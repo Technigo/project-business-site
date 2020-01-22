@@ -12,7 +12,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 :root {
   --prime-font: 'Alata', sans-serif; /*  */
   --second-font: ; /*  */
-  --prime-color: ; /*  */
+  --prime-color: #fff; /*  */
   --second-color: ; /*  */
 }
 
@@ -81,7 +81,6 @@ font-family: 'Alata', sans-serif; */
 
 @media only screen and (min-width: 300px)  and (max-width: 640px) {
   body {
-    background-color: blueviolet;
   }
 
   .flex-conatiner-small {
@@ -90,6 +89,7 @@ font-family: 'Alata', sans-serif; */
   }
   
   .accordion {
+    background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -103,6 +103,7 @@ font-family: 'Alata', sans-serif; */
 
   .accordion > h1 {
     padding: 3vw;
+    color: var(--prime-color);
   }
 
   .question {
@@ -121,21 +122,62 @@ font-family: 'Alata', sans-serif; */
   }
 
   .sign-up {
+    background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
     height: 90vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .sign-up h1 {
+    font-family: var(--prime-font);
+    color: var(--prime-color);
   }
 
   form {
     display: flex;
     width: 70vw;
     flex-direction: column;
+    font-family: var(--prime-font);
+  }
+
+  .form-field {
+    font-family: var(--prime-font);
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .form-check {
+    margin: 10px;
+    padding: 5px;
+  }
+
+  form label {
+    color: var(--prime-color);
+  }
+
+  form > button {
+    font-family: var(--prime-font);
+    margin: 10px;
+    padding: 5px;
+  }
+
+  input {
+
+  }
+
+  .display-block {
+    display: block;
   }
 
   footer {
+    display: flex;
     height: 10vh;
-    background-color: darkmagenta;
+    color: #000;
+    font-family: var(--prime-font);
+    justify-content: center;
+    align-items: center;
   }
 
   .exclude-small {
