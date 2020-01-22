@@ -18,6 +18,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .active + .answer {
   /* some styling here */
+  display:  block;
 }
 
 .hero {
@@ -51,6 +52,16 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   height: 40vh;
 }
 
+.question {
+  width: 70vw;
+  background-color: darkgoldenrod;
+}
+
+.answer {
+  display: none;
+  text-align: left;
+}
+
 .sign-up {
   height: 40vh;
 }
@@ -79,11 +90,52 @@ font-family: 'Alata', sans-serif; */
   }
   
   .accordion {
-    height: 60vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .accordion > * {
+    overflow-y: hidden;
+    font-family: var(--prime-font);
+  }
+
+  .accordion > h1 {
+    padding: 3vw;
+  }
+
+  .question {
+    width: 70vw;
+    background-color: darkgoldenrod;
+  }
+
+  article p {
+    font-size: 4vw;
+    padding: 8px;
+  }
+
+  .answer {
+    width: 70vw;
+    background-color: darkorchid;
   }
 
   .sign-up {
-    height: 60vh;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+  }
+
+  footer {
+    height: 10vh;
+    background-color: darkmagenta;
   }
 
   .exclude-small {
@@ -109,6 +161,8 @@ font-family: 'Alata', sans-serif; */
 
 }
 
+
+/* Might not need this */
 @media only screen and (min-width: 1025px) {
   body {
     background-color: darkblue;
