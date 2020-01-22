@@ -5,10 +5,12 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 :root {
-  --prime-font: ; /*  */
+  --prime-font: 'Alata', sans-serif; /*  */
   --second-font: ; /*  */
   --prime-color: ; /*  */
   --second-color: ; /*  */
@@ -18,6 +20,102 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   /* some styling here */
 }
 
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-color: chocolate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* add hero img */
+  background-image: url(https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hero-inner {
+}
+
+.hero h1 {
+  font-family: var(--prime-font);
+}
+
+.hero p {
+  font-family: var(--prime-font);
+}
+
+.accordion {
+  height: 40vh;
+}
+
+.sign-up {
+  height: 40vh;
+}
+
+footer {
+  height: 10vh;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 /* 
 font-family: 'Alata', sans-serif; */
+
+@media only screen and (min-width: 300px)  and (max-width: 640px) {
+  body {
+    background-color: blueviolet;
+  }
+
+  .flex-conatiner-small {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .accordion {
+    height: 60vh;
+  }
+
+  .sign-up {
+    height: 60vh;
+  }
+
+  .exclude-small {
+    display: none;
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+}
+
+@media only screen and (min-width: 641px)  and (max-width: 1024px) {
+  body {
+    background-color: chartreuse;
+  }
+
+  .exclude-medium {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 1025px) {
+  body {
+    background-color: darkblue;
+  }
+
+  .exclude-large {
+    display: none;
+  }
+
+}
