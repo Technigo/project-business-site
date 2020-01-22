@@ -1,7 +1,6 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
 * {
   margin: 0px;
   padding: 0px;
@@ -13,7 +12,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   --prime-font: 'Alata', sans-serif; /*  */
   --second-font: ; /*  */
   --prime-color: #fff; /*  */
-  --second-color: ; /*  */
+  --second-color: #42692F; /*  */
 }
 
 .active + .answer {
@@ -24,13 +23,12 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .hero {
   width: 100vw;
   height: 100vh;
-  background-color: chocolate;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   /* add hero img */
-  background-image: url(https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg);
+  background-image: url(img/social-media-4.jfif);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -42,10 +40,28 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .hero h1 {
   font-family: var(--prime-font);
+  color: #fff;
+  font-size: 6vw;
 }
 
 .hero p {
   font-family: var(--prime-font);
+  color: #fff;
+  font-size: 4vw;
+}
+
+.hero button {
+  font-family: var(--prime-font);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid var(--second-color);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.hero button:hover {
+  background-color: var(--second-color);
 }
 
 .accordion {
@@ -70,10 +86,24 @@ footer {
   height: 10vh;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:active {
+  color: #000;
+  text-decoration: none;
 }
 
 /* 
@@ -169,6 +199,7 @@ font-family: 'Alata', sans-serif; */
 
   .display-block {
     display: block;
+    text-align: center;
   }
 
   footer {
@@ -189,6 +220,7 @@ font-family: 'Alata', sans-serif; */
     clear: both;
     display: table;
   }
+ 
 
 }
 
