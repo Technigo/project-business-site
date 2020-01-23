@@ -24,7 +24,7 @@ h2 {
 
 h3 {
   font-family: "Pacifico", cursive;
-  margin: 
+  /* margin:  */
   margin-bottom: 1vw;
 }
 
@@ -34,6 +34,7 @@ h3 {
 
 video {
   width: 100%;
+  display: none;
   /* object-fit: scale-down; */
 }
 
@@ -49,7 +50,7 @@ video {
   justify-content: center;
   flex-direction: column;
 }
-.container {
+.container-signup {
   display: flex;
   justify-content: space-evenly;
   margin-top: 3vw;
@@ -89,14 +90,32 @@ button {
   width: 30%;
 }
 
+@media (max-width: 600px) {
+  .v-small {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .v-medium {
+    display: inline-block;
+  }
+  .v-small {
+    display: none;
+  }
+}
+@media (min-width: 901px) {
+  .v-large {
+    display: inline-block;
+  }
+  .v-medium {
+    display: none;
+  }
+}
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp 
 
-.active + .answer {
-  /* some styling here */
-}
-
-@media (max-width: 600px) {
-
-}
+ .active + .answer {
+  some styling here 
+} */

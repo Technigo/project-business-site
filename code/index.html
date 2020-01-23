@@ -13,27 +13,33 @@
       href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap"
       rel="stylesheet"
     />
-    <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
     <!-- GLÖM INTE ATT GE CRED FÖR VIDEON Video by Taryn Elliott from Pexels -->
     <header>
       <div class="video-wrapper">
-        <video playsinline autoplay loop muted id="mounatin-video">
+        <video class="v-small" autoplay loop muted>
           <source
+            class="video-small"
             src="videos/video-small.mp4"
             type="video/mp4"
-            media="all and (max-width: 600px)"
+            media="(max-width: 600px)"
           />
+        </video>
+        <video class="v-medium" autoplay loop muted>
           <source
+            class="video-medium"
             src="videos/video-medium.mp4"
             type="video/mp4"
-            media="all and (min-width: 601px)"
+            media="(max-width: 000px)"
           />
+        </video>
+        <video class="v-large" autoplay loop muted>
           <source
+            class="video-large"
             src="videos/video-large.mp4"
             type="video/mp4"
-            media="all and (min-width: 900px)"
+            media="(min-width: 901px)"
           />
         </video>
         <div class="title">
@@ -43,7 +49,7 @@
       </div>
     </header>
 
-    <div class="container">
+    <div class="container-signup">
       <!-- Signup form -->
       <section class="sign-up-form">
         <h3>Want to know more?</h3>
