@@ -17,7 +17,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .active + .answer {
   /* some styling here */
-  display:  block;
+  height: 8vh;
+  transition: 0.2s ease-out;
 }
 
 .hero {
@@ -65,25 +66,109 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 .accordion {
-  height: 40vh;
+  background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion > * {
+  overflow-y: hidden;
+  font-family: var(--prime-font);
+}
+
+.accordion > h1 {
+  padding: 3vw;
+  color: var(--prime-color);
 }
 
 .question {
+  display: flex;
   width: 70vw;
-  background-color: darkgoldenrod;
+  background-color: var(--second-color);
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+  align-items: center;
 }
 
+article p {
+  font-size: 4vw;
+  padding: 8px;
+}
+
+article i {
+  margin-right: 4vh;
+}
+
+/* .rotate {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+} */
+
 .answer {
-  display: none;
+  height: 0vw; /* The JS will append active class and then change the height */
   text-align: left;
+  overflow-y: hidden; /* removes small scroll when answer is expanding */
+  width: 70vw;
+  background-color: var(--prime-color);
 }
 
 .sign-up {
-  height: 40vh;
+  background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up h1 {
+  font-family: var(--prime-font);
+  color: var(--prime-color);
+}
+
+form {
+  display: flex;
+  width: 70vw;
+  flex-direction: column;
+  font-family: var(--prime-font);
+}
+
+.form-field {
+  font-family: var(--prime-font);
+  margin: 10px;
+  padding: 5px;
+}
+
+.form-check {
+  margin: 10px;
+  padding: 5px;
+}
+
+form label {
+  color: var(--prime-color);
+}
+
+form > button {
+  font-family: var(--prime-font);
+  margin: 10px;
+  padding: 5px;
+}
+
+.display-block {
+  display: block;
+  text-align: center;
 }
 
 footer {
+  display: flex;
   height: 10vh;
+  color: #000;
+  font-family: var(--prime-font);
+  justify-content: center;
+  align-items: center;
 }
 
 a:link {
@@ -113,103 +198,11 @@ font-family: 'Alata', sans-serif; */
   body {
   }
 
-  .flex-conatiner-small {
+   .flex-conatiner-small {
     display: flex;
     flex-direction: column;
   }
   
-  .accordion {
-    background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .accordion > * {
-    overflow-y: hidden;
-    font-family: var(--prime-font);
-  }
-
-  .accordion > h1 {
-    padding: 3vw;
-    color: var(--prime-color);
-  }
-
-  .question {
-    width: 70vw;
-    background-color: darkgoldenrod;
-  }
-
-  article p {
-    font-size: 4vw;
-    padding: 8px;
-  }
-
-  .answer {
-    width: 70vw;
-    background-color: darkorchid;
-  }
-
-  .sign-up {
-    background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .sign-up h1 {
-    font-family: var(--prime-font);
-    color: var(--prime-color);
-  }
-
-  form {
-    display: flex;
-    width: 70vw;
-    flex-direction: column;
-    font-family: var(--prime-font);
-  }
-
-  .form-field {
-    font-family: var(--prime-font);
-    margin: 10px;
-    padding: 5px;
-  }
-
-  .form-check {
-    margin: 10px;
-    padding: 5px;
-  }
-
-  form label {
-    color: var(--prime-color);
-  }
-
-  form > button {
-    font-family: var(--prime-font);
-    margin: 10px;
-    padding: 5px;
-  }
-
-  input {
-
-  }
-
-  .display-block {
-    display: block;
-    text-align: center;
-  }
-
-  footer {
-    display: flex;
-    height: 10vh;
-    color: #000;
-    font-family: var(--prime-font);
-    justify-content: center;
-    align-items: center;
-  }
 
   .exclude-small {
     display: none;
@@ -226,11 +219,14 @@ font-family: 'Alata', sans-serif; */
 
 @media only screen and (min-width: 641px)  and (max-width: 1024px) {
   body {
-    background-color: chartreuse;
   }
 
   .exclude-medium {
     display: none;
+  }
+
+  footer {
+    background-color: darkgreen;
   }
 
 }
@@ -239,7 +235,10 @@ font-family: 'Alata', sans-serif; */
 /* Might not need this */
 @media only screen and (min-width: 1025px) {
   body {
-    background-color: darkblue;
+  }
+
+  footer {
+    background-color: darkorange;
   }
 
   .exclude-large {

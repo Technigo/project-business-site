@@ -12,3 +12,11 @@ document.getElementById("section2").onclick = toggle
 document.getElementById("section3").onclick = toggle
 document.getElementById("section4").onclick = toggle
 document.getElementById("section5").onclick = toggle
+
+
+// Rotate icon when question is clicked
+function toggle2() {
+  this.classList.toggle("rotate")
+}
+
+document.getElementsByClassName("fas").onclick = toggle2
