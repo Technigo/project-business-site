@@ -24,32 +24,47 @@
     
     <section class="form">
 
+      <h2>Order form</h2>
+
     <form action="https://httpbin.org/anything" method="POST">
-     <input type="text" name="firstname" required>
-     <input type="text" name="lastname" required>
 
-     <input type="email" name="email" required>
+      <label> Name
+        <input type="text" name="firstname" required>
+      </label>
+      <label>E-mail
+        <input type="email" name="email" required>
+      </label>
 
-     <select name="model">
+      <label> Store
+      <input type="text" name="lastname" required>
+      </label>
+
+     <label> Brand
+     <select name="brand">
       <option value="ray">RayBan</option>
       <option value="guc">Gucci</option>
       <option value="cel">Celine</option>
      </select>
+    </label>
 
 
+     <label> Size
      <select name="sunglassessize">
       <option value="s">Small</option>
       <option value="m">Medium</option>
       <option value="L">Large</option>
      </select>
 
-     <p>Do you wanna to subscribe?</p>
+    </label>
 
-     <input type="checkbox" name="gender" value="Female">Female<br>  
-     <input type="checkbox" name="gender" value="Male">Male<br>  
-     <input type="checkbox" name="gender" value="noneofthem">None of them<br> 
+     <label>
+      <input type="checkbox" name="gender" value="Female">I want commercial.<br> 
 
-     <button type="submit">Order sunglasses</button>
+      </label>
+
+      <label>
+        <button type="submit">Order sunglasses</button>
+       </label>
     
     </form>
 
