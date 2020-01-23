@@ -1,3 +1,5 @@
+/* ––– Global styles ––– */
+
 * {
   box-sizing: border-box;
 }
@@ -24,7 +26,7 @@ h1 {
 }
 
 a {
-  color: #000;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -38,12 +40,39 @@ header {
 /* ––– Hero ––– */
 
 .hero {
+  position: relative;
   height: 100vh;
-  padding: 100px;
   background: url(https://images.unsplash.com/photo-1546895418-20ff32efa2ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1503&q=80);
   background-size: cover;
+  background-position: 50% 50%;
 }
 
+.hero video {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.hero .hero-content {
+  position: absolute;
+  z-index: 10;
+  top: 20%;
+}
+
+.hero::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  ;
+}
+
+
+/* ––– FAQ ––– */
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
@@ -51,4 +80,25 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .active+.answer {
   /* some styling here */
+}
+
+
+/* ––– Form ––– */
+
+
+/* ––– Media queries ––– */
+/* ––– Tablet styles ––– */
+
+@media screen and (min-width: 668px) {}
+
+/* ––– Desktop styles ––– */
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    background: none;
+  }
+
+  .hero video {
+    display: inline;
+  }
 }
