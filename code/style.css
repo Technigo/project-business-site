@@ -65,7 +65,11 @@ video {
   flex-direction: column;
   align-items: center;
 }
-
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 label {
   display: block;
   margin: 0;
@@ -79,9 +83,30 @@ input {
   box-sizing: border-box;
 }
 
-button {
-  display: flex;
-  align-items: center;
+.submit-btn {
+  background: #f2f2f2;
+  padding: 10px 30px;
+  width: min-content;
+  height: min-content;
+  font-size: 2vw;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #cccccc;
+  cursor: pointer;
+  box-shadow: 1px 2px 3px 0 #666666;
+  transition-duration: 0.3s;
+}
+
+.submit-btn:focus {
+  outline: 0;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 0 1px 0 #666666;
+}
+.submit-btn:active {
+  box-shadow: inset 2px 3px 3px 0 #666666;
+  outline: none;
 }
 
 .accordion {
