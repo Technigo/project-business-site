@@ -17,6 +17,7 @@ body {
 h1,
 h2,
 h3 {
+  margin-top: 0;
   line-height: 1;
 }
 
@@ -30,10 +31,12 @@ a {
   text-decoration: none;
 }
 
+
 /* ––– Header + Nav ––– */
 
 header {
   position: absolute;
+  z-index: 10;
 }
 
 
@@ -68,11 +71,33 @@ header {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, .5);
-  ;
+}
+
+
+/* ––– Sections ––– */
+
+.faq,
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-container {
+  flex: 1 1 auto;
+  max-width: 50rem;
+  margin: 4rem;
+}
+
+.section-container h1 {
+  text-align: center;
 }
 
 
 /* ––– FAQ ––– */
+
+
+
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
@@ -84,6 +109,17 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 
 /* ––– Form ––– */
+
+
+
+
+
+footer {
+  padding: 2rem 3rem;
+  background-color: #000;
+  color: #fff;
+  font-size: .8rem;
+}
 
 
 /* ––– Media queries ––– */
