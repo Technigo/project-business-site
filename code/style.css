@@ -28,14 +28,44 @@ nav{
 
 video{
   width: 100%;
-  height: 40vh;
+  max-height: 70vh;
   object-fit: cover;
   margin-bottom: 2rem;
   z-index: -1;
 }
 
+.main-content{
+  display: flex;
+  justify-content: center;
+  background-color: gold;
+  width: 100%;
+}
+
+main{
+  background-color: coral;
+  padding: 1rem;
+  max-width: 1000px;
+}
+
+form{
+  background-color: blueviolet;
+}
+
+section{
+  background-color: chartreuse;
+}
+
+footer{
+ display: block;
+}
+
 @media (min-width: 600px){
 video{
 height: auto;
+}
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
 }
 }
