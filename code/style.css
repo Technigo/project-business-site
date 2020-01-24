@@ -25,6 +25,8 @@ h2 {
 h3 {
   font-family: "Pacifico", cursive;
   margin: 1vw 0;
+  white-space: nowrap;
+  color: #ffffff;
 }
 
 .video-wrapper {
@@ -34,8 +36,6 @@ h3 {
 video {
   width: 100%;
   display: none;
-  /* object-fit: cover; */
-  /* object-fit: scale-down; */
 }
 
 .title {
@@ -54,8 +54,6 @@ video {
   display: flex;
   justify-content: space-evenly;
   margin: 3vw;
-  /* height: 100%; */
-  /* overflow-y: scroll; */
 }
 
 .sign-up-form {
@@ -121,6 +119,27 @@ input:focus {
   border: 2px solid #ffffff;
   padding: 5px;
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.question {
+  width: 90%;
+  height: 4vw;
+  background: #223d3f;
+}
+
+ul {
+  display: none;
+  width: 90%;
+  height: 40px;
+  margin: 0;
+  background: #457f6c;
+  list-style: none;
+  padding: 0;
+  list-style-type: none;
 }
 @media (max-width: 600px) {
   .v-small {
@@ -148,7 +167,10 @@ input:focus {
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp 
-
- .active + .answer {
-  some styling here 
-} */
+*/
+.open {
+  background: #223d3f;
+}
+.open + ul {
+  display: block;
+}
