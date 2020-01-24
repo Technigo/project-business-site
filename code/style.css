@@ -7,22 +7,22 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 html {
-  color: rgb(107, 85, 36);
-  font-family: 'Shadows Into Light', cursive;
-  background-color: rgba(255, 235, 205, 0.87);
+  color: rgba(31, 49, 33, 0.603);
+  font-family: 'Nanum Myeongjo', serif;
+  background-color: rgb(253, 243, 227);
   /* border: 20px solid white; */
   margin: 0;
 }
 
-/* body {
+body {
   margin: 0;
 }
 
-header {
+/* header {
   width: 100%;
   margin: 0;
-  display: block;
-}
+  display: flex;
+} */
 
 img {
   width: 100%;
@@ -30,6 +30,7 @@ img {
 
 .title {
   text-align: center;
+  display: flex;
   position: relative;
 }
 
@@ -52,25 +53,37 @@ img {
   width: 100%;
   font-family: 'Bowlby One SC', cursive;
   color: white;
-  font-size: 200px;
-  font-weight: bold; */
+  font-size: 100px;
+  font-weight: bold; 
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  justify-content: space-evenly;
+  margin: 30px 20px;
 }
 
 .form {
   display: flex;
-  width: 50%;
+  flex-direction: column;
+  width: 40%;
+  background-color: rgb(182, 172, 129);
+  border-radius: 20px;
+  padding: 20px;
 }
 
-.form input {
-  /* width: 150px; */
+/* .form input {
+  width: 150px;
   height: 25px;
   border: 2px solid beige;
   margin: 5px;
-  /* border-radius: 20px; */
-}
+  border-radius: 20px;
+} */
 
 .form input:hover {
-  opacity: 0.6;
+  /* opacity: 0.6; */
 }
 
 .form ::placeholder{
@@ -82,16 +95,84 @@ input.submit {
   border-radius: 30px;
 }
 
+input:focus {
+  background-color: rgb(146, 166, 170);
+}
+
+/* input:invalid {
+  text-decoration: underline;
+} */
+
+label {
+  display: block;
+  cursor: cell;
+  padding: 10px;
+}
+
+.textArea input {
+  width: 150px;
+  height: 20px;
+  margin: 5px;
+}
+
+.choice input {
+  margin: 5px;
+  margin: 8px
+}
+
+.checkBox input {
+  padding: 5px;
+  margin: 8px;
+}
+
+.button {
+  width: 100px;
+  border-radius: 20px;
+  font-size: 16px;
+  opacity: 0.7;
+  margin: 10px;
+}
+
+.button:hover {
+  opacity: 1;
+  box-shadow: 2px 3px 5px grey;
+}
+
+.info {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  background-color: lemonchiffon;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.accordion h1 {
+  text-align: center;
+  font-size: 30px;
+}
+
 .question {
   background-color: #eee;
-  color: #444;
+  color: rgb(150, 147, 156);
   cursor: pointer;
   padding: 18px;
-  width: 100%;
+  margin: 15px 15px 0px 15px;
+  width: auto;
   text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
+}
+
+.question:hover {
+  cursor: context-menu;
+  text-shadow: 1px 1px 5px grey;
 }
 
 .answer {
@@ -99,4 +180,26 @@ input.submit {
   background-color: white;
   display: none;
   overflow: hidden;
+  margin: 0px 15px 15px 15px
+}
+
+
+@media (max-width: 668px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+
+  .form {
+    width: 80%;
+    margin: 20px 10px;
+  }
+
+  .accordion {
+    width: 80%;
+    margin: 20px 10px;
+  }
 }
