@@ -24,8 +24,7 @@ h2 {
 
 h3 {
   font-family: "Pacifico", cursive;
-  /* margin:  */
-  margin-bottom: 1vw;
+  margin: 1vw 0;
 }
 
 .video-wrapper {
@@ -51,10 +50,12 @@ video {
   justify-content: center;
   flex-direction: column;
 }
-.container-signup {
+.container-signup-and-accordion {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 3vw;
+  margin: 3vw;
+  /* height: 100%; */
+  /* overflow-y: scroll; */
 }
 
 .sign-up-form {
@@ -64,6 +65,7 @@ video {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1.5vw;
 }
 form {
   display: flex;
@@ -72,41 +74,46 @@ form {
 }
 label {
   display: block;
-  margin: 0;
-  font-size: 1vw;
+  margin: 0 1vw 1vw 1vw;
+  font-size: 1.75vw;
 }
 input {
   width: 100%;
+  height: 3vw;
   margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 0 10px;
+  border: 3px solid #223d3f;
+  border-radius: 90px;
   box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
 }
 
 .submit-btn {
   background: #f2f2f2;
-  padding: 10px 30px;
-  width: min-content;
-  height: min-content;
+  padding: 2px 5px;
   font-size: 2vw;
-  text-align: center;
-  border-radius: 10px;
-  border: 2px solid #cccccc;
+  border-radius: 90px;
+  border: 3px solid #223d3f;
   cursor: pointer;
-  box-shadow: 1px 2px 3px 0 #666666;
+  box-shadow: 4px 4px 0px 0px #223d3f;
   transition-duration: 0.3s;
+  align-self: center;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 0 1px 0 #223d3f;
+}
+
+.submit-btn:active {
+  box-shadow: inset 4px 4px 2px -1px #223d3f;
+  outline: none;
 }
 
 .submit-btn:focus {
   outline: 0;
-}
-
-.submit-btn:hover {
-  box-shadow: 0 0 1px 0 #666666;
-}
-.submit-btn:active {
-  box-shadow: inset 2px 3px 3px 0 #666666;
-  outline: none;
 }
 
 .accordion {
