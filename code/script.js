@@ -7,3 +7,15 @@ function toggle() {
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
 document.getElementById("section1").onclick = toggle
+
+document.getElementById("section2").onclick = toggle
+
+
+/*This will eventually be the toggle for accordion*/
+
+const btn = document.getElementById("button")
+
+btn.onclick = () => {
+  btn.classList.toggle("btn-dark")
+  alert("Thank You!")
+}

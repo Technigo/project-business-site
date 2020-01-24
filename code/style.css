@@ -1,7 +1,124 @@
+body {
+	font-family: Georgia, serif;
+	height: 100%;
+	margin: 0;
+	text-align: center;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  background: rgb(226, 217, 214);
+}
+
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 56px; 
+}
+
+input {
+  font-size: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+/**Header**/
+
+.hero {
+    background-image: url("pottery.jpg");
+    background-position: center top;
+    background-size: cover;
+    padding: 20% 0;
+    margin-bottom: 30px;
+    font-family: 'Trebuchet MS', 'Helvetica';
+}
+
+/** main **/
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 30px;
+}
+
+/** Signup form **/
+
+.signup-form {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  background: rgb(105, 105, 151);
+}
+
+.signup-form input{
+  margin: 10px;
+}
+
+.signup-form input:valid {
+  background-color: rgba(0, 128, 0, 0.199);
+}
+
+.signup-form input:invalid {
+  background-color: rgba(128, 0, 0, 0.199);
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(105, 105, 151);
+  border-color: rgb(166, 94, 218);
+}
+
+.btn-dark {
+  display: none;
+}
+
+
+/**accordion**/
+.accordion {
+  background: rgb(245, 244, 242);
+  color:rgb(105, 105, 151);
+}
+
+.accordion div {
+  background: rgb(201, 211, 240);
+  color:rgb(105, 105, 151);
+  cursor: pointer;
+}
+
+.answer {
+  display: none;
+}
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
   /* some styling here */
+  display: block;
+  margin: 0;
+}
+
+@media (min-width: 650px) and (max-width: 1024px) {
+  main {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1025px) {
+  main {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: row;
+  }
+
 }

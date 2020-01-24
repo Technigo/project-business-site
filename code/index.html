@@ -1,30 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Small business site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- video or image as a header is cool :) -->
+  <header class="hero">
+    <h1>The potters place</h1>
+    <h3>Lets get our hands dirty</h3>
+  </header>
+
+  <main>
 
     <!-- Signup form -->
+    <section class="signup-form">
+      <form action="https://httpbin.org/anything" method="post">
+        <label name="name">Name</label>
+        <input type="text" name="name" required>
+        </label>
+
+        <label name="adress">Adress
+          <input type="text" name="name" required>
+        </label>
+
+        <label name="password">Password
+          <input type="password" name="password" required>
+        </label>
+
+
+        <label class="container">Man
+          <input type="radio" checked="checked" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Woman
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Other
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container">
+          <input type="checkbox" checked="checked" required>
+          <span class="checkmark"></span>
+          <h5>I agree to the <a href="#"> Terms and Conditions </a></h5>
+        </label>
+
+        <button id="button" type="submit">Submit</button>
+      </form>
+    </section>
 
     <section class="accordion">
-      <!-- Accordion -->
+      <!-- Accordion / Toggle-->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">How much does it cost?</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">Should I wear special clothes?</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+
+  </main>
+
+  <!-- dont forget to link the javascript file here! -->
+  <script src="script.js"></script>
+</body>
+
 </html>
