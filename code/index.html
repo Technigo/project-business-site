@@ -3,28 +3,110 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>💼 Project 3</title>
+    <script src="https://kit.fontawesome.com/b688a7816b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
-
+    
+    <header>
+      <div class="hero-banner">
+        <img class="logo" src="./images/black_logo.png" alt="Bläck Magazine Logo">
+        <h1>Magazine</h1>
+      </div>
+    </header>
     <!-- Signup form -->
+    <div class="info-box">
+      <section class="sign-up">
+        <h2>Sign Up</h2>
+        <label>
+          <!-- Name -->
+          <input class="name" type="text" name="Name" placeholder=" Name" required>
+        </label>
+        <label>
+          <!-- Email -->
+          <input class="email" type="email" name="email" placeholder=" Email" required>
+        </label>
+        <label>
+          <!-- Password -->
+          <input class="password" type="password" name="password" placeholder=" Password" required>
+        </label>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+        <!-- RADIO INPUTS -->
+        <div class="radio-inputs">
+          <label>
+            <input type="radio" id="physicalMagazine" name="type" value="physicalMagazine"
+          checked>
+          Physical Magazine
+          </label>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+          <label>
+            <input type="radio" id="onlinelMagazine" name="type" value="onlinelMagazine">
+            Online Magazine
+          </label>
+
+          <label>
+            <input type="radio" id="both" name="type" value="both">
+            Both
+          </label>
+        </div>
+
+      <!-- CHECKBOX -->
+        <div class="terms">  
+          <label>
+            <input type="checkbox" id="scales" name="scales">
+            Terms & Conditions
+          </label>
+        </div>
+
+        <!-- BUTTON -->
+
+        <input class="submit" type="button" value="Submit"></input>
+
+
+      </section>
+
+      <section class="accordion">
+        <!-- Accordion -->
+        <h2>FAQ</h2>
+        <!-- <div class="open"> -->
+          <div class="question" id="section1">How much does it cost?<i class="fas fa-plus"></i></div>
+          <div class="answer">
+            <p>Keel me scurvy careen man-of-war broadside spyglass loot hogshead hang the jib.</p>
+          </div>
+
+          <div class="question" id="section2">Can I submit an article?<i class="fas fa-plus"></i></div>
+          <div class="answer">
+            <p>Brig gally gun nipperkin black spot tack hornswaggle long boat gibbet scurvy coxswain Jack Tar spyglass.</p>
+          </div>
+
+          <div class="question" id="section3">Poems vs. Rap<i class="fas fa-plus"></i></div>
+          <div class="answer">
+            <p>Splice the main brace prow clipper ho.</p>
+          </div>
+
+          <div class="question" id="section4">Is this an escort service?<i class="fas fa-plus"></i></div>
+          <div class="answer">
+            <p>Nope.</p>
+          </div>
+        <!-- </div> -->
+
+      </section>
+    </div>
+
+    <footer class="footer-center">
+      <div class="logo-footer">
+        <img src="./images/black_logo.png" alt="Bläck Magazine Logo">
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="copyright">
+        <p>	&copy; Copyrigth 2020</p>
+        <p>Bläck Magazine</p>
       </div>
-    </section>
+    </footer>
+
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
   </body>
+ 
 </html>

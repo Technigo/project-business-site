@@ -2,6 +2,198 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  background-color: #ffb0ba;
+  margin: 0;
+}
+
+/********* HEADER **********/
+
+h1 {
+  color: #2B2828;
+  margin-top: 0em;
+  padding-left: 1.7em;
+}
+
+.hero-banner img {
+  width: 30%;
+  min-width: 150px;
+  height: auto;
+  margin-top: 2em;
+}
+
+.hero-banner {
+  background-image: url(./images/ink_on_pink.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/********* SIGNUP FORM AND FAQ *********/
+
+.info-box {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.sign-up { 
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: #ff5d38; 
+  width: 30%;
+  padding: 3em;
+}
+
+.name {
+  outline: none;
+  background-color: #fcb2a1;
+  line-height: 1.8em;
+  border: 0;
+  border-radius: 40px;
+}
+
+.name:focus {
+  border: 1px solid white;
+}
+  
+.email {
+  outline: none;
+  background-color: #fcb2a1;
+  line-height: 1.8em;
+  border: 0;
+  border-radius: 40px;
+}
+
+.email:focus {
+  border: 1px solid white;
+}
+
+  .password {
+    outline: none;
+    background-color: #fcb2a1;
+    line-height: 1.8em;
+    border: 0;
+    border-radius: 40px;
+  }
+
+  .password:focus {
+    border: 1px solid white;
+  }
+
+  ::placeholder {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2em;
+    color: white;
+  }
+
+    /********* RADIO INPUTS *********/
+
+  .radio-inputs {
+    font-size: 0.7em;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+    line-height: 1rem;
+  }
+
+/********* CHECKBOX *********+*/
+
+  .terms {
+    padding: 1em 0 2em 0;
+      font-size: 0.7em;
+  }
+
+
+
+
+
+
+/******* BUTTON ******/
+
+  .submit {
+    font-family: 'Roboto Mono' monospace;
+    font-weight: 700;
+    border: 5px;
+    border-color: white;
+    background-color: #4357ef;
+    color: white;
+    line-height: 2;
+    border-radius: 40px;
+    font-size: 1rem;
+    padding: 0 2rem;
+    width: fit-content;
+  }
+
+  .submit:hover {
+    background-color: #6576f7;
+  }
+
+  .submit:active {
+    background-color: #293cce;
+  }
+
+/********* FAQ **********/
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: #743C12;
+  width: 30%;
+  padding: 3em;
+}
+
+ .question {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .question:hover {
+   background-color: #293cce;
+ }
+
+/* .question:visited {
+  background-color: #071cba;
+} */
+
+.question:visited i {
+  rotate: rotate(45deg);
+}
+.answer {
+  visibility: hidden;
+  background-color: #4357ef;
+}
 .active + .answer {
+  visibility: visible;
+
   /* some styling here */
+}
+
+/******** FOOTER ********/
+
+.footer-center {
+  color: #2B2828;
+  font-size: 0.7em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-footer img {
+  max-width: 50px;
+}
+
+.copyright p {
+  text-align: center;
+  line-height: 0.7em;
+  font-size: 0.7em;
 }
