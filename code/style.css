@@ -1,18 +1,66 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
+body {
+  font-family: "Courier New";
+  margin: 0;
+  background-color: rgb(222, 230, 238);
+  
+}
 .active + .answer {
   /* some styling here */
+  display: inline;
+}
+
+header {
+  background-image: url("alena-vavrdova-93leWZmzVvI-unsplash.png");
+  background-position: center;
+  background-size: cover;
+  background-color: rgb(222, 230, 238);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  margin: 0;
+  height: 40vh;
+}
+
+.header-textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 75vw;
+  height: 15vh;
+  background-color: aliceblue;
+  opacity: 0.7;
+ }
+
+.header-textbox h1 {
+  font-size: 1.5em;
+  margin: 5px;
+}
+
+.header-textbox h3 {
+  margin: 5px;
+  text-align: center;
+}
+
+.signFAQ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .signup {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-}
+  justify-self: center;
+  }
 
 .accordion {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
 }
 
@@ -29,9 +77,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   border: solid 1px rgb(251, 243, 231);
   width: 250px;
   padding: 10px;
+  display: none;
 }
 
-.accordion h1 {
+.accordion h2 {
   background-color: #694F5D;
   border: solid 1px rgb(251, 243, 231);
   margin-bottom: 0;
@@ -39,7 +88,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   padding: 10px;
 }
 
-.signup h1 {
+.signup h2 {
   background-color: #9FA4C4;
   width: 250px;
   padding: 10px;
@@ -50,4 +99,72 @@ form {
   background-color: rgb(194, 194, 199);
   width: 250px;
   padding: 10px;
+}
+
+h3 {
+  font-size: 1em
+}
+
+@media (min-width: 668px) and (max-width: 1024px) {
+
+.header-textbox {
+  width: 45vw;
+}
+
+.header-textbox h3 {
+  margin: 15px;
+}
+
+.header-textbox h1 {
+  margin: 15px;
+}
+
+.signFAQ {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 50px 30px;
+  height: 900px;
+}
+
+}
+
+@media (min-width: 1025px) {
+
+.header-textbox {
+  width: 30vw;
+}
+
+.signFAQ {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 50px 300px;
+  height: 900px;
+}
+
+.question {
+  width: 25vw;
+}
+
+.answer {
+  width: 25vw;
+}
+
+.signup h2 {
+  width: 25vw;
+}
+
+.signup form {
+  width: 25vw;
+}
+
+.accordion h2 {
+  width: 25vw;
+}
+
+input[type=text] {
+  width: 300px;
+}
+
 }
