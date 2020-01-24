@@ -5,15 +5,12 @@ body {
   font-family: "Courier New";
   margin: 0;
   background-color: rgb(222, 230, 238);
-  
-}
-.active + .answer {
-  /* some styling here */
-  display: inline;
 }
 
+/* Styling header + children below */
+
 header {
-  background-image: url("alena-vavrdova-93leWZmzVvI-unsplash.png");
+  background-image: url("./images/alena-vavrdova-93leWZmzVvI-unsplash.png");
   background-position: center;
   background-size: cover;
   background-color: rgb(222, 230, 238);
@@ -45,7 +42,20 @@ header {
 .header-textbox h3 {
   margin: 5px;
   text-align: center;
+  font-size: 1em
 }
+
+/* Styling sidebars below  */
+
+.sidebar {
+  width: 400px;
+  height: 900px;
+  border: solid 1px #9FA4C4;
+  display: inline-flex;
+  display:none;
+}
+
+/* Styling forms and FAQ below */
 
 .signFAQ {
   display: flex;
@@ -53,40 +63,40 @@ header {
   align-items: center;
 }
 
-.signup {
+.faq {
   display: inline-flex;
   flex-direction: column;
-  justify-self: center;
-  }
-
-.accordion {
-  display: inline-flex;
-  flex-direction: column;
+  
 }
 
+.faq h2 {
+  background-color: rgb(139, 146, 192);
+  border: solid 1px rgb(251, 243, 231);
+  margin-bottom: 0;
+  width: 250px;
+  padding: 10px;
+}
 
 .question {
-  background-color: #B49082;
+  background-color: rgb(194, 194, 199);
   border: solid 1px rgb(251, 243, 231);
   width: 250px;
   padding: 10px;
 }
 
 .answer {
-  background-color: #DFBBB1;
-  border: solid 1px rgb(251, 243, 231);
+  background-color: rgb(212, 212, 216);
+  border: solid 1px whitesmoke;
   width: 250px;
   padding: 10px;
   display: none;
 }
 
-.accordion h2 {
-  background-color: #694F5D;
-  border: solid 1px rgb(251, 243, 231);
-  margin-bottom: 0;
-  width: 250px;
-  padding: 10px;
-}
+.signup {
+  display: inline-flex;
+  flex-direction: column;
+  justify-self: center;
+  }
 
 .signup h2 {
   background-color: #9FA4C4;
@@ -99,11 +109,41 @@ form {
   background-color: rgb(194, 194, 199);
   width: 250px;
   padding: 10px;
+  
 }
 
-h3 {
-  font-size: 1em
+input[type=text] {
+  border: solid 2px #9FA4C4;
+  margin: 3px 0;
 }
+
+input[type=text]:focus {
+  background-color:rgb(204, 170, 188);
+}
+
+input[type=submit] {
+  padding: 15px;
+  border: dotted 2px #9FA4C4;
+  border-radius: 30px;
+  background-color: #9FA4C4;
+  }
+
+input[type=submit]:hover {
+  opacity: 0.5;
+}
+
+form a {
+  text-decoration: none;
+  color: black;
+  border-bottom: solid 2px #694F5D;
+}
+
+form a:hover {
+  background-color: #694F5D;
+  opacity: 0.7;
+}
+
+/* Styling tablet mode below  */
 
 @media (min-width: 668px) and (max-width: 1024px) {
 
@@ -129,42 +169,88 @@ h3 {
 
 }
 
+/* Styling desktop mode below */
+
 @media (min-width: 1025px) {
 
 .header-textbox {
   width: 30vw;
 }
 
+.header-textbox h1 {
+  font-size: 2.5em;
+  padding: 5px;
+}
+
+.header-textbox h3 {
+  padding: 5px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
 .signFAQ {
+  display: inline-flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
-  margin: 50px 300px;
+  margin: 0px;
   height: 900px;
+  width: 50vw;
 }
 
-.question {
-  width: 25vw;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.answer {
-  width: 25vw;
+.sidebar-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/jay-mantri-TFyi0QOx08c-unsplash.png");
+  margin-top: 20px;
+  width: 350px;
+  height: 350px;
+  opacity: 0.9;
+  font-size: 1em;
 }
 
-.signup h2 {
-  width: 25vw;
+.sidebar a {
+  text-decoration: none;
+  color: black;
+  background-color: #9FA4C4;
+  padding: 10px;
+  opacity: 0.7;
 }
 
-.signup form {
-  width: 25vw;
+.sidebar-img2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/westboundary-photography-chris-gill-lBL7rSRaNGs-unsplash.png");
+  background-position: center;
+  margin-top: 20px;
+  width: 350px;
+  height: 350px;
+  opacity: 0.9;
+  font-size: 1em;
 }
 
-.accordion h2 {
-  width: 25vw;
+.desktop-sidebars {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+ /* Styling classes javascript below*/
+
+.textpopup a {
+    display: block;
+    opacity: 1;
+  }
 }
 
-input[type=text] {
-  width: 300px;
-}
-
+.active + .answer {
+  display: inline;
 }

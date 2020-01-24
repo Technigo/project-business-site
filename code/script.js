@@ -1,14 +1,20 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
+ // nedan skapar vi en funktion och namnger den (ex. toggle eller toggleDisplay)
 
 function toggle() {
-  this.classList.toggle("active")
+  this.classList.toggle("active");
 }
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
-document.getElementById("section2").onclick = toggle
-document.getElementById("section3").onclick = toggle
-document.getElementById("section4").onclick = toggle
+function toggleDisplay() {
+  this.classList.toggle("textpopup");
+}
 
+// nedan tilldelas en händelse funktionen vi skapade ovan (ex. mouseover aktiverar klassen .class2 
+//  när muspekaren är ovanpå sidebar-img1)
+
+document.getElementById("section1").onclick = toggle;
+document.getElementById("section2").onclick = toggle;
+document.getElementById("section3").onclick = toggle;
+document.getElementById("section4").onclick = toggle;
+
+document.getElementById("sidebar-img1").onmouseover = toggleDisplay;
+document.getElementById("sidebar-img1").onmouseout = toggleDisplay;
