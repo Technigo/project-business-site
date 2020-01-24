@@ -18,7 +18,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   margin: 0;
   height: 40vh;
 }
@@ -32,7 +32,7 @@ header {
   height: 15vh;
   background-color: aliceblue;
   opacity: 0.7;
- }
+}
 
 .header-textbox h1 {
   font-size: 1.5em;
@@ -48,20 +48,22 @@ header {
 /* Styling sidebars below  */
 
 .sidebar {
-  width: 400px;
+  width: 350px;
   height: 900px;
   border: solid 1px #9FA4C4;
   display: inline-flex;
   display:none;
 }
 
-/* Styling forms and FAQ below */
+    /* Styling forms and FAQ below */
 
 .signFAQ {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+    /*faq accordion*/
 
 .faq {
   display: inline-flex;
@@ -92,11 +94,13 @@ header {
   display: none;
 }
 
+    /*styling form below*/
+
 .signup {
   display: inline-flex;
   flex-direction: column;
   justify-self: center;
-  }
+}
 
 .signup h2 {
   background-color: #9FA4C4;
@@ -109,7 +113,6 @@ form {
   background-color: rgb(194, 194, 199);
   width: 250px;
   padding: 10px;
-  
 }
 
 input[type=text] {
@@ -126,7 +129,7 @@ input[type=submit] {
   border: dotted 2px #9FA4C4;
   border-radius: 30px;
   background-color: #9FA4C4;
-  }
+}
 
 input[type=submit]:hover {
   opacity: 0.5;
@@ -135,122 +138,119 @@ input[type=submit]:hover {
 form a {
   text-decoration: none;
   color: black;
-  border-bottom: solid 2px #694F5D;
+  border-bottom: solid 2px rgb(139, 146, 192);
 }
 
 form a:hover {
-  background-color: #694F5D;
+  background-color: rgb(139, 146, 192);
   opacity: 0.7;
 }
 
-/* Styling tablet mode below  */
+    /* Styling tablet mode below  */
 
 @media (min-width: 668px) and (max-width: 1024px) {
 
-.header-textbox {
-  width: 45vw;
+  .header-textbox {
+    width: 45vw;
+  }
+
+  .header-textbox h3 {
+    margin: 15px;
+  }
+
+  .header-textbox h1 {
+    margin: 15px;
+  }
+
+  .signFAQ {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 50px 30px;
+    height: 900px;
+  }
+
 }
 
-.header-textbox h3 {
-  margin: 15px;
-}
-
-.header-textbox h1 {
-  margin: 15px;
-}
-
-.signFAQ {
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin: 50px 30px;
-  height: 900px;
-}
-
-}
-
-/* Styling desktop mode below */
+    /* Styling desktop mode below */
 
 @media (min-width: 1025px) {
 
-.header-textbox {
-  width: 30vw;
-}
+  .header-textbox {
+    width: 30vw;
+  }
 
-.header-textbox h1 {
-  font-size: 2.5em;
-  padding: 5px;
-}
+  .header-textbox h1 {
+    font-size: 2.5em;
+    padding: 5px;
+  }
 
-.header-textbox h3 {
-  padding: 5px;
-  text-align: center;
-  font-size: 1.5em;
-}
+  .header-textbox h3 {
+    padding: 5px;
+    text-align: center;
+    font-size: 1.5em;
+  }
 
-.signFAQ {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin: 0px;
-  height: 900px;
-  width: 50vw;
-}
+  .signFAQ {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0px;
+    height: 900px;
+    width: 40vw;
+  }
+    /* styling sidebar (desktop mode) below*/
 
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 5px;
+  }
 
-.sidebar-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("./images/jay-mantri-TFyi0QOx08c-unsplash.png");
-  margin-top: 20px;
-  width: 350px;
-  height: 350px;
-  opacity: 0.9;
-  font-size: 1em;
-}
+  .sidebar div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 350px;
+    height: 350px;
+    opacity: 0.9;
+    font-size: 1em; 
+  }
 
-.sidebar a {
-  text-decoration: none;
-  color: black;
-  background-color: #9FA4C4;
-  padding: 10px;
-  opacity: 0.7;
-}
+  .sidebar-img {
+    background-image: url("./images/jay-mantri-TFyi0QOx08c-unsplash.png");
+  }
 
-.sidebar-img2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("./images/westboundary-photography-chris-gill-lBL7rSRaNGs-unsplash.png");
-  background-position: center;
-  margin-top: 20px;
-  width: 350px;
-  height: 350px;
-  opacity: 0.9;
-  font-size: 1em;
-}
+  .sidebar-img2 {
+    background-image: url("./images/westboundary-photography-chris-gill-lBL7rSRaNGs-unsplash.png");
+    background-position: center;
+  }
 
-.desktop-sidebars {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-}
+  .sidebar a {
+    text-decoration: none;
+    color: black;
+    background-color: #9FA4C4;
+    padding: 10px;
+    opacity: 0.7;
+  }
+
+  .desktop-sidebars {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
  /* Styling classes javascript below*/
 
-.textpopup a {
-    display: block;
-    opacity: 1;
+  .opaque-text a {
+      display: block;
+      opacity: 1;
   }
 }
 
-.active + .answer {
-  display: inline;
-}
+  .open + .answer {
+    display: inline;
+   }

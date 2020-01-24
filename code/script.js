@@ -1,11 +1,11 @@
  // nedan skapar vi en funktion och namnger den (ex. toggle eller toggleDisplay)
 
 function toggle() {
-  this.classList.toggle("active");
+  this.classList.toggle("open");
 }
 
 function toggleDisplay() {
-  this.classList.toggle("textpopup");
+  this.classList.toggle("opaque-text");
 }
 
 // nedan tilldelas en händelse funktionen vi skapade ovan (ex. mouseover aktiverar klassen .class2 
@@ -18,3 +18,6 @@ document.getElementById("section4").onclick = toggle;
 
 document.getElementById("sidebar-img1").onmouseover = toggleDisplay;
 document.getElementById("sidebar-img1").onmouseout = toggleDisplay;
+
+document.getElementById("sidebar-img2").onmouseover = toggleDisplay;
+document.getElementById("sidebar-img2").onmouseout = toggleDisplay;
