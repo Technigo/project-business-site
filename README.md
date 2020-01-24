@@ -4,7 +4,10 @@ This is a business site for the Technigo course intro to javaScript.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Create a sign-up form, accordion and a hero header.  
+I used flexbox to lay out the components and Html for the user to fill in the form correct. 
+The accordion does toggle with getelementbyId.
+The hero header is a img set to cover as a background.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://silly-pike-315fd7.netlify.com/
