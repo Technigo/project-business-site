@@ -1,30 +1,112 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=New+Rocker|Roboto&display=swap" rel="stylesheet">
+  <title>Drummer Bootcamp</title>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+</head>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+<body>
+  <!-- video or image as a header is cool :) -->
+  <header>
+    <div class="video-container">
+      <video autoplay muted loop playsinline>
+        <source src="./videos/drummerVideo360.mp4" type="video/mp4" media="(max-width: 667px)">
+        <source src="./videos/" type="video/mp4" media="(min-width: 668px max-width:1024px)">
+        <source src="./videos/videoDrummer-1280.mp4" type="video/mp4" media="(min-width: 1024px)"> Your browser does not
+        support the video tag.
+      </video>
+      <div class="overlay-header">
+        <h1 class="h1-header">Drummer Bootcamp</h1>
+        <h2 class="h2-header">Become an animal with our help!</h2>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    </div>
+  </header>
+
+  <section class="info">
+    <p>Become a drummer in one week. We will learn you all the basic rock n' roll beats you need to know to start your
+      own band. Grab a pair of sticks and join us for a ride!</p>
+  </section>
+
+  <!-- Signup form -->
+  <div class="form-container">
+    <form action="http://httpbin.org/anything" method="post">
+      <h2>Drummer Bootcamp</h2>
+      <h3>Sign Up</h3>
+      <label>
+        First Name <br>
+        <input type="text" name="first-name" required>
+      </label>
+
+      <label>
+        Last Name <br>
+        <input type="text" name="last-name" required>
+      </label>
+
+      <label>
+        E-mail <br>
+        <input type="email" name="email" required>
+      </label>
+
+      <label>
+        Desired Bootcamp Week <br>
+        <select name="week" id="week" required>
+          <option value="22">w 22</option>
+          <option value="23">w 23</option>
+          <option value="26">w 26</option>
+        </select>
+      </label>
+
+      <div class="instrument">
+        <label>
+          Do you play another instrument? <br>
+          <input type="radio" name="instrument" value="yes">Yes<br>
+          <input type="radio" name="instrument" value="no">No<br>
+        </label>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+
+      <label>
+        If yes, what instrument? <br>
+        <input type="text" name="first-name">
+      </label>
+
+      <label>
+        <input type="checkbox" name="conditions" value="yes">
+        I accecpt the terms & conditions<br>
+      </label>
+      <button type="submit">Rock on!</button>
+    </form>
+  </div>
+
+  <div class="gif-container">
+    <div class="gif">
+      <img src="https://media.giphy.com/media/ONhLlW0mlQVlm/giphy.gif" alt="drummer with stick">
+    </div>
+  </div>
+
+  <!-- Accordion -->
+  <section class="accordion"></section>
+  <h1>FAQ</h1>
+
+  <div class="question" id="section1">Section 1</div>
+  <div class="answer">
+    <p>Lorem ipsum...</p>
+  </div>
+
+  <div class="question" id="section2">Section 2</div>
+  <div class="answer">
+    <p>Lorem ipsum...</p>
+  </div>
+  </section>
+  <!-- dont forget to link the javascript file here! -->
+
+
+
+</body>
+
 </html>
