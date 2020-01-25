@@ -1,7 +1,108 @@
+
+body {
+  margin: 0;
+  font-family: 'Rosario', sans-serif;
+  background: #e6ddde;
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+
+/*** HERO VIDEO ***/
+
+.video-container {
+  position: relative;
+}
+
+video {
+  height: 300px;
+  vertical-align: middle;
+  width: 100%;
+  object-fit: cover;
+}
+
+.tablet-video {
+  display: none;
+}
+
+.desktop-video {
+  display: none;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-paragraph {
+  display: none;
+  color: #fff;
+  font-size: 1rem;
+  margin: 40px;
+}
+
+.get-started {
+  background-color: #ffffff54;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 16px;
+  padding: 5px 20px;
+  display: inline-block;
+  text-align: center;
+  backdrop-filter: blur(15px);
+}
+
+/*** FAQ ACCORDION ***/
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
   /* some styling here */
+}
+
+/*** MEDIA QUERIES ***/
+
+@media (min-width: 668px) {
+  video {
+    height: 400px;
+  }
+
+  .mobile-video {
+    display: none;
+  }
+
+  .tablet-video {
+    display: inline;
+  }
+
+  .overlay-paragraph {
+    display: initial;
+  }
+}
+
+@media (min-width: 1025px) {
+  video {
+    height: 600px;
+  }
+
+  .tablet-video {
+    display: none;
+  }
+
+  .desktop-video {
+    display: inline;
+  }
 }
