@@ -11,6 +11,7 @@
 
 const question1 = document.getElementById("section1");
 const question2 = document.getElementById("section2");
+const question3 = document.getElementById("section3");
 
 // question1.onclick = function(){
 //   question1.classList.toggle('active');
@@ -19,41 +20,15 @@ const question2 = document.getElementById("section2");
 function banana(){
   question1.classList.toggle('active');
 }
+
 function banana2(){
   question2.classList.toggle('active');
 }
 
+function peter (){
+  question3.classList.toggle('active');
+}
+
 question1.addEventListener('click',banana);
 question2.addEventListener('click',banana2);
-
-
-// function
-
-// // question1.onclick = () => {
-// //   alert('test')
-// // }
-
-// const btn = document.getElementById("button")
-
-// // btn.onclick = () => {
-// //   alert('test')
-// // }
-
-// var acc = document.getElementsByClassName("accordion1");
-// var i;
-
-// for (i = 0; i < acc.length; i++) {
-//   acc[i].addEventListener("click", function() {
-//     /* Toggle between adding and removing the "active" class,
-//     to highlight the button that controls the panel */
-//     this.classList.toggle("active");
-
-//     /* Toggle between hiding and showing the active panel */
-//     var panel = this.nextElementSibling;
-//     if (panel.style.display === "block") {
-//       panel.style.display = "none";
-//     } else {
-//       panel.style.display = "block";
-//     }
-//   });
-// }
+question3.addEventListener('click',peter);
