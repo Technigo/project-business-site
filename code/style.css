@@ -42,13 +42,13 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .hero h1 {
   font-family: var(--prime-font);
   color: #fff;
-  font-size: 6vw;
+  font-size: 5vw;
 }
 
 .hero p {
   font-family: var(--prime-font);
   color: #fff;
-  font-size: 4vw;
+  font-size: 2vw;
 }
 
 .hero button {
@@ -69,8 +69,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .accordion > * {
@@ -78,22 +78,33 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   font-family: var(--prime-font);
 }
 
-.accordion > h1 {
+.faq > h1 {
+  text-align: center;
   padding: 3vw;
   color: var(--prime-color);
 }
 
 .question {
   display: flex;
-  width: 70vw;
+  width: 40vw;
   background-color: var(--second-color);
   border-bottom: 1px solid black;
   justify-content: space-between;
   align-items: center;
 }
 
+.question:nth-of-type(1) {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.answer:nth-of-type(10){
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 article p {
-  font-size: 4vw;
+  font-size: 1vw;
   padding: 8px;
 }
 
@@ -101,18 +112,65 @@ article i {
   margin-right: 4vh;
 }
 
-/* .rotate {
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-} */
+.question > i::after {
+  content: '\002B';
+}
+
+.active > i::after {
+  content: "\2212";
+}
 
 .answer {
   height: 0vw; /* The JS will append active class and then change the height */
   text-align: left;
   overflow-y: hidden; /* removes small scroll when answer is expanding */
-  width: 70vw;
+  width: 40vw;
   background-color: var(--prime-color);
+}
+
+.testimonials {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials * {
+  overflow-y: hidden;
+}
+
+.testimonials-card {
+  background-color: var(--prime-color);
+  width: 40vw;
+  padding: 1vw;
+  margin: 1vh;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.testimonials-card > span {
+  width: 30vw;
+}
+
+.testimonials-card > span > p {
+  text-align: right;
+}
+
+.testimonials-card > img {
+  width: 6vw;
+  height: 6vw;
+  border-radius: 100%;
+  border: 1px solid #000;
+}
+
+.testimonials > h1 {
+  text-align: center;
+  padding: 3vw;
+  color: var(--prime-color);
 }
 
 .sign-up {
@@ -131,7 +189,7 @@ article i {
 
 form {
   display: flex;
-  width: 70vw;
+  width: 40vw;
   flex-direction: column;
   font-family: var(--prime-font);
 }
@@ -198,12 +256,189 @@ font-family: 'Alata', sans-serif; */
   body {
   }
 
-   .flex-conatiner-small {
+  .flex-conatiner-small {
     display: flex;
     flex-direction: column;
   }
-  
 
+  .active + .answer {
+    /* some styling here */
+    height: 8vh;
+    transition: 0.2s ease-out;
+  }
+
+  .hero {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* add hero img */
+    background-image: url(img/social-media-4.jfif);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .hero-inner {
+  }
+
+  .hero h1 {
+    font-family: var(--prime-font);
+    color: #fff;
+    font-size: 6vw;
+  }
+
+  .hero p {
+    font-family: var(--prime-font);
+    color: #fff;
+    font-size: 4vw;
+  }
+
+  .hero button {
+    font-family: var(--prime-font);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid var(--second-color);
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+
+  .hero button:hover {
+    background-color: var(--second-color);
+  }
+
+  .accordion {
+    background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .accordion > * {
+    overflow-y: hidden;
+    font-family: var(--prime-font);
+  }
+
+  .accordion > h1 {
+    padding: 3vw;
+    color: var(--prime-color);
+  }
+
+  .question {
+    display: flex;
+    width: 70vw;
+    background-color: var(--second-color);
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .question > i::after {
+    content: '\002B';
+  }
+
+  .active > i::after {
+    content: "\2212";
+  }
+
+  article p {
+    font-size: 2vh;
+    padding: 8px;
+  }
+
+  article i {
+    margin-right: 4vh;
+  }
+
+  .answer {
+    height: 0vw; /* The JS will append active class and then change the height */
+    text-align: left;
+    overflow-y: hidden; /* removes small scroll when answer is expanding */
+    width: 70vw;
+    background-color: var(--prime-color);
+  }
+
+  .sign-up {
+    background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sign-up h1 {
+    font-family: var(--prime-font);
+    color: var(--prime-color);
+  }
+
+  form {
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+    font-family: var(--prime-font);
+  }
+
+  .form-field {
+    font-family: var(--prime-font);
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .form-check {
+    margin: 10px;
+    padding: 5px;
+  }
+
+  form label {
+    color: var(--prime-color);
+  }
+
+  form > button {
+    font-family: var(--prime-font);
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .display-block {
+    display: block;
+    text-align: center;
+  }
+
+  footer {
+    display: flex;
+    height: 10vh;
+    color: #000;
+    font-family: var(--prime-font);
+    justify-content: center;
+    align-items: center;
+  }
+
+  a:link {
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  a:active {
+    color: #000;
+    text-decoration: none;
+  }
+  
   .exclude-small {
     display: none;
   }
@@ -221,12 +456,231 @@ font-family: 'Alata', sans-serif; */
   body {
   }
 
-  .exclude-medium {
-    display: none;
+  .flex-conatiner-medium {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .active + .answer {
+    /* some styling here */
+    height: 10vh;
+    transition: 0.2s ease-out;
+  }
+
+  .hero {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* add hero img */
+    background-image: url(img/social-media-4.jfif);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .hero-inner {
+  }
+
+  .hero h1 {
+    font-family: var(--prime-font);
+    color: #fff;
+    font-size: 6vw;
+  }
+
+  .hero p {
+    font-family: var(--prime-font);
+    color: #fff;
+    font-size: 3vw;
+  }
+
+  .hero button {
+    font-family: var(--prime-font);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid var(--second-color);
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+
+  .hero button:hover {
+    background-color: var(--second-color);
+  }
+
+  .accordion {
+    background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .accordion > * {
+    overflow-y: hidden;
+    font-family: var(--prime-font);
+  }
+
+  .accordion > h1 {
+    padding: 3vw;
+    color: var(--prime-color);
+  }
+
+  .question {
+    display: flex;
+    width: 40vw;
+    background-color: var(--second-color);
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .question > i::after {
+    content: '\002B';
+  }
+
+  .active > i::after {
+    content: "\2212";
+  }
+
+  article p {
+    font-size: 2vh;
+    padding: 8px;
+  }
+
+  article i {
+    margin-right: 4vh;
+  }
+
+  .answer {
+    height: 0vw; /* The JS will append active class and then change the height */
+    text-align: left;
+    overflow-y: hidden; /* removes small scroll when answer is expanding */
+    width: 40vw;
+    background-color: var(--prime-color);
+  }
+
+  .testimonials {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonials-card {
+    background-color: var(--prime-color);
+    width: 40vw;
+    padding: 2vw;
+    margin: 1vh;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .testimonials-card > span {
+    width: 30vw;
+  }
+  
+  .testimonials-card > span > p {
+    text-align: right;
+  }
+
+  .testimonials-card > img {
+    width: 7vw;
+    height: 7vw;
+    border-radius: 100%;
+  }
+  
+  .testimonials > h1 {
+    text-align: center;
+    padding: 3vw;
+    color: var(--prime-color);
+  }
+
+  .sign-up {
+    background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sign-up h1 {
+    font-family: var(--prime-font);
+    color: var(--prime-color);
+  }
+
+  form {
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    font-family: var(--prime-font);
+  }
+
+  .form-field {
+    font-family: var(--prime-font);
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .form-check {
+    margin: 10px;
+    padding: 5px;
+  }
+
+  form label {
+    color: var(--prime-color);
+  }
+
+  form > button {
+    font-family: var(--prime-font);
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .display-block {
+    display: block;
+    text-align: center;
   }
 
   footer {
-    background-color: darkgreen;
+    display: flex;
+    height: 10vh;
+    color: #000;
+    font-family: var(--prime-font);
+    justify-content: center;
+    align-items: center;
+  }
+
+  a:link {
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  a:active {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .exclude-medium {
+    display: none;
   }
 
 }
@@ -237,8 +691,9 @@ font-family: 'Alata', sans-serif; */
   body {
   }
 
-  footer {
-    background-color: darkorange;
+  .flex-conatiner-large {
+    display: flex;
+    flex-direction: column;
   }
 
   .exclude-large {
