@@ -15,23 +15,51 @@ h1 {
 }
 
 h2 {
-  font-size: 4vw;
+  font-size: 3vw;
   margin: 0;
   color: white;
   opacity: 70%;
-
   font-weight: lighter;
 }
-
 h3 {
+  font-size: 5vw;
+  margin: 0;
+  color: #488286;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  letter-spacing: 1vw;
+  /* overflow: hidden; */
+  background: linear-gradient(90deg, #488286, #fff, #488286);
+  background-repeat: no-repeat;
+  /* background-size: 80%; */
+  /* animation: animate 4s linear infinite; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes animate {
+  0% {
+    background-position: -400%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+h4 {
   font-family: "Pacifico", cursive;
   margin: 1vw 0;
   white-space: nowrap;
   color: #ffffff;
 }
 
+.company-text p {
+  font-size: 1vw;
+}
+
 .video-wrapper {
   position: relative;
+  margin-bottom: 40px;
 }
 
 video {
@@ -50,6 +78,13 @@ video {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.company-text {
+  margin: auto;
+  width: 80%;
+  border: 4px dotted #223d3f;
+  padding: 10px 25px;
 }
 .container-signup-and-accordion {
   display: flex;
@@ -116,8 +151,8 @@ input:focus {
 }
 
 .accordion {
-  background: #457f77;
-  border: 2px solid #ffffff;
+  background: #457b7f;
+  box-shadow: 5px 10px #223d3f;
   padding: 5px;
   width: 30%;
   display: flex;
@@ -127,9 +162,10 @@ input:focus {
 }
 
 .question {
-  width: 90%;
+  width: 100%;
   height: auto;
   background: #223d3f;
+  margin-bottom: 5px;
 }
 
 ul {
@@ -142,10 +178,13 @@ ul {
   font-size: 1.5vw;
 }
 li {
-  width: 90%;
-  background: #305d4b;
+  background: #589c81;
   padding: 0;
-  margin: 10px;
+  margin: 5px 0;
+}
+
+li:nth-child(even) {
+  background: #609ca1;
 }
 @media (max-width: 600px) {
   .v-small {
@@ -176,6 +215,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 */
 .open {
   background: #223d3f;
+  margin: 0;
 }
 .open + ul {
   display: block;

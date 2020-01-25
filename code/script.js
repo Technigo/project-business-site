@@ -2,7 +2,9 @@
 // We haven't really talked about ´this´ yet, but we will... ;)
 // console.log(this) to see how it works
 const btnOne = document.getElementById("section-one");
+const btnTwo = document.getElementById("section-two");
 btnOne.onclick = toggle;
+btnTwo.onclick = toggle;
 
 function toggle() {
   this.classList.toggle("open");
