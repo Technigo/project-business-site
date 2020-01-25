@@ -12,6 +12,7 @@ html {
 body {
   height: 100%;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -81,7 +82,7 @@ header {
 .hero-content {
   flex: 0 1 auto;
   max-width: 40rem;
-  margin: 4rem;
+  margin: 3rem;
   color: wheat;
 }
 
@@ -112,7 +113,7 @@ header {
 .section-container {
   flex: 1 1 auto;
   max-width: 50rem;
-  margin: 4rem;
+  margin: 3rem;
 }
 
 .section-container h1 {
@@ -122,15 +123,36 @@ header {
 
 /* ––– FAQ ––– */
 
+.question {
+  position: relative;
+  padding: 1.5rem 2rem 1.5rem 0;
+  font-weight: 700;
+  cursor: pointer;
+}
 
+.question::after {
+  position: absolute;
+  top: 35%;
+  right: 10px;
+  content: url(img/plus.svg);
+  width: 14px;
+}
 
+.question:not(:first-of-type) {
+  border-top: 1px solid #e2e2e2;
+}
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+.answer {
+  display: none;
+  margin-bottom: .5rem;
+}
 
 .active+.answer {
-  /* some styling here */
+  display: inline-block;
+}
+
+.active.question::after {
+  content: url(img/minus.svg);
 }
 
 
@@ -151,7 +173,13 @@ footer {
 /* ––– Media queries ––– */
 /* ––– Tablet styles ––– */
 
-@media screen and (min-width: 668px) {}
+@media screen and (min-width: 668px) {
+
+  .hero-content,
+  .section-container {
+    margin: 4rem;
+  }
+}
 
 /* ––– Desktop styles ––– */
 
