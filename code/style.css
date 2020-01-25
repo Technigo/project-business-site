@@ -16,29 +16,43 @@ h1 {
 p {
   font-size: 30px;
   margin-bottom: 2px;
+  margin-top: 10px;
+  text-shadow: 1px 1px 2px darkblue, 0 0 25px black, 0 0 5px darkblue;
 }
 
 h3 {
-  font-size: 30px;
-  margin: 2px 0px;
+  font-size: 50px;
+  margin: 10px;
 }
 
 /*** HEADER ***/
 
 header {
-    color: green;
-    margin: 10px;
+    color: lightblue;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    text-align: center;
+    height: 600px;
   }
+.header-content {
+  margin-left: 10px;
+
+}
 
 .sign-up {
-  background: transparent;
+  background: lightblue;
   font-size: 30px;
-  color: green;
+  color: white;
+  position: relative;
+  left: 35%;
+  text-align: center;
   border-radius: 10%;
   margin-bottom: 20px;
+}
+.sign-up:hover {
+  background-color: darkblue;
 }
 
 /*** SIGN UP FORM ***/
@@ -50,15 +64,26 @@ form {
   align-items: center;
   flex-wrap: wrap;
   font-size: 30px;
-  color: blueviolet;
+  color: white;
+  height: 400px;
 }
 
 form button {
-  margin: 10px;
+  margin: 20px;
+  background: white;
+  font-size: 25px;
+  border: 2px solid;
+  color: lightblue;
+  border-radius: 10%;
+}
+
+.form button:hover {
+  background-color: darkblue;
 }
 
 input {
-  font-size: 20px;
+  font-size: 30px;
+  margin-bottom: 2px;
 }
 
 input:focus {
@@ -66,16 +91,23 @@ input:focus {
 }
 
 input:invalid {
-  border: 2px solid red;
+  border: 2px solid lightcoral;
+}
+
+select {
+  font-size: 20px;
 }
 
 /*** FAQ ***/
 
 .faq {
-  text-align: center;
-  background-color: lightgray;
-  color: black;
-  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  color:lightblue;
+  height: 400px;
 }
 
 .first-question {
@@ -88,8 +120,14 @@ input:invalid {
   padding: 10px;
 }
 
+.question {
+  font-size: 30px;
+  margin: 5px;
+}
+
 .answer {
   display: none;
+  font-size: 20px;
 }
 .active + .answer {
   display: block;
