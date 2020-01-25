@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="http://httpbin.org/anything" method="POST">
+    <h2>Contact me</h2>
+    <p>Interested in my services or need advice? Then please get in touch and I'll be glad to help.</p>
+
+    <h4>About you</h4>
+    <!-- the for and id need to have the same value to be connected to each other -->
+    <label>Full name:
+      <input type="text" name="name" id="name" required>
+    </label>
+
+    <label>Mobile number:
+      <input type="tel" name="phone" id="phone" placeholder="Optional">
+    </label>
+
+    <label>E-mail:
+      <input type="email" name="email" id="email" required>
+    </label>
+    <h4>Let's stay in touch</h4>
+    <p>Every few weeks, I send information about special events and other fun news. Would you like to receive this to
+      your
+      email, as well?:
+    </p>
+    <input type="radio" name="newsletters" id="newsletters" checked>Yes, please
+    <input type="radio" name="newsletters" id="noNewsletters"> No, thanks
+
+    <input type="checkbox" name="agree" id="agree" required>I agree to the <a href="url">Terms and Conditions</a> and
+    the <a href="url">Privacy Policy</a>.
+    <div class=""></div>
+
+    <input type="submit" name="submit" id="submit" value="Send">
+  </form>
+  <script src="script.js"></script>
+</body>
+
+</html>
