@@ -5,7 +5,73 @@
 a{
   color: gold;
 }
-
-input:invalid{
-  background-color:red;
+/* simple-form */
+.input-container{
+  margin-bottom: 15px;
+  max-width: 300px;
 }
+
+.input{
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  border-left: 3px solid;
+  transition: border-color 0.5s ease-out;
+}
+
+.input:optional{
+  border-left-color: #999;
+}
+
+.input:required{
+  border-left-color: palegreen;
+}
+
+.input:invalid{
+  border-left-color: salmon;
+}
+
+.input:required:focus:valid{
+  background: url("valid.svg") no-repeat 95% 50%;
+}
+
+.input:required:focus:invalid{
+  background: url("invalid.svg") no-repeat 95% 50%;
+}
+
+.radio-button-container{
+  display: block;
+  margin-bottom: 15px;
+  max-width: 300px;
+}
+
+.radio-button{
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  border-left: 3px solid #999; 
+  cursor: pointer;
+}
+
+.radio-button-container input{
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+.radio-button:checked{
+  color: #ccc8ce;
+  background: #675f6b;
+}
+.radio-button-input:checked{
+  color: #ccc8ce;
+  background: #675f6b;
+}
+
+
+
+
