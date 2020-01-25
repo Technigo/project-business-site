@@ -6,6 +6,8 @@ body {
   background-color: lightblue;
   color: white;
   margin: 0;
+  cursor: pointer;
+  
 }
 
 h1 {
@@ -17,7 +19,8 @@ p {
   font-size: 30px;
   margin-bottom: 2px;
   margin-top: 10px;
-  text-shadow: 1px 1px 2px darkblue, 0 0 25px black, 0 0 5px darkblue;
+  text-shadow: 1px 1px 2px white, 0 0 25px black, 0 0 5px white;
+  letter-spacing: 2px;
 }
 
 h3 {
@@ -82,13 +85,19 @@ form button {
 }
 
 input {
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 2px;
+  /*Added this to hide the invalid border styling*/
+  font-style: italic;
+  font-weight: lighter;
+  color: lightgray;
 }
 
 input:focus {
   box-shadow: darkmagenta;
-}
+  font-weight: bold;
+  color: lightblue;
+  }
 
 input:invalid {
   border: 2px solid lightcoral;
@@ -96,7 +105,9 @@ input:invalid {
 
 select {
   font-size: 20px;
+  margin-top: 10px;
 }
+
 
 /*** FAQ ***/
 
@@ -123,6 +134,7 @@ select {
 .question {
   font-size: 30px;
   margin: 5px;
+  cursor: cell;
 }
 
 .answer {
