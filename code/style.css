@@ -2,6 +2,97 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+body {
+  background-color: lightblue;
+  color: white;
+  margin: 0;
 }
+
+h1 {
+  font-size: 70px;
+  margin: 0;
+}
+
+p {
+  font-size: 30px;
+  margin-bottom: 2px;
+}
+
+h3 {
+  font-size: 30px;
+  margin: 2px 0px;
+}
+
+/*** HEADER ***/
+
+header {
+    color: green;
+    margin: 10px;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+  }
+
+.sign-up {
+  background: transparent;
+  font-size: 30px;
+  color: green;
+  border-radius: 10%;
+  margin-bottom: 20px;
+}
+
+/*** SIGN UP FORM ***/
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 30px;
+  color: blueviolet;
+}
+
+form button {
+  margin: 10px;
+}
+
+input {
+  font-size: 20px;
+}
+
+input:focus {
+  box-shadow: darkmagenta;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+/*** FAQ ***/
+
+.faq {
+  text-align: center;
+  background-color: lightgray;
+  color: black;
+  font-size: 20px;
+}
+
+.first-question {
+  background: darkgray;
+  padding: 10px;
+}
+
+.second-question {
+  background: darkgray;
+  padding: 10px;
+}
+
+.answer {
+  display: none;
+}
+.active + .answer {
+  display: block;
+}
+
+

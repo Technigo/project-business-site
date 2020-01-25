@@ -1,30 +1,58 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
+<html lang="en">
 
-    <!-- Signup form -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/code/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+  <title>FRIDAY QUIZ</title>
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+<body>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+  <header>
+    <div class="header-content">
+      <h1>Join Friday Quiz!</h1>
+      <h2>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum</h2>
+      <button id="signUp" class="sign-up">Sign up!</button>
+    </div>
+  </header>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+  <div class="form">
+    <form action="https://httpbin.org/anything" method="post">
+      <p>Your name:</p>
+      <input type="text" name="name" required>
+      <p>Email adress:</p>
+      <input type="email" name="email" required>
+      <p>What are you?</p>
+      <select name="type">
+        <option value="teacher">Teacher</option>
+        <option value="student">Student</option>
+        <option value="other">Other</option>
+      </select>
+      <button type="submit">Sign up!</button>
+    </form>
+  </div>
+
+  <section class="faq">
+    <h3>FAQ</h3>
+    <div class="question" id="section1">What can I win?</div>
+    <div class="answer">
+      <h4>Everything 😎</h4>
+    </div>
+
+    <div class="question" id="section2">What can I loose?</div>
+    <div class="answer">
+      <h4>Nothing 😋</h4>
+    </div>
+  </section>
+
+
+</body>
+
+
+<script src="/code/script.js"></script>
+
 </html>
