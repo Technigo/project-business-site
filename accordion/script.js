@@ -11,20 +11,5 @@ for (var i = 0; i < accordions.length; i++) {
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
     }
-
-    var arrowDown = document.getElementById("arrow-down")
-    if (content.style.maxHeight) {
-      arrowDown.style.display = "none";
-
-    } else {
-      arrowDown.style.display = "block";
-    }
-
-    var arrowUp = document.getElementById("arrow-up")
-    if (content.style.maxHeight) {
-      arrowUp.style.display = "block";
-    } else {
-      arrowUp.style.display = "none";
-    }
   }
 }

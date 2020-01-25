@@ -16,17 +16,16 @@ button.accordion{
   transition: background-color 0.2s linear;
 }
 
-#arrow-up{
-  float: right;
-  display: none;
+button.accordion::after{
+content: url(arrow-down.svg);
+float: right;
 }
 
-#arrow-down{
-  float: right;
+button.accordion.is-open::after{
+  content: url(arrow-up.svg);
 }
 
-
-button.accordion:hover{
+button.accordion:hover, button.accordion.is-open{
   background-color: cornflowerblue;
 }
 
