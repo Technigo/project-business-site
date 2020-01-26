@@ -12,39 +12,54 @@ html {
   background-color: rgb(253, 243, 227);
   /* border: 20px solid white; */
   margin: 0;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  height: 100%;
 }
 
-/* header {
+header {
   width: 100%;
   margin: 0;
   display: flex;
-} */
+} 
 
-img {
+/*img {
   width: 100%;
-}
+}*/
 
 .title {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/buns.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
   display: flex;
   position: relative;
+  width: 100%;
+  height: 70%;
 }
 
 .title-text {
   position: absolute;
   text-align: center;
   width: 100%;
+  color: white;
+  font-family: 'Bowlby One SC', cursive;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
 }
 
-.title img {
+/*.title img {
   position: absolute;
   left: 0;
   top: 0;
-}
+  width: 100%; 
 
 .title-text h1 {
   text-align: center;
@@ -55,21 +70,21 @@ img {
   color: white;
   font-size: 100px;
   font-weight: bold; 
-}
+}  */
 
 .main {
   display: flex;
   flex-direction: row;
   width: auto;
   justify-content: space-evenly;
-  margin: 30px 20px;
+  margin: 50px 20px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   width: 40%;
-  background-color: rgb(214, 191, 160);
+  background-color: rgb(201, 183, 160);
   border-radius: 20px;
   padding: 20px;
 }
@@ -82,13 +97,10 @@ img {
   border-radius: 20px;
 } */
 
-.form input:hover {
-  /* opacity: 0.6; */
-}
-
 .form ::placeholder{
   opacity: 0.4;
   color: gray;
+  font-style: italic;
 }
 
 input.submit {
@@ -96,7 +108,7 @@ input.submit {
 }
 
 input:focus {
-  background-color: rgb(146, 166, 170);
+  background-color: rgb(253, 243, 227);
 }
 
 /* input:invalid {
@@ -105,7 +117,6 @@ input:focus {
 
 label {
   display: block;
-  cursor: cell;
   padding: 10px;
 }
 
@@ -123,6 +134,7 @@ label {
 .checkBox input {
   padding: 5px;
   margin: 8px;
+  cursor: pointer;
 }
 
 .button {
@@ -195,6 +207,8 @@ footer {
   border-top: 3px solid rgb(255, 255, 255);
   font-size: 12px;
   padding: 10px;
+  width: 100%;
+  background-position: bottom;
 }
 
 footer a {
@@ -218,8 +232,12 @@ footer img {
     align-items: baseline;
   }
 
+  .title {
+    height: 50%;
+  }
+
   .title-text h1 {
-    font-size: 70px;
+    font-size: 80px;
   }
 
   .form {
