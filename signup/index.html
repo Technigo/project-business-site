@@ -36,7 +36,7 @@
       your email, as well?:
     </p>
     <div class="radio-button-container">
-      <input class="radio-button-input" type="radio" name="newsletters" id="newsletters" checked>
+      <input type="radio" name="newsletters" id="newsletters" checked>
       <label class="radio-button" for="newsletters">Yes, please</label>
     </div>
     <div class="radio-button-container">
@@ -44,11 +44,18 @@
       <label class="radio-button" for="noNewsletters">No, thanks</label>
     </div>
 
-    <input class="input" type="checkbox" name="agree" id="agree" required>I agree to the <a href="url">Terms and
-      Conditions</a> and
-    the <a href="url">Privacy Policy</a>.
+    <div class="checkbox-container">
+      <input class="input" type="checkbox" name="agree" id="agree" required>
+      <label for="agree"></label>
+      <p>I accept the <a href="url">terms and conditions</a> and the <a href="url">privacy
+          policy</a>.</p>
+    </div>
 
-    <input type="submit" name="submit" id="submit" value="Send">
+    <div class="submit-container">
+      <input type="submit" name="submit" id="submit">
+      <label for="submit">Submit</label>
+    </div>
+
   </form>
   <script src="script.js"></script>
 </body>
