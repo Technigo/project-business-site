@@ -1,0 +1,294 @@
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/* 
+.active + .answer {
+  
+} */
+
+.box {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+display: flex;
+flex-direction: column;
+box-sizing: border-box;
+
+
+}
+p{
+  font-family: 'Arapey', Georgia, serif;
+}
+header {
+  width: 100%;
+  background-color: #799575;
+  
+}
+header h1{
+  text-align: center;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 3px black;
+  
+  
+}
+.center {
+  width: 100%;
+  
+  height: 600px;
+  background-image: url("boats.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.center div{
+  width: 90%;
+}
+
+.center h1{
+  text-align: center;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 3px black;
+}
+.center p{
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+.center img {
+max-width: 80%;
+filter: grayscale(100%);
+
+}
+.center img:hover {
+  filter: none;
+}
+
+
+
+.accordion {
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(to bottom left, #006666 0%, #888 100%);
+
+  
+ 
+}
+.accordion h1{
+  text-align: center;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+}
+.container div{
+  width: 95%;
+  margin-left: 5px;
+  margin-right: 5px;
+  
+}
+.answer p{
+  text-align: center;
+}
+.answer {
+  width: 100%;
+  display: none;}
+
+
+.question {
+  width: 100%;
+  color: black;
+}
+
+
+
+/* Style the active class (and buttons on mouse-over) */
+.tog-btn {
+  width: 100%;
+  background-color: #222;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.tog-btn:hover{
+  background-color: #444;
+}
+
+.tog-btn:active{
+  background-color: #444;
+  color: black;
+}
+
+
+ 
+  .answer p{
+    padding: 15px;
+    margin: 0px;
+  } 
+  .answer {
+    background-color: #777;
+    color: black;
+    border: 1px solid black;
+    display: none;}
+
+.input {
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(to bottom left, #006666 0%, #888 100%);
+}
+.input h1{
+  text-align: center;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 0px 15px;
+  
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 90%;
+  padding: 15px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+label{
+  display: block;
+  margin: 10px 0px;
+  font-family: 'Arapey', Georgia, serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.sub-btn {
+  width: 100%;
+  height: 40px;
+  padding: 0px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  display: block;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: lightsteelblue;
+  border: 1 px solid black;
+  box-shadow: 0 8px #999;
+}
+
+.sub-btn:hover {background-color: steelblue}
+
+.sub-btn:active { 
+  background-color: steelblue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);}
+
+  .sub-btn:after{
+    background-color: steelblue;
+    box-shadow: 0 5px #666;
+  }
+
+
+
+/* Add a blue text color to links */
+.terms {
+  text-decoration: none;
+  color: black;
+  
+}
+
+
+footer {
+  width: 100%;
+  background-color: lightcoral;
+  background: url("sea-tenor.gif");
+  background-position: bottom;
+  background-size: 100%;
+   
+}
+footer h1{
+  color: white;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  text-shadow: 1px 1px 2px black;
+  text-align: center;
+}
+.active+div{
+  display: block;
+ 
+  }
+
+
+/* ---------För andra storlekar på skärm */
+
+@media all and (min-width: 567px){
+  .box{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.accordion{
+  width: 50%;
+}
+.input {
+  width: 50%;
+}
+}
+@media all and (min-width: 992px){
+
+  .box :nth-child(1) { order: 0; }
+  .box :nth-child(2) { order: 2; }
+  .box :nth-child(3) { order: 1; }
+  .box :nth-child(4) { order: 3; }
+  .box :nth-child(5) { order: 4; }
+
+  .center {
+    width: 40%;
+    height: 700px;
+    
+  }
+  .center :nth-child(1) { order: 0; }
+  .center :nth-child(2) { order: 1; }
+  .center :nth-child(3) { order: 2; }
+  .accordion{
+    width: 30%;
+  }
+  .input {
+    width: 30%;
+  }
+}
+@media all and (min-width: 1200px){
+  .box{
+    max-width: 1080px;
+  }
+  
+}
