@@ -13,6 +13,21 @@ body{
   /* overflow-x: hidden; */
 }
 
+h4{
+  color: #34b3a0;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1.5rem 0 1rem 0;
+}
+
+h2{
+  color: #34b3a0;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  margin: 1.5rem 0 1rem 0;
+}
+
 /*--- HEADER ---*/
 
 .v-header{
@@ -86,10 +101,11 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
+  width: 80vw;
 }
 
 section{
-  max-width: 960px;
   padding: 20px;
   text-align: justify;
 }
@@ -100,7 +116,8 @@ section{
 .grid-container{
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
+  justify-content: center;
+  align-items: start;
 }
 
 /*--- SIGNUP FORM ---*/
@@ -112,12 +129,16 @@ section{
 }
 
 a{
-  color: gold;
+  color: #34b3a0;
+}
+
+a:hover{
+  color: cornflowerblue;
 }
 
 form{
   max-width: 960px;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 form p{
@@ -145,11 +166,11 @@ form p{
 }
 
 .input:required{
-  border-left-color: palegreen;
+  border-left-color: #999;
 }
 
 .input:invalid{
-  border-left-color: salmon;
+  border-left-color: #999;
 }
 
 .input:focus{
@@ -158,7 +179,7 @@ form p{
 
 .input:required:focus:valid{
   background: url("valid.svg") no-repeat 95% 50%;
-  border-color: palegreen;
+  border-color: #34b3a0;
 }
 
 .input:required:focus:invalid{
@@ -189,13 +210,13 @@ form p{
 }
 
 .radio-button-container input:checked + label{
-  border-color: palegreen;
+  border-color: #34b3a0;
   background: url("valid.svg") no-repeat 95% 50%;
 }
 
 .radio-button-container label:hover{
-  background-color: palegreen;
-  border-color: palegreen;
+  background-color: #34b3a0;
+  border-color: #34b3a0;
 }
 
 .checkbox-container{
@@ -243,8 +264,8 @@ form p{
   display: block;
   width: 100%;
   padding: 12px;
-  background-color: rgba(152, 251, 152, 0.274);
-  border: 1px solid palegreen;
+  background-color: #333;
+  color: white;
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(153, 153, 153, 0.25);
@@ -257,21 +278,38 @@ form p{
 }
 
 .submit-container label:hover{
-  background-color: palegreen;
+  background-color: #34b3a0;
 }
 
 
 /*--- FAQ ---*/
 
-.container{
+.accordians-container{
   width: 80%;
   max-width: 600px;
-  margin: 50px auto;
+  margin: 1.5rem 15px;
+}
+
+.accordians-container h4{
+  margin: 0 0 1rem 0;
+}
+
+#firstButton{
+  border-radius: 4px 4px 0 0;
+}
+
+#lastButton{
+  border-radius: 0 0 4px 4px;
+  width: 100%;
+  background-color: #34b3a0;
+  border: none;
+  outline: none;
+  padding: 15px 0;
 }
 
 button.accordion{
   width: 100%;
-  background-color: coral;
+  background-color: #34b3a0;
   border: none;
   outline: none;
   text-align: left;
@@ -279,6 +317,7 @@ button.accordion{
   font-size: 18px;
   cursor: pointer;
   transition: background-color 0.2s linear;
+  color: white;
 }
 
 button.accordion::after{
@@ -296,8 +335,8 @@ button.accordion:hover, button.accordion.is-open{
 
 .accordion-content{
   padding: 0 20px;
-  border-left: 1px solid coral;
-  border-right: 1px solid coral;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-in-out;
