@@ -1,0 +1,240 @@
+/******* Body *******/
+body {
+  margin: 0;
+}
+
+/******* Header *******/
+header {
+  background-color: rgb(2, 31, 31);
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.header-content {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav a:link {
+  text-decoration: none;
+  color: rgb(1, 22, 22); 
+  font-size: 25px;
+  padding: 20px 20px;
+}
+
+nav a:visited {
+  color: rgb(2, 31, 31);
+}
+
+nav a:hover {
+  font-weight: bold;
+  color: teal;
+}
+
+.home {
+  align-self: flex-start;
+}
+
+h1 {
+  color: white;
+  
+}
+
+.video {
+  position: relative;
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-size: contain;
+}
+
+video {
+  display: block;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/******* Main *******/
+
+main {
+  background-color: rgb(2, 31, 31);
+  display: grid;
+  grid-template-columns: 10% 36% 8% 36% 10%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    ". item-a item-a item-a ."
+    ". item-b . item-c .";
+  justify-items: center;
+}
+
+/*______ Accordion Dogs ______*/
+
+.accordion-dog {
+  background-color: white;
+  border: 12px solid #fff;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  grid-area: item-a;
+  width: 80%; 
+}
+
+h2 {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.question {
+  width: 100%;
+  padding: 20px 0px;
+  background: teal;
+  text-align: center;
+  color: white;
+}
+
+.question:hover {
+  background: rgb(0, 68, 68);
+}
+
+.answer {
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  display: none;
+}
+
+.answer p {
+  padding: 10px;
+}
+
+.answer img {
+  height: auto;
+  width: 100%;
+}
+
+.active {
+  background: teal;
+}
+
+.active + .answer {
+  display: inherit;
+}
+
+/*______ Form ______*/
+
+.form-container {
+  background-color: teal;
+  border: 12px solid #fff;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  grid-area: item-b;
+  width: 100%;
+}
+
+.h3-form {
+  margin-left: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 20px;
+}
+
+button {
+  margin: 10px 20px 20px 20px
+} 
+
+input:valid {
+  background-color: rgb(64, 224, 176);
+}
+
+/*______ Accordion FAQ ______*/
+
+.accordion-faq {
+  background-color: white;
+  border: 12px solid #fff;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  grid-area: item-c;
+  width: 100%;
+}
+
+
+
+/******* Footer *******/
+
+footer {
+  background-color: rgb(1, 22, 22);
+  margin: 0;
+}
+
+footer p {
+  padding: 50px 20px 20px 20px;
+  margin: 0;
+  font-size: 20px;
+}
+
+footer p img {
+  width: 100px;
+  height: 50px
+}
+
+
+/******* Media Queries *******/
+
+@media (max-width: 667px) {
+  main {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      ". item-a ."
+      ". item-b ."
+      ". item-c .";
+  }
+
+  .accordion-dog {
+    width: 100%; 
+  }
+
+  .form-container {
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .accordion-dog {
+    width: 50%; 
+  }
+}
+
+@media (min-width: 1440px) {
+  .accordion-dog {
+    width: 40%; 
+  }
+}
