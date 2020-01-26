@@ -21,3 +21,9 @@ function toggle() {
 // const question1 =document.getElementById("section1")
 // const question2 =document.getElementById("section2")
 // const question3 =document.getElementById("section3")
+
+
+
+{/* <p id="demo" style="display:none">Hello JavaScript!</p>
+
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button> */}
