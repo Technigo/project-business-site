@@ -6,18 +6,18 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  line-height: 1.5;
 }
 
 body{
   color: #333;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .v-header{
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: white;
 }
 
@@ -49,7 +49,7 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(34, 84, 112, 0.85);
+  background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.85) ,rgba(34, 84, 112, 0.85));
   z-index: 1;
 }
 
@@ -73,16 +73,28 @@ body{
   color: white;
   font-size: 1.2rem;
   padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section{
+  max-width: 960px;
   padding: 20px;
   text-align: justify;
 }
 
-.second-section{
+footer{
   background: #333;
   color: white;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
 }
 
 @media(max-width: 960px){
