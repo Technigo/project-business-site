@@ -246,6 +246,7 @@ button[type=submit] {
   padding: 5px 20px;
   display: block;
   text-align: center;
+  cursor: pointer;
 }
 
 /*** FAQ ACCORDION ***/
@@ -265,6 +266,24 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   width: 97%;
   background: #e6c2c6;
   color: #fff;
+  cursor: pointer;
+  border-bottom: 1px solid #f5e3e7;
+}
+
+.question::after {
+  content: '+';
+  text-align: center;
+  float: right;
+  color: #fff;
+  width: 22px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding-bottom: 2px;
+}
+
+.question.active::after {
+  content: '×';
 }
 
 .answer {
