@@ -57,7 +57,7 @@ video {
 }
 
 .get-started {
-  background: #ffffff54;
+  background: #e6c2c654;
   color: #fff;
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
@@ -71,17 +71,26 @@ video {
   backdrop-filter: blur(15px);
 }
 
+/*** MAIN CONTAINER ***/
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px;
+}
+
 /*** SIGNUP FORM ***/
 
 .sign-up {
-  margin: 20px;
   background-color: #fff;
   padding: 40px;
+  margin-bottom: 20px;
 }
 
 input {
   /* display: block; */
-  width: 100%;
+  width: 97%;
   background: transparent;
   outline: none;
   border: none;
@@ -92,11 +101,12 @@ input {
   margin-bottom: 10px;
 }
 
-/* .radio-bttn {
-  display: flex;
-  flex-wrap: wrap;
+input::placeholder {
+  color: #e6ddde;
+  font-family: 'Rosario', sans-serif;
+  font-size: 0.7rem;
 }
- */
+
 label {
   color: #666666;
   font-size: 0.8rem;
@@ -244,8 +254,37 @@ button[type=submit] {
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+.accordion {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.question {
+  margin: 0;
+  padding: 10px;
+  width: 97%;
+  background: #e6c2c6;
+  color: #fff;
+}
+
+.answer {
+  margin: 0;
+  padding: 10px;
+  width: 97%;
+  background: #f5e3e7;
+  color: #666666;
+  font-size: 0.8rem;
+  display: none;
+}
+
+.answer a {
+  color: #e6a6ad;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .active + .answer {
-  /* some styling here */
+  display: block;
 }
 
 /*** MEDIA QUERIES ***/
@@ -289,5 +328,20 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
   .desktop-video {
     display: inline;
+  }
+
+  .main-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  }
+
+  .sign-up {
+    margin: 0;
+  }
+
+  .accordion {
+    margin: 0 20px 0 0;
   }
 }
