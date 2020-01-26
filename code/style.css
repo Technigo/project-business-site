@@ -2,6 +2,94 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+
+header {
+  height:200px;
+}
+
+.formulare {
+  text-align: center;
+  width: 100%;
+  border: solid black 2px;
+}
+
+input {
+  display: block;
+  box-shadow: rgb(128, 124, 124) 2px 2px;
+  border-radius: 60px;
+  
+}
+
+#radio {
+  display: inline;
+  box-shadow: none;
+}
+
+#check {
+  display: inline-block;
+  box-shadow: none;
+}
+
+form {
+  
+  display: inline-block;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.submit {
+  width:100%;
+  background: rgb(233, 176, 255);
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.question {
+  background: rgba(180, 32, 185, 0.507);
+  color: white;
+  border: rgb(241, 230, 230) solid 1px;
+  height: 40px;
+  /* transition: 0.4s; */
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10px;
+}
+ /* Hidden by default, and will show by using Javascript  */
+.answer {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+
 .active + .answer {
   /* some styling here */
+  display: block;
+  
+}
+
+
+
+@media (min-width:667px) {
+.flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.accordion {
+  width: 45%;
+
+}
+
+.formulare {
+  width: 45%;
+}
+
+}
+
+@media (max-width:1020px) {
+
 }

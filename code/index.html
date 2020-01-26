@@ -4,27 +4,68 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css">
   </head>
+  
   <body>
     <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
+<header></header>
+    
+   <div class="flex">
+     <div class=formulare>
+    <form action="http://httpbin.org/anything" method="POST">
+      <label>Name
+        <input type="text" name="username" required>
+      </label>
+      <label>Email address 
+        <input type="email" name="user-email" required>
+      </label>
+      <label>Password
+        <input type="password" name="user-password" required>
+      </label>
+      <p>Would you like our awesome newsletter?</p>
+      <label>Yes
+      <input id="radio" type="radio" name="radio-answer" value="ja">
+      </label>
+      <label>No
+      <input id="radio" type="radio" name="radio-answer" value="nej">
+      </label>
+      <p>What are you most intrested in?</p>
+      <label>Travel
+      <input id="check" type="checkbox" value="travel" name="checkbox-question">
+    </label>
+    <label>Beauty
+    <input id="check" type="checkbox" value="beauty" name="checkbox-question">
+    </label> 
+      <label>Fashion
+      <input id="check" type="checkbox" value="fashion" name="checkbox-question">
+    </label>
+    <input class="submit" type="submit" value="send">
+    </form>
+  </div>
 
     <section class="accordion">
       <!-- Accordion -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">Section 1 </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing 
+          elit. Ut, adipisci.</p>
       </div>
 
       <div class="question" id="section2">Section 2</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
+
+      <div class="question" id="section3">Section 3</div>
+      <div class="answer">
+        <p>lorem ipsum...</p> 
+      </div>
     </section>
+  </div class> 
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
   </body>
 </html>
