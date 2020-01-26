@@ -1,11 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 *{
   text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+::placeholder{
+  font-family: 'Roboto', sans-serif;
+  color: black;
 }
 
 a{
   color: gold;
 }
-/* simple-form */
+
+form p{
+  margin: 0;
+  margin-bottom: 6px;
+}
+
 .input-container{
   margin-bottom: 15px;
   max-width: 300px;
@@ -82,17 +96,13 @@ a{
 .checkbox-container{
   display: inline-flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin: 15px 0 30px 0;
 }
 
 .checkbox-container input{
   position: absolute;
   visibility: hidden;
   display: none;
-}
-
-.checkbox-container label{
-  margin-top: -5px;;
 }
 
 .checkbox-container label::before{
@@ -131,6 +141,7 @@ a{
   border: 1px solid palegreen;
   border-radius: 4px;
   cursor: pointer;
+  box-shadow: 0 5px 5px rgba(153, 153, 153, 0.25);
 }
 
 .submit-container input{
