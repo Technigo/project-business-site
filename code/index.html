@@ -10,41 +10,48 @@
 
 <body>
   <!-- video or image as a header is cool :) -->
-  <header class="hero">
-    <h1>The potters place</h1>
-    <h3>Lets get our hands dirty</h3>
+  <header>
+    <div class="hero">
+      <h1>The potters place</h1>
+      <h3>- Lets get our hands dirty -</h3>
+    </div>
   </header>
 
   <main>
 
     <!-- Signup form -->
     <section class="signup-form">
+      <h3>Sign up for class</h3>
       <form action="https://httpbin.org/anything" method="post">
-        <label name="name">Name</label>
-        <input type="text" name="name" required>
-        </label>
 
-        <label name="adress">Adress
-          <input type="text" name="name" required>
-        </label>
+        <div class="container">
+          <label name="name">
+            <input type="text" name="name" value="Name" required>
+          </label>
 
-        <label name="password">Password
-          <input type="password" name="password" required>
-        </label>
+          <label name="adress">
+            <input type="text" name="name" value="Adress" required>
+          </label>
 
+          <label name="password">
+            <input type="password" name="password" required minlength="8">
+          </label>
+        </div>
 
-        <label class="container">Man
-          <input type="radio" checked="checked" name="radio">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Woman
-          <input type="radio" name="radio">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Other
-          <input type="radio" name="radio">
-          <span class="checkmark"></span>
-        </label>
+        <div>
+          <label class="container">Man
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Woman
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Other
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+        </div>
 
         <label class="container">
           <input type="checkbox" checked="checked" required>
@@ -60,14 +67,14 @@
       <!-- Accordion / Toggle-->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">How much does it cost?</div>
+      <div class="question" id="section1">How much does it clothes? </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Lorem ipsum... </p>
       </div>
 
-      <div class="question" id="section2">Should I wear special clothes?</div>
+      <div class="question" id="section2">Should I wear special clothes? </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Lorem ipsum... </p>
       </div>
     </section>
 
