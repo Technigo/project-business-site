@@ -11,6 +11,14 @@ h1 {
   font-size: 2rem;
 }
 
+h2 {
+  color: #e6c2c6;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
 /*** HERO VIDEO ***/
 
 .video-container {
@@ -49,7 +57,7 @@ video {
 }
 
 .get-started {
-  background-color: #ffffff54;
+  background: #ffffff54;
   color: #fff;
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
@@ -61,6 +69,173 @@ video {
   display: inline-block;
   text-align: center;
   backdrop-filter: blur(15px);
+}
+
+/*** SIGNUP FORM ***/
+
+.sign-up {
+  margin: 20px;
+  background-color: #fff;
+  padding: 40px;
+}
+
+input {
+  /* display: block; */
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f5e3e7;
+  font-size: 1rem;
+  color: #000;
+  padding: 10px 0 10px 10px;
+  margin-bottom: 10px;
+}
+
+/* .radio-bttn {
+  display: flex;
+  flex-wrap: wrap;
+}
+ */
+label {
+  color: #666666;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.select-containers {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+fieldset {
+  border: 1px solid #f5e3e7;
+  width: 100%;
+}
+
+legend {
+  color: #666666;
+  font-size: 0.8rem;
+}
+
+input[type=checkbox], input[type=radio] {
+  position: relative;
+  width: 1em;
+  margin: 0 0 0 5px;
+}
+
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.radio-bttn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background: #e6c2c6;
+  border-radius: 50%;
+}
+
+.radio-bttn:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .radio-bttn:after {
+  display: block;
+}
+
+.radio-container .radio-bttn:after {
+  top: 5px;
+  left: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-bttn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background: #e6c2c6;
+}
+
+.checkbox-bttn:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkbox-bttn:after {
+  display: block;
+}
+
+.checkbox-container .checkbox-bttn:after {
+  top: 1px;
+  left: 4px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(40deg);
+}
+
+/* .radio-bttn p, .checkbox p {
+  font-size: 0.8rem;
+  margin: 0 5px 5px 5px;
+} */
+
+/* button {
+  margin: 10px;
+} */
+
+button[type=submit] {
+  background: #e6c2c6;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 30px auto 0 auto;
+  padding: 5px 20px;
+  display: block;
+  text-align: center;
 }
 
 /*** FAQ ACCORDION ***/
@@ -91,6 +266,15 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   .overlay-paragraph {
     display: initial;
   }
+
+  .select-containers {
+    justify-content: space-between;
+  }
+  
+  fieldset {
+    border: 1px solid #f5e3e7;
+    width: 40%;
+    flex-grow: 1;
 }
 
 @media (min-width: 1025px) {
