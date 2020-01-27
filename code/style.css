@@ -2,51 +2,143 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+body {
+  margin: 0px;
+  background-color: ghostwhite;
+  font-family: Arial;
+  color:  rgb(87, 86, 86);
+}
+
 
 header {
-  height:200px;
+  height:100%;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+  
+}
+
+ header h1{
+    position: absolute;
+     top:20px;
+     left:20px;
+     z-index:1;
+     color: rgba(255, 255, 255, 0.774);
+     margin: auto;
+   }
+
+
+video {
+  position: inherit;;
+  right: 0px;
+  bottom: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .formulare {
   text-align: center;
-  width: 100%;
-  border: solid black 2px;
+  width: 90%;
+  margin: auto;
+  background-color: gainsboro;
+  
+}
+
+.formulare h3 {
+  margin: 20px;
+  color: rgb(156, 156, 156);
+  
+  font-weight: normal;
+}
+
+.formulare p {
+  margin: 20px auto 0px auto;
+  color: rgb(61, 60, 60);
+}
+
+label {
+  font-size: 12px;
 }
 
 input {
   display: block;
-  box-shadow: rgb(128, 124, 124) 2px 2px;
-  border-radius: 60px;
+  border: rgb(119, 116, 116) solid 1px;
+  background: transparent;
+  outline: none;
+  line-height: 1.8em;
+  margin: 10px auto;
+  font-size: 15px;
+  /* font-family: 'Playfair Display', serif; */
+  font-family: 'Roboto Mono', monospace;
+  
   
 }
 
-#radio {
-  display: inline;
-  box-shadow: none;
+::placeholder {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  color: rgb(87, 86, 86);
+  text-align: center;
 }
 
-#check {
+
+
+#check, 
+#radio {
   display: inline-block;
   box-shadow: none;
+  
 }
 
 form {
-  
   display: inline-block;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 
 .submit {
   width:100%;
-  background: rgb(233, 176, 255);
+  background: rgb(255, 162, 55);
   margin: 20px 0;
   padding: 10px;
 }
 
+.submit:hover {
+  background: mediumpurple;
+}
+
+.accordion {
+  background-color: gainsboro;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.accordion h1 {
+  text-align: center;
+   margin: 20px 0 0 0;
+}
+
+.accordion a {
+  color: gray;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 0 15px;
+  display: block;
+  text-align: center;
+}
+
+.accordion a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
 .question {
-  background: rgba(180, 32, 185, 0.507);
-  color: white;
+  background: mediumpurple;
+  color: rgb(71, 67, 67);
   border: rgb(241, 230, 230) solid 1px;
   height: 40px;
   /* transition: 0.4s; */
@@ -54,21 +146,78 @@ form {
   cursor: pointer;
   text-align: center;
   margin-top: 10px;
+  width: 90%;
+  margin: 10px auto;
+  padding-top: 15px;
+  
 }
+
+
+
+.question:hover {
+  background: rgb(255, 162, 55);
+}
+
  /* Hidden by default, and will show by using Javascript  */
 .answer {
   padding: 0 18px;
-  background-color: white;
-  display: none;
+  background-color: gainsboro;
+  /* display: none; */
   overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  
+
 }
+
 
 
 .active + .answer {
   /* some styling here */
   display: block;
+  width: 90%;
+  /* margin: auto; */
+  padding: 0 18px;
+  max-height: 150px;
+  
   
 }
+
+footer {
+  height: 100px;
+  font-family: Arial;
+  font-weight: normal;
+  margin: 20px 0 0 0;
+  
+}
+
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+footer a:hover {
+  cursor: pointer;
+  color: darkgray
+}
+
+footer a:focus {
+  color: blueviolet;
+  text-decoration: underline;
+}
+
+
+
+
+
+
 
 
 
@@ -79,17 +228,87 @@ form {
   justify-content: space-evenly;
 }
 
+header h1 {
+  font-size: 50px;
+}
+
+.question {
+  padding: 15px 0;
+}
+
 .accordion {
   width: 45%;
-
+  margin: 0 auto;
 }
 
 .formulare {
   width: 45%;
 }
 
+footer {
+  height: 300px;
 }
 
-@media (max-width:1020px) {
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+footer a {
+  text-align: center;
+  margin: 40% 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.pic-one {
+  background-image: url('akryl.jpg');
+  width: 30%;
+  height: 200px;
+  border-radius: 100%;
+  margin: auto;
+  background-size: cover;
+}
+
+.pic-two {
+  background-image: url('oil.jpg');
+  width: 30%;
+  height: 200px;
+  border-radius: 100%;
+  margin: auto;
+  background-size: cover;
+}
+
+.pic-three {
+  background-image: url('water.jpg');
+  width: 30%;
+  height: 200px;
+  border-radius: 100%;
+  margin: auto;
+  background-size: cover;
+}
+
+
+
+}
+
+@media (min-width:1020px) {
+
+  header {
+    height:500px;
+    
+    
+  }
+
+  header h1 {
+    font-size: 70px;
+  }
 
 }
