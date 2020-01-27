@@ -9,15 +9,34 @@
 </head>
 
 <body>
-  <!-- video or image as a header is cool :) -->
-  <div>
-    <h1>TESTAR</h1>
-  </div>
-  <video controls autoplay>
-    <source src="Video1.mp4" type="video/mp4">
-    <source src="Video1.webm" type="video/webm">
-    <p>This browser doesn't support video...</p>
-  </video>
+  <header>
+    <div>
+      <h1 id="Slogan">Skip Plastic, Be Fantastic!</h1>
+    </div>
+    <video controls autoplay>
+      <source src="Video1.mp4" type="video/mp4">
+      <source src="Video1.webm" type="video/webm">
+      <p>This browser doesn't support video...</p>
+    </video>
+  </header>
+
+  <form action="http://httpbin.org/anything" method="POST">
+    <label>Namn
+      <input type="name" name="message" required></label>
+    <label>
+      E-mail
+      <input type="email" name="email" required>
+    </label>
+    <label> Betyg
+      <select name="Scrollmeny">
+        <option value="1">Dåligt</option>
+        <option value="2">OK</option>
+        <option value="3">Mycket bra</option>
+    </label>
+    </select>
+    <button type="submit">Skicka svar</button>
+  </form>
+
   <!-- Signup form -->
 
   <section class="accordion">
@@ -34,7 +53,7 @@
       <p>Lorem ipsum...</p>
     </div>
   </section>
-  <!-- dont forget to link the javascript file here! -->
+  <script src="script.js"></script> <!-- dont forget to link the javascript file here! -->
 </body>
 
 </html>
