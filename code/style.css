@@ -9,28 +9,68 @@ div {
 }
 
 .navbar {
-  background-color: rgb(66, 64, 65);
   position: relative;
   width: 100%;
+  height: 60px;
   z-index: 1000;
-  background-color: #0d0d0d;
+  background-color: #37475a;
   overflow: hidden;
 }
 
 .fullvideo-container {
+  display: inline-block;
   color: white;
   position: relative;
   overflow: hidden;
 }
 
 .fullvideo-content {
-  z-index: 5;
+  z-index: 1;
   position: relative;
   padding: 60px 0;
 }
 
 .fullvideo-textbox {
+  position: relative;
+  align-content: center;
+  z-index: 1;
+}
+
+.header-text {
+  font-size: 50px;
   text-align: center;
+  color: white;
+}
+
+.base-text {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+.info-text {
+  font-size: 14px;
+  text-align: center;
+  color: white;
+}
+
+.collab-text{
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+.info.logo {
+  list-style: none;
+  padding: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+img {
+  width: 50px;
+  height: 50px;
 }
 
 video {
@@ -40,8 +80,8 @@ video {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 3;
+  height: 90%;
+  z-index: 0;
   overflow: hidden;
   object-fit: cover;
   object-position: center center;
@@ -50,6 +90,7 @@ video {
 /* Signup form style */
 
 .signup-form {
+  margin-top: 20%;
   background-color:rgb(120, 137, 113);
   width: 350px;
   height: 400px;
@@ -60,19 +101,24 @@ video {
 #signin-title {
 padding-top: 20px;
 text-align: center;
-font-size: 20px
+font-size: 20px;
+color: rgb(29, 45, 34);
 }
 
 .signup-form input {
   display: relative;
   font-size: 15px;
   widt: 30%;
-  background: rgb(120, 137, 113);
-  Border: 1px solid black;
+  background: rgb(157, 197, 168);
+  Border: none;
   border-radius: 25px;
   padding: 20px;
   width: 200px;
   height: 3px;
+}
+
+.signup-form input:hover {
+  box-shadow: 0 1px 10px;
 }
 
 .signup-form label {
@@ -82,8 +128,9 @@ font-size: 20px
 }
 
 ::placeholder {
-  color: rgb(0, 0, 0);
+  color: rgb(127, 167, 137);
   font-style: italic;
+  font-size: 11px;
 }
 
 .container-green {
@@ -102,32 +149,58 @@ font-size: 20px
 .btn-text {
   padding-bottom: 5px;
   font-size: 15px;
+  color: rgb(29, 45, 34);
 }
 
 #signupbtn:hover {
 box-shadow: 0 5px 15px;
 }
 
+/* FAQ style */
 
-.footer {
-  height: 45px;
+.accordion-container {
+  margin-top: 20%;
+  background-color: rgb(82, 82, 215);
+  width: 350px;
+  height: 400px;
+  margin-bottom: 30%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#question-title {
+ padding-top: 20px;
+ text-align: center;
+ font-size: 20px
+}
+
+.question-panel {
   text-align: center;
-  background-color: rgb(29, 45, 34);
-  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.answer {
+  display: none;
 }
 
 
-
-
-
-
+.active + .answer {
+  display: block;
+  background-color: cornflowerblue;
+}
 
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+
+/* Footer style */
+
+.footer {
+  height: 45px;
+  text-align: center;
+  background-color: rgb(29, 45, 34);
+  margin-bottom: 0;
 }
 
