@@ -1,7 +1,80 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+.hero-image {
+  background-image: url("flag-america-usa.gif");
+  background-color: white;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 42%;
+  position: relative;
+  margin: 50px 5px;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px #BF0A30;
+}
+/*justify center?*/
+.main {
+  display: flex;
+  justify-content: center;
+}
+.accordion {
+  display: block;
+  background-color:  #1d4f8b;
+  color: white;
+  align-self: center;
+  width: 60%;
+  text-align: center;
+  font-size: 140%;
+  box-shadow: 10px 10px #2c71c56e;
+  
+}
+.question {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding: 15px 15px 15px 15px;
+}
+
+.active {
+  display: block;
+  margin: 30px 30px 0px 30px;
+  background-color: white;
+  color: #1d4f8b;
+  padding: 15px 15px 15px 15px;
+}
 
 .active + .answer {
-  /* some styling here */
+  display: block;
+  margin: 0px 30px 30px 30px;
+  background-color: white;
+  color: #1d4f8b;
+  padding: 0px 15px 15px 15px;
+  font-size: 80%
+}
+
+.active + p {
+  border-block-color: #1d1d1d;
+}
+.boxTitle {
+  margin: 40px 0px;
+}
+.answer {
+  display: none;
+}
+
+
+@media only screen 
+and (max-width: 600px) {
+.hero-image {
+  background-size: 100%;
+  margin: 0px;
+}
+.hero-text {
+  font-size: 80%;
+}
 }
