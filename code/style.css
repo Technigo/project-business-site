@@ -19,6 +19,7 @@ body{
   background:#cc0000;
 }
 
+/* TOP THINGS */
   header{
     background: #fedfdd;
     position: fixed;
@@ -57,22 +58,33 @@ body{
     border-radius: 16px;
     font-size: 16px;
     border: none;
+    cursor: pointer;
   }
+
+  /********** FORM ************/
 
   .main-content{
     margin-top: 46px;
     display:flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .order-form{
-    width: 75%;
+    width: 40%;
+    flex-grow: 1;
     border-color: #cc0000;
     border-style: solid;
     border-width: 5px;
     border-radius: 20px;
-    
     padding: 20px;
+  }
+
+  .order-form h1{
+    font-size: 40px;
+    color: #fedfdd;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
 label{
@@ -91,6 +103,64 @@ label{
   color: #cc0000;
 }
   
+
+/********** FAQ ************/
+
+.accordion{
+  width: 40%;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.accordion h1{
+  font-size: 40px;
+  color: #fedfdd;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.faq-content {
+  display: block;
+  margin-bottom: 20px;
+  background: #fedfdd;
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 20px;
+}
+
+.question{
+  cursor: pointer;
+
+}
+
+.answer {
+  display: none;
+  margin: 20px 0 20px 0;
+  font-style: italic;
+
+}  
+
 .active + .answer {
-  /* some styling here */
+display: block;
+}
+
+footer{
+  background-image: url(images/footer-img.png);
+  height: 138px;
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+/***** MEDIA QUERIES ******/
+
+@media (min-width: 667px) {
+
+
+}
+
+@media (min-width: 1025px) {
+
+  
 }
