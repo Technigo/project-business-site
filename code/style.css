@@ -50,9 +50,9 @@ video {
 
 .formulare h3 {
   margin: 20px;
-  color: rgb(156, 156, 156);
-  
-  font-weight: normal;
+  /* color: rgb(156, 156, 156); */
+  color: rgb(87, 86, 86);
+  font-weight: bold;
 }
 
 .formulare p {
@@ -165,12 +165,16 @@ form {
   /* display: none; */
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.5s ease-out;
-  
-
+  transition: max-height 0.5s ease-in-out;
 }
 
-
+/* .question:after {
+  content: '\02795';
+  font-size: 13px;
+  color: #777777;
+  float: right;
+  margin-right: 10px;
+} */
 
 .active + .answer {
   /* some styling here */
@@ -196,13 +200,15 @@ footer {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
+  
 }
 
 footer a {
-  color: black;
+  color: rgb(105, 102, 102);
   text-decoration: none;
 }
 
+.bottom a:hover,
 footer a:hover {
   cursor: pointer;
   color: darkgray
@@ -211,6 +217,19 @@ footer a:hover {
 footer a:focus {
   color: blueviolet;
   text-decoration: underline;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  background: orange;
+  margin-top: 20px;
+}
+
+.bottom a {
+  margin: 16px 16px 5px 0;
+  font-size: 25px;
+  color: gray;
 }
 
 
@@ -246,12 +265,13 @@ header h1 {
 }
 
 footer {
-  height: 300px;
+  height: 150px;
 }
 
 .footer-flex {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
 }
 
 footer a {
@@ -270,32 +290,25 @@ footer a:hover {
 
 .pic-one {
   background-image: url('akryl.jpg');
-  width: 30%;
-  height: 200px;
-  border-radius: 100%;
-  margin: auto;
-  background-size: cover;
 }
 
 .pic-two {
   background-image: url('oil.jpg');
-  width: 30%;
-  height: 200px;
-  border-radius: 100%;
-  margin: auto;
-  background-size: cover;
 }
 
 .pic-three {
-  background-image: url('water.jpg');
+  background-image: url('water.jpg'); 
+}
+
+.pic-one,
+.pic-two,
+.pic-three {
   width: 30%;
-  height: 200px;
-  border-radius: 100%;
+  height: 90%;
+  border-radius: 50%;
   margin: auto;
   background-size: cover;
 }
-
-
 
 }
 
@@ -310,5 +323,20 @@ footer a:hover {
   header h1 {
     font-size: 70px;
   }
+
+/* .pic-one,
+.pic-two,
+.pic-three { */
+  
+  footer {
+   height: 200px;
+  }
+
+  .pic-one,
+.pic-two,
+.pic-three {
+  width: 20%;
+  height: 70%;
+}
 
 }
