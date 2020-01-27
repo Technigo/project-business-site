@@ -91,6 +91,12 @@ label {
   margin: 5px;
 }
 
+.textArea input:required:valid {
+  background-image: url('img/valid.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
 .choice input {
   margin: 5px;
   margin: 8px
@@ -163,6 +169,10 @@ label {
   transition: transform 0.4s ease-in-out;
 }
 
+.question:nth-child(4) {
+  background-color: rgb(225, 226, 218);
+}
+´
 .question::after {
   content: '\25be';
   float: right;
@@ -179,13 +189,6 @@ label {
   overflow: hidden;
   transition: max-height 0.4s ease-in-out;
 }
-
-/* .answer::after {
-  padding: 0 18px;
-  max-height: 150px;
-  overflow: hidden;
-  transition: max-height 0.4s ease-out;
-} */
 
 .active + .answer {
   display: block;
