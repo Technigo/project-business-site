@@ -140,8 +140,12 @@ h2 {
   margin: 0;
   width: 100%;
   list-style: none;
-  display: none;
+  /* display: none; */
   color: rgb(192, 67, 0);
+  visibility: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 2s ease-in-out;
 }
 
 .answer p {
@@ -158,14 +162,18 @@ h2 {
 }
 
 .active + .answer {
-  display: inherit;
+  visibility: visible;
+  /* display: inherit; */
+  max-height: 1000px;
+  opacity: 1;
 }
 
 /*______ Form ______*/
 
 .form-container {
-  border: 12px solid #F78C51;
-  border-radius: 8px;
+  border-top: 2px solid #F78C51;
+  border-left: 2px solid #F78C51;
+  /* border-radius: 8px; */
   margin-top: 20px;
   margin-bottom: 40px;
   grid-area: item-b;
@@ -348,9 +356,9 @@ input:valid {
 /*______ Accordion FAQ ______*/
 
 .accordion-faq {
-  /* background-color: white; */
-  border: 12px solid #F78C51;
-  border-radius: 8px;
+  border-top: 2px solid #F78C51;
+  border-left: 2px solid #F78C51;
+  /* border-radius: 8px; */
   margin-top: 20px;
   margin-bottom: 40px;
   grid-area: item-c;
@@ -361,7 +369,6 @@ input:valid {
   padding-left: 20px;
   max-width: 100%;
   padding: 20px 20px;
-  /* background: teal; */
   color: rgb(192, 67, 0);
   font-weight: bold;
 }
@@ -374,7 +381,6 @@ input:valid {
 /******* Footer *******/
 
 footer {
-  /* background-color: rgb(1, 22, 22); */
   margin: 0;
 }
 
@@ -447,7 +453,7 @@ footer p img {
   }
 
  .formform-container {
-    max-width: 100%;
+    max-width: 90%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -458,20 +464,12 @@ footer p img {
       "item-4";
     justify-items: start;
   }
-
-  .radiobutton-div {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 @media (min-width: 1024px) {
   .accordion-dog {
     width: 50%; 
   }
-
-  
-
 }
 
 @media (min-width: 1440px) {
