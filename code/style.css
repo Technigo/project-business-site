@@ -2,21 +2,14 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-  display: block;
-  transition: transform 0.3s ease-in-out;
-  padding: 0 18px;
-  background-color: white;
-  margin: 0px 15px 15px 15px;
-  text-align: left;
-}
+
+
+
 
 html {
   color: rgba(25, 34, 26, 0.651);
   font-family: 'Nanum Myeongjo', serif;
   background-color: rgb(253, 243, 227);
-  /* border: 20px solid white; */
   margin: 0;
   height: 100%;
   overflow-x: hidden;
@@ -32,10 +25,6 @@ header {
   margin: 0;
   display: flex;
 } 
-
-/*img {
-  width: 100%;
-}*/
 
 .title {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/buns.jpeg");
@@ -61,23 +50,6 @@ header {
   font-size: 80px;
 }
 
-/*.title img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%; 
-
-.title-text h1 {
-  text-align: center;
-  align-content: center;
-  padding: 20px;
-  width: 100%;
-  font-family: 'Bowlby One SC', cursive;
-  color: white;
-  font-size: 100px;
-  font-weight: bold; 
-}  */
-
 .main {
   display: flex;
   flex-direction: row;
@@ -95,14 +67,6 @@ header {
   padding: 20px;
 }
 
-/* .form input {
-  width: 150px;
-  height: 25px;
-  border: 2px solid beige;
-  margin: 5px;
-  border-radius: 20px;
-} */
-
 .form ::placeholder{
   opacity: 0.4;
   color: gray;
@@ -117,9 +81,9 @@ input:focus {
   background-color: rgb(253, 243, 227);
 }
 
-/* input:invalid {
-  text-decoration: underline;
-} */
+input {
+  outline: white;
+}
 
 label {
   display: block;
@@ -202,11 +166,40 @@ label {
 .question:hover {
   cursor: context-menu;
   box-shadow: 1px 1px 5px grey;
+  transition: transform 0.4s ease-in-out;
+}
+
+.question::after {
+  content: '\25be';
+  float: right;
+  transform: scale(1.5);
 }
 
 .answer {
-  display: none;
+  /* display: none;
   overflow: hidden;
+  max-height: 0; */
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in;
+}
+
+.active + .answer {
+  display: block;
+  padding: 0 18px;
+  background-color: white;
+  margin: 0px 15px 15px 15px;
+  line-height: 1.5;
+  color: rgb(104, 97, 97);
+  max-height: 150px;
+}
+
+.active::after {
+  content: '\25b4';
+  float: right;;
+  transform: scale(2);
 }
 
 footer {
