@@ -15,10 +15,13 @@
   <header>
     <div class="video-container">
       <video autoplay muted loop playsinline>
-        <source src="./videos/drummerVideo360.mp4" type="video/mp4" media="(max-width: 667px)">
-        <source src="./videos/" type="video/mp4" media="(min-width: 668px max-width:1024px)">
-        <source src="./videos/videoDrummer-1280.mp4" type="video/mp4" media="(min-width: 1024px)"> Your browser does not
-        support the video tag.
+        <source class="video-mobile" src="./videos/drummerVideo360.mp4" type="video/mp4"
+          alt="by Taryn Elliott from Pexels">
+        <source class="video-tablet" src="./videos/drummerVideo960.mp4" type="video/mp4"
+          alt="by Taryn Elliott from Pexels">
+        <source class="video-desktop" src="./videos/videoDrummer-1280.mp4" type="video/mp4"
+          alt="by Taryn Elliott from Pexels">
+        Your browser does not support the video tag.
       </video>
       <div class="overlay-header">
         <h1 class="h1-header">Drummer Bootcamp</h1>
@@ -28,85 +31,113 @@
     </div>
   </header>
 
-  <section class="info">
-    <p>Become a drummer in one week. We will learn you all the basic rock n' roll beats you need to know to start your
+  <section class="lead-paragraph">
+    <p>Become a drummer in just one week. We will learn you all the basic rock n' roll beats you need to know to start
+      your
       own band. Grab a pair of sticks and join us for a ride!</p>
   </section>
 
-  <!-- Signup form -->
-  <div class="form-container">
-    <form action="http://httpbin.org/anything" method="post">
-      <h2>Drummer Bootcamp</h2>
-      <h3>Sign Up</h3>
-      <label>
-        First Name <br>
-        <input type="text" name="first-name" required>
-      </label>
+  <Section class="signup-info">
 
-      <label>
-        Last Name <br>
-        <input type="text" name="last-name" required>
-      </label>
-
-      <label>
-        E-mail <br>
-        <input type="email" name="email" required>
-      </label>
-
-      <label>
-        Desired Bootcamp Week <br>
-        <select name="week" id="week" required>
-          <option value="22">w 22</option>
-          <option value="23">w 23</option>
-          <option value="26">w 26</option>
-        </select>
-      </label>
-
-      <div class="instrument">
+    <!-- Signup form -->
+    <div class="form-container">
+      <form action="http://httpbin.org/anything" method="post">
+        <h2>Drummer Bootcamp</h2>
+        <h3>Sign Up</h3>
         <label>
-          Do you play another instrument? <br>
-          <input type="radio" name="instrument" value="yes">Yes<br>
-          <input type="radio" name="instrument" value="no">No<br>
+          First Name <br>
+          <input type="text" name="first-name" required>
         </label>
-      </div>
 
-      <label>
-        If yes, what instrument? <br>
-        <input type="text" name="first-name">
-      </label>
+        <label>
+          Last Name <br>
+          <input type="text" name="last-name" required>
+        </label>
 
-      <label>
-        <input type="checkbox" name="conditions" value="yes">
-        I accecpt the terms & conditions<br>
-      </label>
-      <button type="submit">Rock on!</button>
-    </form>
-  </div>
+        <label>
+          E-mail <br>
+          <input type="email" name="email" required>
+        </label>
 
-  <div class="gif-container">
-    <div class="gif">
-      <img src="https://media.giphy.com/media/ONhLlW0mlQVlm/giphy.gif" alt="drummer with stick">
+        <label>
+          Desired Bootcamp Week <br>
+          <select name="week" id="week" required>
+            <option value="22">w 22</option>
+            <option value="23">w 23</option>
+            <option value="26">w 26</option>
+          </select>
+        </label>
+
+        <div class="instrument">
+          <label>
+            Do you play another instrument? <br>
+            <input type="radio" name="instrument" value="yes">Yes<br>
+            <input type="radio" name="instrument" value="no">No<br>
+          </label>
+        </div>
+
+        <label>
+          If yes, what instrument? <br>
+          <input type="text" name="first-name">
+        </label>
+
+        <label>
+          <input type="checkbox" name="conditions" value="yes">
+          I accecpt the terms & conditions<br>
+        </label>
+        <button type="submit">Rock on!</button>
+      </form>
     </div>
-  </div>
-
-  <!-- Accordion -->
-  <section class="accordion"></section>
-  <h1>FAQ</h1>
-
-  <div class="question" id="section1">Section 1</div>
-  <div class="answer">
-    <p>Lorem ipsum...</p>
-  </div>
-
-  <div class="question" id="section2">Section 2</div>
-  <div class="answer">
-    <p>Lorem ipsum...</p>
-  </div>
-  </section>
-  <!-- dont forget to link the javascript file here! -->
 
 
+    <!-- Accordion -->
+    <section class="accordion-container">
+      <section class="accordion">
+        <h1>FAQ</h1>
 
+        <div class="question" id="question1">
+          Price?
+        </div>
+        <div class="answer">
+          <p class="p-answer">The Bootcamp costs 4999 SEK. 4 hours of drumming per day,<br>lunches included in the
+            price.</p>
+        </div>
+
+        <div class="question" id="question2">
+          Do I need to bring anything?
+        </div>
+        <div class="answer">
+          <p class="p-answer">We provide sticks to loan but we encourage you to bring your own.</p>
+        </div>
+
+        <div class="question" id="question3">
+          Who will be the teacher?</div>
+        <div class="answer">
+          <p class="p-answer">Hopefully this guy or someone equally as good.</p>
+          <img class="teacher" src="https://media.giphy.com/media/4Lyd8tJk410iI/giphy.gif" alt="animal drummer">
+        </div>
+      </section>
+    </section>
+  </Section>
+
+
+  <footer>
+    <div class="gif-container">
+      <div class="gif">
+        <img src="https://media.giphy.com/media/ONhLlW0mlQVlm/giphy.gif" alt="drummer with stick">
+      </div>
+    </div>
+
+    <form class="footer-form" action="http://httpbin.org/anything" method="post">
+      <label for="message">Questions? Send us a message</label>
+      <textarea rows="6" cols="40" name="comment" form="question"> I was wondering...</textarea>
+      <button class="button-footer" type="submit">Rock on!</button>
+    </form>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
+
+<!-- dont forget to link the javascript file here! -->

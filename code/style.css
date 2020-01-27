@@ -9,6 +9,7 @@ body {
 }
 
 h1 {
+  color: black;
   font-size: 36px;
   font-family: 'New Rocker', cursive;
   
@@ -24,33 +25,38 @@ font-size: 24px;
 font-family: 'New Rocker', cursive;
 }
 
+
 p {
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
   color: whitesmoke;
   text-align: center;
+  padding: 5px;
 }
 
-.info {
-  margin-top: 20px;
+.lead-paragraph {
+  border: whitesmoke 5px;
+  border-style: dotted;
+  margin: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
+.lead-paragraph:hover {
+  border:#f2a4c7 8px;
+  border-style: dotted;
+}
 
 .gif-container{
   display: flex;
-  justify-content: center;
-
 }
-
 
 .gif img {
   width: 300px;
   height: auto;
-  border-radius: 5px;
+  box-shadow: 10px 10px 10px grey;
+  margin-top: 10px;
 }
 
 /*styling of the header */
@@ -65,6 +71,7 @@ video {
   vertical-align: middle;
   width: 100%;
 }
+
 .overlay-header {
   background: rgba(0,0,0,0);
   position: absolute;
@@ -75,13 +82,14 @@ video {
   justify-content: center;
 }
 
-.h1-header{
-  font-size: 36px;
+.h1-header {
+  font-size: 42px;
   color: whitesmoke;
   text-align: center;
 }
 
 .h2-header {
+  font-size: 36px;
   color: whitesmoke;
   text-align: center;
   margin-left: 10px;
@@ -94,13 +102,13 @@ form {
   width: fit-content;
   height: auto;
   background-color: #327779;
-  border: black 2px solid;
-  border-radius: 5%;
+  border: black 2px;
+  box-shadow: 10px 10px 10px grey;
   padding: 20px;
   margin-bottom: 30px;
 }
 
-input{
+input {
   font-size: 20px;
   font-family:'Roboto', sans-serif;
 }
@@ -135,21 +143,133 @@ button {
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
-@media (min-width:1024px) {
-  .form-container {
+.accordion {
+  background-color: #327779;
+  color: #0000;
+  cursor: pointer;
+  padding: 15px;
+  margin: auto;
+  margin-bottom: 30px;
+  box-shadow: 10px 10px 10px grey;
+  width: fit-content;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+  /* some styling here */
+
+
+.question {
+  display: block;
+  background-color: #f2a4c7;
+  height: 40px;
+  padding: 10px;
+  color: black;
+  font-family:'New Rocker';
+  font-size: 24px;
+}
+
+.question:hover {
+  background-color: #b2ffe6;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.answer {
+  padding: 0 18px;
+  background-color: #b2ffe6;
+  color: black;
+  display: none;
+}
+
+.active + .answer {
+  display: block;
+}
+
+.p-answer {
+  color: black;
+  text-align: left;
+  margin-top: 0;
+}
+
+.teacher {
+  width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/*styling of the footer */
+
+footer {
+display: flex;
+flex-direction: column;
+align-items: center;
+color: black;
+}
+
+.footer-form {
+  width: 300px;
+  height: auto;
+  background-color: #b2ffe6;
+  border: black 2px;
+  padding: 20px;
+  text-align: center; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.button-footer {
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*media queries*/
+
+@media screen and (min-width: 668px) {
+  .video-mobile {
+    display: none;
+  }
+
+  .video-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width:1024px) { 
+  .signup-info {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
+    align-items: flex-start;
     margin-left: 20px;
+  }
+
+
+  .video-mobile {
+    display: none;
+  }
+
+  .video-tablet{
+    display: none;
   }
 }
 
 
-Video by Taryn Elliott from Pexels
 
 
