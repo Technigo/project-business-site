@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Small business site</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,39 +26,41 @@
       <form action="https://httpbin.org/anything" method="post">
 
         <div class="container">
-          <label name="name">
-            <input type="text" name="name" value="Name" required>
+          <label name="name">Name 
+            <input type="text" name="name" required>
           </label>
 
-          <label name="adress">
-            <input type="text" name="name" value="Adress" required>
+          <label name="adress">Adress
+            <input type="text" name="name" required>
           </label>
 
-          <label name="password">
+          <label name="password">Password
             <input type="password" name="password" required minlength="8">
           </label>
         </div>
 
         <div>
           <label class="container">Man
-            <input type="radio" checked="checked" name="radio">
+            <input type="radio"  name="gender" value="Man">
             <span class="checkmark"></span>
           </label>
           <label class="container">Woman
-            <input type="radio" name="radio">
+            <input type="radio" name="gender"value="Woman" checked="checked">
             <span class="checkmark"></span>
           </label>
           <label class="container">Other
-            <input type="radio" name="radio">
+            <input type="radio" name="gender" value="Other">
             <span class="checkmark"></span>
           </label>
         </div>
 
+     <div>
         <label class="container">
           <input type="checkbox" checked="checked" required>
           <span class="checkmark"></span>
           <h5>I agree to the <a href="#"> Terms and Conditions </a></h5>
         </label>
+      </div>
 
         <button id="button" type="submit">Submit</button>
       </form>
@@ -67,18 +70,22 @@
       <!-- Accordion / Toggle-->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">How much does it clothes? </div>
+      <div class="question" id="section1">How much does it cost? </div>
       <div class="answer">
-        <p>Lorem ipsum... </p>
+        <p>10 kr... </p>
       </div>
 
       <div class="question" id="section2">Should I wear special clothes? </div>
       <div class="answer">
-        <p>Lorem ipsum... </p>
+        <p>Yes, why not... </p>
       </div>
     </section>
-
   </main>
+
+  <video controls autoplay muted >
+    <source src="videos/viking.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
   <!-- dont forget to link the javascript file here! -->
   <script src="script.js"></script>
