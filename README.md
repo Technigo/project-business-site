@@ -1,12 +1,12 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This was my second project on the Technigo bootcamp. The assigment was to create a website including a responsive video header, a form connected to httbin and having a FAQ with a basic accordion using javascript.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+If I had more time on this project, I would definitely add some animation to the FAQ that shows and hides depending on if the bar is open or not. 
+
+Also another problem I had was that the black bar around the video is displayed on mobile, later I found out that it was actually included in the sample video file. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://competent-goodall-60c427.netlify.com/
