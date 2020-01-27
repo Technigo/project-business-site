@@ -4,7 +4,12 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .active + .answer {
   /* some styling here */
-  /* display: block; */
+  display: block;
+  transition: transform 0.3s ease-in-out;
+  padding: 0 18px;
+  background-color: white;
+  margin: 0px 15px 15px 15px;
+  text-align: left;
 }
 
 html {
@@ -84,7 +89,7 @@ header {
 .form {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 30%;
   background-color: rgb(201, 183, 160);
   border-radius: 20px;
   padding: 20px;
@@ -159,7 +164,7 @@ label {
 .accordion {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 30%;
   background-color: rgb(212, 204, 190);
   border-radius: 20px;
   padding: 20px;
@@ -174,6 +179,7 @@ label {
 }
 
 .accordion h1 {
+  top: 0;
   text-align: center;
   font-size: 50px;
   font-weight: bold;
@@ -195,15 +201,12 @@ label {
 
 .question:hover {
   cursor: context-menu;
-  text-shadow: 1px 1px 5px grey;
+  box-shadow: 1px 1px 5px grey;
 }
 
 .answer {
-  padding: 0 18px;
-  background-color: white;
   display: none;
   overflow: hidden;
-  margin: 0px 15px 15px 15px
 }
 
 footer {
@@ -226,6 +229,20 @@ footer img {
   margin: 10px 20px;
 }
 
+@media (max-width: 1023px) {
+  .main {
+    width: auto;
+  }
+
+  .form {
+    width: 40%;
+  }
+
+  .accordion {
+    width: 40%;
+  }
+}
+
 @media (max-width: 668px) {
   .main {
     display: flex;
@@ -233,6 +250,7 @@ footer img {
     width: auto;
     justify-content: center;
     align-items: baseline;
+    width: 80%;
   }
 
   .title {
@@ -244,12 +262,12 @@ footer img {
   }
 
   .form {
-    width: 80%;
+    width: 100%;
     margin: 20px 10px;
   }
 
   .accordion {
-    width: 80%;
+    width: 100%;
     height: auto;
     margin: 20px 10px;
   }
