@@ -2,6 +2,164 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+.active+.answer {
   /* some styling here */
+}
+
+body {
+  margin: 0;
+  background: rgb(228, 242, 243);
+  color: #000;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.hero h1 {
+  font-size: 72px;
+  color: rgb(247, 7, 107);
+}
+
+h2 {
+  font-size: 36px;
+}
+
+.hero {
+  background-image: url(./assets/ceramics.jpeg);
+  background-size: cover;
+  padding-top: 250px;
+  padding-bottom: 250px;
+  background-position: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.signup {
+  padding: 70px 30px;
+  width: 40%;
+  background: #fff;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup p {
+  margin-bottom: 40px;
+
+}
+
+form div {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+form div input {
+  flex: 1;
+  margin-left: 20px;
+}
+
+button {
+  width: 75px;
+  height: 50px;
+  margin-top: 35px;
+  border: none;
+  background-color: rgb(68, 118, 122);
+  font-size: 16px;
+  font-family: 'IBM Plex Mono', monospace;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0px 0px 12px -2px rgb(36, 63, 65);
+  margin-left: 300px;
+}
+
+.accordion {
+  width: 40%;
+  background: rgb(248, 223, 223);
+  padding: 30px;
+
+}
+
+.accordion h1 {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgb(247, 7, 107);
+  margin-bottom: 50px;
+}
+
+.accordion div {
+  height: 25px;
+}
+
+.gender {
+  margin-top: 30px;
+}
+
+.news-letter {
+  margin-top: 20px;
+}
+
+.accordion p {
+  visibility: collapse;
+}
+
+@media (max-width:910px) {
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-position: left center;
+  }
+
+  button {
+    margin-left: 250px;
+  }
+}
+
+@media (max-width:760px) {
+  button {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width:700px) {
+  .hero {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signup {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 60%;
+  }
+
+  .accordion {
+    width: 60%;
+  }
+
+  button {
+    margin-left: 300px;
+  }
 }

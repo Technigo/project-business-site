@@ -1,30 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+  <!-- dont forget to add a css file and link it here! -->
+</head>
+
+<body>
+  <header>
+    <div class="hero">
+      <h1>Ceramics for everyone</h1>
+      <h2>One for all and all for pottery! </h2>
+    </div>
+  </header>
+  <!-- Signup form -->
+
+  <section class="container">
+
+    <section class='signup'>
+      <p>Sign up for a class</p>
+
+      <form action="http://httpbin.org/anything">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" name=''>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="" id="">
+        </div>
+        <div>
+          <label for="mobile">Mobile</label>
+          <input type="number" name="" id="">
+        </div>
+
+        <div class='gender'>
+          <label for="gender">female</label>
+          <input type="checkbox" id="genderF" name="female" value="newsletter">
+          <label for="gender">male</label>
+          <input type="checkbox" id="genderM" name="male" value="newsletter">
+          <label for="gender">other</label>
+          <input type="checkbox" id="genderO" name="other" value="newsletter">
+        </div>
+
+        <div class='news-letter'>
+          <label for="subscribeNews">Subscribe to newsletter?</label>
+          <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
 
     <section class="accordion">
       <!-- Accordion -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">How much does it cost?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>3750 kr / 8 weeks</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">What happens if I get sick?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>It's a good idea to wear a t-shirt, or similar that you're don't mind getting dirty.</p>
+      </div>
+
+      <div class="question" id="section2">Should I wear special clothes?</div>
+      <div class="answer">
+        <p>You can come on a different evening to catch up. The fee is unrefundable.</p>
+      </div>
+
+      <div class="question" id="section2">Does it fit a total beginner?</div>
+      <div class="answer ">
+        <p>Yes! Everyone works at their own project at their own level.</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+  </section>
+  <script src="script.js"></script>
+  <!-- dont forget to link the javascript file here! -->
+</body>
+
+
 </html>
