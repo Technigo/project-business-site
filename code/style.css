@@ -1,11 +1,6 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-
-
-
-
 html {
   color: rgba(25, 34, 26, 0.651);
   font-family: 'Nanum Myeongjo', serif;
@@ -160,7 +155,6 @@ label {
   text-align: left;
   border: none;
   outline: none;
-  transition: 0.4s;
 }
 
 .question:hover {
@@ -173,18 +167,25 @@ label {
   content: '\25be';
   float: right;
   transform: scale(1.5);
+  padding: 0 18px;
+  max-height: 150px;
 }
 
 .answer {
-  /* display: none;
-  overflow: hidden;
-  max-height: 0; */
   padding: 0 18px;
+  margin: 0 15px 15px 15px;
   background-color: white;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-in;
+  transition: max-height 0.4s ease-in-out;
 }
+
+/* .answer::after {
+  padding: 0 18px;
+  max-height: 150px;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+} */
 
 .active + .answer {
   display: block;
