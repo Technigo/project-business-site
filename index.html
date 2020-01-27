@@ -7,48 +7,45 @@
 
   <link rel="stylesheet" href="style.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Arapey|Montserrat:300&display=swap" rel="stylesheet">
-  <title>Project 3</title>
+  <title>Project 3: business-site</title>
   <!-- dont forget to add a css file and link it here! -->
 </head>
 
 <body>
   <div class="box">
-    <header>
+    <div class=top-page>
+
       <!-- video or image as a header is cool :) -->
-      <h1>Photagraphy Class</h1>
+      <div class="video">
+        <video autoplay muted loop controls class="video">
+          <source src="media/ibex.mp4" type="video/mp4">
 
-    </header>
-    <!-- Center column, general info -->
-    <section class="center">
-      <div>
-        <h1>History</h1>
-
-        <p>We love photagrphy and we love people. please join us to share the love.
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="content">
+        <h1 class="content">Photagraphy Class</h1>
+        <p class="content">We love photagrphy and we love people. please join us to share the love.
           <br>The First Permanent Images
           Photography, as we know it today, began in the late 1830s in France. Joseph Nicéphore Niépce used a portable
           camera obscura to expose a pewter plate coated with bitumen to light. This is the first recorded image that
           did not fade quickly.
         </p>
       </div>
-      <video width="320" height="240" controls muted>
-        <source src="media/heartbeats_video.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        Your browser does not support the video tag.
-      </video>
+    </div>
 
-    </section>
     <!-- ***Accordion, FAQ*** -->
-    <section class="accordion">
+    <section class="accordion" id="faq">
       <!-- Accordion -->
       <h1>FAQ</h1>
       <div class="container">
         <div class="question" id="section1">
-          <button class="tog-btn" id="button1" onclick="myfunk1()">
-            <p>Do I need to own a camera?</p>
-          </button>
+
+          <p>Do I need to own a camera?</p>
+
         </div>
         <div class="answer">
-          <p>Since you start out as a beginer the camera in your smartphone is fine. If you need advice
+          <p>Since you start out as a beginer, the camera in your smartphone is fine. If you need advice
             on which camera is good to buy you can always ask any of our teachers.</p>
 
         </div>
@@ -56,20 +53,20 @@
       <div class="container">
 
         <div class="question" id="section2">
-          <button class="tog-btn" id="button2" onclick="myfunk2()">
-            <p>How much does it cost?</p>
-          </button>
+
+          <p>How much does it cost?</p>
+
 
         </div>
         <div class="answer">
-          <p>Lorem ipsum. One semester is 50 dollars and two is 75.</p>
+          <p>One semester is 50 dollars and two is 75.</p>
         </div>
       </div>
       <div class="container">
         <div class="question" id="section3">
-          <button class="tog-btn" id="button3" onclick="myfunk3()">
-            <p>What is the schedual?</p>
-          </button>
+
+          <p>What is the schedual?</p>
+
 
         </div>
         <div class="answer">
@@ -79,7 +76,7 @@
       </div>
     </section>
     <!-- Signup form -->
-    <section class="input">
+    <section class="input" id="input">
       <form action="https://httpbin.org/anything" method="POST">
         <div class="container">
           <h1>Register</h1>
