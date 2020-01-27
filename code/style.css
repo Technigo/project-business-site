@@ -2,11 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   margin: 0;
-  font-family: 'Rosario', sans-serif;
   background: #e6ddde;
+  font-family: 'Rosario', sans-serif;
 }
 
 h1 {
@@ -16,11 +15,11 @@ h1 {
 }
 
 h2 {
+  text-align: center;
+  margin: 0 auto 20px auto;
   color: #e6c2c6;
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
-  margin: 0 auto 20px auto;
-  text-align: center;
 }
 
 /*** HERO VIDEO ***/
@@ -30,10 +29,10 @@ h2 {
 }
 
 video {
-  height: 300px;
   vertical-align: middle;
-  width: 100%;
   object-fit: cover;
+  width: 100%;
+  height: 300px; 
 }
 
 .tablet-video {
@@ -43,6 +42,8 @@ video {
 .desktop-video {
   display: none;
 }
+
+/*** HERO VIDEO OVERLAY ***/
 
 .video-overlay {
   position: absolute;
@@ -55,24 +56,24 @@ video {
 
 .overlay-paragraph {
   display: none;
+  margin: 40px;
   color: #fff;
   font-size: 1rem;
-  margin: 40px;
 }
 
 .get-started {
+  text-align: center;
+  display: inline-block;
+  margin: 16px;
+  padding: 5px 20px;
+  border: 0;
+  border-radius: 30px;
   background: #e6c2c654;
+  backdrop-filter: blur(15px);
   color: #fff;
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
-  border: 0;
-  border-radius: 30px;
   text-decoration: none;
-  margin: 16px;
-  padding: 5px 20px;
-  display: inline-block;
-  text-align: center;
-  backdrop-filter: blur(15px);
 }
 
 /*** MAIN CONTAINER ***/
@@ -87,22 +88,21 @@ video {
 /*** SIGNUP FORM ***/
 
 .sign-up {
-  background-color: #fff;
-  padding: 40px;
   margin-bottom: 20px;
+  padding: 40px;
+  background-color: #fff;
 }
 
 input {
-  /* display: block; */
   width: 97%;
-  background: transparent;
+  margin-bottom: 10px;
+  padding: 10px 0 10px 10px;
   outline: none;
   border: none;
   border-bottom: 1px solid #f5e3e7;
-  font-size: 1rem;
+  background: transparent;
   color: #000;
-  padding: 10px 0 10px 10px;
-  margin-bottom: 10px;
+  font-size: 1rem;
 }
 
 input::placeholder {
@@ -112,22 +112,22 @@ input::placeholder {
 }
 
 label {
-  color: #666666;
-  font-size: 0.8rem;
   display: flex;
   flex-direction: column;
+  color: #666666;
+  font-size: 0.8rem;
 }
 
 .select-containers {
-  width: 100%;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
 }
 
 fieldset {
-  border: 1px solid #f5e3e7;
   width: 100%;
+  border: 1px solid #f5e3e7;
 }
 
 legend {
@@ -144,26 +144,26 @@ input[type=checkbox], input[type=radio] {
 .radio-container {
   display: block;
   position: relative;
-  padding-left: 25px;
   margin-bottom: 12px;
+  padding-left: 25px;
   cursor: pointer;
 }
 
 .radio-container input {
   position: absolute;
-  opacity: 0;
-  height: 0;
   width: 0;
+  height: 0;
+  opacity: 0;
 }
 
 .radio-bttn {
   position: absolute;
   top: 0;
   left: 0;
-  height: 15px;
   width: 15px;
-  background: #e6c2c6;
+  height: 15px;
   border-radius: 50%;
+  background: #e6c2c6;
 }
 
 .radio-bttn:after {
@@ -188,24 +188,24 @@ input[type=checkbox], input[type=radio] {
 .checkbox-container {
   display: block;
   position: relative;
-  padding-left: 25px;
   margin-bottom: 12px;
+  padding-left: 25px;
   cursor: pointer;
 }
 
 .checkbox-container input {
   position: absolute;
-  opacity: 0;
-  height: 0;
   width: 0;
+  height: 0;
+  opacity: 0;
 }
 
 .checkbox-bttn {
   position: absolute;
   top: 0;
   left: 0;
-  height: 15px;
   width: 15px;
+  height: 15px;
   background: #e6c2c6;
 }
 
@@ -229,27 +229,18 @@ input[type=checkbox], input[type=radio] {
   transform: rotate(40deg);
 }
 
-/* .radio-bttn p, .checkbox p {
-  font-size: 0.8rem;
-  margin: 0 5px 5px 5px;
-} */
-
-/* button {
-  margin: 10px;
-} */
-
 button[type=submit] {
+  display: block;
+  text-align: center;
+  margin: 30px auto 0 auto;
+  padding: 5px 20px;
+  border: 0;
+  border-radius: 30px;
   background: #e6c2c6;
   color: #fff;
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
-  border: 0;
-  border-radius: 30px;
   text-decoration: none;
-  margin: 30px auto 0 auto;
-  padding: 5px 20px;
-  display: block;
-  text-align: center;
   cursor: pointer;
 }
 
@@ -260,30 +251,30 @@ in this case it is the div with the answer class next to the div with the active
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .accordion {
-  background-color: #fff;
   padding: 40px;
+  background-color: #fff;
 }
 
 .question {
+  width: 97%;
   margin: 0;
   padding: 10px;
-  width: 97%;
+  border-bottom: 1px solid #f5e3e7;
   background: #e6c2c6;
   color: #fff;
   cursor: pointer;
-  border-bottom: 1px solid #f5e3e7;
 }
 
 .question::after {
   content: '+';
   text-align: center;
   float: right;
-  color: #fff;
   width: 22px;
   height: 20px;
+  padding-bottom: 2px;
   border: 1px solid #fff;
   border-radius: 50%;
-  padding-bottom: 2px;
+  color: #fff;
 }
 
 .question.active::after {
@@ -291,19 +282,19 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 .answer {
+  display: none;
+  width: 97%;
   margin: 0;
   padding: 10px;
-  width: 97%;
   background: #f5e3e7;
   color: #666666;
   font-size: 0.8rem;
-  display: none;
 }
 
 .answer a {
   color: #e6a6ad;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .active + .answer {
@@ -334,9 +325,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   }
   
   fieldset {
-    border: 1px solid #f5e3e7;
-    width: 40%;
     flex-grow: 1;
+    width: 40%;
+    border: 1px solid #f5e3e7;
   }
 }
 
