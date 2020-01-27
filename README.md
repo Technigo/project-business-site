@@ -15,4 +15,4 @@ Kept the styling light and neat with a café au lait type of theme. Reached some
 If I had more time and energy this week I would have spent it exploring more of the JavaScript elements and maybe create some type of form validtors. Trying to get the transition to work smoothly took a lot of time but was definitly worth the work which I'm super proud of!
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Deployed website: https://stoic-sammet-60e20b.netlify.com
