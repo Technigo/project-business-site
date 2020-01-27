@@ -12,9 +12,9 @@
 
   <header>
 
-    <div class="logo">
+    <a class="logo" href="index.html">
       <img src="img/logo.svg">
-    </div>
+    </a>
 
     <nav>
       <a href="#">About</a>
@@ -35,7 +35,7 @@
         <div class="hero-content">
           <h1>Hero heading some tasty words</h1>
           <p>Sweetened fruit flavored filler text loop for the love of froot.</p>
-          <a class="button" href="#">A nice link</a>
+          <a class="button" href="#">Join the club!</a>
         </div>
       </div>
 
@@ -88,9 +88,14 @@
           <div class="col">
             <form class="signup-form" action="https://httpbin.org/anything" method="POST">
 
+              <label class="visibility-hidden" for="name">Name</label>
               <input type="text" name="name" placeholder="Name" required>
-              <input type="text" name="email" placeholder="E-mail" required>
-              <input type="password" name="password" placeholder="Password" required>
+
+              <label class="visibility-hidden" for="email">E-mail</label>
+              <input type="email" name="email" placeholder="E-mail" required>
+
+              <label class="visibility-hidden" for="password">Password</label>
+              <input type="password" name="password" placeholder="Password" maxlength="12" minlength="4" required>
 
               <label class="checkbox-container">Send me the newsletter
                 <input type="checkbox" name="newsletter" checked="checked">
@@ -102,7 +107,8 @@
                 <span class="checkmark"></span>
               </label>
 
-              <input class="button" type="submit" value="Submit">
+              <label class="visibility-hidden" for="submit">Submit</label>
+              <input class="button" type="submit" name="submit" value="Submit">
 
             </form>
           </div>

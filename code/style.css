@@ -36,10 +36,20 @@ a {
   display: inline-block;
   margin-top: 2rem;
   padding: .6rem 1.4rem;
-  background-color: #000;
+  background-color: seagreen;
   color: wheat;
   font-weight: 600;
+  outline: none;
+  transition: all .2s ease-in-out;
+}
 
+.button:hover {
+  background-color: rgb(28, 94, 56);
+}
+
+.visibility-hidden {
+  visibility: hidden;
+  position: absolute;
 }
 
 
@@ -47,7 +57,7 @@ a {
 
 header {
   position: absolute;
-  z-index: 10;
+  z-index: 15;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,6 +76,12 @@ header>* {
 nav a {
   margin-left: 1rem;
   color: #fff;
+  font-weight: 600;
+}
+
+.logo:hover img,
+nav a:hover {
+  opacity: .5;
 }
 
 
@@ -73,7 +89,7 @@ nav a {
 
 .hero {
   position: relative;
-  height: 100vh;
+  height: 600px;
   background: url(https://images.unsplash.com/photo-1419833173245-f59e1b93f9ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
   background-size: cover;
   background-position: 50% 50%;
@@ -107,7 +123,7 @@ nav a {
 }
 
 .hero-content h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -165,6 +181,7 @@ nav a {
 .answer {
   display: none;
   margin-bottom: .5rem;
+
 }
 
 .active+.answer {
@@ -198,6 +215,7 @@ nav a {
 }
 
 .signup-form input[type=text],
+.signup-form input[type=email],
 .signup-form input[type=submit],
 .signup-form input[type=password] {
   display: block;
@@ -209,17 +227,10 @@ nav a {
 }
 
 
-.signup-form input:focus {
+.signup-form input[type=text]:focus,
+.signup-form input[type=password]:focus {
   outline: none;
   box-shadow: -10px 0px 0px 0px #d8be8f;
-}
-
-.signup-form input[type=submit] {
-  margin-top: 2rem;
-  padding: .6rem 1.4rem;
-  background-color: #000;
-  color: #fff;
-  font-weight: 600;
 }
 
 .checkbox-container:first-of-type {
@@ -308,6 +319,10 @@ footer {
     margin: 4rem;
   }
 
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+
   .signup-form input[type=submit] {
     width: auto;
   }
@@ -318,6 +333,7 @@ footer {
 @media screen and (min-width: 1024px) {
   .hero {
     background: none;
+    height: 100vh;
   }
 
   .hero video {
