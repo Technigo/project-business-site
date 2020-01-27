@@ -66,12 +66,14 @@ body{
   .main-content{
     margin-top: 46px;
     display:flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-grow: 1;
   }
 
   .order-form{
-    width: 40%;
+    width: 80%;
     flex-grow: 1;
     border-color: #cc0000;
     border-style: solid;
@@ -107,7 +109,7 @@ label{
 /********** FAQ ************/
 
 .accordion{
-  width: 40%;
+  width: 80%;
   flex-grow: 1;
   padding: 20px;
 }
@@ -155,12 +157,13 @@ align-items: center;
 
 /***** MEDIA QUERIES ******/
 
-@media (min-width: 667px) {
-
-
-}
 
 @media (min-width: 1025px) {
-
   
+  .main-content{
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+
 }
