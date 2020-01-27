@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+body{
+  color: #333;
+  overflow-x: hidden;
+}
+
+h4{
+  color: #34b3a0;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1.5rem 0 1rem 0;
+}
+
+h2{
+  color: #34b3a0;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  margin: 1.5rem 0 1rem 0;
+}
+
+/*--- HEADER ---*/
+
+.v-header{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.header-container{
+  max-width: 960px;
+  padding: 0 1rem;
+  margin: auto;
+  text-align: center;
+}
+
+.fullscreen-video-wrap{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fullscreen-video-wrap video{
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.header-overlay{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;  
+  background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.85) ,rgba(34, 84, 112, 0.85));
+  z-index: 1;
+}
+
+.header-content{
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content h1{
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+.header-content p{
+  font-size: 1.5rem;
+  display: block;
+  padding-bottom: 2rem;
+}
+
+.btn{
+  background: #34b3a0;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/*--- MAIN CONTENT ---*/
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 80vw;
+}
+
+section{
+  padding: 20px;
+  text-align: justify;
+}
+
+
+/*--- GRID-CONTAINER ---*/
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: start;
+}
+
+/*--- SIGNUP FORM ---*/
+
+
+::placeholder{
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+
+a{
+  color: #34b3a0;
+}
+
+a:hover{
+  color: cornflowerblue;
+}
+
+form{
+  max-width: 960px;
+  padding: 0 20px;
+}
+
+form p{
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.input-container{
+  margin-bottom: 15px;
+  max-width: 300px;
+}
+
+.input{
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  border-left: 3px solid;
+  transition: border-color 0.5s ease-out;
+}
+
+.input:optional{
+  border-left-color: #999;
+}
+
+.input:required{
+  border-left-color: #999;
+}
+
+.input:invalid{
+  border-left-color: #999;
+}
+
+.input:focus{
+  outline: none;
+}
+
+.input:required:focus:valid{
+  background: url("valid.svg") no-repeat 95% 50%;
+  border-color: #34b3a0;
+}
+
+.input:required:focus:invalid{
+  background: url("invalid.svg") no-repeat 95% 50%;
+  border-color: salmon;
+}
+
+.radio-button-container{
+  display: block;
+  margin-bottom: 15px;
+  max-width: 300px;
+}
+
+.radio-button{
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  border-left: 3px solid #999; 
+  cursor: pointer;
+}
+
+.radio-button-container input{
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+.radio-button-container input:checked + label{
+  border-color: #34b3a0;
+  background: url("valid.svg") no-repeat 95% 50%;
+}
+
+.radio-button-container label:hover{
+  background-color: #34b3a0;
+  border-color: #34b3a0;
+}
+
+.checkbox-container{
+  display: inline-flex;
+  align-items: center;
+  margin: 15px 0 30px 0;
+}
+
+.checkbox-container input{
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox-container label::before{
+  content: "";
+  display: block;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #eee;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.checkbox-container label:hover::before{
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked + label::before{
+  background: url("valid.svg") no-repeat 95% 50%;
+}
+
+.checkbox-container p{
+  margin: 0;
+}
+
+.submit-container{
+  display: block;
+  margin-bottom: 15px;
+  max-width: 300px;
+}
+
+.submit-container label{
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(153, 153, 153, 0.25);
+}
+
+.submit-container input{
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+.submit-container label:hover{
+  background-color: #34b3a0;
+}
+
+
+/*--- FAQ ---*/
+
+.accordians-container{
+  /* width: 80%; */
+  max-width: 600px;
+  margin: 1.5rem 15px;
+}
+
+.accordians-container h4{
+  margin: 0 0 1rem 0;
+}
+
+#firstButton{
+  border-radius: 4px 4px 0 0;
+}
+
+#lastButton{
+  border-radius: 0 0 4px 4px;
+  width: 100%;
+  background-color: #34b3a0;
+  border: none;
+  outline: none;
+  padding: 15px 0;
+}
+
+button.accordion{
+  width: 100%;
+  background-color: #34b3a0;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+  color: white;
+}
+
+button.accordion::after{
+content: url(arrow-down.svg);
+float: right;
+}
+
+button.accordion.is-open::after{
+  content: url(arrow-up.svg);
+}
+
+button.accordion:hover, button.accordion.is-open{
+  background-color: cornflowerblue;
+}
+
+.accordion-content{
+  padding: 0 20px;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+/*--- FOOTER ---*/
+
+footer{
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+/*--- MEDIA ---*/
+
+@media(max-width: 960px){
+.container{
+  padding: 0 3rem;
+  }
+}
+@media(min-width: 500px){
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    justify-items: center;
+  }
+}
