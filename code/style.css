@@ -1,7 +1,150 @@
+*, *::before, *::after { box-sizing: inherit; }
+
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(202, 216, 230);
+  margin: 0;
+}
+
+
+header {
+  background-image: url(./pictures/JellyHeader2.jpg);
+  height: 200px;
+  background-size: cover;
+  background-position: top;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 80px;
+  color: white;
+  text-align: center;
+  margin-block-start: 0;
+  padding-top: 30px;
+  margin-block-end: 0;
+}
+
+h2 {
+  font-family: 'Questrial', sans-serif;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Questrial', sans-serif;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  margin-block-start: 0;
+  padding-top: 16px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up {
+  box-sizing: content-box;
+  margin: 15px 5px;
+  border: 2px solid rgba(45, 45, 122, 0.9);
+  border-radius: 5px;
+  text-align: center;
+  padding-bottom: 15px;
+  background-color: rgba(113, 181, 233, 0.9);
+  box-shadow: 8px 8px rgba(18, 78, 124, 0.9);
+  font-family: 'Questrial', sans-serif;
+}
+
+label {
+  display: block;
+  text-align: left;
+  padding-left: 20%;
+  padding-bottom: 10px;
+}
+
+ button {
+   border-radius: 5px;
+   margin-top: 20px;
+ }
+
+.accordion-container {
+  margin: 15px 5px;
+  border: 2px solid rgba(45, 45, 122, 0.9);
+  border-radius: 5px;
+  padding: 0px 20px 15px 20px;
+  background-color: rgba(113, 181, 233, 0.9);
+  box-shadow: 8px 8px rgba(18, 78, 124, 0.9);
+}
+
+.accordion {
+  font-family: 'Questrial', sans-serif;
+  background-color: rgb(202, 216, 230);
+  border-radius: 5px;
+  text-align: left;
+  padding: 16px;
+
+}
+
+.question {
+  padding: 16px;
+}
+
+.answer {
+  display: none;
+}
+
+.answer p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 16px;
+  font-style: italic;
+}
+
+.active + .answer {
+  display: contents;
+  background-color: white;
+ 
+}
+
+.active, .question:hover {
+  background-color: rgb(223, 227, 232);
+}
+
+@media (min-width: 668px) {
+   header h1 {
+    font-size: 90px;
+    padding-top: 16px;
+    margin-block-end: 0;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: row; 
+  }
+
+  .sign-up {
+    width: 40%;
+    flex-grow: 1;
+  }
+
+  .accordion-container {
+    width: 40%;
+    flex-grow: 1;
+  }
+} 
+
+@media (min-width: 1024px) {
+
+  header h1 {
+    font-size: 100px;
+    padding-top: 16px;
+  }
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
