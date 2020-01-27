@@ -1,30 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
+<body>
+  <header>
+    <h1>The Flower Shop</h1>
+  </header>
+  <!-- video or image as a header is cool :) -->
+  <main>
+    <section class="order-form">
+      <form action="http://httpbin.org/anything" method="POST">
+        <label>
+          <input type="text" name="name" placeholder="Name">
+        </label>
+        <label>
+          <input type="email" name="email" placeholder="Email" required>
+        </label>
+        <label>
+          <input type="text" name="phoneNumber" placeholder="Phone number">
+        </label>
+        <label>
+          How many arrengements?<br>
+          <input type="radio" name="numberOfArrengements" value="1"> 1<br>
+          <input type="radio" name="numberOfArrengements" value="2-3"> 2 - 3<br>
+          <input type="radio" name="numberOfArrengements" value=">3"> > 3<br>
+        </label>
+        <label>
+          For what occasion?<br>
+          <input type="checkbox" name="event" value="wedding"> Wedding<br>
+          <input type="checkbox" name="event" value="birthday"> Birthday<br>
+          <input type="checkbox" name="event" value="funeral"> Funeral<br>
+          <input type="checkbox" name="event" value="other"> Other<br>
+        </label>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+
+    <section class="faq-accordion">
+
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="question1">How much does it cost?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>One arrengement is x dollars. Two or three arrengements is y dollars per arrengement. For bigger orders we
+          will give you a price upon order.</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="question2">How long does it take?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>A simple arrangement takes a couple of hours to make. A more complex one can take a whole day. Please place
+          your order at least two days before the actual event.</p>
+      </div>
+
+      <div class="question" id="question3">How many arrangements can I order?</div>
+      <div class="answer">
+        <p>We are a small business, please keep that in mind and place your order well in advance.</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+  </main>
+
+  <!-- dont forget to link the javascript file here! -->
+  <script src="script.js"></script>
+</body>
+
 </html>
