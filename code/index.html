@@ -13,26 +13,30 @@
     <!-- video or image as a header is cool :) -->
 
     <header>
-    <div class="video-container">
-      <video controls autoplay muted loop class="video">
-        <source src="./assets/vovvideo.mp4" type="video/mp4" alt="Close up of dog">
-        <p>This browser doesn't support video...</p>
-      </video>
-    </div>
-      
-    <div class="header-content">
-      <nav>
-        <a class="home" href="#Home"><img src="./assets/doghousegreen.png" alt="Dog house"></a>
-        <a href="#about">About</a>
-        <a href="#mission">Our mission</a>
-        <a href="#patrion">Become a patrion</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="video-container">
+        <video controls autoplay muted loop class="video">
+          <source src="./assets/vovvideo.mp4" type="video/mp4" alt="Close up of dog">
+          <p>This browser doesn't support video...</p>
+        </video>
+      </div>
 
-      <h1>Dog rescue</h1>
+      <div class="header-content">
+        <nav>
+          <a class="home" href="#Home"><img src="./assets/doghouselight.png" alt="Dog house"></a>
+          <a href="#mission">Our mission</a>
+          <a href="#patrion">Become a patrion</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-    </div>
-      
+        <div class="hamburger">
+          <div class="pickles"></div>
+          <div class="pickles"></div>
+          <div class="pickles"></div>
+        </div>
+
+        <h1>Dog rescue</h1>
+      </div>
     </header>
 
     
@@ -43,8 +47,8 @@
 
         <div class="question" id="section1">Meet Poddrick</div>
         <div class="answer">
-          <p>Age: X years <br>
-            Breed: Lorem ipsum.. <br>
+          <p>Age: 3 years <br>
+            Breed: Lorem ipsum <br>
             Gender: Boy
           </p>
             <img src="./assets/poddrick.jpg" alt="Black dog">
@@ -52,8 +56,8 @@
 
         <div class="question" id="section2">Meet Puddin</div>
         <div class="answer">
-          <p>Age: X years <br>
-            Breed: Lorem ipsum.. <br>
+          <p>Age: 6 months <br>
+            Breed: Lorem ipsum <br>
             Gender: Boy
           </p>
           <img src="./assets/puddin.jpg" alt="Grey dog">
@@ -61,8 +65,8 @@
 
         <div class="question" id="section3">Meet Daisy</div>
         <div class="answer">
-          <p>Age: X years <br>
-            Breed: Lorem ipsum.. <br>
+          <p>Age: 1 year <br>
+            Breed: Lorem ipsum <br>
             Gender: Girl
           </p>
           <img src="./assets/daisy.jpg" alt="Fluffy dog">
@@ -70,8 +74,8 @@
 
         <div class="question" id="section4">Meet Rusty</div>
         <div class="answer">
-          <p>Age: X years <br>
-            Breed: Lorem ipsum.. <br>
+          <p>Age: 3 years <br>
+            Breed: Lorem ipsum <br>
             Gender: Boy
           </p>
           <img src="./assets/rusty.jpg" alt="White and brown dog">
@@ -80,45 +84,63 @@
 
       <section class="form-container">
         <h3 class="h3-form" >Application for adoption</h3>
-        <form action="http://httpbin.org/anything" method="POST">
-          <label>
-            First name
-            <input type="text" name="firstname" required>
-          </label>
+        <p class="p-form">Create a Log In to complete your application</p>
+        <form class="formform-container" action="http://httpbin.org/anything" method="POST">
           
-          <label>
-            Last name
-            <input type="text" name="lastname" required>
-          </label>
-          
-          <label>
-            E-mail
-            <input type="email" name="email" required>
-          </label>
-          
-          <label>
-            Mobile No
-            <input type="tel" name="tfn" maxlength="10" minlength="10" required>
-          </label>
-          
-          <label>
-            I'm interested in adopting: <br>
-            <input type="radio" name="dog" value="Poddrick" checked> Poddrick<br>
-            <input type="radio" name="dog" value="Puddin"> Puddin<br>
-            <input type="radio" name="dog" value="Daisy"> Daisy<br>  
-            <input type="radio" name="dog" value="Rusty"> Rusty 
-          </label>
+          <div class="info-div">
+            <label>
+              Name
+              <input class="form-textbox" type="text" name="name" required>
+            </label>
+            <label>
+              Phone No
+              <input class="form-textbox" type="tel" name="tfn" maxlength="10" minlength="10" required>
+            </label>
+          </div>
 
-          <label>
-            Insert a password to continue your application
-            <input type="password" name="pwd" minlength="6" required>
-          </label>
-
-          <label>
-            <input type="checkbox" name="check1" value="termsandcondition" required> I agree to the Terms and Conditions<br>
-            <input type="checkbox" name="check2" value="adoption" required> I'm ready to adopt my pup 🐶
-          </label>
+          <div class="user-div">
+            <label>
+              User <br>
+              <input class="form-textbox" type="email" name="email" placeholder="E-mail" required>
+            </label>
+            <label>
+              <input class="form-textbox" type="password" name="pwd" minlength="6" placeholder="Password" required>
+            </label>
+          </div>
           
+          <div class="radio-div">
+            <p class="p-form">I'm interested in adopting:</p>
+            <div class="radiobutton-div">
+              <label  class="radio-container">
+                <input type="radio" name="dog" value="Poddrick" checked> Poddrick
+                <span class="radiomark"></span>
+              </label >
+              <label class="radio-container">
+                <input type="radio" name="dog" value="Puddin"> Puddin
+                <span class="radiomark"></span>
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="dog" value="Daisy"> Daisy
+                <span class="radiomark"></span>
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="dog" value="Rusty"> Rusty 
+                <span class="radiomark"></span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="check-div">
+            <label class="radio-container">
+              <input type="checkbox" name="check1" value="termsandcondition" required> I agree to the Terms and Conditions
+              <span class="checkmark"></span>
+            </label>
+            <label class="radio-container">
+            <input type="checkbox" name="check2" value="adoption" required> I'm ready to adopt my pup 🐶 
+            <span class="checkmark"></span>
+            </label>
+          </div>
+
           <button class="button" id="btn" type="submit">Submit Application</button>
         </form>
       </section>

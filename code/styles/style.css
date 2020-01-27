@@ -1,19 +1,44 @@
 /******* Body *******/
 body {
   margin: 0;
+  background-color: #ff9860;
+  background-image: linear-gradient(0deg, #ff9860 0%, #f3d692 38%, #fdefcd 100%);
+
+
 }
 
 /******* Header *******/
 header {
-  background-color: rgb(2, 31, 31);
-  height: 500px;
+  background-image: url(https://images.unsplash.com/photo-1444212477490-ca407925329e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80);
+  height: 700px;
   background-position: center;
   background-size: cover;
   position: relative;
 }
 
+.video {
+  display: block;
+  position: relative;
+  width: auto;
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-size: contain;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .header-content {
-  z-index: 2;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -31,57 +56,45 @@ nav {
 
 nav a:link {
   text-decoration: none;
-  color: rgb(1, 22, 22); 
-  font-size: 25px;
-  padding: 20px 20px;
+  color: #FDEFCD; 
+  font-size: 23px;
+  font-weight: bold;
+  padding: 20px;
 }
 
 nav a:visited {
-  color: rgb(2, 31, 31);
+  color: #F78C51;
 }
 
 nav a:hover {
-  font-weight: bold;
-  color: teal;
+  text-decoration: underline;
 }
 
-.home {
-  align-self: flex-start;
+.home img {
+  height: 40px;
+  width: 40px;
 }
 
-h1 {
-  color: white;
-  
+nav a.home {
+  padding: 10px;
 }
 
-.video {
-  position: relative;
-  width: auto;
-  min-width: 100%;
-  height: auto;
-  min-height: 100%;
-  background-size: contain;
+nav a.home:hover {
+  opacity: 0.5;
 }
 
-video {
-  display: block;
-}
-
-.video-container {
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  max-width: 100%;
-  overflow: hidden;
+.header-content h1 {
+  color: #F78C51;
+  font-size: 40px;
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
+  left: 0;
 }
 
 /******* Main *******/
 
 main {
-  background-color: rgb(2, 31, 31);
   display: grid;
   grid-template-columns: 10% 36% 8% 36% 10%;
   grid-template-rows: auto;
@@ -94,10 +107,8 @@ main {
 /*______ Accordion Dogs ______*/
 
 .accordion-dog {
-  background-color: white;
-  border: 12px solid #fff;
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   grid-area: item-a;
   width: 80%; 
 }
@@ -106,18 +117,23 @@ h2 {
   margin: 0;
   padding: 20px;
   text-align: center;
+  border-top: 2px solid #F78C51;
+  border-bottom: 2px solid rgb(255, 156, 103);
+  background-color: #F78C51;
+  color: #FDEFCD;
 }
 
-.question {
+.accordion-dog .question {
   width: 100%;
   padding: 20px 0px;
-  background: teal;
+  border-bottom: 2px solid rgba(247, 139, 81, 0.37);
   text-align: center;
-  color: white;
+  color: rgb(192, 67, 0);
+  font-weight: bold;
 }
 
-.question:hover {
-  background: rgb(0, 68, 68);
+.accordion-dog .question:hover {
+  background: #F78C51;
 }
 
 .answer {
@@ -125,6 +141,7 @@ h2 {
   width: 100%;
   list-style: none;
   display: none;
+  color: rgb(192, 67, 0);
 }
 
 .answer p {
@@ -137,7 +154,7 @@ h2 {
 }
 
 .active {
-  background: teal;
+  background: #F78C51;
 }
 
 .active + .answer {
@@ -147,16 +164,58 @@ h2 {
 /*______ Form ______*/
 
 .form-container {
-  background-color: teal;
-  border: 12px solid #fff;
+  border: 12px solid #F78C51;
+  border-radius: 8px;
   margin-top: 20px;
   margin-bottom: 40px;
   grid-area: item-b;
   width: 100%;
 }
 
-.h3-form {
+h3 {
   margin-left: 20px;
+  color:rgb(192, 67, 0);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.p-form {
+  margin-left: 20px;
+}
+
+.formform-container {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "item-1 item-2"
+    "item-3 item-3"
+    "item-4 item-4";
+  justify-items: start;
+}
+
+.info-div {
+  grid-area: item-1;
+}
+
+.user-div {
+  grid-area: item-2;
+}
+
+.radio-div {
+  grid-area: item-3;
+}
+
+.radiobutton-div {
+  display: flex;
+  flex-direction: inline;
+  flex-wrap: wrap;
+}
+
+.check-div {
+  grid-area: item-4;
+  margin-top: 20px;
 }
 
 label {
@@ -164,31 +223,158 @@ label {
   margin: 10px 20px;
 }
 
+.form-textbox {
+  border-radius: 8px;
+  background-color: #FDEFCD;
+  outline: none; 
+  border: 2px solid #FDEFCD;
+}
+
+.form-textbox:focus {
+  border: 2px solid #F78C51;
+}
+
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.radiomark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.radio-container:hover input ~ .radiomark {
+  background-color: rgba(247, 139, 81, 0.205);
+}
+
+.radio-container input:checked ~ .radiomark {
+  background-color: #F78C51;
+}
+
+.radiomark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .radiomark:after {
+  display: block;
+}
+
+.radio-container .radiomark:after {
+ 	top: 7px;
+	left: 7px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: white;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+.radio-container:hover input ~ .checkmark {
+  background-color: rgba(247, 139, 81, 0.205);
+}
+
+.radio-container input:checked ~ .checkmark {
+  background-color: #F78C51;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radio-container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 button {
-  margin: 10px 20px 20px 20px
+  margin: 10px 20px 20px 20px;
+  background-color: #F78C51;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgb(82, 29, 0);
 } 
 
 input:valid {
-  background-color: rgb(64, 224, 176);
+  background-color: #F78C51;
+  border-color: #F78C51;
 }
 
 /*______ Accordion FAQ ______*/
 
 .accordion-faq {
-  background-color: white;
-  border: 12px solid #fff;
+  /* background-color: white; */
+  border: 12px solid #F78C51;
+  border-radius: 8px;
   margin-top: 20px;
   margin-bottom: 40px;
   grid-area: item-c;
   width: 100%;
 }
 
+.accordion-faq .question {
+  padding-left: 20px;
+  max-width: 100%;
+  padding: 20px 20px;
+  /* background: teal; */
+  color: rgb(192, 67, 0);
+  font-weight: bold;
+}
 
+.accordion-faq .question:hover {
+  background: #F78C51;
+  color: #FDEFCD;
+}
 
 /******* Footer *******/
 
 footer {
-  background-color: rgb(1, 22, 22);
+  /* background-color: rgb(1, 22, 22); */
   margin: 0;
 }
 
@@ -199,14 +385,37 @@ footer p {
 }
 
 footer p img {
-  width: 100px;
-  height: 50px
+  width: 60px;
+  height: 30px
 }
 
 
 /******* Media Queries *******/
 
 @media (max-width: 667px) {
+  header {
+    height: 300px;
+  }  
+
+  nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+  }
+
+  .hamburger .pickles {
+    width: 30px;
+    height: 5px;
+    background: #FDEFCD;
+  }
+
   main {
     display: grid;
     grid-template-columns: 10% 80% 10%;
@@ -224,16 +433,56 @@ footer p img {
   .form-container {
     margin-bottom: 20px;
   }
+}
 
+@media (min-width: 668px) {
+  header {
+    height: 500px;
+  }
+}
+
+@media (max-width: 1023px) {
+    .video {
+    display: none;
+  }
+
+ .formform-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "item-1"
+      "item-2"
+      "item-3"
+      "item-4";
+    justify-items: start;
+  }
+
+  .radiobutton-div {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 1024px) {
   .accordion-dog {
     width: 50%; 
   }
+
+  
+
 }
 
 @media (min-width: 1440px) {
+  header {
+    height: 700px;
+  }
+
+  main {
+    grid-template-columns: 20% 26% 8% 26% 20%;
+  }
+
   .accordion-dog {
     width: 40%; 
   }
