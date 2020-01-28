@@ -17,6 +17,7 @@ h1 {
   color: #2B2828;
   margin-top: 0em;
   padding-left: 1.7em;
+  font-size: 1.5em;
 }
 
 .hero-banner img {
@@ -39,6 +40,7 @@ h1 {
 /********* SIGNUP FORM AND FAQ *********/
 
 .info-box {
+  margin: 0;
   display: flex;
   justify-content: center;
   padding: 2rem 0;
@@ -51,42 +53,57 @@ h1 {
   background-color: #ff5d38; 
   width: 30%;
   padding: 3em;
+  -webkit-appearance: none;
 }
 
 .name {
+  color: white;
+  padding-left: 0.5em;
   outline: none;
   background-color: #fcb2a1;
   line-height: 1.8em;
-  border: 0;
+  border: 1px;
+  border-color: #ff5d38;
   border-radius: 40px;
+  margin: 0.6em 0;
+  width: 70%;
+  
 }
 
 .name:focus {
-  border: 1px solid white;
+  background-color: #C0BBF9;
 }
-  
+
 .email {
+  padding-left: 0.5em;
+  color: white;
   outline: none;
   background-color: #fcb2a1;
   line-height: 1.8em;
   border: 0;
   border-radius: 40px;
+  margin: 0.6em 0;
+  width: 70%;
 }
 
 .email:focus {
-  border: 1px solid white;
+  background-color: #C0BBF9;
 }
 
   .password {
+    padding-left: 0.5em;
+    color: white;
     outline: none;
     background-color: #fcb2a1;
     line-height: 1.8em;
     border: 0;
     border-radius: 40px;
+    margin: 0.6em 0;
+    width: 70%;
   }
 
   .password:focus {
-    border: 1px solid white;
+    background-color: #C0BBF9;
   }
 
   ::placeholder {
@@ -99,28 +116,130 @@ h1 {
 
   .radio-inputs {
     font-size: 0.7em;
-    display: flex;
-    flex-direction: column;
-    padding: 2em 0;
+    display: block;
+    position: relative;
+    margin-top: 1em;
     line-height: 1rem;
+    padding-left: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
+
+  .radio-inputs input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #4357ef;
+    border-radius: 50%;
+  }
+
+  .radio-inputs:hover input ~ .checkmark {
+    background-color: #6576f7;
+  }
+
+  .radio-inputs input:checked ~ .checkmark {
+    background-color: #2c3cb7;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .radio-inputs input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .radio-inputs .checkmark:after {
+    top: 4.5px;
+    left: 4.5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+ }
+
+
 
 /********* CHECKBOX *********+*/
 
   .terms {
-    padding: 1em 0 2em 0;
-      font-size: 0.7em;
+    padding: 2em 0 2em 0;
+    font-size: 0.7em;
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
   }
 
 
+  /********** I WAS TRYING TO STYLE THE CHECKBOX *********/
+  /* .terms input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
 
+  .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+  }
 
+  .terms:hover input ~ .checkbox {
+    background-color: #ccc;
+  }
 
+  .terms input:checked ~ .checbox {
+    background-color: #2196F3;
+  }
+
+  .checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .terms input:checked ~ .checkbox:after {
+    display: block;
+  }
+
+  .terms .checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  } */
 
 /******* BUTTON ******/
 
   .submit {
-    font-family: 'Roboto Mono' monospace;
+    font-family: inherit;
     font-weight: 700;
     border: 5px;
     border-color: white;
@@ -131,14 +250,16 @@ h1 {
     font-size: 1rem;
     padding: 0 2rem;
     width: fit-content;
+    outline: none;
   }
 
   .submit:hover {
     background-color: #6576f7;
+    cursor: pointer;
   }
 
-  .submit:active {
-    background-color: #293cce;
+  .submit:focus {
+    background-color: #2c3cb7;
   }
 
 /********* FAQ **********/
@@ -146,37 +267,51 @@ h1 {
 .accordion {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  /* align-content: center; */
+  /* justify-content: center; */
   background-color: #743C12;
   width: 30%;
   padding: 3em;
 }
 
+.accordion h2 {
+  padding-left: 0em;
+}
  .question {
+   padding: 1em;
    display: flex;
    justify-content: space-between;
+   /* align-items: center; */
+   background-color: #82471d;
+   margin-bottom: 0;
  }
 
  .question:hover {
    background-color: #293cce;
+   cursor: pointer;
  }
 
-/* .question:visited {
-  background-color: #071cba;
-} */
-
-.question:visited i {
-  rotate: rotate(45deg);
+ .question:focus {
+  background-color: #152496;
 }
+
 .answer {
+  padding: 1em;
   visibility: hidden;
   background-color: #4357ef;
+  max-height: 0;
+  transition: max-height 0.5s ease;
 }
+
 .active + .answer {
   visibility: visible;
-
-  /* some styling here */
+  max-height: 150px;
 }
+
+.question.active .fa-plus {
+    transform: rotate(45deg)
+}
+
 
 /******** FOOTER ********/
 
@@ -196,4 +331,41 @@ h1 {
   text-align: center;
   line-height: 0.7em;
   font-size: 0.7em;
+}
+
+
+/************* MEDIA QUERIES ***********/
+
+@media (max-width: 770px) {
+  .info-box {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 436px) {
+  .hero-banner {
+    background-image: none;
+  }
+
+  body {
+    background-color: #FFBBEC;
+    /* background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%); */
+    background-image: linear-gradient(180deg, #FFBBEC 0%, #A9C9FF 100%);
+  }
+
+  h1 {
+    font-size: 0.8em;
+  }
+
+  .sign-up {
+    width: 70%;
+    padding: 2em;
+  }
+
+  .accordion {
+    width: 70%;
+    padding: 2em;
+  }
+  
 }

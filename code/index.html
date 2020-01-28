@@ -16,54 +16,68 @@
         <h1>Magazine</h1>
       </div>
     </header>
+
+
     <!-- Signup form -->
+
+
     <div class="info-box">
       <section class="sign-up">
-        <h2>Sign Up</h2>
-        <label>
-          <!-- Name -->
-          <input class="name" type="text" name="Name" placeholder=" Name" required>
-        </label>
-        <label>
-          <!-- Email -->
-          <input class="email" type="email" name="email" placeholder=" Email" required>
-        </label>
-        <label>
-          <!-- Password -->
-          <input class="password" type="password" name="password" placeholder=" Password" required>
-        </label>
+        <h2>Subscribe</h2>
+        
 
-        <!-- RADIO INPUTS -->
-        <div class="radio-inputs">
-          <label>
-            <input type="radio" id="physicalMagazine" name="type" value="physicalMagazine"
-          checked>
-          Physical Magazine
-          </label>
+        <form action="http://httpbin.org/anything" method="POST">
+          <div>
+            <input class="name" type="text" name="Name" placeholder=" Name" required="required">
+            <label for="name"></label>
+          </div>
+          
+          <div>
+            <input class="email" type="email" name="email" placeholder=" Email" required="required">
+            <label for="email"></label>
+          </div>
 
-          <label>
-            <input type="radio" id="onlinelMagazine" name="type" value="onlinelMagazine">
-            Online Magazine
-          </label>
+          <div>
+            <input class="password" type="password" name="password" placeholder=" Password" required="required">
+            <label for="password"></label>
+          </div>
+      
+      
 
-          <label>
-            <input type="radio" id="both" name="type" value="both">
-            Both
-          </label>
-        </div>
+          <!-- RADIO INPUTS -->
+          <div>
+            <label class="radio-inputs">
+              <input type="radio" id="physicalMagazine" name="type" value="physicalMagazine" required="required">
+            Physical Magazine
+            <span class="checkmark"></span>
+            </label>
 
-      <!-- CHECKBOX -->
-        <div class="terms">  
-          <label>
-            <input type="checkbox" id="scales" name="scales">
-            Terms & Conditions
-          </label>
-        </div>
+            <label class="radio-inputs">
+              <input type="radio" id="onlinelMagazine" name="type" value="onlinelMagazine">
+              Online Magazine
+              <span class="checkmark"></span>
+            </label>
 
-        <!-- BUTTON -->
+            <label class="radio-inputs">
+              <input type="radio" id="both" name="type" value="both">
+              Both
+              <span class="checkmark"></span>
+            </label>
+          </div>
 
-        <input class="submit" type="button" value="Submit"></input>
+            <!-- CHECKBOX -->
+          <div class="terms">  
+              <input type="checkbox" class="checkbox" id="checkbox" name="box" required="required">
+              <label class="terms-name">Terms & Conditions</label>
+          </div>
 
+            <!-- BUTTON -->
+
+          <button class="submit" type="submit">Submit</button>
+          <!-- <input class="submit" type="button" value="Submit"></input> -->
+        </form>
+          
+        
 
       </section>
 
@@ -71,7 +85,7 @@
         <!-- Accordion -->
         <h2>FAQ</h2>
         <!-- <div class="open"> -->
-          <div class="question" id="section1">How much does it cost?<i class="fas fa-plus"></i></div>
+          <div class="question" id="section1">How much does it cost?<span class="rotate-icon"><i id="fa-plus" class="fas fa-plus"></i></span></div>
           <div class="answer">
             <p>Keel me scurvy careen man-of-war broadside spyglass loot hogshead hang the jib.</p>
           </div>
