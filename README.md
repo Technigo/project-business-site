@@ -1,12 +1,13 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+My business site is a signup form to get a subscription of a magazine.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I spent more time now sketching the website before beginning and that really helped. 
+I used flexbox, media queries and learned how to use a background image as a header.
+If I had more time I would spend it trying to figure out how to style the form so it looks nicer if something is filled out in the wrong way. 
+I also would style the checkbox. I don't understand why I could style the radio inputs but the checkbox was so much harder.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
