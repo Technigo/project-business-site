@@ -1,12 +1,20 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+This is a website made in the Technigo Bootcamp - Spring 2020.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+My business site is a signup form to get a subscription of a magazine.
+
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The project was to focus on forms and input methods, a FAQ accordion and a hero-banner for a header. 
+
+Responsiveness is very important to me and I want to get better at it so that is what I focused on as well. 
+
+I used flex-box, some beginner javascript and spent a long time on getting icons to turn when accordion expanded. 
+
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+Here is the website on netlify🖤:
+https://dazzling-lichterman-7db9bf.netlify.com/
