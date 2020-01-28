@@ -28,19 +28,15 @@ header {
 }
 
 form {
-  /* display: flex;
-  flex-direction: column;
-  font-size: 20px;
-  align-items: flex-start;
-  max-width: 360;
-  text-align: center; */
 
   background: white;
   border: 0 none;
+  font-size: 12px;
   border-radius: 3px;
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
   padding: 20px 30px;
   box-sizing: border-box;
+  height: 220px;
   width: 80%;
   margin: 0 10%;
   position: relative;
@@ -89,6 +85,7 @@ flex-child {
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
   padding: 20px 30px;
   box-sizing: border-box;
+  height: 220px auto;
   width: 80%;
   margin: 0 10%;
   position: relative;
@@ -121,15 +118,15 @@ h1 {
     font-size: 40px;
   }
 
-  input:valid {
-    background-color: green;
-  }
-
-  input:invalid {
-    background-color: red;
-  }
 
 
   label {
     margin: 10px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .body {
+      flex-direction: column;
+      flex: 1;
+    }
   }
