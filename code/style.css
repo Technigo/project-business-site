@@ -34,17 +34,18 @@ a {
 
 .button {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: .6rem 1.4rem;
-  background-color: seagreen;
+  background-color: navy;
   color: wheat;
   font-weight: 600;
   outline: none;
+  cursor: pointer;
   transition: all .2s ease-in-out;
 }
 
 .button:hover {
-  background-color: rgb(28, 94, 56);
+  background-color: black;
 }
 
 .visibility-hidden {
@@ -149,7 +150,7 @@ nav a:hover {
 .section-container {
   flex: 1 1 auto;
   max-width: 50rem;
-  margin: 3rem;
+  margin: 2rem;
 }
 
 .section-container h1 {
@@ -159,29 +160,41 @@ nav a:hover {
 
 /* ––– FAQ ––– */
 
+.faq .section-container div:nth-child(4n),
+.faq .section-container div:nth-child(4n)+.answer {
+  background-color: #eae4dc;
+}
+
 .question {
   position: relative;
-  padding: 1.5rem 2rem 1.5rem 0;
+  padding: 1.5rem;
   font-weight: 700;
   cursor: pointer;
+  transition: all .1s ease-in-out;
+}
+
+.question:hover {
+  filter: brightness(.96);
 }
 
 .question::after {
   position: absolute;
   top: 35%;
-  right: 10px;
+  right: 1.5rem;
   content: url(img/plus.svg);
   width: 14px;
 }
 
-.question:not(:first-of-type) {
-  border-top: 1px solid #e2e2e2;
+.question,
+.answer {
+  padding: 1.5rem 3rem 1.5rem 1.5rem;
+  background-color: #fbf6f0;
 }
 
 .answer {
   display: none;
-  margin-bottom: .5rem;
-
+  width: 100%;
+  padding-top: 0;
 }
 
 .active+.answer {
@@ -216,7 +229,6 @@ nav a:hover {
 
 .signup-form input[type=text],
 .signup-form input[type=email],
-.signup-form input[type=submit],
 .signup-form input[type=password] {
   display: block;
   width: 100%;
@@ -228,6 +240,7 @@ nav a:hover {
 
 
 .signup-form input[type=text]:focus,
+.signup-form input[type=email]:focus,
 .signup-form input[type=password]:focus {
   outline: none;
   box-shadow: -10px 0px 0px 0px #d8be8f;
@@ -298,6 +311,10 @@ nav a:hover {
   transform: rotate(45deg);
 }
 
+input.button {
+  border: 0;
+  font-size: 1rem;
+}
 
 /* ––– Footer ––– */
 
