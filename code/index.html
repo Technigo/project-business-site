@@ -11,41 +11,68 @@
 
 <body>
   <header>
+    <div class="video-container">
+      <video controls autoplay muted loop playsinline>
+        <source src="bigvideo.mp4" type="video/mp4">
+        <source src="smallvideo.mp4" type="video/mp4">
+        <p>This browser doesn't support video...</p>
+      </video>
+    </div>
     <h1>The Flower Shop</h1>
   </header>
-  <!-- video or image as a header is cool :) -->
+
   <main>
     <section class="order-form">
+      <h2>Order flower arrengements</h2>
       <form action="http://httpbin.org/anything" method="POST">
-        <label>
-          <input type="text" name="name" placeholder="Name">
-        </label>
-        <label>
+        <div class="input">
+          <input type="text" name="name" placeholder="Name" required>
+          <span></span>
+        </div>
+        <div class="input">
           <input type="email" name="email" placeholder="Email" required>
-        </label>
-        <label>
-          <input type="text" name="phoneNumber" placeholder="Phone number">
-        </label>
-        <label>
-          How many arrengements?<br>
-          <input type="radio" name="numberOfArrengements" value="1"> 1<br>
-          <input type="radio" name="numberOfArrengements" value="2-3"> 2 - 3<br>
-          <input type="radio" name="numberOfArrengements" value=">3"> > 3<br>
-        </label>
-        <label>
-          For what occasion?<br>
-          <input type="checkbox" name="event" value="wedding"> Wedding<br>
-          <input type="checkbox" name="event" value="birthday"> Birthday<br>
-          <input type="checkbox" name="event" value="funeral"> Funeral<br>
-          <input type="checkbox" name="event" value="other"> Other<br>
-        </label>
-        <input type="submit" value="Submit">
+          <span></span>
+        </div>
+        <div class="input">
+          <input type="text" name="phonenumber" placeholder="Phone number" required>
+          <span></span>
+        </div>
+        <div class="input">
+          <h3>How many arrengements?</h3>
+          <label>
+            <input type="radio" name="numberofarrengements" value="1"> 1
+          </label>
+          <label>
+            <input type="radio" name="numberofarrengements" value="2-3"> 2-3
+          </label>
+          <label>
+            <input type="radio" name="numberofarrengements" value=">3"> >3
+          </label>
+        </div>
+        <div class="input">
+          <h3>For what occasion?</h3>
+          <label>
+            <input type="checkbox" name="event" value="wedding"> Wedding
+          </label>
+          <label>
+            <input type="checkbox" name="event" value="birthday"> Birthday
+          </label>
+          <label>
+            <input type="checkbox" name="event" value="funeral"> Funeral
+          </label>
+          <label>
+            <input type="checkbox" name="event" value="other"> Other
+          </label>
+        </div>
+        <div class="input">
+          <input type="submit" value="Submit">
+        </div>
       </form>
     </section>
 
     <section class="faq-accordion">
 
-      <h1>FAQ</h1>
+      <h2>FAQ</h2>
 
       <div class="question" id="question1">How much does it cost?</div>
       <div class="answer">
@@ -56,17 +83,26 @@
       <div class="question" id="question2">How long does it take?</div>
       <div class="answer">
         <p>A simple arrangement takes a couple of hours to make. A more complex one can take a whole day. Please place
-          your order at least two days before the actual event.</p>
+          your order at least two days before the actual event where you need the flowers.</p>
       </div>
 
       <div class="question" id="question3">How many arrangements can I order?</div>
       <div class="answer">
         <p>We are a small business, please keep that in mind and place your order well in advance.</p>
       </div>
+
+      <div class="question" id="question4">Can I pick any flowers?</div>
+      <div class="answer">
+        <p>We have a broad selection of flowers, give us a call and check if we have everything you have in mind.
+          Otherwise we'll make a special order or give you a beautiful alternative.</p>
+      </div>
     </section>
   </main>
-
-  <!-- dont forget to link the javascript file here! -->
+  <footer>
+    <a href="">Contact us</a>
+    <a href="">Location</a>
+    <a href="">Newsletter</a>
+  </footer>
   <script src="script.js"></script>
 </body>
 

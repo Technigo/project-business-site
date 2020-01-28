@@ -1,77 +1,191 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
 
 body {
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 16px;
-background-color: #eae6da;
+color: #1b1b1b;
+background-color: #84a295;
 margin: 0;
 }
 
 main {
 display: flex;
-justify-content: space-around;
+flex-direction: column;
+align-items: center;
 }
+
+h2 {
+text-align: center;
+font-size: 18px;
+color: #f7f6ee;
+margin-bottom: 18px;
+}
+
+h3 {
+font-size: 16px;
+color: #1b1b1b;
+font-weight: normal;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #b7cdc2;
+  border-radius: 12px;
+}
+
+a {
+  color: #1b1b1b;
+  text-decoration: none;
+}
+
+/*** Header ***/
 
 header {
-  height:400px;
-  display:flex;
-  justify-content: center;
-  align-items:center;
-  background-image: url(annie-spratt-OWq8w3BYMFY-unsplash.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom: 22px;
+  height:200px;
+  position: relative;
+  overflow: hidden;
 }
 
-header h1 {
-  font-size: 160px;
+.video-container {
+  position: relative;
+}
+
+video {
+  height: auto;
+  width: 100%;
+}
+
+h1 {
+  background: rgba(0,0,0,0);
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
   font-family: 'Zhi Mang Xing', cursive;
   color: #f7f6ee;
 }
 
+/*** Order form ***/
+
 .order-form {
-  width: 45%;
-  color: #f7f6ee;
-  background-color: #84a295;
+  width: 70%;
+  flex-grow: 1;
+  margin: 40px 12px;
   padding: 12px;
+  border-radius: 6px;
+  background-color: #b7cdc2;
+  box-shadow: 6px 6px 6px 0 #1b1b1b;
+}
+
+.input {
+  display: block;
+  margin: 10px 0;
 }
 
 label {
   display: block;
-  margin-bottom: 10px;
 }
 
 input {
   font-size: 16px;
+  border-radius: 6px;
   background-color: #eae6da;
+  transition: background-color 1s;
 }
+
+input:focus {
+  background-color: #efdb96;
+  }
+
+/*** FAQ ***/
 
 .faq-accordion {
-  width: 45%;
+  width: 70%;
+  flex-grow: 1;
+  margin: 40px 12px;
+  padding: 12px;
+  border-radius: 6px;
   background-color: #b7cdc2;
-}
-
-.faq-accordion h1 {
-  text-align: center;
-  font-size: 26px;
-  color: #f7f6ee;
+  box-shadow: 6px 6px 6px 0 #1b1b1b;
 }
 
 .question {
-  background-color: #84a295;
+  background-color: #eae6da;
   padding: 12px;
   margin: 4px 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.question::after {
+  content: '+';
+  text-align: center;
+  float: right;
+  color: #1b1b1b;
+  width: 20px;
+  height: 20px;
+}
+
+.question.active::after {
+  content: '-';
 }
 
 .answer {
   display: none;
-  background-color: #efdb96;
-  padding: 2px 0;
+  background-color: #84a295;
+  padding: 12px;
+  border-radius: 6px;
 }
 
 .active + .answer {
   display: block;
+}
+
+/*** media queries ***/
+
+@media (min-width: 668px) {
+  main {
+    flex-direction: row;
+    align-items: unset;
+    }
+
+  header {
+    height:320px;
+    }
+
+  h1 {
+    font-size: 130px;
+    }
+
+  .order-form {
+    width: 40%;
+    }
+
+  .faq-accordion {
+    width: 40%;
+    }
+
+ h2 {
+    font-size: 22px;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  header {
+    height: 400px;
+    }
+
+  h1 {
+    font-size: 160px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
 }
