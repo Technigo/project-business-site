@@ -4,7 +4,7 @@
 
 function toggle() {
   this.classList.toggle("active")
-}
+};
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
 document.getElementById("section1").onclick = toggle
@@ -12,3 +12,21 @@ document.getElementById("section2").onclick = toggle
 document.getElementById("section3").onclick = toggle
 document.getElementById("section4").onclick = toggle
 document.getElementById("section5").onclick = toggle
+
+
+// document.getElementsByClassName('testimonials-img').onclick = changeImg
+
+// document.getElementById('text') = swap;
+
+// document.getElementById("pic2").onclick = changeImg
+
+
+function changeImg() { 
+  const bi = "";
+  const ernst = "";
+  console.log(bi);
+  console.log(ernst);
+  // Conditional ternary
+  // this.src = condition ? ifTrue : ifFalse;
+  this.src = (this.src === bi) ? ernst : bi;
+};

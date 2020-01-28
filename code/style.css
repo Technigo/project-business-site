@@ -16,9 +16,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 .active + .answer {
-  /* some styling here */
-  height: 8vh;
-  transition: 0.2s ease-out;
+  max-height: 100vh;
+  transition: 1s ease-out;
 }
 
 .hero {
@@ -67,7 +66,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .accordion {
   background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -87,7 +86,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .question {
   display: flex;
   width: 40vw;
-  background-color: var(--second-color);
+  background-color: #bbb;
   border-bottom: 1px solid black;
   justify-content: space-between;
   align-items: center;
@@ -103,12 +102,16 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   border-bottom-right-radius: 5px;
 }
 
-article p {
-  font-size: 1vw;
+.question p {
+  font-size: 4vh;
   padding: 8px;
 }
 
-article i {
+.answer p {
+  padding: 8px 0px 8px 8px;
+}
+
+.question i {
   margin-right: 4vh;
 }
 
@@ -121,7 +124,7 @@ article i {
 }
 
 .answer {
-  height: 0vw; /* The JS will append active class and then change the height */
+  max-height: 0vw; /* The JS will append active class and then change the height */
   text-align: left;
   overflow-y: hidden; /* removes small scroll when answer is expanding */
   width: 40vw;
@@ -129,10 +132,11 @@ article i {
 }
 
 .testimonials {
-  width: 40vw;
+  width: 45vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .testimonials * {
@@ -150,6 +154,8 @@ article i {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1), 
+              0px 0px 40px rgb(127, 128, 127) inset;
 }
 
 .testimonials-card > span {
@@ -249,7 +255,7 @@ a:active {
   text-decoration: none;
 }
 
-/* 
+/*
 font-family: 'Alata', sans-serif; */
 
 @media only screen and (min-width: 300px)  and (max-width: 640px) {
@@ -263,8 +269,8 @@ font-family: 'Alata', sans-serif; */
 
   .active + .answer {
     /* some styling here */
-    height: 8vh;
-    transition: 0.2s ease-out;
+    max-height: 100vh;
+    transition: 1s ease-out;
   }
 
   .hero {
@@ -313,7 +319,7 @@ font-family: 'Alata', sans-serif; */
 
   .accordion {
     background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -324,7 +330,7 @@ font-family: 'Alata', sans-serif; */
     font-family: var(--prime-font);
   }
 
-  .accordion > h1 {
+  .faq > h1 {
     padding: 3vw;
     color: var(--prime-color);
   }
@@ -332,10 +338,23 @@ font-family: 'Alata', sans-serif; */
   .question {
     display: flex;
     width: 70vw;
-    background-color: var(--second-color);
+    background-color: #bbb;
     border-bottom: 1px solid black;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .question p {
+    font-size: 3vh;
+    padding: 8px;
+  }
+  
+  .answer p {
+    padding: 8px 0px 8px 8px;
+  }
+  
+  .question i {
+    margin-right: 4vh;
   }
 
   .question > i::after {
@@ -346,17 +365,8 @@ font-family: 'Alata', sans-serif; */
     content: "\2212";
   }
 
-  article p {
-    font-size: 2vh;
-    padding: 8px;
-  }
-
-  article i {
-    margin-right: 4vh;
-  }
-
   .answer {
-    height: 0vw; /* The JS will append active class and then change the height */
+    max-height: 0vw; /* The JS will append active class and then change the height */
     text-align: left;
     overflow-y: hidden; /* removes small scroll when answer is expanding */
     width: 70vw;
@@ -438,7 +448,7 @@ font-family: 'Alata', sans-serif; */
     color: #000;
     text-decoration: none;
   }
-  
+
   .exclude-small {
     display: none;
   }
@@ -448,7 +458,7 @@ font-family: 'Alata', sans-serif; */
     clear: both;
     display: table;
   }
- 
+
 
 }
 
@@ -463,8 +473,8 @@ font-family: 'Alata', sans-serif; */
 
   .active + .answer {
     /* some styling here */
-    height: 10vh;
-    transition: 0.2s ease-out;
+    max-height: 100vh;
+    transition: 1s ease-out;
   }
 
   .hero {
@@ -513,7 +523,7 @@ font-family: 'Alata', sans-serif; */
 
   .accordion {
     background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -524,7 +534,7 @@ font-family: 'Alata', sans-serif; */
     font-family: var(--prime-font);
   }
 
-  .accordion > h1 {
+  .faq > h1 {
     padding: 3vw;
     color: var(--prime-color);
   }
@@ -532,10 +542,25 @@ font-family: 'Alata', sans-serif; */
   .question {
     display: flex;
     width: 40vw;
-    background-color: var(--second-color);
+    background-color: #bbb;
     border-bottom: 1px solid black;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .question p {
+    /* Texten på frågan */
+    font-size: 3vh;
+    padding: 8px;
+  }
+  
+  .answer p {
+    /* Texten på svaret */
+    padding: 8px 0px 8px 8px;
+  }
+  
+  .question i {
+    margin-right: 4vh;
   }
 
   .question > i::after {
@@ -546,17 +571,8 @@ font-family: 'Alata', sans-serif; */
     content: "\2212";
   }
 
-  article p {
-    font-size: 2vh;
-    padding: 8px;
-  }
-
-  article i {
-    margin-right: 4vh;
-  }
-
   .answer {
-    height: 0vw; /* The JS will append active class and then change the height */
+    max-height: 0vw; /* The JS will append active class and then change the height */
     text-align: left;
     overflow-y: hidden; /* removes small scroll when answer is expanding */
     width: 40vw;
@@ -586,7 +602,7 @@ font-family: 'Alata', sans-serif; */
   .testimonials-card > span {
     width: 30vw;
   }
-  
+
   .testimonials-card > span > p {
     text-align: right;
   }
@@ -596,7 +612,7 @@ font-family: 'Alata', sans-serif; */
     height: 7vw;
     border-radius: 100%;
   }
-  
+
   .testimonials > h1 {
     text-align: center;
     padding: 3vw;
