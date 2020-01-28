@@ -89,7 +89,12 @@ header p{
   margin-top: 50px;
 }
 
-form {
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   max-width: 30rem;
@@ -100,12 +105,13 @@ form {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-form h1 {
+h1 {
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--gray-lighter);
   font-size: var(--font-size-3);
   text-align: center;
+  color: rgb(218, 6, 147);
 }
 
 input {
@@ -177,6 +183,26 @@ input[type='checkbox'] + label {
   user-select: all;
 }
 
+.question {
+  border-style: none;
+  font-family: 'Abril Fatface', cursive;
+  font-style: italic;
+  font-size: var(--font-size-3);
+  color: rgb(214, 22, 70);
+  background-color: lightgoldenrodyellow;
+  margin-top: 20px
+}
+
+
+ul {
+  display: none;
+}
+
+.active {
+  display: block;
+  list-style: none;
+  background-color: lightgoldenrodyellow;
+}
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.

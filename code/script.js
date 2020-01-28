@@ -6,17 +6,6 @@ btn.onclick = () => {
   headerTitle.innerText = "김장 하기 좋은 날"
 }
 
-
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-function toggle() {
-  this.classList.toggle("active")
-}
-
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
-
 document.addEventListener('DOMContentLoaded', function () {
   // When the event DOMContentLoaded occurs, it is safe to access the DOM
 
@@ -24,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', myFunctionForSticky);
 
   // Get the navbar
-  var navbar = document.getElementById("myNav");
+  var navbar = document.getElementById('myNav');
 
   // Get the offset position of the navbar
   var sticky = navbar.offsetTop;
@@ -39,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log("Not window.pageYOffset >= sticky");
     }
     if (window.pageYOffset >= sticky) {
-      navbar.classList.add("sticky");
+      navbar.classList.add('sticky');
     } else {
-      navbar.classList.remove("sticky");
+      navbar.classList.remove('sticky');
     }
   }
 
@@ -53,3 +42,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 })
 
+// Selects an HTML element, and calls a function which will be executed when the element is clicked.
+document.getElementById('question1').onclick = toggle
+
+function toggle() {
+  document.getElementById('answer1').classList.toggle('active')
+}
+document.getElementById('question2').onclick = toggleTwo
+
+function toggleTwo() {
+  document.getElementById('answer2').classList.toggle('active')
+}
+
+// A function that adds and remove the class "active" on the section you click on.
+// We haven't really talked about ´this´ yet, but we will... ;)
+// console.log(this) to see how it works
