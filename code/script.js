@@ -14,14 +14,6 @@ document.getElementById("section4").onclick = toggle
 document.getElementById("section5").onclick = toggle
 
 
-// document.getElementsByClassName('testimonials-img').onclick = changeImg
-
-// document.getElementById('text') = swap;
-
-// document.getElementById("pic2").onclick = changeImg
-let test = document.getElementById("test");
-console.log(test.src);
-
 function changeImg() { 
   const bi = "https://laughing-sinoussi-bf359d.netlify.com/img/bi.jpg";
   const ernst = "https://laughing-sinoussi-bf359d.netlify.com/img/ernst.jpg";
@@ -29,5 +21,5 @@ function changeImg() {
   
   // Conditional ternary
   // this.src = condition ? ifTrue : ifFalse;
-  this.src = (this.src === bi) ? ernst : bi;
+  element.src = (element.src === bi) ? ernst : bi;
 };
