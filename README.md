@@ -12,4 +12,4 @@ Then updated the heading background to video (and adjusted the styling).
 
 ## View it live
 
-The Jellymania Site: xxx
+The Jellymania Site: https://hardcore-dijkstra-4b04df.netlify.com/
