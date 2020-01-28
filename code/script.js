@@ -25,9 +25,8 @@ console.log(test.src);
 function changeImg() { 
   const bi = "https://laughing-sinoussi-bf359d.netlify.com/img/bi.jpg";
   const ernst = "https://laughing-sinoussi-bf359d.netlify.com/img/ernst.jpg";
-  console.log(bi);
-  console.log(ernst);
+  const element = document.getElementById("test");
   // Conditional ternary
   // this.src = condition ? ifTrue : ifFalse;
-  this.src = (this.src === bi) ? ernst : bi;
+  el.src = (el.src === bi) ? ernst : bi;
 };
