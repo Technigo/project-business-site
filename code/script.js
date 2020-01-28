@@ -23,8 +23,8 @@ let test = document.getElementById("test");
 console.log(test.src);
 
 function changeImg() { 
-  const bi = "";
-  const ernst = "";
+  const bi = "https://laughing-sinoussi-bf359d.netlify.com/img/bi.jpg";
+  const ernst = "https://laughing-sinoussi-bf359d.netlify.com/img/ernst.jpg";
   console.log(bi);
   console.log(ernst);
   // Conditional ternary
