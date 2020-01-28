@@ -38,3 +38,21 @@ section7.onclick = toggle
 // Section 8
 const section8 = document.getElementById("section8")
 section8.onclick = toggle
+
+
+// Funktion för att stänga andra
+
+var sec = document.getElementsByClassName("question");
+
+for (var i = 0; i < sec.length; i++) {
+  sec[i].onclick = function () {
+    var activeSecs = document.getElementsByClassName("active");
+    for (var j = 0; j < activeSecs.length; j++) {
+      var activeSec = activeSecs[j];
+      if (!(activeSec == this)) {
+        activeSec.classList.toggle("active");
+      }
+    }
+    this.classList.toggle("active");
+  }
+}

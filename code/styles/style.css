@@ -134,6 +134,7 @@ h2 {
 
 .accordion-dog .question:hover {
   background: #F78C51;
+  cursor: pointer;
 }
 
 .answer {
@@ -145,11 +146,12 @@ h2 {
   visibility: hidden;
   max-height: 0;
   opacity: 0;
-  transition: all 2s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .answer p {
   padding: 10px;
+  margin: 0;
 }
 
 .answer img {
@@ -166,6 +168,17 @@ h2 {
   /* display: inherit; */
   max-height: 1000px;
   opacity: 1;
+}
+
+.accordion-dog .question:after {
+  content: 'ᐅ'; 
+  font-size: 15px;
+  float: right;
+  margin-right: 5px;
+}
+
+.accordion-dog .question.active:after {
+  content: 'ᐁ'; 
 }
 
 /*______ Form ______*/
@@ -366,17 +379,28 @@ input:valid {
 }
 
 .accordion-faq .question {
-  padding-left: 20px;
   max-width: 100%;
-  padding: 20px 20px;
+  padding: 20px 0px 20px 20px;
   color: rgb(192, 67, 0);
   font-weight: bold;
+  cursor: pointer;
 }
 
 .accordion-faq .question:hover {
   background: #F78C51;
   color: #FDEFCD;
 }
+
+/* .accordion-faq .question:after {
+  content: 'ᐅ'; 
+  font-size: 15px;
+  float: right;
+  margin-right: 5px;
+}
+
+.accordion-faq .question.active:after {
+  content: 'ᐁ'; 
+} */
 
 /******* Footer *******/
 
