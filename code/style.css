@@ -286,13 +286,20 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 .answer {
-  display: none;
   width: 97%;
+  height: 0;
   margin: 0;
-  padding: 10px;
+  padding: 0 10px;
   background: #f5e3e7;
   color: #666666;
   font-size: 0.8rem;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
 }
 
 .answer a {
@@ -302,7 +309,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 .active + .answer {
-  display: block;
+  opacity: 1;
+  height: 125px;
+  padding: 0 10px;
 }
 
 /*** FOOTER ***/
@@ -352,6 +361,10 @@ footer a {
     width: 40%;
     border: 1px solid #f5e3e7;
   }
+
+  .active + .answer {
+    height: 80px;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -380,5 +393,8 @@ footer a {
 
   .accordion {
     margin: 0 20px 0 0;
+  }
+  .active + .answer {
+    height: 90px;
   }
 }
