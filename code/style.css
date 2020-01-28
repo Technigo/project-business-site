@@ -2,10 +2,6 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-}
-
 html {
   box-sizing: border-box;
 }
@@ -29,6 +25,12 @@ h1 {
 }
 
 h2{
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}
+
+h3 {
   color: black;
   text-align: center;
   font-size: 20px;
@@ -149,7 +151,7 @@ div {
 /****************** SIGNUP FORM ******************/
 
 .main-content { /* This class includes the form section + accordion */
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -227,6 +229,55 @@ form {
   display: inline-block;
   width: 40%;
   margin-right: 40px;
+  border: #A68C76 solid 1px;
+  padding: 30px 50px 30px 18px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.question {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.question:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active > i:after {
+  content: "\2212";
+}
+
+.active .question:hover {
+  background-color: #ccc;
+}
+
+.answer {
+  height: 0vw;
+  text-align: left;
+  width: 40vw;
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow-y: hidden;
+}
+
+.active + .answer {
+  display: block;
+  height: 5vw;
+  transition: 0.2s ease-out;
+  background-color: #ddd;
 }
 
 /****************** MEDIA QUERIES ******************/
