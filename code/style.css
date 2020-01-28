@@ -3,6 +3,7 @@ body {
   font-family: 'Abril Fatface', cursive;
   display: flex;
   flex-flow: column wrap;
+  background-color: rgb(117, 163, 119);
 }
 
 header {
@@ -12,7 +13,7 @@ header {
   align-items: center;
   height: 700px;
   background-image: linear-gradient(rgba(245, 247, 244, 0.1), rgba(245, 247, 244, 0.1)), url("images/hero-image.jpeg");
-  background-position: center;
+  background-position: inherit;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -73,12 +74,6 @@ header p{
   background-color: rgb(214, 22, 70);
 }
 
-.content{
-  margin-top:50px;
-  display: flex;
-  flex-direction: column;
-}
-
 .sticky {
   position: fixed;
   top: 0;
@@ -90,17 +85,19 @@ header p{
 }
 
 .content {
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 30rem;
+  width: 40%;
   margin: 0 auto;
   padding: 1.5rem 2rem;
-  background-color: white;
+  background-color: lightgoldenrodyellow;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
@@ -109,7 +106,7 @@ h1 {
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--gray-lighter);
-  font-size: var(--font-size-3);
+  font-size: 30px;
   text-align: center;
   color: rgb(218, 6, 147);
 }
@@ -123,7 +120,7 @@ input {
 .help-text {
   display: block;
   margin-top: 0.5rem;
-  font-size: var(--font-size-small);
+  font-size: 10px;
 }
 
 input:placeholder-shown + label {
@@ -188,8 +185,8 @@ input[type='checkbox'] + label {
   font-family: 'Abril Fatface', cursive;
   font-style: italic;
   font-size: var(--font-size-3);
-  color: rgb(214, 22, 70);
-  background-color: lightgoldenrodyellow;
+  color: lightgoldenrodyellow;
+  background-color: rgb(214, 22, 70);
   margin-top: 20px
 }
 
@@ -200,8 +197,23 @@ ul {
 
 .active {
   display: block;
-  list-style: none;
   background-color: lightgoldenrodyellow;
+}
+
+@media (max-width: 667px) {
+  header {
+    background-image: linear-gradient(rgba(245, 247, 244, 0.1), rgba(245, 247, 244, 0.1)), url("images/hero-image-mobile.jpeg");
+    background-position: center;
+  }
+  .content {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .container {
+    width: 100%;
+    margin: 20px 10px 20px 10px
+  }
+
 }
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
