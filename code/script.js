@@ -28,5 +28,5 @@ function changeImg() {
   const element = document.getElementById("test");
   // Conditional ternary
   // this.src = condition ? ifTrue : ifFalse;
-  el.src = (el.src === bi) ? ernst : bi;
+  element.src = (element.src === bi) ? ernst : bi;
 };
