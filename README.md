@@ -1,12 +1,19 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A business one pager website with a hero video header, a signup form and an accordion.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I am happy that I made a clear plan from the beginning, using Trello to structure the different steps. I focused on one section at a time instead of jumping back and forth, something that saved me a lot of time. 
+
+Some features:
+Hero video with overlay content
+Signup form using various input types
+Accordion with slide down animation, toggle done with JavaScript
+
+The site is designed mobile first, using mainly flexbox but also grid for one of the media queries.
+
+If I had more time I would try to add some styling to the hero video, maybe a filter.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+View the site here: https://pouroverpurist.netlify.com/
