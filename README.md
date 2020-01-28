@@ -6,10 +6,7 @@ A business one pager website with a hero video header, a signup form and an acco
 
 I am happy that I made a clear plan from the beginning, using Trello to structure the different steps. I focused on one section at a time instead of jumping back and forth, something that saved me a lot of time. 
 
-Some features:
-Hero video with overlay content
-Signup form using various input types
-Accordion with slide down animation, toggle done with JavaScript
+Some features: hero video with overlay content, signup form using various input types, accordion with slide down animation and toggle done with JavaScript.
 
 The site is designed mobile first, using mainly flexbox but also grid for one of the media queries.
 
