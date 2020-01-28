@@ -1,6 +1,9 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  background: #B7BED8;
+}
 
 .active+.answer {
   background-color: #eee;
@@ -25,10 +28,35 @@ header {
 }
 
 form {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   font-size: 20px;
+  align-items: flex-start;
+  max-width: 360;
+  text-align: center; */
 
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  position: relative;
+
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 2px solid black;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
 }
 
 main {
@@ -41,7 +69,7 @@ main {
 flex-child {
   border: 2px solid black;
   height: 300px;
-  width: 400px auto;
+  width: 300px;
   margin: 30px;
   padding: 20px;
   background: #B7BED8;
@@ -50,9 +78,20 @@ flex-child {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   box-shadow: 0 50px 50px rgba(0, 0, 0, .2);
 
+}
+
+.accordation {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  position: relative;
 }
 
 .question {
@@ -64,6 +103,13 @@ flex-child {
   background: white;
   max-width: auto;
   margin: 10px;
+}
+
+h2 {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
 }
 
 h1 {
