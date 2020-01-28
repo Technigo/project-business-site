@@ -8,8 +8,7 @@ body {
 
 h1 {
   font-size: 8vw;
-  color: white;
-  opacity: 80%;
+  color: #122021;
   margin: 0;
   font-family: "Pacifico", cursive;
 }
@@ -18,32 +17,16 @@ h2 {
   font-size: 3vw;
   margin: 0;
   color: white;
-  opacity: 70%;
+  opacity: 75%;
   font-weight: lighter;
 }
 h3 {
   font-size: 5vw;
   margin: 0;
-  color: #488286;
+  color: #3b6a6e;
   font-family: "Pacifico", cursive;
   text-align: center;
   letter-spacing: 1vw;
-  /* overflow: hidden; */
-  background: linear-gradient(90deg, #488286, #fff, #488286);
-  background-repeat: no-repeat;
-  /* background-size: 80%; */
-  /* animation: animate 4s linear infinite; */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@keyframes animate {
-  0% {
-    background-position: -400%;
-  }
-  100% {
-    background-position: 400%;
-  }
 }
 
 h4 {
@@ -59,12 +42,27 @@ h4 {
 
 .video-wrapper {
   position: relative;
+  display: flex;
   margin-bottom: 40px;
 }
 
 video {
   width: 100%;
   display: none;
+}
+
+.video-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(34, 61, 63, 0.45);
+  z-index: 10;
+  background-image: url(images/gplay.png);
+  background-repeat: repeat;
 }
 
 .title {
@@ -78,6 +76,7 @@ video {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  z-index: 20;
 }
 
 .company-text {
@@ -150,6 +149,10 @@ input:focus {
   outline: 0;
 }
 
+.submit-btn:active {
+  cursor: grabbing;
+}
+
 .accordion {
   background: #457b7f;
   box-shadow: 5px 10px #223d3f;
@@ -166,8 +169,22 @@ input:focus {
   height: auto;
   background: #223d3f;
   margin-bottom: 5px;
+  cursor: pointer;
+}
+.question:active {
+  cursor: grabbing;
 }
 
+.question::after {
+  content: "+";
+  float: right;
+  color: #fff;
+  width: 22px;
+  margin-right: 3px;
+}
+.question.open::after {
+  content: "-";
+}
 ul {
   display: none;
   width: 100%;
@@ -177,6 +194,7 @@ ul {
   list-style-type: none;
   font-size: 1.5vw;
 }
+
 li {
   background: #589c81;
   padding: 0;
@@ -186,6 +204,15 @@ li {
 li:nth-child(even) {
   background: #609ca1;
 }
+
+.open {
+  background: #223d3f;
+  margin: 0;
+}
+.open + ul {
+  display: block;
+}
+
 @media (max-width: 600px) {
   .v-small {
     display: inline-block;
@@ -208,15 +235,4 @@ li:nth-child(even) {
   .v-medium {
     display: none;
   }
-}
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp 
-*/
-.open {
-  background: #223d3f;
-  margin: 0;
-}
-.open + ul {
-  display: block;
 }
