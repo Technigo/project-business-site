@@ -1,30 +1,101 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project-business-site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+<body>
+  <header>
+    <picture>
+      <source srcset="pictures\image-mobile.jpg" media="(max-width: 600px)" />
+      <source srcset="pictures\image-ipad.jpg" media="(max-width: 900px)" />
+      <source srcset="pictures\image-computer.jpg" media="(max-width: 1200px)" />
+      <img src="pictures\computer-large.jpg" alt="header" />
+      <h1>4-Week Makeup Program</h1>
+    </picture>
+  </header>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+  <!-- Signup form -->
+  <section class="big-grid">
+    <section class="box">
+      <img src="pictures/ian-dooley-k8OCHhEymME-unsplash.jpg" alt="">
+      <div class="submitform">
+        <form action="http://httpbin.org/anything" method="post">
+          <label for="user_name">Name</label>
+          <input autocomplete="name" class="text-input" type="text" id="user_name">
+          <label for="user_login">Username</label>
+          <input autocorrect="off" autocapitalize="off" class="text-input" type="text" id="user_login">
+          <label for="user_email">Email</label>
+          <input class="text-input" type="email" id="user_email">
+          <label for="user_password">Password</label>
+          <input class="text-input" placeholder="6+ characters" type="password" id="user_password">
+          <input type="checkbox" id="user_agree_to_terms">
+          <label for="user_agree_to_terms">
+            Creating an account means you’re okay with our
+            <a target="#" href="/terms">Terms of Service</a>,
+            <a target="#" href="/privacy">Privacy Policy</a>, and our default
+            <a target="#" href="/notifications">Notification Settings</a>.
+          </label>
+          <button type="submit">Submit</button>
+        </form>
     </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+    <section class="box">
+      <section class="accordion">
+        <ul class="faq">
+          <li>
+            <h3 class="question" id="question1">Frequently Asked Question?
+              <div class="plus-minus-toggle collapsed"></div>
+            </h3>
+            <div class="answer">Answer. Blablba blbal bla blbada bladasd asdasd fgfdgsa adasd. Asdsads dasdasd asdsa
+              Asdsads
+              asdsad asdsa asd asdas fewfw. Dfdad daea fasfsa daea fraeaf adasd. Odsa dafwefa dadegafd. Blablba
+              blbal bla blbada bladasd asdasd fgfdgsa adasd. Asdsads dasdasd asdsa Asdsads
+              asdsad asdsa asd asdas fewfw. Dfdad daea fasfsa daea fraeaf adasd. Odsa dafwefa dadegafd.</div>
+          </li>
+          <li>
+            <h3 class="question" id="question2">Frequently Asked Question?
+              <div class="plus-minus-toggle collapsed"></div>
+            </h3>
+            <div class="answer">Answer. Blablba blbal bla blbada bladasd asdasd fgfdgsa adasd. Asdsads dasdasd asdsa
+              Asdsads
+              asdsad asdsa asd asdas fewfw. Dfdad daea fasfsa daea fraeaf adasd. Odsa dafwefa dadegafd. Blablba
+              blbal bla blbada bladasd asdasd fgfdgsa adasd. Asdsads dasdasd asdsa Asdsads
+              asdsad asdsa asd asdas fewfw. Dfdad daea fasfsa daea fraeaf adasd. Odsa dafwefa dadegafd.</div>
+          </li>
+          <li>
+            <h3 class="question" id="question3">Frequently Asked Question?
+              <div class="plus-minus-toggle collapsed"></div>
+            </h3>
+            <div class="answer">Answer. Blablba blbal bla blbada bladasd asdasd fgfdgsa adasd. Asdsads dasdasd asdsa
+              Asdsads
+              asdsad asdsa asd asdas fewfw. Dfdad daea fasfsa daea fraeaf adasd. Odsa dafwefa dadegafd. Blablba
+              blbal bla blbada bladasd asdasd fgfdgsa adasd. Asdsads dasdasd asdsa Asdsads
+              asdsad asdsa asd asdas fewfw. Dfdad daea fasfsa daea fraeaf adasd. Odsa dafwefa dadegafd.
+            </div>
+          </li>
+          <li>
+            <h3 class="question" id="question4">Frequently Asked Question?
+              <div class="plus-minus-toggle collapsed"></div>
+            </h3>
+            <div class="answer">Answer. Blablba blbal bla blbada bladasd asdasd fgfdgsa adasd. Asdsads dasdasd asdsa
+              Asdsads
+              asdsad asdsa asd asdas fewfw. Dfdad daea fasfsa daea fraeaf adasd. Odsa dafwefa dadegafd. Blablba
+              blbal bla blbada bladasd asdasd fgfdgsa adasd. Asdsads dasdasd asdsa Asdsads
+              asdsad asdsa asd asdas fewfw. Dfdad daea fasfsa daea fraeaf adasd. Odsa dafwefa dadegafd.</div>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </section>
+  <footer>
+    <h3>Technigo project-business-site</h3>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
