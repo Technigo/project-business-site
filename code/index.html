@@ -11,48 +11,49 @@
 <body>
   <header>
     <div>
-      <h1 id="Slogan">Skip Plastic, Be Fantastic!</h1>
+      <h1>Skip Plastic, Be Fantastic!</h1>
     </div>
-    <video controls autoplay>
-      <source src="Video1.mp4" type="video/mp4">
-      <source src="Video1.webm" type="video/webm">
-      <p>This browser doesn't support video...</p>
-    </video>
   </header>
+  <main>
+    <flex-child>
+      <form action="http://httpbin.org/anything" method="POST">
+        <label>Namn
+          <input type="name" name="message" required></label>
+        <label>
+          E-mail
+          <input type="email" name="email" required>
+        </label>
+        <label> Betyg
+          <select name="Scrollmeny">
+            <option value="1">Dåligt</option>
+            <option value="2">OK</option>
+            <option value="3">Mycket bra</option>
+        </label>
+        </select>
 
-  <form action="http://httpbin.org/anything" method="POST">
-    <label>Namn
-      <input type="name" name="message" required></label>
-    <label>
-      E-mail
-      <input type="email" name="email" required>
-    </label>
-    <label> Betyg
-      <select name="Scrollmeny">
-        <option value="1">Dåligt</option>
-        <option value="2">OK</option>
-        <option value="3">Mycket bra</option>
-    </label>
-    </select>
-    <button type="submit">Skicka svar</button>
-  </form>
 
-  <!-- Signup form -->
+        <button type="submit">Skicka svar</button>
+      </form>
+    </flex-child>
+    <!-- Signup form -->
+    <flex-child>
+      <!-- <section class="accordion"> -->
+      <!-- Accordion -->
+      <h2>FAQ</h2>
 
-  <section class="accordion">
-    <!-- Accordion -->
-    <h1>FAQ</h1>
+      <div class="question" id="section1">+ Section </div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
 
-    <div class="question" id="section1">Section 1</div>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
+      <div class="question" id="section2">+ Section </div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+      <!-- </section> -->
+    </flex-child>
+  </main>
 
-    <div class="question" id="section2">Section 2</div>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
-  </section>
   <script src="script.js"></script> <!-- dont forget to link the javascript file here! -->
 </body>
 
