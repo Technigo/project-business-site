@@ -1,13 +1,18 @@
 # Business Site
 
+This is a website made in the Technigo Bootcamp - Spring 2020.
+
 My business site is a signup form to get a subscription of a magazine.
+
 
 ## The problem
 
-I spent more time now sketching the website before beginning and that really helped. 
-I used flexbox, media queries and learned how to use a background image as a header.
-If I had more time I would spend it trying to figure out how to style the form so it looks nicer if something is filled out in the wrong way. 
-I also would style the checkbox. I don't understand why I could style the radio inputs but the checkbox was so much harder.
+The project was to focus on forms and input methods, a FAQ accordion and a hero-banner for a header. 
+
+Responsiveness is very important to me and I want to get better at it so that is what I focused on as well. 
+
+I used flex-box, some beginner javascript and spent a long time on getting icons to turn when accordion expanded. 
+
 
 ## View it live
 
