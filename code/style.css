@@ -8,11 +8,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 html {
   box-sizing: border-box;
-  font-size: 100%;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
 }
 
 body {
@@ -42,23 +37,29 @@ p {
   margin-bottom: 8px;
 }
 
+div {
+  display: block;
+}
+
 /****************** HEADER ******************/
 
-/* Navigation */
-.navigation {
+/* Navigation OK */
+.header { 
+  background: black;
+  display: flow-root;
+  padding: 12px 16px 10px 0;
+  border-bottom: 2px solid #ebebeb;
   position: relative;
-  top: 0;
-  background-size: cover;
-  z-index: 1;
-  margin: 10px 30px;
+  width: 100%;
 }
 
 .navbar-right a {
   color: white;
   font-size: 12px;
-  padding: 10px;
+  padding: 10px 10px;
   text-decoration: none;
   margin-left: 16px;
+  margin-right: 20px;
   float: right;
   font-weight: 900;
 }
@@ -82,47 +83,73 @@ p {
   background: #D9CDBF;
 }
 
-/* Hamburger Animation */
-.hamburger {
-  display: block;
-  width: 32px;
-  flex-direction: column;
-  margin-right: 24px;
-  transform: translate(-50%,-50%);  
-  margin: 16px;
-}
-
-.hamburger::before,
-.hamburger::after {
-  background-color: black;
-  content: '';
-  display: flex;
-  height: 4px;
-  transition: all 250ms ease-in-out;
-  display: none;
-}
-.hamburger::before {
-  box-shadow: 0 10px 0 black;
-  margin-bottom: 16px;
-}
-.hamburger:hover::before {
-  box-shadow: 0 0 0 black;
-  transform: translateY(10px) rotate(45deg);
-}
-.hamburger:hover::after{
-  transform: translateY(-10px) rotate(-45deg);
-}
-
 /****************** TOP SECTION ******************/
 /* Welcome-video*/
-.welcome-container {
+
+.head-container {
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+  }
+
+.head-container .head-content {
+  flex-direction: column;
+  flex-wrap: flex;
+  justify-content: center;
+}
+
+.head-video video {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  opacity: 0.93;
+  margin-top: -3px;
+  }
+
+.head-overlay {
+  position: absolute;
+  z-index: 1;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 40%;
+  left: 30%;
+  right: 30%;
+  bottom: 50%;
+}
+
+/* Welcome message button */
+.head-overlay button {
+  display: inline-block;
+  background-color: #403F3D;
+  color: #D9CDBF;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 13px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.head-overlay button:hover {
+  background-color: #C4F2AE;
+  color: #59493B;
+}
+
+
+/*
+header .welcome-container {
+  display: block;
   align-items: center;
   position: inherit;
   width: 100%;
 }
 
-.welcome-container .container {
+/*.welcome-container {
   padding: 0px 16px;
   display: flex;
   flex-direction: column;
@@ -130,9 +157,11 @@ p {
 }
 
 .container {
-  position: inherit;
-  height: 900px;
-  overflow: hidden;
+ width: 100%;
+ max-width: 1100px;
+ margin: 0 auto;
+ box-sizing: border-box;
+ overflow: hidden;
 }
 
 .row {
@@ -144,7 +173,7 @@ p {
   text-align: center;
 }
 
-.hero-container {
+.header-video {
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -166,10 +195,10 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+}*/
 
 /* Welcome message button */
-.overlay button {
+/*.overlay button {
   display: inline-block;
   background-color: #403F3D;
   color: #D9CDBF;
@@ -185,9 +214,15 @@ p {
 .overlay button:hover {
   background-color: #C4F2AE;
   color: #59493B;
-}
+}*/
 
 /****************** SIGNUP FORM ******************/
+
+/*.form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 
 label {
   display: flex;
@@ -205,7 +240,7 @@ textarea {
 }
 
 /* Form-group */
-form {
+/*form {
   background: var(--color-blue);
   padding: 40px 10px;
   border-radius: 4px;
@@ -261,11 +296,11 @@ form {
 
 /****************** MEDIA QUERIES ******************/
 @media (min-width: 576px){
- 
+
 }
 
 @media (min-width: 768px){
-
+  
 }
 
 @media (min-width: 480px){
