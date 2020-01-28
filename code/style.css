@@ -17,10 +17,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   width: 100%;
   margin: 0;
-  height: 40vh;
+  height: 250px;
 }
 
 .header-textbox {
@@ -28,8 +27,8 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 75vw;
-  height: 15vh;
+  width: 75%;
+  height: 35%;
   background-color: aliceblue;
   opacity: 0.7;
 }
@@ -45,14 +44,57 @@ header {
   font-size: 1em
 }
 
-/* Styling sidebars below  */
+.navbar {
+  display: flex;
+  height: 30px;
+  width: 100%;
+  border-top: solid 2px gray;
+  border-bottom: solid 2px gray;
+  margin-top: 2px;
+}
+
+.hamburger-nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 10px;
+  justify-content: center;
+  background-origin: padding-box;
+  border: none;
+  background-color: inherit;
+  outline: none;
+}
+
+.hamburger-nav div {
+  background-color: darkslategray;
+  height: 3px;
+  width: 20px;
+  margin: 1.5px 0;
+  border-radius: 30px;
+}
+
+.hamburger-nav.active .burger1 {
+  transform: rotate(45deg);
+  transform-origin: left top;
+  position: absolute;
+  top: 2px; 
+  transition: transform 200ms;  
+}
+
+.hamburger-nav.active .burger2 {
+  display: none;
+}
+
+.hamburger-nav.active .burger3 {
+  transform: rotate(-45deg);
+  transform-origin: left bottom;
+  position: absolute;
+  top: 15px;
+  transition: transform 200ms;
+}
 
 .sidebar {
-  width: 350px;
-  height: 900px;
-  border: solid 1px #9FA4C4;
-  display: inline-flex;
-  display:none;
+  display: none;
 }
 
     /* Styling forms and FAQ below */
@@ -68,7 +110,6 @@ header {
 .faq {
   display: inline-flex;
   flex-direction: column;
-  
 }
 
 .faq h2 {
@@ -90,8 +131,10 @@ header {
   background-color: rgb(212, 212, 216);
   border: solid 1px whitesmoke;
   width: 250px;
-  padding: 10px;
-  display: none;
+  padding: 0 10px;
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; 
 }
 
     /*styling form below*/
@@ -117,11 +160,16 @@ form {
 
 input[type=text] {
   border: solid 2px #9FA4C4;
+  border-radius: 8px;
   margin: 3px 0;
 }
 
 input[type=text]:focus {
-  background-color:rgb(204, 170, 188);
+  background-color:rgb(199, 218, 224);
+  box-shadow: 1px 1px 10px 2px white;
+  outline: none;
+  animation: glow 800ms ease-out infinite
+
 }
 
 input[type=submit] {
@@ -162,6 +210,10 @@ form a:hover {
     margin: 15px;
   }
 
+  .hamburger-nav {
+    display: none;
+  }
+
   .signFAQ {
     flex-direction: row;
     justify-content: space-around;
@@ -191,6 +243,10 @@ form a:hover {
     font-size: 1.5em;
   }
 
+  .hamburger-nav {
+    display: none;
+  }
+
   .signFAQ {
     display: inline-flex;
     flex-direction: row;
@@ -202,12 +258,18 @@ form a:hover {
   }
     /* styling sidebar (desktop mode) below*/
 
+  .navbar {
+    display: none;
+  }
   .sidebar {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 0 5px;
+    width: 350px;
+    height: 900px;
+    border: solid 1px #9FA4C4;
+    margin: 5px 5px;
   }
 
   .sidebar div {
@@ -252,5 +314,7 @@ form a:hover {
 }
 
   .open + .answer {
-    display: inline;
-   }
+  padding: 10px;
+  max-height: 500px;
+  
+  }

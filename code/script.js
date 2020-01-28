@@ -8,6 +8,10 @@ function toggleDisplay() {
   this.classList.toggle("opaque-text");
 }
 
+function toggleButton () {
+    this.classList.toggle("active");
+}
+
 // nedan tilldelas en händelse funktionen vi skapade ovan (ex. mouseover aktiverar klassen .class2 
 //  när muspekaren är ovanpå sidebar-img1)
 
@@ -21,3 +25,6 @@ document.getElementById("sidebar-img1").onmouseout = toggleDisplay;
 
 document.getElementById("sidebar-img2").onmouseover = toggleDisplay;
 document.getElementById("sidebar-img2").onmouseout = toggleDisplay;
+
+document.getElementById("burger").onclick = toggleButton
+
