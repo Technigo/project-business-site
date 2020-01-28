@@ -1,101 +1,92 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel='icon' href='favicon.jpg' type='image/x-icon' />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  
-  <body>
-    <!-- video or image as a header is cool :) -->
-<header>
-  <video autoplay muted loop id="myVideo"> 
-    <source src="paint.mp4" type="video/mp4"> 
-    <source src="small.mp4" type="video/mp4"></video>
-<h1>Art Studios</h1>
+</head>
 
+<body>
+  <header>
+    <video autoplay muted loop playsinline id="myVideo">
+      <source src="paint.mp4" type="video/mp4">
+      <source src="small.mp4" type="video/mp4"></video>
+    <h1>Art Studios</h1>
   </header>
-    
-   <div class="flex">
-     <div class=formulare>
-<h3>Let's get your free membership started, fill in the details below</h3>
 
-    <form action="http://httpbin.org/anything" method="POST">
-      
-        <input type="text" name="username"  placeholder="Name" required>
-      
-      
+  <div class="flex">
+    <div class=formulare>
+      <h3>Let's get your free membership started, fill in the details below</h3>
+      <form action="http://httpbin.org/anything" method="POST">
+        <input type="text" name="username" placeholder="Name" required>
         <input type="email" name="user-email" placeholder="Email" required>
-      
-      
         <input type="password" name="user-password" placeholder="Password" required>
-      
-      <p>Would you like our awesome newsletter?</p>
-      <label>Yes
-      <input id="radio" type="radio" name="radio-answer" value="ja">
-      </label>
-      <label>No
-      <input id="radio" type="radio" name="radio-answer" value="nej">
-      </label>
-      <p>Which one is your favourite technique?</p>
-      <label>Acrylic 
-      <input id="check" type="checkbox" value="travel" name="checkbox-question">
-    </label>
-    <label>Oil 
-    <input id="check" type="checkbox" value="beauty" name="checkbox-question">
-    </label> 
-      <label> Watercolor
-      <input id="check" type="checkbox" value="fashion" name="checkbox-question">
-    </label>
-    <input class="submit" type="submit" value="send">
-    </form>
-  </div>
+        <p>Would you like our awesome newsletter?</p>
+        <label>Yes
+          <input id="radio" type="radio" name="email-subscribe" value="ja">
+        </label>
+        <label>No
+          <input id="radio" type="radio" name="email-subscribe" value="nej">
+        </label>
+        <p>Which one is your favourite technique?</p>
+        <label>Acrylic
+          <input id="check" type="checkbox" value="acrylic" name="favourite-technique">
+        </label>
+        <label>Oil
+          <input id="check" type="checkbox" value="oil" name="favourite-technique">
+        </label>
+        <label> Watercolor
+          <input id="check" type="checkbox" value="watercolor" name="favourite-technique">
+        </label>
+        <input class="submit" type="submit" value="send">
+      </form>
+    </div>
 
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>Your favourite questions</h1>
+      <h3>Your favourite questions</h3>
       <a href="#">Click here to read all the questions</a>
-
-      <div class="question" id="section1">When are the meetings, and how often?</div>
+      <div class="question" id="section1">How to get to the Art Studios</div>
       <div class="answer">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing 
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing
           elit. Ut, adipisci.</p>
       </div>
-
-      <div class="question" id="section2">What will we get for the monthly fee?</div>
+      <div class="question" id="section2">Who can join the meetups?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Ducimus eos tempora ipsum itaque facere consectetur
+          magni id eveniet, neque nam? Error vitae debitis,
+          ipsam minus fugit aut nobis officiis voluptatum.</p>
       </div>
-
-      <div class="question" id="section3">Can we bring friends?</div>
+      <div class="question" id="section3">What should we bring to the meetups?</div>
       <div class="answer">
-        <p>lorem ipsum...</p> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing 
+          elit. Unde debitis mollitia illum.</p>
       </div>
     </section>
-  </div class> 
-
-<footer>
-  <h2>Learn more about the different techniques!</h2>
-  <section class="footer-flex">
-<div class="pic-one"> <a href="#">Acrylic</a></div>
-<div class="pic-two"><a href="#">Oil</a></div>
-<div class="pic-three"><a href="#">Watercolor</a></div>
-</section>
-<div class="bottom">
-<p>Art Studios &copy; STHLM </p>
-<div class="social-media">
-<a href="#" class="fa fa-instagram"></a>
-<a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-youtube"></a>
-<a href="#" class="fa fa-linkedin"></a>
-</div>
-</div>
+  </div class>
+  <footer>
+    <h2>Learn more about the different techniques!</h2>
+    <section class="footer-flex">
+      <div class="pic-one"> <a href="#">Acrylic</a></div>
+      <div class="pic-two"><a href="#">Oil</a></div>
+      <div class="pic-three"><a href="#">Watercolor</a></div>
+    </section>
+    <div class="bottom">
+      <p>Art Studios &copy; STHLM </p>
+      <div class="social-media">
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+      </div>
+    </div>
   </footer>
-    <!-- dont forget to link the javascript file here! -->
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>
