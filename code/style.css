@@ -2,14 +2,14 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  background-color: #4a7b52;/* some styling here */
-}
+/* .active + .answer {
+  background-color: #4a7b52;
+} */
 
 body {
-  /* background: #181d20;
-  background: url(img/papyrus-dark.png); */
-  color: #e82020;
+  background: #181d20;
+  /* background: url(img/papyrus-dark.png); */
+  /* color: #e82020; */
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
 }
@@ -19,6 +19,10 @@ h1 {
   color: rgb(255, 255, 255);
 }
 
+h2 {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
 
 h3 {
   font-size: 20px;
@@ -28,8 +32,8 @@ h3 {
 
 .big-text {
   /* width: 80%; */
-  max-width: 1100px;
-  margin: 0 auto;
+  /* max-width: 1100px;
+  margin: 0 auto; */
   /* flex-direction: column;
   justify-content: space-between; */
   /* text-align: center; */
@@ -52,18 +56,18 @@ header {
 }
 
 header div {
-  /* height: 400px; */
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* background-image: url("./images/forrest-2000x1000.png");
-  background-size: contain;
-  background-repeat: no-repeat; */
+
+}
+
+header div h3 {
+  color: #135bb3;
 }
 
 
-header div h3 {
-  color: #ffffff;
+/******* MY FLEX BOX - PARENT *******/
+.box {
+  display: flex;
+  justify-content: space-between;
 }
 
 
@@ -81,31 +85,62 @@ header div h3 {
   border-radius: 0%;
   box-shadow: 2px 2px 1px 1px #878787;
 }
+/******* ******* *******/
 
+/******* ACCORDION Style *******/
 .accordion {
-  background-color: #eee;
+  background-color: #FEE140;
+  background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
   color: #444;
   cursor: pointer;
-  padding: 18px;
-  width: 100%;
+  padding: 10px;
+  width: 50%;
   text-align: left;
   border: none;
+  border-radius: 0%;
   outline: none;
-  transition: 0.4s;
+  font-size: 15px;
+  transition: 0,4s;
 }
 
-/* Style the accordion panel. Note: hidden by default */
+/* .active, .accordion:hover {
+  background-color: rgb(205, 245, 254);
+} */
+
+/* Accordion hidden .answer */
 .answer {
-  padding: 0 18px;
-  background-color: white;
-  display: none;
+  padding: 0 8px;
+  background-color: rgb(255, 255, 255);
+  /* display: none; */
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+/* Accordion open - show .answer */
+.active + .answer {
+  background-color: #f4fc51;/* some styling here */
+  display: block;
+  color: rgb(0, 0, 0);
+  max-height: 150px;
 }
 
-.active + .answer {
-  background-color: #4a7b52;/* some styling here */
-  display: block;
+.question {
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+
+  padding: 5px;
+  margin: 0px;
+  border: 1px solid rgb(255, 255, 255);
 }
+
+
+
+
+
+
+
+
+
 
 /****** MEDIA QUERIES FOR RESPONSIVE DESIGN ******/
 @media (min-width: 668px) {
