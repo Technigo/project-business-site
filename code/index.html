@@ -27,7 +27,7 @@
       <div class="head-content">
         <div class="head-overlay">
           <h1>Join our authentic cooking class</h1>
-          <button>BOOK A TIME HERE</button>
+          <a href="#submit-form"><button>BOOK A TIME HERE</button></a>
         </div>
       </div>
       <div class="head-video">
@@ -42,7 +42,7 @@
 
     <div class="main-content">
       <!--form + accordion-->
-      <div class="form-wrapper">
+      <div class="form-wrapper" id="submit-form">
         <h2>Sign-up here</h2>
         <form action="https://httpbin.org/anything" method="POST">
           <div class="form-group">
@@ -60,9 +60,9 @@
               <label for="mail">E-mail:</label>
               <input type="email" id="mail" name="user_mail" class="form-control" placeholder="Enter your email"
                 required>
-            </div>
+            </div><br>
             <div>
-              <p>What time would you rather attend the class?</p>
+              <p>Pick a time slot:</p>
               <label>
                 <input name="user-preference" value="morning" type="radio" class="input-radio" checked />I'm a
                 morning
@@ -76,30 +76,29 @@
               <label>
                 <input name="user-preference" value="evening" type="radio" class="input-radio" checked />After
                 work,
-                17:00-19:00</label>
+                17:00-19:00</label><br>
             </div>
             <div class="labels">
               <label for="pass">Choose a password (8 characters minimum):</label>
               <input type="password" id="pass" name="password" minlength="8" required>
-            </div>
-            <div> <label>
-                <input name="preference" value="cocktail-bar" type="checkbox" class="input-checkbox" required />I
+            </div><br>
+            <div>
+              <label>
+                <input name="conditions" value="validation" type="checkbox" class="input-checkbox" required />I
                 agree
                 to
                 the
                 Terms
                 and Conditions</label>
             </div>
-            <div class="button">
-              <button type="submit">Send your request</button>
-            </div>
+            <button type="submit" class="submit-button">Send your request</button>
+
         </form>
       </div>
 
       <!-- Accordion -->
       <div class="accordion">
         <h1>FAQ</h1>
-
         <div class="question" id="section1">Section 1</div>
         <div class="answer">
           <p>Lorem ipsum...</p>
