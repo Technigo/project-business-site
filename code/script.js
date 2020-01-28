@@ -19,7 +19,8 @@ document.getElementById("section5").onclick = toggle
 // document.getElementById('text') = swap;
 
 // document.getElementById("pic2").onclick = changeImg
-
+let test = document.getElementById("test");
+console.log(test.src);
 
 function changeImg() { 
   const bi = "";
