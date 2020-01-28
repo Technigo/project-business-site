@@ -17,6 +17,9 @@ body {
 h1 {
   font-size: 40px;
   color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgb(43, 43, 5);
+
 }
 
 h2 {
@@ -30,7 +33,22 @@ h3 {
   color: rgb(0, 0, 0);
 }
 
-.big-text {
+h4 {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 100;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+
+}
+
+.big-text-container {
+  width: 100%;
+  max-width: 650px;
+  object-position: center;
+  padding: 40px;
+
   /* width: 80%; */
   /* max-width: 1100px;
   margin: 0 auto; */
@@ -43,7 +61,7 @@ h3 {
 /******* HEADER *******/
 header {
   /* background: #020202; */
-  height: 200px;
+  height: 240px;
   background-image: url("./images/forrest-2000x1000.png");
   /******* BG link ok, working online? *******/
   background-size: cover;
@@ -65,36 +83,71 @@ header div h3 {
 
 
 /******* MY FLEX BOX - PARENT *******/
-.box {
+.box-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(17, 177, 89);
-
+  background-color: rgb(46, 46, 46);
+  font-family: Arial, Helvetica, sans-serif;
 }
-
 
 /******* ORDER FORM *******/
 
 .my-form {
-  background-color: rgb(217, 249, 194);
+  background-color: #3bb78f;
+  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+
   font-size: 12px;
   color: rgb(14, 14, 14);
   width: 80%;
-  /* max-width: 300px; */
   padding: 10px;
-  /* margin: 20px;
-  border: 1px solid black;
-  border-radius: 0%;
-  box-shadow: 2px 2px 1px 1px #878787; */
 }
-/******* ******* *******/
+
+/* Add some margins for each label */
+.my-form label {
+  margin: 5px 10px 5px 0;
+}
+
+/* Style the input fields */
+.my-form input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.my-form button {
+padding: 10px 10px;
+background-color: dodgerblue;
+border: 1px solid #ddd;
+color: white;
+}
+
+.my-form button:hover {
+  background-color: royalblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /******* ACCORDION Style *******/
 .my-accordion {
-  background-color: #FEE140;
-  background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+  
+  
+  background-color: #3f0d12;
+  background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
+  height: 400px;
   color: #444;
   cursor: pointer;
   padding: 10px;
@@ -153,14 +206,16 @@ header div h3 {
     height: 300px;
     /* justify-content: space-between; */
   }
-  .box {
+  .box-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
   }
-
-
+  h4 {
+    font-size: 16px;
+  
+  }
 
 }
 
@@ -169,7 +224,7 @@ header div h3 {
     height: 360px;
     /* justify-content: space-between; */
   }
-  .box {
+  .box-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -178,12 +233,24 @@ header div h3 {
 
   .my-form {
     width: 400px;
-    margin: 30px;
+    margin: 20px 15px;
   }
 
   .my-accordion {
     width: 400px;
-    margin: 30px;
+    margin: 20px 15px;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  h4 {
+ 
+    font-size: 20px;
+
+  }
+  .big-text-container {
+    text-align: center;
+    max-width: 700px;
   }
 
 }
