@@ -2,16 +2,37 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0px;
+  
+}
+
 h1 {
- 
-  font-size: 40px;
+  font-size: 20px;
   color: rgb(241, 237, 237);
   margin: 0px;
   padding-right: 20%;
   padding-left: 5%;
-  padding-top: 30%;
-  padding-bottom: 10%;
+  padding-top: 35%;
+  padding-bottom: 5%;
 }
+
+h2 {
+  background-color: darkgrey;
+  font-family: 'Dancing Script', cursive;
+  font-size: 15px;
+  color: rgb(202, 199, 199);
+ 
+  margin: 0px;
+  padding: 5px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
 header {
   margin: 0px;
   background-image: url("Images/ballet_shoes.jpg");
@@ -20,27 +41,51 @@ header {
   background-repeat: no-repeat;
 }
 
-body {
-  font-family: 'Quicksand', sans-serif;
-  margin: 0px;
-  background-color: blueviolet;
+.poem {
+  size: inherit;
+  background-color: darkgrey;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font-size: 14px;
+}
+
+input:valid {
+  border-color: rgb(200, 250, 147);
+}
+
+input:invalid {
+  border-color: rgb(247, 103, 132);
+}
+
+label {
+  font-size: 14px;
 }
 
 .active + .answer {
   /* some styling here */
 }
 
-@media  (min-width: 667px) and (max-width:1024px)
-{
+@media  (min-width: 667px) and (max-width:1024px){
+
   h1 {
-    font-size: 50px;
-   
+    font-size: 40px;
+  }
+input {
+  font-size: 20px;
   }
 }
 @media (min-width:1025px) {
 
   h1 {
     font-size: 60px;
-    
-  }
+    }
+    input {
+      font-size: 25px;
+    }
 }
