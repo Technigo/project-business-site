@@ -1,12 +1,10 @@
-pwd# Business Site
+## Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In this project that I made during the Technigo Boot Camp the assignment was to incorporate an HTML-form, a video header or a background image, and an accordion made with JavaScript. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+When the form and the JS-accordion were in place I spent some time getting the video to appear in the right way in the header, using the position and overflow attributes. I styled the accordion to get a slide-down effect and I added an icon in the accordion indicating whether the section is expanded or collapsed. If I had more time I would improve the style of the form, especially focusing on the input fields.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Have a look at my project here: https://objective-jennings-0ffdda.netlify.com/ 
