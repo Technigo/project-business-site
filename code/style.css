@@ -1,31 +1,20 @@
 *, *::before, *::after { box-sizing: inherit; }
 
-
 html {
   box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(202, 216, 230);
-  margin: 0;
-}
-
-
-header {
   background-image: url(./pictures/JellyHeader2.jpg);
-  height: 200px;
-  background-size: cover;
-  background-position: top;
+  margin: 0;
 }
 
 h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 80px;
   color: white;
-  text-align: center;
-  margin-block-start: 0;
+  margin-block-end: 0px;
   padding-top: 30px;
-  margin-block-end: 0;
 }
 
 h2 {
@@ -35,11 +24,41 @@ h2 {
 
 h3 {
   font-family: 'Questrial', sans-serif;
-  font-size: 25px;
   color: white;
+}
+
+header {
+  height: 300px;
+}
+
+.video-phone {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-tablet {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  display: none;
+}
+
+.video-desktop {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  display: none;
+}
+
+.header-content {
+  position: absolute; 
+  top: 0;
+  width: 100%;
   text-align: center;
-  margin-block-start: 0;
-  padding-top: 16px;
 }
 
 .main-container {
@@ -67,7 +86,6 @@ label {
 }
 
  button {
-   border-radius: 5px;
    margin-top: 20px;
  }
 
@@ -91,6 +109,7 @@ label {
 
 .question {
   padding: 16px;
+  font-weight: bold;
 }
 
 .answer {
@@ -107,7 +126,6 @@ label {
 .active + .answer {
   display: contents;
   background-color: white;
- 
 }
 
 .active, .question:hover {
@@ -115,10 +133,22 @@ label {
 }
 
 @media (min-width: 668px) {
+
+  header {
+    height: 200px;
+  }
+
    header h1 {
     font-size: 90px;
-    padding-top: 16px;
-    margin-block-end: 0;
+    margin-top: 0;
+  }
+
+  .video-phone {
+    display: none;
+  }
+
+  .video-tablet {
+    display: block;
   }
 
   .main-container {
@@ -141,10 +171,18 @@ label {
 
   header h1 {
     font-size: 100px;
-    padding-top: 16px;
+  }
+
+  .video-phone {
+    display: none;
+  }
+
+  .video-tablet {
+    display: none;
+  }
+
+  .video-desktop {
+    display: block;
   }
 }
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */

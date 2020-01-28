@@ -5,77 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
     <title>Jellyfish</title>
-    
   </head>
+  
+<body>
 
     <!-- HEADER -->
-  <header>
-    <h1>Jellymania</h1> 
-    <h3>Swim with Jellyfish, live forever!</h3>
+  <header class="header">
+    <video autoplay loop muted class="video-phone">
+      <source src="./videos/JellyMobile.mp4">
+      <source src="./videos/JellyMobileW.webm">
+      <p>Your browser does not support this video</p>
+    </video>
+    <video autoplay loop muted class="video-tablet">
+      <source src="./videos/JellyTablet.mp4">
+      <source src="./videos/JellyTabletW.webm">
+      <p>Your browser does not support this video</p>
+    </video>
+    <video autoplay loop muted class="video-desktop">
+      <source src="./videos/JellyChrome.mp4">
+      <source src="./videos/JellyChromeW.webm">
+    </video>
+    <div class="header-content">
+      <h1>Jellymania</h1>
+      <h3>Swim with Jellyfish, live forever!</h3>
+    </div>
   </header>
 
-
-  <!-- Signup form -->
-  <body>
-    <section class="main-container">
-      <section class="sign-up">
-        <h2>Join the movement!</h2>
-        <form action="http://httpbin.org/anything" method="POST">
-          <label>
-            Name <br>
-            <input type="text" placehoder="Name Lastname" required>
-          </label>
-          <label>
-            E-mail <br>
-            <input type="email" name="email" required>
-          </label>
-          <label>
-            Can you swim?<br>
-            <input type="radio" name="swim" value="veryWell" checked>Very well<br>
-            <input type="radio" name="swim" value="ok">Ok<br>
-            <input type="radio" name="swim" value="no">Not at all<br>
-          </label>
-          <input type="checkbox" name="termsConditions" required>I agree that Jellyfish are the best!<br>
-      
-          <button type="submit">submit</button>
-        </form>
-      </section>
-
-      <!-- Accordion -->
-      <section class="accordion-container">
-      
-        <h2>Jellyfish Basics</h2>
-      
-        <section class="accordion"> 
-          <div class="question" id="section1">Are Jellyfish dangerous?</div>
-          <div class="answer">
-            <p>There are almost 200 known species of jellyfish drifting through our planet’s seas. Many of them are harmless, some can cause pain, and in rare cases some can be deadly.</p>
-          </div>
-          <div class="question" id="section2">How big can they get?</div>
-          <div class="answer">
-            <p>Jellyfish range from about one millimeter in bell height and diameter to nearly 2 metres in bell height
-            and diameter; the tentacles and mouth parts usually extend beyond this bell dimension.</p>
-          </div>
-          <div class="question" id="section3">Where do Jellyfish live?</div>
-          <div class="answer">
-            <p>Jellyfish are found all over the world, from surface waters to the deep sea. Most are exclusively marine, but some live in freshwater.</p>
-          </div>
-          <div class="question" id="section4">When did they first appear?</div>
-          <div class="answer">
-            <p>Jellyfish have been in existence for at least 500 million years and possibly 700 million years or more, making them the oldest multi-organ animal group</p>
-          </div>
-      
-          <script src="./script.js"></script>
-      
-        </section>
-      </section>
-      
+      <!-- CONTAINERS -->
+  <section class="main-container">
+      <!-- Signup form -->
+    <section class="sign-up">
+      <h2>Join the movement!</h2>
+      <form action="http://httpbin.org/anything" method="POST">
+        <label>
+          Name <br>
+          <input type="text" placehoder="Name Lastname" required>
+        </label>
+        <label>
+          E-mail <br>
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Can you swim?<br>
+          <input type="radio" name="swim" value="veryWell" checked>Very well<br>
+          <input type="radio" name="swim" value="ok">Ok<br>
+          <input type="radio" name="swim" value="no">Not at all<br>
+        </label>
+        <input type="checkbox" name="termsConditions" required>I agree that Jellyfish are the best!<br>
+        <button type="submit">submit</button>
+      </form>
     </section>
-    
- 
-    <!-- dont forget to link the javascript file here! -->
+      <!-- Accordion -->
+    <section class="accordion-container">
+      <h2>Jellyfish Basics</h2>
+      <section class="accordion"> 
+        <div class="question" id="section1">Are Jellyfish dangerous?</div>
+        <div class="answer">
+          <p>There are almost 200 known species of jellyfish drifting through our planet’s seas. Many of them are harmless, some can cause pain, and in rare cases some can be deadly.</p>
+        </div>
+        <div class="question" id="section2">How big can they get?</div>
+        <div class="answer">
+          <p>Jellyfish range from about one millimeter in bell height and diameter to nearly 2 metres in bell height and diameter; the tentacles and mouth parts usually extend beyond this bell dimension. </p>
+        </div>
+        <div class="question" id="section3">Where do Jellyfish live?</div>
+        <div class="answer">
+          <p>Jellyfish are found all over the world, from surface waters to the deep sea. Most are exclusively marine, but some live in freshwater.
+          </p>
+        </div>
+        <div class="question" id="section4">When did they first appear?</div>
+        <div class="answer">
+          <p>Jellyfish have been in existence for at least 500 million years and possibly 700 million years or more, making them the oldest multi-organ animal group</p>
+        </div>
+      </section>
+    </section>
+  </section>
+  <script src="./script.js"></script>
+
   </body>
 </html>
