@@ -1,12 +1,15 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+This is a project for the Technigo Remote Boot Camp to learn and practice video and image backgrounds and HTML forms.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The site should include a header with responsive image/video background, a sign-up form and a FAQ Accordion.
+After going trhough this week's learning material, I made a scetch. 
+Started coding trying to do a video header background, decided to leave that for later and made a header background with background-image then focused on the HTML sign-up form and accordion. I used the learning material plus stack Overflow and google (mmainly found answers in MDN adn w3school) and pushed a first version to GitHub.
+Then updated the heading background to video (and adjusted the styling).
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+The Jellymania Site: xxx
