@@ -1,7 +1,186 @@
+body {
+  margin: 0px;
+  font-family: 'Abril Fatface', cursive;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 700px;
+  background-image: linear-gradient(rgba(245, 247, 244, 0.1), rgba(245, 247, 244, 0.1)), url("images/hero-image.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  overflow: hidden;
+  border: 1px solid white;
+  background-color: lightgoldenrodyellow;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+  }
+
+nav a:link {
+  text-decoration: none;
+  color: rgb(218, 6, 147);
+}
+
+nav a:hover {
+  border-bottom: 3px solid rgb(218, 6, 147);
+}
+
+nav a:active {
+  color: rgb(148, 184, 86);
+}
+
+nav a:visited {
+  color: rgb(218, 6, 147); 
+}
+
+header h1{
+  font-size: 100px;
+  color: rgb(218, 6, 147);
+  padding-top: 80px;
+}
+
+header p{
+  font-size: 55px;
+  color: rgb(214, 22, 70);
+}
+
+.btn {
+  width: 200px;
+  height: 50px;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 15px;
+  color: lightgoldenrodyellow;
+  text-align: center;
+  background-color: rgb(214, 22, 70);
+}
+
+.content{
+  margin-top:50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  margin-top: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+form h1 {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-lighter);
+  font-size: var(--font-size-3);
+  text-align: center;
+}
+
+input {
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.75rem;
+}
+
+.help-text {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: var(--font-size-small);
+}
+
+input:placeholder-shown + label {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+.has-dynamic-label {
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+.has-dynamic-label label {
+  position: absolute;
+  top: 0;
+  font-size: var(--font-size-small);
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.2s ease-out;
+}
+
+input:required + .help-text::before {
+  content: '*Required';
+}
+
+input:optional + .help-text::before {
+  content: '*Optional';
+}
+
+input:valid {
+  border-color: var(--color-primary);
+  background-image: url("data:image/svg+xml,%3Csvg width='45px' height='34px' viewBox='0 0 45 34' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate%28-56.000000, -59.000000%29' fill='%232EEC96'%3E%3Cpolygon points='70.1468531 85.8671329 97.013986 59 100.58042 62.5664336 70.1468531 93 56 78.8531469 59.5664336 75.2867133'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+input:invalid {
+  border-color: var(--color-error);
+  background-image: url("data:image/svg+xml,%3Csvg width='30px' height='30px' viewBox='0 0 30 30' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate%28-128.000000, -59.000000%29' fill='%23F44336'%3E%3Cpolygon points='157.848404 61.9920213 145.980053 73.8603723 157.848404 85.7287234 154.856383 88.7207447 142.988032 76.8523936 131.119681 88.7207447 128.12766 85.7287234 139.996011 73.8603723 128.12766 61.9920213 131.119681 59 142.988032 70.8683511 154.856383 59'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+input:invalid:focus {
+  border-color: var(--color-error);
+}
+
+input:invalid + .help-text {
+  color: var(--color-error);
+}
+
+input[type='email']:invalid + .help-text::before {
+  content: 'You must enter a valid email.'
+}
+
+input:out-of-range + .help-text::before {
+  content: 'Out of range';
+}
+
+input[type='checkbox'] + label {
+  user-select: all;
+}
+
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
+/*
+.active + .answer {}
   /* some styling here */
-}
