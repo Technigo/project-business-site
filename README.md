@@ -1,12 +1,22 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This was the third week assignment for technigo bootcamp. 
+Yhe task was to create a business website with Q&A and a form.
 
 ## The problem
+Unfortunately this week I had very little time to do the assignement. Therefore i did a plan just to manage the minimum requirements and always sticking to that backlog. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Techniques:
+DOM
+flexbox
+picture tag 
+
+If I had more time: 
+* Make the function that the question expands more clear. For example with (+/-). 
+Also adding so conditional styleling to the questions and answers.
+* Structure the code better
+* Also try different was to write the code in js. (Now I only found a solution and stick to it, I think is better ways to write more clean code.
+
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://compassionate-brattain-d37270.netlify.com/
