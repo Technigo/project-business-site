@@ -1,4 +1,4 @@
-/* ––– Global styles ––– */
+/* ––– General styles ––– */
 
 * {
   box-sizing: border-box;
@@ -30,22 +30,40 @@ h1 {
 a {
   color: #000;
   text-decoration: none;
+  cursor: crosshair;
 }
 
 .button {
   display: inline-block;
   margin-top: 1rem;
   padding: .6rem 1.4rem;
+
   background-color: navy;
   color: wheat;
   font-weight: 600;
   outline: none;
-  cursor: pointer;
+  cursor: crosshair;
   transition: all .2s ease-in-out;
 }
 
 .button:hover {
   background-color: black;
+}
+
+section:not(:first-child) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-container {
+  flex: 1 1 auto;
+  max-width: 50rem;
+  margin: 2rem;
+}
+
+.section-container h1 {
+  text-align: center;
 }
 
 .visibility-hidden {
@@ -96,6 +114,15 @@ nav a:hover {
   background-position: 50% 50%;
 }
 
+.hero::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
 .hero video {
   position: absolute;
   display: none;
@@ -128,38 +155,10 @@ nav a:hover {
   margin-bottom: 2rem;
 }
 
-.hero::after {
-  position: absolute;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .5);
-}
-
-
-/* ––– Sections ––– */
-
-.faq,
-.signup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.section-container {
-  flex: 1 1 auto;
-  max-width: 50rem;
-  margin: 2rem;
-}
-
-.section-container h1 {
-  text-align: center;
-}
-
 
 /* ––– FAQ ––– */
 
+/* Selects every 4th question + answer */
 .faq .section-container div:nth-child(4n),
 .faq .section-container div:nth-child(4n)+.answer {
   background-color: #eae4dc;
@@ -175,6 +174,7 @@ nav a:hover {
 
 .question:hover {
   filter: brightness(.96);
+  cursor: crosshair;
 }
 
 .question::after {
@@ -194,11 +194,33 @@ nav a:hover {
 .answer {
   display: none;
   width: 100%;
-  padding-top: 0;
+}
+
+/* Animation */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .active+.answer {
   display: inline-block;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }
 
 .active.question::after {
@@ -224,7 +246,6 @@ nav a:hover {
 
 .signup-form>* {
   font-size: .9rem;
-  ;
 }
 
 .signup-form input[type=text],
@@ -238,7 +259,7 @@ nav a:hover {
   border: none;
 }
 
-
+/* Focus effect on input fields */
 .signup-form input[type=text]:focus,
 .signup-form input[type=email]:focus,
 .signup-form input[type=password]:focus {
@@ -323,6 +344,7 @@ footer {
   background-color: #000;
   color: #fff;
   font-size: .8rem;
+  font-weight: 600;
 }
 
 
