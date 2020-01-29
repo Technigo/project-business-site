@@ -8,6 +8,8 @@ I struggled with selecting the right element and class in FAQ accordion in order
 
 And I still have problem making the background image for header responsive in mobile version. The width of the header image becomes bit narrower than the size of the screen and I don't know how to solve it. 
 
+I also tried using the transition function for the accordion but it seems not working and I don't understand why. 
+
 
 ## View it live
 https://keen-mcclintock-4f9a9e.netlify.com
