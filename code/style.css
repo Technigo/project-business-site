@@ -9,6 +9,8 @@ body {
   
 }
 
+
+
 h1 {
   font-size: 20px;
   color: rgb(241, 237, 237);
@@ -52,7 +54,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
+  background-color: rgb(58, 56, 56);
   
 }
 
@@ -113,18 +115,67 @@ button {
   cursor: pointer;
 }
 
+.accordion  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  border: solid;
+  border-radius: 8px;
+  margin: 8px;
+}
+
+.FAQheader {
+  color: black;
+}
+
+.question {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.answer {
+  display: none;
+}
+
 .active + .answer {
   /* some styling here */
+  display: block;
+  padding: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 50px;
+}
+
+h3 {
+  font-size: 8px;
+  margin-right: 10px;
 }
 
 @media  (min-width: 667px) and (max-width:1024px){
 
+  main {
+    display: flex;
+    justify-content: space-evenly
+    
+  
+  }
+
   h1 {
     font-size: 40px;
   }
-input {
-  font-size: 20px;
+
+  input {
+    width: 90%;  
   }
+  input[type=email] {
+    width: 100%
+    }
 }
 @media (min-width:1025px) {
 
