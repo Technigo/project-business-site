@@ -9,6 +9,7 @@
 
 section1.onclick = toggle
 section2.onclick = toggle
+section3.onclick = toggle
 
 function toggle() {
   this.classList.toggle('active')

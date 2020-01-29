@@ -2,16 +2,16 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-active+answer {
-  /* some styling here */
+
+.active+.answer {
+  display: block;
 }
 
 body {
   margin: 0;
   padding: 0;
   background-color: black;
-
-
+  ;
 }
 
 .container {
@@ -20,23 +20,10 @@ body {
   background-repeat: no-repeat;
   height: 300px;
   margin-top: -60px;
-
+  margin-bottom: 0;
 }
 
-.liten {
-  width: 50px;
-}
-
-.container h6 {
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  text-align: center;
-  padding-top: 100px;
-  color: white;
-}
-
-.container h1 {
+h1 {
   font-size: 55px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -46,44 +33,29 @@ body {
   margin-top: -28px;
 }
 
-
-.textinput {
-  font-size: 10px;
-  width: 200px;
-  padding: 8px;
-  border-radius: 5px;
-  background-color: rgb(202, 215, 219);
-  font-weight: 400;
-  outline: none;
-  border: none;
-  color: black;
-}
-
-/*input:valid {
-  background-color: green;
-}*/
-
-/**** SIGN_UP ****/
-
-
-h3 {
-  font-size: 25px;
+h6 {
+  font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
-  color: rgb(202, 215, 219);
-  margin-left: 10px;
-  margin-right: 10px;
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+  letter-spacing: 2px;
 }
 
 .information {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
 }
 
+/**** SIGN_UP ****/
+
 .sign-up {
   background-color: rgb(98, 127, 139);
+  background-color: rgb(210, 129, 30);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -92,32 +64,56 @@ h3 {
   min-height: 370px;
   max-height: 400px;
   max-width: 300px;
-  margin-top: 75px;
   text-decoration: none;
   border-radius: 5px;
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+
+.textinput {
+  font-size: 10px;
+  width: 220px;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: rgb(202, 215, 219);
+  background-color: rgb(245, 227, 195);
+  font-weight: 400;
+  outline: none;
+  border: none;
+  color: black;
 }
 
 label {
   display: block;
-  margin-bottom: 20px;
+  margin: 12px 6px;
+  align-self: flex-start;
 }
 
 .radio-box {
-  width: 85%;
   font-size: 10px;
   font-family: arial;
+  margin: 20px 10px;
 }
 
 .checkbox-box {
-  margin-top: 10px;
   font-size: 10px;
   font-family: arial;
-  justify-content: flex-start;
-
+  display: flex;
+  flex-direction: column;
 }
 
-
+.checkbox-box label {
+  margin: 0px 6px;
+}
 
 button {
   font-size: 10px;
@@ -125,18 +121,18 @@ button {
   padding: 8px;
   border-radius: 5px;
   background-color: white;
-  margin-top: 15px;
+  margin-top: 35px;
 }
 
-/**** accordion ****/
+/**** ACCORDION ****/
 
 .accordion {
-  background-color: rgb(220, 135, 82);
+  background-color: rgb(57, 30, 3);
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: flex-start;
   text-align: center;
-  width: 75%;
+  width: 80%;
   min-height: 370px;
   max-height: 400px;
   max-width: 300px;
@@ -144,29 +140,91 @@ button {
   text-decoration: none;
   border-radius: 5px;
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
-
 }
 
+.accordion h3 {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: rgb(210, 129, 30);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.question {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: rgb(219, 214, 202);
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 30px;
+  padding: 10px;
+  display: flex;
+}
+
+.question:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 .answer {
   margin: 0;
   width: 160px;
-  background: #ccc;
+  color: white;
   list-style: none;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 20px;
   display: none;
 }
 
-.active {
-  background-color: yellowgreen;
+.answer p {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  margin-top: -5px;
 }
 
-.active+.answer {
-  display: block;
+@media (min-width: 650px) {
 
+  .container {
+    height: 350px;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  .information {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .accordion {
+    margin-top: 20px;
+  }
 }
 
-.test {
-  background-color: blue;
-  width: 400px;
-  padding: 10px;
+@media (min-width: 900px) {
+
+  .container {
+    height: 400px;
+  }
+
+  h1 {
+    font-size: 90px;
+  }
+
+  h6 {
+    font-size: 24px;
+  }
 }
