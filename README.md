@@ -1,12 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+This was our second project at Technigo bootcamp. The assignment was to make a "business site" including a header with responsive image/video, a signup form, and a FAQ accordion. For the FAQ accordion we used JavaScript for the first time. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I was happy to be able to use flexbox and some other tools that we tried on earlier and that I fully understand what I was doing this time. The JavaScript is not really there yet. It works but I havent really understood how it works yet. That was my biggest struggle.
 
-## The problem
+Im satisfied with the design and how the site turned out and that I had time for some of the stretch goals. 
+If I had some more time I would probably tried to use video instead of an image in the head.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+----
+View it live here: 
