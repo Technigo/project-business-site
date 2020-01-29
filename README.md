@@ -1,12 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This website page displays a form and an accordion, using a bit of JavaScript.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I did not managed to set the hero video as a header. Instead, it is displayed as a top section. If I would have more time, I would have set the navbar on top of it and set it in a fixed position when scrolling down. Next time, I'll try to display the form and accordion side by side and not on top of each other.
+
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://reverent-brown-fa5e70.netlify.com/#submit-form
