@@ -1,8 +1,6 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week's project was to create a site for a company. It should contain three parts: A hero image with text above it, a signup form and an accordion with a section title that would expand and collapse its description with a click.
 
 ## The problem
 
