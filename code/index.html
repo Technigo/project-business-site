@@ -1,30 +1,121 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/echidna-logo.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cabin+Sketch|Overlock&display=swap" rel="stylesheet">
+
+  <!-- dont forget to add a css file and link it here! -->
+</head>
+
+<body>
+  <!-- video or image as a header is cool :) -->
+  <nav class="mobile-banner">
+    <img class="logo" src="images/echidna-logo.png" alt="company-logo" />
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+  <div class="head-container">
+    <nav class="desktop-banner">
+      <img class="logo" src="images/echidna-logo.png" alt="company-logo" />
+      <nav class="desktop-nav">
+        <a>About</a>
+        <a>Contact Us</a>
+        <a>Image Gallery</a>
+        <a>Terms & Conditions</a>
+      </nav>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+    <div class="text-container">
+
+
+      <h1>Adopt an echidna</h1>
+      <h3 class="tagline">Thousands of homeless echidnas need you</h3>
+      <h3>Sign up today</h3>
+
+    </div>
+
+    <video class="mobile-video" autoplay loop muted>
+      <source src="videos/echidna 720x480.mp4" type="video/mp4">
+
+    </video>
+    <video class="tablet-video" autoplay loop muted>
+      <source src="videos/echidna 1280x740.mp4" type="video/mp4" />
+    </video>
+    <video class="desktop-video" autoplay loop muted>
+      <source src="videos/echidna.mp4" type="video/mp4">
+    </video>
+
+
+  </div>
+
+
+  <main class="mainClass" id="mainId">
+
+    <form action="http://httpbin.org/anything" method="POST" target="_blank">
+      Membership Sign Up
+      <input class="text-fields" type="text" name="username" minlength="8" maxlength="12" placeholder="username"
+        required>
+      <input class="text-fields" type="email" name="email" placeholder="example@email.com" required>
+      <input class="text-fields" type="password" name="password" placeholder="password" required>
+      <div class="radio-buttons">
+        <input type="radio" name="echidna-count" value="3echidnas"> 3 echidnas
+        <input type="radio" name="echidna-count" value="6echidnas"> 6 echidnas
+        <input type="radio" name="echidna-count" value="12echidnas"> 12 echidnas
+      </div>
+      <div class="terms">
+
+        <input class="check" type="checkbox" name="terms" required> Agree to Terms & Conditions
+      </div>
+
+      <button class="form-button" type="submit">Sign up</button>
+    </form>
+
 
     <section class="accordion">
       <!-- Accordion -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">How much does it cost?<span class="accordion-btn" id="accordion1">➕</span>
+      </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Adopting an echidna will cost you a monthly percentage of your total income, on top of an initial
+          adminstrative fee calculated against your country of residence's GDP. </p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">Are echidnas dog-friendly?<span class="accordion-btn" id="accordion2">➕</span>
+      </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Your dog might be interested in your new echidna, but echidnas are disdainful to mingle with creatures so
+          beneath their own dignity.</p>
+      </div>
+      <div class="question" id="section3">What do I feed my echidna?<span class="accordion-btn" id="accordion3">➕</span>
+      </div>
+      <div class="answer">
+        <p>Your echidna will expect to eat off your dinner plate.</p>
       </div>
     </section>
     <!-- dont forget to link the javascript file here! -->
-  </body>
+
+
+  </main>
+
+  <footer class="footer" id="footerId">
+    <button class="footer-button" id="night-switch">Night Mode</button>
+
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
