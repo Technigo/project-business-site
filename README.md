@@ -1,8 +1,8 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+https://codepen.io/tuliany/pen/GRgLrmw
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+https://stackoverflow.com/questions/59968231/how-do-i-make-content-into-column-flex-when-site-is-responsive
 
 ## The problem
 
