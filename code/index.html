@@ -12,12 +12,11 @@
 <body>
 
   <header class="navbar">
-    <ul class="navbar-content"> 
+    <ul class="navbar-content">
       <li>Home</li>
       <li>About us</li>
       <li>Contact</li>
-      <li>Shop</li>
-      <li>Our partners</li>
+      <li><a href="#accordion-container" >FQA</a></li>
     </ul>
   </header>
 
@@ -28,15 +27,15 @@
     <div class="fullvideo-textbox">
       <h1 Class="header-text">Help us save our oceans</h1>
 
-      <h2 Class="base-text">Sign up to donate</h2>
+      <a href="#signup-form"><h2 Class="base-text">Sign up to donatea</a></h2>
 
       <h3 class="info-text">You can donate to these organizations</h3>
 
       <ul class="info-logos">
-        <li><a href="https://www.coralgardeners.org/"><img src="./Images/Coral.png" alt="Coral-logo"></a></li>
-        <li><a href="CjwKCAiAjrXxBRAPEiwAiM3DQshgrMmEyHW2b8lyIeaRk_UFVXF9u4Hmb1phpXoHTi6OwqXppNxuwhoCPRMQAvD_BwE"><img
+        <li><a href="https://www.coralgardeners.org/" target="_blank"><img src="./Images/Coral.png" alt="Coral-logo"></a></li>
+        <li><a href="https://4ocean.com/" target="_blank"><img
               src="./Images/4O.png" alt="4ocean"></a></li>
-        <li><a href="https://www.onepercentfortheplanet.org/"><img src="./Images/Top1.jpg" alt="Plasticocean"></a></li>
+        <li><a href="https://www.onepercentfortheplanet.org/" target="_blank"><img src="./Images/Top1.jpg" alt="Plasticocean"></a></li>
       </ul>
 
     </div>
@@ -48,80 +47,81 @@
 
     <article class="flexbox-container">
 
-    <section class="signup-form">
-      <h2 id="signin-title">Sign up to join the community<h2>
-          <form>
-            <Label>
-              <input type="text" placeholder="Username" name="firstname" required>
-            </Label>
+      <section class="signup-form" id="signup-form">
+        <h2 id="signin-title">Sign up to join the community<h2>
+            <form action="http://httpbin.org/anything" method="POST">
+              
+              <Label class="label"><input class="input" type="text" placeholder="Username" name="firstname" required></Label>
+              
+              <label class="label"><input class="input" type="text" placeholder="E-mail" name="email" required></label>
 
-            <label>
-              <input type="text" placeholder="E-mail" name="email" required>
-            </label>
+              <div class="radio-inline">
+                <label Class="checkbox-label"><input class="radio" type="radio" name="gender" value="man" required>Man</label>
+                <label Class="checkbox-label"><input Class="radio" type="radio" name="gender" value="women" required>Women</label>
+                <label Class="checkbox-label"><input Class="radio" type="radio" name="gender" value="other" required>Other</labe Class="checkbox-label"l>
+              </div>
 
-            <label>
-              <input type="text" placeholder="Password" name="password" required>
-            </label>
+              <label class="label"><input class="input" type="text" name="password" minlength="8" placeholder="Password 8 characters minimum" required></label>
 
-            <label>
-              <input type="text" placeholder="Confirm password" name="confrim-password" required>
-            </label>
+              <div class="checkbox-inline">
+                <label><input class="thecheckbox" type="checkbox" required>I agree to <a href="#">Terms & Conditions</a></label>
+              </div>
 
-            <div class="container-green">
-              <Button id="signupbtn" class="btn-text">🌊Sign up</Button>
-            </div>
-          </form>
-    </section>
+              <div class="container-buttom">
+                <Button id="signupbtn" class="btn-text">🌊Sign up</Button>
+              </div>
+            </form>
+      </section>
 
-    <section class="accordion-container">
-      <h1 id="question-title">FAQ</h1>
+      <section class="accordion-container" id="accordion-container">
+        <h1 id="question-title">Frequently Asked Questions</h1>
 
-      <div class="question" id="section1">How do I donate?</div>
-      <div class="answer">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec velit a risus dapibus rhoncus. Donec at
-          pretium eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        </p>
-      </div>
+        <div class="question" id="section1">How do I donate?</div>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec velit a risus dapibus rhoncus. Donec at
+            pretium eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          </p>
+        </div>
 
-      <div class="question" id="section2">Lorem ipsum dolor</div>
-      <div class="answer">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec velit a risus dapibus rhoncus. Donec at
-          pretium eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        </p>
-      </div>
+        <div class="question" id="section2">Lorem ipsum dolor</div>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec velit a risus dapibus rhoncus. Donec at
+            pretium eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          </p>
+        </div>
 
-      <div class="question" id="section3">Lorem ipsum dolor</div>
-      <div class="answer">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec velit a risus dapibus rhoncus. Donec at
-          pretium eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        </p>
-      </div>
+        <div class="question" id="section3">Lorem ipsum dolor</div>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec velit a risus dapibus rhoncus. Donec at
+            pretium eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          </p>
+        </div>
 
-      <div class="question" id="section4">Lorem ipsum dolor</div>
-      <div class="answer">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec velit a risus dapibus rhoncus. Donec at
-          pretium eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        </p>
-      </div>
+        <div class="question" id="section4">Lorem ipsum dolor</div>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec velit a risus dapibus rhoncus. Donec at
+            pretium eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          </p>
+        </div>
 
-      <div class="question" id="section5">Lorem ipsum dolor</div>
-      <div class="answer">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec velit a risus dapibus rhoncus. Donec at
-          pretium eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        </p>
-      </div>
+        <div class="question" id="section5">Lorem ipsum dolor</div>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec velit a risus dapibus rhoncus. Donec at
+            pretium eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          </p>
+        </div>
 
-    </section>
-  </article>
+      </section>
+    </article>
   </main>
 
 
   <footer class="footer">
     <ul class="footer-logos">
-      <li><a href="https://www.coralgardeners.org/"><img src="./Images/instaicon.png" alt="instagram-logo"></a></li>
-      <li><a href="CjwKCAiAjrXxBRAPEiwAiM3DQshgrMmEyHW2b8lyIeaRk_UFVXF9u4Hmb1phpXoHTi6OwqXppNxuwhoCPRMQAvD_BwE"><img
+      <li><a href="https://www.instagram.com/" target="_blank"><img src="./Images/instaicon.png" alt="instagram-logo"></a></li>
+      <li><a href="https://www.youtube.com/?gl=SE&hl=sv"><img
             src="./Images/youtubeicon.png" alt="4ocean"></a></li>
-      <li><a href="https://www.onepercentfortheplanet.org/"><img src="./Images/fbicon.png" alt="Plasticocean"></a></li>
+      <li><a href="https://www.facebook.com/"><img src="./Images/fbicon.png" alt="Plasticocean"></a></li>
     </ul>
 
     <p>© Images/videos Copyright Free</p>
