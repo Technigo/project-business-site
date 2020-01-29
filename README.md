@@ -4,7 +4,7 @@ This website page displays a form and an accordion, using a bit of JavaScript.
 
 ## The problem
 
-I did not managed to set the hero video as a header. Instead, it is displayed as a top section. If I would have more time, I would have set the navbar on top of it and set it in a fixed position when scrolling down. Next time, I'll try to display the form and accordion side by side and not on top of each other.
+I did not manage to set the hero video as a header. Instead, it is displayed as a top section. Next time, I will try to set the navbar on top of it and set it in a fixed position when scrolling down. In addition to that, I'll try to display the form and accordion side by side and not on top of each other.
 
 
 ## View it live
