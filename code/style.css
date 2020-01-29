@@ -114,7 +114,20 @@ header img {
     text-transform:uppercase;
     position:relative;
     cursor:pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
 
+  }
+
+  .question:after {
+    content: '👇';
+    margin-left: auto;
+  }
+
+  .question.open:after {
+    content: '☝️';
   }
 
 
@@ -126,6 +139,7 @@ header img {
   .answer {
     margin: 0; 
     list-style: none;
+    padding: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     display:none;
   }
