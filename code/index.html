@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -12,11 +12,11 @@
 
 <body>
   <!--Hero section-->
-  <header class="header" role="banner">
+  <header class="header">
     <div class="navigation">
       <nav class="navbar-right">
         <a href="#">ABOUT US</a>
-        <a href="#">FAQ</a>
+        <a href="#faq-section">FAQ</a>
         <a href="#">CONTACT US</a>
       </nav>
     </div>
@@ -27,7 +27,7 @@
       <div class="head-content">
         <div class="head-overlay">
           <h1>Join our authentic cooking class</h1>
-          <a href="#submit-form"><button>BOOK A TIME HERE</button></a>
+          <a href="#submit-form" class="welcome-button">BOOK A TIME HERE</a>
         </div>
       </div>
       <div class="head-video">
@@ -45,14 +45,14 @@
         <form action="https://httpbin.org/anything" method="POST">
           <div class="form-group">
             <div class="labels">
-              <label for="name">First Name:</label>
-              <input type="text" id="name" name="user_firstname" class="form-control"
+              <label for="firstname">First Name:</label>
+              <input type="text" id="firstname" name="user_firstname" class="form-control"
                 placeholder="Enter your first name" required />
             </div>
             <div class="labels">
-              <label for="name">Last name:</label>
-              <input type="text" id="name" name="user_lastname" class="form-control" placeholder="Enter your last name"
-                required>
+              <label for="lastname">Last name:</label>
+              <input type="text" id="lastname" name="user_lastname" class="form-control"
+                placeholder="Enter your last name" required>
             </div>
             <div class="labels">
               <label for="mail">E-mail address:</label>
@@ -90,11 +90,12 @@
                 and Conditions</label>
             </div><br>
             <button type="submit" class="submit-button">Send your request</button>
+          </div>
         </form>
       </section>
 
       <!-- ACCORDION -->
-      <h3>FAQ</h3>
+      <h3 id="faq-section">FAQ</h3>
       <section class="accordion-content">
         <!--Question one-->
         <h4 class="question" id="q1">Is it fun?</h4>
@@ -111,10 +112,10 @@
         <h5 class="answer" id="a3">Cooking classes allow you to try new foods.</h5>
         <!--Question four-->
         <h4 class="question" id="q4">Will I have to clean up after the cooking class?</h4>
-        <h5 class="answer" id="a4">You get the fun of cooking with none of the cleanup.</h3>
-          <!--Question five-->
-          <h4 class="question" id="q5">How much does it cost?</h4>
-          <h5 class="answer" id="a5">Gratuit! This cooking class does not exist 💛</h5>
+        <h5 class="answer" id="a4">You get the fun of cooking with none of the cleanup.</h5>
+        <!--Question five-->
+        <h4 class="question" id="q5">How much does it cost?</h4>
+        <h5 class="answer" id="a5">Gratuit! This cooking class does not exist 💛</h5>
       </section>
     </div>
   </article>
