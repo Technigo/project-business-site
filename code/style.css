@@ -5,3 +5,212 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .active + .answer {
   /* some styling here */
 }
+
+body {
+  background: #fff;
+}
+
+header {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+
+header h1 {
+  position: absolute;
+  font-size: 100px;
+  top: 40%;
+  left: 50%;
+  font-family: 'Questrial', sans-serif;
+  text-transform:uppercase;
+  transform: translate(-50%, -50%); 
+}
+
+header img {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+.big-grid {
+  display: flex;
+  flex-direction: row;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0 10px 20px 10px;
+  justify-content: space-around;
+  align-items: center;
+  }
+
+
+  .big-grid .box {
+  flex-direction: row;
+  width: 50%;
+  display: flex;
+  background-size: cover;
+}
+
+.big-grid .box img {
+  width: 50%;
+  height: auto;
+}
+
+.big-grid .box .submitform {
+  background-size: cover;
+  background-color: #fff; 
+  width: 40%;
+  padding: 20px 20px 20px 20px;
+
+}
+
+  .big-grid .box .submitform .text-input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 6px;
+    font: 16px/22px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 9px 15px;
+    margin-right: 8px;
+    background: #f5f6f7;
+    color: #444;
+    box-shadow: inset 0px 2px 3px rgba(0,0,0,0.03);
+    outline: none;
+    }
+
+
+    .big-grid .box .submitform label{
+    color: #444;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    }
+
+  .big-grid .box .submitform button {
+  display: block;
+  width: 30%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font: bold 13px/16px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #ea4c88;
+  border-radius: 10px;
+  border: none;
+  padding: 12px;
+  margin-top: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.big-grid .box .accordion {
+  width: 100%;
+  padding: 15px 15px 15px 15px;
+  border: none;
+  border-radius: 6px;
+  font: 16px/22px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background:#f4cfd6;
+  color: #444;
+  box-shadow: inset 0px 2px 3px rgba(0,0,0,0.03);
+  outline: none;
+  }
+
+  .question {
+    font-size:20px;
+    font-weight:800;
+    text-transform:uppercase;
+    position:relative;
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+
+  }
+
+  .question:after {
+    content: '👇';
+    margin-left: auto;
+  }
+
+  .question.open:after {
+    content: '☝️';
+  }
+
+
+  ul {
+    margin: 0; 
+    list-style: none;
+  }
+
+  .answer {
+    margin: 0; 
+    list-style: none;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display:none;
+  }
+  .open + .answer {
+    display: block;
+  }
+
+
+footer {
+  background-color: #f5f6f7;
+  height: 70px;
+  text-align: end;
+
+}
+
+  
+@media (max-width: 900px) {
+
+  header h1 {
+    font-size: 50px;
+  }
+  
+.big-grid {
+  display: flex;
+  flex-direction: column;
+  }
+
+  .big-grid .box {
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    background-size: cover;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  header h1 {
+    font-size: 40px;
+  }
+
+  .big-grid .box img {
+    display: none;
+  }
+
+  .big-grid .box .submitform {
+    width: 100%;
+  
+  }
+
+.big-grid {
+  display: flex;
+  flex-direction: column;
+  }
+
+  .big-grid .box {
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+
+}
+
