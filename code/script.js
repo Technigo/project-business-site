@@ -13,7 +13,7 @@ document.getElementById("section3").onclick = toggle
 document.getElementById("section4").onclick = toggle
 document.getElementById("section5").onclick = toggle
 
-
+// Toggle one testimonial img
 function changeImg() { 
   const bi = "https://laughing-sinoussi-bf359d.netlify.com/img/bi.jpg";
   const ernst = "https://laughing-sinoussi-bf359d.netlify.com/img/ernst.jpg";
