@@ -1,6 +1,6 @@
 # Business Site
 
-Third weeks project in Tehcnigo Bootcamp was to create a business site containing:
+Third weeks project in Technigo Bootcamp was to create a business site containing:
 - Hero Image or Video
 - Signup form
 - Accordion
