@@ -1,30 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento|Quattrocento+Sans&display=swap" rel="stylesheet">
+
+  <title>Kanelbulleverkstaden</title>
+  <!-- dont forget to add a css file and link it here! -->
+</head>
+
+<body>
+  <header>
+    <div class="videoheader">
+      <video autoplay loop muted>
+        <source src="https://static.videezy.com/system/resources/previews/000/034/860/original/hand_bread4.mp4"
+          type="video/mp4">
+      </video>
+      <div class="videotitle">
+        <h1>Kanelbulleverkstaden</h1>
+      </div>
+    </div>
+  </header>
+
+
+
+  <div class="container">
 
     <!-- Signup form -->
+    <div class="form-container">
+      <h2>Order your cinnamon rolls here</h2>
+      <section class="form">
+        <form action="http://httpbin.org/anything" method="POST">
+          <label>
+            Name
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            E-mail
+            <input type="email" name="email">
+          </label>
+          <label>
+            How many kanelbullar?
+            <input type="number" name="number" min="4" max="99" placeholder="mininum order is 4">
+          </label>
+          <label class="radio">
+            What type?
+            <input type="radio" name="type" value="regular">Regular
+            <input type="radio" name="type" value="vegan">Vegan
+            <input type="radio" name="type" value="glutenfree">Glutenfree
+          </label>
+          <label>When do you want them?
+            <input type="date" name="date">
+          </label>
+          <div class="button-container">
+            <button type="submit">Place your order</button>
+          </div>
+        </form>
+      </section>
+    </div>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+    <!-- Accordion -->
+    <div class="accordion-container">
+      <h2>FAQ</h2>
+      <section class="accordion">
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <div class="question" id="section1">Are they good?</div>
+        <div class="answer">
+          <p>They're delicious, tasty and simply divine. They smell of cinnamon and are soft as a bun.</p>
+        </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+        <div class="question" id="section2">How long is the delivery time?</div>
+        <div class="answer">
+          <p>You have to order at least 2 days in advance. We let the dough cold-rise for at least 10 hours.</p>
+        </div>
+
+        <div class="question" id="section3">Can you make them gluten-free or vegan?</div>
+        <div class="answer">
+          <p>Of course! Just specify in the order form. For other allergies, send us an e-mail.</p>
+        </div>
+
+        <div class="question" id="section4">What if I want to order more than 99?</div>
+        <div class="answer">
+          <p>For bigger orders, send us an e-mail and we'll sort it out.</p>
+        </div>
+
+        <div class="question" id="section5">How many cinnamon rolls can I eat?</div>
+        <div class="answer">
+          <p>The recommended amount is at least 3.54 cinnamon rolls every day.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    <div class="contact">
+      <h5>Contact us:</h5>
+      <a href="mailto:info@kanelbulleverkstaden.se">info@kanelbulleverkstaden.se</a>
+    </div>
+    <div class="credits">
+      <h5>Emma Prené 2020</h5>
+      <a href="http://www.videezy.com">B-Roll by Videezy</a>
+    </div>
+  </footer>
+
+
+  <!-- dont forget to link the javascript file here! -->
+  <script src="script.js"></script>
+</body>
+
 </html>

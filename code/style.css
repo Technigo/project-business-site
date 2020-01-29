@@ -1,7 +1,330 @@
+body {
+  font-family: Quattrocento Sans;
+  background: #58513f;
+  margin: 0;
+  
+}
+
+h1 {
+  position: relative;
+  color: #f2f1e7;
+  font-family: Quattrocento;
+  font-size: 35px;
+  text-shadow: 3px 0px 5px #6e6e68;
+}
+
+h2 {
+  width: 100%;
+  padding: 10px;
+  font-family: Quattrocento;
+  background: #d7c79e;
+  box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+h5 {
+  margin: 0;
+}
+
+/* ********HEADER*********** */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(videos/cinnamonroll.jpg);
+  background-position: center;
+  background-size: cover;
+  height:250px;
+  margin: 0;
+}
+
+video {
+ display: none;
+}
+
+.videotitle {
+
+}
+
+/* .videoheader {
+  position: relative;
+
+}
+
+video {
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.videotitle {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+} */
+
+/* video {
+    position: fixed;
+    right: 0;
+    width: 100%; 
+  
+} */
+
+
+/* .videoheader {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+} */
+
+
+/* *********CONTAINER********** */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+    margin-bottom: 100px;
+}
+
+/* **********FORM********** */
+.form-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80%; 
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  background: #9dab86;
+  box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.45);
+}
+
+.form {
+  background: #f2f1e7;
+  padding: 20px;
+  border: solid 1px #f2f1e7;
+  border-radius: 5px;
+}
+
+/* form{
+  display: flex;
+  align-items: center;
+} */
+
+label{
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+input{
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed black;
+  margin-top: 20px;
+  height:30px;
+  font-family: Quattrocento;
+} 
+
+.radio {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center; 
+  
+}
+
+.radio input {
+  margin-top: 0;
+}
+
+.button-container {
+  display:flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+button {
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Quattrocento;
+  font-weight: bold;
+  background: #d7c79e;
+  padding: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.45);
+  }
+
+  button:hover {
+    box-shadow: none;
+  }
+
+  button:focus {
+    box-shadow: inset 5px 5px 2px 0px rgba(0, 0, 0, 0.45);
+    -webkit-box-shadow: inset 5px 5px 2px 0px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: inset 5px 5px 2px 0px rgba(0, 0, 0, 0.45);
+    transition: all 0.4s ease 0s;
+    }
+
+
+/* *******ACCORDION******* */
+
+.accordion-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80%; 
+  height: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  background: #9dab86;
+  box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.45);
+}
+
+ 
+.accordion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  padding: 20px; 
+}
+
+.question {
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  background: #d7c79e;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.answer {
+  display:none;
+  width: 100%;
+  padding: 5px;
+  background: #f2f1e7;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
   /* some styling here */
+  display: block;
+
 }
+
+
+/* *******FOOTER******** */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height:50px;
+  margin: 0;
+  background: #9dab86;
+  color:#f2f1e7;
+
+}
+
+footer a{
+  color: #f2f1e7;
+  font-size: 14px;
+}
+
+footer a:hover {
+  color: #58513f;
+}
+
+.contact {
+padding-left: 10px;
+}
+
+.credits {
+  text-align: left;
+  padding-right:10px;
+}
+
+
+/* ************MEDIA QUERIES*************** */
+
+
+@media screen and (min-width: 668px) {
+  h1 {
+    font-size:55px;
+  }
+  
+  header {
+    display: block;
+    position: relative; 
+    height: 100%;
+    background: none;
+  }
+  
+  video {
+    display: block;
+    height: auto;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  .videotitle {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch; 
+  }
+
+  .form-container {
+  width: 40%;  
+}
+
+  .accordion-container {
+    width: 40%;
+    min-height: 700px;
+  }
+
+
+}
+
+@media screen and (min-width: 900px) { 
+h1 { 
+  font-size: 75px;
+}
+
+
+}
+
+
