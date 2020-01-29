@@ -1,30 +1,130 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <nav>
+
+  </nav>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business site project</title>
+  <!-- dont forget to add a css file and link it here! -->
+  <link rel="stylesheet" href="./style.css" />
+  <!-- link tag for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- meta tag for responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <!-- video or image as a header is cool :) -->
+  <header>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav class="menu">
+      <a href="#" target="_blank">ABOUT</a>
+      <a href="#" target="_blank">PRICES</a>
+      <a href="#" target="_blank">CONTACT</a>
+      <button type="button" onclick="alert('You are not authorized!')">SIGN IN</button>
+    </nav>
+    <div class="video-container">
+      <video class="video-phone" autoplay>
+        <source src="videos/SampleVideo_360x240_1mb.mp4" type="video/mp4">
+        <source src="videos/SampleVideo_360x240_1mb.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+      <video class="video-tablet" autoplay>
+        <source src="videos/SampleVideo_720x480_1mb.mp4" type="video/mp4">
+        <source src="videos/SampleVideo_720x480_1mb.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+      <video class="video-desktop" autoplay>
+        <source src="videos/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+        <source src="videos/SampleVideo_1280x720_1mb.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </header>
+  <main>
+    <section class="signup-form">
+      <!-- Signup form -->
+      <h2>Create your free account</h2>
+      <form action="http://httpbin.org/anything" method="POST" class="create-account">
+        <input type="text" name="firstname" required placeholder=" First name">
+        <input type="text" name="lastname" required placeholder=" Last name">
+        <input type="email" name="email" required placeholder=" E-mail">
+        <select name="age" required>
+          <option value="" disabled selected>Select your age</option>
+          <option value=">18" name="age">> 18</option>
+          <option value="18-25" name="age">18-25</option>
+          <option value="25-35" name="age">25-35</option>
+          <option value="35-45" name="age">35-45</option>
+          <option value="45+" name="age">45+</option>
+        </select>
+        <div class="radio">
+          <input type="radio" id="Female" name="gender" value="Female">
+          <input type="radio" id="Male" name="gender" value="Male">
+          <input type="radio" id="Other" name="gender" value="Other">
+        </div>
+        <div class="radio-label">
+          <label for="Female">Female</label>
+          <label for="Male">Male</label>
+          <label for="Other">Other</label>
+        </div>
+        <input type="text" name="username" required placeholder=" Username">
+        <input type="password" name="pw" minlength="8" required placeholder=" Password">
+        <div class="accept-terms">
+          <input type="checkbox" name="accept-terms" value="accept" required id="terms">
+          <label for="terms">Creating an account means you’re okay with
+            our <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a>, and our default <a
+              href="#">Notification
+              Settings</a>.</label>
+        </div>
+        <button type="submit">Create account</button>
+      </form>
+    </section>
+
+
 
     <section class="accordion">
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      <h1>Frequently Asked Question</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">What is HTML?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>LHTML stands for Hyper Text Markup Language and is the standard markup language for Web pages. HTML elements
+          are the building blocks of HTML pages. HTML elements are represented by <> tags</p>
       </div>
-
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">What is CSS</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed</p>
+      </div>
+      <div class="question" id="section3">What is JavaScript?</div>
+      <div class="answer">
+        <ul>
+          <li>JavaScript is the Programming Language for the Web</li>
+          <li>JavaScript can update and change both HTML and CSS</li>
+          <li>JavaScript can calculate, manipulate and validate data</li>
+        </ul>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+  </main>
+
+  <footer>
+    <div class="social-media">
+      <a href="https://sv-se.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+      <a href="https://www.instagram.com/?hl=sv" target="_blank" class="fa fa-instagram"></a>
+      <a href="https://www.linkedin.com/" target="_blank" class="fa fa-linkedin"></a>
+    </div>
+  </footer>
+
+  <!-- dont forget to link the javascript file here! -->
+  <script src="script.js"></script>
+
+</body>
+
 </html>
