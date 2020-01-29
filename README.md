@@ -8,4 +8,5 @@ Im satisfied with the design and how the site turned out and that I had time for
 If I had some more time I would probably tried to use video instead of an image in the head.
 
 ----
-View it live here: 
+View it live here:
+https://stupefied-wing-ba0358.netlify.com/
