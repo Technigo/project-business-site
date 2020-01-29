@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project 3</title>
+  <title>Project Business Website</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -22,58 +22,67 @@
   </header>
   <!-- Signup form -->
 
-  <section class="form">
-    <form action="https://httpbin.org/anything" method="POST" target="_blank">
-      <h3>Contact me for a consultation:</h3>
-      <br>
-      Name:<br>
-      <input type="text" name="Your name" value="Your Name">
-      <br>
-      Last name:<br>
-      <input type="text" name="Email" value="Email">
-      <br>
-      Is your cat friend a:<br>
-      <input type="radio" name="age" value="kitten" checked> Kitten<br>
-      <input type="radio" name="age" value="adult"> Adult<br>
-      <input type="radio" name="age" value="senior"> Senior<br>
-      <input type="checkbox" name="terms" value="agree">I agree to the Terms & Conditions<br>
-      <input type="submit" value="Submit">
-    </form>
+  <section class="main">
 
+    <div class="form">
+      <form action="https://httpbin.org/anything" method="POST" target="_blank">
+        <h3>Contact me for a consultation:</h3>
+        <br>
+        <label>
+          Name:<br>
+          <input type="text" name="Your name" value="Name" placeholder="Your Full Name">
+        </label>
+        <br>
+        <label>
+          Email:<br>
+          <input type="email" name="Email" value="email" placeholder="Email">
+        </label>
 
+        <br>
+        <label>
+          Is your cat friend a:<br>
+          <input type="radio" name="age" value="kitten" checked> Kitten<br>
+          <input type="radio" name="age" value="adult"> Adult<br>
+          <input type="radio" name="age" value="senior"> Senior<br>
+          <input type="checkbox" name="terms" value="agree" required>I agree to the Terms & Conditions<br>
+          <input style="cursor: pointer;" type="submit" value="Submit">
+        </label>
 
-
-  </section>
-
-  <section>
-    <!-- Accordion -->
-    <h3>FAQ</h3>
-
-
-    <button class="question" id="section1">Section 1</button>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
+      </form>
     </div>
 
 
-    <button class="question" id="section2">Section 2</button>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
 
-    <button class="question" id="section3">Section 3</button>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
 
-    <button class="question" id="section4">Section 4</button>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
+    <section class="accordion">
+      <!-- Accordion -->
+      <div class="faq">
+        <h3>FAQ</h3>
+
+
+        <button class="question" id="section1">What can you do for me and my cat?</button>
+        <div class="answer">
+          <p>I can guide you towards a more harmonius relationship and help you understand your cat better.</p>
+        </div>
+
+
+        <button class="question" id="section2">Can you help me with a special issue?</button>
+        <div class="answer">
+          <p>Lorem ipsum ...</p>
+        </div>
+
+        <button class="question" id="section3">Question 3</button>
+        <div class="answer">
+          <p>Lorem ipsum ...</p>
+        </div>
+
+
+      </div>
+    </section>
+
   </section>
   <script src="script.js"></script>
 
-  <!-- dont forget to link the javascript file here! -->
 </body>
 
 </html>

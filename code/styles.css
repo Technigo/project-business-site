@@ -1,11 +1,5 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-
-
 body {
-  background-color: aquamarine;
+  background-color: whitesmoke;
   box-sizing: border-box;
   height: 100%;
 }
@@ -20,28 +14,31 @@ h2 {
   font-size: 2em;
 }
 
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  color: white;
+
+}
+
 header {
-  background-color: cadetblue;
+  background-color: whitesmoke;
   height: 600px;
 
 }
 
 /* The hero image */
 .hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("hero-image.jpg");
-
-  /* Set a specific height */
   height: 100%;
-
-  /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
 }
 
-/* Place text in the middle of the image */
 .hero-text {
   text-align: center;
   position: absolute;
@@ -51,6 +48,18 @@ header {
   color: white;
 }
 
+/* MAIN SECTION*/
+
+.main {
+  display: flex;
+  align-items: row;
+  flex-wrap: inherit;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* FORM*/
+
 .form {
   height: 400px;
   background-color: darkgoldenrod;
@@ -58,12 +67,30 @@ header {
   color: white;
   display: flex;
   justify-content: center;
+  width: 46%;
+  padding-left: 16px;
+  border-radius: 10px;
+  line-height: 1.5rem;
 
 }
 
+
+/* FAQ-SECTION*/
+
+
 .accordion {
-  height: 400px;
-  background-color: darksalmon;
+  height: auto;
+  background-color: #854f41;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: column;
+  justify-content: center;
+  width: 46%;
+  border-radius: 10px;
+}
+
+.faq {
+  width: 90%;
 }
 
 .question {
@@ -75,31 +102,48 @@ header {
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 16px;
   transition: 0.4s;
+
+
 }
 
 
 
 .answer {
-  padding: 0 18px;
+
+  padding: 18px;
   width: 100%;
   display: none;
   background-color: white;
-  overflow: hidden;
+  font-size: 15px;
+  box-sizing: border-box;
 }
 
-.active,
 .question {
   display: block;
 }
 
-.active+.answer {
-  display: block;
-}
-
-
-.active,
 .question:hover {
   background-color: #ccc;
+  font-size: 16px;
+}
+
+/* MEDIA QUERY FOR MOBILE */
+
+@media (max-width: 667px) {
+  .main {
+    justify-content: center space-evenly;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  .accordion {
+    width: 90%;
+  }
+
+  .form {
+    width: 90%;
+  }
 }
