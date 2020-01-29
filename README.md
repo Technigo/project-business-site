@@ -19,4 +19,4 @@ Also adding so conditional styleling to the questions and answers.
 
 
 ## View it live
-https://compassionate-brattain-d37270.netlify.com/
+https://distracted-wiles-4e0c28.netlify.com/
