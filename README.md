@@ -1,12 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+Third weeks project in Tehcnigo Bootcamp was to create a business site containing:
+- Hero Image or Video
+- Signup form
+- Accordion
+- Javascript connected to accordion
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+When first looking at the javascript I felt really lost but in the end I got it to work and understood how it was suppose to work for this project. If I had more time I would have wanted to look more into javascript and tried to use it in more ares. But I guess that will come for the following weeks! Looking forward. 
 
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://loving-tesla-63200c.netlify.com
