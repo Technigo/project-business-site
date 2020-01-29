@@ -11,7 +11,7 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 700px;
+  height: 50em;
   background-image: linear-gradient(rgba(245, 247, 244, 0.1), rgba(245, 247, 244, 0.1)), url("images/hero-image.jpeg");
   background-position: inherit;
   background-repeat: no-repeat;
@@ -206,40 +206,42 @@ input[type='checkbox'] + label {
   margin-left: auto;
 }
 
-
 ul {
   display: none;
-  list-style: none;
-  border-left: 2px dotted rgb(214, 22, 70);
-  margin-left: 8px;
-  padding-left: 8px;
   overflow: hidden;
 }
 
 .active {
+  transition: all 4s ease;
   display: block;
-  transition: all 10s ease;
+  list-style: none;
+  border-left: 2px dotted rgb(214, 22, 70);
+  margin-left: 8px;
+  padding-left: 8px;
 }
 
 @media (max-width: 667px) {
   header {
     background-image: linear-gradient(rgba(245, 247, 244, 0.1), rgba(245, 247, 244, 0.1)), url("images/hero-image-mobile.jpeg");
-    background-position: center;
+    background-size: cover;
   }
+
+  header h1{
+    padding: 50px 20px 20px 20px;
+  }
+  
+  header p{
+    padding: 30px 20px 20px 20px;
+  }
+
   .content {
     flex-direction: column;
     flex-wrap: wrap;
   }
   .container {
     width: 100%;
-    margin: 20px 10px 20px 10px
+    margin: 50px 20px 20px 20px
   }
 
 }
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-/*
-.active + .answer {}
-  /* some styling here */
