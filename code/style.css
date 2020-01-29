@@ -72,6 +72,7 @@ header p{
   color: lightgoldenrodyellow;
   text-align: center;
   background-color: rgb(214, 22, 70);
+  cursor: pointer;
 }
 
 .sticky {
@@ -180,24 +181,44 @@ input[type='checkbox'] + label {
   user-select: all;
 }
 
+#signupbtn {
+  width: 100%;
+}
+
 .question {
-  border-style: none;
+  border: 1px solid lightgoldenrodyellow;
+  border-radius: 8px;
+  padding: 8px;
+  width: 95%;
+  display: flex;
+  align-items: center;
   font-family: 'Abril Fatface', cursive;
   font-style: italic;
   font-size: var(--font-size-3);
   color: lightgoldenrodyellow;
   background-color: rgb(214, 22, 70);
-  margin-top: 20px
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.question:after {
+  content: '🥬' ;
+  margin-left: auto;
 }
 
 
 ul {
   display: none;
+  list-style: none;
+  border-left: 2px dotted rgb(214, 22, 70);
+  margin-left: 8px;
+  padding-left: 8px;
+  overflow: hidden;
 }
 
 .active {
   display: block;
-  background-color: lightgoldenrodyellow;
+  transition: all 10s ease;
 }
 
 @media (max-width: 667px) {

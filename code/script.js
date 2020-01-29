@@ -48,6 +48,7 @@ document.getElementById('question1').onclick = toggle
 function toggle() {
   document.getElementById('answer1').classList.toggle('active')
 }
+
 document.getElementById('question2').onclick = toggleTwo
 
 function toggleTwo() {
