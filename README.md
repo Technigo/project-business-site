@@ -4,7 +4,9 @@ This week's project was to create a site for a company. It should contain three 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started of by making a simple sketch. I decided to use a background image in css for the header. I used flexbox for responsivness and to make my signup form look the way I wanted. I used javascript to make the accordion expand and collapse.
+
+If I had more time I would definitely make the accordion more obvious. Put a plus and minus on the title for example. I would also make a responsive navbar and a fixed footer.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://unruffled-bartik-ace58d.netlify.com/
