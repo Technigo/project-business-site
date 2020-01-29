@@ -4,11 +4,15 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+header {
+  position: relative;
+  height: 250px;
+}
 
 video {
-  height: auto;
-  vertical-align: middle;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .video-tablet {
@@ -18,7 +22,6 @@ video {
 .video-desktop {
   display: none;
 }
-
 
 .menu {
   display: none;
@@ -44,6 +47,7 @@ video {
   background-color: white;
 }
 
+
 header h1 {
   position: absolute;
   margin: 0;
@@ -51,6 +55,7 @@ header h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  font-size: 20px;
 }
 
 
@@ -61,7 +66,7 @@ header h1 {
   padding: 5%;
   background-color: #559565;
   color: white;
-  box-shadow: 0 5px 9px 0 #A8DEAF;
+  box-shadow: 4px 4px 4px #A8DEAF;
 }
 
 .create-account {
@@ -81,6 +86,11 @@ input {
   width: 250px;
 }
 
+input:hover {
+  border: 2px solid white;
+  background-color: #C4F6BC;
+}
+
 input:focus {
   border: 2px solid white;
   outline: none;
@@ -96,6 +106,11 @@ select {
   margin-bottom: 10px;
   font-size: 20px;
   width: 250px;
+}
+
+select:hover {
+  border: 2px solid white;
+  background-color: #C4F6BC;
 }
 
 select:focus {
@@ -127,6 +142,7 @@ select:focus {
   width: 250px;
   margin-bottom: 15px;
 }
+
 
 ::placeholder {
   color: white;
@@ -167,17 +183,18 @@ input:focus, input:focus {
 
 .accordion {
   margin: 5%;
-  text-align: center;
-  /*border: 2px gray solid;*/
   border-radius: 5px;
   padding: 5%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: white;
-  box-shadow: 2px 2px 2px #A8DEAF;
+  box-shadow: 4px 4px 4px #A8DEAF;
   color: #559565;
+}
+
+.accordion h1 {
+  text-align: center;
 }
 
 
@@ -190,6 +207,8 @@ input:focus, input:focus {
   height: 40px;
   background-color: #A8DEAF;
   cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .question:hover {
@@ -206,18 +225,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 /* TOGGLE */
 
 .answer {
-display: none;
-}
-
-.active + .answer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  width: 100%;
-  height: auto;
-  background-color: #559565;
-  color: white;
+  display: none;
 }
 
 .active {
@@ -225,7 +233,25 @@ display: none;
   color: white;
   border-bottom: #A8DEAF solid 1px;
   font-weight: bold;
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
+
+.active + .answer {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  background-color: #559565;
+  color: white;
+  margin-bottom: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 4px 4px 4px #A8DEAF;
+}
+
 
 /* Symbol (+/-) in end of sections/questions */
 
@@ -300,20 +326,24 @@ footer {
     display: none;
   }
 
+  header h1 {
+    font-size: 30px;
+  }
+
   .hamburger {
     display: none;
     z-index: 1;
   }
 
   .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding: 1%;
-    position: absolute;
-    z-index: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      padding: 1%;
+      position: absolute;
+      z-index: 1;
     }
     
   .menu a {
@@ -326,19 +356,20 @@ footer {
     color: #559565;
   }
     
-    .menu button {
+  .menu button {
     color: white;
     border: white 2px solid;
     border-radius: 5px;
     font-size: 20px;
     padding: 10px;
     font-weight: bold;
-    }
+    background: transparent;
+  }
     
-    .menu button:hover {
+  .menu button:hover {
     color: #559565;
     background-color: white;
-    }
+   }
 
     
 
@@ -347,9 +378,6 @@ footer {
 
 @media (min-width: 1024px) {
  
-  .video-phone {
-    display: none;
-  }
   
   .video-tablet {
     display: none;
@@ -361,7 +389,11 @@ footer {
   }
 
   .hamburger {
-  display: none;
+    display: none;
+  }
+
+  header h1 {
+    font-size: 40px;
   }
 
   .menu {
@@ -374,41 +406,41 @@ footer {
   }
 
   .menu a {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
   }
 
   .menu a:hover {
-  color: #559565;
+    color: #559565;
   }
 
   .menu button {
-  color: white;
-  border: white 2px solid;
-  border-radius: 5px;
-  font-size: 20px;
-  padding: 10px;
-  font-weight: bold;
+    color: white;
+    border: white 2px solid;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
   }
 
   .menu button:hover {
-  color: #559565;
-  background-color: white;
+    color: #559565;
+    background-color: white;
   }
 
   
   main {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-left: 10%;
-  margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .signup-form {
-  min-width: 250px;
-  width: 20%;
+    min-width: 250px;
+    width: 20%;
   }
 
   .accordion {
