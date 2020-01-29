@@ -200,23 +200,23 @@ input:focus {
   color: black;
 }
 
-input::placeholder {
+.text-fields::placeholder {
   color: black;
   font-family: 'Overlock';
-  font-size: 15px;
+  font-size: 10px;
   border-color: blue;
 }
 
-input:valid {
-  border: 5px solid green;
+.text-fields:valid {
+  border: 1px solid green;
   background-image: url(images/inputTick.png);
   background-position: right;
   background-size: 13px;
   background-repeat: no-repeat;
   
 }
-input:invalid {
-  border: 5px solid maroon;
+.text-fields:invalid {
+  border: 1px solid maroon;
 }
 
 .radio-buttons {
@@ -401,6 +401,18 @@ input:invalid {
   .head-container {
   height: 450px;
   
+  }
+
+  .text-fields:valid {
+    border: 5px solid green;
+  }
+
+  .text-fields:invalid {
+    border: 5px solid maroon;
+  }
+
+  .text-fields::placeholder {
+    font-size: 15px;
   }
   
 }
