@@ -106,14 +106,17 @@ form {
 }
 
 input {
-  font-size: 20px;
+  font-size: 18px;
   font-family:'Roboto', sans-serif;
+  display: block;
+  border: none;
+  margin-top: 2px;
 }
 
 label {
+  display: block;
   font-size: 20px;
   font-family: 'New Rocker', cursive;
-  display: block;
   margin-bottom: 20px;
 }
 
@@ -124,13 +127,26 @@ button {
   border-radius: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family:'Roboto', sans-serif;
 }
 
-.form-container{
+select {
+  display: block;
+  font-size: 18px;
+  font-family:'Roboto', sans-serif;
+}
+
+.form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.terms input {
+  display: inline-flex;
 }
 
 /*styling of the accordion */
@@ -154,7 +170,6 @@ button {
   text-align: left;
   border: none;
   outline: none;
-  transition: 0.4s;
 }
 
 .question {
@@ -165,6 +180,7 @@ button {
   color: black;
   font-family:'New Rocker';
   font-size: 24px;
+  transition: 0.4s;
 }
 
 .question:hover {
@@ -176,6 +192,8 @@ button {
   background-color: #b2ffe6;
   color: black;
   display: none;
+  overflow: hidden;
+  transition: 0.4s;
 }
 
 .active + .answer {
