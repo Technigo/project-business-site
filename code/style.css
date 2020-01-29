@@ -13,6 +13,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
 }
+p {
+  margin: 2px;
+}
 
 h1 {
   font-size: 40px;
@@ -23,8 +26,9 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 14px;
   color: rgb(255, 255, 255);
+  font-weight: 100;
 }
 
 h3 {
@@ -39,15 +43,23 @@ h4 {
   font-weight: 100;
   margin-top: 0px;
   margin-bottom: 0px;
-
+  text-shadow: 1px 1px 2px rgb(43, 43, 5);
 
 }
+
+footer {
+  background-color: rgb(19, 108, 22);
+  /* background-image: url(./images/green-fibers.png); */
+  height: 50px;
+  margin: 0px 0px
+}
+
 
 .big-text-container {
   width: 100%;
   max-width: 650px;
   object-position: center;
-  padding: 40px;
+  padding: 50px;
 
   /* width: 80%; */
   /* max-width: 1100px;
@@ -62,7 +74,7 @@ h4 {
 header {
   /* background: #020202; */
   height: 240px;
-  background-image: url("./images/forrest-2000x1000.png");
+  background-image: url("./images/forrest-2000x1333.png");
   /******* BG link ok, working online? *******/
   background-size: cover;
   background-repeat: no-repeat;
@@ -73,13 +85,13 @@ header {
   padding: 0 0px;
 }
 
-header div {
+/* header div {
 
-}
+} */
 
-header div h3 {
+/* header div h3 {
   color: #135bb3;
-}
+} */
 
 
 /******* MY FLEX BOX - PARENT *******/
@@ -88,52 +100,73 @@ header div h3 {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(46, 46, 46);
+  /* background-color: rgb(194, 25, 25); */
+  background-image: url(./images/micro_carbon.png);
   font-family: Arial, Helvetica, sans-serif;
+  height: auto;
 }
 
 /******* ORDER FORM *******/
 
 .my-form {
-  background-color: #3bb78f;
-  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+  background-color: #63d471;
+  background-image: linear-gradient(315deg, #233329  0%, #63d471 74%);
 
-  font-size: 12px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+
+  font-size: 10px;
   color: rgb(14, 14, 14);
   width: 80%;
-  padding: 10px;
+  padding: 5px 20px 20px;
+  border-radius: 0px;
+
+  margin: 20px auto;
+  /* max-width: 400px; */
+  /* padding: 20px 12px 10px 20px; */
+  /* font: 10px "Lucida Sans Unicode", "Lucida Grande", sans-serif; */
+  box-shadow: 3px 3px 0px 0px rgb(176, 247, 202);
+  
+
+  
+  
 }
 
 /* Add some margins for each label */
 .my-form label {
-  margin: 5px 10px 5px 0;
+  margin: 0px 0px 3px 0px;
+  padding:0px;
+  display:block;
+  font-weight: 100;
+  color: #fff;
 }
 
 /* Style the input fields */
 .my-form input {
   vertical-align: middle;
-  margin: 5px 10px 5px 0;
-  padding: 10px;
+  margin: 0px 5px 5px 0;
+  padding: 5px;
   background-color: #fff;
   border: 1px solid #ddd;
+  font-size: 10px;
+ 
 }
 
 .my-form button {
-padding: 10px 10px;
-background-color: dodgerblue;
-border: 1px solid #ddd;
+padding: 2px 5px;
+background-color: rgb(110, 158, 206);
+border: 1px solid rgb(146, 173, 220);
+border-radius: 2px;
 color: white;
+font-size: 1em;
 }
 
 .my-form button:hover {
-  background-color: royalblue;
+  background-color: rgb(146, 173, 220);;
 }
-
-
-
-
-
-
 
 
 
@@ -143,21 +176,20 @@ color: white;
 
 /******* ACCORDION Style *******/
 .my-accordion {
-  
-  
-  background-color: #3f0d12;
-  background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
-  height: 400px;
+  background-color: #63d471;
+  background-image: linear-gradient(315deg, #233329  0%, #63d471 74%);
+  height: auto;
   color: #444;
   cursor: pointer;
-  padding: 10px;
+  padding: 5px 20px 20px;
   width: 80%;
   text-align: left;
   border: none;
   border-radius: 0%;
   outline: none;
-  font-size: 15px;
+  font-size: 12px;
   transition: 0,4s;
+  box-shadow: 3px 3px 0px 0px rgb(176, 247, 202);
 }
 
 /* .active, .accordion:hover {
@@ -203,15 +235,19 @@ color: white;
 
 @media (min-width: 668px) {
   header {
-    height: 300px;
+    height: 280px;
     /* justify-content: space-between; */
   }
   .box-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     flex-direction: row;
+    /* max-width: 650px; */
+    margin-top: 20px;
   }
+
+
   h4 {
     font-size: 16px;
   
@@ -221,7 +257,7 @@ color: white;
 
 @media (min-width: 900px) {
   header {
-    height: 360px;
+    height: 280px;
     /* justify-content: space-between; */
   }
   .box-container {
