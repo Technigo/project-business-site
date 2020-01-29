@@ -11,3 +11,5 @@ Only later did I find out we could to it in another, maybe simpler, way.
 If I had more time I would try to write the JS-function in another way and maybe in that way I could make the +-sign change to -.
 
 ## View it live
+
+https://nostalgic-fermi-dfb8a5.netlify.com
