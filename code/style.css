@@ -36,6 +36,18 @@ h3 {
   font-size: 20px;
 }
 
+h4 {
+
+font-size: 15px;
+font-weight: lighter;
+}
+
+h5 {
+  text-align: left;
+  font-size: 13px;
+  font-weight: lighter;
+}
+
 p {
   color: black;
   font-family: 'Roboto', sans-serif;
@@ -232,12 +244,14 @@ form {
   border: #A68C76 solid 1px;
   padding: 30px 50px 30px 18px;
   border-radius: 10px;
+  margin: auto;
+  display: inline-block;
 }
 
 .question {
   margin: 0;
-  border: 2px solid black;
-  border-radius: 8px; 
+  border: 1px solid black;
+  border-radius: 10px; 
   padding: 8px;
   display: flex;
   align-items: center;
@@ -245,12 +259,12 @@ form {
 }
 
 .question:after {
-  content: '👇';
+  content: '\002B';
   margin-left: auto;
 }
 
 .question.active:after {
-  content: '☝️';
+  content: '\2212';
 }
 
 .answer {
@@ -258,14 +272,33 @@ form {
   align-items: center;
   margin-left: 8px;
   padding-left: 8px;
-  border-left: 2px dotted blue;
   height: 0;
-  background: yellow;
   overflow: hidden;
+  transition: all 0.5s ease;
 }
 
 .answer.active {
-  height: 90px;
+  height: 30px;
+  transition: all 0.5s ease;
+  overflow: scroll;
+}
+
+/****************** FOOTER ******************/
+
+footer {
+  background: #0D0D0D;
+  color: white;
+  font-size: 12px;
+  font-weight: lighter;
+  height: 50px;
+  width: 100%;
+  text-align: end;
+  padding: 15px 10px;
+}
+
+footer p {
+  margin-right: 40px;
+  color: #D9CDBF; 
 }
 
 
