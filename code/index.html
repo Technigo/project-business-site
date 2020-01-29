@@ -13,6 +13,7 @@
 <body>
   <header>
     <div class="hero">
+      <div class="logo"></div>
       <h1>Ceramics for everyone</h1>
       <h2>One for all and all for pottery! </h2>
     </div>
@@ -27,31 +28,31 @@
       <form action="http://httpbin.org/anything">
         <div>
           <label for="name">Name</label>
-          <input type="text" name=''>
+          <input type="text" name='Name' required>
         </div>
         <div>
           <label for="email">Email</label>
-          <input type="email" name="">
+          <input type="email" name="" required>
         </div>
         <div>
           <label for="mobile">Mobile</label>
-          <input type="number" name="">
+          <input id="mobile" type="number" name="" required>
         </div>
 
         <div class='gender'>
           <label for="gender">female</label>
-          <input type="checkbox" id="genderF" name="female" value="newsletter">
+          <input type="radio" id="genderF" name="female" value="newsletter">
           <label for="gender">male</label>
-          <input type="checkbox" id="genderM" name="male" value="newsletter">
+          <input type="radio" id="genderM" name="male" value="newsletter">
           <label for="gender">other</label>
-          <input type="checkbox" id="genderO" name="other" value="newsletter">
+          <input type="radio" id="genderO" name="other" value="newsletter">
         </div>
 
         <div class='news-letter'>
           <label for="subscribeNews">Subscribe to newsletter?</label>
           <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
         </div>
-        <button type="submit">Submit</button>
+        <button class="submit" type="submit">Submit</button>
       </form>
     </section>
 

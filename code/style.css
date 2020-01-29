@@ -2,25 +2,24 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active+.answer {
-  /* some styling here */
-}
+
 
 body {
   margin: 0;
-  background: rgb(222, 227, 228);
+  background: rgb(219, 229, 231);
   color: #000;
   font-family: 'IBM Plex Mono', monospace;
 }
 
-.hero h1 {
-  font-size: 72px;
-  color: rgb(247, 7, 107);
+/******** HEADER ********/
 
+.hero h1 {
+  font-size: 81px;
+  color: rgb(247, 7, 107);
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 48px;
 }
 
 .hero {
@@ -32,33 +31,44 @@ h2 {
   color: #fff;
   text-align: center;
   background-attachment: fixed;
+  position: relative;
 }
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background: rgb(247, 7, 107);
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+/******** CONTAINER ********/
 
 .container {
   display: flex;
   justify-content: space-between;
   max-width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
+  margin: 30px auto 50px auto;
 }
+
+/******** SIGN-UP ********/
 
 .signup {
   padding: 30px 30px 40px 30px;
   width: 40%;
   background: #fff;
-
+  height: 500px;
 }
 
 form {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
 }
 
 .signup p {
-  margin-bottom: 40px;
   font-size: 32px;
-
 }
 
 form div {
@@ -69,27 +79,69 @@ form div {
 form div input {
   flex: 1;
   margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+input {
+  outline: none;
+  font-size: 18px;
+  background: rgb(250, 242, 242);
+  border: none;
+  border-radius: 5px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+label {
+  font-size: 18px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:valid {
+  background: rgb(250, 229, 229);
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.gender {
+  margin-top: 30px;
+}
+
+.news-letter {
+  margin-top: 20px;
+}
+
+input[type="checkbox"]:checked {
+  background: rgb(42, 72, 73);
 }
 
 button {
   width: 75px;
   height: 50px;
-  margin-top: 35px;
   border: none;
-  background-color: rgb(66, 103, 105);
+  background-color: rgb(107, 168, 172);
   font-size: 16px;
   font-family: 'IBM Plex Mono', monospace;
   border-radius: 5px;
   padding: 5px;
-  box-shadow: 5px 5px rgb(25, 43, 44);
+  margin-bottom: 20px;
   margin-left: 300px;
 }
+
+button:hover {
+  font-style: italic;
+  box-shadow: 5px 5px rgb(42, 72, 73);
+}
+
+/******** ACCORDION ********/
 
 .accordion {
   width: 40%;
   background: rgb(248, 223, 223);
   padding: 30px;
-
 }
 
 .accordion h1 {
@@ -101,29 +153,57 @@ button {
 }
 
 .accordion div {
-  height: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
-.gender {
-  margin-top: 30px;
-}
 
-.news-letter {
-  margin-top: 20px;
+
+.question {
+  background: rgb(247, 201, 201);
+  outline: none;
+  color: #000;
+  cursor: pointer;
+  padding: 18px;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .answer {
-  display: none;
-
+  padding: 0 18px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 
 .selected+.answer {
+  margin-top: -20px;
   display: block;
-  background: #fff;
-  box-shadow: 5px 5px rgb(68, 118, 122);
+  background: rgb(107, 168, 172);
   padding: 20px 20px 60px 20px;
+  transition: all 0.5s ease;
 }
+
+.answer .selected {
+  height: 50px;
+  /* transition: all 0.5s ease; */
+}
+
+.question:after {
+  content: '\02795';
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.selected:after {
+  content: "\2796";
+}
+
+/******** MEDIA QUERIES ********/
 
 @media (max-width:910px) {
   .hero {
@@ -132,7 +212,7 @@ button {
     background-position: left center;
   }
 
-  button {
+  button .submit {
     margin-left: 250px;
   }
 }
