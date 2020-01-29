@@ -3,8 +3,7 @@ body {
   margin: 0;
   background-color: #ff9860;
   background-image: linear-gradient(0deg, #ff9860 0%, #f3d692 38%, #fdefcd 100%);
-
-
+  font-family: 'Roboto Mono', monospace;
 }
 
 /******* Header *******/
@@ -84,11 +83,12 @@ nav a.home:hover {
 }
 
 .header-content h1 {
-  color: #F78C51;
-  font-size: 40px;
+  color: #FDEFCD;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 60px;
+  padding-left: 50px;
   position: absolute;
   bottom: 0;
-  right: 0;
   left: 0;
 }
 
@@ -110,7 +110,7 @@ main {
   margin-top: 40px;
   margin-bottom: 40px;
   grid-area: item-a;
-  width: 80%; 
+  width: 80%;
 }
 
 h2 {
@@ -127,6 +127,7 @@ h2 {
   width: 100%;
   padding: 20px 0px;
   border-bottom: 2px solid rgba(247, 139, 81, 0.37);
+  font-size: 18px;
   text-align: center;
   color: rgb(192, 67, 0);
   font-weight: bold;
@@ -141,12 +142,11 @@ h2 {
   margin: 0;
   width: 100%;
   list-style: none;
-  /* display: none; */
   color: rgb(192, 67, 0);
   visibility: hidden;
   max-height: 0;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .answer p {
@@ -165,7 +165,6 @@ h2 {
 
 .active + .answer {
   visibility: visible;
-  /* display: inherit; */
   max-height: 1000px;
   opacity: 1;
 }
@@ -186,7 +185,6 @@ h2 {
 .form-container {
   border-top: 2px solid #F78C51;
   border-left: 2px solid #F78C51;
-  /* border-radius: 8px; */
   margin-top: 20px;
   margin-bottom: 40px;
   grid-area: item-b;
@@ -253,6 +251,12 @@ label {
 
 .form-textbox:focus {
   border: 2px solid #F78C51;
+}
+
+::placeholder {
+  font-family: 'Roboto mono', monospace;
+  padding-left: 5px;
+  color: #F78C51;
 }
 
 .radio-container {
@@ -359,6 +363,7 @@ button {
   border: none;
   border-radius: 8px;
   box-shadow: 0 0 5px rgb(82, 29, 0);
+  font-family: 'IBM Plex Mono', monospace;
 } 
 
 input:valid {
@@ -371,7 +376,6 @@ input:valid {
 .accordion-faq {
   border-top: 2px solid #F78C51;
   border-left: 2px solid #F78C51;
-  /* border-radius: 8px; */
   margin-top: 20px;
   margin-bottom: 40px;
   grid-area: item-c;
@@ -384,6 +388,8 @@ input:valid {
   color: rgb(192, 67, 0);
   font-weight: bold;
   cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .accordion-faq .question:hover {
@@ -391,16 +397,20 @@ input:valid {
   color: #FDEFCD;
 }
 
-/* .accordion-faq .question:after {
+.accordion-faq .question:after {
   content: 'ᐅ'; 
   font-size: 15px;
-  float: right;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .accordion-faq .question.active:after {
   content: 'ᐁ'; 
-} */
+}
+
+.accordion-faq .answer {
+  color: black;
+  padding-left: 15px;
+}
 
 /******* Footer *******/
 
@@ -411,7 +421,7 @@ footer {
 footer p {
   padding: 50px 20px 20px 20px;
   margin: 0;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 footer p img {
@@ -422,7 +432,7 @@ footer p img {
 
 /******* Media Queries *******/
 
-@media (max-width: 667px) {
+@media (max-width: 780px) {
   header {
     height: 300px;
   }  
@@ -445,6 +455,12 @@ footer p img {
     height: 5px;
     background: #FDEFCD;
   }
+
+  .header-content h1 {
+    font-size: 40px;
+    padding-left: 0;
+    right: 0;
+  }  
 
   main {
     display: grid;
