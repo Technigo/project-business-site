@@ -1,28 +1,205 @@
 body {
-  background-color: lavender;
-  margin: 0 auto;
-}
-
-h1 {
+  background-color: pink;
+  margin: 0;
+  height: 100%;
   font-family: helvetica, monospace;
-  letter-spacing: .1em;
-  color: sienna;
+
+
 
 }
+
+h3 {
+  font-size: 30px;
+  text-align: center;
+}
+
+
+h2 {
+
+  letter-spacing: .1em;
+  color: forestgreen;
+  font-size: 40px;
+  padding: 10px;
+  margin-top: 180px;
+
+}
+
+h4 {
+  font-size: 15px;
+  letter-spacing: .1em;
+  text-align: center;
+}
+
+p {
+  display: flex;
+  text-align: left;
+  margin: 0px 8px;
+  width: 100%;
+}
+
+/*** HEADER ***/
 
 header {
   width: 100%;
-  height: 150px;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-video: ;
 }
+
+
+.background {
+  height: 80%;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1495476479092-6ece1898a101?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+
+}
+
+
+
+/*** SIGN UP FORM ***/
+
+.bottomPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 100px;
+
+}
+
+form {
+  padding: 30px;
+  background: border-box;
+  background-color: rgb(2, 43, 2);
+  margin-top: 40px;
+  border-radius: 20px;
+  width: 70%;
+
+
+}
+
+
+
+button {
+  color: rgb(235, 236, 238);
+  font-weight: bold;
+  background-color: grey;
+  border: none;
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-family: helvetica, monospace;
+  font-size: 16px;
+  color: rgb(235, 236, 238);
+  font-weight: bold;
+  letter-spacing: .2em;
+
+}
+
+input {
+  border-radius: 8px 0px;
+  font-size: 12px;
+  width: 100%;
+  display: flex;
+  height: 20px;
+  border: none;
+}
+
+input :valid {}
+
+input :invalid {}
+
+.options {
+  display: block;
+  position: relative;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+  padding-left: 50px;
+
+}
+
+.options input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: bisque;
+  border-radius: 50%;
+}
+
+.options .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: plum;
+}
+
+
+/*** INFOACCORDIAN ***/
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: border-box;
+  background-color: dimgrey;
+  margin-top: 20px;
+  border-radius: 20px;
+  width: 70%;
+  transition: 0.5s;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  background-color: darkslategrey;
+  padding: 10px;
+
+}
+
+.answer {
+  background: slategrey;
+  padding: 20px;
+  display: none;
+  overflow: hidden;
+
+}
+
+
+
+
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+
 .active+.answer {
-  /* some styling here */
+  background: slategrey;
+  visibility: visible;
+
 }

@@ -8,34 +8,96 @@
 
   <!-- dont forget to add a css file and link it here! -->
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
   <!-- video or image as a header is cool :) -->
 
   <header>
-    <h1>The Garderners</h1>
-
+    <div class="background">
+      <h2>The Gardeners</h2>
+    </div>
 
   </header>
 
-  <!-- Signup form -->
+  <section class="bottomPart">
 
-  <section class="accordion">
-    <!-- Accordion -->
-    <h1>FAQ</h1>
+    <form action="http://httpbin.org/anything" method="POST">
 
-    <div class="question" id="section1">Section 1</div>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
+      <h3>FORM OF INTEREST</h3>
+      <label>
+        Name
+        <input type="text" name="name" placeholder="name" required>
+      </label>
 
-    <div class="question" id="section2">Section 2</div>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
+      <label>
+        E-mail
+        <input type="email" name="email" placeholder="name@gmail.com">
+      </label>
+
+      <label>
+        Phone
+        <input type="tel" name="phonenumber" placeholder="706020833">
+      </label>
+
+
+      <label class="options" id="Gardening" name="type" value="gardening">Gardening
+        <input type="radio" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="options">Pruning
+        <input type="radio">
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="options">Landscaping
+        <input type="radio">
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="options">Value pack (all of the above)
+        <input type="radio">
+        <span class="checkmark"></span>
+      </label>
+
+      <button id="button" class="btn" type="Submit">Send</button>
+
+      <h4>We will get back to you shortly!</h4>
+
+    </form>
+    <!-- Signup form -->
+
+
+    <section class="accordion">
+      <!-- Accordion -->
+      <h1>INFO</h1>
+
+      <div class="question" id="section1">Gardening</div>
+      <div class="answer" id="show1">
+        <p>Flowers blablablal blalblbalbl blalbalbl </p>
+      </div>
+
+      <div class="question" id="section2">Pruning</div>
+      <div class="answer">
+        <p>Flowers blabla blblablalblablabl blablalblab balbla </p>
+      </div>
+
+      <div class="question" id="section3">Landscaping</div>
+      <div class="answer">
+        <p>Flowers blabla lablablablalblalb bablablalb</p>
+      </div>
+
+      <div class="question" id="section4">Value pack
+      </div>
+      <div class="answer">
+        <p>Flowers blabla blablabl blablabl balbla</p>
+      </div>
+    </section>
   </section>
   <!-- dont forget to link the javascript file here! -->
+  <script src="script.js"></script>
 </body>
 
 </html>
