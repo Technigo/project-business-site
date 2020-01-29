@@ -1,19 +1,51 @@
 body, html {
   margin: 0;
   height: 100%;
+  
+}
+
+/*** TYPO ***/
+
+h1 {
   font-family: Helvetica, sans-serif;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+}
+p{
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/*** HERO VID ***/
+
+.video-container {
+  position: relative;
+}
+video {
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
+}
+.overlay-text {
+  background: rgba(0,0,0,0);
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*** HERO IMAGE ***/
 
-header {
-  height: 500px;
-}
-
+/* 
 .hero-image {
 position: relative;
 height: 100%;
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("street.jpeg");
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("pink.jpg");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -26,30 +58,22 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 color: white;
-}
-
-.heckyesbtn {  
-    font-family: Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 14px 20px;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor:pointer;
-    overflow: hidden;        
-}
-
-.heckyesbtn:hover {
-    background-color: #000;
-    color: white;
-}
+} */
 
 /*** FORM ***/
+
+.middlesection {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .form-container {
+  width: 100%;
   padding: 20px;
   background-color: #fff;
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
 }
 
 input[type=text], input[type=password], select {
@@ -58,6 +82,8 @@ input[type=text], input[type=password], select {
   padding: 5px 0px;
   margin: 5px 0;
   display: inline-block;
+  font-size: 14px;
+  font-family: inherit;
   border: none;
   border-bottom: 2px solid #000;
   box-sizing: border-box;
@@ -94,6 +120,8 @@ input[type=submit] {
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
   border: none;
   cursor: pointer;
 }
@@ -126,9 +154,13 @@ input[type=submit]:hover {
 /*** ACCORDION ***/
 
 .accordion {
+  width: 100%;
   background-color: #fff;
   padding: 40px;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
 }
+
 .question {
   margin: 0;
   padding: 10px;
@@ -167,3 +199,57 @@ input[type=submit]:hover {
 }
 
 /*** FOOTER ***/
+
+footer {
+  margin: 0;
+  padding: 90px 0;
+  background: #232323;
+  color: #fff;
+}
+
+.footer-container{
+  max-width: 100%;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+}
+
+.social-col {
+  margin: auto;
+  font-size: 10px;
+}
+
+.social-media {
+margin: 20px 0;
+}
+
+.social-media a{
+  color: #fff;
+  margin-right: 10px;
+  font-size: 30px;
+  text-decoration: none;
+  transition: .3s linear;
+}
+
+.social-media a:hover {
+  color: #232323;
+}
+
+/*** IPAD PRO & DESKTOP ***/
+
+@media (min-width: 900px) {
+
+h1 {
+  font-size: 70px;
+}
+  .accordion {
+    width: 40%;
+    flex-grow: 1;
+  }
+
+  .form-container {
+    width: 40%;
+    flex-grow: 1;
+  }
+  
+}
