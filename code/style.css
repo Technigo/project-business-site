@@ -18,26 +18,36 @@
   color: white;
   text-shadow: 2px 2px #BF0A30;
 }
-/*justify center?*/
+
 .main {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .accordion {
   display: block;
-  background-color:  #1d4f8b;
+  background-image: url("shallow-photography-of-usa-flag-973049.jpg");
+  background-repeat: no-repeat;
+  background-position-y: 30%;
+  background-size: cover;
   color: white;
   align-self: center;
   width: 60%;
-  text-align: center;
   font-size: 140%;
-  box-shadow: 10px 10px #2c71c56e;
-  
+  box-shadow: 10px 10px 6px 0px rgba(173, 173, 173, 0.664);
+  margin-block-end: 60px;
+  padding-block-end: 30px;
 }
+
+.boxTitle {
+  margin: 30px 30px 0px 30px;
+  padding: 0px 15px 15px 15px;
+}
+
 .question {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  padding: 15px 15px 15px 15px;
+  margin: 20px 30px;
+  padding: 15px;
 }
 
 .active {
@@ -45,7 +55,7 @@
   margin: 30px 30px 0px 30px;
   background-color: white;
   color: #1d4f8b;
-  padding: 15px 15px 15px 15px;
+  padding: 15px;
 }
 
 .active + .answer {
@@ -57,17 +67,88 @@
   font-size: 80%
 }
 
-.active + p {
-  border-block-color: #1d1d1d;
-}
-.boxTitle {
-  margin: 40px 0px;
-}
 .answer {
   display: none;
 }
 
+/*signup form*/
 
+.signup-form {
+  background-image: url("architecture-daylight-famous-landmark-geology-136154.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  align-self: center;
+  width: 60%;
+  font-size: 140%;
+  box-shadow: 10px 10px 6px 0px rgba(173, 173, 173, 0.664);
+  margin-block-end: 60px;
+  padding-block-end: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 0px 30px;
+  padding: 15px 15px 15px 15px;
+}
+
+.form-answer {
+  font-size: 80%;
+  padding-top: 5px;
+}
+
+.food-answer {
+  padding: 10px 10px 10px 0px;
+}
+
+input[type=text], input[type=email] {
+  width: 40%;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  background: none;
+  text-transform: uppercase;
+}
+
+.btn-submit {
+  padding: 8px;
+  margin-bottom: 15px;
+  align-self: center;
+  width: 30%;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  background: none;
+}
+
+footer {
+  position: relative;
+  background: linear-gradient(rgb(148, 148, 148),white);
+  width: 60%;
+  display: inline-flex;
+  justify-content: flex-end;
+  font-size: 120%;
+  color: #fff;
+}
+
+#footer-text {
+  padding: 15px;
+  margin: 0px;
+}
+
+#footer-image {
+  height: 40px;
+  width: auto;
+  padding: 10px 10px 10px 0px;
+}
 @media only screen 
 and (max-width: 600px) {
 .hero-image {
@@ -76,5 +157,81 @@ and (max-width: 600px) {
 }
 .hero-text {
   font-size: 80%;
+}
+
+/*accordion*/
+.accordion {
+  width: 90%;
+  font-size: 100%;
+  box-shadow: 10px 10px 6px 0px rgba(173, 173, 173, 0.664);
+  margin-block-end: 60px;
+  padding-block-end: 10px;
+}
+.question {
+  margin: 20px 10px;
+  padding: 5px;
+}
+
+.active {
+  margin: 10px 10px 0px 10px;
+  padding: 5px;
+}
+
+.active + .answer {
+  margin: 0px 10px 10px 10px;
+  padding: 5px;
+  font-size: 80%
+}
+
+.boxTitle {
+  margin: 20px 10px;
+  padding: 5px;
+}
+
+/*signup form*/
+.signup-form {
+  width: 90%;
+  font-size: 100%;
+  box-shadow: 10px 10px 6px 0px rgba(173, 173, 173, 0.664);
+  margin-block-end: 60px;
+  padding-block-end: 10px;
+}
+
+label {
+  margin: 0px 10px;
+  padding: 5px;
+}
+
+.food-answer {
+  padding: 5px 5px 5px 0px;
+}
+
+.btn-submit {
+  padding: 8px;
+  margin: 5px 0px;
+  align-self: center;
+  width: 30%;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 80%;
+  background: none;
+}
+
+footer {
+  width: 90%;
+  font-size: 80%;
+}
+
+#footer-text {
+  padding: 10px;
+  margin: 0px;
+}
+
+#footer-image {
+  height: 20px;
+  width: auto;
+  padding: 5px 5px 5px 0px;
 }
 }
