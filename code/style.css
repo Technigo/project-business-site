@@ -151,8 +151,10 @@ div {
 /****************** SIGNUP FORM ******************/
 
 .main-content { /* This class includes the form section + accordion */
-  flex-direction: row;
-  flex-wrap: wrap;
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 24px;
 }
 
 .form-wrapper {
@@ -225,60 +227,47 @@ form {
 }
 
 /****************** ACCORDION ******************/
-.accordion {
-  display: inline-block;
-  width: 40%;
-  margin-right: 40px;
+
+.accordion-content {
   border: #A68C76 solid 1px;
   padding: 30px 50px 30px 18px;
   border-radius: 10px;
-  margin-top: 30px;
 }
 
 .question {
-  background-color: #eee;
-  color: #444;
+  margin: 0;
+  border: 2px solid black;
+  border-radius: 8px; 
+  padding: 8px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
 }
 
 .question:after {
-  content: '\002B';
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
+  content: '👇';
+  margin-left: auto;
 }
 
-.active > i:after {
-  content: "\2212";
-}
-
-.active .question:hover {
-  background-color: #ccc;
+.question.active:after {
+  content: '☝️';
 }
 
 .answer {
-  height: 0vw;
-  text-align: left;
-  width: 40vw;
-  padding: 0 18px;
-  background-color: white;
-  display: none;
-  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  padding-left: 8px;
+  border-left: 2px dotted blue;
+  height: 0;
+  background: yellow;
+  overflow: hidden;
 }
 
-.active + .answer {
-  display: block;
-  height: 5vw;
-  transition: 0.2s ease-out;
-  background-color: #ddd;
+.answer.active {
+  height: 90px;
 }
+
 
 /****************** MEDIA QUERIES ******************/
 @media (min-width: 576px){
@@ -286,9 +275,11 @@ form {
 }
 
 @media (min-width: 768px){
-  
+
 }
 
 @media (min-width: 480px){
-
+  .form-wrapper {
+    width: 80%;
+  }
 }

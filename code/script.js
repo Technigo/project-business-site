@@ -1,10 +1,30 @@
-
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-function toggle() {
-  this.classList.toggle("active")
+const toggleActiveClass = () => {
+  document.getElementById('q1').classList.toggle('active')
+  document.getElementById('a1').classList.toggle('active')
 }
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
+const toggleActiveClassSecond = () => {
+  document.getElementById('q2').classList.toggle('active')
+  document.getElementById('a2').classList.toggle('active')
+}
+
+const toggleActiveClassThird = () => {
+  document.getElementById('q3').classList.toggle('active')
+  document.getElementById('a3').classList.toggle('active')
+}
+
+const toggleActiveClassFourth = () => {
+  document.getElementById('q4').classList.toggle('active')
+  document.getElementById('a4').classList.toggle('active')
+}
+
+const toggleActiveClassFifth = () => {
+  document.getElementById('q5').classList.toggle('active')
+  document.getElementById('a5').classList.toggle('active')
+}
+
+document.getElementById('q1').onclick = toggleActiveClass
+document.getElementById('q2').onclick = toggleActiveClassSecond
+document.getElementById('q3').onclick = toggleActiveClassThird
+document.getElementById('q4').onclick = toggleActiveClassFourth
+document.getElementById('q5').onclick = toggleActiveClassFifth
