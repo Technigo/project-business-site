@@ -36,7 +36,7 @@ body{
   }
 
   .hero-content {
-    background-image: url(images/header-img.png);
+    background-image: url(images/header-668x548px.png);
     object-fit: cover;
     height: 548px;
     display: flex;
@@ -63,30 +63,30 @@ body{
 
   /********** FORM ************/
 
-  .main-content{
-    margin-top: 46px;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+.main-content{
+  margin-top: 46px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
   }
 
-  .order-form{
-    width: 80%;
-    flex-grow: 1;
-    border-color: #cc0000;
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 20px;
-    padding: 20px;
+.order-form{
+  width: 80%;
+  flex-grow: 1;
+  border-color: #cc0000;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 20px;
+  padding: 20px;
   }
 
-  .order-form h1{
-    font-size: 40px;
-    color: #fedfdd;
-    text-align: center;
-    margin-bottom: 20px;
+.order-form h1{
+  font-size: 40px;
+  color: #fedfdd;
+  text-align: center;
+  margin-bottom: 20px;
   }
 
 label{
@@ -122,48 +122,64 @@ label{
 }
 
 .faq-content {
-  display: block;
   margin-bottom: 20px;
   background: #fedfdd;
-  padding: 10px;
-  padding-left: 20px;
+  padding: 10px 20px 10px 20px;
   border-radius: 20px;
 }
 
 .question{
+  display: flex;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 
+}
+
+.question::after {
+  content: "+";
+}
+
+.question.active::after {
+  content: "-";
 }
 
 .answer {
   display: none;
   margin: 20px 0 20px 0;
   font-style: italic;
-
 }  
 
 .active + .answer {
-display: block;
+  display: block;
 }
 
 footer{
   background-image: url(images/footer-img.png);
   height: 138px;
   display: flex;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 
 /***** MEDIA QUERIES ******/
 
 
+@media (min-width: 669px) {
+  .hero-content{
+    background-image: url(images/header-img.png);
+  }
+}
+
 @media (min-width: 1025px) {
+
+  .hero-content{
+    background-image: url(images/header-img.png);
+  }
   
   .main-content{
     flex-direction: row;
     align-items: flex-start;
   }
-
-
 }
