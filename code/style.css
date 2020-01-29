@@ -1,5 +1,6 @@
 *, *::before, *::after { box-sizing: inherit; }
 
+/* Main styling */
 html {
   box-sizing: border-box;
 }
@@ -27,6 +28,7 @@ h3 {
   color: white;
 }
 
+/* HEADER */
 header {
   height: 300px;
 }
@@ -61,11 +63,13 @@ header {
   text-align: center;
 }
 
+/* Sign-up and Info*/
 .main-container {
   display: flex;
   flex-direction: column;
 }
 
+/* Sign-up*/
 .sign-up {
   box-sizing: content-box;
   margin: 15px 5px;
@@ -89,6 +93,7 @@ label {
    margin-top: 20px;
  }
 
+ /* Info*/
 .accordion-container {
   margin: 15px 5px;
   border: 2px solid rgba(45, 45, 122, 0.9);
@@ -109,10 +114,23 @@ label {
 .question {
   padding: 16px;
   font-weight: bold;
+  display: flex;
+  cursor: pointer;
+}
+
+.question::after {
+  content: '+';
+  margin-left: auto;
+}
+
+.question.active::after {
+  content: '-';
 }
 
 .answer {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: all 1s ease;
 }
 
 .answer p {
@@ -123,14 +141,15 @@ label {
 }
 
 .active + .answer {
-  display: contents;
-  background-color: white;
+  height: 100px;
+  transition: all 1s ease;
 }
 
 .active, .question:hover {
   background-color: rgb(223, 227, 232);
 }
 
+/* Media Queries */
 @media (min-width: 668px) {
 
   header {
