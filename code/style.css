@@ -1,95 +1,190 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>🐶 Dogpool</title>
-</head>
-<body>
-    <header> 
-      
-        <div class="header-video" style="width: 1349px; height: 800px;">
-            <video autoplay="true" loop="true" muted="" id="header-video"> type="video/mp4">
-                <source src="C:\Users\siri_\Desktop\KodÖvEx\Pexels Videos 2776522.mp4" type="video/mp4"></video></div>
-         <div class="overload"> <h1>The Dogpool🐕 </h1> <h2>For healthy, happy puppys!</h2>
-        </div> 
-        </div>
-       
-    </header>
-    
+* {
+  margin: 0px;
+}
+body {
+  background-color: rgb(255, 157, 37);
+ 
+}
+header {
+height: 70vh;
+background-size: cover;
+margin-bottom: 20px;
+}
 
-    <section class="container"> 
-        <section class="sign-up-form">
-           <h4>Sign up for our classes here! 🥇</h4>
-           <form action="http://httpbin.org/anything" method="post">
-           <label>
-             <input type="text" name="yourName" placeholder="Your Name" required>
-           <label>
-     
-           <label>
-             <input type="text" name="dogsName" placeholder="Dogs Name" required>
-           <label>
-           
-           <label>
-             <input type="email" placeholder="name@email" required>
-           <label>
-           
-           <label>
-           <select name="Swimclasses">
-               <option value="Rehab30">Rehab 30 minutes</option>
-               <option value="Rehab60">Rehab 60 minutes</option>
-               <option value="Exercise30">Exercise 30 minutes</option>
-               <option value="Exercise60">Exercise 60 minutes</option>
-             </select>
-             <label>
+video {
+min-width: 100vw;
+max-height: 70vh;
+object-fit: cover;
+}
 
-             <label>
-               <input type="radio" name="Dogsize" value="BigDog" > Big dog
-                <input type="radio" name="Dogsize" value="MediumDog"> Medium dog
-                <input type="radio" name="Dogsize" value="SmallDog"> Small dog 
-             </label>
-     
-             <label>
-                <button class="bone">
-                    <div class="c1"></div>
-                    <div class="c2"></div>
-                    <div class="c3"></div>
-                    <div class="c4"></div>
-                    <div class="b1">
-                      <div class="b2">
-                        Submit
-                      </div>
-                    </div>
-                </button>
-             <label>
-           </form>
-         </section >
-     
-         <section class="faqbox">
-           <h4>Frequently asked question 😕</h4>
-         <section class="entry-form">
-        
-        <button class="accordion">Just for dogs?</button>
-         <div class="panel">
-           <p>Our pool is only for dogs.</p>
-         </div>
-         
-         <button class="accordion">What do I need to bring with me?</button>
-         <div class="panel">
-           <p>Just your dog, with a leash on.</p>
-         </div>
-         
-         <button class="accordion">Why swimming?</button>
-         <div class="panel">
-           <p>It's a great way to exercise.</p>
-         </div>
-         </section>
-     </section>
+h1 {
+  font-size: 80px;
+  text-shadow: 2px rgb(117, 117, 117);
+  font-style: oblique;
+}
 
-     <script src="myscripts.js"></script>
-   
-      <!--- Video by Engin Akyurt from Pexels-->
-    </body>
-</html>
+.overload {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+h4 {
+  padding-bottom: 10px;
+}
+.container {
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  background-image: url(https://images.pexels.com/photos/2824173/pexels-photo-2824173.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  background-size: cover;
+  padding-bottom: 30px;
+}
+
+.sign-up-form {
+  background-color: #4bb9dd;
+  font-family: 'source sans pro', sans-serif;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin-right: 10px;
+  width: 350px;
+  height: 350px;
+  margin-top: 40px;
+  box-shadow: 1px 1px 2px black, 0 0 25px;
+}
+
+input {
+  font-size: 17px;
+}
+
+input:valid {
+  border: 3px solid rgb(4, 202, 4);
+  border-radius: 4px;
+  background-color: whitesmoke;
+  }
+  
+input:invalid {
+      border: 4px solid rgb(223, 151, 57);
+      border-radius: 4px;
+      background-color: whitesmoke;
+  }
+  
+label {
+      display: block;
+      margin-top: 10px;
+      font-family: 'source sans pro', sans-serif;
+  }
+
+  .bone{
+      margin: 20px;
+      position: relative;
+      width: 150px;
+      height: 60px;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+    }
+    .c1, .c2, .c3, .c4{
+      background:#fff;
+      height: 30px;
+      width: 30px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      position:absolute;
+    }
+    .c1{
+      left: 0;
+      top: 0;
+    }
+    .c2{
+      right: 0;
+      top: 0;
+    }
+    .c3{
+      left: 0;
+      bottom: 0;
+    }
+    .c4{
+      bottom: 0;
+      right: 0;
+    }
+    .b1 {
+      background:#fff;
+      height: 30px;
+      width: 120px;
+      position:absolute;  
+      left: 15px;
+      top: 15px;
+    }
+    .b2 {
+      position: absolute;
+      left: 15px;
+      top: 0;
+      width: 90px;
+      height: 30px;
+      line-height: 30px;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      text-align: center;
+    }
+  
+.faqbox {
+      background-color: #4bb9dd;
+      width:350px;
+      height:370px;
+      margin-top:40px;
+      padding-left: 20px;
+      padding-top: 30px;
+      box-shadow: 1px 1px 2px black, 0 0 25px;
+      font-size: 20px;
+      margin-left: 10px;
+  }
+
+.accordion {
+  background-color: rgb(208, 224, 230);
+  font-family: 'source sans pro', sans-serif;
+  font-size: 20px;
+  color: black;
+  padding: 18px;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  width:300px;
+  height:70px;
+  display:block;
+}
+
+.active, .accordion:hover {
+  background-color: rgb(239, 245, 247);
+  
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  font-style: oblique;
+  display: none;
+  overflow: hidden;
+  width: 280px;
+  height: fit-content;
+  font-family: 'source sans pro', sans-serif;
+  padding-right: 2px;
+}
+
+@media only screen and (max-width:920px){
+  .container {
+      display:flex;  
+      flex-wrap: wrap;
+    align-content: center;
+      }
+}
