@@ -123,6 +123,7 @@ button {
   border: solid;
   border-radius: 8px;
   margin: 8px;
+  background-image: linear-gradient(white,grey);
 }
 
 .FAQheader {
@@ -141,7 +142,8 @@ button {
 .active + .answer {
   /* some styling here */
   display: block;
-  padding: 10px;
+  padding: 5px 5px;
+  border-left: dotted;
 }
 
 footer {
@@ -157,13 +159,12 @@ h3 {
   margin-right: 10px;
 }
 
-@media  (min-width: 667px) and (max-width:1024px){
+@media  (min-width: 667px) {
 
   main {
     display: flex;
     justify-content: space-evenly
     
-  
   }
 
   h1 {
@@ -176,13 +177,42 @@ h3 {
   input[type=email] {
     width: 100%
     }
+
+.accordion {
+  background-image: linear-gradient(white,grey,black);
+}
+
 }
 @media (min-width:1025px) {
 
   h1 {
     font-size: 60px;
     }
+  h4 {
+    font-size: 20px;
+  }  
     input {
       font-size: 25px;
     }
+   form {
+     width: 40%;
+   }
+   input[type=email] {
+    width: 97%
+    }
+    select {
+      margin-right: 50px;
+    }
+    .accordion {
+     width: 40%;
+   }
+   .FAQheader {
+     font-size: 25px;
+   }
+   .question {
+     font-size: 20px
+   }
+   p {
+     font-size: 20px;
+   }
 }
