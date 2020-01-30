@@ -1,12 +1,4 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
-
-
+/* general styling */
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -53,7 +45,26 @@ header {
   padding: 100px 0;
 }
 
-.forms-wrapper {
+/* icons about the company */
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.icon {
+  margin: 40px;
+}
+
+.icon img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* styling form */
+
+.form {
   display: flex;
   align-items: end;
   justify-content: space-evenly;
@@ -62,39 +73,19 @@ header {
 }
 
 .form-top {
-  padding: 15px;
+  padding: 25px;
+  font-weight: bold;
 }
 
 form {
   height: 600px;
   width: 500px;
-  border: 2px solid grey;
+  border: 1px dotted grey;
   border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-.questions-top {
-  padding: 15px;
-}
-
-.form-content {
-
-}
-
-input {
-  font-size: 20px;
-  width: 90%;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 4px;
-  margin: 10px;
-}
-
-input:valid {
-  background-color: rgba(198, 241, 216, 0.589);
-}
-
-button {
+.submit {
   border: black 1px solid;
   border-radius: 4px;
   color: black;
@@ -109,38 +100,88 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.submit:hover {
   background-color: #555555;
   color: white;
 }
- 
 
-select {
+/* styling question-box */
+
+.questions {
+  height: 600px;
+  width: 500px;
+  border: 1px dotted grey;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.questions-top {
+  padding: 15px;
+  font-weight: bold;
+}
+
+input {
   font-size: 20px;
   width: 90%;
-  padding: 10px 10px;
+  padding: 10px 20px;
+  box-sizing: border-box;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   margin: 10px;
 }
 
-
-.icons {
-  display: flex;
-  justify-content: center;
-  align-items: top;
+input[type="radio"] {
+  width: auto;
 }
 
-.icon {
-  margin: 40px;
+input:valid {
+  background-color: rgba(198, 241, 216, 0.589);
 }
 
-.icon img {
-  width: 150px;
+.accordion {
+  padding: 20px;
 }
 
-.opeining-hours {
-  background-color: #dcdcdc;
+.accordion-btn {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 90%;
+  text-align: left;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  margin: 20px;
+}
+
+.active, .button-accordion:hover {
+  background-color: #ccc;
+}
+
+.button-accordion + .active {
+  background-color: hotpink;
+}
+
+.active {
+display: block;
+}
+
+.active + .panel {
+display: block;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+/* contactinfo and footer */
+
+.opening-hours {
+  background-color: white;
 }
 
 footer {
