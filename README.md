@@ -1,12 +1,18 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+Business site with main focus on a hero video, an accordian and a sign up form.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Deep-dived into understanding the syntax of js before coding just to minimize the time of debugging.
+
+I divided all sections into different folders in the beginning. Making a separate code for the hero video, the accordian and the sign up form. Just to make sure the functionality is working before getting into styling the whole site. 
+
+When everything worked as I wanted to, I combined all the different folders into one. 
+
+If I had more time, I would be spending time on the layout and making a navbar or a sidebar.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://rautellin-business-site.netlify.com/
