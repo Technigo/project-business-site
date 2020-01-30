@@ -1,12 +1,12 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This was a project I did when I attended Technigo Frontend bootcamp. The project was to create a site for a company with a Hero image/video as a header, create some kind of form and a FAQ accordion. Focus was to practice whriting HTML, CSS and get a introduction to Javascript.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+At first my plan was to use a video as a header but I didn´t get it to even show up in the browser. Because of the lack of time, I used a background image instead.
+If I had more time I would of tweeked the design for responsivness and the overall styling of the site.
+
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
