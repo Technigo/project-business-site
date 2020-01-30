@@ -9,4 +9,4 @@ If I had more time I would of tweeked the design for responsivness and the overa
 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://upbeat-lichterman-e872db.netlify.com/
