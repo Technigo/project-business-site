@@ -3,16 +3,12 @@ body {
   margin: 0;
   height: 100%;
   font-family: helvetica, monospace;
-
-
-
 }
 
 h3 {
   font-size: 30px;
   text-align: center;
 }
-
 
 h2 {
 
@@ -21,7 +17,6 @@ h2 {
   font-size: 40px;
   padding: 10px;
   margin-top: 180px;
-
 }
 
 h4 {
@@ -34,7 +29,6 @@ p {
   display: flex;
   text-align: left;
   margin: 0px 8px;
-
 }
 
 /*** HEADER ***/
@@ -48,7 +42,6 @@ header {
   text-align: center;
 }
 
-
 .background {
   height: 80%;
   width: 100%;
@@ -56,10 +49,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
-
 }
-
-
 
 /*** SIGN UP FORM ***/
 
@@ -69,7 +59,6 @@ header {
   align-items: center;
   justify-content: space-around;
   margin-bottom: 30px;
-
 }
 
 form {
@@ -79,10 +68,7 @@ form {
   margin-top: 40px;
   border-radius: 20px;
   width: 70%;
-
-
 }
-
 
 button {
   color: rgb(235, 236, 238);
@@ -97,7 +83,7 @@ button {
   letter-spacing: .1em;
 }
 
-label {
+.form-label {
   display: block;
   margin-bottom: 15px;
   font-family: helvetica, monospace;
@@ -108,18 +94,18 @@ label {
 
 }
 
-input {
+.form-label input {
   border-radius: 8px 0px;
   font-size: 12px;
   width: 100%;
   display: flex;
   height: 20px;
   border: none;
+  margin: 8px 0px;
 }
 
-/* input :valid {} */
+/*** RADIO/CHECKMARKS ***/
 
-/* input :invalid {} */
 
 .options {
   display: block;
@@ -129,8 +115,17 @@ input {
   font-size: 16px;
   user-select: none;
   padding-left: 50px;
+  margin-bottom: 15px;
+  font-family: helvetica, monospace;
+  font-size: 16px;
+  color: rgb(235, 236, 238);
+  font-weight: bold;
+  letter-spacing: .2em;
   margin: 30px 0px;
-
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .options input {
@@ -151,18 +146,29 @@ input {
   border-radius: 50%;
 }
 
+.options input:checked~.checkmark {
+  background-color: rgb(52, 52, 99);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
 .options input:checked~.checkmark:after {
   display: block;
 }
 
-/* .options .checkmark:after {
+.options .checkmark:after {
   top: 9px;
   left: 9px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: plum;
-} */
+  background: rgb(165, 165, 168);
+}
+
 
 
 /*** INFOACCORDIAN ***/
@@ -210,10 +216,6 @@ input {
 
 }
 
-
-
-
-
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
@@ -227,7 +229,28 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 footer {
+  display: inline-block;
   background-color: rgb(2, 43, 2);
   width: 100%;
   height: 50px;
+  text-align: center;
+}
+
+.fa {
+  padding: 5px;
+  margin: 15px 0px;
+  width: 20px;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  color: white;
+}
+
+.fa-instagram {
+  color: white;
 }
