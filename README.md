@@ -15,4 +15,4 @@ I also struggled litte bit with the checkbox, I got the solution from team, they
 I think I planned good this time and looks almost like a wanted. So I will keep up the good work. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://inspiring-curran-a7b987.netlify.com/
