@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://kit.fontawesome.com/9e61dfece2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Forms & Free Cookies</title>
+    </head>
+    <body class="formbody">
+        <form id="cookieform" action="http://httpbin.org/anything" method="POST">
+
+            <div class="formdiv">
+                <h1>Get in touch, we have cookies!</h1>
+
+                <fieldset class="contactdetails">
+                    <legend>Leave your details, we will get back to you!</legend>
+                    <label for="firstname"></label>
+                    <input
+                        type="text"
+                        id="firstname"
+                        name="firstname"
+                        placeholder="FIRST NAME"
+                        required="required"><br>
+                    <label for="secondname"></label>
+                    <input type="text" id="secondname" name="secondname" placeholder="SECOND NAME"><br>
+                    <label></label>
+                    <input type="email" id="email" name="email" placeholder="Email ✉️">
+                </fieldset>
+                <br>
+                <fieldset class="personal">
+                    <legend>
+                        <h3>What type of person are you?</h3>
+                    </legend>
+                    <br>
+                    <p class="formtxt">I AM A...</p>
+                    <br>
+                    <div class="radio">
+                        <input
+                            type="radio"
+                            class="custom"
+                            name="cookietype"
+                            value="healthy"
+                            id="healthy">
+                        <label for="one">Healthy Carrot Cookie person</label>
+                        <input
+                            type="radio"
+                            class="custom"
+                            name="cookietype"
+                            value="unhealthy"
+                            id="unhealthy"
+                            checked="checked">
+                        <label for="two">Chocoholic</label>
+                        <br>
+                        <input type="radio" class="custom" name="cookietype" value="mix" id="mix">
+                        <label for="three">A mixer of flavours</label>
+                        <br>
+                        <div class="favourites">
+                            <label for="favourite"></label>
+                            <input type="checkbox" name="chocolate" value="chocolate">Chocolate<br>
+                            <input type="checkbox" name="vanilla" value="vanilla">Vanilla<br>
+                            <input type="checkbox" name="carmel" value="carmel" checked="checked">
+                            Carmel<br>
+                            <br>
+                        </div>
+                        <div class="textarea">
+                            <label for="story">Talk to us..</label>
+                            <textarea id="story" name="story" rows="5">
+                                What is your favourite cookie!?
+                            </textarea>
+                            <br>
+                            <br>
+                        </div>
+
+                        <div class="submitcookie">
+                            <br>
+                            <label>
+                                Set a password
+                                <input type="password" name="psw" minlength="5">
+                            </label>
+                            <br>
+                            <div>
+                                <label for="submit">🍪Click to Send</label>
+                                <input type="submit" id="submitimg" name="submit">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

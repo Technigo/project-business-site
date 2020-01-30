@@ -1,7 +1,288 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp 
 
 .active + .answer {
-  /* some styling here */
+ some styling here */
+
+
+ *{
+  padding: 0; margin: 0; box-sizing: border-box;
+}
+
+
+.hero {
+  /*position: relative;*/
+  width: 100%;
+  height: 1vh;
+}
+
+h2 button{
+  position: absolute;
+  width: 40%;
+  z-index: 10;
+  font: bold 30px;
+  top: 120px;
+  line-height: 35px;
+  background: black;
+  background: rgba(8, 8, 8, 0.7);
+  padding: 6px;
+  margin: 10px;
+}
+a {
+  text-decoration: none;
+  color:rgb(236, 233, 233);
+}
+
+.heronormal{
+  object-fit: cover;
+  width: 100%;
+  max-height: 400px;
+}
+
+/*** business_grid page*/
+
+#menu #questions #faq #footer {
+ background: gold;
+}
+
+.menu #menu_button{
+  grid-area: menu;    
+}
+
+#questions {
+  grid-area: questions;
+}
+
+#imggridbox {
+  grid-area: imggridbox;
+}
+#footer {
+  grid-area: footer;
+}
+#gridbody{
+    display: grid;
+    grid-template-areas: 
+    "menu menu menu"
+    "questions questions questions"
+    "imggridbox imggridbox imggridbox"
+    "footer footer footer";
+    grid-template-rows: 50px 1fr auto 50px;
+    grid-template-columns: 20% 1fr 15%;
+    grid-gap: 5px;
+    height: 200vh;
+    margin: 0;
+    background: palegoldenrod;
+}
+
+/** DROP DOWN **/
+
+.menu #menu_button  {
+  width: 200px;
+  height: 40px;
+  background: rgba(8, 8, 8, 0.7);
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu p{
+    line-height: 40px;
+    height: 40px;
+    color: rgb(248, 244, 244);
+    background: rgba(8, 8, 8, 0.7);
+    font-weight: 500;
+}
+
+ul {
+  margin: 0;
+  width: 260px;
+  background: rgba(8, 8, 8, 0.7);
+  list-style: none;
+  display:none;
+}
+
+.open {
+  background: rgba(8, 8, 8, 0.7);
+}
+.open + ul {
+  display: inline-block;  
+  color: black;
+}
+.open + li {
+    display: inline-block;
+    padding: 3px;
+}
+
+
+/* ACCORDION*/
+
+.dropacc {
+  background-color: #FBDA61;
+  background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 4s;
+}
+#questions{
+    background-image: background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+}
+
+.active, .dropacc:hover {
+  background-color: rgb(204, 204, 204); 
+}
+
+.txt {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  transition: all 4s ease;
+}
+
+
+#cookiequestions{
+text-align: center;
+background-color: #FBDA61;
+background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+}
+.dropacc::before {
+  content: '▼';
+  margin-left: auto;
+}
+.dropacc.active::before {
+  content: '▲';
+}
+.txt.active {
+  height: 90px;
+  transition: all 4s ease;
+}
+
+
+/**** FORM ****/
+.formbody {
+ background-image:url(images/fruitsweet.jpg);
+ background-position: center;
+ background-size: cover;
+}
+.formdiv{
+  width: 50%;
+  margin: 0 auto;
+  background-color: rgb(226, 226, 229);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.formdiv h1 {
+  text-align: center;
+  background-color: rgb(226, 226, 229);
+}
+input {
+  width: 100%;
+  height: 35px;
+}
+fieldset .personal{
+  border: none;
+  margin-left: 4px;
+}
+#story{
+  width: 100%;
+}
+
+
+
+
+/*RADIO BUTTONS*/
+.custom {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  background-color: #f1f1f1;
+  color: #666;
+  border-radius: 15px;
+  cursor:pointer;
+   }
+.custom:checked::before {
+  position: absolute;
+  font-size: 24px;
+  left: 11px;
+  top:  3px;
+  content: '\00AC'; /* u could use UTF-8 but used ASCII instead */
+  transform: rotate(130deg);
+  display:block;
+   }
+.custom:hover {
+  background-color: rgb(225, 240, 89);
+   }
+.custom:checked {
+ background-color: rgb(207, 129, 243);
+ color: #fff;
+ }
+label {
+  font: 18px 'Futura', sans-serif;
+  color: #333;
+  padding: 0 20px 0 10px;
+   } 
+
+/** GRID IMAGES **//
+
+.imggridbox{
+  display: grid;
+  margin: 0;
+  grid-gap: 5px;
+  background-color: hsl(41, 78%, 75%);
+  justify-content: space-between;
+}
+
+.imggrid {
+  width: 250px;
+  justify-content: space-between;
+  height: 250px;
+  background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+}
+
+
+@media only screen and (min-width: 768px){
+  #gridbody{
+    display: grid;
+    grid-template-areas: 
+    "menu menu menu"
+    "questions imggridbox imggridbox"
+    "questions  imggridbox imggridbox"
+    "questions imggridbox imggridbox"
+    "footer footer footer";
+    grid-template-rows: 50px 1fr 1fr 1fr 50px;
+    grid-template-columns: 20% 1fr 1fr;
+    grid-gap: 5px;
+    height: 200vh;
+    margin: 0;
+}
+.imggrid{
+    width: 150px;
+    height: 150px;
+    background: rgb(252, 221, 154);
+}
+}
+/**** FOOTER ***/
+#footer {
+  background: rgb(61, 60, 60);
+  display: flex;
+  color:rgb(204, 199, 199);
+  height: 40px;
+  align-content: center;
+}
+#footer a {
+display: inline-flex;
+color:rgb(204, 199, 199);
 }
