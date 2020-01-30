@@ -1,7 +1,364 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
+
+body {
+background: #c1bdba;
+}
+
+html {
+font-size: 10px;
+top: 30%;
+overflow-y: scroll; 
+}
+
+header {
+width: 100%; 
+height: 100%;
+position: relative;
+ background-color: rgb(139, 37, 37);
+}
+
+.topnav {
+  position: relative;
+  background-color: rgb(139, 37, 37);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Centered section inside the top navigation */
+.topnav-centered img {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 100px;
+
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+    width: auto;
+  }
+
+  .topnav-centered a {
+position: relative;
+top: 0;
+left: 0;
+transform: none;
+  }
+}
+
+img {
+  width: 100%;
+  height: 600px;
+  position: absolute;
+}
+
+.tab-content h1 {
+color: lightgray;
+size: 20px;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+  transition:.5s ease;
+}
+
+.form {
+  max-width: 600px;
+  padding-left: 10%;  
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin:0 0 20px 0;
+  
+  }
+
+  li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    font-size:20px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition:.5s ease;
+ }
+
+  .active a {
+    background:
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+h1 {
+  text-align:center;
+  color: #ffffff;
+  font-weight: thin;
+  margin: 0 0 40px;
+}
+
+label {
+  position:absolute;
+  transform: translateY(6px);
+  left: 13px;
+  color: rgba(#ffffff;.5);
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 22px;
+}
+
+label.active {
+  transform:translateY(50px);
+  left:2px;
+  font-size:14px;
+}
+
+
+input, textarea {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+}
+
+textarea {
+  border: 2px solid lightgrey
+  resize: vertical;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+  clear: both;
+  display: table;
+}
+
+.top-row {
+display: table;
+clear: both;
+  }
+
+  > div {
+float: left;
+width: 48%;
+margin-right: 4%;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: white;
+  color: black;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+}
+
+*:before, *:after {
+box-sizing: border-box;
+}
+
+button, hr, input {
+overflow: visible; 
+}
+
+.button-block {
+display: block;
+width: 53%;
+}
+
+.forgot {
+margin-top:-20px;
+text-align:right;
+}
+
+.div video {
+justify: flex;
+align-items: center;
+}
+
+video {
+width: 100%;
+height: 100%;
+}
+
+.nav video {
+justify: flex;
+align-items: center;
+}
+
+#myVideo {
+justify: flex;
+
+}
+
+@media (max-width: 600px) {
+  video {
+    width: 100%;
+  }
+ }
+
+
+ @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+ margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 2rem auto 0 auto;
+  position: relative;
+}
+
+.expand {
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -2rem;
+  height: 50%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background: black;
+  color:whitesmoke;
+  text-align: center;
+  border-radius: 30px 0 0 30px;
+  transition: transform 150ms ease-out;
+  cursor: pointer;
+}
+
+details {
+  overflow: hidden;
+  position: relative;
+  text-indent: 0;
+  background-color:  rgb(170, 45, 45);
+}
+
+summary {
+  list-style: none;
+  padding: 1rem;
+  background-color:  rgb(139, 37, 37);
+  color: white;
+  size: 20px;
+  position: relative;
+  
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "\27a7";
+  position: absolute;
+  right: 1rem;
+  transform: rotate(90deg);
+  transition: transform 300ms ease-in-out;
+}
+
+details[open] summary::after{
+  transform: rotate(630deg);
+}
+
+details > p {
+  padding: 1rem;
+  width: 100%;
+  z-index: 1;
+  text-align: justify;
+  color: white;
+  size: 15px;
+}
+
+details[open] summary ~ * {
+   animation: slide 200ms cubic-bezier(0, 1, 0, 1);
+}
+
+@keyframes slide {
+  0% { transform: translateY(-100%); max-height: 0; }
+  100% { transform: translateY(0); max-height: 1000px; }
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #c1bdba;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.footnav {
+margin: 0px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-evenly;
+}
+
+.fotp {
+  color: rgb(77, 65, 65);
+  size: 10px;
+  margin: 30px;
+}
+
+@media (max-width: 600px) {
+  footer {
+        width: auto;
+      }
+     }
+  
+  @media (max-width: 600px) {
+  .footernav, .navli, .navlink,  {
+      width: auto;
+    }
+   }
