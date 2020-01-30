@@ -3,13 +3,31 @@
 // console.log(this) to see how it works
 
 const acc = document.getElementById("section1")
-const answ = document.getElementById("show1")
+const pru = document.getElementById("section2")
+const lan = document.getElementById("section3")
+const val = document.getElementById("section4")
+
+
 
 acc.onclick = () => {
   acc.classList.toggle('active')
+
 }
 
+pru.onclick = () => {
+  pru.classList.toggle('active')
 
+}
+
+lan.onclick = () => {
+  lan.classList.toggle('active')
+
+}
+
+val.onclick = () => {
+  val.classList.toggle('active')
+
+}
 
 
 
