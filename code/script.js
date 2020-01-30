@@ -1,5 +1,4 @@
-  /* Här beskriver jag vad som ska hända när man ex. klickar på ett element. Det är alltså INTE här själva grejen händer... */
-
+ 
 document.getElementById("burger").onclick = toggleButton;
 
 document.getElementById("signUp").onsubmit = validateForm;
@@ -24,7 +23,6 @@ for (var i = 0; i < listOfVideos.length; i++) {
   specificVideo.onmouseout = pauseVideo;
 }
 
-  /* Här är alla funktioner som körs, det är här det händer typ :) */
 
 function validateForm () {
   if (document.getElementById("termsandconditions").checked) {
