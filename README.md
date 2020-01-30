@@ -1,12 +1,18 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+My business is information based and working with organization to save the ocean. FAQ it's a way to get to know the company and sign up to be a part of the clean water Generation community.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Inspired of https://www.coralgardeners.org/ 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This project did go more smoothy than the first. 
+
+But struggled little bit with the accordion to get it how I wanted it. I solved it with google, with the videos on canvas and the codepen help a lot. 
+
+I also struggled litte bit with the checkbox, I got the solution from team, they help me a lot. 
+
+I think I planned good this time and looks almost like a wanted. So I will keep up the good work. 
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
