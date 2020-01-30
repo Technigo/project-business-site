@@ -4,4 +4,4 @@ A practice project with a form, accordion and basic js.
 So many details that sucked me in, things that will become second nature in a few more goes Im sure.
 
 ## View it live
-
+https://app.netlify.com/sites/flamboyant-lalande-244345/overview
