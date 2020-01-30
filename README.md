@@ -1,12 +1,12 @@
 # Business Site
-
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Got great help from technigos videos in starting the design. The designing part was more challenging, next time I will imitate an existing site to make the proccess hopefully quicker. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I don't know why, but when I upploaded my project to github the video and accordion stopped working! I really don't know why... Maybe it's something obvius, I would love to know why. I tried to use a direct url (worse quality, but that worked from codepen) but that didn't work from github.
+
+Video address: https://player.vimeo.com/external/352930770.sd.mp4?s=75122935c4024494ce2d7ca39deb208fb873753b&profile_id=139&oauth2_token_id=57447761
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://stoic-goldwasser-a3a2e6.netlify.com/
