@@ -120,11 +120,26 @@ header {
   padding: 10px;
 }
 
-.question {
+.faq-question {
   background-color: rgb(194, 194, 199);
   border: solid 1px rgb(251, 243, 231);
   width: 250px;
   padding: 10px;
+  cursor: pointer;
+}
+
+.faq-question:after {
+  content: '+'; 
+  font-size: 25px;
+  color: rgb(75, 87, 167);
+  float: right;
+  margin-left: 5px;  
+}
+
+.open:after {
+  content: '-'; 
+  font-size: 25px;
+  color: rgb(75, 87, 167);
 }
 
 .answer {
@@ -136,6 +151,10 @@ header {
   max-height: 0px;
   transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; 
 }
+
+  .green {
+    background-color: rgb(170, 179, 170);
+  }
 
     /*styling form below*/
 
@@ -158,29 +177,39 @@ form {
   padding: 10px;
 }
 
-input[type=text] {
+.input {
   border: solid 2px #9FA4C4;
   border-radius: 8px;
   margin: 3px 0;
-}
-
-input[type=text]:focus {
-  background-color:rgb(199, 218, 224);
-  box-shadow: 1px 1px 10px 2px white;
   outline: none;
-  animation: glow 800ms ease-out infinite
-
+  width: 98%;
 }
+
+.input:focus {
+  background-color:rgb(199, 218, 224);
+  box-shadow: 1px 1px 15px 3px white;
+  outline: none;
+  animation: glowing 2s ease-in-out infinite;
+}
+
+  @keyframes glowing {
+    0% { box-shadow: 0 0 -10px rgb(199, 218, 224); }
+    40% { box-shadow: 0 0 15px white; }
+    60% { box-shadow: 0 0 15px white; }
+    100% { box-shadow: 0 0 -10px rgb(199, 218, 224); }
+  }
 
 input[type=submit] {
   padding: 15px;
   border: dotted 2px #9FA4C4;
   border-radius: 30px;
   background-color: #9FA4C4;
+  outline: none;
 }
 
 input[type=submit]:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
 form a {
@@ -228,8 +257,13 @@ form a:hover {
 
 @media (min-width: 1025px) {
 
+  header {
+    height: 360px;
+  }
+
   .header-textbox {
-    width: 30vw;
+    width: 400px;
+    height: 150px;
   }
 
   .header-textbox h1 {
@@ -261,17 +295,37 @@ form a:hover {
   .navbar {
     display: none;
   }
+
   .sidebar {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 350px;
+    width: 400px;
     height: 900px;
     border: solid 1px #9FA4C4;
     margin: 5px 5px;
   }
 
+  .sidebar video {
+    position: relative;
+    object-fit: cover;
+    margin-top: 20px;
+    position:relative;
+    z-index:0;
+  }
+
+  .text-overlay {
+    top:0;
+    left:0;
+ }
+
+  .text-overlay a {
+    display: block;
+    position: absolute;
+    z-index:1;
+  }
+    
   .sidebar div {
     display: flex;
     justify-content: center;
@@ -300,7 +354,7 @@ form a:hover {
     opacity: 0.7;
   }
 
-  .desktop-sidebars {
+  .main {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;

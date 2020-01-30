@@ -26,34 +26,43 @@
       </button>
     </section>
 
-    <section class= "desktop-sidebars">
-    <section class="sidebar">
+    <section class= "main">
+      <section class="sidebar">
+        <div class="text-overlay toggle-display">
+          <video class="sidebar-video" width="350" height="350" muted loop>
+            <source src="videos/PexelsVideo.mp4">        
+            Your browser does not support the video tag.
+          </video>
+          <a class="opaque-text" href="" target="_blank">Learn about our classes</a>
+      </div>
 
+      </section>
 
-    </section>
-
-    <section class="signFAQ">
+      <section class="signFAQ">
 
       <div class="signup">
 
         <h2> Sign up for class</h2>
 
-        <form>
+        <form action="http://httpbin.org/anything" id="signUp">
           <label for="firstname">First name</label> <br>
-          <input type="text" name="firstname" id="firstname"> <br>
+          <input type="text" class="input" name="firstname" id="firstname" required> <br>
 
-          <label for="firstname">Last name</label> <br>
-          <input type="text" name="lastname" id="lastname"> <br>
+          <label for="lastname">Last name</label> <br>
+          <input type="text" class="input" name="lastname" id="lastname" required> <br>
 
-          <label for="mail">Email adress</label> <br>
-          <input type="text" name="mail" id="mail"> <br> <br> 
+          <label for="telephone">Telephone number</label> <br>
+          <input type="tel" class="input" name="telephone" id="telephone" required> <br>
+
+          <label for="password">Set a password</label> <br>
+          <input type="password" class="input" name="password" id="password" placeholder=" Your password"> <br> <br> 
       
           <input type="radio" name="gender" value="male" id="male"> <label for="male">Male</label><br>
           <input type="radio" name="gender" value="female" id="female" checked> <label for="female">Female</label> <br> <br>
           
         
-          <input type="checkbox" name="termsandconditions" value="termsandconditions">I accept the <a href="" target="_blank">Terms & Conditions</a> <br><br>
-          <input type="checkbox" name="newsletter" value="newsletter" checked>I wish to recieve the newsletter <br><br>
+          <input type="checkbox" name="termsandconditions" id="termsandconditions" value="termsandconditions"> <label for="termsandconditions">I accept the <a href="" target="_blank">Terms & Conditions</a></label><br><br>
+          <input type="checkbox" name="newsletter" id="newsletter" value="newsletter" checked> <label for="newsletter">I wish to recieve the newsletter </label><br><br>
 
           <input type="submit" name="submit" value="Sign up">
         </form> 
@@ -65,23 +74,23 @@
       
         <h2>Frequently Asked Questions</h2>
 
-        <div class="question" id="section1">How much do the classes cost?</div>
-        <div class="answer">
+        <div class="faq-question">How much do the classes cost?</div>
+        <div class="answer green">
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, ut.</p>
         </div>
 
-        <div class="question" id="section2">When do the classes start?</div>
+        <div class="faq-question">When do the classes start?</div>
         <div class="answer">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At molestiae autem soluta vitae rem eum.</p>
         </div>
 
-        <div class="question" id="section3">Do I need any previous knowledge?</div>
-        <div class="answer">
+        <div class="faq-question">Do I need any previous knowledge?</div>
+        <div class="answer green">
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
             Magnam voluptatibus molestiae sunt illum velit temporibus adipisci, quos voluptates. Dolor, expedita.</p>
         </div>
 
-        <div class="question" id="section4">When is the last day to sign up?</div>
+        <div class="faq-question">When is the last day to sign up?</div>
         <div class="answer">
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
             Laborum laboriosam voluptates labore doloremque similique voluptatum.</p>
@@ -93,12 +102,12 @@
 
       <section class="sidebar">
 
-        <div class="sidebar-img" id="sidebar-img1">
-          <a href="" target="_blank">About us</h3> </a>
+        <div class="sidebar-img toggle-display">
+          <a href="" target="_blank">About us </a>
         </div>
 
-        <div class="sidebar-img2" id="sidebar-img2">
-          <a href="" target="_blank">Contact us</h3> </a>
+        <div class="sidebar-img2 toggle-display">
+          <a href="" target="_blank">Contact us </a>
         </div>
 
       </section>
