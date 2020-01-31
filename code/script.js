@@ -10,25 +10,30 @@ document.getElementById("section1").onclick = toggle
 */
 
 
+const btn = document.getElementById("menu_button");
 
-var acc = document.getElementsByClassName("drop");
+function toggleDrinkMenu() {
+    this
+        .classList
+        .toggle('open')
+}
+btn.onclick = toggleDrinkMenu;
+
+// script for accordion
+
+var acc = document.getElementsByClassName("dropacc");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var txt = this.nextElementSibling;
-    if (txt.style.display === "block") {
-      txt.style.display = "none";
-    } else {
-      txt.style.display = "block";
-    }
-  });
-
-<script type="text/javascript">
-	const btn = document.getElementById("button");
-
-function toggleDrinkMenu() {
-  this.classList.toggle('open')
+    acc[i].addEventListener("click", function () {
+        this
+            .classList
+            .toggle("active");
+        var txt = this.nextElementSibling;
+        if (txt.style.display === "block") {
+            txt.style.display = "none";
+        } else {
+            txt.style.display = "block";
+        }
+    });
 }
-btn.onclick = toggleDrinkMenu;
