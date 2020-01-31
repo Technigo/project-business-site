@@ -13,4 +13,4 @@ To solve this task I
 
 ## View it live
 This is the link to the project:
-https://optimistic-lovelace-0359ba.netlify.com/code/
+https://flamboyant-goldwasser-284563.netlify.com/
