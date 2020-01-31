@@ -1,12 +1,16 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is a project made made when doing the Technigo bootcamp. During this project we should learn;
+- Use image or video in the header, for responsive webpages
+- How to use HTML forms and simple requests
+- How to modify the DOM using Javascript
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+To solve this task I 
+1. created a header with responsive image
+2. added a signup form and a httpbin
+3. added a accordion modivied with Javascrip
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+This is the link to the project:
+https://optimistic-lovelace-0359ba.netlify.com/code/
