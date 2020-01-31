@@ -1,7 +1,177 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+ margin: 0;
+}
 
-.active + .answer {
-  /* some styling here */
+.video-header {
+ position: relative;
+ width: 100%;
+ height: 300px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
+}
+
+.video-header h1 {
+ text-align: center;
+ font-size: 4rem;
+ background-color: cornsilk; 
+ padding: 20px;
+ margin: 10px;
+ z-index: 1;
+ opacity: 0.6;
+}
+
+video {
+ min-width: 100%;
+ height: auto;
+}
+
+.video-container {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+}
+
+.color-overlay {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ background-color: lightgoldenrodyellow;
+ opacity: 0.7;
+}
+
+.form {
+ background-color: cadetblue;
+ width: 90%;
+ margin: auto;
+ border-radius: 6px;
+}
+
+h1 {
+ text-align: center;
+ padding: 10px;
+ margin: 10px;
+}
+
+label {
+ display: block;
+ width: 90%;
+ margin: 10px auto;
+ padding: 10px;
+ font-size: 25px;
+}
+
+input {
+ display: block;
+ width: 100%;
+ padding: 5px;
+ border-radius: 6px;
+ font-size: 20px;
+}
+
+p {
+ font-size: 25px;
+ text-align: center;
+}
+
+input[type="radio"]{
+ width: auto;   /* VS Code says this will be ignored because of display, but if I take it out, the buttons get centered while the text is aligned to the left. */
+ display: inline;
+ transform: scale(2);
+ margin-right: 20px;
+}
+
+select {
+ font-size: 25px;
+}
+
+option {
+ font-size: 15px;
+}
+
+button {
+ font-size: 25px;
+ text-align: center;
+ padding: 15px;
+ margin: 20px;
+ background-color: cornsilk;
+ border: 2px solid darkslategrey;
+ border-radius: 25%;
+}
+
+.accordion {
+ background-color: cadetblue;
+ width: 90%;
+ margin: auto;
+ padding: 0 0 10px 0;
+ border-radius: 6px;
+}
+
+.accordion-item {
+ background-color: cornsilk;
+ margin: 10px;
+ padding: 15px;
+ border-radius: 6px;
+}
+.accordion-item-header {
+ padding: 5px;
+ font-size: 20px;
+ font-weight: bold;
+ display: flex;
+ align-items: center;
+ position: relative; 
+ cursor: pointer;
+}
+.accordion-item-header::after {
+ content: "+";
+ font-size: 2rem;
+ position: absolute;
+ right: 1rem;
+}
+.accordion-item-header.active::after{
+ content: "-";
+}
+
+.accordion-item-body {
+ display: none;
+ font-size: 20px;
+ padding: 1rem;
+ line-height: 1,5rem;
+ border-top: 1px solid black;
+}
+
+.accordion-item-header.active + .accordion-item-body {
+ display: block;
+}
+
+@media screen and (min-width: 668px) {
+ .form {
+  width: 60%;
+  margin: 30px auto;
+ }
+
+ p {
+  text-align: left;
+  padding: 0 15px;
+ }
+
+ .accordion {
+  width: 60%;
+  margin: 30px auto;
+ }
+}
+
+@media screen and (min-width: 1024px) {
+ .form {
+  width: 50%;
+  margin: 50px auto;
+ }
+
+ .accordion {
+  width: 50%;
+  margin: 50px auto;
+ }
 }

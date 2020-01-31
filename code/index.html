@@ -3,28 +3,83 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>The Tea Nook</title>
+    <link rel="stylesheet" href="style.css">  
   </head>
+
   <body>
-    <!-- video or image as a header is cool :) -->
+    <header class="video-header">
+        <h1>The Tea Nook</h1>
+        <div class="video-container">
+          <div class="color-overlay">
+            <video autoplay loop muted>
+              <source src="videos/teapot.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+    </header>
 
-    <!-- Signup form -->
+    <section class="form">
+      <h1>Book your afternoon tea</h1>
+      <form action="http://httpbin.org/anything" method="POST">
+        <label>
+          <input type="text" name="Name" placeholder="Your name" required>
+        </label>
+        <label>
+          <input type="email" name="E-mail" placeholder="Your e-mail" required>
+        </label>
+        <label>
+          <input type="password" name="password" placeholder="Your password" required>
+        </label>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <p>Time for your visit</p>
+        <label><input type="radio" name="time" required>14.00</label>
+        <label><input type="radio" name="time" required>16.00</label>
+        <label><input type="radio" name="time" required>18.00</label>
+        
+        <label>
+          Number of guests
+          <select name="size-of-party">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </label>
+        <div>
+          <button type="submit">Book</button>
+        </div>
+      </form>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+    
+    <div class="accordion">
+      <h1>FAQ</h1>
+      <div class="accordion-item">
+        <div class="accordion-item-header">Why can´t I book for one?</div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit. Vivamus sagittis augue nisi. 
+            Sed pellentesque nunc turpis, sed tempus tortor 
+            tincidunt quis.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-item-header">Can I bring my children?</div>
+        <div class="accordion-item-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Vivamus sagittis augue nisi. Sed pellentesque nunc turpis, sed 
+          tempus tortor tincidunt quis.
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
+
