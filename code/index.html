@@ -8,7 +8,9 @@
         <meta name="keywords" content="cookies order, cookies delivery">
         <meta name="author" content="Lisa">
         <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap"
+            rel="stylesheet">
 
         <title>Free Cookies 4 All</title>
     </head>
@@ -32,25 +34,25 @@
             </picture>
         </header>
 
-            <div id="menu_button" class="menu">
-                <p class="menutxt">MENU</p>
-            </div>
-            <ul>
-                <li>
-                    <a href="#">
-                        About</a>
-                </li>
-                <li>
-                    <a href="#">
-                        FAQ</a>
-                </li>
-                <li>
-                    <a href="form.html">
-                        FORM</a>
-                </li>
-            </ul>
+        <div id="menu_button" class="menu">
+            <p class="menutxt">MENU</p>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    About</a>
+            </li>
+            <li>
+                <a href="#">
+                    FAQ</a>
+            </li>
+            <li>
+                <a href="form.html">
+                    FORM</a>
+            </li>
+        </ul>
 
-    <div class="main">
+        <div class="main">
             <div id="questions">
                 <h1 id="cookiequestions">Cookie Questions</h1>
                 <button class="dropacc">Do you have fat free cookies</button>
@@ -86,45 +88,20 @@
                 </div>
             </div>
             <div class="linktoform">
-            <a href="form.html">
-               <p>Klick here to fill our our form!</p></a>
+                <a href="form.html">
+                    <p>Klick here to fill our our form!</p>
+                </a>
             </div>
         </div>
 
         <footer id="footer">
-            <p>Stay in touch </p>
-          <a href="lisaojeland@gmail.com">✉️</a>
+            <p>Stay in touch
+            </p>
+            <a href="lisaojeland@gmail.com">✉️</a>
         </footer>
     </div>
 
-    <script type="text/javascript">
-        const btn = document.getElementById("menu_button");
-
-        function toggleDrinkMenu() {
-            this
-                .classList
-                .toggle('open')
-        }
-        btn.onclick = toggleDrinkMenu;
-
-        // script for accordion
-
-        var acc = document.getElementsByClassName("dropacc");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-                this
-                    .classList
-                    .toggle("active");
-                var txt = this.nextElementSibling;
-                if (txt.style.display === "block") {
-                    txt.style.display = "none";
-                } else {
-                    txt.style.display = "block";
-                }
-            });
-        }
-    </script>
+    <script src="script.js"></script> 
+</script>
 </body>
 </html>
