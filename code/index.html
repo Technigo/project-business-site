@@ -3,28 +3,52 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Holmsjö</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
+    <header>
+      <section class="header">
+        <h1>Holmsjö</h1>   
+      </section>
+    </header>
+    <main class="main">
+        <!-- Form -->
+      <section class="signup-form">
+        <h2>Sign up for Newsletter</h2>
+        <form action="https://httpbin.org/anything" method="POST">
+          <label>
+           <input type="text" placeholder="First name" name="firstname" required>
+          </label>
+           <label>
+            <input type="text" placeholder="Last name" name="lastname" required>
+          </label>
+           <label>
+            <input type="text" placeholder="Enter your email" name="email" required>
+          </label>
+         <div>
+           <button class= "btn-submit" type="submit">Sign up</button>
+         </div>  
+        </form>
+      </section>
+        <!-- Accordion -->
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+      <h1>Holmsjö Gård</h1>
+        <div class="question" id="section1">Location?</div>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="question" id="section2">Activities?</div>
+          <div class="answer">
+            <p>LLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        <div class="question" id="section3">About us</div>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+     </section>
+  </main>
+  <script src="script.js"></script>
   </body>
 </html>
