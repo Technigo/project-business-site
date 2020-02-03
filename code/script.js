@@ -15,6 +15,3 @@ document.getElementById("section2").onclick = toggle
 
 const btn = document.getElementById("button")
 
-btn.onclick = () => {
-  btn.classList.toggle("btn-dark")
-}

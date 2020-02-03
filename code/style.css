@@ -24,103 +24,109 @@ h3 {
 }
 /**Header**/
 
+.video-hero {
+  display: flex;
+}
+
+/** main **/
+
 .hero {
-    background-image: url("pottery.jpg");
-    background-position: center top;
-    background-size: cover;
-    padding: 20% 0;
-    margin-bottom: 30px;
-    font-family: 'Trebuchet MS', 'Helvetica';
+  background-image: url("pottery.jpg");
+  background-position: center top;
+  background-size: cover;
+  padding: 20% 0;
+  margin-bottom: 30px;
+  font-family: 'Trebuchet MS', 'Helvetica';
 }
 
 /** main **/
 
 video {
-  display: flex;
-  width: 100%;
+display: flex;
+width: 100%;
 }
 
 /** Signup form **/
 
 .signup-form {
-  background: #395d75;
-  border-radius: 2px;
-  margin: 15px;
+background: #395d75;
+border-radius: 2px;
+margin: 15px;
 }
 
 .signup-form input {
-  background-color: #708a9c;
-  margin: 10px;
-  border-radius: 2px;
-  flex-direction: row;
+background-color: #708a9c;
+margin: 10px;
+border-radius: 2px;
+flex-direction: row;
 }
 
 .signup-form input:valid {
-  /*Could be green for example*/
+/*Could be green for example*/
 }
 
 .signup-form input:invalid {
-  border: solid rgba(252, 53, 53, 0.562);
+border: solid rgba(252, 53, 53, 0.562);
 }
 
 .info {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 }
 
 .container {
-  display: inline-grid;
+display: inline-grid;
 }
 
 a {
-  color: white;
+color: white;
 }
 
 button {
-  padding: 10px;
-  border-radius: 3px;
-  margin: 10px;
-  border: solid white;
-  background: #395d75;
-  color: aliceblue;
+padding: 10px;
+border-radius: 3px;
+margin: 10px;
+border: solid white;
+background: #395d75;
+color: aliceblue;
 }
 
 .btn-dark {
-  background-color: rgba(82, 82, 180, 0.856);
+background-color: rgba(82, 82, 180, 0.856);
 }
 
 
 /**accordion**/
 .accordion {
-  background: rgb(245, 244, 242);
-  color:rgb(105, 105, 151);
-  border-radius: 2px;
-  margin: 15px;
+background: rgb(245, 244, 242);
+color:rgb(105, 105, 151);
+border-radius: 2px;
+margin: 15px;
 }
 
 /* active, .question:hover {
-  background-color: rgba(82, 100, 151, 0.404); 
+background-color: rgba(82, 100, 151, 0.404); 
 } */
 
 .accordion div {
-  background:#c8d2d8;
-  color: #395d75;
-  cursor: pointer;
-  padding: 20px;
-  border: solid 1px #395d7536;
+background:#c8d2d8;
+color: #395d75;
+cursor: pointer;
+padding: 20px;
+border: solid 1px #395d7536;
 }
 
 .accordion h1 {
-  color: #395d75;
+color: #395d75;
 }
 
 .answer {
-  display: none;
+display: none;
 }
 
 .answer p {
-  margin: 0;
-  padding: 20px;
+margin: 0;
+padding: 20px;
 }
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
@@ -128,56 +134,56 @@ in this case it is the div with the answer class next to the div with the active
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
-  /* some styling here */
-  display: block;
-  margin: 0;
-  padding: 20px;
+/* some styling here */
+display: block;
+margin: 0;
+padding: 20px;
 }
 
 @media (min-width: 650px) and (max-width: 1024px) {
 
 main  {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 
-  .signup-form {
-    margin: 15px;
-    width: 50%;
-  }
+.signup-form {
+  margin: 15px;
+  width: 50%;
+}
 
-  .accordion {
-    margin: 15px;
-    width: 50%;
-  }
+.accordion {
+  margin: 15px;
+  width: 50%;
+}
 }
 
 @media (min-width: 1025px) {
 
-  main  {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+main  {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
-  h1 {
-    font-size: 2em;
-  }
+h1 {
+  font-size: 2em;
+}
 
-  .signup-form {
-    margin: 15px;
-    width: 25%;
-  }
+.signup-form {
+  margin: 15px;
+  width: 25%;
+}
 
-  .accordion {
-    margin: 15px;
-    width: 25%;
-  }
+.accordion {
+  margin: 15px;
+  width: 25%;
+}
 
-  .hero {
-    font-size: 2.5em;
-    height: 70%;
-    padding: 10% 0;
-  }
+.hero {
+  font-size: 2.5em;
+  height: 70%;
+  padding: 10% 0;
+}
 }
