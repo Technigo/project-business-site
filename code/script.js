@@ -21,11 +21,11 @@ btn.onclick = toggleDrinkMenu;
 
 // script for accordion
 
-var acc = document.getElementsByClassName("dropaccordion");
+const accordion = document.getElementsByClassName("dropaccordion");
 var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
+for (i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener("click", function () {
         this
             .classList
             .toggle("active");
