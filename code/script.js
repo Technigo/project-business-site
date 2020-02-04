@@ -21,7 +21,7 @@ btn.onclick = toggleDrinkMenu;
 
 // script for accordion
 
-var acc = document.getElementsByClassName("dropacc");
+var acc = document.getElementsByClassName("dropaccordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
