@@ -2,9 +2,11 @@
 
 This website page displays a form and an accordion, using a bit of JavaScript.
 
-## The problem
+## What I learnt
 
-I did not manage to set the hero video as a header. Instead, it is displayed as a top section. Next time, I will try to set the navbar on top of it and set it in a fixed position when scrolling down. In addition to that, I'll try to display the form and accordion side by side and not on top of each other.
+- Use image or video in the header, for responsive webpages
+- How to use HTML forms and simple requests
+- How to modify the DOM using Javascript
 
 
 ## View it live
