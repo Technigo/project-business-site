@@ -11,4 +11,4 @@ The wider background of the headlines was a padding mistake that I decided to ke
 
 ## View it live
 Take a look!
-kanelbulleverkstaden.netlify.com
+https://kanelbulleverkstaden.netlify.com/
