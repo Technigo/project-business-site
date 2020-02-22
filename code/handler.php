@@ -5,16 +5,7 @@ if(isset($_POST['email'])) {
     $email_to = "petra_jud@hotmail.com";
     $email_subject = "ALEX 30";
  
-    function died($error) {
-        // your error code can go here
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below.<br /><br />";
-        echo $error."<br /><br />";
-        echo "Please go back and fix these errors.<br /><br />";
-        die();
-    }
- 
- 
+    
     // validation expected data exists
     if(!isset($_POST['first_name']) ||
         !isset($_POST['last_name']) ||
@@ -74,8 +65,3 @@ $headers = 'From: '.$email_from."\r\n".
 @mail($email_to, $email_subject, $email_message, $headers);  
 ?>
  
-
-<?php
- 
-}
-?>
