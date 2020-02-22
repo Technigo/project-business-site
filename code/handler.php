@@ -10,8 +10,8 @@ if(isset($_POST['email'])) {
     if(!isset($_POST['first_name']) ||
         !isset($_POST['last_name']) ||
         !isset($_POST['email']) ||
-        !isset($_POST['telephone']) ||
-        !isset($_POST['comments'])) {
+        !isset($_POST['dinner']) ||
+        !isset($_POST['food'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
  
@@ -64,4 +64,3 @@ $headers = 'From: '.$email_from."\r\n".
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);  
 ?>
- 
