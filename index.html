@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css"">
+  <link rel="stylesheet" href="style.css">
   <title>FRIDAY QUIZ</title>
 </head>
 
@@ -13,57 +13,62 @@
 
   <header>
     <div class=" header-content">
-  <h1>Join Friday Quiz!</h1>
-  <h2>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum</h2>
-  <button onclick="scrollWin(0, 400)" id="signUp" class="sign-up">Sign up!</button>
-  <video autoplay playsinline muted loop class="mobile-video">
-    <source src="/videos/SampleVideo_360x240_1mb.mp4" type="video/mp4">
-    <source src="/videos/SampleVideo_360x240_1mb.webm" type="video/webm">
-  </video>
-  <video autoplay playsinline muted loop class="tablet-video">
-    <source src="/videos/SampleVideo_720x480_1mb.mp4" type="video/mp4">
-    <source src="/videos/SampleVideo_720x480_1mb.webm" type="video/webm">
-  </video>
-  <video autoplay playsinline muted loop class="desktop-video">
-    <source src="/videos/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
-    <source src="/videos/SampleVideo_1280x720_1mb.webm" type="video/webm">
-  </video>
-  </div>
+      <h1>Do you want to sign up for Friday Quiz?</h1>
+      <h2>Enter the details below to get invited</h2>
+      <button onclick="scrollWin(0, 400)" id="signUp" class="sign-up">Sign up!</button>
+      <video autoplay playsinline muted loop class="mobile-video">
+        <source src="/videos/SampleVideo_360x240_1mb.mp4" type="video/mp4">
+        <source src="/videos/SampleVideo_360x240_1mb.webm" type="video/webm">
+      </video>
+      <video autoplay playsinline muted loop class="tablet-video">
+        <source src="/videos/SampleVideo_720x480_1mb.mp4" type="video/mp4">
+        <source src="/videos/SampleVideo_720x480_1mb.webm" type="video/webm">
+      </video>
+      <video autoplay playsinline muted loop class="desktop-video">
+        <source src="/videos/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+        <source src="/videos/SampleVideo_1280x720_1mb.webm" type="video/webm">
+      </video>
+    </div>
   </header>
+  <section class="wrapper">
+    <section class="form-card">
+      <form action="https://httpbin.org/anything" method="post">
+        <p>Your name:</p>
+        <input type="text" name="name" required value="name">
+        <p>Email adress:</p>
+        <input type="email" name="email" required value="example@example.com">
+        <p>What are you?</p>
 
-  <div class="form">
-    <form action="https://httpbin.org/anything" method="post">
-      <p>Your name:</p>
-      <input type="text" name="name" required value="name">
-      <p>Email adress:</p>
-      <input type="email" name="email" required value="example@example.com">
-      <p>What are you?</p>
-      <select name="type">
-        <option value="teacher">Teacher</option>
-        <option value="student">Student</option>
-        <option value="other">Other</option>
-      </select>
-      <button type="submit">Sign up!</button>
-    </form>
-  </div>
+        <select name="type">
+          <option value="teacher">Teacher</option>
+          <option value="student">Student</option>
+          <option value="other">Other</option>
+        </select>
+        </br>
 
-  <section class="faq">
-    <h4>FAQ</h4>
-    <div class="question" id="section1">What can I win?</div>
-    <div class="answer">
-      <h5>Everything 😎</h5>
-    </div>
+        <input type="checkbox" name="agree" value="agree">
+        <label for="newsletters?"> Do you want to receive newsletters?</label><br>
+        <button type="submit">Sign up!</button>
+      </form>
+    </section>
 
-    <div class="question" id="section2">What can I loose?</div>
-    <div class="answer">
-      <h5>Nothing 😋</h5>
-    </div>
+    <section class="faq-card">
+      <h4>FAQ</h4>
+      <div class="question" id="section1">What can I win?</div>
+      <div class="answer">
+        <h5>Everything 😎</h5>
+      </div>
+
+      <div class="question" id="section2">What can I loose?</div>
+      <div class="answer">
+        <h5>Nothing 😋</h5>
+      </div>
+    </section>
   </section>
 
+</body>
 
-  </body>
 
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
 </html>

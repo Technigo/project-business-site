@@ -3,37 +3,27 @@ in this case it is the div with the answer class next to the div with the active
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 body {
-  background-color: lightblue;
+  background-color: whitesmoke;
   color: white;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 {
-  font-size: 70px;
-  margin: 0;
-  text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white;
-}
-
-h3 {
-  font-size: 50px;
-  margin: 10px;
-  text-shadow: 1px 1px 2px white, 0 0 25px black, 0 0 5px white;
-}
-h4 {
-  font-size: 50px;
-  margin: 5px;
+  margin: auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 p {
-  font-size: 30px;
-  margin-bottom: 2px;
-  margin-top: 10px;
-  text-shadow: 1px 1px 2px white, 0 0 25px black, 0 0 5px white;
-  letter-spacing: 2px;
+  margin: 2px;
+  font-size: 20px;
 }
 
-/*** HEADER ***/
+h1 {
+  color: white;
+  font-size: 40px;
+}
+ h2 {
+   color:white;
+   font-size: 20px;
+ }
+
+/*** HEADER VIDEO ***/
 
 .mobile-video {
   position: absolute;
@@ -44,7 +34,7 @@ p {
   overflow: hidden;
 }
 
-  .tablet-video {
+.tablet-video {
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -63,10 +53,9 @@ p {
     }
 
 header {
-    color: lightblue;
+    color: darkslateblue;
     background-color: transparent;
     overflow: hidden;
-    height: 590px;
   }
 
 .header-content {
@@ -74,92 +63,78 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 500px;
+  height: 450px;
 }
 
-.sign-up {
-  background: lightblue;
-  font-size: 30px;
-  color: white;
-  left: 35%;
-  text-align: center;
-  border-radius: 10%;
-  margin-bottom: 20px;
-  border-color: lightblue;
-}
-.sign-up:hover {
-  background-color: darkblue;
-}
+/* FORM AND FAQ WRAPPER */
 
-/*** SIGN UP FORM ***/
-
-form {
+.wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  margin-right: 30px;
+  width: 100%;
+}
+
+
+/*** FORM CARD ***/
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
+  background: darkslategray;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
   font-size: 30px;
+}
+
+form {
+  text-align: center;
   color: white;
-  height: 400px;
 }
 
-form button {
-  margin: 20px;
-  background: white;
-  font-size: 25px;
-  border: 2px solid;
-  color: lightblue;
-  border-radius: 10%;
+input, select {
+  color: darkslategray;
+  font-size: 20px;
 }
 
-.form button:hover {
-  background-color: darkblue;
+button {
+  color: darkslategray;
+  font-size: 30px;
+  margin: 10px;
 }
-
-input {
-  font-size: 25px;
-  margin-bottom: 2px;
-  /*Added this to hide the invalid border styling*/
-  font-style: italic;
-  font-weight: lighter;
-  color: lightgray;
-}
-
-input:focus {
-  box-shadow: darkmagenta;
-  font-weight: bold;
-  color: lightblue;
-  }
 
 input:invalid {
   border: 2px solid lightcoral;
 }
 
 select {
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 10px;
 }
 
+label {
+  font-size: 15px;
+}
 
 /*** FAQ ***/
 
-.faq {
+.faq-card {
   display: flex;
+  flex-direction: column;
+  background: whitesmoke;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background-color: white;
-  color:lightblue;
-  height: 400px;
+  color: darkslategray;
 }
 
-.first-question {
-  background: darkgray;
-  padding: 10px;
-}
-
-.second-question {
+.first-question, .second-question {
   background: darkgray;
   padding: 10px;
 }
@@ -178,9 +153,20 @@ select {
   display: block;
 }
 
+.question:after {
+  content: '➕'
+}
+.active:after {
+  content: '➖'
+}
+
 /*** MEDIA QUERIES ***/
 
-@media (max-width: 719px) {
+@media (max-width: 670px) {
+
+header {
+  margin-bottom: 5px;
+}
 
 .tablet-video {
   display: none;
@@ -191,7 +177,7 @@ select {
 }
 }
 
-@media (min-width: 720px) and (max-width: 1099px) {
+@media (min-width: 671px) and (max-width: 1099px) {
 
   .mobile-video {
     display: none;
@@ -199,6 +185,10 @@ select {
 
   .desktop-video {
     display: none;
+  }
+
+  .wrapper {
+    flex-direction: row;
   }
 }
 
@@ -210,6 +200,10 @@ select {
 
   .tablet-video {
     display: none;
+  }
+
+  .wrapper {
+    flex-direction: row;
   }
 }
 
