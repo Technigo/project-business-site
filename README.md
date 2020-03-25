@@ -1,7 +1,7 @@
 # Business Site
 
 
-Assignment 3 Technigo bootcamp. Build a one-page business site. 
+Assignment 3 Technigo bootcamp. Build a one-page business site. Practice image backgrounds, HTML forms and how to modify the DOM with JavaScript. 
 
 
 ## The problem
