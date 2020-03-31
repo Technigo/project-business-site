@@ -12,5 +12,18 @@ The site is designed mobile first, using mainly flexbox but also grid for one of
 
 If I had more time I would try to add some styling to the hero video, maybe a filter.
 
+## Learning objectives
+
+* Using image or video in the header for responsive webpages
+* Using HTML forms and simple requests
+* Modifying the DOM using Javascript
+
+## Tech
+
+* HTML5
+* CSS3
+* JavaScript JS6
+
 ## View it live
+
 View the site here: https://pouroverpurist.netlify.com/
