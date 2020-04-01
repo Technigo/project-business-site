@@ -1,12 +1,16 @@
 # Business Site
-
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week’s project was to create a site for a company of my choice. The site had to include a sign up form and a javascript accordion with FAQ's. 
 
 ## The problem
+In this project I've done a business website with a hero picture (I chose to do a hero video instead), sign up form and an accordion. I have used Javascript for the accordion and added a plus and minus for when the accordion is expand / not expand. I styled the page in css. 
+The form had to include 
+- 2 x Text fields
+- 1 x A password field
+- 1 x Set of radio buttons
+- 1 x Set of checkboxes
+- 1 x Submit button
+and then we used method Post to send the answers to HttpBin.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://elated-lamport-7f1a86.netlify.com 
