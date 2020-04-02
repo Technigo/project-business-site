@@ -1,280 +1,289 @@
 body {
-  background: #61acb2;
-  color: #ffffff;
-  margin: 0;
-  font-family: "Comfortaa", cursive;
-  font-size: 2.5vw;
+	background: #61acb2;
+	color: #ffffff;
+	margin: 0;
+	font-family: "Comfortaa", cursive;
+	font-size: 2.5vw;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }
-
+video {
+	width: fit-content;
+}
 h1 {
-  font-size: 8vw;
-  color: #122021;
-  margin: 0;
-  font-family: "Pacifico", cursive;
+	font-size: 8vw;
+	color: #122021;
+	margin: 0;
+	font-family: "Pacifico", cursive;
 }
 
 h2 {
-  font-size: 3vw;
-  margin: 0;
-  color: white;
-  opacity: 75%;
-  font-weight: lighter;
+	font-size: 3vw;
+	margin: 0;
+	color: white;
+	opacity: 75%;
+	font-weight: lighter;
 }
 h3 {
-  font-size: 5vw;
-  margin: 0;
-  color: #3b6a6e;
-  font-family: "Pacifico", cursive;
-  text-align: center;
-  letter-spacing: 1vw;
+	font-size: 5vw;
+	margin: 0;
+	color: #3b6a6e;
+	font-family: "Pacifico", cursive;
+	text-align: center;
+	letter-spacing: 1vw;
 }
 
 h4 {
-  font-family: "Pacifico", cursive;
-  margin: 1vw 0;
-  white-space: nowrap;
-  color: #ffffff;
+	font-family: "Pacifico", cursive;
+	margin: 1vw 0;
+	white-space: nowrap;
+	color: #ffffff;
 }
 
 .company-text p {
-  font-size: 1vw;
+	font-size: 1vw;
 }
 
 .video-wrapper {
-  position: relative;
-  display: flex;
-  margin: 0 0 40px 0;
+	position: relative;
+	display: flex;
+	margin: 0 0 40px 0;
 }
 
 video {
-  width: 100%;
-  display: none;
-  margin: 0;
+	width: 100%;
+	display: none;
+	margin: 0;
 }
 
 .video-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(34, 61, 63, 0.45);
-  z-index: 10;
-  background-image: url(images/diamonds.png);
-  background-repeat: repeat;
-  margin: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(34, 61, 63, 0.45);
+	z-index: 10;
+	background-image: url(images/diamonds.png);
+	background-repeat: repeat;
+	margin: 0;
 }
 
 .title {
-  background: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 20;
+	background: rgba(0, 0, 0, 0);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	z-index: 20;
+}
+
+.main-content {
+	flex: 1;
 }
 
 .company-text {
-  margin: auto;
-  width: 80%;
-  border: 4px dotted #223d3f;
-  padding: 10px 25px;
+	margin: auto;
+	width: 80%;
+	border: 4px dotted #223d3f;
+	padding: 10px 25px;
 }
 .container-signup-and-accordion {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 3vw;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 3vw;
 }
 
 .sign-up-form {
-  background: #457b7f;
-  background-image: url(images/diamonds.png);
-  background-repeat: repeat;
-  box-shadow: 5px 10px #223d3f;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5vw;
+	background: #457b7f;
+	background-image: url(images/diamonds.png);
+	background-repeat: repeat;
+	box-shadow: 5px 10px #223d3f;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1.5vw;
 }
 form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }
 label {
-  display: block;
-  margin: 0 1vw 1vw 1vw;
-  font-size: 1.75vw;
+	display: block;
+	margin: 0 1vw 1vw 1vw;
+	font-size: 1.75vw;
 }
 input {
-  width: 100%;
-  height: 3.5vw;
-  font-size: 1.75vw;
-  padding: 0 10px;
-  border: 3px solid #223d3f;
-  border-radius: 90px;
-  box-sizing: border-box;
+	width: 100%;
+	height: 3.5vw;
+	font-size: 1.75vw;
+	padding: 0 10px;
+	border: 3px solid #223d3f;
+	border-radius: 90px;
+	box-sizing: border-box;
 }
 
 input:focus {
-  outline: none;
+	outline: none;
 }
 
 .submit-btn {
-  background: #f2f2f2;
-  padding: 2px 5px;
-  font-size: 2vw;
-  border-radius: 90px;
-  border: 3px solid #223d3f;
-  cursor: pointer;
-  box-shadow: 4px 4px 0px 0px #223d3f;
-  transition-duration: 0.3s;
-  align-self: center;
+	background: #f2f2f2;
+	padding: 2px 5px;
+	font-size: 2vw;
+	border-radius: 90px;
+	border: 3px solid #223d3f;
+	cursor: pointer;
+	box-shadow: 4px 4px 0px 0px #223d3f;
+	transition-duration: 0.3s;
+	align-self: center;
 }
 
 .submit-btn:hover {
-  box-shadow: 0 0 1px 0 #223d3f;
+	box-shadow: 0 0 1px 0 #223d3f;
 }
 
 .submit-btn:active {
-  box-shadow: inset 4px 4px 0px 0px #223d3f;
-  outline: none;
+	box-shadow: inset 4px 4px 0px 0px #223d3f;
+	outline: none;
 }
 
 .submit-btn:focus {
-  outline: 0;
+	outline: 0;
 }
 
 .submit-btn:active {
-  cursor: grabbing;
+	cursor: grabbing;
 }
 
 .accordion {
-  background: #457b7f;
-  background-image: url(images/diamonds.png);
-  background-repeat: repeat;
-  box-shadow: 5px 10px #223d3f;
-  padding: 5px;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
+	background: #457b7f;
+	background-image: url(images/diamonds.png);
+	background-repeat: repeat;
+	box-shadow: 5px 10px #223d3f;
+	padding: 5px;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
 }
 
 .question {
-  width: 100%;
-  height: auto;
-  background: #223d3f;
-  margin-bottom: 5px;
-  cursor: pointer;
+	width: 100%;
+	height: auto;
+	background: #223d3f;
+	margin-bottom: 5px;
+	cursor: pointer;
 }
 .question:active {
-  cursor: grabbing;
+	cursor: grabbing;
 }
 
 .question::after {
-  content: "+";
-  float: right;
-  color: #fff;
-  width: 22px;
-  margin-right: 3px;
+	content: "+";
+	float: right;
+	color: #fff;
+	width: 22px;
+	margin-right: 3px;
 }
 .question.open::after {
-  content: "-";
+	content: "-";
 }
 ul {
-  display: none;
-  width: 100%;
-  margin: 0;
-  list-style: none;
-  padding: 0;
-  list-style-type: none;
-  font-size: 1.5vw;
+	display: none;
+	width: 100%;
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	list-style-type: none;
+	font-size: 1.5vw;
 }
 
 li {
-  background: #589c81;
-  padding: 0;
-  margin: 5px 0;
+	background: #589c81;
+	padding: 0;
+	margin: 5px 0;
 }
 
 li:nth-child(even) {
-  background: #609ca1;
+	background: #609ca1;
 }
 
 .open {
-  background: #223d3f;
-  margin: 0;
+	background: #223d3f;
+	margin: 0;
 }
 .open + ul {
-  display: block;
+	display: block;
 }
 
 footer {
-  background: #122021;
-  width: 100%;
-  position: static;
-  margin-top: 10vw;
-  padding: 2vw 0;
-  background-image: url(images/diamonds.png);
-  background-repeat: repeat;
+	background: #122021;
+	width: 100%;
+	position: static;
+	margin-top: 10vw;
+	padding: 2vw 0;
+	background-image: url(images/diamonds.png);
+	background-repeat: repeat;
 }
 
 footer p {
-  text-align: center;
-  color: #61acb2;
-  font-size: 2vw;
-  margin: 0;
+	text-align: center;
+	color: #61acb2;
+	font-size: 2vw;
+	margin: 0;
 }
 
 footer a {
-  color: #61acb2;
-  text-decoration: none;
+	color: #61acb2;
+	text-decoration: none;
 }
 
 .container-last-row {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
 .tiny-text {
-  font-size: 1.5vw;
+	font-size: 1.5vw;
 }
 
 .mountain {
-  width: 3vw;
-  margin-right: 5px;
+	width: 3vw;
+	margin-right: 5px;
 }
 
 @media (max-width: 600px) {
-  .v-small {
-    display: inline-block;
-  }
+	.v-small {
+		display: inline-block;
+	}
 }
 
 @media (min-width: 601px) {
-  .v-medium {
-    display: inline-block;
-  }
-  .v-small {
-    display: none;
-  }
+	.v-medium {
+		display: inline-block;
+	}
+	.v-small {
+		display: none;
+	}
 }
 
 @media (min-width: 900px) {
-  .v-large {
-    display: inline-block;
-  }
-  .v-medium {
-    display: none;
-  }
+	.v-large {
+		display: inline-block;
+	}
+	.v-medium {
+		display: none;
+	}
 }
