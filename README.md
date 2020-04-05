@@ -3,7 +3,7 @@
 A simple business site containing hero section, accordion & contact form.
 
 
-## The solution
+## Approach
 #### Hero
 I used a video only for desktop due to performance issues. In smaller devices I used a background image with a fixed height. 
 
@@ -17,5 +17,5 @@ I used placeholders instead of displaying the labels on each input, though I mad
 If I had more time I would make an accordion answer close when opening another.
 
 
-## View it live
-View the site [over here](https://project-clouds-business-site.netlify.com/).
+## Deployed
+https://project-clouds-business-site.netlify.com/
