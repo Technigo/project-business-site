@@ -1,6 +1,13 @@
 # Business Site
 
-Making a business website that contains a form with different user inputs and an interactive accordion with FAQ's using some JavaScript.
+Making a business website that contains a form with different user inputs and an interactive accordion with FAQ's using some JavaScript 👩‍💻🧠🌿🥯
+
+## Code
+I've used:
+  * **JavaScript**
+  * **CSS**
+  * **HTML**
+  * **Flexbox**
 
 ## The problem
 
