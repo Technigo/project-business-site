@@ -17,7 +17,7 @@ h1 {
 h2 {
   text-align: center;
   margin: 0 auto 20px auto;
-  color: #e6c2c6;
+  color: #573139;
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
 }
@@ -99,20 +99,20 @@ input {
   padding: 10px 0 10px 10px;
   outline: none;
   border: none;
-  border-bottom: 1px solid #f5e3e7;
+  border-bottom: 1px solid #573139;
   background: transparent;
   color: #000;
   font-size: 1rem;
 }
 
 input::placeholder {
-  color: #e6ddde;
+  color: #666666;
   font-family: 'Rosario', sans-serif;
   font-size: 0.7rem;
 }
 
 input:focus {
-  box-shadow: 0 3px 2px -2px #f5e3e7;
+  background: #e6ddde;
 }
 
 label {
@@ -131,7 +131,7 @@ label {
 
 fieldset {
   width: 100%;
-  border: 1px solid #f5e3e7;
+  border: 1px solid #573139;
 }
 
 legend {
@@ -167,7 +167,7 @@ input[type=checkbox], input[type=radio] {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #e6c2c6;
+  background: #573139;
 }
 
 .radio-bttn:after {
@@ -210,7 +210,7 @@ input[type=checkbox], input[type=radio] {
   left: 0;
   width: 15px;
   height: 15px;
-  background: #e6c2c6;
+  background: #573139;
 }
 
 .checkbox-bttn:after {
@@ -240,7 +240,7 @@ button[type=submit] {
   padding: 5px 20px;
   border: 0;
   border-radius: 30px;
-  background: #e6c2c6;
+  background: #573139;
   color: #fff;
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
@@ -263,8 +263,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   width: 97%;
   margin: 0;
   padding: 10px;
-  border-bottom: 1px solid #f5e3e7;
-  background: #e6c2c6;
+  border-bottom: 1px solid #fff;
+  background: #573139;
   color: #fff;
   cursor: pointer;
 }
@@ -290,7 +290,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   height: 0;
   margin: 0;
   padding: 0 10px;
-  background: #f5e3e7;
+  background: #e6ddde;
   color: #666666;
   font-size: 0.8rem;
   opacity: 0;
@@ -303,9 +303,13 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 .answer a {
-  color: #e6a6ad;
+  color: #573139;
   font-weight: bold;
   text-decoration: none;
+}
+
+.answer a:hover {
+  text-decoration: underline;
 }
 
 .active + .answer {
@@ -320,17 +324,22 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 30px;
+  height: 60px;
   margin: 0;
   padding: 10px 20px;
-  background: #e6c2c6;
+  background: #573139;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 footer a {
   color: #f5e3e7;
+  font-weight: bold;
   text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /*** MEDIA QUERIES ***/
@@ -359,7 +368,6 @@ footer a {
   fieldset {
     flex-grow: 1;
     width: 40%;
-    border: 1px solid #f5e3e7;
   }
 
   .active + .answer {
