@@ -9,4 +9,4 @@ At this point I was still struggeling on how to make my site responsive, I wante
 I also struggled to make my answer and question to fit into the boxes, since they didnt I had to change the size of the box for form and accordation. 
 
 ## View it live
-https://eager-golick-4302c1.netlify.com/
+https://signup-project-bytuliany.netlify.com
