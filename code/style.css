@@ -269,7 +269,11 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   cursor: pointer;
 }
 
-.question::after {
+.question-text {
+  margin: 0;
+}
+
+.question-text::after {
   content: '+';
   text-align: center;
   float: right;
@@ -281,7 +285,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   color: #fff;
 }
 
-.question.active::after {
+.question.active .question-text::after {
   content: '×';
 }
 
