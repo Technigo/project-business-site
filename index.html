@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta name="Description" content="It is a business-site with a form and an accordian" />
   <link rel="stylesheet" href="style.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Arapey|Montserrat:300&display=swap" rel="stylesheet">
   <title>&#x1F911 Project 3: business-site</title>
@@ -13,9 +13,7 @@
 
 <body>
   <div class="box">
-    <div class=top-page id="top">
-
-
+    <header class=top-page id="top">
       <div class="video">
         <video autoplay muted loop controls class="video">
           <source src="media/ibex.mp4" type="video/mp4">
@@ -32,17 +30,18 @@
           did not fade quickly.
         </p>
       </div>
-    </div>
+  </header>
 
     <!-- ***Accordion, FAQ*** -->
+    <main>
     <section class="accordion" id="faq">
       <h2>FAQ</h2>
       <div class="container">
-        <div class="question" id="section1">
+        <button class="question" id="section1">
 
           <p>Do I need to own a camera?</p>
 
-        </div>
+        </button>
         <div class="answer">
           <p>Since you start out as a beginer, the camera in your smartphone is fine. If you need advice
             on which camera is good to buy you can always ask any of our teachers.</p>
@@ -51,23 +50,17 @@
       </div>
       <div class="container">
 
-        <div class="question" id="section2">
-
+        <button class="question" id="section2">
           <p>How much does it cost?</p>
-
-
-        </div>
+        </button>
         <div class="answer">
           <p>One semester is 50 dollars and two is 75.</p>
         </div>
       </div>
       <div class="container">
-        <div class="question" id="section3">
-
+        <button class="question" id="section3">
           <p>What is the schedual?</p>
-
-
-        </div>
+        </button>
         <div class="answer">
           <p>The class is one day in the afternoon for 2h.</p>
         </div>
@@ -82,24 +75,34 @@
           <p>Please fill in this form for more information regarding the class and how to participate.</p>
           <hr>
           <label for="name">Name</label>
-          <input type="text" placeholder="First Name Last Name" name="name" required>
+          <input id="name" type="text" placeholder="First Name Last Name" name="name" required>
 
           <label for="email">Email</label>
-          <input type="text" placeholder="Enter Email" name="email" required>
+          <input id="email" type="email" placeholder="Enter Email" name="email" required>
 
           <label for="phone">Phone Number</label>
-          <input type="text" placeholder="+46 10 101 0101" name="phone" required>
-          <label for="name">Course Level</label>
+          <input id="phone" type="number" placeholder="+46 10 101 0101" name="phone" required>
+          <label for="course">Course Level</label>
           <select name="course" id="course">
             <option value="beginer">Beginer</option>
             <option value="a">Advanced</option>
             <option value="t">For Teachers</option>
           </select>
-          <label> How did you hear about us?<br>
-            <input type="checkbox" name="source1" value="fb"> Facebook<br>
-            <input type="checkbox" name="source2" value="ins"> Instagram<br>
-            <input type="checkbox" name="source3" value="other"> Other
+          <div>
+            <p class="check-box">How did you hear about us?</p>
+          <label> 
+            <input type="checkbox" name="source1" value="fb">
+            Facebook
           </label>
+          <label>
+            <input type="checkbox" name="source2" value="ins">
+            Instagram
+          </label>
+          <label>
+            <input type="checkbox" name="source3" value="other">
+            Other
+          </label>
+        </div>
           <hr>
           <p>By creating an account you agree to our <a class="terms"
               href="https://en.wikipedia.org/wiki/Terms_of_service">Terms & Privacy</a></p>
@@ -110,6 +113,7 @@
       </form>
 
     </section>
+  </main>
     <!-- *****Footer***** -->
     <footer>
 
