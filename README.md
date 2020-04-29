@@ -10,4 +10,4 @@ Im happy with the outcome of the page and that I achieved some of my stretch-goa
 
 ## View it live
 
-https://serene-dubinsky-506c1f.netlify.com
+https://er-project-business-site.netlify.app/
