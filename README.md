@@ -10,4 +10,4 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 ## View it live
 
-https://stupefied-keller-303e80.netlify.com/
+https://shuttle-sign-up.netlify.app
