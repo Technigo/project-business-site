@@ -1,13 +1,13 @@
-# Business Site
+# City Shuttle&ensp;|&ensp;[View Live &#10555;](https://shuttle-sign-up.netlify.app)
 
-Replace this readme with your own information about your project. 
+A business site that contains a Hero video header, a signup form and an accordion FAQ.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+* HTML 5
+* CSS flexbox
+* JavaScript
 
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## Screenshot
+![Screenshot](screenshot.png)
 
 ## View it live
-
-https://stupefied-keller-303e80.netlify.com/
+https://shuttle-sign-up.netlify.app
