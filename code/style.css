@@ -1,22 +1,22 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: rgb(255, 223, 152);
+  background:white;
 }
 
 
 /* Header */
 header {
   position: relative;
-  height: 600px;
+  height: 100vh;
   text-align: center;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 video {
-  min-height: 600px;
-  min-width: 800px; /* ratio 4:3 */
+  min-height: 100vh;
+  min-width: 133.3vh; /* ratio 4:3 */
 
   /* centers video */
   position: absolute;
@@ -81,8 +81,7 @@ section {
 .form {
   display: flex;
   flex-direction: column;
-  background: orangered;
-  border-radius: 25px;
+  background: orange;
   box-sizing: border-box;
   padding: 0 10px;
 }
@@ -99,7 +98,7 @@ input {
   font-size: 24px;
   font-weight: bold;
   color: black;
-  background: orange;
+  background: white;
 }
 
 input::placeholder {
@@ -150,7 +149,7 @@ label {
 }
 
 .check-container:hover input ~ .checkmark {
-  background-color: orange;
+  background-color: orangered;
 }
 
 .check-container input:checked ~ .checkmark {
@@ -160,9 +159,9 @@ label {
 button {
   display: flex;
   margin: 40px auto;
-  padding: 10px;
+  padding: 10px 50px;
   color: black;
-  background: orange;
+  background: wheat;
   border-radius: 10px;
   outline: none;
   border: 0;
@@ -178,8 +177,7 @@ button:hover {
 
 /* Accordion */
 .accordion {
-  background: orangered;
-  border-radius: 25px;
+  background: orange;
   box-sizing: border-box;
   padding: 0 10px;
 }
@@ -191,7 +189,7 @@ button:hover {
 }
 
 .question:hover {
-  color: orange;
+  color: orangered;
 }
 
 .question span {
@@ -205,7 +203,8 @@ button:hover {
 .answer {
   padding: 0 30px;
   margin-bottom: 20px;
-  background-color: orange;
+  background-color: white;
+  border-radius: 20px;;
   max-height: 0;
   overflow: hidden;  
   visibility: hidden;
@@ -229,17 +228,20 @@ button:hover {
 }
 
 .active {
-  color: orange;
+  color: orangered;
 }
 
 footer {
   background: orangered;
-  height: 90px;
+  height: 50px;
   font-family: 'Stalinist One', cursive;
-  text-align: center;
+  color: white;
   line-height: 1em;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   text-transform: uppercase;
   margin-top: 20px;
-  padding-top: 10px;
+  padding: 10px 40px;
+
+  display: flex;
+  justify-content: space-between;
 }
