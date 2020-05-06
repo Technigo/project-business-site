@@ -7,7 +7,7 @@ A business site that contains a Hero video header, a signup form and an accordio
 * JavaScript
 
 ## Screenshot
-![Screenshot](screenshot.png)
+![Screenshot](screenshot1.png)
 
 ## View it live
 https://shuttle-sign-up.netlify.app
