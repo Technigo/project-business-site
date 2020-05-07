@@ -1,9 +1,9 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 html {
   color: rgba(13, 17, 14, 0.651);
-  font-family: 'Nanum Myeongjo', serif;
+  /* font-family: 'Nanum Myeongjo', serif; */
+  font-family: 'Righteous', cursive;
   background-color: rgb(253, 243, 227);
   margin: 0;
   height: 100%;
@@ -30,7 +30,7 @@ header {
   display: flex;
   position: relative;
   width: 100%;
-  height: 70%;
+  height: 80%;
 }
 
 .title-text {
@@ -65,7 +65,7 @@ header {
 .form ::placeholder{
   opacity: 0.4;
   color: gray;
-  font-style: italic;
+  font-family: 'Righteous', cursive;
 }
 
 input.submit {
@@ -109,10 +109,13 @@ label {
 }
 
 .button {
+  background-color: white;
   width: 100px;
+  height: 30px;
+  border: none;
+  outline: none;
   border-radius: 20px;
   font-size: 12px;
-  opacity: 0.7;
   margin: 10px;
 }
 
@@ -161,12 +164,12 @@ label {
   text-align: left;
   border: none;
   outline: none;
+  transition: all 0.4s ease-in-out;
 }
 
 .question:hover {
   cursor: context-menu;
   box-shadow: 1px 1px 5px grey;
-  transition: transform 0.4s ease-in-out;
 }
 
 .question:nth-child(4) {
@@ -198,6 +201,7 @@ label {
   line-height: 1.5;
   color: rgb(104, 97, 97);
   max-height: 150px;
+  transition: all 0.4s ease-in-out;
 }
 
 .active::after {
@@ -210,7 +214,7 @@ footer {
   border-top: 3px solid rgb(255, 255, 255);
   color: rgb(146, 146, 146);
   font-size: 12px;
-  padding: 10px;
+  padding: 10px 0px;
   width: 100%;
   background-position: bottom;
 }
@@ -245,14 +249,15 @@ footer img {
   .main {
     display: flex;
     flex-direction: column;
-    width: auto;
     justify-content: center;
-    align-items: baseline;
-    width: 80%;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .title {
-    height: 50%;
+    height: 70%;
   }
 
   .title-text h1 {
@@ -260,12 +265,12 @@ footer img {
   }
 
   .form {
-    width: 100%;
+    width: 80%;
     margin: 20px 10px;
   }
 
   .accordion {
-    width: 100%;
+    width: 80%;
     height: auto;
     margin: 20px 10px;
   }
