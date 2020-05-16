@@ -22,8 +22,8 @@ If I had more time I would try to add some styling to the hero video, maybe a fi
 
 * HTML5
 * CSS3
-* JavaScript JS6
+* JavaScript ES6
 
 ## View it live
 
-View the site here: https://pouroverpurist.netlify.com/
+https://pouroverpurist.netlify.app/
