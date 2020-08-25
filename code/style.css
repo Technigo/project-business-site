@@ -1,7 +1,106 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
+* {
+    box-sizing: border-box;
 }
+
+body{
+  margin: 0;
+}
+
+.hero, .signup-form, .accordionWrap{
+  padding: 10px;
+}
+
+.active + .panel {
+  /* some styling here */
+  display: inline-block;
+}
+
+/*HERO*/
+.hero {
+  height: 70vh;
+  background-image: url(./pics/jungle.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-title{
+  color: rgb(236, 222, 222);
+  font-size: 4em;
+}
+
+/*The main section with form and accordion*/
+
+.flex-container{
+  display: flex;
+  background-color: darkseagreen;
+  border: 1px solid black;
+
+  justify-content: space-evenly;
+  align-items: stretch;
+  flex-direction : row;
+  flex-wrap: wrap;
+  
+}
+
+.signup-form{
+  background-color: burlywood;
+  border: 1px solid black;
+  align-self: center;
+  min-width: 40%;
+}
+
+.textInput{
+  display: block;
+  padding: 7px;
+}
+
+label{
+  padding: 7px 3px;
+}
+
+.accordionWrap{
+  background-color: gray;
+  border : 1px solid black;
+  align-self: center;
+  min-width: 40%;
+}
+
+/*Accordion*/
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
