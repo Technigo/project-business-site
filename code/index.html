@@ -18,23 +18,45 @@
     
         <section class="signup-form">
           <form>
-            <label for="fname">First name:</label><br>
-             <input class="textInput" type="text" id="fname" name="fname"><br>
-            <label for="lname">Last name:</label><br>
+            <label for="fname">First name:</label>
+             <input class="textInput" type="text" id="fname" name="fname">
+            <label for="lname">Last name:</label>
              <input class="textInput" type="text" id="lname" name="lname">
-             <input class="radioInput" type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
-              <input class="radioInput" type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
-              <input class="radioInput" type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label>
-            <input class="checkbox-Input" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-              <label for="vehicle1"> I have a bike</label><br>
+             <label for="pwd">Password</label>
+             <input class="textInput" type="password" id="pwd" name="pwd">
+             
+             <div class="radioGroup">
+
+              <div class="radioButtonWrapper">
+                <input class="radioInput" type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label>
+              </div>
+              <div class="radioButtonWrapper">
+                <input class="radioInput" type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label>
+              </div>
+                
+              <div class="radioButtonWrapper">
+                <input class="radioInput" type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+              </div>
+               
+            </div>
+            <div class="checkBoxWrapper">
+              <input class="checkbox-Input" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+              <label for="vehicle1"> I agree to the terms and conditions</label>
+            </div>
+           
+            <button class="submitBtn" type="button" onClick="clickSubmitBtn()">Submit</button>
           </form>
         </section>
     
         <section class="accordionWrap">
           <!-- Accordion -->
+          <div class ="accordionHeader">
+              <h4>FAQ</h3>
+          </div>
+          
           <button id="acc1" class="accordion" onClick="toggleActive(this.id)">Question 1</button>
             <div id="panel1" class="panel">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
