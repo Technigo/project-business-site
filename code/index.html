@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One&family=Roboto&display=swap" rel="stylesheet">
     <title>Project 3</title>
     <link rel="stylesheet" href="./style.css">
   </head>
@@ -10,16 +11,17 @@
       
     <section class="hero">
         <header class="hero-header">
-          <h1 class="hero-title">The Title of this Hero Module</h1>
+          <h1 class="hero-title">Explore the jungle with us</h1>
         </header>
     </section>
     
     <section class="main-content flex-container">
     
         <section class="signup-form">
-          <form>
+          <!--https://httpbin.org/anythingaction_page.php-->
+          <form id="signUpForm" action="" onsubmit="return validateForm()" method="post">
             <label for="fname">First name:</label>
-             <input class="textInput" type="text" id="fname" name="fname">
+             <input class="textInput" type="text" id="fname" name="fname" >
             <label for="lname">Last name:</label>
              <input class="textInput" type="text" id="lname" name="lname">
              <label for="pwd">Password</label>
@@ -37,39 +39,52 @@
               </div>
                 
               <div class="radioButtonWrapper">
-                <input class="radioInput" type="radio" id="other" name="gender" value="other">
+                <input class="radioInput" type="radio" id="other" name="gender" value="other" checked="checked">
                 <label for="other">Other</label>
               </div>
                
             </div>
             <div class="checkBoxWrapper">
-              <input class="checkbox-Input" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-              <label for="vehicle1"> I agree to the terms and conditions</label>
+              <input class="checkbox-Input" id="checkbox-optional" type="checkbox" name="checkbox-optional" value="checked">
+              <label for="checkbox-optional"> I'd like to receive the weekly newsletter with updates from TeamJungleExpo</label>
+            </div>
+            <div class="checkBoxWrapper">
+              <input class="checkbox-Input" id="checkbox-Input" type="checkbox" name="agree" value="checked">
+              <label for="checkbox-Input"> I agree to the terms and conditions</label>
             </div>
            
-            <button class="submitBtn" type="button" onClick="clickSubmitBtn()">Submit</button>
+            <input type="submit" class="submitBtn" value="Submit"></button>
           </form>
         </section>
     
         <section class="accordionWrap">
           <!-- Accordion -->
           <div class ="accordionHeader">
-              <h4>FAQ</h3>
+              <h4 class="faqHeader">FAQ</h3>
           </div>
           
-          <button id="acc1" class="accordion" onClick="toggleActive(this.id)">Question 1</button>
+          <section id="acc1" class="accordion" onClick="toggleActive(this.id)">
+            How big are the groups?
+            <div class="icon"></div>
+          </section>
             <div id="panel1" class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>We arrange events for different types of groups, but no more than 10 people at the time.</p>
             </div>
 
-            <button id="acc2" class="accordion" onClick="toggleActive(this.id)">Question 2</button>
+            <section id="acc2" class="accordion" onClick="toggleActive(this.id)">
+              What's the price?
+              <div class="icon"></div>
+            </section>
             <div id="panel1" class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>It depends on your choices, we have differenct price plans for different needs. The explorations start at $1000 per person.</p>
             </div>
 
-            <button id="acc3" class="accordion" onClick="toggleActive(this.id)">Question 3</button>
+            <section id="acc3" class="accordion" onClick="toggleActive(this.id)">
+              Do I need to bring anything?
+              <div class="icon"></div>
+            </section>
             <div id="panel1" class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>Bring clothing and some hygiene products if you want to. We will provide food, drinks, equipment and so on.</p>
             </div>
         </section>
 

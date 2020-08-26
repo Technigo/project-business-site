@@ -1,6 +1,5 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/* font-family: 'Chau Philomene One', sans-serif;
+font-family: 'Roboto', sans-serif;*/
 * {
     box-sizing: border-box;
 }
@@ -8,7 +7,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 body{
   margin: 0;
   min-height: 100vh;
-  background-color: #001212;
+ /* background-color: #001212;*/
+ background: rgb(0,18,18);
+ background: linear-gradient(180deg, rgba(0,18,18,1) 46%, rgb(0 29 46) 100%);
+
 }
 
 .hero, .signup-form, .accordionWrap{
@@ -20,9 +22,25 @@ body{
   display: inline-block;
 }
 
+.active .icon {
+  background-image: url("./pics/less.png");
+}
+
+.icon{
+  max-width: 30px;
+  display: inline-block;
+  float: right;
+  /* margin-bottom: 5px; */
+  background-image: url("./pics/more.png");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+}
+
 /*HERO*/
 .hero {
-  height: 80vh;
+  height: 40vh;
   background-image: url(./pics/jungle.jpg);
   background-position: center;
   background-size: cover;
@@ -31,7 +49,10 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Chau Philomene One', sans-serif;
+  margin-bottom: 4vh;
 }
+
 
 #header {
   display: flex;
@@ -49,7 +70,6 @@ body{
 .flex-container{
   display: flex;
   background-color: transparent;
-  border: 1px solid black;
 
   justify-content: space-evenly;
   align-items: stretch;
@@ -60,7 +80,8 @@ body{
   
   max-width: 1300px;
     margin: auto;
-  
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 7vh;
 }
 
 .signup-form{
@@ -87,10 +108,18 @@ form{
   border-radius: 13px;
   border: none;
   min-height: 3em;
+  font-size: 1.2em;
+  
+}
+
+.textInput:focus{
+  outline: none;
+  border-bottom: 3px solid#986e92;
 }
 
 label{
   padding: 4% 0;
+  font-size: 1.2em;
 }
 .radioGroup{
   display: flex;
@@ -106,6 +135,10 @@ label{
   padding: 4%;
 }
 
+.radioInput, .checkbox-Input{
+  cursor: pointer;
+}
+
 .checkBoxWrapper{
   padding: 4%;
 }
@@ -117,7 +150,13 @@ label{
   align-self: center;
   height: 6vh;
   border-radius: 20px;
-  background-color: #f69e7b;
+  background-color: #986e92;
+  font-size: 1em;
+}
+
+.submitBtn:hover{
+  background-color: #557571;
+  color: white;
 }
 
 .accordionWrap{
@@ -140,10 +179,14 @@ label{
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 1.2em;
   transition: 0.4s;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+  margin-bottom: 5px;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -151,7 +194,7 @@ label{
 .accordionHeader{
   
   color: #444;
-  padding: 18px;
+  padding-left: 5px;
   width: 100%;
   border: none;
   text-align: left;
@@ -160,18 +203,25 @@ label{
   transition: 0.4s;
 }
 
+.faqHeader{
+  color: #fff;
+  font-size: 1.2em;
+}
+
 .active, .accordion:hover {
-  background-color: #ccc; 
+  background-color: #383e56;
+  color: white;
 }
 
 .panel {
   padding: 0 18px;
   display: none;
-  background-color: #cccccc;
+  background-color: #f9f1f1;
   color: #333;
   overflow: hidden;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
+  font-size: 1em;
 }
 
 
@@ -179,6 +229,19 @@ label{
 /*Tablet*/
 @media only screen and (min-width: 415px) {
   .radioGroup{
+    flex-direction: column;
+  }
+
+  
+  }
+
+  /*Desktop or Laptop*/
+@media only screen and (min-width: 1200px) {
+  .radioGroup{
     flex-direction: row;
+  }
+
+  .hero{
+    height: 80vh;
   }
   }
