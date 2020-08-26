@@ -61,9 +61,12 @@ body{
 }
 
 .hero-title{
-  color: rgb(236, 222, 222);
+  background: #e8f3f8b8;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 4em;
 }
+
 
 /*The main section with form and accordion*/
 
@@ -203,7 +206,7 @@ label{
   transition: 0.4s;
 }
 
-.faqHeader{
+.faqHeader, .signupHeader{
   color: #fff;
   font-size: 1.2em;
 }
@@ -224,6 +227,28 @@ label{
   font-size: 1em;
 }
 
+footer{
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 4vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footerLink, .footerText{
+  font-size: 1em;
+  color: #f9f1f180;
+}
+
+.footerLink{
+  text-decoration: none;
+}
+
+.footerLink:hover{
+  color: pink;
+}
 
 
 /*Tablet*/
@@ -243,5 +268,9 @@ label{
 
   .hero{
     height: 80vh;
+  }
+
+  .hero-title{
+    font-size: 6em;
   }
   }
