@@ -13,6 +13,7 @@
       let fname = document.forms["signUpForm"]["fname"].value;
       let lname = document.forms["signUpForm"]["lname"].value;
       let pwd = document.forms["signUpForm"]["pwd"].value;
+      let email = document.forms["signUpForm"]["email"].value;
       let checked = document.getElementById("checkbox-Input").checked;
 
       if (fname == "") {
@@ -27,6 +28,11 @@
 
       if (pwd == "") {
         alert("Please choose a password.");
+        return false;
+      }
+
+      if (email == "") {
+        alert("Please enter your e-mail address");
         return false;
       }
 
