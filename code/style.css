@@ -2,6 +2,200 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+/* MOBILE FIRST APPROACH */
+
+body {
+  margin: 0;
+}
+
+.heroimage img {
+  display:flex;
+  max-width:100%;
+}
+
+nav {
+  background-color: rgb(20, 20, 20);
+}
+
+.logo{
+  display: flex;
+}
+
+.linkleft {
+  display: none;
+}
+
+.linkright {
+  display:none;
+}
+
+.heroimage { 
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.heroimage p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  font-family:"didot";
+  margin:0px;
+}
+
 .active + .answer {
   /* some styling here */
 }
+
+/* TABLET */
+
+@media screen and (min-width:768px) {
+
+.linkleft {
+  display: inline-flex;
+  order: 0;
+}
+
+.logo { 
+  order:1;
+  padding-left:30px;
+}
+  
+.linkright { 
+  display: inline-flex;
+  order:2;
+}
+nav {
+  display: flex;
+  justify-content: center;
+
+}
+
+nav a {
+  color: #a7a5a5;
+  padding: 23px 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 3px;
+  align-self: flex-end;
+}
+
+ nav a:hover {
+   text-decoration-line: underline;
+   color: #ecdf94;
+}
+
+
+.heroimage img {
+  width: 1100px;
+  height:450px;
+}
+
+.heroimage { 
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.heroimage { 
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow:hidden;
+  max-width:100%;
+}
+
+.heroimage p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  font-family:"didot";
+  margin:0px;
+}
+}
+
+/*DESKTOP*/
+
+@media screen and (min-width:1024px) {
+
+  .linkleft {
+    display: inline-flex;
+    order: 0;
+  }
+  
+  .logo { 
+    order:1;
+    padding-left:30px;
+  }
+    
+  .linkright { 
+    display: inline-flex;
+    order:2;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  nav a {
+    color: #a7a5a5;
+    padding: 23px 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 3px;
+    align-self: flex-end;
+  }
+  
+   nav a:hover {
+     text-decoration-line: underline;
+     color: #ecdf94;
+  }
+  
+  .heroimage img {
+    width: 1500px;;
+    height:500px;
+  }
+
+  
+  .heroimage p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    font-family:"didot";
+    margin:0px;
+  }
+  }
+
+  /*** FOOTER ****/
+
+footer {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0px;
+  background-color:#0c0c0c;
+  width: 100%;
+}
+
+footer p {
+  width:100%;
+  text-align: center;
+  font-family:"didot";
+  font-size: 14px;
+  color: rgb(202, 202, 202);
+}
+
+footer img {
+  width: 50px;
+}
+  
