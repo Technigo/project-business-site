@@ -1,25 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Roboto&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <title>Coffee Collective</title>
-</head>
-<body>
-
-    <header>
-        <div class="header-text">
-            <div class="backdrop">
-                <h1>Coffee Collective</h1>
-            </div>
-            <p>- Try Our Coffee Tasting Experience -</p>
+  </head>
+  <body>
+    <header>  <!-- HEADER -->
+      <div class="header-text">
+        <div class="backdrop">
+          <h1>Coffee Collective</h1>
         </div>
+        <p>- Try Our Coffee Tasting Experience -</p>
+      </div>
     </header>
-    
 
+    <form action="http://httpbin.org/anything" method="POST">  <!-- FORM -->
+      <fieldset>
+        <legend>Book your your coffee tour now:</legend>
+        <div class="form">
+          <div class="details">
+            <label>
+              Full Name:<br />
+              <input type="text" name="name" required />
+            </label>
+
+            <label>
+              Email:<br />
+              <input type="email" name="email" required />
+            </label>
+
+            <label>
+              Number of Participants:<br />
+              <select name="participants" required>
+                <option value="4">4 (minimum)</option>
+                <option value="8">8</option>
+                <option value="10">10 (maximum)</option>
+              </select>
+            </label>
+          </div>
+
+          <p>Number of coffee variations you'd like to taste:</p>
+
+          <div class="radio-buttons">
+            <label class="radio-button-container"
+              >4
+              <input type="radio" name="variations" value="4" checked />
+              <span class="custom-radio"></span>
+            </label>
+
+            <label class="radio-button-container"
+              >6
+              <input type="radio" name="variations" value="6" />
+              <span class="custom-radio"></span>
+            </label>
+
+            <label class="radio-button-container"
+              >8
+              <input type="radio" name="variations" value="8" />
+              <span class="custom-radio"></span>
+            </label>
+          </div>
+
+          <button type="submit">Get tasting!</button>
+        </div>
+      </fieldset>
+    </form>
 
     <!-- Remember to link JS file-->
-</body>
+  </body>
 </html>
