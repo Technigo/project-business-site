@@ -2,6 +2,193 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+.active+.answer {
   /* some styling here */
+}
+
+body {
+  font-family: 'Teko', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* HERO HEADER */
+
+#hero header {
+  max-width: 100%;
+  display: flex;
+  z-index: 20;
+  position: relative;
+}
+
+#hero nav a {
+  color: #91d18b;
+  text-decoration: none;
+  margin-left: 20px;
+  padding-right: 30px;
+  position: fixed;
+  text-align: left;
+  position: relative;
+  z-index: 30;
+}
+
+/* HERO VIDEO */
+
+#hero {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5;
+  position: absolute;
+}
+
+#hero .heropanel {
+  z-index: 30;
+  position: relative;
+  text-align: center;
+}
+
+/* ABOUT SECTION */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #91d18b;
+  margin: 100px;
+}
+
+.about img {
+  width: 40%;
+}
+
+.about div {
+  text-align: center;
+  margin: 50px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* SIGN UP FORM*/
+
+.contact {
+  width: 100%;
+  padding: 0, 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  max-width: 550px;
+  background: black;
+  padding: 30px;
+  border-radius: 3px;
+  padding: 50px;
+}
+
+.form:hover {
+  box-shadow: 0 0 30px white;
+}
+
+.contact-us {
+  padding-bottom: 10px;
+  text-align: center;
+  margin-top: -60px;
+  position: absolute;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  margin-right: 60px;
+  width: 50%;
+}
+
+.msg {
+  width: 50%;
+}
+
+.input-fields .input,
+.msg textarea {
+  margin: 20px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #91d18b;
+  padding: 10px;
+  color: #91d18b;
+  width: 100%;
+}
+
+.msg textarea {
+  height: 170px;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+
+.btn {
+  text-align: center;
+  padding: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 3px solid #91d18b;
+}
+
+
+
+/* ACCORDION*/
+
+
+/* FOOTER */
+
+footer {
+  background: black;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  margin-top: 100px;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+}
+
+footer img {
+  width: 80px;
+  height: 80px;
+  margin-right: 30px;
+}
+
+footer img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  box-shadow: 0 20px 20px 0 white;
+  margin-right: 100px;
 }
