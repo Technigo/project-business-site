@@ -1,3 +1,200 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Josefin Slab', serif;
+}
+
+h2 {
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+/**** HEADER ****/
+
+.main-header {
+  position: fixed;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  height: 65px; /*change when logo inserted*/
+  width: 100vw;
+  padding: 0 10vw;
+  color: black;
+  z-index: 1; /*when we scroll we want the header to be on top of everything*/
+}
+
+a {
+  text-decoration: none;
+  color:#fff;
+  text-transform: uppercase;
+}
+
+.nav-bar {
+  display: flex;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10rem 0;
+  width: 100vw;
+  height: 100vh; 
+  font-size: 24px;
+  background: #272727;
+}
+
+.menu-btn:checked ~ .nav-bar {
+  opacity: 1;
+}
+
+.nav-link {
+  
+}
+
+.nav-link a {
+  margin: 5px;
+  padding: 2px;
+  font-size: 18px;
+
+}
+
+.nav-link a:hover{
+  border-bottom: 2px solid #fff;
+  transition: width .5s;
+  /*want the border to go in left to right slowly*/
+}
+
+.menu-icon {
+  position: relative;
+  padding: 26px 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-icon__line {
+  display:block;
+  position: relative;
+  background: #fff;
+  height: 2px;
+  width: 20px;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+/*to hide the checkbox*/
+.menu-btn {
+  display: none;
+}
+
+
+
+/***HERO PICTURE***/
+
+.hero {
+  height: 50vh;
+  background: url(./unsplash.hero.jpg) no-repeat top center;
+  /*media query on background url to have a nice pic*/
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 10vw; 
+  color: #fff;
+}
+
+.hero h1 {
+    position: relative;
+    font-size: 34px;
+    text-transform: uppercase;
+    text-align:center;
+    background: rgba(0,0,0,0.2);
+    padding: 10px;
+}
+
+.hero p {
+    position: relative;
+}
+  
+
+/****BAKERY and FOOD CONTAINER****/
+
+.bakery-container, .food-container {
+  width: 90%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.bakery-container img, .food-container img {
+  width: 80%;
+  object-fit: contain;
+}
+
+.bakery-container p, .food-container p {
+  width: 80%;
+}
+
+
+
+
+
+
+/***TABLET MEDIA QUERIES****/
+@media (min-width: 768px) {
+  .nav-bar {
+    all: unset;
+    display: flex;
+    list-style: none;
+
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .bakery-container {
+   flex-direction: row;
+  }
+
+  .food-container {
+    flex-direction: row-reverse;
+  }
+
+  .bakery-container img, .food-container img {
+    width: 40%;
+  }
+
+  .bakery-container p, .food-container p {
+    width: 40%;
+  }
+
+}
+
+/****DESKTOP MEDIA QUERIES****/
+
+@media (min-width: 1024px) {
+  .nav-bar {
+    display: flex;
+  }
+
+
+  .menu-icon {
+    display: none;
+  }
+
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
