@@ -46,15 +46,16 @@ h1 {
 
 /* FORM STYLING */
 form {
-  margin-top: 650px;
-  margin-left: 50px;
+  width: 40%;
+  max-width: 600px;
+  min-width: 450px;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: bold;
+  margin: 0 20px;
 }
 
 fieldset {
-  width: 600px;  /* determines the width of the form */
   background-color: #B5AA99;
   border: none;
   border-radius: 7px;
@@ -173,6 +174,23 @@ button { /* styles submit button */
   cursor: pointer;
 }
 
+.accordion {
+  margin: 20px 20px 0 20px;
+  width: 40%;
+  max-width: 600px;
+  min-width: 450px;
+  background-color: #B5AA99;
+  border-radius: 7px;
+}
+
+.main-content {
+  margin-top: 650px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* MEDIA QUERIES */
 /* Tablet */
 @media (min-width: 667px) and (max-width: 1024px) {
@@ -185,9 +203,19 @@ button { /* styles submit button */
       margin-top: 200px;
   }
 
+  .main-content {
+    margin-top: 430px;
+    justify-content: space-around;
+  }
+
   form {
-    margin-top: 450px;
-    margin-left: 50px;
+    width: 45%;  /* determines the width of the form */
+    margin: 0;
+  }
+
+  .accordion {
+    width: 45%;
+    margin: 20px 0;
   }
 }
 
@@ -211,11 +239,21 @@ button { /* styles submit button */
       font-size: 15px;
   }
 
-  form {
-    margin-top: 350px;
+  .main-content {
+    margin-top: 330px;
+    flex-direction: column;
+    align-content: center;
   }
 
-  fieldset {
-    width: 225px;  /* determines the width of the form */
+  form {
+    width: 90%;  /* determines the width of the form */
+    min-width: 225px;
+    margin: 0;
+  }
+
+  .accordion {
+    min-width: 280px;
+    width: 90%;
+    margin: 20px 0;
   }
 }
