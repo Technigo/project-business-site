@@ -1,6 +1,3 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 /* MOBILE FIRST APPROACH */
 
@@ -145,13 +142,25 @@ h3{
   text-align: center;
   color: #2d4059;
   background-color: #f0ece3;
-  margin-top:30px;
-  margin-bottom: 30px;
+  padding-top: 18px;
+  border-radius:10px;
+}
+
+.faq {
+  background-color: #f0ece3;
+  border-radius: 15px;
+  margin: 30px;
+}
+
+.accordion {
+  width:100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .question{
   color: #7a756c;
-  background-color: #cfccc4;
+  background-color:#e2dcd6ee;
   border-bottom: 1px solid;
   font-size: 20px;
   padding: 20px;
@@ -171,26 +180,25 @@ h3{
 
 .answer {
   display: none;
+ 
 }
 
 .answer p {
-  padding:10px;
+  padding: 25px;
+  margin: 0px;
   text-align: left;
-}
-
-.accordion {
-  display: flex;
-  flex-direction: column;
-  background-color: #f0ece3;
-  border-radius: 15px;
-  margin: 30px;
 }
 
 .active + .answer {
   display: block;
-  background-color:#f0ece3;
   width: 100%;
 }
+
+.accordion :nth-child(4n+1){
+  background-color: #cfccc4;
+  
+}
+
 
 /* TABLET */
 
@@ -333,8 +341,12 @@ h1{
     font-size: 27px;
   }
 
+  .faq {
+    width: 60%;
+  }
+
   .accordion {
-    width: 55%;
+    width: 100%;
   }
 
   .active, .question:hover {
