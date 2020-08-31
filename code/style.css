@@ -1,5 +1,5 @@
 body {
-  background-color: #88726C;
+  background-color: #88726c;
 }
 
 header {
@@ -28,7 +28,7 @@ header {
 }
 
 h1 {
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   color: white;
   font-size: 60px;
   text-align: center;
@@ -36,10 +36,10 @@ h1 {
 }
 
 .header-text p {
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   width: 400px;
-  color:white;
-  background-color: #00917C;
+  color: white;
+  background-color: #00917c;
   text-align: center;
   font-size: 20px;
   font-weight: bold;
@@ -52,20 +52,20 @@ form {
   width: 40%;
   max-width: 600px;
   min-width: 450px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: bold;
   margin: 0 20px;
 }
 
 fieldset {
-  background-color: #BEA69F;
+  background-color: #bea69f;
   border: none;
   border-radius: 7px;
 }
 
 legend {
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   font-size: 25px;
   font-weight: bold;
   color: white;
@@ -95,7 +95,7 @@ legend {
 
 .details input:focus {
   outline: none;
-  border: 3px solid #00917C;
+  border: 3px solid #00917c;
 }
 
 select {
@@ -103,7 +103,8 @@ select {
   border: none;
 }
 
-.form p { /* modifies the text:"number of coffee variations..." */
+.form p {
+  /* modifies the text:"number of coffee variations..." */
   margin-bottom: 5px;
 }
 
@@ -147,10 +148,11 @@ select {
 }
 
 .radio-button-container input:checked ~ .custom-radio {
-  background-color: #00917C;
+  background-color: #00917c;
 }
 
-.custom-radio:after { /* creates the white dot in the middle, hidden now */
+.custom-radio:after {
+  /* creates the white dot in the middle, hidden now */
   content: "";
   position: absolute;
   top: 6px;
@@ -166,11 +168,12 @@ select {
   display: block;
 } /* makes white dot in middle visible after clicking it */
 
-button { /* styles submit button */
+button {
+  /* styles submit button */
   margin-top: 25px;
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   font-size: 20px;
-  background-color: #00917C;
+  background-color: #00917c;
   color: white;
   padding: 10px;
   border: none;
@@ -178,7 +181,7 @@ button { /* styles submit button */
 }
 
 button:hover {
-  background-color: #00747C;
+  background-color: #00747c;
   transition: 0.25s;
 }
 
@@ -188,6 +191,7 @@ button:hover {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 120px;
 }
 
 /* ACCORDION STYLING */
@@ -198,20 +202,21 @@ button:hover {
   min-width: 450px;
 }
 
-.question {  /* styles the accordion questions */
+.question {
+  /* styles the accordion questions */
   width: 100%;
   height: 40px;
-  background: #00917C;
+  background: #00917c;
   cursor: pointer;
 }
 
 .question:hover {
-  background: #00747C;
+  background: #00747c;
   transition: 0.25s;
 }
 
 .accordion p {
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   color: white;
   font-weight: bold;
   float: left;
@@ -219,16 +224,16 @@ button:hover {
 }
 
 .open {
-  background: #BEA69F;
+  background: #bea69f;
 }
 
 .open:hover {
-  background: #BEA69F;
+  background: #bea69f;
 }
 
 .panel {
   width: 100%;
-  height: 0;  /* for animation - height goes from 0 to 100 */
+  height: 0; /* for animation - height goes from 0 to 100 */
   overflow: hidden;
   background: white;
   margin-bottom: 10px;
@@ -236,16 +241,17 @@ button:hover {
 }
 
 .panel p {
-    color: black;
-    margin: 12px;
+  color: black;
+  margin: 12px;
 }
 
 .open + .panel {
   height: 200px;
 }
 
-.question:after {  /* creates + sign on question */
-  content: '\002B'; /* Unicode character for "plus" sign (+) */
+.question:after {
+  /* creates + sign on question */
+  content: "\002B"; /* Unicode character for "plus" sign (+) */
   font-size: 25px;
   font-weight: bold;
   color: white;
@@ -255,19 +261,44 @@ button:hover {
 }
 
 .open:after {
-  content: '\2212'; /* Unicode character for "minus" sign (-) */
+  content: "\2212"; /* Unicode character for "minus" sign (-) */
+}
+
+/* FOOTER STYLING */
+footer {
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #bea69f;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+footer p {
+  font-weight: bold;  
+  margin-bottom: 5px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin-top: 5px;
+  font-weight: bold;
 }
 
 /* MEDIA QUERIES */
 /* Tablet */
 @media (min-width: 667px) and (max-width: 1024px) {
   header {
-      background-image: url("./Images/coffee-header-medium.jpg");
-      height: 400px;
+    background-image: url("./Images/coffee-header-medium.jpg");
+    height: 400px;
   }
 
   .header-text {
-      margin-top: 200px;
+    margin-top: 200px;
   }
 
   .main-content {
@@ -276,7 +307,7 @@ button:hover {
   }
 
   form {
-    width: 45%;  /* determines the width of the form */
+    width: 45%; /* determines the width of the form */
     margin: 0;
   }
 
@@ -289,21 +320,21 @@ button:hover {
 /* Mobile */
 @media (max-width: 667px) {
   header {
-      background-image: url("./Images/coffee-header-small.jpg");
-      height: 300px;
+    background-image: url("./Images/coffee-header-small.jpg");
+    height: 300px;
   }
 
   .header-text {
-      margin-top: 100px;
+    margin-top: 100px;
   }
 
   h1 {
-      font-size: 35px;
+    font-size: 35px;
   }
 
   .header-text p {
-      width: 300px;
-      font-size: 15px;
+    width: 300px;
+    font-size: 15px;
   }
 
   .main-content {
@@ -313,7 +344,7 @@ button:hover {
   }
 
   form {
-    width: 90%;  /* determines the width of the form */
+    width: 90%; /* determines the width of the form */
     min-width: 225px;
     margin: 0;
   }
@@ -326,5 +357,9 @@ button:hover {
 
   .open + .panel {
     height: 300px;
+  }
+
+  footer {
+    display: none;
   }
 }
