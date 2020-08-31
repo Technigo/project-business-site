@@ -6,6 +6,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   /* some styling here */
 }
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 
 body {
   height: 100%;
@@ -22,6 +23,16 @@ body {
   align-items: center;
   justify-content: center;
 }
+#hero-video::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: rgba(248, 249, 249, 0.2);
+}
 #hero-video video {
   width: 100%;
   height: 100%;
@@ -32,4 +43,40 @@ body {
   left: 0;
   bottom: 0;
   object-fit: cover;
+}
+#hero-video .texture {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  background: url(./img/worn-dots.png);
+}
+#hero-video .hero-text {
+  position: relative;
+  z-index: 20;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-align: center;
+}
+#hero-video h1 {
+  color: #292524;
+  font-family: "Sacramento", cursive;
+  font-size: 80px;
+  margin-top: 0;
+  margin-bottom: 2px;
+  letter-spacing: 5px;
+}
+#hero-video .btn {
+  color: #292524;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: burlywood;
+  border: 1px solid tan;
 }
