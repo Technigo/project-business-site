@@ -90,7 +90,7 @@ body{
 
   justify-content: space-evenly;
   align-items: stretch;
-  flex-direction : column;
+  flex-direction : row;
   flex-wrap: wrap;
   padding-top: 3%;
   margin-bottom: 10vh;
@@ -106,10 +106,12 @@ body{
  
   align-self: flex-start;
   min-width: 300px;
-  flex-basis: 40%;
+  /*flex-basis: 40%;*/
   margin-bottom: 5vh;
   border-radius: 15px;
   color:white;
+  flex-basis : 100%;
+ 
 }
 
 
@@ -181,9 +183,11 @@ label{
   
   align-self: flex-start;
   min-width: 300px;
-    flex-basis: 40%;
+    /*flex-basis: 40%;*/
     border-radius: 15px;
     color: white;
+    flex-basis : 100%;
+   
 }
 
 /*Accordion*/
@@ -266,7 +270,7 @@ footer{
 
 
 /*Tablet*/
-@media only screen and (min-width: 415px) {
+@media only screen and (min-width: 768px) {
   .radioGroup{
     flex-direction: column;
   }
@@ -277,6 +281,10 @@ footer{
 
   .flex-container{
     flex-direction: row;
+  }
+
+  .signup-form, .accordionWrap{
+    flex-basis : 40%;
   }
 
   
