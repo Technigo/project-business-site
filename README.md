@@ -1,6 +1,6 @@
 # Business Site
 
-This is my business-site project. It's a one-pager created for my sisters art. As the assignment said, it contains a hero image, an accordion for FAQ and a form. I also added a few cards displaying art for sale.
+This is my business-site project. It's a one-pager created for my sisters art (only a mockup). As the assignment said, it contains a hero image, an accordion for FAQ and a form. I also added a few cards displaying art for sale.
 
 ## The problem
 
