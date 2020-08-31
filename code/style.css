@@ -178,15 +178,6 @@ button { /* styles submit button */
   cursor: pointer;
 }
 
-.accordion {
-  margin: 20px 20px 0 20px;
-  width: 40%;
-  max-width: 600px;
-  min-width: 450px;
-  background-color: #BEA69F;
-  border-radius: 7px;
-}
-
 .main-content {
   margin-top: 650px;
   display: flex;
@@ -196,36 +187,48 @@ button { /* styles submit button */
 }
 
 /* ACCORDION STYLING */
+.accordion {
+  margin: 20px 20px 0 20px;
+  width: 40%;
+  max-width: 600px;
+  min-width: 450px;
+}
+
 .question {  /* styles the accordion questions */
-  width: 300px;
+  width: 100%;
   height: 40px;
-  background: red;
-  text-align: center;
+  background: #00917C;
   cursor: pointer;
-  margin-bottom: 8px;
+}
+
+.question:hover {
+  background: #00747C;
+  transition: background 0.25s;
 }
 
 .accordion p {
-  color: black;
+  font-family: 'Alata', sans-serif;
+  color: white;
   font-weight: bold;
   float: left;
-  margin-left: 10px;
-  margin: 12px 0 6px 10px;
+  margin: 9px 0 6px 15px;
 }
 
 .open {
-  background: yellow;
-  margin-bottom: 0;
+  background: #BEA69F;
+}
+
+.open:hover {
+  background: #BEA69F;
 }
 
 .panel {
-  margin: 0;
-  width: 300px;
-  height: 100px;
-  background: grey;
-  list-style: none;
-  display: none;
-  margin-bottom: 5px;
+  width: 100%;
+  height: 0;  /* for animation - height goes from 0 to 100 */
+  overflow: hidden;
+  background: white;
+  margin-bottom: 10px;
+  transition: 0.5s ease-in-out;
 }
 
 .panel p {
@@ -233,14 +236,14 @@ button { /* styles submit button */
 }
 
 .open + .panel {
-  display: block;
+  height: 200px;
 }
 
 .question:after {  /* creates + sign on question */
   content: '\002B'; /* Unicode character for "plus" sign (+) */
   font-size: 25px;
   font-weight: bold;
-  color: blue;
+  color: white;
   float: right;
   margin-right: 10px;
   margin-top: 6px;
