@@ -6,83 +6,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project 3</title>
   <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- dont forget to add a css file and link it here! -->
 </head>
 
 <body>
   <!-- video or image as a header is cool :) -->
 
-  <div class="wrapper">
 
-    <video autoplay loop muted class="wrapper__video">
+  <div class="header">
+
+    <video autoplay loop muted class="header__video">
       <source src="Sky - 3186.mp4">
     </video>
     <div class="overlay">
-      <h1>HEJ</h1>
+      <button class="knapp"></button>
+      <h2>Hej</h2>
+
     </div>
   </div>
 
-  <!-- dont forget to link the javascript file here! -->
-  <h1>Form</h1>
-  <div class="accordion">
-    <ul>
-      <li tabindex="1">
-        <div>
-          <a href="#">
-            <h2>Sign In</h2>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
-          </a>
-        </div>
-      </li>
-      <li tabindex="2">
-        <div>
-          <a href="#">
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          </a>
-        </div>
-      </li>
-      <li tabindex="3">
-        <div>
-          <a href="#">
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          </a>
-        </div>
-      </li>
-      <li tabindex="4">
-        <div>
-          <a href="#">
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          </a>
-        </div>
-      </li>
-      <li tabindex="5">
-        <div>
-          <a href="#">
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          </a>
-        </div>
-      </li>
-      <li tabindex="6">
-        <div>
-          <a href="#">
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <p class="about">
+
+
+
+  <section class="content">
+    <section class="content-item1">
+      <h1>Log In</h1>
     
-  </p>
 
-    <!-- dont forget to link the javascript file here! -->
+      <form class="form" action="http://httpbin.org/anything" method="POST">
+        <div class="form-group">
 
-      <!-- dont forget to link the javascript file here! -->
+          
+          <label for="firstName">First name</label>
+          <input class="w3-input" id="firstName" type="text" placeholder="Type your first name" name="firstNameValue" required />
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Last name</label>
+          <input class="w3-input" id="lastName" type="text" placeholder="Type your last name" name="lastNameValue" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input class="w3-input" id="email" type="email" placeholder="Type your email" name="emailValue" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="w3-input" id="message" cols="10" rows="2" placeholder="Type your message" name="messageValue" required></textarea>
+        </div>
+
+        
+          
+          <button class="form-submit" type="submit"></button>
+      </form>
+    </section>
+
+    <!-- fmsdfkm  -->
+
+    <section class="content-item2">
+
+      <h1>Sign In</h1>
+    
+      <div class="wrapper">
+
+        <button class="accordion" typ="button"></button>
+        <div class="panel">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.</p>
+        </div>
+        <button class="accordion" typ="button"></button>
+        <div class="panel">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.</p>
+        </div>
+        <button class="accordion" typ="button"></button>
+        <div class="panel">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. </p>
+        </div>
+        <button class="accordion" typ="button"></button>
+        <div class="panel">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. </p>
+        </div>
+        <button class="accordion" typ="button"></button>
+        <div class="panel">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. </p>
+        </div>
+      </div>
+
+    </section>
+  </section>
+
+
+
+  <div class="footer">
+
+    <video autoplay loop muted class="footer__video">
+      <source src="Sky - 3186.mp4">
+    </video>
+    <div class="footer_overlay">
+
+    </div>
+  </div>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+
+    var i;
+
+    for (i = 0; 1 < acc.length; i++) {
+      acc[i].onclick = function () {
+        this.classList.toggle("active");
+
+        var panel = this.nextElementSibling;
+
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        }
+        else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+
+  </script>
+  <!-- dont forget to link the javascript file here! -->
+
+  <!-- dont forget to link the javascript file here! -->
 </body>
 
 </html>
