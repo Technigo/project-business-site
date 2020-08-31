@@ -195,6 +195,61 @@ button { /* styles submit button */
   flex-wrap: wrap;
 }
 
+/* ACCORDION STYLING */
+.question {  /* styles the accordion questions */
+  width: 300px;
+  height: 40px;
+  background: red;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.accordion p {
+  color: black;
+  font-weight: bold;
+  float: left;
+  margin-left: 10px;
+  margin: 12px 0 6px 10px;
+}
+
+.open {
+  background: yellow;
+  margin-bottom: 0;
+}
+
+.panel {
+  margin: 0;
+  width: 300px;
+  height: 100px;
+  background: grey;
+  list-style: none;
+  display: none;
+  margin-bottom: 5px;
+}
+
+.panel p {
+    color: black;
+}
+
+.open + .panel {
+  display: block;
+}
+
+.question:after {  /* creates + sign on question */
+  content: '\002B'; /* Unicode character for "plus" sign (+) */
+  font-size: 25px;
+  font-weight: bold;
+  color: blue;
+  float: right;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+
+.open:after {
+  content: '\2212'; /* Unicode character for "minus" sign (-) */
+}
+
 /* MEDIA QUERIES */
 /* Tablet */
 @media (min-width: 667px) and (max-width: 1024px) {
