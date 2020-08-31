@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
+    <title>Molecules</title>
     <link rel="stylesheet" href="style.css">
   
   </head>
@@ -13,7 +13,7 @@
       <nav>
       <a href="" class="linkleft"> Home </a>
       <a href="" class="linkleft"> About </a>
-      <a href="" class="linkright"> Features </a>
+      <a href="" class="linkright"> Next lab dates </a>
       <a href="" class="linkright"> Contact us </a>
       <div class="logo">
         <img src="./img/moleculeslogo.jpg" alt="molecules logo" />
@@ -26,22 +26,25 @@
       <p>"Chemistry at first sniff"</p>
     </div>
     </header>
-
+    <section class="container">
     <h1>Book an Experimental Perfume Lab</h1>
 
     <form action="http://httpbin.org/anything" method="POST">
-
+      <h2>Book an Experimental Perfume Lab</h2><br>
+      
       <label for="fName">First name</label>
         <input type="text" name="fname" required>
       <label for="lName">Last name</label>
         <input type="text"  name="lname" required><br>
 
-        <input type="radio" name="gender" value="male">
+        <div class="radio">
+          <input type="radio" name="gender" value="male">
       <label for="male">Male</label>
         <input type="radio" name="gender" value="female">
       <label for="female">Female</label>
         <input type="radio" name="gender" value="other">
       <label for="other">Other</label><br>
+      </div>
 
       <label for="email">E-mail adress</label>
         <input type="email" name="email" required>
@@ -49,32 +52,50 @@
         <input type="password" name="pass" required
         minlength="6"><br>
 
+        <div class="checkboxterms">
         <input type="checkbox" id="terms" name="terms" value="terms" required>
-      <label for="terms"> I accept the Terms & Conditions</label><br>
-        <input type="checkbox" id="newsletter" name="newsletter" value="newsletter" required>
-      <label for="vehicle2"> Subscribe to our Newsletter</label><br>
-
+      <label for="terms"> I accept the Terms & Conditions</label>
+        </div>
+        <div class="checkboxnews">
+      <input type="checkbox" id="newsletter" name="newsletter" value="newsletter" required>
+      <label for="newsletter"> Subscribe to our Newsletter</label>
+        </div>
       <button type= "submit">Book Me!</button>
     </form>
-  
-
 
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
+      <h3>Frequently Asked Questions</h3>
+      <div class="question" id="section1"> What we do?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Experimental perfume labs for groups where you can use your instincts to
+          push your boundaries creating your bespoke fragrance with a lead perfumer.
+          Online courses - free mini class where you can get a taste of perfume criation.
+        </p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2"> Who is MOLECULES for?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>For everyone who has a nose and loves perfume! 
+          The labs and courses are beginner friendly, so feel free to join us and ask questions!
+        </p>
+      </div>
+
+      <div class="question" id="section3"> How much does it cost?</div>
+      <div class="answer">
+        <p> Our Online courses are completely free, feel free to reach us 
+          to get our full range of prices.
+        </p>
+      </div>
+
+      <div class="question" id="section4"> When is the next Experimental Perfume Lab?</div>
+      <div class="answer">
+        <p> We keep adding dates, so check our site regularly or subscribe to our newsletter
+          so you're the first one to get notified about it!
+        </p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
-
+  </section>
+    <script type="text/javascript" src="script.js"></script>
 
 
     <footer>

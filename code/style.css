@@ -7,10 +7,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 body {
   margin: 0;
   background-color: #faf4edee;
+  font-family: "didot";
 }
 
 .herovideo video {
-  display:flex;
   max-width:100%;
 }
 
@@ -33,8 +33,6 @@ nav {
 
 .herovideo { 
   position: relative;
-  text-align: center;
-  color: white;
 }
 
 .herovideo p {
@@ -43,14 +41,13 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 17px;
-  font-family:"didot";
+  color: #ffffff;
   margin:0px;
 }
 
 /* FORM */
 
-h1{
-  font-family:"didot";
+h1 {
   font-size: 20px;
   text-align: center;
   color: #B8B4A7;
@@ -59,7 +56,13 @@ h1{
   /* color:#D9D4C4 ; */
 }
 
+h2 {
+  display:none;
+}
+
 form {
+  display:flex;
+  flex-direction: column;
   padding-top: 15px;
   padding-right:30px;
   padding-bottom: 30px;
@@ -68,6 +71,13 @@ form {
   font-size: 15px;
 }
 
+form .radio {
+flex-direction: column;
+}
+
+form .checkbox {
+  display:flex;
+}
 
 input[type=text], select {
   width: 100%;
@@ -82,7 +92,6 @@ input[type=text], select {
 input[type=radio], select {
   margin-bottom:30px;
 }
-
 
 input[type=password], select {
   width: 100%;
@@ -119,8 +128,54 @@ button:hover{
   background-color: #CDDEFA;
 }
 
+input:valid {
+  border-color:#81b214;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+/* ACCORDION */
+
+h3{
+  font-size: 20px;
+  text-align: center;
+  color: #2d4059;
+  background-color: #f0ece3;
+  margin-top:30px;
+  margin-bottom: 30px;
+}
+
+.question{
+  color: #7a756c;
+  background-color: #cfccc4;
+  border-bottom: 1px solid;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.answer {
+  display: none;
+}
+
+.answer p {
+  padding:10px;
+  text-align: left;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0ece3;
+  border-radius: 15px;
+  margin: 30px;
+}
+
 .active + .answer {
-  /* some styling here */
+  display: block;
+  background-color:#f0ece3;
+  width: 100%;
 }
 
 /* TABLET */
@@ -159,9 +214,8 @@ nav a {
 
  nav a:hover {
    text-decoration-line: underline;
-   color: #ecdf94;
+   color: #faf6e3;
 }
-
 
 .herovideo { 
   max-width: 100%;
@@ -173,12 +227,11 @@ nav a {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 35px;
-  font-family:"didot";
   margin:0px;
 }
 }
 
-/*DESKTOP*/
+/* DESKTOP */
 
 @media screen and (min-width:1024px) {
 
@@ -231,12 +284,52 @@ nav a {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 60px;
-    font-family:"didot";
     margin:0px;
+  }
+
+
+  .container {
+    width:100%;
+    display: inline-flex;
+    flex-direction: row;
+  }
+
+/* FORM */
+
+form{
+  width:45%;
+  background-color:#cfccc4;
+  border-radius:15px;
+  margin:30px;
+}
+
+h2{
+  color:#2d4059;
+  display: initial;
+  font-size:27px;
+  text-align: center;
+}
+
+h1{
+  display:none;
+}
+  /* ACCORDION */
+
+  h3 {
+    font-size: 27px;
+  }
+
+  .accordion {
+    width: 55%;
+  }
+
+  .active, .question:hover {
+    background-color: #dfddcbe0;
   }
 }
 
-  /*** FOOTER ****/
+
+  /* FOOTER */
 
 footer {
   display:flex;
@@ -251,7 +344,6 @@ footer {
 footer p {
   width:100%;
   text-align: center;
-  font-family:"didot";
   font-size: 14px;
   color: rgb(202, 202, 202);
 }
