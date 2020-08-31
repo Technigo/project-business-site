@@ -2,6 +2,152 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+html,
+body {
+    height: 100%;
+}
+
+.active+.answer {
+    display: block;
+}
+
+.answer {
+    display: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+label,
+p {
+    font-family: 'Raleway', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #C9C5C2;
+    padding-bottom: 60px;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./caleb-george-iVXfOilGYHA-unsplash.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    color: #C9C5C2;
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    right: 20%;
+    padding: 20px;
+    border: 5px double #C9C5C2;
+    border-radius: 25px;
+}
+
+section {
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    margin: 5px;
+}
+
+.form-group label,
+h2 {
+    width: 150px;
+    margin-left: 20px;
+}
+
+.form-group input {
+    width: 150px;
+}
+
+.accordion div,
+h1 {
+    margin-left: 20px;
+}
+
+input {
+    border-radius: 5px;
+    border: 2px inset #fff;
+}
+
+.question,
+.answer {
+    background: #fff;
+    width: 250px;
+    border: 3px double black;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+button {
+    background-color: #C9C5C2;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px;
+    margin-left: 250px;
+}
+
+.accordion {
+    padding-bottom: 40px;
+}
+
+
+/* --Tablet-- */
+
+@media (min-width: 768px) {
+    main {
+        flex-wrap: nowrap;
+    }
+    section {
+        width: 50%;
+    }
+    .question,
+    .answer {
+        width: 300px;
+    }
+    .hero-text h1 {
+        font-size: 60px;
+    }
+    .hero-text p {
+        font-size: 20px;
+        font-style: bold;
+    }
+}
+
+
+/* --Desktop-- */
+
+@media (min-width: 1200px) {
+    .question,
+    .answer {
+        width: 500px;
+    }
+    .booking div,
+    h1 {
+        padding-left: 100px;
+    }
 }
