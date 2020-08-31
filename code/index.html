@@ -3,13 +3,52 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Business site</title>
+    <link rel="stylesheet" href="./style.css">
   </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
+  <body>
+    <header>
+      <video autoplay loop muted>
+        <source src="./videos/dog-video.mp4" type="video/mp4">
+        <!-- <source src="./videos/video-test.mp4" type="video/mp4">
+        <source src="./videos/SampleVideo_360x240_1mb.mp4" type="video/mp4">  
+        <source src="./videos/SampleVideo_720x480_1mb.mp4" type="video/mp4">
+        <source src="./videos/SampleVideo_1280x720_1mb.mp4" type="video/mp4"> -->
+        <p>This video is not supported by the browser you're using.</p>  
+      </video>
+    <!-- video or image as a header is cool :) -->
+    </header>
+    
     <!-- Signup form -->
+    <form action="http://httpbin.org/anything" method="POST">
+      <label>
+        Message:
+        <input type="text" required name="message">
+      </label>
+      
+      <label>
+        E-mail:
+        <input type="email" required name="emailAddress">
+      </label>
+
+      <label>
+        How did you find about us?
+        <select name="heardAbout">
+          <option value="Fb">Facebook</option>
+          <option value="Ggl">Google</option>
+          <option value="onlineForum">Online Forum</option>
+          <option value="friend">From a friend</option>
+          <option value="other">Other ...</option>
+        </select>
+
+      </label>
+     
+      <button type="submit">Sign Up</button>
+    
+    </form>
+
+
 
     <section class="accordion">
       <!-- Accordion -->
@@ -26,5 +65,8 @@
       </div>
     </section>
     <!-- dont forget to link the javascript file here! -->
+    <footer>
+
+    </footer>
   </body>
 </html>
