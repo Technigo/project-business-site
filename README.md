@@ -1,8 +1,6 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is my business-site project. It's a one-pager created for my sisters art. As the assignment said, it contains a hero image, an accordion for FAQ and a form. I also added a few cards displaying art for sale.
 
 ## The problem
 

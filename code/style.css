@@ -1,7 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("pictures/blue-art.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: relative;
+}
+
+.header-text {
+    color: #fff;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.for-sale {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    width: 200px;
+    box-shadow: 2px 9px 19px -6px rgba(0, 0, 0, 0.59);
+}
+
+.for-sale img {
+    width: 100%;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 2px 9px 19px -6px rgba(0, 0, 0, 0.59);
+    margin: 10px;
+    width: 200px;
+    padding: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 2px 9px 19px -6px rgba(0, 0, 0, 0.59);
+    margin: 10px;
+    width: 200px;
+    padding: 10px;
+}
+
+.question {
+    background: #87A371;
+}
+
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+.active+.answer {
+    /* some styling here */
 }
