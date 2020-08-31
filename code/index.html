@@ -12,7 +12,7 @@
     <!-- video or image as a header is cool :) -->
     <header class="main-header">
       <div class="logo">
-        <a href="#" alt="logo image">LOGO</a>
+        <img src="logo.png" alt="logo image">
       </div>
 
       <input type="checkbox" class="menu-btn" id="menu-btn">
@@ -51,53 +51,150 @@
 
     <section class="bakery-container">
       <!---Image to the left and text to the right-->
-      <img src="unsplash.hero.jpg" alt="bakery image">
-      <h2>Bakery</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
-        elit. Laborum in expedita fugiat. 
-        Provident, officia earum sapiente itaque doloremque 
-        libero magnam deserunt cupiditate accusantium nemo 
-        rerum veritatis amet dolorum ipsam expedita.</p>
+      <img src="unsplash-bakery.jpg" alt="bakery image">
+      <div class="bakeryText">
+        <h2>Bakery</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
+          elit. Laborum in expedita fugiat. 
+          Provident, officia earum sapiente itaque doloremque 
+          libero magnam deserunt cupiditate accusantium nemo 
+          rerum veritatis amet dolorum ipsam expedita.</p>
+      </div>
     </section>
 
 
 
     <section class="food-container">
       <!---Image to the right and text to the left-->
-      <img src="unsplash.food.jpg" alt="food image">
-      <h2>food    </h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
-        elit. Laborum in expedita fugiat. 
-        Provident, officia earum sapiente itaque doloremque 
-        libero magnam deserunt cupiditate accusantium nemo 
-        rerum veritatis amet dolorum ipsam expedita.</p>
+      <img src="unsplash-food.jpg" alt="food image">
+      <div class="foodText">
+        <h2>food</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
+          elit. Laborum in expedita fugiat. 
+          Provident, officia earum sapiente itaque doloremque 
+          libero magnam deserunt cupiditate accusantium nemo 
+          rerum veritatis amet dolorum ipsam expedita.</p>
+      </div>
     </section>
 
 
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+          <!-- Accordion -->
+        <h3>What will you taste?</h3>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">Cinnamon bun?</div>
+      <div class="answer"> <!---display flex -->
+        <img src="#" alt="cinnamon bun">
+        <p>Lorem ipsum...</p> 
+      </div>
+
+      <div class="question" id="section2">Croissant?</div>
       <div class="answer">
+        <img src="#" alt="croissant">
         <p>Lorem ipsum...</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">Everything?</div>
       <div class="answer">
+        <img src="#" alt="pasteries">
         <p>Lorem ipsum...</p>
       </div>
     </section>
 
-    <form action="http//:httpbin.org/anything" method="POST">
-          <!-- Signup form -->
+   
 
-      <!----Radio button 
-            Text field (2)
-            Checkbox
-            Password field
-            Submit button -->
+    <!----FORM---->
+    <form class="form" action="http://httpbin.org/anything" method="POST">
+        <h4>Make your reservation</h4>
+        <div class="form-group" id="firstName">
+          <label for="firstName">First name</label>
+          <input
+            type="text"
+            name="lastName"
+          />
+        </div>
+
+        <!---You dont need both label and placeholder
+        From a UX point of view, 
+        I’d say label is preferred over placeholder 
+        (since placeholder disappears as soon as you’ve filled the input, 
+        thus making it unclear what fields there are in the form)
+        
+        placeholder="First name"----> 
+
+        <div class="form-group" id="lastName">
+          <label for="lastName">Last name*</label>
+          <input
+            type="text"
+            name="lastName"
+            required
+          />
+        </div>
+       
+      
+        <div class="form-group" id="time">
+          <label>
+            Reservation for?:
+            <input type="radio" name="time" value="breakfast"/>Breakfast
+            <input type="radio" name="time" value="lunch"/>Lunch
+            <input type="radio" name="time" value="dinner"/>Dinner
+          </label>
+        </div>
+
+        
+        <div class="form-group" id="date">
+          <label for="date">Date*</label>
+          <input
+            type="date"
+            name="date"
+            required
+          />
+        </div>
+
+
+        <div class="form-group" id="phoneNr">
+          <label for="phone">Phone number</label>
+          <input
+            type="tel"
+            name="phone"
+            pattern="[0-7]{3}-[0-9]{7}"
+          />
+        </div>
+        
+        
+        <div class="form-group" id="email">
+          <label for="email">E-mail*</label>
+          <input
+            type="email"
+            name="email"
+            required
+          />
+        </div>       
+        
+        
+        <div class="form-group" id="findUs">
+          <label>
+            How did you find us?
+            <input type="checkbox" name="recommendation" value="friend">
+            <label for="recommendation">Friend</label>
+
+            <input type="checkbox" name="recommendation" value="thatsUp">
+            <label for="recommendation">ThatsUp</label>
+
+            <input type="checkbox" name="recommendation" value="other">
+            <label for="recommendation">Other</label>
+          </label>
+        </div>
+      
+        <button type="submit">Make reservation</button>
     </form>
+
+    <footer>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Cupiditate sint magnam assumenda, 
+        velit quas saepe omnis id labore aliquid culpa maiores ipsam 
+        nobis cum libero magni in nihil? Ratione, odio?</p>
+    </footer>
 
     <script src="script.js"></script>
     <!-- dont forget to link the javascript file here! -->

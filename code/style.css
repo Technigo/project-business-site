@@ -10,20 +10,33 @@ body{
 
 h2 {
   text-transform: uppercase;
-  margin: 20px;
+  /*margin: 20px;*/
+}
+
+h3 {
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 /**** HEADER ****/
 
 .main-header {
-  position: fixed;
+  position: sticky;
   display: flex; 
   justify-content: space-between;
   align-items: center;
-  height: 65px; /*change when logo inserted*/
+  height: 70px; /*change when logo inserted*/
   width: 100vw;
   padding: 0 10vw;
-  color: black;
+  /*color: black;*/
+  background-color: #23272A;
   z-index: 1; /*when we scroll we want the header to be on top of everything*/
 }
 
@@ -46,7 +59,7 @@ a {
   padding: 10rem 0;
   width: 100vw;
   height: 100vh; 
-  font-size: 24px;
+  font-size: 28px;
   background: #272727;
 }
 
@@ -61,13 +74,14 @@ a {
 .nav-link a {
   margin: 5px;
   padding: 2px;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: Semi-bold 600;
 
 }
 
 .nav-link a:hover{
   border-bottom: 2px solid #fff;
-  transition: width .5s;
+  transition: .5s ease;
   /*want the border to go in left to right slowly*/
 }
 
@@ -93,13 +107,18 @@ a {
   display: none;
 }
 
+.logo img {
+  height: 65px;
+  margin-top: 5px;
+}
+
 
 
 /***HERO PICTURE***/
 
 .hero {
-  height: 50vh;
-  background: url(./unsplash.hero.jpg) no-repeat top center;
+  height: 70vh;
+  background: url(./unsplash-hero.jpg) no-repeat bottom center;
   /*media query on background url to have a nice pic*/
   background-size: cover;
   display: flex;
@@ -130,33 +149,164 @@ a {
   width: 90%;
   margin: 40px auto;
   display: flex;
-  flex-direction: column;
+  /*flex-direction: column;*/
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
+.bakeryText, .foodText {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+
+}
+
 .bakery-container img, .food-container img {
   width: 80%;
   object-fit: contain;
+  box-shadow: 0 0 20px lightgrey;
 }
 
-.bakery-container p, .food-container p {
+
+/****ACCORDION****/
+
+.accordion {
+  width: 100%;
+  background-color: rgb(245,255,250);
+  font-size: 18px;
+  transition: 0.9s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  /*padding: 30px;*/
+  padding-left: 3vw;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.question {
+  padding: 20px;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 1px solid rgba(189, 201, 173, 0.858);
   width: 80%;
 }
 
+.active, .question:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.answer {
+  display: none;
+  background-color: white;
+  overflow: hidden; 
+}
 
 
+/*****INPUT FORM****/
 
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3vw;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  /*margin-left: 20px;*/
+  display:flex;
+  align-items: center;
+}
+
+.form-group label {
+  width: 100px;
+  margin-right: 15px;
+}
+
+/*since I want them to be in a row instead of a column*/
+#time, #findUs {
+  display: block;
+}
+
+input {
+  font-size: 16px;
+  /*background: rgba(100, 0, 0, .1);*/
+  border: none;
+  border-bottom: 1px solid rgba(100, 0, 0, .1) ; 
+}
+
+input:invalid {
+  /*border-bottom: 2px solid red;*/
+}
+
+button {
+  width: 130px;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 20px 15px;
+  margin: 20px 20px;
+  font-family: inherit;
+
+}
+
+button::before, button::after {
+  content:'';
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 2px solid lightgrey;
+  transition: all .6s ease;
+  border-radius: 2px;
+}
+
+button::after {
+  bottom:0;
+  right:0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  /*border-bottom-color: ;
+  border-right-color: ;*/
+}
+
+button::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  /*border-top-color: blueviolet;
+  border-left-color: blueviolet;*/
+}
+
+button:hover:after, button:hover:before {
+  width:100%;
+  height: 100%;
+}
+
+
+/****FOOTER****/
+footer {
+  background:green;
+  margin-top: 40px;
+}
 
 
 /***TABLET MEDIA QUERIES****/
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .nav-bar {
     all: unset;
     display: flex;
     list-style: none;
+  }
 
+  .nav-link a {
+    font-size: 18px;
   }
 
   .menu-icon {
@@ -171,12 +321,15 @@ a {
     flex-direction: row-reverse;
   }
 
+   
+
   .bakery-container img, .food-container img {
-    width: 40%;
+    width: 50%;
   }
 
-  .bakery-container p, .food-container p {
+  .bakeryText, .foodText {
     width: 40%;
+    margin-left: 10px;
   }
 
 }
