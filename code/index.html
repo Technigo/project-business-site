@@ -11,7 +11,7 @@
     <title>Coffee Collective</title>
   </head>
   <body>
-    <header>  <!-- HEADER -->
+    <header> <!-- HEADER -->
       <div class="header-text">
         <div class="backdrop">
           <h1>Coffee Collective</h1>
@@ -21,88 +21,115 @@
     </header>
 
     <div class="main-content">
-    <form action="http://httpbin.org/anything" method="POST">  <!-- FORM -->
-      <fieldset>
-        <legend>BOOK YOUR COFFEE TASTING:</legend>
-        <div class="form">
-          <div class="details">
-            <label>
-              Full Name:<br />
-              <input type="text" name="name" required />
-            </label>
+      <form action="http://httpbin.org/anything" method="POST"> <!-- FORM -->
+        <fieldset>
+          <legend>BOOK YOUR COFFEE TASTING:</legend>
+          <div class="form">
+            <div class="details">
+              <label>
+                Full Name:<br />
+                <input type="text" name="name" required />
+              </label>
 
-            <label>
-              Email:<br />
-              <input type="email" name="email" required />
-            </label>
+              <label>
+                Email:<br />
+                <input type="email" name="email" required />
+              </label>
 
-            <label>
-              Number of Participants:<br />
-              <select name="participants" required>
-                <option value="4">4 (minimum)</option>
-                <option value="8">8</option>
-                <option value="10">10 (maximum)</option>
-              </select>
-            </label>
+              <label>
+                Number of Participants:<br />
+                <select name="participants" required>
+                  <option value="4">4 (minimum)</option>
+                  <option value="8">8</option>
+                  <option value="10">10 (maximum)</option>
+                </select>
+              </label>
+            </div>
+
+            <p>Number of coffee variations you'd like to taste:</p>
+
+            <div class="radio-buttons">
+              <label class="radio-button-container"
+                >4
+                <input type="radio" name="variations" value="4" checked />
+                <span class="custom-radio"></span>
+              </label>
+
+              <label class="radio-button-container"
+                >6
+                <input type="radio" name="variations" value="6" />
+                <span class="custom-radio"></span>
+              </label>
+
+              <label class="radio-button-container"
+                >8
+                <input type="radio" name="variations" value="8" />
+                <span class="custom-radio"></span>
+              </label>
+            </div>
+
+            <button type="submit">Get tasting!</button>
           </div>
+        </fieldset>
+      </form>
 
-          <p>Number of coffee variations you'd like to taste:</p>
-
-          <div class="radio-buttons">
-            <label class="radio-button-container"
-              >4
-              <input type="radio" name="variations" value="4" checked />
-              <span class="custom-radio"></span>
-            </label>
-
-            <label class="radio-button-container"
-              >6
-              <input type="radio" name="variations" value="6" />
-              <span class="custom-radio"></span>
-            </label>
-
-            <label class="radio-button-container"
-              >8
-              <input type="radio" name="variations" value="8" />
-              <span class="custom-radio"></span>
-            </label>
-          </div>
-
-          <button type="submit">Get tasting!</button>
+      <section class="accordion"> <!-- ACCORDION-->
+        <div id="button1" class="question">
+          <p>WHAT WILL WE LEARN?</p>
         </div>
-      </fieldset>
-    </form>
-
-    <section class="accordion">  <!-- ACCORDION-->
-      <div id="button1" class="question">
-          <p>QUESTION</p>
+        <div class="panel" id="panel">
+          <p>
+            The laboratory tasting session is the professional course of the
+            tasting. You learn how to taste coffee and to narrow down the
+            individual flavours in the cup by comparing the coffee to other
+            flavours and aromas. We will guide you step by step so you too can
+            enjoy coffee evaluation! No experience needed.
+          </p>
         </div>
-      <div class="panel" id="panel">
-          <p>Extra information goes here</p>
-      </div>
-  
+
         <div id="button2" class="question">
-          <p>QUESTION</p>
+          <p>ROASTING STYLES</p>
         </div>
         <div class="panel" id="panel">
-          <p>Extra information goes here</p>
-      </div>
-  
+          <p>
+            Drop Coffee has a flavour vision of a clear and bright cup where the
+            origin of the coffee should shine through. We like to present as
+            much of the coffees’ acidity and sweetness as possible. Some coffees
+            will be more acidic and juicy - and some creamy and chocolatey -
+            depending on the origin, but all the coffees are roasted for
+            clarity.
+          </p>
+        </div>
+
         <div id="button3" class="question">
-          <p>QUESTION</p>
+          <p>COFFEE VARIETIES</p>
         </div>
         <div class="panel" id="panel">
-          <p>Extra information goes here</p>
-      </div>
-  
-      <div id="button4" class="question">
-        <p>QUESTION</p>
-      </div>
-      <div class="panel" id="panel">
-        <p>Extra information goes here</p>
+          <p>
+            Most of the ingredients used at our café are local, produced by
+            small scale producers and mainly organic. Our origins of focus are
+            Bolivia, Costa Rica, Nicaragua, Honduras, Guatemala, El Salvador,
+            Ethiopia and Kenya. We're crafting to perfection our preferred taste
+            profile and maintaining our ethical business model with the
+            producers.
+          </p>
+        </div>
+
+        <div id="button4" class="question">
+          <p>REGARDING COVID-19</p>
+        </div>
+        <div class="panel" id="panel">
+          <p>
+            Our outdoor seating is open and our seatings has a 2 meters distance
+            and cleaned off frequently. We serve the coffee at the table and ask
+            you to hold a 2 meters distance in the line. If you’re not showing
+            symptoms, you are heartily welcome to the café, to sit in or to go.
+            As always, we are keeping our shelves filled with freshly roasted
+            coffee from our roastery, to brew at home.
+          </p>
+        </div>
+      </section>
     </div>
-  </section>
-</div>
-<script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>
