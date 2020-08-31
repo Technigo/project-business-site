@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>the Studio</title>
     <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   </head>
   <body>
 
@@ -21,10 +22,10 @@
       <form action="/action_page.php">
         <h2>Sign up!</h2>
         <label for="name">Name</label><br>
-        <input type="text" id="name" name="name" value="Natalie Green"><br>
+        <input type="text" id="name" name="name" autocomplete="off"><br> <!--value="Natalie Green", onfocus="this.value=''"-->
 
         <label for="e-mail">E-mail</label><br>
-        <input type="text" id="e-mail" name="e-mail" value="natalie.green@gmail.com"><br>
+        <input type="text" id="e-mail" name="e-mail" autocomplete="off"><br> <!--value="natalie.green@gmail.com, onfocus="this.value=''""-->
       
         <p>Choose your city</p>
         <input type="radio" id="Stockholm" name="city" value="Stockholm" checked="checked">
@@ -40,7 +41,6 @@
         </div>
 
         <input class="submit" type="submit" value="Submit">
-
       </form>
 
       <section class="accordion">
