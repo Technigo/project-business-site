@@ -6,71 +6,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Breakfast Club</title>
   <link rel="stylesheet" href="style.css">
-  <!-- dont forget to add a css file and link it here! -->
 </head>
 
 <body>
 
-  <!-- video or image as a header is cool :) -->
+  <!-- Video header -->
 
-  <header>
-    <video autoplay loop muted src="./videos/video.mp4" type="video/mp4"></video>
-    <div class="overlay">
-      <h1>The Breakfast Club</h1>
-    </div>
-  </header>
+  <div class="herovideo">
+    <video width:100% autoplay loop muted preload="auto">
+      <source src="./videos/video.mp4" type="video/mp4">
+    </video>
+    <h1>The Breakfast Club</h1>
+  </div>
 
 
 
-  <div class="Sign-up">
+  <div class="sign-up">
     <h1>Sign up for our weekly meet-ups! </h1>
   </div>
+
 
   <!-- Signup form -->
 
 
   <form action="http://httpbin.org/anything" method="POST">
-    <label>
-      Name
-      <input type="text" name="name" required>
-    </label>
+    <div class="form-group">
+      <label>
+        Name
+        <input type="text" name="name" required  />
+      </label>
+    </div>
+    
+    <div class="form-group">
+      <label>
+        Phone
+        <input type="text" name="phone" required />
+      </label>
+    </div>
 
-    <label>
-      Phone
-      <input type="text" name="phone" required>
-    </label>
-
-    <label>
-      Email
-      <input type="email" name="email" required>
-    </label>
-
+    <div class="form-group">
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+    </div>
 
     <h3>City</h3>
 
-    <label>
-      Stockholm
-      <input type="radio" name="sthlm" id="Stockholm">
-    </label>
+    <div class="form-group">
+      <label>
+        <input type="radio" name="sthlm" id="Stockholm" value="sthlm" />
+        Stockholm
+      </label>
+      <label>
+        <input type="radio" name="gbg" id="Gothenburg" value="gbg" />
+        Gothenburg
+      </label>
+    </div>  
 
-    <label>
-      Gothenburg
-      <input type="radio" name="gbg" id="Gothenburg">
-    </label>
+    <div class="form-group">
+      <label>
+        <input type="checkbox" name="checkbox" id="check" />
+        I Agree to the terms and conditions
+      </label>
 
-    <label>
-      <input type="checkbox" name="checkbox" id="check">
-      I Agree to the terms and conditions
-    </label>
+    </div>
 
-    <button type="submit">Submit</button>
-
+    <div class="form-group-button">
+      <input type="submit" name="Submit" value="Submit">
+      
+    </div>
   </form>
 
 
 
+  <!-- Accordion -->
   <section class="accordion">
-    <!-- Accordion -->
+
     <h1>Frequently asked questions</h1>
 
     <div class="question" id="section1">Section 1</div>
@@ -83,16 +95,13 @@
       <p>Lorem ipsum...</p>
     </div>
   </section>
+
   <!-- dont forget to link the javascript file here! -->
-
-
-
-
 
 
   <footer>
     <div class="footer">
-      <p></p>
+      <p> © Created by Moa Hammarbäck </p>
     </div>
   </footer>
 

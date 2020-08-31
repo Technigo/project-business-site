@@ -9,51 +9,136 @@ font-family: didot;
 
 
 body  {
+  width: 100%;
   background-color: #FAF0E6;
   margin: 0;
 
-}
-
-header {
-  margin: 0;  
-}
-
-header h1 {
-  font-size: 100px;
-  color: white;
 
 }
+
 
 video {
-  position: relative;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  
-  
 }
 
 
-.overlay {
+.herovideo {
+  position: relative;
+  width: 667px;
+ 
+}
+.herovideo h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  font-family:“didot”;
+  color: #FFFFFF;
+  margin:0px;
+}
+
+
+  /***  Media Quaries   ***/
+
+@media screen and (min-width: 667px) and (max-width:1024px) {
+  .herovideo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .herovideo h1 {
+    font-size: 50px;
+
+
+  }
+} 
+
+@media screen and (min-width: 1025px) {
+  .herovideo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .herovideo h1 {
+    font-size: 80px;
+
+
+    
+  }
+} 
+
+
+.sign-up {
+  margin-top:30px;
   display: flex;
-  align-items: center;
   justify-content: center;
-
-
+  width:650px
+  
 }
 
 
-
+/*Form */
 
 
 form {
-justify-content: center;
- border: 2px solid black;
- width: 400px;
- height: 500px;
- padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 40px;
+  margin: 20px;
+  margin-left: 100px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.15);
+  font-size: 20px;
+  
+ 
+  }
+  
+.form-group {
+ display: flex;
+  justify-content: center;
+    
 }
+
+.form-group label {
+ justify-content: center;
+ padding:10px;
+  border-radius:10px;
+}
+
+.form-group-button {
+  display: flex;
+  justify-content: center;
+  
+
+}
+
+
+
+
+h3 {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  
+  width: 120px;
+  height: 50px;
+  background-color: brown;
+
+}
+ 
+
+
+
+
+
+
+
+
 
 
 
@@ -70,7 +155,7 @@ input {
 
   /* some styling here */
 input:valid {
-  background-color: green;
+  
 }
 
 label {
@@ -79,3 +164,14 @@ label {
 
 }
 
+footer{
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  color:#2F4F4F;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
