@@ -1,12 +1,33 @@
-# Business Site
+# Business Site - [View Live!](https://ylvas-buiness-site.netlify.app/)
 
-Replace this readme with your own information about your project. 
+The assigment is to create a Buisness Site which has the following content:
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+* Hero image/video
+* Signup form
+* FAQ section (able to expand/collapse description)
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+### Tools and techniques
+
+* Flexbox & media queries for responsivness (mobile, tablet and desktop)
+* `<form> </form>` for Signup form
+* Accordion, an area that can collapse to show and hide text
+
+### Planning
+
+I started with a sprint planning and was breaking down the work in small tasks (added into Trello).
+
+In HTML file I started to add html element needed for my site, like a template.
+
+Started from the top of the site and worked down to the bottom.
+
+### Had more time, I would have done this next
+
+TODO
+
+## Screenshots
+
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+[https://ylvas-buiness-site.netlify.app/](https://ylvas-buiness-site.netlify.app/)
