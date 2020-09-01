@@ -2,6 +2,153 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+/* .active + .answer {
+  some styling here 
+} */
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #eaf8bf;
+  font-family: sans-serif;
+}
+
+/* Hero */
+
+#hero{
+  height: 55vh;
+  width: 100%;
+  background: #eca400;
+  display: flex;
+}
+
+#hero::after {
+
+  width: 100%;
+  height: 55%;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+
+}
+
+#hero video {
+  width: 100%;
+  height: 55%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  object-fit: cover;
+}
+
+.container {
+  position: absolute;
+  color: whitesmoke;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 20;
+}
+
+.container h1 {
+  font-size: 72px;
+  letter-spacing: 0.2em;
+}
+
+.container h1 span {
+  border: 10px solid whitesmoke;
+  padding: 6px 14px;
+  display: inline-block;
+}
+
+.des {
+  margin: 20px;
+  display: block;
+  font-size: 26px;
+  text-shadow: 0 0 10px black;
+}
+
+.btn {
+  color: white;
+  padding: 10px 24px;
+  font-size: 20px;
+  text-decoration: none;
+  background: #d36135;
+  border-radius: 8px;
+  transition: 0.3s all;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Form */
+
+.member {
+  width:350px;
+  display: flex;
+  background: #eca400;
+  margin-top: 50px;
+  padding: 5px;
+}
+
+.signup {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid white;
+}
+
+h2{
+  text-align: center;
+  background: #006992;
+  color: whitesmoke;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+input{
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+input[type=text], 
+input[type=email],
+input[type=password]{
+  width:90%;
+} 
+
+input[type=radio],
+input[type=checkbox]
+{
+  margin-top: 20px;
+} 
+
+input[type=submit]{
+  margin-top: 30px;
+  width:95%;
+  background: #001d4a;
+  color: antiquewhite;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: grab;
+
+
+} 
+
+
+/* Accordian */
+
+form {
+  color: black;
 }
