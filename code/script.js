@@ -1,8 +1,8 @@
 function toggleHamburger() {
-  this.classList.toggle("responsive")
+  this.parentNode.classList.toggle("responsive")
 }
 
-document.getElementById("topnavbar").onclick = toggleHamburger
+document.getElementById("hamburger").onclick = toggleHamburger
 
 function toggleFaq () {
   this.classList.toggle("question")
