@@ -1,32 +1,113 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evening Cooking Classes</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+<body>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+  <div class="nav-container">
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <!-- <img class="logo-full" src="#" alt="logo">
+      <img class="logo-ico" src="#" alt="logo mini"> -->
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Sign up</a>
+      <a href="#">Other</a>
+    </nav>
+  </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
+  <header>
 
-    
-    <script src="./script.js"></script>
-  </body>
+
+    <video controls width="600" autoplay loop muted preload="auto">
+      <source src="./video_hd.mp4" type="video/mp4">
+      <p>This browser doesn't support video. Here's a <a href="./video_hd.mp4">link to the video</a> instead.</p>>
+    </video>
+  </header>
+  <!-- Signup form -->
+  <form 
+    class="form"
+    action="http://httpbin.org/anything"
+    target="_blank" 
+    method="POST"
+  >
+    <div class="form-group">
+      <label for="firstName">First name
+      <input
+          type="text"
+          name="firstNameValue"
+          placeholder="First name"
+          required
+      />
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last name
+      <input
+        type="text"
+        name="lastNameValue"
+        placeholder="Last Name"
+        required
+      />
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="email">Email address
+      <input
+          type="email"
+          name="emailValue"
+          placeholder="E-mail address"
+          required
+      />
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="message">Message
+      <textarea
+          id="message"
+          cols="10"
+          rows="2"
+          name="messageValue"
+      ></textarea>
+      </label>
+    </div>
+
+    <button class="form-submit" type="submit">Sign me up!</button>
+  </form>
+
+  <section class="accordion">
+    <!-- Accordion -->
+    <h1>FAQ</h1>
+
+    <div class="question" id="section1">Section 1</div>
+    <div class="answer">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <div class="question" id="section2">Section 2</div>
+    <div class="answer">
+      <p>Lorem ipsum...</p>
+    </div>
+  </section>
+
+
+  <footer>
+    <p><span style='font-size:25px;'>&#129418;</span></p>
+    <p>This page was made by Peggy @<a href="https://blipsandclicks.com">blipsandclicks</a> for educational purposes.
+    </p>
+    <p>Video by <a href="https://www.pexels.com/@pressmaster">Pressmaster</a> from <a
+        href="https://www.pexels.com/videos/">Pexels</a>.
+    </p>
+  </footer>
+  <script src="./script.js"></script>
+</body>
 </html>
