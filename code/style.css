@@ -5,3 +5,303 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .active + .answer {
   /* some styling here */
 }
+
+/* GENERAL */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #d1dfe4;
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+}
+
+video {
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+.header-content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
+}
+
+img.all-mountain-logo {
+    width: 25%;
+}
+
+h1.header-title {
+  display: none;
+}
+
+/* For computer only */
+@media (min-width: 1025px) {
+  
+  .header-content {
+    height: 700px;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+  }
+
+  nav a {
+    margin: 0px 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    color: orange;
+    text-decoration: underline;
+  }
+
+  button.header {
+    width: 100px;
+    height: 30px;
+  }
+
+  h1.header-title {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    font-family: 'Abril Fatface', Cursive;
+    font-weight: normal;
+    font-size: 80px;
+    color: orange;
+  }
+
+  h2.header-subtitle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
+    font-size: 32px;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: lighter;
+  }
+
+
+}
+
+
+/* FORM SECTION */
+
+section.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 100px;
+  align-items: center;
+}
+
+.textbox {
+  background-color: white;
+  width: 80%;
+  padding: 30px;
+  margin: 20px 0px;
+}
+
+.form-container {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  width: 80%;
+  padding: 10px 20px 20px 20px;
+}
+
+h2.form {
+  font-family: 'Abril Fatface', Cursive;
+  font-size: 40px;
+  font-weight: normal;
+  margin: 0px 0px 10px 0px;
+}
+
+p.form {
+  margin: 0px;
+  font-family: 'Poppins', Sans-Serif;
+  font-size: 18px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label, .form-group-extra label {
+  width: 100%;
+  margin: 10px 0px 10px 0px;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+}
+
+h3 {
+  width: 100%;
+  margin: 10px 0px 10px 0px;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.group-size-container label {
+  font-size: 16px;
+  margin: 0px;
+  text-transform: capitalize;
+}
+
+.dates-container label{
+  font-size: 16px;
+  margin: 0px;
+  text-transform: capitalize;
+}
+
+/* group size: radio buttons*/
+
+.group-size-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+
+/* dates: date & checkbox */
+
+.dates-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+/* extra: text */
+
+.form-group-extra {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*customize the submit button*/
+button.form {
+  width: 100px;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 5px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* For tablet only */
+
+
+/* For computer only */
+@media (min-width: 1025px) {
+
+  section.form {
+    flex-direction: row;
+    justify-content: center;
+    min-height: 400px;
+  }
+
+  .textbox {
+    width: 20%;
+    margin-right: 5%;
+    height: 440px;
+  }
+
+  .form-container {
+    width: 30%;
+  }
+
+  form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form-group {
+    width: 50%;
+    padding: 10px;
+  }
+
+  .form-group-size, .form-group-dates {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .group-size-container {
+    width: 25%;
+  }
+
+  .dates-container {
+    width: 50%;
+  }
+
+  .form-group-extra {
+    width: 100%;
+    padding: 10px;
+
+  }
+
+  button.form {
+    margin: 10px;
+  }
+}
+
+/* FAQ SECTION */
+
+section.accordion {
+  display: flex;
+  justify-content: center;
+}
+
+.accordion-faq {
+  background-color: white;
+  width: 55%;
+  margin: 50px;
+}
