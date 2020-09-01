@@ -1,7 +1,94 @@
+body {
+  margin: 0;
+  background: lightblue;
+}
+
+h1 {
+  font-size: 80px;
+  margin: 10px 0;
+}
+
+p {
+  color: #fff;
+}
+
+/****** HEADER ******/
+
+header {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  height: 100vh;
+}
+
+video {
+  min-height: 100vh;
+  min-width: 177.8vh;
+  position: absolute;
+
+  /* center */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: #fff;
+  padding: 0;
+}
+
+li {
+  margin: 0 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+header p {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.header-text {
+  text-align: center;
+  color: #fff;
+
+  /* center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+  fill: #fff;
+  padding: 10px 20px;
+}
+
+.sign-up {
+  display: inline;
+  margin-right: 20px;
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
   /* some styling here */
+}
+
+/* TABLET */
+@media (min-width: 667px) and (max-width: 1024px) {
+  nav {
+    background: #000;
+  }
 }
