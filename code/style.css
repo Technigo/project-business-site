@@ -7,19 +7,150 @@ video {
   width: 100%;
 }
 
+main {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
 /*** FORM ***/
 .form {
-  border: 1px solid black;
-  width: 50%;
+  display: block;
+  border: 1px solid blue;
+  width: 48%;
 }
+
+form {
+  display: flex;
+  margin-top: 0px;
+  flex-direction: column;
+}
+
+
+fieldset {
+  display: block;
+  /*** below are default setting, values changed ***/
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 4px;
+  padding-inline-start: 4px;
+  padding-inline-end: 4px;
+  padding-block-end: 4px;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: bisque;
+  /***not default setting***/
+  margin-bottom: 20px;
+}
+
+/* .owner-info {
+  height: 100%;
+} */
+
+.owner-info-div {
+  border: 1px solid orangered;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+.owner-info-div > label {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-owner {
+  /*default settings below*/
+  font-size: 14px;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: left;
+  appearance: textfield;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+  border-image: initial;
+}
+
+/* div:first-of-type {
+  border: 1px solid pink;
+} */
 
 input {
   font-size: 14px;
+  width: fit-content;
+  /* default settings - zakomentiraj neuporabne/definirane prej */
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: textfield;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 2px;
+  border-width: 2px;
+  /* border-style: solid; */
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+  border-image: initial;
+}
+
+button {
+  align-self: center;
+  /*default settings below*/
+  appearance: button;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark(buttontext, rgb(170, 170, 170));
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(74, 74, 74));
+  box-sizing: border-box;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 4px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+  border-image: initial;
 }
 
 /*** FAQ - ACCORDION ***/
 .accordion {
   border: 1px solid red;
+  width: 48%;
 }
 
 

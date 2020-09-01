@@ -15,70 +15,62 @@
       </video>
     <!-- video or image as a header is cool :) -->
     </header>
-    
-    <!-- Signup form -->
-    <section class="form">
-      <form action="http://httpbin.org/anything" method="POST">
-        <p>Sign up for a consultation session</p>
-        <!--OWNER'S INFO-->
-        <fieldset class="owner-info">
-          <div>
-            <!-- <p>Sign up for a consultation session</p> -->
+
+    <main>
+      <!-- Signup form -->
+      <section class="form">
+        <form action="http://httpbin.org/anything" method="POST">
+          <p>Sign up for a consultation session</p>
+          <!--OWNER'S INFO-->
+          <fieldset class="owner-info">
+          <div class="owner-info-div">
             <label>
               Your full name:
-              <input type="text" required name="name">
+              <input type="text" required name="name" class="input-owner">
             </label>
             <label>
               E-mail:
-              <input type="email" required name="emailAddress">
+              <input type="email" required name="emailAddress" class="input-owner">
             </label>
             <label>
               Phone number:
-              <input type="tel" name="phoneNumber">
+              <input type="tel" name="phoneNumber" class="input-owner">
             </label>
           </div>
-        </fieldset>
+          </fieldset>
   
-        <!--DOG'S INFO-->
-        <fieldset class="dog-info">
-          <label>
-          Your dog's name:
-            <input type="text" required name="message">
-          </label>
-          <label>
-            Breed:
-            <input type="text" required name="message">
-          </label>
-          <div class="dog-sex">
+          <!--DOG'S INFO-->
+          <fieldset class="dog-info">
             <label>
-              <input type="radio" required name="male">
-              male
+              Your dog's name:
+              <input type="text" required name="message">
             </label>
             <label>
-              <input type="radio" required name="female">
-              female
+              Breed:
+              <input type="text" required name="message">
             </label>
-          </div>
-          <div>
-            <label>
-              Spayed/Neutered
+            <div class="dog-sex">
+              <label>
+                <input type="radio" required name="male">
+                male
+              </label>
+              <label>
+                <input type="radio" required name="female">
+                female
+              </label>
+            </div>
+            <div>
+              <label>
+                Spayed/Neutered
                 <input type="radio" required name="message"> YES
                 <input type="radio" required name="message"> NO
               </label>
-          </div>
-          
-          <label>
-            Age:
-            <input type="radio" required name="puppy">
-            <input type="radio" required name="youngerAdult">
-            <input type="radio" required name="olderDog">
-          </label>
+            </div>
             <textarea name="message" rows="" cols=""> <!--or define size of the box in CSS-->
-              Short description of your dog's behavioural issue:
+                Short description of your dog's behavioural issue:
             </textarea> 
-        </fieldset>
-  
-        <label>
+          </fieldset>
+        <!-- <label>
           Where did you hear about us?
           <select name="heardAbout">
             <option value="Fb">Facebook</option>
@@ -87,17 +79,17 @@
             <option value="friend">From a friend</option>
             <option value="other">Other ...</option>
           </select>
-        </label>
+        </label> -->
        
-        <button type="submit" onclick="alert('Your information has been submitted!')">Sign Up</button> 
-        <!--check if the onclick function works-->
-      </form>
-  
+          <button type="submit" onclick="alert('Your information has been submitted!')">
+            Send request
+          </button> 
+          <!--check if the onclick function works-->
+        </form>
+      </section>
 
-    </section>
-
-    <!-- Accordion -->
-    <section class="accordion">
+      <!-- Accordion -->
+      <section class="accordion">
       <h1>FAQ</h1>
 
       <div class="question" id="section1">Section 1</div>
@@ -109,10 +101,10 @@
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
-    </section>
+      </section>
+    </main>
     <!-- dont forget to link the javascript file here! -->
     <footer>
-
     </footer>
   </body>
 </html>
