@@ -1,12 +1,27 @@
-# Business Site
+# Project Business Site 👔
+This week's project was to create a site for a company of our choice (an existing one or fantasy). 
+The main requirements were to have" 
 
-Replace this readme with your own information about your project. 
+- "Hero" image/video 
+- Signup form with: 2 x Text fields, 1 x A password field, 1 x Set of radio buttons, 1 x Set of checkboxes,1 x Submit button
+- Accordion element 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
-## The problem
+# MOLECULES 🧪
+I decided to build MOLECULES, a business that allows you to make your own fragrance, built with all sorts of molecules! 
+The theme of the site was based in my passion for perfume and I wanted the design to be quite ethereal but strong at the same time, like most perfumes I like. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## Planning & The Problem 🧩
+
+I applied a lot of knowledge I acquired in last week's project. I used flexbox to structure the layout the page and mobile first approach for responsiveness and decided to have a subtle signup form for mobile and tablet and then a different styled form for the desktop version. 
+Initially I was going to have a hero image but then switched to a video because I wanted to have the challenge of making it responsive across devices. 
+
+I had quite a bit of trouble with the accordion element, as I couldn't  fully understand the Javascript code yet. But a codepen exercise and quite a bit of google search did help and I managed to make it work in the end.
+
+# Tech ⚡
+HTML5
+CSS3
+JavaScript
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Coming soon.
