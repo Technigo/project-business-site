@@ -122,8 +122,8 @@ a {
   /*media query on background url to have a nice pic*/
   background-size: cover;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  /*flex-wrap: wrap;*/
+  /*justify-content: flex-start;*/
   align-items: center;
   padding: 0 10vw; 
   color: #fff;
@@ -135,7 +135,7 @@ a {
     text-transform: uppercase;
     text-align:center;
     background: rgba(0,0,0,0.2);
-    padding: 10px;
+    /*padding: 10px;*/
 }
 
 .hero p {
@@ -282,6 +282,11 @@ input:invalid {
   /*border-bottom: 2px solid red;*/
 }
 
+::placeholder {
+  font-size: 12px;
+  font-family: inherit;
+}
+
 button {
   width: 130px;
   position: relative;
@@ -404,6 +409,20 @@ footer {
     display: none;
   }
 
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    align-self: flex-start;
+  }
+
+  .hero p {
+    width: 50%;
+    align-self: flex-start;
+  }
+
   .bakery-container {
    flex-direction: row;
   }
@@ -411,8 +430,6 @@ footer {
   .food-container {
     flex-direction: row-reverse;
   }
-
-   
 
   .bakery-container img, .food-container img {
     width: 50%;
@@ -432,10 +449,40 @@ footer {
     display: flex;
   }
 
-
   .menu-icon {
     display: none;
   }
+
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    align-self: flex-start;
+  }
+
+  .hero p {
+    width: 50%;
+    align-self: flex-start;
+  }
+
+  .bakery-container {
+    flex-direction: row;
+   }
+ 
+   .food-container {
+     flex-direction: row-reverse;
+   }
+ 
+   .bakery-container img, .food-container img {
+     width: 35%;
+   }
+ 
+   .bakeryText, .foodText {
+     width: 40%;
+     margin-left: 10px;
+   }
 
   .form {
     margin-left: 60vw;
