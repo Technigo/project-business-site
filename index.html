@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Evening Cooking Classes</title>
+  <title>Because Food</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -19,86 +19,74 @@
     <!-- <img class="logo-full" src="#" alt="logo">
       <img class="logo-ico" src="#" alt="logo mini"> -->
     <nav>
+      <a href="#">Classes</a>
       <a href="#">About</a>
       <a href="#">Sign up</a>
-      <a href="#">Other</a>
+      <a href="#">Login</a>
     </nav>
   </div>
 
   <header>
-
-
-    <video controls width="600" autoplay loop muted preload="auto">
+    <video autoplay loop muted preload playsinline>
       <source src="./video_hd.mp4" type="video/mp4">
       <p>This browser doesn't support video. Here's a <a href="./video_hd.mp4">link to the video</a> instead.</p>>
     </video>
   </header>
+
   <!-- Signup form -->
-  <form 
-    class="form"
-    action="http://httpbin.org/anything"
-    target="_blank" 
-    method="POST"
-  >
-    <div class="form-group">
-      <label for="firstName">First name
-      <input
-          type="text"
-          name="firstNameValue"
-          placeholder="First name"
-          required
-      />
+  <section class="form-accordian">
+    <form class="form" action="http://httpbin.org/anything" target="_blank" method="POST">
+      <h3>Reserve your spot</h3>
+      <div class="form-group">
+        <label for="firstName">First name
+          <input type="text" name="nameValue" placeholder="First and last name" required />
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address
+          <input type="email" name="emailValue" placeholder="E-mail address" required />
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="password">Password
+          <input type="password" name="password" placeholder="choose a passwords" required />
+        </label>
+      </div>
+      <label for="passmatch">Confirm password
+        <input type="password" name="passmatch" placeholder="Confirm password" required />
       </label>
-    </div>
-    <div class="form-group">
-      <label for="lastName">Last name
-      <input
-        type="text"
-        name="lastNameValue"
-        placeholder="Last Name"
-        required
-      />
-      </label>
-    </div>
-    <div class="form-group">
-      <label for="email">Email address
-      <input
-          type="email"
-          name="emailValue"
-          placeholder="E-mail address"
-          required
-      />
-      </label>
-    </div>
-    <div class="form-group">
-      <label for="message">Message
-      <textarea
-          id="message"
-          cols="10"
-          rows="2"
-          name="messageValue"
-      ></textarea>
-      </label>
-    </div>
+      <div class="form-group">
 
-    <button class="form-submit" type="submit">Sign me up!</button>
-  </form>
+      </div>
+      <!-- 1 set of radio -->
+      <div class="form-group">
+        <label for="">whatis
+        </label>
+      </div>
+      <!-- 1 set of checkboxes -->
+      <div class="form-group">
+        <input type="checkbox" id="tos" required><label for="tos">I agree to the <a href="#">Terms & Conditions</a>a>.
+        </label>
+      </div>
 
-  <section class="accordion">
-    <!-- Accordion -->
-    <h1>FAQ</h1>
+      <button class="form-submit" type="submit">Sign me up!</button>
+    </form>
 
-    <div class="question" id="section1">Section 1</div>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
+    <section class="accordion">
+      <!-- Accordion -->
+      <h1>FAQ</h1>
 
-    <div class="question" id="section2">Section 2</div>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
+      <div class="question" id="section1">Section 1</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <div class="question" id="section2">Section 2</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+    </section>
   </section>
-
 
   <footer>
     <p><span style='font-size:25px;'>&#129418;</span></p>
@@ -110,4 +98,5 @@
   </footer>
   <script src="./script.js"></script>
 </body>
+
 </html>

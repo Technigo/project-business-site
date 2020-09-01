@@ -7,20 +7,18 @@ body {
 
 /* Nav */
 .nav-container {
-  height: 80px;
-  width: 100%;
   top: 0;
-  /* position: fixed; */
+  height: 50px;
+  width: 100%;
   display: flex;
   align-items: center;
-  background: #4d4d4d;
-  /* padding: 0 16px; */
+  background: #000066;
 }
 
 .hamburger {
   height: 25px;
   width: 30px;
-  background: #fff;
+  background: #000066;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -29,9 +27,10 @@ body {
 }
 
 .hamburger div {
+  margin-left: 16px;
   height: 5px;
   width: 30px;
-  background: #000;
+  background: #fff;
   border-radius: 5px;
 }
 
@@ -48,7 +47,7 @@ nav {
 }
 
 nav a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   margin-left: 16px;
 }
@@ -61,29 +60,48 @@ a:hover {
 /* Header */
 header {
   padding: 0;
-  height: 375px;
+  height: 600px;
   width: 100%;
   background: lightgreen;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  display: block;
 }
 
 video {
-  margin: 16px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: block;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center center;
   
+}
+
+.form-accordian {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 5px;
 }
 
 /* Form */
 .form {
+  margin-top: 5px;
   padding: 16px;
-  width: ;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  border: 2px solid blue;
-  border-radius: 10px;
+  background-color: #e0e0eb;
 }
 
 .form-group {
   margin-bottom: 15px;
-  display: flex;
   align-items: center;
 }
 
@@ -94,19 +112,22 @@ video {
 
 .form-group input,
 .form-group textarea {
-  width: 200px;
+  width: 100px;
 }
 
 .form-submit {
-  width: 100px;
+  height: 40px;
+  width: 200px;
+  border-radius: 10px; 
+  font-size: medium;
+  background-color: #adadeb;
 }
 
 /* Accordion */
 .accordion {
+  margin-top: 5px;
   padding: 16px;
-  width: 45%;
-  border: 2px solid pink;
-  border-radius: 10px;
+  width: 50%;
   background-color: lightslategray;
 }
 h1{
@@ -134,10 +155,10 @@ footer {
   left: 0;
   bottom: 0;
   right: 0;
-  position: absolute;
-  background: #4d4d4d;
+  background: #000066;
   color: #fff;
   width: 100%;
+  padding-top: 15px;
   padding-bottom: 20px;
 }
 
