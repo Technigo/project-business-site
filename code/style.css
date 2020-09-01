@@ -7,40 +7,48 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 /* } */
 
 
-/* MOBILE VIEW EXTRA SMALL DEVICES max-width: 600px  */
+/* MOBILE VIEW EXTRA SMALL DEVICES max-width: 600px */
 
 body {
   margin: 0;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
 }
 
 /* HEADER WITH LOGO, PAGE TITLE & NAV*/
 
-header {
+/* header {
   height: 70px;
   background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.hamburger-menu {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.hamburger-menu div {
+  height: 4px;
+  width: 50px;
+  border-radius: 5px;
+  background: #31482c;
+  box-sizing: border-box;
 }
 
 header nav {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  margin-right: 20px;
-  padding: 20px;
-}
+  display: none;
+} */
 
-header a {
-  text-decoration: none;
-  color: #31482c;
-  display: flex;
-  padding: 7px;
-  font-size: 15px;  
-}
-
-header a:hover {
-  background: #dadfd9;
-}
-
-/* HERO IMAG WITH TEXT */
+/* HERO IMAGE WITH TEXT */
 
 .hero-image {
   max-width: 100%;
@@ -49,16 +57,15 @@ header a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
 .hero-image-details {
-  height: 200px;
-  width: 400px;
-  padding: 25px;
+  width: 90%;
+  padding: 30px;
+  margin: 30px auto;
   background: #ffffff;
   opacity: 0.9;
   display: flex;
@@ -67,8 +74,26 @@ header a:hover {
   justify-content: center;
 }
 
-.hero-image-details h1, h3 {
+.hero-image-details h1 {
   color: #31482c;
+  font-family: 'Rozha One', serif;
+  font-size: 50px;
+  text-align: center;
+  margin: 5px;
+  font-weight: 100;
+  border-bottom: solid #31482c 1px;
+  line-height: 01em;
+}
+
+.hero-image-details h3 {
+  font-family: 'Raleway', sans-serif;
+  color:#ffffff;
+  font-size: 20px;
+  font-weight: 200;
+  background:  #9ec47f;
+  opacity: 1;
+  padding: 10px;
+  text-align: center;
 }
 
 /* MAIN CONTAINER WITH FORM & ACCORDIAN */
@@ -82,8 +107,8 @@ header a:hover {
 /* FORM */
 .form-container {
   width: 90%;
-  padding: 30px;
-  margin: 10px auto;
+  padding: 20px;
+  margin: 20px auto;
   box-sizing: border-box;
   background: #dadfd9;
   display: flex;
@@ -96,6 +121,7 @@ header a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .input-section h3 {
@@ -103,6 +129,10 @@ header a:hover {
   margin-bottom: 20px;
   margin-top: 0px;
   border-bottom: solid #31482c 1px;
+  font-weight: 100;
+  font-family: 'Rozha One', serif;
+  text-align: center;
+  color: #31482c;
 }
 
 .input-section label {
@@ -136,6 +166,14 @@ header a:hover {
   margin: 5px 0px 15px 0px;
   padding-bottom: 5px;
   border-bottom: solid #31482c 1px;
+  font-weight: 100;
+  font-family: 'Rozha One', serif;
+  color: #31482c;
+}
+
+.radio-button-container label {
+  font-family: 'Raleway', sans-serif;
+  color: #31482c;
 }
   
 .radio-button-row {
@@ -152,6 +190,7 @@ header a:hover {
   margin: 10px 5px;
   font-size: 16px;
   user-select: none;
+  box-sizing: border-box;
 }
 
 .radio-button-container input {
@@ -206,6 +245,7 @@ header a:hover {
   padding: 10px 0px 10px 0px;
   margin-top: 15px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .checkbox-container {
@@ -215,6 +255,7 @@ header a:hover {
   margin: 10px 5px;
   font-size: 16px;
   user-select: none;
+  
 }
 
 .checkbox-container input {
@@ -283,48 +324,123 @@ header a:hover {
   color: #ffffff;
 }
 
+/* ACCORDIAN */
+.accordion-parent {
+  width: 90%;
+  padding: 20px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  background: #dadfd9;
+}
 
+.accordion-parent h1 {
+  color: #31482c;
+  text-align: center; 
+  margin: 0px;
+  padding: 15px 0px;
+  font-family: 'Rozha One', serif; 
+  font-weight: 200;
+  font-size: 18px;
+}
 
+.question {
+  background: #ffffff;
+  color: #31482c;
+  padding: 10px 5px;
+  cursor: pointer;  
+}
 
-
-
-
-
-
-
-
-
-
-
+.answer {
+  background: #9ec47f;
+  color: #ffffff;
+  padding: 10px 5px;
+}
 
 /* SMALL DEVICES (PORTRAIT TABLES & LARGE IPHONES, 600PX & UPWARDS */
 @media (min-width: 600px) {
-  .background-image {
+  .hero-image {
     background-image: url("Hero-image-2.jpg");
   }
 }
 
+@MEDIA (min-width: 650px) {
+  /* .hamburger-menu {
+    display: none;
+  }
+
+  header nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #31482c;
+    display: flex;
+    padding: 7px;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;  
+  }
+  
+  header a:hover {
+    background: #dadfd9;
+  }   */
+}
 
 /* Medium devices (landscape tablets 768px and up) */
 @media (min-width:768px) {
-  .background-image {
+
+  .hero-image {
     background-image: url("Hero-image-3.jpg");
   }
+
+  .hero-image-details {
+    width: 70%;
+  }
+
+  .main-container {
+    display: flex; 
+    justify-content: flex-start; 
+    flex-wrap: wrap; 
+  }
+
+  .form-container {
+    width: 45%;
+  }
+
+  .accordion-parent {
+    width: 45%;
+  }  
 }
 
 /* LARGE DEVICES (Laptops/desktops, 992px and up) */
 @media (min-width: 992px) {
-  .background-image {
+  .hero-image {
     background-image: url("Hero-image-4.jpg");
     height: 600px;
+  }
+
+  .hero-image-details {
+    width: 50%;
+  }
+
+  .form-container {
+    padding: 30px 0px;
   }
 }
 
 
 /* EXTRA LARGE DEVICES (large laptops and desktops, 1200px and up)*/
 @media (min-width:1024px) {
-  .background-image {
+  .hero-image {
     background-image: url("Hero-image-5.jpg");
     height: 700px;
   }
+
+  .hero-image-details {
+    width: 50%;
+  }  
 }
