@@ -1,7 +1,199 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
 .active + .answer {
   /* some styling here */
+}
+
+body{
+  background: #ffffff;
+  color: #515151;
+  margin: auto 0px;
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+}
+
+a{
+ text-decoration: none;
+}
+
+/*** HEADER ***/
+header{
+ height: 400px;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ position: relative;
+ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("the-rockstar.jpg");
+}
+
+.navbar{
+ height: 80px;
+ display: flex;
+ align-items: center;
+ padding: 0px 16px;
+}
+
+div.hamburger{
+ display: flex;
+ width: 30px;
+ height: 30px;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+.hamburger div{
+ width: 30px;
+ height: 5px;
+ background: #ffffff;
+ border-radius: 5px;
+}
+
+.navbar img{
+ width: 100px;
+ margin: 0px 5px 0px 5px;
+}
+
+nav {
+ display: none; 
+}
+
+nav a{
+ color: #ffffff;
+ text-decoration: none;
+ margin-left: 16px;
+ display: inline-block;
+}
+
+nav a::after{
+ content: '';
+ display: block;
+ width: 0;
+ height: 2px;
+ transition: width .3s;
+ background: #ffffff;
+ text-decoration: none;
+}
+
+nav a:hover::after {
+  width: 100%;
+  background: solid 1px 
+}
+
+/*border-bottom: solid 1px #efefef;*/
+
+/* SOCIAL MEDIA ROW */ 
+.icon-row{
+ background-image: linear-gradient(#51414a, #0a0a10);
+ height: 100px;
+ width: 100%;
+}
+ 
+.social-menu ul{
+ position: absolute;
+ left: 50%;
+ padding: 20px;
+ margin-top: 45px;
+ transform: translate(-50%,-50%);
+ display: flex;
+}
+ 
+.social-menu ul li {
+ list-style: none;
+ margin: 0px 15px;
+}
+ 
+.social-menu ul li:nth-child(1) a:hover{
+ background-color: #ffffff;
+}
+ 
+.social-menu ul li:nth-child(2) a:hover{
+ background-color: #ffffff;
+}
+ 
+.social-menu ul li .fa {
+ font-size: 30px;
+ line-height: 60px;
+ color: #ffffff;
+}
+ 
+.social-menu ul li .fa:hover{
+ color: #000000;
+}
+ 
+.social-menu ul li a {
+ display: block;
+ width: 60px;
+ height: 60px;
+ border-radius: 50%;
+ background-color: #000000;
+ text-align: center;
+ transition: .6s;
+ box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+ 
+.social-menu ul li a:hover {
+ transform: translate(0,-10px);
+}
+ 
+/*** FOOTER ***/
+footer {
+ height: 100px;
+ background-color: #0a0a10;
+ display: flex;
+ justify-content: center;
+}
+
+footer a {
+ color: #ffffff;
+ margin-bottom: 5px;
+ display: flex;
+ align-items: center;
+}
+
+.footer-logo {
+ margin-right: 5px;
+ width: 100px;
+ }
+
+/*** MEDIA QUERIES ***/
+@media (min-width: 600px){  
+  .navbar{
+   justify-content: space-between;
+  }
+
+  nav {
+   display: inline-block;
+  }
+
+  div.hamburger{
+   display: none;
+  }
+}
+
+@media (min-width: 600px){
+
+  .nav-logo {
+   order: 2;
+  }
+ 
+  .nav-left {
+    order: 1;
+  }
+  
+  .nav-right{
+    order: 3;
+  }
+} 
+
+@media (min-width:1024px){
+
+  .navbar{
+   justify-content: flex-start;
+  }
+
+  .nav-logo {
+   order: 1;
+  }
 }
