@@ -3,6 +3,7 @@
 // console.log(this) to see how it works
 function toggle() {
   this.classList.toggle("active")
+  console.log(this)
 }
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
