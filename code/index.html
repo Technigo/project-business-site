@@ -7,16 +7,31 @@
     <title>Project 3</title>
     <link rel="stylesheet" href="style.css">
   </head><body>
-    <header></header><!-- video or image as a header is cool :) -->
+    <header>
+      <div class="overlay">
+        <h1>Dream Cakes</h1>
+        <p class="tagline">We fulfil your cake dream<br></p>
+        <button>Contact us</button>
+        </div>
+      <video autoplay muted loop>
+        <source src="./videos/CakeVideo.mp4" type="video/mp4">
+          
+      </video>
+
+    </header>
 
     
     <!-- Signup form -->
-
+    <section class="content">
     <form 
     class="form"
-    action: "http:/httpbin.org/anything"
+    action="http:/httpbin.org/anything"
     method="POST"
     >
+
+    <h3>Get your dream cake</h3>
+    <p>Choose what cake style you like from the<br>
+      list to the right and we will send you an offer</p>
     
     <div class="form-group">
       <label for="firstName">First name*</label>
@@ -53,10 +68,10 @@
 
       
       <div class="form-group">
-        <label for="message">What cake style do you want?</label>
+        <label for="message">What cake style do you want?</label><br>
         <textarea
         id="message"
-        cols="10"
+        cols="30"
         rows="2"
         name="messageValue"
         required
@@ -110,8 +125,8 @@
 
         <input 
         type="checkbox" 
-        id="Laktosfri" 
-        name="Laktosfri" 
+        id="LactoseFree" 
+        name="LactoseFree" 
         value="Foodallergies">
         <label for="allergi2">Lactose free</label><br>
 
@@ -124,14 +139,14 @@
       </div>
 
       <button class="form-submit" type="submit">Submit</button>
-      
+
     </form>
 
 
 
     <section class="accordion">
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      <h2>Choose a cake style</h2>
 
       <div class="question" id="section1">Section 1</div>
       <div class="answer">
@@ -143,6 +158,7 @@
         <p>Lorem ipsum...</p>
       </div>
     </section>
+  </section>
     <!-- dont forget to link the javascript file here! -->
   </body>
 </html>
