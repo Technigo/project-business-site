@@ -1,7 +1,52 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
+*{
+  box-sizing: border-box;
 }
+.container{
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  border: 1px black solid;
+  background-color:#a8dadc;
+  position: relative;
+}
+
+.headerText {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.19);
+  color: #f1faee;
+  font-size: 25px;
+}
+
+.headerVideo{
+  width: 100%;
+  object-fit: cover;
+}
+
+.navBar{
+  text-align: center;
+  border-top: 1px solid  #8895a7;
+}
+.navBar a{
+  padding: 20px;
+  font-size: 20px;
+  color:#1d3557;
+}
+.footer{
+  background-color: #1d3557;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 10px;
+  color: white;
+  }
