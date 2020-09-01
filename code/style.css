@@ -128,7 +128,7 @@ text-align: center;
 }
 
 /** All the forms  **/
-.form-group textarea {
+.form-group .message {
  
 }
 
@@ -184,7 +184,9 @@ textarea:invalid {
 }
 
 
-
+p {
+  font-size: 12px;
+}
 
 
   /** Accordion ***/
@@ -246,6 +248,27 @@ div.panel-b {
   font-family: 'Lato', sans-serif;
 }
 
+.form-group .form-submit {
+  width: 0px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(#D8E8FF,#CEAEA5);
+  box-shadow: 5px 10px 10px #888888;
+  border:none;
+}
+
+.form-submit:active {
+  transform: translateY(4px);
+  box-shadow: 5px 5px 10px;
+}
+
+.form-submit:focus {
+  outline: none;
+}
+.form-submit.active, .form-submit:hover {
+  background: linear-gradient(#CEAEA5, #D8E8FF);
+}
+
 /** footer ***/
 
 .footer{
@@ -279,4 +302,15 @@ div.panel-b {
   
   }
 
-  @media
+  @media (min-width: 667px) and (max-width: 1024px) {
+    p {
+      font-size: 13px;
+    }
+
+  }
+
+  @media (min-width: 1024px){
+    p {
+      font-size: 20px;
+    }
+  }
