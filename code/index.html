@@ -3,28 +3,143 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Happy Buddy dog day care</title>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
+    <header>
+      <nav>
+        <div class="header__logo">
+          <img src="" alt="">
+        </div>
+        <div class="header__companyName">
+          Happy Buddy Dog Day Care
+        </div>
+        <a class="header__link" href="#">Concept</a>
+        <a class="header__link" href="#">Personal</a>
+        <a class="header__link" href="#">Centers</a>
+        <a class="header__link" href="#">Contact</a>
+      </nav>
+      <section class="header__title">
+        <h1>Happy Buddy Dog Day Care</h1>
+        <video controls>
+          <source srcset="/code/videos/Dog_1280x720_10mb.mp4" type="video/mp4" media="(min-width: 960px)">
+          <source srcset="/code/videos/Dog_960x540_6mb.mp4" type="video/mp4" media="(max-width: 960px)">
+          <source srcset="/code/videos/Dog_640x360_2mb.mp4" type="video/mp4" media="(max-width: 640px)">
+          <p>This browser does not support video</p>
+        </video>
+      </section>
+    </header>
     <!-- video or image as a header is cool :) -->
 
+    <section class="form">
     <!-- Signup form -->
+      <h2>Request</h2>
+      <form action="http://httpbin.org/anything" method="POST">
+        <div class="form__first">
+          <label>
+            First name
+            <input type="text" name="firstNameValue">
+          </label>
+          <label>
+            Last name
+            <input type="text" name="lastNameValue">
+          </label>
+        </div>
+        <div class="form__second">
+          <label>
+            Phone number
+            <input type="tel" name="telValue">
+          </label>
+          <label>
+            Email address
+            <input type="email" name="eMailValue">
+          </label>
+        </div>
+        <div class="form__third">
+          <label>
+            Dog's name
+            <input type="text" name="dogNameValue">
+          </label>
+          <label>
+            Size
+            <select name="sizeValue">
+              <option value="xs">Very small</option>
+              <option value="s">Small</option>
+              <option value="m">Medium</option>
+              <option value="l">Large</option>
+              <option value="xl">Very large</option>
+            </select>
+          </label>
+        </div>
+        <div class="form__fourth">
+          <p>Gender</p>
+          <label>
+            Male
+            <input type="radio" name="gender" value="male">
+          </label>
+          <label>
+            Female
+            <input type="radio" name="gender" value="female">
+          </label>
+          <label>
+            Birth date
+            <input type="date" name="birthDateValue">
+          </label>
+        </div>
+        <div class="form__fifth">
+          <p>Required services</p>
+          <label>
+            Service 1
+            <input type="checkbox" name="service" value="1">
+          </label>
+          <label>
+            Service 2
+            <input type="checkbox" name="service" value="1">
+          </label>
+          <label>
+            Service 3
+            <input type="checkbox" name="service" value="1">
+          </label>
+          <label>
+            Service 4
+            <input type="checkbox" name="service" value="1">
+          </label>
+        </div>
+      </form>
+    </section>
+
 
     <section class="accordion">
       <!-- Accordion -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">Question 1</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">Question 2</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <div class="question" id="section3">Question 3</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <div class="question" id="section4">Question 4</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <div class="question" id="section5">Question 5</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
     </section>
     <!-- dont forget to link the javascript file here! -->
+    <script src="./script.js"></script>
   </body>
 </html>
