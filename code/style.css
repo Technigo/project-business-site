@@ -2,9 +2,9 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+/* .active + .answer { */
   /* some styling here */
-}
+/* } */
 
 
 /* MOBILE VIEW EXTRA SMALL DEVICES max-width: 600px  */
@@ -17,31 +17,27 @@ body {
 
 header {
   height: 70px;
-  background: blue;
+  background: #ffffff;
 }
 
 header nav {
   display: flex;
   align-items: flex-end;
-  justify-content: flex-start;
+  justify-content: flex-end;
   margin-right: 20px;
-  padding: 20px;  
-  margin-bottom: 100px;
+  padding: 20px;
 }
 
-.header a {
+header a {
   text-decoration: none;
   color: #31482c;
   display: flex;
-  border-top: solid 1px #31482c;
-  border-bottom: solid 1px #31482c;
   padding: 7px;
-  font-size: 16px;
+  font-size: 15px;  
 }
 
-.header a:hover {
-  background: white;
-  opacity: 0.9;
+header a:hover {
+  background: #dadfd9;
 }
 
 /* HERO IMAG WITH TEXT */
@@ -63,7 +59,7 @@ header nav {
   height: 200px;
   width: 400px;
   padding: 25px;
-  background: white;
+  background: #ffffff;
   opacity: 0.9;
   display: flex;
   flex-direction: column;
@@ -83,33 +79,217 @@ header nav {
   align-items: center;
 }
 
-.form {
+/* FORM */
+.form-container {
   width: 90%;
-  padding: 40px;
+  padding: 30px;
   margin: 10px auto;
   box-sizing: border-box;
   background: #dadfd9;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-label {
+.input-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-section h3 {
+  padding-bottom: 5px;
   margin-bottom: 20px;
+  margin-top: 0px;
+  border-bottom: solid #31482c 1px;
 }
 
-input {
-  width: 70%;
-  height: 25px;
+.input-section label {
+  margin-bottom: 15px;
+}
+
+.input-section input {
+  width: 250px;
+  height: 35px;
   margin-bottom: 10px;
   border: none;
-  background: white;
+  background: #ffffff;
 }
 
-.radio-buttons {
-  
+.input-section input::placeholder {
+  padding-left: 10px;
 }
+
+/* RADIO BUTTON CONTAINER */
+
+.radio-button-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.radio-button-column h3 {
+  text-align: center;
+  margin: 5px 0px 15px 0px;
+  padding-bottom: 5px;
+  border-bottom: solid #31482c 1px;
+}
+  
+.radio-button-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+}
+
+.radio-button-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.radio-button-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color:#ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.radio-button-container:hover input ~ .custom-radio {
+  background-color: rgb(243, 236, 236);
+}
+
+.radio-button-container input:checked ~ .custom-radio {
+  background-color: #9ec47f;
+}
+
+.custom-radio:after {
+  content:"";
+  position: absolute;
+  top: 6px;
+  left: 6px; 
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: none;
+}
+
+.radio-button-container input:checked ~ .custom-radio:after {
+  display: block;
+}
+
+/* CHECKBOX CONTAINER */
+
+.checkbox-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0px 10px 0px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color:#ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox-container:hover input ~ .custom-checkbox {
+  background-color:   rgb(243, 236, 236);
+}
+
+.checkbox-container input:checked ~ .custom-checkbox {
+  background-color: #9ec47f;
+}
+
+.custom-checkbox:after {
+  content:"";
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  top: 5px;
+  left: 7px;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox:after {
+  display: block;
+}
+
+/* SUMBIT BUTTON */
+.submit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px; 
+}
+
+.submit-container input {
+  background: #ffffff;;
+  border: none;
+  width: 150px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.submit-container input:hover {
+  background: #9ec47f;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
 
 
 

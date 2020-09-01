@@ -36,38 +36,54 @@
     <!-- MAIN SECTION WITH FORM & ACCORDIAN -->
     <main class="main container">
       <!-- FORM -->
-      <section class="form">
-        <h3>For more info about our plants fill me in!</h3>
+      <section class="form-container">        
         <form action="http://httpbin.org/anything" method="POST">
-          <label for="fname">
-            <input type="text" id="fname" name="fname" placeholder="First name" required>
-          </label>
-          <label for="lname">
-            <input type="text" id="lname" name="lname" placeholder="Last name" required>
-          </label>
-          <label for="email">
-            <input type="email" id="email" name="email" placeholder="Email" required>
-          </label>
+          <div class="input-section">
+            <h3>For more info about our plants fill me in!</h3>
+            <label for="fname">
+              <input type="text" id="fname" name="fname" placeholder="First name" required>
+            </label>
+            <label for="lname">
+              <input type="text" id="lname" name="lname" placeholder="Last name" required>
+            </label>
+            <label for="email">
+              <input type="email" id="email" name="email" placeholder="Email" required>
+            </label>
+          </div>
 
-        <h4>Interested in plant care workshops?</h4>
-        <div>
-          <label class="radio-buttons">
-            Yes please
-            <input type="radio" id="yes" name="yes" value="yes" required>
-          </label>
-        </div>
-        <label>
-          No thanks
-          <input type="radio" id="no" name="no" value="no" required>
-        </label>
+          <!-- RADIO BUTTON SECTION -->
+          <div class="radio-button-column">
+            <h3>Interested in plant care workshops?</h3>
+            <div class="radio-button-row">
+              <label class="radio-button-container">
+                <input type="radio" id="yes" name="answer" checked required> 
+                Yes please
+                <span class="custom-radio"></span>
+              </label>
 
-        <label>
-          Agree to terms & conditions
-          <input type="checkbox" id="terms" name="terms" value="terms" required>
-        </label>
+              <label class="radio-button-container">
+                <input type="radio" id="no" name="answer" required>  
+                No thanks
+                <span class="custom-radio"></span>
+              </label>
+            </div> 
+          </div>
 
-        <input type="submit" name="submit" value="submit"> 
-      </form>
+          <!-- CHECKBOX SECTION -->
+          <div class="checkbox-column">
+            <div class= "checkbox-row">
+              <label class="checkbox-container">
+                <input type="checkbox" id="terms" name="terms" checked required>
+                I agree to terms & conditions
+                <span class="custom-checkbox"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="submit-container">
+            <input type="submit" name="submit" value="SUBMIT">
+          </div>
+        </form>
       </section>  
 
       <!-- ACCORDIAN -->
