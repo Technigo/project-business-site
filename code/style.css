@@ -13,30 +13,138 @@ body {
   margin: 0;
 }
 
+/* HEADER WITH LOGO, PAGE TITLE & NAV*/
 
-header img {
-  width: 100%;
+header {
+  height: 70px;
+  background: blue;
 }
+
+header nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-right: 20px;
+  padding: 20px;  
+  margin-bottom: 100px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #31482c;
+  display: flex;
+  border-top: solid 1px #31482c;
+  border-bottom: solid 1px #31482c;
+  padding: 7px;
+  font-size: 16px;
+}
+
+.header a:hover {
+  background: white;
+  opacity: 0.9;
+}
+
+/* HERO IMAG WITH TEXT */
+
+.hero-image {
+  max-width: 100%;
+  height: 500px;
+  background-image: url("Hero-image-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image-details {
+  height: 200px;
+  width: 400px;
+  padding: 25px;
+  background: white;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image-details h1, h3 {
+  color: #31482c;
+}
+
+/* MAIN CONTAINER WITH FORM & ACCORDIAN */
+.main-container {
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  width: 90%;
+  padding: 40px;
+  margin: 10px auto;
+  box-sizing: border-box;
+  background: #dadfd9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 70%;
+  height: 25px;
+  margin-bottom: 10px;
+  border: none;
+  background: white;
+}
+
+.radio-buttons {
+  
+}
+
+
+
+
+
+
 
 /* SMALL DEVICES (PORTRAIT TABLES & LARGE IPHONES, 600PX & UPWARDS */
 @media (min-width: 600px) {
-
+  .background-image {
+    background-image: url("Hero-image-2.jpg");
+  }
 }
 
 
 /* Medium devices (landscape tablets 768px and up) */
 @media (min-width:768px) {
- 
+  .background-image {
+    background-image: url("Hero-image-3.jpg");
+  }
 }
 
 /* LARGE DEVICES (Laptops/desktops, 992px and up) */
 @media (min-width: 992px) {
-
+  .background-image {
+    background-image: url("Hero-image-4.jpg");
+    height: 600px;
+  }
 }
 
 
 /* EXTRA LARGE DEVICES (large laptops and desktops, 1200px and up)*/
 @media (min-width:1024px) {
-  
-
+  .background-image {
+    background-image: url("Hero-image-5.jpg");
+    height: 700px;
+  }
 }
