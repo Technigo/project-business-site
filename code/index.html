@@ -3,19 +3,193 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
+    <title>All Mountain</title>
     <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300" rel="stylesheet">
+
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <header>
 
-    <!-- Signup form -->
+      <!-- video or image as a header is cool :) -->
+
+      <video autoplay muted loop>
+        <source src="videos/Header_1920x1080.mp4" type="video/mp4">
+        <source src="videos/Header_360x202.mp4" type="video/mp4">  
+        <source src="videos/Header_720x404.mp4" type="video/mp4">
+        <p class="video-message">This browser does not support video...</p>
+      </video>
+
+      <div class="header-content">
+
+        <img src="#" alt="all-mountain-logo">
+        <nav>
+
+          <a href="#">LOCATIONS</a>
+          <a href="#">ACCOMODATION</a>
+          <a href="#">ABOUT US</a>
+          <a href="#">INSPIRATION</a>
+        </nav>
+
+        <button class="header">contact us</button>
+
+        <h1 class="header-title">All Mountain</h1>
+
+        <h2 class="header-subtitle">We’ll help you plan and book your perfect ski holiday</h2>
+      </div>
+
+    <!-- For tablet only -->
+
+    <!-- For computer only -->
+
+    </header>
+
+    <!-- TEXT BOX FORM -->
+
+
+     <!-- FORM - find the perfect location -->
+
+    <section class="form">
+
+      <div class="textbox">
+        <h2 class="form">Find your perfect location</h2>
+        <p class="form">All Mountain is passionate about delivering exceptional service. <br> <br> We believe it’s the little things that make staying in a hotel, private apartment or chalet so special. <br> <br> Let us do the ground work for you and help you plan the perfect holiday.</p>
+      </div>
+
+      <div class="form-container">
+
+      <form 
+      action="http://httpbin.org/anything" 
+      method="POST">
+
+      <!-- country: select -->
+      <div class="form-group">
+        <label for="resortCountry">Country</label>
+        <select 
+        name="resortCountryValue" 
+        id="resortCountry">
+          <option value="fr">France</option>
+          <option value="it">Italy</option>
+          <option value="au">Austria</option>
+          <option value="sw">Switzerland</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="resortType">Resort type</label>
+        <select 
+        name="resortTypeValue" 
+        id="resortType">
+          <option value="ch">Chalets</option>
+          <option value="pa">Private Apartments</option>
+          <option value="hr">Hotel & Resorts</option>
+        </select>
+      </div>
+
+        <!-- group size: radio -->
+        <div class="form-group-size">
+          
+            <h3>Group size</h3>
+  
+            <div class="group-size-container">
+              <input 
+              id="oneTwo" 
+              type="radio"
+              name="groupSizeValue"
+              >
+            <label for="oneTwo">1-2</label>
+            </div>
+            
+            <div class="group-size-container">
+              <input 
+              id="twoFour" 
+              type="radio"
+              name="groupSizeValue"
+              >
+              <label for="twoFour">2-4</label>
+            </div>
+
+            <div class="group-size-container">
+              <input 
+              id="fiveTen" 
+              type="radio"
+              name="groupSizeValue"
+              >
+              <label for="fiveTen">5-10</label>
+            </div>
+          
+            <div class="group-size-container">
+              <input 
+              id="tenTwenty" 
+              type="radio"
+              name="groupSizeValue"
+              >
+              <label for="tenTwenty">10-20</label>
+            </div>
+
+        </div>
+        
+        <!-- dates: date & checkbox -->
+        <div class="form-group-dates">
+
+          <h3>Dates</h3>
+
+          <div class="dates-container">
+            <label for="dateArrival">Arrival</label>
+          <input 
+            id="dateArrival" 
+            type="date"
+            name="dateArrivalValue"
+            >
+          </div>
+          
+          <div class="dates-container">
+            <label for="dateDeparture">Depature</label>
+          <input 
+            id="dateDeparture" 
+            type="date"
+            name="dateDepartureValue"
+            >
+          </div>
+
+          <div class="dates-container">
+            <label 
+          for="flexible">
+          My dates are flexible</label>
+          <input
+          id="flexible"
+          type="checkbox"
+          >
+          </div>
+  
+        </div>
+        
+        <!-- extras features: text -->
+        <div class="form-group-extra">
+
+          <label for="otherComments">Extra features</label>
+          <input 
+            id="otherComments" 
+            type="text"
+            name="otherCommentsValue"
+            >
+        </div>
+
+        <button class="form" type="submit">Search</button>
+      </form>
+
+      </div>
+
+    </section>
+
 
     <section class="accordion">
       <!-- Accordion -->
-      <h1>FAQ</h1>
 
-      <h2>test</h2>
+      <div class="accordion-faq">
+      <h1>FAQ</h1>
 
       <div class="question" id="section1">Section 1</div>
       <div class="answer">
@@ -26,7 +200,10 @@
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
+    </div>
+
     </section>
+
     <!-- dont forget to link the javascript file here! -->
   </body>
 </html>
