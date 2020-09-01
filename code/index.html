@@ -10,12 +10,22 @@
   <body>
     <!-- video or image as a header is cool :) -->
 
+    <section class="logotype">
+
+      <picture>
+        <source srcset="./mentimeter-logo.png" media="(max-width: 600px)" />
+        <source srcset="./mentimeter-logo.png" media="(max-width: 900px)" />
+        <img src="./mentimeter-logo.png" alt="menti-logo" />
+      </picture>
+
+    </section>
+
     <header class="header">
 
       <picture>
-        <source srcset="./martin-adams-small.jpg" media="(max-width: 600px)" />
-        <source srcset="./martin-adams-medium.jpg" media="(max-width: 900px)" />
-        <img src="./martin-adams-large.jpg" alt="header-image" />
+        <source srcset="./menti-header.png" media="(max-width: 600px)" />
+        <source srcset="./menti-header.png" media="(max-width: 900px)" />
+        <img src="./menti-header.png" alt="menti-header" />
       </picture>
 
     </header>
@@ -29,16 +39,16 @@
 
     <form action="https://httpbin.org/anything" target="_blank" method="POST">
       <label for="company">Company:</label>
-      <input type="text" id="company" name="company" required>
+      <input type="text" id="company" name="company" required">
 
-      <label for="name">Full name:</label>
-      <input type="text" id="name" name="name" required>
+      <label for="name">Full name:</label pattern="[A-Za-z]">
+      <input type="text" id="name" name="name" required">
 
       <label for="title">Title:</label></label>
-      <input type="text" id="title" name="title" required>
+      <input type="text" id="title" name="title" required">
 
       <label for="email">Email:</label>
-      <input type="text" id="email" name="email" required>
+      <input type="text" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
 
       <label for="licenses">Amount of licenses:</label>
       <input type="text" id="licenses" name="licenses" required>
@@ -46,7 +56,6 @@
       <label for="consent">I agree to Mentimeters<a href="https://www.mentimeter.com/terms" target="_blank">T&C</a></label>
       <input type="checkbox" id="consent" name="consent" value="Yes" required>
       
-
       <input type="submit" value="Submit">
     </form>
 
@@ -67,12 +76,12 @@
         <p>Lorem ipsum...</p>
       </div>
 
-      <div class="question" id="section2">What is the pricing?</div>
+      <div class="question" id="section3">What is the pricing?</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
 
-      <div class="question" id="section2">How do I get in contact you?</div>
+      <div class="question" id="section4">How do I get in contact?</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
