@@ -2,6 +2,223 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+* {
+  box-sizing: border-box; 
+}
+
+html {
+  background:white;
+  color: black;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+h2 {
+  margin: 0px;
+  font-size: 30px;
+}
+
+h3 {
+  text-align: left;
+  font-size: 48px;
+  padding: 0px;
+  margin-bottom: 0px 0px 20px 0px;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+a {
+  color: black;
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+.hero {
+  background-size: cover;
+  height: 400px;
+  background-image: url(https://images.unsplash.com/photo-1433740944490-b669cb8b1c44?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1510&q=80);
+}
+
+h1.header-heading {
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  align-self: center;
+  background-color: white;
+  margin: 0px;
+  font-size: 80px;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 40px 60px 40px 60px;
+  font-size: 24px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ERBJUDANDE */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: white;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #cde7f7;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 40px;
+}
+
+.card-img {
+  width: 50%;
+}
+
+.text-container {
+justify-content: flex-start;
+flex-direction: column;
+width: 50%;
+padding-left: 60px;
+}
+
+.text-container-two {
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 60px;
+  }
+
+.card-link {
+  background-color: white; 
+  color: black;
+  font-weight: bold;
+  text-decoration: none; 
+  text-align: center;
+  padding: 20px;
+  width: 250px;
+  font-size: 18px;
+  margin-top: 30px;
+  letter-spacing: 1px;
+  border-radius: 25px;
+}
+
+/* FAQ */
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Det är den här som styr om det ska vara centrerat eller ej */
+  background-color:#E09269;
+  padding: 0px 0px 40px 40px;
+}
+
+.question {
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+.answer {
+  background-color: #F4E4CD;
+  display: none;
+  text-align: center;
+  font-size: 12px;
+  padding-left: 5px;
+  width: 50%;
+  border-radius: 25px;
+}
+
 .active + .answer {
-  /* some styling here */
+  display: block;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 60px;
+  margin: 0px;
+}
+
+/* For tablet */
+
+@media (max-width: 1024px) {
+
+  .hero {
+  height: 250px;
+  }
+
+}
+
+/* For mobile */
+
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 18px;
+    padding: 20px 0px 20px 20px;
+  }
+  
+  .card {
+    flex-direction: column;
+  }
+
+  .card-img {
+    width: 100%;
+  }
+
+  .text-container {
+    width: 100%;
+    padding: 20px 0px;
+  }
+
+
 }
