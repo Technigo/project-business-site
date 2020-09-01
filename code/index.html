@@ -3,28 +3,208 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Web design</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:400,700" rel="stylesheet">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
 
+    <!--Header with hero-video-->
+    <header class="hero-image">
+      <video preload autoplay loop muted>
+        <source src="https://player.vimeo.com/external/253035808.hd.mp4?s=39c72b07d00cb1415f2b1eb9a2c5b5e7068784c1&profile_id=174" media="(min-width:700px">
+        <source src="https://player.vimeo.com/external/446828437.sd.mp4?s=fe20bd8d726a1e51b16ce1482bc0a74effed5697&profile_id=139&oauth2_token_id=57447761" media="(max-width:700px">
+        <p>Your browser does not support HTML5 video.</p>
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/13/24/balloons-1869816__340.jpg">
+      </video>
+      <h1>Web Dev. & Co. </h1>
+      <h3>We help you create the nicest websites you have ever seen!</h3>
+       <!-- Video av Engin Akyurt från Pexels-->
+    </header>
+
+    <main>
+    
     <!-- Signup form -->
+    <section class="form-container">
+      <div class="form-heading">  <!--Info text for form-->
+        <h2> Do you need help to set up a nice website?</h2>
+        <h4>Fill in the below form & we will contact you!</h4>
+      </div>
+      <div class="form">
+        <form action="http://httpbin.org/anything" method="POST">
+           <!-- 2 x Text fields -->
+          <div class="form-div">  
+            <label for="fullName">Full name:</label>
+            <input 
+              id="fullName" 
+              type="text"
+              name="fullName"
+              required
+            />
+          </div>
+          <div class="form-div">
+            <label for="companyName">Company name:</label>
+            <input 
+              id="companyName" 
+              type="text"
+              name="companyName"
+            />
+          </div>
+          <!-- Mail field -->
+          <div class="form-div">
+            <label for="mailAdress">Mail address:</label>
+            <input 
+              id="mailAdress" 
+              type="email"
+              name="emailAdress"
+              required
+            />
+          </div>
+          <!-- 1 x A password field -->
+          <div class="form-div">
+            <label for="passWord">Choose your password:</label>
+            <input 
+              id="passWord" 
+              type="password"
+              name="passWord"
+              required
+            />
+          </div>
+          <!-- 1 x Set of radio buttons -->
+          <div class="form-div">
+            <p>Do you have a website today?</p>
+            <input 
+              id="webSite" 
+              type="radio"
+              name="yesWebsite"
+            />
+            <label for="webSite">Yes</label>
+            <input 
+              id="webSite" 
+              type="radio"
+              name="noWebsite"
+            />
+            <label for="webSite">No</label>
+          </div>
+          <!-- 1 x Set of checkboxes -->
+          <div class="form-div checkbox">
+              <div class="checkbox-child"></div>
+              <p>Which of the features below would you want to have on your new website?</p>
+                <div>
+              <div class="checkbox-child">
+              <input 
+                id="featuresChoice" 
+                type="checkbox"
+                name="navigationBar"
+              />
+              <label for="featuresChoice">Navigation bar</label>
+              </div>
+              <div class="checkbox-child">
+              <input 
+                id="featuresChoice" 
+                type="checkbox"
+                name="form"
+              />
+            <label for="featuresChoice">A form</label>
+            </div>
+            <div class="checkbox-child">
+            <input 
+              id="featuresChoice" 
+              type="checkbox"
+              name="articles"
+            />
+            <label for="featuresChoice">Articles</label>
+            </div>
+            <div class="checkbox-child">
+            <input 
+              id="featuresChoice" 
+              type="checkbox"
+              name="links"
+            />
+            <label for="featuresChoice">Links</label>
+            </div>
+            <div class="checkbox-child">
+            <input 
+              id="featuresChoice" 
+              type="checkbox"
+              name="video"
+            />
+            <label for="featuresChoice">Video</label>
+            </div>
+            <div class="checkbox-child">
+            <input 
+              id="featuresChoice" 
+              type="checkbox"
+              name="accordion"
+            />
+            <label for="featuresChoice">Accordion</label>
+            </div>
+          </div>
+          <!-- 1 x Set of checkboxes -->
+          <div class="form-div">
+            <div class="submitbtn">
+            <button type="submit">Send form!</button>
+          </div>
+          </div>
+        </form>
+      </div>
+    </section>
 
     <section class="accordion">
       <!-- Accordion -->
+      <div class="FAQ">
       <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
+      </div>
+      
+      <div class="question" id="section1">Question #1:
+        Do you have a portfolio with previous works? </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>YES, of course. Please see them <a href="#">here!</a></p>
+      </div>
+      
+      <div class="question" id="section2">Question #2:
+        How much does it cost to get your help?
+      </div>
+      <div class="answer">
+        <p>Please see our pricelist <a href="#">here!</a> Please note that the prices can vary about based on project scoop.</p>
+      </div>
+     
+      <div class="question" id="section3">Question #3:
+        Who are you that work at Web Dev. & Co.?
+      </div>
+      <div class="answer">
+        <p>We are three happy and enthuastic girls. 
+          Read more about us here: <a href="#">Anna H</a>, 
+          <a href="#">Gabriella B</a> and <a href="#">Jessica W</a>.</p>
+      </div>
+      
+      <div class="question" id="section4">Question #4:
+        Where are you located?
+      </div>
+      <div class="answer">
+        <p>We are located where YOU - our customer - are! We are happy to work remote and have 90% of our meetings online. 
+          If you want to meet us live we are happy to see you and will arrange a live meeting with you - preferably in Sweden. 
+          (Outside Sweden extra costs can be added if live-meeting.)
+        </p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section5">Question #5:
+        Will I be satisfied?
+      </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Of course you will! We work with you as a team, you will be involved in the whole process being able to feedback us all the time. We are not satisfied until you are more than satisfied!
+          Looking forward to work with you!
+        </p>
       </div>
     </section>
+  </main>
+
     <!-- dont forget to link the javascript file here! -->
+  <script src="script.js"></script>
+
+  <footer>This website is made by Gabriella Bolin as Project 3 @Technigo Bootcamp 2020
+    <p>Videos from Pixabay and Pexels. </p>
+  </footer>
+
   </body>
 </html>

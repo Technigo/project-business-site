@@ -1,7 +1,273 @@
+/** My color palette
+#182825 Dark Jungle Green - Text color
+#016FB9 Spanish blue - Section background color
+#22AED1 Pacific blue 
+#6D8EA0 Light Slate Gray - Background picture
+#AFA98D Sage
+
+**/
+
+* {box-sizing: border-box;}
+
+body {
+  background-color: black;
+  margin: 0;
+  color: #22031F;
+  font-Family: 'Roboto', Sans-Serif;
+  font-Size: 48px;
+  font-Family: 'Lora', Serif;
+  font-Size: 14px;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+/***HERO-VIDEO***/
+
+.hero-image {
+ height: 500px;
+ width: 100%;
+ position: relative;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+}
+ 
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #CC76A1;
+  z-index: 1;
+  top: 15%; 
+  font-size: 106px;
+  text-shadow: 3px 3px #87B38D;
+}
+
+header h3 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #87B38D;
+  top: 52%;
+  font-size: 24px;
+}
+ 
+
+/*** FORM ***/
+.form-container {
+  margin: 20px;
+  background-color: #F2B7C6;
+  border: 2px solid #CC76A1;
+  border-radius: 15%;
+  padding: 20px 40px;
+  width: 500px;
+}
+
+.form-container:hover {
+  box-shadow: 3px 3px 20px 5px #DD9296;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-div {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.form-div label {
+  width: 100px;
+  margin: 5px;
+}
+
+#fullName, #companyName, #mailAdress, #passWord { 
+  /*Styling of the input fields*/
+  width: 250px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: #F2B7C6;
+}
+
+/* #passWord, #webSite, #featuresChoice {
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: #F2B7C6;
+}*/
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.checkbox-child {
+  margin-bottom: 5px;
+}
+
+button  { /** Design of the button **/
+  width: 125px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #22031F;
+  color: #F2B7C6;
+  padding: 8px;
+  margin: 10px;
+  border: 2px solid #CC76A1; 
+  border-radius: 18%;
+  box-shadow: 3px 3px 6px 2px #DD9296; 
+}
+
+/** How to button shall look when pointing on it - it gets flat **/ 
+
+button:hover {
+  transform: translateX(5px);
+  box-shadow: none;
+}
+
+/*** ACCORDION ***/
+.accordion {
+  margin: 20px;
+  background-color: #F2B7C6;
+  border: 2px solid #CC76A1;
+  border-radius: 15%;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.accordion:hover {
+  box-shadow: 3px 3px 20px 5px #DD9296;
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+.active, .question:hover {
+  font-size: 15px;
 }
+
+.question {
+  font-weight: bold;
+  line-height: 2em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.answer {
+  line-height: 20px;
+  font-style: italic;
+  max-height: 0;
+  color: #22031F;
+  overflow-y: hidden;
+}
+
+.active + .answer {
+  animation: unfold 1s ease forwards;
+  display: block;
+}
+
+.folded + .answer {
+  animation: fold 1s ease;
+}
+
+@keyframes unfold {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 200px;
+  }
+}
+
+@keyframes fold {
+  from { max-height: 100px}
+  to {max-height: 0px}
+}
+
+/* Footer styling */
+footer {
+  width: 100%;
+  background-color: #87B38D;
+  text-align: center;
+  bottom: 0;
+  color: #22031F;
+  padding: 15px;
+ }
+
+/*** Media queries ***/
+ @media screen and (max-width: 667px) { /* Mobile device */
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-container {
+    width: 100%;
+   }
+
+   .accordion {
+    width: 100%;
+   }
+  
+  header h1 {
+    top: 1%; 
+    font-size: 10px;
+  }
+  
+  header h3 {
+    top: 80%;
+    font-size: 16px;
+    width: 300px;
+  }
+ }
+
+ /*** Media queries ***/
+ @media screen and (max-width: 1023px) { /* Tablet device */
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-container {
+    width: 100%;
+   }
+
+   .accordion {
+    width: 100%;
+   }
+  
+ header h1 {
+    font-size: 90px;
+  }
+  
+  header h3 {
+    font-size: 20px;
+  }
+ }
