@@ -11,47 +11,93 @@
     <header>
       <video autoplay loop muted>
         <source src="./videos/dog-video.mp4" type="video/mp4">
-        <!-- <source src="./videos/video-test.mp4" type="video/mp4">
-        <source src="./videos/SampleVideo_360x240_1mb.mp4" type="video/mp4">  
-        <source src="./videos/SampleVideo_720x480_1mb.mp4" type="video/mp4">
-        <source src="./videos/SampleVideo_1280x720_1mb.mp4" type="video/mp4"> -->
-        <p>This video is not supported by the browser you're using.</p>  
+        <p>This HTML5 video is not supported by the browser you're using.</p>  
       </video>
     <!-- video or image as a header is cool :) -->
     </header>
     
     <!-- Signup form -->
-    <form action="http://httpbin.org/anything" method="POST">
-      <label>
-        Message:
-        <input type="text" required name="message">
-      </label>
-      
-      <label>
-        E-mail:
-        <input type="email" required name="emailAddress">
-      </label>
+    <section class="form">
+      <form action="http://httpbin.org/anything" method="POST">
+        <p>Sign up for a consultation session</p>
+        <!--OWNER'S INFO-->
+        <fieldset class="owner-info">
+          <div>
+            <!-- <p>Sign up for a consultation session</p> -->
+            <label>
+              Your full name:
+              <input type="text" required name="name">
+            </label>
+            <label>
+              E-mail:
+              <input type="email" required name="emailAddress">
+            </label>
+            <label>
+              Phone number:
+              <input type="tel" name="phoneNumber">
+            </label>
+          </div>
+        </fieldset>
+  
+        <!--DOG'S INFO-->
+        <fieldset class="dog-info">
+          <label>
+          Your dog's name:
+            <input type="text" required name="message">
+          </label>
+          <label>
+            Breed:
+            <input type="text" required name="message">
+          </label>
+          <div class="dog-sex">
+            <label>
+              <input type="radio" required name="male">
+              male
+            </label>
+            <label>
+              <input type="radio" required name="female">
+              female
+            </label>
+          </div>
+          <div>
+            <label>
+              Spayed/Neutered
+                <input type="radio" required name="message"> YES
+                <input type="radio" required name="message"> NO
+              </label>
+          </div>
+          
+          <label>
+            Age:
+            <input type="radio" required name="puppy">
+            <input type="radio" required name="youngerAdult">
+            <input type="radio" required name="olderDog">
+          </label>
+            <textarea name="message" rows="" cols=""> <!--or define size of the box in CSS-->
+              Short description of your dog's behavioural issue:
+            </textarea> 
+        </fieldset>
+  
+        <label>
+          Where did you hear about us?
+          <select name="heardAbout">
+            <option value="Fb">Facebook</option>
+            <option value="Ggl">Google</option>
+            <option value="onlineForum">Online Forum</option>
+            <option value="friend">From a friend</option>
+            <option value="other">Other ...</option>
+          </select>
+        </label>
+       
+        <button type="submit" onclick="alert('Your information has been submitted!')">Sign Up</button> 
+        <!--check if the onclick function works-->
+      </form>
+  
 
-      <label>
-        How did you find about us?
-        <select name="heardAbout">
-          <option value="Fb">Facebook</option>
-          <option value="Ggl">Google</option>
-          <option value="onlineForum">Online Forum</option>
-          <option value="friend">From a friend</option>
-          <option value="other">Other ...</option>
-        </select>
+    </section>
 
-      </label>
-     
-      <button type="submit">Sign Up</button>
-    
-    </form>
-
-
-
+    <!-- Accordion -->
     <section class="accordion">
-      <!-- Accordion -->
       <h1>FAQ</h1>
 
       <div class="question" id="section1">Section 1</div>
