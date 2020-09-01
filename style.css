@@ -1,7 +1,178 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  background: #fff;
+  color: #4d4d4d;
+  font-family: Helvetica, sans-serif;
+  align-items: center;
+}
+
+/* Nav */
+.nav-container {
+  height: 80px;
+  width: 100%;
+  top: 0;
+  /* position: fixed; */
+  display: flex;
+  align-items: center;
+  background: #4d4d4d;
+  /* padding: 0 16px; */
+}
+
+.hamburger {
+  height: 25px;
+  width: 30px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 24px;
+}
+
+.hamburger div {
+  height: 5px;
+  width: 30px;
+  background: #000;
+  border-radius: 5px;
+}
+
+.logo-ico {
+  height: 65px;
+}
+
+.logo-full {
+  display: none;
+}
+
+nav {
+  display: none;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+a:hover {
+  background-color: #ffffcc;
+  color: #000;
+}
+
+/* Header */
+header {
+  padding: 0;
+  height: 375px;
+  width: 100%;
+  background: lightgreen;
+}
+
+video {
+  margin: 16px;
+  
+}
+
+/* Form */
+.form {
+  padding: 16px;
+  width: ;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid blue;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.form-group label {
+  width: 100px;
+  margin-right: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 200px;
+}
+
+.form-submit {
+  width: 100px;
+}
+
+/* Accordion */
+.accordion {
+  padding: 16px;
+  width: 45%;
+  border: 2px solid pink;
+  border-radius: 10px;
+  background-color: lightslategray;
+}
+h1{
+  background-color: aquamarine;
+}
+
+.question {
+  background: lightseagreen;
+}
+
+.answer {
+  background-color: lightblue;
+  display: none;
+
+}
 
 .active + .answer {
-  /* some styling here */
+  display: block;
+}
+
+
+/* Footer */
+footer {
+  height: 120px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background: #4d4d4d;
+  color: #fff;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 15px;
+}
+
+footer a {
+  color: #fff;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .nav-container {
+      justify-content: space-between;
+  }
+
+  .logo-ico {
+    display: none;
+  }
+
+  .logo-full {
+    display: inline-block;
+  }
+
+}
+
+/* desktop */
+@media (min-width: 900px) {
+  nav {
+    display: inline-block;
+  }
+
+  .hamburger {
+      display: none;
+  }
 }
