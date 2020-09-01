@@ -9,8 +9,6 @@
   </head>
   <body>
 
-
-
     <header class="header">
 
       <section class="logotype">
@@ -20,13 +18,6 @@
           <img src="./mentimeter-logo-white.png" alt="menti-logo" />
         </picture>
       </section>
-     <!--
-     <picture>
-        <source srcset="./menti-header.png" media="(max-width: 600px)" />
-        <source srcset="./menti-header.png" media="(max-width: 900px)" />
-        <img src="./menti-header.png" alt="menti-header" />
-      </picture>
---> 
 
     </header>
 
@@ -40,37 +31,39 @@
     <form action="https://httpbin.org/anything" target="_blank" method="POST">
       
       <label for="company">
-        Company
+        <p>Company</p>
         <input type="text" id="company" name="company" required>
       </label>
 
       <label for="name">
-       Full name
-       <input type="text" id="name" name="name" required>
+        <p>Full name</p>
+        <input type="text" id="name" name="name" required>
       </label>
 
       <label for="title">
-       Title
+       <p>Title</p> 
        <input type="text" id="title" name="title" required>
       </label>
 
       <label for="email">
-       Email
+       <p>Email</p>
        <input type="text" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
       </label>
 
       <label for="licenses">
-       Amount of licenses
+      <p>Amount of licenses</p>
        <input type="text" id="licenses" name="licenses" required>
       </label>
 
       <label for="consent">
-        I agree to Mentimeters
-        <a href="https://www.mentimeter.com/terms" target="_blank">T&C</a>
         <input type="checkbox" id="consent" name="consent" value="Yes" required>
+       <p>I agree to Mentimeter's <a href="https://www.mentimeter.com/terms" target="_blank">terms</a> </p>
+        
+
+        <input type="submit" value="Submit">
       </label>
       
-      <input type="submit" value="Submit">
+      
     </form>
 
   </section>
