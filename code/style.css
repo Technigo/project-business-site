@@ -207,25 +207,10 @@ label {
   }
 } 
 
-
-
-
-
-
  /* Accordion */
 
 .answer {
   display: none;
-}
-
-
-.active + .answer {
-  display: inline-block;
-  /* some styling here */
-}
-
-.accordion :nth-child(4n+1) {
-  background-color: #FAEBD7;
 }
 
  /* Accordion  box styling and placement*/
@@ -241,7 +226,6 @@ label {
   margin-bottom:90px ;
   border-radius: 8px;
   box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.15);
-  
 
 }
 
@@ -249,21 +233,39 @@ label {
   display: flex;
   justify-content: center;
   font-size: 30px;
+  background-color:rgb(250, 240, 230);;
 
+}
+
+.answer {
+  width: 100%;
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+}
+
+.active + .answer {
+  display: inline-block;
+  opacity: 1;
+  height: 80px;
+  background-color: #FAEBD7;
 }
 
  .question {
    font-size: 20px;
    margin:12px;
    cursor: pointer;
+   border-bottom: 2px solid white;
  }
 
  .question:hover {
-   background-color:#FAEBD7;
-  
- }
- 
-
+  background-color:#FAEBD7;
+}
 
 
 
@@ -305,6 +307,7 @@ footer{
 .footer {
   display: flex;
   justify-content: center;
+  font-size: 18px;
 }
   /***  Media Quaries   ***/
 
