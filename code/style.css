@@ -1,6 +1,8 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+*, *::before, *::after {box-sizing: border-box;}
+
 header{
   text-align: center;
 }
@@ -9,6 +11,7 @@ header{
   text-align: left;
   overflow: hidden;
   background-color: #333;
+  
 }
 
 .navbar a {
@@ -35,9 +38,30 @@ header{
   display: block;
 }
 
+.hero-banner {
+  position: relative;
+  text-align: center;
+
+}
+
+.hero-banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+
+}
+
+.hero-banner img{
+  width: 100%;
+  height: auto;
+}
+
+
+
 .answer {
   display: block;
-
 }
 
 .form {
@@ -49,7 +73,6 @@ header{
   margin-bottom: 15px;
   display: flex;
   align-items: center;
-
 }
 
 .navbar.responsive {
