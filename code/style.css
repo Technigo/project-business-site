@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Comic Sans MS", cursive, sans-serif;
   color: #056676;
-  background: #e8ded2;
+  background: #a3d2ca;
 }
 
 /*** HEADER ***/
@@ -44,7 +44,7 @@ nav {
 .hero-img {
   background: url(./images/hero-img-boat.jpg) no-repeat bottom left;
   background-size: cover;
-  height: 30vh;
+  height: 50vh;
   color: #e8ded2;
   display: flex;
   flex-direction: column;
@@ -54,16 +54,21 @@ nav {
 /*** MAIN ***/
 main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  font-size: x-small;
 }
 
 section {
   width: 80%;
-  /* border: solid 2px red; */
+  background: #e8ded2;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+section h1 {
+  align-self: center;
 }
 
 /*** SIGNUP FORM ***/
@@ -80,8 +85,16 @@ section {
   /* border: solid 2px green; */
 }
 
-.form-group label {
-  width: 110px;
+.form-group-name label,
+.form-group-email label,
+.form-group-phone-no label {
+  width: 80px;
+}
+
+.form-group-name input,
+.form-group-email input,
+.form-group-phone-no input {
+  width: 200px;
 }
 
 /*** ACCORDION ***/
@@ -119,11 +132,11 @@ section {
   }
 
   .hero-img {
-    height: 40vh;
+    height: 60vh;
   }
 
   main {
-    flex-direction: row;
+    font-size: unset;
   }
 }
 
@@ -163,7 +176,7 @@ section {
   }
 
   .hero-img {
-    height: 50vh;
+    height: 70vh;
   }
 }
 
