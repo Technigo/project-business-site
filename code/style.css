@@ -1,16 +1,10 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
-
 
 body {
  margin: 0px;
  font-family: monospace;
 }
+
+ /* Header */
 
 header {
   background-size: cover;
@@ -34,12 +28,11 @@ button {
   font-size: larger;
   margin: 30px;
   padding: 10px;
+  border: transparent;
   border-radius: 50px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 20px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   background-color: transparent;
 }
-
-
 
 .overlay {
   position: absolute;
@@ -49,13 +42,20 @@ button {
   right: 0;
   display: flex;
   flex-direction: column;
- justify-content: center;
- align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.button {
-  color: black;
+
+
+ /* Content (form and accordion) */
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
 }
+
+ /* Sign up form */
 
 .form {
   display: flex;
@@ -64,7 +64,7 @@ button {
   width: fit-content;
   box-shadow: 10px 10px 5px #aaaaaa;
   font-size: larger;
-  padding: 30px;
+  padding: 70px;
 }
 
 .form-group {
@@ -75,7 +75,30 @@ button {
   width: 100px;
 }
 
-.content {
-  display: flex;
-  justify-content: space-evenly;
+/* Accordion*/
+ 
+.accordion {
+  background-color: tan;
+  padding: 70px;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  width: 400px;
 }
+
+.active {
+  background-color: white;
+}
+.answer {
+  display: none;
+}
+
+.active + .answer {
+  display: block;
+}
+
+.active, .question:hover {
+  background-color: #ccc; 
+}
+
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
