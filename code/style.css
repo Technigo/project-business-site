@@ -2,6 +2,156 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 .active + .answer {
   /* some styling here */
 }
+body{
+  height: 100%;
+  margin: 0;
+  background-color: #F2F2F2;
+}
+
+/*** HERO IMAGE ****/
+
+.hero-image {
+  height: 75vh;
+  background: url("./erol_ahmed_unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 10vw;
+  
+}
+
+.hero-h1{
+  position: relative;
+  font-size: 3em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #e83333;
+  font-family: 'Monoton', cursive;
+}
+
+.hero-p{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero-text button{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  border-radius: 12px;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+span.red{
+  color:#DA0C0C;
+}
+
+/*** NAVBAR ****/
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+a:after {
+  display: flex;
+  content: "";
+  width: 0px;
+  height: 4px; 
+  background: #DA0C0C;
+}
+
+a:hover::after {
+  width: 20px;
+  transition: width 0.5s;
+
+}
+
+a:hover {
+  color: #DA0C0C;
+}
+
+/*** MANIFESTO ****/
+
+.manifesto{
+  display: flex;
+  flex-direction: column;
+  background-color: #ecded5;
+}
+
+.manifesto-h2{
+  font-family: 'Monoton', cursive;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  margin: 70px 10px 30px 10px;
+}
+
+.manifesto-h3{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: black;
+  text-align: center;
+  position: relative;
+  font-weight: 10;
+}
+
+
+/*** SIGN UP FORM ****/
+
+.the-form{
+  background-color: #ecded5;
+  display: flex;
+  justify-content: center;
+}
+
+.p-form-main{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: black;
+  text-align: justify;
+}
+
+.p-form{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: purple;
+  text-align: justify;
+}
+
