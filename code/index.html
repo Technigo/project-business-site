@@ -4,27 +4,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Mountain</title>
-    <!-- dont forget to add a css file and link it here! -->
     <link rel="stylesheet" href="style.css">
-
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300" rel="stylesheet">
 
   </head>
   <body>
     <header>
 
-      <!-- video or image as a header is cool :) -->
+      <!-- HEADER WITH HERO VIDEO :) -->
 
-      <video autoplay muted loop>
-        <source src="videos/Header_1920x1080.mp4" type="video/mp4">
+      <video class="mobile" autoplay muted loop>
         <source src="videos/Header_360x202.mp4" type="video/mp4">  
+        <source src="videos/Header_360x202.webm" type="video/webm">
+        <p class="video-message">This browser does not support video...</p>
+      </video>
+
+      <video class="tablet" autoplay muted loop>  
         <source src="videos/Header_720x404.mp4" type="video/mp4">
+        <source src="videos/Header_720x404.webm" type="video/webm">
+        <p class="video-message">This browser does not support video...</p>
+      </video>
+
+      <video class="computer" autoplay muted loop>
+        <source src="videos/Header_1920x1080.mp4" type="video/mp4">
+        <source src="videos/Header_1920x1080.webm" type="video/webm">
         <p class="video-message">This browser does not support video...</p>
       </video>
 
       <div class="header-content">
 
-        <img src="#" alt="all-mountain-logo">
+        <img class="logo" src="./logo.png" alt="all-mountain-logo">
         <nav>
 
           <a href="#">LOCATIONS</a>
@@ -185,25 +194,62 @@
     </section>
 
 
+    <!-- ACCORDION SECTION -->
     <section class="accordion">
-      <!-- Accordion -->
 
-      <div class="accordion-faq">
-      <h1>FAQ</h1>
+      <div class="accordion-container">
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+        <h2 class="accordion-heading">Learn more about our locations</h2>
+
+        <div class="accordion-element">
+
+          <h3 id="accordion-header-1" class="accordion-header">Austria</h1>
+
+          <div class=accordion-text-container>
+            <p class="accordion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+    
+        </div>
+
+        <div class="accordion-element">
+
+          <h3 id="accordion-header-2" class="accordion-header">France</h1>
+
+          <div class="accordion-text-container">
+            <p class="accordion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+    
+        </div>
+
+        <div class="accordion-element">
+
+          <h3 id="accordion-header-3" class="accordion-header">Italy</h1>
+    
+          <div class="accordion-text-container">
+            <p class="accordion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+
+        </div>
+
+        <div class="accordion-element">
+
+          <h3 id="accordion-header-4" class="accordion-header">Switzerland</h1>
+    
+          <div class="accordion-text-container">
+            <p class="accordion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+
+        </div>
+
+
+
+
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </div>
 
     </section>
 
-    <!-- dont forget to link the javascript file here! -->
+    <!-- JS link -->
+    <script src="./script.js"></script>
+
   </body>
 </html>

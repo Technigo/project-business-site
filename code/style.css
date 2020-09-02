@@ -1,10 +1,3 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
 
 /* GENERAL */
 
@@ -26,23 +19,39 @@ header {
   width: 100%;
 }
 
-video {
+video.computer {
+  display:none;
+}
+
+video.tablet {
+  display:none;
+}
+
+video.mobile {
   position: absolute;
+  z-index: -1;
+  margin: 0;
   right: 0;
   top: 0;
   min-width: 100%;
-  height: 700px;
+  height: 200px;
   object-fit: cover;
 }
 
 .header-content {
-  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  margin: 0px;
   width: 100%;
   padding: 15px;
+}
+
+img.logo {
+  width: 100px;
+
 }
 
 img.all-mountain-logo {
@@ -53,11 +62,61 @@ h1.header-title {
   display: none;
 }
 
+/* For tablet only */
+@media screen and (min-width: 667px) and (max-width: 1024px) {
+
+  video.mobile {
+    display: none;
+  }
+
+  video.computer {
+    display: none;
+  }
+
+  video.tablet {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+}
+
 /* For computer only */
 @media (min-width: 1025px) {
   
+  video.mobile {
+    display: none;
+  }
+
+  video.tablet {
+    display: none;
+  }
+  
+  video.computer {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    height: 700px;
+    object-fit: cover;
+  }
+  
   .header-content {
     height: 700px;
+    margin: 0px;
+  }
+
+  img.logo {
+    width: 150px;
   }
   
   nav {
@@ -110,8 +169,6 @@ h1.header-title {
     font-family: 'Poppins';
     font-weight: lighter;
   }
-
-
 }
 
 
@@ -150,7 +207,7 @@ h2.form {
 p.form {
   margin: 0px;
   font-family: 'Poppins', Sans-Serif;
-  font-size: 18px;
+  font-size: 90%;
 }
 
 form {
@@ -221,7 +278,6 @@ h3 {
   flex-direction: column;
 }
 
-
 /*customize the submit button*/
 button.form {
   width: 100px;
@@ -247,18 +303,21 @@ button.form {
   }
 
   .textbox {
-    width: 20%;
+    width: 25%;
     margin-right: 5%;
-    height: 440px;
+    height: 450px;
+    overflow: auto;
   }
 
   .form-container {
-    width: 30%;
+    width: 40%;
+    height: 450px;
   }
 
   form {
     flex-direction: row;
     flex-wrap: wrap;
+    height: 100%
   }
 
   .form-group {
@@ -296,12 +355,51 @@ button.form {
 /* FAQ SECTION */
 
 section.accordion {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.accordion-faq {
+.accordion-container {
   background-color: white;
-  width: 55%;
-  margin: 50px;
+  width: 70%;
+}
+
+.accordion-heading {
+  font-family: 'Abril Fatface', Cursive;
+  font-weight: normal;
+  margin: 0px;
+  padding: 20px;
+}
+
+.accordion-element {  
+  width: 100%;
+  border: solid 1px #999;
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  font-family: 'Poppins', Sans-Serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 20px;
+  margin: 0px;
+}
+
+.accordion-text-container {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.2s ease;
+}
+
+.accordion-text {
+  font-family: 'Poppins', Sans-Serif;
+  font-size: 14px;
+  border-top: solid 1px #999;
+  padding: 20px;
+  margin: 0px;
+}
+
+.active {
+  height: 146px;
 }
