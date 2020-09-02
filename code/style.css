@@ -293,7 +293,7 @@ label {
   opacity: 1;
   height: 80px;
   background-color: #FAEBD7;
-  
+
 }
 
  .question {
@@ -304,9 +304,26 @@ label {
    border-bottom: 2px solid white;
  }
 
- .question:hover {
+
+/* Here is the icon in the accordion    */
+
+.question::after {
+  content: "\002B";
+  font-size: 25px;
+  float: left;
+  margin-right: 10px;
+ 
+
+}
+
+.active::after {
+  content: "\002D";
+}
+
+.question:hover {
   background-color:#FAEBD7;
 }
+
 
 
   /***  Media Quaries   ***/
