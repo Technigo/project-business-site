@@ -1,14 +1,111 @@
+body {
+  height: 2000px;
+  font-family: 'Ahiti', Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #e0e1dd;
+}
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background: #c6c5b9;
+  height: 75px;
+  margin: 0;
+  z-index: 1;
+}
+
+/* Class to use for sticky navbar in JavaScript */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 60px;
+  margin: 10px;
+}
+
+.header-name {
+  font-family: 'Indie Flower';
+  font-size: 20px;
+  margin: 10px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-link {
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+}
+
+.header-title {
+  position: relative;
+}
+
+.header-video {
+  width: 100%;
+  opacity: .8;
+  z-index: 0;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  z-index: .9;
+  top: 40%;
+  left: 20%;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-big-logo {
+  width: 120px;
+}
+
+.header-text {
+  font-family: 'Indie Flower';
+  font-size: 50px;
+  margin: 10px;
+}
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.answer {
-  display: none;
+.accordion {
+  margin: 30px;
+  padding: 30px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  box-shadow: grey;
 }
 
-.active + .answer {
-  /* some styling here */
-  display: block;
+.accordion-title {
+  margin: 0;
+}
+
+.answer {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.active {
+  height: 50px;
+  overflow: auto;
 }

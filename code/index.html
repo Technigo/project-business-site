@@ -4,37 +4,54 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Buddy dog day care</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./style.css">
+    <link href='https://fonts.googleapis.com/css?family=Athiti' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
   </head>
   <body>
     <header>
-      <nav>
-        <div class="header__logo">
-          <img src="" alt="">
+      <nav class="nav">
+        <div class="nav-left">
+          <img class="header-logo" src="./assets/paw-solid.svg" alt="A paw">
+          <p class="header-name">
+            Happy Buddy Dog Day Care
+          </p>
         </div>
-        <div class="header__companyName">
-          Happy Buddy Dog Day Care
+        <div class="nav-right">
+          <a class="header-link" href="#">Concept</a>
+          <a class="header-link" href="#">Personal</a>
+          <a class="header-link" href="#">Centers</a>
+          <a class="header-link" href="#">Contact</a>  
         </div>
-        <a class="header__link" href="#">Concept</a>
-        <a class="header__link" href="#">Personal</a>
-        <a class="header__link" href="#">Centers</a>
-        <a class="header__link" href="#">Contact</a>
       </nav>
-      <section class="header__title">
-        <h1>Happy Buddy Dog Day Care</h1>
-        <video controls>
-          <source srcset="/code/videos/Dog_1280x720_10mb.mp4" type="video/mp4" media="(min-width: 960px)">
-          <source srcset="/code/videos/Dog_960x540_6mb.mp4" type="video/mp4" media="(max-width: 960px)">
-          <source srcset="/code/videos/Dog_640x360_2mb.mp4" type="video/mp4" media="(max-width: 640px)">
-          <p>This browser does not support video</p>
+      <section class="header-title">
+        <video class="header-video" autoplay loop muted>
+          <source src="/code/videos/Dog_640x360_2mb.mp4" type="video/mp4">
+            <p>This browser does not support video</p>
         </video>
+        <div class="overlay">
+          <div class="header-container">
+            <img class="header-big-logo" src="./assets/paw-solid.svg" alt="A paw">
+          <h1 class="header-text">Happy Buddy Dog Day Care</h1>
+          </div>
+        </div>
       </section>
     </header>
     <!-- video or image as a header is cool :) -->
 
+    <section class="intro">
+      <h2>
+        Best dog day care in Stockholm!
+      </h2>
+      <p>
+        Do you want your best friend to 
+      </p>
+    </section>
+
     <section class="form">
     <!-- Signup form -->
-      <h2>Request</h2>
+      <h2 class="form-title">Request</h2>
       <form action="http://httpbin.org/anything" method="POST">
         <div class="form__first">
           <label>
@@ -109,36 +126,66 @@
       </form>
     </section>
 
-
+    <!-- Accordion -->
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
 
-      <div class="question" id="section1">Question 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <h2 class="accordion-title">FAQ</h2>
+
+      <div class="accordion-element">
+        <h3 class="question" id="question-1">
+          Question 1
+        </h3>
+        <div class="answer">
+          <p class="answer-text">
+            Lorem ipsum...
+          </p>
+        </div>
+      </div>
+      
+      <div class="accordion-element">
+        <h3 class="question" id="question-2">
+          Question 2
+        </h3>
+        <div class="answer">
+          <p class="answer-text">
+            Lorem ipsum...
+          </p>
+        </div>
       </div>
 
-      <div class="question" id="section2">Question 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="accordion-element">
+        <h3 class="question" id="question-3">
+          Question 3
+        </h3>
+        <div class="answer">
+          <p class="answer-text">
+            Lorem ipsum...
+          </p>
+        </div>
       </div>
 
-      <div class="question" id="section3">Question 3</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="accordion-element">
+        <h3 class="question" id="question-4">
+          Question 4
+        </h3>
+        <div class="answer">
+          <p class="answer-text">
+            Lorem ipsum...
+          </p>
+        </div>
       </div>
 
-      <div class="question" id="section4">Question 4</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="accordion-element">
+        <h3 class="question" id="question-5">
+          Question 5
+        </h3>
+        <div class="answer">
+          <p class="answer-text">
+            Lorem ipsum...
+          </p>
+        </div>
       </div>
 
-      <div class="question" id="section5">Question 5</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
     <!-- dont forget to link the javascript file here! -->
     <script src="./script.js"></script>
   </body>
