@@ -13,9 +13,9 @@
 <body>
   <header>
     <section class="navbar responsive" id="topnavbar">
-      <a href="#" >about us</a>
-      <a href="#" >faq</a>
-      <a href="#" >contact</a>
+      <a href="#">about us</a>
+      <a href="#">faq</a>
+      <a href="#">contact</a>
       <a href="javascript:void(0);" id="hamburger" class="icon">
         <i class="fa fa-bars"></i>
       </a>
@@ -35,7 +35,8 @@
     <p> answer a few questions down below and we'll send you you're tailor made mix
       of your favorites. </p>
 
-    <!-- Signup form -->
+    <HR>
+
     <form class="form" action="http://httpbin.org/anything" method="POST">
 
       <div class="form-group">
@@ -49,48 +50,54 @@
       </div>
 
       <div class="form-group">
-        <label> vinos </label>
-        <input type="checkbox">
-        <input type="checkbox">
-        <input type="checkbox">
-        <input type="checkbox">
+        <label> Select your whine of preference </label>
+        <div class="row-buttons">
+          <label><input type="checkbox"> white</label>
+          <label><input type="checkbox"> red</label>
+          <label><input type="checkbox"> bubbles</label>
+          <label><input type="checkbox"> rosé</label>
+        </div>
       </div>
 
       <div class="form-group">
-        <label> prices </label>
-        <input type="radio" name="price" />
-        <input type="radio" name="price" />
-        <input type="radio" name="price" />
-        <input type="radio" name="price" />
-      </div>
-
-      <div class="form-group">
-        <input type="checkbox" required>
-        <label>I have read the T&C</label>
-        <input type="checkbox" required>
-        <label>I am over 18</label>
-      </div>
-
-        <div class="form-group">
-          <label for="message">Anything else you want us to know? </label> 
-          <textarea id="message" cols="10" rows="2" name="messageValue"></textarea>
+          <label> Choose your price range </label>
+          <div class="row-buttons">
+          <label><input type="radio" name="price">500-1000</label>
+          <label><input type="radio" name="price">1000-1500</label>
+          <label><input type="radio" name="price">1500-2000</label>
+          <label><input type="radio" name="price">2000+</label>
+          </div>
         </div>
 
         <div class="form-group">
-          <input type="button" required>
-          <label>Send</label>
+          <div class="row-buttons">
+          <input type="checkbox" required>
+          <label>I have read the T&C</label>
+          <input type="checkbox" required>
+          <label>I am over 18</label>
+          </div>
         </div>
 
+        <div class="form-group">
+          <label for="message">Anything else you want us to know? </label>
+          <textarea id="message" cols="30" rows="5" name="messageValue" placeholder="Let us know if you have any preferences!"></textarea>
+        </div>
 
+        <div class="form-group">
+          <input type="submit" value="send" required>
+        </div>
+      
         <!--USE A <TARGET TAG> OOR maybe that's not the thing a want, but I want a pop-up, 
         Thank you for sending your request, we'll get back
         to you as soon as we have a proposal for you! -->
     </form>
 
+    <HR>
+
   </section>
-  
+
   <section class="faq">
-    
+
     <div class="question" id="question1"> mat? </div>
     <div class="answer">
       <p>en korv</p>
@@ -112,13 +119,13 @@
     <div class="answer">
       <p>100 spänn</p>
     </div>
-    
 
 
-  </section> 
+
+  </section>
 
 
-<script src="script.js"> </script>
+  <script src="script.js"> </script>
 </body>
 
 </html>
