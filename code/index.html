@@ -1,103 +1,150 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hay Harvest</title>
-    <link rel="stylesheet" href="./style.css">
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
-    <header>
-      <h1>KÄLLSLÄTTEN <br> HAY HARVEST</h1>
-      <p>16-18 july 2021</p>
-    </header>
 
-    <section class="greet">
-      <p>Welcome! <br> As every year Källslätten-föreningen is going to harvest the hay in our beloved and protected landscape Källslätten. 
-        Fill in the form if you want to join. For more information, see FAQ below. </p>
-    </section>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hay Harvest</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- dont forget to add a css file and link it here! -->
+</head>
 
-    <section class="info">
-      <section class="form-container">
-        <h2>I want to join!</h2>
-        <form action="">
+<body>
+  <!-- video or image as a header is cool :) -->
+  <header>
+    <h1>KÄLLSLÄTTEN <br> HAY HARVEST</h1>
+    <p>16-18 july 2021</p>
+  </header>
 
-          <div class="form-group">
+  <section class="greet">
+    <p>Welcome! <br> As every year Källslätten-föreningen is going to harvest the hay in our beloved and protected
+      landscape Källslätten.
+      Fill in the form if you want to join. For more information, see FAQ below. </p>
+  </section>
+
+  <section class="info">
+    <section class="form-container">
+      <h2>I want to join!</h2>
+
+      <form 
+        action="http://httpbin.org/anything"
+        method="POST"
+      >
+        
+        <div class="form-group">
           <label class="label-left" for="firstName">First name *</label>
-            
-            <input type="text" name="firstName" id="firstName" class="textfield">
-          
-         </div>
+          <input 
+            type="text" 
+            name="firstName" 
+            id="firstName" 
+            class="textfield"
+          >
+        </div>
 
-          <div class="form-group">
+        <div class="form-group">
           <label class="label-left" for="lastName">Last name *</label>
-            
-            <input type="text" name="lastName" id="lastName" class="textfield">
-          
-          </div>  
+          <input 
+            type="text" 
+            name="lastName" 
+            id="lastName" 
+            class="textfield"
+          >
+        </div>
 
-          <div class="form-group">
+        <div class="form-group">
           <label class="label-left" for="mailAddress">Mail address *</label>
-            
-            <input type="email" name="mailAddress" id="mailAddress" class="textfield">
-          
-          </div>
+          <input 
+            type="email" 
+            name="mailAddress" 
+            id="mailAddress" 
+            class="textfield"
+          >
+        </div>
 
-          <div class="form-choose">
+        <div class="form-choose">
           <label class="label-left" for="bring1">I can bring</label>
-            
-           <div class="bringbox">
-            <input type="checkbox" name="bring" id="bring1" value="tent">
-              <label for="bring1" class="label-right">tent</label><br>
-            <input type="checkbox" name="bring" id="bring2" value="hayfork">
-              <label for="bring2" class="label-right">hay fork</label><br>
-            <input type="checkbox" name="bring" id="bring3" value="scythe">
-             <label for="bring3" class="label-right">scythe</label><br>
-            <input type="checkbox" name="bring" id="bring4" value="guitar">
-              <label for="bring4" class="label-right">guitar</label><br>
-            </div>
-          
-          </div>
-
-          <div class="form-choose">
-            <label class="label-left" for="member">I'm a member</label>
-            
-            <div class="memberbox">
-              <input type="radio" id="member" name="member" value="yes">
-                <label for="member" class="label-right">Yes</label><br>
-              <input type="radio" name="member" id="noMember" value="no">
-                <label for="noMember" class="label-right">No</label>
-            </div>
+            <div class="bringbox">
+              <input 
+                type="checkbox" 
+                name="bring" 
+                id="bring1" 
+                value="tent"
+              >
+              <label for="bring1" class="label-right">tent</label>
               
-          </div>
+              <input 
+                type="checkbox" 
+                name="bring" 
+                id="bring2" 
+                value="hayfork"
+              >
+              <label for="bring2" class="label-right">hay fork</label>
+              
+              <input 
+                type="checkbox" 
+                name="bring" 
+                id="bring3" 
+                value="scythe"
+              >
+              <label for="bring3" class="label-right">scythe</label>
 
-        </form>
-      </section>
+              <input 
+                type="checkbox" 
+                name="bring" 
+                id="bring4" 
+                value="guitar"
+              >
+              <label for="bring4" class="label-right">guitar</label>
+            </div>
+        </div>
 
-      <section class="accordion-container">
-        <section class="accordion">
-          <!-- Accordion -->
-          <h1>FAQ</h1>
-    
-          <div class="question" id="section1">Section 1</div>
-          <div class="answer">
-            <p>Lorem ipsum...</p>
-          </div>
-    
-          <div class="question" id="section2">Section 2</div>
-          <div class="answer">
-            <p>Lorem ipsum...</p>
-          </div>
-        </section>
-        <!-- dont forget to link the javascript file here! -->
-      </section>
+        <div class="form-choose">
+          <label class="label-left" for="member">I'm a member</label>
+            <div class="memberbox">
+              <input 
+                type="radio" 
+                id="member" 
+                name="member" 
+                value="yes"
+              >
+              <label for="member" class="label-right">Yes</label>
 
+              <input 
+                type="radio" 
+                name="member" 
+                id="noMember" 
+                value="no"
+              >
+              <label for="noMember" class="label-right">No</label>
+            </div>
+        </div>
+        <button class="form-submit" type="submit">Submit form</button>
+      </form>
     </section>
 
-    <!-- Signup form -->
+    <section class="accordion-container">
+      <section class="accordion">
+        <!-- Accordion -->
+        <h1>FAQ</h1>
+
+        <div class="question" id="section1">Section 1</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <div class="question" id="section2">Section 2</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+      </section>
+      <!-- dont forget to link the javascript file here! -->
+    </section>
+
+  </section>
+
+  <!-- Signup form -->
 
 
-  </body>
+</body>
+
 </html>
