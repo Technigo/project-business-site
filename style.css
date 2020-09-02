@@ -1,13 +1,14 @@
 body {
-  background: #fff;
-  color: #4d4d4d;
-  font-family: Helvetica, sans-serif;
+  background: #000066;
+  color: #000;
+  font-family: Verdana, sans-serif;
+  font-size: 13px;
   align-items: center;
+  margin: 0px;
 }
 
 /* Nav */
 .nav-container {
-  top: 0;
   height: 50px;
   width: 100%;
   display: flex;
@@ -34,16 +35,14 @@ body {
   border-radius: 5px;
 }
 
-.logo-ico {
-  height: 65px;
-}
-
-.logo-full {
-  display: none;
+h2 {
+  padding: 8px;
+  color: #fff;
 }
 
 nav {
   display: none;
+  margin-right: 16px;
 }
 
 nav a {
@@ -53,47 +52,65 @@ nav a {
 }
 
 a:hover {
-  background-color: #ffffcc;
-  color: #000;
+  background-color: #2966a3;
+  color: #fff;
 }
 
 /* Header */
 header {
   padding: 0;
-  height: 600px;
+  height: 400px;
   width: 100%;
-  background: lightgreen;
   position: relative;
   overflow: hidden;
   background-size: cover;
   background-position: center center;
   display: block;
+  text-align: center;
+  color: #fff
 }
+
+.overlay-video {
+  background: none;
+  mix-blend-mode: overlay;
+}
+
+.headline {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: 'Times New Roman', Times, serif;
+ } 
+
+ .header-blurb {
+  font-size: 20px;
+ }
 
 video {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
+  margin-bottom: 2px;
+  z-index: -1;
   display: block;
   overflow: hidden;
   object-fit: cover;
   object-position: center center;
-  
 }
 
+/* Container for accordian & form */
 .form-accordian {
   display: flex;
   flex-direction: row-reverse;
-  margin-bottom: 5px;
+}
+
+h3 {
+  font-weight: 600;
+  /* background-color: aquamarine; */
 }
 
 /* Form */
 .form {
-  margin-top: 5px;
-  padding: 16px;
+  padding: 10px;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -102,17 +119,36 @@ video {
 
 .form-group {
   margin-bottom: 15px;
+  display: flex;
   align-items: center;
 }
 
 .form-group label {
-  width: 100px;
+  width: 130px;
   margin-right: 5px;
 }
 
 .form-group input,
 .form-group textarea {
-  width: 100px;
+  width: 200px;
+  display: block;
+}
+
+/* .register {
+  background: #e3e6e8;
+}
+
+.student-type {
+  background: #cccccc;
+} */
+
+button {
+  display: block;
+  align-items: center;
+}
+
+.tos label a {
+  color: #000
 }
 
 .form-submit {
@@ -120,19 +156,17 @@ video {
   width: 200px;
   border-radius: 10px; 
   font-size: medium;
-  background-color: #adadeb;
+  background-color: #fff;
 }
 
 /* Accordion */
 .accordion {
-  margin-top: 5px;
-  padding: 16px;
+  padding: 10px;
   width: 50%;
   background-color: lightslategray;
 }
-h1{
-  background-color: aquamarine;
-}
+
+
 
 .question {
   background: lightseagreen;
@@ -151,24 +185,28 @@ h1{
 
 /* Footer */
 footer {
-  height: 120px;
+  height: 130px;
   left: 0;
   bottom: 0;
   right: 0;
   background: #000066;
   color: #fff;
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 footer p {
   text-align: center;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 footer a {
   color: #fff;
+}
+
+footer span {
+  font-size: 25px;
 }
 
 /* Media Queries */
@@ -177,12 +215,8 @@ footer a {
       justify-content: space-between;
   }
 
-  .logo-ico {
-    display: none;
-  }
-
-  .logo-full {
-    display: inline-block;
+  header {
+    height: 500px;
   }
 
 }
@@ -195,5 +229,9 @@ footer a {
 
   .hamburger {
       display: none;
+  }
+
+  header {
+    height: 600px;
   }
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Because Food</title>
+  <title>Because: Food</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -16,20 +16,22 @@
       <div></div>
       <div></div>
     </div>
-    <!-- <img class="logo-full" src="#" alt="logo">
-      <img class="logo-ico" src="#" alt="logo mini"> -->
+   <h2>Because: Food</h2>
     <nav>
-      <a href="#">Classes</a>
+      <a href="#">Calendar</a>
       <a href="#">About</a>
-      <a href="#">Sign up</a>
       <a href="#">Login</a>
     </nav>
   </div>
 
   <header>
+    <div class="overlay-video">
+      <p class="headline">Let’s cook something up!</p>
+      <p class="header-blurb">Because: Food is a community cooking school. We believe that life is too short to do without solid cookery skills. Join us and learn something new.</p>
+    </div>
     <video autoplay loop muted preload playsinline>
       <source src="./video_hd.mp4" type="video/mp4">
-      <p>This browser doesn't support video. Here's a <a href="./video_hd.mp4">link to the video</a> instead.</p>>
+      <p>This browser doesn't support video. Here's a <a href="./video_hd.mp4">link to the video</a> instead.</p>
     </video>
   </header>
 
@@ -37,44 +39,110 @@
   <section class="form-accordian">
     <form class="form" action="http://httpbin.org/anything" target="_blank" method="POST">
       <h3>Reserve your spot</h3>
+    
       <div class="form-group">
-        <label for="firstName">First name
-          <input type="text" name="nameValue" placeholder="First and last name" required />
-        </label>
+        <label for="firstName">Name</label>
+        <input 
+        id="nameValue"
+        type="text" 
+        name="nameValue" 
+        placeholder="First and last name" 
+        required 
+        />
       </div>
+    
       <div class="form-group">
-        <label for="email">Email address
-          <input type="email" name="emailValue" placeholder="E-mail address" required />
-        </label>
+        <label for="email">E-mail</label>
+        <input 
+        id="email"
+        type="email" 
+        name="emailValue" 
+        placeholder="Where can we reach you?" 
+        required 
+        />
       </div>
+    
       <div class="form-group">
-        <label for="password">Password
-          <input type="password" name="password" placeholder="choose a passwords" required />
-        </label>
+        <label for="password">Password</label>
+        <input 
+        id="pass"
+        type="password" 
+        name="password" 
+        placeholder="Choose a password" 
+        required 
+        />
       </div>
-      <label for="passmatch">Confirm password
-        <input type="password" name="passmatch" placeholder="Confirm password" required />
-      </label>
+    
       <div class="form-group">
+        <label for="passmatch">Confirm password</label>
+        <input 
+        id="passmatch"
+        type="password" 
+        name="passmatch" 
+        placeholder="Let's make sure they match" 
+        required />
+      </div>
+      
+      <div class="student-type">
+        <h4>Are you a new or returning student?</h4>
+          <input type="radio" id="firstTime" name="student" >
+          <label for="firstTime">I'm new!</label>
+        </p>
+        <p>
+          <input type="radio" id="returnStudent" name="student">
+          <label for="returnStudent">I've been here before.</label>
+        </p>
+      </div>
+      
+      <div class="register">
+        <h4>Choose your classes</h4>
+        <p>
+          <input type="checkbox" id="pasta">
+          <label for="pasta">Pasta From Scratch: 3 Types
+          </label>
+        </p>
+        <p>
+          <input type="checkbox" id="sourdough">
+          <label for="sourdough">Sourdough Starter Workshop
+          </label>
+        </p>
+        <p><input type="checkbox" id="sd-bread">
+          <label for="sd-bread">Sourdough Bread
+          </label>
+        </p>
+        <p>
+          <input type="checkbox" id="basics">
+          <label for="basics">Kitchen Basics and Knife Skills
+          </label>
+        </p>
+        <p>
+          <input type="checkbox" id="veggie">
+          <label for="veggie">Vegetarian: South Indian Soul Food
+          </label>
+        </p>
+        <p>
+          <input type="checkbox" id="squash">
+          <label for="squash">Fall Focus: Butternut Squash
+          </label>
+        </p>
 
-      </div>
-      <!-- 1 set of radio -->
-      <div class="form-group">
-        <label for="">whatis
+      </div>  
+
+      <div class="tos">
+        <p>
+          <input type="checkbox" id="tos" required>
+          <label for="tos">I agree to the <a href="#">Terms & Conditions</a>.
         </label>
-      </div>
-      <!-- 1 set of checkboxes -->
-      <div class="form-group">
-        <input type="checkbox" id="tos" required><label for="tos">I agree to the <a href="#">Terms & Conditions</a>a>.
-        </label>
+        </p>
       </div>
 
-      <button class="form-submit" type="submit">Sign me up!</button>
+      <p><button class="form-submit" type="submit">Sign me up!</button></p>
     </form>
+
 
     <section class="accordion">
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      <h3>FAQ</h3>
 
       <div class="question" id="section1">Section 1</div>
       <div class="answer">
@@ -89,7 +157,7 @@
   </section>
 
   <footer>
-    <p><span style='font-size:25px;'>&#129418;</span></p>
+    <p><span>&#129418;</span></p>
     <p>This page was made by Peggy @<a href="https://blipsandclicks.com">blipsandclicks</a> for educational purposes.
     </p>
     <p>Video by <a href="https://www.pexels.com/@pressmaster">Pressmaster</a> from <a
@@ -98,5 +166,4 @@
   </footer>
   <script src="./script.js"></script>
 </body>
-
 </html>
