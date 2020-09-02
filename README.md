@@ -3,7 +3,7 @@ This week's project was to create a site for a company of our choice (an existin
 The main requirements were to have" 
 
 - "Hero" image/video 
-- Signup form with: 2 x Text fields, 1 x A password field, 1 x Set of radio buttons, 1 x Set of checkboxes,1 x Submit button
+- Signup form with: 2 x Text fields, 1 x A password field, 1 x Set of radio buttons, 1 x Set of checkboxes,1 x Submit button (submit it to httpbin)
 - Accordion element 
 
 
@@ -13,10 +13,11 @@ The theme of the site was based in my passion for perfume and I wanted the desig
 
 ## Planning & The Problem 🧩
 
-I applied a lot of knowledge I acquired in last week's project. I used flexbox to structure the layout the page and mobile first approach for responsiveness and decided to have a subtle signup form for mobile and tablet and then a different styled form for the desktop version. 
-Initially I was going to have a hero image but then switched to a video because I wanted to have the challenge of making it responsive across devices. 
+I applied a lot of knowledge I acquired in last week's project. I used flexbox to structure the layout the page and mobile first approach for responsiveness and decided to have a subtle signup form for mobile and tablet and then a different styled form for the desktop version.
 
-I had quite a bit of trouble with the accordion element, as I couldn't  fully understand the Javascript code yet. But a codepen exercise and quite a bit of google search did help and I managed to make it work in the end.
+Initially I was going to have a hero image but then switched to a video because I wanted to have the challenge of making it responsive across devices, so my approach was to have 3 different videos with different sizes: desktop, tablet and mobile, so depending on the device, the appropriate video will load and be shown.
+
+I had quite a bit of trouble with the accordion element, as I couldn't  ully understand the Javascript code yet. But a codepen exercise and quite a bit of google search did help and I managed to make it work in the end.
 
 # Tech ⚡
 - HTML5
