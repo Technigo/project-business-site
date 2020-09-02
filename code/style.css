@@ -139,13 +139,14 @@ form {
 
 /*THE QUESTION ACCORDION*/
 
-.accordion h1 {
+.accordion h2 {
   width: 400px;
   box-sizing: border-box;
   text-align: center;
   background-color: white;
   margin-top: 50px;
-  margin-bottom: 0px;
+  margin-bottom: 50px;
+  padding: 20px;
 
 }
 
@@ -161,8 +162,23 @@ form {
   width: 400px;
   box-sizing: border-box;
   background-color: white;
-  padding: 5px 15px;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s ease;
   
+}
+
+.answer p {
+  padding: 5px 15px;
+}
+
+.active {
+  height: 100px;
+  overflow: auto;
+}
+
+.chosen {
+  background-color:#C0CEAD;
 }
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
