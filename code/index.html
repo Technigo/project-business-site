@@ -20,13 +20,14 @@
       <!-- Signup form -->
       <section class="form">
         <form action="http://httpbin.org/anything" method="POST">
-          <p>Sign up for a consultation session</p>
+          <p>Get in touch with us for a consultation session</p>
           <!--OWNER'S INFO-->
           <fieldset class="owner-info">
+          <legend>Information about owner</legend>
           <div class="owner-info-div">
             <label>
               Your full name:
-              <input type="text" required name="name" class="input-owner">
+              <input type="text" required name="fullName" class="input-owner">
             </label>
             <label>
               E-mail:
@@ -41,34 +42,55 @@
   
           <!--DOG'S INFO-->
           <fieldset class="dog-info">
-            <label>
-              Your dog's name:
-              <input type="text" required name="message">
-            </label>
-            <label>
-              Breed:
-              <input type="text" required name="message">
-            </label>
-            <div class="dog-sex">
+          <legend>About your dog</legend>
+            <div class="dog-info-div">
               <label>
-                <input type="radio" required name="male">
-                male
+                Dog's name:
+                <input type="text" required name="dogName">
               </label>
               <label>
-                <input type="radio" required name="female">
-                female
+                Breed:
+                <input type="text" required name="breed">
               </label>
+              <!-- <label>
+                Dog's gender:
+                <input type="radio" required name="dogGender">male
+                <input type="radio" required name="dogGender">female
+              </label>
+              <label>
+                Spayed/Neutered:
+                <input type="radio" required name="spayedNeutered"> YES
+                <input type="radio" required name="spayedNeutered"> NO
+              </label>
+              <label>
+                Behavioural issue:
+                
+                <textarea name="behaviouralIssue" rows="" cols="">
+                </textarea>
+              </label> -->
+              <!--need div to get the radio buttons in a row not in a column-->
+              <div class="dog-sex">
+                <label>
+                  Dog's gender:
+                  <input type="radio" required name="dogGender">male
+                  <input type="radio" required name="dogGender">female
+                </label>
+              </div>
+              <div>
+                <label>
+                  Spayed/Neutered:
+                  <input type="radio" required name="spayedNeutered"> yes
+                  <input type="radio" required name="spayedNeutered"> no
+                </label>
+              </div>
+              <div>
+                <label>
+                  Behavioural issue:
+                  <textarea name="behaviouralIssue" rows="" cols="">
+                  </textarea>
+                </label>
+              </div>
             </div>
-            <div>
-              <label>
-                Spayed/Neutered
-                <input type="radio" required name="message"> YES
-                <input type="radio" required name="message"> NO
-              </label>
-            </div>
-            <textarea name="message" rows="" cols=""> <!--or define size of the box in CSS-->
-                Short description of your dog's behavioural issue:
-            </textarea> 
           </fieldset>
         <!-- <label>
           Where did you hear about us?
@@ -105,6 +127,9 @@
     </main>
     <!-- dont forget to link the javascript file here! -->
     <footer>
+      Happy footer.
     </footer>
+    <script src="./script.js">
+    </script>
   </body>
 </html>
