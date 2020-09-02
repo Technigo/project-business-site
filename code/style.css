@@ -2,6 +2,161 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+body {
+  margin: 0;
+  background-color: #a9b8cd;
+}
+
+header {
+ margin: 0;
+ position: absolute;
+ background-color: transparent;
+ width: 100%;
+ height: 500px;
+}
+
+h1 {
+ position: absolute;
+ text-align: center;
+ font-size: 100px;
+ color: #fafafa;
+ left: 20%;
+ right: 20%;
+ top: 20%;
+ 
+}
+
+picture {
+  width:100%
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+ 
+}
+
+.hero-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.box-container {
+  padding-top: 600px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-container {
+  background-color: ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: black solid;
+  width: 45%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.form-group1 label {
+  margin-top: -10px;
+}
+
+.form-group2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.form-input {
+  margin: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin:0;
+}
+
+li {
+  margin: 10px;
+}
+
+ul input {
+  display: flex;
+}
+
+.form-text {
+  text-align: center;
+}
+
+.radiobutton-container {
+ user-select: none;
+ margin: 15px;
+}
+
+.radiobutton-container input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  background-color: #cfcab6;
+  height: 17px;
+  width: 17px;
+  margin-left: 2px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.radiobutton-container:hover input ~ .custom-radio {
+  background-color: #657e83;
+}
+
+.radiobutton-container input:checked ~ .custom-radio {
+  background-color: #657e83;
+} 
+
+.radiobutton-container input:focus ~ .custom-radio {
+  outline: ;
+}
+
+.accordion {
+  border: black solid;
+  width: 45%;
+  margin: 10px;
+  padding: 20px;
+}
+
+
 .active + .answer {
   /* some styling here */
+  
+}
+
+@media (max-width: 1024px) {
+ video {
+   display:none;
+ }
 }
