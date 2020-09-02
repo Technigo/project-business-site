@@ -1,10 +1,14 @@
-*{
+* {
   box-sizing: border-box;
 }
-.container{
+.container {
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.wrap {
+  padding: 10px;
 }
 
 .header {
@@ -29,24 +33,76 @@
   font-size: 25px;
 }
 
-.headerVideo{
+@media screen and (max-width: 325px){
+  .headerText{
+    font-size: 23px;
+  }
+}
+
+.headerVideo {
   width: 100%;
   object-fit: cover;
 }
 
-.navBar{
+.navBar {
   text-align: center;
   border-top: 1px solid  #8895a7;
+  padding-bottom: 10px;
 }
-.navBar a{
-  padding: 20px;
+.navBar a {
+  padding: 10px;
   font-size: 20px;
   color:#1d3557;
 }
-.footer{
-  background-color: #1d3557;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 10px;
-  color: white;
+
+.bodyContent {
+  display: flex;
+  
+}
+
+@media screen and (max-width: 600px){
+  .bodyContent {
+    flex-direction: column;
   }
+}
+
+.form {
+  flex: 1;
+}
+
+.accordionContainer{
+  flex: 1;
+}
+
+.footer {
+  background-color: #1d3557;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  width: 100%;
+}
+
+.footerSocial {
+  display: flex;
+  padding-top: 15px;
+     
+}
+
+.footerSocialItems {
+padding: 10px;
+}
+
+.socialIcons {
+  width: 20px;
+}
+
+.socialIcons path {
+  fill: white;
+}
+
+.footerCopyWright {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
