@@ -29,6 +29,9 @@ h4 {
 
 .main-header {
   position: sticky;
+  top: 0; /*when we want the header to be sticky*/ 
+  /*this could also be done with javascript, onscroll sticky.. 
+  then a sticky class should be styled. */
   display: flex; 
   justify-content: space-between;
   align-items: center;
@@ -37,6 +40,7 @@ h4 {
   padding: 0 10vw;
   /*color: black;*/
   background-color: #23272A;
+  /*background-color: transparent;*/
   z-index: 1; /*when we scroll we want the header to be on top of everything*/
 }
 
@@ -67,9 +71,6 @@ a {
   opacity: 1;
 }
 
-.nav-link {
-  
-}
 
 .nav-link a {
   margin: 5px;
@@ -119,28 +120,33 @@ a {
 .hero {
   height: 70vh;
   background: url(./unsplash-hero.jpg) no-repeat bottom center;
-  /*media query on background url to have a nice pic*/
   background-size: cover;
   display: flex;
-  /*flex-wrap: wrap;*/
-  /*justify-content: flex-start;*/
   align-items: center;
   padding: 0 10vw; 
   color: #fff;
+  position: relative;
 }
 
-.hero h1 {
-    position: relative;
-    font-size: 34px;
-    text-transform: uppercase;
-    text-align:center;
-    background: rgba(0,0,0,0.2);
-    /*padding: 10px;*/
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin: 3vw;
 }
 
-.hero p {
-    position: relative;
+.hero-text h1 {
+  font-size: 34px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
+
+.hero-text p {
+  font-size: 20px;
+  width: 50%;
+}
+
+
   
 
 /****BAKERY and FOOD CONTAINER****/
@@ -169,8 +175,79 @@ a {
   box-shadow: 0 0 20px lightgrey;
 }
 
+/****ACCORDION SECOND TEST ****/
 
-/****ACCORDION****/
+.accordion {
+  width: 100%;
+  margin: 3vw auto;
+  background-color: mintcream;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.accordion-element {
+  background-color: mintcream;
+  margin-left: 3vw;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+  width: 60%;
+  position: relative;
+}
+
+.accordion-header:after {
+  content: "\002b";
+  position: absolute;
+  right: 20px;
+}
+
+.accordion-header {
+  padding: 20px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  position: relative; 
+  cursor: pointer; 
+}
+
+.accordion-header:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+
+.accordion-text-container {
+  height: 0;
+  overflow: hidden;
+  transition: height .5s ease;
+}
+
+.accordion-text img {
+  width: 200px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  border-radius: 2px;
+}
+
+.accordion-text {
+  padding: 20px;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, #cceedd, transparent) 1;
+  display: flex;
+  align-items: center;
+}
+
+
+.active {
+  height: 200px;
+}
+
+.active + .accordion-header:after {
+  content: '\002D';
+}
+
+
+
+
+/****ACCORDION FIRST TEST!!!!
 
 .accordion {
   width: 100%;
@@ -180,7 +257,6 @@ a {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  /*padding: 30px;*/
   padding-left: 3vw;
   padding-bottom: 40px;
   margin-bottom: 10px;
@@ -189,21 +265,17 @@ a {
 .accordion img {
   width: 200px;
   object-fit: cover;
-  margin: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
   border-radius: 2px;
 }
 
 
 .question {
-  /*background-color: white;*/
   padding: 20px;
   margin-top: 10px;
   text-transform: uppercase;
   text-align: left;
-  /*border-bottom: 1px solid rgba(189, 201, 173, 0.858);*/
   width: 60%;
-  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);*/
   position: relative;
 }
 
@@ -218,11 +290,6 @@ a {
   right: 20px;
 }
 
-.question.active::after {
-  content: '\002D';
-  font-size: 20px;
-}
-
 
 .question:hover {
   background-color: rgba(0,0,0,0.2);
@@ -231,11 +298,14 @@ a {
 .answer {
   display: none;
   width: 60%;
+  padding:20px;
   background-color: #ffff;
   overflow: hidden; 
   border-top: 3px solid;
   border-image: linear-gradient(to right, #cceedd, transparent) 1;
+  transition: height 10s; 
 }
+
 
 .question.active + .answer {
   display: flex;
@@ -245,6 +315,10 @@ a {
   align-self:center;
 }
 
+.question.active::after {
+  content: '\002D';
+  font-size: 20px;
+}****/
 
 /*****INPUT FORM****/
 
@@ -265,6 +339,8 @@ a {
   width: 100px;
   margin-right: 15px;
 }
+
+
 
 /*since I want them to be in a row instead of a column*/
 #time, #findUs {
@@ -317,8 +393,6 @@ button::after {
   right:0;
   border-top-color: transparent;
   border-left-color: transparent;
-  /*border-bottom-color: ;
-  border-right-color: ;*/
 }
 
 button::before {
@@ -326,8 +400,6 @@ button::before {
   left: 0;
   border-bottom-color: transparent;
   border-right-color: transparent;
-  /*border-top-color: blueviolet;
-  border-left-color: blueviolet;*/
 }
 
 button:hover:after, button:hover:before {
@@ -460,10 +532,7 @@ footer {
      margin-left: 10px;
    }
 
-  .form {
-    margin-left: 60vw;
-  }
-
+  
 }
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
