@@ -81,19 +81,7 @@ html {
   text-shadow: 0 0 10px black;
 }
 
-.btn {
-  color: white;
-  padding: 10px 24px;
-  font-size: 20px;
-  text-decoration: none;
-  background: #d36135;
-  border-radius: 8px;
-  transition: 0.3s all;
-}
 
-.btn:hover {
-  opacity: 0.8;
-}
 
 /* Main */
 
@@ -101,7 +89,6 @@ html {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  box-sizing: border-box;
 }
 
 /* Form */
@@ -166,13 +153,12 @@ input[type=submit]{
   widows: 20px;
   background: #a1cdf4;
   padding: 5px;
-  margin:50px;
-  width: 500px;
-  border: 10px solid #7b4b94;
+  margin: 50px;
+  width: 300px;
+  border: 8px solid #7b4b94;
   border-radius: 20px;
-  
+  flex-flow: wrap;
 }
-
 
 .accordion h1 {
   text-align: center;
@@ -183,28 +169,27 @@ input[type=submit]{
 }
 
 .accordion-container {
+  align-items: ;
   border: 2px solid #999;
   border-radius: 5px;
   margin-bottom: 15px;
-  width: 400px;
+  width: 200px;
   margin: 50px;
 }
 
 .accordion-header {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   background: #001d4a;
   color: whitesmoke;
   margin: 0;
   padding: 15px;
-  cursor: pointer;
+  cursor: grab;
 }
 
 
 .accordion-text {
   border-top: 2px solid #999;
-  text: 12px;
   margin: 0;
   padding: 15px;
 }
@@ -241,18 +226,28 @@ body {
   margin-top: 58px;
 }
 
-3. Responsive images */
+3. Responsive images 
 
 @media (max-width: 900px) {
   .rwd-image {
       width: 100%;
   }
 }
+*/
 
-@media (min-width: 901px) {
-  .rwd-image {
-      width: auto;
+@media (min-width: 600px ){
+
+  .accordion{
+    width: 500px;
+    
+    
   }
+  .accordion-container {
+    width: 400px;
+    margin: 50px;
+  }
+  
+
 }
 
 
