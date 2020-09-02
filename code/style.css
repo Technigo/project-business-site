@@ -1,24 +1,25 @@
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   color: #056676;
-  background-color: #e8ded2;
+  background: #e8ded2;
 }
 
 /*** HEADER ***/
 header {
-  background-color: #056676;
+  background: #056676;
   color: #e8ded2;
   display: flex;
+  flex-direction: row-reverse; /* Logo to left and hamburger-menu to right */
+  justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 8px;
 }
 
 .hamburger-menu {
   display: flex;
   width: 30px;
-  height: 30px;
+  height: 20px;
   flex-direction: column;
   justify-content: space-between;
   margin-right: 24px;
@@ -26,30 +27,28 @@ header {
 
 .hamburger-menu div {
   width: 35px;
-  height: 5px;
-  background-color: #e8ded2;
+  height: 3px;
+  background: #e8ded2;
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
 }
 
 nav {
-  display: none;
-}
-
-nav a {
-  color: #e8ded2;
-  text-decoration: none;
-  margin-left: 16px;
+  display: none; /* Not display navbar menu */
 }
 
 /*** HERO IMAGE ***/
 .hero-img {
-  background-color: cadetblue;
-  width: 100%;
-  height: 300px;
+  background: url(./images/hero-img-boat.jpg) no-repeat bottom left;
+  background-size: cover;
+  height: 30vh;
+  color: #e8ded2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*** MAIN ***/
@@ -60,17 +59,29 @@ main {
 }
 
 section {
-  width: 90%;
+  width: 80%;
+  /* border: solid 2px red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*** SIGNUP FORM ***/
 .form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  /* border: solid 2px blue; */
 }
 
 .form-group {
+  display: flex;
   margin-bottom: 10px;
+  /* border: solid 2px green; */
+}
+
+.form-group label {
+  width: 110px;
 }
 
 /*** ACCORDION ***/
@@ -85,20 +96,30 @@ section {
 /*** MEDIA QUERIES ***/
 @media (min-width: 768px) {
   /* Add styling specific for screen-size from 768px to 1023px */
+  body {
+    font-size: 18px;
+  }
+
   header {
-    justify-content: space-between;
+    flex-direction: row; /* Logo to left and navbar menu to right */
   }
 
   .hamburger-menu {
-    display: none;
-  }
-
-  .logo {
-    margin-left: 54px;
+    display: none; /* Not display hamburger-menu */
   }
 
   nav {
-    display: inline-block;
+    display: flex;
+  }
+
+  nav a {
+    color: #e8ded2;
+    text-decoration: none;
+    margin-right: 16px;
+  }
+
+  .hero-img {
+    height: 40vh;
   }
 
   main {
@@ -107,7 +128,43 @@ section {
 }
 
 @media (min-width: 1024px) {
-  /* Add styling specific for screen-size from 1024px */
+  /* Add styling specific for screen-size from 1024px and above */
+  .logo {
+    width: 90px; /* Want the logo to be bigger */
+    height: 90px;
+  }
+
+  a::after {
+    display: block;
+    content: "";
+    width: 0px;
+    height: 2px;
+    background: #e8ded2;
+  }
+
+  a.home:hover::after {
+    width: 56px;
+    transition: width 0.5s;
+  }
+
+  a.about:hover::after {
+    width: 65px;
+    transition: width 0.5s;
+  }
+
+  a.contact:hover::after {
+    width: 88px;
+    transition: width 0.5s;
+  }
+
+  a.four:hover::after {
+    width: 50px;
+    transition: width 0.5s;
+  }
+
+  .hero-img {
+    height: 50vh;
+  }
 }
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
