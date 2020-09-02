@@ -19,9 +19,9 @@ Initially I was going to have a hero image but then switched to a video because 
 I had quite a bit of trouble with the accordion element, as I couldn't  fully understand the Javascript code yet. But a codepen exercise and quite a bit of google search did help and I managed to make it work in the end.
 
 # Tech ⚡
-HTML5
-CSS3
-JavaScript
+- HTML5
+- CSS3
+- JavaScript
 
-## View it live
+## View it live 🔴
 Coming soon.
