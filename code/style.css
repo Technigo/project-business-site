@@ -1,12 +1,4 @@
-/** My color palette
-#182825 Dark Jungle Green - Text color
-#016FB9 Spanish blue - Section background color
-#22AED1 Pacific blue 
-#6D8EA0 Light Slate Gray - Background picture
-#AFA98D Sage
-
-**/
-
+/*** General styling for the website ***/
 * {box-sizing: border-box;}
 
 body {
@@ -25,8 +17,7 @@ main {
   padding: 20px;
 }
 
-/***HERO-VIDEO***/
-
+/*** HERO-VIDEO ***/
 .hero-image {
  height: 500px;
  width: 100%;
@@ -42,7 +33,7 @@ video {
   object-fit: cover;
 }
 
-header h1 {
+header h1 { /* Text on hero-image and placement of it */
   position: absolute;
   width: 100%;
   text-align: center;
@@ -53,7 +44,7 @@ header h1 {
   text-shadow: 3px 3px #87B38D;
 }
 
-header h3 {
+header h3 { /* Text on hero-image and placement of it */
   position: absolute;
   width: 100%;
   text-align: center;
@@ -62,22 +53,20 @@ header h3 {
   font-size: 24px;
 }
  
-
 /*** FORM ***/
 .form-container {
   margin: 20px;
   background-color: #F2B7C6;
   border: 2px solid #CC76A1;
-  border-radius: 15%;
-  padding: 20px 40px;
+  padding: 10px 20px;
   width: 500px;
 }
 
-.form-container:hover {
+.form-container:hover { /* When hovering the full container-box */
   box-shadow: 3px 3px 20px 5px #DD9296;
 }
 
-.form {
+.form { 
   display: flex;
   flex-direction: column;
 }
@@ -93,8 +82,7 @@ header h3 {
   margin: 5px;
 }
 
-#fullName, #companyName, #mailAdress, #passWord { 
-  /*Styling of the input fields*/
+#fullName, #companyName, #mailAdress, #passWord {  /*Styling of the input fields*/
   width: 250px;
   border: none;
   border-bottom: 1px solid black;
@@ -117,8 +105,9 @@ header h3 {
   margin-bottom: 5px;
 }
 
-button  { /** Design of the button **/
-  width: 125px;
+/** Design of the button **/
+button  { 
+  width: 438px;
   font-size: 16px;
   font-weight: bold;
   background: #22031F;
@@ -126,14 +115,11 @@ button  { /** Design of the button **/
   padding: 8px;
   margin: 10px;
   border: 2px solid #CC76A1; 
-  border-radius: 18%;
-  box-shadow: 3px 3px 6px 2px #DD9296; 
+  box-shadow: 3px 3px 10px 4px #DD9296; 
 }
 
-/** How to button shall look when pointing on it - it gets flat **/ 
-
-button:hover {
-  transform: translateX(5px);
+button:hover { /** How the button shall look when pointing on it - it gets flat **/ 
+  transform: translateY(5px);
   box-shadow: none;
 }
 
@@ -142,43 +128,45 @@ button:hover {
   margin: 20px;
   background-color: #F2B7C6;
   border: 2px solid #CC76A1;
-  border-radius: 15%;
-  padding: 20px 40px;
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
   width: 500px;
 }
 
-.accordion:hover {
+.accordion:hover { /* When hovering */
   box-shadow: 3px 3px 20px 5px #DD9296;
 }
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active, .question:hover {
-  font-size: 15px;
-}
-
-.question {
+.question { /* Design of the question texts */
   font-weight: bold;
   line-height: 2em;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.answer {
+.question:hover { /* When hovering the question 'heading */
+  font-size: 15px;
+}
+
+.answer { /* Design of the answer texts */
   line-height: 20px;
-  font-style: italic;
-  max-height: 0;
   color: #22031F;
+  max-height: 0;
   overflow-y: hidden;
 }
 
+/*height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease; 
+}
+
+.active {
+  height: 120px;
+}*/
+
 .active + .answer {
   animation: unfold 1s ease forwards;
-  display: block;
 }
 
 .folded + .answer {
@@ -199,8 +187,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   to {max-height: 0px}
 }
 
-/* Footer styling */
-footer {
+footer { /* Footer styling */
   width: 100%;
   background-color: #87B38D;
   text-align: center;
@@ -215,20 +202,12 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  main {
-    justify-content: center;
     align-items: center;
   }
 
-  .form-container {
+  .form-container, .accordion, button {
     width: 100%;
-   }
-
-   .accordion {
-    width: 100%;
-   }
+  }
   
   header h1 {
     top: 1%; 
@@ -248,18 +227,10 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  main {
-    justify-content: center;
     align-items: center;
   }
 
-  .form-container {
-    width: 100%;
-   }
-
-   .accordion {
+  .form-container, .accordion, button {
     width: 100%;
    }
   
