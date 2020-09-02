@@ -2,5 +2,6 @@ function toggle() {
   this.classList.toggle("active")
 }
 
-document.getElementById("section1").onclick = toggle
-document.getElementById("section2").onclick = toggle
+document.getElementById("about-class").onclick = toggle
+document.getElementById("cost").onclick = toggle
+document.getElementById("location").onclick = toggle
