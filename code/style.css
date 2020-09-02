@@ -1,108 +1,105 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poiret+One&display=swap');
+*{
   box-sizing: border-box;
 }
 
-body {
-  height: 100%;
+body{
   margin: 0;
-  font-family: sans-serif;
+  color: #000;
+  font-family: 'Poiret One', sans-serif;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
-  height: 60vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
-    url("pictures/blue-art.jpg");
+header{
+  height: 70vh;
+  background-image: url(./pictures/blue-art.jpg);
   background-position: center;
-  background-repeat: no-repeat;
-  object-fit: cover;
+  background-size: cover;
+  border: 2px solid black;
+}
+
+.hero-image h1{
   position: relative;
+  text-align: center;
+  font-family: 'Lora';
+  font-size: 10vh;
 }
 
-.header-text {
-  color: #fff;
-  font-size: 4vh;
-  font-weight: bold;
+h1, h2, h3{
+  font-family: 'Poiret One';
 }
 
-main {
+h3{
+  margin: 0;
+}
+
+.wrapper{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   padding: 20px;
-  width: 100%;
-}
-
-.for-sale {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.display {
-  display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  padding: 10px;
+  border: 2px solid black;
+  background: #ECE3D2;
 }
-
-.display-item {
-  width: 30%;
+.form-section{
+  display: flex;
+}
+form{
+  display: flex;
+  font-family: 'Poiret One';
+  flex-direction: column;
+  border: 2px solid black;
+  padding: 5px;
   margin: 10px;
-  box-shadow: 2px 9px 19px -6px rgba(0, 0, 0, 0.59);
+  background: #D2D1BB;
 }
 
-.display-item img {
+.request-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+}
+.accordion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.accordion-element{
+  margin-bottom: 5px;
   width: 100%;
 }
 
-.accordion {
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  box-shadow: 2px 9px 19px -6px rgba(0, 0, 0, 0.59);
-  margin: 10px;
-  width: 200px;
-  padding: 10px;
+.accordion-element p, .question{
+  padding: 15px;
 }
 
-.log-in-form,
-.guest-form {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  margin: 10px;
-  border: 2px solid #87a371;
+.question, .answer{
+  margin: 0;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  box-shadow: 2px 9px 19px -6px rgba(0, 0, 0, 0.59);
-  margin: 10px;
-  width: 200px;
-  padding: 10px;
+.question{
+  background: #D2D1BB;
 }
 
-.question {
-  background: #87a371;
+.answer{
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  background: #EDECE1;
 }
 
-input:invalid {
-  border: 2px solid red;
-}
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  display: inline-block;
+.active  + .answer{
+  height: 10vh;
   /* some styling here */
-}
-.answer{
-  display: none;
 }
