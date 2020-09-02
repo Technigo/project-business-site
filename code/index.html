@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KREATISA</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- dont forget to add a css file and link it here! -->
 </head>
 
@@ -38,53 +38,87 @@
 
         <section class="for-sale">
             <div class="display">
-
-                <a class="display-item" href="#"><img src="pictures/evie-appleblossom.jpg" alt=""></a>
+                <picture class="display-item">
+                    <source srcset="pictures/evie-appleblossom.jpg" media="(max-width: 100px)" />
+                    <source srcset="pictures/evie-appleblossom.jpg" media="(max-width: 300px)" />
+                    <img src="pictures/evie-appleblossom.jpg" alt="Appleblossom picture" />
+                </picture>
+                <picture class="display-item">
+                    <source srcset="pictures/evie-bushflower.jpg" media="(max-width: 100px)" />
+                    <source srcset="pictures/evie-bushflower.jpg" media="(max-width: 300px)" />
+                    <img src="pictures/evie-bushflower.jpg" alt="Bushflower picture" />
+                </picture>
+                <picture class="display-item">
+                    <source srcset="pictures/evie-dahlia-eternell.jpg" media="(max-width: 100px)" />
+                    <source srcset="pictures/evie-dahlia-eternell.jpg" media="(max-width: 300px)" />
+                    <img src="pictures/evie-dahlia-eternell.jpg" alt="Dahlia and eternell picture" />
+                </picture>
+                <picture class="display-item">
+                    <source srcset="pictures/evie-eternell.jpg" media="(max-width: 100px)" />
+                    <source srcset="pictures/evie-eternell.jpg" media="(max-width: 300px)" />
+                    <img src="pictures/evie-eternell.jpg" alt="Eternell picture" />
+                </picture>
+                <picture class="display-item">
+                    <source srcset="pictures/evie-fragile.jpg" media="(max-width: 100px)" />
+                    <source srcset="pictures/evie-fragile.jpg" media="(max-width: 300px)" />
+                    <img src="pictures/evie-fragile.jpg" alt="Fragile flower picture" />
+                </picture>
+                <picture class="display-item">
+                    <source srcset="pictures/evie-geranium.jpg" media="(max-width: 100px)" />
+                    <source srcset="pictures/evie-geranium.jpg" media="(max-width: 300px)" />
+                    <img src="pictures/evie-geranium.jpg" alt="Geranium picture" />
+                </picture>
+                <!-- <a class="display-item" href="#"><img src="pictures/evie-appleblossom.jpg" alt=""></a>
                 <a class="display-item" href="#"><img src="pictures/evie-bushflower.jpg" alt=""></a>
                 <a class="display-item" href="#"><img src="pictures/evie-dahlia-eternell.jpg" alt=""></a>
                 <a class="display-item" href="#"><img src="pictures/evie-eternell.jpg" alt=""></a>
                 <a class="display-item" href="#"><img src="pictures/evie-fragile.jpg" alt=""></a>
                 <a class="display-item" href="#"><img src="pictures/evie-geranium.jpg" alt=""></a>
-
+ -->
             </div>
         </section>
 
-        <section class="form">
-            <h2>Log in to view your order</h2>
+        <aside>
+            <section class="log-in-form">
+                <h2>Log in to view your order</h2>
 
-            <form action="http://httpbin.org/anything" method="POST" class="sign-in-form">
-                <label for="userName">Username</label>
-                <input type="text" id="userName" placeholder="Enter your username">
-                <label for="password">Password</label>
-                <input type="password" id="password"><br><br>
-                <button type="submit">Log in</button><br><br>
-            </form>
+                <form action="http://httpbin.org/anything" method="POST" class="sign-in-form">
+                    <label>Username
+                        <input type="text" id="userName" placeholder="Enter your username" required />
+                    </label><br /><br />
+                    <label>Password
+                        <input type="password " id="password " required /> </label><br /><br />
+                    <button type="submit ">Log in</button><br /><br />
+                </form>
+            </section>
 
+            <section class="guest-form">
+                <h2>Shop as guest</h2>
+                <form action=" " class="selection-form">
+                    <label>30x40
+                        <input type="checkbox" id="small " name="smallPainting " />
+                    </label>
+                    <label>40x50
+                        <input type="checkbox" id="medium " name="mediumPaintin " />
+                    </label>
+                    <label>50x70
+                        <input type="checkbox" id="large " name="largePainting " /> </label><br />
 
-            <h2>Shop as guest</h2>
-            <form action="" class="selection-form">
-                <label for="small">30x40</label>
-                <input type="checkbox" id="small" name="smallPainting">
-                <label for="medium">40x50</label>
-                <input type="checkbox" id="medium" name="mediumPaintin">
-                <label for="large">50x70</label>
-                <input type="checkbox" id="large" name="largePainting"><br>
+                    <p>Would you like your prints to be framed?</p>
+                    <label for="yes ">Yes</label>
+                    <input type="radio " id="frame " value="frame " name="frameChoice " /><br /><br />
+                    <label for="no ">No</label>
+                    <input type="radio " id="noFrame " value="noFrame " name="frameChoice " /><br /><br />
+                    <label for="email ">Email adress for confirmation</label>
+                    <input type="email " id="email " placeholder="example@email.com " required /><br /><br />
 
-                <p>Would you like your prints to be framed?</p>
-                <label for="yes">Yes</label>
-                <input type="radio" id="frame" value="Frame" name="frameChoice">
-                <label for="no">No</label>
-                <input type="radio" id="noFrame" value="NoFrame" name="frameChoice"><br><br>
-                <label for="email">Email adress for confirmation</label>
-                <input type="email" id="email" placeholder="example@email.com"><br><br>
-
-                <button type="submit">Place your order</button>
-
-            </form>
-        </section>
+                    <button type="submit ">Place your order</button>
+                </form>
+            </section>
+        </aside>
     </main>
 
-    <script href="script.js"></script>
+    <script src="./script.js"></script>
     <!-- dont forget to link the javascript file here! -->
 </body>
 
