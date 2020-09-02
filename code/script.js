@@ -14,6 +14,10 @@ question1.onclick = () => {
   panel2.classList.remove('open');
   panel3.classList.remove('open');
   panel4.classList.remove('open');
+
+  question2.classList.remove('sign');
+  question3.classList.remove('sign');
+  question4.classList.remove('sign');
 }
 
 question2.onclick = () => {
@@ -27,6 +31,10 @@ question2.onclick = () => {
   panel1.classList.remove('open');
   panel3.classList.remove('open');
   panel4.classList.remove('open');
+
+  question1.classList.remove('sign');
+  question3.classList.remove('sign');
+  question4.classList.remove('sign');
 }
 
 question3.onclick = () => {
@@ -40,6 +48,10 @@ question3.onclick = () => {
   panel2.classList.remove('open');
   panel1.classList.remove('open');
   panel4.classList.remove('open');
+
+  question2.classList.remove('sign');
+  question1.classList.remove('sign');
+  question4.classList.remove('sign');
 }
 
 question4.onclick = () => {
@@ -53,4 +65,8 @@ question4.onclick = () => {
   panel2.classList.remove('open');
   panel3.classList.remove('open');
   panel1.classList.remove('open');
+
+  question2.classList.remove('sign');
+  question3.classList.remove('sign');
+  question1.classList.remove('sign');
 }
