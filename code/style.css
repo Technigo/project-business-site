@@ -6,9 +6,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-.active + .answer {
-  /* some styling here */
-}
+
 body{
   height: 100%;
   margin: 0;
@@ -16,6 +14,9 @@ body{
 }
 
 /*** HERO IMAGE ****/
+.header{
+  width:100%;
+}
 
 .hero-image {
   height: 75vh;
@@ -98,7 +99,6 @@ a:after {
 a:hover::after {
   width: 20px;
   transition: width 0.5s;
-
 }
 
 a:hover {
@@ -110,7 +110,6 @@ a:hover {
 .manifesto{
   display: flex;
   flex-direction: column;
-  background-color: #ecded5;
 }
 
 .manifesto-h2{
@@ -132,6 +131,66 @@ a:hover {
   font-weight: 10;
 }
 
+/*** ACCORDION ****/
+
+.accordion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.accordion-h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  text-align: center;
+}
+
+.answer-p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9em;
+  text-align: justify;
+}
+
+.answer-list{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9em;
+  text-align: justify;
+}
+
+.question{
+  width: 80%;
+  height: auto;
+  text-align: justify;
+  border: solid 2px black;
+  background-color: #ecded5;
+}
+
+.answer{
+  width: 80%;
+  height: auto;
+  text-align: justify;
+  overflow:auto;
+}
+
+.accordion-image{
+  width:100%;
+  justify-items: center;
+}
+
+span.italic{
+  font-style: italic;
+}
+
+/*** Showing and hiding accordion ****/
+
+.active + .answer {
+  display: inline-block;
+}
+
+.answer{
+  display:none;
+}
 
 /*** SIGN UP FORM ****/
 
@@ -139,6 +198,7 @@ a:hover {
   background-color: #ecded5;
   display: flex;
   justify-content: center;
+  margin: 60px 0px 0px 0px;
 }
 
 .p-form-main{
@@ -153,5 +213,19 @@ a:hover {
   font-size: 1em;
   color: purple;
   text-align: justify;
+}
+
+footer{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.imgage-container{
+  display: inline-block;
+}
+
+.footer-image{
+  width:50px;
 }
 

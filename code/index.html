@@ -10,23 +10,26 @@
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
-    <section>
+    <header>
+     <section>
       <div class="hero-image">
         <div class="hero-text">
           <h1 class="hero-h1">MENSTRU-AID</h1>
           <p class="hero-p">Fight <span class="red">period poverty</span>, become a <span class="red">period sponsor!</span></p>
-          <button>Become a <span class="red">period sponsor</span> for 28 SEK/MONTH</button>
+          <button a href="#the-form"> Become a <span class="red">period sponsor</span></button>
         </div>
       </div>
     </section>
+  
 
     <nav>
-        <a href="#">MANIFEST</a>
-        <a href="#">ABOUT THE PROJECT</a>
+        <a href="#manifesto">MANIFEST</a>
+        <a href="#accordion">ABOUT THE PROJECT</a>
     </nav>
+  </header>
 
       <!-- MANIFESTO -->
-    <section class="manifesto">
+    <section class="manifesto" id ="manifesto">
       <h2 class="manifesto-h2">
         "Every day we meet young <span class="red">menstruators</span> who cannot afford <span class="red">menstrual hygine</span> products"
       </h2>
@@ -36,27 +39,71 @@
     </section>
 
     <!-- FAQ -->
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <section class="accordion" id="accordion">
+      
+      <div>
+        <h1>I have questions about the project!</h1>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section1"> 
+        <h3 class=accordion-h3><span class="red">Period poverty</span>?</div></h3>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p class="answer-p"> It is the term used to describe a lack of access to 
+          <span class="red">menstrual hygiene</span> products and education, 
+          toilets, hand washing facilities, and/or waste management. Even in developed countries, such as Sweden, 
+          <span class ="red">period poverty</span> exists and is a persistent problem!
+        </p>
+      </div>
+
+      <div class="question" id="section2">
+        <h3 class="accordion-h3">Implications of <span class ="red">period poverty</span>?</h3>
+      </div>
+      <div class="answer"> 
+          <ul class="answer-list">
+            <li>Staying home from school and miss out on education</li>
+            <li>Using unhygienic and ineffective alternative methods (toilet paper, rags, etc.)</li>
+            <li>Experiencing shame, stress, and discomfort</li>
+          </ul>
+      </div>
+
+      <div class="question" id="section3">
+        <h3 class="accordion-h3">Is it <span class="italic">that</span> expensive to have your <span class ="red">period</span>?</h3></div>
+      <div class="answer">
+        <p class="answer-p">On average, <span class ="red">menstruators</span> endure 55 000 hours of their lives <span class ="red">menstruating</span>, 
+          use 10 000 hygiene products, and spend 63 000 SEK</p>
+      </div>
+
+      <div class="question" id="section4">
+        <h3 class="accordion-h3">What does it mean to be a  <span class ="red">period sponsor</span>?</h3></div>
+      <div class="answer">
+        <p class="answer-p">
+          As a <span class ="red">period sponsor</span> you contributes to ensure that free <span class ="red">menstrual hygiene</span> products are handed out. 
+          By doing so, you make sure so that <span class ="red">period poverty</span> does not affect 
+          schooling or get in the way of physical and mental well-being.</p>
+      
+          <p class="answer-p">
+            You will also make a real impact, break the taboo, and create awareness to <span class ="red">period poverty</span>!
+          </p>
+      </div>
+
+      <div class="question" id="section5">
+        <h3 class="accordion-h3">So, what's the impact?</h3></div>
+      <div class="answer">
+        <p class="answer-p">Remember those 10 000 hygine products and the 63 000 SEK?
+          Imagine that half of your FB friends became <span class ="red">period sponsors</span>…
+        </p>
+        <img class="accordion-image"
+            src="pp.png" alt="graph over proposed impact">
+
       </div>
     </section>
-  <!-- dont forget to link the javascript file here! -->
+
 
 
     <!-- Signup form -->
   
 
-  <section class="the-form">
+  <section class="the-form" id ="the-form">
 
     <fieldset style="width: 85%;">
       <legend>
@@ -66,7 +113,7 @@
         As a menstrual sponsor, you ensure that a young person can buy menstrual protection every month. 
         A package of sanitary napkins or tampons costs approximately SEK 28. 
         Choose yourself how many packages you want to contribute. </p>
-    <form>
+    <form class=”form” action=”http://httpbin.org/anything” method=”POST”>
       <p class="p-form">SELECT AN AMOUNT</p>
     <div class="amount">
       <label for="28SEK">28 SEK/MONTH</label>
@@ -235,14 +282,25 @@
   </form>
 </fieldset>
 
-
 </section>
 
    
 
   
   <footer>
-    
+    <div class="imgage-container">
+      <img class="footer-image"
+      src="./Logo_mf_red.png" alt="logo 1">
+    </div>
+
+    <div class="imgage-container">
+      <img class="footer-image"
+      src="./Logo2.svg" alt="logo 1">
+    </div>
   </footer>
+
+
+  <script src="./script.js"></script>
+
   </body>
 </html>
