@@ -1,6 +1,5 @@
 body {
   background-color: #88726c;
-  margin: 0;
 }
 
 header {
@@ -201,68 +200,53 @@ button:hover {
   width: 40%;
   max-width: 600px;
   min-width: 450px;
+  font-family: "Alata", sans-serif;
 }
 
-.question {
-  /* styles the accordion questions */
-  width: 100%;
-  height: 40px;
-  background: #00917c;
+.button {
+  background-color: #00917c;
+  margin: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
   cursor: pointer;
 }
 
-.question:hover {
+.button::after {
+  content: "\002B"; /* Unicode character for "plus" sign (+) */
+  float: right;
+}
+
+.button:hover {
   background: #00747c;
   transition: 0.25s;
 }
 
-.accordion p {
-  font-family: "Alata", sans-serif;
-  color: white;
+.panel {
+  height: 0;
+  background: white;
+  overflow: hidden;
+  margin: 0 0 5px 0;
+  padding: 0 10px;
   font-weight: bold;
-  float: left;
-  margin: 9px 0 6px 15px;
+  transition: height 0.35s;
 }
 
 .open {
-  background: #bea69f;
-}
-
-.open:hover {
-  background: #bea69f;
-}
-
-.panel {
-  width: 100%;
-  height: 0; /* for animation - height goes from 0 to 200 */
-  overflow: hidden;
-  background: white;
-  margin-bottom: 10px;
-  transition: 0.5s ease-in-out;
-}
-
-.panel p {
-  color: black;
-  margin: 12px;
-}
-
-.open + .panel {
   height: 200px;
 }
 
-.question:after {
-  /* creates + sign on question */
-  content: "\002B"; /* Unicode character for "plus" sign (+) */
-  font-size: 25px;
-  font-weight: bold;
-  color: white;
-  float: right;
-  margin-right: 10px;
-  margin-top: 6px;
+.button.sign::after {
+  content: "\2212"; /* Unicode character for "minus" sign (-) */
 }
 
-.open:after {
-  content: "\2212"; /* Unicode character for "minus" sign (-) */
+.sign {
+  background-color: #bea69f;
+}
+
+.sign:hover {
+  background: #bea69f;
 }
 
 /* FOOTER STYLING */
@@ -288,10 +272,6 @@ footer a {
   text-decoration: none;
   margin-top: 5px;
   font-weight: bold;
-}
-
-footer a:hover {
-  color: #00747c;
 }
 
 /* MEDIA QUERIES */
