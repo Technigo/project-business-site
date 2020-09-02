@@ -9,6 +9,7 @@ I'm a big coffee nerd, so decided to create this **"Coffee Collective"**, where 
 - The Hero Header for this site must be responsive, so my approach was to have 3 different images with different sizes: one for desktop, tablet and mobile - so depending on the device, the appropriate image will be loaded, resulting in a better loading time. 👌
 - Since the header has a background image, learned to do a backdrop for the main title (using CSS), so that it's more readable.
 - The form is being submitted to HTTP BIN until we learn in the future what to do with the collected data. Learned about GET and POST methods.
+- Styling radio buttons was challenging, but learned to do it by hiding the default buttons and creating new styled elements that "replace" them.
 - This is the first time we get to use JavaScript in the bootcamp 💥, so we learned about modifying elements with the DOM. Managed to create an accordion using a simple toggle function and with several CSS animations in place.
 
 ## View it live
