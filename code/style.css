@@ -1,6 +1,59 @@
 body {
+  background-color: black;
+}
 
+/* OBS! STRUKTURERA, CLEAN UP & SE MÅSTEN MM INFO LÄNGST NER HÄR, TEX STYLA ELEMENTEN SOM KLASSER, SÅ ÄNDRA DETTTA! */
 
+h1 {
+  position: absolute;
+  bottom: 80%;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+
+}
+
+nav {
+  position: absolute;
+  left: 50%;
+  margin-top: 20px;
+  transform: translate(-50%, -50%)
+}
+
+a {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  text-decoration: none;
+  width: 120px;
+  padding: 1em, 0;
+  display: inline-block;
+  font-weight: bold;
+  transition: all .4s ease-in-out;
+}
+
+.line {
+  width: 120px;
+  height: 3px;
+  background-color: white;
+  transition: all .4s ease-in-out;
+}
+
+a:nth-child(2):hover ~ .line {
+  transform: translate(120px);
+  transition: all .4s ease-in-out;
+  background-color: yellow;
+}
+
+a:nth-child(3):hover ~ .line {
+  transform: translate(250px);
+  transition: all .4s ease-in-out;
+}
+
+a:nth-child(4):hover ~ .line {
+  transform: translate(375px);
+  transition: all .4s ease-in-out;
+  background-color: yellow;
 }
 
 header {
@@ -10,34 +63,13 @@ header {
   margin-bottom: 50px;
 }
 
-/* Style the video: 100% width and height to cover the entire window */
+
 header video {
- max-width: 80%;
+ max-width: 100%;
  max-height: 80%;
 }
 
-/* Add some content at the bottom of the video/page */
-.content {
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  padding: 20px;
-}
-
-/* Style the button used to pause/play the video */
-#myBtn {
-  width: 200px;
-  font-size: 18px;
-  padding: 10px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-}
-
-#myBtn:hover {
-  background: #ddd;
-  color: black;
-}
+/
 
 main {
   display: flex;
@@ -91,9 +123,6 @@ section {
 
 /* Ändra så det är klasser att styla i CSS istället för element */
 
-/* QUESTION: So things worked out when I changed (from the display: flex;) to display:flexbox; , but I don't know why, I've used display:flex; in my first project and it worked out the way I wanted... don't really know the differents even thoug I googled it, but yet have'nt found information about it... */
-
-}
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
