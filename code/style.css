@@ -7,26 +7,48 @@ body {
 /* THE HEADER */
 
 header {
-  height: 600px;
-  background-image: url(./summerday_original.jpg);
-  background-size: cover;
+  background-image: url(./summerday_small.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-header h1 {
+h1 {
   background-color: rgba(255, 255, 255, 0.5);
+  font-size: 35px;
+  width: auto;
+  padding: 20px 50px;
+}
+
+header p {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  padding: 10px;
+}
+
+@media (min-width: 668px) {
+
+header  {
+  height: 600px;
+  background-image: url(./summerday_medium.jpg);
+  background-size: cover;
+}  
+
+header h1 {
   padding: 32px 70px;
   font-size: 50px;
 }
 
 header p {
-  background-color: rgba(255, 255, 255, 0.5);
   padding: 30px;
   font-size: 30px;
 }
+}
+
 
 /* THE SHORT GREET SECTION */
 
@@ -90,15 +112,15 @@ form {
   width: 150px;
 }
 
+.label-right {
+  width: 100px;
+  margin-bottom: 5px;
+}
+
 .bringbox {
   display: flex;
   flex-wrap: wrap;
   width: 120px;
-}
-
-.label-right {
-  width: 100px;
-  margin-bottom: 5px;
 }
 
 .memberbox {
