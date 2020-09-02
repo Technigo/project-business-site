@@ -2,9 +2,11 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+/* #a9b8cd */
+
 body {
   margin: 0;
-  background-color: #a9b8cd;
+  background-color: #fafafa;
 }
 
 header {
@@ -26,9 +28,6 @@ h1 {
  
 }
 
-picture {
-  width:100%
-}
 
 video {
   height: 100%;
@@ -38,17 +37,10 @@ video {
   left: 0;
   z-index: -1;
   object-fit: cover;
- 
 }
 
-.hero-image {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  object-fit: cover;
+img {
+  width: 100%;  
 }
 
 .box-container {
@@ -62,7 +54,7 @@ video {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: black solid;
+  border: #a9b8cd solid;
   width: 45%;
   margin: 10px;
   padding: 10px;
@@ -142,21 +134,80 @@ ul input {
   outline: ;
 }
 
-.accordion {
-  border: black solid;
+.accordion-container {
+  border: #a9b8cd solid;
   width: 45%;
   margin: 10px;
   padding: 20px;
+  background-color: #cfcab6;
+  color: black;
 }
 
+.accordion-content {
+  background-color: #a9b8cd ;
 
-.active + .answer {
-  /* some styling here */
-  
+}
+
+.accordion-question {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 1px;
+  margin: 10px;
+}
+
+.accordion-question::after {
+  content: "\002B";
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+}
+
+.accordion-question.active::after { 
+ content: "\2212";
+}
+
+.accordion-answer-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.2s ease-out;
+ 
+}
+
+.accordion-answer-text {
+  padding: 10px;
+  border-top: solid black 3px;
+}
+
+.accordion-question.active + .accordion-answer-content {
+  height: auto;  
 }
 
 @media (max-width: 1024px) {
  video {
    display:none;
+ }
+
+ h1 {
+   font-size: 80px;
+   
+ }
+
+ img {
+   height: 600px;
+   object-fit: cover;
+   
+ }
+ .box-container {
+   flex-wrap: wrap;
+ }
+
+ .form-container {
+   width: 60%;
+ }
+
+ .accordion {
+   width: 60%;
  }
 }

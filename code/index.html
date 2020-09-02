@@ -11,7 +11,7 @@
 
 <body>
   <header>  <!---include picture tag with media queries-->
-    <h1>WEEKLY BOUQUET</h1>
+    <h1>FRIDAY BOUQUET</h1>
 
   <div class="hero-video">
     <video autoplay muted loop>
@@ -20,17 +20,18 @@
     </video>
   </div>  
 
-  <picture>
-    <source srcset="./images/flowerStill.jpeg" media="(max-width: 667px)">
-    <source srcset="./images/flower_stand.jpg" media="(max-width: 1024px)"> 
+  <div class="hero-image">
+    <picture>
+    <source srcset="./images/mobilBukett.jpg" media="(max-width: 667px)">
+    <source srcset="./images/bukett.jpg" media="(max-width: 1024px)"> 
     <img src="./images/flowersStill.jpg" alt="">
-  </picture>
+    </picture>
+  </div>
 
   </header>
 
   <section class="box-container">
-    <!--form and faq-->
-    <!-- Signup form -->
+  
     <section class="form-container">
 
       <h2>Subscribe</h2>
@@ -127,23 +128,51 @@
       </form>
     </section>
 
-    <section class="accordion">
+    <section class="accordion-container">
       <!-- Accordion -->
       <h2>FAQ</h2>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="accordion-content">
+        <div class="accordion-question" id="section1">
+          <h3>How does it work?</h3>
+        </div>
+        <div class="accordion-answer-content">
+          <div class="accordion-answer-text">
+          <p>Lorem ipsum...</p>
+          </div>
+        </div>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="accordion-content">
+        <div class="accordion-question" id="section2">
+          <h3>How does it work?</h3>
+        </div>
+        <div class="accordion-answer-content">
+          <div class="accordion-answer-text">
+          <p>Lorem ipsum...</p>
+          </div>
+        </div>
       </div>
+
+      <div class="accordion-content">
+        <div class="accordion-question" id="section3">
+          <h3>How does it work?</h3>
+        </div>
+        <div class="accordion-answer-content">
+          <div class="accordion-answer-text">
+          <p>Lorem ipsum...</p>
+          </div>
+        </div>
+      </div>
+
+      <!--<div class="accordian-question" id="section2">Section 2</div>
+      <div class="accordian-answer">
+        <p>Lorem ipsum...</p>
+      </div>-->
     </section>
 
     <script src="script.js"></script> <!-- dont forget to link the javascript file here! -->
   </section>
-  
+  <script defer src="./script.js"></script>
 </body>
 </html>
