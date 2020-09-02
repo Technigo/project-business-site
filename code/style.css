@@ -1,7 +1,175 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: lightseagreen;
+  color: white;
+  margin: 0px;
+  width: 100%;
+  height: 300px;
+
+}
+
+header h2 {
+  color: white;
+}
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin: 0px;
+
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+  color: lightsalmon;
+}
+
+p {
+  margin: 0px;
+}
+
+/* MAIN */
+
+main {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* INFO */
+
+.intro {
+  width: 100%;
+  grid-row: span 1;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+
+}
+
+/* SIGN UP */
+
+.sign-up {
+  width: 100%;
+  background-color: lightsalmon;
+  color: white;
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: 75px 75px 2fr;
+  align-items: center;
+}
+
+.sign-up h2 {
+  color: white;
+}
+
+.days {
+  /* display: none; */
+  /* grid-row: span 1; */
+  width: 25%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  padding: 10px;
+  /* border-bottom: 1px solid white; */
+
+}
+
+.days div {
+  display: none;
+  grid-row: span 1fr;
+  height: 35px;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+form {
+  display: grid;
+  /* grid-template-rows: repeat(6, 1fr); */
+  row-gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+
+
+}
+
+input {
+  height: 40px;
+  border: none;
+  /* border-bottom: 1px solid white; */
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 10px;
+  
+}
+
+button {
+  margin: 20px 0px;
+  height: 40px;
+  border: none;
+  /* border-bottom: 1px solid white; */
+  background: rgba(255, 255, 255, 1);
+  color: lightsalmon;
+  border-radius: 10px;
+
+  
+}
+
+form div {
+  text-align: left;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  font-size: 12px;
+}
+
+form div input {
+  margin-right: 15px;
+}
+
+form div label {
+  margin: 0px;
+}
+
+
+/* FAQ */
+
+.accordion {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
   /* some styling here */
+}
+
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
 }
