@@ -11,6 +11,7 @@ I'm a big coffee nerd, so decided to create this **"Coffee Collective"**, where 
 - The form is being submitted to HTTP BIN until we learn in the future what to do with the collected data. Learned about GET and POST methods.
 - Styling radio buttons was challenging, but learned to do it by hiding the default buttons and creating new styled elements that "replace" them.
 - This is the first time we get to use JavaScript in the bootcamp 💥, so we learned about modifying elements with the DOM. Managed to create an accordion using a simple toggle function and with several CSS animations in place.
+- When creating the + or - signs for the opening and closing styling of the accordion, learned about unicode 👌
 
 ## View it live
 😎 Check it out, all live and pretty at Netlify: https://frosty-wing-ab2339.netlify.app/
