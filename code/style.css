@@ -1,6 +1,46 @@
 body {
   margin: 0;
-  background: lightblue;
+
+  background: linear-gradient(270deg, #aef0df, #d9b7d6, #fbd880);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 h1 {
@@ -8,11 +48,17 @@ h1 {
   margin: 10px 0;
 }
 
+h2 {
+  text-align: center;
+}
+
 p {
   color: #fff;
 }
 
-/****** HEADER ******/
+/************ HEADER ************/
+
+/* video as header */
 
 header {
   position: relative;
@@ -41,7 +87,7 @@ ul {
 }
 
 li {
-  margin: 0 10px;
+  margin: 5px 10px;
 }
 
 nav {
@@ -63,8 +109,15 @@ a:visited {
   color: #fff;
 }
 
+@keyframes shake {
+  20% {
+    transform: translateY(5px);
+  }
+}
+
 .nav-bar:hover {
-  color: pink;
+  animation-name: shake;
+  animation-duration: 1s;
 }
 
 .header-text {
@@ -103,6 +156,201 @@ a:visited {
   display: none;
 }
 
+/************ MAIN ************/
+
+main {
+  min-height: 800px; /*tillfälligt*/
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+/*** signup ***/
+
+/* form */
+
+.form-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+
+  width: 40%;
+  height: 500px;
+  border: 2px solid black;
+  margin: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* .form-group label {
+  width: 100px;
+  margin-right: 5px;
+} */
+
+.form-group input {
+  width: 100%;
+}
+
+.form-submit {
+  width: 100%;
+  /* text-align: center;
+  margin: auto;
+  width: 50%; */
+}
+
+/* radio */
+
+p {
+  margin-bottom: 5px;
+}
+
+.wrapper-row {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.radiobutton-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.radiobutton-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.radiobutton-container:hover input ~ .custom-radio {
+  background-color: #ccc;
+}
+
+.radiobutton-container input:checked ~ .custom-radio {
+  background-color: #444444;
+}
+
+.custom-radio:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: none;
+}
+
+.radiobutton-container input:checked ~ .custom-radio:after {
+  display: block;
+}
+
+/* .radiobutton-container input:focus + .custom-radio {
+  outline: #333 auto 4px;
+} */
+
+/* check-box */
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.checkbox-container input {
+  /* position: absolute; */
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox-container:hover input ~ .custom-checkbox {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox {
+  background-color: #444444;
+}
+
+.custom-checkbox:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  top: 5px;
+  left: 7px;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox::after {
+  display: block;
+}
+
+/* .checkbox-container input:focus + .custom-checkbox {
+  outline: #333 auto 4px;
+} */
+
+/*** accordion ***/
+
+.accordion-container {
+  width: 40%;
+  height: 500px;
+  border: 2px solid black;
+  margin: 20px;
+}
+
+/************ FOOTER ************/
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
@@ -134,18 +382,20 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     background: rgba(255, 255, 255, 0.5);
   }
 
+  li {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .nav-bar:visited {
     color: #000;
   }
 
   .nav-bar:hover {
     color: pink;
-  }
-
-  li {
-    font-size: 20px;
-    line-height: 1.8;
-    margin-left: 20px;
   }
 
   .sign-up {
@@ -166,10 +416,13 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     height: 4px;
     border-radius: 2px;
     background: #fff;
+    transition: 0.5s;
+    cursor: pointer;
   }
 
-  .open {
+  .open div {
     transition: 1s;
+    background: pink;
   }
 
   .open + ul {

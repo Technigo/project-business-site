@@ -10,6 +10,9 @@
 </head>
 
 <body>
+  <!------- HEADER ------->
+
+  <!-- video as a header -->
 
   <header>
 
@@ -17,7 +20,6 @@
       <source src="videos/video-hd.mp4" type="video/mp4">
       <p>Your browser doesn't support HTML5 video.</p>
     </video>
-
 
     <nav class="nav-container">
       <svg class="logo" id="Capa_1" enable-background="new 0 0 512.019 512.019" height="512"
@@ -54,8 +56,6 @@
         </a>
       </ul>
 
-
-
       <p class="sign-up"><a href="">Sign up</a></p>
     </nav>
 
@@ -66,10 +66,104 @@
     </article>
   </header>
 
-  <!-- Signup form -->
+  <!------- MAIN ------->
+
+  <main id="main">
 
 
-  <!-- dont forget to link the javascript file here! -->
+
+
+
+
+
+
+
+
+
+    <!-- Signup form -->
+    <section id="form-container" class="form-container">
+      <h2>Sign up!</h2>
+
+      <form class="form" action="http://httpbin.org/anything" method="POST">
+
+        <div class="form-group">
+
+          <input id="firstName" type="text" placeholder="First name" name="firstNameValue" required />
+        </div>
+        <div class="form-group">
+
+          <input id="lastName" type="text" placeholder="Last name" name="lastNameValue" required />
+        </div>
+        <div class="form-group">
+          <input id="email" type="email" placeholder="E-mail address" name="emailValue" required />
+        </div>
+
+        <!-- radio -->
+        <div class="wrapper-col">
+
+          <div class="wrapper-row">
+
+            <label class="radiobutton-container">Female
+              <input type="radio" name="answer" checked>
+              <span class="custom-radio"></span>
+            </label>
+
+            <label class="radiobutton-container">Male
+              <input type="radio" name="answer">
+              <span class="custom-radio"></span>
+            </label>
+
+            <label class="radiobutton-container">Non-binary
+              <input type="radio" name="answer">
+              <span class="custom-radio"></span>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- check-box -->
+
+
+        <div class="wrapper-row">
+          <label class="checkbox-container">
+            I agree to the Terms & Conditions</label>
+          <label class="checkbox-container">
+            <input type="checkbox" required>
+            <span class="custom-checkbox"></span>
+          </label>
+        </div>
+
+
+
+
+
+
+        <button class="form-submit" type="submit">Submit</button>
+
+
+
+
+      </form>
+
+    </section>
+
+
+
+    <!-- Accordion -->
+    <section id="accordion-container" class="accordion-container">
+      <h2>FAQ</h2>
+    </section>
+
+
+
+
+  </main>
+
+  <!------- FOOTER ------->
+
+
+
+  <!-- javaScript -->
 
   <script src="script.js"></script>
 
