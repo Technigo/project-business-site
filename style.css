@@ -1,0 +1,99 @@
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+.active + .answer {
+  /* some styling here */
+}
+#hero{
+  height: 100vh;
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+#hero::after{
+  width: 100%;
+  height:100%;
+  content: '';
+  position: absolute;
+  z-index: 10;
+  top:0;
+  top:0;
+  background:rgba(0,0,0,0.5)
+}
+#hero video{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index: 5;
+  object-fit:cover;
+}
+#hero .content{
+position:relative;
+z-index:20;
+text-align:center;
+color:white;
+}
+#hero .content h1{
+  font-size: 2em;
+  Font-Family: 'Raleway', Sans-Serif;
+  Font-Size: 44px;
+  margin-bottom:0.5rem;
+
+}
+#hero .content h2{
+  font-weight:400;
+  font-size:1.5rem;
+  margin:0;
+  Font-Family: 'Open Sans', Sans-Serif;
+  Font-Size: 16px;
+}
+#hero .content p{
+  font-size:1rem;
+}
+.form{
+position:relative;
+z-index:18;
+text-align:center
+}
+@media (min-width:768px){
+  #hero .content h1{
+    font-size:2.5 rem;
+  }
+  #hero .content h2{
+    font-size:1.75 rem;
+  }
+}
+@media (min-width:992px){
+  .content h1{
+    font-size:3 rem;
+    }
+  .content h2{
+    font-size:2 rem;
+  }
+}
+@media (min-width:1200px){
+  .content h1{
+    font-size:4 rem;
+  }
+  .content h2{
+    font-size:2.5 rem;
+  }
+}
+  .form{
+    position: fixed;
+  }
+
+  .accordion{
+    border: black;
+    border-radius: 15px;
+  }
+
+  .accordion-container{
+   height:auto;
+   overflow:hidden;
+   transition: height 0,3s ease; 
+  }
