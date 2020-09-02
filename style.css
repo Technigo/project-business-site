@@ -20,7 +20,7 @@ body{
 
 .hero-image {
   height: 75vh;
-  background: url("./erol_ahmed_unsplash.jpg");
+  background: url("./images/erol_ahmed_unsplash.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -143,7 +143,37 @@ a:hover {
 .accordion-h3{
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
-  text-align: center;
+  text-align: left;
+}
+
+.question{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  text-align: justify;
+  border: solid 2px black;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .question:hover {
+  background-color: #ecded5
+}
+
+.question:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: rgb(3, 3, 3);
+  float: right;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 .answer-p{
@@ -158,16 +188,8 @@ a:hover {
   text-align: justify;
 }
 
-.question{
-  width: 80%;
-  height: auto;
-  text-align: justify;
-  border: solid 2px black;
-  background-color: #ecded5;
-}
-
 .answer{
-  width: 80%;
+  width: 70%;
   height: auto;
   text-align: justify;
   overflow:auto;
