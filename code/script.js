@@ -21,3 +21,9 @@ document.getElementById("section6").onclick = toggle
 document.getElementById("section7").onclick = toggle
 
 document.getElementById("section8").onclick = toggle
+
+document.getElementById("section9").onclick = toggle
+
+document.getElementById("section10").onclick = toggle
+
+document.getElementById("section11").onclick = toggle
