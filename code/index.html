@@ -9,54 +9,62 @@
   <body>
     <!-- video or image as a header is cool :) -->
     <header>
-      <picture></picture> <img src="" alt="">
-      <video src=""></video>
-      <nav></nav>
+      <video autoplay>
+        <source src="metalconcert.mp4" type="video/mp4">
+        <p>This browser doesn't support video...</p>
+      </video>
+    
     </header>
-
+    
+    <main>
     <!-- Signup form -->
     <form class="form" action="https://httpbin.org/anything" method="POST">
-      
-      <h2>SIGN UP HERE</h2>
+      <div class="form-card">
+        <h2>SIGN UP</h2>
 
-      <div class="form-groups">
-
-        <div class="form-groups-1">
-        <label for="firstName">First name</label>
+        <label for="firstName">First name:</label>
           <input 
             type="text" 
             name="firstNameValue" 
             id="firstName"
           >
-        </div>
+        <br>
 
-        <label for="LastName">Last name</label>
+        <label for="LastName">Last name:</label>
           <input 
           type="text" 
           name="LastNameValue" 
           id="LastName"
           >
+        <br>
         
-        <label for="email">Email</label>
+        <label for="email">Email:</label>
           <input 
             type="email" 
             name="EmailValue" 
             id="Email"
           >
+        <br>
         
-        <label for="password">Choose password</label>
+        <label for="password">Choose password:</label>
           <input 
             type="password" 
             name="passwordValue" 
             id="password"
           >
+        <br>
         
-        <label for="age">Age</label>
-          <input 
-            type="radio" 
-            name="ageValue" 
-            id="age"
-          > <!--Flera radiobuttons så kan man bara välja en då... -->
+        <label for="age">Gender:</label>
+        <br>
+          <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male"/>
+          <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female"/>
+          <label for="other">Other</label>
+            <input type="radio" id="other" name="gender" value="other"/>
+          <br>
+         
+          <!-- Ha /> eller bara > i slutet på input tagen? -->
         
         <label for="termsAndConditions">I agree to the <a href="#">terms & conditions</a></label>
           <input 
@@ -64,19 +72,16 @@
             name="termsAndConditionsValue" 
             id="termsAndConditions"
           >
+        <br>
 
-        <label for="submit">SUBMIT</label>
-          <input 
-            type="submit" 
-            value=""
-            name="submitValie" 
-            id="submit"
-          >
+        <button class="form-submit" type="submit"> SUBMIT </button>
           <!--ha attributen name och value för detta? value dök upp automatiskt... -->
       </div>
     </form>
 
+ 
     <section class="accordion">
+      <div class="section-card">
       <!-- Accordion -->
       <h1>FAQ</h1>
 
@@ -89,7 +94,10 @@
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
+
+      </div>
     </section>
     <!-- dont forget to link the javascript file here! -->
+    </main>
   </body>
 </html>

@@ -1,28 +1,98 @@
 body {
-  background: blue;
+
+
 }
 
-.form {
-  display: flexbox;
-  flex-direction: column;
-  width: 100px;
-}
-
-/* So things worked out when I changed (from the display: flex;) to display:flexbox; , but I don't know why, I've used display:flex; in my first project and it worked out the way I wanted... don't really know the differents even thoug I googled it, but yet have'nt found information about it... */
-
-.form-groups {
-  margin-bottom: 15px;
-  display: flexbox;
+header {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 
-.form-groups label {
-  width: 100px;
-  margin-right: 5px;
+/* Style the video: 100% width and height to cover the entire window */
+header video {
+ max-width: 80%;
+ max-height: 80%;
 }
 
-.form-groups input {
-  width: 100px;
+/* Add some content at the bottom of the video/page */
+.content {
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+form {
+  display: block;
+  width: 200px;
+}
+
+.form-card {
+  margin: auto;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 80%;
+  text-align: center;
+  color: #89507f;
+  font-family: monospace;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+section {
+  display: block;
+  width: 200px;
+}
+
+.section-card {
+  margin: auto;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 80%;
+  text-align: center;
+  color: #89507f;
+  font-family: monospace;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.form-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.section-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Ändra så det är klasser att styla i CSS istället för element */
+
+/* QUESTION: So things worked out when I changed (from the display: flex;) to display:flexbox; , but I don't know why, I've used display:flex; in my first project and it worked out the way I wanted... don't really know the differents even thoug I googled it, but yet have'nt found information about it... */
+
 }
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
