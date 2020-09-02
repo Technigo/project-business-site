@@ -103,8 +103,7 @@ select {
   border: none;
 }
 
-.form p {
-  /* modifies the text:"number of coffee variations..." */
+.form p {  /* modifies the text:"number of coffee variations..." */
   margin-bottom: 5px;
 }
 
@@ -164,12 +163,11 @@ select {
   display: none;
 }
 
-.radio-button-container input:checked ~ .custom-radio:after {
+.radio-button-container input:checked ~ .custom-radio:after {  /* makes white dot in middle visible after clicking it */
   display: block;
-} /* makes white dot in middle visible after clicking it */
+}
 
-button {
-  /* styles submit button */
+button { /* styles submit button */
   margin-top: 25px;
   font-family: "Alata", sans-serif;
   font-size: 20px;
@@ -214,7 +212,7 @@ button:hover {
 }
 
 .button::after {
-  content: "\002B"; /* Unicode character for "plus" sign (+) */
+  content: "\002B"; /* Created + sign - Unicode character for "plus" sign (+) */
   float: right;
 }
 
@@ -242,7 +240,7 @@ button:hover {
 }
 
 .sign {
-  background-color: #bea69f;
+  background-color: #bea69f; /* changes button background color when open */
 }
 
 .sign:hover {
@@ -274,7 +272,11 @@ footer a {
   font-weight: bold;
 }
 
-/* MEDIA QUERIES */
+footer a:hover {
+  color: #00747c;
+}
+
+/* MEDIA QUERIES - To load right size iage when viewing from different devices */
 /* Tablet */
 @media (min-width: 667px) and (max-width: 1024px) {
   header {
