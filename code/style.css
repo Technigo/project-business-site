@@ -11,17 +11,21 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #eaf8bf;
+  background: #03cea4;
   font-family: sans-serif;
+  box-sizing: border-box;
 }
+
+
 
 /* Hero */
 
 #hero{
   height: 55vh;
   width: 100%;
-  background: #eca400;
+  background: #c4ffb2;
   display: flex;
+  flex-shrink: inherit;
 }
 
 #hero::after {
@@ -91,28 +95,39 @@ html {
   opacity: 0.8;
 }
 
+/* Main */
+
+.main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
 /* Form */
 
 .member {
-  width:350px;
-  display: flex;
-  background: #eca400;
-  margin-top: 50px;
+  widows: 20px;
+  background: #a1cdf4;
   padding: 5px;
+  margin:50px;
+  width: 500px;
+  border: 8px solid #7b4b94;
+  border-radius: 20px;
 }
 
 .signup {
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  border: 1px solid white;
+  
 }
 
-h2{
+.member h2{
   text-align: center;
-  background: #006992;
-  color: whitesmoke;
-  padding: 10px;
-  border-radius: 10px;
+  color: black;
+  padding: 20px;
+  border: 10px solid black;
+  border-radius: 30px;
 }
 
 input{
@@ -136,19 +151,110 @@ input[type=checkbox]
 
 input[type=submit]{
   margin-top: 30px;
-  width:95%;
+  width:99%;
   background: #001d4a;
   color: antiquewhite;
   font-size: 18px;
   font-weight: bold;
   cursor: grab;
-
-
 } 
 
 
 /* Accordian */
 
-form {
-  color: black;
+.accordion{
+  widows: 20px;
+  background: #a1cdf4;
+  padding: 5px;
+  margin:50px;
+  width: 500px;
+  border: 10px solid #7b4b94;
+  border-radius: 20px;
+  
 }
+
+
+.accordion h1 {
+  text-align: center;
+  color: black;
+  padding: 20px;
+  border: 10px solid black;
+  border-radius: 10px;
+}
+
+.accordion-container {
+  border: 2px solid #999;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  width: 400px;
+  margin: 50px;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #001d4a;
+  color: whitesmoke;
+  margin: 0;
+  padding: 15px;
+  cursor: pointer;
+}
+
+
+.accordion-text {
+  border-top: 2px solid #999;
+  text: 12px;
+  margin: 0;
+  padding: 15px;
+}
+
+.accordion-text-container {
+  height: 0;
+  overflow: hidden;
+  transition: height .3s ease;
+}
+
+.accordion-text-container.active {
+  height: 158px;
+}
+
+/* 2. Sticky navbar 
+
+body {
+  margin: 0;
+  height: 2000px;
+}
+
+.header {
+  padding: 20px;
+  background: #999;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header.sticky + .accordion {
+  margin-top: 58px;
+}
+
+3. Responsive images */
+
+@media (max-width: 900px) {
+  .rwd-image {
+      width: 100%;
+  }
+}
+
+@media (min-width: 901px) {
+  .rwd-image {
+      width: auto;
+  }
+}
+
+
+
+/* 26 resolution 1024 */
