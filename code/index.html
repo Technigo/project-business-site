@@ -3,28 +3,58 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Wood is Good</title>
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body class="wrapper">
     <!-- video or image as a header is cool :) -->
+    <header class="hero-image">
+        <div class="hero-text">
+          <h1>Wood is Good</h1>
+          <p>Everything wood</p>
+        </div>
+    </header>
+    
+    <main class="main-wrapper">
+      <!-- Signup form -->
+      <section class="form">
+        <h3>Sign up for wood</h3>
+        <form action="">
+          <label for="firstName">First name:</label><br>
+          <input type="text" name="firstName" id="firstName"><br>
+          <label for="lastName">Last name:</label><br>
+          <input type="text" name="lastName" id="lastName"><br>
+          <label for="email">E-mail:</label><br>
+          <input type="email" name="email" id="email"><br>
+            <input type="radio" name="nrWood" id="oneWood" value="oneWood">
+            <label for="oneWood">One wood</label>
+            <input type="radio" name="nrWood" id="twoWood" value="twoWood">
+            <label for="twoWood">Two wood</label>
+            <input type="radio" name="nrWood" id="threeWood" value="threeWood">
+            <label for="threeWood">Three wood</label><br>
+            <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+            <label for="checkbox">I agree</label>
+        </form>
+      </section>
 
-    <!-- Signup form -->
+      <section class="accordion">
+        <!-- Accordion -->
+        <h1>FAQ</h1>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+        <div class="question" id="section1">Section 1</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
+        <div class="question" id="section2">Section 2</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+      </section>
+    </main>
+    <footer>Wood is Good</footer>
     <!-- dont forget to link the javascript file here! -->
+    <script src="./script.js">
+    </script>
   </body>
 </html>
