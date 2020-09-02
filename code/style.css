@@ -137,6 +137,19 @@ form {
   margin-bottom: 25px;
 }
 
+input:focus {
+  background-color:#e5dff7;
+}
+
+input:valid {
+  background-color: #c6fc9f;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+  background-color: #eb7457;
+}
+
+
 /*THE QUESTION ACCORDION*/
 
 .accordion h2 {
@@ -152,10 +165,19 @@ form {
 
 .question {
   width: 400px;
+
   box-sizing: border-box;
   background-color: #faeed2;
   padding: 10px 15px;
   border: 1px solid lightgray;
+}
+
+.question:hover {
+  cursor: pointer;
+}
+
+.icon:before {
+  content:"➕";
 }
 
 .answer {
@@ -179,6 +201,10 @@ form {
 
 .chosen {
   background-color:#C0CEAD;
+}
+
+.chosen .icon:before {
+  content:"➖";
 }
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
