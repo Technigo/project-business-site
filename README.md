@@ -27,7 +27,7 @@ Started from the top of the site and worked down to the bottom.
 TODO
 
 ## Screenshots
-
+![Ylva Business Site](https://user-images.githubusercontent.com/63206854/92109048-a1256700-ede8-11ea-8a88-e8ea5cb647f9.png)
 
 ## View it live
 [https://ylvas-buiness-site.netlify.app/](https://ylvas-buiness-site.netlify.app/)
