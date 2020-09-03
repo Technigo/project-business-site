@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Graffiti bootcamp - project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  </head>
-  <body>
-    <header>
-      <!-- video or image as a header is cool :) -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graffiti bootcamp - project 3</title>
+  <!-- dont forget to add a css file and link it here! -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+  <header>
+    <!-- video or image as a header is cool :) -->
     <div id=hero>
       <video autoplay loop muted preload="auto" id="graffitiVideo">
         <source src="./videos/compressed_graffiti.mp4" type="video/mp4">
@@ -20,64 +22,74 @@
       </video>
       <div class="content">
         <h1>Graffiti artist bootcamp</h1>
-        <h2> Want to become a real graffiti artist ?  Sign up to the graffit artist bootcamp this fall 2021.</h2>
+        <h2> Want to become a real graffiti artist ? Sign up to the graffit artist bootcamp this fall 2021.</h2>
         <p><button id=signbutton class="w3-button w3-black w3-round-xxlarge">Sign up to Graffiti bootcamp</button></p>
       </div>
-    </div> 
-  </header>  
+    </div>
+  </header>
   <!-- Signup form -->
-  <form class="form">
-    <p>Signup to bootcamp</p>
-    <div class="form-group">
+  <div class="form-group">
+    <form class="form" action="http://httpbin.org/anything" method="POST">
+      <p>Signup to bootcamp</p>
+
       <label for="fname">First name:</label>
-      <input id="fname" type="text" placeholder="firstname">
-    </div>
-    <div class="form-group">
-      <label for="lname">Last name:</label>
-      <input id="lname" type="text">
-    </div>
-    <div class="form-group">
+      <input name="firstname" id="fname" type="text" placeholder="firstname" required>
+
+      <label for="lastname">Last name:</label>
+      <input name="lname" id="lname" type="text" placeholder="lastname" required>
+
       <label for="email">Email adress:</label>
-      <input id="email" type="email">
-    </div>
-    <div class="form-group">
-      <label for="Pasword">Password</label>
-      <input id="Password"type="password">
-    </div>
-    <div class="form-group">
-      <p>Gender:</p>
-      <label for="radio">Man</label>
-      <input type="radio">
-      <label for="radio">Woman</label>
-      <input type="radio">
-      <label for="radio">Other</label>
-      <input type="radio">
-    </div>
-    <div class="form-group">
-      <label for="checkbox">More information ? </label>
-      <input type="checkbox">
-    </div>
-    <div class="form-group">
-      <input type="submit">
+      <input name="email" id="email" type="email">
+
+      <label for="pasword">Password</label>
+      <input name="password" id="password" type="password">
+
+      <textarea name="message" rows="10" cols="30">
+        Any other information.
+        </textarea>
+      <p>Level of graffiti expertise</p>
+      <label for="radio">Rookie</label>
+      <input name="radio1" type="radio">
+      <label for="radio">Intermediate</label>
+      <input name="radio2" type="radio">
+      <label for="radio">Experienced</label>
+      <input name="radio3" type="radio">
+
+      <label for="color">Favorit graffit color </label>
+      <select name="color">
+        <option value="pink">Pink</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+      </select>
+
+      <label for="checkbox">Should we send more info? </label>
+      <input name="checkbox" type="checkbox">
+
+      <input type="submit" value="Submit">
+    </form>
   </div>
   <!-- Accordion-->
-    <section class="accordion"> 
-      <h1>FAQ</h1>
-<div class="accordion-container">
-      <div class="question" id="section1">Is the Graffiti bootcamp for everyone ?</div>
-      <div class="answer">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus obcaecati, corporis sint deserunt esse nemo nobis ipsum dolor rem dolorem expedita porro deleniti facere qui eaque, provident iure asperiores.</p>
+  <section class="accordion">
+    <h1>FAQ</h1>
+    <div class="accordion-element">
+      <h3 class="accordion-header1"> Is the Graffiti bootcamp for everyone ?</h3>
+      <p class="accordion-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus obcaecati, corporis
+        sint deserunt esse nemo nobis ipsum dolor rem dolorem expedita porro deleniti facere qui eaque, provident iure
+        asperiores.</p>
+
+      <h3 class="accordion-header2"> How much does it cost ?</h3>
+      <p class="accordion-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus obcaecati, corporis
+        sint deserunt esse nemo nobis ipsum dolor rem dolorem expedita porro deleniti facere qui eaque, provident iure
+        asperiores.</p>
+
+      <h3 class="accordion-header3"> When do I need to apply ?</h3>
+      <p class="accordion-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus obcaecati, corporis
+        sint deserunt esse nemo nobis ipsum dolor rem dolorem expedita porro deleniti facere qui eaque, provident iure
+        asperiores.</p>
       </div>
-      <div class="question" id="section2">How much does it cost ?</div>
-      <div class="answer">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia numquam ducimus voluptate ab facere in aliquam inventore doloribus, nam minima. Reiciendis enim doloremque aliquid necessitatibus sint facere laboriosam eos commodi.</p>
-      </div>
-      <div class="question" id="section3">When do I need to apply ?</div>
-      <div class="answer">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nobis delectus, quia nisi recusandae porro id laudantium nulla repudiandae harum necessitatibus. Repudiandae odio inventore veritatis, recusandae iure facilis nostrum earum?</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-    <script src="scripts.js"></script>
-  </body>
+  </section>
+  <!-- dont forget to link the javascript file here! -->
+  <script src="scripts.js"></script>
+</body>
+
 </html>
