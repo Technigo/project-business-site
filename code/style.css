@@ -1,7 +1,131 @@
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+  /* Hero-image with Header-text*/
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("./tvättahåret.jpeg");
+  display: flex;
+  flex-direction: column;
+  min-height: 15em;
+  height: 70%;
+  align-self: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+  color: white;
+  font-size: 90px;
+}
+
+.hero-header{
+  align-self: center;
+}
+
+/* Information */
+
+/* Booking-system */
+
+
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/* some styling here */
 
-.active + .answer {
-  /* some styling here */
+/* FAQ (Good to know) */
+h2 {
+  font-size: 48px;
 }
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  color: #053949;
+  background-color: plum; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to top, rgb(130, 177, 177), rgb(160, 221, 216), rgb(160, 221, 216), rgb(130, 177, 177));
+}
+
+.question {
+  display: flex;
+  border: solid rgb(91, 162, 196) 1px;
+  background: rgb(91, 162, 196);
+  border-radius: 20px;
+  padding: 15px;
+  margin: 2px;
+  width: 100%;
+}
+
+.active + .answer{
+  display: block;
+}
+
+.answer {
+  display: none;
+  padding: 15px;
+  margin: 2px;
+  width: 100%;
+}
+
+/* Footer */
+footer{
+  display: flex;
+  align-items: flex-start;
+  padding: 50px;
+  background-color: #053949;
+  color: white;
+}
+
+/******** Responsive ***********/
+
+/* For tablet: */
+@media (min-width:600px) {
+  .question {
+    padding: 15px;
+    margin: 2px;
+    width: 60%;
+  }
+  
+  .answer{
+  padding: 15px;
+  margin: 2px;
+  width: 60%;
+}
+}
+
+/* For desktop: */
+@media (min-width:1025px)  {
+  
+  .accordion {
+    padding: 15px;
+  }
+
+  .question {
+    padding: 15px;
+    margin: 2px;
+    width: 40%;
+  }
+  
+  .answer{
+  padding: 15px;
+  margin: 2px;
+  width: 40%;
+}
+}
+
+
