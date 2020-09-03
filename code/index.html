@@ -9,8 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Gayathri&family=Roboto+Slab&display=swap" rel="stylesheet">
   <title>Project3/ Perfectly Paired</title>
 </head>
-<!-- TAKE THE IMAGE OUT OF THE HERO-BANNER
-   AND MAKE IT MORE IN THE CENTER  and also add the video-->
 
 <body>
   <header>
@@ -29,27 +27,22 @@
         <div class="hero-text">
           <h1> perfectly paired </h1>
           <p>
-            we love wine and we are passionate of the process of making wine.
-            we want you to feel the love we feel.
+            a tailor made box of wine, just for you.
           </p>
         </div>
       </div>
-
-      <!-- <video> 
-        <source src="videos/video.mp4" type="video/mp4">
-      </video>-->
     </div>
-
 
   </header>
 
   <div class="main-content">
     <section class="order-form">
-      <h1>order</h1>
-      <p> answer a few questions down below and we'll send you you're tailor made mix
-        of your favorites. </p>
+      <h1>interested?</h1>
+      <p> fill in this form below and we'll send you a suggestion
+        of what your box can contain.
+      </p>
 
-      <form class="form" action="http://httpbin.org/anything" method="POST">
+      <form class="form" action="http://httpbin.org/anything" method="POST" onsubmit="return false">
 
         <div class="form-group">
           <label> first and lastname </label>
@@ -95,7 +88,12 @@
         </div>
 
         <div class="form-group">
-          <input type="submit" value="send" required>
+          <input type="submit" value="send" onclick=showThankYou() required>
+        </div>
+
+        <div class="thank-you hidden" id="thank-you">
+          Thank you for your interest! We'll get back to you as 
+          soon we as we have your tailor made offer. 
         </div>
 
         <!--USE A <TARGET TAG> OOR maybe that's not the thing a want, but I want a pop-up, 
@@ -105,10 +103,10 @@
     </section>
 
     <section class="faq" id="faq">
-      <h1>FAQ</h1>
+      <h1>frequently asked questions</h1>
       <p>click on your question and hopefully you'll find your answer. If not, don't hesitate and contact us!</p>
 
-      <div class="question" id="question1">
+      <div class="question inactive-question" id="question1">
         <h3>how long will it take to get my order?</h3>
       </div>
       <div class="answer">
@@ -118,7 +116,7 @@
         </p>
       </div>
 
-      <div class="question" id="question2">
+      <div class="question inactive-question" id="question2">
         <h3>where is your wine from?</h3>
       </div>
       <div class="answer">
@@ -127,7 +125,7 @@
           of inpact on the world.
         </p>
       </div>
-      <div class="question" id="question3">
+      <div class="question inactive-question" id="question3">
         <h3>can I order for someone else?</h3>
       </div>
       <div class="answer">
@@ -135,13 +133,13 @@
           pretty nice gift!
         </p>
       </div>
-      <div class="question" id="question4">
+      <div class="question inactive-question" id="question4">
         <h3>can I start a subscription?</h3>
       </div>
       <div class="answer">
         <p>For now it's not possible but we're working on a sulution for that.</p>
       </div>
-      <div class="question" id="question5">
+      <div class="question inactive-question" id="question5">
         <h3>wich countries do you deliver to?</h3>
       </div>
       <div class="answer">
