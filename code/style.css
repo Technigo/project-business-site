@@ -123,6 +123,10 @@ nav a:hover {
   align-items: center;
 }
 
+/*.form-group input {
+  background-color: none;
+}*/
+
 .form-group label {
   width: 150px;
   margin-right: 5px;
@@ -131,6 +135,10 @@ nav a:hover {
 ::placeholder {
   font-size: 12px;
   font-family: Courier New, monospace;
+}
+
+.form-group input:valid {
+  border-color: #000; 
 }
 
 input:not(:placeholder-shown) {
@@ -142,9 +150,9 @@ input[required]:placeholder-shown {
 }
 
 .form-group input{ 
-  border:0;
-  border-bottom:1px solid #555;  
-  background:transparent;
+  border-radius: 0;
+  border-bottom: 1px solid #555;  
+  background: transparent;
   width:50%;
   padding:8px 0 5px 0;
   font-size:16px;
@@ -266,7 +274,7 @@ input[required]:placeholder-shown {
 
 @media (min-width: 768px) {
   video {
-    height: 60vh;
+    height: 80vh;
 }
 
   /*.flex-box {
@@ -299,14 +307,7 @@ input[required]:placeholder-shown {
   .flex-box {
     flex-direction: row;
     align-items: center;
-  }
-}
-
-/*MEDIA QUERY LARGE SCREEN*/
-
-@media (min-width: 1200px) {
-  video {
-    height: 100vh;
+    justify-content: space-around;
   }
 
   header {
@@ -316,8 +317,12 @@ input[required]:placeholder-shown {
   header h1 {
     font-size: 70px;
   }
+}
 
-  nav {
-    margin-top: 0;
+/*MEDIA QUERY LARGE SCREEN*/
+
+@media (min-width: 1200px) {
+  video {
+    height: 100vh;
   }
 }
