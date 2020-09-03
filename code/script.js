@@ -18,7 +18,9 @@ form.addEventListener('submit', (e) => {
   if (firstName.value.length >= 15) {
     messages.push('Name must be less than 15 characters')
   }
-
+  if (email.value.length >= 20) {
+    messages.push('Email must be less than 20 characters')
+  }
   if (messages.length > 0) {
     e.preventDefault()
     errorElement.innerText = messages.join(', ')

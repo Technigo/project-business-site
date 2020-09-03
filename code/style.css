@@ -130,14 +130,26 @@ body {
 }
 
 /* SIGN-UP FORM */
+* {
+  box-sizing: border-box;
+}
 #sign-up {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  background: #e6ebf6;
+  margin: 0;
+  background-color: #deb887; /* For browsers that do not support gradients */
+  background-image: linear-gradient(
+    to right,
+    #f1e1cd,
+    #f6e2c9,
+    #fce3c3,
+    #ffe4bc
+  );
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-flow: wrap;
+  align-items: center;
 }
 .form .btn {
   align-items: left;
@@ -146,25 +158,53 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
+  max-width: 100%;
 }
 .form-sign-up {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+  background-image: url(./img/flower.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  max-width: 100%;
+  color: #292524;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px #292524;
+  width: 600px;
+  height: 800px;
+  display: block;
+  margin: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .form-sign-up h3 {
   font-family: "Playfair Display", serif;
-  font-size: 25px;
+  color: white;
+  font-size: 30px;
   letter-spacing: 2px;
   font-weight: 700;
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
   padding: 10px;
+  justify-content: center;
+}
+.form-sign-up .btn {
+  color: #292524;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: burlywood;
+  border: 2px solid tan;
+  text-align: center;
+  justify-content: center;
 }
 .form-group {
   font-size: 18px;
   font-family: "Playfair Display", serif;
   padding: 10px;
+  text-align: center;
+  color: black;
+  font-weight: 800;
 }
+
+/* ACCORDION */
