@@ -1,12 +1,10 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I need to build a one-pager business site with a hero image, sign up form, faq accordion using JS. Last week I do not have the chance that add to my project grid, so I did it for this project. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I had a problem with the radio button styling, but I found a youtube tutorial where I undrestood the steps and it worked. If I had more time, I style it more 2020ish. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://therockstar.netlify.app/
