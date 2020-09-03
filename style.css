@@ -6,6 +6,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+*, *::before, *::after {box-sizing: border-box}
+
 
 body{
   height: 100%;
@@ -13,13 +15,18 @@ body{
   background-color: #F2F2F2;
 }
 
+p{
+  margin:0;
+  padding:0;
+}
+
 /*** HERO IMAGE ****/
 .header{
   width:100%;
 }
 
-.hero-image {
-  height: 75vh;
+.hero-image{
+  height: 80vh;
   background: url("./images/erol_ahmed_unsplash.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -29,7 +36,6 @@ body{
   justify-content: flex-start;
   align-items: center;
   padding: 0 10vw;
-  
 }
 
 .hero-h1{
@@ -38,19 +44,23 @@ body{
   text-transform: uppercase;
   text-align: center;
   color: #e83333;
+  font-weight: 900;
+  text-shadow: rgb(120, 0, 0) 2px 2px;
   font-family: 'Monoton', cursive;
 }
 
 .hero-p{
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  font-size: 2em;
+  font-size: 1.8em;
   color: white;
+  font-weight: 900;
   text-align: center;
   position: relative;
 }
 
 .hero-text button{
+  
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   border: none;
@@ -65,7 +75,7 @@ body{
   position: relative;
 }
 
-.hero-text button:hover {
+.hero-text button:hover{
   background-color: #555;
   color: white;
 }
@@ -75,20 +85,20 @@ span.red{
 }
 
 /*** NAVBAR ****/
-nav {
+
+nav{
   display: flex;
   justify-content: space-evenly;
-  margin: 10px;
+  margin: 30px 10px;
   font-family: 'Montserrat', sans-serif;
-  
 }
 
-nav a {
+nav a{
   text-decoration: none;
   color: black;
 }
 
-a:after {
+a:after{
   display: flex;
   content: "";
   width: 0px;
@@ -96,12 +106,12 @@ a:after {
   background: #DA0C0C;
 }
 
-a:hover::after {
+a:hover::after{
   width: 20px;
   transition: width 0.5s;
 }
 
-a:hover {
+a:hover{
   color: #DA0C0C;
 }
 
@@ -113,7 +123,7 @@ a:hover {
 }
 
 .manifesto-h2{
-  font-family: 'Monoton', cursive;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
   text-transform: uppercase;
   text-align: center;
@@ -131,13 +141,34 @@ a:hover {
   font-weight: 10;
 }
 
+.p-manifesto-wrapper{
+  display: block;
+}
+
+.p-manifesto{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: black;
+  text-align: center;
+  position: relative;
+  margin: 20px 30px;
+}
+
 /*** ACCORDION ****/
+
+.accordion-question{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8em;
+  color: black;
+  text-align: center;
+}
 
 .accordion{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 
 .accordion-h3{
@@ -159,12 +190,20 @@ a:hover {
   transition: 0.4s;
 }
 
-.active, .question:hover {
+.active, .question:hover{
   background-color: #ecded5
 }
 
-.question:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
+.activequestion:after{
+  content: '\02795';
+}
+
+.inactivequestion:after{
+  content: '\02796';
+}
+
+.question:after{
+  /* content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
   color: rgb(3, 3, 3);
   float: right;
@@ -172,27 +211,36 @@ a:hover {
   margin-top: 10px;
 }
 
+/* THIS IS NOT WORKING */
+/*
 .active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  content: "\2796";  Unicode character for "minus" sign (-)
+}
+*/
+
+.active, .answer{
+  background-color: #F2F2F2;
+}
+
+.answer{
+  width: 70%;
+  height: 0;
+  text-align: justify;
+  overflow:hidden;
+  transition: height 0.3s ease;
+  margin: 5px 0;
 }
 
 .answer-p{
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
   text-align: justify;
 }
 
 .answer-list{
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
   text-align: justify;
-}
-
-.answer{
-  width: 70%;
-  height: auto;
-  text-align: justify;
-  overflow:auto;
 }
 
 .accordion-image{
@@ -206,17 +254,28 @@ span.italic{
 
 /*** Showing and hiding accordion ****/
 
-.active + .answer {
+/*** .active + .answer {
   display: inline-block;
+}****/
+
+.active{
+  height: 270px; 
 }
 
-.answer{
-  display:none;
+.active-image{
+  height: 230px; !important;
 }
+
 
 /*** SIGN UP FORM ****/
 
+form{
+  box-sizing: border-box;
+  width:50%;
+}
+
 .the-form{
+  box-sizing: border-box;
   background-color: #ecded5;
   display: flex;
   justify-content: center;
@@ -231,10 +290,65 @@ span.italic{
 }
 
 .p-form{
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+  color: black;
+  font-weight: 900;
+  text-align: left;
+  margin: 15px 5px;
+}
+
+.p-form-small{
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
-  color: purple;
-  text-align: justify;
+  font-style: bold;
+}
+
+.amount-container{
+  display:inline-flex;
+
+}
+
+.amount{
+  box-sizing: border-box;
+  margin: 5px;
+}
+
+.person{
+  box-sizing: border-box;
+  margin: 15px 5px;
+}
+
+.news{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 5px;
+}
+
+.bank{
+  box-sizing: border-box;
+  margin: 10px 5px;
+}
+
+.submit-form{
+  margin: 15px 5px;
+}
+
+input[type = "text"]{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+}
+
+input[type = "number"]{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+  height: 100px;
+}
+
+input[type = "submit"]{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
 }
 
 footer{
@@ -250,4 +364,37 @@ footer{
 .footer-image{
   width:50px;
 }
+
+@media (min-width: 768px) {
+  .hero-h1 {
+    font-size: 3.5em;
+  }
+
+  .active{
+    height: 150px; 
+  }
+  
+  .active-image{
+    height: 350px; !important;
+  }
+}
+
+@media (min-width: 1024px){
+  .hero-h1 {
+    font-size: 4em;
+  }
+
+  .hero-p{
+    font-size: 2.8em;
+  }
+  
+  .active{
+    height: 95px; 
+  }
+  
+  .active-image{
+    height: 650px;
+  }
+}
+
 
