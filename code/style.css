@@ -1,5 +1,10 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   background-color: #ededed;
 }
 
@@ -50,6 +55,7 @@ p {
 /* På skärmar större än 678 px */
 @media screen and (min-width: 678px) {
 
+
   .header-background-image {
     background-image: url("img/SannaDolckWall_Wedding2_1920px.jpg");
     background-position: bottom;
@@ -63,6 +69,19 @@ p {
   .header-background-image h2 {
     color: white;
   }
+
+  .container {
+    display: flex;
+    }
+
+    .container form {
+      width: 50%;
+    }
+
+    .accordion {
+      width: 50%;
+    }
+
 }
 
 
@@ -79,6 +98,11 @@ p {
   }
 
 
+  /* .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    } */
 
   /* FORM */
 
@@ -86,7 +110,7 @@ p {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    align-items: center;
+    align-items: left;
     border: 2px solid red;
   }
 
@@ -100,13 +124,17 @@ p {
 
   .hours .form-group label {
     color: blue;
-    display: flex;
+    /* display: flex; */
     margin-right: -15px;
   }
+
   .form-group label {
     width: 100px;
     margin-right: 100px;
   }
+
+  
+
 
   /* .form-group input,
   .form-group text-area {
@@ -133,31 +161,48 @@ label {
 .accordion {
   padding: 20px;
   margin: 0 20px 0 20px;
+  /* display: flex;
+  flex-direction: column; */
 }
 
-.accordion .question {
-  background-color: #13443b;
-  padding: 5px;
+.accordion-item {
+  background-color:#13443b;
+  border-radius: 10px;
+}
+
+.accordion-item-header {
+  padding: 10px;
   text-align: center;
   color: white;
+  cursor: pointer;
 }
 
-.accordion .answer {
+.accordion-item-body {
   background-color: white;
   margin-bottom: 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 } 
 
-.accordion .answer p {
-  margin: 0px;
+.accordion-item-body-content {
   padding: 20px;
+  border-bottom: 3px solid yellow;
+  border-image: linear-gradient(to right, transparent, #13443b, transparent) 1;  
 }
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+accordion-item-header.active + ..accordion-item-body {
   /* some styling here */
+  max-height: 200px;
 }
+
+
+
+
+
 
 
