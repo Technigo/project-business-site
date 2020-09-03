@@ -7,26 +7,28 @@
     <link rel="stylesheet" href="./style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
   </head>
   <body>
 
     <header>
-      <video autoplay loop>
+      <video class="header-desktop" autoplay loop>
         <source src="./yoga.mp4" type="video/mp4">
         Your browser does not support video.
       </video>
+      <img class="header-tablet" src="./yogaphone.jpeg" alt="Yoga picture">
+      <img class="header-phone" src="./yogatablet.jpeg" alt="Yoga picture">
       <h1>the Studio</h1>
     </header>
 
-    <div class="content-container">
-    
-      <form action="/action_page.php">
+    <main>
+      <div class="content-item">
+      <form action="http://httpbin.org/anything" method="POST">
         <h2>Sign up!</h2>
         <label for="name">Name</label><br>
-        <input type="text" id="name" name="name" autocomplete="off"><br> <!--value="Natalie Green", onfocus="this.value=''"-->
-
+        <input type="text" id="name" name="name" autocomplete="off"> 
         <label for="e-mail">E-mail</label><br>
-        <input type="text" id="e-mail" name="e-mail" autocomplete="off"><br> <!--value="natalie.green@gmail.com, onfocus="this.value=''""-->
+        <input type="text" id="e-mail" name="e-mail" autocomplete="off"><br>
       
         <p>Choose your city</p>
         <input type="radio" id="Stockholm" name="city" value="Stockholm" checked="checked">
@@ -35,36 +37,48 @@
         <label for="Berlin">Berlin</label><br>
 
         <div class="checkbox">
-          <input type="checkbox" id="newsletter" name="newsletter" value="newsletter" checked="checked">
+          <input type="checkbox" id="newsletter" name="newsletter" value="yes" checked="checked">
           <label for="newsletter">I want to recieve the newsletter</label><br>
-          <input type="checkbox" id="terms" name="terms" value="terms">
+          <input type="checkbox" id="terms" name="terms" value="yes">
           <label for="terms">I agree to the <span>terms & conditions</span></label><br>
         </div>
 
         <input class="submit" type="submit" value="Submit">
       </form>
+    </div>
 
-      <section class="accordion">
-        <!-- Accordion -->
+    <div class="content-item">
+      <section class="accordion-container">
         <h2>FAQ</h2>
-  
-        <div class="question" id="section1">Section 1</div>
-        <div class="answer">
-          <p>Lorem ipsum...</p>
+        <div class="accordion-item">
+          <div class="question" id="question1">How do I become a member?</div>
+          <div class="answer">
+          <p>Signup by filling out the form on this site.</p>
         </div>
-  
-        <div class="question" id="section2">Section 2</div>
-        <div class="answer">
-          <p>Lorem ipsum...</p>
+        </div>
+        <div class="accordion-item">
+          <div class="question" id="question2">What does it cost?</div>
+          <div class="answer">
+            <p>500 sek/50 euro per month.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="question" id="question3">How do I end my membership?</div>
+          <div class="answer">
+            <p>Send an e-mail to thestudio@gmail.com.</p>
+          </div>
         </div>
       </section>
+    </div>
 
-  </div>
+    </main>
 
-
+  <footer>
+    
+  </footer>
 
   
-
-    <!-- dont forget to link the javascript file here! -->
+  <script src="./script.js"></script>
+    
   </body>
 </html>

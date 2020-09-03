@@ -9,25 +9,122 @@ header {
   align-items: center;
 }
 
-video {
-  width: 100%;
+@media (min-width: 1024px) {
+  .header-phone {
+    display: none;
+  }
+  .header-tablet {
+    display: none;
+  }
 }
 
-h1 {
-  margin: 0;
-  position: absolute;
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-desktop {
+    display: none;
+  }
+  .header-phone {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-desktop {
+    display: none;
+  } 
+  .header-tablet {
+    display: none;
+  }
+}
+
+video, img {
   width: 100%;
+  filter: grayscale(100%); 
+} 
+
+h1 {
+  position: absolute;
   color: white;
+  width: 100%;
+  text-align: center;
   font-size: 22.4vw;
 }
 
-/*** CONTENT ***/
-.content-container {
-  display: flex;
-  justify-content: space-around;
+@media (max-width: 1023px) {
+  h1 {
+    animation-name: text;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite; 
+  }
+}
 
-  margin: 50px;
+@keyframes text {
+  from {color: white;}
+  to {color: yellow;}
+} 
+
+@media (min-width: 1024px) {
+  h1 {
+    animation-name: lightning;
+    animation-duration: 0.1s;
+    animation-delay: 22s;
+    animation-iteration-count: 20;
+  }
+}
+
+@keyframes lightning {
+  from {color: white;}
+  to {color: yellow;}
+} 
+
+/*** CONTENT ***/
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 40px 20px 40px 20px;
   font-family: 'Open Sans', sans-serif;
+} 
+
+h2 {
+
+  font-family: 'Permanent Marker', cursive;
+  font-size: 40px;
+  color: rgb(134, 125, 125);
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .content-item {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .content-item {
+    width: 60%;
+  }
+  form {
+    margin-bottom: 40px;
+  }
+  .accordion-container {
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .content-item {
+    width: 80%;
+  }
+  form {
+    margin-bottom: 40px;
+  }
+  .accordion-container {
+    text-align: center;
+  }
 }
 
 /*** SIGNUP FORM ***/
@@ -35,18 +132,13 @@ h1 {
 form {
  padding: 20px 40px 20px 40px;
  border-radius: 20px;
- box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+ height: 475px;
 }
 
-h2 {
-  text-align: center;
-  font-family: 'Permanent Marker', cursive;
-  font-size: 40px;
-  color: rgb(134, 125, 125);
-}
+
 
 input[type=text]  {
-  color: black;
   border: none;
   /*color: rgb(175, 170, 170);*/
   background-color: rgb(240, 238, 238);
@@ -58,7 +150,6 @@ input[type=text]  {
 
 input[type=text]:focus, input[type=e-mail]:focus {
   outline: none;
-  color: black;
 }
 
 p {
@@ -97,12 +188,72 @@ span:hover {
 
 /*** FAQ ***/
 
+.accordion-container {
+  padding: 20px 40px 20px 40px;
+
+  background-image: linear-gradient(to right,white, rgb(240, 238, 238));
+  /*background-color: rgb(240, 238, 238);*/
+  border-radius: 20px;
+  /*box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);*/
+  height: 475px;
+}
+
+.accordion-container h2 {
+  color: rgb(134, 125, 125);
+  
+}
+
+.accordion-item {
+  margin-bottom: 16px;
+
+}
+
+.question {
+  cursor: pointer;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
+  padding-bottom: 8px;
+}
+
+.question:hover {
+  font-weight: 700;
+
+}
+
+.active {
+  font-weight: 700;
+}
+
+.answer {
+  display: none;
+  
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
+
+
+
+  padding-bottom: 8px;
+} 
+
+.accordion-container p {
+  margin: 0;
+}
+
+.active + .answer {
+  display: block;
+} 
+
+/*** FOOTER ***/
+
+footer {
+  background-color: rgb(240, 238, 238);
+  padding: 50px; 
+}
+
+
 
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-}
