@@ -223,12 +223,13 @@ p {
 
 button.accordion {
   background: linear-gradient(#D8E8FF,#CEAEA5); 
-  color: white;
+  color: black;
   cursor:pointer;
   border:0px;
   padding: 10px;
   width: 70%;
-  text-align: center;
+  max-width:400px; 
+
   font-size: 18px;
   transition: .4s;
   box-shadow: 5px 10px 10px #888888;
@@ -242,10 +243,20 @@ button.accordion.active, button.accordion:hover {
   background: linear-gradient(#CEAEA5, #D8E8FF);
 }
 
+.accordion::after {
+  content:"\25EF";
+  margin-left: 120px;
+}
+
+.accordion.active::after {
+  content:"\25C9";
+}
+
 div.panel-a {
   padding: 0 18px;
   max-height:0;
-  font-size: 15px;
+  max-width:400px; 
+  font-size: 10px;
   overflow: hidden;
   width:70%;
   margin: 0 auto;
@@ -262,7 +273,8 @@ div.panel-a {
 div.panel-b {
   padding: 0 18px;
   max-height:0;
-  font-size: 15px;
+  max-width:400px; 
+  font-size: 10px;
   overflow: hidden;
   width:67.45%;
   margin: 0 auto;
