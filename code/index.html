@@ -5,46 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3: Business site - Balloon ride</title>
     <link rel="stylesheet" href="./style.css" />
-    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Condensed:wght@300&display=swap');
+    </style>
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
     <!-- HERO IMAGE -->
     <header>
-      
-       <img src = "logo.png" alt= "Balloon Ride's logo">
-   
-    </header>
- 
-      <section class="hero"> 
-        <div class="hero-image"></div>
-        <div class="hero-text"> 
-          <h1> Enter our contest and win a balloon ride! </h1>
-        </div>  
+      <img src = "logo.png" alt= "Balloon Ride's logo">
 
-    
-      
   
-   
-    
-      <!-- <picture>
-        <source media="(max-width:667px)" srcset="./balloonride-small.jpg">
-        <source media="(max-width:1024px)" srcset="./balloonride-big.jpg">
-        <img src="./balloonride-original.jpg" alt="Ballloon ride with a view" style="width: auto">
-      </picture> -->
-      
-   
-    
-      
-    
-    <!-- Signup form -->
+<!-- 
+    <picture>
+      <source id="image1" media ="(max-width:600px)" srcset="./balloons.jpg">
+      <source id="image2" media ="(max-width:900px)" srcset="./balloonride-big.jpg">
+      <img src="./balloonride-original.jpg" alt="Ballloon ride with a view" style="width: auto">
+    </picture>  -->
 
+      <div class="hero-image"></div>
+      <div class="hero-image-text"> 
+        <h1> Enter our contest and win a balloon ride! </h1>    
+      </div>
    
+ 
+    </header>
+
+    <section class= flex-parent>    
+      
       <!-- Accordion -->
-    <section class = "accordion">
 
-      <div class="accordion-container">
-        <h1>Info</h1>
+      <div class="flex-child accordion">
+        <h2>Info</h2>
 
           <div class="accordion-element">
         
@@ -118,14 +110,45 @@
       
       </div>
     
-    </section>
+      <!-- Signup form -->
+      <div class= "flex-child form">
 
- 
+        <form class="form-container">
+          <div class="form-group">
+            <label for="firstName">First name</label>
+            <input id="firstName" type="text"> 
+          </div>
+          
+          <div class="form-group">
+            <label for="lastName"> Last name</label>
+            <input id="lastName" type="text"> 
+          </div>
+    
+          <div class="form-group">
+            <label for="telephoneNumber"> Telephone</label>
+            <input id="telephoneNumber" type="tel" placeholder="xxx-xxx-xx-xx"> 
+          </div>
+          
+          <div class="form-group">
+            <label for="email"> Email</label>
+            <input id="email" type="email"> 
+          </div>
+          
+          <div class="form-group">
+            <input id="checkbox" type="checkbox">
+            <label for="checkbox"> I accept terms and conditions </label>     
+          </div>
+    
+          <div class="form-group">
+            <input id="submit" type="submit">
+          </div>   
+      
+        </form>
+    
+      </div>   
+  </section>  
     
   <script src="./script.js"></script>
-  
-  
-
 </body>
 
 <footer>

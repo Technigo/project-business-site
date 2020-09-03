@@ -67,4 +67,4 @@ accordionHeader4.onclick = () => {
   accordionTextContainer1.classList.remove('active');
   accordionTextContainer2.classList.remove('active');
   accordionTextContainer3.classList.remove('active');
-} */ 
+} 
