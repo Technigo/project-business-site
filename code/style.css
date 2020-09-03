@@ -1,7 +1,267 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  margin: 0;
+  background: rgb(17, 231, 17);
+}
 
+header {
+  display: block;
+  margin: 0;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  right: 50px;
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+  margin: 10px 20px;
+  right: 20px;
+}
+
+a:hover {
+  color: black;
+}
+
+.topic {
+  position: absolute;
+  z-index: 1;
+  right: 300px;
+  top: 250px;
+  color: antiquewhite;
+}
+
+.video {
+  width: 100%;
+}
+
+.myVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Main Content */
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  margin: 100px;
+}
+
+.sections {
+  flex: 1;
+  padding: 50px;
+}
+
+/*  Signup form  */
+
+.form {
+  background-color: yellow;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 16px 32px 0;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.input-width {
+  width: 100%;
+}
+
+.name input:focus{
+  background-color: yellowgreen;
+}
+
+.last-name input:focus{
+  background-color: yellowgreen;
+}
+
+.email input:focus{
+  background-color: yellowgreen;
+}
+
+.password input:focus{
+  background-color: yellowgreen;
+}
+
+.gender > label, .gender > label input {
+  cursor: pointer;
+}
+
+.question > label, .question > label input {
+  cursor: pointer;
+}
+
+.age output{
+  text-align: center;
+}
+
+.age output, input{
+  cursor: pointer;
+}
+.submit {
+  background-color: green;
+  margin: 20px;
+  height: 50px;
+  border-radius: 20px;
+  box-shadow: 0 16px 32px 0;
+  cursor: grab;
+}
+
+.submit:hover {
+  box-shadow: none;
+}
+.submit:active {
+  box-shadow: none;
+}
+
+/* Accordion */
+
+.accordion-container {
+  background-color: violet;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 16px 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 100%;
+}
+.accordion-container h1 {
+  text-align: center;
+}
+
+
+.icon-hand-down{
+  margin: 10px;
+  padding:2px;
+}
+
+
+.icon-hand-up{
+  margin: 10px;
+  padding:2px;
+  display: none !important;
+  
+}
+.accordion-container .question {
+  margin: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  border: 4px outset;
+  padding: 50px;
+  cursor: help;
+}
+
+.accordion-container .question:hover {
+  background-color: rgb(194, 94, 194);
+}
+
+.accordion-container .answer {
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+  border: 4px;
+  padding:5px;
+}
+
+.active > .icon-hand-down{
+  display:none;
+}
+
+.active > .icon-hand-up{
+  display:unset !important;
+}
 .active + .answer {
-  /* some styling here */
+  height: auto;
+  overflow: auto;
+  border: 4px inset;
+}
+
+/*Responsive  */
+@media (min-width: 1025px) {
+  
+  .video {
+    height: 600px;
+  }
+  .tablet, .mobile {
+    display: none;
+  }
+  .gender,
+  .question {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 667px) and (max-width: 1024px) {
+  .video {
+    height: 367px;
+  }
+  
+  .main-content{
+    margin:0;
+    padding: 15px;
+  }
+  .sections{
+    padding:5px;
+    margin:20px;
+  }
+  .form, .accordion-container{
+    padding:20px;
+  }
+  .gender,
+  .question {
+    flex-direction: row;
+  }
+  .desktop,
+  .mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 666px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .nav-container {
+    flex-direction: column;
+    left: 0;
+  }
+  .topic{
+    right: 11px;
+    top: 124px;
+    font-size: larger;
+  }
+  a{
+    margin: 5px;
+  }
+  .video {
+    height: 200px;
+  }
+  .desktop,
+  .tablet {
+    display: none;
+  }
+  .main-content {
+    margin: 5px;
+  }
+  .sections{
+    padding:3px;
+  }
+  }
 }

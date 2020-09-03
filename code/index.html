@@ -4,27 +4,226 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <!-- video or image as a header is cool :) -->
+    <header>
+      <div class="nav-container">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
 
-    <!-- Signup form -->
+      <h1 class="topic">Did you sleep well?</h1>
 
-    <section class="accordion">
+      <div class="video">
+        <video autoplay muted loop class="myVideo desktop">
+          <source src="videos/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
+        </video>
+        <video autoplay muted loop class="myVideo tablet">
+          <source src="videos/SampleVideo_720x480_1mb.mp4" type="video/mp4" />
+        </video>
+        <video autoplay muted loop class="myVideo mobile">
+          <source src="videos/SampleVideo_360x240_1mb.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <!-- Signup form -->
+
+      <section class="sections">
+        <form class="form" action="http://httpbin.org/anything" method="POST">
+          <div class="name">
+            <label for="name">Name:</label><br />
+            <input
+              class="input input-width"
+              type="text"
+              placeholder="Your Name"
+              id="name"
+              name="name"
+              required
+            />
+          </div>
+
+          <div class="last-name">
+            <label for="last-name">Last Name:</label><br />
+            <input
+              class="input input-width"
+              type="text"
+              placeholder="Your Last Name"
+              id="last-name"
+              name="last-name"
+              required
+            />
+          </div>
+
+          <div class="email">
+            <label for="email">Enter your email:</label><br />
+            <input
+              class="input input-width"
+              type="email"
+              placeholder="Your Email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+
+          <div class="password">
+            <label for="password">Password:</label><br />
+            <input
+              class="input input-width"
+              type="password"
+              placeholder="Your Password"
+              id="password"
+              name="pasword"
+              required
+              maxlength="3"
+            />
+          </div>
+
+          <div class="gender input">
+            <b>Gender:</b>
+
+            <label for="male">
+              <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="male"
+              />Male</label
+            ><br />
+
+            <label for="female">
+              <input
+                type="radio"
+                id="female"
+                name="gender"
+                value="female"
+              />Female</label
+            ><br />
+
+            <label for="other"
+              ><input
+                type="radio"
+                id="other"
+                name="gender"
+                value="other"
+              />Other</label
+            >
+          </div>
+
+          <div class="question input">
+            <b>Did you slept well?</b>
+            <br />
+
+            <label for="yes"
+              ><input type="checkbox" id="yes" name="question" value="yes" />
+              Yes</label
+            ><br />
+
+            <label for="no"
+              ><input type="checkbox" id="no" name="question" value="no" />
+              No</label
+            ><br />
+          </div>
+
+          <div class="age input">
+            <label for="ageInputId"><b>Age (between 18 and 100):</b></label
+            ><output name="age" id="ageOutputId">50</output>
+            <input
+              type="range"
+              name="age"
+              id="ageInputId"
+              value="50"
+              min="1"
+              max="100"
+              oninput="ageOutputId.value = ageInputId.value"
+            />
+          </div>
+
+          <div class="message">
+            <textarea
+              class="input-width"
+              id="message"
+              placeholder="Message"
+              name="message"
+            ></textarea>
+          </div>
+
+          <input class="submit" type="submit" value="submit" />
+        </form>
+      </section>
+
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      <section class="sections">
+        <div class="accordion-container">
+          <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+          <div id="section1" class="question">
+            <i class="icon-hand-down"></i>
+            <i class="icon-hand-up"></i>
+            How much sleep do you need by age?
+          </div>
+          <div class="answer">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
+              fusce ut placerat orci. Ipsum nunc aliquet bibendum enim facilisis
+              gravida neque. Sit amet justo donec enim diam vulputate ut
+              pharetra. Placerat duis ultricies lacus sed turpis tincidunt id
+              aliquet risus. Mollis nunc sed id semper risus in. Rhoncus dolor
+              purus non enim praesent elementum facilisis. Pulvinar elementum
+              integer enim neque.
+            </p>
+          </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
+          <div id="section2" class="question">
+            <i class="icon-hand-down"></i>
+            <i class="icon-hand-up"></i>
+            How Much Is Too Much Sleep?
+          </div>
+          <div class="answer">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
+              fusce ut placerat orci. Ipsum nunc aliquet bibendum enim facilisis
+              gravida neque. Sit amet justo donec enim diam vulputate ut
+              pharetra. Placerat duis ultricies lacus sed turpis tincidunt id
+              aliquet risus. Mollis nunc sed id semper risus in. Rhoncus dolor
+              purus non enim praesent elementum facilisis. Pulvinar elementum
+              integer enim neque.
+            </p>
+          </div>
+
+          <div id="section3" class="question">
+            <i class="icon-hand-down"></i>
+            <i class="icon-hand-up"></i>
+            What is the best time to sleep and wake up??
+          </div>
+          <div class="answer">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
+              fusce ut placerat orci. Ipsum nunc aliquet bibendum enim facilisis
+              gravida neque. Sit amet justo donec enim diam vulputate ut
+              pharetra. Placerat duis ultricies lacus sed turpis tincidunt id
+              aliquet risus. Mollis nunc sed id semper risus in. Rhoncus dolor
+              purus non enim praesent elementum facilisis. Pulvinar elementum
+              integer enim neque.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <!-- dont forget to link the javascript file here! -->
+    <script src="./script.js"></script>
   </body>
 </html>
