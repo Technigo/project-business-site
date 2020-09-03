@@ -19,7 +19,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 #BABCBB Ljus grå
 */
 
-
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 
 * {
@@ -99,11 +99,14 @@ nav {
 }
 
 /* Form */
-.signUp {
+.signUpContent {
   display: flex;
+  flex-direction: column;
   width: 100%;
   box-sizing: border-box;
-  padding: 30px
+  padding: 30px;
+  justify-self: center;
+  max-width: 1200px;
 }
 
 .signUpForm {
@@ -123,6 +126,7 @@ form {
 .signUpForm h2 {
   font-weight: 400;
   font-size: 20px;
+  color: #0F1B12;
 }
 
 form label {
@@ -194,16 +198,53 @@ form input {
   
 }
 
-
-
-
-
 .signUpForm h2 .signUpGreen{
   color: #62AC7B;
   font-weight: 900;
 }
 
+@media only screen and (min-width: 768px) {
+  .heroText{
+    font-size: 40px;
+    display: none;
+  }
 
+
+  .signUpContent{
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 50px 50px;
+    
+  }
+
+  .signUpImg {
+    width:90%;
+    align-content: center;
+    align-self: center;
+    padding: 20px;
+
+  }
+
+  .signUpForm h2 {
+    font-weight: 400;
+    font-size: 30px;
+    text-align: left;
+  }
+} 
+
+@media only screen and (min-width: 992px) {
+  .container{
+    margin-top: 70px;
+  }
+  .signUpContent {
+   margin: 0 auto;
+  }
+}
+
+
+
+
+/* Checkbox */
 
 .checkbox-ctn {
   display: flex;
@@ -220,9 +261,7 @@ form input {
   cursor: pointer;
   height: 0;
   width: 0;
-  
 }
-
 
 .custom-checkbox {
   position: relative;
@@ -235,7 +274,6 @@ form input {
   cursor: pointer;
   margin-right: 10px;
 }
-
 
 .checkbox-ctn:hover input ~.custom-checkbox {
   background-color: #BABCBB;
@@ -272,6 +310,8 @@ form input {
   width: 100%;
   box-sizing: border-box;
   padding: 10px 30px 30px 30px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .accordion h1 {

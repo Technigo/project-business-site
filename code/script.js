@@ -31,3 +31,5 @@ section3.onclick = () => {
   const answerContainer3= section3.nextElementSibling.firstElementChild;
   answerContainer3.classList.toggle('active');
 }
+
+
