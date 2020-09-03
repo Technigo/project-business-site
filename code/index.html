@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
   <title>Book a mock-up interview</title>
 </head>
 <body>
@@ -30,64 +30,87 @@
 
     <div class="container">
       <div class="bodyContent">
-        <div class="accordionContainer">
+        <div class="accordion">
           <h2 class="accordionTitle">Why mock-up interview?</h2>
-          <button class="accordion">Interview for a career change</button>
-          <div class="panel">
-            <p>Lorem ipsum...</p>
-          </div>
-
-          <button class="accordion">Fresh graduate</button>
-          <div class="panel">
-            <p>Lorem ipsum...</p>
-          </div>
-
-          <button class="accordion">Upgrade interview skill</button>
-          <div class="panel">
-            <p>Lorem ipsum...</p>
+          <div class="accordionItemContainer">
+            <div class="accordionItem">
+              <h3 id="accordionItemHeader1" class="accordionItemHeader">
+                Interview for a career change
+              </h3>
+              <div class="accordionTextContainer">
+                <p id="accordionItemText1" class="accordionItemText">
+                  Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+  
+            <div class="accordionItem">
+              <h3 id="accordionItemHeader2" class="accordionItemHeader">
+                Fresh Graduates
+              </h3>
+              <div class="accordionTextContainer">
+                <p id="accordionItemText2" class="accordionItemText">
+                  Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+  
+            <div class="accordionItem">
+              <h3 id="accordionItemHeader3" class="accordionItemHeader">
+                Just curious!!!
+              </h3>
+              <div class="accordionTextContainer">
+                <p id="accordionItemText3" class="accordionItemText">
+                  Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="form">
           <h2 class="booking-form-title">Book a mock-up interview</h2>
           <form class="booking-form-container">
-            <lable for="fname">First name</lable>
-            <input type="text" id="fname" name="firstName"><br>
-            <lable for="lname">Last name</lable>
-            <input type="text" id="lname" name="lastName"><br>
-            <lable for="email">Email adress</lable>            
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="firstName" required><br>
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lastName" required><br>
+            <label for="email">Email adress</label>
             <input type="email" id="email" name="email" required><br><br>
             <label for="date">Select date:</label>
             <input type="date" id="date" name="date"><br>
             <p class="checkbox-title">Select your available timeslots:</p>
             <div class="checkbox">
               <input type="checkbox" id="timeslot1" name="timeslot1" value="10AM">
-              <label for="timeslot1">10AM</label>
+              <label class="checkboxItem" for="timeslot1">10AM</label>
               <input type="checkbox" id="timeslot2" name="timeslot2" value="11AM">
-              <label for="timeslot2">11AM</label>
+              <label class="checkboxItem" for="timeslot2">11AM</label>
               <input type="checkbox" id="timeslot3" name="timeslot3" value="2PM">
-              <label for="timeslot3">2PM</label>
+              <label class="checkboxItem" for="timeslot3">2PM</label>
               <input type="checkbox" id="timeslot4" name="timeslot4" value="3PM">
-              <label for="timeslot4">3PM</label>
+              <label class="checkboxItem" for="timeslot4">3PM</label>
             </div>
             <p class="radio-title">How do you want to join the interview?</p>
             <div class="radio">
               <input type="radio" id="f2f" name="F2F" value="F2F">
-              <lable for="f2f">Face-to-Face</lable><br>
+              <label for="f2f">Face-to-Face</label><br>
               <input type="radio" id="skypecall" name="skypecall" value="skypecall">
-              <lable for="skypecall">Skype call</lable>
+              <label for="skypecall">Skype call</label>
             </div><br>
-            <lable for="CV">Upload your CV</lable>
+            <label for="CV">Upload your CV</label>
             <input type="file" id="CV" name="CV" value="CV"><br><br>
-            <lable for="message">Leave your message:</lable><br>
+            <label for="message">Leave your message (Optional):</label><br>
             <textarea id="message" name="message" row="500" column="800">
             </textarea><br><br>
             <input type="submit" value="Submit"><br><br>
           </form>
         </div>
       </div>
+      <div class="test">
+        Test Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
     </div>
 
-        <!-- FOOTER SECTION -->
+           <!-- FOOTER SECTION -->
     <footer class="footer">
       <div class="container">
         <div class="footerSocial">
@@ -107,5 +130,7 @@
       </div>
     </footer>
   </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
