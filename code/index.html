@@ -1,30 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Camden Road Studios</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
+    <!--<nav>
+      <a href="#">home</a>
+      <a href="#">about</a>
+      <a href="#">blog</a>
+      <a href="#">contact</a>
+    </nav> -->
+
+    <header class="header">
+      <h1 class="header-text">Camden Road Studios</h1>
+      <h2>write - record - release</h2> 
+      <div class="video-container">
+        <video autoplay loop muted> <!-- poster="http://" -->
+            <source src="./videos/video1.mp4" type="video/mp4">
+        </video>
+      </div>
+    </header>
 
     <!-- Signup form -->
+    
+    <section class="main-container">
+      <h3>Sign up and book a session</h3>
+        <div class="flex-box">
+      <form 
+          class="form" 
+          action="http://httpbin.org/anything" 
+          method="POST"
+      >
+        <div class="form-group">
+          <label for="fullName">Name</label>
+          <input 
+              type="text" 
+              id="fullName" 
+              placeholder="Full name" 
+              name="fullNameValue" 
+              required 
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input 
+              type="email" 
+              id="email" 
+              placeholder="email@address.com" 
+              name="emailValue" 
+              required 
+          />
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Phone</label>
+          <input 
+              type="tel" 
+              id="phoneNumber" 
+              name="phoneNumberValue" 
+              placeholder="Telephone number"
+          />
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Create Password" name="password" required />
+        </div>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+        <!-- <div class="radio-group" id="radio">
+          <p>Band or solo artist</p>
+          <label for="band">Band
+            <input type="radio" id="band" value="band" name="bandOrSolo" required />
+          </label><br/>
+          
+          <label for="soloArtist">Solo artist 
+            <input type="radio" id="soloArtist" value="soloArtist" name="bandOrSolo" required />
+          </label>
+        </div> -->
 
-      <div class="question" id="section1">Section 1</div>
+        <div class="checkbox-group">
+          <label for="terms">I agree to the terms</label>
+          <input 
+              type="checkbox" 
+              id="terms" 
+              class="terms-box" 
+              required 
+          />
+        </div>
+        <div class="form-button">
+          <button class="submit-btn" type="submit">Sign Up</button>
+        </div>
+      </form>
+    
+    
+    <section class="accordion"> <!-- Accordion -->
+      <h3>FAQ's</h3>
+      <div class="question" id="question1"><h4>What kind of equipment do you provide?</h4></div>
+        <div class="answer">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio suscipit, repellendus dolorem temporibus saepe velit itaque veniam. Natus, perferendis! Magni velit, accusamus aliquid recusandae dolorem ipsa cupiditate excepturi unde soluta!</p>
+        </div>
+
+      <div class="question" id="question2"><h4>Do you host events?</h4></div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quis rem dolorum non corporis, laboriosam neque aperiam, consequatur delectus maxime cum voluptates? Porro labore cum in, mollitia harum quod dolores.</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="question3"><h4>Are there any additional production costs?</h4></div>
+        <div class="answer">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio suscipit, repellendus dolorem temporibus saepe velit itaque veniam. Natus, perferendis! Magni velit, accusamus aliquid recusandae dolorem ipsa cupiditate excepturi unde soluta!</p>
+        </div>
+
+      <div class="question" id="question4"><h4>Can I record podcasts at your studios?</h4></div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quis rem dolorum non corporis, laboriosam neque aperiam, consequatur delectus maxime cum voluptates? Porro labore cum in, mollitia harum quod dolores.</p>
       </div>
+    </div>
+
     </section>
+  </section>
+
+  <footer class="footer">
+    <p>
+      We are located at: <br/>203 Camden Road, London, UK
+    </p>
+
+  </footer>
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
   </body>
 </html>

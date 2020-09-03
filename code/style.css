@@ -2,6 +2,322 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
 .active + .answer {
-  /* some styling here */
+  display: inline-block;
+}
+
+.answer {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  font-family: 'Oswald', sans-serif;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 40px;
+  z-index: 1;
+  color: #fff;
+  padding: 20px;
+  margin: 15px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 25px;
+  z-index: 1;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.video-container {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+
+}
+
+video {
+  object-fit: fill;
+  width: 100%;
+  /*height: 50vh;*/
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #000;
+  margin: 0px;
+  overflow: hidden;
+  margin-top: -450px;
+}
+
+nav a {
+  font: menu;
+  text-decoration: none;
+  font-size: 18;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  float: left;
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 24px;
+}
+
+nav a:hover {
+  background: #f2f2f2;
+  color: #000;
+}
+
+.main-container {
+  text-align: center;
+  background-color: #e1e1e1;
+  /*margin: 20px 10px;*/
+  padding: 10px 0 30px 0;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: column;
+}
+
+/* FORM */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: #fff;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 40px 10px;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.form-group label {
+  width: 150px;
+  margin-right: 5px;
+}
+
+::placeholder {
+  font-size: 12px;
+  font-family: Courier New, monospace;
+}
+
+input:not(:placeholder-shown) {
+  font-weight: bold;
+}
+
+input[required]:placeholder-shown {
+  border-color: red;
+}
+
+.form-group input{ 
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  width:50%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#000;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.radio-group label {
+  margin-left: 0;
+  width: 150px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+.checkbox-group label {
+  margin-left: 0;
+  width: 150px;
+}
+
+.checkbox-group label .terms-box {
+  margin-left: 30px;
+}
+
+.form-button {
+  margin-top: 30px;
+}
+/*label[for="band"], label[for="soloArtist"] {
+  margin-bottom: 10px;
+  display: inline-block;*/
+
+.submit-btn {
+  background-color: #555;
+  color: #fff;
+  padding: 8px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 20px;
+}
+
+.submit-btn:hover {
+  background-color: rgb(41, 40, 40);
+}
+
+/* Accordion */
+
+.accordion {
+  /*border: 1px solid black;*/
+  background-color: #fff;
+  color: #000;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 2%;
+  margin: 20px auto;
+  padding: 5px 5px;
+  height: auto;
+}
+
+.question {
+  /*border: 1px dotted #000;
+  /*margin-bottom: 20px;*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: rgb(238, 235, 235);
+  
+}
+
+.question:hover {
+  background-color: rgb(197, 196, 196);
+  cursor: pointer;
+}
+
+.question::after {
+  content: "\002B";
+  font-size: 20px;
+}
+
+.question.active::after {
+  content: "\2212";
+}
+
+/*#question1 {
+  background-color: rgb(243, 240, 240);
+  padding: 15px;
+}*/
+
+.answer {
+  /*border: 1px dotted green;*/
+  text-align: left;
+  background-color: rgb(243, 240, 240);
+  padding: 0 15px;
+}
+
+
+/*FOOTER*/
+.footer {
+  background-color: black;
+  color: #e1e1e1;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/*MEDIA QUERY TABLET*/
+
+@media (min-width: 768px) {
+  video {
+    height: 60vh;
+}
+
+  /*.flex-box {
+    flex-direction: row;
+    align-items: center;
+  }*/
+
+  .form {
+    width: 380px;
+    margin-top: 30px;
+  }
+
+  .accordion {
+    width: 380px;
+  }
+
+  body {
+    text-align: left;
+    margin: 
+  }
+}
+
+/*MEDIA QUERY DESKTOP*/
+
+@media (min-width: 992px) {
+  video {
+    height: 80vh;
+  }
+  
+  .flex-box {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/*MEDIA QUERY LARGE SCREEN*/
+
+@media (min-width: 1200px) {
+  video {
+    height: 100vh;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  header h1 {
+    font-size: 70px;
+  }
+
+  nav {
+    margin-top: 0;
+  }
 }
