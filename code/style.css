@@ -1,7 +1,81 @@
+  
+ body {
+  background-color: rgb(214, 214, 214);
+ }
+ 
+ header img {
+  width: 100%;
+}
+
+.request, .FAQ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: auto;
+  padding: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: rgb(221, 221, 221);
+  border: solid 5px rgb(255, 255, 255);
+  box-shadow: 5px 10px 18px rgba(117, 117, 117, 0.678);
+}
+
+.request {
+  float: left;
+  margin-left: 100px;
+}
+
+.request-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 310px;
+}
+
+.FAQ {
+  float: right;
+  margin-right: 100px;
+}
+
+.FAQ-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  border: solid 2px rgb(255, 255, 255);
+  box-shadow: 5px 6px 12px rgba(117, 117, 117, 0.678);
+  width: 80%;
+}
+
+.FAQ-header {
+  margin: 0;
+  padding: 15px;
+}
+
+.FAQ-answer-container {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.FAQ-answer {
+  margin: 0;
+  padding: 15px;
+  border-top: solid 2px rgb(255, 255, 255);
+}
+
+.active {
+  height: auto;
+}
+
+
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-}
+
