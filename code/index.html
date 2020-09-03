@@ -1,119 +1,127 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Garden family</title>
-    <!-- dont forget to add a css file and link it here! -->
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/dyt4sde.css">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garden family</title>
+  <!-- dont forget to add a css file and link it here! -->
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/dyt4sde.css">
 
 
-  </head>
-  <body>
-<!-- Logo and navbar -->
-<div>
-<header>
-  <img class="logo" src="./garden-logo.svg" alt="">
-  <nav>
-    <a href="">News</a>
-    <a href="">Our family</a>
-    <a href="">Our Garden</a>
-    <a href="">About us</a>
-  </nav>
+</head>
 
-  <div class="hamburger">
-    <div></div>
-    <div></div>
-    <div></div>
+<body>
+  <!-- Logo and navbar -->
+  <div>
+    <header>
+      <img class="logo" src="./garden-logo.svg" alt="">
+      <nav>
+        <a href="">News</a>
+        <a href="">Our family</a>
+        <a href="">Our Garden</a>
+        <a href="">About us</a>
+      </nav>
+
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+
+    <section class="mainSection">
+      <!-- Hero -->
+      <section class="hero-ctn">
+       
+
+        <div class="heroText">
+          <h1>Welcome to our garden family</h1>
+        </div>
+        <div class="heroPic">
+          <img src="./Test-hero.svg" alt="">
+        <div>
+      </section>
   </div>
-</header>
 
-<section class="mainSection">
-  <!-- Hero -->
-  <section class="hero-ctn">
-    <div class="heroPic">
-      <img src="./Test-hero.svg" alt="">
-      <div class="heroText">
-        <h1>Welcome to our garden family</h1>
+
+  <!-- Signup form -->
+  <section class="signUp">
+    <div class="container">
+      <div class="signUpContent">
+        <div class="signUpForm">
+          <h2><span class="signUpGreen">Sign up</span> to a wonderful gardening event!</h2>
+          <form class="form" action="https://httpbin.org/anything" method=post>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="name" name="email" required>
+
+            <label for="excitedVol" class="excitedVolLabel">How excited are you?</label>
+            <input type="range" id="excitedVol" name="excitedVol" min="0" max="10" value="5" class="excitedVol">
+
+            <div class="wrapper-row">
+              <label class="checkbox-ctn">
+                <input type="checkbox" checked>
+                <span class="custom-checkbox"></span>
+                Are you ready for a wonderful time?
+              </label>
+            </div>
+
+            <input type="button" value="Get started" class="getStartedBtn">
+
+
+          </form>
+        </div>
+        <div class="signUpImg">
+          <img src="./form-img.svg" alt="">
+        </div>
       </div>
     </div>
+
   </section>
-</div>
 
+  <!-- Accordion -->
+  <section class="accordion">
+    <section class="accordion-container">
+    <h1>FAQ</h1>
 
-    <!-- Signup form -->
-<section class="signUp">
-  <div  class="container">
-    <div class="signUpContent">
-      <div class="signUpForm">
-        <h2><span class="signUpGreen">Sign up</span> to a wonderful gardening event!</h2>
-        <form class="form" action="https://httpbin.org/anything" method=post>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">Email</label>
-          <input type="email" id="name" name="email" required>
-          
-          <label for="excitedVol" class="excitedVolLabel">How excited are you?</label>
-          <input type="range" id="excitedVol" name="excitedVol" min="0" max="10" value="5" class="excitedVol">
-
-          <div class="wrapper-row">
-            <label class="checkbox-ctn">
-              <input type="checkbox" checked>
-              <span class="custom-checkbox"></span>
-              Are you ready for a wonderful time?
-           </label>
-          </div>
-
-          <input type="button" value="Get started" class="getStartedBtn">
-
-        
-        </form>
-      </div>
-      <div class="signUpImg">
-        <img src="./form-img.svg" alt="">
-      </div>
-    </div>
-  </div>
-
-</section>
-
- <!-- Accordion -->
-    <section class="accordion">
-     
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">
-        <h4>What is Garden Family?</h4>
+    <div class="question" id="section1">What is Garden Family?
       <span class="fa fa-plus"></span>
-      </div>
-      <div class="answer">
-        <div class="answer-ctn">
-          <p>We are a community of plant loving people. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+    </div>
+    <div class="answer">
+      <div class="answer-ctn">
+        <p>We are a community of plant loving people. Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-        </div>
       </div>
+    </div>
 
-      <div class="question" id="section2">How can I become a part of the family?</div>
-      <div class="answer">
-        <div class="answer-ctn">
-          <p>Sign up and done, you are officaly a part of our community and have access to all our events and information about plants.</p>
-        </div>
+    <div class="question" id="section2">How can I become a part of the family?</div>
+    <div class="answer">
+      <div class="answer-ctn">
+        <p>Sign up and done, you are officaly a part of our community and have access to all our events and information
+          about plants.</p>
       </div>
+    </div>
 
-      <div class="question" id="section3">Can you help me not kill my plants?</div>
-      <div class="answer">
-        <div class="answer-ctn">
-          <p>Of course! Keeping a living creature alive in such a hostile environment as your apartment can seem impossible, 
+    <div class="question" id="section3">Can you help me not kill my plants?</div>
+    <div class="answer">
+      <div class="answer-ctn">
+        <p>Of course! Keeping a living creature alive in such a hostile environment as your apartment can seem
+          impossible,
           but follow a few simple steps and you're on your way to turning your home into a bonafide greenhouse.</p>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
+  </section>
   </section>
 
 
-    <!-- dont forget to link the javascript file here! -->
-    <script src="./script.js"></script>
-  </body>
+  <!-- dont forget to link the javascript file here! -->
+  <script src="./script.js"></script>
+</body>
+
 </html>

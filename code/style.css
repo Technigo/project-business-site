@@ -83,7 +83,7 @@ nav {
 nav a {
   box-sizing: border-box;
   padding: 20px;
-  color: #62AC7B;
+  color: #0F1B12;
 
   font-size: 20px;
   font-weight: 600;
@@ -95,6 +95,7 @@ nav a {
 nav a:hover {
   background-color: #FFCA41;
   color: #fff;
+  border-radius: 10px;
 }
 
 
@@ -125,17 +126,19 @@ nav a:hover {
 }
 
 .hero-ctn {
-  position: relative;
+  /* position: relative; */
   text-align: center;
   width: 100%;
 }
 
 .heroText {
+  
+
   box-sizing: border-box;
-  padding: 20px;
-  font-size: 25px;
-  color: #0F1B12;
-  margin-top: 20px;
+  
+  font-size: 10px;
+
+  
 }
 
 /* Form */
@@ -245,8 +248,17 @@ form input {
 
 @media only screen and (min-width: 768px) {
   .heroText{
-    font-size: 40px;
-    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 42%;
+    font-size: 90px;
+    text-shadow: 5px 5px  #ffffff;
+    color: #0F1B12;
+
+    
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
   }
 
 
@@ -266,8 +278,8 @@ form input {
   }
 
   .signUpForm h2 {
-    font-weight: 400;
-    font-size: 30px;
+    font-weight: 600;
+    font-size: 40px;
     text-align: left;
   }
 } 
@@ -349,17 +361,17 @@ form input {
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
-  padding: 10px 30px 30px 30px;
-  max-width: 900px;
-  margin: 0 auto;
+  padding: 40px 30px 80px 30px;
+
+  background-color: #FEF6DF;
+  
 }
 
 .accordion h1 {
-  font-size: 25px;
   box-sizing: border-box;
-  padding: 10px 0px;
-  font-size: 25px;
-  color: #0F1B12;
+  padding: 20px 20px;
+  font-size: 35px;
+  color: #FFCA41;
   margin-top: -15px;
   
 }
@@ -369,9 +381,19 @@ form input {
   color: #fff;
   font-size: 16px;
   box-sizing: border-box;
-  padding: 15px;
-  font-weight: 600;
+  padding: 20px; 
+  font-weight: 500;
   width: 100%;
+  
+  
+}
+
+.question:nth-child(2) {
+  border-radius: 10px 10px 0 0;
+}
+
+.question:nth-last-child(2) {
+  border-radius: 0 0 10px 10px;
 }
 
 .answer-ctn {
@@ -381,11 +403,11 @@ form input {
 }
 
 .answer-ctn p {
-  padding: 15px;
+  padding: 20px;
 }
 
 .answer {
-  background-color: #f7f7f7;
+  background-color: #fff;
   box-sizing: border-box;
   font-size: 14px;
   line-height: 1.5;
@@ -396,3 +418,27 @@ form input {
 .active {
   height: 170px;
 }
+
+@media only screen and (min-width: 768px) {
+  .accordion {
+    text-align: center;
+  }
+
+  .question:nth-child(2) {
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .question:nth-last-child(2) {
+    border-radius: 0 0 20px 20px;
+  }
+  
+  
+.accordion h1 {
+  font-size: 40px;
+
+  }
+
+  .accordion-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
