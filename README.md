@@ -4,6 +4,8 @@ This is a project during the Technigo Front-end Bootcamp.
 The task was to create a business site with a responsive hero image/video,
 sign up form and accordion.
 
+The Breakfast Club is a ficitve company that hosts breakfast events in cafés owned by small businesses. 
+
 
 ## The problem
 
