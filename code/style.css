@@ -87,9 +87,17 @@
 .accordion {
   flex: 1;
   background-color: rgba(0, 0, 0, 0.19);
-  padding: 0 20px;
+  padding: 5px 20px 10px;
   margin-right: 5px;
   color: #1d3557;
+}
+
+@media screen and (max-width: 600px){
+  .accordion {
+    margin-right: 0px;
+    margin-bottom: 5px;
+    padding: 20px;
+  }
 }
 
 .accordionItem {
@@ -140,8 +148,87 @@
 .form {
   flex: 1;
   background-color: #a8dadc;
-  padding-left: 30px;
+  padding: 5px 20px 10px;
   margin-left: 5px;
+}
+
+@media screen and (max-width: 600px){
+  .form {
+    margin-left: 0px;
+    margin-top: 5px;
+  }
+}
+
+.nameContainer {
+  border: 2px solid grey;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.19);
+  padding: 10px 0 0 10px;
+  margin: 10px;
+  }
+
+.nameContainer input{
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #a8dadc;
+  width: 90%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nameContainer input:focus{
+  outline: none;
+}
+
+.dateContainer {
+  border: 2px solid grey;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.19);
+  padding: 5px;
+  margin: 10px;
+}
+
+.radioContainer {
+  display: flex;
+  border: 2px solid grey;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.19);
+  padding: 5px;
+  margin: 10px;
+}
+
+.cv {
+  margin: 12px;
+  padding: 5px;
+}
+
+.cvUpload {
+  text-align: center;
+}
+
+.message {
+  padding: 5px;
+  margin: 12px;
+}
+.textarea {
+  width: 100%;
+}
+
+.submit {
+  text-align: center;
+}
+
+
+.button {
+  background-color: #1d3557;
+  box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  font-weight: bolder;
+  padding: 5px 25px;
 }
 
 .footer {
