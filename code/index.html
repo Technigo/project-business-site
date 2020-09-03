@@ -1,30 +1,135 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Fira+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>SPA</title>
+</head>
+
+<body>
     <!-- video or image as a header is cool :) -->
+    <header>
+        <!-- background-img in css -->
+        <!-- <h1 id="header-title"></h1> -->
+        <h1>Welcome to Southcoast Spa</h1>
 
-    <!-- Signup form -->
+        <nav>
+            <a href="#">Contact</a>
+            <a href="#">Destinations</a>
+            <a href="#">Booking</a>
+        </nav>
+    </header>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+    <main>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
+        <!-- Signup form -->
+        <section class="form">
+            <form action="http://httpbin.org/anything" method="POST">
+                <h1>Book your spa-days here</h1>
+
+                <fieldset id="date">
+                    <legend>Choose number of nights</legend>
+                    <label for="check-in">* Check in:</label>
+                    <input type="date" id="check-in" name="check-in" value="2020-09-04" min="2020-09-05" max="2021-08-30">
+                    <label for="check-out">* Check out:</label>
+                    <input type="date" id="check-out" name="check-out" value="2020-09-04" min="2020-09-05" max="2021-08-31">
+                </fieldset>
+
+                <fieldset id="room">
+                    <legend>Choose your room</legend>
+                    <label for="single-room">Single room</label>
+                    <input type="radio" name="roomType" id="single-room" value="single-room" checked><br>
+                    <label for="double-room">Dubble room</label>
+                    <input type="radio" name="roomType" id="double-room" value="dubble-room"><br>
+                    <label for="family-room">Family room</label>
+                    <input type="radio" name="roomType" id="family-room" value="family-room"><br>
+
+                    <label for="adults">Number of adults</label>
+                    <input type="number" id="adults" name="adults">
+
+                    <label for="adults">Number of children</label>
+                    <input type="number" id="children" name="children">
+                </fieldset>
+
+                <fieldset>
+                    <button type="submit"> Book</button>
+                </fieldset>
+            </form>
+        </section>
+
+
+
+        <!-- Accordion -->
+
+        <section class="accordion">
+            <h3>Our treatments</h3>
+            <div class="accordion-container">
+                <h3 id="accordion-header-1" class="accordion-header">
+                    <span>Face</span>
+                    <span>▼</span>
+                </h3>
+                <div class="accordion-text-container">
+                    <div class="accordion-text">
+                        <ul>
+                            <li>Deep scrub</li>
+                            <li>Relaxing face massage</li>
+                            <li>Mosturising treatments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-container">
+                <h3 id="accordion-header-2" class="accordion-header">
+                    <span>Body</span>
+                    <span>▼</span>
+                </h3>
+                <div class="accordion-text-container">
+                    <div class="accordion-text">
+                        <ul>
+                            <li>Deep scrub</li>
+                            <li>Relaxing face massage</li>
+                            <li>Mosturising treatments</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="accordion-container">
+                <h3 id="accordion-header-3" class="accordion-header">
+                    <span>Workout</span>
+                    <span>▼</span>
+                </h3>
+                <div class="accordion-text-container">
+                    <div class="accordion-text">
+                        <ul>
+                            <li>Deep scrub</li>
+                            <li>Relaxing face massage</li>
+                            <li>Mosturising treatments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Example from the template -->
+            <!-- <div class="question" id="section2">Section 2</div>
+            <div class="answer">
+                <p>Lorem ipsum...</p>
+            </div> -->
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
     <!-- dont forget to link the javascript file here! -->
-  </body>
+    <script src="./scrips.js"></script>
+</body>
+
 </html>
