@@ -2,7 +2,7 @@
 * {box-sizing: border-box;}
 
 body {
-  background-color: black;
+  background-color: #e8cccb;
   margin: 0;
   color: #22031F;
   font-Family: 'Roboto', Sans-Serif;
@@ -15,51 +15,45 @@ main {
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
+  border-top: 15px solid white;
+  height: 110vh;
 }
 
 /*** HERO-VIDEO ***/
 .hero-image {
- height: 500px;
- width: 100%;
- position: relative;
- display: flex;
- flex-direction: row;
- justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
  
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-header h1 { /* Text on hero-image and placement of it */
-  position: absolute;
-  width: 100%;
+.hero-image h1 { /* Text on hero-image and placement of it */
   text-align: center;
-  color: #CC76A1;
-  z-index: 1;
-  top: 15%; 
+  margin: 5px;
+  color: #22031F;
   font-size: 106px;
   text-shadow: 3px 3px #87B38D;
 }
 
-header h3 { /* Text on hero-image and placement of it */
-  position: absolute;
-  width: 100%;
+.hero-image h3 { /* Text on hero-image and placement of it */
   text-align: center;
+  margin: 5px;
   color: #87B38D;
-  top: 52%;
   font-size: 24px;
+  background-color: none;
 }
  
 /*** FORM ***/
 .form-container {
-  margin: 20px;
-  background-color: #F2B7C6;
-  border: 2px solid #CC76A1;
+  margin: 40px;
+  background-color: #ddeaeb;
   padding: 10px 20px;
   width: 500px;
+  max-height: 630px;
 }
 
 .form-container:hover { /* When hovering the full container-box */
@@ -86,14 +80,8 @@ header h3 { /* Text on hero-image and placement of it */
   width: 250px;
   border: none;
   border-bottom: 1px solid black;
-  background-color: #F2B7C6;
+  background-color: #ddeaeb;
 }
-
-/* #passWord, #webSite, #featuresChoice {
-  border: none;
-  border-bottom: 1px solid black;
-  background-color: #F2B7C6;
-}*/
 
 .checkbox {
   display: flex;
@@ -110,12 +98,12 @@ button  {
   width: 438px;
   font-size: 16px;
   font-weight: bold;
-  background: #22031F;
-  color: #F2B7C6;
+  background: #ddeaeb;
+  color: #22031F;
   padding: 8px;
   margin: 10px;
-  border: 2px solid #CC76A1; 
-  box-shadow: 3px 3px 10px 4px #DD9296; 
+  border: 1px solid white; 
+  box-shadow: 2px 2px 5px 2px white; 
 }
 
 button:hover { /** How the button shall look when pointing on it - it gets flat **/ 
@@ -125,13 +113,13 @@ button:hover { /** How the button shall look when pointing on it - it gets flat 
 
 /*** ACCORDION ***/
 .accordion {
-  margin: 20px;
-  background-color: #F2B7C6;
-  border: 2px solid #CC76A1;
+  margin: 40px;
+  background-color: #ddeaeb;
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
   width: 500px;
+  max-height: 630px;
 }
 
 .accordion:hover { /* When hovering */
@@ -140,105 +128,127 @@ button:hover { /** How the button shall look when pointing on it - it gets flat 
 
 .question { /* Design of the question texts */
   font-weight: bold;
-  line-height: 2em;
+  line-height: 1em;
   cursor: pointer;
   transition: 0.3s;
+  margin: 10px;
 }
 
 .question:hover { /* When hovering the question 'heading */
-  font-size: 15px;
+  font-size: 16px;
 }
 
-.answer { /* Design of the answer texts */
-  line-height: 20px;
-  color: #22031F;
-  max-height: 0;
-  overflow-y: hidden;
-}
-
-/*height: 0;
+.answer-container {
+  height: 0;
   overflow: hidden;
   transition: height 0.3s ease; 
 }
 
-.active {
-  height: 120px;
-}*/
-
-.active + .answer {
-  animation: unfold 1s ease forwards;
+.answer-container.active {
+  height: auto;
 }
 
-.folded + .answer {
-  animation: fold 1s ease;
-}
-
-@keyframes unfold {
-  from {
-    max-height: 0;
-  }
-  to {
-    max-height: 200px;
-  }
-}
-
-@keyframes fold {
-  from { max-height: 100px}
-  to {max-height: 0px}
+.answer-text {
+  margin-left: 13px;
+  margin-right: 18px;
 }
 
 footer { /* Footer styling */
   width: 100%;
-  background-color: #87B38D;
+  background-color: #ddeaeb;
   text-align: center;
   bottom: 0;
   color: #22031F;
   padding: 15px;
- }
+  border-top: 15px solid white;
+}
 
 /*** Media queries ***/
- @media screen and (max-width: 667px) { /* Mobile device */
+@media screen and (max-width: 667px) { /* Mobile device */
   main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: auto;
+  }
+
+  .hero-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*height: auto;*/
+  }
+ 
+  .hero-image h1 {
+    font-size: 55px;
+    margin: 10px;
+  }
+  
+  .hero-image h3 {
+    font-size: 25px;
+    background: #22031F;
+    margin: 20px;
   }
 
   .form-container, .accordion, button {
     width: 100%;
   }
-  
-  header h1 {
-    top: 1%; 
-    font-size: 10px;
-  }
-  
-  header h3 {
-    top: 80%;
-    font-size: 16px;
-    width: 300px;
-  }
- }
 
- /*** Media queries ***/
- @media screen and (max-width: 1023px) { /* Tablet device */
+  .form-container  {
+    max-height: 800px;
+  }
+}
+
+@media screen and (max-width: 1024px) { /* Tablet device */
+  body {
+    background-color: #d4b4c4;
+  }
+  
   main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: auto;
+  }
+
+  .hero-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1506680337708-f23858bf2a76?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+
+  .hero-image h1 {
+    font-size: 92px;
+    margin: 15px;
+  }
+  
+  .hero-image h3 {
+    font-size: 30px;
+    margin: 15px;
   }
 
   .form-container, .accordion, button {
     width: 100%;
-   }
-  
- header h1 {
-    font-size: 90px;
   }
-  
-  header h3 {
-    font-size: 20px;
+   
+  .form-container:hover, .accordion:hover { /* When hovering */
+    box-shadow: 3px 3px 20px 5px #98727d;
   }
- }
+
+  footer, .form-container, .accordion, button, #fullName, #companyName, #mailAdress, #passWord { 
+    background-color: #bcb6c4;
+  }
+}
