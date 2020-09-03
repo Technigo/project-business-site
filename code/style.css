@@ -31,7 +31,7 @@ h3 {
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -96,14 +96,15 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  background-color: white;
   align-items: flex-start;
   justify-content: flex-start;
   background-color: #cde7f7;
   width: 100%;
+  padding: 60px 0pc 60px 0px;
+  margin: 0px;
 }
 
-.card {
+.card-right, .card-left {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -116,18 +117,22 @@ a:hover {
   width: 50%;
 }
 
-.text-container {
+.text-container-right {
 justify-content: flex-start;
 flex-direction: column;
 width: 50%;
 padding-left: 60px;
 }
 
-.text-container-two {
+.text-container-left {
   justify-content: flex-start;
   flex-direction: column;
   width: 50%;
   padding-right: 60px;
+  }
+
+.card-text {
+  width: 600px;
   }
 
 .card-link {
@@ -136,50 +141,143 @@ padding-left: 60px;
   font-weight: bold;
   text-decoration: none; 
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   width: 250px;
-  font-size: 18px;
-  margin-top: 30px;
+  font-size: 16px;
+  margin-top: 10px;
   letter-spacing: 1px;
   border-radius: 25px;
 }
 
-/* FAQ */
+li {
+  list-style-type: dot;
+  width: 600px;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 0px;
+  margin: 5px;
+
+}
+
+/* ACCORDION */
 
 .accordion-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; /* Det är den här som styr om det ska vara centrerat eller ej */
-  background-color:#E09269;
-  padding: 0px 0px 40px 40px;
+  background-color: #F0E3C7;
+  padding-bottom: 40px;
+}
+
+.accordion-container::after {
+  content: "+";
+  font-size: 4px; 
+  right: 40px;
+}
+
+.accordion-container.active::after {
+  content:"-";
 }
 
 .question {
-  display: block;
   text-align: left;
   cursor: pointer;
 }
 
-.answer {
-  background-color: #F4E4CD;
+.answer-container {
+  background-color: whitesmoke;
   display: none;
   text-align: center;
-  font-size: 12px;
   padding-left: 5px;
-  width: 50%;
+  width: 40%;
   border-radius: 25px;
 }
 
-.active + .answer {
+.answer {
+  font-size: 16px;
+}
+
+.active + .answer-container {
   display: block;
+}
+
+/* FORM */
+
+.form-container {
+  display: flex;
+  background-color: #F0E3C7;
+  padding: 0px 0px 60px 40px;
+  }
+
+.form-container1 {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  }
+
+.form-container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 40%;
+}
+
+.form-heading {
+  font-size: 30px;
+  padding-top: 60px;
+  margin: 0px;
+}
+
+.form-intro {
+  font-size: 20px;
+  width: 75%;
+}
+
+.course-group {
+  justify-content: flex-start;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+label {
+  font-weight: bold;
+  font-size: 16px;
+  padding: 20px 0px 20px 0px;
+}
+
+input {
+  border: none;
+  border-radius: 25px;
+  height: 40px;
+  width: 250px;
+}
+
+#meddelande {
+  border: none;
+}
+
+button {
+  border: none;
+  font-weight: bold;
+  background-color: #cde7f7;
+  border-radius: 25px;
+  font-size: 20px;
+  height: 70px;
+  width: 180px;
+  margin-top: 40px;
 }
 
 /* FOOTER */
 
 footer {
+  width: 100%;
+  background-color: #cde7f7;
   padding: 60px;
-  margin: 0px;
 }
 
 /* For tablet */
@@ -196,6 +294,11 @@ footer {
 
 @media (max-width: 768px) {
 
+
+  h1.header-heading {
+    font-size: 48px;
+  }
+  
   nav {
     flex-direction: column;
     justify-content: center;
@@ -207,8 +310,18 @@ footer {
     padding: 20px 0px 20px 20px;
   }
   
-  .card {
+  .card-right {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-left {
+    display: none;
+  }
+
+  .text-container-right {
+    padding: 40px 0px 0px 0px;
   }
 
   .card-img {
