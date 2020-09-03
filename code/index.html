@@ -1,99 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <title>Cold Spa</title>
-  </head>
-    <!-- Hero image + text  -->
-  <header class="hero-image">
-    <h1 class="hero-text">Cold Spa</h1>
-  </header>
 
-    <!-- Information -->
-    <!-- Signup form -->
-    <form class="booking" action="http://httpbin.org/anything" method="POST">
-      
-      <label>
-        Choose day for relax and spa
-        <input type="date" id="bookaday" name="calendar">
-      </label>
-      <label>
-        First name
-        <input type="text" id="name" name="first-name">
-      </label>
-      <label>
-        Last name
-        <input type="text" id="name" name="last-name">
-      </label>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Oxygen:wght@300&display=swap" rel="stylesheet">
+  <title>Cold Spa</title>
+</head>
 
-      <label>
-        Guests
-        <select name="Numbers of guest">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10+</option>
-        </select>
-      </label>
+<!-- Hero image + text  -->
+<header class="hero-image">
+  <h1 class="hero-text">Cold Spa</h1>
+</header>
 
-      <label>
-        Email
-        <input type="email" name="email" required>
-      </label>
-      <lable>
-        <input type="checkbox" id="subscribe" name="subscribe" value="newsletter">
-        Yes, I want to receive newsletters.
-      </lable>
+<!-- Information -->
+<section class="information">
+  <h2>DAY SPA</h2>
+  <p>A day that includes lunch and relaxation in the nordic bath with suana, rituals, cold bath and relaxing areas.</p>
+  <button>Whats included?</button>
+</section>
 
-      <button type="Submit">Book your day</button>
-    </form>
-    <!-- Citat -->
-    <!-- Accordion - FAQ -->
-    <section class="accordion">
-      <h2>Good to know!</h2>
+<!-- Booking-form -->
+<form class="booking" action="http://httpbin.org/anything" method="POST">
 
-      <div class="question" id="question1">
-        <h4>Do I have to bring my own bathrobe and swimwear?</h4>
-      </div>
-      <div class="answer">
-        <p>You bring your own swimwear. Bathrobe and slippers will be in your room. If you forget swimwear, it can be purchased in our spa shop (at the spa reception).</p>
-      </div>
-      <div class="question" id="question2"> 
-        <h4>How do I get to Cold Spa?</h4>
-      </div>
-      <div class="answer">
-        <p>The easiest is to arrive by car. If you come by bus from Östersund (to Krokoms station), we recommend a pre-booked taxi for the last stretch to the spa.</p>
-      </div>
-      <div class="question" id="question3"> 
-        <h4>Do you provide alternative food for allergies?</h4>
-      </div>
-      <div class="answer">
-        <p>Yes, we do. Please inform us of your allergies at time of booking. Our breakfast buffet is clearly marked in terms of allergenes.</p>
-      </div>
-      <div class="question" id="question4"> 
-        <h4>How far away is the skiresort Åre?</h4>
-      </div>
-      <div class="answer">
-        <p>It's a 1 hour drive from Cold Spa.</p>
-      </div>
-      <div class="question" id="question5"> 
-        <h4>Does Cold Spa provide free parking?</h4>
-      </div>
-      <div class="answer">
-        <p>Yes. Cold Spa provides free parking.</p>
-      </div>
-    </section>
-    <footer>
-      <p>© Moa Blomkvist</p>
-    </footer>
-    <script src="./script.js"></script> 
-  </body>
+  <label>
+    Choose day for relax and spa
+    <input type="date" id="bookaday" name="calendar">
+  </label>
+  <label>
+    First name
+    <input type="text" id="name" name="first-name">
+  </label>
+  <label>
+    Last name
+    <input type="text" id="name" name="last-name">
+  </label>
+
+  <label>
+    Guests
+    <select name="Numbers of guest">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10+</option>
+    </select>
+  </label>
+
+  <label>
+    Email
+    <input type="email" name="email" required>
+  </label>
+  <lable>
+    <input type="checkbox" id="subscribe" name="subscribe" value="newsletter">
+    Yes, I want to receive newsletters.
+  </lable>
+
+  <button type="Submit">Book your day pass</button>
+</form>
+
+<!-- Accordion - FAQ -->
+<section class="accordion">
+  <h2>Good to know!</h2>
+
+  <div class="question" id="question1">
+    <h4>Do I have to bring my own bathrobe and swimwear?</h4>
+  </div>
+  <div class="answer">
+    <p>You bring your own swimwear. Bathrobe and slippers will be in your room. If you forget swimwear, it can be
+      purchased in our spa shop (at the spa reception).</p>
+  </div>
+  <div class="question" id="question2">
+    <h4>How do I get to Cold Spa?</h4>
+  </div>
+  <div class="answer">
+    <p>The easiest is to arrive by car. If you come by bus from Östersund (to Krokoms station), we recommend a
+      pre-booked taxi for the last stretch to the spa.</p>
+  </div>
+  <div class="question" id="question3">
+    <h4>Do you provide alternative food for allergies?</h4>
+  </div>
+  <div class="answer">
+    <p>Yes, we do. Please inform us of your allergies at time of booking. Our breakfast buffet is clearly marked in
+      terms of allergenes.</p>
+  </div>
+  <div class="question" id="question4">
+    <h4>How far away is the skiresort Åre?</h4>
+  </div>
+  <div class="answer">
+    <p>It's a 1 hour drive from Cold Spa.</p>
+  </div>
+  <div class="question" id="question5">
+    <h4>Does Cold Spa provide free parking?</h4>
+  </div>
+  <div class="answer">
+    <p>Yes. Cold Spa provides free parking.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© Moa Blomkvist</p>
+</footer>
+<script src="./script.js"></script>
+</body>
+
 </html>

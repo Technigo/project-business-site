@@ -7,35 +7,63 @@ html {
 }
 
 body, html {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Oxygen', sans-serif;
   margin: 0;
 }
   /* Hero-image with Header-text*/
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("./tvättahåret.jpeg");
   display: flex;
   flex-direction: column;
-  min-height: 15em;
-  height: 70%;
-  align-self: center;
-  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./tvättahåret.jpeg");
+  background-position: bottom;
   background-size: cover;
+  background-repeat: no-repeat;
+  align-self: center;
   background-attachment: fixed;
   align-items: center;
   justify-content: center;
+  height: 500px;
 }
 
 .hero-text {
   text-align: center;
-  color: white;
+  color: antiquewhite;
   font-size: 90px;
 }
 
-.hero-header{
+.hero-header {
   align-self: center;
 }
 
 /* Information */
+.information{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(16, 37, 54);
+}
+
+h2{
+  color: antiquewhite;
+}
+
+p {
+  display: flex;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.information button {
+  border: solid antiquewhite;
+  color: antiquewhite;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
 
 /* Booking-system */
 
@@ -45,32 +73,37 @@ body, html {
   align-items: center;
   width: 100%;
   padding: 15px;
+  background-color: antiquewhite;
 }
 
 label{
+  display: flex;
+  flex-direction: column;
   padding: 5px;
   margin: 5px;
   font-size: 12px;
-
 }
 
 input{
-  display: flex;
-  flex-direction: column;
   margin-right: 10px;
-  border-radius: 10px;
-  border: solid;
+  border-radius: 15px;
+  border: solid rgb(16, 37, 54);
 }
 
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-/* some styling here */
+button{
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  border: solid rgb(16, 37, 54);
+  background-color: rgb(16, 37, 54);
+  color: antiquewhite;
+}
 
 /* FAQ (Good to know) */
 h2 {
   font-size: 48px;
+  text-align: center;
 }
 
 .accordion {
@@ -79,15 +112,18 @@ h2 {
   align-items: center;
   width: 100%;
   padding: 15px;
-  color: #053949;
-  background-color: plum; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to top, rgb(130, 177, 177), rgb(160, 221, 216), rgb(160, 221, 216), rgb(130, 177, 177));
+  color:antiquewhite;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./sjö.jpeg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-self: center;
+  background-attachment: fixed;
 }
 
 .question {
   display: flex;
-  border: solid rgb(91, 162, 196) 1px;
-  background: rgb(91, 162, 196);
+  background:rgb(16, 37, 54);
   border-radius: 20px;
   padding: 15px;
   margin: 2px;
@@ -110,8 +146,11 @@ footer{
   display: flex;
   align-items: flex-start;
   padding: 50px;
-  background-color: #053949;
-  color: white;
+  background-color: antiquewhite;
+}
+
+footer p{
+  color: rgb(16, 37, 54);
 }
 
 /******** Responsive ***********/
@@ -129,6 +168,11 @@ footer{
   margin: 2px;
   width: 60%;
 }
+
+.information p{
+  width: 50%;
+}
+
 }
 
 /* For desktop: */
@@ -148,6 +192,11 @@ footer{
   padding: 15px;
   margin: 2px;
   width: 40%;
+}
+
+.information p{
+  width: 30%;
+
 }
 }
 
