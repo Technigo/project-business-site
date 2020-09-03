@@ -1,7 +1,482 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/* ---Font reference---
+font-family: 'Lexend Peta', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Roboto Slab', serif; 
+*/
 
-.active + .answer {
-  /* some styling here */
+.teal {  color: #5DC3CA;  }
+.yellow { color: #F7BA3E; }
+.purple { color: #BF85BF; }
+.red {  color: #EA5E5E;  }
+
+.teal-bg {  background-color: #5DC3CA;  }
+.yellow-bg { background-color: #F7BA3E; }
+.purple-bg { background-color: #BF85BF; }
+.red-bg {  background-color: #EA5E5E;  }
+
+
+* {
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0 0 120px 0px;
+  background-color: #1A2B34;
+  color: #fafafa;
+  width: 100%;
+}
+
+nav {
+  background-color: rgba(0,0,0,1);
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-logo img {
+  height: 16px;
+  /* border: 1px dashed red; */
+}
+
+.nav-links {
+  /* border: 1px dashed blue; */
+}
+
+.nav-content {
+  height: 100%;
+  width: 1200px;
+  /* border: 1px dashed pink; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero .logo {
+  width: 400px;
+}
+
+header {
+  max-width: 100%;
+  /* border: 1px dashed blue; */
+  height: 420px;
+  background-color: rgba(24,32,37,0.5);
+}
+
+/* VIDEO CODE */
+
+.video-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  top: -39%;
+  filter: sepia(1) hue-rotate(230deg);
+  opacity: 0.2;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+/* The hero class contains everything about the hero section (between nav and main) */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 35%;
+  left: 0%;
+}
+
+.header-content img {
+  max-width: 400px;
+}
+
+.header-cta > button {
+  margin: 0 8px 0 8px;
+}
+
+button {
+  border-radius: 100px;
+  padding: 12px 32px;
+  cursor: pointer;
+
+}
+
+.button-primary {
+  border: none;
+  color: #1A2B34;
+}
+
+.button-secondary {
+  border: 1px solid;
+  background-color: rgba(0,0,0,0);
+}
+
+button > p {
+  margin: 0;
+  font-weight: 700;
+}
+
+
+/* ====== TYPOGRAPHY ======= */
+
+p, span, h1, h2, h3 {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Mono', monospace;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 55px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 16px;
+}
+
+.nav-links > a {
+  margin-left: 24px;
+}
+
+a {
+  font-family: 'Lexend Peta', sans-serif;
+  text-decoration: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+a:hover {
+  color: rgba(255,255,255,0.85);
+}
+
+.emphasise {
+  font-style: italic;
+}
+
+
+/* select h2 in a class card-full */
+.card-full > h2  {
+  margin: 0 auto 16px 16px;
+}
+
+.card-full {
+  /* border: 1px dashed #BF85BF; */
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+p {
+  font-family: 'Roboto Slab', serif; 
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  
+}
+
+.p-small {
+  font-family: 'Roboto Slab', serif; 
+  font-size: 16px;
+}
+
+
+/* ===== form input styling ===== */
+
+label {
+  margin: 0 0 8px 16px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+input[type=text], input[type=email] {
+  border-radius: 24px;
+  border: 1px solid rgba(0,0,0,0.20);
+  padding: 10px 24px;
+
+  font-family: 'Roboto Slab', serif; 
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+  border: 1px solid #BF85BF;
+  outline-width: 0;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0px 2px #BF85BF;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background-color: rgba(0,0,0,0.11);
+  border-radius: 100px;
+  width: 80%;
+}
+
+.slider:focus {
+  outline-width: 0;
+}
+
+.form-checkcontainer, .form-slidecontainer {
+  width: 100%;
+  padding: 0 16px 0 16px;
+  margin-bottom: 24px;
+}
+
+.form-checkcontainer p {
+  margin-top: 0;
+}
+
+input[type="checkbox"] {
+  margin-bottom: 16px;
+}
+
+.form-slidecontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* SLIDER CODE  */
+
+.sliderbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.slider::-webkit-slider-thumb {
+  width: 20px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  background: #BF85BF;
+  border-radius: 100%;
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  background: #BF85BF;
+  border-radius: 100%;
+}
+
+.sliderbox > p {
+  margin-left: 16px;
+}
+
+/* CHECKBOX CODE  */
+
+.checkgroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.checkbox {
+  appearance: none;
+  border: 1px solid rgba(0,0,0,0.3);
+  width: 18px;
+  height: 18px;
+  margin: 0px;
+  border-radius: 4px;
+  outline-width: 0;
+}
+
+.checkbox:active, .checkbox:checked:active {
+  background: #D39FD3;
+  border: 1px solid #D39FD3;
+  box-shadow: inset 0px 0px 0px 2px #FFFFFF;
+  outline-width: 0;
+}
+
+.checkbox:checked {
+  background: #BF85BF;
+  border: 1px solid #BF85BF;
+  box-shadow: inset 0px 0px 0px 2px #FFFFFF;
+  outline-width: 0;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.productInfo {
+  background-color: #182025;
+  min-height: 350px;
+  /* border: 1px solid greenyellow; */
+  padding: 40px 0 24px 0;
+}
+
+.productInfo-content {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  /* grid-gap: 40px 20px;
+  grid-template-columns: repeat(2, 1fr); */
+}
+
+.hibr-info, .hibr-image {
+  height: 0;
+}
+
+.hibr-info {
+  flex-grow: 5;
+  min-width: 50%;
+}
+
+.hibr-image img {
+  position: relative;
+  max-width: 670px;
+  top: -54px;
+}
+
+.productInfo-content > div {
+  width: 100%;
+  /* border: 1px dashed white; */
+}
+
+main {
+  max-width: 1200px;
+  /* border: 1px dashed red; */
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+  display: grid;
+  align-items: start;
+  grid-gap: 40px 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  background: #FFFFFF;
+  box-shadow: 0px 24px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  color: rgba(0,0,0,0.87);
+  padding: 24px;
+  height: 500px;
+  width: 100%;
+  /* margin: auto; */
+  height: auto;
+}
+
+/* ================== Accordion code here ================= */
+.card-accordion {
+  background: #FFFFFF;
+  box-shadow: 0px 24px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.accordion-item {
+  background-color: white;
+  color: #111;
+  margin: 1rem 0;
+  /* padding: 16px; */
+}
+
+.accordion-item-header {
+  padding: 8px 40px 8px 24px;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+
+
+/* Pseudo elements vs pseudo classes */
+.accordion-item-header::after {
+  content: "\002B"; /*css entity code for a plus sign */
+  font-size: 24px;
+  position: absolute;
+  right: 24px;
+  color: rgba(0,0,0,0.87);
+}
+
+.accordion-item-header.active::after {
+  content: "\2212"; /*css entity code for a minus sign */
+}
+
+.accordion-item-body {
+  display: none;
+  padding: 8px 24px 8px 24px;
+  line-height: 1.5rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.05);
+}
+
+.accordion-item-header.active  + .accordion-item-body {
+  display: block;
+}
+
+.fullScreenBlocker {
+  display: none;
+}
+
+@media only screen and (max-width: 1280px) {
+  .productInfo, nav, main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .fullScreenBlocker {
+    display: block;
+    background-color: #182025;
+    z-index: 1;
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    bottom:16px;
+    right:16px;
+    border-radius: 16px;
+    padding: 80px 64px 0 64px;
+    text-align: center;
+    box-shadow: 0 0 0 40px rgba(0,0,0,0.6);
+  }
+  nav {
+    display: none;
+  }
+  .fullScreenBlocker img {
+    width: 50%;
+    margin-top: 80px;
+  }
+}
+

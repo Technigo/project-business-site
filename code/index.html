@@ -4,27 +4,240 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Found this informatic piece, so put the JS in the head: https://gomakethings.com/when-should-you-add-the-defer-attribute-to-the-script-element/#:~:text=In%20short%3A%20with%20defer%20on,downloaded%20and%20ready%20to%20run. -->
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <nav>
+      <div class="nav-content">
+        <div class="nav-logo"><img src="assets/hibr-logo.svg"></div>
+        <div class="nav-links">
+          <a href="#" class="nav-link">What's Hibr™?</a>
+          <a href="#" class="nav-link">Features</a>
+          <a href="#" class="nav-link">Hibr™ a friend</a>
+          <a href="#" class="nav-link">Legal</a>
+          <a href="#" class="nav-link">Guestbook</a>
+        </div>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    </nav>
+    
+
+
+    <header>  
+
+      <section class="header-content">
+        <img src="assets/hibr-logo.svg" class="logo">
+        <p>Because right now—we could all use a good year’s sleep.</p>
+        <section class="header-cta">
+          <button class="button-primary teal-bg"><p>Sign up</p></button>
+          <button class="button-secondary teal"><p>Learn more</p></button>
+        </section>
+      </section>
+
+      <div class="video-container">
+        <video autoplay muted loop>
+            <source src="videos/sheep.mp4" type="video/mp4" />
+        </video>
+        <h2>Your caption here</h2>
+      </div>
+
+    </header>
+
+    <section class="productInfo">
+      <div class="productInfo-content">
+        <div class="hibr-info">
+          <h2>We get it.</h2>
+          <p>What a year, huh? A global pandemic is upon us. The effects of climate change are getting more and more apparent each day. The guy you like <span class="emphasise">still</span> hasn't answered your text. The superpowers of the world are just one slightly too animated tweet away from pressing the nuclear button.</p> <p>We get it.</p><p>It’s more than one person should—nay, could—handle. Sounds like you need to be... Hibr’d™.</p>
+        </div>
+        <div class="hibr-image">
+          <img src="assets/pod.png">
+        </div>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <main>
+
+      <section class="card-full">
+        <h2 class="yellow">Get Hibr'd™</h2>
+        <div class="card">
+
+
+        <form class="form" action="http://httpbin.org/anything" method="POST">
+          
+          <label for="fullName" class="p-small bold">Full name</label>
+          <input type="text" name="Full Name" id="fullName" required>
+
+          <label for="email" class="p-small bold">E-mail</label>
+          <input type="email" name="E-mail" id="email" >
+          
+          <div class="form-checkcontainer">
+            <label for=""><p class="bold">What are the reasons you want to be Hibr'd™?</p></label>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason1" name="Reasons" value="Raging wildfires in Australia.">
+              <label for="reason1"> <span class="p-small">Raging wildfires in Australia.</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason2" name="Reasons" value="Someone in China ate a bat.">
+              <label for="reason2"> <span class="p-small">Someone in China ate a bat.</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason3" name="Reasons" value="Spiralling racism in the world.">
+              <label for="reason3"> <span class="p-small">Spiralling racism in the world.</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason4" name="Reasons" value="Liverpool won the Premier League.">
+              <label for="reason4"> <span class="p-small">Liverpool won the Premier League.</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason5" name="Reasons" value="UK left the EU.">
+              <label for="reason5"> <span class="p-small">UK left the EU.</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason6" name="Reasons" value="An angry orange man is running the world's most powerful country.">
+              <label for="reason6"> <span class="p-small">An angry orange man is running the world's most powerful country.</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason7" name="Reasons" value="Harry and Meghan denounced their royalty.">
+              <label for="reason7"> <span class="p-small">Harry and Meghan denounced their royalty.</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason8" name="Reasons" value="Still grieving Harambe.">
+              <label for="reason8"> <span class="p-small">Still grieving Harambe.</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason9" name="Reasons" value="Japanese Murder Hornets invite the Pacific Northwest.">
+              <label for="reason9"> <span class="p-small">Japanese Murder Hornets invite the Pacific Northwest.</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason10" name="Reasons" value="All of the above.">
+              <label for="reason10"> <span class="p-small">All of the above.</span></label><br>
+            </div>
+
+
+
+            <!-- <input type="checkbox" id="reason2" name="Reasons" value="Reason 2">
+            <label for="reason2"> <span class="p-small">Reason 2</span></label><br>
+            <input type="checkbox" id="reason3" name="Reasons" value="Reason 3">
+            <label for="reason3"> <span class="p-small">Reason 3</span></label> -->
+          </div>
+          <label for="numberOfYears"><p>How many years do you want to be Hibr'd™?</p></label>
+          <div class="form-slidecontainer">
+            
+            <div class="sliderbox">
+              <input type="range" min="1" value="1" class="slider" max="100" id="numberOfYears" name="Number of years" onchange="updateTextInput(this.value);">
+              <p class="p-small"><span id="textInput"></span> years</p>
+            </div> 
+          </div>
+
+          
+          <button class="button-primary teal-bg" type="submit"><p>Get quote</p></button>
+        </form>
+      </div>
+      </section>
+
+
+
+      <section class="card-full">
+        <h2 class="teal">FAQ</h2>
+
+        <div class="card-accordion accordion-item">
+          <div class="accordion-item-header">
+            <p>What is Hibr™?</p>
+          </div>
+          <div class="accordion-item-body">
+            <p class="accordion-item-body-content">Think of it as Uber—but for sleeping.</p>
+          </div>
+        </div>
+
+        <div class="card-accordion accordion-item">
+          <div class="accordion-item-header"> 
+            <p> Who is the genius behind Hibr™?</p>
+          </div>
+          <div class="accordion-item-body">
+            <p class="accordion-item-body-content">Very good question, thank you for that. The idea for Hibr™ was spawned when our Tech Lord and Unicorn Ninja Founder Jort W. Dildeaux™ was at his weekly tantric Shambala Mountain Silent Retreat session, and got the epiphany that he wanted to generously give people with enough means an escape from the world.</p> <p>He wants to Hibr™ the world.</p>
+          </div>
+        </div>
+
+        <div class="card-accordion accordion-item">
+          <div class="accordion-item-header">
+            <p> Is it safe?</p>
+          </div>
+          <div class="accordion-item-body">
+            <p class="accordion-item-body-content">There are numerous ways we could answer that. But, let me ask <span class="emphasise">you</span> a question. What <span class="emphasise">is</span> safe, really?</p> <p>As the great, late, Dr. Martin Luther King Jr once said; "Life is either a daring adventure or nothing at all."</p> <p>Just, wow. Jaw? Dropped.</p>
+          </div>
+        </div>
+
+        <div class="card-accordion accordion-item">
+          <div class="accordion-item-header">
+            <p> What does it cost?</p>
+          </div>
+          <div class="accordion-item-body">
+            <p class="accordion-item-body-content">The price depends on a number of factors, such as how long you want to be Hibr'd™, your age, social class, genetic structure, and marital status; to mention a few of them.</p> <p>But we don't like to talk about boring stuff like cost (snooze), and price (yawn)—that's suit stuff!</p><p>What it all boils down to is—can you really put a price on security? On comfort? Peace of mind for you and your loved ones? If you ask Hibr™—the answer is no.</p>
+          </div>
+        </div>
+
+        <div class="card-accordion accordion-item">
+          <div class="accordion-item-header">
+            <p> My husband was Hibr'd™ and was supposed to wake up two months ago. Where is he?</p>
+          </div>
+          <div class="accordion-item-body">
+            <p class="accordion-item-body-content">Marcia, we told you—we are not allowed to disclose information regarding specific cases in the FAQ. Your husband signed the waiver, and Hibr™ may or may not have payed you a more than generous reparation package. Now, could you please stop contacting us through the FAQ?</p>
+          </div>
+        </div>
+
+        <div class="card-accordion accordion-item">
+          <div class="accordion-item-header">
+            <p> How does Hibr <span class="emphasise">work?</span> This sounds too good to be true.</p>
+          </div>
+          <div class="accordion-item-body">
+            <p class="accordion-item-body-content">Hibr™ leverages agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+
+              <p>Furthermore, Hibr™ brings to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+
+              <p>We also capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+
+              <p>But the key lies in podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
+
+              <p>Last, but not least, Hibr™ collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+          </div>
+        </div>
+
+
+        <div class="card-accordion accordion-item">
+          <div class="accordion-item-header">
+            <p> Wow, this all sounds great! How do I get Hibr'd™?</p>
+          </div>
+          <div class="accordion-item-body">
+            <p class="accordion-item-body-content">We love your enthusiasm, you anonymous and completely non-fictional person! Just enter your details in our human-friendly form to the left, and... Get Hibr'd™! 🥳</p>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+
+
+<div class="fullScreenBlocker">
+  <h3>Whoa, hold up!🤚👮‍♀️</h3>
+  <p>Due to a pending lawsuit (thanks again, Marcia), you are prohibited to visit the Hibr™ website on any other device than a desktop computer.</p>
+  <p>Our legal department will get in contact with you shortly.</p>
+  <p>Thank you for your cooperation.</p>
+  <img src="./assets/hibr-logo.svg">
+</div>
+
   </body>
 </html>
