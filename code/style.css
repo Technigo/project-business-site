@@ -1,16 +1,10 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-.active + .answer {
-  /* some styling here */
-}
-
 body{
   background: #ffffff;
   color: #515151;
-  margin: auto 0px;
+  margin: 0px;
+  padding: 0px;
   width: 100%;
-  height: 100%;
+  height: 2000px;
   max-width: 1400px;
 }
 
@@ -25,14 +19,25 @@ header{
  background-repeat: no-repeat;
  background-size: cover;
  position: relative;
- background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("the-rockstar.jpg");
+ background-image: url("the-rockstar-medium.jpg");
 }
 
 .navbar{
- height: 80px;
+ height: 60px;
  display: flex;
  align-items: center;
- padding: 0px 16px;
+ padding: 5px;
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #0a0a10;
+}
+
+.navbar.sticky + .accordion {
+    margin-top: 58px;
 }
 
 div.hamburger{
@@ -81,68 +86,165 @@ nav a:hover::after {
   background: solid 1px 
 }
 
-/*border-bottom: solid 1px #efefef;*/
+/*WEEK3 MUSTE HAVE*/
+.week3-musthave{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+/*SIGN UP*/
+.signup{
+  width: 400px;
+}
+
+.data-container{
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}
+
+/*ACCORDION*/
+.accordion {
+ width: 400px;
+ margin: 3%;
+}
+
+.accordion-container {
+  border: 2px solid #999;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.accordion-text {
+  border-top: 2px solid #999;
+  margin: 0;
+  padding: 15px;
+}
+
+.accordion-text-container {
+  height: 0;
+  overflow: hidden;
+  transition: height .3s ease;
+}
+
+.accordion-text-container.active {
+  height: 158px;
+}
+
+/***GRID***/
+.container{
+  position: relative;
+  height: 1100px;
+  width: 100%;
+  z-index: -1;
+}
+
+.container .gallery{
+  position: relative;
+  height: 1000px;
+  width: 98%;
+  margin: auto;
+  padding: 45px 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 2vh;
+  grid-auto-flow: dense;
+}
+
+.container .gallery .image{
+ position: relative;
+ height: 100%;
+ width: 100%;
+ overflow: hidden;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container .gallery .image:first-child{
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+
+.container .gallery .image:nth-child(2n+3){
+  grid-row-start: span 2;
+}
+
+.container .gallery .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
 /* SOCIAL MEDIA ROW */ 
 .icon-row{
- background-image: linear-gradient(#51414a, #0a0a10);
- height: 100px;
- width: 100%;
-}
- 
-.social-menu ul{
- position: absolute;
- left: 50%;
- padding: 20px;
- margin-top: 45px;
- transform: translate(-50%,-50%);
- display: flex;
-}
- 
-.social-menu ul li {
- list-style: none;
- margin: 0px 15px;
-}
- 
-.social-menu ul li:nth-child(1) a:hover{
- background-color: #ffffff;
-}
- 
-.social-menu ul li:nth-child(2) a:hover{
- background-color: #ffffff;
-}
- 
-.social-menu ul li .fa {
- font-size: 30px;
- line-height: 60px;
- color: #ffffff;
-}
- 
-.social-menu ul li .fa:hover{
- color: #000000;
-}
- 
-.social-menu ul li a {
- display: block;
- width: 60px;
- height: 60px;
- border-radius: 50%;
- background-color: #000000;
- text-align: center;
- transition: .6s;
- box-shadow: 0 5px 4px rgba(0,0,0,.5);
-}
- 
-.social-menu ul li a:hover {
- transform: translate(0,-10px);
-}
- 
+  background-image: linear-gradient(#51414a, #0a0a10);
+  height: 100px;
+  width: 100%;
+  z-index: -1;
+ }
+  
+ .social-menu ul{
+  position: absolute;
+  left: 50%;
+  padding: 20px;
+  margin-top: 45px;
+  transform: translate(-50%,-50%);
+  display: flex;
+ }
+  
+ .social-menu ul li {
+  list-style: none;
+  margin: 0px 15px;
+ }
+  
+ .social-menu ul li:nth-child(1) a:hover{
+  background-color: #ffffff;
+ }
+  
+ .social-menu ul li:nth-child(2) a:hover{
+  background-color: #ffffff;
+ }
+  
+ .social-menu ul li .fa {
+  font-size: 30px;
+  line-height: 60px;
+  color: #ffffff;
+ }
+  
+ .social-menu ul li .fa:hover{
+  color: #000000;
+ }
+  
+ .social-menu ul li a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #000000;
+  text-align: center;
+  transition: .6s;
+  box-shadow: 0 5px 4px rgba(0,0,0,.5);
+ }
+  
+ .social-menu ul li a:hover {
+  transform: translate(0,-10px);
+ }
+
 /*** FOOTER ***/
 footer {
  height: 100px;
  background-color: #0a0a10;
- display: flex;
- justify-content: center;
+ margin-bottom: 0px;
 }
 
 footer a {
@@ -150,6 +252,7 @@ footer a {
  margin-bottom: 5px;
  display: flex;
  align-items: center;
+ justify-content: center;
 }
 
 .footer-logo {
@@ -158,21 +261,25 @@ footer a {
  }
 
 /*** MEDIA QUERIES ***/
-@media (min-width: 600px){  
-  .navbar{
-   justify-content: space-between;
-  }
-
-  nav {
-   display: inline-block;
-  }
-
-  div.hamburger{
-   display: none;
+@media (max-width: 414px){  
+  header{
+    height: 200px;
+    width: 100%;
   }
 }
 
 @media (min-width: 600px){
+ .navbar{
+    justify-content: space-between;
+  }
+ 
+  nav {
+    display: inline-block;
+  }
+ 
+  div.hamburger{
+    display: none;
+  }
 
   .nav-logo {
    order: 2;
@@ -185,10 +292,15 @@ footer a {
   .nav-right{
     order: 3;
   }
+  
+  .container .gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
 } 
 
-@media (min-width:1024px){
-
+@media (min-width:1025px){
   .navbar{
    justify-content: flex-start;
   }
@@ -196,4 +308,11 @@ footer a {
   .nav-logo {
    order: 1;
   }
+
+  .container .gallery{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+ }
 }
+
+
