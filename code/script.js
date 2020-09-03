@@ -17,14 +17,14 @@ function scrollFunction() {
   }
 }
 
-var accordions = document.getElementsByClassName("accordion");
+var accordions = document.getElementsByClassName("accordion-block");
 console.log(accordions)
  
 for (i = 0; i < accordions.length; i++) {
   accordions[i].onclick = function() {
     this.classList.toggle('is-open');
  
-    var content = this.nextElementSibling;
+    var content = this.children[1];
     if (content.style.maxHeight) {
       // accordion is currently open, so close it
       content.style.maxHeight = null;
