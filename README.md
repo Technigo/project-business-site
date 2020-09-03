@@ -1,6 +1,6 @@
 # Business Site
 
-This is a project during the Technigo Front-end Bootcamp. 
+This is a project made during the Technigo Front-end Bootcamp. 
 The task was to create a business site with a responsive hero image/video,
 sign up form and accordion.
 
@@ -23,6 +23,7 @@ If i had more time i would like to design the form more
 
 ## View it live
 Here is a link to the finished project: 
+https://the-breakfast-club.netlify.app/code/
 
 Hope you like it!
 
