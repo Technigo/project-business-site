@@ -5,92 +5,101 @@
 }
 
 body{
-  font-family: 'Josefin Slab', serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 h2 {
   text-transform: uppercase;
-  /*margin: 20px;*/
+  color: #403A3B;
 }
 
 h3 {
-  padding: 20px;
+  margin-left: 3vw;
+  padding-bottom: 15px;
   text-transform: uppercase;
   font-size: 20px;
+  color: #403A3B;
+  font-weight: 200;
 }
 
 h4 {
   text-transform: uppercase;
   font-size: 16px;
-  margin-bottom: 20px;
+  color: #403A3B;
+  font-weight: 200;
 }
 
-/**** HEADER ****/
+p {
+  font-size: 18px;
+  color: #403A3B;
+  font-weight: 200;;
+}
 
-.main-header {
-  position: sticky;
-  top: 0; /*when we want the header to be sticky*/ 
-  /*this could also be done with javascript, onscroll sticky.. 
-  then a sticky class should be styled. */
-  display: flex; 
+
+.header-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: auto;
+  display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 70px; /*change when logo inserted*/
-  width: 100vw;
-  padding: 0 10vw;
-  /*color: black;*/
-  background-color: #23272A;
-  /*background-color: transparent;*/
-  z-index: 1; /*when we scroll we want the header to be on top of everything*/
 }
 
-a {
-  text-decoration: none;
-  color:#fff;
-  text-transform: uppercase;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color:#373B3E;  
 }
 
 .nav-bar {
+  overflow: hidden;  
+  display:none;
+}
+
+.nav-bar a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.nav-bar a:hover {
+  border: 1px solid white;
+}
+
+
+.menu-btn:checked ~ .nav-bar {
+  opacity: .5;
   display: flex;
-  list-style: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10rem 0;
-  width: 100vw;
-  height: 100vh; 
+  height: 70vh;
   font-size: 28px;
   background: #272727;
+  z-index: 1;
 }
 
-.menu-btn:checked ~ .nav-bar {
-  opacity: 1;
-}
-
-
-.nav-link a {
-  margin: 5px;
-  padding: 2px;
-  font-size: 22px;
-  font-weight: Semi-bold 600;
-
-}
-
-.nav-link a:hover{
-  border-bottom: 2px solid #fff;
-  transition: .5s ease;
-  /*want the border to go in left to right slowly*/
+.nav-link a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 .menu-icon {
   position: relative;
   padding: 26px 10px;
+  right: 20px;
   cursor: pointer;
-  z-index: 1;
 }
 
 .menu-icon__line {
@@ -103,17 +112,13 @@ a {
   margin: 5px;
 }
 
-/*to hide the checkbox*/
 .menu-btn {
   display: none;
 }
 
 .logo img {
-  height: 65px;
-  margin-top: 5px;
+  height: 80px;
 }
-
-
 
 /***HERO PICTURE***/
 
@@ -135,17 +140,10 @@ a {
   margin: 3vw;
 }
 
-.hero-text h1 {
-  font-size: 34px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
 .hero-text p {
-  font-size: 20px;
   width: 50%;
+  color: white;
 }
-
 
   
 
@@ -155,7 +153,6 @@ a {
   max-width: 90%;
   margin: 40px auto;
   display: flex;
-  /*flex-direction: column;*/
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -175,7 +172,7 @@ a {
   box-shadow: 0 0 20px lightgrey;
 }
 
-/****ACCORDION SECOND TEST ****/
+/****ACCORDION****/
 
 .accordion {
   width: 100%;
@@ -189,15 +186,22 @@ a {
   background-color: mintcream;
   margin-left: 3vw;
   margin-bottom: 10px;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.3);
   width: 60%;
-  position: relative;
+  /*position: relative;*/
 }
 
 .accordion-header:after {
   content: "\002b";
   position: absolute;
   right: 20px;
+}
+
+.accordion-header:after + .active{
+  content: '\002D';
+  position: absolute;
+  right: 20px;
+  top: 15px;
 }
 
 .accordion-header {
@@ -223,8 +227,8 @@ a {
 .accordion-text img {
   width: 200px;
   object-fit: cover;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
   border-radius: 2px;
+  margin-right: 10px;
 }
 
 .accordion-text {
@@ -233,92 +237,33 @@ a {
   border-image: linear-gradient(to right, #cceedd, transparent) 1;
   display: flex;
   align-items: center;
+  background-color: #ffff;
 }
 
 
 .active {
-  height: 200px;
+  height: 175px;
 }
 
-.active + .accordion-header:after {
+/***HOW DO I MAKE THIS WORK?***/
+.active + #accordion-header-1:after {
   content: '\002D';
-}
-
-
-
-
-/****ACCORDION FIRST TEST!!!!
-
-.accordion {
-  width: 100%;
-  background-color: rgb(245,255,250);
-  font-size: 18px;
-  transition: 0.9s;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  padding-left: 3vw;
-  padding-bottom: 40px;
-  margin-bottom: 10px;
-}
-
-.accordion img {
-  width: 200px;
-  object-fit: cover;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
-  border-radius: 2px;
-}
-
-
-.question {
-  padding: 20px;
-  margin-top: 10px;
-  text-transform: uppercase;
-  text-align: left;
-  width: 60%;
-  position: relative;
-}
-
-#section1, #section2, #section3 {
-  box-shadow: 0 2px 6px 0 rgba(210, 235, 210, 0.5)
-}
-
-.question::after {
-  content: '\002B';
-  font-size: 20px;
   position: absolute;
   right: 20px;
+  top: 15px;
 }
 
 
-.question:hover {
-  background-color: rgba(0,0,0,0.2);
+
+/***TECHNIGO NOTES ****/
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+.active + .answer {
+  /* some styling here */
 }
 
-.answer {
-  display: none;
-  width: 60%;
-  padding:20px;
-  background-color: #ffff;
-  overflow: hidden; 
-  border-top: 3px solid;
-  border-image: linear-gradient(to right, #cceedd, transparent) 1;
-  transition: height 10s; 
-}
-
-
-.question.active + .answer {
-  display: flex;
-}
-
-.question.active + .answer p{
-  align-self:center;
-}
-
-.question.active::after {
-  content: '\002D';
-  font-size: 20px;
-}****/
 
 /*****INPUT FORM****/
 
@@ -326,11 +271,11 @@ a {
   display: flex;
   flex-direction: column;
   margin-left: 3vw;
+  margin-bottom: 3vh;
 }
 
 .form-group {
   margin-bottom: 15px;
-  /*margin-left: 20px;*/
   display:flex;
   align-items: center;
 }
@@ -340,22 +285,24 @@ a {
   margin-right: 15px;
 }
 
-
-
-/*since I want them to be in a row instead of a column*/
+/***HOW DO I STYLE THEM IN A ROW=***/
 #time, #findUs {
   display: block;
+  width: 300px;
 }
 
 input {
   font-size: 16px;
-  /*background: rgba(100, 0, 0, .1);*/
   border: none;
-  border-bottom: 1px solid rgba(100, 0, 0, .1) ; 
+  border-bottom: 1px solid rgba(100, 0, 0, .1); 
 }
 
-input:invalid {
-  /*border-bottom: 2px solid red;*/
+.form h3 {
+  margin-left: 0;
+}
+
+label p {
+  font-size: 14px;
 }
 
 ::placeholder {
@@ -389,8 +336,8 @@ button::before, button::after {
 }
 
 button::after {
-  bottom:0;
-  right:0;
+  bottom: 0;
+  right: 0px;
   border-top-color: transparent;
   border-left-color: transparent;
 }
@@ -411,35 +358,46 @@ button:hover:after, button:hover:before {
 /****FOOTER****/
 
 footer {
-  background:grey;
-  /*height: 10vh;*/
-  margin-top: 40px;
-  /*display: grid;
-  grid-template-columns: 30% 40% 30%;*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center;
-}
-
-.copyright img {
-  height: 80px;
+  background-color: mintcream;
+  display: grid;
+  align-content: center;
+  gap: 15px;
 }
 
 .copyright {
-  border: 2px solid green;
+  background-color: #d2ebde;
+  padding: 2vw;
+}
+
+.copyright img {
+  height: 70px;
+  margin-top: 10px;
 }
 
 .contacts {
-  border: 2px solid red;
+  padding: 2vw;
+}
+
+.contacts span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+#address, #phone {
+  margin-bottom: 15px;
 }
 
 .social {
-  border: 2px solid purple;
+  background-color:#d2ebde; 
+  padding: 2vw;
 }
 
-
-
+.social i {
+  color:black;
+  margin: 5px;
+}
 
 /***TABLET MEDIA QUERIES****/
 @media (min-width: 767px) {
@@ -447,10 +405,12 @@ footer {
     all: unset;
     display: flex;
     list-style: none;
+    align-self: center;
   }
 
-  .nav-link a {
+  .nav-bar a {
     font-size: 18px;
+    margin-right: 3vw;
   }
 
   .menu-icon {
@@ -460,15 +420,6 @@ footer {
   .hero {
     flex-direction: column;
     justify-content: center;
-  }
-
-  .hero h1 {
-    align-self: flex-start;
-  }
-
-  .hero p {
-    width: 50%;
-    align-self: flex-start;
   }
 
   .bakery-container {
@@ -488,6 +439,19 @@ footer {
     margin-left: 10px;
   }
 
+  /*FOOTER*/
+  footer {
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+    padding: 3vw;
+  }
+  .copyright {
+    background-color: mintcream;
+  }
+  .social {
+  background-color: mintcream;
+  }
+  
 }
 
 /****DESKTOP MEDIA QUERIES****/
@@ -495,6 +459,10 @@ footer {
 @media (min-width: 1024px) {
   .nav-bar {
     display: flex;
+  }
+
+  .nav-bar a {
+    font-size: 22px;
   }
 
   .menu-icon {
@@ -506,39 +474,40 @@ footer {
     justify-content: center;
   }
 
-  .hero h1 {
-    align-self: flex-start;
-  }
 
-  .hero p {
-    width: 50%;
-    align-self: flex-start;
+  .hero-text {
+
   }
 
   .bakery-container {
     flex-direction: row;
-   }
+  }
  
    .food-container {
      flex-direction: row-reverse;
-   }
+  }
  
    .bakery-container img, .food-container img {
      width: 35%;
-   }
+  }
  
    .bakeryText, .foodText {
      width: 40%;
      margin-left: 10px;
-   }
+  }
 
-  
+  /***FOOTER***/
+
+  footer {
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+    padding: 3vw;
+  }
+  .copyright {
+    background-color: mintcream;
+  }
+  .social {
+  background-color: mintcream;
+  }
 }
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}

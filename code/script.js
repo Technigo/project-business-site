@@ -37,6 +37,22 @@ accordionHeader3.onclick = () => {
 }
 
 
+const header = document.querySelector('.header-bar');
+const headerOffset = header.offsetTop;
+
+console.dir(header);
+console.log(header);
+
+window.onscroll = () => {
+    if (headerOffset >= window.pageYOffset) {
+        header.classList.remove('sticky');
+    }   else {
+        header.classList.add('sticky');
+    }
+}
+
+//console.log(header);
+//console.dir(header);
   
 
 // A function that adds and remove the class "active" on the section you click on.
@@ -48,7 +64,7 @@ accordionHeader3.onclick = () => {
 //}
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
-//document.getElementById("section1").onclick = toggle
-//document.getElementById("section2").onclick = toggle
-//document.getElementById("section3").onclick = toggle
+//document.getElementById("accordion-header-1").onclick = toggle
+//document.getElementById("accordion-header-2").onclick = toggle
+//document.getElementById("accordion-header-3").onclick = toggle
 

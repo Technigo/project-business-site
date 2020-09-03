@@ -4,55 +4,45 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Project 3 - Vattenverket</title>
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
-    <header class="main-header">
-      <div class="logo">
-        <img src="logo.png" alt="logo image">
-      </div>
+    <header> 
+      <div class="hero">
+          <div class="hero-text">
+          <h1>Our vision</h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Quaerat quam iste magni? </p>
+          </div>
 
-      <input type="checkbox" class="menu-btn" id="menu-btn">
-      <label for="menu-btn" class="menu-icon">
-        <!----Burger lines--->
-        <span class="menu-icon__line"></span>
-        <span class="menu-icon__line"></span>
-        <span class="menu-icon__line"></span>
-      </label>
+      <div class="header-bar">
+          <div class="logo">
+              <img src="logo.png" alt="logo image">
+          </div>
 
-      <ul class="nav-bar">
-        <li class="nav-link">
-          <a href="#">Menu</a>
-        </li>
-        <li class="nav-link">
-          <a href="#">bakery</a>
-        </li>
-        <li class="nav-link">
-          <a href="#form">Make a reservation</a>
-        </li>
-        <li class="nav-link">
-          <a href="#">Contact</a>
-        </li>
-      </ul>
+          <input type="checkbox" class="menu-btn" id="menu-btn">
+          <label for="menu-btn" class="menu-icon">
+          <!----Burger lines--->
+          <span class="menu-icon__line"></span>
+          <span class="menu-icon__line"></span>
+          <span class="menu-icon__line"></span>
+          </label>
+
+          <div class="nav-bar">
+              <a href="#top">Home</a>
+              <a href="#food">Food</a>
+              <a href="#bakery">bakery</a>
+              <a href="#form">Make a reservation</a>
+              <a href="#contactUs">Contact</a>
+          </div>
+      </div>  
+
     </header>
 
-    <div class="hero">
-      <div class="hero-text">
-      <h1>Our vision</h1>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-        Quaerat quam iste magni? 
-        Sequi ad laboriosam aliquid tempora sit accusantium. 
-        Atque cumque necessitatibus consequuntur eum alias, 
-        suscipit id perferendis fugit. Quos.</p>
-      </div>
-    </div>
-
-
-    <section class="bakery-container">
+    <section id="bakery" class="bakery-container">
       <!---Image to the left and text to the right-->
       <img src="unsplash-bakery.jpg" alt="bakery image">
       <div class="bakeryText">
@@ -67,7 +57,7 @@
 
 
 
-    <section class="food-container">
+    <section id="food" class="food-container">
       <!---Image to the right and text to the left-->
       <img src="unsplash-food.jpg" alt="food image">
       <div class="foodText">
@@ -86,7 +76,7 @@
       <h3>What will you taste?</h3>
       <div class="accordion-element">
         <div id="accordion-header-1" class="accordion-header">
-          Cinnamon bun?
+          <h4>Cinnamon bun?</h4>
         </div>
         <div class="accordion-text-container">
           <div class="accordion-text">
@@ -98,7 +88,7 @@
 
       <div class="accordion-element">
         <div id="accordion-header-2" class="accordion-header">
-          Croissant?
+          <h4>Croissant?</h4>
         </div>
         <div class="accordion-text-container">
           <div class="accordion-text">
@@ -110,7 +100,7 @@
 
       <div class="accordion-element">
         <div id="accordion-header-3" class="accordion-header">
-          Everyting?
+          <h4>Everyting?</h4>
         </div>
         <div class="accordion-text-container">
           <div class="accordion-text">
@@ -125,9 +115,9 @@
 
     <!----FORM---->
     <form id="form" class="form" action="http://httpbin.org/anything" method="POST">
-        <h4>Make your reservation</h4>
+        <h3>Make your reservation</h3>
         <div id="firstName" class="form-group">
-          <label for="firstName">First name</label>
+          <label for="firstName"><p>First name</p></label>
           <input
             type="text"
             name="lastName"
@@ -143,7 +133,9 @@
         placeholder="First name"----> 
 
         <div id="lastName" class="form-group">
-          <label for="lastName">Last name*</label>
+          <label for="lastName">
+            <p>Last name*</p>
+          </label>
           <input
             type="text"
             name="lastName"
@@ -152,19 +144,21 @@
         </div>
        
       
-        <div id="time" class="form-group">
+        <div class="form-group">
           <label>
-            Reservation for?:*
-            <input type="radio" name="time" value="breakfast" />Breakfast
-            <input type="radio" name="time" value="lunch"/>Lunch
-            <input type="radio" name="time" value="dinner"/>Dinner
+            <p>Reservation for?:*</p>
+            <input id="time" type="radio" name="time" value="breakfast" /><p>Breakfast</p>
+            <input id="time" type="radio" name="time" value="lunch"/><p>Lunch</p>
+            <input id="time" type="radio" name="time" value="dinner"/><p>Dinner</p>
             
           </label>
         </div>
 
         
         <div id="date" class="form-group">
-          <label for="date">Date*</label>
+          <label for="date">
+            <p>Date*</p>
+          </label>
           <input
             type="date"
             name="date"
@@ -174,7 +168,9 @@
 
 
         <div id="phoneNr" class="form-group">
-          <label for="phone">Phone number</label>
+          <label for="phone">
+            <p>Phone number</p>
+          </label>
           <input
             type="tel"
             name="phone"
@@ -185,7 +181,9 @@
         
         
         <div id="email" class="form-group">
-          <label for="email">E-mail*</label>
+          <label for="email">
+            <p>E-mail*</p>
+          </label>
           <input
             type="email"
             name="email"
@@ -196,56 +194,52 @@
         
         <div id="findUs" class="form-group">
           <label>
-            How did you find us?
+            <p>How did you find us?</p>
             <input type="checkbox" name="recommendation" value="friend">
-            <label for="recommendation">Friend</label>
+            <label for="recommendation"><p>Friend</p></label>
 
             <input type="checkbox" name="recommendation" value="thatsUp">
-            <label for="recommendation">ThatsUp</label>
+            <label for="recommendation"><p>ThatsUp</p></label>
 
             <input type="checkbox" name="recommendation" value="other">
-            <label for="recommendation">Other</label>
+            <label for="recommendation"><p>Other</p></label>
           </label>
         </div>
-      
-        <button type="submit">Make reservation</button>
-
-    
+        <button type="submit">
+          <p>Submit</p>
+        </button>
     </form>
 
+
     <footer>
-      <div class=copyright>
-       <img src="./logo.png" alt="logo">
+      <div id="contactUs" class="copyright">
         <p>Vattenverket &copy 2020</p>
+        <img src="./logo.png" alt="logo">
       </div>
 
       <div class="contacts">
         <div id="address" class="address">
-          <i class="fa fa-map-marker">
-            <p>Street address 123<br>
-              123 44 Stockholm
-            </p>
+          <i class="fa fa-map-marker"> <span>Street address 9,
+            123 44 Stockholm</span>
           </i>
         </div>
 
         <div id="phone" class="phone">
-          <i class="fa fa-phone">
-            <p>08-123 45 67</p>
+          <i class="fa fa-phone"> <span>08-123 45 67</span>
           </i>
         </div>
 
         <div id="email" class="email">
-          <i class="fa fa-envelop">
-            <p>info@vattenverket.org</p>
+          <i class="fa fa-envelope"> <span>info@vattenverket.org</span>
           </i>
         </div>
       </div>
 
-      <div class="social">
+        <div class="social">
           <p>Follow us on:</p>
           <a href="#"><i class="fa fa-facebook"></i></a>
           <a href="#"><i class="fa fa-instagram"></i></a>
-      </div>
+        </div>
       
     </footer>
 
