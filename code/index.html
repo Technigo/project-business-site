@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Project 3 - Vattenverket</title>
-    <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
     <header> 
@@ -25,7 +24,6 @@
 
           <input type="checkbox" class="menu-btn" id="menu-btn">
           <label for="menu-btn" class="menu-icon">
-          <!----Burger lines--->
           <span class="menu-icon__line"></span>
           <span class="menu-icon__line"></span>
           <span class="menu-icon__line"></span>
@@ -43,7 +41,6 @@
     </header>
 
     <section id="bakery" class="bakery-container">
-      <!---Image to the left and text to the right-->
       <img src="unsplash-bakery.jpg" alt="bakery image">
       <div class="bakeryText">
         <h2>Bakery</h2>
@@ -58,7 +55,6 @@
 
 
     <section id="food" class="food-container">
-      <!---Image to the right and text to the left-->
       <img src="unsplash-food.jpg" alt="food image">
       <div class="foodText">
         <h2>food</h2>
@@ -124,13 +120,6 @@
           />
         </div>
 
-        <!---You dont need both label and placeholder
-        From a UX point of view, 
-        I’d say label is preferred over placeholder 
-        (since placeholder disappears as soon as you’ve filled the input, 
-        thus making it unclear what fields there are in the form)
-        
-        placeholder="First name"----> 
 
         <div id="lastName" class="form-group">
           <label for="lastName">
@@ -144,13 +133,17 @@
         </div>
        
       
-        <div class="form-group">
+        <div id="reservationTime" class="form-group">
           <label>
-            <p>Reservation for?:*</p>
-            <input id="time" type="radio" name="time" value="breakfast" /><p>Breakfast</p>
-            <input id="time" type="radio" name="time" value="lunch"/><p>Lunch</p>
-            <input id="time" type="radio" name="time" value="dinner"/><p>Dinner</p>
-            
+            <p>Reservation for?</p>
+            <input type="radio" name="time" value="breakfast">
+            <label for="time"><p>Breakfast</p></label>
+
+            <input type="radio" name="time" value="lunch">
+            <label for="time"><p>Lunch</p></label>
+
+            <input type="radio" name="time" value="dinner">
+            <label for="time"><p>Dinner</p></label>
           </label>
         </div>
 
