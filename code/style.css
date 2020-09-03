@@ -1,5 +1,9 @@
 body {
   margin: 0;
+  /* barvi spodaj color-picked iz videa */
+  background: #463E22;
+  color: #AAB7B3;
+  font-family: 'Patrick Hand', cursive;
 }
 
 /*** HERO VIDEO ***/
@@ -44,10 +48,6 @@ fieldset {
   /***not default setting***/
   margin-bottom: 20px;
 }
-
-/* .owner-info {
-  height: 100%;
-} */
 
 .owner-info-div {
   border: 1px solid orangered;
@@ -109,10 +109,25 @@ fieldset {
   flex-direction: column;
 }
 
+.dogs-gender label {
+  width: 250px;
+}
 
-/* div:first-of-type {
+.spayed-neutered label {
+  width: 250px;
+}
+
+.issue {
   border: 1px solid pink;
-} */
+  width: 100%;
+  height: 200px;
+}
+
+textarea {
+  width: 500px;
+  height: 125px;
+  /* resize: none; */
+}
 
 input {
   font-size: 14px;
@@ -168,12 +183,63 @@ button {
   border-image: initial;
 }
 
+.form-submit {
+  align-self: center;
+}
+
 /*** FAQ - ACCORDION ***/
 .accordion {
   border: 1px solid red;
   width: 48%;
 }
 
+.accordion-container {
+  border: 1px solid purple;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 480px;
+  margin: 20px auto;
+  background: cornsilk;
+}
+
+h1 {
+  text-align: center;
+  font-size: 39px;
+}
+
+.accordion-item {
+  border: 1px solid rgb(66, 107, 3);
+  margin: 25px 18px;
+  box-shadow: 3px 4px 3px grey; /*x, y, blur effect, color*/
+}
+
+.question {
+  border: 1px solid black;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 15px;
+  min-height: 40px;
+  padding: 5px 100px 5px 10px;
+  cursor: pointer; /*import paws*/
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.question::after {
+  content: "\002B";
+  font-size: 25px;
+  position: absolute;
+  right: 30px;
+}
+
+.question.active::after {
+  content: "\2212";
+}
+
+.answer {
+  border: 1px solid yellow;
+}
 
 
 /* input:valid {
@@ -200,7 +266,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 footer {
   border: 1px solid purple;
   background-color: pink;
-  height: 30px;
+  height: 70px;
   left: 0px;
   right: 0px;
   text-align: center;

@@ -1,4 +1,12 @@
 // A function that adds and remove the class "active" on the section you click on.
+const questionVariables = document.querySelectorAll(".question");
+
+questionVariables.forEach(questionVariable => {
+  questionVariable.addEventListener("click", event => {
+    questionVariable.classList.toggle(".active");
+  });
+}); 
+
 // We haven't really talked about ´this´ yet, but we will... ;)
 // console.log(this) to see how it works
 function toggle() {

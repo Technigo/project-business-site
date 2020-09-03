@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business site</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -44,7 +45,7 @@
           <fieldset class="dog-info">
           <legend>About your dog</legend>
             <div class="dog-info-div">
-              <label>
+              <label class="">
                 Dog's name:
                 <input type="text" required name="dogName">
               </label>
@@ -69,41 +70,31 @@
                 </textarea>
               </label> -->
               <!--need div to get the radio buttons in a row not in a column-->
-              <div class="dog-sex">
-                <label>
-                  Dog's gender:
+              <div class="dogs-gender">
+                <label>Dog's gender:
                   <input type="radio" required name="dogGender">male
                   <input type="radio" required name="dogGender">female
                 </label>
               </div>
-              <div>
+              <div class="spayed-neutered">
                 <label>
                   Spayed/Neutered:
                   <input type="radio" required name="spayedNeutered"> yes
                   <input type="radio" required name="spayedNeutered"> no
                 </label>
               </div>
-              <div>
+              <div class="issue">
                 <label>
                   Behavioural issue:
-                  <textarea name="behaviouralIssue" rows="" cols="">
+                  <textarea name="behaviouralIssue">
                   </textarea>
                 </label>
               </div>
             </div>
           </fieldset>
-        <!-- <label>
-          Where did you hear about us?
-          <select name="heardAbout">
-            <option value="Fb">Facebook</option>
-            <option value="Ggl">Google</option>
-            <option value="onlineForum">Online Forum</option>
-            <option value="friend">From a friend</option>
-            <option value="other">Other ...</option>
-          </select>
-        </label> -->
+          <!-- <input class="form-submit" type="submit"> -->
        
-          <button type="submit" onclick="alert('Your information has been submitted!')">
+          <button type="submit">
             Send request
           </button> 
           <!--check if the onclick function works-->
@@ -112,17 +103,49 @@
 
       <!-- Accordion -->
       <section class="accordion">
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <div class="accordion-container">
+          <h1>FAQ</h1>
+          <div class="accordion-item">
+            <div class="question" id="section1">How do we work?</div>
+            <div class="answer">
+              <div class="accordion-answer-content">
+                After submitting your form, we give you a call and discuss the issue you
+                and your dog are facing. Depending on the case we can decide for phone cosultations 
+                or a home visit and assessment in real life, with 1:1 training, sometimes involving 
+                other dogs.   
+              </div>
+            </div>
+          </div>    
+          <div class="accordion-item">
+            <div class="question" id="section2">Do you work individually or in a group?</div>
+            <div class="answer">
+              <div class="accordion-answer-content">
+                Our aim is to help as many as possible. Depending on dog's behavioural issue, 
+                we might combine several customers together, as it might speed up the recovery time.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="question" id="section3">How do we work?</div>
+            <div class="answer">
+              <div class="accordion-answer-content">
+                After submitting your form, we give you a call and discuss the issue you
+                and your dog are facing. Depending on the case we can decide for phone cosultations 
+                or a home visit and assessment in real life, with 1:1 training, sometimes involving 
+                other dogs.   
+              </div>
+            </div>
+          </div>    
+          <div class="accordion-item">
+            <div class="question" id="section4">Do you work individually or in a group?</div>
+            <div class="answer">
+              <div class="accordion-answer-content">
+                Our aim is to help as many as possible. Depending on dog's behavioural issue, 
+                we might combine several customers together, as it might speed up the recovery time.
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <!-- dont forget to link the javascript file here! -->
