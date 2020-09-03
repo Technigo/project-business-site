@@ -7,4 +7,4 @@ I need to build a one-pager business site with a hero image, sign up form, faq a
 I had a problem with the radio button styling, but I found a youtube tutorial where I undrestood the steps and it worked. If I had more time, I style it more 2020ish. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://therockstar.netlify.app/
