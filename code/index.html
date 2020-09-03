@@ -12,39 +12,105 @@
     <header>
       <video playsinline autoplay muted loop id="bgvid">
         <source src="./videos/jellyfish.mp4" type="video/mp4">
+        <img src="images/jellyfish.png" title="Your browser does not support the video tag.">
       </video>
 
       <nav>
         <img src="./images/logo-3.png" alt="Secrets Anonymous logo">
         <div>
-          <a href="#">FAQ</a>
-          <a href="#">LEGAL</a>
+          <a href="#faq">FAQ</a>
         </div>
       </nav>
     </header>
 
+    
+    <!------------------- HERO ------------------->
     <section class="hero">
       <h1>What's your secret?</h1>
       <p>You’re not alone. Everyone has secrets. 
         Read and rave - or submit (admit) your own.</p>
+      <a href="#secret-form"><div class="hero-arrow-down"><p>&#8595;</p></div></a>
     </section>
 
 
+    <!------------------- MARQUEE ------------------->
+    <!-- I know the Marquee is banned and EVIL - but let a girl play- rite?! -->
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" class="uc">"Push your water glass on the floor jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed. Missing until dinner time hide at bottom of staircase to trip human intently stare at the same spot, but scratch me there, elevator butt for i heard this rumor where the humans are our owners, pfft, what do they know?!"</marquee>
+      <marquee behavior="scroll" direction="left" onmouseover="this.start();" onmouseout="this.start();" class="uc">"Meoooow really likes hummus make it to the carpet before i vomit mmmmmm run as fast as i can into another room for no reason milk the cow. Meow meow, i tell my human mesmerizing birds and eat half my food and ask for more, i like fish, but leave hair on owner's clothes. Pose purrfectly to show my beauty."</marquee>
+    </div>
 
 
-    <!-- <section class="accordion">
-      <h1>FAQ</h1>
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <!------------------- FORM ------------------->
+    <section id="secret-form" class="secret-form uc">
+      <form>
+        <label for="secret">What is your secret?</label>
+        <textarea name="secret" id="secret"></textarea>
+
+        <label for="name">Name <span class="italic">(will not be shown)</span></label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">E-mail <span class="italic">(will not be shown)</span></label>
+        <input type="text" id="email" name="email">
+
+        <div class="checkboxes-all-wrapper">
+            <div class="checkbox-wrapper">
+            <label for="terms">I accept the <a href="#">terms</a> and <a href="#">conditions</a></label>
+            <input type="checkbox" id="terms" class="checkbox">
+          </div>
+          <div class="checkbox-wrapper">
+            <label for="newsletter">I want to receive the weekly secret-bundle</label>
+            <input type="checkbox" id="newsletter" class="checkbox">
+          </div>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+
+    <!------------------- ACCORDION ------------------->
+    <section id="faq" class="accordion">
+      <h2>FAQ</h2>
+      
+      <div class="accordion-wrapper">
+
+          <div class="accordion-item">
+            <div id="question1" class="question"><h3>&#9656; How do I know my secret will remain a secret?</h3></div>
+            <div class="answer"><p>Hiss and stare at nothing then run suddenly away human give me attention meow run at 3am but purr. Stand in front of the computer screen i want to go outside let me go outside nevermind inside is better ooooh feather moving feather! but find something else more interesting, meow all night ears back wide eyed run off table persian cat jump eat fish.</p></div>
+          </div>
+          
+          <div class="accordion-item">
+            <div id="question2" class="question"><h3>&#9656; Why Secrets Anonymous?</h3></div>
+            <div class="answer"><p>Hiss and stare at nothing then run suddenly away human give me attention meow run at 3am but purr. Stand in front of the computer screen i want to go outside let me go outside nevermind inside is better ooooh feather moving feather! but find something else more interesting, meow all night ears back wide eyed run off table persian cat jump eat fish.</p></div>
+          </div>
+       
+          <div class="accordion-item">
+            <div id="question3" class="question"><h3>&#9656; Can I share your secrets?</h3></div>
+            <div class="answer"><p>Hiss and stare at nothing then run suddenly away human give me attention meow run at 3am but purr. Stand in front of the computer screen i want to go outside let me go outside nevermind inside is better ooooh feather moving feather! but find something else more interesting, meow all night ears back wide eyed run off table persian cat jump eat fish.</p></div>
+          </div>
+          
+          <div class="accordion-item">
+            <div id="question4" class="question"><h3>&#9656; Can my secret be illegal?</h3></div>
+            <div class="answer"><p>Hiss and stare at nothing then run suddenly away human give me attention meow run at 3am but purr. Stand in front of the computer screen i want to go outside let me go outside nevermind inside is better ooooh feather moving feather! but find something else more interesting, meow all night ears back wide eyed run off table persian cat jump eat fish.</p></div>
+          </div>
+
       </div>
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section> -->
+    </section>
 
 
-    <!-- dont forget to link the javascript file here! -->
+  <!------------------- KNOW-MORE / FOOTER ------------------->
+    <div class="know-more">
+      <p>Want to know more about keeping secrets and what studies have been made on the subject?</p>
+      <p>Test yourself and read more at <a href="http://www.keepingsecrets.org/" target="_blank">KeepingSecrets.org</a>.</p>
+    </div>  
+
+    <footer>
+      <img src="./images/logo-3.png">
+      <p>A website made by Karin Nordkvist @ Technigo - 2/24</p>
+      <p>Copyright 2020 - Video from Pexels</p>
+    </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
