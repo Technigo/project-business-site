@@ -114,34 +114,68 @@
       <!-- Signup form -->
       <div class= "flex-child form">
 
-        <form class="form-container">
+        <form 
+          class="form-container" 
+          action="http://httpbin.org/anything" 
+          method="POST"
+        >
+
           <div class="form-group">
-            <label for="firstName">First name</label>
-            <input id="firstName" type="text"> 
+            <label for="firstName">First name *</label>
+            <input 
+            id="firstName" 
+            type="text" 
+            name="firstNameValue"
+            required>
+            
           </div>
           
           <div class="form-group">
-            <label for="lastName"> Last name</label>
-            <input id="lastName" type="text"> 
+            <label for="lastName"> Last name *</label>
+            <input 
+            id="lastName" 
+            type="text"
+            name="lastNameValue"
+            required>
+            
           </div>
     
           <div class="form-group">
             <label for="telephoneNumber"> Telephone</label>
-            <input id="telephoneNumber" type="tel" placeholder="xxx-xxx-xx-xx"> 
+            <input 
+            id="telephoneNumber" 
+            type="tel" 
+            placeholder="xxx-xxx-xx-xx"
+            name="telephoneNumberValue"
+            >
           </div>
           
           <div class="form-group">
-            <label for="email"> Email</label>
-            <input id="email" type="email"> 
+            <label for="email"> Email *</label>
+            <input 
+            id="email" 
+            type="email"
+            name="emailValue"
+            required>
+            
           </div>
           
           <div class="form-group">
-            <input id="checkbox" type="checkbox">
+            
+            <input 
+            id="checkbox" 
+            type="checkbox"
+            name="checkboxValue"
+            required>
             <label for="checkbox"> I accept terms and conditions </label>     
           </div>
     
-          <div class="form-group">
-            <input id="submit" type="submit">
+          <div>
+            <button 
+            class="form-submit" 
+            type="submit">Submit
+
+            </button>
           </div>   
       
         </form>
