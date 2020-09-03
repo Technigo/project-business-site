@@ -17,7 +17,9 @@ accordionHeader1.onclick = () => {
   const accordionTextContainer4 = accordionHeader4.nextElementSibling;
   accordionTextContainer2.classList.remove("active");
   accordionTextContainer3.classList.remove("active");
-  accordionTextContainer4.classList.remove("active");
+  accordionTextContainer4.classList.remove("active"); 
+
+  accordionHeader1.classList.toggle("active-icon");
 }
 
 accordionHeader2.onclick = () => {
@@ -30,6 +32,9 @@ accordionHeader2.onclick = () => {
   accordionTextContainer1.classList.remove("active");
   accordionTextContainer3.classList.remove("active");
   accordionTextContainer4.classList.remove("active");
+
+  accordionHeader2.classList.toggle("active-icon");
+
 }
 
 accordionHeader3.onclick = () => {
@@ -42,6 +47,8 @@ accordionHeader3.onclick = () => {
   accordionTextContainer1.classList.remove("active");
   accordionTextContainer2.classList.remove("active");
   accordionTextContainer4.classList.remove("active");
+
+  accordionHeader3.classList.toggle("active-icon");
 }
 
 accordionHeader4.onclick = () => {
@@ -54,6 +61,8 @@ accordionHeader4.onclick = () => {
   accordionTextContainer1.classList.remove("active");
   accordionTextContainer2.classList.remove("active");
   accordionTextContainer3.classList.remove("active");
+
+  accordionHeader4.classList.toggle("active-icon");
 }
 
 
