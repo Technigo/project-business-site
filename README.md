@@ -1,10 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+The assignment was to make a business one-pager with a hero image or video, a form and an accordion. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
+
+I did a quick manual sketch focus-points. In my last project I got lost in the details so it was important this time to find a way to pinpoint the bigger picture to be able to make a quicker decision further down in the coding if the feature I though of was something nice to have or have to have. 
 
 Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 

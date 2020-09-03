@@ -1,7 +1,181 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
+/*
 .active + .answer {
-  /* some styling here */
+   some styling here 
+}
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.hero-video {
+ position: relative;
+}
+
+.hero-title-wrapper {
+  background-color: rgba(0,0,0,.2);
+  position: absolute;
+  display: flex;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.hero-title-textbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  
+}
+.header {
+  position: relative;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 14;
+}
+
+.navbar-logo img {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  z-index: 15;
+}
+
+.hero-title {
+  width: 100%;
+  padding: 1rem 1rem .5rem 2rem;
+  font-family: 'Cabin Sketch', cursive; 
+  font-size: 3rem;
+}
+
+.hero-subtitle {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  padding: .25rem 1rem 1rem  2rem;
+  font-size: larger;
+}
+
+@media screen and (min-width: 250px) {
+  .hero-video-small video {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+  }
+  
+  .hero-video-medium,
+  .hero-video-medium video {
+    display: none;
+  }
+
+  .hero-video-large,
+  .hero-video-large video{
+    display: none;
+  }
+}
+
+  @media screen and (min-width: 768px) {
+    .hero-video-small,
+    .hero-video-small video {
+    display: none
+  }  
+
+  .hero-video-medium {
+    display: block;
+  }
+  .hero-video-medium video {
+    display: block;
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+  
+  }
+  .hero-video-large-wrapper,
+  .hero-video-large-wrapper video {
+    display: none;
+  }
+
+.navbar-logo img {
+  height: 60px;
+  width: 60px;
+}
+
+  .hero-title-wrapper{
+    height: 400px;
+  }
+  .hero-title-textbox {
+    text-align: right;
+  }
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1028px) {
+  .hero-video-small,
+  .hero-video-small video {
+    display: none;
+  }
+  
+  .hero-video-medium,
+  .hero-video-medium video {
+    display: none;
+  }
+  .hero-video-large {
+    display: block;
+  }
+  .hero-video-large video{
+    display: block;
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+  }
+
+  .navbar-logo img {
+    height: 70px;
+    width: 70px;
+  }
+  .hero-title-wrapper {
+    height: 500px;
+  }
+  .hero-title-textbox {
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 4rem;
+    padding: 1rem;
+  }
+  .hero-subtitle {
+    font-size: xx-large;
+    padding: 1rem;
+  }
+
 }
