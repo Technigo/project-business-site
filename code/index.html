@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -10,20 +10,32 @@
 </head>
 
 <body>
+
+
+
   <header>
     <!-- Hero Video -->
-    <div id="hero">
-      <video loop muted autoplay preload="auto">
+    <Section id="hero">
+      <video class="mobile-video" loop muted autoplay playsinline>
         <source src="./videos/rock-shore-mac.mp4" type="video/mp4">
-        <source src="./videos/rock-shore-ipad.mp4" type="video/mp4" media="all and (max-width: 800px)">
-        <source src="./videos/rock-shore-iphonepod.mp4" type="video/mp4" media="all and (max-width: 400px)">
+        <p>Your browser does not support the video !</p>
+      </video>
+      <video class="tablet-video" loop muted autoplay playsinline>
+        <source src="./videos/rock-shore-ipad.mp4" type="video/mp4">
+        <p>Your browser does not support the video !</p>
+      </video>
+      <video class="desktop-video" loop muted autoplay playsinline>
+        <source src="./videos/rock-shore-iphonepod.mp4" type="video/mp4">
+        <p>Your browser does not support the video !</p>
       </video>
 
-      <div class=" container">
-        <h1><span>LIV out</span></h1>
+      <div class="container">
+        <h1><span>LIVE OUT</span></h1>
         <span class="des">EXPERIENCE // TRAVEL </span>
+        <a class="btn" href="#">Know More!</a>
       </div>
-    </div>
+    </Section>
+
   </header>
 
   <main class="main">
@@ -31,7 +43,7 @@
     <!-- Signup form -->
     <Div class="member">
       <form class="signup" action="http://httpbin.org/anything" method="POST">
-        <h2>SignUp Here</h2>
+        <h2>Signup!</h2>
         <input type="text" name="firstname" placeholder="First Name" required>
         <input type="text" name="lastname" placeholder="Last Name" required>
         <input type="email" name="email" placeholder="Email" required>
@@ -53,44 +65,32 @@
 
 
     <!-- Accordion -->
+    <section class="accordion">
+      <h2>FAQ</h2>
 
-    <div class="accordion">
-      <h1>F.A.Q.</h1>
-      <div class="accordion-container">
-        <h3 id="accordion-header-1" class="accordion-header">
-          <span>How much does it cost?</span>
-          <span>▼</span>
-        </h3>
-        <div class="accordion-text-container">
-          <p class="accordion-text">
-            We tailor make all your experiences as per your budget and level of experience
-          </p>
-        </div>
+      <div aria-label="question toggle open close answer" class="question" id="question1">
+        <p class="question-text">How much does it cost?</p>
       </div>
-      <div class="accordion-container">
-        <h3 id="accordion-header-2" class="accordion-header">
-          <span>How do I dress?</span>
-          <span>▼</span>
-        </h3>
-        <div class="accordion-text-container">
-          <p class="accordion-text">
-            Dress for the ocassion and the time of the year. Incase of extream conditions additional warm or safty
-            clothing will be provided.
-          </p>
-        </div>
+      <div aria-label="answer" class="answer">
+        <p>We can tailormake courses and experinces as per your budget</p>
       </div>
-      <div class="accordion-container">
-        <h3 id="accordion-header-3" class="accordion-header">
-          <span>How much experience do I need?</span>
-          <span>▼</span>
-        </h3>
-        <div class="accordion-text-container">
-          <p class="accordion-text">
-            We have experiences for everyone from beginers to advanced.
-          </p>
-        </div>
+
+      <div aria-label="question toggle open close answer" class="question" id="question2">
+        <p class="question-text">What quipment do I need?</p>
       </div>
-    </div>
+      <div aria-label="answer" class="answer">
+        <p>All you need is a great smile. We provide you with the best of equipment during the course of your adventure
+        </p>
+      </div>
+
+      <div aria-label=" question toggle open close answer" class="question" id="question3">
+        <p class="question-text">What should I wear?</p>
+      </div>
+      <div aria-label="answer" class="answer">
+        <p>Come dressed comfortably for a day of sun, sand and lots of water.</p>
+      </div>
+    </section>
+
 
   </main>
 

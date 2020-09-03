@@ -1,29 +1,19 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-/* .active + .answer {
-  some styling here 
-} */
-
 body,
 html {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #03cea4;
+  background: #f5d0c5;
   font-family: sans-serif;
   box-sizing: border-box;
 }
 
-
-
-/* Hero */
+/* Hero  Video*/
 
 #hero{
   height: 55vh;
   width: 100%;
-  background: #c4ffb2;
+  background: #f5d0c5;
   display: flex;
   flex-shrink: inherit;
 }
@@ -51,6 +41,17 @@ html {
   object-fit: cover;
 }
 
+.tablet-video {
+  display: none;
+}
+
+.desktop-video {
+  display: none;
+}
+
+
+/* Hero Video Overlay */
+
 .container {
   position: absolute;
   color: whitesmoke;
@@ -64,7 +65,7 @@ html {
 }
 
 .container h1 {
-  font-size: 72px;
+  font-size: 60px;
   letter-spacing: 0.2em;
 }
 
@@ -81,6 +82,20 @@ html {
   text-shadow: 0 0 10px black;
 }
 
+.btn {
+  color: white;
+  padding: 10px 24px;
+  font-size: 20px;
+  text-decoration: none;
+  background: #d36135;
+  border-radius: 8px;
+  transition: 0.3s all;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
 
 
 /* Main */
@@ -95,12 +110,8 @@ html {
 
 .member {
   widows: 20px;
-  background: #a1cdf4;
-  padding: 5px;
-  margin:50px;
-  width: 500px;
-  border: 8px solid #7b4b94;
-  border-radius: 20px;
+  background: #f5d0c5;
+  width:40%;
 }
 
 .signup {
@@ -112,9 +123,7 @@ html {
 .member h2{
   text-align: center;
   color: black;
-  padding: 20px;
-  border: 10px solid black;
-  border-radius: 30px;
+  padding: 20px;  
 }
 
 input{
@@ -138,8 +147,8 @@ input[type=checkbox]
 
 input[type=submit]{
   margin-top: 30px;
-  width:99%;
-  background: #001d4a;
+  width:93%;
+  background: #774936;
   color: antiquewhite;
   font-size: 18px;
   font-weight: bold;
@@ -149,107 +158,163 @@ input[type=submit]{
 
 /* Accordian */
 
-.accordion{
-  widows: 20px;
-  background: #a1cdf4;
-  padding: 5px;
-  margin: 50px;
-  width: 300px;
-  border: 8px solid #7b4b94;
-  border-radius: 20px;
-  flex-flow: wrap;
+
+.accordion {
+  margin: 40px;
+  padding: 40px;
+  width: 40%;
+  background:#f5d0c5;
+ 
 }
 
-.accordion h1 {
+.question {
+  width: 97%;
+  margin: 0;
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+  background: #774936;
+  color: #fff;
+  cursor: pointer;
+}
+
+.question-text {
+  margin: 0;
+}
+
+.question-text::after {
+  content: '+';
   text-align: center;
-  color: black;
-  padding: 20px;
-  border: 10px solid black;
-  border-radius: 10px;
+  float: right;
+  width: 22px;
+  height: 20px;
+  padding-bottom: 2px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #fff;
 }
 
-.accordion-container {
-  align-items: ;
-  border: 2px solid #999;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  width: 200px;
-  margin: 50px;
+.question.active .question-text::after {
+  content: '×';
 }
 
-.accordion-header {
+.answer {
+  width: 97%;
+  height: 0;
+  margin: 0;
+  padding: 0 10px;
+  background: #d69f7e;
+  color: #0a0a0a;
+  font-size: 0.8rem;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+}
+
+.answer a {
+  color: #573139;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.answer a:hover {
+  text-decoration: underline;
+}
+
+.active + .answer {
+  opacity: 1;
+  height: 125px;
+  padding: 0 10px;
+}
+
+/*** FOOTER ***/
+
+footer {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #001d4a;
-  color: whitesmoke;
+  height: 60px;
   margin: 0;
-  padding: 15px;
-  cursor: grab;
+  padding: 10px 20px;
+  background: #3c0000;
+  color: #fff;
+  font-size: 12px;
 }
 
-
-.accordion-text {
-  border-top: 2px solid #999;
-  margin: 0;
-  padding: 15px;
+footer a {
+  color: #f5e3e7;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.accordion-text-container {
-  height: 0;
-  overflow: hidden;
-  transition: height .3s ease;
+footer a:hover {
+  text-decoration: underline;
 }
 
-.accordion-text-container.active {
-  height: 158px;
-}
+/*** MEDIA QUERIES ***/
 
-/* 2. Sticky navbar 
-
-body {
-  margin: 0;
-  height: 2000px;
-}
-
-.header {
-  padding: 20px;
-  background: #999;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.header.sticky + .accordion {
-  margin-top: 58px;
-}
-
-3. Responsive images 
-
-@media (max-width: 900px) {
-  .rwd-image {
-      width: 100%;
+@media (min-width: 668px) {
+  video {
+    height: 400px;
   }
-}
-*/
 
-@media (min-width: 600px ){
-
-  .accordion{
-    width: 500px;
-    
-    
+  .mobile-video {
+    display: none;
   }
-  .accordion-container {
-    width: 400px;
-    margin: 50px;
+
+  .tablet-video {
+    display: inline;
+  }
+
+  .overlay-paragraph {
+    display: initial;
+  }
+
+  .select-containers {
+    justify-content: space-between;
   }
   
+  fieldset {
+    flex-grow: 1;
+    width: 40%;
+  }
 
+  .active + .answer {
+    height: 80px;
+  }
 }
 
+@media (min-width: 1025px) {
+  video {
+    height: 600px;
+  }
 
+  .tablet-video {
+    display: none;
+  }
 
-/* 26 resolution 1024 */
+  .desktop-video {
+    display: inline;
+  }
+
+  .main-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  }
+
+  .sign-up {
+    margin: 0;
+  }
+
+  .accordion {
+    margin: 0 20px 0 0;
+  }
+  .active + .answer {
+    height: 90px;
+  }
+}
