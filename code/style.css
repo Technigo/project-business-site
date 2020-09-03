@@ -8,7 +8,7 @@ body,
 html {
   height: 100%;
   margin: 0px;
-  font-family: "open-sans", sans-serif;
+  font-family: "open sans", sans-serif;
 }
 
 * {
@@ -21,6 +21,8 @@ html {
   flex-direction: column;
 }
 
+/*** HERO ***/
+
 .hero-container {
   display: flex;
   flex-direction: column;
@@ -28,7 +30,7 @@ html {
   object-fit: cover;
   position: relative;
   overflow: hidden;
-  color: #fff;
+  color: #ECC8AF;
 }
 
 .hero-content {
@@ -53,7 +55,8 @@ html {
 
 .hero-action {
   background-color: rgba(255,255,255,0.2);
-  color: #fff;
+  /* color: #ffeddf; */
+  color: #ECC8AF;
   text-align: center;
   backdrop-filter: blur(15px);
   margin-top: 0.3em;
@@ -80,15 +83,86 @@ html {
   width: 100%;
 }
 
+/*** MAIN ***/
+
 .main-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #FFEDDF;
 }
 
 .main-wrapper section {
   margin: 25px;
+}
+
+/*** INFO ***/
+
+.info {
+  margin: 40px;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-header {
+  align-self: center;
+}
+
+.info-header h2 {
+  color: #3E4E50;
+  font-size: 24px;
+}
+
+/*** ACCORDION ***/
+
+.accordion {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.accordion-content {
+  border: 2px solid #999;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.accordion-header::after {
+  content: '\02795';
+  font-size: 13px;
+  color: rgb(3, 3, 3);
+}
+
+.accordion-header.active::after {
+  content: "\2212";
+}
+
+.accordion-text-container {
+  height: 0;
+  overflow: hidden;
+  transition: heigt 0.3s ease;
+}
+
+.accordion-text-container.active {
+  height: 158px;
+}
+
+.accordion-text {
+  border-top: 2px solid #999;
+  margin: 0;
+  padding: 15px;
 }
 
 .answer {
@@ -102,8 +176,6 @@ html {
 /*** MEDIA QUERIES ***/
 
 @media only screen and (min-width: 768px) {
-  
-  
 
   .hero-headline {
     font-size: 65px;
