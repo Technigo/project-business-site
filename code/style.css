@@ -1,9 +1,10 @@
 
-html {
-  box-sizing: border-box;
-}
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 body, html {
@@ -23,6 +24,10 @@ body, html {
   align-items: center;
   justify-content: center;
   height: 500px;
+}
+
+.logo {
+  width: 40%;
 }
 
 .hero-text {
@@ -66,13 +71,24 @@ p {
 
 
 /* Booking-system */
+.booking-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.moodbild {
+  width: 100%;
+}
 
 .booking{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 15px;
+  padding-bottom: 10px;
   background-color: antiquewhite;
 }
 
@@ -157,6 +173,11 @@ footer p{
 
 /* For tablet: */
 @media (min-width:600px) {
+
+  .logo {
+    width: 20%;
+  }
+
   .question {
     padding: 15px;
     margin: 2px;
@@ -177,7 +198,27 @@ footer p{
 
 /* For desktop: */
 @media (min-width:1025px)  {
-  
+
+  .booking-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  }
+
+  .moodbild {
+    width: 50%;
+  }
+
+  .booking{
+    width: 50%;
+    padding: 145px;
+  }
+
+  .logo {
+    width: 10%;
+  }
+
   .accordion {
     padding: 15px;
   }
@@ -192,6 +233,10 @@ footer p{
   padding: 15px;
   margin: 2px;
   width: 40%;
+}
+
+.information{
+  padding: 50px;
 }
 
 .information p{
