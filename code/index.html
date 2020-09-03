@@ -1,30 +1,175 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
+<html lang="en">
 
-    <!-- Signup form -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--google fonts link-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend+Giga&family=Noto+Sans+JP:wght@300&family=Oswald&family=Roboto:wght@300&display=swap"
+    rel="stylesheet" />
+  <!--bootstrap js-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+  <!-- main css link-->
+  <link rel="stylesheet" href="./style.css">
+  <title>Coffee shop</title>
+</head>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+</body>
+
+<header>
+  <!--video-header for DESKTOP-->
+
+  <h1 class="header">Coffee
+    <span>is always a good Idea</span> </h1>
+  <div class="video-container">
+    <video playsinline autoplay muted loop poster="placeholder.jpg" width="100%" height="800">
+      <source src="videos/video_header.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="menu">
+    <nav>
+      <a href="#">buy coffee</a>
+      <a href="#">about us</a>
+      <a href="#">news</a>
+      <a href="#">cafes</a>
+    </nav>
+  </div>
+  <div>
+    <button class="sign-in">Sign in</button>
+  </div>
+
+</header>
+
+<!--responsive image-->
+<!-- <picture>
+ <source media="(max-width: 768px)" srcset="./images/mobile-480.jpg">
+ <source media="(man-width: 1024px)" srcset="./images/tablet-800.jpg">
+ <img src="./images/original.jpg" alt="Beautiful coffee maker picture">
+</picture> -->
+
+<!--main section-->
+<div class="row main">
+  <!-- signup form -->
+  <div class="signup col-sm-6 ">
+    <legend>Sign up here:</legend>
+    <form action="http://httpbin.org/anything" method="POST">
+      <fieldset>
+        <div class="input_data">
+          <label>
+            Name:
+            <input name="name" type="text" class="form-group" placeholder="Type your last name" />
+          </label>
+          <label>
+            Email:
+            <input name="email" type="email" class="form-group" placeholder="Type your email" />
+          </label>
+          <label>
+            Password:
+            <input name="password" type="password" class="form-group" placeholder="Type your password" />
+          </label>
+          <label>
+        </div>
+        <div class="selection">
+          Who are you?
+          <select name="coffee_fan">
+            <option value="snob">coffee snob</option>
+            <option value="enthusiast">intermediate enthusiast</option>
+            <option value="noob">n00b</option>
+          </select>
+          </label>
+        </div>
+
+        <div class="radio-buttons">
+          <p>Please select your gender:</p>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label><br />
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label><br />
+          <input type="radio" id="other" name="gender" value="other" />
+          <label for="other">Other</label>
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" id="input_data_checkbox" name="input_data" />
+          <label for="checkbox">I agree to get cafeinated</label>
+        </div>
+        <div class="submit_form">
+          <button class="submit" value="SUBMIT">SUBMIT</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <!-- accordion -->
+
+  <div class="accordion row col-sm-6 text-center">
+    <div class="accordion-intro">
+      <h4>Wanna learn something about coffee today?</h4>
+    </div>
+    <div class="accordion-container">
+      <h3 id="accordion-header-1" class="accordion-header">
+        <span>Who discovered coffee?</span>
+        <span>▼</span>
+      </h3>
+      <div class="accordion-text-container ">
+        <p class="accordion-text">
+          "It was said that coffee was discovered by a goat herder in Ethiopia in the 1500s. He saw his goats eating
+          coffee
+          cherries. Afterwards, he observed a change in their behavior. They gained a high amount of energy and they
+          didn’t
+          sleep
+          at night. The herder shared his findings with local monks and then after they made a drink with coffee beans,
+          they
+          realized they could stay up all night and pray. Then, they spread the word to other Ethiopian monks and it
+          reached
+          across the civilized world."
+        </p>
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    </div>
+    <div class="accordion-container">
+      <h3 id="accordion-header-2" class="accordion-header">
+        <span>Cat poo or the most expesive coffee? </span>
+        <span>▼</span>
+      </h3>
+      <div class="accordion-text-container">
+        <p class="accordion-text">
+          "“Kopi Luwak” is the most expensive coffee in the world. It comes from Indonesia and is made from beans
+          digested
+          from the
+          Asian Palm Civet. In other words, it comes from cat poop. It sells for €350 and up per kilo!"
+        </p>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+    </div>
+    <div class="accordion-container">
+      <h3 id="accordion-header-3" class="accordion-header">
+        <span>Swedish king was studying coffee effect experimenting on people.. </span>
+        <span>▼</span>
+      </h3>
+      <div class="accordion-text-container">
+        <p class="accordion-text">
+          "The king had ordered this experiment to be conducted on identical twins who were sentenced to the death
+          penalty.
+          Their
+          penalty was commuted to life imprisonment on the condition that one twin drinks only coffee and the other
+          drink tea
+          for
+          the rest of their lives.
+
+          Two physicians were ordered to take tests and deliver the results to the king directly. However, these
+          physicians
+          mysteriously died, presumably of natural causes. Before the King could conclude his study, he passed away as
+          well."
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- javascript file -->
+  <script src="./script.js"></script>
   </body>
+
 </html>

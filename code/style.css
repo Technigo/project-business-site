@@ -1,7 +1,268 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 10;
+  background-color: burlywood;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* .header {
+  display: flex;
+  flex-direction: row;
+  padding: 0 13px;
+  justify-content: flex-start;
+  align-items: center;
+} */
+/***header***/
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 0;
+}
+/* 
+header h1 {
+  text-align: left;
+  font-size: 40px;
+  z-index: 1;
+  color: #fff;
+  padding: 20px;
+  margin: 15px;
+} */
 
-.active + .answer {
-  /* some styling here */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+video {
+  object-fit: fill;
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+  margin: 0px;
+  overflow: hidden;
+  /*margin-top: -190px;*/
+}
+
+nav a {
+  /* font: menu; */
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  /* float: right; */
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 24px;
+}
+/***sign in button***/
+.sign-in {
+  position: absolute;
+  font-size: 20px;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  border: 3px solid white;
+  background-color: transparent;
+  color: white;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+.sign-in:hover {
+  background: #fdffb6;
+  color: grey;
+}
+
+button .sign-in:active {
+  background: #fdffb6;
+  color: grey;
+}
+
+/***sign up form***/
+
+form {
+  max-width: 500px;
+  margin-left: 15px;
+  /* margin: 50px auto; */
+}
+
+legend {
+  font-family: "Lexend Giga", sans-serif;
+  color: grey;
+  text-decoration: none;
+  font-size: 20px;
+  border-bottom: 0px !important;
+  margin-left: 15px;
+}
+
+.form-group {
+  color: white;
+  font-family: "Lexend Giga", sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  border-radius: 5px;
+  line-height: 30px;
+  background-color: transparent;
+  border: 2px solid #fdffb6;
+  transition: all 0.5s;
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 500px;
+  box-sizing: border-box;
+  outline: 0;
+  color: grey;
+  /* -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; */
+}
+
+.form-group:focus {
+  border: 2px solid #fcff99;
+}
+
+.selection {
+  background-color: burlywood;
+  color: grey;
+  font-family: "Lexend Giga", sans-serif;
+}
+select {
+  background: burlywood;
+}
+
+.submit {
+  font-family: "Crimson", Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: #fcff99;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: #908aa8;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: 5px;
+  font-weight: 700;
+}
+.submit:hover {
+  background: #ececd3;
+}
+
+.input_data label {
+  margin-bottom: 5px;
+  padding-bottom: 1em;
+  color: grey;
+  font-family: "Lexend Giga", sans-serif;
+}
+
+.radio-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: grey;
+  background-color: burlywood;
+  font-family: "Lexend Giga", sans-serif;
+}
+
+.checkbox,
+checkbox {
+  margin-left: 25px;
+  color: grey;
+  background-color: burlywood;
+  font-family: "Lexend Giga", sans-serif;
+}
+/***accordion***/
+.accordion-intro {
+  margin-bottom: 40px;
+  color: grey;
+  font-size: 20px;
+  font-family: "Lexend Giga", sans-serif;
+}
+.accordion-container {
+  border: 2px solid #fdffb6;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: grey;
+  font-family: "Lexend Giga", sans-serif;
+  font-size: 20px;
+  padding: 4px;
+}
+
+.accordion-header {
+  display: inline-block;
+  margin: 0;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.accordion-text {
+  border-top: 2px solid #999;
+  margin: 0;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.accordion-text-container {
+  height: 0;
+  overflow: scroll;
+  transition: height 0.3s ease;
+}
+
+.accordion-text-container.active {
+  height: 200px;
+}
+
+/* 2. Sticky navbar */
+
+/* body {
+  margin: 0;
+  height: 2000px;
+}
+
+.header {
+  padding: 20px;
+  background: #999;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+} */
+/* 
+.header.sticky + .accordion {
+  margin-top: 58px;
+} */
+
+/* 3. Responsive images */
+
+@media (max-width: 900px) {
+  .rwd-image {
+    width: 100%;
+  }
+}
+
+@media (min-width: 901px) {
+  .rwd-image {
+    width: auto;
+  }
 }
