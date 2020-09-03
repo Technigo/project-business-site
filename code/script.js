@@ -9,13 +9,13 @@ const questions = document.querySelectorAll('.question');
 
 function toggle(event) {
   this.classList.toggle("active");
-  questions.forEach(question => {
+  /* questions.forEach(question => {
     if (question !== event.target){
       question.classList.remove('active');
     } else {
       question.classList.toggle('active');
     }
-  })
+  }) */
 }
  
 sectionOne.onclick = toggle
