@@ -1,7 +1,15 @@
-function toggle() {
-  this.classList.toggle("active")
-}
+var acc = document.getElementsByClassName("question");
+var i;
 
-document.getElementById("about-class").onclick = toggle
-document.getElementById("cost").onclick = toggle
-document.getElementById("location").onclick = toggle
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+ 
+var answer = this.nextElementSibling;
+  if (answer.style.display === "block") {
+    answer.style.display = "none";
+  } else {
+    answer.style.display = "block";
+  }
+});
+}

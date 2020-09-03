@@ -1,5 +1,5 @@
 body {
-  background: #141452;
+  background: #fff;
   color: #000;
   font-family: Verdana, sans-serif;
   font-size: 13px;
@@ -68,21 +68,20 @@ header {
   overflow: hidden;
   background-size: cover;
   background-position: center center;
-  display: block;
   text-align: center;
-  color: #fff
+  color: #fff;
 }
 
-.overlay-video {
-  background: none;
+.text-overlay {
+  padding: 8% 10% 0 10%;
   mix-blend-mode: overlay;
 }
 
 .headline {
   font-size: 50px;
   font-weight: 700;
-  font-family: 'Times New Roman', Times, serif;
-} 
+  font-family: "Times New Roman", Times, serif;
+}
 
 .header-blurb {
   font-size: 20px;
@@ -153,6 +152,7 @@ button {
 .tos {
   border: 1px dotted #3d3d8f;
   border-radius: 10px;
+  width: 275px;
 }
 
 .tos label a {
@@ -163,7 +163,7 @@ button {
   height: 40px;
   width: 200px;
   border: 2px solid #141452;
-  border-radius: 10px; 
+  border-radius: 10px;
   font-size: 14px;
   background-color: #fff;
 }
@@ -173,7 +173,6 @@ button {
   padding: 10px;
   width: 50%;
   background-color: #fff;
-  
 }
 
 .question {
@@ -183,7 +182,17 @@ button {
   background: #141452;
   padding: 5px;
   display: flex;
-  transition: 0.4s;
+  border: 2px solid #fff;
+}
+
+.question:before {
+  content: "\002b";
+  float: right;
+}
+
+.active:before {
+  content: "\2796";
+  color: #fff;
 }
 
 .answer {
@@ -192,6 +201,7 @@ button {
 
 .active + .answer {
   display: block;
+  padding-left: 8px;
 }
 
 /* Footer */
@@ -223,13 +233,12 @@ footer span {
 /* Media Queries */
 @media (min-width: 768px) {
   .nav-container {
-      justify-content: space-between;
+    justify-content: space-between;
   }
 
   header {
     height: 500px;
   }
-
 }
 
 /* desktop */
@@ -239,7 +248,7 @@ footer span {
   }
 
   .hamburger {
-      display: none;
+    display: none;
   }
 
   header {
