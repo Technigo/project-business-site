@@ -67,12 +67,13 @@ h1.header-heading {
   text-align: center;
   align-self: center;
   background-color: white;
+  border-radius: 25px;
+  padding: 10px;
   margin: 0px;
   font-size: 80px;
 }
 
 /* NAVIGATION */
-
 nav {
   display: flex;
   justify-content: center;
@@ -90,7 +91,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ERBJUDANDE */
+/* SIMHALLAR */
 
 .card-container {
   display: flex;
@@ -100,7 +101,7 @@ a:hover {
   justify-content: flex-start;
   background-color: #cde7f7;
   width: 100%;
-  padding: 60px 0pc 60px 0px;
+  padding: 60px 0px 60px 0px;
   margin: 0px;
 }
 
@@ -131,10 +132,6 @@ padding-left: 60px;
   padding-right: 60px;
   }
 
-.card-text {
-  width: 600px;
-  }
-
 .card-link {
   background-color: white; 
   color: black;
@@ -151,21 +148,18 @@ padding-left: 60px;
 
 li {
   list-style-type: dot;
-  width: 600px;
   font-size: 18px;
   line-height: 1.5;
   padding: 0px;
   margin: 5px;
-
 }
 
 /* ACCORDION */
-
 .accordion-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Det är den här som styr om det ska vara centrerat eller ej */
+  align-items: center; 
   background-color: #F0E3C7;
   padding-bottom: 40px;
 }
@@ -186,7 +180,7 @@ li {
 }
 
 .answer-container {
-  background-color: whitesmoke;
+  background-color: white;
   display: none;
   text-align: center;
   padding-left: 5px;
@@ -206,21 +200,25 @@ li {
 
 .form-container {
   display: flex;
+  flex-wrap: wrap;
   background-color: #F0E3C7;
-  padding: 0px 0px 60px 40px;
+  padding: 0px 0px 60px 100px;
   }
 
 .form-container1 {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  justify-content: flex-start;
+  padding-left: 100px;
+  width: 50%;
   }
 
 .form-container2 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  width: 40%;
+  justify-content: center;
+  padding: 80px 0px 0px 100px;
+  width: 50%;
 }
 
 .form-heading {
@@ -234,42 +232,44 @@ li {
   width: 75%;
 }
 
-.course-group {
-  justify-content: flex-start;
-}
-
 .form-group {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
 }
 
 label {
+  display: flex;
   font-weight: bold;
   font-size: 16px;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0px 10px 0px;
+  width: 75%;
 }
 
 input {
   border: none;
+  cursor: pointer;
   border-radius: 25px;
   height: 40px;
   width: 250px;
+  margin-bottom: 20px;
 }
 
 #meddelande {
   border: none;
+  margin-bottom: 20px;
 }
 
 button {
   border: none;
   font-weight: bold;
   background-color: #cde7f7;
+  cursor: pointer;  
   border-radius: 25px;
   font-size: 20px;
   height: 70px;
   width: 180px;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 /* FOOTER */
@@ -286,6 +286,47 @@ footer {
 
   .hero {
   height: 250px;
+  }
+
+  .card-container {
+  padding: 0px;
+  }
+
+  .card-right, .card-left {
+  margin: 30px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+
+  li {
+    font-size: 12px;
+  }
+
+  .card-link {
+    font-size: 14px;
+    padding: 15px 0px 15px 0px;
+    margin: 0px;
+  }
+
+  .form-container {
+  align-items: center;
+  padding: 40px;
+  width: 100%;
+  }
+
+  .form-container1 .form-container2 {
+  align-items: center;
+  }
+
+  #namn, #mejl {
+  flex-direction: flex-start;
+  }
+
+  #godkännande {
+  margin: 0px;
+  flex-direction: flex-start;
   }
 
 }
@@ -309,6 +350,11 @@ footer {
     font-size: 18px;
     padding: 20px 0px 20px 20px;
   }
+
+  .card-container {
+    padding: 0px;
+    margin-bottom: 0px;
+  }
   
   .card-right {
     flex-direction: column;
@@ -322,10 +368,29 @@ footer {
 
   .text-container-right {
     padding: 40px 0px 0px 0px;
+    width: 75%;
   }
 
   .card-img {
     width: 100%;
+  }
+
+  .accordion-container {
+  padding-bottom: 20px;
+  }
+
+  h3 {
+   font-size: 32px;
+   margin: 40px 0px 20px 0px;
+  }
+
+  h4 {
+  font-size: 16px;
+  }
+
+  .answer {
+  font-size: 14px;
+  width: 100%;
   }
 
   .text-container {
@@ -333,5 +398,33 @@ footer {
     padding: 20px 0px;
   }
 
+  .form-container {
+    padding: 0px 0px 40px 0px;
+    width: 100%;
+  }
 
+  .form-intro {
+  font-size: 14px;
+  width: 50%;
+  }
+
+  .form-container1, .form-container2 {
+  align-items: center;
+  width: 100%;
+  padding: 0px;
+  }
+
+  .form-group {
+    align-items: center;
+  }
+
+  label {
+    justify-content: center;
+    width: 40%;
+    padding: 15px 0px 10px 0px;
+  }
+
+  #anmälan {
+    padding: 0px;
+  }
 }

@@ -127,9 +127,8 @@
     <script src="./script.js"></script>
 
   <!-- Article! -->
-
   <article class="card-container">
-    <div class="card">
+    <div class="card-right">
       <img
         src="https://motionera.stockholm/optimized/c2x1_xxlarge/globalassets/motionera-simma-och-trana/simhallar/akeshovssimhall.jpg" 
         class="card-img" 
@@ -158,34 +157,37 @@
       <p class="form-intro"> Har du redan ett inlogg? Då kan du <a href="#">logga in</a> så slipper du ange dina uppgifter igen.</p>
 
     <h4>Välj kurs*</h4>
-      <div class="course-group">
-        <label for="kurs">Crawlkurs</label>
+      <div class="form-group">
+        <label for="kurs">Crawlkurs
         <input 
           id="kurs1" 
           type="radio" 
           value="courseValue"
           required
         />
+      </label>
       </div>
   
-      <div class="course-group">
-        <label for="kurs">Fjärilssim</label>
+      <div class="form-group">
+      <label for="kurs">Fjärilssim
         <input 
           id="kurs2" 
           type="radio" 
           name="courseValue"
           required
         />
+      </label>
       </div>
       
-      <div class="course-group">
-        <label for="kurs">Konstsim</label>
+      <div class="form-group">
+        <label for="kurs">Konstsim
         <input 
           id="kurs3" 
           type="radio" 
           name="courseValue"
           required
         />
+      </label>
       </div>
 
     <div class="form-group">
@@ -197,48 +199,50 @@
         required
       />
     </div>
-
-    <div class="form-group">
-      <label for="mejl">Mejladress*</label>
-      <input 
-        id="mejl" 
-        type="email"
-        name="emailValue"
-        required
-      />
-    </div>
   </form>
 
   <!-- Form part 2 -->
-
 <form 
   class="form-container2" 
   action="http://httpbin.org/anything"
   method="POST"
 >
+
+<div class="form-group">
+  <label for="mejl">Mejladress*</label>
+  <input 
+    id="mejl" 
+    type="email"
+    name="emailValue"
+    required
+  />
+</div>
+
     <div class="form-group">
-      <label for="meddelande">Om det är något du vill att vi ska veta kan du fylla i det här:</label>
+      <label for="meddelande">Om det är något du vill att vi ska veta kan du fylla i det här.</label>
       <textarea 
         id="meddelande"
         name="messageValue"
         cols="10" row="15"
         style="
-          width: 400px;
+          width: 250px;
           height: 200px;
           resize: none;
           border-radius: 25px;
+          cursor: pointer;
         ">
       </textarea>
     </div>
     
     <div class="form-group">
-    <label for="godkännande">Jag har läst igenom och <a href="#">godkänner villkoren</a>.*</label>
+      <label for="godkännande">Jag har läst igenom och godkänner villkoren.*
     <input 
       id="godkännande" 
       type="checkbox" 
       name="approvalValue"
       required
     />
+  </label>
     </div>
 
     <div class="form-group">
