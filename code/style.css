@@ -1,105 +1,147 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poiret+One&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poiret+One&display=swap");
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
   color: #000;
-  font-family: 'Poiret One', sans-serif;
+  font-family: "Poiret One", sans-serif;
 }
 
-header{
+header {
   height: 70vh;
-  background-image: url(./pictures/blue-art.jpg);
-  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+    url(./pictures/blue-art.jpg);
+  /* background-position: center; */
   background-size: cover;
-  border: 2px solid black;
 }
 
-.hero-image h1{
+.hero-image h1 {
   position: relative;
   text-align: center;
-  font-family: 'Lora';
+  font-family: "Lora";
   font-size: 10vh;
-}
-
-h1, h2, h3{
-  font-family: 'Poiret One';
-}
-
-h3{
+  color: #F5F1E8;
   margin: 0;
 }
 
-.wrapper{
+h1,
+h2,
+h3 {
+  font-family: "Poiret One";
+}
+
+h3 {
+  margin: 0;
+}
+p {
+  font-size: 16px;
+}
+.wrapper {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   padding: 20px;
   align-items: center;
   justify-content: center;
-  border: 2px solid black;
-  background: #ECE3D2;
+  background: rgb(236, 227, 210, 0.5);
 }
-.form-section{
+.form-section {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-form{
+
+form {
   display: flex;
-  font-family: 'Poiret One';
+  font-family: "Poiret One";
   flex-direction: column;
-  border: 2px solid black;
   padding: 5px;
   margin: 10px;
-  background: #D2D1BB;
+  width: 80%;
+  background: rgb(210, 209, 187, 0.3);
+  /* box-shadow: 2px 2px 10px 5px #aaaaaa; */
 }
 
-.request-form{
+.request-form {
   display: flex;
   flex-direction: column;
 }
 
-.login-form{
+.login-form {
   display: flex;
   flex-direction: column;
 }
-.accordion{
+
+:placeholder-shown {
+  font-family: "Poiret One";
+}
+button {
+  font-family: "Poiret One";
+  margin: 10px;
+  width: 200px;
+}
+label {
+  margin: 5px;
+}
+.accordion {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 50%;
 }
 
-.accordion-element{
+.accordion-element {
   margin-bottom: 5px;
   width: 100%;
 }
 
-.accordion-element p, .question{
+.accordion-element p,
+.question {
   padding: 15px;
 }
 
-.question, .answer{
+.question,
+.answer {
   margin: 0;
 }
 
-.question{
-  background: #D2D1BB;
+.question {
+  background: #d2d1bb;
+  position: relative;
 }
 
-.answer{
+.answer {
   height: 0;
   overflow: hidden;
   transition: height 0.3s ease;
-  background: #EDECE1;
+  background: rgb(210, 209, 187, 0.3);
 }
-
-
+.question::after {
+  content: "\002B";
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 2.5vh; 
+}
+.question.active::after {
+  content: "\2212";
+  font-size: 2.25vh;
+}
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active  + .answer{
+.active + .answer {
   height: 10vh;
   /* some styling here */
+}
+
+@media (min-width:1024px){
+  .wrapper{
+    flex-wrap: nowrap;
+  }
+  .form-section {
+    flex-wrap: nowrap;
+  }
 }
