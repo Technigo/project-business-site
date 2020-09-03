@@ -104,16 +104,19 @@ hero-container {
 }
 
 .hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   height: 80vh;
-  padding: 90px 0;
+  padding: 5.6rem 0;
   z-index: 5;
 }
 
 .hero-box {
   position: relative;
   text-align: center;
-  margin: 170px 40px 60px 40px;
+  /* margin: 170px 40px 60px 40px; */
   z-index: 6;
   /* height: 50vh; */
 }
@@ -121,11 +124,11 @@ hero-container {
 .hero-headline {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 68px;
+  font-size: 4.3rem;
   /* color: #fff; */
   color: #ECC8AF;
   z-index: 7;
-  margin: 0;
+  margin: 0 2rem;
 }
 
 .hero-overlay {
@@ -155,8 +158,14 @@ hero-container {
 
                                 /* INTRO-SECTION STARTS HERE */
 
+.accordion-section {
+  display: flex;
+  flex-direction: row;
+  
+}
+
 .intro-wrapper {
-  margin: 40px;
+  margin: 2.5rem;
 }
 
 .intro-section {
@@ -169,11 +178,12 @@ hero-container {
 }
 
 .intro-heading h2 {
+  margin-bottom: 1.2rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #495867;
   color: #C18C5D;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .introtext {
@@ -186,27 +196,40 @@ hero-container {
   font-size: 14px;
   color: #495867;
   width: 33%;
-  margin-right: 20px;
+  margin-right: 1.2rem;
 }
 
 .introtext p:last-of-type {
   margin-right: 0;
 }
                                   /* ACCORDION STARTS HERE */
+.accordion-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  align-items: flex-start;
+}
+
+.accordion-wrapper {
+  width: 60vw;
+}
+
 .accordion-header {
+  width: 90%;
+  font-size: 1.5rem;
   color: #495867;
   text-align: center;
-  font-weight: 500;
+  font-weight: 700;
   /* When using rem for margin, is is sized relative to the font-size set in the same element. So this means that margin 2.5rem here is 2 times 2.5 rem (which is the font-size here): if there is no font-size specified in rem-units in this element, the margin-rem sets itself relative to the root*/
-  margin: 1rem 0;
-  font-size: 2rem;
+  margin: auto;
 }
 
 .accordion {
   width: 90%;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   /* margin auto on the sides as to center the FAQ */
-  margin: 2rem auto;
+  margin: 2rem 3rem;
 }
 
 .accordion-item {
@@ -272,6 +295,19 @@ hero-container {
   padding: 1rem;
   line-height: 1.5rem;
   color: #fff;
+}
+
+.accordion-picture {
+  width: 30vw;
+  margin: 4.5rem 0 0 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.accordion-picture img {
+  width: 70%;
+  border-radius: 1rem;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.35);
 }
 
 @media (max-width:767px) {
