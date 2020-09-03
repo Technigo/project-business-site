@@ -14,35 +14,44 @@
   <body>
     <header>
       <div class="nav-container">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a class="nav-container__item" href="#">Home</a>
+        <a class="nav-container__item" href="#">About</a>
+        <a class="nav-container__item" href="#">Contact</a>
       </div>
 
-      <h1 class="topic">Did you sleep well?</h1>
+      <div class="hero">
+        <h1 class="hero__topic">Did you sleep well?</h1>
 
-      <div class="video">
-        <video autoplay muted loop class="myVideo desktop">
-          <source src="videos/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
-        </video>
-        <video autoplay muted loop class="myVideo tablet">
-          <source src="videos/SampleVideo_720x480_1mb.mp4" type="video/mp4" />
-        </video>
-        <video autoplay muted loop class="myVideo mobile">
-          <source src="videos/SampleVideo_360x240_1mb.mp4" type="video/mp4" />
-        </video>
+        <div class="hero__video">
+          <video autoplay muted loop class="desktop">
+            <source
+              src="videos/SampleVideo_1280x720_1mb.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <video autoplay muted loop class="tablet">
+            <source src="videos/SampleVideo_720x480_1mb.mp4" type="video/mp4" />
+          </video>
+          <video autoplay muted loop class="mobile">
+            <source src="videos/SampleVideo_360x240_1mb.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
     </header>
 
     <div class="main-content">
       <!-- Signup form -->
 
-      <section class="sections">
-        <form class="form" action="http://httpbin.org/anything" method="POST">
-          <div class="name">
+      <section class="main-content__section">
+        <form
+          class="signup-form"
+          action="http://httpbin.org/anything"
+          method="POST"
+        >
+          <div class="input-container">
             <label for="name">Name:</label><br />
             <input
-              class="input input-width"
+              class="input-container__input input-container__input--full-width"
               type="text"
               placeholder="Your Name"
               id="name"
@@ -51,10 +60,10 @@
             />
           </div>
 
-          <div class="last-name">
+          <div class="input-container">
             <label for="last-name">Last Name:</label><br />
             <input
-              class="input input-width"
+              class="input-container__input input-container__input--full-width"
               type="text"
               placeholder="Your Last Name"
               id="last-name"
@@ -63,10 +72,10 @@
             />
           </div>
 
-          <div class="email">
+          <div class="input-container">
             <label for="email">Enter your email:</label><br />
             <input
-              class="input input-width"
+              class="input-container__input input-container__input--full-width"
               type="email"
               placeholder="Your Email"
               id="email"
@@ -75,10 +84,10 @@
             />
           </div>
 
-          <div class="password">
+          <div class="input-container">
             <label for="password">Password:</label><br />
             <input
-              class="input input-width"
+              class="input-container__input input-container__input--full-width"
               type="password"
               placeholder="Your Password"
               id="password"
@@ -88,7 +97,7 @@
             />
           </div>
 
-          <div class="gender input">
+          <div class="input-container input-container--checkbox">
             <b>Gender:</b>
 
             <label for="male">
@@ -119,7 +128,7 @@
             >
           </div>
 
-          <div class="question input">
+          <div class="input-container input-container--checkbox">
             <b>Did you slept well?</b>
             <br />
 
@@ -134,9 +143,10 @@
             ><br />
           </div>
 
-          <div class="age input">
+          <div class="input-container input-container--checkbox">
             <label for="ageInputId"><b>Age (between 18 and 100):</b></label
             ><output name="age" id="ageOutputId">50</output>
+            <br />
             <input
               type="range"
               name="age"
@@ -148,76 +158,83 @@
             />
           </div>
 
-          <div class="message">
-            <textarea
-              class="input-width"
-              id="message"
-              placeholder="Message"
-              name="message"
-            ></textarea>
-          </div>
+          <textarea
+            class="input-container__input input-container__input--full-width"
+            id="message"
+            placeholder="Message"
+            name="message"
+            rows="10"
+          ></textarea>
 
-          <input class="submit" type="submit" value="submit" />
+          <div class="btn-submit">
+            <input class="submit" type="submit" value="submit" />
+          </div>
         </form>
       </section>
 
       <!-- Accordion -->
-      <section class="sections">
-        <div class="accordion-container">
-          <h1>FAQ</h1>
+      <section class="main-content__section">
+        <div class="accordion-list">
+          <h1 class="accordion-list__title">FAQ</h1>
 
-          <div id="section1" class="question">
-            <i class="icon-hand-down"></i>
-            <i class="icon-hand-up"></i>
-            How much sleep do you need by age?
-          </div>
-          <div class="answer">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
-              fusce ut placerat orci. Ipsum nunc aliquet bibendum enim facilisis
-              gravida neque. Sit amet justo donec enim diam vulputate ut
-              pharetra. Placerat duis ultricies lacus sed turpis tincidunt id
-              aliquet risus. Mollis nunc sed id semper risus in. Rhoncus dolor
-              purus non enim praesent elementum facilisis. Pulvinar elementum
-              integer enim neque.
-            </p>
-          </div>
-
-          <div id="section2" class="question">
-            <i class="icon-hand-down"></i>
-            <i class="icon-hand-up"></i>
-            How Much Is Too Much Sleep?
-          </div>
-          <div class="answer">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
-              fusce ut placerat orci. Ipsum nunc aliquet bibendum enim facilisis
-              gravida neque. Sit amet justo donec enim diam vulputate ut
-              pharetra. Placerat duis ultricies lacus sed turpis tincidunt id
-              aliquet risus. Mollis nunc sed id semper risus in. Rhoncus dolor
-              purus non enim praesent elementum facilisis. Pulvinar elementum
-              integer enim neque.
-            </p>
+          <div class="accordion">
+            <div id="section1" class="accordion__question">
+              <i class="icon-hand-down"></i>
+              <i class="icon-hand-up"></i>
+              How much sleep do you need by age?
+            </div>
+            <div class="accordion__answer">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Dictum fusce ut placerat orci. Ipsum nunc aliquet bibendum enim
+                facilisis gravida neque. Sit amet justo donec enim diam
+                vulputate ut pharetra. Placerat duis ultricies lacus sed turpis
+                tincidunt id aliquet risus. Mollis nunc sed id semper risus in.
+                Rhoncus dolor purus non enim praesent elementum facilisis.
+                Pulvinar elementum integer enim neque.
+              </p>
+            </div>
           </div>
 
-          <div id="section3" class="question">
-            <i class="icon-hand-down"></i>
-            <i class="icon-hand-up"></i>
-            What is the best time to sleep and wake up??
+          <div class="accordion">
+            <div id="section2" class="accordion__question">
+              <i class="icon-hand-down"></i>
+              <i class="icon-hand-up"></i>
+              How Much Is Too Much Sleep?
+            </div>
+            <div class="accordion__answer">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Dictum fusce ut placerat orci. Ipsum nunc aliquet bibendum enim
+                facilisis gravida neque. Sit amet justo donec enim diam
+                vulputate ut pharetra. Placerat duis ultricies lacus sed turpis
+                tincidunt id aliquet risus. Mollis nunc sed id semper risus in.
+                Rhoncus dolor purus non enim praesent elementum facilisis.
+                Pulvinar elementum integer enim neque.
+              </p>
+            </div>
           </div>
-          <div class="answer">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
-              fusce ut placerat orci. Ipsum nunc aliquet bibendum enim facilisis
-              gravida neque. Sit amet justo donec enim diam vulputate ut
-              pharetra. Placerat duis ultricies lacus sed turpis tincidunt id
-              aliquet risus. Mollis nunc sed id semper risus in. Rhoncus dolor
-              purus non enim praesent elementum facilisis. Pulvinar elementum
-              integer enim neque.
-            </p>
+
+          <div class="accordion">
+            <div id="section3" class="accordion__question">
+              <i class="icon-hand-down"></i>
+              <i class="icon-hand-up"></i>
+              What is the best time to sleep and wake up??
+            </div>
+            <div class="accordion__answer">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Dictum fusce ut placerat orci. Ipsum nunc aliquet bibendum enim
+                facilisis gravida neque. Sit amet justo donec enim diam
+                vulputate ut pharetra. Placerat duis ultricies lacus sed turpis
+                tincidunt id aliquet risus. Mollis nunc sed id semper risus in.
+                Rhoncus dolor purus non enim praesent elementum facilisis.
+                Pulvinar elementum integer enim neque.
+              </p>
+            </div>
           </div>
         </div>
       </section>
