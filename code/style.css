@@ -2,13 +2,22 @@ body {
   margin: 0;
   font-family: "Comic Sans MS", cursive, sans-serif;
   color: #056676;
-  background: #a3d2ca;
-  font-size: 14px;
+  background-color: #a3d2ca;
+  /* font-size: 14px; */
 }
 
 /*** HEADER ***/
-header {
-  background: #056676;
+.hero-img {
+  height: 70vh;
+  background: url(./images/hero-img-boat.jpg);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #e8ded2;
+}
+
+.navbar-menu {
+  background-color: #056676;
   color: #e8ded2;
   display: flex;
   flex-direction: row-reverse; /* Logo to left and hamburger-menu to right */
@@ -29,7 +38,7 @@ header {
 .hamburger-menu div {
   width: 35px;
   height: 3px;
-  background: #e8ded2;
+  background-color: #e8ded2;
 }
 
 .logo {
@@ -37,19 +46,8 @@ header {
   height: 70px;
 }
 
-nav {
-  display: none; /* Not display navbar menu */
-}
-
-/*** HERO IMAGE ***/
-.hero-img {
-  background: url(./images/hero-img-boat.jpg) no-repeat bottom left;
-  background-size: cover;
-  height: 50vh;
-  color: #e8ded2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.row-menu {
+  display: none; /* Don't display row menu */
 }
 
 /*** MAIN ***/
@@ -62,7 +60,7 @@ main {
 
 section {
   width: 80%;
-  background: #e8ded2;
+  background-color: #e8ded2;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -106,7 +104,7 @@ section h1 {
 
 .question::after {
   content: "\002B";
-  font-size: 30px;
+  /* font-size: 30px; */
   position: absolute;
   right: 0px;
 }
@@ -127,29 +125,31 @@ section h1 {
 @media (min-width: 768px) {
   /* Add styling specific for screen-size from 768px to 1023px */
   body {
-    font-size: 18px;
+    /* font-size: 18px; */
   }
 
-  header {
-    flex-direction: row; /* Logo to left and navbar menu to right */
+  .navbar-menu {
+    background-color: transparent;
+    flex-direction: row; /* Logo to left and row menu to right */
   }
 
   .hamburger-menu {
-    display: none; /* Not display hamburger-menu */
+    display: none; /* Don't display hamburger-menu */
   }
 
-  nav {
+  .logo {
+    width: 90px; /* Want the logo to be bigger */
+    height: 90px;
+  }
+
+  .row-menu {
     display: flex;
   }
 
-  nav a {
+  .row-menu a {
     color: #e8ded2;
     text-decoration: none;
     margin-right: 16px;
-  }
-
-  .hero-img {
-    height: 60vh;
   }
 
   main {
@@ -163,17 +163,12 @@ section h1 {
 
 @media (min-width: 1024px) {
   /* Add styling specific for screen-size from 1024px and above */
-  .logo {
-    width: 90px; /* Want the logo to be bigger */
-    height: 90px;
-  }
-
   a::after {
     display: block;
     content: "";
     width: 0px;
     height: 2px;
-    background: #e8ded2;
+    background-color: #e8ded2;
   }
 
   a.home:hover::after {
@@ -194,10 +189,6 @@ section h1 {
   a.four:hover::after {
     width: 50px;
     transition: width 0.5s;
-  }
-
-  .hero-img {
-    height: 70vh;
   }
 }
 
