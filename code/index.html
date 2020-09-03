@@ -9,8 +9,15 @@
   </head>
   <body>
     <header>
+      <div class="video-container">
+      <video autoplay muted loop>
+        <source src="videos/production ID_4101893.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="header-content">
       <h1>Free Walking Tour</h1>
       <h2>Stockholm - Södermalm</h2>
+    </div>
     </header>
 
     <main>
@@ -33,13 +40,10 @@
         </div>
       </div>
 
-      <form id="tuesday">
+      <form action="https://httpbin.org/anything" id="tuesday" method="POST">
 
-        <!-- <label for="firstName">First name:</label>
-        <input type="text" id="firstName" class="firstName" name="firstName"> -->
-
-        <label for="lastName">Name:</label>
-        <input type="text" id="lastName" class="lastName" name="lastName">
+        <label for="name">Name:</label>
+        <input type="text" id="name" class="name" name="name" required>
 
         <label for="email">Email:</label>
         <input type="email" id="email" class="email" name="email">
@@ -51,7 +55,7 @@
 
       <div>
         <label for="firstTime">10 AM:</label>
-        <input type="radio" id="firstTime" name="time" value="firstTime" class="time">
+        <input type="radio" id="firstTime" name="time" value="firstTime" class="time" required>
 
         <label for="secondTime">3 PM:</label>
         <input type="radio" id="secondTime" name="time" value="secondTime" class="time">
