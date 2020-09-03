@@ -2,6 +2,125 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+/* .active + .answer {
+  /* some styling here 
+ */
+
+* {
+  margin: 0;
 }
+
+body {
+  background #fff;
+  margin:0; 
+  height: 1500px;
+}
+
+/**** HEADER ****/
+
+header {
+background-color: #fff;
+text-align: center;
+margin: 5px;
+}
+
+header img {
+  height: 100px;
+  padding: 10px;  
+}
+
+.hero-image {
+  height: 600px;
+  background-image: url('balloons.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment:fixed;
+  background-position: center;
+  background-size:cover;
+}
+
+.hero text {
+  Font-Family: Helvetica;
+  Font-Size: 48px;
+}
+
+h1 {
+  Font-Family: Helvetica;
+  Font-Size: 32px;
+  margin: 10px
+}
+
+/**** ACCORDION ****/
+
+.accordion-container {
+  margin:15px;
+  background: lightblue;
+  border: 2px solid #0b6ba8;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.accordion-element {
+  margin: 0;
+  border-top: 1px solid #0b6ba8;
+  padding:0px
+}
+
+
+.accordion-header {
+  background: #fff;
+  Font-Family: Helvetica;
+  Font-Size: 26px;
+  margin: 0;
+  padding: 20px;
+}
+
+
+.accordion-text-container {
+  height: 0;
+  overflow: hidden;
+  transition: height .3s ease;
+}
+
+.accordion-text-container.active {
+  height: 150px;
+}
+
+.accordion-text {
+  Font-Family: Helvetica;
+  Font-Size: 16px;
+  margin: 0;
+  padding:15px;
+}
+
+.active {
+  height: auto;
+}
+
+
+/**** FORM ****/
+
+
+
+/**** FOOTER ***/
+
+
+.footer {
+  display: flex;
+  background: #0b6ba8;
+  height: 60px;
+  margin: 0px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-text {
+  Font-Family: Helvetica;
+  Font-Size: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  
+} 
