@@ -3,28 +3,147 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>The business site</title>
+    <link rel="stylesheet" href="./style.css">
+    <!--Link to google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Shadows+Into+Light&display=swap" rel="stylesheet">
   </head>
+
   <body>
-    <!-- video or image as a header is cool :) -->
+    <!-- header with navbar and hero image -->
+    <header>
+      <div class="hero-video">
+        <video 
+        class="video-large"
+        loop
+        muted
+        autoplay
+        preload="auto">
+          <source src="./videos/Video_L.mp4" type="video/mp4">
+        </video>
+        <video 
+        class="video-medium"
+        loop
+        muted
+        autoplay
+        preload="auto">
+          <source src="./videos/Video_M.mp4" type="video/mp4">
+        </video>
+        <video 
+        class="video-small"
+        loop
+        muted
+        autoplay
+        preload="auto">
+          <source src="./videos/Video_S.mp4" type="video/mp4">
+        </video>
 
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+       
+        <div class="hero-text">
+          <h1>The business site</h1>
+          <p>Sign up now!</p>
+        </div>
       </div>
+      
+    </header>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+
+    <section class="info">
+
+      <!-- Signup form -->
+      <section class="sign-up">
+        <div class="toggle-links">
+          <a href="#">SIGN UP</a>
+          <a href="#">SIGN IN</a>
+        </div>
+        <form action="http://httpbin.org/anything" method="POST">
+          <div class="form-group">
+              <label for="firstName">First name</label>
+              <input
+                  id="firstName"
+                  type="text"
+                  placeholder="First name"
+                  name="firstNameValue"
+              />
+          </div>
+          <div class="form-group">
+              <label for="lastName">Last name</label>
+              <input
+                  id="lastName"
+                  type="text"
+                  name="lastNameValue"
+              />
+          </div>
+          <div class="form-group">
+              <label for="email">Email address</label>
+              <input
+                  id="email"
+                  type="email"
+                  name="emailValue"
+              />
+          </div>
+          <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" name="passwordValue">
+          </div>
+          <div class="form-group">
+            <input type="checkbox" name="checkbox1Value">
+            <label class="checkbox" for="checkbox1">I agree with the terms and conditions</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" name="checkbox2Value">
+            <label class="checkbox" for="checkbox2">Yes, I want to subscribe to newsletter</label>
+          </div>
+          <button class="form-submit" type="submit">JOIN NOW</button>
+        </form>
+      </section>
+
+    
+
+      <!--ACCORDION SECTION-->
+
+      <section class="accordion">
+        
+        <h2>FAQ</h2>
+
+        <div class="question" id="section1">
+          <h3>Question 1</h3>
+        </div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <div class="question" id="section2">
+          <h3>Question 2</h3>
+        </div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <div class="question" id="section3">
+          <h3>Question 3</h3>
+        </div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <div class="question" id="section4">
+          <h3>Question 4</h3>
+        </div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+
+      </section>
+
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <footer>
+      <p>Project 3, The business site, by Anna Hellqvist @ Technigo Bootcamp 2020</p>
+    </footer>
+
+    
+    <!-- Link to the javascript file -->
+    <script src="./script.js"></script>
   </body>
 </html>
