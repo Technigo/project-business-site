@@ -2,9 +2,20 @@ const accordionItemHeaders = document.querySelectorAll(".question");
 
 accordionItemHeaders.forEach(accordionItemHeader => {
   accordionItemHeader.addEventListener("click", event => {
+    const currentlyActiveAccordionItemHeader = document.querySelector(".question.active");
+    if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
+      currentlyActiveAccordionItemHeader.classList.toggle("active");
+      
+    }
+
     accordionItemHeader.classList.toggle("active");
+    const accordionItemBody = accordionItemHeader.nextElementSibling;
+    if(accordionItemHeader.classList.contains("active")) {
+      accordionItemBody.getElementsByClassName.maxHeight = accordionItemBody.scrollHeight + "px";
+    }
   });
 });
+
 
 
 const questionOne = document.getElementById("question-1");
@@ -63,3 +74,13 @@ questionTwo.onclick = onQuestion2Click;
 questionThree.onclick = onQuestion3Click;
 questionFour.onclick = onQuestion4Click;
 questionFive.onclick = onQuestion5Click;
+
+/*
+function toggle() {
+  this.classList.toggle("active");
+}
+document.getElementById("question-1").onclick = toggle;
+document.getElementById("question-2").onclick = toggle;
+document.getElementById("question-3").onclick = toggle;
+document.getElementById("question-4").onclick = toggle;
+document.getElementById("question-5").onclick = toggle;*/

@@ -5,8 +5,6 @@ body {
   background-color: #e8cccb;
   margin: 0;
   color: #22031F;
-  font-Family: 'Roboto', Sans-Serif;
-  font-Size: 48px;
   font-Family: 'Lora', Serif;
   font-Size: 14px;
 }
@@ -16,7 +14,7 @@ main { /** The area containing the form and the FAQ. **/
   justify-content: space-evenly;
   padding: 20px;
   border-top: 15px solid white;
-  height: 110vh;
+  height: 120vh;
 }
 
 /*** HERO-VIDEO ***/
@@ -35,8 +33,10 @@ main { /** The area containing the form and the FAQ. **/
   text-align: center;
   margin: 5px;
   color: #22031F;
-  font-size: 106px;
   text-shadow: 3px 3px #87B38D;
+  font-Family: 'Roboto', Sans-Serif;
+  font-Size: 106px;
+  
 }
 
 .hero-image h3 { /* Text on hero-image and placement of it */
@@ -54,6 +54,11 @@ main { /** The area containing the form and the FAQ. **/
   padding: 10px 20px;
   width: 500px;
   max-height: 630px;
+  border-radius: 5%;
+}
+
+h2 {
+  font-Family: 'Roboto', Sans-Serif;
 }
 
 .form-container:hover { /* When hovering the full container-box */
@@ -120,6 +125,17 @@ button:hover { /** How the button shall look when pointing on it - it gets flat 
   flex-direction: column;
   width: 500px;
   max-height: 630px;
+  border-radius: 5%;
+}
+
+.accordion-container-1 {
+  background-color: white;
+  padding-bottom: 20px;
+}
+
+.accordion-container-2 {
+  background-color: #e1e8ed;
+  padding-bottom: 20px;
 }
 
 .accordion:hover { /* When hovering */
@@ -141,12 +157,16 @@ button:hover { /** How the button shall look when pointing on it - it gets flat 
 .question::after {
   content: "\002B";
   font-size: 24px;
-  position: absolute;
-  right: 200px;
+  float: left;
+  margin-right: 10px;
 }
 
 .question.active::after {
   content: "\2212";
+}
+
+.question.remove::after {
+  content: "\002B";
 }
 
 .answer-container {
@@ -185,7 +205,7 @@ img { /* Styling of LinkedIn logo */
 }
 
 /*** Media queries ***/
-@media screen and (max-width: 1024px) { /* Tablet device */
+@media screen and (max-width: 1121px) { /* Tablet device - I choosed my own measures on width to make the header text fit nicely with the hero-image.*/
   body {
     background-color: #d4b4c4;
   }
@@ -223,6 +243,10 @@ img { /* Styling of LinkedIn logo */
   .form-container, .accordion, button {
     width: 100%;
   }
+
+  .form-container, .accordion {
+    border-radius: 0%;
+  }
    
   .form-container:hover, .accordion:hover { /* When hovering */
     box-shadow: 3px 3px 20px 5px #98727d;
@@ -232,8 +256,8 @@ img { /* Styling of LinkedIn logo */
     background-color: #bcb6c4;
   }
 
-  .question::after {
-    right: 60px;
+  .accordion-container-2 {
+    background-color: #eae4ed;
   }
 }
 
@@ -274,6 +298,10 @@ img { /* Styling of LinkedIn logo */
     text-shadow: 5px 3px 4px white;
   }
 
+  .form-container, .accordion {
+    border-radius: 5%;
+  }
+
   .form-container, .accordion, button, #fullName, #companyName, #mailAdress, #passWord, footer {
     width: 100%;
     background-color: #F3ECEF;
@@ -283,7 +311,16 @@ img { /* Styling of LinkedIn logo */
     max-height: 800px;
   }
 
-  .question::after {
-    right: 35px;
+  .accordion-container-2 {
+    background-color: #f0e4e6;
   }
+
+  .form-container:hover, .accordion:hover { /* When hovering */
+    box-shadow: 3px 3px 10px 5px #e08b87;
+  }
+
+  .question::after {
+    margin-top: 10px;  
+    margin-right: 10px;
+   }
 }
