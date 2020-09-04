@@ -38,7 +38,7 @@ function validateForm() {
     return false;
   } else if (mail.test(email) === false) {
     document.getElementById("error").innerHTML =
-      "Check if your e-mail is correct!";
+      "Check if your e-mail is correct";
     return false;
   } else if (radio === "") {
     document.getElementById("error").innerHTML = "Select a gender!";
@@ -56,23 +56,32 @@ const accordionHeader2 = document.getElementById("accordion-header-2");
 const accordionHeader3 = document.getElementById("accordion-header-3");
 
 const onAccordion1Click = () => {
+  accordionHeader1.classList.toggle("active");
   accordionHeader1.nextElementSibling.classList.toggle("active");
 
+  accordionHeader2.classList.remove("active");
   accordionHeader2.nextElementSibling.classList.remove("active");
+  accordionHeader3.classList.remove("active");
   accordionHeader3.nextElementSibling.classList.remove("active");
 };
 
 const onAccordion2Click = () => {
+  accordionHeader2.classList.toggle("active");
   accordionHeader2.nextElementSibling.classList.toggle("active");
 
+  accordionHeader1.classList.remove("active");
   accordionHeader1.nextElementSibling.classList.remove("active");
+  accordionHeader3.classList.remove("active");
   accordionHeader3.nextElementSibling.classList.remove("active");
 };
 
 const onAccordion3Click = () => {
+  accordionHeader3.classList.toggle("active");
   accordionHeader3.nextElementSibling.classList.toggle("active");
 
+  accordionHeader1.classList.remove("active");
   accordionHeader1.nextElementSibling.classList.remove("active");
+  accordionHeader2.classList.remove("active");
   accordionHeader2.nextElementSibling.classList.remove("active");
 };
 

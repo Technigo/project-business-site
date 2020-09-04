@@ -63,6 +63,7 @@ h1 {
 
 h2 {
   text-align: center;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -76,6 +77,9 @@ h3 {
 h4 {
   display: inline;
   margin-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
 }
 
 p {
@@ -89,6 +93,7 @@ button {
 
 button:focus {
   outline: 2px solid #fff;
+  outline-offset: 4px;
 }
 
 a:focus {
@@ -107,8 +112,9 @@ header {
 }
 
 video {
-  min-height: 100vh;
-  min-width: 177.8vh;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
   position: absolute;
 
   /* center */
@@ -329,11 +335,14 @@ input[type="text"]:focus {
   border-radius: 27px;
   padding-left: 20px;
   transition: 0.3s;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
 }
 
 input::placeholder {
   color: rgba(0, 0, 0, 0.2);
   font-family: "Arvo", serif;
+  font-size: 14px;
 }
 
 input:hover {
@@ -356,6 +365,12 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: #000;
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+.checkbox-container a:hover {
+  text-decoration: underline;
+  color: #000;
+  transition: 0.3s;
 }
 
 .form-submit {
@@ -389,6 +404,8 @@ select:-webkit-autofill:focus {
 }
 
 .error {
+  font-size: 20px;
+  font-weight: 900;
 }
 
 /* radio */
@@ -461,6 +478,7 @@ select:-webkit-autofill:focus {
 
 .radiobutton-container input:focus + .custom-radio {
   outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 /* check-box */
@@ -527,15 +545,10 @@ select:-webkit-autofill:focus {
 
 .checkbox-container input:focus + .custom-checkbox {
   outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 /*** accordion ***/
-
-.accordion {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .accordion-container {
   width: 40%;
@@ -544,11 +557,38 @@ select:-webkit-autofill:focus {
   margin: 20px;
 }
 
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 80%;
+  margin-bottom: 24px;
+}
+
+.accordion-header::after {
+  content: "▼";
+  transition: 0.2s;
+}
+
+.accordion-header.active::after {
+  content: "▲";
+  color: #fff;
+  transition: 0.2s;
+}
+
 .accordion-text-container {
   height: 0;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.4);
   width: 80%;
+  font-size: 20px;
   box-sizing: border-box;
   text-align: left;
   transition: 0.5s ease;
@@ -565,13 +605,8 @@ select:-webkit-autofill:focus {
   margin-right: 10px;
 }
 
-.accordion-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  width: 80%;
-  margin-bottom: 24px;
+.accordion-icon.active {
+  margin-right: 20px;
 }
 
 .accordion-text {
