@@ -4,9 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" size="32x32" href="./favicon 32*32.png">
+    <link rel="icon" type="image/png" size="16x16" href="./favicon 16*16.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Project 3 - Vattenverket</title>
+    <title>Vattenverket</title>
   </head>
   <body>
     <header> 
@@ -76,7 +78,6 @@
         </div>
         <div class="accordion-text-container">
           <div class="accordion-text">
-            <img src="./unsplash-accordion-cinnamonbun.jpg" alt="cinnamon bun">
             <p>Excellent choice!</p>
           </div>
         </div>
@@ -88,7 +89,6 @@
         </div>
         <div class="accordion-text-container">
           <div class="accordion-text">
-            <img src="./unsplash-accordion-croissant.jpg" alt="croissant">
             <p>Excellent choice!</p>
           </div>
         </div>
@@ -100,7 +100,6 @@
         </div>
         <div class="accordion-text-container">
           <div class="accordion-text">
-            <img src="./unsplash-accordion-everything.jpg" alt="pasteries">
             <p>Excellent choice!</p>
           </div>
         </div>
@@ -110,98 +109,98 @@
 
 
     <!----FORM---->
-    <form id="form" class="form" action="http://httpbin.org/anything" method="POST">
-        <h3>Make your reservation</h3>
-        <div id="firstName" class="form-group">
-          <label for="firstName"><p>First name</p></label>
-          <input
-            type="text"
-            name="lastName"
-          />
-        </div>
+    <section class="form-wrapper">
+      <form id="form" class="form" action="http://httpbin.org/anything" method="POST" target="blank">
+          <h3>Make your reservation</h3>
+          <div class="form-group">
+            <label for="firstName">First name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="lastName"
+                required pattern=".{2,}"
+              />
+          </div>
 
 
-        <div id="lastName" class="form-group">
-          <label for="lastName">
-            <p>Last name*</p>
-          </label>
-          <input
-            type="text"
-            name="lastName"
-            required
-          />
-        </div>
-       
-      
-        <div id="reservationTime" class="form-group">
-          <label>
-            <p>Reservation for?</p>
-            <input type="radio" name="time" value="breakfast">
-            <label for="time"><p>Breakfast</p></label>
+          <div class="form-group">
+            <label for="lastName">Last name*</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                required
+              />
+          </div>
+          
+          <!---JUST ADDED TO TRY TO CUSTOM MY RADIO BUTTIN-->
+          <div class="wrapperRadio">
+            <label class="radiobtnContainer">
+              Breakfast
+              <input type="radio" name="time" value="breakfast">
+              <span class="custom-radio"></span>
+            </label>
 
-            <input type="radio" name="time" value="lunch">
-            <label for="time"><p>Lunch</p></label>
+            <label class="radiobtnContainer">
+              Lunch
+              <input type="radio" name="time" value="lunch">
+              <span class="custom-radio"></span>
+            </label>
 
-            <input type="radio" name="time" value="dinner">
-            <label for="time"><p>Dinner</p></label>
-          </label>
-        </div>
+            <label class="radiobtnContainer">
+              Dinner
+              <input type="radio" name="time" value="dinner" checked>
+              <span class="custom-radio"></span>
+            </label>
+          </div>
+          
+          <div class="form-group">
+            <label for="date">Date*</label>
+              <input
+                type="date"
+                id="date"
+                name="date"
+                required
+              />
+          </div>
 
-        
-        <div id="date" class="form-group">
-          <label for="date">
-            <p>Date*</p>
-          </label>
-          <input
-            type="date"
-            name="date"
-            required
-          />
-        </div>
 
-
-        <div id="phoneNr" class="form-group">
-          <label for="phone">
-            <p>Phone number</p>
-          </label>
-          <input
-            type="tel"
-            name="phone"
-            pattern="[0-7]{3}-[0-9]{7}"
-            placeholder="07x-1234567"
-          />
-        </div>
-        
-        
-        <div id="email" class="form-group">
-          <label for="email">
-            <p>E-mail*</p>
-          </label>
-          <input
-            type="email"
-            name="email"
-            required
-          />
-        </div>       
-        
-        
-        <div id="findUs" class="form-group">
-          <label>
-            <p>How did you find us?</p>
-            <input type="checkbox" name="recommendation" value="friend">
-            <label for="recommendation"><p>Friend</p></label>
-
-            <input type="checkbox" name="recommendation" value="thatsUp">
-            <label for="recommendation"><p>ThatsUp</p></label>
-
-            <input type="checkbox" name="recommendation" value="other">
-            <label for="recommendation"><p>Other</p></label>
-          </label>
-        </div>
-        <button type="submit">
-          <p>Submit</p>
-        </button>
-    </form>
+          <div class="form-group">
+            <label for="phoneNr">Phone nr</label> 
+              <input
+                type="tel"
+                id="phoneNr"
+                name="phone"
+                pattern="[0-7]{3}[0-9]{7}"
+                placeholder="07x-1234567"
+              />
+          </div>
+          
+          
+          <div class="form-group">
+            <label for="eMail">E-mail*</label>
+              <input
+                type="email"
+                id="eMail"
+                name="email"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              />
+          </div>       
+          
+          <div class="wrapperCheckbox">
+            <label class="checkboxContainer">
+              I agree to terms and conditions
+              <input type="checkbox" value="agree" name="checkbox" required>
+              <span class="custom-checkbox"></span>
+            </div>
+          </div>
+          
+          <button type="submit">
+            <p>Submit</p>
+          </button>
+      </form>
+    </section>
 
 
     <footer>

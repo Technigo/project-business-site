@@ -56,7 +56,8 @@ p {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color:#373B3E;  
+  background-color:#373B3E; 
+  z-index: 1; 
 }
 
 .nav-bar {
@@ -71,6 +72,7 @@ p {
   text-transform: uppercase;
   border-radius: 5px;
   font-size: 18px;
+  border: 1px solid transparent;
 }
 
 .nav-bar a:hover {
@@ -124,10 +126,12 @@ p {
 
 .hero {
   height: 70vh;
-  background: url(./unsplash-hero.jpg) no-repeat bottom center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+  url(./unsplash-hero.jpg) no-repeat bottom center;
   background-size: cover;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 10vw; 
   color: #fff;
   position: relative;
@@ -174,41 +178,35 @@ p {
 
 /****ACCORDION****/
 
+.accordion h3 {
+  margin-left: 0;
+  align-self: center;
+}
+
 .accordion {
   width: 100%;
-  margin: 3vw auto;
-  background-color: mintcream;
+  margin: 3vh auto;
+  background-color: #f5fffa;
   padding-top: 15px;
   padding-bottom: 15px;
+  display: flex; 
+  flex-direction: column; 
 }
 
 .accordion-element {
   background-color: mintcream;
-  margin-left: 3vw;
   margin-bottom: 10px;
   box-shadow: 0 1px 1px 0 rgba(0,0,0,0.3);
-  width: 60%;
-}
-
-.accordion-header:after {
-  content: "\002b";
-  position: absolute;
-  right: 20px;
-}
-
-.accordion-header:after + .active{
-  content: '\002D';
-  position: absolute;
-  right: 20px;
-  top: 15px;
+  width: 80%; 
+  align-self: center; 
 }
 
 .accordion-header {
-  padding: 20px;
+  padding: 20px; 
   text-transform: uppercase;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  position: relative; 
   cursor: pointer; 
 }
 
@@ -216,81 +214,67 @@ p {
   background-color: rgba(0,0,0,0.2);
 }
 
+.accordion-header:after {
+  content: "\002b";
+  right: 20px;
+}
+
+.accordion-header.active:after {
+  content: '\002D';
+  right: 20px;
+}
+
 
 .accordion-text-container {
   height: 0;
   overflow: hidden;
-  transition: height .5s ease;
-}
-
-.accordion-text img {
-  width: 200px;
-  object-fit: cover;
-  border-radius: 2px;
-  margin-right: 10px;
+  transition: height 0.5s ease-out;
+  background-color: white;
 }
 
 .accordion-text {
   padding: 20px;
   border-top: 1px solid;
   border-image: linear-gradient(to right, #cceedd, transparent) 1;
-  display: flex;
-  align-items: center;
   background-color: #ffff;
 }
 
 
-.active {
-  height: 175px;
+.accordion-text-container.active {
+  height: 5vh;
 }
-
-/***HOW DO I MAKE THIS WORK?***/
-.active + #accordion-header-1:after {
-  content: '\002D';
-  position: absolute;
-  right: 20px;
-  top: 15px;
-}
-
-
-
-/***TECHNIGO NOTES ****/
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
-
 
 /*****INPUT FORM****/
 
-.form {
-  display: flex;
-  flex-direction: column;
-  margin-left: 3vw;
-  margin-bottom: 3vh;
+.form-wrapper {
+  display:flex;
+  justify-content: center;
+  margin: 3vh auto;
 }
 
+.form {
+  border: 1px;
+  padding: 20px;
+  border-radius: 3px;
+  background: radial-gradient(circle, #e0ece4 0%, #EAEAEA 100%);
+}
+
+
 .form-group {
-  margin-bottom: 15px;
+  padding: 15px;
   display:flex;
   align-items: center;
 }
 
-.form-group label {
+form label {
   width: 100px;
+}
+
+.form-group label {
+  font-family: inherit;
+  font-weight: 200;
+  font-size: 14px;
   margin-right: 15px;
-}
-
-/***HOW DO I STYLE THEM IN A ROW?????***/
-#reservationTime, #findUs {
-  display: block;
-}
-
-#reservationTime p, #findUs p {
-  display: inline-block;
 }
 
 input {
@@ -303,14 +287,120 @@ input {
   margin-left: 0;
 }
 
-label p {
-  font-size: 14px;
-}
-
 ::placeholder {
   font-size: 12px;
   font-family: inherit;
 }
+
+
+.wrapperRadio {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+
+.radiobtnContainer {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+label.radiobtnContainer {
+  font-family: inherit;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.radiobtnContainer input {
+  /*position: absolute;*/
+  opacity: 0;
+  cursor: 0;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio {
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #e1d5d5;
+}
+
+.radiobtnContainer input:checked ~.custom-radio:after {
+  display: block;
+}
+
+.custom-radio:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  background-color: #373B3E;
+  border-radius: 50%;
+  display: none;
+}
+
+.wrapperCheckbox {
+  padding: 15px;
+}
+
+.checkboxContainer {
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+label.checkboxContainer {
+  font-family: inherit;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.checkboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox {
+  position: absolute;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #e1d5d5;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkboxContainer input:checked ~.custom-checkbox:after {
+  display: block;
+}
+
+.custom-checkbox:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  border: solid #373B3E;
+  border-width: 0 3px 3px 0;
+  top: 5px;
+  left: 7px;
+  transform: rotate(45deg);
+  display: none;
+}
+
 
 button {
   width: 130px;
@@ -357,27 +447,27 @@ button:hover:after, button:hover:before {
 }
 
 
+/***ACCORDION***/
+.accordion-text-container.active {
+  height: 10vh;
+}
+
 /****FOOTER****/
 
 footer {
-  background-color: mintcream;
+  background-color: rgb(208, 211, 209);
   display: grid;
   align-content: center;
   gap: 15px;
 }
 
-.copyright {
-  background-color: #d2ebde;
+.copyright, .contacts, .social {
   padding: 2vw;
 }
 
 .copyright img {
   height: 70px;
   margin-top: 10px;
-}
-
-.contacts {
-  padding: 2vw;
 }
 
 .contacts span {
@@ -391,10 +481,6 @@ footer {
   margin-bottom: 15px;
 }
 
-.social {
-  background-color:#d2ebde; 
-  padding: 2vw;
-}
 
 .social i {
   color:black;
@@ -421,7 +507,6 @@ footer {
 
   .hero {
     flex-direction: column;
-    justify-content: center;
   }
 
   .bakery-container {
@@ -441,19 +526,23 @@ footer {
     margin-left: 10px;
   }
 
+  /***ACCORDION***/
+  .accordion-text-container.active {
+    height: 10vh;
+  }
+
+  /****FORM****/
+  .form-wrapper {
+    justify-content: flex-start;
+    margin-left: 10vw;
+  }
+
   /*FOOTER*/
   footer {
     grid-template-columns: 30% 30% 30%;
     justify-content: center;
     padding: 3vw;
   }
-  .copyright {
-    background-color: mintcream;
-  }
-  .social {
-  background-color: mintcream;
-  }
-  
 }
 
 /****DESKTOP MEDIA QUERIES****/
@@ -473,11 +562,7 @@ footer {
 
   .hero {
     flex-direction: column;
-    justify-content: center;
-  }
-
-
-  .hero-text {
+    align-items: flex-start;
 
   }
 
@@ -496,7 +581,7 @@ footer {
    .bakeryText, .foodText {
      width: 40%;
      margin-left: 10px;
-  }
+  }  
 
   /***FOOTER***/
 
@@ -505,11 +590,6 @@ footer {
     justify-content: center;
     padding: 3vw;
   }
-  .copyright {
-    background-color: mintcream;
-  }
-  .social {
-  background-color: mintcream;
-  }
+  
 }
 
