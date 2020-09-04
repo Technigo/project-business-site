@@ -1,3 +1,12 @@
+const accordionItemHeaders = document.querySelectorAll(".question");
+
+accordionItemHeaders.forEach(accordionItemHeader => {
+  accordionItemHeader.addEventListener("click", event => {
+    accordionItemHeader.classList.toggle("active");
+  });
+});
+
+
 const questionOne = document.getElementById("question-1");
 const questionTwo = document.getElementById("question-2");
 const questionThree = document.getElementById("question-3");
