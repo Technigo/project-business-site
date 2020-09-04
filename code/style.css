@@ -41,7 +41,7 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
   color: lightsalmon;
 }
@@ -79,7 +79,7 @@ main {
   color: white;
   grid-row: span 2;
   display: grid;
-  grid-template-rows: 75px 75px 2fr;
+  grid-template-rows: 80px 2fr;
   align-items: center;
 }
 
@@ -87,42 +87,24 @@ main {
   color: white;
 }
 
-.days {
-  /* display: none; */
-  /* grid-row: span 1; */
-  width: 25%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 15px;
-  padding: 10px;
-  /* border-bottom: 1px solid white; */
-
-}
-
-.days div {
-  display: none;
-  grid-row: span 1fr;
-  height: 35px;
-  border: 2px solid white;
-  border-radius: 10px;
-  text-align: center;
-}
-
 form {
   display: grid;
   /* grid-template-rows: repeat(6, 1fr); */
+  grid-template-columns: 1fr;
   row-gap: 15px;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin: 10px 50px;
+}
 
-
+form p {
+  font-weight: 500;
 }
 
 input {
   height: 40px;
+  width: 100%;
   border: none;
-  /* border-bottom: 1px solid white; */
   background: rgba(255, 255, 255, 0.1);
   color: white;
   border-radius: 10px;
@@ -131,9 +113,95 @@ input {
   
 }
 
+
+
+input:invalid {
+  /* background: rgba(255, 255, 255, 0.8); */
+}
+
+input:focus {
+  border: 1px solid white;
+}
+
 label {
   font-weight: 500;
 }
+
+form div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+form div input {
+  margin-right: 15px;
+  height: 20px;
+  width: 20px;
+}*/
+
+.radio-container {
+  display: block;
+  position: relative;
+  padding-right: 35px;
+  padding-top: 3px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: right;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 24px;
+  width: 24px;
+  background-color: lightsalmon;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.radio-container:hover input ~ .custom-radio {
+  background-color: rgba(255, 255, 255, 0.5)
+}
+
+.radio-container input:checked ~ .custom-radio {
+  background-color: rgba(255, 255, 255, 1)
+}
+
+.custom-radio:after {
+  content:"";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~.custom-radio:after {
+  display: block;
+}
+
+.radio-container .custom-radio:after {
+  top: 6px;
+  left: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: lightsalmon;
+}
+
 
 button {
   margin: 20px 0px;
@@ -146,29 +214,7 @@ button {
   font-weight: bold;
   font-size: inherit;
   font-family: inherit;
-
-  
 }
-
-form div {
-  text-align: left;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(6, 1fr);
-  justify-content: center;
-  align-items: center;
-  text-align: right;
-  font-size: 12px;
-}
-
-form div input {
-  margin-right: 15px;
-}
-
-form div label {
-  margin: 0px;
-}
-
 
 /* FAQ */
 
@@ -189,6 +235,7 @@ form div label {
   border-radius: 10px;
   background-color: white;
   transition: background-color 0.5s;
+  cursor: pointer;
 
 }
 
@@ -245,4 +292,91 @@ footer a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .intro {
+    grid-column: span 2;
+  
+  }
+
+  .sign-up {
+    grid-column: span 1;
+  }
+
+  .accordion {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  footer {
+    background-color: white;
+    border-top: 1px solid lightsalmon;
+    color: lightsalmon;
+  }
+
+  footer a {
+    color: lightsalmon;
+  }
+}
+
+
+@media (min-width: 1027px) {
+  main {
+    grid-template-columns: [line1] 1fr [line2] 1fr [line3] 1fr [line4] 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    /* justify-content: baseline; */
+    align-items: baseline;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  header {
+    height: 600px;
+  }
+
+  .video-container {
+    height: 600px;
+  }
+
+  .intro {
+    grid-column: span 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  
+  }
+
+  .sign-up {
+    grid-column: span 1;
+    grid-column-start: 2;
+  
+  }
+
+  .accordion {
+    grid-column: span 1;
+    grid-row: span 1;
+    grid-column-start: 3;
+  }
+
+  footer {
+    background-color: white;
+    border-top: 1px solid lightsalmon;
+    color: lightsalmon;
+    margin-top: 50px;
+  }
+
+  footer a {
+    color: lightsalmon;
+  }
 }

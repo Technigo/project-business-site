@@ -27,41 +27,37 @@
     </section>
 
     <section class="sign-up">
-      <h2>Sign up for the tour here</h2>
-      <div class="days">
-        <div>
-          11/9
-        </div>
-        <div>
-          13/9
-        </div>
-        <div>
-          15/9
-        </div>
-      </div>
+      <h2>Sign up here</h2>
+   
 
-      <form action="https://httpbin.org/anything" id="tuesday" method="POST">
+      <form action="https://httpbin.org/anything" method="POST">
 
-        <label for="name">Name:</label>
+        <label for="name">Name *</label>
         <input type="text" id="name" class="name" name="name" required>
 
-        <label for="email">Email:</label>
+        <label for="email">Email</label>
         <input type="email" id="email" class="email" name="email">
 
-        <label for="amount">How many are you:</label>
+        <label for="amount">How many are you?</label>
         <input type="number" id="amount" class="amount" name="amount">
 
-        <p>Choose a time</p>
+        <p>Choose a time *</p>
 
       <div>
-        <label for="firstTime">10 AM:</label>
-        <input type="radio" id="firstTime" name="time" value="firstTime" class="time" required>
+        <label class="radio-container">10 AM:
+        <input type="radio" id="firstTime" name="time" value="firstTime" class="radio-time" required>
+        <span class="custom-radio"></span>
+        </label>
 
-        <label for="secondTime">3 PM:</label>
-        <input type="radio" id="secondTime" name="time" value="secondTime" class="time">
+        <label class="radio-container">3 PM:
+        <input type="radio" id="secondTime" name="time" value="secondTime" class="radio-time">
+        <span class="custom-radio"></span>
+        </label>
 
-        <label for="thirdTime">7 PM:</label>
-        <input type="radio" id="thirdTime" name="time" value="thirdTime" class="time">
+        <label class="radio-container">7 PM:
+        <input type="radio" id="thirdTime" name="time" value="thirdTime" class="radio-time">
+        <span class="custom-radio"></span>
+        </label>
       </div>
         <button type="submit">Submit</button>
 
@@ -72,7 +68,7 @@
 
     <section class="accordion">
       <!-- Accordion -->
-      <h2>FAQ</h2>
+      <h2>Frequently asked questions</h2>
 
       <div class="question" id="question1">How long will the tour take?</div>
       <div class="answer">
