@@ -20,13 +20,13 @@
                 <div class="request-form">
                     <h2>Request</h2>
                     <label for="firstName">First name
-                        <input type="text" id="firstName" placeholder="Firstname">
+                        <input type="text" id="firstName" placeholder="Firstname" required>
                     </label><br>
                     <label for="lastName">Last name
-                        <input type="text" id="lastName" placeholder="Lastname">
+                        <input type="text" id="lastName" placeholder="Lastname" required>
                     </label>
                     <label for="message" class="message-text"> What would you like to request?
-                        <input type="text" id="message" placeholder="Message">
+                        <input type="text" id="message" placeholder="Message" maxlength="50">
                     </label>
                 </div>
 
@@ -38,18 +38,19 @@
                     <label for="no">No
                         <input type="radio" id="no" value="no" name="costumerBtn">
                     </label>
+                    <button type="submit">Send request</button><!--This is only sending the radio-info atm. Need to fix-->
                 </div>
-                <button type="submit">Send request</button><!--This is only sending the radio-info atm. Need to fix-->
+                
             </form>
 
             <form action="https://httpbin.org/anything" method="POST">
                 <div class="login-form">
                     <h2>Log in</h2>
                     <label for="email">Email-adress
-                        <input type="email" id="email" placeholder="email@example.com">
+                        <input type="email" id="email" placeholder="email@example.com" required>
                     </label>
                     <label for="password">Password 
-                        <input type="password" id="password">
+                        <input type="password" id="password" required>
                     </label>
                 <button type="submit">Log in</button>
                 </div>
