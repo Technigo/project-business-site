@@ -17,7 +17,7 @@ I applied a lot of knowledge I acquired in last week's project. I used flexbox t
 
 Initially I was going to have a hero image but then switched to a video because I wanted to have the challenge of making it responsive across devices, so my approach was to have 3 different videos with different sizes: desktop, tablet and mobile, so depending on the device, the appropriate video will load and be shown.
 
-I had quite a bit of trouble with the accordion element, as I couldn't  ully understand the Javascript code yet. But a codepen exercise and quite a bit of google search did help and I managed to make it work in the end.
+I had quite a bit of trouble with the accordion element, as I couldn't fully understand the Javascript code yet. But a codepen exercise, the lecture and quite a bit of google search did help and I managed to make it work in the end and add some animation + different alternated background colours.
 
 # Tech ⚡
 - HTML5
