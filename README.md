@@ -1,12 +1,12 @@
-# Business Site
+## Business News Site
 
-Replace this readme with your own information about your project. 
+Second project at Technigo Bootcamp
+Project time: 1 week.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I was building a “booking request form” for my dream business - a cold bathing spa. The assignment was to build a business site with a responsive image/video. And add a signup form and have a FAQ accordion (built with JavaScript). 
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I have practiced my flexbox skills from last week's assignment, so that my form would behave as I wanted it to behave. I tried mobile first as an approach for the layout, and it felt really good. I am really excited about what JavaScript can do and want to explore that more if I hade more time. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://condescending-raman-c6de6e.netlify.app
