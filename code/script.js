@@ -14,7 +14,7 @@
       let lname = document.forms["signUpForm"]["lname"].value;
       let pwd = document.forms["signUpForm"]["pwd"].value;
       let email = document.forms["signUpForm"]["email"].value;
-      let checked = document.getElementById("checkbox-Input").checked;
+      let checked = document.getElementById("agreeTerms").checked;
 
       if (fname == "") {
         alert("Please fill out your name");
