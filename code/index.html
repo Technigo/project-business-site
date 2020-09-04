@@ -6,7 +6,7 @@
     <title>Project 3</title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- Found this informatic piece, so put the JS in the head: https://gomakethings.com/when-should-you-add-the-defer-attribute-to-the-script-element/#:~:text=In%20short%3A%20with%20defer%20on,downloaded%20and%20ready%20to%20run. -->
+    <!-- Found a helpful guide which advocated it's ok to put the JS in the head, as long as you add the "defer" property: https://gomakethings.com/when-should-you-add-the-defer-attribute-to-the-script-element/#:~:text=In%20short%3A%20with%20defer%20on,downloaded%20and%20ready%20to%20run. -->
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -24,8 +24,6 @@
 
     </nav>
     
-
-
     <header>  
 
       <section class="header-content">
@@ -71,7 +69,7 @@
           <input type="text" name="Full Name" id="fullName" required>
 
           <label for="email" class="p-small bold">E-mail</label>
-          <input type="email" name="E-mail" id="email" >
+          <input type="email" name="E-mail" id="email" required>
           
           <div class="form-checkcontainer">
             <label for=""><p class="bold">What are the reasons you want to be Hibr'd™?</p></label>
@@ -126,29 +124,21 @@
               <label for="reason10"> <span class="p-small">All of the above.</span></label><br>
             </div>
 
-
-
-            <!-- <input type="checkbox" id="reason2" name="Reasons" value="Reason 2">
-            <label for="reason2"> <span class="p-small">Reason 2</span></label><br>
-            <input type="checkbox" id="reason3" name="Reasons" value="Reason 3">
-            <label for="reason3"> <span class="p-small">Reason 3</span></label> -->
           </div>
-          <label for="numberOfYears"><p>How many years do you want to be Hibr'd™?</p></label>
+
+          <label for="numberOfYears"><p class="bold">How many years do you want to be Hibr'd™?</p></label>
           <div class="form-slidecontainer">
             
             <div class="sliderbox">
               <input type="range" min="1" value="1" class="slider" max="100" id="numberOfYears" name="Number of years" onchange="updateTextInput(this.value);">
-              <p class="p-small"><span id="textInput"></span> years</p>
+              <p class="p-small"><span id="textInput">1</span> years</p>
             </div> 
           </div>
 
-          
           <button class="button-primary teal-bg" type="submit"><p>Get quote</p></button>
         </form>
       </div>
       </section>
-
-
 
       <section class="card-full">
         <h2 class="teal">FAQ</h2>
@@ -200,7 +190,7 @@
 
         <div class="card-accordion accordion-item">
           <div class="accordion-item-header">
-            <p> How does Hibr <span class="emphasise">work?</span> This sounds too good to be true.</p>
+            <p> How does Hibr work? This sounds too good to be true.</p>
           </div>
           <div class="accordion-item-body">
             <p class="accordion-item-body-content">Hibr™ leverages agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
@@ -231,13 +221,14 @@
 
 
 
-<div class="fullScreenBlocker">
-  <h3>Whoa, hold up!🤚👮‍♀️</h3>
-  <p>Due to a pending lawsuit (thanks again, Marcia), you are prohibited to visit the Hibr™ website on any other device than a desktop computer.</p>
-  <p>Our legal department will get in contact with you shortly.</p>
-  <p>Thank you for your cooperation.</p>
-  <img src="./assets/hibr-logo.svg">
-</div>
+  <div class="fullScreenBlocker">
+    <h3>Whoa, hold up!🤚👮‍♀️</h3>
+    <p>Due to a pending lawsuit (thanks again, Marcia), you are prohibited to visit the Hibr™ website on any other device than a desktop computer.</p>
+    <p>Our legal department will get in touch with you shortly.</p>
+    <p>Thank you for your cooperation.</p>
+    <img src="./assets/hibr-logo.svg">
+    <p class="smaller">Jokes aside—I didn't plan well enough from the start, and there was not enough time to make it responsive without a code overhaul. For a responsive example, check out Project 1: <a href="https://real-fake-news.netlify.app/" target="_blank">Real Fake News.</a></p>
+  </div>
 
   </body>
 </html>
