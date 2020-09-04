@@ -10,28 +10,28 @@ header {
 }
 
 @media (min-width: 1024px) {
-  .header-phone {
+  .video-phone {
     display: none;
   }
-  .header-tablet {
+  .video-tablet {
     display: none;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .header-desktop {
+  .video-desktop {
     display: none;
   }
-  .header-phone {
+  .video-phone {
     display: none;
   }
 }
 
 @media (max-width: 767px) {
-  .header-desktop {
+  .video-desktop {
     display: none;
   } 
-  .header-tablet {
+  .video-tablet {
     display: none;
   }
 }
@@ -46,10 +46,16 @@ h1 {
   color: white;
   width: 100%;
   text-align: center;
-  font-size: 22.4vw;
+  font-size: 22.1vw;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
+  h1 {
+    color: yellow;
+  }
+}
+
+@media (min-width: 768px) {
   h1 {
     animation-name: text;
     animation-duration: 10s;
@@ -80,7 +86,7 @@ h1 {
 
 /*** CONTENT ***/
 
-main {
+.content-container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;

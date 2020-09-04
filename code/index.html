@@ -12,72 +12,78 @@
   <body>
 
     <header>
-      <video class="header-desktop" autoplay loop>
-        <source src="./yoga.mp4" type="video/mp4">
+      <video class="video-desktop" autoplay loop>
+        <source src="./yogadesktop.mp4" type="video/mp4">
         Your browser does not support video.
       </video>
-      <img class="header-tablet" src="./yogaphone.jpeg" alt="Yoga picture">
-      <img class="header-phone" src="./yogatablet.jpeg" alt="Yoga picture">
+      <video class="video-tablet" autoplay loop>
+        <source src="./yogatablet.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+      <video class="video-phone" autoplay loop>
+        <source src="./yogaphone.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
       <h1>the Studio</h1>
     </header>
 
-    <main>
+    <main class="content-container">
       <div class="content-item">
-      <form action="http://httpbin.org/anything" method="POST">
-        <h2>Sign up!</h2>
-        <label for="name">Name</label><br>
-        <input type="text" id="name" name="name" autocomplete="off"> 
-        <label for="e-mail">E-mail</label><br>
-        <input type="text" id="e-mail" name="e-mail" autocomplete="off"><br>
-      
-        <p>Choose your city</p>
-        <input type="radio" id="Stockholm" name="city" value="Stockholm" checked="checked">
-        <label for="Stockholm">Stockholm</label><br>
-        <input type="radio" id="Berlin" name="city" value="Berlin">
-        <label for="Berlin">Berlin</label><br>
+        <form action="http://httpbin.org/anything" method="POST">
+          <h2>Sign up!</h2>
 
-        <div class="checkbox">
-          <input type="checkbox" id="newsletter" name="newsletter" value="yes" checked="checked">
-          <label for="newsletter">I want to recieve the newsletter</label><br>
-          <input type="checkbox" id="terms" name="terms" value="yes">
-          <label for="terms">I agree to the <span>terms & conditions</span></label><br>
-        </div>
+          <label for="name">Name</label><br>
+          <input type="text" id="name" name="name" autocomplete="off"> 
+          <label for="e-mail">E-mail</label><br>
+          <input type="text" id="e-mail" name="e-mail" autocomplete="off"><br>
+      
+          <p>Choose your city</p>
+          <input type="radio" id="Stockholm" name="city" value="Stockholm" checked="checked">
+          <label for="Stockholm">Stockholm</label><br>
+          <input type="radio" id="Berlin" name="city" value="Berlin">
+          <label for="Berlin">Berlin</label><br>
+
+          <div class="checkbox">
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes" checked="checked">
+            <label for="newsletter">I want to recieve the newsletter</label><br>
+            <input type="checkbox" id="terms" name="terms" value="yes">
+            <label for="terms">I agree to the <span>terms & conditions</span></label><br>
+          </div>
 
         <input class="submit" type="submit" value="Submit">
-      </form>
-    </div>
+        </form>
+      </div>
 
-    <div class="content-item">
-      <section class="accordion-container">
-        <h2>FAQ</h2>
-        <div class="accordion-item">
-          <div class="question" id="question1">How do I become a member?</div>
-          <div class="answer">
-          <p>Signup by filling out the form on this site.</p>
-        </div>
-        </div>
-        <div class="accordion-item">
-          <div class="question" id="question2">What does it cost?</div>
-          <div class="answer">
-            <p>500 sek/50 euro per month.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="question" id="question3">How do I end my membership?</div>
-          <div class="answer">
-            <p>Send an e-mail to thestudio@gmail.com.</p>
-          </div>
-        </div>
-      </section>
-    </div>
+      <div class="content-item">
+        <section class="accordion-container">
+          <h2>FAQ</h2>
 
+          <div class="accordion-item">
+            <div class="question" id="question1">How do I become a member?</div>
+            <div class="answer">
+              <p>Signup by filling out the form on this site.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="question" id="question2">What does it cost?</div>
+            <div class="answer">
+              <p>500 sek/50 euro per month.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="question" id="question3">How do I end my membership?</div>
+            <div class="answer">
+              <p>Send an e-mail to thestudio@gmail.com.</p>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
   <footer>
     
   </footer>
 
-  
   <script src="./script.js"></script>
     
   </body>
