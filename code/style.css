@@ -3,20 +3,14 @@ html {
 }
 body {
   margin: 10;
-  background-color: burlywood;
+  background-color: lightgrey;
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
-/* .header {
-  display: flex;
-  flex-direction: row;
-  padding: 0 13px;
-  justify-content: flex-start;
-  align-items: center;
-} */
+
 /***header***/
 header {
   position: relative;
@@ -28,15 +22,29 @@ header {
   overflow: hidden;
   margin-top: 0;
 }
-/* 
-header h1 {
-  text-align: left;
+
+div.header-text h1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 90px;
+  opacity: 0.6;
+  color: #fdffb6;
+}
+
+.header-text span {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
   font-size: 40px;
-  z-index: 1;
-  color: #fff;
-  padding: 20px;
-  margin: 15px;
-} */
+  opacity: 0.6;
+  color: #fdffb6;
+}
 
 .video-container {
   position: absolute;
@@ -44,30 +52,30 @@ header h1 {
   left: 0;
   width: 100%;
   overflow: hidden;
+  z-index: -1;
 }
 
 video {
   object-fit: fill;
   width: 100%;
   height: 100vh;
+  z-index: 0;
 }
 
 nav {
-  position: sticky;
+  position: absolute;
+  width: 50%;
   top: 0;
   background-color: transparent;
-  margin: 0px;
+  margin: 10px;
   overflow: hidden;
-  /*margin-top: -190px;*/
 }
 
 nav a {
-  /* font: menu; */
   text-decoration: none;
   font-size: 18px;
   letter-spacing: 1px;
   box-sizing: border-box;
-  /* float: right; */
   display: inline-block;
   color: #f2f2f2;
   text-align: center;
@@ -82,15 +90,15 @@ nav a {
   border: 3px solid white;
   background-color: transparent;
   color: white;
-  margin-top: 10px;
-  margin-left: 40px;
+  margin-top: 20px;
+  margin-left: 500px;
 }
 .sign-in:hover {
   background: #fdffb6;
   color: grey;
 }
 
-button .sign-in:active {
+.sign-in:active {
   background: #fdffb6;
   color: grey;
 }
@@ -138,12 +146,12 @@ legend {
 }
 
 .selection {
-  background-color: burlywood;
+  background-color: lightgrey;
   color: grey;
   font-family: "Lexend Giga", sans-serif;
 }
 select {
-  background: burlywood;
+  background: lightgrey;
 }
 
 .submit {
@@ -177,7 +185,7 @@ select {
   flex-direction: row;
   justify-content: space-between;
   color: grey;
-  background-color: burlywood;
+  background-color: lightgrey;
   font-family: "Lexend Giga", sans-serif;
 }
 
@@ -185,7 +193,7 @@ select {
 checkbox {
   margin-left: 25px;
   color: grey;
-  background-color: burlywood;
+  background-color: lightgrey;
   font-family: "Lexend Giga", sans-serif;
 }
 /***accordion***/
@@ -229,6 +237,29 @@ checkbox {
 
 .accordion-text-container.active {
   height: 200px;
+}
+
+/***footer***/
+
+.footer {
+  text-align: center;
+  display: inline-block !important;
+  background-color: lightgrey;
+  width: 100%;
+  border: 2px solid #fdffb6;
+  margin-top: 50px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  line-height: 50px;
+}
+
+.footer p {
+  font-family: "Lexend Giga", sans-serif;
+  font-size: 18px;
+  color: grey;
 }
 
 /* 2. Sticky navbar */
