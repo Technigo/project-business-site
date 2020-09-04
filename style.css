@@ -52,7 +52,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   font-size: 1rem;
   margin: 0;
   Font-Family: 'Open Sans', Sans-Serif;
-  
+
 }
 
 #hero .content p {
@@ -71,12 +71,16 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   margin-left: auto;
   margin-right: auto;
   padding: 12px 20px;
-  
+
 }
 
 input[type=text],
-select {
-  width: 200px;
+input[type=email],
+input[type=text],
+input[type=password],
+select,
+textarea {
+  width: 270px;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -87,7 +91,7 @@ select {
 }
 
 input[type=submit] {
-  width: 100px;
+  width: 150px;
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -95,21 +99,23 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: black;
 }
 
 .form-group {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-  height: 100%;
-  width: 400px;
+  height: auto;
+  width: auto;
   text-align: center;
   font-size: 12px;
   display: flex;
+  flex-direction: column;
   justify-content: center
 }
 
@@ -141,36 +147,64 @@ input[type=submit]:hover {
   .content h2 {
     font-size: 2.5rem;
   }
+
+  .accordion {
+    position: relative;
+    z-index: 17;
+    display: inline-block;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40 px;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
-.accordion-element{
+.accordion-element {
   border: 2px solid #999;
   border-radius: 5px;
-  margin-bottom: 15px;
+  margin: 40px;
   text-align: center;
-}
-.accordion-header{
-  margin:0;
-  padding:15px;
-  font-size: 14px;
 }
 
-.accordion-text{
+.accordion-header {
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin: 0;
+  padding: 15px;
+  font-size: 14px;
+  background-color: #f2f2f2;
+}
+
+.accordion-text {
   border-top: 2px solid #999;
-  margin:0;
-  padding:15px;
+  margin: 0;
+  padding: 15px;
 }
-.accordion-text-container{
-  height:0;
-  overflow:hidden;
-  transition:height 0.3s ease;
+
+.accordion-text-container {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
 }
+
 .active {
-  height:auto;
+  height: auto;
 }
-.FAQ-heading{
+
+.color-dark {
+  background-color: lightpink;
+}
+
+.FAQ-heading {
   text-align: center;
 }
-p{
+
+p {
   font-size: 10px;
 }

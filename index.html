@@ -27,77 +27,104 @@
       </div>
     </div>
   </header>
-  <!-- Signup form -->
-  <div class="form-group">
-    <form class="form" action="http://httpbin.org/anything" method="POST">
-      <p>Signup to bootcamp</p>
+  <div class="content-container">
+    <!-- Signup form -->
+    <div class="form-group">
+      <form class="form" action="http://httpbin.org/anything" method="POST">
+        <div class="form-element">
+          <h2>Sign up to bootcamp</h2>
+        </div>
+        <div class="form-element">
+          <label for="fname">First name:</label><br>
+          <input name="firstname" id="fname" type="text" placeholder="firstname" required>
+        </div>
+        <div class="form-element">
+          <label for="lastname">Last name:</label><br>
+          <input name="lname" id="lname" type="text" placeholder="lastname" required>
+        </div>
+        <div class="form-element">
+          <label for="email">Email adress:</label><br>
+          <input name="email" id="email" type="email" placeholder="my@email.com">
+        </div>
+        <div class="form-element">
+          <label for="pasword">Password:</label><br>
+          <input name="password" id="password" type="password" placeholder="********">
 
-      <label for="fname">First name:</label>
-      <input name="firstname" id="fname" type="text" placeholder="firstname" required>
-
-      <label for="lastname">Last name:</label>
-      <input name="lname" id="lname" type="text" placeholder="lastname" required>
-
-      <label for="email">Email adress:</label>
-      <input name="email" id="email" type="email">
-
-      <label for="pasword">Password</label>
-      <input name="password" id="password" type="password">
-
-      <textarea name="message" rows="10" cols="30">
+        </div>
+        <br>
+        <div class="form-element">
+          <textarea name="message">
         Any other information.
         </textarea>
-      <p>Level of graffiti expertise</p>
-      <label for="radio">Rookie</label>
-      <input name="radio1" type="radio">
-      <label for="radio">Intermediate</label>
-      <input name="radio2" type="radio">
-      <label for="radio">Experienced</label>
-      <input name="radio3" type="radio">
-
-      <label for="color">Favorit graffit color </label>
-      <select name="color">
-        <option value="pink">Pink</option>
-        <option value="blue">Blue</option>
-        <option value="green">Green</option>
-      </select>
-
-      <label for="checkbox">Should we send more info? </label>
-      <input name="checkbox" type="checkbox">
-
-      <input type="submit" value="Submit">
-    </form>
+        </div>
+        <div class="form-element">
+          <label class="radio-text" name="radio">Should we send more info? </label><br>
+          <label for="radio">Rookie</label>
+          <input name="radio1" type="radio">
+          <label for="radio">Intermediate</label>
+          <input name="radio2" type="radio">
+          <label for="radio">Experienced</label>
+          <input name="radio3" type="radio">
+        </div>
+        <br>
+        <div class="form-element">
+          <label for="color">What is your favorit graffit color ? </label>
+          <br>
+          <select name="color">
+            <option value="pink">Pink</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-element">
+          <label for="checkbox">Should we send more info? </label>
+          <input name="checkbox" type="checkbox">
+        </div>
+        <div class="form-element">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+    <!-- Accordion-->
+    <section class="accordion">
+      <h2 class="FAQ-heading">FAQ</h2>
+      <div class="accordion-element">
+        <h4 id="accordion-header1" class="accordion-header"> Is the Graffiti bootcamp for everyone ?</h4>
+        <div class="accordion-text-container ">
+          <p class="accordion-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus obcaecati,
+            corporis
+            sint deserunt esse nemo nobis ipsum dolor rem dolorem expedita porro deleniti facere qui eaque, provident
+            iure
+            asperiores.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus obcaecati, corporis
+            sint deserunt esse nemo nobis ipsum dolor rem dolorem expedita porro deleniti facere qui eaque, provident
+            iure
+            asperiores
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus obcaecati, corporis
+            sint deserunt esse nemo nobis ipsum dolor rem dolorem expedita porro deleniti facere qui eaque, provident
+            iure
+            asperiores</p>
+        </div>
+        <h4 id="accordion-header2" class="accordion-header"> How much does it cost ?</h4>
+        <div class="accordion-text-container ">
+          <p class="accordion-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus obcaecati,
+            corporis
+            sint deserunt esse nemo nobis ipsum dolor rem dolorem expedita porro deleniti facere qui eaque, provident
+            iure
+            asperiores.</p>
+        </div>
+        <h4 id="accordion-header3" class="accordion-header"> When do I need to apply ?</h4>
+        <div class="accordion-text-container ">
+          <p class="accordion-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus obcaecati,
+            corporis
+            sint deserunt esse nemo nobis ipsum dolor rem dolorem expedita porro deleniti facere qui eaque, provident
+            iure
+            asperiores.</p>
+        </div>
+      </div>
+    </section>
   </div>
-  <!-- Accordion-->
-  <section class="accordion">
-    <h1 class="FAQ-heading" >FAQ</h1>
-    <div class="accordion-element">
-      <h4 id="accordion-header1" class="accordion-header"> Is the Graffiti bootcamp for everyone ?</h4>
-      <div class="accordion-text-container ">
-      <p class="accordion-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus obcaecati, corporis
-        sint deserunt esse nemo nobis ipsum dolor rem dolorem expedita porro deleniti facere qui eaque, provident iure
-        asperiores.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus obcaecati, corporis
-        sint deserunt esse nemo nobis ipsum dolor rem dolorem expedita porro deleniti facere qui eaque, provident iure
-        asperiores
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus obcaecati, corporis
-        sint deserunt esse nemo nobis ipsum dolor rem dolorem expedita porro deleniti facere qui eaque, provident iure
-        asperiores</p>
-      </div>
-      <h4 id="accordion-header2" class="accordion-header"> How much does it cost ?</h4>
-      <div class="accordion-text-container ">
-      <p class="accordion-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus obcaecati, corporis
-        sint deserunt esse nemo nobis ipsum dolor rem dolorem expedita porro deleniti facere qui eaque, provident iure
-        asperiores.</p>
-      </div>
-      <h4 id="accordion-header3" class="accordion-header"> When do I need to apply ?</h4>
-      <div class="accordion-text-container ">
-      <p class="accordion-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus obcaecati, corporis
-        sint deserunt esse nemo nobis ipsum dolor rem dolorem expedita porro deleniti facere qui eaque, provident iure
-        asperiores.</p>
-      </div>
-      </div>
-  </section>
   <!-- dont forget to link the javascript file here! -->
   <script src="script.js"></script>
 </body>
