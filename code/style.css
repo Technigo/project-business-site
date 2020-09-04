@@ -9,74 +9,40 @@ header {
   align-items: center;
 }
 
-@media (min-width: 1024px) {
-  .video-phone {
-    display: none;
-  }
-  .video-tablet {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .video-desktop {
-    display: none;
-  }
-  .video-phone {
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .video-desktop {
-    display: none;
-  } 
-  .video-tablet {
-    display: none;
-  }
-}
-
 video, img {
   width: 100%;
   filter: grayscale(100%); 
 } 
 
+@media (min-width: 1024px) { 
+  .img-tablet, .img-phone {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) { 
+  video, .img-phone {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) { 
+  video, .img-tablet {
+    display: none;
+  }
+}
+
 h1 {
-  position: absolute;
-  color: white;
   width: 100%;
+  position: absolute;
   text-align: center;
+  color: white;
   font-size: 22.1vw;
-}
 
-@media (max-width: 767px) {
-  h1 {
-    color: yellow;
-  }
-}
-
-@media (min-width: 768px) {
-  h1 {
-    animation-name: text;
-    animation-duration: 10s;
-    animation-delay: 2s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite; 
-  }
-}
-
-@keyframes text {
-  from {color: white;}
-  to {color: yellow;}
-} 
-
-@media (min-width: 1024px) {
-  h1 {
-    animation-name: lightning;
-    animation-duration: 0.1s;
-    animation-delay: 22s;
-    animation-iteration-count: 20;
-  }
+  animation-name: lightning;
+  animation-duration: 0.1s;
+  animation-delay: 22s;
+  animation-iteration-count: 20;
 }
 
 @keyframes lightning {
@@ -84,34 +50,49 @@ h1 {
   to {color: yellow;}
 } 
 
-/*** CONTENT ***/
+@media (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    animation-name: slowyellow;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite; 
+  }
+}
+
+@keyframes slowyellow {
+  from {color: white;}
+  to {color: yellow;}
+} 
+
+@media (max-width: 767px) {
+  h1 {
+    color: yellow;
+    animation: none;
+  }
+}
+
+/*** CONTENT: SIGNUP FORM AND ACCORDION ***/
 
 .content-container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 40px 20px 40px 20px;
-  font-family: 'Open Sans', sans-serif;
 } 
 
 h2 {
-
   font-family: 'Permanent Marker', cursive;
   font-size: 40px;
   color: rgb(134, 125, 125);
   text-align: center;
 }
 
-@media (min-width: 1024px) {
-  .content-item {
-    width: 40%;
-  }
+.content-item {
+  width: 40%;
 }
 
 @media (max-width: 1023px) {
-  .content-item {
-    width: 60%;
-  }
   form {
     margin-bottom: 40px;
   }
@@ -120,38 +101,36 @@ h2 {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .content-item {
+    width: 60%;
+  }
+}
 
 @media (max-width: 767px) {
   .content-item {
     width: 80%;
-  }
-  form {
-    margin-bottom: 40px;
-  }
-  .accordion-container {
-    text-align: center;
   }
 }
 
 /*** SIGNUP FORM ***/
 
 form {
- padding: 20px 40px 20px 40px;
- border-radius: 20px;
- box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
- height: 475px;
+  height: 500px;
+  padding: 20px 40px 20px 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Open Sans', sans-serif;
 }
 
-
-
 input[type=text]  {
-  border: none;
-  /*color: rgb(175, 170, 170);*/
-  background-color: rgb(240, 238, 238);
-  border-radius: 20px;
-  padding: 8px;
-  margin: 4px 0 8px 0;
   width: 100%;
+  margin: 4px 0 8px 0;
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  /*background-color: rgb(240, 238, 238);*/
+  background-color: rgb(240, 238, 238);
 }
 
 input[type=text]:focus, input[type=e-mail]:focus {
@@ -176,14 +155,14 @@ span:hover {
 }
 
 .submit {
+  display: block;
+  margin: 40px auto;
+  padding: 10px;
+  border-width: 0;
+  border-radius: 20px;
   background-color:rgb(134, 125, 125);
   color: white;
-  font-weight: 700;
-  padding: 10px;
-  border-radius: 20px;
-  display: block;
-  margin: 20px auto;
-  border-width: 0;
+  font-weight: 700;  
   font-size: 16px;
 }
 
@@ -195,54 +174,31 @@ span:hover {
 /*** FAQ ***/
 
 .accordion-container {
+  height: 500px;
   padding: 20px 40px 20px 40px;
-
-  background-image: linear-gradient(to right,white, rgb(240, 238, 238));
-  /*background-color: rgb(240, 238, 238);*/
   border-radius: 20px;
-  /*box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);*/
-  height: 475px;
-}
-
-.accordion-container h2 {
-  color: rgb(134, 125, 125);
-  
+  background-image: linear-gradient(to right,white, rgb(240, 238, 238));
 }
 
 .accordion-item {
   margin-bottom: 16px;
-
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
 }
 
 .question {
-  cursor: pointer;
-  font-family: 'Architects Daughter', cursive;
-  font-size: 20px;
   padding-bottom: 8px;
-}
-
-.question:hover {
-  font-weight: 700;
-
-}
-
-.active {
-  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .answer {
   display: none;
-  
-  font-family: 'Architects Daughter', cursive;
-  font-size: 20px;
-
-
-
   padding-bottom: 8px;
 } 
 
-.accordion-container p {
-  margin: 0;
+.question:hover, .active {
+  font-weight: 700;
 }
 
 .active + .answer {
@@ -252,14 +208,6 @@ span:hover {
 /*** FOOTER ***/
 
 footer {
+  padding: 50px;
   background-color: rgb(240, 238, 238);
-  padding: 50px; 
 }
-
-
-
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
