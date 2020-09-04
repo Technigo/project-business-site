@@ -1,9 +1,11 @@
 /* MOBILE VIEW EXTRA SMALL DEVICES max-width: 360px */
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
-  box-sizing: border-box;
 }
 
 /* HEADER/HERO IMAGE NAVBAR CONTAINER WITH LOGO, HAMBURGER & NAV MENU*/
@@ -27,9 +29,9 @@ body {
 }
 
 .title {
-  padding: 5px;
+  padding: 20px;
   margin: 5px;
-  width: 70px;
+  width: 100px;
   background: rgb(230, 243, 229);
   display: flex;
   flex-direction: column;
@@ -61,7 +63,6 @@ body {
   width: 40px;
   border-radius: 5px;
   background: #31482c;
-  box-sizing: border-box;
 }
 
 /* HERO IMAGE WITH TEXT & BUTTON */
@@ -72,21 +73,11 @@ body {
   background-image: url("Hero-image-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  /* z-index: -1; */
-}
-
-.hero-image:before{
-  content: '';
   position: absolute;
   top: 0;
-  right: 0;
   left: 0;
-  bottom: 0;
+  right: 0; 
+  z-index: -1;
 }
 
 .hero-image-details {
@@ -94,12 +85,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
+  padding:10px;
+  
 }
 
 .hero-image-text {
-  /* width: 80%; */
   padding: 10px;
   margin-bottom: 10px;
   opacity: 0.9;
@@ -159,12 +150,12 @@ main {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-top: 550px;
 }
 
 /* FORM */
 .form-parent {
   width: 90%;
-  /* height: 570px; */
   padding: 20px;
   margin: 20px auto;
   box-sizing: border-box;
@@ -179,7 +170,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
 }
 
 .input-section h3 {
@@ -219,7 +209,6 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .radio-button-column h3 {
@@ -252,7 +241,6 @@ main {
   margin: 10px 5px;
   font-size: 16px;
   user-select: none;
-  box-sizing: border-box;
 }
 
 .radio-button-row label {
@@ -311,7 +299,6 @@ main {
   padding: 10px 0px 10px 0px;
   margin-top: 15px;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .checkbox-container {
@@ -399,10 +386,8 @@ main {
 /* ACCORDIAN */
 .accordion-container {
   width: 90%;
-  /* height: 550px; */
   padding: 20px;
   margin: 20px auto;
-  box-sizing: border-box;
   background: #dadfd9;
   display: flex;
   flex-direction: column;
@@ -437,8 +422,8 @@ main {
   color: #31482c;
 }
 
-.active + .pointer {
-  transform: rotate(45deg);
+.active .pointer {
+  transform: rotate(90deg);
 }
 
 .active, .question:hover {
@@ -469,13 +454,18 @@ footer {
   justify-content: center;
 }
 
-/* EXTRA SMALL DEVICES - Portrait mobile devices 360px or bigger */
-@media (min-width: 361px) {
+/* EXTRA SMALL DEVICES - Portrait mobile devices 360px & upwards */
+@media (min-width: 360px) {
   .hero-image-details {
     padding: 30px;
     margin-bottom: 30px;
   }
 }
+
+@media (min-width: 450px) {
+  .hero-image-details {
+    margin-top: 30px;
+  }}
 
 /* SMALL DEVICES (Portrait tablets & landscape iphones 600x & upwards) */
 @media (min-width: 600px) {
@@ -484,7 +474,7 @@ footer {
   }
 
   .hero-image-details {
-    margin-bottom: 50px;
+    margin-top: 45px;
   }
 }
 
@@ -519,18 +509,23 @@ footer {
     background-image: url("Hero-image-3.jpg");
   }
 
+  .hero-image-details {
+    margin-bottom: 50px;
+  }
+
   main {
     width: 100%; 
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    margin-top: 550px
   }
 
   .form-parent {
     width: 45%;
     height: 600px;
   }
-
+  
   .accordion-container {
     width: 45%;
     height: 600px;
@@ -545,7 +540,7 @@ footer {
   }
 
   .hero-image-details{
-    margin-bottom: 60px;
+    margin-top: 100px;
   }
 
   .form-parent {
@@ -555,10 +550,14 @@ footer {
   .accordion-container {
     width: 40%;
   } 
+
+  main {
+    margin-top: 600px;
+  }
 }
 
 /* EXTRA LARGE DEVICES (large laptops and desktops, 1200px and up)*/
-@media (min-width:1024px) {
+@media (min-width:1200px) {
   .hero-image {
     background-image: url("Hero-image-5.jpg");
     height: 700px;
@@ -566,5 +565,10 @@ footer {
 
   .hero-image-details{
     margin-bottom: 150px;
+    margin-top: 120px;
+  }
+
+  main {
+    margin-top: 700px;
   }
 }
