@@ -25,6 +25,12 @@ p{
   width:100%;
 }
 
+.hero-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  
+}
+
 .hero-image{
   height: 80vh;
   background: url("./images/erol_ahmed_unsplash.jpg");
@@ -40,12 +46,12 @@ p{
 
 .hero-h1{
   position: relative;
-  font-size: 3em;
+  font-size: 2.5em;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
   color: #e83333;
   font-weight: 900;
-  text-shadow: rgb(120, 0, 0) 2px 2px;
+  text-shadow: rgb(120, 0, 0) 1px 1px;
   font-family: 'Monoton', cursive;
 }
 
@@ -55,13 +61,32 @@ p{
   font-size: 1.8em;
   color: white;
   font-weight: 900;
-  text-align: center;
+  text-align: left;
   position: relative;
+  
 }
 
+.hero-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.hero-button{
+  display: inline-block;
+}
+
+button{
+  margin: 20px 0px;
+  align-items: left;
+  position: absolute;
+
+}
+
+
 .hero-text button{
-  
   font-family: 'Montserrat', sans-serif;
+  font-size: 0.7em;
   text-transform: uppercase;
   border: none;
   outline: 0;
@@ -69,7 +94,6 @@ p{
   padding: 10px 25px;
   color: black;
   border-radius: 12px;
-  background-color: #ddd;
   text-align: center;
   cursor: pointer;
   position: relative;
@@ -81,7 +105,7 @@ p{
 }
 
 span.red{
-  color:#DA0C0C;
+  color:#ff0f0f;
 }
 
 /*** NAVBAR ****/
@@ -89,8 +113,10 @@ span.red{
 nav{
   display: flex;
   justify-content: space-evenly;
-  margin: 30px 10px;
+  margin: 30px 0px;
   font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
 }
 
 nav a{
@@ -98,6 +124,7 @@ nav a{
   color: black;
 }
 
+/***
 a:after{
   display: flex;
   content: "";
@@ -105,11 +132,13 @@ a:after{
   height: 4px; 
   background: #DA0C0C;
 }
+****/
 
 a:hover::after{
   width: 20px;
   transition: width 0.5s;
 }
+
 
 a:hover{
   color: #DA0C0C;
@@ -252,12 +281,6 @@ span.italic{
   font-style: italic;
 }
 
-/*** Showing and hiding accordion ****/
-
-/*** .active + .answer {
-  display: inline-block;
-}****/
-
 .active{
   height: 270px; 
 }
@@ -269,9 +292,14 @@ span.italic{
 
 /*** SIGN UP FORM ****/
 
+
 form{
   box-sizing: border-box;
   width:50%;
+}
+
+.field-container{
+  width:70%;
 }
 
 .the-form{
@@ -315,6 +343,48 @@ form{
   margin: 5px;
 }
 
+/* radio buttons styling */
+
+
+.radio-button-container{
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+
+.radio-button-container input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  transform: translate(-180%, -135%);
+  z-index: 1;
+}
+
+.custom-radio{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.radio-button-container:hover input ~ .custom-radio{
+  background-color: #444444;
+}
+
+.radio-button-container input:checked ~ .custom-radio{
+  background-color: #444444
+} 
+
 .person{
   box-sizing: border-box;
   margin: 15px 5px;
@@ -325,6 +395,9 @@ form{
   flex-direction: column;
   margin: 0px 5px;
 }
+
+/* check box styling */
+
 
 .bank{
   box-sizing: border-box;
@@ -365,7 +438,12 @@ footer{
   width:50px;
 }
 
+/*** media query ****/
+
 @media (min-width: 768px) {
+  .hero-image{
+    height: 85vh;
+  
   .hero-h1 {
     font-size: 3.5em;
   }
@@ -377,6 +455,11 @@ footer{
   .active-image{
     height: 350px; !important;
   }
+
+  .field-container{
+    width:50%;
+  }
+
 }
 
 @media (min-width: 1024px){
@@ -387,7 +470,7 @@ footer{
   .hero-p{
     font-size: 2.8em;
   }
-  
+
   .active{
     height: 95px; 
   }

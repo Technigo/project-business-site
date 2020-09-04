@@ -12,22 +12,24 @@
 <body>
   <!-- video or image as a header is cool :) -->
   <header>
-    <section>
+    <section class="hero-wrapper">
       <div class="hero-image">
         <div class="hero-text">
           <h1 class="hero-h1">MENSTRU-AID</h1>
           <p class="hero-p">Fight <span class="red">period poverty</span>, become a <span class="red">period
               sponsor!</span>
           </p>
+
           <a href="#the-form"><button>Become a <span class="red">period sponsor</span></button></a>
+          </div>
         </div>
       </div>
     </section>
 
 
     <nav>
-      <a href="#manifesto">MANIFEST</a>
-      <a href="#accordion">ABOUT THE PROJECT</a>
+      <a href="#manifesto">Manifest</a>
+      <a href="#accordion">THE PROJECT</a>
     </nav>
   </header>
 
@@ -68,7 +70,7 @@
       </p>
     </div>
 
-    <div class="question symbolplus" id="section2">
+    <div class="question" id="section2">
       <h3 class="accordion-h3">Implications of <span class="red">period poverty</span>?</h3>
     </div>
     <div id="answer2" class="answer">
@@ -119,7 +121,7 @@
 
   <section class="the-form" id="the-form">
 
-    <fieldset style="width: 85%;">
+    <fieldset  class ="field-container">
       <legend>
         <h2 class="manifesto-h2">choose your impact!</h2>
       </legend>
@@ -130,22 +132,27 @@
       
         <form class=”form” action="http://httpbin.org/anything" method=”POST”>
         <p class="p-form">SELECT AN AMOUNT</p>
+        
         <div class="amount-container">
           <div class="amount">
-            <label for="28SEK"> <p class="p-form-small">28 sek/month</p></label>
-            <input 
-            id="28SEK" 
-            type="radio" 
-            name="SekValue"
-            checked>
-          </div>
+            <label for = "SekValue" class="radio-button-container"> 
+              <p class="p-form-small">28 sek/month</p>
+              <input 
+              id="28SEK" 
+              type="radio" 
+              name="SekValue"
+              checked>
+              <span class="custom-radio"></span>
+            </label>
 
-          <div class="amount">
-            <label for="56SEK"><p class="p-form-small">56 sek/month</p></label>
+            <label for = "SekValue" class="radio-button-container">
+            <p class="p-form-small">56 sek/month</p>
             <input 
             id="56SEK" 
             type="radio" 
             name="SekValue">
+            <span class="custom-radio"></span>
+          </label>
           </div>
         </div>
 
@@ -223,11 +230,13 @@
         </div>
 
         <div class="news">
-          <label for="newsletter"> <p class="p-form-small">I want to recive the newsletter</p></label>
+          <label for="newsletter" class="check-box-container"> <p class="p-form-small">I want to recive the newsletter</p>
           <input 
           id="newsletter" 
           type="checkbox" 
           name="newsletterValue">
+          <span class="custom-check"></span>
+        </label>
         </div>
 
         <p class="p-form">BANK INFORMATION</p>
@@ -260,7 +269,6 @@
           <input 
           id="bankName" 
           type="text" 
-          inputmode="numeric"
           placeholder="Your Bank" 
           required: 
           name="bankNameValue">
