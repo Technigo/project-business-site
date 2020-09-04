@@ -1,0 +1,346 @@
+/*** General design ***/
+  body {
+    background: #89507f;
+  }
+
+/*** Media for mobile ***/
+  @media (min-width: 1px) and (max-width: 667px){
+  
+  /*** Header ***/
+    header {
+      background: white;
+      color: #89507f;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 120px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    header img {
+      height: 100px;
+    }
+
+    h1 {
+      color: #89507f;
+      margin: 10px;
+    }
+
+    header a {
+     display: none;
+    }
+
+  /*** All images ***/
+    img {
+      border-radius: 10%;
+      }
+
+  /*** Section of news/cards ***/
+    .big-news {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 15px;
+      border-bottom-style: solid;
+      border-color: white;
+    }
+
+    .big-news img {
+      width: 300px;
+      height: auto;
+      margin: 5px;
+    }
+
+    .big-news-text {
+      padding: 15px;
+      color: white;
+      font-family: monospace;
+    }
+
+    .other-news-cards {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      margin: auto;
+      padding: 15px;
+      background: white;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      width: 80%;
+      text-align: center;
+      color: #89507f;
+      font-family: monospace;
+      margin-bottom: 10px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .card img {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      object-fit: cover;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+  /*** Footer ***/
+    footer {
+      text-align: center;
+      color: white;
+      font-family: monospace;
+    }
+    footer a {
+      color: white;
+      text-decoration-line: underline;
+    }
+  }
+
+/*** Media for tablet ***/
+  @media (min-width: 668px) and (max-width: 1024px) {
+
+  /*** Header ***/  
+    header {
+      background: white;
+      color: #89507f;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #89507f;
+      text-decoration-line: none;
+      margin-left: 20px;
+      margin-right: 20px;
+      padding: 60px;
+    }
+
+    .logo {
+      order: 1;
+      height: 100px;
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+
+    .linkleft {
+      order: 0;
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+
+    .linkright {
+      order: 2;
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+    
+    h1 {
+      display: none;
+    }
+    
+  /*** All images ***/
+    img {
+      border-radius: 10%;
+    }
+
+  /*** Section of news/cards ***/
+    .big-news {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      margin-bottom: 10px;
+      border-bottom-style: solid;
+      border-color: white;
+    }
+    
+    .big-news img {
+      width: 380px;
+      height: auto;
+      margin: 30px;
+    }
+    
+    .big-news-text {
+      padding: 15px;
+      margin: 20px;
+      color: white;
+      font-family: monospace;
+    }
+
+    .other-news-cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    
+    .card {
+      margin: auto;
+      padding: 15px;
+      background: white;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      width: 40%;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 20px;
+      color: #89507f;
+      font-family: monospace;
+      border-radius: 10px;
+    }
+    
+    .card img {
+      max-width: 90%;
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
+
+    .container {
+      margin: 5px;
+    }
+    
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+  /*** Footer ***/
+    footer {
+      text-align: center;
+      color: white;
+      font-family: monospace;
+    }
+    footer a {
+      color: white;
+      text-decoration-line: underline;
+    }
+  }
+
+/*** Media for desktop ***/
+  @media (min-width: 1025px) {
+  
+  /*** Header ***/
+    header {
+      background: white;
+      color: #89507f;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 120px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    
+    header img {
+      height: 100px;
+    }
+
+    h1 {
+      color: #89507f;
+      margin: 10px;
+    }
+
+    .links {
+      margin-left: auto;
+    }
+
+    a {
+      color: #89507f;
+      text-decoration-line: none;
+      padding: 10px;
+    }
+
+
+  /*** All images ***/
+    img {
+     border-radius: 10%;
+    } 
+
+  /*** Section of news/cards ***/
+    .big-news {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      margin-bottom: 10px;
+      border-bottom-style: solid;
+      border-color: white;
+    }
+  
+    .big-news img {
+      width: 520px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    
+    .big-news-text {
+      padding: 15px;
+      margin: 20px;
+      color: white;
+      font-family: monospace;
+    }
+    
+    .other-news-cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    
+    }
+    
+    .card {
+      margin: auto;
+      padding: 15px;
+      background: white;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      width: 20%;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 20px;
+      color: #89507f;
+      font-family: monospace;
+      border-radius: 10px;
+    }
+    
+    .card img {
+      max-width: 90%;
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
+
+    .container {
+      margin: 5px;
+    }
+    
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+    /*** Footer ***/
+    footer {
+      text-align: center;
+      color: white;
+      font-family: monospace;
+    }
+    footer a {
+      color: white;
+      text-decoration-line: underline;
+    }
+  }

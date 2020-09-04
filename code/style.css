@@ -3,14 +3,12 @@ body {
 }
 
 /* OBS! STRUKTURERA, CLEAN UP & SE MÅSTEN MM INFO LÄNGST NER HÄR, TEX STYLA ELEMENTEN SOM KLASSER, SÅ ÄNDRA DETTTA! */
-
-h1 {
-  position: absolute;
-  bottom: 80%;
-  color: white;
-  font-family: sans-serif;
-  font-weight: bold;
-
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  object-fit: cover;
 }
 
 nav {
@@ -26,7 +24,7 @@ a {
   font-family: sans-serif;
   text-decoration: none;
   font-size: 20px;
-  width: 120px;
+  width: 125px;
   padding: 1em, 0;
   display: inline-block;
   font-weight: bold;
@@ -57,15 +55,8 @@ a:nth-child(4):hover ~ .line {
   background-color: white;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-}
 
-
-header video {
+video {
   z-index: -1;
   max-width: 100%;
   max-height: 80%;
@@ -94,6 +85,10 @@ main {
   border-radius: 10px;
 }
 
+.form:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 .accordion {
   margin: 15px;
   padding: 15px;
@@ -107,21 +102,45 @@ main {
   margin-bottom: 10px;
   margin-top: 20px;
   border-radius: 10px;
+} 
+
+/* 1. Accordion */
+
+.accordion-container {
+  border: 2px solid #999;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
-.form:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 15px;
+  cursor: pointer;
 }
+
+.accordion-text {
+  border-top: 2px solid #999;
+  margin: 0;
+  padding: 15px;
+}
+
+.accordion-text-container {
+  height: 0;
+  overflow: hidden;
+  transition: height .3s ease;
+}
+
+.accordion-text-container.active {
+  height: 158px;
+}
+
 .accordion:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+@media (min-width: 1px) and (max-width: 667px){
+
 /* Ändra så det är klasser att styla i CSS istället för element */
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}

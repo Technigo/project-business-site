@@ -6,12 +6,9 @@
     <title>Project 3</title>
     <link rel="stylesheet" href="./style.css">
   </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
- 
 
+  <body>
     <header>
-      <h1>METAL FESTIVAL</h1>
       <nav>
         <a href="#">ARTISTS</a>
         <a href="#">TICKETS</a>
@@ -19,20 +16,21 @@
         <a href="#">ABOUT</a>
         <div class="line"></div>
       </nav>
-      <video width="auto" height="auto" autoplay loop poster="">
-        <source src="alcest-concert.mp4" type="video/mp4">
-        <p>This browser doesn't support video.......</p>
-        </video>
-    <!-- läg till loop el vad det heter för att videon ska spelas om och om-->
+      <video 
+        autoplay
+        loop  
+        poster="metal-festival.JPG"
+      >
+        <source src="alcest-concert-6.mp4" type="video/mp4">
+        <p>This browser doesn't support video.........</p>
+      </video>
     </header>
     
-    <main>
+    <main> 
     <!-- Signup form -->
-    <form class="form" action="https://httpbin.org/anything" method="POST">
-      
-        <h2>SIGN UP</h2>
-
-        <label for="firstName">First name:</label>
+      <form class="form" action="https://httpbin.org/anything" method="POST">
+      <h2>SIGN UP</h2>
+      <label for="firstName">First name:</label>
         <br>
         <br>
           <input 
@@ -42,7 +40,6 @@
           >
         <br>
         <br>
-
         <label for="LastName">Last name:</label>
         <br>
         <br>
@@ -53,7 +50,6 @@
           >
         <br>
         <br>
-        
         <label for="email">Email:</label>
         <br>
         <br>
@@ -64,7 +60,6 @@
           >
         <br>
         <br>
-        
         <label for="password">Choose password:</label>
         <br>
         <br>
@@ -75,7 +70,6 @@
           >
         <br>
         <br>
-        
         <label for="age">Gender:</label>
         <br>
         <br>
@@ -87,10 +81,7 @@
             <input type="radio" id="other" name="gender" value="other"/>
           <br>
           <br>
-         
-          <!-- Ha /> eller bara > i slutet på input tagen? -->
-        
-        <label for="termsAndConditions">I like to get the <br> latest news by email</label>
+          <label for="termsAndConditions">I like to get the <br> latest news by email</label>
           <input 
             type="checkbox" 
             name="termsAndConditionsValue" 
@@ -99,30 +90,74 @@
         <br>
         <br>
         <button class="form-submit" type="submit"> SUBMIT </button>
-          <!--ha attributen name och value för detta value dök upp automatiskt... -->
         <br>
         <br>
-    </form>
-
- 
-    <section class="accordion">
-      
-      <!-- Accordion -->
-      <h2>FAQ</h2>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      </form>
+    <!--Accordion-->
+      <section class="accordion">
+        <h2>FAQ</h2>
+      <div class="accordion-container">
+          <h3 id="accordion-header-1" class="accordion-header">
+              <span>Food and drinks?</span>
+              <span>▼</span>
+          </h3>
+          <div class="accordion-text-container">
+              <p class="accordion-text">
+                We offer a range of food and beverage stalls inside the festival area as well as in the camping area. There are Vegan alternatives at some of the stalls. Water is free at the festival area and the camping area. You can not bring food or beverages to the festival area. It is totally okay to bring food and beverages to the camping area.
+              </p>
+          </div>
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="accordion-container">
+          <h3 id="accordion-header-2" class="accordion-header">
+              <span>Where can I park?</span>
+              <span>▼</span>
+          </h3>
+          <div class="accordion-text-container">
+              <p class="accordion-text">
+                There are thousands parking lots next to the festival area, and also in the camping are. To be sure that you have a parking lot you need to book one which costs 100 SEK a day. Please ensure that you have the festival-parking-card in front of your window at your car.
+              </p>
+          </div>
       </div>
+      <div class="accordion-container">
+          <h3 id="accordion-header-3" class="accordion-header">
+              <span>Running order</span>
+              <span>▼</span>
+          </h3>
+          <div class="accordion-text-container">
+              <p class="accordion-text">
+                  We will we will rock you! And with that said, we will soon announce which day the bands/artists will play. Playscheme will be avaible one month before the festival.
+              </p>
+          </div>
+          </div>
+          <div class="accordion-container">
+            <h3 id="accordion-header-4" class="accordion-header">
+                <span>Running order</span>
+                <span>▼</span>
+            </h3>
+            <div class="accordion-text-container">
+                <p class="accordion-text">
+                    We will we will rock you! And with that said, we will soon announce which day the bands/artists will play. Playscheme will be avaible one month before the festival.
+                </p>
+            </div>
+            </div>
+            <div class="accordion-container">
+              <h3 id="accordion-header-5" class="accordion-header">
+                  <span>Running order</span>
+                  <span>▼</span>
+              </h3>
+              <div class="accordion-text-container">
+                  <p class="accordion-text">
+                      We will we will rock you! And with that said, we will soon announce which day the bands/artists will play. Playscheme will be avaible one month before the festival.
+                  </p>
+              </div>
+              </div>
+      </section>
 
-   
-    </section>
-    <!-- dont forget to link the javascript file here! -->
     </main>
+
+    <footer>@ </footer>
+
+    <script src="./script.js"></script>
+    
   </body>
 </html>
