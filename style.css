@@ -1,0 +1,432 @@
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/*
+.active + .answer {
+   some styling here 
+}
+*/
+
+/* General style */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+p, 
+label, 
+input,
+a {
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2 {
+  font-family: 'Cabin Sketch', cursive
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  position: relative;
+}
+
+/* Sticky navbar style */
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 300px;
+  left: 0;
+  right: 0;
+  height: 50px;  
+  background: #ffffff;
+  z-index: 14;
+}
+
+.navbar-menu {
+  display: flex;
+}
+
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar-menu-item {
+  padding: 17px;
+}
+
+.navbar-menu-item-link {
+  padding: 15px;
+}
+
+.navbar-menu-item-link:hover {
+  background-color: rgb(255, 113, 97);
+  box-shadow: 0 0 5px grey;
+}
+
+.sticky {
+  position: fixed;
+  top: 0 !important;
+  width: 100%;
+  box-shadow: 0 0 5px darkgray;
+}
+
+/* Hero video style */
+
+.hero-video {
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+}
+
+.hero-title-wrapper {
+  background-color: rgba(0,0,0,.2);
+  position: absolute;
+  display: flex;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.hero-title-textbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.hero-title {
+  width: 100%;
+  padding: 1rem 1rem .5rem 2rem;
+  font-family: 'Cabin Sketch', cursive; 
+  font-size: 3rem;
+}
+
+.hero-subtitle {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  padding: .25rem 1rem 1rem  2rem;
+  font-size: larger;
+}
+
+
+/* Main section style */
+
+main {
+  height: fit-content;
+  width: 100%;
+  padding-top: 350px;
+  background-color: #ACC3C0;
+}
+.section-title {
+  width: 100%;
+  margin-bottom: .5rem;
+  padding: 1rem 0;
+  font-size: 36px;
+  text-align: center;
+}
+
+.main-section {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  background-color: #f5f5f5;
+  margin: 3rem;
+  padding: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px gray;
+  border-radius: 5px;
+}
+
+/* Form style */
+
+.form {
+  margin: .25rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form:last-child {
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 100%; 
+   margin: .5rem 2rem;
+ 
+}
+
+.form-group p {
+  padding: .25rem 0;
+}
+
+.form-group input {
+  width: 100%;
+  padding: .75rem 1rem;
+  margin: .35rem 0;
+  display: inline-block;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+#radio-button-group {
+  margin-bottom: 1.2rem;
+}
+
+#radio-button-group input{
+  width: 20%;
+}
+
+#radio-button-group label {
+  flex-wrap: nowrap;
+  width: 65%;
+  padding: .2rem 0;
+}
+
+#checkbox-group input {
+  width: 23%;
+}
+
+#checkbox-group label {
+  flex-wrap: nowrap;
+  width: 65%;
+  font-size: 12px;
+  padding: .2rem 0;
+}
+
+.form-submit {
+  color: white;
+  background-color: rgb(228, 86, 71);
+  margin: 15px 0;
+  padding: 15px 30px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+}
+
+/* Accordion style */
+
+.accordion-wrapper {
+  border-left: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+}
+
+.accordion-wrapper:last-child {
+  border-bottom: 1px solid lightgrey;
+}
+
+.accordion-wrapper span {
+  margin: 0 5px;
+  padding: 5px;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.accordion-icon-less {
+  display: none;
+}
+
+.accordion-icon-less.active {
+  display: inline-block;
+}
+
+.accordion-icon-more.active {
+  display: none;
+}
+
+.accordion-textbox {
+  height: 0;
+  overflow: hidden;
+  transition: height .3s ease;
+}
+
+.accordion-text {
+  border-top: 2px solid #999;
+  margin: 0;
+  padding: 15px;
+}
+
+.accordion-textbox {
+  height: 0;
+  overflow: hidden;
+  transition: height .3s ease;
+}
+
+.accordion-textbox.active {
+  height: 158px;
+}
+
+/* Footer style */
+
+footer {
+  background-color: #ff7161;
+}
+
+@media screen and (min-width: 250px) {
+  
+  .hero-video-small video {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+  }
+  
+  .hero-video-medium,
+  .hero-video-medium video {
+    display: none;
+  }
+
+  .hero-video-large,
+  .hero-video-large video{
+    display: none;
+  }
+}
+
+  @media screen and (min-width: 768px) {
+    .navbar {
+      top: 400px;
+    }
+
+    .hero-video-small,
+    .hero-video-small video {
+    display: none
+  }  
+
+  .hero-video-medium {
+    display: block;
+  }
+  .hero-video-medium video {
+    display: block;
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+  
+  }
+  .hero-video-large-wrapper,
+  .hero-video-large-wrapper video {
+    display: none;
+  }
+
+
+  .hero-title-wrapper{
+    height: 400px;
+  }
+  .hero-title-textbox {
+    text-align: right;
+  }
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  main {
+    padding-top: 450px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .main-section {
+    margin: 1rem;
+  }
+
+  .signup-form {
+    width: 50%;
+  }
+
+  .accordion {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1028px) {
+  .navbar {
+    top: 500px;
+  }
+
+  .hero-video-small,
+  .hero-video-small video {
+    display: none;
+  }
+  
+  .hero-video-medium,
+  .hero-video-medium video {
+    display: none;
+  }
+  .hero-video-large {
+    display: block;
+  }
+  .hero-video-large video{
+    display: block;
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+  }
+
+  .hero-title-wrapper {
+    height: 500px;
+  }
+  .hero-title-textbox {
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 4rem;
+    padding: 1rem;
+  }
+  .hero-subtitle {
+    font-size: xx-large;
+    padding: 1rem;
+  }
+
+  main {
+    padding-top: 550px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+ .main-section {
+   width: 425px;
+ }
+ 
+}

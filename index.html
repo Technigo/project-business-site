@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Malte form</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <header>
+      <!-- Navbar logo-->
+      <nav id="navbar" class="navbar">
+        <a class="navbar-logo" href="https://www.malteform.se">
+          <img src="./Malte_form.jpg" alt="Malte form logo">
+        </a>
+        <ul class="navbar-menu">
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-item-link">Om</a>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-item-link">Produkter</a>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-item-link">Dreja</a>
+          </li>
+          <li class="navbar-menu-item">
+            <a class="navbar-menu-item-link">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Hero video -->
+        <div class="hero-video">
+          <div class="hero-video-small">
+            <video muted autoplay>
+                <source src="./videos/Potters_640x360.mp4" type="video/mp4">
+                <p>This browser does not support video</p>
+            </video>
+          </div>
+
+          <div class="hero-video-medium">
+            <video muted autoplay>
+                <source src="./videos/Pottery_md_960x540.mp4" type="video/mp4">
+                <p>This browser does not support video</p>
+            </video>
+          </div>
+
+          <div class="hero-video-large">
+            <video muted autoplay>
+                <source src="./videos/Potters_1280x720.mp4" type="video/mp4">
+                  <p>This browser does not support video</p>
+            </video>
+        </div>
+        
+        <!-- Hero title overlay-->
+        <div class="hero-title-wrapper">
+          <div class="hero-title-textbox">
+            <h1 class="hero-title">Dreja i Sundsvall</h1>
+            <h3 class="hero-subtitle">Kom och prova på!</h3>
+          </div>
+
+        </div>
+    </header>   
+
+    
+    <main> 
+        <!-- Signup form -->
+        <section class="main-section signup-form">
+            <h2 class="section-title">Anmäl dig här</h2>
+        
+
+            <form
+                class="form"
+                action="http://httpbin.org/anything"
+                method="POST"
+            >
+        
+                <div class="form-group">
+                    <label for="firstName">Förnamn*</label>
+                    <input
+                        id="firstName"
+                        type="text"
+                        placeholder="Skriv ditt förnamn"
+                        name="firstNameValue"
+                        required
+                      />
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Efternamn</label>
+                    <input
+                        id="lastName"
+                            type="text"
+                            placeholder="Skriv ditt efternamn"
+                            name="lastNameValue"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Mejladress*</label>
+                    <input
+                       id="email"
+                      type="email"
+                      placeholder="namn@någonting.domän"
+                      name="emailValue"
+                      required
+                    />
+                </div>
+        
+                <div id="radio-button-group" class="form-group">
+                    <p>Hur många personer kommer?</p>
+                    <label for="1person">1</label>
+                    <input
+                        id="1person"
+                        type="radio"
+                        name="groupSize"
+                        value="1personValue"
+                    />
+                    <label for="upTo5">2 - 5</label>
+                    <input
+                        id="upTo5"
+                        type="radio"
+                        name="groupSize"
+                        value="upTo5Value"
+                    />
+                    <label for="upTo10">6 - 10</label>
+                    <input
+                       id="upTo10"
+                      type="radio"
+                        name="groupSize"
+                        value="upTo10Value"
+                    />
+                </div>
+                <div id="checkbox-group" class="form-group">
+                    <label for="terms">Jag godkänner köpvillkoren.</label>
+                    <input
+                        id="terms"
+                        type="checkbox"
+                        name="termsValue"
+                    />
+                    <label for="newsletter">Jag vill gärna få e-post om nyheter</label>
+                    <input
+                        id="newsletter"
+                       type="checkbox"
+                       name="newsletterValue"
+                    />
+                  </div>
+                  <button 
+                      class="form-submit" 
+                      type="submit"
+                  >
+                      Skicka
+                  </button>
+                </div>
+            </form>
+          </section>
+
+
+          <section class="main-section accordion">
+            <h2 class="section-title">Frågor & svar</h2>
+            <div class="accordion-wrapper">
+                <h3 id="accordion-header-1" class="accordion-header">
+                  <div class="accordion-icon">
+                    <span class="accordion-icon-more "><i id="accordionIconMore" class="material-icons">expand_more</i></span>
+                    <span class="accordion-icon-less"><i id="accordionIconLess" class="material-icons">expand_less</i></span>
+                  </div>
+                    <span>Hur många får komma?</span>  
+                </h3>
+                <div class="accordion-textbox">
+                    <p class="accordion-text">
+                      Löksås ipsum som smultron varit samma plats, sitt hav dimma strand ska bland, är dimmhöljd och kanske precis. Del i flera miljoner det ordningens nya kunde, kanske flera jäst upprätthållande både redan det annan, så där sitt mot erfarenheter göras. Dock ännu därmed dimma har strand sitt söka björnbär göras regn där, brunsås år söka stig ta nya där enligt sin icke denna dunge, stig del ordningens fram olika räv häst samma annan händer.                    </p>
+                </div>
+            </div>
+            <div class="accordion-wrapper">
+                <h3 id="accordion-header-2" class="accordion-header">
+                  <div class="accordion-icon">
+                    <span id="accordionIconMore" class="accordion-icon-more"><i class="material-icons">expand_more</i></span>
+                    <span id="accordionIconLess" class="accordion-icon-less"><i class="material-icons">expand_less</i></span>
+                  </div>
+                    <span>Vad kostar det?</span>
+                </h3>
+                <div class="accordion-textbox">
+                    <p class="accordion-text">
+                      Löksås ipsum som smultron varit samma plats, sitt hav dimma strand ska bland, är dimmhöljd och kanske precis. Del i flera miljoner det ordningens nya kunde, kanske flera jäst upprätthållande både redan det annan, så där sitt mot erfarenheter göras. Dock ännu därmed dimma har strand sitt söka björnbär göras regn där, brunsås år söka stig ta nya där enligt sin icke denna dunge, stig del ordningens fram olika räv häst samma annan händer.                    </p>
+                </div>
+            </div>
+            <div class="accordion-wrapper">
+                <h3 id="accordion-header-3" class="accordion-header">
+                  <div class="accordion-icon">
+                    <span class="accordion-icon-more "><i id="accordionIconMore" class="material-icons">expand_more</i></span>
+                    <span class="accordion-icon-less"><i id="accordionIconLess" class="material-icons">expand_less</i></span>
+                  </div>
+                    <span>Vad ingår i priset?</span>
+                </h3>
+                <div class="accordion-textbox">
+                    <p class="accordion-text">
+                      Löksås ipsum som smultron varit samma plats, sitt hav dimma strand ska bland, är dimmhöljd och kanske precis. Del i flera miljoner det ordningens nya kunde, kanske flera jäst upprätthållande både redan det annan, så där sitt mot erfarenheter göras. Dock ännu därmed dimma har strand sitt söka björnbär göras regn där, brunsås år söka stig ta nya där enligt sin icke denna dunge, stig del ordningens fram olika räv häst samma annan händer.                    </p>
+                </div>
+            </div>
+        </div>
+    
+  </main>
+  <footer>
+    <div class="footer-info">
+    </div>        
+</footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
