@@ -17,35 +17,21 @@ body  {
   object-fit: contain; 
 }
 
-.herovideo {
-  position: relative; 
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:250px ;
+  background-image: url(./img/coffe_small.jpg);
+  background-size: contain;  
+  background-repeat: no-repeat;
 }
 
-.herovideo video {
-  max-width: 100%;
-}
-
-#mobile {
-  display: block;
-}
-
-.herovideo h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 25px;
-  font-family:“didot”;
-  color: #FFFFFF;
-  margin:0px;
-}
-
-#tablet {
-  display: none;
-}
-
-#desktop {
-  display: none;
+header h1 {
+  position: relative;
+  text-align: center;
+  font-size: 35px;
+  color: white;
 }
 
 /*WE ARE TEXT */
@@ -239,14 +225,13 @@ footer img {
     /***  Media Quaries  Tablet  ***/
 
 @media screen and (min-width: 667px) and (max-width:1024px) {
-  #tablet {
-    display:block; 
+
+  header {
+    height: 550px;
   }
-  #mobile {
-    display: none;
-  }
-  .herovideo h1 {
-    font-size: 45px;
+
+  header h1 {
+    font-size: 70px;
   }
   .weare{
     font-size: 20px;
@@ -278,20 +263,15 @@ footer img {
 
   /***  Media Quaries  Desktop ***/
 
-  @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
 
-  #desktop {
-    display: block;
+  header {
+    height: 1000px
   }
-  #mobile {
-    display: none;  
-  }
-  #tablet {
-    display: none;
-  }  
+
+  header h1 {
+    font-size: 100px;
   
-  .herovideo h1 {
-    font-size: 60px; 
   }
   .weare{
     font-size: 20px;      
