@@ -252,15 +252,24 @@ main {
   cursor: pointer;
 }
 
+.accordion-header::before {
+  font-family: 'Material Icons';
+  font-size: 24px;
+  content: "expand_more";
+}
+
+.accordion-header.active::before {
+  font-family: 'Material Icons';
+  font-size: 24px;
+  content: "expand_less";
+}
+
+
+/*
+.accordion-header::before {
+  
+*/
 .accordion-icon-less {
-  display: none;
-}
-
-.accordion-icon-less.active {
-  display: inline-block;
-}
-
-.accordion-icon-more.active {
   display: none;
 }
 

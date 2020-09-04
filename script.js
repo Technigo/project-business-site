@@ -1,7 +1,5 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
 
-// Function with loop
+// Accordion function with loop
 
 const accordionList = document.querySelectorAll('.accordion-header');
 
@@ -17,7 +15,18 @@ accordionList.forEach(item => {
     }
 });
 
-// Sticky navbar
+// Icon toggle function
+
+const accordionIcon = document.querySelectorAll(".accordion-header");
+
+accordionIcon.forEach(accordionIcon => {
+    accordionIcon.addEventListener("click", event =>{
+        accordionIcon.classList.toggle("active");
+    });
+});
+
+
+// Sticky navbar function
 
 const navbar = document.getElementById('navbar');
 const navbarOffset = navbar.offsetTop;
