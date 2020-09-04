@@ -134,7 +134,6 @@ body {
   box-sizing: border-box;
 }
 #sign-up {
-  min-height: 100vh;
   width: 100%;
   margin: 0;
   background-color: #deb887; /* For browsers that do not support gradients */
@@ -150,36 +149,42 @@ body {
   flex-wrap: wrap;
   flex-flow: wrap;
   align-items: center;
+  justify-content: center;
 }
-.form .btn {
-  align-items: left;
-}
-.sign-up-form {
+
+section.sign-up-form {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   max-width: 100%;
 }
+
 .form-sign-up {
-  background-image: url(./img/flower.jpg);
+  background-image: url(./img/whiteflower.jpg);
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  max-height: 100vh;
   max-width: 100%;
+  width: 500px;
+  height: 700px;
+
   color: #292524;
   border-radius: 5px;
-  box-shadow: 0 5px 5px #292524;
-  width: 600px;
-  height: 800px;
-  display: block;
-  margin: 25px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  box-shadow: 5px 15px 55px grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  margin-top: 20px;
 }
 .form-sign-up h3 {
   font-family: "Playfair Display", serif;
-  color: white;
-  font-size: 30px;
+  color: tan;
+  font-size: 50px;
   letter-spacing: 2px;
   font-weight: 700;
   text-align: center;
@@ -192,19 +197,106 @@ body {
   font-family: "Playfair Display", serif;
   text-transform: uppercase;
   text-decoration: none;
+  width: 100%;
   font-size: 16px;
   background-color: burlywood;
   border: 2px solid tan;
   text-align: center;
   justify-content: center;
+  outline: none;
 }
 .form-group {
   font-size: 18px;
   font-family: "Playfair Display", serif;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
   color: black;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 /* ACCORDION */
+#accordion {
+  max-height: 100vh;
+  max-width: 100%;
+  margin: 50px;
+}
+section.accordion {
+  border-radius: 5px;
+  background-image: url(./img/daisys.jpg);
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-height: 100vh;
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 700px;
+  box-shadow: 5px 15px 55px grey;
+  margin: 15px;
+  margin-top: 20px;
+}
+.accordion-container {
+  border: 2px solid tan;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  max-height: 100vh;
+  max-width: 100%;
+}
+.faq {
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  color: white;
+  font-weight: 800;
+}
+.accordion-header {
+  font-size: 18px;
+  padding: 5px;
+  margin: 2px;
+  font-weight: 500;
+  text-align: left;
+  color: black;
+  font-family: "Playfair Display", serif;
+  cursor: pointer;
+}
+.accordion-text {
+  border-top: 2px solid #292524;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  padding: 15px;
+}
+.accordion-text-container {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in;
+}
+/* for JS */
+.accordion-text-container.active {
+  height: 158px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+  .rwd-image {
+    width: 100%;
+  }
+}
+@media (min-width: 901px) {
+  .rwd-image {
+    width: auto;
+  }
+}
