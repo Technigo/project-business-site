@@ -3,28 +3,82 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>DX Wines</title>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <header>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+      </nav>
+      <h1 class="header-title">DX WINES</h1>
+      <div class="hamburger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    </header>
+    <main>
+      <h2 class="wine-gallery-heading">Our wines</h2>
+      <section class="wine-gallery">
+        <div>
+          <img src="Images/Red-wine.jpg" alt="Red wine">
+        </div>
+        <div>
+          <img src="Images/White-wine.jpg" alt="White wine">
+        </div>
+        <div>
+          <img src="Images/Rose-wine.jpg" alt="Rosé wine">
+        </div>
+        <div>
+          <img src="Images/Sparkling-wine.jpg"alt="Sparkling wine">
+        </div>
+      </section>
+      <!-- Signup form -->
+      <div class="form-container">
+        <form action="https://httpbin.org/anything" method="POST" class="sign-up-form">
+          <h2>Sign up</h2>
+          <label>Name</label>
+          <input type="text" name="name" class="sign-up-info"required>
+          <label>E-mail</label>
+          <input type="email" name="email" class="sign-up-info" required>
+          <label>Telephone</label>
+          <input type="number" name="telephone" class="sign-up-info">
+          <label>Would you like to subscribe to our newsletter?</label>
+          <label><input type="radio" name="subscribe">Yes</label>
+          <label><input type="radio" name="subscribe">No</label>
+          <label><input type="checkbox"name="conditions">Accept all terms and conditions</label>
+          
+          <button class="submit-button">Submit</button>
+        </form>
+        <section class="accordion">
+          <!-- Accordion -->
+          <h2>FAQ</h2>
+          <div class="question" id="section1">Where can I buy the wines?</div>
+          <div class="answer">
+            <p>At our website and in Systembolaget.</p>
+          </div>
+          <div class="question" id="section2">What is the normal delivery time?</div>
+          <div class="answer">
+            <p>1-2 weeks max</p>
+          </div>
+          <div class="question" id="section3">How do I contact you?</div>
+          <div class="answer">
+            <p><a href="#footer">Here </a>you can find our contact information.</p>
+          </div>
+        </section>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+    </main>
+    <footer class="footer" id="footer">
+      <h4>Contact information</h4>
+      <p>Telephone: +46 70 89 99 99</p>
+      <p><Address>
+        DX Wines
+        Birger Jarlsgatan 45
+        17744 Stockholm
+      </Address></p>
+    </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

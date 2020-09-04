@@ -1,7 +1,231 @@
+
+header {
+  background-image: url("./Images/Flowers.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 200px;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.header-title {
+  color: white;
+  margin: 0 auto;
+  border: 1px solid;
+  font-size: 50px;
+}
+
+.nav {
+  display: none;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+
+.hamburger-menu div {
+  width: 30px;
+  background: white;
+  height: 3px;
+  margin: 4px;
+}
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  justify-content: center;
+  background-color: pink;
+  padding: 32px;
+}
+
+.sign-up-form label {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.sign-up-info {
+  height: 25px;
+}
+
+.submit-button {
+  width: 70px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  background-color: lightsteelblue;
+  padding: 32px;
+}
+
+.question {
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.answer {
+  height: 0;
+  overflow: hidden;
+}
+
+.answer a {
+  text-decoration: none;
+}
+
+.wine-gallery-heading {
+  text-align: center;
+}
+
+.wine-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.wine-gallery img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.wine-gallery img:hover {
+ opacity: 0.5;
+ transition: 1s;
+}
+
+.footer {
+  border: 1px solid white;
+  background: black;
+  color: white;
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
   /* some styling here */
+  height: auto;
+}
+
+/*Styling for tablets*/
+@media(min-width: 768px) and (max-width: 899px) {
+  .nav {
+    display:flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 10px;
+    margin-top: 8px;
+} 
+
+.nav a {
+    border: 1px solid white;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    width: 100px;
+    margin-right: 5px;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sign-up-form {
+  width: 350px;
+}
+
+.accordion {
+  width: 350px;
+}
+
+.wine-gallery {
+  flex-direction: row;
+  display: flex;
+}
+
+.wine-gallery div {
+  width: 50%;
+}
+
+.wine-gallery img {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+}
+
+
+
+/*Styling for desktop*/
+@media(min-width: 900px) {
+
+.nav {
+  display: flex;
+  text-decoration: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 10px;
+  margin-top: 10px;
+  }
+  
+  .nav a {
+   margin-right: 10px;
+   text-decoration: none;
+   color: white;
+   float: left;
+   border: 1px solid white;
+   background-color: black;
+   width: 150px;
+  }
+
+  .hamburger-menu {
+   display: none;
+  }
+
+.form-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+  }
+
+.sign-up-form {
+  width: 50%;
+  }
+
+.accordion {
+  width: 50%;
+  }
+
+  .wine-gallery {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  }
+
+  .wine-gallery div {
+  width: 25%;
+  margin-top: 5px;
+  }
+
 }
