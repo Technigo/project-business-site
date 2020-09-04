@@ -1,12 +1,12 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This weeks project involved a coding buisness website with a responsive hero-image, it also involved coding simple forms and requests that gave us a quick introduction to Javascript. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I got some problems with the accordion and JavaScript. I started with doing a codealong on YouTube making the accordion with JavaScript and when I still felt like I did not quite understand it I did another one.
+
+For next week I will have to study and read more about JavaScript to get a better understanding. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://upbeat-ardinghelli-d343bf.netlify.app/
