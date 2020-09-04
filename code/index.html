@@ -57,139 +57,212 @@
 
     <!-- TEXT BOX FORM -->
 
-
-     <!-- FORM - find the perfect location -->
-
     <section class="form">
 
-      <div class="textbox">
-        <h2 class="form">Find your perfect location</h2>
-        <p class="form">Thestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility Cloak cauldron cakes, hiya Harry!</p> <p class="form">Basilisk venom Umbridge swiveling blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky quills The Boy Who Lived bat spleens cupboard under the stairs flying motorcycle.</p>
+      <div class="form-textbox">
+        <h2 class="form-textbox-header">Find your perfect location</h2>
+        <p class="form-textbox-text">Thestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility Cloak cauldron cakes, hiya Harry!</p> 
+        <p class="form-textbox-text">Basilisk venom Umbridge swiveling blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky quills The Boy Who Lived bat spleens cupboard under the stairs flying motorcycle.</p>
       </div>
 
-      <div class="form-container">
+      <!-- FORM -->
 
       <form 
       action="http://httpbin.org/anything" 
       method="POST">
 
-      <!-- country: select -->
-      <div class="form-group">
-        <label for="resortCountry">Country</label>
+      <!-- country: select type -->
+      <div class="form-select-group">
+        <label 
+        for="resortCountry" 
+        class="form-label-heading">
+        Country</label>
+
         <select 
+        required
         name="resortCountryValue" 
-        id="resortCountry">
-          <option value="fr">France</option>
-          <option value="it">Italy</option>
-          <option value="au">Austria</option>
-          <option value="sw">Switzerland</option>
+        id="resortCountry"
+        class="form-select-box">
+          <option 
+          value="disable"
+          disabled selected hidden
+          class="form-select-box-option">
+          Choose country</option>
+          <option 
+          value="fr"
+          class="form-select-box-option">
+          France</option>
+          <option 
+          value="it"
+          class="form-select-box-option">
+          Italy</option>
+          <option 
+          value="au"
+          class="form-select-box-option">
+          Austria</option>
+          <option 
+          value="sw"
+          class="form-select-box-option">
+          Switzerland</option>
         </select>
       </div>
 
-      <div class="form-group">
-        <label for="resortType">Resort type</label>
+      <div class="form-select-group">
+        <label for="resortType" 
+        class="form-label-heading">
+        Resort type</label>
+
         <select 
+        required
         name="resortTypeValue" 
-        id="resortType">
-          <option value="ch">Chalets</option>
-          <option value="pa">Private Apartments</option>
-          <option value="hr">Hotel & Resorts</option>
+        id="resortType"
+        class="form-select-box">
+        <option 
+          value="disable"
+          disabled selected hidden
+          class="form-select-box-option">
+          Choose resort type</option>
+          <option 
+          value="ch"
+          class="form-select-box-option">
+          Chalets</option>
+          <option 
+          value="pa"
+          class="form-select-box-option">
+          Private Apartments</option>
+          <option 
+          value="hr"
+          class="form-select-box-option">
+          Hotel & Resorts</option>
         </select>
       </div>
 
-        <!-- group size: radio -->
-        <div class="form-group-size">
-          
-            <h3>Group size</h3>
+      <!-- group size: radio type -->    
+      <h3 class="form-label-heading">Group size</h3>
   
-            <div class="group-size-container">
-              <input 
-              id="oneTwo" 
-              type="radio"
-              name="groupSizeValue"
-              >
-            <label for="oneTwo">1-2</label>
-            </div>
+      <div class="form-size-group">
+        <input 
+        id="oneTwo" 
+        type="radio"
+        value="one_two"
+        name="groupSizeValue"
+        class="form-input-radio">
+        
+        <span class="form-custom-radio"></span>
+
+        <label 
+        for="oneTwo" 
+        class="form-label-input">
+        1 - 2</label>
+        </div>
             
-            <div class="group-size-container">
-              <input 
-              id="twoFour" 
-              type="radio"
-              name="groupSizeValue"
-              >
-              <label for="twoFour">2-4</label>
-            </div>
+      <div class="form-size-group">
+        <input 
+        id="twoFour" 
+        type="radio"
+        value="two_four"
+        name="groupSizeValue"
+        class="form-input-radio">
 
-            <div class="group-size-container">
-              <input 
-              id="fiveTen" 
-              type="radio"
-              name="groupSizeValue"
-              >
-              <label for="fiveTen">5-10</label>
-            </div>
-          
-            <div class="group-size-container">
-              <input 
-              id="tenTwenty" 
-              type="radio"
-              name="groupSizeValue"
-              >
-              <label for="tenTwenty">10-20</label>
-            </div>
-
-        </div>
-        
-        <!-- dates: date & checkbox -->
-        <div class="form-group-dates">
-
-          <h3>Dates</h3>
-
-          <div class="dates-container">
-            <label for="dateArrival">Arrival</label>
-          <input 
-            id="dateArrival" 
-            type="date"
-            name="dateArrivalValue"
-            >
-          </div>
-          
-          <div class="dates-container">
-            <label for="dateDeparture">Depature</label>
-          <input 
-            id="dateDeparture" 
-            type="date"
-            name="dateDepartureValue"
-            >
-          </div>
-
-          <div class="dates-container">
-            <label 
-          for="flexible">
-          My dates are flexible</label>
-          <input
-          id="flexible"
-          type="checkbox"
-          >
-          </div>
-  
-        </div>
-        
-        <!-- extras features: text -->
-        <div class="form-group-extra">
-
-          <label for="otherComments">Extra features</label>
-          <input 
-            id="otherComments" 
-            type="text"
-            name="otherCommentsValue"
-            >
-        </div>
-
-        <button class="form" type="submit">Search</button>
-      </form>
-
+        <label 
+        for="twoFour"
+        class="form-label-input">
+        2 - 4</label>
       </div>
+
+      <div class="form-size-group">
+        <input 
+        id="fiveTen" 
+        type="radio"
+        value="five_ten"
+        name="groupSizeValue"
+        class="form-input-radio">
+
+        <label 
+        for="fiveTen"
+        class="form-label-input">
+        5 - 10</label>
+      </div>
+          
+      <div class="form-size-group">
+        <input 
+        id="tenTwenty" 
+        type="radio"
+        value="ten_twenty"
+        name="groupSizeValue"
+        class="form-input-radio">
+
+        <label 
+        for="tenTwenty"
+        class="form-label-input">
+        10 - 20</label>
+      </div>
+        
+      <!-- dates: date & checkbox -->
+
+      <h3 class="form-label-heading">Dates</h3>
+
+      <div class="form-dates-group">
+        <label 
+        for="dateArrival"
+        class="form-label-input">
+        Arrival</label>
+
+        <input 
+        id="dateArrival" 
+        type="date"
+        name="dateArrivalValue"
+        class="form-input-date">
+      </div>
+          
+      <div class="form-dates-group">
+        <label 
+        for="dateDeparture"
+        class="form-label-input">
+        Depature</label>
+
+        <input 
+        id="dateDeparture" 
+        type="date"
+        name="dateDepartureValue"
+        class="form-input-date">
+      </div>
+
+      <div class="form-dates-checkbox-group">
+        <label 
+        for="flexible"
+        class="form-label-input">
+        My dates are flexible</label>
+
+        <input
+        id="flexible"
+        type="checkbox"
+        name="flexibleDateValue"
+        value="flexible"
+        class="form-input-checkbox">
+      </div>
+          
+      <!-- extras features: text -->
+      <div class="form-extra-group">
+          <label 
+          for="otherComments"
+          class="form-label-heading">
+          Extra features</label>
+
+          <input 
+          id="otherComments" 
+          type="text"
+          name="otherCommentsValue"
+          placeholder="Tell us exactly what you want"
+          class="form-input-text">
+        </div>
+
+        <button 
+        class="form" 
+        type="submit">
+        Search</button>
+
+      </form>
 
     </section>
 
