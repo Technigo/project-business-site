@@ -1,5 +1,4 @@
 
-
 const headerAll = document.querySelectorAll(".accordion-question");
 
 headerAll.forEach(headerAll => {
