@@ -18,54 +18,31 @@
     </section> 
 
     <section class="main-content flex-container">
-        <section class="signup-form">
-
-          <form id="signUpForm" action="https://httpbin.org/anything" onsubmit="return validateForm()" method="post">
-            <h4 class="signupHeader">Become a member and explore our tours</h4>
+        <section class="signup-form-wrap">
+          <form id="sign-Up-Form" action="https://httpbin.org/anything" onsubmit="return validateForm()" method="post">
+            <h4 class="signup-Header">Become a member and explore our tours</h4>
             <label for="fname"> * First name</label>
-             <input class="textInput" type="text" id="fname" name="fname" required pattern=".{2,}">
+             <input class="text-Input" type="text" id="fname" name="fname" required pattern=".{2,}">
             <label for="lname"> * Last name</label>
-             <input class="textInput" type="text" id="lname" name="lname" required pattern=".{2,}">
+             <input class="text-Input" type="text" id="lname" name="lname" required pattern=".{2,}">
              <label for="email"> * E-mail</label>
-             <input class="textInput" type="text" id="email" name="email" title="Enter a valid e-mail address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+             <input class="text-Input" type="text" id="email" name="email" title="Enter a valid e-mail address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
              <label for="pwd"> * Password</label>
-             <input class="textInput" type="password" id="pwd" name="pwd" title="Choose a password" required>
-             <!--
-             <div class="radioGroup">
-              <div class="radioButtonWrapper">
-                <input class="radioInput" type="radio" id="expert" name="radioBtn" value="expert">
-              <label for="Expert">Expert hiker</label>
-              </div>
-              <div class="radioButtonWrapper">
-                <input class="radioInput" type="radio" id="experienced" name="radioBtn" value="experienced">
-              <label for="experienced">Some experience</label>
-              </div>                
-              <div class="radioButtonWrapper">
-                <input class="radioInput" type="radio" id="newbie" name="radioBtn" value="newbie" checked="checked">
-                <label for="newbie">Total newbie</label>
-              </div>
-            -->
-
-            <!-- FOR TESTING -->
+             <input class="text-Input" type="password" id="pwd" name="pwd" title="Choose a password" required>             
             <div class="wrapper-row">
               <label class="radiobutton-container">Expert hiker
                 <input type="radio" name="experience" value="expert">
                 <span class="custom-radio"></span>
               </label>
-
               <label class="radiobutton-container">Some experience
                 <input type="radio" name="experience" value="someexp">
                 <span class="custom-radio"></span>
               </label>
-
               <label class="radiobutton-container">Total newbie
                 <input type="radio" name="experience" value="newbie" checked>
                 <span class="custom-radio"></span>
               </label>
-
-            </div>
-          <!-- FOR TESTING -->
-
+            </div>       
             </div>
             <div class="age-wrapper">              
               <label for="age"></label>
@@ -77,18 +54,7 @@
                   <option value="agegroup4">70+</option>
                 </select>
             </div>  
-<!--
-            <div class="checkBoxWrapper">
-              <input class="checkbox-Input" id="checkbox-optional" type="checkbox" name="checkbox-optional" value="checkedNewsL">
-              <label for="checkbox-optional"> I'd like to receive the weekly newsletter with updates from TeamJungleExpo</label>
-            </div>
-            <div class="checkBoxWrapper">
-              <input class="checkbox-Input" id="checkbox-Input" type="checkbox" name="agree" value="checkedAgree" checked="checked">
-              <label for="checkbox-Input"> I agree to the terms and conditions</label>
-            </div>          
-          -->
 
-        <!-- For testing custom checkbox-->
         <div class="wrapper-row-check">
           <label class="checkbox-container">I agree to the terms and conditions
             <input type="checkbox" value="agree" name="checkbox" id="agreeTerms">
@@ -101,20 +67,14 @@
             </span>
           </label>
         </div>
-
-         <!-- For testing custom checkbox-->
-
-         
-            <input type="submit" class="submitBtn" value="Submit"></button>
+            <input type="submit" class="submit-Btn" value="Submit"></button>
           </form>
         </section>
 
-    
-
-        <section class="accordionWrap">
+        <section class="accordion-Wrap">
           <!-- Accordion -->
-          <div class ="accordionHeader">
-              <h4 class="faqHeader">FAQ</h3>
+          <div class ="accordion-Header">
+              <h4 class="faq-Header">FAQ</h3>
           </div>
           <section id="acc1" class="accordion" onClick="toggleActive(this.id)">
             Why should I become a member?
@@ -140,8 +100,8 @@
         </section>
   </section>
   <footer>
-    <p class="footerText">Want more info?</p>
-    <a class="footerLink" href="mailto:teamjungleexpo@mailinator.com">Reach out!</a>
+    <p class="footer-Text">Want more info?</p>
+    <a class="footer-Link" href="mailto:teamjungleexpo@mailinator.com">Reach out!</a>
   </footer>
   <script src="./code/script.js"></script>
   </body>
