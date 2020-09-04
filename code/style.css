@@ -51,6 +51,121 @@ p {
   text-align: center;
 }
 
+
+
+
+  /* FORM */
+
+  .form-heading {
+    padding-bottom: 20px;
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+    padding: 5px 0 5px 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif; 
+    background-color: rgb(122, 140, 122);
+    margin: 20px;
+    box-shadow: 4px 4px #c9c9c9;
+  }
+
+  .form-group {
+    padding: 10px;
+  }
+
+  .form-group input,
+  .form-group text-area {
+    width: 300px;
+  }
+
+  .button input{
+    background-color: #13443b;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    padding-bottom: 27px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-group-radio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  input {
+    border-radius: 5px;
+    height: 30px;
+  }
+
+  input:invalid {
+    border: 1px solid red;
+  }
+
+/* ACCORDION */
+
+.accordion {
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(177, 179, 177);
+  box-shadow: 4px 4px  #c9c9c9;
+}
+
+.accordion-item {
+  background-color:#13443b;
+  border-radius: 10px;
+}
+
+.accordion-item-header {
+  padding: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+
+}
+
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+
+.accordion-item-body {
+  background-color: white;
+  margin-bottom: 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+} 
+
+.accordion-item-body-content {
+  padding: 20px;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(to right, transparent, #13443b, transparent) 1;  
+}
+
+
+
+
 /* MEDIA QUERIES */
 /* På skärmar större än 678 px */
 @media screen and (min-width: 678px) {
@@ -74,17 +189,13 @@ p {
     display: flex;
     }
 
-    .container form {
+  .container form {
       width: 50%;
     }
 
-    .accordion {
+  .accordion {
       width: 50%;
     }
-
-    /* .form {
-      text-align: left;
-    } */
 }
 
 
@@ -101,101 +212,6 @@ p {
   }
 
 
-  /* .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    } */
-
-  /* FORM */
-
-  form {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    font-family: 'Roboto', sans-serif; 
-    background-color: rgb(122, 140, 122);
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 4px 4px #c9c9c9;
-  }
-
-  .form-group {
-    padding: 10px;
-  }
-
-  .form-group input,
-  .form-group text-area {
-    width: 300px;
-  }
-
-  .button input{
-    background-color: #13443b;
-    border-radius: 20px;
-    padding: 10px;
-    color: white;
-    font-family: 'Playfair Display', serif;
-  }
-
-label {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5px;
-}
-
-.form-heading {
-  padding-bottom: 20px;
-  font-weight: 900;
-  font-family: 'Playfair Display', serif;
-  padding: 5px 0 5px 0;
-}
-
-.form-group-radio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-
-}
-
-/* ACCORDION */
-
-.accordion {
-  padding: 20px;
-  margin: 20px;
-  background-color: rgb(177, 179, 177);
-  border-radius: 10px;
-  box-shadow: 4px 4px  #c9c9c9;
-  /* display: flex;
-  flex-direction: column; */
-}
-
-.accordion-item {
-  background-color:#13443b;
-  border-radius: 10px;
-}
-
-.accordion-item-header {
-  padding: 10px;
-  text-align: center;
-  color: white;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.accordion-item-body {
-  background-color: white;
-  margin-bottom: 15px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-} 
-
-.accordion-item-body-content {
-  padding: 20px;
-  border-bottom: 3px solid yellow;
-  border-image: linear-gradient(to right, transparent, #13443b, transparent) 1;  
-}
 
 
 
@@ -203,14 +219,7 @@ label {
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-accordion-item-header.active + ..accordion-item-body {
+/* accordion-item-header.active + .accordion-item-body { */
   /* some styling here */
-  max-height: 200px;
-}
-
-
-
-
-
-
-
+  /* max-height: auto;
+} */

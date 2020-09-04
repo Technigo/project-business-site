@@ -3,7 +3,6 @@ const accordionItemHeaders = document.querySelectorAll(".accordion-item-header")
 accordionItemHeaders.forEach(accordionItemHeader => {
 
     accordionItemHeader.addEventListener("click", event => {
-        // console.log("säg hej");
         accordionItemHeader.classList.toggle("active"); 
         const accordionItemBody = accordionItemHeader.nextElementSibling;
         if(accordionItemHeader.classList.contains("active")) {
@@ -27,3 +26,5 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
 // document.getElementById("section1").onclick = toggle
+
+
