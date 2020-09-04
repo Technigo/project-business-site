@@ -10,13 +10,26 @@
   </head>
   <body>   
 
-    <section class="hero">
-        <header class="hero-header">
-          <h4 class="hero-small-title">Discover the magic of</h1>
-          <h1 class="hero-title">THE INCA TRAIL</h1>
+    <!-- Hero image, for small screens-->
+    <section class="hero-mobile">
+        <header class="hero-header-mobile">
+          <h4 class="hero-small-title-mobile">Discover the magic of</h1>
+          <h1 class="hero-title-mobile">THE HIDDEN JUNGLES</h1>
         </header>
     </section> 
-
+    <!-- Video in hero, for big screens-->
+    <section class="hero-video-wrap">
+      <div class="hero-normal-titles-wrapper">
+        <h4 class="hero-small-title-normal">Discover the magic of</h1>
+          <h1 class="hero-title-normal">
+            THE HIDDEN JUNGLES
+          </h1>
+      </div>      
+      <video class="hero-video" autoplay muted loop>
+        <source src="./code/videos/mountains.mp4" type="video/mp4">
+        <p>This browser doesn't support video...</p>
+      </video>
+    </section>
     <section class="main-content flex-container">
         <section class="signup-form-wrap">
           <form id="sign-Up-Form" action="https://httpbin.org/anything" onsubmit="return validateForm()" method="post">
@@ -54,7 +67,6 @@
                   <option value="agegroup4">70+</option>
                 </select>
             </div>  
-
         <div class="wrapper-row-check">
           <label class="checkbox-container">I agree to the terms and conditions
             <input type="checkbox" value="agree" name="checkbox" id="agreeTerms">
@@ -70,7 +82,6 @@
             <input type="submit" class="submit-Btn" value="Submit"></button>
           </form>
         </section>
-
         <section class="accordion-Wrap">
           <!-- Accordion -->
           <div class ="accordion-Header">

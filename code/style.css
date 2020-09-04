@@ -10,23 +10,63 @@ body{
  background: linear-gradient(180deg, rgb(5 29 31) 46%, rgb(0 29 46 / 80%) 100%);
 }
 
+.hero-video-wrap{
+  position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.hero {
+.hero-video{
+   background-size: cover;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    filter: blur(0.5px) saturate(0.6);
+    z-index: -1;
+}
+
+.hero-normal-titles-wrapper{
+  z-index: 1;
+  position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+}
+
+.hero-title-normal{
+  font-size: 6em;
+  color: #c2b3a8;
+  font-family: 'Big Shoulders Display', cursive;
+  margin: 0;
+}
+
+.hero-small-title-normal{
+  font-size: 4em;
+  color: #e9a985;
+  font-family: Sacramento, cursive;
+  margin: 0;
+}
+
+.hero-mobile {
   height: 40vh;
   background-image: url("./pics/jungleView.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: 'Big Shoulders Display', cursive;
   margin-bottom: 4vh;
   min-width: 300px;
+  display: none;
 }
 
-.hero-header{
+.hero-header-mobile{
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -38,7 +78,7 @@ body{
   align-items: center;
 }
 
-.hero-title{
+.hero-title-mobile{
   background: #e8f3f8b8;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -46,7 +86,7 @@ body{
   margin-top: 0;
 }
 
-.hero-small-title{
+.hero-small-title-mobile{
   background: #e8f3f8b8;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -55,11 +95,9 @@ body{
   font-family: Sacramento, cursive;
 }
 
-.hero, .signup-form-wrap, .accordion-Wrap{
+.hero-mobile, .signup-form-wrap, .accordion-Wrap{
   padding: 20px;
 }
-
-
 
 .flex-container{
   display: flex;
@@ -409,8 +447,6 @@ footer{
   .signup-form-wrap, .accordion-Wrap{
     flex-basis : 40%;
   }
-
-  
   }
 
   /*Desktop or Laptop*/
@@ -430,3 +466,17 @@ footer{
     flex-direction: row;
   }
   }
+
+  /*Smaller tablets and mobile*/
+  @media only screen and (max-width: 767px)
+{
+  .hero-video-wrap
+  { 
+    display: none;
+  }
+
+  .hero-mobile{
+    display: flex;
+  }
+
+}
