@@ -302,7 +302,7 @@ hero-container {
   border-radius: 1rem;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.35);
 }
-
+                                                        /* FORM STARTS HERE */
 .form-container {
   display: flex;
   justify-content: center;
@@ -310,15 +310,15 @@ hero-container {
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */    
-    background: radial-gradient(circle, #ECC8AF 0%, #C18C5D 100%);
-    padding: 20px 0;
-    max-width: 500px;
-    border-radius: 1rem;
-    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */    
+  background: radial-gradient(circle, #ECC8AF 0%, #C18C5D 100%);
+  padding: 0;
+  max-width: 500px;
+  border-radius: 1rem;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.35);
 }
 
 .form-input-container {
@@ -347,6 +347,7 @@ hero-container {
 .form-group label {
     width: 100px;
     margin-right: 5px;
+    color: #495867;
 }
 
 .form-group input {
@@ -354,18 +355,58 @@ hero-container {
   border-right-style: hidden;
   border-left-style: hidden;
   background: rgba(0, 0, 0, 0);
+  color: #495867;
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.radio-button {
     width: 200px;
 }
 
-.form-submit {
-    width: 100px;
-    margin-left: 10px;
-    margin-bottom: 5px;
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+  color: #495867;
 }
+
+.radio-group p {
+  width: 100px;
+  margin-right: 5px;
+}
+
+.radio-button {
+  font-size: 12px;
+}
+
+.radio-button label {
+  margin-right: 3px;
+}
+
+.form-submit {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-submit-button {
+  /* width: 150px;
+  color: #495867; */
+  background-color: #495867;
+  color: #E7AD99;
+  padding: 8px 18px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
+
+
 
 @media (max-width:768px) {
   html {

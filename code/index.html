@@ -183,57 +183,101 @@ Set the form action to post to `https://httpbin.org/anything` and the method s
           Make a reservation request
         </h3>
       </div>
+
       <div class="form-group">
           <label for="firstName">First name*</label>
           <input
               id="firstName"
               type="text"
-              placeholder="Your first name"
+              placeholder="First name"
               name="firstNameValue"
               required
           />
       </div>
 
       <div class="form-group">
-          <label for="lastName">Last name</label>
+          <label for="lastName">Last name*</label>
           <input
               id="lastName"
               type="text"
+              placeholder="Last name"
               name="lastNameValue"
+              required
           />
       </div>
 
            <!-- put in a div for phone-number here -->
 
       <div class="form-group">
-          <label for="email">Email address</label>
+          <label for="email">Email address*</label>
           <input
-              id="email"
-              type="email"
-              name="emailValue"
+            id="email"
+            type="email"
+            name="emailValue"
+            placeholder="example@email.com"
           />
       </div>
 
-      <!-- Put in radiobuttons for man, woman, other here -->
+      <div class="form-group">
+        <label for="date">Select date of arrival*</label>
+        <input 
+          id="date"    
+          type="date"
+          name="dateValue"
+          required
+        />
+      </div>
 
-      <!-- Put in password here -->
+      <!-- Put in radiobuttons for man, woman, other here -->
+      <div class="radio-group" id="radio">
+          <p class="radio-cabin-title">Choose a cabin*</p>
+          <div class="radio-button"> 
+            <label for="cabin1">Cabin 1</label>
+            <input 
+              id="cabin1"
+              type="radio"
+              name="cabinValue"
+              value="cabin1"
+              required>
+              <br>
+            <label for="cabin2">Cabin 2</label>
+            <input 
+              id="cabin2"
+              type="radio"
+              name="cabinValue"
+              value="cabin2"
+              required> 
+              <br>
+              <label for="cabin3">Cabin 3</label>
+              <input 
+                id="cabin3"
+                type="radio"
+                name="cabinValue"
+                value="cabin3"
+                required>       
+          </div>
+      </div>
+
+      
+
+      <div class="form-group">
+          <label for="message">Anything we should know?</label>
+          <textarea
+              id="message"
+              type="text"
+              placeholder="Type your message here"
+              cols="10"
+              rows="6"
+              name="messageValue"
+          ></textarea>
+      </div>
 
       <!-- put in a checkbox for terms and conditions here -->
 
       <!-- put in a checkbox for monthly newsletter here -->
 
-      <div class="form-group">
-          <label for="message">Message</label>
-          <textarea
-              id="message"
-              cols="10"
-              rows="2"
-              name="messageValue"
-          ></textarea>
-      </div>
-
       <div class="form-submit">
-        <button type="submit">Submit</button>
+        <button class="form-submit-button" type="submit">Submit</button>
       </div>
 
     </div>
