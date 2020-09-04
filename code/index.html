@@ -4,39 +4,130 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Overpass|Permanent+Marker" rel="stylesheet">
+
 
     <title>My sisters hair</title>
-    <!-- dont forget to add a css file and link it here! heheheh-->
+   <!-- video or image as a header is cool :) -->
+  
   </head>
   <body>
 
+
     <header>
-    <img src="./Mysister.jpg" alt="Woman with curly hair">
+
+      <div class="top-section-container">
+
+        <di class="hero-img">
+          <img src="./Mysister.jpg" alt="Woman with curly hair" width="100%"> 
+        </div>
+
+          <div class="name-text"> 
+              <h1>My sisters hair </h1> 
+          </div>
     
-    <div class="Mysisterlogo">
-       <img src="./Mysisterlogo.png" alt="My sisters hairs logo">
+          <!-- <div class="mysister-logo">
+              <img src="./Mysisterlogo.png" alt="My sisters hairs logo" width="70px">
+          </div>  -->
+
+      </div>
+
+  </header>
+   
+
+  <!-- Main content -->
+
+    <main class="main-container">
+
+       <!-- Signup form -->
+    <form
+    class="form"
+    action="http://httpbin.org/anything"
+    method="POST"
+>
+    <div class="form-group">
+        <label for="firstName">First name*</label>
+        <input
+            id="firstName"
+            type="text"
+            placeholder="Type your first name"
+            name="firstNameValue"
+            required
+        />
     </div>
+    <div class="form-group">
+        <label for="lastName">Last name</label>
+        <input
+            id="lastName"
+            type="text"
+            name="lastNameValue"
+            required
+        />
+    </div>
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input
+            id="email"
+            type="email"
+            name="emailValue"
+        />
+    </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea
+            id="message"
+            cols="10"
+            rows="2"
+            name="messageValue"
+        ></textarea>
+    </div>
+    <button class="form-submit" type="submit">Submit form</button>
+</form>
 
 
-</header>
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
+    <!-- Accordion -->
 
     <section class="accordion">
-      <!-- Accordion -->
+     
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">Gör ni flätor?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>
+          För våra flätbehandlingar.
+          Kontakta salongen för info och pris.</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">Vad kostar en behandling?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Alla våra priser är frånpriser för normaltjockt hår i ca axellängd. 
+          <br>
+          Om du har långt och/eller tjockt hår kan priset komma att öka.
+          <br> 
+          Kontakta salongen via telefon eller mail om du har frågor.</p>
       </div>
+
+
+      <div class="question" id="section3">Vart finns er salongen?</div>
+      <div class="answer">
+        <p>
+          Du hittar oss i Stockholm, Hornstull, Bergsunds strand 3.
+          </p>
+      </div>
+      
     </section>
+
+  </main>
+
+<div class="footer">
+
+<p>Created by Sabina de Maré @ Technigo bootcamp 2020</p>
+
+</footer>
+
     <!-- dont forget to link the javascript file here! -->
+    
+ <script src="./script.js"></script>
+
   </body>
 </html>
