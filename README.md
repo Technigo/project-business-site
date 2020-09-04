@@ -1,12 +1,20 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The graffiti bootcamp is a mobile first responsive business site with a hero video.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Started of the project to make a highlevel sketch in Jamboard with the mobile first approach.
+To cretate a responsive hero video i used one vide that i compressed and adapted the video for driffrent screen sizes.
+A sign up form with validation was created that can send the information with POST to http://httpbin.org/anything.
+FAQ section was created using javascript.
+
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+Link to the deployed project https://pensive-payne-f31714.netlify.app/
+
+
+## Known errors and suggested improvements
+Sign up button on the hero page is not currently going to the sign up section.
+Responsive layout for desktop is not working perfect for form and accordion.
