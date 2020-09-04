@@ -1,12 +1,13 @@
-# Business Site
+# Free walking tour
 
-Replace this readme with your own information about your project. 
+Made during Technigo Bootcamp. The assignment was to create a site with forms, accordion and a hero image/video. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## The process
 
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started mobile first, tried CSS grid for the first time to layout the site. 
+I put some effort in styling the form and accordion with CSS, added the hero video in a video tag. 
+Next I made it somewhat responsive for tablet and desktop. 
+Had I more time I would refine the grid layout, add more validation to the form and make a selection for days as well as times. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Here you can see the site live: https://cornelia-business-site.netlify.app/
