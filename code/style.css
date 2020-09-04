@@ -30,25 +30,44 @@ header p {
   padding: 10px;
 }
 
+/* MEDIA QUERIES FOR THE RESPONSIVE HEADER */
+
 @media (min-width: 668px) {
 
 header  {
-  height: 600px;
-  background-image: url(./summerday_medium.jpg);
+  height: 400px;
+  background-image: url(./summerday_tablet.jpg);
   background-size: cover;
 }  
 
 header h1 {
   padding: 32px 70px;
-  font-size: 50px;
+  font-size: 42px;
 }
 
 header p {
-  padding: 30px;
-  font-size: 30px;
+  padding: 20px;
+  font-size: 25px;
 }
 }
 
+@media (min-width: 1025px) {
+  header {
+    height: 600px;
+    background-image: url(./summerday_screen.jpg);
+    background-size: 100% auto;
+  }
+
+  header h1 {
+    padding: 32px 70px;
+    font-size: 50px;
+  }
+  
+  header p {
+    padding: 30px;
+    font-size: 30px;
+  }
+}
 
 /* THE SHORT GREET SECTION */
 
@@ -69,7 +88,7 @@ header p {
 }
 
 .form-container {
-  background-color:#C0CEAD;
+  background-color:#E8F1FB;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -77,7 +96,7 @@ header p {
 }
 
 .accordion-container {
-  background-color:#DAC180;
+  background-color:#C6B488;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -133,8 +152,16 @@ form {
 }
 
 .form-submit {
-  width: 100px;
-  margin-bottom: 25px;
+  width: 140px;
+  margin-bottom: 35px;
+  padding: 5px;
+  background-color: #353630;
+  color: white;
+  border: none;
+}
+
+.form-submit:hover {
+  cursor: pointer;
 }
 
 input:focus {
@@ -206,6 +233,31 @@ input:invalid:not(:focus):not(:placeholder-shown) {
 .chosen .icon:before {
   content:"➖";
 }
+
+/* FOOTER */
+
+footer {
+  background: #353630;
+  color: #fff;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.pink--brain:before {
+content: '\1F9E0';
+}
+
+.pink--brain:hover:before {
+  content: '\2764';
+}
+
+.right {
+  float: right;
+}
+
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
