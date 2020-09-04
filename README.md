@@ -15,8 +15,6 @@ The site has:
 - a signup form with styled radio buttons and check boxes, a change of the mouse cursor when hovering over the boxes/buttons, and form validation via HTML input 
 - a FAQ accordion, built with JavaScript, with a slide-down effect when the accordion expands and collapses.
 
-I have 
-
 ## View it live
 The site is deployed <a href="https://cranky-joliot-40c1a2.netlify.app">here.</a>  
 Check it out and learn some cool facts about period poverty and a solution!
