@@ -63,7 +63,10 @@ main {
 /* INFO */
 
 .intro {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   grid-row: span 1;
   text-align: center;
   box-sizing: border-box;
@@ -114,13 +117,9 @@ input {
 }
 
 
-
-input:invalid {
-  /* background: rgba(255, 255, 255, 0.8); */
-}
-
 input:focus {
   border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.5)
 }
 
 label {
@@ -134,12 +133,6 @@ form div {
   align-items: center;
 }
 
-/*
-form div input {
-  margin-right: 15px;
-  height: 20px;
-  width: 20px;
-}*/
 
 .radio-container {
   display: block;
@@ -176,11 +169,11 @@ form div input {
 }
 
 .radio-container:hover input ~ .custom-radio {
-  background-color: rgba(255, 255, 255, 0.5)
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .radio-container input:checked ~ .custom-radio {
-  background-color: rgba(255, 255, 255, 1)
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .custom-radio:after {
@@ -260,7 +253,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   border: 1px solid lightsalmon;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  
 }
 
 .active {
@@ -356,6 +348,9 @@ footer a {
     grid-column-end: 4;
   
   }
+ .intro p {
+   width: 75%;
+ }
 
   .sign-up {
     grid-column: span 1;

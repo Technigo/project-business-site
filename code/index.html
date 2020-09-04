@@ -10,8 +10,8 @@
   <body>
     <header>
       <div class="video-container">
-      <video autoplay muted loop>
-        <source src="videos/production ID_4101893.mp4" type="video/mp4">
+      <video autoplay muted loop poster="./videos/video-fallback.jpg">
+        <source src="./videos/production ID_4101893_1_1920.mp4" type="video/mp4">
       </video>
     </div>
     <div class="header-content">
@@ -22,8 +22,10 @@
 
     <main>
     <section class="intro">
-      <h2>What is a free walking tour?</h2>
-      <p>The tour will take you around Södermalm in Stockholm and show you the most precious and hidden gems of the island</p>
+      <h2>Join us on a tour around Söder</h2>
+      <p>The tour will take you around Södermalm in Stockholm and show you the most precious and hidden gems of the island. 
+        We will both walk you through history and tell you the most up to date news. 
+        We'll meet up at Slussen, take you around, and return you safely to slussen again.  </p>
     </section>
 
     <section class="sign-up">
@@ -39,7 +41,7 @@
         <input type="email" id="email" class="email" name="email">
 
         <label for="amount">How many are you?</label>
-        <input type="number" id="amount" class="amount" name="amount">
+        <input type="number" id="amount" class="amount" name="amount" maxlength="5">
 
         <p>Choose a time *</p>
 
@@ -50,12 +52,12 @@
         </label>
 
         <label class="radio-container">3 PM:
-        <input type="radio" id="secondTime" name="time" value="secondTime" class="radio-time">
+        <input type="radio" id="secondTime" name="time" value="secondTime" class="radio-time" required>
         <span class="custom-radio"></span>
         </label>
 
         <label class="radio-container">7 PM:
-        <input type="radio" id="thirdTime" name="time" value="thirdTime" class="radio-time">
+        <input type="radio" id="thirdTime" name="time" value="thirdTime" class="radio-time" required>
         <span class="custom-radio"></span>
         </label>
       </div>
