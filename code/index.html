@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <!------------------- HEADER ------------------->
     <header>
       <video playsinline autoplay muted loop id="bgvid">
         <source src="./videos/jellyfish.mp4" type="video/mp4">
@@ -36,31 +37,63 @@
     <!------------------- MARQUEE ------------------->
     <!-- I know the Marquee is banned and EVIL - but let a girl play- rite?! -->
     <div class="marquee">
-      <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" class="uc">"Push your water glass on the floor jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed. Missing until dinner time hide at bottom of staircase to trip human intently stare at the same spot, but scratch me there, elevator butt for i heard this rumor where the humans are our owners, pfft, what do they know?!"</marquee>
+      <marquee 
+        behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" class="uc">"Push your water glass on the floor jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed. Missing until dinner time hide at bottom of staircase to trip human intently stare at the same spot, but scratch me there, elevator butt for i heard this rumor where the humans are our owners, pfft, what do they know?!"</marquee>
       <marquee behavior="scroll" direction="left" onmouseover="this.start();" onmouseout="this.start();" class="uc">"Meoooow really likes hummus make it to the carpet before i vomit mmmmmm run as fast as i can into another room for no reason milk the cow. Meow meow, i tell my human mesmerizing birds and eat half my food and ask for more, i like fish, but leave hair on owner's clothes. Pose purrfectly to show my beauty."</marquee>
     </div>
 
 
     <!------------------- FORM ------------------->
     <section id="secret-form" class="secret-form uc">
-      <form>
-        <label for="secret">What is your secret?</label>
-        <textarea name="secret" id="secret"></textarea>
+      <form action="http://httpbin.org/anything" method="POST">
+        
+        <label for="secret">What is your secret?*</label>
+        <textarea 
+          id="secret" 
+          name="secret" 
+          minlength="10" 
+          maxlength="500" 
+          placeholder="Spill the beans here..."
+          required
+          ></textarea>
 
-        <label for="name">Name <span class="italic">(will not be shown)</span></label>
-        <input type="text" id="name" name="name">
+        <label for="name">Name* <span class="italic">(will not be shown)</span></label>
+        <input 
+          id="name" 
+          type="text" 
+          name="name" 
+          required
+          >
 
-        <label for="email">E-mail <span class="italic">(will not be shown)</span></label>
-        <input type="text" id="email" name="email">
+        <label for="email">E-mail* <span class="italic">(will not be shown)</span></label>
+        <input
+          id="email" 
+          type="text"
+          name="email" 
+          required
+          >
 
         <div class="checkboxes-all-wrapper">
             <div class="checkbox-wrapper">
-            <label for="terms">I accept the <a href="#">terms</a> and <a href="#">conditions</a></label>
-            <input type="checkbox" id="terms" class="checkbox">
+            <label for="terms">I accept the <a href="#">terms</a> and <a href="#">conditions</a>*</label>
+            <input 
+              id="terms" 
+              type="checkbox" 
+              name="checkbox-terms" 
+              class="checkbox" 
+              required
+              >
+              <span class="custom-checkbox"></span>
           </div>
           <div class="checkbox-wrapper">
             <label for="newsletter">I want to receive the weekly secret-bundle</label>
-            <input type="checkbox" id="newsletter" class="checkbox">
+            <input 
+              id="newsletter" 
+              type="checkbox" 
+              name="checkbox-newsletter" 
+              class="checkbox"
+              checked
+              >
           </div>
         </div>
 
@@ -69,40 +102,61 @@
     </section>
 
 
-    <!------------------- ACCORDION ------------------->
-    <section id="faq" class="accordion">
-      <h2>FAQ</h2>
-      
-      <div class="accordion-wrapper">
+  <!------------------- ACCORDION ------------------->
+    
+  <h2>FAQ</h2>
 
-          <div class="accordion-item">
-            <div id="question1" class="question"><h3>&#9656; How do I know my secret will remain a secret?</h3></div>
-            <div class="answer"><p>Hiss and stare at nothing then run suddenly away human give me attention meow run at 3am but purr. Stand in front of the computer screen i want to go outside let me go outside nevermind inside is better ooooh feather moving feather! but find something else more interesting, meow all night ears back wide eyed run off table persian cat jump eat fish.</p></div>
-          </div>
-          
-          <div class="accordion-item">
-            <div id="question2" class="question"><h3>&#9656; Why Secrets Anonymous?</h3></div>
-            <div class="answer"><p>Hiss and stare at nothing then run suddenly away human give me attention meow run at 3am but purr. Stand in front of the computer screen i want to go outside let me go outside nevermind inside is better ooooh feather moving feather! but find something else more interesting, meow all night ears back wide eyed run off table persian cat jump eat fish.</p></div>
-          </div>
-       
-          <div class="accordion-item">
-            <div id="question3" class="question"><h3>&#9656; Can I share your secrets?</h3></div>
-            <div class="answer"><p>Hiss and stare at nothing then run suddenly away human give me attention meow run at 3am but purr. Stand in front of the computer screen i want to go outside let me go outside nevermind inside is better ooooh feather moving feather! but find something else more interesting, meow all night ears back wide eyed run off table persian cat jump eat fish.</p></div>
-          </div>
-          
-          <div class="accordion-item">
-            <div id="question4" class="question"><h3>&#9656; Can my secret be illegal?</h3></div>
-            <div class="answer"><p>Hiss and stare at nothing then run suddenly away human give me attention meow run at 3am but purr. Stand in front of the computer screen i want to go outside let me go outside nevermind inside is better ooooh feather moving feather! but find something else more interesting, meow all night ears back wide eyed run off table persian cat jump eat fish.</p></div>
-          </div>
-
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-item-header">
+        How do I know my secret will remain a secret?
       </div>
-    </section>
+      <div class="accordion-item-body">
+        <div class="accordion-item-body-content">
+          Hiss and stare at nothing then run suddenly away human give me attention meow run at 3am but purr. Stand in front of the computer screen i want to go outside let me go outside nevermind inside is better ooooh feather moving feather! but find something else more interesting, meow all night ears back wide eyed run off table persian cat jump eat fish.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-item-header">
+        Why Secrets Anonymous?
+      </div>
+      <div class="accordion-item-body">
+        <div class="accordion-item-body-content">
+          Hiss and stare at nothing then run suddenly away human give me attention meow run at 3am but purr. Stand in front of the computer screen i want to go outside let me go outside nevermind inside is better ooooh feather moving feather! but find something else more interesting, meow all night ears back wide eyed run off table persian cat jump eat fish.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-item-header">
+        Can I share your secrets?
+      </div>
+      <div class="accordion-item-body">
+        <div class="accordion-item-body-content">
+          Hiss and stare at nothing then run suddenly away human give me attention meow run at 3am but purr. Stand in front of the computer screen i want to go outside let me go outside nevermind inside is better ooooh feather moving feather! but find something else more interesting, meow all night ears back wide eyed run off table persian cat jump eat fish.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-item-header">
+        Can my secret be illegal?
+      </div>
+      <div class="accordion-item-body">
+        <div class="accordion-item-body-content">
+          Massacre a bird in the living room and then look like the cutest and most innocent animal on the planet walk on keyboard chew the plant attack the child, so hiss and stare at nothing then run suddenly away and sweet beast, but catto munch salmono. Lick sellotape i rule on my back you rub my tummy i bite you hard yet spend all night ensuring people don't sleep sleep all day. Decide to want nothing to do with my owner today leave hair everywhere. Present belly, scratch hand when stroked spit up on light gray carpet instead of adjacent linoleum. I like big cats and i can not lie toy mouse squeak roll over. Open the door, let me out, let me out, let me-out, let me-aow, let meaow, meaow!
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <!------------------- KNOW-MORE / FOOTER ------------------->
     <div class="know-more">
       <p>Want to know more about keeping secrets and what studies have been made on the subject?</p>
-      <p>Test yourself and read more at <a href="http://www.keepingsecrets.org/" target="_blank">KeepingSecrets.org</a>.</p>
+      <p>Test yourself(!) and read more at <a href="http://www.keepingsecrets.org/" target="_blank">KeepingSecrets.org</a>.</p>
     </div>  
 
     <footer>
@@ -112,5 +166,6 @@
     </footer>
 
     <script src="./script.js"></script>
+    <script src="./script-test.js"></script>
   </body>
 </html>

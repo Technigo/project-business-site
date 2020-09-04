@@ -217,54 +217,47 @@ form a:hover {
 /* ------------------------- FAQ ------------------------- */
 
 .accordion {
-  margin: 100px 0;
+  width:80vw;
+  max-width: 1000px;
+  margin: 30px auto;
 }
 
-.accordion h2 {
-  margin-bottom: 50px;
+.accordion-item {
+  background: #252525;
+  margin: 20px 0;
 }
 
-.accordion-wrapper {
-  width: 60vw;
-  margin: auto;
-}
-
-.question {
-  text-align: left;
+.accordion-item-header {
+  margin: 20px 30px 0 20px;
+  min-height: 56px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  position: relative;
   cursor: pointer;
-  display: inline;
 }
 
-.question h3 {
-  padding: 10px;
+.accordion-item-header::after {
+  content: "\25B8";
+  position: absolute;
+  right: 0px;
+  transition: transform .2s ease-in-out;
 }
 
-.question:hover {
-  color: #FF33F6;
+.accordion-item-header.active::after {
+  transform: rotate(90deg);
 }
 
-.answer {
-  padding: 5px 5px 10px 5px;
-  height: 0;
-  overflow: hidden;
-  transition: all .3s ease;
+.accordion-item-body {
+  max-height: 0;
+  overflow:hidden;
+  transition: max-height .2s ease-out;
 }
 
-.answer p {
+.accordion-item-body-content {
   padding: 20px;
-  color: rgba(255, 255, 255, 0);
-  transition: all .3s ease;
-}
-
-.active {
-  height: 200px;
-  overflow: auto;
-  border: 1px solid #fff;
-  margin-bottom: 25px;
-}
-
-.active p {
-  color: rgba(255, 255, 255, 1);
+  line-height: 24px;
+  border-top: 1px solid #060606;
 }
 
 
@@ -304,10 +297,6 @@ footer img {
   header img {
     width: 350px;
   }
-
-  .active {
-    height: 240px;
-  }
 }
 
 
@@ -322,13 +311,5 @@ footer img {
 
   .hero p {
     max-width: 75vw;
-  }
-
-  .accordion-wrapper {
-    width: 80vw;
-  }
-
-  .accordion h2 {
-    margin-bottom: 25px;
   }
 }
