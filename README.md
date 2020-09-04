@@ -8,4 +8,5 @@ I used "background-image" for the hero image and javascript for opening and clos
 If I had more time I would have tried to style the radio- and checkbox-buttons. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://fotografsannadolckwall.netlify.app/
+
