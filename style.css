@@ -2,9 +2,7 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active+.answer {
-  /* some styling here */
-}
+
 
 #hero {
   height: 100vh;
@@ -43,19 +41,18 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 #hero .content h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   Font-Family: 'Raleway', Sans-Serif;
-  Font-Size: 44px;
   margin-bottom: 0.5rem;
 
 }
 
 #hero .content h2 {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0;
   Font-Family: 'Open Sans', Sans-Serif;
-  Font-Size: 16px;
+  
 }
 
 #hero .content p {
@@ -67,13 +64,14 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 .form {
-  /*position: relative;*/
+  position: relative;
   z-index: 18;
   display: inline-block;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
   padding: 12px 20px;
+  
 }
 
 input[type=text],
@@ -117,45 +115,62 @@ input[type=submit]:hover {
 
 @media (min-width:768px) {
   #hero .content h1 {
-    font-size: 2.5 rem;
+    font-size: 2.5rem;
   }
 
   #hero .content h2 {
-    font-size: 1.75 rem;
+    font-size: 1.75rem;
   }
 }
 
 @media (min-width:992px) {
-  .content h1 {
-    font-size: 3 rem;
+  #hero .content h1 {
+    font-size: 4rem;
   }
 
-  .content h2 {
-    font-size: 2 rem;
+  #hero .content h2 {
+    font-size: 2rem;
   }
 }
 
 @media (min-width:1200px) {
   .content h1 {
-    font-size: 4 rem;
+    font-size: 4rem;
   }
 
   .content h2 {
-    font-size: 2.5 rem;
+    font-size: 2.5rem;
   }
 }
 
-
-.accordion {
-  border: black;
-  border-radius: 15px;
-  position: relative;
-  z-index: 16;
-  text-align: center
+.accordion-element{
+  border: 2px solid #999;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.accordion-header{
+  margin:0;
+  padding:15px;
+  font-size: 14px;
 }
 
-.accordion-container {
-  height: auto;
-  overflow: hidden;
-  transition: height 0, 3s ease;
+.accordion-text{
+  border-top: 2px solid #999;
+  margin:0;
+  padding:15px;
+}
+.accordion-text-container{
+  height:0;
+  overflow:hidden;
+  transition:height 0.3s ease;
+}
+.active {
+  height:auto;
+}
+.FAQ-heading{
+  text-align: center;
+}
+p{
+  font-size: 10px;
 }
