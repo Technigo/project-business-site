@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Knut Punkten</title>
+    <title>Take on Le Tour</title>
     <link rel="stylesheet" href="./style.css" />
-    <link
+    <link rel="icon" type="image/png" href="./cyclingIcon.png">
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=PT+Sans&display=swap"
       rel="stylesheet"
     />
@@ -23,26 +23,80 @@
         Your broswer does not support this video format.
       </video>
       <div class="caption">
-        <h1>Medical Massage</h1>
-        <h2>We take your pain away</h2>
+        <p>
+          We take you all the way
+          <span> It's your Tour! </span>
+          &mdash; for the road cycling enthusiast &mdash;
+        </p>
       </div>
     </div>
 
     <!-- Signup form -->
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+    <main>
+      <section class="forms">
+      <div class="login-form">
+          <input type="radio" name="tab" class="tab" id="sign-up-tab" checked />
+          <label for="sign-up-tab" class="tab-header">SIGN UP</label>
+          <input type="radio" name="tab" class="tab" id="sign-in-tab" />
+          <label for="sign-in-tab" class="tab-header">SIGN IN</label>
+          <form id="form1">
+            <div class="header">Sign up for free</div>
+            <div class="form-input">
+              <input
+                type="text"
+                class="input"
+                id="new-username"
+                placeholder="User Name"
+                required
+              />
+            </div>
+            <div class="form-input">
+              <input
+                type="email"
+                class="input"
+                id="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="form-input">
+              <input
+                type="password"
+                class="input"
+                id="new-password"
+                placeholder="Password"
+                required
+              />
+              <input type="checkbox"/><span id="check">Keep me posted!</span><br />
+            </div>
+            <input type="submit" id="sign-up" class="submit-button" value="SIGN UP" />
+          </form>
+          <form id="form2">
+            <div class="header">Welcome Back</div>
+            <div class="form-input">
+              <input
+                type="text"
+                class="input"
+                id="username"
+                placeholder="User Name"
+                required
+              />
+            </div>
+            <div class="form-input">
+              <input
+                type="password"
+                class="input"
+                id="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            
+            <input type="checkbox" /><span id="check">Keep me signed in</span><br />
+            <input type="submit" id="sign-in" class="submit-button" value="SIGN IN" />
+          </form>
+        </div>
     </section>
     <script src="./script.js"></script>
   </body>
