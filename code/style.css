@@ -18,6 +18,7 @@ body {
   width: 100%;
 }
 
+/* General styling */
 h2 {
   margin: 0px;
   font-size: 30px;
@@ -31,8 +32,8 @@ h3 {
 }
 
 h4 {
-  font-size: 20px;
   font-weight: bold;
+  font-size: 20px;
 }
 
 p {
@@ -42,10 +43,14 @@ p {
 
 a {
   color: black;
+  text-decoration: none;
+}
+  
+a:hover {
+  background-color: #F0E3C7;
 }
 
 /* HEADER */
-
 header {
   width: 100%;
 }
@@ -87,12 +92,12 @@ nav {
   font-size: 24px;
 }
 
-a:hover {
+.nav-link:hover {
   text-decoration: underline;
+  background-color: #F0E3C7;
 }
 
-/* SIMHALLAR */
-
+/* CONTENT */
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -111,25 +116,25 @@ a:hover {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  margin: 40px;
+  margin: 50px;
 }
 
 .card-img {
-  width: 50%;
+  width: 57%;
 }
 
 .text-container-right {
 justify-content: flex-start;
 flex-direction: column;
-width: 50%;
-padding-left: 60px;
+width: 43%;
+padding-left: 50px;
 }
 
 .text-container-left {
   justify-content: flex-start;
   flex-direction: column;
-  width: 50%;
-  padding-right: 60px;
+  width: 43%;
+  padding-right: 50px;
   }
 
 .card-link {
@@ -164,16 +169,6 @@ li {
   padding-bottom: 40px;
 }
 
-.accordion-container::after {
-  content: "+";
-  font-size: 4px; 
-  right: 40px;
-}
-
-.accordion-container.active::after {
-  content:"-";
-}
-
 .question {
   text-align: left;
   cursor: pointer;
@@ -194,10 +189,11 @@ li {
 
 .active + .answer-container {
   display: block;
+  width: 40%;
+  padding: 20px;
 }
 
 /* FORM */
-
 .form-container {
   display: flex;
   flex-wrap: wrap;
@@ -205,7 +201,7 @@ li {
   padding: 0px 0px 60px 100px;
   }
 
-.form-container1 {
+.form1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -213,7 +209,7 @@ li {
   width: 50%;
   }
 
-.form-container2 {
+.form2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -230,6 +226,15 @@ li {
 .form-intro {
   font-size: 20px;
   width: 75%;
+}
+
+.intro-link {
+  text-decoration: underline;
+}
+
+.intro-link:hover {
+  background-color: #cde7f7;
+  text-decoration: none;
 }
 
 .form-group {
@@ -255,6 +260,10 @@ input {
   margin-bottom: 20px;
 }
 
+input:hover, #meddelande:hover {
+  background-color: #cde7f7;
+}
+
 #meddelande {
   border: none;
   margin-bottom: 20px;
@@ -272,22 +281,30 @@ button {
   margin-top: 10px;
 }
 
-/* FOOTER */
+button:hover {
+  background-color:white;
+}
 
+/* FOOTER */
 footer {
   width: 100%;
   background-color: #cde7f7;
-  padding: 60px;
+  padding: 60px 60px 100px 60px;
+}
+
+span {
+  display: block;
+  padding-top: 5px;
 }
 
 /* For tablet */
-
 @media (max-width: 1024px) {
 
   .hero {
   height: 250px;
   }
 
+/* Content */
   .card-container {
   padding: 0px;
   }
@@ -310,6 +327,7 @@ footer {
     margin: 0px;
   }
 
+  /* FORM */
   .form-container {
   align-items: center;
   padding: 40px;
@@ -328,16 +346,14 @@ footer {
   margin: 0px;
   flex-direction: flex-start;
   }
-
 }
 
 /* For mobile */
-
 @media (max-width: 768px) {
-
 
   h1.header-heading {
     font-size: 48px;
+    width: 75%;
   }
   
   nav {
@@ -351,6 +367,7 @@ footer {
     padding: 20px 0px 20px 20px;
   }
 
+  /* CONTENT */
   .card-container {
     padding: 0px;
     margin-bottom: 0px;
@@ -375,6 +392,7 @@ footer {
     width: 100%;
   }
 
+  /* ACCORDION */
   .accordion-container {
   padding-bottom: 20px;
   }
@@ -398,6 +416,12 @@ footer {
     padding: 20px 0px;
   }
 
+  .active + .answer-container {
+    width: 65%;
+    padding: 10px 15px 10px 15px;
+  }
+
+  /* FORM */
   .form-container {
     padding: 0px 0px 40px 0px;
     width: 100%;
@@ -408,7 +432,7 @@ footer {
   width: 50%;
   }
 
-  .form-container1, .form-container2 {
+  .form1, .form2 {
   align-items: center;
   width: 100%;
   padding: 0px;
@@ -420,11 +444,19 @@ footer {
 
   label {
     justify-content: center;
+    font-size: 14px;
     width: 40%;
     padding: 15px 0px 10px 0px;
+    letter-spacing: 0.3px;
   }
 
   #anmälan {
     padding: 0px;
+    margin: 30px 0px 10px 0px;
+    font-size: 16px;
+  }
+
+  footer {
+    padding: 60px;
   }
 }

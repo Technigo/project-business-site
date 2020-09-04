@@ -1,12 +1,12 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I made a business site for the Swim baths of Stockholm stad. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I drew a sketch in Figma before I started the work, which made it easier to begin coding – and then I had a clear vision to strive for.
+
+If I had more time I would have focused on the accordian – making an animation with the functionality of hiding the answer to the question I clicked on recently, when choosing to click on a new one. And I would have tryied to customize the radio- and checkbox elements in the form, making the border go away like on the others. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
