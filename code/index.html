@@ -6,16 +6,16 @@
     <title>Surfboard Rental - Hiriketiya Beach</title>
     <link rel="stylesheet" media="all" href="./style.css" type="text/css"/>
     <link rel="icon" type="image/png" href="./Images/icon.jpg">
-    
   </head>
+
   <body>
  <header>
     <picture>
       <source srcset="./Images/surfboard667.jpg" media="(max-width: 667px)">
-          <img src="./Images/surfboard.jpg" alt="Surfboard on beach">
+      <source srcset=".Images/surfboard.jpg" media="min-width: 1025px">
+      <img src="./Images/surfboard.jpg" alt="Surfboard on beach">
     </picture>
   </header>
-        
     
   <section class="request">
     <form action="http://httpbin.org/anything" method="POST"/>
@@ -40,7 +40,8 @@
     </div>
 
     <div class="request-group">
-      <label for="checkboxes">I'd like to rent board/boards for</label>
+      
+      <label for="checkbox">I'd like to rent board/boards for</label>
       <input type="checkbox">
       <label for="beginner">beginner</label>
       <input type="checkbox">
@@ -55,8 +56,8 @@
 
     <section class="FAQ">
       <h1>FAQ</h1>
-      <div class="FAQ-group"">
-        <h3 id="FAQ-header-1" class="FAQ-header">
+      <div class="FAQ-group">
+        <h3 id="FAQ-Header-1" class="FAQ-header">
           Question 1
         </h3>
         <div class="FAQ-answer-container">
@@ -64,8 +65,8 @@
         </div> 
       </div>
 
-      <div class="FAQ-group"">
-        <h3 id="FAQ-header-2" class="FAQ-header">
+      <div class="FAQ-group">
+        <h3 id="FAQ-Header-2" class="FAQ-header">
           Question 2
         </h3>
         <div class="FAQ-answer-container">
@@ -73,8 +74,8 @@
         </div>
       </div>
 
-      <div class="FAQ-group"">
-        <h3 id="FAQ-header-3" class="FAQ-header">
+      <div class="FAQ-group">
+        <h3 id="FAQ-Header-3" class="FAQ-header">
           Question 3
         </h3>
         <div class="FAQ-answer-container">
@@ -83,7 +84,13 @@
       </div>
     </section>
 
-    <script src="script.js"></script>
 
+ <footer>
+   <img id="logo" src="./Images/logo.svg">
+   <p>Created by Therése Larsson / Project Week 3</p>
+ </footer>
+
+    <script src="./script.js"></script>
   </body>
+  
 </html>
