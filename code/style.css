@@ -49,14 +49,14 @@ button:hover {
 
 .overlay {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 50%;
+  left: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 2;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -75,7 +75,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(to bottom right,#CC95C0, #DBD4B4,#7AA1D2);
-  width: fit-content;
+  width: 400px;
   box-shadow: 10px 10px 5px #aaaaaa;
   font-size: larger;
   padding: 70px;
@@ -107,6 +107,7 @@ h2 {
 }
 
 .question {
+  display: block;
   padding: 20px;
   background-color: thistle;
   font-size: larger;
@@ -116,8 +117,8 @@ h2 {
 .answer {
   display: none;
   background-color:#fce4f5;
-  padding: 20px;
-  width: 400px;
+  padding: 10px;
+  width: 420px;
 }
 
 .active + .answer {
@@ -133,7 +134,6 @@ h2 {
   font-size: 13px;
   color: #777;
   float: right;
-  margin-left: 5px;
 }
 
 .active:after {
@@ -176,6 +176,10 @@ footer {
     font-size: 15px;
   }
 
+  .form {
+    margin-right: 40px;
+  }
+
 }
 
   @media (max-width: 667px) {
@@ -203,5 +207,9 @@ footer {
   .content {
     display: flex;
     flex-direction: column;
+  }
+
+  .form {
+    margin-bottom: 30px;
   }
 }
