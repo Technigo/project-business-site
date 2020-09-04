@@ -4,304 +4,302 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 
 html {
-Font-Family: 'Playfair Display', Serif;
-}
-
+  Font-Family: 'Playfair Display', Serif;
+  }
+  
 body  {
   background-color: #FAF0E6;
   margin: 0;
 }
-
+  
 .video {
   display: block;
   object-fit: contain; 
 }
-
-header {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height:250px ;
-  background-image: url(./img/coffe_small.jpg);
-  background-size: contain;  
-  background-repeat: no-repeat;
-}
-
-header h1 {
-  position: relative;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
-/*WE ARE TEXT */
-
-.weare {
-  display: flex;
-  text-align: center;
-  margin-top: 5px;
-  color: black;
-  font-style: italic;
-  font-size: 10px;
-  text-decoration: underline solid white; 
-}
-
-/*sign up text */
-
-.sign-up {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top:30px;
-}
-
-  /*Container main content*/
-
-.container{
-  display: inline-flex;
-  flex-direction: column;
-  margin-left:5px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-
-/*Form */
-
-form {
-  display: flex;
-  flex-direction: column;
-  height: 600px;
-  padding-top: 30px;
-  border-radius: 8px;
-  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.15);
-  font-size: 15px;
-}
   
-.form-group {
-  display: flex;
-  justify-content: center;   
-}
-
-.form-group label {
-  justify-content: center;
-  padding:10px;
-  border-radius:10px;
-}
-
-.form-group-button {
-  display: flex;
-  justify-content: center;
-}
-
-h3 {
-  display: flex;
-  justify-content: center;
-}
-
-button {
-  height: 50px;
-  background-color: white;
-  border-radius: 15px;
-  border-style: hidden;
-  font-size: 20px;
-  Font-Family: 'Playfair Display', Serif;
-  box-shadow: grey 2px 2px;
-}
-
-input {
-  font-size: 20px;
-}
-
-/*Color Validations */ 
-
-input:valid {
-  background-color: #63C380;
-}
-
-input:invalid {
-  border-color:#FE6C6C ;
-}
-
-label {
-  display: block;
-  margin-bottom: 30px;
-}
-
-
- /* Accordion */
-
-.answer {
-  display: none;
-}
-
- /* Accordion  box styling and placement*/
-
-.accordion {
-  display: flex;
-  flex-direction: column;
-  height: 600px;
-  margin-left: 5px;
-  margin-top: 100px;
-  margin-bottom:90px ;
-  border-radius: 8px;
-  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.15);
-}
-
-.accordion h1 {
-  display: flex;
-  text-align: center;
-  font-size: 30px;
-  background-color:rgb(250, 240, 230);;
-}
-
-.answer {
-  height: 0px;
-  opacity: 0;
-  overflow: hidden;
-  transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-}
-
-.active + .answer {
-  display: inline-block;
-  opacity: 1;
-  height: 80px;
-  background-color: #FAEBD7;
-}
-
- .question {
-   font-size: 20px;
-   margin:12px;
-   padding:10px;
-   cursor: pointer;
-   border-bottom: 2px solid white;
- }
-
-
-/* the icon in the accordion    */
-
-.question::after {
-  content: "\002B";
-  font-size: 25px;
-  float: left;
-  margin-right: 10px;
-}
-
-.active::after {
-  content: "\002D";
-}
-
-.question:hover {
-  background-color:#FAEBD7;
-}
-
-/*Footer*/ 
-
-footer{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  background-color: white; 
-}
-
-footer p {
-  text-align: center;
-  font-size: 18px;
-  color:black;
-}
-
-
-footer img {
-  width: 50px;
-  margin-bottom: 10px;
-}
-
-
-    /***  Media Quaries  Tablet  ***/
-
-@media screen and (min-width: 667px) and (max-width:1024px) {
-
   header {
-    height: 550px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:300px ;
+    background-image: url(./img/coffe_medium.jpg);
+    background-size: contain;  
+    background-repeat: no-repeat;
   }
-
-  header h1 {
-    font-size: 70px;
-  }
-  .weare{
-    font-size: 20px;
-  } 
-  .sign-up-container{
-    justify-content: left;
-    margin-left: 80px;
-  }
-  .sign-up {
-   font-size: 12px;
-   justify-content: left;
-   margin-left: 15px;
-  }
-  .container {
-    display: inline-flex;
-    margin-left: 10px;
-    flex-direction: row;
-  }
-  form {
-    margin-left: 20px;
-    height:570px ;
-  }
-  .accordion {
-    font-size: 15px;
-    height: 500px;
-    margin-left: 40px;
-  }
-}  
-
-  /***  Media Quaries  Desktop ***/
-
-@media screen and (min-width: 1024px) {
-
-  header {
-    height: 1000px
-  }
-
-  header h1 {
-    font-size: 100px;
   
+  header h1 {
+    position: relative;
+    text-align: center;
+    font-size: 35px;
+    color: white;
   }
-  .weare{
-    font-size: 20px;      
-  } 
+  
+  /*WE ARE TEXT */
+  
+  .weare {
+    display: flex;
+    text-align: center;
+    margin-top: 5px;
+    color: black;
+    font-style: italic;
+    font-size: 10px;
+    text-decoration: underline solid white; 
+  }
+  
+  /*sign up text */
+  
   .sign-up {
-    font-size: 20px;
-    justify-content: left;
-    margin-left: 60px;
-  }
-  .container {
-    display: inline-flex;
-    flex-direction: row;
+    display: flex;
     justify-content: center;
-    margin-left: 80px;
+    text-align: center;
+    margin-top:30px;
   }
+  
+    /*Container main content*/
+  
+  .container{
+    display: inline-flex;
+    flex-direction: column;
+    margin-left:5px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  
+  /*Form */
+  
   form {
-    margin: 20px;
-    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    padding-top: 30px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.15);
+    font-size: 15px;
+  }
+    
+  .form-group {
+    display: flex;
+    justify-content: center;   
+  }
+  
+  .form-group label {
+    justify-content: center;
+    padding:10px;
+    border-radius:10px;
+  }
+  
+  .form-group-button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  h3 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    height: 50px;
+    background-color: white;
+    border-radius: 15px;
+    border-style: hidden;
+    font-size: 20px;
+    Font-Family: 'Playfair Display', Serif;
+    box-shadow: grey 2px 2px;
+  }
+  
+  input {
     font-size: 20px;
   }
+  
+  /*Color Validations */ 
+  
+  input:valid {
+    background-color: #63C380;
+  }
+  
+  input:invalid {
+    border-color:#FE6C6C ;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 30px;
+  }
+  
+  
+   /* Accordion */
+  
+  .answer {
+    display: none;
+  }
+  
+   /* Accordion  box styling and placement*/
+  
   .accordion {
-    height:500px;
-    margin-left: 80px;
-    padding: 20px;
-  }    
-} 
-
-
-
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    margin-left: 5px;
+    margin-top: 100px;
+    margin-bottom:90px ;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.15);
+  }
+  
+  .accordion h1 {
+    display: flex;
+    text-align: center;
+    font-size: 30px;
+    background-color:rgb(250, 240, 230);;
+  }
+  
+  .answer {
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+  }
+  
+  .active + .answer {
+    display: inline-block;
+    opacity: 1;
+    height: 80px;
+    background-color: #FAEBD7;
+  }
+  
+   .question {
+     font-size: 20px;
+     margin:12px;
+     padding:10px;
+     cursor: pointer;
+     border-bottom: 2px solid white;
+   }
+  
+  
+  /* the icon in the accordion    */
+  
+  .question::after {
+    content: "\002B";
+    font-size: 25px;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .active::after {
+    content: "\002D";
+  }
+  
+  .question:hover {
+    background-color:#FAEBD7;
+  }
+  
+  /*Footer*/ 
+  
+  footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    background-color: white; 
+  }
+  
+  footer p {
+    text-align: center;
+    font-size: 18px;
+    color:black;
+  }
+  
+  
+  footer img {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+  
+  
+      /***  Media Quaries  Tablet  ***/
+  
+  @media screen and (min-width: 667px) and (max-width:1024px) {
+  
+    header {
+      height: 550px;
+    }
+  
+    header h1 {
+      font-size: 70px;
+    }
+    .weare{
+      font-size: 20px;
+    } 
+    .sign-up-container{
+      justify-content: left;
+      margin-left: 80px;
+    }
+    .sign-up {
+     font-size: 12px;
+     justify-content: left;
+     margin-left: 15px;
+    }
+    .container {
+      display: inline-flex;
+      margin-left: 10px;
+      flex-direction: row;
+    }
+    form {
+      margin-left: 20px;
+      height:570px ;
+    }
+    .accordion {
+      font-size: 15px;
+      height: 500px;
+      margin-left: 40px;
+    }
+  }  
+  
+    /***  Media Quaries  Desktop ***/
+  
+  @media screen and (min-width: 1024px) {
+  
+    header {
+      height: 1000px
+    }
+  
+    header h1 {
+      font-size: 100px;
     
+    }
+    .weare{
+      font-size: 20px;      
+    } 
+    .sign-up {
+      font-size: 20px;
+      justify-content: left;
+      margin-left: 60px;
+    }
+    .container {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-left: 80px;
+    }
+    form {
+      margin: 20px;
+      padding: 80px;
+      font-size: 20px;
+    }
+    .accordion {
+      height:500px;
+      margin-left: 80px;
+      padding: 20px;
+    }    
+  } 
+  
+  
   
   
 
