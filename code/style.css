@@ -37,30 +37,19 @@ header h1 {
   font-size: 40px;
   z-index: 1;
   color: #fff;
+  opacity: 0.9;
   padding: 20px;
   margin: 15px;
 }
 
-h2 {
+header h2 {
   text-align: center;
   font-size: 25px;
   z-index: 1;
   color: #fff;
+  opacity: 0.9;
   margin-top: 20px;
 }
-
-/*.video-container {
-  position: absolute;
-  top:0;
-  left:0;
-  width: 100%;
-
-}
-
-video {
-  object-fit: fill;
-  width: 100%;
-  /*height: 50vh;*/ 
 
 video {
   display: none;
@@ -72,40 +61,16 @@ picture {
   left:0;
   width: 100%;
   object-fit: cover;
-
 }
 
-nav {
-  position: sticky;
-  top: 0;
-  background-color: #000;
-  margin: 0px;
-  overflow: hidden;
-  margin-top: -450px;
-}
-
-nav a {
-  font: menu;
-  text-decoration: none;
-  font-size: 18;
-  letter-spacing: 1px;
-  box-sizing: border-box;
-  float: left;
-  display: inline-block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 16px 24px;
-}
-
-nav a:hover {
-  background: #f2f2f2;
-  color: #000;
+picture img {
+  height: 50vh;
+  width: 100%;
 }
 
 .main-container {
   text-align: center;
   background-color: #e1e1e1;
-  /*margin: 20px 10px;*/
   padding: 10px 0 30px 0;
 }
 
@@ -134,10 +99,6 @@ nav a:hover {
   margin-bottom: 15px;
   align-items: center;
 }
-
-/*.form-group input {
-  background-color: none;
-}*/
 
 .form-group label {
   width: 150px;
@@ -175,7 +136,7 @@ input[required]:placeholder-shown {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-left: 10px;
+  margin: 15px 10px;
 }
 
 .radio-group label {
@@ -202,9 +163,6 @@ input[required]:placeholder-shown {
 .form-button {
   margin-top: 30px;
 }
-/*label[for="band"], label[for="soloArtist"] {
-  margin-bottom: 10px;
-  display: inline-block;*/
 
 .submit-btn {
   background-color: #555;
@@ -225,7 +183,6 @@ input[required]:placeholder-shown {
 /* Accordion */
 
 .accordion {
-  /*border: 1px solid black;*/
   background-color: #fff;
   color: #000;
   width: 90%;
@@ -237,19 +194,16 @@ input[required]:placeholder-shown {
 }
 
 .question {
-  /*border: 1px dotted #000;
-  /*margin-bottom: 20px;*/
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
   background-color: rgb(238, 235, 235);
-  
 }
 
 .question:hover {
   background-color: rgb(197, 196, 196);
-  cursor: pointer;
+  cursor: crosshair;
 }
 
 .question::after {
@@ -261,18 +215,35 @@ input[required]:placeholder-shown {
   content: "\2212";
 }
 
-/*#question1 {
-  background-color: rgb(243, 240, 240);
-  padding: 15px;
-}*/
+.question:nth-of-type(1) {
+  background-color: rgb(221, 220, 220);
+}
+
+.question:nth-of-type(5) {
+  background-color: rgb(221, 220, 220);
+}
+
+.question:nth-of-type(1):hover {
+  background-color: rgb(197, 196, 196);
+}
+
+.question:nth-of-type(5):hover {
+  background-color: rgb(197, 196, 196);
+}
+
+.answer:nth-of-type(2) {
+  background-color: rgb(221, 220, 220);
+}
+
+.answer:nth-of-type(6) {
+  background-color: rgb(221, 220, 220);
+}
 
 .answer {
-  /*border: 1px dotted green;*/
   text-align: left;
   background-color: rgb(243, 240, 240);
   padding: 0 15px;
 }
-
 
 /*FOOTER*/
 .footer {
@@ -283,7 +254,7 @@ input[required]:placeholder-shown {
 }
 
 .footer .attribution {
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .footer a {
@@ -293,14 +264,9 @@ input[required]:placeholder-shown {
 /*MEDIA QUERY TABLET*/
 
 @media (min-width: 768px) {
-  /*video {
-    height: 80vh;
-}
-
-  /*.flex-box {
-    flex-direction: row;
-    align-items: center;
-  }*/
+  header h1 {
+    font-size: 50px;
+  }
 
   .form {
     width: 380px;
@@ -312,18 +278,13 @@ input[required]:placeholder-shown {
   }
 
   body {
-    text-align: left;
-    margin: 
+    text-align: left; 
   }
 }
 
 /*MEDIA QUERY DESKTOP*/
 
-@media (min-width: 992px) {
-  /*video {
-    height: 80vh;
-  }*/
-
+@media (min-width: 1025px) {
   picture {
     display: none;
   }
@@ -339,6 +300,7 @@ input[required]:placeholder-shown {
     display: flex;
     object-fit: fill;
     width: 100%;
+    height: 80vh;
   }
 
   .flex-box {
