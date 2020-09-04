@@ -11,7 +11,7 @@
   <body>
     <header>
 
-      <!-- HEADER WITH HERO VIDEO :) -->
+      <!-- HEADER WITH HERO VIDEO -->
 
       <video class="mobile" autoplay muted loop>
         <source src="videos/Header_360x202.mp4" type="video/mp4">  
@@ -34,28 +34,24 @@
       <div class="header-content">
 
         <img class="logo" src="./logo.png" alt="all-mountain-logo">
-        <nav>
 
+        <nav>
           <a href="#">LOCATIONS</a>
           <a href="#">ACCOMODATION</a>
           <a href="#">ABOUT US</a>
           <a href="#">INSPIRATION</a>
         </nav>
 
-        <button class="header">contact us</button>
+        <button class="button-header">contact us</button>
 
         <h1 class="header-title">All Mountain</h1>
 
         <h2 class="header-subtitle">We’ll help you plan and book your perfect ski holiday</h2>
       </div>
 
-    <!-- For tablet only -->
-
-    <!-- For computer only -->
-
     </header>
 
-    <!-- TEXT BOX FORM -->
+    <!-- FORM SECTIOM -->
 
     <section class="form">
 
@@ -64,8 +60,6 @@
         <p class="form-textbox-text">Thestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility Cloak cauldron cakes, hiya Harry!</p> 
         <p class="form-textbox-text">Basilisk venom Umbridge swiveling blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky quills The Boy Who Lived bat spleens cupboard under the stairs flying motorcycle.</p>
       </div>
-
-      <!-- FORM -->
 
       <form 
       action="http://httpbin.org/anything" 
@@ -79,12 +73,12 @@
         Country</label>
 
         <select 
-        required
         name="resortCountryValue" 
         id="resortCountry"
+        required
         class="form-select-box">
           <option 
-          value="disable"
+          value=""
           disabled selected hidden
           class="form-select-box-option">
           Choose country</option>
@@ -113,12 +107,12 @@
         Resort type</label>
 
         <select 
-        required
         name="resortTypeValue" 
         id="resortType"
+        required
         class="form-select-box">
         <option 
-          value="disable"
+          value=""
           disabled selected hidden
           class="form-select-box-option">
           Choose resort type</option>
@@ -137,13 +131,14 @@
         </select>
       </div>
 
-      <!-- group size: radio type -->    
+      <!-- group size: radio type (I did not like how it came out visually, so I am hiding this part)   
       <h3 class="form-label-heading">Group size</h3>
   
       <div class="form-size-group">
         <input 
         id="oneTwo" 
         type="radio"
+        required
         value="one_two"
         name="groupSizeValue"
         class="form-input-radio">
@@ -160,6 +155,7 @@
         <input 
         id="twoFour" 
         type="radio"
+        required
         value="two_four"
         name="groupSizeValue"
         class="form-input-radio">
@@ -174,6 +170,7 @@
         <input 
         id="fiveTen" 
         type="radio"
+        required
         value="five_ten"
         name="groupSizeValue"
         class="form-input-radio">
@@ -188,6 +185,7 @@
         <input 
         id="tenTwenty" 
         type="radio"
+        required
         value="ten_twenty"
         name="groupSizeValue"
         class="form-input-radio">
@@ -196,7 +194,7 @@
         for="tenTwenty"
         class="form-label-input">
         10 - 20</label>
-      </div>
+      </div> -->  
         
       <!-- dates: date & checkbox -->
 
@@ -211,7 +209,10 @@
         <input 
         id="dateArrival" 
         type="date"
+        required
         name="dateArrivalValue"
+        min="2020-12-01"
+        max="2021-04-01"
         class="form-input-date">
       </div>
           
@@ -224,7 +225,10 @@
         <input 
         id="dateDeparture" 
         type="date"
+        required
         name="dateDepartureValue"
+        min="2020-12-01"
+        max="2021-04-01"
         class="form-input-date">
       </div>
 
@@ -266,8 +270,8 @@
 
     </section>
 
-
     <!-- ACCORDION SECTION -->
+
     <section class="accordion">
 
       <div class="accordion-container">
@@ -320,7 +324,7 @@
 
     <footer>
 
-        <img class="logo-footer"src="./logo.png" alt="all-mountain-logo">
+      <img class="logo-footer"src="./logo.png" alt="all-mountain-logo">
 
       <h2 class="footer-heading">All Mountain</h2>
 
