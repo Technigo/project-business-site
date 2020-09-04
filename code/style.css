@@ -1,5 +1,4 @@
-/* font-family: 'Chau Philomene One', sans-serif;
-font-family: 'Roboto', sans-serif;*/
+
 * {
     box-sizing: border-box;
 }
@@ -7,7 +6,6 @@ font-family: 'Roboto', sans-serif;*/
 body{
   margin: 0;
   min-height: 100vh;
- /* background-color: #001212;*/
  background: rgb(0,18,18);
  background: linear-gradient(180deg, rgb(5 29 31) 46%, rgb(0 29 46 / 80%) 100%);
 }
@@ -17,7 +15,6 @@ body{
 }
 
 .active + .panel {
-  /* some styling here */
   display: inline-block;
 }
 
@@ -29,7 +26,6 @@ body{
   max-width: 30px;
   display: inline-block;
   float: right;
-  /* margin-bottom: 5px; */
   background-image: url("./pics/more.png");
   background-repeat: no-repeat;
   background-size: 30px 30px;
@@ -87,14 +83,12 @@ body{
 .flex-container{
   display: flex;
   background-color: transparent;
-
   justify-content: space-evenly;
   align-items: stretch;
   flex-direction : row;
   flex-wrap: wrap;
   padding-top: 3%;
-  margin-bottom: 10vh;
-  
+  margin-bottom: 10vh; 
   max-width: 1300px;
     margin: auto;
     font-family: 'Roboto', sans-serif;
@@ -103,17 +97,13 @@ body{
 
 .signup-form{
   background-color:#2e5962;
- 
   align-self: flex-start;
   min-width: 300px;
-  /*flex-basis: 40%;*/
   margin-bottom: 5vh;
   border-radius: 15px;
   color:white;
-  flex-basis : 100%;
- 
+  flex-basis : 100%; 
 }
-
 
 form{
   display: flex;
@@ -128,12 +118,38 @@ form{
   border: none;
   min-height: 2.5em;
   font-size: 1.2em;
-  
 }
 
 .textInput:focus{
   outline: none;
   border-bottom: 4px solid#e89a74;
+  border-right: none;
+}
+
+.textInput:valid{
+  outline: none;
+  border-bottom: 4px solid #32965691;
+  border-right: none;
+}
+
+.textInput:focus:invalid{
+  outline: none;
+  border-bottom: 4px solid #e89a74;
+  border-right: none;
+}
+
+.age-wrapper{
+  padding: 5%;
+}
+
+select{
+  display: block;
+    padding: 7px;
+    width: 99%;
+    border-radius: 13px;
+    border: none;
+    min-height: 2em;
+    font-size: 1em;
 }
 
 label{
@@ -174,8 +190,8 @@ label{
 }
 
 .submitBtn:hover{
-  background-color: #0096888c;
-  color: white;
+  background-color: #8ac39f;
+  color: #333;
 }
 
 .accordionWrap{
@@ -210,10 +226,7 @@ label{
     align-items: center;
 }
 
-
-
-.accordionHeader{
-  
+.accordionHeader{ 
   color: #444;
   padding-left: 5px;
   width: 100%;

@@ -8,56 +8,58 @@
     <title>Jungle explorations</title>
     <link rel="stylesheet" href="./code/style.css">
   </head>
-  <body>
-      
+  <body>      
     <section class="hero">
         <header class="hero-header">
           <h4 class="hero-small-title">Discover the magic of</h1>
           <h1 class="hero-title">THE INCA TRAIL</h1>
         </header>
-    </section>
-    
+    </section> 
     <section class="main-content flex-container">
-    
         <section class="signup-form">
-          <!---->
           <form id="signUpForm" action="https://httpbin.org/anything" onsubmit="return validateForm()" method="post">
             <h4 class="signupHeader">Become a member and explore our tours</h4>
-            <label for="fname">First name</label>
-             <input class="textInput" type="text" id="fname" name="fname" >
-            <label for="lname">Last name</label>
-             <input class="textInput" type="text" id="lname" name="lname">
-             <label for="email">E-mail</label>
-             <input class="textInput" type="text" id="email" name="email">
-             <label for="pwd">Password</label>
-             <input class="textInput" type="password" id="pwd" name="pwd">
+            <label for="fname"> * First name</label>
+             <input class="textInput" type="text" id="fname" name="fname" required pattern=".{2,}">
+            <label for="lname"> * Last name</label>
+             <input class="textInput" type="text" id="lname" name="lname" required pattern=".{2,}">
+             <label for="email"> * E-mail</label>
+             <input class="textInput" type="text" id="email" name="email" title="Enter a valid e-mail address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+             <label for="pwd"> * Password</label>
+             <input class="textInput" type="password" id="pwd" name="pwd" title="Choose a password" required>
              
              <div class="radioGroup">
-
               <div class="radioButtonWrapper">
-                <input class="radioInput" type="radio" id="male" name="gender" value="male">
-              <label for="male">Male</label>
+                <input class="radioInput" type="radio" id="expert" name="radioBtn" value="expert">
+              <label for="Expert">Expert hiker</label>
               </div>
               <div class="radioButtonWrapper">
-                <input class="radioInput" type="radio" id="female" name="gender" value="female">
-              <label for="female">Female</label>
-              </div>
-                
+                <input class="radioInput" type="radio" id="experienced" name="radioBtn" value="experienced">
+              <label for="experienced">Some experience</label>
+              </div>                
               <div class="radioButtonWrapper">
-                <input class="radioInput" type="radio" id="other" name="gender" value="other" checked="checked">
-                <label for="other">Other</label>
+                <input class="radioInput" type="radio" id="newbie" name="radioBtn" value="newbie" checked="checked">
+                <label for="newbie">Total newbie</label>
               </div>
-               
             </div>
+            <div class="age-wrapper">              
+              <label for="age"></label>
+                <select name="age" id="age">
+                  <option value="agegroup">-- Select age group --</option>
+                  <option value="agegroup1">18-30</option>
+                  <option value="agegroup2">31-50</option>
+                  <option value="agegroup3">51-70</option>
+                  <option value="agegroup4">70+</option>
+                </select>
+            </div>  
             <div class="checkBoxWrapper">
-              <input class="checkbox-Input" id="checkbox-optional" type="checkbox" name="checkbox-optional" value="checked">
+              <input class="checkbox-Input" id="checkbox-optional" type="checkbox" name="checkbox-optional" value="checkedNewsL">
               <label for="checkbox-optional"> I'd like to receive the weekly newsletter with updates from TeamJungleExpo</label>
             </div>
             <div class="checkBoxWrapper">
-              <input class="checkbox-Input" id="checkbox-Input" type="checkbox" name="agree" value="checked">
+              <input class="checkbox-Input" id="checkbox-Input" type="checkbox" name="agree" value="checkedAgree" checked="checked">
               <label for="checkbox-Input"> I agree to the terms and conditions</label>
-            </div>
-           
+            </div>          
             <input type="submit" class="submitBtn" value="Submit"></button>
           </form>
         </section>
@@ -67,9 +69,6 @@
           <div class ="accordionHeader">
               <h4 class="faqHeader">FAQ</h3>
           </div>
-          
-     
-
           <section id="acc1" class="accordion" onClick="toggleActive(this.id)">
             Why should I become a member?
             <div class="icon"></div>
@@ -77,7 +76,6 @@
             <div id="panel1" class="panel">
               <p>Becoming a member allows you to explore our full range of tour packages. </p>
             </div>
-
             <section id="acc2" class="accordion" onClick="toggleActive(this.id)">
               What's the price for a tour?
               <div class="icon"></div>
@@ -85,27 +83,19 @@
             <div id="panel1" class="panel">
               <p>It depends on your choices, we have differenct price plans for different needs. The explorations start at $1000 per person.</p>
             </div>
-
             <section id="acc3" class="accordion" onClick="toggleActive(this.id)">
               Do I need to bring anything?
               <div class="icon"></div>
             </section>
             <div id="panel1" class="panel">
               <p>Bring clothing and some hygiene products if you want to. We will provide food, drinks, equipment and so on.</p>
-            </div>
-
-           
-
+            </div>     
         </section>
-
-       
-    <!-- dont forget to link the javascript file here! -->
-    <script src="./code/script.js"></script>
   </section>
   <footer>
     <p class="footerText">Want more info?</p>
     <a class="footerLink" href="mailto:teamjungleexpo@mailinator.com">Reach out!</a>
   </footer>
-
+  <script src="./code/script.js"></script>
   </body>
 </html>
