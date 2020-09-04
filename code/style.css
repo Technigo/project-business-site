@@ -1,25 +1,38 @@
 * {
   box-sizing: border-box;
 }
+
 .container {
   max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
+  padding: 20px;
+
 }
 
-.wrap {
-  padding: 10px;
+
+body {
+  margin: 0;
 }
 
 * {
   font-family: 'Nunito', sans-serif;
 }
 
-.header {
-  background-color:#a8dadc;
+.navBar {
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.hero {
   position: relative;
   top: 0;
   z-index: 1;
+  background: #a8dadc url('./assets/headerpicture.jpg') no-repeat center center;
+  background-size: cover;
+  margin-top: 52px;
 }
 
 
@@ -42,7 +55,14 @@
   
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 400px) {
+  .headerText {
+    position: relative;
+    margin-top: 52px;
+  }
+}
+
+@media screen and (max-width: 537px){
   .headerText {
     font-size: 20px;
   }
@@ -57,15 +77,22 @@
   padding-bottom: 15px;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 537px){
   .slogan {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 .headerVideo {
   width: 100%;
   object-fit: cover;
+  display: block;
+}
+
+@media screen and (max-width: 400px){
+  .headerVideo {
+    display: none;
+  }
 }
 
 .navBar {
@@ -84,10 +111,10 @@
 .navBar a {
   padding: 10px;
   font-size: 20px;
-  color:#e9c46a;
+  color:#1d3557;
 }
 
-@media screen and (max-width: 325px){
+@media screen and (max-width: 400px){
   .navBar a {
     font-size: 18px;
   }
@@ -274,15 +301,6 @@ input[type="radio"]+label {
   padding: 5px 25px;
 }
 
-.footer {
-  background-color: #1d3557;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  color: white;
-  width: 100%;
-}
-
 .quoteContainer {
   text-align: center;
   background-color: #f1faee;
@@ -302,6 +320,17 @@ input[type="radio"]+label {
   margin: 0 5px 10px;
   padding-bottom: 10px;
 }
+
+.footer {
+  background-color: #1d3557;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  width: 100%;
+}
+
+
 
 .footerSocial {
   display: flex;
