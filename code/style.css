@@ -62,6 +62,8 @@ video {
 }
 
 .form-container {
+  display: flex;
+  flex-direction: column;
   color: #fafafa;
   background-color: #c0c2bd;
   border-radius: 2%;
@@ -70,6 +72,7 @@ video {
   height: 550px;
   margin: 20px;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .form-group1 {
@@ -88,22 +91,18 @@ video {
   margin-bottom: 20px;
 }
 
-legend {
+.form-container h2 {
   color: #657e83;
   font-size: 40px;
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 0px;
 }
-
-fieldset {
-  border-color: #fafafa;
-  border-style: solid;
-  border-radius: 2%;
-  height: 480px;
-  }
 
 .input {
   background-color: #fafafa;
   outline: none;
-  width: 200px
+  width: 150px
 }
 
 input:hover {
@@ -179,6 +178,7 @@ input:hover {
 
 .form-group2 label {
   width: 15px;
+  margin-bottom: 20px;
 }
 
 .radiobutton-container {
@@ -228,13 +228,14 @@ input:hover {
   padding: 10px;
   color: #fafafa;
   background-color: #c0c2bd;
+  box-sizing: border-box;
 }
 
 .accordion-container h2 {
   text-align: center;
   color: #657e83;
   font-size: 40px;
-  margin-top: 10px;
+  margin-top: 20px;
   font-weight: lighter;
 }
 
@@ -310,6 +311,7 @@ footer {
  }
  .box-container {
    flex-wrap: wrap;
+   align-content: center;
  }
 
 }
@@ -328,17 +330,20 @@ footer {
 
   .intro-text {
     font-size: 35px;
-    padding-top: 570px;
+    padding-top: 550px;
    }
+
+  .box-container {
+    flex-wrap: wrap;
+    align-content: center;
+  }
 
   .form-container {
-     margin: 0;
-     padding: 0;
-   }
-
+    margin: 0;
+    padding: 0;
+  }
 
   .accordion-container {
-    margin: 10 px 0;
-    padding: 0;
+    margin: 10px 0;
   }
 }
