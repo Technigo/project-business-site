@@ -9,27 +9,23 @@
 }
 
 html {
+  /* added this font-size when watching tutorial on accordion, because he used the rem-unit for font-size which I think sets the fonts relative to the size specified in the body. */
   font-size: 1rem;
 }
 
 body {
-  /* margin: 0; */
-  /* added this font-size when watching tutorial on accordion, because he used the rem-unit for font-size which I think sets the fonts relative to the size specified in the body. */
-  /* font-size: 16px; */
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
   background-color: #fff;
-  /* unsure as whether to set color below on whole body. This is from the tutorial */
-  /* color: #495867; */
 }
                                           /* HEADER NAVBAR STARTS HERE */
 header {
   position: fixed;
-  width: 100%;
+  /* for some reason the header doesn't center when I look at in in the inspector. But when I changed to 99vw it worked. But without inspector it looks good. Why? */
+  width: 100vw;
   background: rgba(73, 88, 103, 0.8);
   padding: 6px 24px;
-  /* text-align: left; */
   color: white;
-  /*margin: 0;*/
   letter-spacing: 1px;
   z-index: 9; /* same as for navbar: not sure if I should have z-index here or not*/
 }
@@ -43,12 +39,9 @@ header .navbar {
   I didn't get position sticky to work. The header lost ist transparent colour when I set it to position sticky, 
   and even though I put a negative top margin on the hero container, and z-index 10 on the header it didn't work.*/
   top: 0px;
-  /* background-color: black; */
   margin: 0px;
   overflow: hidden;
-  z-index: 9; /* Not sure if z-index works on this one. I want it to be ontop of 
-  the hero section and for it to have opacity and stick to the top 
-  when I scroll down*/
+  z-index: 9; 
 }
 
 .navbar img {
@@ -94,13 +87,11 @@ hero-container {
   position: relative;
   /* overflow: hidden; */
   height: 80vh;
-  /* the background-values below weren't set when I checked in the inspector, 
-  so maybe I should remove them if the page looks weird */
+  width: 100vw;
   background-size: cover;
   background-position: center center;
+  /* thw background below don't show - maybe remove? */
   background: linear-gradient(90deg, #833ab4 0%, #75adc0 50%, #fcb045 100%);
-  /* should I put a margin-top on the hero-container as to not make the header nav cover the top of the hero? 
-  (margin the same size as the height of the header nav) */
 }
 
 .hero-content {
@@ -114,7 +105,7 @@ hero-container {
 }
 
 .hero-box {
-  position: relative;
+  /* position: relative; */
   text-align: center;
   /* margin: 170px 40px 60px 40px; */
   z-index: 6;
@@ -156,6 +147,9 @@ hero-container {
   object-position: top center;
 }
 
+.hero-picture {
+  display: none;
+}
                                 /* INTRO-SECTION STARTS HERE */
 
 .accordion-section {
@@ -242,7 +236,6 @@ hero-container {
 }
 
 .accordion-item:nth-child(even) {
-  /* background-color: #E7AD99; */
   background-color: #C18C5D;
 }
 
@@ -310,48 +303,75 @@ hero-container {
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.35);
 }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */    
+    background: radial-gradient(circle, #ECC8AF 0%, #C18C5D 100%);
+    padding: 20px 0;
+    max-width: 500px;
+    border-radius: 1rem;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.35);
+}
+
+.form-input-container {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-heading h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #495867;
+  margin: 5px 0 36px 0;
+  text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #495867;
+}
+
+.form-group label {
+    width: 100px;
+    margin-right: 5px;
+}
+
+.form-group input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  background: rgba(0, 0, 0, 0);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 200px;
+}
+
+.form-submit {
+    width: 100px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
 @media (max-width:767px) {
   html {
     font-size: 14px;
   }
 }
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-/* .accordion-wrapper {
-  border: 1px solid #000;
-  margin: 40px;
-} */
-
-/* .accordion-section {
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; Detta gör att background-color inte funkar. Varför?*/
-  /* justify-content: center; */
-  /* text-align: center;
-} */ 
-
-/* .accordion-heading {
-  background-color: #ECC8AF;
-} */
-/* .accordion-heading h2 {
-  color:  #495867;
-  margin: 0;
-  /* width: 50vw; */
-  /* padding-top: 20px; */
-  /* height: 60px;
-  font-family: 'Montserrat', sans-serif;
-}  */
-
-/* .answer {
-  display: none
-} */
- /* .active + .answer {
-  display: inline-block;
-  /* some styling here */
-  /* }  */ 
-
 
 @media (max-width: 600px) {
 
@@ -363,9 +383,11 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     margin: 0 15px;
     font-size: 20px;
   }
+
   .hamburger {
     margin-right: 8px;
   }
+
   .navbar img {
     margin-left: 8px;
   }
@@ -380,6 +402,20 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
   .hero-headline {
     font-size: 48px;
+  }
+
+  .hero-video-playing {
+    display: none;
+  }
+
+  .hero-picture {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
   }
 
   .introtext {

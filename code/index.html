@@ -42,6 +42,21 @@
           <img src="videos/hero-image.png" alt="picure or video of a magic pine tree forest">
           <p>This browser do not support video</p>
         </video>
+
+       <!-- Why doesn't the picture tag work on smaller screens???  -->
+        <!-- <picture >
+          <source srcset="pictures" media="(max-width:600px)">
+        </picture> -->
+
+        <!-- trying with just img instead -->
+        <img class="hero-picture"
+            srcset=".pictures/hero-image.png 1915w,
+                    .pictures/hero-imagesmaller.png 1687w"
+            sizes="(max-width: 600px) 1687px,
+                    800px" 
+            src="pictures/hero-image.png"
+            alt="Image of the woods">
+
       </div>
     </section> 
 
@@ -155,65 +170,90 @@
     <img src="./couple-picture.jpg">
   </div>
   </section>                         
-    <!-- <section class="accordion-wrapper">
-      <div class="accordion-section">  
-       
-        <div class="accordion-heading">
-          <h2> 
-            FAQ
-          </h2>
-        </div> -->
-
-        <!-- <div class="accordion-questions"> 
-          <div class="question" id="section1">
-            <h4>How do I get to the cabins?</h4>
-          </div>
-          <div class="answer">
-            <p>LLorem ipsum. ..Lorem ipsum.. .Lorem  ipsum.. .Lorem  ipsum...L orem ipsu m...Lor em ipsum...Lorem ipsum.. .Lorem ipsum...Lorem ipsum. ..Lorem ipsum... Lorem ipsum.. .Lorem ipsum. ..vLorem ipsum... Lorem ipsum. ..</p>
-          </div> -->
-
-          <!-- <div class="question" id="section2">
-            <h4>
-              Can I use the Internet in the cabins?
-            </h4>
-          </div>
-          <div class="answer">
-            <p>Lorem ipsum. ..Lorem ipsum.. .Lorem  ipsum.. .Lorem  ipsum...L orem ipsu m...Lor em ipsum...Lorem ipsum.. .Lorem ipsum...Lorem ipsum. ..Lorem ipsum... Lorem ipsum.. .Lorem ipsum. ..vLorem ipsum... Lorem ipsum. ..</p>
-          </div> -->
-
-          <!-- <div class="question" id="section3">
-            <h4>Can I book a transfer to/from the cabins?</h4>
-          </div>
-          <div class="answer">
-            <p>Lorem ipsum. ..Lorem ipsum.. .Lorem  ipsum.. .Lorem  ipsum...L orem ipsu m...Lor em ipsum...Lorem ipsum.. .Lorem ipsum...Lorem ipsum. ..Lorem ipsum... Lorem ipsum.. .Lorem ipsum. ..vLorem ipsum... Lorem ipsum. ..</p>
-          </div> -->
-
-          <!-- <div class="question" id="section4">
-            <h4>Is there bed linen?</h4>
-          </div>
-          <div class="answer">
-            <p>Lorem ipsum. ..Lorem ipsum.. .Lorem  ipsum.. .Lorem  ipsum...L orem ipsu m...Lor em ipsum...Lorem ipsum.. .Lorem ipsum...Lorem ipsum. ..Lorem ipsum... Lorem ipsum.. .Lorem ipsum. ..vLorem ipsum... Lorem ipsum. ..</p>
-          </div> -->
-
-          <!-- <div class="question" id="section5">
-            <h4>What activities are there?</h4>
-          </div>
-          <div class="answer">
-            <p>LLorem ipsum. ..Lorem ipsum.. .Lorem  ipsum.. .Lorem  ipsum...L orem ipsu m...Lor em ipsum...Lorem ipsum.. .Lorem ipsum...Lorem ipsum. ..Lorem ipsum... Lorem ipsum.. .Lorem ipsum. ..vLorem ipsum... Lorem ipsum. ..</p>
-          </div> -->
-
-          <!-- <div class="question" id="section6">
-            <h4>Are the cabins accessible for the disabled?</h4>
-          </div>
-          <div class="answer">
-            <p>Lorem ipsum...< Lorem ipsum. ..Lorem ipsum.. .Lorem  ipsum.. .Lorem  ipsum...L orem ipsu m...Lor em ipsum...Lorem ipsum.. .Lorem ipsum...Lorem ipsum. ..Lorem ipsum... Lorem ipsum.. .Lorem ipsum. ..vLorem ipsum... Lorem ipsum. ../p>
-          </div>
-        </div>
+                                     <!-- Signup form Here-->
+<!-- You should also build a **signup form** and style this according to how you want it to look. In the end, you will also post the data from the form into a service called HTTPBin and it should show the data you put in. It is basically a server and will work in the same way as if we posted this data to our own server to for example create a user account.
+Build a form that contains all or some of these:
+- 2 x Text fields
+- 1 x A password field
+- 1 x Set of radio buttons
+- 1 x Set of checkboxes
+- 1 x Submit button
+Set the form action to post to `https://httpbin.org/anything` and the method set to `post`. This means that httpbin will show you how this response would look like if you sent this to a server. -->
+<div class="form-container"> 
+  <form
+      class="form"
+      action="http://httpbin.org/anything"
+      method="POST"
+  >
+    <div class="form-input-container">
+      
+      <div class="form-heading">
+        <h3>
+          Make a reservation request
+        </h3>
       </div>
-    </section> -->
-                                 <!-- Signup form Here-->
+      <div class="form-group">
+          <label for="firstName">First name*</label>
+          <input
+              id="firstName"
+              type="text"
+              placeholder="Your first name"
+              name="firstNameValue"
+              required
+          />
+      </div>
 
+      <div class="form-group">
+          <label for="lastName">Last name</label>
+          <input
+              id="lastName"
+              type="text"
+              name="lastNameValue"
+          />
+      </div>
 
+           <!-- put in a div for phone-number here -->
+
+      <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+              id="email"
+              type="email"
+              name="emailValue"
+          />
+      </div>
+
+      <!-- Put in radiobuttons for man, woman, other here -->
+
+      <!-- Put in password here -->
+
+      <!-- put in a checkbox for terms and conditions here -->
+
+      <!-- put in a checkbox for monthly newsletter here -->
+
+      <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+              id="message"
+              cols="10"
+              rows="2"
+              name="messageValue"
+          ></textarea>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit">Submit</button>
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<section class="footer">
+  <div class="footer-content">
+
+  </div>
+</section>
                                  <!-- Footer here (sticky) -->
     <script src="./script.js"></script>
   </body>
