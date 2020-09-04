@@ -1,18 +1,31 @@
+html {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+header p {
+  font-size: 28px;
+  font-weight: bold;
+}
+
 body {
   margin: 0;
   font-family: "Comic Sans MS", cursive, sans-serif;
   color: #056676;
   background-color: #a3d2ca;
-  /* font-size: 14px; */
 }
 
 /*** HEADER ***/
-.hero-img {
-  height: 70vh;
+header {
+  height: 60vh;
   background: url(./images/hero-img-boat.jpg);
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
   color: #e8ded2;
 }
 
@@ -50,6 +63,13 @@ body {
   display: none; /* Don't display row menu */
 }
 
+.business-name-slogan {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
 /*** MAIN ***/
 main {
   display: flex;
@@ -59,7 +79,7 @@ main {
 }
 
 section {
-  width: 80%;
+  width: 90%;
   margin-bottom: 40px;
 }
 
@@ -70,7 +90,7 @@ section {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 2);
 }
 
-.signup-form h1 {
+.signup-form h2 {
   text-align: center;
 }
 
@@ -98,7 +118,7 @@ section {
 }
 
 /*** ACCORDION ***/
-.accordion-heading h1 {
+.accordion-heading h2 {
   text-align: center;
 }
 
@@ -146,13 +166,38 @@ section {
   color: #e8ded2;
 }
 
+/*** FOOTER ***/
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #056676;
+  color: #e8ded2;
+}
+
+footer a {
+  color: #e8ded2;
+}
+
 /*** MEDIA QUERIES ***/
 @media (min-width: 768px) {
   /* Add styling specific for screen-size from 768px to 1023px */
-  body {
-    /* font-size: 18px; */
+  html {
+    font-size: 18px;
   }
 
+  h1 {
+    font-size: 60px;
+  }
+
+  header p {
+    font-size: 36px;
+  }
+
+  header {
+    height: 70vh;
+  }
   .navbar-menu {
     background-color: transparent;
     flex-direction: row; /* Logo to left and row menu to right */
@@ -188,7 +233,11 @@ section {
 
 @media (min-width: 1024px) {
   /* Add styling specific for screen-size from 1024px and above */
-  a::after {
+  nav a {
+    font-size: 24px;
+  }
+
+  nav a::after {
     display: block;
     content: "";
     width: 0px;
@@ -197,23 +246,27 @@ section {
   }
 
   a.home:hover::after {
-    width: 56px;
+    width: 73px;
     transition: width 0.5s;
   }
 
   a.about:hover::after {
-    width: 65px;
+    width: 85px;
     transition: width 0.5s;
   }
 
   a.contact:hover::after {
-    width: 88px;
+    width: 117px;
     transition: width 0.5s;
   }
 
   a.four:hover::after {
-    width: 50px;
+    width: 66px;
     transition: width 0.5s;
+  }
+
+  header {
+    height: 80vh;
   }
 }
 
