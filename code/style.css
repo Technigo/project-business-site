@@ -1,5 +1,4 @@
 body {
-  height: 2000px;
   font-family: 'Ahiti', Arial, Helvetica, sans-serif;
   margin: 0;
   background: #e0e1dd;
@@ -63,8 +62,9 @@ body {
 .overlay {
   position: absolute;
   z-index: .9;
-  top: 40%;
-  left: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header-container {
@@ -83,20 +83,147 @@ body {
   margin: 10px;
 }
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/* INTRO */
 
-.accordion {
-  margin: 30px;
+.intro {
+  margin: 0 30px;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro p {
+  margin: 0;
+}
+
+/* .intro h2 {
+  align-self: center;
+} */
+
+/* CONTENT */
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+.form-container {
+  margin-left: 30px;
   padding: 30px;
   border: 2px solid grey;
   border-radius: 10px;
-  box-shadow: grey;
+  box-shadow: 10px 10px 10px rgba(122,122,122,1);
+  width: 50%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  background: #62929e;
+}
+
+.form-title {
+  margin: 0 0 16px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 16px 0;
+}
+
+.form-group-service {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 16px 0;
+}
+
+.form-group:last-child {
+  margin: 0;
+}
+
+input {
+  width: 140px;
+  background: #e0e1dd;
+}
+
+select {
+  width: 148px;
+  height: 22px;
+  background: #e0e1dd;
+}
+
+label {
+  width: 120px;
+}
+
+/* label:first-of-type ~ label {
+  margin-left: 10px;
+} */
+
+.form-group p, .form-group-service p {
+  width: 120px;
+  margin: 0;
+}
+
+.gender {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  width: 148px;
+}
+
+.gender label, .services label {
+  width: fit-content;
+}
+
+.gender input, .services input {
+  width: fit-content;
+  margin: 0;
+  background: #e0e1dd;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 148px;
+}
+
+.service {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-submit {
+  width: 200px;
+  height: 40px;
+  border-radius: 15px;
+  font-weight: bold;
+  background: #e0e1dd;
+}
+
+/* ACCORDION */
+
+.accordion {
+  margin: 0 30px;
+  padding: 30px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 500px;
+  box-shadow: 10px 10px 10px rgba(122,122,122,1);
+  background: #62929e;
 }
 
 .accordion-title {
-  margin: 0;
+  margin: 0 0 16px 0;
 }
 
 .answer {
@@ -108,4 +235,24 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .active {
   height: 50px;
   overflow: auto;
+}
+
+/* FOOTER */
+
+footer {
+  background: #393d3f;
+  color: #c6c5b9;
+  padding: 16px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer img {
+  width: 50px;
+}
+
+.footer-right {
+  text-align: right;
 }

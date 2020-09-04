@@ -27,13 +27,14 @@
       </nav>
       <section class="header-title">
         <video class="header-video" autoplay loop muted>
-          <source src="/code/videos/Dog_640x360_2mb.mp4" type="video/mp4">
+          <!-- <source src="/code/videos/Dog_640x360_2mb.mp4" type="video/mp4"> -->
+          <source src="https://vod-progressive.akamaized.net/exp=1599240395~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F3856%2F16%2F419280227%2F1809494193.mp4~hmac=cbbd24946284bc98a563556c0134d53d00491a6683b9bf54068557c9f8057e9d/vimeo-prod-skyfire-std-us/01/3856/16/419280227/1809494193.mp4" type="video/mp4">
             <p>This browser does not support video</p>
         </video>
         <div class="overlay">
           <div class="header-container">
             <img class="header-big-logo" src="./assets/paw-solid.svg" alt="A paw">
-          <h1 class="header-text">Happy Buddy Dog Day Care</h1>
+            <h1 class="header-text">Happy Buddy Dog Day Care</h1>
           </div>
         </div>
       </section>
@@ -45,146 +46,211 @@
         Best dog day care in Stockholm!
       </h2>
       <p>
-        Do you want your best friend to 
+        Do you want your best friend to spend a good time when you are at work? 
+      </p>
+      <p>
+        Fill in the form below and send your request. We will contact you to book an appointment.
       </p>
     </section>
 
-    <section class="form">
-    <!-- Signup form -->
-      <h2 class="form-title">Request</h2>
-      <form action="http://httpbin.org/anything" method="POST">
-        <div class="form__first">
-          <label>
-            First name
-            <input type="text" name="firstNameValue">
-          </label>
-          <label>
-            Last name
-            <input type="text" name="lastNameValue">
-          </label>
-        </div>
-        <div class="form__second">
-          <label>
-            Phone number
-            <input type="tel" name="telValue">
-          </label>
-          <label>
-            Email address
-            <input type="email" name="eMailValue">
-          </label>
-        </div>
-        <div class="form__third">
-          <label>
-            Dog's name
-            <input type="text" name="dogNameValue">
-          </label>
-          <label>
-            Size
-            <select name="sizeValue">
-              <option value="xs">Very small</option>
-              <option value="s">Small</option>
-              <option value="m">Medium</option>
-              <option value="l">Large</option>
-              <option value="xl">Very large</option>
+    <section class="content">
+      <section class="form-container">
+      <!-- Signup form -->
+        <h2 class="form-title">Request</h2>
+        <form action="http://httpbin.org/anything" method="POST">
+          <div class="form-group">
+            <label for="firstName">First name</label>
+            <input
+              id="firstName"
+              type="text"
+              name="firstNameValue"
+              required
+            >
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last name</label>
+            <input
+              id="lastName"
+              type="text"
+              name="lastNameValue"
+              required
+            >
+          </div>
+          <div class="form-group">
+            <label for="tel">Phone number</label>
+            <input
+              id="tel"
+              type="tel"
+              name="telValue"
+              required
+            >
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              type="email"
+              name="eMailValue"
+              required
+            >
+          </div>
+          <div class="form-group">
+            <label for="dogBreed">Dog's breed</label>
+            <input
+              id="dogBreed"
+              type="text"
+              name="dogBreedValue"
+              required
+            >
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <select id="age" name="ageValue" required>
+              <option value="" disabled selected>Select a category</option>
+              <option value="young">Young (under 2 years)</option>
+              <option value="adult">Adult</option>
+              <option value="senior">Senior</option>
             </select>
-          </label>
+          </div>
+          <div class="form-group">
+            <p>Gender</p>
+            <div class="gender">
+              <label for="male">Male</label>
+              <input
+              id="male"
+              type="radio"
+              name="gender"
+              value="male"
+              required
+              >
+              <label for="female">Female</label>
+              <input
+                id="female"
+                type="radio"
+                name="gender"
+                value="female"
+                required
+              >
+            </div>
+          </div>
+          <div class="form-group-service">
+            <p>Services</p>
+            <div class="services">
+              <div class="service">
+                <label for="service1">Service 1</label>
+                <input
+                  id="service1"
+                  type="checkbox"
+                  name="service"
+                  value="1"
+                >
+              </div>
+              <div class="service">
+                <label for="service2">Service 2</label>
+                <input
+                  id="service2"
+                  type="checkbox"
+                  name="service"
+                  value="2"
+                >
+              </div>
+              <div class="service">
+                <label for="service3">Service 3</label>
+                <input
+                  id="service3"
+                  type="checkbox"
+                  name="service"
+                  value="3"
+                >
+              </div>
+              <div class="service">
+                <label for="service4">Service 4</label>
+                <input
+                id="service4"
+                type="checkbox"
+                name="service"
+                value="4"
+                >
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="form-submit" type="submit">
+              SEND REQUEST
+            </button>
+          </div>
+        </form>
+      </section>
+  
+      <!-- Accordion -->
+      <section class="accordion">
+  
+        <h2 class="accordion-title">FAQ</h2>
+  
+        <div class="accordion-element">
+          <h3 class="question" id="question-1">
+            Question 1
+          </h3>
+          <div class="answer">
+            <p class="answer-text">
+              Lorem ipsum...
+            </p>
+          </div>
         </div>
-        <div class="form__fourth">
-          <p>Gender</p>
-          <label>
-            Male
-            <input type="radio" name="gender" value="male">
-          </label>
-          <label>
-            Female
-            <input type="radio" name="gender" value="female">
-          </label>
-          <label>
-            Birth date
-            <input type="date" name="birthDateValue">
-          </label>
+        
+        <div class="accordion-element">
+          <h3 class="question" id="question-2">
+            Question 2
+          </h3>
+          <div class="answer">
+            <p class="answer-text">
+              Lorem ipsum...
+            </p>
+          </div>
         </div>
-        <div class="form__fifth">
-          <p>Required services</p>
-          <label>
-            Service 1
-            <input type="checkbox" name="service" value="1">
-          </label>
-          <label>
-            Service 2
-            <input type="checkbox" name="service" value="1">
-          </label>
-          <label>
-            Service 3
-            <input type="checkbox" name="service" value="1">
-          </label>
-          <label>
-            Service 4
-            <input type="checkbox" name="service" value="1">
-          </label>
+  
+        <div class="accordion-element">
+          <h3 class="question" id="question-3">
+            Question 3
+          </h3>
+          <div class="answer">
+            <p class="answer-text">
+              Lorem ipsum...
+            </p>
+          </div>
         </div>
-      </form>
+  
+        <div class="accordion-element">
+          <h3 class="question" id="question-4">
+            Question 4
+          </h3>
+          <div class="answer">
+            <p class="answer-text">
+              Lorem ipsum...
+            </p>
+          </div>
+        </div>
+  
+        <div class="accordion-element">
+          <h3 class="question" id="question-5">
+            Question 5
+          </h3>
+          <div class="answer">
+            <p class="answer-text">
+              Lorem ipsum...
+            </p>
+          </div>
+        </div>
+      </section>
     </section>
 
-    <!-- Accordion -->
-    <section class="accordion">
-
-      <h2 class="accordion-title">FAQ</h2>
-
-      <div class="accordion-element">
-        <h3 class="question" id="question-1">
-          Question 1
-        </h3>
-        <div class="answer">
-          <p class="answer-text">
-            Lorem ipsum...
-          </p>
-        </div>
+    <footer>
+      <div class="footer-left">&#169; 2020 Sandrine Elander</div>
+      <div>
+        <img src="./logo.svg" alt="Technigo">
       </div>
-      
-      <div class="accordion-element">
-        <h3 class="question" id="question-2">
-          Question 2
-        </h3>
-        <div class="answer">
-          <p class="answer-text">
-            Lorem ipsum...
-          </p>
-        </div>
-      </div>
-
-      <div class="accordion-element">
-        <h3 class="question" id="question-3">
-          Question 3
-        </h3>
-        <div class="answer">
-          <p class="answer-text">
-            Lorem ipsum...
-          </p>
-        </div>
-      </div>
-
-      <div class="accordion-element">
-        <h3 class="question" id="question-4">
-          Question 4
-        </h3>
-        <div class="answer">
-          <p class="answer-text">
-            Lorem ipsum...
-          </p>
-        </div>
-      </div>
-
-      <div class="accordion-element">
-        <h3 class="question" id="question-5">
-          Question 5
-        </h3>
-        <div class="answer">
-          <p class="answer-text">
-            Lorem ipsum...
-          </p>
-        </div>
-      </div>
+      <div class="footer-right">Technigo Bootcamp Fall 2020</div>
+    </footer>
 
     <!-- dont forget to link the javascript file here! -->
     <script src="./script.js"></script>
