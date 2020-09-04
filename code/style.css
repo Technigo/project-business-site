@@ -1,4 +1,4 @@
-/*** General styling for the website ***/
+/*** General styling for the whole website ***/
 * {box-sizing: border-box;}
 
 body {
@@ -11,7 +11,7 @@ body {
   font-Size: 14px;
 }
 
-main {
+main { /** The area containing the form and the FAQ. **/
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
@@ -24,7 +24,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url("https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-image: url("./desktoppic.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -138,6 +138,17 @@ button:hover { /** How the button shall look when pointing on it - it gets flat 
   font-size: 16px;
 }
 
+.question::after {
+  content: "\002B";
+  font-size: 24px;
+  position: absolute;
+  right: 200px;
+}
+
+.question.active::after {
+  content: "\2212";
+}
+
 .answer-container {
   height: 0;
   overflow: hidden;
@@ -163,48 +174,17 @@ footer { /* Footer styling */
   border-top: 15px solid white;
 }
 
-/*** Media queries ***/
-@media screen and (max-width: 667px) { /* Mobile device */
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-  }
-
-  .hero-image {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /*height: auto;*/
-  }
- 
-  .hero-image h1 {
-    font-size: 55px;
-    margin: 10px;
-  }
-  
-  .hero-image h3 {
-    font-size: 25px;
-    background: #22031F;
-    margin: 20px;
-  }
-
-  .form-container, .accordion, button {
-    width: 100%;
-  }
-
-  .form-container  {
-    max-height: 800px;
-  }
+img { /* Styling of LinkedIn logo */
+  width: 22px;
+  margin-top: 35px;
+  margin-left: 10px;
 }
 
+.footer {
+  font-size: 12px;
+}
+
+/*** Media queries ***/
 @media screen and (max-width: 1024px) { /* Tablet device */
   body {
     background-color: #d4b4c4;
@@ -223,7 +203,7 @@ footer { /* Footer styling */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("https://images.unsplash.com/photo-1506680337708-f23858bf2a76?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    background-image: url("./tabletpic.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -250,5 +230,52 @@ footer { /* Footer styling */
 
   footer, .form-container, .accordion, button, #fullName, #companyName, #mailAdress, #passWord { 
     background-color: #bcb6c4;
+  }
+}
+
+@media screen and (max-width: 667px) { /* Mobile device */
+  body {
+    background-color: #FCB1AD;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .hero-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./mobilepic.jpg"); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+ 
+  .hero-image h1 {
+    font-size: 55px;
+    margin: 10px;
+    text-shadow: 5px 4px 5px white;
+  }
+  
+  .hero-image h3 {
+    font-size: 25px;
+    margin: 20px;
+    color: #22031F;
+    text-shadow: 5px 3px 4px white;
+  }
+
+  .form-container, .accordion, button, #fullName, #companyName, #mailAdress, #passWord, footer {
+    width: 100%;
+    background-color: #F3ECEF;
+  }
+
+  .form-container  {
+    max-height: 800px;
   }
 }
