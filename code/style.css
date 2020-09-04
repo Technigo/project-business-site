@@ -18,11 +18,15 @@ header {
 }
 
 .video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   width: 100%;
   height: 400px;
   overflow: hidden;
 }
+
 
 .header-content {
   position: relative;
@@ -334,6 +338,10 @@ footer a {
     height: 600px;
   }
 
+  .header-content {
+    position: absolute;
+    z-index: 2;
+  }
   .intro {
     grid-column: span 2;
     grid-column-start: 2;
@@ -366,4 +374,11 @@ footer a {
   footer a {
     color: lightsalmon;
   }
+}
+
+@media (min-width: 1920px) {
+video {
+  width: 100%;
+ 
+}
 }
