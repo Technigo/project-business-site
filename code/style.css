@@ -1,9 +1,9 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0px;
+  margin: 0;
 }
 
-/* HEADER */
+/*** HEADER ***/
 
 header {
   display: flex;
@@ -11,7 +11,7 @@ header {
   justify-content: center;
   align-items: center;
   color: white;
-  margin: 0px;
+  margin: 0;
   width: 100%;
   height: 400px;
 
@@ -22,12 +22,10 @@ header {
   width: 100%;
   height: 400px;
   overflow: hidden;
-  /* z-index: -1; */
 }
 
 .header-content {
   position: relative;
-  /* z-index: 2; */
 }
 
 header h2 {
@@ -47,10 +45,10 @@ h2 {
 }
 
 p {
-  margin: 0px;
+  margin: 0;
 }
 
-/* MAIN */
+/*** MAIN ***/
 
 main {
   display: grid;
@@ -60,7 +58,7 @@ main {
   
 }
 
-/* INFO */
+/*** INTRO ***/
 
 .intro {
   display: flex;
@@ -74,7 +72,7 @@ main {
 
 }
 
-/* SIGN UP */
+/*** SIGN UP ***/
 
 .sign-up {
   width: 100%;
@@ -92,7 +90,6 @@ main {
 
 form {
   display: grid;
-  /* grid-template-rows: repeat(6, 1fr); */
   grid-template-columns: 1fr;
   row-gap: 15px;
   justify-content: center;
@@ -113,9 +110,7 @@ input {
   border-radius: 10px;
   box-sizing: border-box;
   padding: 10px;
-  
 }
-
 
 input:focus {
   border: 1px solid white;
@@ -126,13 +121,14 @@ label {
   font-weight: 500;
 }
 
+/* Form radio buttons */
+
 form div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
 }
-
 
 .radio-container {
   display: block;
@@ -197,10 +193,9 @@ form div {
 
 
 button {
-  margin: 20px 0px;
+  margin: 20px 0;
   height: 40px;
   border: none;
-  /* border-bottom: 1px solid white; */
   background: rgba(255, 255, 255, 1);
   color: lightsalmon;
   border-radius: 10px;
@@ -209,7 +204,7 @@ button {
   font-family: inherit;
 }
 
-/* FAQ */
+/*** FAQ ***/
 
 .accordion {
   width: 100%;
@@ -221,34 +216,28 @@ button {
 .question {
   font-weight: bold;
   padding: 10px 10px;
-  margin: 5px 0px;
+  margin: 5px 0;
   color: lightsalmon;
-  border-bottom: 0px solid lightsalmon;
   border: 1px solid lightsalmon;
   border-radius: 10px;
   background-color: white;
   transition: background-color 0.5s;
   cursor: pointer;
-
 }
 
 .answer {
-  margin: 10px 0px;
+  margin: 10px 0;
   background: white;
-  height: 0px;
+  height: 0;
   overflow: hidden;
   color: white;
   transition: height 0.5s; 
 }
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
 .active + .answer {
   height: 30px;
   padding: 10px;
-  margin-top: 0px;
+  margin-top: 0;
   color: black;
   border: 1px solid lightsalmon;
   border-bottom-left-radius: 10px;
@@ -256,15 +245,15 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 .active {
-  margin-bottom: 0px;
+  margin-bottom: 0;
   border-bottom: 1px solid lightsalmon;
   color: white;
   background-color: lightsalmon;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
-/* FOOTER */
+/*** FOOTER ***/
 
 footer {
   margin-top: 20px;
@@ -285,6 +274,9 @@ footer a {
   color: white;
   font-weight: bold;
 }
+
+
+/*** TABLET ***/
 
 @media (min-width: 768px) {
   main {
@@ -317,12 +309,12 @@ footer a {
   }
 }
 
+/*** DESKTOP ***/
 
-@media (min-width: 1027px) {
+@media (min-width: 1024px) {
   main {
     grid-template-columns: [line1] 1fr [line2] 1fr [line3] 1fr [line4] 1fr;
     grid-template-rows: repeat(3, 1fr);
-    /* justify-content: baseline; */
     align-items: baseline;
   }
 
@@ -348,7 +340,7 @@ footer a {
     grid-column-end: 4;
   
   }
- .intro p {
+  .intro p {
    width: 75%;
  }
 
