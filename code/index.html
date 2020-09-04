@@ -6,46 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project 3</title>
   <link rel="stylesheet" href="./style.css">
-
 </head>
 
 <body>
-  <header>  <!---include picture tag with media queries-->
-    <h1>FRIDAY BOUQUET</h1>
+  <header> 
+    <h1>THE FRIDAY BOUQUET</h1>
 
-  <div class="hero-video">
     <video autoplay muted loop>
-    <source src="./videos/flowers.mp4" type="video/mp4">
-    <p>This browser doesn't support video.</p>
-    </video>
-  </div>  
+      <source src="./videos/flowers.mp4" type="video/mp4">
+      <p>This browser doesn't support video.</p>
+    </video> 
 
-  <div class="hero-image">
-    <picture>
-    <source srcset="./images/mobilBukett.jpg" media="(max-width: 667px)">
-    <source srcset="./images/bukett.jpg" media="(max-width: 1024px)"> 
-    <img src="./images/flowersStill.jpg" alt="">
+    <picture class="hero-image">
+      <source srcset="./images/mobilBukett.jpg" media="(max-width: 667px)"/>
+      <source srcset="./images/bukett.jpg" media="(max-width: 1024px)"/> 
+      <img src="./images/flowersStill.jpg" alt="image of flowers"/> 
     </picture>
-  </div>
 
   </header>
+
+  <section class="intro-text">
+    <p>Get fresh flowers every Friday - Delivered to your door</p>
+  </section>
 
   <section class="box-container">
   
     <section class="form-container">
-
-      <h2>Subscribe</h2>
-      <p>Sign up to lorem ipsum every week</p>
-
       <form class="form" 
         action="http://httpbin.org/anything" 
         target="_blank" 
         method="POST"
       >
-      <div class="form-group1"></div>
-        <ul>
-          <li>
-            <label for="name">Name </label>
+      <fieldset>
+        <legend>SUBSCRIBE</legend>
+        <div class="form-group1"></div>
+          <div class="form-part">
+            <label for="name">Name</label>
             <input 
               type="text" 
               name="nameValue"
@@ -53,9 +49,9 @@
               placeholder="Namn Namnsson" 
               required 
             />
-          </li>
+          </div>
 
-          <li>
+          <div class="form-part">
             <label for="email">Email</label>
             <input 
               type="text" 
@@ -64,35 +60,37 @@
               placeholder="email@email.com" 
               required 
             />
-          </li>
-
-          <li>
-            <label for="password">Password </label>
+          </div>
+          
+          <div class="form-part">
+            <label for="password">Password</label>
             <input 
               type="text" 
               name="passwordValue"
               id="password"
               required 
             />
-          </li>
-
-          <li>
-            <label for="termsCon">Accept Terms & Conditions </label>
+          </div>
+          
+          <div class="form-checkbox">
+            <label for="termsCon">
+            Accept Terms & Conditions 
             <input 
               type="checkbox" 
               name="termsConditions"
               id="termsCon" 
               required 
             />
-          </li>
-        </ul>
-      </div>
+            <span class="checkmark"></span>
+          </label>
+          </div>  
+        </div>
 
-      <p class="form-text">Size of bouquet</p> 
+        <p class="form-text">Size of bouquet</p> 
 
-      <div class="form-group2">
+        <div class="form-group2">
           <label class="radiobutton-container">
-          small
+          Small
           <input 
             type="radio" 
             name="size"
@@ -101,20 +99,19 @@
           />
           <span class="custom-radio"></span>
           </label> 
-        
+          
           <label class="radiobutton-container">
-          medium
-          <input 
+          Medium
+         <input 
             type="radio" 
             name="size" 
             value="medium"
           />
           <span class="custom-radio"></span>
           </label> 
-         
 
           <label class="radiobutton-container">
-          large
+          Large
           <input 
             type="radio" 
             name="size" 
@@ -122,14 +119,17 @@
           />
           <span class="custom-radio"></span>
           </label> 
-
         </div>
-       <button class="submit-button" type="submit">Submit</button>
+
+        <div class="button-container">
+          <button class="submit-button" type="submit">Submit</button>
+        </div>  
+
+       </fieldset>
       </form>
     </section>
 
     <section class="accordion-container">
-      <!-- Accordion -->
       <h2>FAQ</h2>
 
       <div class="accordion-content">
@@ -138,40 +138,44 @@
         </div>
         <div class="accordion-answer-content">
           <div class="accordion-answer-text">
-          <p>Lorem ipsum...</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras felis dui, consequat in blandit vel, ultrices ac metus. Integer ultricies porta tempor. </p>
           </div>
         </div>
       </div>
 
       <div class="accordion-content">
         <div class="accordion-question" id="section2">
-          <h3>How does it work?</h3>
+          <h3>How much does it cost?</h3>
         </div>
         <div class="accordion-answer-content">
           <div class="accordion-answer-text">
-          <p>Lorem ipsum...</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras felis dui, consequat in blandit vel, ultrices ac metus. Integer ultricies porta tempor. Ut porttitor ligula at dui finibus, ut rhoncus ligula tristique. Vivamus dignissim fermentum massa, quis sollicitudin tellus vehicula et. Mauris et faucibus arcu. Phasellus non malesuada nibh.</p>
           </div>
         </div>
       </div>
 
       <div class="accordion-content">
         <div class="accordion-question" id="section3">
-          <h3>How does it work?</h3>
+          <h3>How will they be delivered?</h3>
         </div>
         <div class="accordion-answer-content">
           <div class="accordion-answer-text">
-          <p>Lorem ipsum...</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras felis dui, consequat in blandit vel, ultrices ac metus. </p>
           </div>
         </div>
       </div>
 
-      <!--<div class="accordian-question" id="section2">Section 2</div>
-      <div class="accordian-answer">
-        <p>Lorem ipsum...</p>
-      </div>-->
+      <div class="accordion-content">
+        <div class="accordion-question" id="section4">
+          <h3>How big are the bouquets?</h3>
+        </div>
+        <div class="accordion-answer-content">
+          <div class="accordion-answer-text">
+          <p>Cras felis dui, consequat in blandit vel, ultrices ac metus.</p>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <script src="script.js"></script> <!-- dont forget to link the javascript file here! -->
   </section>
   <script defer src="./script.js"></script>
 </body>

@@ -1,15 +1,16 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-/* #a9b8cd */
 
 body {
   margin: 0;
-  background-color: #fafafa;
+  background-color: #e5dfd3;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/*** styling of header ***/
+
 header {
+ display: flex;
+ align-items: center;
+ justify-content: center;
  margin: 0;
  position: absolute;
  background-color: transparent;
@@ -22,12 +23,7 @@ h1 {
  text-align: center;
  font-size: 100px;
  color: #fafafa;
- left: 20%;
- right: 20%;
- top: 20%;
- 
 }
-
 
 video {
   height: 100%;
@@ -39,72 +35,91 @@ video {
   object-fit: cover;
 }
 
-img {
-  width: 100%;  
+.hero-image img { 
+  display: none;
 }
+
+.intro-text {
+  color: #fafafa;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 530px;
+  margin: 0 20px;
+}
+
+/*** container for form and accordion ***/
 
 .box-container {
-  padding-top: 600px;
+  padding-bottom: 70px;
   display: flex;
   justify-content: space-evenly;
+  /*background-image: url(/code/images/flowerStill.jpeg); */
 }
 
-.form-container {
-  background-color: ;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: #a9b8cd solid;
-  width: 45%;
-  margin: 10px;
-  padding: 10px;
-}
-
-.form-group1 label {
-  margin-top: -10px;
-}
-
-.form-group2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-bottom: 15px;
-}
+/*** styling of form ***/
 
 .form {
-  display: flex;
-  flex-direction: column;
   margin: 20px;
 }
 
-.form-input {
-  margin: 10px;
+.form-container {
+  color: #fafafa;
+  background-color: #c0c2bd;
+  border-radius: 2%;
+  border: #fafafa solid;
+  width: 400px;
+  height: 550px;
+  margin: 20px;
+  padding: 10px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin:0;
+.form-group1 {
+  margin-top: 30px;
 }
 
-li {
-  margin: 10px;
+.form-part label {
+  width: 100px;
+  margin: 0 20px;
+  font-size: 17px;
 }
 
-ul input {
+.form-part {
   display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.form-text {
-  text-align: center;
+legend {
+  font-size: 40px;
 }
 
-.radiobutton-container {
- user-select: none;
- margin: 15px;
+fieldset {
+  border-color: #fafafa;
+  border-style: solid;
+  border-radius: 2%;
+  height: 480px;
+  }
+
+.input {
+  background-color: #fafafa;
+  outline: none;
+  width: 200px
 }
 
-.radiobutton-container input{
+input:hover {
+  background-color: #d5dfee;
+}
+
+.form-checkbox {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.form-checkbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -112,40 +127,120 @@ ul input {
   width: 0;
 }
 
-.custom-radio {
+.checkmark {
   position: absolute;
-  background-color: #cfcab6;
   height: 17px;
   width: 17px;
-  margin-left: 2px;
+  background-color: #fafafa;
+  margin-left: 10px;
+  border-radius: 20%;
+}
+
+.form-checkbox input:checked ~ .checkmark {
+  background-color: #657e83;
+}
+
+.form-checkbox:hover input ~ .checkmark {
+  background-color: #86bbc5;
+}
+
+.form-text {
+ text-align: center;
+ font-size: 17px;
+ padding-top: 50px;
+ margin: 10px;
+ margin-bottom: -30px;
+}
+
+.button-container {
+ margin: 0 100px;
+}
+
+.submit-button {
+  font-size: 15px;
+  width: 100%;
+  height: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #fafafa;
+  color: #657e83;
+  border-radius: 5%;
+  border-color: #657e83;
+}
+
+.submit-button:hover {
+  background-color: #d5dfee;
+}
+
+.form-group2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-group2 label {
+  width: 15px;
+}
+
+.radiobutton-container {
+  user-select: none;
+  margin: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+}
+
+.radiobutton-container input{
+  position: absolute; 
+  opacity: 0;
   cursor: pointer;
-  border-radius: 50%;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio {
+  background-color: #fafafa;
+  height: 17px;
+  width: 17px;
+  margin: 18px;
+  cursor: pointer;
+  border-radius: 50%; 
 }
 
 .radiobutton-container:hover input ~ .custom-radio {
-  background-color: #657e83;
+  background-color: #86bbc5;
 }
 
 .radiobutton-container input:checked ~ .custom-radio {
   background-color: #657e83;
 } 
 
-.radiobutton-container input:focus ~ .custom-radio {
-  outline: ;
-}
+/*** styling of accordion ***/
 
 .accordion-container {
-  border: #a9b8cd solid;
-  width: 45%;
-  margin: 10px;
-  padding: 20px;
-  background-color: #cfcab6;
-  color: black;
+  display: flex;
+  flex-direction: column;
+  border: #fafafa solid;
+  border-radius: 2%;
+  width: 400px;
+  height: 550px;
+  margin: 20px;
+  padding: 10px;
+  /*background-color: #c0c2bd;*/
+  color: #fafafa;
+}
+
+.accordion-container h2 {
+  text-align: center;
+  color: #657e83;
+  font-size: 40px;
+  margin-top: 10px;
 }
 
 .accordion-content {
-  background-color: #a9b8cd ;
-
+  margin: 10px 30px;
+  background-color: #c2c4c1 ;
+  box-shadow: 0 0 2px 2px #657e83;
 }
 
 .accordion-question {
@@ -172,17 +267,23 @@ ul input {
   height: 0;
   overflow: hidden;
   transition: height 0.2s ease-out;
- 
 }
 
 .accordion-answer-text {
   padding: 10px;
-  border-top: solid black 3px;
+  border-top: solid #fafafa 3px;
 }
 
 .accordion-question.active + .accordion-answer-content {
   height: auto;  
 }
+
+footer {
+  height: 200px;
+  background-color: #e5dfd3;
+}
+
+/*** for ipad ***/
 
 @media (max-width: 1024px) {
  video {
@@ -191,10 +292,17 @@ ul input {
 
  h1 {
    font-size: 80px;
-   
  }
 
- img {
+ .intro-text {
+  font-size: 50px;
+  padding-top: 600px;
+  padding-bottom: 20px;
+ }
+
+ .hero-image img {
+   width: 100%; 
+   display: block;
    height: 600px;
    object-fit: cover;
    
@@ -203,11 +311,33 @@ ul input {
    flex-wrap: wrap;
  }
 
- .form-container {
-   width: 60%;
- }
+}
 
- .accordion {
-   width: 60%;
- }
+/*** for mobile ***/
+
+@media (max-width: 667px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .hero-image img {
+    width: 100%; 
+    height: 570px;
+  }
+
+  .intro-text {
+    font-size: 35px;
+    padding-top: 570px;
+   }
+
+  .form-container {
+     margin: 0;
+     padding: 0;
+   }
+
+
+  .accordion-container {
+    margin: 10 px 0;
+    padding: 0;
+  }
 }
