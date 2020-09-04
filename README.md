@@ -1,12 +1,21 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Project W3 is about htlm form and accordion using javascript. It also requires to have a here video/image on the header.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+#1
+Replace hero video with background image at small screen size.
+Solution: put the background image under the video (higher z-index) and use media query to hide the video at small screen size
+
+#2
+Put icon (+/-) to show the expansion/collapse of the accordion
+Solution: follow exactly the guidance in one youtube video. Copy it and it works!
+
+#3
+Style the input (name-email) when it is focused
+Solution: learn new CSS :focus
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://mockupinterview.netlify.app/
+
