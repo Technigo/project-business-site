@@ -156,12 +156,12 @@
   </article>
 
 <!-- Form -->
-<div class="form-container">
-    <form 
-      class="form1" 
+  <form 
+      class="form-container" 
       action="http://httpbin.org/anything" 
-      method="POST"
-    >
+      method="POST">
+
+    <div class="form1">
 
       <h3 class="form-heading">Säkra en plats direkt</h3>
         <p class="form-intro"> 
@@ -169,7 +169,7 @@
           <a class="intro-link" href="#">logga in</a> 
           så slipper du ange dina uppgifter igen.
         </p>
-      <h4>Välj kurs</h4>
+        <h4>Välj kurs</h4>
 
       <div class="form-group">
         <label for="kurs">Crawlkurs
@@ -210,28 +210,24 @@
           required
         />
       </div>
-  </form>
-
-<!-- Form part 2 -->
-  <form 
-    class="form2" 
-    action="http://httpbin.org/anything" 
-    method="POST"
-  >
-    
-    <div class="form-group">
-      <label for="mejl">Mejladress*</label>
-      <input 
-        id="mejl" 
-        type="email"
-        name="emailValue"
-        required
-      />
     </div>
 
-    <div class="form-group">
-      <label for="meddelande">Fyll i om det är något du vill att vi ska veta.</label>
-      <textarea 
+<!-- Form part 2 -->
+
+    <div class="form2"> 
+      <div class="form-group">
+        <label for="mejl">Mejladress*</label>
+        <input 
+          id="mejl" 
+          type="email"
+         name="emailValue"
+         required
+          />
+      </div>
+
+      <div class="form-group">
+       <label for="meddelande">Fyll i om det är något du vill att vi ska veta.</label>
+        <textarea 
         id="meddelande"
         name="messageValue"
         cols="10" row="15"
@@ -242,30 +238,29 @@
           border-radius: 25px;
           cursor: pointer;
         ">
-      </textarea>
-    </div>
+       </textarea>
+      </div>
     
-    <div class="form-group">
-      <label for="godkännande">Jag har läst igenom och godkänner villkoren.*
-      <input 
-        id="godkännande" 
-        type="checkbox" 
-        name="approvalValue"
-        required
-      />
-      </label>
-    </div>
+      <div class="form-group">
+        <label for="godkännande">Jag har läst igenom och godkänner villkoren.*
+        <input 
+          id="godkännande" 
+          type="checkbox" 
+          name="approvalValue"
+          required
+        />
+        </label>
+      </div>
 
-    <div class="form-group">
-      <button
-        id="anmälan"
-        type="submit"
-        name="sendValue"
-        >Anmäl mig
-      </button>
+      <div class="form-group">
+        <button
+          id="anmälan"
+          type="submit"
+          name="sendValue"
+          >Anmäl mig
+        </button>
+      </div>
     </div>
-
-  </div>
   </form>
 
 <!-- Footer -->
