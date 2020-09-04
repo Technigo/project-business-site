@@ -9,4 +9,4 @@ I created a businesssite for a wine company.
 I started to sketch the site for mobile, tablet and desktop in Miro.com and wanted the form and FAQ to be similiar. Then I used background-img property in CSS for the responsive hero image and played around with its properties to make the hero image responsive. If I had more time I would have added some validations to the forms and added styling to validations. I would have also made a functioning hamburger menu for mobile. I would have also put more time or design and functionality for the different input types and added more hover and click effects.  
 
 ## View it live
-
+https://dazzling-hamilton-a9024a.netlify.app/
