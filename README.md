@@ -25,4 +25,4 @@ I had quite a bit of trouble with the accordion element, as I couldn't fully und
 - JavaScript
 
 ## View it live 🔴
-Coming soon.
+https://themolecules.netlify.app/
