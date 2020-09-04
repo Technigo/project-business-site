@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 
   background: linear-gradient(270deg, #aef0df, #d9b7d6, #fbd880);
   background-size: 400% 400%;
@@ -47,9 +48,17 @@ html {
   scroll-behavior: smooth;
 }
 
+main {
+  max-width: 1100px;
+  text-align: center;
+  margin: auto;
+}
+
 h1 {
   font-size: 80px;
   margin: 10px 0;
+  font-family: "Arvo", serif;
+  font-style: italic;
 }
 
 h2 {
@@ -59,10 +68,31 @@ h2 {
 h3 {
   font-size: 30px;
   margin: 0;
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+h4 {
+  display: inline;
+  margin-left: 10px;
 }
 
 p {
   color: #fff;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 2px solid #fff;
+}
+
+a:focus {
+  outline: 2px solid #fff;
 }
 
 /************ HEADER ************/
@@ -102,6 +132,7 @@ li {
 nav {
   display: flex;
   justify-content: space-between;
+  /* align-items: center; */
   position: relative;
 }
 
@@ -114,6 +145,7 @@ article {
   flex-direction: column;
   align-items: center;
   color: #fff;
+  min-width: 1024px;
 
   /* center */
   position: absolute;
@@ -132,34 +164,47 @@ a:visited {
   }
 }
 
+.nav-bar {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
 .nav-bar:hover {
   animation-name: shake;
   animation-duration: 1s;
 }
 
 .logo {
-  height: 30px;
-  width: 30px;
-  fill: #fff;
-  padding: 10px 20px;
+  height: 40px;
+  width: 40px;
+  fill: rgba(255, 255, 255, 0.6);
+  padding-left: 20px;
+  padding-top: 5px;
+  transition: 0.1s;
 }
 
 .logo:hover {
   cursor: pointer;
-  fill: pink;
+  fill: #fff;
+  transition: 0.2s;
 }
 
-.sign-up {
+.sign-in {
+  margin: 0;
+  padding-top: 20px;
   display: inline;
-  padding: 0;
-  font-size: 30px;
-  margin: 8px 20px 0 0;
+  padding-right: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 900;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.1s;
 }
 
-.sign-up:hover a {
-  color: pink;
-  text-align: center;
-  margin: auto;
+.sign-in:hover {
+  color: #fff;
+  transition: 0.2s;
 }
 
 .button-container {
@@ -168,23 +213,26 @@ a:visited {
 
 .btn {
   display: inline-block;
-  width: 160px;
-  margin-top: 30px;
+  width: 240px;
+  margin-top: 50px;
   padding: 14px 0;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.5);
+  border-radius: 60px;
+  background: rgba(255, 255, 255, 0.4);
   font-size: 20px;
-
   color: #000;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .btn:hover {
+  transition: 1s;
+
   background: linear-gradient(270deg, #aef0df, #d9b7d6, #fbd880);
   background-size: 150% 150%;
 
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite;
+  -webkit-animation: AnimationName 5s ease infinite;
+  -moz-animation: AnimationName 5s ease infinite;
+  animation: AnimationName 5s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
@@ -221,6 +269,9 @@ a:visited {
   }
 }
 
+/* I didn't get the "transition: 0.3s;" to work when hovering on this button.
+Is that possible in any way??? Would be nice :) */
+
 .hamburger {
   display: none;
 }
@@ -238,10 +289,8 @@ main {
 
 /* form */
 
-input {
-  height: 30px;
-
-  /* border-radius: 25px; */
+input[type="text"]:focus {
+  border: 2px solid #000;
 }
 
 .form-container {
@@ -259,54 +308,107 @@ input {
 
 .form {
   display: flex;
+  /* justify-content: center;
+  align-items: center; */
   flex-direction: column;
+  width: 100%;
 }
 
 .form-group {
   margin-bottom: 20px;
-
-  display: flex;
-  align-items: center;
+  text-align: center;
 }
 
-/* .form-group label {
-  width: 100px;
-  margin-right: 5px;
-} */
-
 .form-group input {
-  width: 100%;
+  width: 80%;
   outline: none;
   border: none;
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0);
+  height: 50px;
+  border-radius: 27px;
+  padding-left: 20px;
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-family: "Arvo", serif;
+}
+
+input:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+}
+
+/* change autocomplete styles in WebKit */
+/* code from https://css-tricks.com/ */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .form-submit {
-  width: 100%;
-  /* text-align: center;
+  display: inline-block;
+  text-align: center;
   margin: auto;
-  width: 50%; */
+  border: 2px solid #000;
+  width: 100px;
+  margin-top: 5px;
+  padding: 5px 0;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0);
+  font-size: 20px;
+  color: #000;
+  transition: 0.3s;
+}
+
+.form-submit:hover {
+  color: #fff;
+  background: #000;
+  transition: 0.3s;
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin: 0;
+}
+
+.error {
 }
 
 /* radio */
 
-p {
-  margin-bottom: 5px;
-}
-
 .wrapper-row {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .wrapper-col {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin: 0 10%;
 }
 
 .radiobutton-container {
   display: block;
   position: relative;
-  padding-left: 25px;
+  padding-left: 30px;
   margin: 10px 5px;
   font-size: 16px;
   user-select: none;
@@ -324,29 +426,31 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  height: 19px;
-  width: 19px;
-  background-color: #eee;
+  height: 20px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
   border-radius: 50%;
+  transition: 0.3s;
 }
 
 .radiobutton-container:hover input ~ .custom-radio {
-  background-color: #ccc;
+  background-color: #000;
+  transition: 0.3s;
 }
 
 .radiobutton-container input:checked ~ .custom-radio {
-  background-color: #444444;
+  background-color: #000;
 }
 
 .custom-radio:after {
   content: "";
   position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 7px;
-  height: 7px;
-  background-color: #fff;
+  top: 7px;
+  left: 7px;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 1);
   border-radius: 50%;
   display: none;
 }
@@ -355,56 +459,63 @@ p {
   display: block;
 }
 
-/* .radiobutton-container input:focus + .custom-radio {
-  outline: #333 auto 4px;
-} */
+.radiobutton-container input:focus + .custom-radio {
+  outline: 2px solid #fff;
+}
 
 /* check-box */
 
 .checkbox-container {
   display: block;
   position: relative;
-  padding-left: 25px;
-  margin: 10px 5px;
+  margin: 5px 15px 0 0;
   font-size: 16px;
   user-select: none;
 }
 
 .checkbox-container input {
-  /* position: absolute; */
+  position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
 
+.checkbox-container.checkbox-container-text {
+  margin: 5px 20px;
+}
+
 .custom-checkbox {
   position: absolute;
   top: 0;
   left: 0;
-  height: 19px;
-  width: 19px;
-  background-color: #eee;
-  border-radius: 4px;
+  height: 20px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
+  /*  I don't really know why below margin position worked or why the checkbox was in a weird place without it.
+  I just tested different ways and this one worked! */
+  margin: -2px 5px;
+  transition: 0.3s;
 }
 
 .checkbox-container:hover input ~ .custom-checkbox {
-  background-color: #ccc;
+  background-color: #000;
+  transition: 0.3s;
 }
 
 .checkbox-container input:checked ~ .custom-checkbox {
-  background-color: #444444;
+  background-color: #000;
 }
 
 .custom-checkbox:after {
   content: "";
   position: absolute;
   width: 3px;
-  height: 6px;
+  height: 7px;
   border: solid white;
   border-width: 0 3px 3px 0;
-  top: 5px;
+  top: 4px;
   left: 7px;
   transform: rotate(45deg);
   display: none;
@@ -414,11 +525,17 @@ p {
   display: block;
 }
 
-/* .checkbox-container input:focus + .custom-checkbox {
-  outline: #333 auto 4px;
-} */
+.checkbox-container input:focus + .custom-checkbox {
+  outline: 2px solid #fff;
+}
 
 /*** accordion ***/
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .accordion-container {
   width: 40%;
@@ -427,15 +544,42 @@ p {
   margin: 20px;
 }
 
-/************ FOOTER ************/
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
+.accordion-text-container {
+  height: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.4);
+  width: 80%;
+  box-sizing: border-box;
+  text-align: left;
+  transition: 0.5s ease;
 }
+
+.accordion-text-container.active {
+  height: 158px;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.accordion-icon {
+  margin-right: 10px;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 80%;
+  margin-bottom: 24px;
+}
+
+.accordion-text {
+  color: #000;
+  margin: 0;
+}
+
+/************ FOOTER ************/
 
 /* **************** MEDIA QUERIES **************** */
 
@@ -476,7 +620,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     color: pink;
   }
 
-  .sign-up {
+  .sign-in {
     display: none;
   }
 
