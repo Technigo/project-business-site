@@ -1,7 +1,619 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+
+html,
+body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;  
 }
+
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+h1  {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 7vw;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+}
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 3vw;
+}
+
+a {
+  font-family: 'Quicksand', sans-serif;
+}
+
+p,
+label {
+  font: 16px 'Abril', sans-serif;
+  font-weight: lighter;
+}
+
+p, .bold {
+  font-weight: bold;
+}
+
+.intro-text p {
+  font-weight: lighter;
+}
+
+.accordion-item-body-content p {
+  font-weight: lighter;
+}
+
+header {
+  background: beige;
+  position: -webkit-sticky;  /* required for Safari*/
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 15px 16px;
+  font-size: 18px;
+  width: 100%;
+  z-index: 1; 
+}
+
+.site-name {
+  color: red;
+  opacity: 0.8;
+  font-size: 1rem;
+  font-family: 'Quicksand', serif;
+  font-weight: lighter;
+}
+
+nav a {
+  color: red;
+  text-decoration: none;
+  opacity: 0.8;
+  padding-right: 10px;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+nav {
+  display: inline;
+  margin-left: auto;
+  padding-right: 5px;
+}
+
+.container-form-accordion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-accordion {
+  width: 400px;
+  margin: 40px;
+  border-radius: 40px;
+}
+
+.container-form {
+  width: 400px;
+  margin: 40px;
+  border-radius: 40px;
+}
+
+/*MEDIA QUERY MIN320*/
+@media screen and (min-width: 320px) {
+
+  video {
+  display: none;
+}
+ 
+/*
+nav {
+  display: none;
+*/
+
+.hero-image {
+  background-image: url(./img/guldMobil.jpg);
+  height: 300px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  object-fit: cover;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.overlay-text {
+  display: none;
+}
+
+.container-form-accordion {
+  display: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+}
+
+/*MEDIA QUERY MIN-667*/
+
+@media screen and (min-width: 737px) {
+  
+  nav {
+    display: inline;
+    margin-left: auto;
+    padding-right: 5px;
+  }
+
+  .hero-image {
+    background-image: url("img/confettiTablet.jpg");
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+    .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    }
+
+    .overlay-text {
+    display: none;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    .container-form-accordion {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+    }
+
+/*MEDIA QUERY MIN 767*/
+@media screen and (max-width:767px) {
+  
+  html {
+  font-size: 14px;
+  }
+}
+    
+/*MEDIA QUERY MIN1024*/
+@media screen and (min-width: 1024px) {
+
+  video {
+    display: inline;
+  }
+
+  .video-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 500px;
+  }
+
+  video {
+    background-image: url("FREDAGcleaningconfetti.mp4");
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    object-fit: cover;
+  }
+
+    .overlay-text {
+    display: inline;
+    position: absolute;
+    text-align: center;
+    padding-top: 130px;
+    color: #fff;
+    z-index: 0;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+  }
+  
+   /* 
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    }
+  */
+
+  .hero-image {
+    display: none;
+  }
+}
+
+  .site-name {
+    font-size: 1.6rem;
+}
+
+  nav {
+    padding-right: 0;
+  }
+
+.intro-text {
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 700px;
+  height: auto;
+  text-align: center;
+  }
+  
+  .intro-text p {
+    line-height: 1.3;
+  }
+
+.form {
+    display: flex;
+    flex-direction: column;  
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;   
+}
+
+.form-group label {
+    width: 100px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.form-submit {
+    width: 100px;
+}
+
+input {
+    margin: .4rem;
+    border-radius: 4px;
+    width: 225px;
+    height: 35px;
+    border-color: grey;
+}
+
+input:focus {
+  background-color: rgb(219, 234, 238);
+}
+
+.boxes-buttons {
+  display: flex;
+  justify-content: space-around; 
+}
+
+/* Customize the label (the container) */
+.container-box {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container-box input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container-box:hover input ~ .checkmark-box {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container-box input:checked ~ .checkmark-box {
+    background-color: teal;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark-box:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container-box input:checked ~ .checkmark-box:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container-box .checkmark-box:after {
+    left: 6px;
+    top: 3px;
+    width: 4px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .checkboxes {
+    margin-bottom: 25px;
+  }
+
+  /* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: teal;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+      top: 6px;
+      left: 6px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+  .radio-buttons {
+    margin-bottom: 20px;
+  }
+  
+  /* BUTTON */
+
+.star-wrapper {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  margin-bottom: 20px;  
+}
+
+.star-button {
+  font-family: 'Quicksand' sans-serif;
+  font-size: 3vmin;
+  appearance: none;
+  background: linear-gradient(to bottom, #f46001, #eb7764);
+  border: none;
+  color: #fff;
+  border-radius: 2em;
+  padding: 0.6em 1.8em;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+  outline: none;
+  box-shadow: 0 0 12px teal;
+  transition: transform 0.1s cubic-bezier(0.5, 0, 0.5, 1), box-shadow 0.2s;
+}
+
+.star-button:hover {
+  box-shadow: 0 0 20px 10px rgb(218, 140, 182);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.star-button:active {
+  transform: scale(0.8) translateY(10%);
+  transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.star {
+  --scale-x: 0;
+  --scale-y: 0;
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 0.5rem);
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vmin;
+  transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px))
+    translate(-50%, -50%);
+  pointer-events: none;
+  animation: star-enter 0.1s ease-in backwards,
+    star-exit 300ms linear calc((var(--lifetime, 3000) * 1ms) - 300ms) forwards;
+
+  @keyframes star-enter {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes star-exit {
+    to {
+      opacity: 0;
+    }
+  }
+
+}
+
+/*ACCORDION*/
+
+.accordion {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.accordion-item {
+  background-color: #fff;
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.5);
+}
+
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion-item-header::after {
+  content:"\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+
+/* If we don't want to anmiate the body, use this:*/
+/*
+.accordion-item-body {
+  display: none;
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 3px solid grey;
+  border-image: linear-gradient(to right, blue, yellow) 1;
+}
+
+.accordion-item-header.active + .accordion-item-body {
+  display: block;
+}*/
+
+
+/*If we want to animate the body we cannot use display: hide and block. Use this instead:*/
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: grey;
+}
+
+footer {
+  display: flex;
+  background: transparent;
+  align-items: center;
+  height: 50px;
+  padding: 20px 30px;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-top: 1px solid grey; 
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+  margin: auto;
+  opacity: .8;
+}
+
+
+
+
+
+
