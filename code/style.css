@@ -11,7 +11,7 @@ html {
 
 body {
   background-color: #ebecf0;
-  margin: 0px;
+  margin: 0;
 }
 
 /* HEADER */
@@ -45,7 +45,7 @@ video.mobile {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 0px;
+  margin: 0;
   width: 100%;
   height: 200px;
   padding: 15px;
@@ -56,14 +56,14 @@ img.logo {
 }
 
 img.all-mountain-logo {
-    width: 25%;
+  width: 25%;
 }
 
 nav {
   display: none;
 }
 
-button.header {
+.button-header {
   display:none;
 }
 
@@ -80,7 +80,6 @@ h1.header-title {
 h2.header-subtitle {
   display: none;
 }
-
 
 /* For tablet only */
 @media screen and (min-width: 667px) and (max-width: 1024px) {
@@ -123,7 +122,6 @@ h2.header-subtitle {
     font-family: 'Poppins';
     font-weight: lighter;
   }
-
 }
 
 /* For computer only */
@@ -152,7 +150,7 @@ h2.header-subtitle {
   .header-content {
     justify-content: space-evenly;
     height: 600px;
-    margin: 0px;
+    margin: 0;
   }
 
   img.logo {
@@ -169,7 +167,7 @@ h2.header-subtitle {
   }
 
   nav a {
-    margin: 0px 10px;
+    margin: 0 10px;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -182,7 +180,7 @@ h2.header-subtitle {
     color: orange;
   }
 
-  button.header {
+  .button-header {
     display: block;
     width: 120px;
     height: 35px;
@@ -199,7 +197,7 @@ h2.header-subtitle {
     border-radius: 4px;
   }
 
-  button.header:hover {
+  .button-header:hover {
     background-color: #043d64;
   }
 
@@ -246,7 +244,7 @@ section.form {
   font-family: 'Abril Fatface', Cursive;
   font-size: 30px;
   font-weight: normal;
-  margin: 0px 0px 10px 0px;
+  margin: 0 0 10px 0;
 }
 
 .form-textbox-text {
@@ -284,7 +282,13 @@ form {
 }
 
 .form-input-radio {
-  margin: 0px 5px;
+  width: 30px;
+  height: 20px;
+  margin: 0 5px 0 0;
+}
+
+.form-size-group .form-label-input {
+  font-size: 14px;
 }
 
 .form-dates-group {
@@ -298,7 +302,17 @@ form {
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin: 5px 0px;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.form-dates-checkbox-group .form-label-input {
+  font-size: 14px;
+}
+
+.form-input-checkbox {
+  width: 18px;
+  height: 18px;
 }
 
 .form-extra-group {
@@ -309,7 +323,7 @@ form {
 
 .form-label-heading {
   width: 100%;
-  margin: 10px 0px 10px 0px;
+  margin: 10px 0 10px 0;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
@@ -336,22 +350,14 @@ form {
   border: solid 1px #999 
 }
 
- .form-select-box:hover, .form-input-date:hover, .form-input-text:hover  {
+.form-select-box:hover, .form-input-date:hover, .form-input-text:hover  {
   background-color: white;
   border: solid 1px #999 
 }
 
-
-/* styling for option in select */
-.form-select-box-option {
-  font-family:'Poppins', Sans-Serif;
-}
-
-/* style for custom radio-button */
-
-
-/* style for check-box*/
-.form-input-checkbox {
+  /* some validation styling */
+.form-select-box:valid, .form-input-date:valid {
+  background-color: #dff4e9;
 }
 
 button.form {
@@ -378,7 +384,6 @@ button.form:hover {
   .form-size-group {
     width: 25%;
   }
-
 }
 
 /* For computer only */
@@ -393,7 +398,7 @@ button.form:hover {
   .form-textbox {
     width: 20%;
     margin-right: 5%;
-    height: 500px;
+    height: 450px;
     overflow: auto;
   }
 
@@ -402,10 +407,8 @@ button.form:hover {
   }
 
   form {
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-between;
-    height: 500px;
+    height: 450px;
     width: 40%;
     padding: 20px 30px 30px 30px;
   }
@@ -424,11 +427,17 @@ button.form:hover {
 
   .form-dates-group {
     width: 45%;
+    margin: 0;
+  }
+
+  h3.form-label-heading {
+    margin: 10px 0 0 0;
   }
 
   .form-dates-checkbox-group {
     width: 45%;
     justify-content: space-between;
+    margin: 0;
   }
 
   .form-extra-group {
@@ -459,14 +468,14 @@ section.accordion {
   font-family: 'Abril Fatface', Cursive;
   font-size: 30px;
   font-weight: normal;
-  margin: 0px;
+  margin: 0;
   padding: 20px;
 }
 
 .accordion-element {  
   width: 100%;
   border-top: solid 1px white;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .accordion-header {
@@ -480,23 +489,23 @@ section.accordion {
   outline: none;
   border: none;
   padding: 20px;
-  margin: 0px;
+  margin: 0;
   width: 100%;
 }
 
-/* changing the mouse cursor on hover (red level) */
+/* changing the mouse cursor on hover */
 .accordion-header:hover {
   cursor: pointer;
 }
 
-/* using css to make every other row in the accordion have another background color (red level) */
+/* using css to make every other row in the accordion have another background color */
 #accordion-header-1, #accordion-header-3 {
   background-color: #043d64;
 }
 
-/* added transition animation (red level) */
+/* added transition animation */
 .accordion-text-container {
-  height: 0px;
+  height: 0;
   overflow: hidden;
   background-color: white;
   color: #033150;
@@ -508,7 +517,7 @@ section.accordion {
   font-size: 14px;
   border-top: solid 1px white;
   padding: 20px;
-  margin: 0px;
+  margin: 0;
 }
 
 .active {
@@ -516,8 +525,7 @@ section.accordion {
   overflow: scroll;
 }
 
-/* added icon that changes when the section expands (red level) */
-
+/* added icon that changes when the section expands */
 .accordion-header:after {
   content: '\002B';
   color: white;
@@ -536,7 +544,6 @@ section.accordion {
   .active {
     height: 170px;
   }
-
 }
 
 /* For computer only */
@@ -582,7 +589,7 @@ footer {
 }
 
 .footer-menu-text:hover {
-color: orange;
+  color: orange;
 }
 
 .footer-categories {
@@ -610,7 +617,6 @@ color: orange;
 /* For tablet only */
 @media screen and (min-width: 667px) and (max-width: 1024px) {
 
-
   .footer-categories {
     width: 50%;
   }
@@ -622,7 +628,6 @@ color: orange;
   .footer-logo-social-container {
     width: 40%;
   }
-
 }
 
 /* For computer only */
