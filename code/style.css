@@ -9,16 +9,16 @@ body {
   font-family: "Poiret One", sans-serif;
 }
 
-header {
-  height: 60vh;
+.hero-image {
+  height: 80vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
     url(./pictures/blue-art.jpg);
   background-position: top center;
   background-size: cover;
-}
+} /*FIX RESPONSIVE BACKGROUND IMAGE*/
 
-.hero-image{
-  position: relative;
+.text-container{
+  padding-top: 10vh;
   text-align: center;
   color: #F5F1E8;
 }
@@ -43,10 +43,23 @@ h3 {
   background: rgb(236, 227, 210, 0.8);
   width: 100px;
   border-radius: 10%;
+  cursor: pointer;
 }
 
 .class-btn:hover{
   background: rgb(236, 227, 210, 1);
+  transition: all 0.5s ease-in-out;
+}
+
+.submit {
+  background: rgb(131,175,175, 0.7);
+  border: none;
+  width: 100px;
+  cursor: pointer;
+}
+
+.submit:hover{
+  background: rgb(131,175,175, 1);
   transition: all 0.5s ease-in-out;
 }
 
@@ -90,17 +103,23 @@ form {
   flex-direction: column;
 }
 
+input{
+  cursor: pointer;
+}
 :placeholder-shown {
   font-family: "Poiret One";
 }
+
 button {
   font-family: "Poiret One";
   margin: 10px;
   width: 200px;
 }
+
 label {
   margin: 5px;
 }
+
 .accordion {
   display: flex;
   flex-direction: column;
@@ -124,15 +143,15 @@ label {
 }
 
 .question {
-  background: #d2d1bb;
+  background: #eae7db;
   position: relative;
 }
 
 .answer {
   height: 0;
   overflow: hidden;
-  transition: height 0.3s ease;
-  background: rgb(210, 209, 187, 0.3);
+  transition: 0.3s ease;
+  background: rgb(210, 209, 187, 0.2);
 }
 .question::after {
   content: "\002B";

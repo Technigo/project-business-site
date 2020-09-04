@@ -10,14 +10,17 @@
 
 <body>
     <header class="hero-image">
-        <h1>KREATISA</h1>
-        <h2>Painting and pottery</h2>
-        <button class="class-btn">Schedule course</button>
+        <div class="text-container">
+            <h1>KREATISA</h1>
+            <h2>Painting and pottery</h2>
+            <button class="class-btn">Schedule course</button>
+        </div>
     </header>
     <!--Add navbar?-->
 
     <main class="wrapper">
-        <section class="form-section"><!--Add fieldset for styling-->
+        <section class="form-section">
+            <!--Add fieldset for styling-->
             <form action="https://httpbin.org/anything" method="POST">
                 <div class="request-form">
                     <h2>Request</h2>
@@ -43,7 +46,7 @@
                     <label for="no">No
                         <input type="radio" id="no" value="no" name="costumerBtn">
                     </label>
-                    <button type="submit">Send request</button>
+                    <button type="submit" class="submit">Send request</button>
                 </div>
                 <!--Fix buttons style-->
             </form>
@@ -52,12 +55,12 @@
                 <div class="login-form">
                     <h2>Log in</h2>
                     <label for="email">Email-adress
-                        <input type="email" id="email" placeholder="email@example.com" required>
+                        <input type="email" id="email" name="email" placeholder="email@example.com" required>
                     </label>
-                    <label for="password">Password 
-                        <input type="password" id="password" required>
+                    <label for="password">Password
+                        <input type="password" id="password" name="password" required>
                     </label>
-                <button>Log in</button>
+                    <button type="submit" class="submit">Log in</button>
                 </div>
             </form>
 
@@ -97,7 +100,7 @@
                 </div>
             </div>
         </section>
-        
+
     </main>
 
     <script src="./script.js"></script>
