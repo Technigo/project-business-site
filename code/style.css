@@ -11,7 +11,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 body {
     margin: 0;
-    height: auto;
+    /* height: auto; */
     /* background: #FBCEB1; */
     /* background: #f0f0ec; */
     background: #F8F8F8;
@@ -22,7 +22,8 @@ body {
 
 /* --- header-section --- */
 
-header {
+
+/* header {
     height: 700px;
     width: 100%;
     color: #fff;
@@ -31,17 +32,39 @@ header {
     background-size: cover;
     display: flex;
     justify-content: space-around;
-}
+} */
 
-header h1 {
+
+/* header h1 {
     font-family: 'Cormorant Garamond', serif;
     font-Size: 55px;
+} */
+
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: url("./img/preview2.jpeg");
+    /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), */
+    /* Set a specific height */
+    height: 500px;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-main {
-    margin: 50px;
-    display: flex;
-    justify-content: space-around;
+
+/* Place text in the middle of the image */
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-Size: 55px;
 }
 
 
@@ -56,11 +79,44 @@ nav a {
     margin-right: 20px;
 }
 
+main {
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
 .form {
     /* background: #FEEAD8; */
     background: #eae8dc;
     border-radius: 5px;
     width: 40%;
+    /* background-image: url("./img/bg-form.jfif");
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.form h1 {
+    text-align: center;
+}
+
+
+/* input:valid {
+    border: 4px solid #999;
+} */
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.dates {
+    display: inline-block;
 }
 
 .accordion {
@@ -83,6 +139,7 @@ nav a {
 .accordion-text-container {
     height: 0;
     overflow: hidden;
+    transition: height 0.3s ease;
 }
 
 .accordion-text {
@@ -90,3 +147,23 @@ nav a {
     margin: 0;
     padding: 15px;
 }
+
+.accordion-container img {
+    height: 50px;
+    width: 50px;
+}
+
+.active {
+    height: 110px;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+span {
+    align-self: center;
+}
+
+.accordion-header h3 {}
