@@ -6,4 +6,4 @@ This is a Coffee shop page with a video header for desktop and responsive images
 I used bootstrap to align elements, styled sign up form with CSS and created the accordion with Javascript.
 
 ## View it live
-coffee-shop-liza.netlify.app
+https://coffee-shop-liza.netlify.app/
