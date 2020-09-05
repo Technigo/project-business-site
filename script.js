@@ -20,7 +20,7 @@ accordionList.forEach(item => {
 const accordionIcon = document.querySelectorAll(".accordion-header");
 
 accordionIcon.forEach(accordionIcon => {
-    accordionIcon.addEventListener("click", event =>{
+    accordionIcon.addEventListener("click", event => {
         accordionIcon.classList.toggle("active");
     });
 });
