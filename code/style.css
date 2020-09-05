@@ -5,6 +5,36 @@ body {
   font-family: 'Patrick Hand', cursive;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  background-color: #594020;
+  color: #F2DCB3;
+  height: 70px;
+  left: 0px;
+  right: 0px;
+  position: sticky;
+  top: 0px;
+}
+
+.nav-image {
+  width: 120px;
+  height: 120px;
+}
+
+a {
+  /* box-sizing: border-box; */
+  padding: 20px;
+  color: #B89068;
+  /* font-size: 20px; */
+  /* font-weight: 600; */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
 /*** HERO VIDEO ***/
 video {
   width: 100%;
@@ -20,7 +50,6 @@ main {
 /*** FORM ***/
 .form {
   display: block;
-  border: 1px solid blue;
   width: 48%;
 }
 
@@ -38,18 +67,6 @@ form {
 }
 
 fieldset {
-  display: block;
-  /*** below are default setting, values changed ***/
-  margin-inline-start: 2px;
-  margin-inline-end: 2px;
-  padding-block-start: 4px;
-  padding-inline-start: 4px;
-  padding-inline-end: 4px;
-  padding-block-end: 4px;
-  min-inline-size: min-content;
-  border-width: 2px;
-  border-style: groove;
-  border-color: 1px solid #F2DCB3;
   /***not default setting***/
   margin-bottom: 20px;
   border-radius: 15px;
@@ -73,13 +90,6 @@ legend {
   text-transform: uppercase;
 }
 
-.owner-info-div {
-  border: 1px solid orangered;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-}
-
 .owner-info-div > label {
   margin: 10px 0px;
   display: flex;
@@ -87,18 +97,6 @@ legend {
   justify-content: center;
 }
 
-/* .input-owner {
-  border-radius: 5px;
-  border: 0.5px solid #594020;
-} */
-
-.dog-info {
-  /* border: 1px solid green; */
-}
-
-.dog-info-div {
-  border: 1px solid orange;
-}
 
 .dog-info-div > label {
   margin: 10px 0px;
@@ -121,14 +119,15 @@ legend {
 }
 
 .issue {
-  border: 1px solid pink;
   width: 100%;
   height: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
 textarea {
-  width: 500px;
-  height: 125px;
+  width: 80%;
+  height: 120px;
   padding: 5px;
   border-radius: 5px;
   border: 0.3px solid #594020;
@@ -145,6 +144,16 @@ input {
 
 button {
   align-self: center;
+  width: 40%;
+  font-size: 20px;
+  font-family: 'Patrick Hand', cursive;
+  background-color: #F2B90C;
+  color: #594020;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: 1px solid #594020;
+  border-radius: 25px;
+  cursor: pointer;
   /*default settings below*/
 
 }
@@ -155,7 +164,6 @@ button {
 
 /*** FAQ - ACCORDION ***/
 .accordion {
-  border: 1px solid red;
   width: 48%;
 }
 
@@ -223,7 +231,6 @@ h1 {
   height: 110px;
 }
 
-
 /* input:valid {
   background-color: green;
 } */
@@ -243,7 +250,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 
 footer {
-  /* border: 1px solid purple; */
   background-color: #594020;
   color: #F2DCB3;
   height: 70px;
