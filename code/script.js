@@ -56,13 +56,13 @@ accordionItemHeader3.onclick = () => {
   accordionItemHeader2.classList.remove('active');
 }
 
-const header = document.querySelector('.header');
-const headerOffset = header.offsetTop;
+// const header = document.querySelector('.header');
+// const headerOffset = header.offsetTop;
 
-window.onscroll = () => {
-  if (headerOffset >= window.pageYOffset) {
-  header.classList.remove('sticky');
-  } else {
-  header.classList.add('sticky')
-  }
-}
+// window.onscroll = () => {
+//   if (headerOffset >= window.pageYOffset) {
+//   header.classList.remove('sticky');
+//   } else {
+//   header.classList.add('sticky')
+//   }
+// }
