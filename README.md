@@ -1,12 +1,37 @@
-# Business Site
+function showAlert(myMsg) {
+alert(myMsg);
+}
 
-Replace this readme with your own information about your project. 
+window.onscroll = function() {
+scrollFunction()
+};
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop+64;
 
-## The problem
+function scrollFunction() {
+if (window.pageYOffset >= sticky) {
+navbar.classList.add("sticky")
+} else {
+navbar.classList.remove("sticky");
+}
+}
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+var accordions = document.getElementsByClassName("accordion-block");
+console.log(accordions)
 
-## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+for (i = 0; i < accordions.length; i++) {
+accordions[i].onclick = function() {
+this.classList.toggle('is-open');
+
+    var content = this.children[1];
+    if (content.style.maxHeight) {
+      // accordion is currently open, so close it
+      content.style.maxHeight = null;
+    } else {
+      // accordion is currently closed, so open it
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+
+}
+}
