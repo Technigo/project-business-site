@@ -1,12 +1,28 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+Created a bussines one-page website for a fictional dog behaviourist copany called Pawsitive talk.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The main parts of the website are:
+- a responsive hero video, 
+- a sign up form with validation (text fields, set of radio buttons, email field with validation, submit button) 
+- and a FAQ accordion (animated transition). 
 
 ## The problem
 
+- I started by finding a header/hero video. 
+- Designed a form and decided on componens I want to include.
+- Designed accordion with included animation using JavaScript.
+- Used flexbox to align elements on the website.
+
+If I had more time:
+- animate 
+
 Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
+## Technologies
+- HTML5
+- CSS3
+- JavaScript 
+
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Link: https://pawsitive-talk.netlify.app/
