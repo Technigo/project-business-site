@@ -285,7 +285,7 @@ Is that possible in any way??? Would be nice :) */
 /************ MAIN ************/
 
 main {
-  min-height: 800px; /*tillfälligt*/
+  height: 700px;
   display: flex;
   justify-content: center;
   padding-top: 50px;
@@ -303,7 +303,6 @@ input[type="text"]:focus {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   width: 40%;
@@ -314,8 +313,6 @@ input[type="text"]:focus {
 
 .form {
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
   flex-direction: column;
   width: 100%;
 }
@@ -367,9 +364,15 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.checkbox-container a:hover {
-  text-decoration: underline;
+.checkbox-container a {
   color: #000;
+  text-decoration: underline;
+  transition: 0.1s;
+}
+
+.checkbox-container a:hover {
+  font-weight: 700;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -448,12 +451,12 @@ select:-webkit-autofill:focus {
   background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
   border-radius: 50%;
-  transition: 0.3s;
+  transition: 0.1s ease;
 }
 
 .radiobutton-container:hover input ~ .custom-radio {
   background-color: #000;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .radiobutton-container input:checked ~ .custom-radio {
@@ -514,12 +517,12 @@ select:-webkit-autofill:focus {
   /*  I don't really know why below margin position worked or why the checkbox was in a weird place without it.
   I just tested different ways and this one worked! */
   margin: -2px 5px;
-  transition: 0.3s;
+  transition: 0.1s ease;
 }
 
 .checkbox-container:hover input ~ .custom-checkbox {
   background-color: #000;
-  transition: 0.3s;
+  transition: 0.2s ease;
 }
 
 .checkbox-container input:checked ~ .custom-checkbox {
@@ -561,6 +564,7 @@ select:-webkit-autofill:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: help;
 }
 
 .accordion-header {
@@ -570,11 +574,18 @@ select:-webkit-autofill:focus {
   height: 50px;
   width: 80%;
   margin-bottom: 24px;
+  transition: 0.1s ease;
+}
+
+.accordion-header:hover {
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.2s ease;
 }
 
 .accordion-header::after {
   content: "▼";
   transition: 0.2s;
+  color: #000;
 }
 
 .accordion-header.active::after {
@@ -592,6 +603,7 @@ select:-webkit-autofill:focus {
   box-sizing: border-box;
   text-align: left;
   transition: 0.5s ease;
+  padding-left: 30px;
 }
 
 .accordion-text-container.active {
@@ -615,6 +627,46 @@ select:-webkit-autofill:focus {
 }
 
 /************ FOOTER ************/
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+}
+
+.social-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+.social-icon:hover {
+  fill: rgba(255, 255, 255, 0.6);
+  transition: 0.2s ease;
+}
+
+.footer-info a {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.1s ease;
+}
+
+.footer-info a:hover {
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.2s ease;
+}
+
+.footer-info-link {
+  margin-left: 10px;
+}
 
 /* **************** MEDIA QUERIES **************** */
 
