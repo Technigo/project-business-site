@@ -9,16 +9,15 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <!-- Header -->
     <header>
-      
       <div class="hero-container">
         <div class="hero-content">
           <h1 class="hero-headline">Wood is Good</h1>
           <!-- <p class="hero-info">We make it simple for you to plant trees
              around the world. One dollar plants one tree.</p> -->
           <p class="hero-info">Donate today to plant a tree</p>
-          <a class="hero-action" href="#">Plant a Tree</a>
+          <a class="hero-action" href="#form-content">Plant a Tree</a>
         </div>
         <picture>
             <source srcset="./images/tree-xsmall.jpg" media="(max-width: 768px)">
@@ -28,103 +27,126 @@
       </div>
     </header>
     
+    <!-- MAIN -->
     <main class="main-wrapper">
-
-      <!-- <section class="info">
-        <div class="info-content">
-          <div class="info-header">
-            <h2>
-              Planting trees can help us curb the effects of climate 
-              change.
-            </h2>
-          </div>
-        </div>
-      </section> -->
-      
-      <!-- Signup form -->
+      <!-- FORM -->
       <section class="form-container">
-        <h2 class="form-header" >Sign Up</h2>
-        <form 
-          class="form" 
-          action="htttps://httpbin.org/anything" 
-          method="POST">
-          <label 
-            class="form-label" 
-            for="fname">
-            * First Name
-          </label>
-          <input 
-            class="form-input" 
-            type="text" name="fname" 
-            id="fname" placeholder="First Name" 
-            required>
-          <label 
-            class="form-label" 
-            for="lname">
-            * Last Name
-          </label>
-          <input 
-            class="form-input" 
-            type="text" name="lname" 
-            id="lname" 
-            placeholder="Last Name" 
-            required>
-          <label 
-            class="form-label" 
-            for="email">
-            * E-mail
-          </label>
-          <input 
-            class="form-input" 
-            type="email" 
-            name="email" 
-            id="email" 
-            placeholder="E-mail" 
-            required>
-          <label 
-            class="form-label" 
-            for="password">
-            * Password
-          </label>
-          <input 
-            class="form-input" 
-            type="password" 
-            name="password" 
-            id="password" 
-            placeholder="Password" 
-            required>
-          <input 
-            type="submit" 
-            name="submit" 
-            value="Submit">
-        </form>
+        <div class="form-content" id="form-content" >
+          <h2 class="main-header">SIGN UP</h2>
+          <form 
+            class="form" 
+            action="https://httpbin.org/anything" 
+            method="POST">
+            <label 
+              class="form-label" 
+              for="fame">
+              * First Name
+            </label>
+            <input 
+              class="form-input" 
+              type="text" 
+              name="fname" 
+              id="fname" 
+              placeholder="First Name" 
+              required>
+            <label 
+              class="form-label" 
+              for="lname">
+              * Last Name
+            </label>
+            <input 
+              class="form-input" 
+              type="text" name="lname" 
+              id="lname" 
+              placeholder="Last Name" 
+              required>
+            <label 
+              class="form-label" 
+              for="email">
+              * E-mail
+            </label>
+            <input 
+              class="form-input" 
+              type="email" 
+              name="email" 
+              id="email" 
+              placeholder="E-mail" 
+              required>
+            <label 
+              class="form-label" 
+              for="password">
+              * Password
+            </label>
+            <input 
+              class="form-input" 
+              type="password" 
+              name="password" 
+              id="password" 
+              placeholder="Password" 
+              required>
+              <div class="wrapper-radio-column">
+                <p class="form-label">
+                  How many trees do you want to plant?
+                </p>
+                <div class="wrapper-radio-row">
+                  <label 
+                    class="form-radio">
+                    1
+                    <input 
+                      type="radio" 
+                      checked="checked" 
+                      name="radio"
+                      value="1">
+                    <span 
+                      class="custom-radio">
+                    </span>
+                  </label>
+                  <label 
+                    class="form-radio">
+                    5
+                    <input 
+                      type="radio" 
+                      name="radio">
+                    <span 
+                      class="custom-radio">
+                    </span>
+                  </label>
+                  <label 
+                    class="form-radio">
+                    10
+                    <input 
+                      type="radio" 
+                      name="radio">
+                    <span 
+                      class="custom-radio">
+                    </span>
+                  </label>
+                  <label 
+                    class="form-radio">5
+                    0
+                    <input 
+                      type="radio" 
+                      name="radio">
+                    <span 
+                      class="custom-radio">
+                    </span>
+                  </label>
+                </div>
+              </div> 
+            <input 
+              class="form-input"
+              type="submit" 
+              name="submit" 
+              value="Submit">
+          </form>
+        </div>
       </section>
 
-      <!-- <section class="form">
-        <h3>Sign up for wood</h3>
-        <form action="">
-          <label for="firstName">First name:</label><br>
-          <input type="text" name="firstName" id="firstName"><br>
-          <label for="lastName">Last name:</label><br>
-          <input type="text" name="lastName" id="lastName"><br>
-          <label for="email">E-mail:</label><br>
-          <input type="email" name="email" id="email"><br>
-            <input type="radio" name="nrWood" id="oneWood" value="oneWood">
-            <label for="oneWood">One wood</label>
-            <input type="radio" name="nrWood" id="twoWood" value="twoWood">
-            <label for="twoWood">Two wood</label>
-            <input type="radio" name="nrWood" id="threeWood" value="threeWood">
-            <label for="threeWood">Three wood</label><br>
-            <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
-            <label for="checkbox">I agree</label>
-        </form>
-      </section> -->
-
       <!-- Accordion -->
-      <section class="accordion">
-        <h2 class="accordion-head">FAQ</h2>
-        <div class="accordion-container">
-          <div class="accordion-content">
+      <section class="accordion-container">
+        <div class="accordion-content">
+          <h2 class="main-header">FAQ</h2>
+          <div class="accordion">
             <h3 id="accordion-header-1" class="accordion-header">
               Why are trees important?
             </h3>
@@ -140,7 +162,7 @@
               </p>
             </div>
           </div>
-          <div class="accordion-content">
+          <div class="accordion">
             <h3 id="accordion-header-2" class="accordion-header">
               Why are trees important?
             </h3>
@@ -156,7 +178,7 @@
               </p>
             </div>
           </div>
-          <div class="accordion-content">
+          <div class="accordion">
             <h3 id="accordion-header-3" class="accordion-header">
               Why are trees important?
             </h3>
