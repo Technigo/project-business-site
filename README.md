@@ -11,4 +11,4 @@ In general I focused more in functionality than design.
 I did not have big issues with the other tasks. My accordion wasn't working and I couldn't understand why. I asked on StackOverflow and it turned out to be just a (*) misplaced. I got reminded that I should check the console for errors.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://amazing-pare-b371b7.netlify.app/
