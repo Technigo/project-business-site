@@ -2,6 +2,8 @@ body {
   background-color: white;
 }
 
+/* MEDIA FOR DESKTOP FIRST - MORE EFFECTS AND STYLING THAN MOBILE & DESKTOP VIEW */
+
 /* HEADER HERO */
 
 .header-hero {
@@ -9,14 +11,28 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-  object-fit: cover;
+}
+
+.header-hero:hover {
+  box-shadow: 10px 10px 40px 40px rgba(129, 63, 214, 0.423);
 }
 
 .navbar {
   position: absolute;
+  background: black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom: 20px;
   left: 50%;
-  margin-top: 20px;
+  bottom: 80%;
   transform: translate(-50%, -50%)
+}
+
+.navbar:hover {
+  box-shadow: 10px 10px 40px 40px rgba(129, 63, 214, 0.623);
 }
 
 .navbar a {
@@ -27,6 +43,7 @@ body {
   font-size: 20px;
   width: 125px;
   padding: 1em, 0;
+  cursor: pointer;
   display: inline-block;
   font-weight: bold;
   transition: all .4s ease-in-out;
@@ -62,6 +79,22 @@ a:nth-child(4):hover ~ .line {
   max-height: 80%;
 }
 
+.navbar-smaller-devices {
+  display: none;
+}
+
+/* WELCOME TITLE */
+
+.welcome-title {
+  font-size: 70px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: black;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+/* FORM & ACCORDION */
 .form-and-accordion {
   display: flex;
   flex-direction: row;
@@ -69,7 +102,7 @@ a:nth-child(4):hover ~ .line {
   justify-content: space-evenly;
 }
 
-/* FORM */
+/* SIGN UP FORM */
 .sign-up-form {
   margin: 15px;
   padding: 15px;
@@ -106,7 +139,7 @@ a:nth-child(4):hover ~ .line {
   box-shadow: 2px 2px 4px 4px rgba(129, 63, 214, 0.352);
 }
 
-/* 1. Accordion */
+/* ACCORDION */
 
 .accordion {
   margin: 15px;
@@ -175,6 +208,296 @@ footer p {
   padding: 100px;
 }
 
+/* MEDIA FOR MOBILE */
+
 @media (min-width: 1px) and (max-width: 667px){
 
+  .header-hero {
+    object-fit: cover;
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar-smaller-devices {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-smaller-devices a {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .welcome-title {
+    font-size: 90%;
+    margin-top: 10px;
+  }
+  
+  .form-and-accordion {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* FORM */
+  .sign-up-form {
+    margin: 5px;
+    padding: 15px;
+    background: black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: 70%;
+    height: auto;
+    text-align: center;
+    color:white;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  
+  .form-submit-button {
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .sign-up-form:hover {
+    box-shadow: none;
+  }
+  
+  .form-submit-button:hover {
+    box-shadow: none;
+  }
+  
+  /* 1. Accordion */
+  
+  .accordion {
+    margin: 15px;
+    padding: 15px;
+    background: black;
+    box-shadow: 16 32px 64px 16 rgba(51, 51, 51, 0.76);
+    width: 70%;
+    height: auto;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+  } 
+  
+  .accordion-container {
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 15px;
+    cursor: pointer;
+  }
+  
+  .accordion-text {
+    border-top: 2px solid white;
+    margin: 0;
+    padding: 15px;
+  }
+  
+  .accordion-text-container {
+    height: 0;
+    overflow: hidden;
+    transition: height .3s ease;
+  }
+  
+  .accordion-text-container.active {
+    height: 158px;
+  }
+  
+  .accordion:hover {
+    box-shadow: none;
+  }
+  
+  /* FOOTER */
+  
+  footer {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  
+  footer p {
+    padding: 100px;
+  }
+}
+
+/* MEDIA FOR TABLET */
+@media (min-width: 668px) and (max-width: 1024px){
+
+  .header-hero {
+    object-fit: cover;
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar-smaller-devices {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-smaller-devices a {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .welcome-title {
+    font-size: 180%;
+    margin-top: 10px;
+  }
+  
+  .form-and-accordion {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-evenly;
+  }
+  
+  /* FORM */
+  .sign-up-form {
+    margin: 5px;
+    padding: 15px;
+    background: black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: 70%;
+    height: auto;
+    text-align: center;
+    color:white;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  
+  .form-submit-button {
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .sign-up-form:hover {
+    box-shadow: none;
+  }
+  
+  .form-submit-button:hover {
+    box-shadow: none;
+  }
+  
+  /* 1. Accordion */
+  
+  .accordion {
+    margin: 15px;
+    padding: 15px;
+    background: black;
+    box-shadow: 16 32px 64px 16 rgba(51, 51, 51, 0.76);
+    width: 70%;
+    height: auto;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+  } 
+  
+  .accordion-container {
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 15px;
+    cursor: pointer;
+  }
+  
+  .accordion-text {
+    border-top: 2px solid white;
+    margin: 0;
+    padding: 15px;
+  }
+  
+  .accordion-text-container {
+    height: 0;
+    overflow: hidden;
+    transition: height .3s ease;
+  }
+  
+  .accordion-text-container.active {
+    height: 158px;
+  }
+  
+  .accordion:hover {
+    box-shadow: none;
+  }
+  
+  /* FOOTER */
+  
+  footer {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  
+  footer p {
+    padding: 100px;
+  }
 }
