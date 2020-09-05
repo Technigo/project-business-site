@@ -12,21 +12,21 @@ body  {
   margin: 0;
 }
     
-header {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height:350px ;
-  background-image: url(./img/coffe_large.jpg);
-  background-size: contain;  
+.hero-img {
+  background-image: url(./img/coffe_extreme.jpg);
+  height:350px;
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover; 
 }
+    
   
-header h1 {
+.hero-img h1 {
   position: relative;
   text-align: center;
   font-size: 35px;
   color: white;
+  margin:0;
 }
   
   /*WE ARE TEXT */
@@ -214,18 +214,20 @@ footer img {
   width: 50px;
   margin-bottom: 10px;
 }
+
+
   
   /***  Media Quaries  Tablet  ***/
   
 @media screen and (min-width: 667px) and (max-width:1024px) {
-  
-  header {
-    height: 550px;
+  .hero-img {
+    height: 700px;
   }
-  
-  header h1 {
-    font-size: 70px;
+
+  .hero-img h1 {
+    font-size: 60px;
   }
+
   .weare{
     font-size: 20px;
   } 
@@ -257,14 +259,14 @@ footer img {
 /***  Media Quaries  Desktop ***/
   
 @media screen and (min-width: 1024px) {
-  
-  header {
-    height: 1000px
+  .hero-img {
+    height: 1000px;
   }
-  
-  header h1 {
+
+  .hero-img h1 {
     font-size: 100px;
   }
+
   .weare{
     font-size: 20px;      
   } 
