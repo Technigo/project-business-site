@@ -6,31 +6,35 @@
     <title>Take on Le Tour</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" type="image/png" href="./cyclingIcon.png">
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=PT+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=PT+Sans&display=swap" rel="stylesheet">
+     
   </head>
   <body>
-    <div id="hero">
-      <video
-        loop
-        muted
-        autoplay
-        preload="auto"
-        src="./videos/Video.mp4"
-        type="video.mp4"
-      >
+    <header>
+      <div class="video-container">
+      <div id="hero">
+
+              <video
+             loop
+             muted
+             autoplay
+             preload="auto"
+             src="./videos/Video.mp4"
+             type="video.mp4">
         Your broswer does not support this video format.
       </video>
       <div class="caption">
         <p>
           We take you all the way
-          <span> It's your Tour! </span>
-          &mdash; for the road cycling enthusiast &mdash;
+          <span> 
+            It's your Tour! 
+          </span>
+          &mdash; for the road cycling enthusiast 
+          &mdash;
         </p>
       </div>
-    </div>
-
+ 
+  </header>
     <!-- Signup form -->
 
     <main>
@@ -40,37 +44,45 @@
           <label for="sign-up-tab" class="tab-header">SIGN UP</label>
           <input type="radio" name="tab" class="tab" id="sign-in-tab" />
           <label for="sign-in-tab" class="tab-header">SIGN IN</label>
-          <form id="form1">
+          <form id="form1"
+          <form 
+            class="form"
+            action="http://httpbin.org/anything"
+            method="POST"
+            >
             <div class="header">Sign up for free</div>
             <div class="form-input">
+              <label for="newUserName">User Name</label>
               <input
+                id="newUserName"
                 type="text"
-                class="input"
-                id="new-username"
-                placeholder="User Name"
+                placeholder="Enter Your User Name"
+                name="newUserNameValue"
                 required
               />
             </div>
             <div class="form-input">
+              <label for="email">Email</label>
               <input
-                type="email"
-                class="input"
                 id="email"
-                placeholder="Email Address"
+                type="email"
+                placeholder="Enter Your Email Address"
+                name="emailValue"
                 required
               />
             </div>
             <div class="form-input">
+              <label for="password">Password</label>
               <input
+                id="password"
                 type="password"
-                class="input"
-                id="new-password"
-                placeholder="Password"
-                required
+                placeholder="Enter Password"
+                name="passwordValue"
+                required 
               />
               <input type="checkbox"/><span id="check">Keep me posted!</span><br />
             </div>
-            <input type="submit" id="sign-up" class="submit-button" value="SIGN UP" />
+            <button class="form-submit" type="submit">Send</button>
           </form>
           <form id="form2">
             <div class="header">Welcome Back</div>
