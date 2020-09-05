@@ -75,10 +75,21 @@ body {
 }
 
 .navbar-menu-item-link:hover {
-  background-color: rgb(255, 113, 97);
-  box-shadow: 0 0 5px grey;
+  background-color: #ff7161;
+  box-shadow: 0 0 7px black;
+  animation-name: navbar-link-hover, shadow;
+  animation-duration: .7s;
 }
 
+@keyframes navbar-link-hover {
+  from {background-color: white;}
+  to {background-color: #ff7161;}
+}
+
+@keyframes shadow {
+from {box-shadow: none;}
+to {box-shadow: 0 0 7px black;}
+}
 .sticky {
   position: fixed;
   top: 0 !important;
@@ -254,7 +265,7 @@ main {
   align-items: center;
   margin: 0;
   padding: 15px;
-  cursor: pointer;
+  cursor: s-resize;
 }
 
 .accordion-header::before {
@@ -269,12 +280,6 @@ main {
   content: "expand_less";
 }
 
-.accordion-textbox {
-  height: 0;
-  overflow: hidden;
-  transition: height .3s ease;
-}
-
 .accordion-text {
   border-top: 2px solid #999;
   margin: 0;
@@ -284,7 +289,7 @@ main {
 .accordion-textbox {
   height: 0;
   overflow: hidden;
-  transition: height .3s ease;
+  transition: height .3s ease-in-out;
 }
 
 .accordion-textbox.active {
