@@ -6,7 +6,7 @@ body {
 }
 
 h3 {
-  margin-right: 0 0 10px 0;
+  margin: 20px 0;
 }
 
 .nav {
@@ -47,9 +47,20 @@ h3 {
   justify-content: flex-end;
 }
 
+.hamburger {
+  display: none;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 5px;
+  background: #000000;
+  border-radius: 5px;
+}
+
 .header-link {
   text-decoration: none;
-  color: black;
+  color: #000000;
   margin: 10px;
 }
 
@@ -230,8 +241,12 @@ label {
 }
 
 .active {
-  height: 120px;
+  height: 100px;
   overflow: auto;
+}
+
+.answer-text {
+  margin: 0;
 }
 
 .accordion-element {
@@ -296,6 +311,15 @@ footer img {
 
   .nav-right {
     display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    width: 30px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-right: 10px;
+    padding: 5px;
   }
 
   .form-container {
