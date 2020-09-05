@@ -23,6 +23,9 @@ VIDEO & NAVBAR:
 ACCORDION:
 2020-09-04: So I used on our teachers code for the accordion, wanted to add more questions + answers than 3, so added two more and the space between question-header 3-5 was none, so it did not look good... Cheched the CSS and the JS for something I missed, then noticed I forgotten a </div> in the html, so when I added that it worked out :)
 
+THOUGHTS ABOUT THIS:
+Maybe I should had choosen a video from a free video-download-site for better quality and smaller file-size. But I got in love with the colours of my private video (also my love for the band Alcest), and the animation I did in a video-editor... Even though quality not that good/profesional. Also the design over all could be better, but even though I love designing, I have had the priority that nice coding and learning about code is priority number one. Also time-limit, me working 85% at the same time as studying 50%, I think it is okay. But I aim for better and better of course. So I'll like to in the future go back and make this project better.
+
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
