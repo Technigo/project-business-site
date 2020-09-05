@@ -2,6 +2,251 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+body {
+  background-color: black;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.topnav {
+  background-color: black;
+  overflow: hidden;
+}
+
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgb(219, 9, 125);
+}
+
+
+.topnav a.active {
+  background-color: #184b52;
+  color: white;
+}
+
+video {
+  width: 100%;
+  height: auto; 
+}
+
+.hero-video {
+  display: flex;
+  align-items: 100%;
+ }
+
+ h1 {
+  position: absolute;
+  text-shadow: 1px 1px 2px rgb(172, 171, 171), 0 0 25px palevioletred, 0 0 5px palevioletred;
+  width: 100%;
+  text-align: center;
+  padding-top: 65px;
+  color: aliceblue;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ }
+
+ h3 {
+  color: aliceblue;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ }
+
+ .flex-container {
+  margin: 10px;
+  max-width: 1400px;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  
+}
+
+.flex-item1 {
+ padding: 10px;
+ border: 2px solid #9aedfc;
+ margin: 10px auto;
+}
+
+.flex-item2 {
+  border: 2px solid deeppink;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+  border: none;
+  
+}
+
+.form-group label {
+  width: 100px;
+  margin-right: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 200px;
+}
+
+.form-submit {
+  width: 100px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-radius: 4px;
+  background-color: #184b52;
+  border: none;
+  color: aliceblue;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.form-submit span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.form-submit span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.form-submit:hover span {
+  padding-right: 25px;
+}
+
+.form-submit:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+h2 {
+  color: aliceblue;
+  padding: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+
+
+.accordion {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2px auto;
+}
+
+.accordion-item {
+  border: 2px solid #f2f2f2;
+  color: aliceblue;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  
+}
+
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  }
+
+  .accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.2 ease-in-out;
+  }
+
+  .accordion-item-header.active::after {
+    content:"\2212";
+    transform: rotate(-180deg);
+  }
+
+  .accordion-item-body {
+    display: none;
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid #9aedfc;
+    border-image: linear-gradient(to right, transparent, #9aedfc, transparent) 1;
+  }
+  .accordion-item-header.active + .accordion-item-body {
+    display: block;
+  }
+
+  footer {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    justify-content: space-between;
+  }
+
+  @media only screen and (min-width: 768px) {
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  
+  }
+
+  .flex-item1 {
+
+    margin: 1px;
+  }
+
+  .flex-item2 {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  
+  }
+
+  .flex-item1 {
+    margin: 1px;
+    width: 30%;
+  }
+
+
+  .flex-item2 {
+    width: 60%;
+    margin: auto;
+  }
 }
