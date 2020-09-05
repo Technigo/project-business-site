@@ -5,29 +5,60 @@
   margin: 0;
  }
 
- picture {
-  width: 100%;
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./Images/surfboard.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  max-width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
 }
 
+.hero-text {
+display: flex;
+flex-direction: column;
+position: absolute;
+opacity: 0.7;
+}
 
+.hero-text h1 {
+  font-size: 40px;
+  margin-bottom: 2px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 0px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+}
 .request, .FAQ {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 300px;
   height: auto;
   padding: 10px;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px;
   background-color: rgb(221, 221, 221);
   border: solid 5px rgb(255, 255, 255);
   box-shadow: 5px 10px 18px rgba(117, 117, 117, 0.678);
+  cursor: pointer;
 }
 
 .request {
 display: flex;
+flex-direction: column;
 justify-content: center;
 }
 
@@ -80,8 +111,8 @@ footer {
   width: 100%;
   left: 0;
   right: 0;
+  bottom: 0;
   padding: 5px;
-  position: absolute;
 }
 
 #logo {
@@ -90,27 +121,34 @@ footer {
 }
 
 @media screen and (min-width: 668px) {
+  
+  h1 {
+    font-size: 25px;
+  }
+  .cards {
+   flex-direction: row;
+   justify-content: center;
+  }
 
   .request, .FAQ {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 400px;
-    height: 350px;
-    padding: 10px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: rgb(221, 221, 221);
-    border: solid 5px rgb(255, 255, 255);
-    box-shadow: 5px 10px 18px rgba(117, 117, 117, 0.678);
+    margin: 25px;
   }
-  
+
+  footer {
+  position: absolute;
+  }
 
 }
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+@media screen and (min-width: 1025px) {
 
+  .hero-text h1 {
+    font-size: 60px;
+  }
 
+  .cards {
+  display: flex;
+  justify-content: center;
+  }
+
+}
