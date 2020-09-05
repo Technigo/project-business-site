@@ -13,25 +13,25 @@
   <body>
     <!-- HERO IMAGE -->
     <header>
-      <img src = "logo.png" alt= "Balloon Ride's logo">  
-    </header>
-  
-  
-   <picture>
-      <source media ="(max-width:600px)" srcset="./image1-600.jpg">
-      <source media ="(min-width:601px)" srcset="./image2-1024.jpg">
-      <img class="image3" src="./image3-1024.jpg" alt="Ballloon ride with a view" style="width: auto">
-    </picture>
-    
-    <h1> Enter our contest and win a balloon ride! </h1>
-     <!--  <div class="hero-image"></div>
-      <div class="hero-image-text"> 
-        <h1> Enter our contest and win a balloon ride! </h1>    
-      </div>
-    -->
- 
+      <img src = "logo.png" alt= "Balloon Ride's logo">
+
   
 
+   <!--  <picture>
+      <source id="image1" media ="(max-width:600px)" srcset="./balloons.jpg">
+      <source id="image2" media ="(max-width:900px)" srcset="./balloonride-big.jpg">
+      <img class="image3" src="./balloonride-original.jpg" alt="Ballloon ride with a view" style="width: auto">
+    </picture>
+ -->   
+
+    </header>
+
+    <div class= hero-container>
+      <div class="hero-image"></div>
+      <div class="hero-image-text"> Enter our contest and win a balloon ride!</div>
+           
+      </div>
+   
     <section class= flex-parent>    
       
       <!-- Accordion -->
@@ -113,72 +113,71 @@
     
       <!-- Signup form -->
       <div class= "flex-child form">
-
         <form 
-          class="form-container" 
-          action="http://httpbin.org/anything" 
-          method="POST"
-        >
+        class="form-container" 
+        action="http://httpbin.org/anything" 
+        method="POST"
+      >
 
-          <div class="form-group">
-            <label for="firstName">First name *</label>
-            <input 
-            id="firstName" 
-            type="text" 
-            name="firstNameValue"
-            required>
-            
-          </div>
+        <div class="form-group">
+          <label for="firstName">First name *</label>
+          <input 
+          id="firstName" 
+          type="text" 
+          name="firstNameValue"
+          required>
           
-          <div class="form-group">
-            <label for="lastName"> Last name *</label>
-            <input 
-            id="lastName" 
-            type="text"
-            name="lastNameValue"
-            required>
-            
-          </div>
-    
-          <div class="form-group">
-            <label for="telephoneNumber"> Telephone</label>
-            <input 
-            id="telephoneNumber" 
-            type="tel" 
-            placeholder="xxx-xxx-xx-xx"
-            name="telephoneNumberValue"
-            >
-          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="lastName"> Last name *</label>
+          <input 
+          id="lastName" 
+          type="text"
+          name="lastNameValue"
+          required>
           
-          <div class="form-group">
-            <label for="email"> Email *</label>
-            <input 
-            id="email" 
-            type="email"
-            name="emailValue"
-            required>
-            
-          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="telephoneNumber"> Telephone</label>
+          <input 
+          id="telephoneNumber" 
+          type="tel" 
+          placeholder="xxx-xxx-xx-xx"
+          name="telephoneNumberValue"
+          >
+        </div>
+        
+        <div class="form-group">
+          <label for="email"> Email *</label>
+          <input 
+          id="email" 
+          type="email"
+          name="emailValue"
+          required>
           
-          <div class="form-group">
-            
-            <input 
-            id="checkbox" 
-            type="checkbox"
-            name="checkboxValue"
-            required>
-            <label for="checkbox"> I accept terms and conditions </label>     
-          </div>
-    
-          <div>
-            <button 
-            class="form-submit" 
-            type="submit">Submit
+        </div>
+        
+        <div class="form-group">
+          
+          <input 
+          id="checkbox" 
+          type="checkbox"
+          name="checkboxValue"
+          required>
+          <label for="checkbox"> I accept terms and conditions </label>     
+        </div>
+  
+        <div>
+          <button 
+          class="form-submit" 
+          type="submit">Submit
 
-            </button>
-          </div>   
-      
-        </form>
+          </button>
+        </div>   
+    
+      </form>
     
       </div>   
   </section>  
