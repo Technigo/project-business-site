@@ -5,10 +5,6 @@ body {
   background: #ffffff;
 }
 
-h3 {
-  margin: 20px 0;
-}
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -227,11 +223,23 @@ label {
   border-radius: 10px;
   width: 350px;
   box-shadow: 10px 10px 10px rgba(122,122,122,1);
-  background: #e0e1dd;  
+  background: #e0e1dd;
 }
 
 .accordion-title {
   margin: 0 0 16px 0;
+}
+
+.question {
+  cursor: pointer;
+  margin: 0;
+}
+
+.question:after {
+  font-family: "Font Awesome 5 Free";
+  content: '\f055';
+  font-size: 18px;
+  float: right;
 }
 
 .answer {
@@ -245,12 +253,32 @@ label {
   overflow: auto;
 }
 
-.answer-text {
-  margin: 0;
+.open {
+  background-color: #62929e;
+}
+
+.clicked:after {
+  font-family: "Font Awesome 5 Free";
+  content: '\f056';
+  font-size: 18px;
+  float: right;
 }
 
 .accordion-element {
   border-bottom: 1px solid #546a7b;
+  padding: 20px 10px;
+}
+
+.accordion-element:hover {
+  background-color: #62929e;
+}
+
+.accordion-element:nth-child(even) {
+  background: #c6c5b9;
+}
+
+.accordion-element:nth-child(even):hover {
+  background-color: #62929e;
 }
 
 /* FOOTER */

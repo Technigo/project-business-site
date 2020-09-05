@@ -1,8 +1,7 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The purpose this week was to create a business site containing a hero video, a signup form and an accordion.
+I chose to keep last week's dog theme, building an application page for a day care center for dogs.
 
 ## The problem
 
