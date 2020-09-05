@@ -1,12 +1,19 @@
-# Business Site
+# Källslätten Hay Harvest - building a business site
 
-Replace this readme with your own information about your project. 
+The purpose of this project was to design a simple business website on a self-chosen topic, in this case a sign-up page for an event of a local community. The main objective was to train forms in html and test Javascript for the first time while building an FAQ-accordion. This is one of the first websites I created during the Technigo Bootcamp in fall 2020, on my way to become a frontend developer.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## The requirements - what you'll find in the code
 
-## The problem
+Following the requirements of the project, I built a header with a reponsive background-image that also chooses between different filesizes depending on the screensize. As responsiveness wasn't the focus of the project, the header is the only responsive part of the site. 
+Below, you'll find a sign-up form using different input types and some validation. The data is sent to a test server called httpbin just to know that the form works.
+Next to the form, you'll find an FAQ-accordion that folds in and out using the toggle-function in Javascript. There are also some built-in animations. 
+Finally there's a footer on the page, mostly for aesthetics.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## Browser compatibility
+
+I've tested the page in Chrome, Edge and Firefox for mobile, tablet and screen width using the respective dev tools. Everything works as expected.
+
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+You can view the page live on Netlify: https://hayharvest.netlify.app/ 
