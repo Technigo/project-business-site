@@ -1,7 +1,210 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  margin: 0;
+  padding: 0;
+  background: #cedd69;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #cedd69;
+  padding: 30px;
+}
+
+header {
+  overflow: hidden;
+  margin: 0px;
+  height: 720px;
+}
+
+.header-video {
+  object-fit: cover;
+  width: 100%;
+  height: 720px;
+}
+
+#video2 {
+  display: none;
+}
+
+/* styling for tablet mode */
+
+.header-text {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 45px;
+  color: white;
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  text-align: center;
+}
+
+.header-text h1 {
+  font-size: 45px;
+  color: white;
+}
+
+.header-text h2 {
+  font-size: 25px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+#signup-form {
+  font-family: "Source Sans Pro", sans-serif;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background:rgba(255, 255, 255, 0);;
+  margin-right: 100px;
+  box-shadow: 10px 5px 5px rgb(90, 165, 113);
+  
+}
+
+.form-group {
+  padding: 10px;
+  width: 280px;
+  display: flex;
+  align-items: center;
+}
+
+.form-group label {
+  width: 100px;
+  color: white;
+}
+
+#daynightgroup {
+  width: 120px;
+}
+
+.form-group input {
+  width: 200px;
+  border: none;
+}
+
+#vegetarian {
+  width: 20px;
+}
+
+#submit {
+  color: white;
+  background: rgb(156, 156, 156);
+
+}
+
+.accordion {
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  width: 300px;
+  margin-bottom: 55px;
+  box-shadow: 10px 5px 5px rgb(90, 165, 113);
+}
+
+.accordion-header {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 15px;
+  cursor: pointer;
+  background: rgb(156, 156, 156)
+}
+
+.question {
+  border-top: 2px solid #999;
+  margin: 0;
+  padding: 15px;
+  height: 20px;
+  cursor: help;
+  position:relative;
+}
+
+.question::after {
+  content:"+";
+  padding-right:5px;
+  position: absolute; 
+  right: 0;
+}
+
+.active::after {
+  content:"-";
+  padding-right:5px;
+  position: absolute; 
+  right: 0;
+}
+
+.answer {
+  height: 0px;
+
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
 
 .active + .answer {
-  /* some styling here */
+  height: 100px;
+  padding: 15px;
+  background: rgb(181, 190, 155);
+}
+
+@media only screen and (max-width: 768px) {
+  
+  main {
+    padding: 0px;
+    height: auto;
+    margin:0;
+  }
+
+  #video1 {
+    display: none;
+  }
+  #video2 {
+    display: block;
+  }
+  .header-video {
+    height: 480px;
+  }
+
+  header {
+    height: auto;
+  }
+
+  .header-text h1 {
+    font-size: 30px;
+  }
+
+  .header-text h2 {
+    font-size: 15px;
+  }
+
+  #signup-form {
+    margin: 0px;
+    padding: 0px;
+    width: 50%;
+    height:100%;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+
+  .accordion {
+    margin: 0px;
+    padding: 0px;
+    width: 50%;
+    min-width: 300px;
+    height:100%;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .accordion {
+    width: 100%;
+  }
+  
+  #signup-form {
+    width: 100%;
+  }
 }
