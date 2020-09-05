@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 
+  /* backgorund animation */
   background: linear-gradient(270deg, #aef0df, #d9b7d6, #fbd880);
   background-size: 400% 400%;
 
@@ -46,34 +47,6 @@ body {
 
 html {
   scroll-behavior: smooth;
-}
-
-h1 {
-  font-size: 80px;
-  margin: 10px 0;
-  font-family: "Arvo", serif;
-  font-style: italic;
-}
-
-h2 {
-  text-align: center;
-  text-transform: uppercase;
-}
-
-h3 {
-  font-size: 30px;
-  margin: 0;
-  font-family: "Arvo", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-h4 {
-  display: inline;
-  margin-left: 10px;
-  font-size: 20px;
-  font-weight: 500;
-  font-style: italic;
 }
 
 p {
@@ -121,6 +94,8 @@ picture {
   display: none;
 }
 
+/* navbar */
+
 ul {
   display: flex;
   align-items: center;
@@ -138,28 +113,6 @@ nav {
   justify-content: space-between;
   /* align-items: center; */
   position: relative;
-}
-
-a {
-  text-decoration: none;
-}
-
-article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #fff;
-  min-width: 1024px;
-
-  /* center */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-a:visited {
-  color: #fff;
 }
 
 @keyframes shake {
@@ -209,6 +162,49 @@ a:visited {
 .sign-in:hover {
   color: #fff;
   transition: 0.2s;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* center text and button */
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  min-width: 1024px;
+
+  /* center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 80px;
+  margin: 10px 0;
+  font-family: "Arvo", serif;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 30px;
+  margin: 0;
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .button-container {
@@ -276,10 +272,6 @@ a:visited {
 /* I didn't get the "transition: 0.3s;" to work when hovering on this button.
 Is that possible in any way??? Would be nice :) */
 
-.hamburger {
-  display: none;
-}
-
 /************ MAIN ************/
 
 main {
@@ -296,8 +288,10 @@ main {
 
 /* form */
 
-input[type="text"]:focus {
-  border: 2px solid #000;
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .form-container {
@@ -310,12 +304,6 @@ input[type="text"]:focus {
   height: 500px;
   /* border: 2px solid black; */
   margin: 20px;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
 }
 
 .form-group {
@@ -346,6 +334,10 @@ input::placeholder {
 input:hover {
   background: rgba(255, 255, 255, 0.8);
   transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border: 2px solid #000;
 }
 
 /* change autocomplete styles in WebKit */
@@ -553,6 +545,19 @@ select:-webkit-autofill:focus {
 }
 
 /*** accordion ***/
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h4 {
+  display: inline;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+}
 
 .accordion-container {
   width: 40%;
@@ -784,6 +789,7 @@ select:-webkit-autofill:focus {
     height: 100%;
     object-fit: cover;
   }
+
   h1 {
     font-size: 46px;
   }
@@ -807,11 +813,11 @@ select:-webkit-autofill:focus {
     width: 90%;
   }
 
+  /* footer */
+
   .footer-container {
     flex-direction: column;
   }
-
-  /* footer */
 
   .footer-info {
     margin: 20px 0 50px 0;

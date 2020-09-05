@@ -1,8 +1,4 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-
-//navbar
+// hamburger navbar
 
 document.getElementById("hamburger").onclick = toggle;
 
@@ -10,9 +6,7 @@ function toggle() {
   this.classList.toggle("open");
 }
 
-//form
-
-//validate
+//form validate
 
 function validateForm() {
   const firstName = document.forms["myForm"]["firstName"].value;
@@ -89,10 +83,6 @@ accordionHeader1.onclick = onAccordion1Click;
 accordionHeader2.onclick = onAccordion2Click;
 accordionHeader3.onclick = onAccordion3Click;
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-
-// document.getElementById("something").onclick = toggle;
-
-//function toggle() {
-// this.classList.toggle("active");
-//}
+// I realize this code above is too long but I hadn't time to figure
+// out how to make it cleaner. Believe I should change a bit in the CSS
+// first but it works for now.
