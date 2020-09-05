@@ -10,14 +10,14 @@ The Breakfast Club is a ficitve company that hosts breakfast events in cafés ow
 ## The problem
 
 I created a simple design in Sketch and started with mobile first approach. 
-I started from the top with the video then when it worked i continued to the form and accordion. 
+I started from the top with the header then when it worked i continued to the form and accordion. 
 I've kept the form pretty basic accept from styling the button and centering the content. 
 The accordion is my first Javascript code and i started with the basics on how to make it slide down when clicked.
 That is made with the Toggle function. After the code worked i added some styling with hover effect, cursor pointer,
 border-bottom and the symbol that changes in the left corner. 
 
 I also used a google font for the first time. 
-If i had more time i would like to design the form more
+If i had more time i would like to design the form more.
 
 
 
