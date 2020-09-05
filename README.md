@@ -1,37 +1,16 @@
-function showAlert(myMsg) {
-alert(myMsg);
-}
+# Business Site
 
-window.onscroll = function() {
-scrollFunction()
-};
+This week's project was to create a business site with a form, accordion and hero video/image.
 
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop+64;
+## The problem
 
-function scrollFunction() {
-if (window.pageYOffset >= sticky) {
-navbar.classList.add("sticky")
-} else {
-navbar.classList.remove("sticky");
-}
-}
+I had issues with timemanagement for this project. I am overall not so satisfied with the result and I will come back to this project at another time.
 
-var accordions = document.getElementsByClassName("accordion-block");
-console.log(accordions)
+## What i would have dont if i had more time
 
-for (i = 0; i < accordions.length; i++) {
-accordions[i].onclick = function() {
-this.classList.toggle('is-open');
+- Made a Hero image for tablet & mobile view
+- Added more attributes to the form
+- Styled the accordion more
+- Spend more time with the overall design and layout
 
-    var content = this.children[1];
-    if (content.style.maxHeight) {
-      // accordion is currently open, so close it
-      content.style.maxHeight = null;
-    } else {
-      // accordion is currently closed, so open it
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-
-}
-}
+## View it live
