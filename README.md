@@ -16,7 +16,7 @@ I couldn't toggle the open question to close again. The solution to that was to 
 
 If I had more time on this project I would definately add a "for-sale"-section with a grid of cards displaying artwork.
 Perhaps I would do it by adding some sort of box containing the art-work and set it to be hidden when not clicked, and displayed when clicked.
-I would also have liked to add a nav-bar, but since it's a onepager the links would have directed the user to different parts of the page (for example the forms, the "for sale"-section etc).
+I would also have liked to add a nav-bar, but since it's a onepager the links would have directed the user to different parts of the page (for example the forms, the "for sale"-section etc). At the moment I've only added links directing to the request form.
 
 ## View it live
 https://kreatisa.netlify.app/ 
