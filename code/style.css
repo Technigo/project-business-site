@@ -1,7 +1,12 @@
 body {
   font-family: 'Ahiti', Arial, Helvetica, sans-serif;
+  font-size: 15px;
   margin: 0;
-  background: #e0e1dd;
+  background: #ffffff;
+}
+
+h3 {
+  margin-right: 0 0 10px 0;
 }
 
 .nav {
@@ -9,8 +14,8 @@ body {
   justify-content: space-between;
   background: #c6c5b9;
   height: 75px;
-  margin: 0;
-  z-index: 1;
+  margin: -5px 0 0 0;
+  z-index: 2;
 }
 
 /* Class to use for sticky navbar in JavaScript */
@@ -32,7 +37,7 @@ body {
 
 .header-name {
   font-family: 'Indie Flower';
-  font-size: 20px;
+  font-size: 25px;
   margin: 10px;
 }
 
@@ -61,7 +66,7 @@ body {
 
 .overlay {
   position: absolute;
-  z-index: .9;
+  z-index: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -71,15 +76,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: max-content;
 }
 
 .header-big-logo {
-  width: 120px;
+  width: 15vw;
 }
 
 .header-text {
   font-family: 'Indie Flower';
-  font-size: 50px;
+  font-size: 5vw;
   margin: 10px;
 }
 
@@ -87,39 +93,37 @@ body {
 
 .intro {
   margin: 0 30px;
-  padding: 0 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.intro h2 {
+  text-align: center;
 }
 
 .intro p {
   margin: 0;
 }
 
-/* .intro h2 {
-  align-self: center;
-} */
-
 /* CONTENT */
 
 .content {
   display: flex;
-  justify-content: space-evenly;
-  margin: 20px 0;
+  justify-content: center;
+  margin: 20px 30px 40px 30px;
 }
 
 .form-container {
-  margin-left: 30px;
+  margin-right: 50px;
   padding: 30px;
-  border: 2px solid grey;
+  border: 1px solid #546a7b;
   border-radius: 10px;
   box-shadow: 10px 10px 10px rgba(122,122,122,1);
-  width: 50%;
-  max-width: 500px;
+  width: 350px;
   display: flex;
   flex-direction: column;
-  background: #62929e;
+  background: #e0e1dd;
 }
 
 .form-title {
@@ -150,22 +154,16 @@ form {
 
 input {
   width: 140px;
-  background: #e0e1dd;
 }
 
 select {
   width: 148px;
   height: 22px;
-  background: #e0e1dd;
 }
 
 label {
   width: 120px;
 }
-
-/* label:first-of-type ~ label {
-  margin-left: 10px;
-} */
 
 .form-group p, .form-group-service p {
   width: 120px;
@@ -199,6 +197,7 @@ label {
 .service {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 .form-submit {
@@ -206,20 +205,18 @@ label {
   height: 40px;
   border-radius: 15px;
   font-weight: bold;
-  background: #e0e1dd;
+  background: #62929e;
 }
 
 /* ACCORDION */
 
 .accordion {
-  margin: 0 30px;
   padding: 30px;
-  border: 2px solid grey;
+  border: 1px solid #546a7b;
   border-radius: 10px;
-  width: 50%;
-  max-width: 500px;
+  width: 350px;
   box-shadow: 10px 10px 10px rgba(122,122,122,1);
-  background: #62929e;
+  background: #e0e1dd;  
 }
 
 .accordion-title {
@@ -229,30 +226,112 @@ label {
 .answer {
   height: 0;
   overflow: hidden;
-  transition: height 0.5s ease;
+  transition: height 0.3s ease;
 }
 
 .active {
-  height: 50px;
+  height: 120px;
   overflow: auto;
+}
+
+.accordion-element {
+  border-bottom: 1px solid #546a7b;
 }
 
 /* FOOTER */
 
 footer {
-  background: #393d3f;
-  color: #c6c5b9;
+  background: #c6c5b9;
   padding: 16px;
-  margin-top: 16px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid: 1fr / 1fr 70px 1fr;
   align-items: center;
+}
+
+footer p {
+  margin: 5px 0;
 }
 
 footer img {
   width: 50px;
+  margin: 0 10px;
 }
 
 .footer-right {
   text-align: right;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1023px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 13px;
+  }
+  
+  .nav {
+    height: 50px;
+  }
+
+  .header-logo {
+    width: 35px;
+  }
+
+  .header-name {
+    font-size: 15px;
+  }
+
+  .nav-right {
+    display: none;
+  }
+
+  .form-container {
+    width: 208px;
+  }
+
+  input {
+    width: 100px;
+  }
+  
+  select {
+    width: 108px;
+  }
+  
+  label {
+    width: 100px;
+  }
+  
+  .form-group p, .form-group-service p {
+    width: 100px;
+  }
+  
+  .gender {
+    width: 108px;
+  }
+  
+  .services {
+    width: 108px;
+  }
+
+  .accordion {
+    width: 208px;
+  }
+
+  footer p {
+  font-size: 8px;
+  }
+
 }
