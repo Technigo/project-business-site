@@ -1,12 +1,10 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A business site to practice responsive videos, accordion (javascript) and forms.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I had a great plan for my site to begin with and I am happy how I solved the 3 main tasks for the project. In the end I realised I had'nt thought about mobile first. I tried to fix it, because the overlay text does not look ok in mobile, but since that wasn'nt really part of the criterias I did'nt put more effort to it. I also put width to the accordion and the form which I know it is not good for the responiveness but I could'nt solve it in another way.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+This is my sitE: https://dreamcake.netlify.app/
