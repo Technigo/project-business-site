@@ -17,19 +17,15 @@
     <header>
 
       <div class="top-section-container">
-
-        <di class="hero-img">
-          <img src="./Mysister.jpg" alt="Woman with curly hair" width="100%"> 
-        </div>
+          
+          <picture class="hero-img">
+            <source srcset="./Mysister.jpg" media="(max-width: 600px)" />
+            <source srcset="./Mysister.jpg" media="(max-width: 900px)" />
+            <img src="./Mysister.jpg" alt="Woman with curly hair" width="100%">
 
           <div class="name-text"> 
               <h1>My sisters hair </h1> 
           </div>
-    
-          <!-- <div class="mysister-logo">
-              <img src="./Mysisterlogo.png" alt="My sisters hairs logo" width="70px">
-          </div>  -->
-
       </div>
 
   </header>
@@ -60,6 +56,7 @@
         <input
             id="lastName"
             type="text"
+            placeholder="Type your last name"
             name="lastNameValue"
             required
         />
@@ -69,6 +66,7 @@
         <input
             id="email"
             type="email"
+            placeholder="Type your email"
             name="emailValue"
         />
     </div>
@@ -81,7 +79,17 @@
             name="messageValue"
         ></textarea>
     </div>
-    <button class="form-submit" type="submit">Submit form</button>
+    <button class="form-submit" type="submit">Boka besök</button>
+
+   <div class="radio-btn">
+      <input type="radio" id="longHair" name="hairlenght" value="long>
+      <label for="male">Långt hår (länger än 30cm)</label><br>
+
+      <input type="radio" id="shortHair" name="hairlenght" value="short">
+      <label for="female">Kort hår (kortare än 30 cm)</label><br>
+     
+    </div>
+
 </form>
 
 
@@ -131,3 +139,46 @@
 
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
