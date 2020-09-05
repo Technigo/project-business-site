@@ -14,3 +14,4 @@ I had issues with timemanagement for this project. I am overall not so satisfied
 - Spend more time with the overall design and layout
 
 ## View it live
+https://djclover.netlify.app/
