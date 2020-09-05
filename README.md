@@ -1,6 +1,6 @@
 # Business Site
 
-A responsive single page application where I have used hero video and image, created a form and an accordion with my first JavaScript. Also played around with animations.
+A responsive single page application where I have used hero video and image, created a form and an accordion with my first JavaScript. Also played around with animations, 3D and gradient styling.
 
 ## The problem
 
