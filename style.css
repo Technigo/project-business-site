@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+  }
+
+html{
+    margin: 0;
+}
+.body{ 
+    font-family:"Monserrat", sans-serif;
+    margin: 0px;
+}
+
+a{
+    font-size: 20px;
+    color: #fbf0f0;
+    text-decoration: none;
+    padding: 20px; 
+}
+
+/*** Header styling ***/
+header {
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-around;
+    background: #7c7575;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    color: #fbf0f0;
+}
+
+/*** Hero image styling ***/
+
+.hero { 
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://images.unsplash.com/photo-1511804472014-fa7b871cd6a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(65%);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: #fbf0f0;
+    margin: 0.625rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    font-weight: 200;
+    margin-top: 1rem;
+}
+
+.hero-button {
+   border: none;
+   margin-top: 3rem;
+   padding: 20px;
+   border-radius: 5px;
+   font-size: 1.125rem;
+   font-weight: 200;
+   cursor: pointer;
+   background: #fbf0f0;
+   box-shadow: 0px 3px 2px 0 #fbf0f0;
+}
+
+.hero-button:hover {
+   background-color: #fbf0f0;
+   box-shadow: none;
+   border: none;
+   transform: translateY(5px);
+}
+
+/*** Main section with accordion and form styling ***/
+
+main{ 
+    background: #dfd3d3;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*** Test styling Maks code ***/
+.accordion-container {
+    margin-top: 2rem;
+    border: 1px solid #b8b0b0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 500px;
+    background: #fbf0f0;
+    padding: 15px;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.accordion-text {
+    border-top: 2px solid #7c7575;
+    margin: 0;
+    padding: 15px;
+}
+
+.accordion-text-container {
+    height: 0;
+    overflow: hidden;
+    transition: height .3s ease;
+}
+
+.accordion-text-container.active {
+    height: 158px;
+}
+
+
+/*** Accordion styling ***/
+/***.accordion {
+    width: 500px;
+    background: whitesmoke;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.accordion-container{
+    margin-bottom: 5px;
+    border: 1px solid black;
+}
+
+.accordion-header{
+    padding: 15px;
+    margin: 5px;
+}
+
+/*** Accordion text default hidden, when clicked it will collapse ***/
+/***
+.accordion-text {
+    border-top: 2px solid grey;
+    padding: 15px;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.accordion-text-container {
+    height: 0;
+    overflow: hidden;
+}***/
+
+/*** Form styling ***/
+
+.form-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 500px;
+    background: #fbf0f0;
+    padding: 15px;
+    border: 1px solid #b8b0b0;
+    border-radius: 5px;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 100px;
+    margin-right: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 200px;
+}
+
+.form-submit {
+    width: 100px;
+}
+
+/*** Footer styling ***/
+footer{
+    position: block;
+    padding: 40px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    background: #7c7575;
+    color: #fbf0f0;
+}
+
+@media screen and (max-width: 667px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+}
+    
