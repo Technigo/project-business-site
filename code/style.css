@@ -41,8 +41,7 @@ video.mobile {
 
 .header-content {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 0;
@@ -52,11 +51,9 @@ video.mobile {
 }
 
 img.logo {
-  display:none;
-}
-
-img.all-mountain-logo {
-  width: 25%;
+  display: block;
+  width: 100px;
+  padding-top: 10px;
 }
 
 nav {
@@ -73,8 +70,10 @@ h1.header-title {
   width: 100%;
   font-family: 'Abril Fatface', Cursive;
   font-weight: lighter;
-  font-size: 44px;
+  font-size: 26px;
   color: orange;
+  margin: 0;
+  padding-bottom: 10px;
 }
 
 h2.header-subtitle {
@@ -105,12 +104,20 @@ h2.header-subtitle {
   }
 
   .header-content {
+    flex-direction: column;
+    flex-wrap: wrap;
     height: 400px;
     align-content: center;
+    justify-content: center;
+  }
+
+  img.logo {
+    display: none;
   }
 
   h1.header-title {
     font-size: 68px;
+    padding: 20px;
   }
 
   h2.header-subtitle {
@@ -148,6 +155,8 @@ h2.header-subtitle {
   }
   
   .header-content {
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     height: 600px;
     margin: 0;
@@ -156,6 +165,7 @@ h2.header-subtitle {
   img.logo {
     display: block;
     width: 100px;
+    padding: 0;
   }
   
   nav {
