@@ -215,11 +215,58 @@ footer{
     background: #7c7575;
     color: #fbf0f0;
 }
+ 
+/*** Media queries for tablet ***/ 
+@media (max-width: 1024px){
+  body{
+    margin: 0;
+  }
 
-@media screen and (max-width: 667px) {
-    .main{
+  a{
+      padding: 10px;
+  }
+
+  main{
+      display:flex;
+      flex-direction: column-reverse;
+      padding-bottom: 30px;
+      align-items: center;
+  }
+
+}
+
+/*** Media queries for mobile ***/
+
+@media (max-width: 668px){
+    body{
+      margin: 0;
+    }
+  
+    header{
+      flex-direction: column;
+    }
+  
+    nav{
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
-}
-    
+  
+    a{
+        padding: 10px;
+    }
+  
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 30px;
+    }
+
+    .form-container{
+        width: fit-content;
+    }
+  
+    .accordion-container{
+        width: fit-content;
+    }
+  }
