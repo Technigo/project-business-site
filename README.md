@@ -26,3 +26,4 @@ Maybe I should had choosen a video from a free video-download-site for better qu
 
 
 ## View it live
+https://metal-festival-project3.netlify.app/
