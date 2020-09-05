@@ -1,12 +1,11 @@
-# Business Site
+Business Site
+This is a Coffee shop webpage with a video header for desktop and responsive images for tablet/mobile. It has a sign up form and an accordion made with Javascript.
 
-Replace this readme with your own information about your project. 
+The problem
+I used bootstrap to align elements, styled sign up form with CSS and created the accordion with Javascript.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+My next goal
+Make the page responsive and add one more section.
 
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+View it live
+https://coffee-shop-liza.netlify.app/
