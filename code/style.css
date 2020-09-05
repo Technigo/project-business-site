@@ -8,6 +8,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 body {
   margin: 0;
+  background-color: #e0f2e9;
 }
 
 p {
@@ -19,47 +20,31 @@ p {
   width: 100%;
   display: flex;
   margin: 0px;
+  align-items: center;
+  justify-content: center;
+
   /* align-items: center; */
 }
 
-
-/* h1 {
-  Font-Family: 'Overpass', Sans-Serif;
-  Font-Size: 17px; 
-} */
-
-/* 
- .hero-img {
-  width: 100%;
-  position: relative;
-  margin: 0;
-  filter: blur(8px);
-  -webkit-filter: blur(1px); */
-
   .name-text {
     position: absolute;
-    width: 100%;
+    box-sizing: border-box;
     text-align: center;
-    color: rgb(42, 197, 218);
-    z-index: 1;
+    justify-content: center;
+    color: rgb(42, 197, 218); 
+    z-index: 1; 
     top: 80%;
-    font-size: 50px;
-} 
-
+    font-size: 40px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px;
+}
 
 /* Main content */
 
 .main-container {
   display: flex;
-  justify-content: space-between;
   margin: 10px 20px auto;
-  /* flex-wrap: wrap; */
-  /* align-items: center;
-  justify-content: center;
-  width: 100%; */
-  background-color: rgb(238, 237, 223);
-  /* margin: 20px;
-  padding: 10px; */
+  /* flex-wrap: wrap;  */
+  /* flex-direction: column;       */
 }
 
 
@@ -67,19 +52,22 @@ p {
 
 .form {
   display: flex;
-  width: 80%;
+  width: 40%;
   box-sizing: border-box;
   flex-direction: column;
-  background-color: wheat;
+  background-color:rgb(118, 216, 230);
   margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
+  box-shadow: 10px 10px 5px #adfff3;
 }
   
 .form-group {
   margin-bottom: 15px;
   display: flex;
   align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
 }
 
 .form-group label {
@@ -90,16 +78,21 @@ p {
 .form-group input,
 .form-group textarea {
   width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background-color: wheat;
+  border-radius: 3px;
 }
 
 .form-submit {
   width: 100px;
+  position: relative;
 } 
 
 .answer {
   display: none;
-  background-color: rgb(243, 235, 235);
-  
+  background-color: rgb(199, 242, 243);
+  padding: 3px;
 }
 
 .active + .answer {
@@ -112,7 +105,11 @@ p {
 }
 
 input:valid {
-  background-color: rgb(189, 235, 200);
+  background-color: rgb(217, 236, 222);
+}
+
+input:invalid {
+  background-color: cornsilk;
 }
 
 button {
@@ -128,6 +125,9 @@ button {
   border: none;
   border-radius: 10px;
   box-shadow: 0 4px #999;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  margin: 15px;
 } 
 
 button:hover {
@@ -140,24 +140,39 @@ button:active {
   transform: translateY(4px);
 } 
 
-/* .radio-btn {
+.radio-btn {
+  display: flex;
+  justify-items: self-end;
+  margin: 5px;
+  cursor: pointer;
 
-
-} */
+}
 
 /* Accordion styling */
 
 .accordion {
-  background-color: wheat;
+  background-color: #adfff3;
   box-sizing: border-box;
-  width: 80%;
+  width: 40%;
   margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px bold;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgb(7, 207, 233) ;
+}
+
+.quetsions {
+display: flex;
+margin: auto;
 
 }
 
+.answer {
 
+
+}
 
 .footer {
     position: relative;
@@ -167,7 +182,7 @@ button:active {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(42, 197, 218);
+    background-color:#adfff3; 
     color: rgb(54, 47, 47);
     text-align: center;
   }
@@ -175,34 +190,26 @@ button:active {
 
 /* Mobile 767px or less */
 
-/* main {
+body {
+
+}
+/* 
+.main {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 100%;
-}
-  /* margin: 20px;
-  padding: 10px; */
-
-
-
-
+} */
 
 /* syns i tablet */
 
 @media (min-with: 768px){
-/* 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  /* margin: 20px;
-  padding: 10px;
-  } */ 
+  body {
+    background-color: yellowgreen;
+  }
 
 .main-container {
   display: flex; 
  flex-direction: row;
- background-color: chocolate;
 }
 
 .form {
@@ -225,6 +232,10 @@ main {
 
 /* syns i Desktop */
  @media (min-with: 1024px) {
+
+  body {
+    background-color: rgb(128, 0, 43);
+  }
 
   .main-container {
     display: flex; 
