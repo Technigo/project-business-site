@@ -48,12 +48,6 @@ html {
   scroll-behavior: smooth;
 }
 
-main {
-  max-width: 1100px;
-  text-align: center;
-  margin: auto;
-}
-
 h1 {
   font-size: 80px;
   margin: 10px 0;
@@ -121,6 +115,10 @@ video {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+picture {
+  display: none;
 }
 
 ul {
@@ -285,9 +283,12 @@ Is that possible in any way??? Would be nice :) */
 /************ MAIN ************/
 
 main {
+  max-width: 1100px;
   height: 700px;
   display: flex;
   justify-content: center;
+  text-align: center;
+  margin: auto;
   padding-top: 50px;
 }
 
@@ -703,10 +704,6 @@ select:-webkit-autofill:focus {
     color: #000;
   }
 
-  .nav-bar:hover {
-    color: pink;
-  }
-
   .sign-in {
     display: none;
   }
@@ -731,7 +728,7 @@ select:-webkit-autofill:focus {
 
   .open div {
     transition: 1s;
-    background: pink;
+    background: rgba(255, 255, 255, 0.6);
   }
 
   .open + ul {
@@ -739,9 +736,75 @@ select:-webkit-autofill:focus {
     transition: 1s;
     padding-top: 20px;
   }
+
+  .logo {
+    fill: #fff;
+  }
+
+  .logo:hover {
+    fill: rgba(255, 255, 255, 0.6);
+  }
+
+  /* main */
+
+  main {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .form-container,
+  .accordion-container {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+  }
 }
 
 /* MOBILE */
 @media (max-width: 667px) {
   /*** HEADER ****/
+
+  video {
+    display: none;
+  }
+
+  picture {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  h1 {
+    font-size: 46px;
+  }
+
+  h3 {
+    font-size: 26;
+  }
+
+  /* main */
+
+  .form-container,
+  .accordion-container {
+    width: 95%;
+  }
+
+  .wrapper-col {
+    margin: 0 7%;
+  }
+
+  .accordion-header {
+    width: 90%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-info {
+    margin: 20px 0;
+  }
 }
