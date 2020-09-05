@@ -219,6 +219,17 @@ Set the form action to post to `https://httpbin.org/anything` and the method s
       </div>
 
       <div class="form-group">
+        <label for="phone">Phone number*</label>
+        <input
+          id="phoneNumber"
+          type="tel"
+          name="phoneNumberValue"
+          placeholder="Telephone number"
+          minlength="5"
+        />
+    </div>
+
+      <div class="form-group">
         <label for="date">Select date of arrival*</label>
         <input 
           id="date"    
@@ -228,7 +239,49 @@ Set the form action to post to `https://httpbin.org/anything` and the method s
         />
       </div>
 
-      <!-- Put in radiobuttons for man, woman, other here -->
+      <div class="number-group">
+        <label for="numberOfNuests">Select number of nights*</label>
+        <input 
+          list="nights-value"
+          id="nightsSelect"  
+          type="number"
+          name="nightsSelect"
+          min="1"
+          max="10"
+          required>
+        <datalist id="nights-value">
+          <option value="1"> </option>
+          <option value="2"> </option>
+          <option value="3"> </option>
+          <option value="4"> </option>
+          <option value="5"> </option>
+          <option value="6"> </option>
+          <option value="7"> </option>
+          <option value="9"> </option>
+          <option value="9"> </option>
+          <option value="10"> </option>
+        </datalist>
+      </div>
+
+      <div class="number-group">
+        <label for="numberOfGuests">Select number of guests*</label>
+        <input 
+          list="guest-value"
+          id="guestsSelect"  
+          type="number"
+          name="guestsSelect"
+          min="1"
+          max="5"
+          required>
+        <datalist id="guest-value">
+          <option value="1"> </option>
+          <option value="2"> </option>
+          <option value="3"> </option>
+          <option value="4"> </option>
+          <option value="5"> </option>
+        </datalist>
+      </div>
+
       <div class="radio-group" id="radio">
           <p class="radio-cabin-title">Choose a cabin*</p>
           <div class="radio-button"> 
@@ -256,6 +309,41 @@ Set the form action to post to `https://httpbin.org/anything` and the method s
                 value="cabin3"
                 required>       
           </div>
+      </div>
+
+      <div class="checkbox-group">
+
+        <div class="checkbox-group-order"> 
+          <label for="bedlinen">I want to add bedlinen to my order</label>
+          <input 
+            type="checkbox"
+            id="bedlinen"
+            value="bedlinenValue">
+        </div>
+
+        <div class="checkbox-group-order"> 
+          <label for="transfer">I want to order transfer to/from the cabin</label>
+          <input 
+            type="checkbox"
+            id="transfer"
+            value="transferValue">
+        </div>
+
+        <div class="checkbox-group-terms"> 
+          <label for="terms">I agree to terms and conditions*</label>
+          <input 
+            type="checkbox"
+            id="terms"
+            value="termsValue"
+            required>
+        </div>
+        <div class="checkbox-group-news">
+          <label for="news">I want to recieve the monthly newsletter</label>
+          <input 
+            type="checkbox"
+            id="news"
+            value="newsValue">
+        </div>
       </div>
 
       
