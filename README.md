@@ -14,9 +14,10 @@ I spent much of my time on layout and responsiveness. I had some difficulties wi
 
 I have tested my web page with good results in Chrome, Edge and on iPad Pro. On iPhone (XR), I get the fall back image instead of the video. Luckily, I spent some time on choosing and editing the fall back image and it looks nice anyway. Still no luck with Internet Explorer.
 
-If I had more time, I would try to apply the BEM methodology. I read about it and tried to use it but it got too disconcerting.
+If I had more time, I would style checkboxes and radio buttons. I tried to style them in this webpage but it required so many changes in my current code that I gave up.
+I would even try to apply the BEM methodology. I read about it and tried to use it but it got too disconcerting.
 
 ## View it live
 You can take a look at the result on https://relaxed-wescoff-d89de7.netlify.app/
-You are welcome to visit my pull request https://github.com/Technigo/project-news-site/pull/54 and leave some comments about my code.
+You are welcome to visit my pull request https://github.com/Technigo/project-business-site/pull/76 and leave some comments about my code.
 Enjoy!
