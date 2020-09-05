@@ -9,12 +9,14 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 /* }*/
 
-body {
+body,
+html {
     margin: 0;
-    /* height: auto; */
+    height: 100%;
     /* background: #FBCEB1; */
     /* background: #f0f0ec; */
-    background: #F8F8F8;
+    /* background: #F8F8F8; */
+    background: #f9f5e9;
     font-family: 'Fira Sans', sans-serif;
     font-Size: 15px;
 }
@@ -22,56 +24,45 @@ body {
 
 /* --- header-section --- */
 
-
-/* header {
-    height: 700px;
-    width: 100%;
-    color: #fff;
-    background-image: url("./img/preview2.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: space-around;
-} */
-
-
-/* header h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-Size: 55px;
-} */
-
 .hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: url("./img/preview2.jpeg");
-    /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), */
-    /* Set a specific height */
-    height: 500px;
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
+    height: 500px;
+    overflow: hidden;
+    background: url(./img/waater-spa2.jpeg) no-repeat center;
+    background-size: cover;
 }
 
-
-/* Place text in the middle of the image */
-
-.hero-text {
-    text-align: center;
+.text-container {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 20%;
     transform: translate(-50%, -50%);
-    color: white;
     font-family: 'Cormorant Garamond', serif;
-    font-Size: 55px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
 }
 
+.text-container h1 {
+    font-size: 70px;
+    letter-spacing: 0.1em;
+    margin: 0;
+    text-shadow: 0 0 10px black;
+}
 
-/* nav {
-    display: flex;
-    justify-content: space-around;
-} */
+.nav {
+    top: 40%;
+    right: 0;
+    /* transform: translate(-50%, -50%); */
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.text-container p {
+    font-size: 30px;
+}
 
 nav a {
     color: #fff;
