@@ -39,6 +39,28 @@ h3 {
   color: #000;
 }
 
+h2{
+  font-size: 3vh;
+}
+
+h3 {
+  margin: 0;
+  font-size: 2vh
+}
+
+p {
+  font-size: 2vh;
+}
+
+p a {
+  text-decoration: none;
+  font-weight: 800;
+  color: rgb(0,0,0);
+}
+p a:hover{
+  color: 	rgb(169,169,169);
+}
+
 .class-btn {
   margin-top: 15vh;
   background: rgb(236, 227, 210, 0.8);
@@ -64,8 +86,9 @@ h3 {
 .submit {
   background: rgb(131,175,175, 0.7);
   border: none;
-  width: 100px;
+  width: 10vh;
   cursor: pointer;
+  font-size: 1.5vh;
 }
 
 .submit:hover{
@@ -73,12 +96,6 @@ h3 {
   transition: all 0.5s ease-in-out;
 }
 
-h3 {
-  margin: 0;
-}
-p {
-  font-size: 16px;
-}
 .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -129,16 +146,13 @@ button {
 
 label {
   margin: 5px;
-  font-size: 3vh;
+  font-size: 2vh;
 }
 
 input:focus {
   background: rgb(106,117,82, 0.3);
 }
 
-p {
-  font-size: 3vh;
-}
 .accordion {
   display: flex;
   flex-direction: column;
@@ -162,8 +176,13 @@ p {
 }
 
 .question {
-  background: rgb(163,191,189);
+  background: rgb(163,191,189, 0.7);
   position: relative;
+}
+
+.question:hover{
+  background: rgb(163,191,189, 1);
+  transition: all 0.5s ease-in-out;
 }
 
 .answer {
@@ -182,15 +201,6 @@ p {
 .question.active::after {
   content: "\2212";
   font-size: 2.25vh;
-}
-
-p a {
-  text-decoration: none;
-  font-weight: 800;
-  color: rgb(0,0,0);
-}
-p a:hover{
-  color: 	rgb(169,169,169);
 }
 
 .active + .answer {
