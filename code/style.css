@@ -14,14 +14,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 html,
 body {
-  height: 1000px;
-  background-color: teal;
   font-family: "Oswald", "PT Sans", sans-serif;
 }
 
-nav {
-  z-index: 10;
-}
 /* HERO VIDEO */
 
 .video-container {
@@ -125,12 +120,20 @@ main {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   position: relative;
   background-color: #69757d;
   padding: 15px;
 }
 
+.form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 10px;
+  padding: 15px;
+}
 #form2 {
   display: none;
 }
@@ -146,7 +149,7 @@ main {
   opacity: 0.8;
 }
 .login-form {
-  position: absolute;
+  position: relative;
   top: 20%;
   left: 7%;
   width: 400px;
@@ -222,35 +225,98 @@ input:focus {
   color: #fff;
 }
 
+/* ACCORDION */
+
+main h1 {
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  padding: 20px;
+}
+
+.accordion {
+  max-width: 300px;
+  margin: 5rem 5rem 5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.accordion-item {
+  background-color: #fff;
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border: 1px solid lightblue;
+}
+
 /* MEDIA QUERIES */
 
 /* MOBILE */
 
 @media screen and (min-width: 768px) {
-  #hero .caption h1 {
-    font-size: 2.5rem;
+  #hero .caption {
+    font-size: 1rem;
   }
-  #hero .caption h2 {
-    font-size: 1.75rem;
+
+  #hero .caption span {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #hero .caption {
+    font-size: 1rem;
+    justify-content: last baseline;
+  }
+
+  #hero .caption span {
+    font-size: 1rem;
   }
 }
 
 /* IPAD PRO */
 @media screen and (min-width: 992px) {
-  #hero .caption h1 {
-    font-size: 3rem;
-  }
-  #hero .caption h2 {
+  #hero .caption {
     font-size: 2rem;
+  }
+  #hero .caption span {
+    font-size: 3rem;
   }
 }
 
 /* DESKTOP */
 @media screen and (min-width: 1200) {
-  #hero .caption h1 {
+  #hero .caption {
     font-size: 4rem;
   }
-  #hero .caption h2 {
-    font-size: 2.5rem;
+
+  #hero .caption span {
+    font-size: 4rem;
   }
-}
