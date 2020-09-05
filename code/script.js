@@ -17,7 +17,6 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 });
 
 
-
 const questionOne = document.getElementById("question-1");
 const questionTwo = document.getElementById("question-2");
 const questionThree = document.getElementById("question-3");
@@ -75,12 +74,3 @@ questionThree.onclick = onQuestion3Click;
 questionFour.onclick = onQuestion4Click;
 questionFive.onclick = onQuestion5Click;
 
-/*
-function toggle() {
-  this.classList.toggle("active");
-}
-document.getElementById("question-1").onclick = toggle;
-document.getElementById("question-2").onclick = toggle;
-document.getElementById("question-3").onclick = toggle;
-document.getElementById("question-4").onclick = toggle;
-document.getElementById("question-5").onclick = toggle;*/
