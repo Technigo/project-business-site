@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The business site</title>
+    <title>Space Travels &#128640</title>
+    <!--Link to stylesheet-->
     <link rel="stylesheet" href="./style.css">
     <!--Link to google fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Shadows+Into+Light&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <!-- header with navbar and hero image -->
+    <!-- header with hero video -->
     <header>
       <div class="hero-video">
         <video 
@@ -18,7 +19,8 @@
         loop
         muted
         autoplay
-        preload="auto">
+        preload="auto"
+        >
           <source src="./videos/Video_L.mp4" type="video/mp4">
         </video>
         <video 
@@ -26,7 +28,8 @@
         loop
         muted
         autoplay
-        preload="auto">
+        preload="auto"
+        >
           <source src="./videos/Video_M.mp4" type="video/mp4">
         </video>
         <video 
@@ -34,67 +37,118 @@
         loop
         muted
         autoplay
-        preload="auto">
+        preload="auto"
+        >
           <source src="./videos/Video_S.mp4" type="video/mp4">
         </video>
-
-       
         <div class="hero-text">
-          <h1>The business site</h1>
-          <p>Sign up now!</p>
+          <h1>Welcome to Space Travels! &#128640</h1>
+          <p>Are you ready for your longest journey yet?</p>
         </div>
       </div>
-      
     </header>
 
+    <!--Info section with sign-up form and FAQ-accordion-->
 
     <section class="info">
 
       <!-- Signup form -->
       <section class="sign-up">
-        <div class="toggle-links">
-          <a href="#">SIGN UP</a>
-          <a href="#">SIGN IN</a>
-        </div>
         <form action="http://httpbin.org/anything" method="POST">
+          <p>Fill in your contact info:</p>
           <div class="form-group">
-              <label for="firstName">First name</label>
-              <input
-                  id="firstName"
-                  type="text"
-                  placeholder="First name"
-                  name="firstNameValue"
-              />
+            <label for="firstName">First name</label>
+            <input
+                id="firstName"
+                type="text"
+                name="firstNameValue"
+                />
           </div>
           <div class="form-group">
-              <label for="lastName">Last name</label>
-              <input
-                  id="lastName"
-                  type="text"
-                  name="lastNameValue"
-              />
+            <label for="lastName">Last name</label>
+            <input
+                id="lastName"
+                type="text"
+                name="lastNameValue"
+                />
           </div>
           <div class="form-group">
-              <label for="email">Email address</label>
-              <input
-                  id="email"
-                  type="email"
-                  name="emailValue"
-              />
+            <label for="email">Email address</label>
+            <input
+                id="email"
+                type="email"
+                name="emailValue"
+                />
           </div>
+          
+          <div class="checkboxes-container">
+            <p>Where do I want to go?</p>
+            <div class="checkbox-box">
+              <input type="checkbox" name="marsValue">
+              <label class="checkbox" for="checkbox2">Mars</label>
+            </div>
+           
+            <div class="checkbox-box">
+              <input type="checkbox" name="plutoValue">
+              <label class="checkbox" for="checkbox2">Pluto</label>
+            </div>
+            
+            <div class="checkbox-box">
+              <input type="checkbox" name="jupiterValue">
+              <label class="checkbox" for="checkbox2">Jupiter</label>
+            </div>
+            
+            <div class="checkbox-box">
+              <input type="checkbox" name="asfarValue">
+              <label class="checkbox" for="checkbox2">As far as you can get me</label>
+            </div> 
+          </div>
+
+          <div class="checkboxes-container">
+            <p>Select your gender:</p>
+            <div class="checkbox-box">
+              <input 
+                type="radio" 
+                id="male" 
+                name="gender" 
+                value="male"
+                >
+              <label for="male">Male</label>
+            </div>
+            <div class="checkbox-box">
+              <input 
+                type="radio" 
+                id="female" 
+                name="gender" 
+                value="female"
+                >
+              <label for="female">Female</label>
+            </div>
+            <div class="checkbox-box">
+              <input 
+                type="radio" 
+                id="other" 
+                name="gender" 
+                value="other"
+                >
+              <label for="other">SpaceCat</label>
+            </div>
+            <div class="checkbox-box">
+              <input 
+                type="radio" 
+                id="other" 
+                name="gender" 
+                value="other"
+                >
+              <label for="other">Other</label>
+            </div> 
+          </div>
+
           <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" name="passwordValue">
+            <input type="checkbox" name="termsValue">
+            <label class="checkbox" for="checkbox">I agree with the terms and conditions</label>
           </div>
-          <div class="form-group">
-            <input type="checkbox" name="checkbox1Value">
-            <label class="checkbox" for="checkbox1">I agree with the terms and conditions</label>
-          </div>
-          <div class="form-group">
-            <input type="checkbox" name="checkbox2Value">
-            <label class="checkbox" for="checkbox2">Yes, I want to subscribe to newsletter</label>
-          </div>
-          <button class="form-submit" type="submit">JOIN NOW</button>
+          <button class="form-submit" type="submit">YES take me to space!</button>
         </form>
       </section>
 
@@ -104,34 +158,62 @@
 
       <section class="accordion">
         
-        <h2>FAQ</h2>
+        <h2>FAQ - Frequently Asked Questions</h2>
 
         <div class="question" id="section1">
-          <h3>Question 1</h3>
+          <h3>How long is the journey?</h3>
         </div>
         <div class="answer">
-          <p>Lorem ipsum...</p>
+          <p>This, of course, depends on your choice of destination.</p>
         </div>
 
         <div class="question" id="section2">
-          <h3>Question 2</h3>
+          <h3>Will I be able to take a shower?</h3>
         </div>
         <div class="answer">
-          <p>Lorem ipsum...</p>
+          <p>
+            We are providing a space-shower, 
+            more info about the process is handed to you 
+            when you have applied.
+          </p>
         </div>
 
         <div class="question" id="section3">
-          <h3>Question 3</h3>
+          <h3>Is this my chance to escape spiders once and for all?</h3>
         </div>
         <div class="answer">
-          <p>Lorem ipsum...</p>
+          <p>
+            Earthly spiders yes, we cannot promise you 
+            won't encounter other kinds of creatures.
+          </p>
         </div>
 
         <div class="question" id="section4">
-          <h3>Question 4</h3>
+          <h3>Can I bring my Ipad?</h3>
         </div>
         <div class="answer">
-          <p>Lorem ipsum...</p>
+          <p>Yes, your accomodation is equipped with lightning source.</p>
+        </div>
+
+        <div class="question" id="section5">
+          <h3>Is there a chance to meet any celebrities?</h3>
+        </div>
+        <div class="answer">
+          <p>
+            Well yes, on previous journeys we have been accompanied by Luke Skywalker, Thor, Master Yoda and 
+            Groot, to name a few.
+          </p>
+        </div>
+
+        <div class="question" id="section6">
+          <h3>How does the space smell?</h3>
+        </div>
+        <div class="answer">
+          <p>
+            No one has actually smelled it, 
+            but astronauts have said there's an 
+            acrid and metallic linguering scent.
+          </p>
         </div>
 
       </section>

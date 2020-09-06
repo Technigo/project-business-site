@@ -2,33 +2,24 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+/*** GENERAL STYLING ***/
+
 body {
   margin: 0;
-}
-p {
-  font-family: 'Montserrat', sans-serif; 
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
-  font-size: 64px;
-  font-family: 'Shadows Into Light', cursive;
+  font-size: 24px;
   color: white;
+  padding: 10px;
 }
 
 h2, h3 {
-  font-family: 'Montserrat', sans-serif;
   padding: 15px;
 }
 
-h2 {
-  color: pink;
-}
 /*** HEADER WITH HERO VIDEO***/
-
-header {
-  
-}
-
 
 .hero-video {
   height: 100vh;
@@ -68,7 +59,9 @@ header {
   position: relative;
   z-index: 10;
   color: white;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -76,34 +69,29 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: black;
+  background: #060614;
 }
+
+
 /*** SIGN-UP SECTION ***/
 
 .sign-up {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.toggle-links {
-  background: white;
-  width: 315px;
-  display: flex;
-  justify-content: space-evenly;
-  border-radius: 15px 15px 0px 0px;
-  padding: 10px;
   margin-top: 50px;
+  margin-bottom: 50px;
+  width: 80%;
 }
 
 form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   background: white;
-  border-radius: 0px 0px 15px 15px;
-  margin-bottom: 50px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px;
 }
 
 .form-group {
@@ -112,6 +100,7 @@ form {
   align-items: center;
 }
 
+
 .form-group label {
   width: 120px;
   margin-left: 10px;
@@ -119,6 +108,40 @@ form {
 
 .form-group .checkbox {
   width: 250px;
+}
+
+.checkboxes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+}
+
+.checkbox-box {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-box label {
+  width: 200px;
+  margin-left: 10px;
+}
+
+.form-submit {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  box-shadow: 2px 5px 3px 0 #e75480;
+  cursor: pointer;
+} 
+
+.form-submit:hover {
+  transform: translateY(5px);
+  box-shadow: none;
 }
 
 /*** ACCORDION STYLES ***/
@@ -130,6 +153,10 @@ form {
 
 .accordion h2 {
   padding: 10px;
+  background: #40E0D0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 5px;
 }
 
 
@@ -149,7 +176,7 @@ form {
 /*When .active is active, the .answer is selected*/
 /*När Id section1 klickas på, så läggs class .active till section1 och + gör att även .answer aktiveras */
 .active + .answer {
-  height: 50px;
+  height: 60px;
   padding: 10px;
 }
 
@@ -167,9 +194,16 @@ footer p {
   padding: 20px;
   color: pink;
 }
+
 /*** MEDIA QUERIES***/
 
 @media (min-width: 667px) {
+
+  /** HEADER/HERO VIDEO **/
+
+  h1 {
+    font-size: 42px;
+  }
 
   .hero-video .video-small {
     display: none;
@@ -182,9 +216,21 @@ footer p {
   .hero-video .video-large {
     display: none;
   }
+
+  /** INFO SECTION **/
+
+  .sign-up {
+    width: 60%;
+  }
 }
 
 @media (min-width: 1024px) {
+  
+  /** HEADER/HERO VIDEO **/
+
+  h1 {
+    font-size: 64px;
+  }
 
   .hero-video .video-small {
     display: none;
@@ -198,6 +244,8 @@ footer p {
     display: block;
   }
 
+  /** INFO SECTION **/
+
   .info {
     flex-direction: row;
     justify-content: space-evenly;
@@ -206,5 +254,11 @@ footer p {
   .accordion {
     width: 40%;
   }
+
+  .sign-up {
+    width: 30%;
+  }
+
+  
 }
 
