@@ -5,6 +5,7 @@ This weeks assignment was to bulid a business site including a responsive backgr
 I started with drawing a sketch on how I wanted the site to look. When I started coding I did the site structure first and then started to experiment a bit more. I've used a sign up form, an accordion section and a background image that's responsive. This time I didn't make the whole site responsive since I spent quite time to understand and learn sign up form an accordion. If I had more time I would have done the whole site responsive and spent some more time on the accordion design.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://romantic-poincare-0ba89c.netlify.app/
+
 
 
