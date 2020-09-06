@@ -133,6 +133,135 @@ nav {
   display: none;
 }
 
+.wrapper-row {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-col {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin-bottom: 20px;
+  font-family: 'Abril', sans-serif;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+} 
+
+.checkbox-container {
+  display: inline;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  border-radius: 4 px;
+  cursor: pointer;
+}
+
+.checkbox-container:hover input ~ .custom-checkbox {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox {
+  background-color: #444444
+}
+
+.custom-checkbox:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  top: 5px;
+  left: 7px;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox:after {
+  display: block;
+}
+
+.checkbox-container input:focus + .custom-checkbox {
+  outline: #333 auto 4px;
+}
+
+.radiobutton-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;   
+}
+
+.radiobutton-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.radiobutton-container:hover input ~ .custom-radio {
+  background-color: #ccc;
+}
+
+.radiobutton-container input:checked ~ .custom-radio {
+  background-color: #444444;
+}
+
+.custom-radio:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 50%;
+  display: none; 
+}
+
+.radiobutton-container input:checked ~ .custom-radio:after {
+  display: block;
+}
+
+/*.radiobutton-container input:focus + .custom-radio {
+  outline:#333 auto 4px;
+}
+*/
+
 .container-form-accordion {
   display: row;
   flex-wrap: wrap;
@@ -274,6 +403,7 @@ input:focus {
   background-color: rgb(219, 234, 238);
 }
 
+/*
 div.radiobuttons {
   margin-bottom: 20px;
   margin-top: 5px;
@@ -287,6 +417,7 @@ padding-bottom: 20px;
 input#yes {
   margin: 0 auto;
 }
+*/
 
   /* BUTTON */
 
