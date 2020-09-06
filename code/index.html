@@ -3,28 +3,193 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Cordonnerie</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e056cb308d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
   </head>
+
   <body>
+    <!-- <header> -->
+    <!-- Sticky navbar -->
+    <nav class="navbar">
+      <a href="#"
+        ><img src="./img/logo.png" alt="" width="80px" height="80px"
+      /></a>
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+
+        <li>
+          <a href="#">Shoe care</a>
+        </li>
+
+        <li>
+          <a href="#">FAQ</a>
+        </li>
+
+        <li>
+          <a href="#">About us</a>
+        </li>
+      </ul>
+    </nav>
+
     <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <section class="hero">
+      <video loop muted autoplay preload="auto" style="pointer-events: none">
+        <source src="./videos/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-text-container">
+        <h1>Cordonnerie</h1>
+        <h2>we take care of your shoes</h2>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+    <!-- </header> -->
+
+    <!-- Main content -->
+    <section class="main">
+      <section class="main-section information">
+        <p><strong>Cordonnerie</strong> - your online cobbler</p>
+        <p>For fast and professional repair of all kinds of shoes</p>
+      </section>
+
+      <!-- Signup form -->
+      <form
+        class="main-section form"
+        action="http://httpbin.org/anything"
+        method="POST"
+      >
+        <p>Create your account to get started:</p>
+        <div class="form-item">
+          <!-- <label for="email">Email</label> -->
+          <input id="email" type="email" name="email" placeholder="Email" />
+        </div>
+        <div class="form-item">
+          <!-- <label for="name">Password</label> -->
+          <input
+            id="password"
+            type="text"
+            name="password"
+            placeholder="Password"
+            minlength="8"
+          />
+        </div>
+        <div class="form-item">
+          <!-- <label for="name">Confirm password</label> -->
+          <input
+            id="name"
+            type="text"
+            name="confirm"
+            placeholder="Confirm password"
+            minlength="8"
+          />
+        </div>
+        <div class="form-item">
+          <input
+            id="button"
+            class="button"
+            type="submit"
+            name="button"
+            value="Next"
+          />
+        </div>
+      </form>
+
+      <!-- Accordiation -->
+      <section class="main-section accordion">
+        <h2>FAQ</h2>
+
+        <div class="accordion-item">
+          <h3 id="accordion-header1" class="accordion-header">
+            <span>How can Cordonnerie help me?</span> <span>+</span>
+          </h3>
+          <div class="accordion-text-container">
+            <p class="accordion-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              ullamcorper aliquet est, a tincidunt elit facilisis in. Proin
+              scelerisque facilisis eros id ultricies.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 id="accordion-header2" class="accordion-header">
+            <span>Can you repair all types of shoes?</span> <span>+</span>
+          </h3>
+          <div class="accordion-text-container">
+            <p class="accordion-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              ullamcorper aliquet est, a tincidunt elit facilisis in. Proin
+              scelerisque facilisis eros id ultricies.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 id="accordion-header3" class="accordion-header">
+            <span>How much does it cost?</span> <span>+</span>
+          </h3>
+          <div class="accordion-text-container">
+            <p class="accordion-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              ullamcorper aliquet est, a tincidunt elit facilisis in. Proin
+              scelerisque facilisis eros id ultricies.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 id="accordion-header4" class="accordion-header">
+            <span>How do I send in my shoes?</span> <span>+</span>
+          </h3>
+          <div class="accordion-text-container">
+            <p class="accordion-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              ullamcorper aliquet est, a tincidunt elit facilisis in. Proin
+              scelerisque facilisis eros id ultricies.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 id="accordion-header5" class="accordion-header">
+            <span>What happens if I'm not satisfied?</span> <span>+</span>
+          </h3>
+          <div class="accordion-text-container">
+            <p class="accordion-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              ullamcorper aliquet est, a tincidunt elit facilisis in. Proin
+              scelerisque facilisis eros id ultricies.
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <section class="footer-container">
+        <div class="icons">
+          <a href="#" class="icon fab fa-facebook-f fa-2x"></a>
+          <a href="#" class="icon fab fa-instagram fa-2x"></a>
+        </div>
+        <div class="contacs">
+          <p>Contact us:</p>
+          <a href="#">cordonnerie@fakeemail.com</a>
+          <a href="#">070 - 123 45 67</a>
+        </div>
+      </section>
+    </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>

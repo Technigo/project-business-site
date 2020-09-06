@@ -1,7 +1,231 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  background: #8d4501;
+  color: #ebe6dc;
+  font-family: "PT Sans", sans-serif;
+  margin: 0;
+}
 
-.active + .answer {
-  /* some styling here */
+h1,
+h2,
+h3 {
+  font-family: "Oswald", sans-serif;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #ebe6dc;
+}
+a,
+.accordion-text-container p {
+  font-size: 12px;
+}
+
+/* STICKY NAVBAR */
+
+.navbar {
+  z-index: 15;
+  position: sticky;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar img:hover {
+  cursor: pointer;
+}
+
+.navbar ul {
+  padding: 0;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.navbar a {
+  margin-left: 20px;
+  transition: background 0.6s ease;
+}
+
+.navbar li a:hover {
+  cursor: pointer;
+  background: #8d4501;
+  border-radius: 3px;
+}
+
+/* VIDEO HERO */
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  object-fit: cover;
+}
+
+.hero .hero-text-container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.hero .hero-text-container h1 {
+  text-transform: uppercase;
+  font-size: 32px;
+  margin-bottom: 0.5rem;
+}
+
+.hero .hero-text-container h2 {
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* MAIN SECTION */
+
+.main {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-section {
+  padding: 0 16px 30px 16px;
+  margin: auto;
+  margin-bottom: 30px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, transparent, #999, transparent) 5;
+}
+
+.information p {
+  text-align: center;
+}
+
+/* FORM */
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.form-item input {
+  width: 100%;
+  border: none;
+  border: 1px solid #999;
+  border-radius: 5px;
+  box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  font-family: "PT Sans", sans-serif;
+  color: #000;
+}
+
+.button {
+  background: #bbb;
+  color: #fff;
+  font-weight: bold;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+/* ACCORDION */
+
+.accordion-item {
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  border: 2px solid #999;
+  border-radius: 8px;
+  margin: 16px 0;
+  box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
+.accordion-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 16px;
+}
+
+.accordion-text {
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #999, transparent) 1;
+  margin: 0;
+  padding: 16px;
+}
+
+.accordion-text-container {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.accordion-text-container.active {
+  height: 100px;
+}
+
+footer {
+  background: #3f1f00;
+  display: flex;
+}
+.footer-container {
+  width: 90%;
+  margin: auto;
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container a:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+.icons a {
+  padding: 8px;
+}
+
+.contacs {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacs p {
+  margin: 0 0 8px 0;
 }
