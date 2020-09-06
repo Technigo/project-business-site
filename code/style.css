@@ -85,17 +85,17 @@ nav {
   padding-right: 5px;
 }
 
-.container-form-accordion {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
 .container-accordion {
   width: 400px;
   margin: 40px;
   border-radius: 40px;
+}
+
+.container-form-accordion {
+  display: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
 
 .container-form {
@@ -132,6 +132,8 @@ nav {
 .overlay-text {
   display: none;
 }
+
+/*BOXES AND BUTTONS*/
 
 .wrapper-row {
   display: flex;
@@ -261,12 +263,6 @@ p {
   outline:#333 auto 4px;
 }
 */
-
-.container-form-accordion {
-  display: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
 
 
 /*MEDIA QUERY MIN-667*/
@@ -403,22 +399,6 @@ input:focus {
   background-color: rgb(219, 234, 238);
 }
 
-/*
-div.radiobuttons {
-  margin-bottom: 20px;
-  margin-top: 5px;
-}
-
-div.boxes-and-buttons {
-padding-left: 20px;
-padding-bottom: 20px;
-}
-
-input#yes {
-  margin: 0 auto;
-}
-*/
-
   /* BUTTON */
 
 .star-wrapper {
@@ -476,21 +456,6 @@ input#yes {
   transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px))
     translate(-50%, -50%);
   pointer-events: none;
-  animation: star-enter 0.1s ease-in backwards,
-    star-exit 300ms linear calc((var(--lifetime, 3000) * 1ms) - 300ms) forwards;
-
-  @keyframes star-enter {
-    from {
-      opacity: 0;
-    }
-  }
-
-  @keyframes star-exit {
-    to {
-      opacity: 0;
-    }
-  }
-
 }
 
 /*ACCORDION*/
