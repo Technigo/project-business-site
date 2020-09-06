@@ -1,11 +1,3 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -127,6 +119,7 @@ main {
   background-color: #69757d;
   padding: 15px;
 }
+
 .container-1 {
   display: flex;
   flex-wrap: wrap;
@@ -134,35 +127,43 @@ main {
   align-items: center;
   justify-content: space-evenly;
 }
+
 .form-wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   margin: 0;
 }
+
 #form2 {
   display: none;
 }
+
 #sign-in-tab:checked ~ #form2,
 #sign-up-tab:checked ~ #form1 {
   display: block;
 }
+
 #sign-in-tab:checked ~ #form1,
 #sign-up-tab:checked ~ #form2 {
   display: none;
 }
+
 .tab:not(:checked) + label {
   opacity: 0.8;
 }
+
 .login-form {
   position: relative;
   top: 4%;
   left: 3%;
   width: 380px;
 }
+
 .tab {
   display: none;
 }
+
 .tab-header {
   width: 48%;
   text-align: center;
@@ -170,6 +171,7 @@ main {
   font-size: 18px;
   cursor: pointer;
 }
+
 .tab-header:after {
   display: block;
   content: "";
@@ -178,15 +180,18 @@ main {
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
+
 .tab:checked + label:after {
   transform: scaleX(1);
 }
+
 .header {
   margin: 10px 0 10px 0;
   font-size: 20px;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
 }
+
 .form-input input {
   border-radius: 10px;
   height: 35px;
@@ -197,10 +202,12 @@ main {
   padding: 10px;
   color: #fff;
 }
+
 input::placeholder,
 #check {
   color: rgba(255, 255, 255, 0.8);
 }
+
 input:focus {
   outline: none;
 }
@@ -209,6 +216,7 @@ input:focus {
   font-family: "PT Sans", sans-serif;
   font-size: 2rem;
 }
+
 .submit-button {
   margin: 20px 0;
   width: 100%;
@@ -245,12 +253,14 @@ main h1 {
   display: flex;
   flex-wrap: wrap;
 }
+
 .accordion-item {
   color: #111;
   margin: 1rem 0;
   border-radius: 0.5rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
+
 .accordion-item-header {
   padding: 0.5rem 3rem 0.5rem 1rem;
   min-height: 3.5rem;
@@ -261,20 +271,24 @@ main h1 {
   position: relative;
   cursor: pointer;
 }
+
 .accordion-item-header::after {
   content: "\002B";
   font-size: 2rem;
   position: absolute;
   right: 1rem;
 }
+
 .accordion-item-header.active::after {
   content: "\2212";
 }
+
 .accordion-item-body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+
 .accordion-item-body-content {
   padding: 1rem;
   line-height: 1.5rem;
@@ -300,7 +314,6 @@ footer a {
 /* MEDIA QUERIES */
 
 /* MOBILE */
-
 @media screen and (min-width: 768px) {
   #hero .caption {
     font-size: 1rem;
@@ -310,6 +323,7 @@ footer a {
     font-size: 1rem;
   }
 }
+
 @media screen and (max-width: 768px) {
   #hero .caption {
     font-size: 1rem;
@@ -348,6 +362,6 @@ footer a {
   }
 
   #hero .caption span {
-    fon-size: 5rem;
+    font-size: 5rem;
   }
 }

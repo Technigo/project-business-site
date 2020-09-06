@@ -15,6 +15,8 @@ What I struggle with (in this moment) are 3 things:
 
 This time I decided to spend more time on the "structutal" aspects of the html and css than previously. Rewarding myself with css fun.
 
+If had more time I would add a sticky navbar with icons. I would also replace the plus and minus signs with icons in the accordion. Twwek the colorscheme.
+
 Techniques used: transform/transition and animated text-fill in css. Javascript.
 
 ## View it live
