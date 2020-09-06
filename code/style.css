@@ -4,17 +4,25 @@ body, html {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  font-size: 14px;
+  background: #ff9b54;
 }
 
-h1 {
+h1, h2 {
   font-family: 'flood-std', sans-serif;
   font-weight: 400;
   font-style: normal;
+  text-align: center;
 }
 
+/* Hero banner with video */
+
 #hero {
-  height: 100vh;
+  height: 80%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #hero video {
@@ -25,25 +33,59 @@ h1 {
   left: 0;
   z-index: 5;
   object-fit: cover;
+}
+
+#hero .caption {
+  position: relative;
+  z-index: 20;
+  color: #ffffff;
+  text-align: center;
+}
+
+#hero::after {
+  width: 100%;
+  height: 80%;
+  content:'';
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+/* The hero image 
+.hero-image {
+/* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read 
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/alex-harvey-nqSUnXINsp4-unsplash.jpg");
+
+/* Set a specific height 
+height: 50%;
+
+*/
+
+.color-container {
+  padding: 15px;
+  margin: 15px;
+  background: #ffe26e;
 
 }
 
-/* The hero image */
-.hero-image {
-/* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/alex-harvey-nqSUnXINsp4-unsplash.jpg");
-
-/* Set a specific height */
-height: 50%;
-
-/* Position and center the image to scale nicely on all screens */
+.info-container {
+padding: 25px;
+margin: 25px;
+text-align: center;
+background: #ff7f51;
+color: #ffffff;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 position: relative;
+box-shadow: 12px 5px 10px 1px #fe9873;
 }
 
-/* Place text in the middle of the image */
+
+
+/* Place text in the middle of the image 
 .hero-text {
 text-align: center;
 position: absolute;
@@ -53,15 +95,102 @@ transform: translate(-50%, -50%);
 color: white;
 }
 
+*/
+
+.accordion {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.accordion-item {
+  background-color: #ffffff;
+  color: #111111;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);  
+}
+
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid #111111;
+  border-image: linear-gradient(to right, transparent, #a45f5f, transparent) 1;
+}
+
+/*
+.accordion-item-header.active + .accordion-item-body {
+  max-height: 1000px;
+
+}
+*/
 
 
+/* Media queries - Responsive design */
 
+/* Smartphones/mobile */
+@media screen and (min-width:768px) {
+  
+  h1 {
+    font-size: 2.5rem;
+  }
 
+  h2 {
+    font-size: 1.75rem;
+  }
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+}
 
-.active + .answer {
-  /* some styling here */
+/* Tablet */
+
+@media screen and (min-width:992px) {
+  
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+}
+
+/* Desktop */
+@media screen and (min-width:1200px) {
+  
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
 }
