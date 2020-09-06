@@ -1,12 +1,10 @@
 # Business Site
-
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This weeks assignment was to bulid a business site including a responsive background image or video. The site also should have a sign up form and an accordion section.
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started with drawing a sketch on how I wanted the site to look. When I started coding I did the site structure first and then started to experiment a bit more. I've used a sign up form, an accordion section and a background image that's responsive. This time I didn't make the whole site responsive since I spent quite time to understand and learn sign up form an accordion. If I had more time I would have done the whole site responsive and spent some more time on the accordion design.
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+
