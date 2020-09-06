@@ -8,3 +8,4 @@ Combining flexboxes and some vanilla JS, I created a responsive sign-up form whi
 
 ## View it live
 This project may be viewed on GitHub: https://github.com/Katsiez/project-business-site
+And live on Netlify: https://5f5554ad080cf005ec62f3a6--epic-haibt-b73186.netlify.app/ - just realized that Netlify does not wish to play hero video, thanks Netlify!
