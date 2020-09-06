@@ -1,12 +1,22 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Create a business site with a sign up form to be submitted/posted. The site should also contain a text accordion.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Hesitating over the theme the site should have I started building it quite late in the process. However, I knew from the beginning I wanted a hero-video. The video then decided what sort of site I would build.
+Something minimalistic in contrast to the video.
+
+What I struggle with (in this moment) are 3 things:
+
+1 - spending more time in Css finding ways to tweek the design than actually needed.
+2 - establishing flex relationships
+3 - responsiveness
+
+This time I decided to spend more time on the "structutal" aspects of the html and css than previously. Rewarding myself with css fun.
+
+Techniques used: transform/transition and animated text-fill in css. Javascript.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://compassionate-goodall-80ae72.netlify.app/
