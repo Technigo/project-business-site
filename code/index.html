@@ -32,28 +32,21 @@
     <nav class="nav-container">
 
       <ul>
-        <a class="nav-bar" href="#">
+        <a class="nav-bar" href="#about">
           <li>About</li>
         </a>
 
-        <a class="nav-bar" href="#">
+        <a class="nav-bar" href="#sign-up">
           <li>Sign Up</li>
         </a>
 
-        <a class="nav-bar" href="#">
+        <a class="nav-bar" href="#accordion">
           <li>FAQ</li>
         </a>
       </ul>
 
     </nav>
   </section>
-
-  <!-- HAMBURGER MENU -->
-  <div class="hamburger" id="hambburger">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
 
     <!-- HERO VIDEO -->
     <section class="video-container">
@@ -77,11 +70,9 @@
       <div id="about">
         <div class="about-bloomista">
           <h2>About us</h2>
-          <p class="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-         <p class="about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
- 
+          <p class="about-p">When it comes to special events, flowers are usually ordered a couple of weeks prior from one of the auction hauses around the world. The flower trade is a miracle of modern capitalism. A chain of cold storage starts with stems being picked in places as far-flung as Africa, the Middle East, and South America, then packed into refrigerated trucks, driven to refrigerated planes, and flown to Amsterdam to be auctioned off. They’re then repacked into more cold trucks and planes and delivered to supermarkets, florists, and bridal bouquets across Asia, Europe, and the U.S. This year in particular, due to the amount of canceled events, flower shops are struggling to help their businesses survive.</p>
+          <p class="about-p">Bloomista Flowers provides you with the freshest, most beautiful flower arrangements at a fraction of a cost! Fill out our form and get started today!</p>
+
         </div>
       </div>
 
@@ -96,7 +87,10 @@
         <div class="form-sign-up">
           <h3>Sign up today</h3>
 
-          <div id="error"></div>
+          <!-- ERROR MESSAGE -->
+          <div class="error-container">
+          <div id="error" class="error"></div>
+        </div>
           <form id="form"
           class="form"
           action="http://httpbin.org/anything"
@@ -132,22 +126,24 @@
           </div>
         <div class="form-group">
           <label for="p">How often would you like us to deliver?</label>
-          
-          <label class="weekly-radio">
-          <label for="weekly">Weekly</label>
-          <input id="weekly" type="radio" name="weekly" checked="checked"/>
+          <div class="wrapper-col">
+          <div class="wrapper-row">
+          <label class="radiobutton-container">
+          <label for="radio">Weekly</label>
+          <input id="weekly" type="radio" name="time" checked="checked"/>
           </label>
 
-          <label class="biWeekly-radio">
-          <label for="biWeekly">Bi-weekly</label>
-          <input id="biWeekly" type="radio" name="biWeekly"/>
+          <label class="radiobutton-container">
+          <label for="radio">Bi-weekly</label>
+          <input id="biWeekly" type="radio" name="time"/>
         </label>
 
-        <label class="monthly-radio">
-          <label for="monthly">Monthly</label>
-          <input id="monthly" type="radio" name="monthly"/>
+        <label class="radiobutton-container">
+          <label for="radio">Monthly</label>
+          <input id="monthly" type="radio" name="time"/>
         </label>
-        
+      </div>
+          </div>
       </div>
           
           <div class="form-group">

@@ -1,10 +1,3 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 
@@ -14,6 +7,9 @@ body {
   overflow-x: hidden;
   font-family: "Sacramento", cursive;
   color: #292524;
+}
+html {
+  scroll-behavior: smooth;
 }
 /* HEADER */
 header {
@@ -182,6 +178,9 @@ nav.nav-container {
 * {
   box-sizing: border-box;
 }
+label {
+  color: white;
+}
 #sign-up {
   width: 100%;
   margin: 0;
@@ -217,11 +216,9 @@ section.sign-up-form {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  max-height: 100vh;
   max-width: 100%;
   width: 500px;
   height: 700px;
-
   color: white;
   border-radius: 5px;
   box-shadow: 5px 15px 55px grey;
@@ -271,10 +268,52 @@ section.sign-up-form {
   color: black;
   font-weight: 900;
 }
+/* STYLING INPUTS */
+input {
+  padding: 1px 2px;
+  border: 2px solid tan;
+  border-radius: 10px;
+  background-color: #f1e1cd;
+}
 /* STYLING RADIO BUTTONS */
-.form-group .weekly-radio,
-.biWeekly-radio,
-.monthly-radio {
+.wrapper-row {
+  display: flex;
+  justify-content: flex-start;
+}
+.wrapper-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 10%;
+}
+.radiobutton-container {
+  display: block;
+  position: relative;
+  padding-left: 3px;
+  margin: 5px;
+  font-size: 16px;
+  user-select: none;
+}
+.radiobutton-container input {
+  cursor: pointer;
+}
+/* ERROR MESSAGE */
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin: 0;
+}
+.error {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  width: 80%;
 }
 /* ACCORDION */
 #accordion {
@@ -290,7 +329,7 @@ section.accordion {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  max-height: 100vh;
+  /* max-height: 100vh; */
   max-width: 100%;
 
   display: flex;
@@ -333,6 +372,25 @@ section.accordion {
   background-color: white;
   font-family: "Playfair Display", serif;
   cursor: pointer;
+  position: relative;
+}
+.accordion-header:hover {
+  color: #deb887;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.accordion-header::after {
+  content: "☽";
+  padding: 10px;
+  transition: 0.2s;
+  color: #292524;
+  position: relative;
+}
+.accordion-header.active::after {
+  content: "☾";
+  padding: 10px;
+  transition: 0.2s;
+  color: #deb887;
 }
 .accordion-text {
   border-top: 2px solid #292524;
@@ -362,17 +420,17 @@ section.accordion {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  width: 100%;
-  height: 80px;
+  max-width: 100%;
+  max-height: 100px;
+  overflow: hidden;
   padding: 20px;
   font-family: "Sacramento", cursive;
   font-size: 50px;
   letter-spacing: 2px;
 }
 .footer-h2 {
-  font-size: 50px;
+  font-size: 25px;
   margin: 0;
-  letter-spacing: 2px;
   margin-left: 5px;
 }
 .social-media {
@@ -407,5 +465,87 @@ section.accordion {
 @media (min-width: 901px) {
   .rwd-image {
     width: auto;
+  }
+}
+@media (min-width: 375px) and (max-width: 768px) {
+  .about-p {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #hero-video h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 813px) {
+  .about-section h2 {
+    font-size: 45px;
+  }
+  #accordion {
+    margin: 15px;
+  }
+  #sign-up {
+    padding-top: 10px;
+  }
+
+  .form-sign-up h3 {
+    font-size: 50px;
+  }
+  .form-sign-up .btn {
+    width: 80%;
+  }
+  #hero-video h1 {
+    font-size: 40px;
+  }
+  .about-p {
+    font-size: 15px;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .footer-h2 {
+    font-size: 24px;
+  }
+  li {
+    font-size: 15px;
+  }
+  #hero-video .btn,
+  .form-sign-up .btn {
+    font-size: 15px;
+  }
+  label {
+    font-size: 15px;
+  }
+  .accordion-header,
+  .accordion-text {
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #hero-video h1 {
+    font-size: 80px;
+  }
+  .about-p {
+    font-size: 30px;
+  }
+  .footer-h2 {
+    font-size: 55px;
+  }
+  li {
+    font-size: 30px;
+  }
+  #hero-video .btn,
+  .form-sign-up .btn {
+    font-size: 25px;
+  }
+  label {
+    font-size: 25px;
+  }
+  .accordion-header,
+  .accordion-text {
+    font-size: 25px;
   }
 }

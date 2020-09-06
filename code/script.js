@@ -30,9 +30,16 @@ form.addEventListener('submit', (e) => {
   }
 
 })
-// Accordion section
+// Flipping Moon symbol accordion
+const accordionHeader = document.querySelectorAll(".accordion-header");
 
-// 1. Function on each element
+accordionHeader.forEach(accordionHeader => {
+  accordionHeader.addEventListener("click", event => {
+    accordionHeader.classList.toggle("active");
+  });
+});
+
+// Accordion 
 
 const accordionHeader1 = document.getElementById('accordion-header-1');
 const accordionHeader2 = document.getElementById('accordion-header-2');
@@ -63,8 +70,6 @@ accordionHeader1.onclick = onAccordion1Click;
 accordionHeader2.onclick = onAccordion2Click;
 accordionHeader3.onclick = onAccordion3Click;
 
-// 2. Universal function
-
 const onAccordionClick = (event) => {
   event.target.nextElementSibling.classList.toggle('active');
 
@@ -79,8 +84,6 @@ const onAccordionClick = (event) => {
 accordionHeader1.onclick = onAccordionClick;
 accordionHeader2.onclick = onAccordionClick;
 accordionHeader3.onclick = onAccordionClick;
-
-// 3. Universal function with loop
 
 const accordionList = document.querySelectorAll('.accordion-header');
 
