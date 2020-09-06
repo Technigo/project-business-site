@@ -1,12 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Assignment was to build a Business website with a hero image/video, a signup form and an accordion. I chose the videos that was provided to build the header out of
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Since <video> tag doesnt support different source files in the HTML tag, I had to use display:none property and different video elements to make sure the right one was used. Used object-fit: cover to crop the video while shrinking the page. Form and accordion is also responsive.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://animal-bedandbreakfast-business.netlify.app/
