@@ -1,160 +1,152 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+    /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-
-/* .active+.answer {
+    /* .active+.answer {
     /* some styling here */
-
-
-/* }*/
-
-body,
-html {
-    margin: 0;
-    height: 100%;
-    /* background: #FBCEB1; */
-    /* background: #f0f0ec; */
-    /* background: #F8F8F8; */
-    background: #f9f5e9;
-    font-family: 'Fira Sans', sans-serif;
-    font-Size: 15px;
-}
-
-
-/* --- header-section --- */
-
-.hero-image {
-    position: relative;
-    height: 500px;
-    overflow: hidden;
-    background: url(./img/waater-spa2.jpeg) no-repeat center;
-    background-size: cover;
-}
-
-.text-container {
-    position: absolute;
-    top: 40%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    font-family: 'Cormorant Garamond', serif;
-    color: #fff;
-    text-align: center;
-    overflow: hidden;
-}
-
-.text-container h1 {
-    font-size: 70px;
-    letter-spacing: 0.1em;
-    margin: 0;
-    text-shadow: 0 0 10px black;
-}
-
-.nav {
-    top: 40%;
-    right: 0;
-    /* transform: translate(-50%, -50%); */
-    font-family: 'Cormorant Garamond', serif;
-    color: #fff;
-    text-align: center;
-    overflow: hidden;
-}
-
-.text-container p {
-    font-size: 30px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 20px;
-}
-
-main {
-    margin: 50px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.form {
-    /* background: #FEEAD8; */
-    background: #eae8dc;
-    border-radius: 5px;
-    width: 40%;
-    /* background-image: url("./img/bg-form.jfif");
+    /* }*/
+    
+    body {
+        margin: 0;
+        height: 100%;
+        /* background: #FBCEB1; */
+        /* background: #f0f0ec; */
+        /* background: #F8F8F8; */
+        background: #f9f5e9;
+        font-family: 'Fira Sans', sans-serif;
+        font-Size: 15px;
+    }
+    /* --- header-section --- */
+    
+    .hero-image {
+        position: relative;
+        height: 500px;
+        overflow: hidden;
+        background: url(./img/waater-spa2.jpeg) no-repeat center;
+        background-size: cover;
+    }
+    
+    .text-container {
+        position: absolute;
+        top: 40%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        font-family: 'Cormorant Garamond', serif;
+        color: #fff;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .text-container h1 {
+        font-size: 70px;
+        letter-spacing: 0.1em;
+        margin: 0;
+        text-shadow: 0 0 10px black;
+    }
+    
+    nav {
+        color: #fff;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+        margin-right: 20px;
+        /* font-family: 'Fira Sans', sans-serif; */
+        /* font-Size: 15px; */
+        font-weight: 600;
+    }
+    
+    .text-container p {
+        font-size: 30px;
+    }
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+    
+    main {
+        margin: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .form {
+        /* background: #FEEAD8; */
+        background: #eae8dc;
+        border-radius: 5px;
+        width: 40%;
+        /* background-image: url("./img/bg-form.jfif");
     background-repeat: no-repeat;
     background-size: cover; */
-}
-
-legend {
-    font-size: 18px;
-    font-weight: bold;
-    font-style: italic;
-}
-
-.form h1 {
-    text-align: center;
-}
-
-
-/* input:valid {
+    }
+    
+    legend {
+        font-size: 18px;
+        font-weight: bold;
+        font-style: italic;
+    }
+    
+    .form h1 {
+        text-align: center;
+    }
+    /* input:valid {
     border: 4px solid #999;
 } */
-
-label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.dates {
-    display: inline-block;
-}
-
-.accordion {
-    width: 40%;
-}
-
-.accordion-container {
-    border: 2px solid #999;
-    border-radius: 10px;
-    margin-bottom: 6px;
-    /* padding: 0 10px; */
-    background: #eae8dc;
-}
-
-.accordion-header {
-    margin: 0;
-    padding: 15px;
-}
-
-.accordion-text-container {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease;
-}
-
-.accordion-text {
-    border-top: 2px solid #999;
-    margin: 0;
-    padding: 15px;
-}
-
-.accordion-container img {
-    height: 50px;
-    width: 50px;
-}
-
-.active {
-    height: 110px;
-}
-
-.accordion-header {
-    display: flex;
-    justify-content: space-between;
-}
-
-span {
-    align-self: center;
-}
-
-.accordion-header h3 {}
+    
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .dates {
+        display: inline-block;
+    }
+    
+    .accordion {
+        width: 40%;
+    }
+    
+    .accordion-container {
+        border: 2px solid #999;
+        border-radius: 10px;
+        margin-bottom: 6px;
+        /* padding: 0 10px; */
+        background: #eae8dc;
+    }
+    
+    .accordion-header {
+        margin: 0;
+        padding: 15px;
+    }
+    
+    .accordion-text-container {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+    
+    .accordion-text {
+        border-top: 2px solid #999;
+        margin: 0;
+        padding: 15px;
+    }
+    
+    .accordion-container img {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .active {
+        height: 110px;
+    }
+    
+    .accordion-header {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    span {
+        align-self: center;
+    }
+    
+    .accordion-header h3 {}
