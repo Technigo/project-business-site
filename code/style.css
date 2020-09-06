@@ -9,10 +9,55 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 
 body {
+  margin: 0;
   height: 100%;
   overflow-x: hidden;
   font-family: "Sacramento", cursive;
   color: #292524;
+}
+/* HEADER */
+header {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  height: 100vh;
+}
+/* NAVBAR */
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+li {
+  margin: 5px 10px;
+  color: #292524;
+}
+li:hover {
+  color: aliceblue;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  z-index: 100;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  background-color: rgba(248, 249, 249, 0.2);
+}
+nav.nav-container {
+  display: block;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
+}
+.hamburger {
+  display: none;
 }
 
 /* HERO VIDEO */
@@ -20,6 +65,7 @@ body {
 #hero-video {
   height: 100vh;
   width: 100%;
+  object-fit: cover;
   background: tan;
   display: flex;
   align-items: center;
@@ -82,7 +128,10 @@ body {
   background-color: burlywood;
   border: 1px solid tan;
 }
-
+#hero-video .btn:hover {
+  color: #ffe4bc;
+  background-color: #292524;
+}
 /* ABOUT */
 #about {
   width: 80%;
@@ -136,6 +185,8 @@ body {
 #sign-up {
   width: 100%;
   margin: 0;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background-color: #deb887; /* For browsers that do not support gradients */
   background-image: linear-gradient(
     to right,
@@ -149,7 +200,7 @@ body {
   flex-wrap: wrap;
   flex-flow: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 section.sign-up-form {
@@ -160,7 +211,7 @@ section.sign-up-form {
 }
 
 .form-sign-up {
-  background-image: url(./img/whiteflower.jpg);
+  background-image: url(./img/orange.jpg);
   background-repeat: no-repeat;
   -moz-background-size: cover;
   background-size: cover;
@@ -171,7 +222,7 @@ section.sign-up-form {
   width: 500px;
   height: 700px;
 
-  color: #292524;
+  color: white;
   border-radius: 5px;
   box-shadow: 5px 15px 55px grey;
   display: flex;
@@ -197,13 +248,18 @@ section.sign-up-form {
   font-family: "Playfair Display", serif;
   text-transform: uppercase;
   text-decoration: none;
-  width: 100%;
   font-size: 16px;
   background-color: burlywood;
-  border: 2px solid tan;
+  border: 1px solid tan;
+  width: 100%;
   text-align: center;
   justify-content: center;
   outline: none;
+}
+.form-sign-up .btn:hover {
+  color: #ffe4bc;
+  background-color: #292524;
+  letter-spacing: 3px;
 }
 .form-group {
   font-size: 18px;
@@ -215,7 +271,11 @@ section.sign-up-form {
   color: black;
   font-weight: 900;
 }
-
+/* STYLING RADIO BUTTONS */
+.form-group .weekly-radio,
+.biWeekly-radio,
+.monthly-radio {
+}
 /* ACCORDION */
 #accordion {
   max-height: 100vh;
@@ -224,7 +284,7 @@ section.sign-up-form {
 }
 section.accordion {
   border-radius: 5px;
-  background-image: url(./img/daisys.jpg);
+  background-image: url(./img/rose.jpg);
   background-repeat: no-repeat;
   -moz-background-size: cover;
   background-size: cover;
@@ -246,15 +306,18 @@ section.accordion {
 }
 .accordion-container {
   border: 2px solid tan;
-  background-color: white;
+  background-image: url(./img/worn-dots.png);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
   border-radius: 5px;
   margin-bottom: 15px;
   max-height: 100vh;
   max-width: 100%;
 }
 .faq {
-  font-size: 50px;
-  letter-spacing: 2px;
+  font-size: 60px;
+  letter-spacing: 4px;
   font-family: "Playfair Display", serif;
   text-align: center;
   color: white;
@@ -267,6 +330,7 @@ section.accordion {
   font-weight: 500;
   text-align: left;
   color: black;
+  background-color: white;
   font-family: "Playfair Display", serif;
   cursor: pointer;
 }
@@ -283,6 +347,51 @@ section.accordion {
   overflow: hidden;
   transition: height 0.3s ease-in;
 }
+
+/* FOOTER */
+.footer-container {
+  background-color: #deb887;
+  background-image: linear-gradient(
+    to right,
+    #f1e1cd,
+    #f6e2c9,
+    #fce3c3,
+    #ffe4bc
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+  font-family: "Sacramento", cursive;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+.footer-h2 {
+  font-size: 50px;
+  margin: 0;
+  letter-spacing: 2px;
+  margin-left: 5px;
+}
+.social-media {
+  display: flex;
+  flex-direction: row;
+}
+.social-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 0.1s ease;
+  margin: 5px;
+}
+.social-icon:hover {
+  fill: whitesmoke;
+  transition: 0.3s ease;
+}
+
 /* for JS */
 .accordion-text-container.active {
   height: 158px;
