@@ -1,14 +1,7 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-/* 
-/* .active + .answer {
-  some styling here 
- }  */
 
 body {
   margin: 0;
-  background-color: #e0f2e9;
+  background-color: #cbd3cf;
 }
 
 p {
@@ -17,42 +10,47 @@ p {
 }
 
 .top-section-container {
+  background-size: 100% 100%;
   width: 100%;
+  height: 100%;
   display: flex;
   margin: 0px;
   align-items: center;
   justify-content: center;
-
-  /* align-items: center; */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  position: absolute; 
+  background-image: url("./Mysister.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
   .name-text {
-    position: absolute;
-    box-sizing: border-box;
-    text-align: center;
-    justify-content: center;
-    color: rgb(42, 197, 218); 
-    z-index: 1; 
-    top: 80%;
     font-size: 40px;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px;
-}
+    margin-top:450px;
+    top: 120px;  
+    color: rgb(42, 197, 218); 
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px;    
+  } 
+
 
 /* Main content */
 
 .main-container {
   display: flex;
-  margin: 10px 20px auto;
-  /* flex-wrap: wrap;  */
-  /* flex-direction: column;       */
+  margin-top: 800px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 
-/* Forms styling */
-
 .form {
   display: flex;
-  width: 40%;
+  width: 90%;
   box-sizing: border-box;
   flex-direction: column;
   background-color:rgb(118, 216, 230);
@@ -77,7 +75,7 @@ p {
 
 .form-group input,
 .form-group textarea {
-  width: 200px;
+  width: 90%;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   background-color: wheat;
@@ -89,12 +87,6 @@ p {
   position: relative;
 } 
 
-.answer {
-  display: none;
-  background-color: rgb(199, 242, 243);
-  padding: 3px;
-}
-
 .active + .answer {
   display: block;
 }
@@ -105,7 +97,7 @@ p {
 }
 
 input:valid {
-  background-color: rgb(217, 236, 222);
+  background-color: rgb(144, 231, 167);
 }
 
 input:invalid {
@@ -153,31 +145,42 @@ button:active {
 .accordion {
   background-color: #adfff3;
   box-sizing: border-box;
-  width: 40%;
+  width: 90%;
+  /* width: 40%; */
   margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px bold;
   border-radius: 10px;
-  box-shadow: 10px 10px 5px rgb(7, 207, 233) ;
+  box-shadow: 10px 10px 5px rgb(58, 190, 207) ;
 }
 
-.quetsions {
+.question {
 display: flex;
-margin: auto;
-
+margin-bottom: 10px;
+border: 3px solid rgb(7, 207, 233);
+border-radius: 3px;
+padding: 7px;
 }
 
 .answer {
-
-
+display: none;
+margin-bottom: 5px;
+background-color: rgb(129, 226, 230);
+border: 3px solid rgb(126, 208, 219);
+border-radius: 3px;
+padding: 3px;
 }
+
+
+/* footer styling */
 
 .footer {
     position: relative;
     height: 50px;
     padding-top: 20px;
+    margin-top: 20px;
     width: 80%;
     left: 0;
     bottom: 0;
@@ -188,60 +191,57 @@ margin: auto;
   }
 
 
-/* Mobile 767px or less */
+/* syns i mobil vy */
 
-body {
+  @media (max-width: 767px){
+  
+    .top-section-container{
+      background-size: 100% 100%;
+      width: 100%;
+      height: 100%;
+    }
 
-}
-/* 
-.main {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-} */
+  }
 
 /* syns i tablet */
 
-@media (min-with: 768px){
-  body {
-    background-color: yellowgreen;
+@media (min-width: 768px) {
+  
+  .name-text {
+  font-size: 60px;
   }
 
 .main-container {
   display: flex; 
- flex-direction: row;
 }
 
 .form {
-   flex-basis: 30%;
+  display: flex; 
+  justify-content: flex-start; 
+  flex-wrap: wrap; 
+  width: 30%;
   } 
 
   .accordion {
-    flex-basis: 30%;
+  display: flex; 
+  justify-content: flex-start; 
+  flex-wrap: wrap; 
+  width: 30%;
+  
   }  
 
-  }
-
-  /* 
-.form {
-  width: 30%;
-}
-.accordion {
-  width: 30%; */
+  } 
 
 
 /* syns i Desktop */
- @media (min-with: 1024px) {
-
-  body {
-    background-color: rgb(128, 0, 43);
+ @media (min-width: 1024px) {
+  
+  .name-text {
+    font-size: 80px;
+    }
+  
   }
-
-  .main-container {
-    display: flex; 
-    justify-content: flex-start;
-    flex-wrap: wrap; 
-  }
+  
 } 
 
 
