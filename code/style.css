@@ -28,8 +28,6 @@ header {
   display: none;
 }
 
-/* styling for tablet mode */
-
 .header-text {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 45px;
@@ -120,12 +118,16 @@ header {
   position:relative;
 }
 
+/* content in answer after question */
+
 .question::after {
   content:"+";
   padding-right:5px;
   position: absolute; 
   right: 0;
 }
+
+/* styling for active answer in accordion */
 
 .active::after {
   content:"-";
@@ -146,6 +148,8 @@ header {
   padding: 15px;
   background: rgb(181, 190, 155);
 }
+
+/* styling for tablet mode */
 
 @media only screen and (max-width: 768px) {
   
@@ -199,6 +203,8 @@ header {
   }
 }
 
+/* styling for mobile view */
+
 @media only screen and (max-width: 600px){
   .accordion {
     width: 100%;
@@ -206,5 +212,21 @@ header {
   
   #signup-form {
     width: 100%;
+  }
+
+  .header-video {
+    height: 240px;
+  }
+
+  .header-text {
+    top: 100px;
+  }
+
+  .header-text h1 {
+    font-size: 20px;
+  }
+
+  .header-text h2 {
+    font-size: 12px;
   }
 }
