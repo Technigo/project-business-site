@@ -20,7 +20,8 @@ body {
   height: 100vh;
 }
 
-p, 
+p,
+h3, 
 label, 
 input,
 a {
@@ -33,6 +34,11 @@ h2 {
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 header {
@@ -64,10 +70,6 @@ body {
 .navbar-logo img {
   width: 40px;
   height: 40px;
-}
-
-.navbar-menu-item {
-  padding: 17px;
 }
 
 .navbar-menu-item-link {
@@ -147,7 +149,8 @@ to {box-shadow: 0 0 7px black;}
 main {
   height: fit-content;
   width: 100%;
-  padding-top: 350px;
+  padding: 350px 0 25px;
+  
   background-color: #ACC3C0;
 }
 
@@ -165,7 +168,7 @@ main {
   flex-wrap: wrap;
   height: fit-content;
   background-color: #f5f5f5;
-  margin: 3rem;
+  margin: 2rem 1rem;
   padding: 1.25rem;
   justify-content: center;
   align-items: center;
@@ -289,38 +292,37 @@ main {
 .accordion-textbox {
   height: 0;
   overflow: hidden;
-  transition: height .3s ease-in-out;
+  transition: height .4s ease-out;
 }
 
 .accordion-textbox.active {
-  height: 100px;
+  height: 125px;
+  padding-bottom: 25px;
+  
 }
 
-/* Footer style */
 
 /* Footer style */
 
 footer {
   position: relative;
-  margin-top: 8rem;
+  margin-top: 100px;
 }
 
 .footer-info {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: .25rem;
+  padding: 7px 0;
+  color: white;
   background-color: #ff7161;
   align-items: center;
   justify-content: space-evenly;
-  color: white;
-  width: 100%;
-  padding: .4em;
-  font-family: 'Open Sans', sans-serif;
-  letter-spacing: .2em;
+  font-size: small;
   text-align: center;
 }
 
@@ -328,14 +330,18 @@ footer {
   width: 100%;
 }
 
+.footer-info p {
+  font-size: 12px;
+}
+
 .fab {
   color: white;
+  padding: .15em;
 }
 
 .social-media-items {
   display: flex;
   margin-bottom: .5em;
-  padding: .25em; 
   width: 100%;
   justify-content: center;
   color: white;
@@ -412,15 +418,15 @@ footer {
     font-size: 3.5rem;
   }
 
+.navbar-menu-item {
+  padding: 17px;
+}
+
   main {
     padding-top: 450px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-  }
-
-  .main-section {
-    margin: 1rem;
   }
 
   .signup-form {
@@ -429,6 +435,9 @@ footer {
 
   .accordion {
     width: 50%;
+    height: 720px;
+    display: flex;
+    align-content: flex-start !important;
   }
 }
 
@@ -484,6 +493,10 @@ footer {
 
  .main-section {
    width: 425px;
+ }
+
+ .accordion {
+   height: 709.25px;
  }
  
 }
