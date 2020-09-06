@@ -64,12 +64,14 @@ h1 {
 
 
 .small-text {
-  font-size: 25px;
+  font-size: 20px;
   color:black;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   text-align: center;
+  background-color: white;
+  
+  
 }
 
 
@@ -79,45 +81,60 @@ h1 {
 
 
 
-/*.form {
-  display: flex;
-  flex-direction: row;
+.container {
+  background-color: white;
+  text-align: center;
 
-}*/
+}
 
 .form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
+  height: auto;
+  
+  margin: 0 auto;
+  -webkit-box-shadow: 17px 18px 10px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 17px 18px 10px 2px rgba(0,0,0,0.2);
+box-shadow: 17px 18px 10px 2px rgba(0,0,0,0.2);
+width: 600px;
+border: 2px solid black;
 }
+
+.form h3 {
+  text-align: center;
+  color: black;
+}
+
+
 
 label {
   color: black;
+  margin: 15px;
+  padding: 10px;
+  width: 100px;
+  font-size: 15px;
+  
 
 }
-/*.main-image {
-  display: flex;
-  width: 400px;
-  height: auto;
-  margin-left: 25%;
-}*/
 
-
-/*.main-one {
-  width: 100%;
-  height: auto;
-  padding: 50px;
-  margin: 20px;
-  font-size: 20px;
-  background-color: white;
-  color: black;
-  display: flex;
-  flex-direction: row;
+.form-group {
   
-}*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.input-text {
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+}
+
 
 .accordion {
   background-color: white;
-  color: #444;
   padding: 18px;
   width: 100%;
   text-align: center;
@@ -132,6 +149,7 @@ label {
 .accordion h1 {
   writing-mode: unset;
   color: black;
+  background-color: white;
   text-align: center;
   font-size: 30px;
   margin-bottom: 10px;
@@ -147,8 +165,12 @@ label {
   margin-bottom: 15px;
 }
 
+.accordion-text {
+  color: black;
+}
+
 .accordion-text-container.active {
-  height: 300px;
+  height: 150px;
 }
 
 /*make text white and box black at hover*/
@@ -162,12 +184,10 @@ label {
 .accordion-text {
   padding: 18px;
   background-color: white;
-  
-  
-  
+}
 
-
-  
+.submit-button {
+  background-color: ;
 }
 
 footer {
@@ -304,12 +324,14 @@ body {
 }
 
 
+
+
+
 @media only screen and (max-width: 425px) {
   /* For mobile phones: */
-  .hero-image {
-    
-    
-    
+  
+  .hero-text {
+    display: none;
   }
 
   h1 {
@@ -317,7 +339,7 @@ body {
     font-size: 15px;
   }
   
-  .hero-text, p {
+  .hero-text, h2 {
     font-size: 10px;
   }
 
@@ -325,7 +347,7 @@ body {
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* For mobile phones: */
   .hero-image {
     
@@ -338,7 +360,37 @@ body {
     font-size: 25px;
   }
   
-  .hero-text, p {
+  .hero-text, h2 {
     font-size: 15px;
   }
+
+
+.form {
+  width: 300px;
+}
+
+.accordion h1 {
+  font-size: 20px;
+  
+}
+
+.accordion-header {
+  font-size: 20px;
+}
+
+.accordion-header, p {
+  font-size: 12px;
+}
+.input-text {
+  width: 120px;
+  height: 40px;
+  
+}
+
+.form-group {
+  font-size: 12px;
+}
+
+.hero-text {
+  display: none;
 }

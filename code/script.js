@@ -68,3 +68,5 @@ const onAccordion3Click = () => {
 accordionHeader1.onclick = onAccordion1Click;
 accordionHeader2.onclick = onAccordion2Click;
 accordionHeader3.onclick = onAccordion3Click;
+
+
