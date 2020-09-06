@@ -1,12 +1,10 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week’s project was to create a business one pager website with an image or video header, a signup form and an accordion. I've started to build a website for a business network I'm a part of in Jönköping.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The focus for this project was to practice what I've learned about image backgrounds, HTML forms, and how to modify the DOM with JavaScript. I choose to do a responsive hero-video banner using flexbox and columns for the contact-form which will stack on top of each other on smaller screens.The accordions functionality is built with JavaScript.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
