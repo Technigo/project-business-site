@@ -111,6 +111,17 @@ nav a {
 
 /***header for tablet/mobile***/
 @media screen and (max-width: 1024px) {
+  header {
+    height: 90vh;
+  }
+
+  div.header-text h1 {
+    top: 40%;
+  }
+  .header-text span {
+    top: 50%;
+    font-size: 20px;
+  }
   .video-container {
     display: none;
   }
@@ -136,10 +147,28 @@ nav a {
   }
 }
 
+/***header for mobile***/
+@media screen and (max-width: 500px) {
+  header {
+    height: 150vh;
+  }
+}
 /***sign up form***/
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.signup {
+  flex: 1;
+  margin-right: 20px;
+}
+.accordion {
+  flex: 1;
+}
 
 form {
-  max-width: 100vw;
+  max-width: 50vw;
   margin-left: 15px;
 }
 
@@ -164,7 +193,7 @@ legend {
   transition: all 0.5s;
   padding: 15px;
   margin-bottom: 15px;
-  width: 100vw;
+  width: 50vw;
   box-sizing: border-box;
   outline: 0;
   color: grey;
@@ -246,7 +275,6 @@ checkbox {
 }
 
 .accordion-header {
-  display: inline-block;
   margin: 0;
   padding: 15px;
   cursor: pointer;
@@ -267,7 +295,21 @@ checkbox {
 }
 
 .accordion-text-container.active {
-  height: 200px;
+  height: 550px;
+}
+
+/***main section (signup form and accordion for tablet/mobile***/
+
+@media screen and (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+  }
+  .form {
+    width: 100vw;
+  }
+  .form-group {
+    width: 100vw;
+  }
 }
 
 /***footer***/
