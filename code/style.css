@@ -5,16 +5,28 @@ body {
   margin: 0;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Oswald", sans-serif;
+h1 {
+  text-transform: uppercase;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0;
 }
 
 h3 {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Oswald", sans-serif;
 }
 
 a {
@@ -91,17 +103,11 @@ a,
   margin-bottom: 150px;
 }
 
-.hero .hero-text-container h1 {
-  text-transform: uppercase;
-  font-size: 32px;
-  margin-bottom: 0.5rem;
-}
-
-.hero .hero-text-container h2 {
+/* .hero .hero-text-container h2 {
   font-weight: 400;
   font-size: 24px;
   margin: 0;
-}
+} */
 
 /* MAIN SECTION */
 
@@ -110,6 +116,7 @@ a,
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  /* align-items: center; */
 }
 
 .main-section {
@@ -120,6 +127,10 @@ a,
   border-image: linear-gradient(to right, transparent, #999, transparent) 5;
 }
 
+.information {
+  width: 100%;
+}
+
 .information p {
   text-align: center;
 }
@@ -128,6 +139,7 @@ a,
 
 .form {
   width: 100%;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
 }
@@ -163,6 +175,14 @@ a,
 
 /* ACCORDION */
 
+.accordion {
+  max-width: 500px;
+}
+
+.accordion h2 {
+  text-align: center;
+}
+
 .accordion-item {
   border: 1px solid #000;
   background: #fff;
@@ -196,13 +216,23 @@ a,
 }
 
 .accordion-text-container.active {
-  height: 100px;
+  height: 110px;
+}
+
+.accordion-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+.accordion-header.active::after {
+  transform: rotate(45deg);
 }
 
 footer {
   background: #3f1f00;
   display: flex;
 }
+
 .footer-container {
   width: 90%;
   margin: auto;
@@ -228,4 +258,37 @@ footer {
 
 .contacs p {
   margin: 0 0 8px 0;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 56px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+}
+
+a,
+.accordion-text-container p {
+  font-size: 16px;
+}
+
+@media (min-width: px) {
+}
+
+@media (min-width: 900px) {
+  .form {
+    width: 40%;
+    flex-grow: 1;
+    margin-top: 15px;
+  }
+
+  .accordion {
+    width: 40%;
+    flex-grow: 1;
+  }
 }

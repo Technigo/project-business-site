@@ -1,12 +1,16 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+This project was about to create a business site with an accordion and a responsive hero image or video.
 
 Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The biggest problem this week was the accordion, i did not get it to expand. Found no error in the code and had to spend a lot of time troubleshooting.
+Another difficulty was getting rid of margins around hero video and hub bars.
+
+I found some helpful youtube guides about accordion and hero video that I used.
+
+I I had more time I would try to style checkboxes and radio buttons.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
