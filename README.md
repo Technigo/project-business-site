@@ -7,3 +7,4 @@ When it comes to special events, flowers are usually ordered a couple of weeks p
 Combining flexboxes and some vanilla JS, I created a responsive sign-up form which prompts the user with messages in case they have forgotten to enter first name, last name, email address. Next to the sign-up form, there is a simple yet responsive FAQ sheeth and a clean and slightly embelished footer. Since there are only 3 links in the navbar, i opted out of the hamburger menu option and decided to keep it as is.
 
 ## View it live
+This project may be viewed on GitHub: https://github.com/Katsiez/project-business-site
