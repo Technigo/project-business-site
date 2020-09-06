@@ -6,11 +6,14 @@ Start by briefly describing the assignment in a sentence or two. Keep it short a
 
 ## The problem
 
-The biggest problem this week was the accordion, i did not get it to expand. Found no error in the code and had to spend a lot of time troubleshooting.
+The biggest problem this week was the accordion, i did not get it to expand. I found no errors in the code and had to spend a lot of time troubleshooting.
 Another difficulty was getting rid of margins around hero video and hub bars.
 
 I found some helpful youtube guides about accordion and hero video that I used.
 
-I I had more time I would try to style checkboxes and radio buttons.
+For the sticky navbar I got good help from a codepen that one of the team member did during the lab session.
+
+I I had more time I would definitely dig deeper into JavaScript and fix the js-file. To many similar lines, might be solvable with if statements.
 
 ## View it live
+https://dreamy-noyce-a71f71.netlify.app
