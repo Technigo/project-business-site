@@ -6,37 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Fira+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>SPA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Southcoast Spa</title>
 </head>
 
 <body>
-    <header>
-        <div class="hero-image">
-            <div class="text-container">
-                <h1>Southcoast Spa</h1>
-                <p>Realxation and wellbeing</p>
-            </div>
 
-            <nav>
-                <a href="#">Contact</a>
-                <a href="#">Destinations</a>
-                <a href="#">Booking</a>
-            </nav>
 
+    <div class="hero-image">
+        <div class="text-container">
+            <h1>Southcoast Spa</h1>
+            <span>Realxation and wellbeing</span>
         </div>
-    </header>
+
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="#">Find us</a>
+            <a href="#">Products</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
 
     <main>
 
         <!-- Accordion -->
-
         <section class="accordion">
-            <h3>Our treatments</h3>
+            <h2>Our treatments and activities</h2>
             <div class="accordion-container">
                 <h3 id="accordion-header-1" class="accordion-header">
-                    <span><img src="./img/face.jpg" alt="image face"></span>
-                    <span><h3>Face</h3></span>
-                    <span>▼</span>
+                    <img src="./img/acc-face.jpg" alt="image face">
+                    <span>Face</span>
+                    <span class="plus">+</span>
                 </h3>
                 <div class="accordion-text-container">
                     <div class="accordion-text">
@@ -50,31 +54,49 @@
             </div>
             <div class="accordion-container">
                 <h3 id="accordion-header-2" class="accordion-header">
+                    <img src="./img/acc-body.jfif" alt="image body">
                     <span>Body</span>
-                    <span>▼</span>
+                    <span class="plus">+</span>
+
                 </h3>
                 <div class="accordion-text-container">
                     <div class="accordion-text">
                         <ul>
-                            <li>Deep scrub</li>
-                            <li>Relaxing face massage</li>
-                            <li>Mosturising treatments</li>
+                            <li>Full body massage</li>
+                            <li>Back massage</li>
+                            <li>Relaxing massage</li>
                         </ul>
                     </div>
-
                 </div>
             </div>
             <div class="accordion-container">
                 <h3 id="accordion-header-3" class="accordion-header">
+                    <img src="./img/acc-workout.jfif" alt="image workout">
                     <span>Workout</span>
-                    <span>▼</span>
+                    <span class="plus">+</span>
                 </h3>
                 <div class="accordion-text-container">
                     <div class="accordion-text">
                         <ul>
-                            <li>Deep scrub</li>
-                            <li>Relaxing face massage</li>
-                            <li>Mosturising treatments</li>
+                            <li>Body pump</li>
+                            <li>Zumba</li>
+                            <li>Spinning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-container">
+                <h3 id="accordion-header-4" class="accordion-header">
+                    <img src="./img/acc-hands.jfif" alt="image manicure">
+                    <span>Manicure</span>
+                    <span class="plus">+</span>
+                </h3>
+                <div class="accordion-text-container">
+                    <div class="accordion-text">
+                        <ul>
+                            <li>French manicure</li>
+                            <li>Gel manicure</li>
+                            <li>Acryl manicure</li>
                         </ul>
                     </div>
                 </div>
@@ -85,79 +107,76 @@
         <!-- Signup form -->
 
         <section class="form">
-            <h1>Book your spa-days here</h1>
+            <h2>Book your spa-days here</h2>
             <form action="http://httpbin.org/anything" method="POST">
 
-
-                <fieldset id="date">
-                    <legend>Choose number of nights</legend>
-                    <label class="dates">* Check in:
-                    <input type="date" id="check-in" name="check-in" value="2020-09-04" min="2020-09-05" max="2021-08-30">
-                   </label>
-                    <label class="dates">
-                        * Check out:
-                    <input type="date" id="check-out" name="check-out" value="2020-09-04" min="2020-09-05" max="2021-08-31">
+                <legend>Choose number of nights</legend>
+                <label class="dates">* Check in:
+                    <input type="date" id="check-in" name="check-in" 
+                        max="2021-08-30">
                 </label>
-                </fieldset>
-
-                <fieldset id="room">
-                    <legend>Choose your room</legend>
-                    <label>
-                        Single room
+                <label class="dates">
+                    * Check out:
+                    <input type="date" id="check-out" name="check-out" value="2020-09-65" min="2020-09-06">
+                        max="2021-08-31">
+                </label> >
+                <legend>Choose your room</legend>
+                <label>
+                    Single room
                     <input type="radio" name="roomType" id="single-room" value="single-room" checked>
-                     </label>
-                    <label>
-                        Dubble room
+                </label>
+                <label>
+                    Dubble room
                     <input type="radio" name="roomType" id="double-room" value="dubble-room">
-                    </label>
-                    <label>
-                        Family room
+                </label>
+                <label>
+                    Family room
                     <input type="radio" name="roomType" id="family-room" value="family-room">
-                    </label>
-                    <label>
-                        Number of adults
+                </label>
+                <label>
+                    Number of adults
                     <input type="number" id="adults" name="adults" required>
-                    </label>
-                    <label>
-                        Number of children
+                </label>
+                <label>
+                    Number of children
                     <input type="number" id="children" name="children" required>
-                    </label>
-                </fieldset>
+                </label>
 
-                <fieldset>
-                    <legend>Contact details</legend>
-                    <label>* Name:
+                <legend>Contact details</legend>
+                <label>* Name:
                     <input type="text" id="name" name="name" required>
-                    </label>
-                    <label>
-                        * Street:
+                </label>
+                <label>
+                    * Street:
                     <input type="text" id="street" name="street" required>
-                   </label>
-                    <label>
-                        * Zipcode:
+                </label>
+                <label>
+                    * Zipcode:
                     <input type="text" id="zipcode" name="zipcode" required>
-                   </label>
-                    <label>
-                        * City:
+                </label>
+                <label>
+                    * City:
                     <input type="text" id="city" name="city" required>
-                    </label>
-                    <label>
-                        * Email:
+                </label>
+                <label>
+                    * Email:
                     <input type="email" id="email" name="email" required>
-                  </label>
-                </fieldset>
+                </label>
 
-                <fieldset>
-                    <button type="submit"> Book</button>
-                </fieldset>
+                <button type="submit"> Book</button>
+
             </form>
         </section>
 
     </main>
     <footer>
+        <p>Created by Sara Stjernberg @Technigo <span> September 2020</span> &nbsp;
+            <a href="https://www.linkedin.com/in/sara-stjernberg-12b929157/"><i style="font-size:24px" class="fa">&#xf08c;</i></a>
 
+            </a>
+        </p>
     </footer>
-    <!-- dont forget to link the javascript file here! -->
+
     <script src="./script.js"></script>
 </body>
 
