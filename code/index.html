@@ -6,6 +6,11 @@
     <link  href="./style.css" rel="stylesheet"  type="text/css">
     <link rel="stylesheet" href="https://use.typekit.net/lml3gyj.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./favicon_io/site.webmanifest">
   <title>EDGE</title>
   </head>
   <body>
@@ -31,11 +36,6 @@
     <h2>Powernätverket för kvinnor i Jönköping. </h2>
       
       <p>Varmt välkommen till Jönköpings hetaste powernätverk för kvinnor - EDGE!</p>
-    
-    <!-- Signup form -->
-    <form>
-
-    </form>
 
     <!-- Accordion -->
     <h2>FAQ</h2>
@@ -75,28 +75,45 @@
           <div class="accordion-item-body">
             <p class="accordion-item-body-content">
                Vi kommer att träffas minst en gång i månaden, och höstens planering kommer dyka upp här på webbplatsen inom kort. 
-               Stay tuned för mer info! Ett årsmedlemsskap i EDGE kostar 500 kr. 
+               Stay tuned för mer info! 
+               <br>
+               Ett årsmedlemsskap i EDGE kostar 500 kr, prova på i en månad för 150 kr.
             </p>
           </div>      
         </div>
-
-    
-
     </div>
+    <script src="./script.js"></script><!-- Link for JavaScript file -->
 
-    <!-- Accordion technigo -->
-    <section class="accordion">
+     <!-- Signup form -->
+    <form action="http://httpbin.org/anything" method="POST">
+      <fieldset>
+        <legend>KONTAKTA OSS</legend>
+        <label for="fname">Förnamn</label><br>
+        <input type="text" id="fname" name="fname" required><br>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <label for="lname">Efternamn:</label><br>
+        <input type="text" id="lname" name="lname" required><br>
+        
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br><br>
+        
+        <input type="submit" value="Skicka">
+      </fieldset>
+    </form>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <script src="./script.js"></script><!-- dont forget to link the javascript file here! -->
+    <footer>
+
+      <h1 class="footer-text">
+        Följ EDGE i sociala medier:  
+        <p> Facebook <a href="#" class="fa fa-facebook"></a> </p>
+        <p> Instagram <a href="#" class="fa fa-instagram"></a> </p>
+      </h1>
+      
+      <p class="footer-text"> 
+        Project 3: Business site by Emma Urman @ Technigo Bootcamp 2020. 
+      </p>
+
+    </footer>
+
   </body>
 </html>
