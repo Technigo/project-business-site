@@ -8,3 +8,4 @@ The focus for this project was to practice what I've learned about image backgro
 
 ## View it live
 
+https://business-site-edge.netlify.app/
