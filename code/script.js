@@ -13,10 +13,3 @@ accordionList.forEach(item => {
     })
   }
 });
-
-// function toggle() {
-//   this.classList.toggle("open")
-// }
-
-// // Selects an HTML element, and calls a function which will be executed when the element is clicked.
-// document.getElementById("accordion-header-1").onclick = toggle

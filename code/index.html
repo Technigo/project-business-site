@@ -29,9 +29,12 @@
     
     <!-- MAIN -->
     <main class="main-wrapper">
+
+      
+
       <!-- FORM -->
       <section class="form-container">
-        <div class="form-content" id="form-content" >
+        <div class="section-content" id="form-content" >
           <h2 class="main-header">SIGN UP</h2>
           <form 
             class="form" 
@@ -40,7 +43,7 @@
             <label 
               class="form-label" 
               for="fame">
-              * First Name
+              First Name*
             </label>
             <input 
               class="form-input" 
@@ -48,49 +51,52 @@
               name="fname" 
               id="fname" 
               placeholder="First Name" 
-              required>
+              required
+              minlength="2">
             <label 
               class="form-label" 
               for="lname">
-              * Last Name
+              Last Name*
             </label>
             <input 
               class="form-input" 
               type="text" name="lname" 
               id="lname" 
               placeholder="Last Name" 
-              required>
+              required
+              minlength="2">
             <label 
               class="form-label" 
               for="email">
-              * E-mail
+              E-mail*
             </label>
             <input 
               class="form-input" 
               type="email" 
               name="email" 
               id="email" 
-              placeholder="E-mail" 
+              placeholder="example@mail.com" 
               required>
             <label 
               class="form-label" 
               for="password">
-              * Password
+              Password*
             </label>
             <input 
               class="form-input" 
               type="password" 
               name="password" 
               id="password" 
-              placeholder="Password" 
-              required>
+              placeholder="Minimum 6 characters" 
+              required
+              minlength="6">
               <div class="wrapper-radio-column">
                 <p class="form-label">
                   How many trees do you want to plant?
                 </p>
                 <div class="wrapper-radio-row">
                   <label 
-                    class="form-radio">
+                    class="custom-form-container">
                     1
                     <input 
                       type="radio" 
@@ -98,41 +104,50 @@
                       name="radio"
                       value="1">
                     <span 
-                      class="custom-radio">
+                      class="custom-input custom-radio">
                     </span>
                   </label>
                   <label 
-                    class="form-radio">
+                    class="custom-form-container">
                     5
                     <input 
                       type="radio" 
                       name="radio">
                     <span 
-                      class="custom-radio">
+                      class="custom-input custom-radio">
                     </span>
                   </label>
                   <label 
-                    class="form-radio">
+                    class="custom-form-container">
                     10
                     <input 
                       type="radio" 
                       name="radio">
                     <span 
-                      class="custom-radio">
+                      class="custom-input custom-radio">
                     </span>
                   </label>
                   <label 
-                    class="form-radio">5
-                    0
+                    class="custom-form-container">
+                    50
                     <input 
                       type="radio" 
                       name="radio">
                     <span 
-                      class="custom-radio">
+                      class="custom-input custom-radio">
                     </span>
                   </label>
                 </div>
-              </div> 
+              </div>
+
+              <div class="wrapper-checkbox-row">
+                <label class="custom-form-container">I agree to the terms and conditions
+                  <input type="checkbox" required>
+                  <span class="custom-input custom-checkbox"></span>
+
+                </label>
+              </div>
+
             <input 
               class="form-input"
               type="submit" 
@@ -144,10 +159,23 @@
 
       <!-- Accordion -->
       <section class="accordion-container">
-        <div class="accordion-content">
+        <div class="section-content">
           <h2 class="main-header">FAQ</h2>
           <div class="accordion">
-            <h3 id="accordion-header-1" class="accordion-header">
+            <h3 id="accordion-header-1" class="form-label accordion-header">
+              Why are trees important?
+            </h3>
+            <div class="accordion-text-container">
+              <p class="accordion-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="accordion">
+            <h3 id="accordion-header-2" class="form-label accordion-header">
               Why are trees important?
             </h3>
             <div class="accordion-text-container">
@@ -163,39 +191,19 @@
             </div>
           </div>
           <div class="accordion">
-            <h3 id="accordion-header-2" class="accordion-header">
+            <h3 id="accordion-header-3" class="form-label accordion-header">
               Why are trees important?
             </h3>
             <div class="accordion-text-container">
               <p class="accordion-text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-          <div class="accordion">
-            <h3 id="accordion-header-3" class="accordion-header">
-              Why are trees important?
-            </h3>
-            <div class="accordion-text-container">
-              <p class="accordion-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
           </div>
         </div>
       </section>
+
     </main>
     <footer>Wood is Good</footer>
     <!-- dont forget to link the javascript file here! -->

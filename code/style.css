@@ -88,6 +88,16 @@ html {
 .form-container, 
 .accordion-container {
   padding: 20px;
+  width: 100%;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .main-header {
@@ -100,15 +110,7 @@ html {
 
 .form-container {
   background: #ECC8AF;
-  width: 100%;
   color: #3E4E50;
-}
-
-.form-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .form {
@@ -123,6 +125,7 @@ html {
   width: 100%;
   padding: 10px 0;
   font-weight: bold;
+  font-size: 16px;
 }
 
 .form-input {
@@ -132,6 +135,10 @@ html {
 
 .form-input::placeholder {
   font-size: 14px;
+}
+
+.form-input:valid {
+  border-bottom: 1.5px solid green;
 }
 
 .form-input[type="text"],
@@ -156,6 +163,12 @@ html {
 .form-input[type="password"]:focus {
   border-bottom: 1.5px solid rgb(77,72,43);
 }
+
+.form-input[type="text"]:valid,
+.form-input[type="email"]:valid,
+.form-input[type="password"]:valid {
+  border-bottom: 1.5px solid green;
+}
  
 .wrapper-radio-column {
   display: flex;
@@ -169,7 +182,7 @@ html {
   justify-content: space-between;
 }
 
-.form-radio {
+.custom-form-container {
   display: block;
   position: relative;
   padding-left: 25px;
@@ -182,7 +195,7 @@ html {
   user-select: none;
 }
 
-.form-radio input {
+.custom-form-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -190,7 +203,7 @@ html {
   width: 0;
 }
 
-.custom-radio {
+.custom-input {
   position: absolute;
   top: 0;
   left: 0;
@@ -198,15 +211,18 @@ html {
   width: 19px;
   background: rgba(89,89,75, 0.5); 
   cursor: pointer;
-  border-radius: 50%;
 }
 
-.form-radio:hover input ~ .custom-radio {
+.custom-form-container:hover input ~ .custom-input {
   background: rgba(89,89,75, 0.8);
 }
 
-.form-radio input:checked ~ .custom-radio{
+.custom-form-container input:checked ~ .custom-input{
   background: #444;
+}
+
+.custom-form-container input:checked ~ .custom-input:after {
+  display: block;
 }
 
 .custom-radio:after {
@@ -215,17 +231,40 @@ html {
   display: none;
 }
 
-.form-radio input:checked ~ .custom-radio:after {
-  display: block;
+.custom-radio {
+  border-radius: 50%;
 }
 
-.form-radio .custom-radio:after {
+.custom-form-container .custom-radio:after {
  top: 6px;
  left: 6px;
  width: 7px;
  height: 7px;
  border-radius: 50%;
  background: white;
+}
+
+.wrapper-checkbox-row {
+  display: flex;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.custom-checkbox {
+  border-radius: 4px;
+}
+
+.custom-checkbox::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  top: 4px;
+  left: 6px;
+  transform: rotate(45deg);
+  display: none;
 }
 
 .form-input[type="submit"] {
@@ -254,16 +293,8 @@ html {
 /*** ACCORDION ***/
 
 .accordion-container {
-  background: #3E4E50;
-  width: 100%;
+  background: transparent;
   color: #ECC8AF;
-}
-
-.accordion-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .accordion {
@@ -273,13 +304,14 @@ html {
   align-items: center;
   width: 90%;
   border-bottom: 0.05px solid #ECC8AF;
+  transition: all 0.15s ease-in-out;
+  transform: scale(1);
 }
 
-.accordion:hover {
-  background: #3E4E50;
-  opacity: 0.5;
-  /* background-color: rgba(62, 78, 80, 0.2); */
-  color: #ECC8AF;
+.accordion-header:hover {
+  font-size: 120%;
+  /* transform: scale(1.03); */
+  cursor: help;
 }
 
 .accordion-header {
@@ -287,35 +319,31 @@ html {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  width: 100%;
-  padding: 10px 0;
-  font-weight: bold;
 }
 
 .accordion-header:after {
   content: '\02795';
-  font-size: 13px;
-  color: #ECC8AF;
 }
 
 .accordion-header.active:after {
   content: "\02796";
-  color: #ECC8AF;
-
 }
 
 .accordion-text-container {
   height: 0;
   overflow: hidden;
   transition: heigt 0.3s ease;
+  font-size: 13px;
+  text-align: justify;
 }
 
 .accordion-text-container.active {
-  height: 158px;
+  height: auto;
+  background: transparent;
 }
 
 .accordion-text {
-  border-top: 2px solid #999;
+  /* border-top: 0.05px solid #ECC8AF; */
   margin: 0;
   padding: 15px;
 }
@@ -343,11 +371,14 @@ html {
     margin-top: 50px;
   }
 
-  .form,
-  .accordion {
-    padding: 30px;
+  .accordion-container {
+    background: #ECC8AF;
+    color: #3E4E50;
   }
-  
+
+  .form-input[type="submit"] {
+    width: 200px;
+  } 
 }
 
 @media only screen and (min-width: 1024px) {
@@ -355,8 +386,5 @@ html {
   .hero-container {
     max-height: 100vh;
   }
-
-  .form-input[type="submit"] {
-    width: 200px;
-  }
 }
+
