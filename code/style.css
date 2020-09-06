@@ -24,6 +24,10 @@ nav {
   height: 120px;
 }
 
+nav a:hover {
+  text-decoration-line: underline;
+}
+
 a {
   padding: 20px;
   color: #B89068;
@@ -57,14 +61,13 @@ form {
 }
 
 .form-title {
-  font-size: 25px;
+  font-size: 18px;
   margin: 40px 20px 25px 20px;
   text-align: center;
   font-weight: bold;
 }
 
 fieldset {
-  /***not default setting***/
   margin-bottom: 20px;
   border-radius: 15px;
 }
@@ -136,7 +139,6 @@ input {
   padding: 5px;
   border-radius: 5px;
   border: 0.3px solid #594020;
-  /* default settings - zakomentiraj neuporabne/definirane prej */
 }
 
 button {
@@ -151,7 +153,6 @@ button {
   border: 1px solid #594020;
   border-radius: 25px;
   cursor: pointer;
-  /*default settings below*/
 
 }
 
@@ -173,6 +174,10 @@ button {
   background: #F2DCB3;
 }
 
+.accordion-item:nth-child(odd) {
+  background: #F2B90C;
+}
+
 h1 {
   text-align: center;
   font-size: 39px;
@@ -191,60 +196,30 @@ h1 {
   line-height: 1.3;
   min-height: 40px;
   padding: 5px 100px 5px 10px;
-  cursor: pointer; /*import paws*/
+  cursor: pointer;
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.question::after {
-  content: "\002B";
-  font-size: 25px;
-  position: absolute;
-  right: 30px;
-  /* transition: transform 0.2s ease-in-out; */ /*poglej, kako deluje!*/
-}
-
-.question.active::after {
-  content: "\2212";
-  /* transform: rotate(45deg); */ /*poglej, kako deluje!*/
-}
-
 .answer-container {
   height: 0;
   overflow: hidden;
-  transition: height 3s ease;
+  transition: height 1s ease;
 }
 
 .answer {
-  border-top: 1px solid #F2B90C;
   margin: 0;
   padding: 15px;
-  /* line-height: 1.3;
-  border-image: linear-gradient(to right, transparent, #463E22, transparent) 1;  */
 }
 
 .active {
-  height: 110px;
+  height: 117px;
 }
-
-/* input:valid {
-  background-color: green;
-} */
-
-/* input:invalid {
-  background-color: orange;
-} */
-
-/* label {
-  display: block;
-  margin-bottom: 20px;
-} */
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
 
 footer {
   background-color: #594020;

@@ -4,6 +4,7 @@ const accordionSection1 = document.getElementById("section1");
 const accordionSection2 = document.getElementById("section2");
 const accordionSection3 = document.getElementById("section3");
 const accordionSection4 = document.getElementById("section4");
+const accordionSection5 = document.getElementById("section5");
 
 accordionSection1.onclick = () => {
   const answerContainer1 = accordionSection1.nextElementSibling;
@@ -25,37 +26,8 @@ accordionSection1.onclick = () => {
   answerContainer4.classList.toggle("active");
  }
 
- //STICKY HEADER:
-// const stickyHeader = document.querySelector(".sticky-header");
-// const headerOffset = stickyHeader.offsetTop;
-
-// window.onscroll = () => {
-//   if (headerOffset > window.pageYOffset) {
-//     stickyHeader.classList.remove("sticky");
-//   } else {
-//     stickyHeader.classList.add("sticky");
-//   }
-// }
-
-
-
-
-
-// const questionVariables = document.querySelectorAll(".question");
-
-// questionVariables.forEach(questionVariable => {
-//   questionVariable.addEventListener("click", event => {
-//     questionVariable.classList.toggle(".active");
-//   });
-// }); 
-
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-
-// function toggle() {
-//   this.classList.toggle("active")
-// }
-
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-// document.getElementById("section1").onclick = toggle
+ accordionSection5.onclick = () => {
+  const answerContainer5 = accordionSection5.nextElementSibling;
+  answerContainer5.classList.toggle("active");
+ }
 

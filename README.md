@@ -15,7 +15,8 @@ The main parts of the website are:
 - Used flexbox to align elements on the website.
 
 If I had more time:
-- animate 
+- make the whole website responsive, not only the video
+- play around with animation in accordion buttons
 
 Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
