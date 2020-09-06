@@ -29,4 +29,4 @@ In next project I hope I get more learnings within JavaScript and that I can put
 - JavaScript (modifying the DOM)
 
 ## View it live
-Link to the site: 
+Link to the site: https://upbeat-clarke-78c9c1.netlify.app/ 
