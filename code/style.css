@@ -1,11 +1,10 @@
 /* Style for project 3: business site */
 
-
-
 body, html {
   height: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
+  margin: 0;
   font-size: 14px;
 }
 
@@ -17,7 +16,6 @@ h1, h2 {
 }
 
 /* Hero banner with video */
-
 #hero {
   height: 80%;
   width: 100%;
@@ -54,50 +52,19 @@ h1, h2 {
   background: rgba(0,0,0,0.3);
 }
 
-/* The hero image 
-.hero-image {
-/* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read 
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/alex-harvey-nqSUnXINsp4-unsplash.jpg");
-
-/* Set a specific height 
-height: 50%;
-
-*/
-
-.color-container {
-  padding: 15px;
-  margin: 15px;
-  background: #ffe26e;
-
+/* Style for page content */
+.page-content {
+  text-align: center;
+  margin-top: 50px;
 }
 
-.info-container {
-padding: 25px;
-margin: 25px;
-text-align: center;
-background: #ff7f51;
-color: #ffffff;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-box-shadow: 12px 5px 10px 1px #fe9873;
+.photo {
+  text-align: center;
+  padding: 10px;
+  width: 300px;
 }
 
-
-
-/* Place text in the middle of the image 
-.hero-text {
-text-align: center;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
-}
-
-*/
-
+/* Style for the accordion */
 .accordion {
   width: 90%;
   max-width: 1000px;
@@ -113,6 +80,8 @@ color: white;
 }
 
 .accordion-item-header {
+  background: #ff9747;
+  color: #ffffff;
   padding: 0.5rem 3rem 0.5rem 1rem;
   min-height: 3.5rem;
   line-height: 1.25rem;
@@ -143,21 +112,77 @@ color: white;
   padding: 1rem;
   line-height: 1.5rem;
   border-top: 1px solid #111111;
-  border-image: linear-gradient(to right, transparent, #a45f5f, transparent) 1;
+  border-image: linear-gradient(to right, transparent, #ee716e, transparent) 1;
+}
+
+/* Style for the form  */
+input[type=text], select, textarea {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: #ffb260;
+  color: #353535;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 5px 3px 0 #ae8e5b;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  transform: translateY(5px);
+  box-shadow: none;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #ffdda1;
+  color: #353535;
+  padding: 20px;
+  margin: 30px;
+  width: 80%;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Style for the footer */
 footer {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  clear: both;
+  position: relative;
+  height: 200px;
   width: 100%;
+  margin-top: 100px;
   text-align: center;
-  background-color: #EFE1D6;
-  color: #000000;
+  background-color: #ff9747;
+  color: #ffffff;
 }
 
 .footer-text {
@@ -175,27 +200,17 @@ footer {
   opacity: 0.7;
   text-decoration: none;
   transition: all .3s;
-  color: #ac7675;
+  color: #ffd900;
   }
      
   .fa-facebook {
-  background: #EFE1D6;
-  color: #000000;
-  }
-     
-  .fa-linkedin {
-  background: #EFE1D6;
-  color: #000000;
+  background: #ff9747;
+  color: #ffffff;
   }
      
   .fa-instagram {
-  background: #EFE1D6;
-  color: #000000;
-  }
-  
-  .fa-pinterest {
-  background: #EFE1D6;
-  color: #000000;
+  background: #ff9747;
+  color: #ffffff;
   }
 
 
@@ -215,7 +230,6 @@ footer {
 }
 
 /* Tablet */
-
 @media screen and (min-width:992px) {
   
   h1 {
@@ -238,5 +252,12 @@ footer {
   h2 {
     font-size: 2.5rem;
   }
+}
 
+/* Responsive layout - contact form */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link  href="./style.css" rel="stylesheet"  type="text/css">
     <link rel="stylesheet" href="https://use.typekit.net/lml3gyj.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
@@ -13,33 +13,35 @@
     <link rel="manifest" href="./favicon_io/site.webmanifest">
   <title>EDGE</title>
   </head>
+  
   <body>
-
-    <header id="hero"> 
+    <header id="hero"> <!-- Hero banner with video -->
       <!--Video by Arvind Balagopal on Pexels-->
-      <video 
-      loop 
-      muted
-      autoplay
-      preload="auto">
+      <video loop muted autoplay preload="auto">
         <source src="./videos/hero-video_compressed.mp4" type="video/mp4">
         <p>Din webbläsare har inte stöd för video.</p>
       </video>
-
+      
       <div class="caption">
         <h1>EDGE</h1>
         <p>FEMALE NETWORK</p>
         <p>EMPOWER • DRIVEN • GOALS • ENERGY</p>
       </div>
     </header>
-
-    <h2>Powernätverket för kvinnor i Jönköping. </h2>
-      
-      <p>Varmt välkommen till Jönköpings hetaste powernätverk för kvinnor - EDGE!</p>
-
+    
+    <div class="page-content"> <!-- Page content -->
+      <h2> Varmt välkommen till EDGE! </h2>
+      <p> Powernätverket för kvinnor i Jönköping. </p>
+      <p> <i>* Some image gallery would be fun here :) * </i></p>
+      <br>
+      <img src="./img/Logga_EDGE_svart.png" class="photo"/>
+      <img src="./img/web_A6A4663.jpg" class="photo"/>
+    </div>
+    <br>
+    <br>
+    
+    <h2>FRÅGOR & SVAR</h2>
     <!-- Accordion -->
-    <h2>FAQ</h2>
-
     <div class="accordion">
 
       <div class="accordion-item">
@@ -63,57 +65,100 @@
             <p class="accordion-item-body-content">
               Det här är i grunden ett affärsnätverk där vi ska utvecklas som både som affärskvinnor som privatpersoner. 
               Det spelar ingen roll om du är anställd, egenföretagare, eller något annat. För var du är nu behöver ju inte definiera var du villl vara, eller var du kommer att vara i framtiden. 
-              Det viktiga är din inställning och öppenhet eftersom det här är ett nätverk för kvinnor som vet att 1 + 1 = 3: att vi tillsammans blir starkare! 
+              Det viktiga är din inställning och öppenhet eftersom det här är ett nätverk för kvinnor som vet att 1 + 1 = 3; att vi tillsammans blir starkare! 
             </p>
           </div>
       </div>
 
       <div class="accordion-item">
         <div class="accordion-item-header">
-          <h4>Hur ofta ses vi? Och vad kostar ett medlemsskap?</h4>
+          <h4> Hur ofta ses vi? </h4>
         </div>
           <div class="accordion-item-body">
             <p class="accordion-item-body-content">
-               Vi kommer att träffas minst en gång i månaden, och höstens planering kommer dyka upp här på webbplatsen inom kort. 
-               Stay tuned för mer info! 
-               <br>
-               Ett årsmedlemsskap i EDGE kostar 500 kr, prova på i en månad för 150 kr.
+              Vi kommer att träffas minst en gång i månaden. Höstens planering kommer dyka upp här på webbplatsen inom kort. 
+              Stay tuned för mer info! 
+            </p>
+          </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          <h4>Vad kostar ett medlemsskap?</h4>
+        </div>
+          <div class="accordion-item-body">
+            <p class="accordion-item-body-content">
+              Ett årsmedlemsskap i EDGE kostar 500 kr, prova på i en månad för 150 kr.
             </p>
           </div>      
         </div>
     </div>
-    <script src="./script.js"></script><!-- Link for JavaScript file -->
+    <script src="./script.js"></script> <!-- Link for JavaScript file -->
+    <br>
+    <br>
 
-     <!-- Signup form -->
-    <form action="http://httpbin.org/anything" method="POST">
-      <fieldset>
-        <legend>KONTAKTA OSS</legend>
-        <label for="fname">Förnamn</label><br>
-        <input type="text" id="fname" name="fname" required><br>
-
-        <label for="lname">Efternamn:</label><br>
-        <input type="text" id="lname" name="lname" required><br>
-        
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" required><br><br><br>
-        
-        <input type="submit" value="Skicka">
-      </fieldset>
-    </form>
-
-    <footer>
-
-      <h1 class="footer-text">
-        Följ EDGE i sociala medier:  
-        <p> Facebook <a href="#" class="fa fa-facebook"></a> </p>
-        <p> Instagram <a href="#" class="fa fa-instagram"></a> </p>
+    <!-- Signup form -->
+    <h2>KONTAKT</h2>
+    
+    <div class="container">
+      <form action="http://httpbin.org/anything" method="POST">
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">Förnamn</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="fname" placeholder="Förnamn">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Efternamn</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lname" placeholder="Efternamn">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="question">Min fråga gäller...</label>
+          </div>
+          <div class="col-75">
+            <select id="question" name="question">
+              <option value="välj">Välj...</option>
+              <option value="medlem">Medlemsskap</option>
+              <option value="sponsor">Sponsor</option>
+              <option value="event">Event</option>
+              <option value="styrelse">Styrelse</option>
+              <option value="övrigt">Övrigt</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Meddelande</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Skriv ditt meddelande här..." style="height:200px"></textarea>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+          <input type="submit" value="Skicka">
+        </div>
+      </form>
+    </div>
+    
+    <footer> <!-- Footer -->
+      <h1 class="footer-text"> 
+        Följ EDGE i sociala medier:
+        <p> Facebook: <a href="#" class="fa fa-facebook"></a> </p>
+        <p> Instagram: <a href="#" class="fa fa-instagram"></a> </p>
       </h1>
       
       <p class="footer-text"> 
         Project 3: Business site by Emma Urman @ Technigo Bootcamp 2020. 
       </p>
-
     </footer>
-
   </body>
 </html>
