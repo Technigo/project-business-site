@@ -2,11 +2,17 @@
     box-sizing: border-box;
   }
 
+/***  Font-Family: 'Roboto Condensed', Sans-Serif;
+  Font-Size: 35px;
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 15px; ***/
+  
 html{
     margin: 0;
 }
+
 .body{ 
-    font-family:"Monserrat", sans-serif;
+    font-family: 'Roboto Condensed', Sans-Serif;
     margin: 0px;
 }
 
@@ -14,10 +20,18 @@ a{
     font-size: 20px;
     color: #fbf0f0;
     text-decoration: none;
-    padding: 20px; 
+    padding: 50px; 
+    Font-Family: 'Roboto Condensed', Sans-Serif;
+    Font-Size: 25px;
+    letter-spacing: 3px;
+}
+
+nav{
+    padding: 20px;
 }
 
 /*** Header styling ***/
+
 header {
     display: flex;
     position: sticky;
@@ -30,6 +44,8 @@ header {
     right: 0;
     z-index: 1;
     color: #fbf0f0;
+    Font-Family: 'Roboto Condensed', Sans-Serif;
+    Font-Size: 30px;
 }
 
 /*** Hero image styling ***/
@@ -50,7 +66,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(https://images.unsplash.com/photo-1511804472014-fa7b871cd6a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background: url(https://images.pexels.com/photos/1109543/pexels-photo-1109543.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -68,17 +84,23 @@ header {
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 0;
+    Font-Family: 'Roboto Condensed', Sans-Serif;
+    Font-Size: 60px;
+    letter-spacing: 3px;
 }
 
 .hero-subtitle {
     font-size: 2rem;
     font-weight: 200;
     margin-top: 1rem;
+    Font-Family: 'Cabin', Sans-Serif;
+    Font-Size: 30px;
+    letter-spacing: 3px;
 }
 
 .hero-button {
    border: none;
-   margin-top: 3rem;
+   margin-top: 2rem;
    padding: 20px;
    border-radius: 5px;
    font-size: 1.125rem;
@@ -86,6 +108,9 @@ header {
    cursor: pointer;
    background: #fbf0f0;
    box-shadow: 0px 3px 2px 0 #fbf0f0;
+   Font-Family: 'Cabin', Sans-Serif;
+   Font-Size: 15px;
+   letter-spacing: 3px;
 }
 
 .hero-button:hover {
@@ -103,7 +128,8 @@ main{
     justify-content: space-evenly;
 }
 
-/*** Test styling Maks code ***/
+/*** Accordion styling ***/
+
 .accordion-container {
     margin-top: 2rem;
     border: 1px solid #b8b0b0;
@@ -116,62 +142,31 @@ main{
 
 .accordion-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 0;
     padding: 15px;
     cursor: pointer;
+    Font-Family: 'Roboto Condensed', Sans-Serif;
+    letter-spacing: 3px;
 }
 
 .accordion-text {
     border-top: 2px solid #7c7575;
     margin: 0;
     padding: 15px;
+    Font-Family: 'Roboto Condensed', Sans-Serif;
 }
 
 .accordion-text-container {
     height: 0;
     overflow: hidden;
-    transition: height .3s ease;
+    transition: .3s se;
 }
 
 .accordion-text-container.active {
     height: 158px;
 }
-
-
-/*** Accordion styling ***/
-/***.accordion {
-    width: 500px;
-    background: whitesmoke;
-    padding: 15px;
-    border: 1px solid black;
-}
-
-.accordion-container{
-    margin-bottom: 5px;
-    border: 1px solid black;
-}
-
-.accordion-header{
-    padding: 15px;
-    margin: 5px;
-}
-
-/*** Accordion text default hidden, when clicked it will collapse ***/
-/***
-.accordion-text {
-    border-top: 2px solid grey;
-    padding: 15px;
-    margin: 0;
-    height: 0;
-    overflow: hidden;
-}
-
-.accordion-text-container {
-    height: 0;
-    overflow: hidden;
-}***/
 
 /*** Form styling ***/
 
@@ -189,7 +184,8 @@ fieldset{
     border-radius: 5px;
     display: flex;
     align-items: center;
- }
+    Font-Family: 'Roboto Condensed', Sans-Serif;
+}
 
 .form-group {
     margin-bottom: 5px;
@@ -198,6 +194,7 @@ fieldset{
 .form-group label {
     width: 100px;
     padding: 10px;
+    Font-Family: 'Roboto Condensed', Sans-Serif;
 }
 
 .form-group input,
@@ -208,10 +205,14 @@ fieldset{
     border: none;
     background:#fbf0f0;
     display: flex;
+    Font-Family: 'Cabin', Sans-Serif;
+    Font-Size: 15px;
 }
 
 p{
     margin-bottom: 5px;
+    font-family: 'Cabin', Sans-Serif;
+    font-size: 15px;
 }
 
 .age-group{
@@ -250,6 +251,8 @@ p{
     background: #eee;
     cursor: pointer;
     border-radius: 50%;
+    Font-Family: 'Cabin', Sans-Serif;
+    Font-Size: 15px;
 }
 
 .radiobuttoncontainer:hover input ~ .custom-radio{
@@ -275,13 +278,87 @@ p{
 .radiobuttoncontainer input:checked ~ .custom-radio:after{
     display: block; 
 }
-
-.form-submit {
-    width: 150px;
+.checkbox-group{
+    display: flex;
+    flex-direction: column;
 }
 
 
+.checkbox-container{
+    display:block;
+    position: relative;
+    padding-left: 25px;
+    margin: 10px 5px;
+    font-size: 15px;
+    user-select: none; 
+}
+
+.checkbox-container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.custom-checkbox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    background-color: #eee;
+    border-radius: 4px;
+    cursor: pointer; 
+}
+
+.checkbox-container:hover input ~ .custom-checkbox{
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox{
+    background-color: #444444;
+}
+
+.custom-checkbox:after{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    top: 5px;
+    left: 7px; 
+    transform: rotate(45deg);
+    display: none;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox:after{
+    display: block;
+}
+
+.form-submit {
+    width: 150px;
+    border: none;
+    padding: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid #b8b0b0;
+    background-color: #fbf0f0;
+    box-shadow: 0px 5px 5px 0 #b8b0b0;
+    letter-spacing: 3px;
+    margin-top: 15px;
+}
+
+.form-submit:hover{
+   background-color: #fbf0f0;
+   box-shadow: none;
+   border: 1px solid #b8b0b0;
+   transform: translateY(5px);
+}
+
 /*** Footer styling ***/
+
 footer{
     position: block;
     padding: 40px;
@@ -294,6 +371,7 @@ footer{
 }
  
 /*** Media queries for tablet ***/ 
+
 @media (max-width: 1024px){
   body{
     margin: 0;
@@ -321,6 +399,7 @@ footer{
   
     header{
       flex-direction: column;
+      position: static;
     }
   
     nav{
@@ -328,11 +407,16 @@ footer{
         flex-direction: column;
         align-items: center;
     }
-  
-    a{
-        padding: 10px;
+
+    h1{
+        font-size: 30px;
     }
   
+    a{
+        padding: 15px;
+        Font-Size: 20px;
+    }
+   
     main{
         display: flex;
         flex-direction: column-reverse;
@@ -340,7 +424,7 @@ footer{
     }
 
     .form-container{
-        width: fit-content;
+        width: 100%;
     }
   
     .accordion-container{
