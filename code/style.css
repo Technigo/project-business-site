@@ -28,6 +28,8 @@ h3 {
     font-family: "Montserrat", sans-serif;
 }
 
+
+
 label,
 p {
     font-family: "Raleway", sans-serif;
@@ -44,20 +46,41 @@ main {
 
 .hero-container {
     position: relative;
+    
+
 }
+
+.hero-image-container {
+    height: 300px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+img.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+    
+}
+
+
 
 .hero-text {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    color: #c9c5c2;
+    color: #000;
     text-align: center;
     position: absolute;
-    top: 25%;
-    left: 20%;
-    right: 20%;
-    padding: 20px;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    padding: 10px;
     border: 5px double #c9c5c2;
     border-radius: 25px;
+    
+    
 }
 
 section {
@@ -139,11 +162,15 @@ button {
         width: 300px;
     }
     .hero-text h1 {
-        font-size: 60px;
+        font-size: 40px;
     }
     .hero-text p {
         font-size: 20px;
         font-style: bold;
+    }
+
+    .hero-image-container {
+        height: 500px;
     }
 }
 
@@ -158,5 +185,9 @@ button {
     .booking div,
     h1 {
         padding-left: 100px;
+    }
+
+    .hero-image-container {
+        height: 900px;
     }
 }
