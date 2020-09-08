@@ -17,5 +17,13 @@ The page also has a footer. Small glimpses of fun are animation on hover on the 
 
 With more time I would have added a text container in the beginning of the main content, as well as a button on the side of the content to click back up on the page.
 
+EDIT: I have noticed three bugs that I, with more time and less stress, would have wanted to correct:
+
+1. The accordion JS-loop makes one textbox close when another is opened. However, the icon does not follow this pattern, so if a textbox is closed on click of another, the icon won't change back. Hm.
+2. The sticky navbar worked fine and dandy in all three media breakpoints in Chrome. But on Netlify, the navbar won't stick until scroll reaches further down the page on mobile and iPad view. Instead it sorts of disappear and then bounces back to the top. A quick guess would be that it bounces to fixed when it reaches the starting point of large screen view? I would have liked to investigate more in this.
+3. The hight of the accordion container doesn't always match the form container on laptop/iPad view. It happens because the form container's height is fluid while the accordion's is fixed to try to align it to the form container. On mobile this is not an issue as the layout is different. The quick fix would of course be to set them both to the same height, but I would like them to be fluid. I'm guessing the flex property could've taken care of this.
+
+
+
 ## View it live
 https://malteform-signup.netlify.app/
