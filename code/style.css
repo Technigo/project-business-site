@@ -1,242 +1,247 @@
-            body {
-                margin: 0 auto;
-                height: 100%;
-                background: #f9f5e9;
-                font-family: 'Fira Sans', sans-serif;
-                font-Size: 15px;
-            }
-            /* --- header-section --- */
-            
-            .hero-image {
-                position: relative;
-                height: 350px;
-                overflow: hidden;
-                background: url(./img/relax1.jpeg) no-repeat center;
-                background-size: cover;
-            }
-            
-            .text-container {
-                position: absolute;
-                top: 5%;
-                right: 5%;
-                font-family: 'Cormorant Garamond', serif;
-                color: #DCDCDC;
-                text-align: center;
-                overflow: hidden;
-            }
-            
-            .text-container h1 {
-                font-size: 50px;
-                margin: 0;
-                text-shadow: 0 0 10px black;
-            }
-            
-            .text-container span {
-                font-size: 30px;
-            }
-            
-            nav {
-                display: none;
-                margin-top: 10px;
-            }
-            
-            nav a {
-                color: #585858;
-                text-decoration: none;
-            }
-            
-            .hamburger {
-                display: flex;
-                width: 30px;
-                height: 30px;
-                flex-direction: column;
-                justify-content: space-between;
-                margin-left: 10px;
-                margin-top: 10px;
-            }
-            
-            .hamburger div {
-                width: 30px;
-                height: 5px;
-                background: #fff;
-            }
-            /* -----main section--------------------- */
-            
-            main {
-                margin: 50px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            h2 {
-                font-weight: bold;
-            }
-            /* ------form----------- */
-            
-            .form {
-                background: #eae8dc;
-                border-radius: 5px;
-                width: 90%;
-                border: 2px solid #999;
-                border-radius: 10px;
-                padding: 10px;
-            }
-            
-            legend {
-                font-size: 18px;
-                font-weight: bold;
-                font-style: italic;
-            }
-            
-            label {
-                display: block;
-                margin-bottom: 10px;
-            }
-            
-            .dates {
-                display: inline-block;
-            }
-            
-            #adults,
-            #children {
-                width: 40px;
-            }
-            
-            #zipcode {
-                width: 60px;
-            }
-            
-            button {
-                margin-left: 100px;
-                padding: 5px;
-                border-radius: 5px;
-                font-weight: bold;
-                background: #f4c2b4;
-            }
-            /* ------Accordion------------- */
-            
-            .accordion {
-                width: 90%;
-                margin-bottom: 50px;
-            }
-            
-            .accordion-container {
-                border: 2px solid #999;
-                border-radius: 10px;
-                margin-bottom: 6px;
-                background: #eae8dc;
-            }
-            
-            .accordion-header {
-                margin: 0;
-                padding: 15px;
-            }
-            
-            .accordion-text-container {
-                height: 0;
-                overflow: hidden;
-                transition: height 0.3s ease;
-            }
-            
-            .accordion-text {
-                border-top: 2px solid #999;
-                margin: 0;
-                padding: 15px;
-            }
-            
-            .accordion-container img {
-                width: 100px;
-            }
-            
-            .active {
-                height: 110px;
-            }
-            
-            .accordion-header {
-                display: flex;
-                justify-content: space-between;
-            }
-            
-            span {
-                align-self: center;
-            }
-            
-            .plus {
-                font-size: 40px;
-                font-weight: bold;
-            }
-            
-            footer {
-                background: #f4c2b4;
-                color: #fff;
-                height: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            footer .first {
-                color: #d1a193;
-            }
-            
-            footer .second {
-                font-style: italic;
-            }
-            
-            @media (min-width: 650px) {
-                .hamburger {
-                    display: none;
-                }
-                .hero-image {
-                    height: 500px;
-                }
-                nav {
-                    display: flex;
-                    justify-content: flex-end;
-                }
-                nav a {
-                    margin-right: 20px;
-                    font-size: 18px;
-                    font-weight: 700;
-                }
-                main {
-                    flex-direction: row;
-                    justify-content: center;
-                }
-                .text-container {
-                    top: 15%;
-                    left: 25%;
-                    transform: translate(-50%, -50%);
-                }
-                .accordion {
-                    margin-right: 50px;
-                }
-                @media (min-width: 1024px) {
-                    .hero-image {
-                        height: 600px;
-                    }
-                    .text-container h1 {
-                        font-size: 70px;
-                        letter-spacing: 0.1em;
-                        margin: 0;
-                        text-shadow: 0 0 10px black;
-                    }
-                    .text-container p {
-                        font-size: 40px;
-                    }
-                    .text-container {
-                        top: 40%;
-                        left: 25%;
-                        transform: translate(-50%, -50%);
-                    }
-                    .form {
-                        padding-left: 70px;
-                        width: 40%
-                    }
-                    .accordion {
-                        margin-right: 100px;
-                        width: 30%
-                    }
-                }
-            }
+body {
+    margin: 0 auto;
+    height: 100%;
+    background: #f9f5e9;
+    font-family: 'Fira Sans', sans-serif;
+    font-Size: 15px;
+}
+
+
+/* --- header-section --- */
+
+.hero-image {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    background: url(./img/relax1.jpeg) no-repeat center;
+    background-size: cover;
+}
+
+.text-container {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-family: 'Cormorant Garamond', serif;
+    color: #DCDCDC;
+    text-align: center;
+    overflow: hidden;
+}
+
+.text-container h1 {
+    font-size: 50px;
+    margin: 0;
+    text-shadow: 0 0 10px black;
+}
+
+.text-container span {
+    font-size: 30px;
+}
+
+nav {
+    display: none;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #585858;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 5px;
+    background: #fff;
+}
+
+
+/* -----main section--------------------- */
+
+main {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+
+/* ------form----------- */
+
+.form {
+    background: #eae8dc;
+    border-radius: 5px;
+    width: 90%;
+    border: 2px solid #999;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.dates {
+    display: inline-block;
+}
+
+#adults,
+#children {
+    width: 40px;
+}
+
+#zipcode {
+    width: 60px;
+}
+
+button {
+    margin-left: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: #f4c2b4;
+}
+
+
+/* ------Accordion------------- */
+
+.accordion {
+    width: 90%;
+    margin-bottom: 50px;
+}
+
+.accordion-container {
+    border: 2px solid #999;
+    border-radius: 10px;
+    margin-bottom: 6px;
+    background: #eae8dc;
+}
+
+.accordion-header {
+    margin: 0;
+    padding: 15px;
+}
+
+.accordion-text-container {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.accordion-text {
+    border-top: 2px solid #999;
+    margin: 0;
+    padding: 15px;
+}
+
+.accordion-container img {
+    width: 100px;
+}
+
+.active {
+    height: 110px;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+span {
+    align-self: center;
+}
+
+.plus {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+footer {
+    background: #f4c2b4;
+    color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+footer span {
+    font-style: italic;
+}
+
+@media (min-width: 650px) {
+    .hamburger {
+        display: none;
+    }
+    .hero-image {
+        height: 500px;
+    }
+    nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav a {
+        margin-right: 20px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    main {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .text-container {
+        top: 15%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+    .accordion {
+        margin-right: 50px;
+    }
+    @media (min-width: 1024px) {
+        .hero-image {
+            height: 600px;
+        }
+        .text-container h1 {
+            font-size: 70px;
+            letter-spacing: 0.1em;
+            margin: 0;
+            text-shadow: 0 0 10px black;
+        }
+        .text-container p {
+            font-size: 40px;
+        }
+        .text-container {
+            top: 40%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+        }
+        .form {
+            padding-left: 70px;
+            width: 40%
+        }
+        .accordion {
+            margin-right: 100px;
+            width: 30%
+        }
+    }
+}

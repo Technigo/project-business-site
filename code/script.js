@@ -4,6 +4,12 @@ const date = new Date();
 checkIn.value = date.getFullYear().toString() + '-' + (date.getMonth() + 1).toString().padStart(2, 0) +
     '-' + date.getDate().toString().padStart(2, 0);
 
+// Set the date for check out
+const checkOut = document.querySelector('#check-out');
+const depart = new Date();
+checkOut.value = depart.getFullYear().toString() + '-' + (depart.getMonth() + 1).toString().padStart(2, 0) +
+    '-' + depart.getDate().toString().padStart(2, 0)
+
 
 //Accordion. Toggles between the different headers.
 const accordionHeader1 = document.getElementById("accordion-header-1");
