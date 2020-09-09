@@ -1,9 +1,29 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-function toggle() {
-  this.classList.toggle("active")
-}
+const question = document.querySelectorAll(".question");
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
+question.forEach(question => {
+  question.addEventListener("click", event =>{
+    question.classList.toggle("active");
+    const answer = question.nextElementSibling;
+    if(question.classList.contains("active")) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    }
+    else {
+      answer.style.maxHeight = 0;
+    }
+  });
+});
+ 
+//Above, a function that adds and remove the class "active" on the section being clicked.
+
+
+
+const header = document.querySelector('.header');
+const headerOffset = header.offsetTop;
+
+window.onscroll = () => {
+if (headerOffset >= window.pageYOffset) {
+  header.classList.remove('sticky');
+} else {
+  header.classList.add('sticky');
+}
+}
