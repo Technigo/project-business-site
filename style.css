@@ -1,12 +1,3 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-/*
-.active + .answer {
-   some styling here 
-}
-*/
-
 /* General style */
 * {
   margin: 0;
@@ -27,6 +18,7 @@ input,
 a {
   font-family: 'Roboto', sans-serif;
 }
+
 h1,
 h2 {
   font-family: 'Cabin Sketch', cursive
@@ -92,6 +84,7 @@ body {
 from {box-shadow: none;}
 to {box-shadow: 0 0 7px black;}
 }
+
 .sticky {
   position: fixed;
   top: 0 !important;
@@ -100,7 +93,6 @@ to {box-shadow: 0 0 7px black;}
 }
 
 /* Hero video style */
-
 .hero-video {
  position: absolute;
  top: 0;
@@ -143,14 +135,11 @@ to {box-shadow: 0 0 7px black;}
   font-size: larger;
 }
 
-
 /* Main section style */
-
 main {
   height: fit-content;
   width: 100%;
   padding: 350px 0 25px;
-  
   background-color: #ACC3C0;
 }
 
@@ -192,8 +181,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex: 0 1 100%; 
-   margin: 8px 32px;
- 
+  margin: 8px 32px;
 }
 
 .form-group p {
@@ -246,7 +234,6 @@ main {
 }
 
 /* Accordion style */
-
 .accordion-wrapper {
   border-left: 1px solid lightgrey;
   border-top: 1px solid lightgrey;
@@ -298,12 +285,9 @@ main {
 .accordion-textbox.active {
   height: 125px;
   padding-bottom: 25px;
-  
 }
 
-
 /* Footer style */
-
 footer {
   position: relative;
   margin-top: 100px;
@@ -385,48 +369,54 @@ footer {
 
     .hero-video-small,
     .hero-video-small video {
-    display: none
-  }  
+      display: none
+    }   
 
-  .hero-video-medium {
-    display: block;
-  }
-  .hero-video-medium video {
-    display: block;
-    position: absolute;
-    height: 400px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    object-fit: cover;
-  
-  }
-  .hero-video-large-wrapper,
-  .hero-video-large-wrapper video {
-    display: none;
-  }
+    .hero-video-medium {
+      display: block;
+    }
 
+    .hero-video-medium video {
+      display: block;
+      position: absolute;
+      height: 400px;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      object-fit: cover;
+    }
 
-  .hero-title-wrapper{
-    height: 400px;
-  }
-  .hero-title-textbox {
-    text-align: right;
-  }
-  .hero-title {
-    font-size: 56px;
-  }
+    .hero-video-large-wrapper,
+    .hero-video-large-wrapper video {
+      display: none;
+    }
 
-.navbar-menu-item {
-  padding: 17px;
-}
+    .hero-title-wrapper{
+      height: 400px;
+    }
+
+    .hero-title-textbox {
+      text-align: right;
+    }
+
+    .hero-title {
+      font-size: 56px;
+    }
+
+  .navbar-menu-item {
+    padding: 17px;
+  }
 
   main {
     padding-top: 450px;
     display: flex;
+  }
+
+  .main-section {
+    flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .signup-form {
