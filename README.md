@@ -1,12 +1,12 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Where to make a site with a hero imgage or video that would have accardion
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I had a hard time understanding how to get the video.... Made it mobile first so when it was time to put the video in all my energy was poff... gone. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Here it is! enjoy!
+
+https://happy-kowalevski-b861a6.netlify.app/
