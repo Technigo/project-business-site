@@ -78,7 +78,7 @@ h1 {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  padding: 40px 20px 40px 20px;
+  padding: 40px 20px;
 } 
 
 h2 {
@@ -90,6 +90,8 @@ h2 {
 
 .content-item {
   width: 40%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
 @media (max-width: 1023px) {
@@ -117,13 +119,19 @@ h2 {
 
 form {
   height: 500px;
-  padding: 20px 40px 20px 40px;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px 40px;
+  /* border-radius: 20px; */
+  box-shadow: 0 4px 8px 4px yellow;
   font-family: 'Open Sans', sans-serif;
 }
 
-input[type=text]  {
+@media (max-width: 767px) {
+  form {
+    height: 550px;
+  }
+}
+
+input[type=text], input[type=email]  {
   width: 100%;
   margin: 4px 0 8px 0;
   padding: 8px;
@@ -132,8 +140,8 @@ input[type=text]  {
   background-color: rgb(240, 238, 238);
 }
 
-input[type=text]:focus, input[type=e-mail]:focus {
-  outline: none;
+input[type=text]:focus, input[type=email]:focus {
+  outline-style: none;
 }
 
 p {
@@ -173,21 +181,22 @@ span:hover {
 /*** FAQ ***/
 
 .accordion-container {
+  padding: 20px 40px;
+  text-align: center;
+  /* border-radius: 20px; */
+  background-image: linear-gradient(to right,white, yellow);
   height: 500px;
-  padding: 20px 40px 20px 40px;
-  border-radius: 20px;
-  background-image: linear-gradient(to right,white, rgb(240, 238, 238));
+  /* box-shadow: 0 4px 8px 4px yellow; */
 }
 
 .accordion-item {
   margin-bottom: 16px;
-  font-family: 'Architects Daughter', cursive;
-  font-size: 20px;
+  /* font-family: 'Architects Daughter', cursive;
+  font-size: 16px; */
 }
 
 .question {
   padding-bottom: 8px;
-  font-size: 20px;
   cursor: pointer;
 }
 
