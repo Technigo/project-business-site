@@ -11,19 +11,26 @@ accordionList.forEach(item => {
             } else {
                 itemNested.nextElementSibling.classList.toggle('active');
             }
-        })
+        });
+        accordionList.forEach(item => {
+            if (item !== event.target) {
+                item.classList.remove('active');
+            } else {
+                item.classList.toggle('active');
+            }
+        });
     }
 });
 
 // Icon toggle function
 
-const accordionIcon = document.querySelectorAll(".accordion-header");
 
-accordionIcon.forEach(accordionIcon => {
-    accordionIcon.addEventListener("click", event => {
-        accordionIcon.classList.toggle("active");
-    });
-});
+
+
+//    accordionIcon.addEventListener("click", event => {
+//        accordionIcon.classList.toggle("active");
+ //   });
+// });
 
 
 // Sticky navbar function
