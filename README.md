@@ -1,12 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+This is a business for events. On this webpage you can contact the organiser yo get more information about the events. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I struggles with the flexbox part but in the end I solved the problem. If I had mor time I would put in more animations and to the design better. I didn't have the time to change the text in the hero-video so I would love to do that etc. For me the visual is important. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://peaceful-sammet-7e98ec.netlify.app/
