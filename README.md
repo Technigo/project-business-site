@@ -16,4 +16,4 @@ For the sticky navbar I got good help from a codepen that one of the team member
 I I had more time I would definitely dig deeper into JavaScript and fix the js-file. To many similar lines, might be solvable with if statements.
 
 ## View it live
-https://github.com/petrame/project-business-site/
+https://blissful-davinci-bbddb0.netlify.app/
