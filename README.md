@@ -21,4 +21,4 @@ After adressing the requirements, I later found myself hitting a wall with a few
 All in all, I'm pleased with where I landed with the site. It felt like a breakthrough just to get the text overlay on the video to work and it was an extra sweet moment when I realized it was one of the items under the Black-level requirements. 
 
 ## See it live
-https://pwangypbs.netlify.app/
+https://pwangy-biz.netlify.app/
