@@ -2,7 +2,7 @@ body {
   background: #fff;
   color: #000;
   font-family: Verdana, sans-serif;
-  font-size: 13px;
+  font-size: 10px;
   align-items: center;
   margin: 0px;
 }
@@ -29,15 +29,14 @@ body {
 
 .hamburger div {
   margin-left: 16px;
-  height: 5px;
+  height: 4px;
   width: 30px;
   background: #fff;
   border-radius: 5px;
 }
 
 h2 {
-  font-size: 25px;
-  font-weight: none;
+  font-size: 20px;
   padding: 8px;
   color: #fff;
 }
@@ -56,12 +55,13 @@ nav a {
 a:hover {
   background-color: #fff;
   color: #141452;
+  cursor: pointer;
 }
 
 /* Header */
 header {
   padding: 0;
-  height: 400px;
+  height: 350px;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -77,13 +77,14 @@ header {
 }
 
 .headline {
-  font-size: 70px;
+  font-size: 38px;
   font-weight: 700;
   font-family: "Times New Roman", Times, serif;
 }
 
 .header-blurb {
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: 700px;
 }
 
 video {
@@ -102,11 +103,11 @@ video {
 /* Container for accordian & form */
 .form-and-accordian {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   color: #141452;
 }
@@ -114,11 +115,9 @@ h3 {
 /* Form */
 .form {
   padding: 10px;
-  width: 50%;
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  border-left: 1px solid #141452;
 }
 
 .form-group {
@@ -136,23 +135,25 @@ h3 {
 .form-group textarea {
   width: 200px;
   display: block;
+  font-size: 10px;
 }
 
 h4 {
   font-weight: 500;
-  font-size: 15px;
+  font-size: 13px;
   color: #141452;
 }
 
 button {
   display: block;
   align-items: center;
+  cursor: pointer;
 }
 
 .tos {
   border: 1px dotted #3d3d8f;
   border-radius: 10px;
-  width: 275px;
+  width: 255px;
 }
 
 .tos label a {
@@ -171,7 +172,6 @@ button {
 /* Accordion */
 .accordion {
   padding: 10px;
-  width: 50%;
   background-color: #fff;
 }
 
@@ -181,8 +181,8 @@ button {
   color: #fff;
   background: #141452;
   padding: 5px;
-  display: flex;
   border: 2px solid #fff;
+  cursor: pointer;
 }
 
 .question:before {
@@ -202,6 +202,7 @@ button {
 .active + .answer {
   display: block;
   padding-left: 8px;
+  cursor: pointer;
 }
 
 /* Footer */
@@ -238,19 +239,61 @@ footer img {
 
 /* Media Queries */
 @media (min-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+  
   .nav-container {
     justify-content: space-between;
+  }
+
+  .headline {
+    font-size: 70px;
+    font-weight: 700;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  .header-blurb {
+    font-size: 20px;
   }
 
   header {
     height: 500px;
   }
 
-  .form-accordian {
-    display: flex;
-    flex-direction: column;
+  h3 {
+    font-size: 18px;
   }
-}
+
+  .form-and-accordian {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .form {
+    border-left: 1px solid #141452;
+    width: 50%;
+  }
+
+  .form-group input,
+  .form-group textarea {
+  width: 200px;
+  font-size: 13px;
+  }
+
+  .tos {
+    width: 275px;
+  }
+
+  h4 {
+    font-size: 15px;
+  }
+
+  .accordion {
+    padding: 10px;
+    width: 50%;
+    background-color: #fff;
+  }
 
 /* desktop */
 @media (min-width: 900px) {
