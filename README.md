@@ -1,24 +1,37 @@
 # Business Site - Overview
-Project done as a part of Technigo bootcamp. Learning objectives:
+Project done as a part of Technigo bootcamp. 
+
+Learning objectives:
 1. Using image or video in the header, for responsive webpages
 2. HTML forms and simple requests
 3. Modifying the DOM using Javascript
 
+## Core Tech
+- HTML5
+- CSS
 
-# Brief
-This week’s project is to create a site for a company of your choice. You can come up with your own fantasy company or use an existing one.
-We want you to practice what we've gone through this week so the website should contain these three parts:
-Hero image/video
-Signup form
-Accordion
 
-## Approach
-I reviewed as much as this week's lesson materials before starting in on the code, all the while coding-along with the provided video-presentations as much as possible. By the time I started I had some bits of code to copy/paste in as a good starting point. Then it was off to search for a free to use video as the header Hero. The video I chose determined the theme to my page: It's a community cooking school, similar to one I had attended in San Francisco. 
-After adressing the requirements, I later found myself hitting a wall with a few items and finally ended up leaving them out. 
-1) Originally I had a "Confirm Password" field in the form but couldn't figure out how to validate it (I need more to know more .js!). 
-2) Following along with the videos demonstrating formatting custom radio buttons and checkboxes, I was able to do it successfully in CodePen. Unfortunately, when it came to applying it to my site, it really didn't want to work! 
 
-All in all, I'm pleased with where I landed with the site. It felt like a breakthrough just to get the text overlay on the video to work and it was an extra sweet moment when I realized it was one of the items under the Black-level requirements. 
+## Requirements Completed
+**🔵 Blue Level (Minimum)**
+- Style your page
+- Site should have a header with responsive image/video
+- Site should have a signup form with at least three different input types
+- Site should have an FAQ accordion, built with JavaScript
+
+<!-- **🔴 Red Level (Intermediary Goals)**
+- Try out some other form elements or input types. 
+- Add an icon before the title in the accordion indicates whether the section is expanded or collapsed. It should update when the section expands or collapses.
+- Add some validation to the form
+- Use CSS selectors to make every other row in the accordion have another background color, or add a focus effect on the input tags.
+- On hover, change the mouse cursor to something other than the default
+
+**⚫ Black Level (Advanced Goals)**
+- Add some animations to your project. For example, a slide-down effect when the accordion expands and collapses.
+- One of the harder things to do in CSS is to style checkboxes and radio buttons. Try to create custom checkboxes and radio buttons.
+- Add a header and/or a button on top of your video, just like Confetti, by using `position: absolute;` and `z-index` to get everything in the right place.
+- Read up on the [BEM](http://getbem.com/introduction/) methodology and use it for the project -->
+
 
 ## See it live
 https://pwangy-biz.netlify.app/
