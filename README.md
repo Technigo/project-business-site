@@ -9,7 +9,7 @@ Learning objectives:
 ## Core Tech
 - HTML5
 - CSS
-
+- Mobile-First approach
 
 
 ## Requirements Completed
@@ -19,18 +19,13 @@ Learning objectives:
 - Site should have a signup form with at least three different input types
 - Site should have an FAQ accordion, built with JavaScript
 
-<!-- **🔴 Red Level (Intermediary Goals)**
-- Try out some other form elements or input types. 
-- Add an icon before the title in the accordion indicates whether the section is expanded or collapsed. It should update when the section expands or collapses.
+**🔴 Red Level (Intermediary Goals)**
+- Add an icon in the accordion which indicates whether the section is expanded or collapsed. It should update when the section expands or collapses.
 - Add some validation to the form
-- Use CSS selectors to make every other row in the accordion have another background color, or add a focus effect on the input tags.
 - On hover, change the mouse cursor to something other than the default
 
 **⚫ Black Level (Advanced Goals)**
-- Add some animations to your project. For example, a slide-down effect when the accordion expands and collapses.
-- One of the harder things to do in CSS is to style checkboxes and radio buttons. Try to create custom checkboxes and radio buttons.
-- Add a header and/or a button on top of your video, just like Confetti, by using `position: absolute;` and `z-index` to get everything in the right place.
-- Read up on the [BEM](http://getbem.com/introduction/) methodology and use it for the project -->
+- Add a header and/or a button on top of your video.
 
 
 ## See it live
