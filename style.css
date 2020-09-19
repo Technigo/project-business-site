@@ -56,7 +56,6 @@ nav a {
 a:hover {
   background-color: #fff;
   color: #141452;
-  padding: 5px;
 }
 
 /* Header */
@@ -78,7 +77,7 @@ header {
 }
 
 .headline {
-  font-size: 50px;
+  font-size: 70px;
   font-weight: 700;
   font-family: "Times New Roman", Times, serif;
 }
@@ -97,10 +96,11 @@ video {
   overflow: hidden;
   object-fit: cover;
   object-position: center center;
+  background: #141452;
 }
 
 /* Container for accordian & form */
-.form-accordian {
+.form-and-accordian {
   display: flex;
   flex-direction: row-reverse;
 }
@@ -206,28 +206,34 @@ button {
 
 /* Footer */
 footer {
-  height: 130px;
-  left: 0;
-  bottom: 0;
-  right: 0;
   background: #141452;
   color: #fff;
-  width: 100%;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
 }
 
-footer p {
+.footer {
+  width: 100%;
+  bottom: 0;
+  font-family: Verdana, sans-serif;
   text-align: center;
   font-size: 12px;
 }
 
 footer a {
+  text-decoration: none;
   color: #fff;
 }
 
 footer span {
-  font-size: 25px;
+  font-size: 20px;
+}
+
+footer img {
+  height: 19px;
+  padding: 0;
 }
 
 /* Media Queries */
@@ -238,6 +244,11 @@ footer span {
 
   header {
     height: 500px;
+  }
+
+  .form-accordian {
+    display: flex;
+    flex-direction: column;
   }
 }
 
