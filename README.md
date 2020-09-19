@@ -13,7 +13,7 @@ Learning objectives:
 
 
 ## Requirements Completed
-**🔵 Blue Level (Minimum Requirements)**
+**🔵 Blue Level (Minimum)**
 - Style your page
 - Site should have a header with responsive image/video
 - Site should have a signup form with at least three different input types
