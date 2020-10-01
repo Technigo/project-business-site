@@ -13,38 +13,38 @@
   <body>
     <header> 
       <div class="hero">
-          <div class="hero-text">
+        <div class="hero-text">
           <h1>Our vision</h1>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
             Quaerat quam iste magni? </p>
-          </div>
+        </div>
 
-      <div class="header-bar">
+        <div class="header-bar">
           <div class="logo">
-              <img src="logo.png" alt="logo image">
+            <img src="logo.png" alt="logo with text of company name, Vattenverket">
           </div>
 
           <input type="checkbox" class="menu-btn" id="menu-btn">
           <label for="menu-btn" class="menu-icon">
-          <span class="menu-icon__line"></span>
-          <span class="menu-icon__line"></span>
-          <span class="menu-icon__line"></span>
+            <span class="menu-icon__line"></span>
+            <span class="menu-icon__line"></span>
+            <span class="menu-icon__line"></span>
           </label>
 
-          <div class="nav-bar">
-              <a href="#top">Home</a>
+          <nav class="nav-bar">
+              <a href="#top">Home</a> 
               <a href="#food">Food</a>
               <a href="#bakery">bakery</a>
               <a href="#form">Make a reservation</a>
               <a href="#contactUs">Contact</a>
-          </div>
+          </nav>
       </div>  
 
     </header>
 
     <section id="bakery" class="bakery-container">
-      <img src="unsplash-bakery.jpg" alt="bakery image">
-      <div class="bakeryText">
+      <img src="unsplash-bakery.jpg" alt="freshly baked bread image">
+      <div class="bakery-text">
         <h2>Bakery</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
           elit. Laborum in expedita fugiat. 
@@ -54,11 +54,9 @@
       </div>
     </section>
 
-
-
     <section id="food" class="food-container">
-      <img src="unsplash-food.jpg" alt="food image">
-      <div class="foodText">
+      <img src="unsplash-food.jpg" alt="three different food servings">
+      <div class="food-text">
         <h2>food</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
           elit. Laborum in expedita fugiat. 
@@ -68,12 +66,10 @@
       </div>
     </section>
 
-   
-    
     <section class="accordion">
       <h3>What will you taste?</h3>
       <div class="accordion-element">
-        <div id="accordion-header-1" class="accordion-header">
+        <div id="accordionHeader1" class="accordion-header">
           <h4>Cinnamon bun?</h4>
         </div>
         <div class="accordion-text-container">
@@ -84,7 +80,7 @@
       </div>
 
       <div class="accordion-element">
-        <div id="accordion-header-2" class="accordion-header">
+        <div id="accordionHeader2" class="accordion-header">
           <h4>Croissant?</h4>
         </div>
         <div class="accordion-text-container">
@@ -95,7 +91,7 @@
       </div>
 
       <div class="accordion-element">
-        <div id="accordion-header-3" class="accordion-header">
+        <div id="accordionHeader3" class="accordion-header">
           <h4>Everyting?</h4>
         </div>
         <div class="accordion-text-container">
@@ -107,100 +103,95 @@
          
     </section>
 
-
     <!----FORM---->
     <section class="form-wrapper">
       <form id="form" class="form" action="http://httpbin.org/anything" method="POST" target="blank">
-          <h3>Make your reservation</h3>
-          <div class="form-group">
-            <label for="firstName">First name</label>
-              <input
-                type="text"
-                id="firstName"
-                name="lastName"
-                required pattern=".{2,}"
-              />
-          </div>
+        <h3>Make your reservation</h3>
+        <div class="form-group">
+          <label for="firstName">First name</label>
+            <input
+              type="text"
+              id="firstName"
+              name="lastName"
+              required pattern=".{2,}"
+            />
+        </div>
 
-
-          <div class="form-group">
-            <label for="lastName">Last name*</label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                required
-              />
-          </div>
+        <div class="form-group">
+          <label for="lastName">Last name*</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              required
+            />
+        </div>
           
-          <div class="wrapperRadio">
-            <label class="radiobtnContainer">
-              Breakfast
-              <input type="radio" name="time" value="breakfast">
-              <span class="custom-radio"></span>
-            </label>
+        <div class="wrapper-radio">
+          <label class="radiobtn-container">
+            Breakfast
+            <input type="radio" name="time" value="breakfast">
+            <span class="custom-radio"></span>
+          </label>
 
-            <label class="radiobtnContainer">
-              Lunch
-              <input type="radio" name="time" value="lunch">
-              <span class="custom-radio"></span>
-            </label>
+          <label class="radiobtn-container">
+            Lunch
+            <input type="radio" name="time" value="lunch">
+            <span class="custom-radio"></span>
+          </label>
 
-            <label class="radiobtnContainer">
-              Dinner
-              <input type="radio" name="time" value="dinner" checked>
-              <span class="custom-radio"></span>
-            </label>
-          </div>
+          <label class="radiobtn-container">
+            Dinner
+            <input type="radio" name="time" value="dinner" checked>
+            <span class="custom-radio"></span>
+          </label>
+        </div>
           
-          <div class="form-group">
-            <label for="date">Date*</label>
-              <input
-                type="date"
-                id="date"
-                name="date"
-                required
-              />
-          </div>
+        <div class="form-group">
+          <label for="date">Date*</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              required
+            />
+        </div>
 
-
-          <div class="form-group">
-            <label for="phoneNr">Phone nr</label> 
-              <input
-                type="tel"
-                id="phoneNr"
-                name="phone"
-                pattern="[0-7]{3}[0-9]{7}"
-                placeholder="07x-1234567"
-              />
-          </div>
+        <div class="form-group">
+          <label for="phoneNr">Phone nr</label> 
+            <input
+              type="tel"
+              id="phoneNr"
+              name="phone"
+              pattern="[0-7]{3}[0-9]{7}"
+              placeholder="07x-1234567"
+            />
+        </div>
           
           
-          <div class="form-group">
-            <label for="eMail">E-mail*</label>
-              <input
-                type="email"
-                id="eMail"
-                name="email"
-                required
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              />
-          </div>       
+        <div class="form-group">
+          <label for="eMail">E-mail*</label>
+            <input
+              type="email"
+              id="eMail"
+              name="email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            />
+        </div>       
           
-          <div class="wrapperCheckbox">
-            <label class="checkboxContainer">
-              I agree to terms and conditions
-              <input type="checkbox" value="agree" name="checkbox" checked/>
-              <span class="custom-checkbox"></span>
-            </div>
-          </div>
-          
-          <button type="submit">
-            <p>Submit</p>
-          </button>
+        <div class="wrapper-checkbox">
+          <label class="checkbox-container">
+            I agree to terms and conditions
+            <input type="checkbox" value="agree" name="checkbox" checked/>
+            <span class="custom-checkbox"></span>
+        </div>
+                  
+        <button type="submit">
+          <p>Submit</p>
+        </button>
       </form>
     </section>
-
 
     <footer>
       <div id="contactUs" class="copyright">
@@ -226,12 +217,11 @@
         </div>
       </div>
 
-        <div class="social">
-          <p>Follow us on:</p>
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-instagram"></i></a>
-        </div>
-      
+      <div class="social">
+        <p>Follow us on:</p>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+      </div>
     </footer>
 
     <script src="./script.js"></script>
