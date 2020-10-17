@@ -1,4 +1,4 @@
-# Business Site
+# Project Business Site
 
 In this project we were asked to create a one page website which had a responsive hero image header, a form and an accordion. This was to be created for a business and I chose a house plant hotel (which is a bit of a joke as most house plants die if you go on holiday!)
 
