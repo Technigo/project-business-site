@@ -12,4 +12,4 @@ If I had more time I would have looked up JavaScript even more to make my navbar
 
 
 ## View it live
-https://pedantic-brown-a8af3a.netlify.app/#contactUs
+https://therese-linden-business-site.netlify.app
