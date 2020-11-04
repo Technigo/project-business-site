@@ -7,8 +7,10 @@ To practice using image backgrounds, video as a header, HTML forms, Javascript a
 
 ## The process
 
-I visualized my website in 3 resolutions(mobile,tablet,desktop) in Figma.
-I used flexbox to align elements in the main section, styled sign up form with CSS and created the accordion with Javascript.
+* I visualized my website in 3 resolutions(mobile,tablet,desktop) in Figma
+* I used flexbox to align elements in the main section
+* Styled the sign up form with CSS 
+* Created the accordion with Javascript and added some CSS styling to it
 
 ## Challenges to solve
 Create a sticky navbar and add a favicon.
