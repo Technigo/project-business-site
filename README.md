@@ -1,4 +1,4 @@
-# Project 2 Business website for a coffee shop
+## Project 2: Business website for a coffee shop
 
 This is a Coffee shop webpage with a video header for desktop and responsive images for tablet/mobile. It has a sign up form and an accordion with questions/answers made with Javascript.
 
