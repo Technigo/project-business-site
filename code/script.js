@@ -4,8 +4,7 @@ const accordionItemHeaders = document.querySelectorAll(
 
 accordionItemHeaders.forEach((accordionItemHeader) => {
   accordionItemHeader.addEventListener("click", (event) => {
-    // I am aware that this is the lazy way of toggling instead of removing nextelementsibling as Maks showed
-    // during Wednesday lecture. //
+ 
 
     const currentlyActiveAccordionItemHeader = document.querySelector(
       ".accordion-item-header.active"
