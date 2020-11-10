@@ -1,8 +1,6 @@
-// select accordion-item-headers and store them into a variable
-
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
-// we want to loop through each accordion-item-header
+//loop through each accordion-item-header
 accordionItemHeaders.forEach(accordionItemHeader => {
   accordionItemHeader.addEventListener("click", event => {
     const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");

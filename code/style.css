@@ -1,6 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
 * {
@@ -10,7 +8,6 @@
 }
 
 html {
-  /* added this font-size when watching tutorial on accordion, because he used the rem-unit for font-size which sets the fonts relative to the size specified here */
   font-size: 16px;
 }
 
@@ -20,7 +17,7 @@ body {
   background-color: #fff;
   overflow-x: hidden;
 }
-                                          /* HEADER NAVBAR STARTS HERE */
+                                          /* HEADER NAVBAR */
 header {
   position: fixed;
   width: 100vw;
@@ -71,7 +68,7 @@ header .navbar {
   background-color: #E7AD99;
   border-radius: 5px;
 }
-                                                     /* HERO CONTAINER STARTS HERE */
+                            /* HERO CONTAINER */
 hero-container {
   position: relative;
   height: 80vh;
@@ -128,7 +125,7 @@ hero-container {
 .hero-picture {
   display: none;
 }
-                                /* INTRO-SECTION STARTS HERE */
+                                /* INTRO-SECTION */
 .intro-section {
   display: flex;
   flex-direction: column;
@@ -164,11 +161,14 @@ hero-container {
 .introtext p:last-of-type {
   margin-right: 0;
 }
-                                  /* ACCORDION STARTS HERE */
+                                  /* ACCORDION*/
 .accordion-section {
   display: flex;
   justify-content: center;
-  /* When using rem for margin, is is sized relative to the font-size set in the same element. So this means that margin 2.5rem here is 2 times 2.5 rem (which is the font-size here): if there is no font-size specified in rem-units in this element, the margin-rem sets itself relative to the root*/
+  /* When using rem, element is sized relative to the font-size set in 
+  the same element. So this means that margin 2.5rem here is 2 times 2.5 rem 
+  (which is the font-size here): if there is no font-size specified 
+  in rem-units in this element, the margin-rem sets itself relative to the root*/
   margin-bottom: 2.5rem;
 }
 
@@ -195,7 +195,6 @@ hero-container {
   color: #111;
   margin: 1rem 0;
   border-radius: 0.5rem;
-  /* Box-shadow explained: 0 horizontal, 4px vertical offset, 8px blur and 0 spread*/
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.35);
 }
 
@@ -203,34 +202,37 @@ hero-container {
   background-color: #C18C5D;
 }
 
-/* When the accordion is open, the .active class will be added to accordion-item-header, changing the dispayed symbol from plus to minus*/
+/* When accordion is open, the .active class is added to accordion-item-header, 
+changing the dispayed symbol from plus to minus*/
 .accordion-item-header {
-  /* padding 3rem to the right to make place for the pseudo-element (+/-) */
   padding: 0.5rem 3rem 0.5rem 1rem;
-  /* min-height set to 3.5rem to make sure that if the header expands to two lines, then the total height of the header would be 2.5rem plus padding 1rem, which equals the minimum height of 3.5rem. In that way the content fits if header expands to two lines*/
+  /* min-height set to 3.5rem to make sure that if the header expands 
+  to two lines, then the total height of the header would be 2.5rem 
+  plus padding 1rem, which equals the minimum height of 3.5rem. 
+  In that way the content fits if header expands to two lines*/
   min-height: 3.5rem;
   line-height: 1.25rem;
   font-weight: 700;
   color: #495867;
   display: flex;
   align-items: center;
-  /* position relative because I will place the pseudo-element in absolute position relative to the header */
   position: relative;
   cursor: pointer;
 }
 
-/* Add the symbol with help of the ::after pseudo-element. Using :: to distinguish between pseudo-elements and pseudo-classes */
+/* Add the symbol with help of the ::after pseudo-element. 
+Using :: to distinguish between pseudo-elements and pseudo-classes */
 
 .accordion-item-header::after {
   content: "\002B";
   color: #495867;
   font-size: 2rem;
-  /* position the plus relative and place it 1rem from the right side of the element */
   position: absolute;
   right: 1rem;
 }
 
-/* whenever the active class below is added to the accordion, the pseudo-element will change from plus to minus and when active class is removed it will change to plus sign*/
+/* when active class is added to the accordion, the pseudo-element will change 
+from plus to minus and when active class is removed it will change to plus sign*/
 .accordion-item-header.active::after {
   content: "\2212";
 }
