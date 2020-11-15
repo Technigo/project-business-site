@@ -15,3 +15,4 @@ document.querySelectorAll(".accordion-element").forEach(element => {
     element.classList.toggle("active")
   })
 })
+
