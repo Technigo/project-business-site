@@ -1,10 +1,6 @@
 # Business Site
 
-Project was to create a business one pager website that should contain an image or video header, a signup form, and an accordion. The focus was to practice image backgrounds, HTML forms, and how to modify the DOM with JavaScript.
-
-## The problem
-
-Styling and layout inside of the forms. 
+I've create a business one pager website containing a video header, signup form, and an accordion. The focus was to practice image backgrounds, HTML forms, and how to modify the DOM with JavaScript.
 
 
 ## View it live
