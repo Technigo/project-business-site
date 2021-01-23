@@ -1,7 +1,156 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.background-img {
+  background-image: url("Images/jeans.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: solid 3px black;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background: #ffffff;
+  margin-top: 70px;
+}
 
 .active + .answer {
   /* some styling here */
+}
+
+.name {
+  font-family: 'Lobster', cursive;
+  font-size: 80px;
+  margin: 0;
+}
+
+.info {
+  padding: 10px;
+  margin-top: 30px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+
+.info h2 {
+  font-family: 'Varela', sans-serif;
+  color: #fff;
+  font-size: 25px;
+  margin: auto;
+  width: 90%;
+}
+
+.info p {
+  font-family: 'Varela', sans-serif;
+  color: #fff;
+  font-size: 14px;
+  margin: auto;
+  width: 90%;
+}
+
+
+/***** SIGN UP, SIGN IN BUTTONS *****/
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  background: #fff;
+}
+
+.sign-up {
+  margin: 0px;
+  width: 80%;
+  height: 50px;
+  border: solid 1px black;
+  border-radius: 30px;
+  background: rgb(91, 100, 107);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  color: #fff;
+
+  background-image: url("Images/fabric.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+}
+
+
+/***** FORM STYLING *****/
+
+form {
+  position: fixed;
+  bottom: 0; 
+  right: 0;
+  width: 100%;
+
+}
+
+.form-welcome {
+
+}
+
+ul {
+
+}
+
+li {
+
+}
+
+li.button {
+
+}
+
+/* END FORM */
+
+p {
+  margin: 0;
+}
+
+@media (min-width: 667px) and (max-width: 1024px) {
+  .background-img {
+    background-image: url("Images/jeans.jpg");
+    width: 100vw;
+    height: 60vh;
+  }
+}
+
+@media (min-width: 1025px) {
+
+.background-img {
+    background-image: url("Images/jeans-smaller.jpg");
+    width: 60vw;
+    height: 100vh;
+  }
+
 }
