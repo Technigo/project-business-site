@@ -221,7 +221,7 @@ body {
 
 .form {
   width: 50%;
-  border: solid black;
+  flex-grow: 1;
 }
 
 .form-image {
@@ -273,31 +273,19 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     display:none;
   }
 
-  @keyframes scaleup {
-    0% {
-      transform: scale(1);
-      color: rgb(49, 80, 223);
-    }
+  .form-section {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 
-    10% {
-      transform: scale(1);
-      color: rgb(41, 201, 241);
-    }
+  .form {
+    width: 50%;
+    height: 80%;
+  }
 
-    50% {
-      transform: scale(3);
-      color: rgb(255, 0, 200);
-    }
-
-    90% {
-      transform: scale(1);
-      color: rgb(65, 139, 236);
-    }
-
-    100% {
-      transform: scale(1);
-      color: rgb(49, 80, 223);
-    }
+  .form-image {
+    width: 100%;
+    height: 20%;
   }
 
 }
