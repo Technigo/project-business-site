@@ -2,17 +2,19 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+.active+.answer {
   /* some styling here */
 }
 
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .headerImage {
   width: 100%;
+  filter: blur(1px);
 }
 
 .headerLogo {
@@ -26,6 +28,22 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   padding-left: 10px;
   padding-right: 10px;
   background-color: white;
+}
+
+/* Container holding the image and the text */
+.heroContainer {
+  position: relative;
+  z-index: -1;
+}
+
+.heroTitle {
+  position: absolute;
+  text-align: center;
+  bottom: 50%;
+  right: 10%;
+  left: 10%;
+  color: white;
+  text-shadow: 2px 2px 2px #000000;
 }
 
 .ham {
@@ -53,7 +71,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   left: 0;
   background: black;
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
   color: white;
   /* hide the menu above the screen by default */
@@ -81,7 +99,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   font-size: 1.2rem;
 }
 
-.navbar ul li a:hover, .navbar ul li a:focus {
+.navbar ul li a:hover,
+.navbar ul li a:focus {
   border-bottom: 2px solid white;
 }
 
