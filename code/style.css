@@ -1,7 +1,242 @@
+body 
+{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 400px 1fr 1fr 50px;
+  height: 100%;
+  width: 100%;
+  grid-template-areas: 
+  "header header header header"
+  "form form form form"
+  "accordion accordion accordion accordion"
+  "footer footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column; 
+  position: relative;
+  background-color: rgb(164, 222, 255);
+}
+
+.header-imgages {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.header-img-1 {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  animation: slide1 20s linear infinite;
+}
+
+.header-img-1 img {
+  height: 100%;
+  min-width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+
+@keyframes slide1 {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  90% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.header-img-2 {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  animation: slide2 20s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.header-img-2 img {
+  height: 120%;
+  min-width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+@keyframes slide2 {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(200%);
+  }
+  90% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.logo {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: scaleup 20s linear infinite;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes scaleup {
+  0% {
+    transform: scale(1);
+    color:rgb(49, 80, 223);
+  }
+  10% {
+    transform: scale(1);
+    color:rgb(41, 201, 241);
+  }
+  50% {
+    transform: scale(4); 
+    color:rgb(255, 0, 200);
+  }
+  70%
+  {
+    transform: scale(4);
+    color:rgb(22, 225, 240);
+  }
+  90% {
+    transform: scale(1);
+    color:rgb(65, 139, 236);
+  }
+  100% {
+    transform: scale(1);
+    color:rgb(49, 80, 223);
+  }
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ 
+}
+
+.form-section {
+  grid-area: form;
+  display: flex;
+  border: solid black;
+}
+.form {
+ width: 50%;
+ border: solid black;
+}
+
+.form-image {
+  width: 50%;
+  border: solid black;
+}
+
+.form-image img {
+  width: 100%;
+}
+
+.accordion {
+  grid-area: accordion;
+}
+
+.footer {
+  grid-area: footer;
+}
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
   /* some styling here */
+}
+
+@media screen and (device-width: 600px), (max-width:600px) {
+  
+  @keyframes slide2 {
+    0% {
+      transform: rotateY(180deg) translateX(0);
+    }
+    10% {
+      transform: rotateY(180deg) translateX(0);
+    }
+    50% {
+      transform: rotateY(180deg) translateX(-200%);
+    }
+    90% {
+      transform: rotateY(180deg) translateX(0);
+    }
+    100% {
+      transform: rotateY(180deg) translateX(0);
+    }
+  }
+  .logo {
+    font-size: 10px;
+  }
+
+  @keyframes scaleup {
+      0% {
+        transform: scale(1);
+        color:rgb(49, 80, 223);
+      }
+      10% {
+        transform: scale(1);
+        color:rgb(41, 201, 241);
+      }
+      50% {
+        transform: scale(3); 
+        color:rgb(255, 0, 200);
+      }
+      70%
+      {
+        transform: scale(3);
+        color:rgb(22, 225, 240);
+      }
+      90% {
+        transform: scale(1);
+        color:rgb(65, 139, 236);
+      }
+      100% {
+        transform: scale(1);
+        color:rgb(49, 80, 223);
+      }
+    }
+
+
+  .header {
+  background-color: black;
+  }
 }
