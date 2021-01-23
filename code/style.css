@@ -155,40 +155,53 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: blue;
   text-shadow: 1px 1px black;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.logo h1 {
-  animation: scaleup 20s linear infinite;
+.logo h1::before {
+  content:"NC";
+  font-size: 50px;
+  animation: logo 20s linear infinite;
 }
 
-/* animation that makes logo scale and change colors */
-@keyframes scaleup {
+/* animation that makes logo spell out and change colors */
+@keyframes logo {
   0% {
-    transform: scale(1);
-    color: rgb(49, 80, 223);
+    content:"NC";
+    color: blue;
   }
-
   10% {
-    transform: scale(1);
-    color: rgb(41, 201, 241);
+    content:"N  C";
+    color:rgb(0, 4, 255);
   }
-
+  30% {
+    content:"Nano Colors";
+    color:rgb(0, 110, 255);
+  }
   50% {
-    transform: scale(4);
-    color: rgb(255, 0, 200);
+    content:"Colors";
+    color:rgb(255, 0, 0);
   }
-
-  90% {
-    transform: scale(1);
-    color: rgb(65, 139, 236);
+  75% {
+    content:"Colors";
+    color:rgb(25, 0, 255);
   }
-
-  100% {
-    transform: scale(1);
-    color: rgb(49, 80, 223);
+  80%
+  {
+    content:"Nano Colors";
+    color:rgb(0, 132, 255);
+  }
+  90%
+  {
+    content:"N  C";
+    color: rgb(8, 202, 186);
+  }
+  100% 
+  {
+    content:"NC";
+    color: blue;
   }
 }
 
@@ -242,6 +255,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   .logo {
     font-size: 10px;
     align-items:flex-end;
+  }
+
+  .buzzwords h2{
+    font-size: 20px;
   }
 
   .header-img-1, .header-img-2 {
