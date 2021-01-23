@@ -16,11 +16,63 @@ body {
   z-index: -1;
 }
 
+/***** HEADER AND NAV *****/
+
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 4px;
+  background: white;
+  border-radius: 10px;
+}
+
+.content {
+  align-self:flex-start;
+  display: flex;
+  justify-content: space-between;
+
+  width: 60%;
+}
+
+.content a {
+  font-family: 'Varela', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.nav-sign-in {
+display: inline;
+align-self: flex-start;
+}
+
+.nav-sign-in a {
+  font-family: 'Varela', sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+/***** LOGO *****/
 
 .logo {
   display: flex;
@@ -32,12 +84,11 @@ body {
   width: 150px;
   height: 150px;
   background: #ffffff;
-  margin-top: 70px;
+  margin: auto;
+  margin-top: 30px;
 }
 
-.active + .answer {
-  /* some styling here */
-}
+
 
 .name {
   font-family: 'Lobster', cursive;
@@ -83,7 +134,7 @@ body {
   right: 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-
+  box-shadow: 0 -2px 5px #3b383f;
   background: #fff;
 }
 
@@ -94,14 +145,18 @@ body {
   border: solid 1px black;
   border-radius: 30px;
   background: rgb(91, 100, 107);
-  font-family: 'Quicksand', sans-serif;
-  font-size: 22px;
-  color: #fff;
 
   background-image: url("Images/fabric.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   filter: grayscale(100%);
+}
+
+.sign-up h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  color: #fff;
+  margin: auto;
 }
 
 
@@ -135,6 +190,11 @@ li.button {
 
 p {
   margin: 0;
+}
+
+
+.active + .answer {
+  /* some styling here */
 }
 
 @media (min-width: 667px) and (max-width: 1024px) {
