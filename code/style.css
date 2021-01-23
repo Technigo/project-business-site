@@ -64,12 +64,12 @@ body {
   height: 100%;
   overflow: hidden;
   position: relative;
-  animation: slideup 20s linear infinite;
+  animation: slideup 10s linear infinite;
 }
 
 /*nth-of-type is used to change animation time on pictures */
 .header-img-1:nth-of-type(3) {
-  animation: slideup 10s linear infinite;
+  animation: slideup 22s linear infinite;
 }
 
 .header-img-1 img {
@@ -94,7 +94,7 @@ body {
     transform: translateY(-200%);
   }
 
-  90% {
+  70% {
     transform: translateY(0);
   }
 
@@ -108,11 +108,11 @@ body {
   height: 100%;
   overflow: hidden;
   position: relative;
-  animation: slidedown 10s linear infinite;
+  animation: slidedown 22s linear infinite;
 }
 
 .header-img-2:nth-of-type(4) {
-  animation: slidedown 20s linear infinite;
+  animation: slidedown 10s linear infinite;
 }
 
 .header-img-2 img {
@@ -137,7 +137,7 @@ body {
     transform: translateY(200%);
   }
 
-  90% {
+  70% {
     transform: translateY(0);
   }
 
@@ -155,10 +155,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: scaleup 20s linear infinite;
   color: white;
   text-shadow: 1px 1px black;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo h1 {
+  animation: scaleup 20s linear infinite;
 }
 
 /* animation that makes logo scale and change colors */
@@ -176,11 +179,6 @@ body {
   50% {
     transform: scale(4);
     color: rgb(255, 0, 200);
-  }
-
-  70% {
-    transform: scale(4);
-    color: rgb(22, 225, 240);
   }
 
   90% {
@@ -241,16 +239,22 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 @media screen and (device-width: 600px),
 (max-width:600px) {
 
-
   .logo {
     font-size: 10px;
+    align-items:flex-end;
   }
 
-  .header-img-1 img,
-  .header-img-2 img {
-    top: auto;
+  .header-img-1, .header-img-2 {
+    width: 50%;
   }
 
+  .header-img-1:nth-of-type(3) {
+    display:none;
+  }
+
+  .header-img-2:nth-of-type(2) {
+    display:none;
+  }
 
   @keyframes scaleup {
     0% {
@@ -266,11 +270,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     50% {
       transform: scale(3);
       color: rgb(255, 0, 200);
-    }
-
-    70% {
-      transform: scale(3);
-      color: rgb(22, 225, 240);
     }
 
     90% {
