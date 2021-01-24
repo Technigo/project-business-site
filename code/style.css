@@ -122,27 +122,41 @@ h1 {
   z-index: 1;
 }
 
-.header-img-1 {
-  width: 30%;
+.header-img {
   height: 100%;
   overflow: hidden;
   position: relative;
-  animation: slideup 10s linear infinite;
 }
 
-/*nth-of-type is used to change animation time on pictures */
-.header-img-1:nth-of-type(3) {
-  animation: slideup 22s linear infinite;
-  width: 20%;
-}
-
-.header-img-1 img {
+.header-img img {
   display: block;
   min-height: 100%;
   width: 100%;
   position: absolute;
   object-fit: cover;
 }
+
+/* id's are used as specific width and animation are applied to different elements of the same class*/
+#header-img1 {
+  width: 30%;
+  animation: slidedown 10s linear infinite;
+}
+
+#header-img2 {
+  width: 20%;
+  animation: slideup 20s linear infinite;
+}
+
+#header-img3 {
+  width: 20%;
+  animation: slidedown 20s linear infinite;
+}
+
+#header-img4 {
+  width:30%;
+  animation: slideup 10s linear infinite;
+}
+
 
 /*animation for images to slideup of the header */
 @keyframes slideup {
@@ -165,27 +179,6 @@ h1 {
   100% {
     transform: translateY(0);
   }
-}
-
-.header-img-2 {
-  width: 20%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  animation: slidedown 22s linear infinite;
-}
-
-.header-img-2:nth-of-type(4) {
-  animation: slidedown 10s linear infinite;
-  width: 30%;
-}
-
-.header-img-2 img {
-  display: block;
-  min-height: 100%;
-  width: 100%;
-  position: absolute;
-  object-fit: cover;
 }
 
 /* animation for pictures to slide down out of the header */
@@ -371,13 +364,13 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   }
 
   /* removes 2 of the header images as the screen is to small for 4 */
-  .header-img-1:nth-of-type(3), .header-img-2:nth-of-type(2) {
+  #header-img1, #header-img4 {
     display: none;
   }
   
   /* makes the 2 middle header images take all header space */
-  .header-img-1,
-  .header-img-2 {
+  #header-img2,
+  #header-img3{
     width: 50%;
   }
 
