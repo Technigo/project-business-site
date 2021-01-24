@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Libre+Barcode+128+Text&display=swap');
 
 body {
-   padding: 0;
-   margin: 0;
-   width: 100%;
-   min-height: 100%;
-   min-height: 100vh;
-   position: relative;
-   background-color: rgb(192, 250, 235);
-   padding-bottom: 50px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: rgb(192, 250, 235);
+  padding-bottom: 50px;
 }
 
 .header {
@@ -41,13 +41,13 @@ body {
   margin-top: 40px;
 }
 
-h1{
+h1 {
   color: rgb(29, 66, 233);
   font-family: 'Libre Barcode 128 Text', cursive;
 }
 
 .logo h1::before {
-  content:"N|C";
+  content: "N|C";
   font-size: 80px;
   animation: logo 20s linear infinite;
 }
@@ -55,33 +55,37 @@ h1{
 /* animation that makes logo spell out and change colors */
 @keyframes logo {
   0% {
-    content:"N|C";
+    content: "N|C";
     color: rgb(29, 66, 233);
   }
+
   20% {
-    content:"Nano | Colors";
-    color:rgb(0, 47, 255);
+    content: "Nano | Colors";
+    color: rgb(0, 47, 255);
   }
+
   30% {
-    content:"Colors";
-    color:rgb(98, 0, 255);
+    content: "Colors";
+    color: rgb(98, 0, 255);
   }
+
   50% {
-    content:"Colors";
-    color:rgb(234, 0, 255);
+    content: "Colors";
+    color: rgb(234, 0, 255);
   }
+
   75% {
-    content:"Colors";
-    color:rgb(0, 238, 255);
+    content: "Colors";
+    color: rgb(0, 238, 255);
   }
-  80%
-  {
-    content:"Nano | Colors";
+
+  80% {
+    content: "Nano | Colors";
     color: rgb(8, 92, 202);
   }
-  100% 
-  {
-    content:"N|C";
+
+  100% {
+    content: "N|C";
     color: rgb(29, 66, 233);
   }
 }
@@ -212,34 +216,29 @@ h1{
   align-items: center;
 }
 
-.form-section {
+/*wrapper for section*/
+.form {
   margin-top: 40px;
   display: flex;
+  justify-content: space-between;
   border: solid rgb(255, 255, 255);
   width: 70%;
   background-color: darkcyan;
-}
-
-.form {
-  width: 50%;
-  flex-grow: 1;
-  display: flex;
-  align-content: center;
-  justify-content: space-evenly;
-  color: white;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .form-col1 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-left: 40px;
   align-self: center;
+  width: 20%;
   height: 50%;
 }
 
 .form-col2 {
   height: 40%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -251,6 +250,7 @@ h1{
   height: 400px;
   position: relative;
   overflow: hidden;
+  flex: 1 1 auto;
 }
 
 .form-image img {
@@ -261,7 +261,7 @@ h1{
 }
 
 .accordion-section {
-  margin:40px 0;
+  margin: 40px 0;
   display: flex;
   justify-content: space-between;
   width: 70%;
@@ -274,10 +274,12 @@ h1{
   width: 49%;
   border: solid rgb(255, 255, 255);
   background-color: rgb(70, 54, 131);
- 
+
 }
 
-.accordion, .accordion-expand,.accordion-section h2 {
+.accordion,
+.accordion-expand,
+.accordion-section h2 {
   margin-left: 20px;
 }
 
@@ -289,11 +291,11 @@ h1{
 }
 
 .footer {
- display: block;
- height: 50px;
- width: 100%;
- position: absolute;
- bottom: 0;
+  display: block;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .footer-wrapper {
@@ -318,7 +320,7 @@ h1{
 /* wrapper for the social media icons*/
 .socialmedia {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   width: 10%;
 }
@@ -332,10 +334,10 @@ h1{
 }
 
 .icon img {
-width: 100%;
-height: auto;
-object-fit: contain;
-position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  position: absolute;
 }
 
 
@@ -352,55 +354,51 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
   .logo {
     font-size: 10px;
-    align-items:flex-end;
+    align-items: flex-end;
   }
 
-  .buzzwords h2{
+  .buzzwords h2 {
     font-size: 20px;
   }
 
-  .header-img-1, .header-img-2 {
+  .header-img-1,
+  .header-img-2 {
     width: 50%;
   }
 
   .header-img-1:nth-of-type(3) {
-    display:none;
+    display: none;
   }
 
   .header-img-2:nth-of-type(2) {
-    display:none;
+    display: none;
   }
 
-  .form-section {
+  .form {
     flex-direction: column-reverse;
     align-items: center;
     width: 100%;
     height: 300px;
   }
 
-  .form {
-    width: 100%;
-    height: 100%;
-  }
-
   .form-image {
     width: 100%;
     height: 100px;
   }
-  
+
   .accordion-section {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    
+
   }
-  
+
   .FAQ {
     width: 100%;
     margin-bottom: 40px;
   }
-  
-  
+
+
   .products {
     width: 100%;
 
