@@ -13,6 +13,7 @@ body {
 
 .header {
   height: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -113,7 +114,7 @@ h1 {
 }
 
 /* wrapper for several images in the header */
-.header-imgages {
+.header_images {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -122,13 +123,14 @@ h1 {
   z-index: 1;
 }
 
-.header-img {
+.image {
   height: 100%;
+  width: 100%;
   overflow: hidden;
   position: relative;
 }
 
-.header-img img {
+.image img {
   display: block;
   min-height: 100%;
   width: 100%;
@@ -136,27 +138,55 @@ h1 {
   object-fit: cover;
 }
 
-/* id's are used as specific width and animation are applied to different elements of the same class*/
-#header-img1 {
+
+.image--hiddenOnDesktop .image {
+  display: none;
+  width: 0%;
+}
+
+.image--hiddenOnMobile {
+display: block;
+}
+
+.image--mini {
+
+}
+
+.image--xs {
+  width: 20%;
+}
+
+.image--small {
   width: 30%;
-  animation: slidedown 10s linear infinite;
 }
 
-#header-img2 {
-  width: 20%;
-  animation: slideup 20s linear infinite;
+.image--medium {
+  width: 50%;
 }
 
-#header-img3 {
-  width: 20%;
-  animation: slidedown 20s linear infinite;
+.image--fullSize {
+  width: 100%;
 }
 
-#header-img4 {
-  width:30%;
-  animation: slideup 10s linear infinite;
+.image--animationSlideDown {
+  animation-name: slidedown;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
+.image--animationSlideUp {
+  animation-name: slideup;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.image--animationLong {
+  animation-duration: 20s;
+}
+
+.image--animationShort {
+  animation-duration: 10s; 
+}
 
 /*animation for images to slideup of the header */
 @keyframes slideup {
@@ -228,7 +258,8 @@ h1 {
 
 .form-section h2 {
   position: absolute;
-  left: 20px;;
+  left: 20px;
+  ;
   top: 10px;
 }
 
@@ -240,27 +271,13 @@ h1 {
   width: fit-content;
   height: 70%;
   flex-grow: 1;
-  align-self:flex-start;
+  align-self: flex-start;
   margin-top: 80px;
 }
 
 .form-row {
   width: 80%;
   margin: 5px 20px;
-}
-
-.form-image {
-  width: 50%;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-}
-
-.form-image img {
-  width: 100%;
-  min-height: 100%;
-  position: absolute;
-  object-fit: cover;
 }
 
 .accordion-section {
@@ -363,17 +380,15 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     font-size: 20px;
   }
 
-  /* removes 2 of the header images as the screen is to small for 4 */
-  #header-img1, #header-img4 {
-    display: none;
+  .image--hiddenOnMobile {
+    display:none;
+   width: 0%;
   }
-  
-  /* makes the 2 middle header images take all header space */
-  #header-img2,
-  #header-img3{
-    width: 50%;
+  .image--hiddenOnDesktop {
+    display: block;
   }
 
+ 
   /* changes the form and picture to be in one column instead of next to eachother */
   .form-section {
     flex-direction: column;
@@ -392,7 +407,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   .form-image {
     order: 1;
   }
-  
+
   .form {
     width: 100%;
     align-items: center;
