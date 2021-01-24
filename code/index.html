@@ -10,8 +10,6 @@
 </head>
 
 <body>
-
-  <div class="grid">
     <!-- video or image as a header is cool :) -->
     <header class="header">
       <nav class="nav">
@@ -21,7 +19,6 @@
         <div>Chart</div>
         <div>Sign up</div>
       </nav>
-
       <div class="header-imgages">
         <container class="header-img-1">
           <img src="./images/left.png">
@@ -44,19 +41,30 @@
         <h1></h1>
       </div>
     </header>
-    <!-- Signup form -->
 
+    <main class="main">
     <section class="form-section">
       <form class="form">
-        <label for="user">Username:</label><br>
-        <input type="text" id="user" name="user" placeholder="You Username"><br>
-        <label for="pwd">Password:</label><br>
-        <input type="password" id="pwd" name="pwd" placeholder="You Password"><br>
-        <label for="privacy">I agree to the <a href="">privacy policy</a></label>
-        <input type="checkbox" id="privacy" name="privacy">
+        <div class="form-col1">
+          <div><label for="user">Username:</label><br>
+            <input type="text" id="user" name="user" placeholder="You Username"><br></div>
+          <div><label for="pwd">Password:</label><br>
+            <input type="password" id="pwd" name="pwd" placeholder="You Password"><br></div>
+          <div>
+            <input type="checkbox" id="privacy" name="privacy">
+            <label for="privacy">I agree to the <a href="">privacy policy</a></label></div>
+        </div>
+        <div class="form-col2">
+          <div><input type="radio" id="woman" name="gender">
+            <label for="woman">Woman</label><br></div>
+          <div><input type="radio" id="man" name="gender">
+            <label for="woman">Man</label><br></div>
+          <div><input type="radio" id="other" name="gender">
+            <label for="woman">Other</label></div>
+        </div>
       </form>
       <container class="form-image">
-
+        <img src="./images/right.png">
       </container>
     </section>
 
@@ -75,9 +83,15 @@
       </div>
     </section>
     <!-- dont forget to link the javascript file here! -->
+  </main>
 
     <footer class="footer">
-      <div class="small-logo"><h1>N|C</h1></div>
+      <div class="footer-wrapper">
+
+     
+      <div class="small-logo">
+        <h1>N|C</h1>
+      </div>
       <p>&copy; Pauline Andersson 2021</p>
       <div class="socialmedia">
         <div class="icon"><img src="./images/Fb.svg"></div>
@@ -85,8 +99,9 @@
         <div class="icon"><img src="./images/Linkedin.svg"></div>
         <div class="icon"><img src="./images/Twitter.svg"></div>
       </div>
+    </div>
     </footer>
-  </div>
+
 </body>
 
 </html>
