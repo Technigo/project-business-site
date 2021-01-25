@@ -1,3 +1,60 @@
+
+
+/* first header as flexcontainer, tried using vh to get the font size to adapt to screen */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 5vh;
+  font-weight: bold;
+}
+
+.menu {
+  font-size: 6vh;
+}
+
+/* hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  padding: 2em;
+  box-sizing: border-box;
+  color: whitesmoke;
+  background: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/44ed8b50022933.58c566bd36679.gif) center center no-repeat;
+  background-size: cover;
+}
+
+.hero-title {
+  max-width: 16em;
+  margin: 0;
+  font-size: 10vh;
+  font-weight: bold;
+  line-height: .9;
+
+}
+
+.hero-footer {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.button {
+  padding: .5em .67em;
+	color: white;
+	text-decoration: none;
+	border: .1em solid white;
+}
+
+@media only screen and (min-width: 32em) { .hero-title { font-size: 14vh; } }	
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
