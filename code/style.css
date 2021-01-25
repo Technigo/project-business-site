@@ -158,13 +158,12 @@ align-self: flex-start;
   text-shadow: 2px 2px 3px rgb(50, 48, 56);
 }
 
+/***** ACCORDION *****/
+
 .accordion-container {
   display: none;
 }
 
-.accordion div p {
- display: none;
-}
 
 /***** FORM STYLING *****/
 
@@ -258,21 +257,18 @@ p {
 /***** ACCORDION *****/
 
 .accordion-container {
-  display: block;
+  display: inline;
   width: 60vw;
   position: fixed;
   bottom: 0;
   left: 0;
 }
 
-.accordion div a:hover {
-  color: pink;
-}
-.accordion div p {
+.accordion-content {
   display: none;
 }
 
-.accordion div:target p {
+.accordion-selected {
   display: block;
 }
 }
@@ -346,34 +342,20 @@ p {
   /***** ACCORDION *****/
 
   .accordion-container {
-      display: block;
+      display: inline;
       width: 30vw;
       position: fixed;
       top: 0;
       right: 0;
     }
     
-    .accordion div a:hover {
-      color: pink;
-    }
-    .accordion div p {
+    .accordion-content {
       display: none;
     }
     
-    .accordion div:target p {
+    .accordion-selected {
       display: block;
     }
-  
-  .accordion div a:hover {
-    color: pink;
-  }
-  .accordion div p {
-    display: none;
-  }
-  
-  .accordion div:target p {
-    display: block;
-  }
 
 
 
