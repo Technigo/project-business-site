@@ -17,6 +17,23 @@ const answerFive = document.getElementById('answer-5');
 const questionSix = document.getElementById('question-6');
 const answerSix = document.getElementById('answer-6');
 
+
+const sliderOne = document.getElementById('myInvoices');
+const outputOne = document.getElementById('numberOfInvoices');
+outputOne.innerHTML = sliderOne.value;
+
+sliderOne.oninput = function() {
+  outputOne.innerHTML = this.value;
+}
+
+const sliderTwo = document.getElementById('myExpenses');
+const outputTwo = document.getElementById('numberOfExpenses');
+outputTwo.innerHTML = sliderTwo.value;
+
+sliderTwo.oninput = function() {
+  outputTwo.innerHTML = this.value;
+}
+
 console.log(answerOne);
 
 questionOne.addEventListener('click', () => {
