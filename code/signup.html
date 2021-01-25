@@ -54,79 +54,53 @@
       </div>
     </div>
     <!-- Hero image and text end -->
-
-
-
-
   </div>
   <!-- Header container end -->
 
+
+
   <!-- Signup form start -->
-  <div class="signupFormContainer">
-    <form action="https://httpbin.org/anything" method="POST" class="signupForm">
-     
-      <div class="formRadioChrome formBox">
-        <label for="radioBrowser">
-          <p>Select if you are using Google Chrome</p>
-          <input type="radio" id="" name="radioButtonBrowser" value="chrome">
-        </label>
-       </div>
+  <div class="signupFormWrapper">
+    <div class="signupFormContainer">
 
-       <div class="formRadioFirefox formBox">
-        <label for="radioBrowser">
-          <p>Select if you are using Firefox</p>
-          <input type="radio" id="" name="radioButtonBrowser" value="firefox">
-        </label>
-       </div>
+      <h1>Sign up</h1>
+      <form action="https://httpbin.org/anything" type="POST">
 
-       <div class="formCheckboxGender formBox">
-        <label for="checkboxMale">
-          <p>Select if you are male</p>
-          <input type="checkbox" id="" name="checkboxGender" value="male">
-        </label>
-       </div>
+        <input type="text" id="firstName" name="firstName" placeholder="First Name" required><br>
 
-       <div class="formCheckboxGender formBox">
-        <label for="checkboxFemale">
-          <p>Select if you are female</p>
-          <input type="checkbox" id="" name="checkboxGender" value="female">
-        </label>
-       </div>
-  
-       <div class="formLastName formBox">
-        <label for="lastName">
-          <p>Last name</p>
-          <input type="text" name="lastName" required>
-        </label>
-       </div>
 
-      <div class="formUsername formBox">
-      <label for="username">
-        <p>Username</p>
-        <input type="text" name="username" required>
-      </label>
-     </div>
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required><br>
 
-     <div class="formEmail formBox">
-      <label for="email">
-        <p>E-mail</p>
-        <input type="email" name="email" required>
-      </label>
-     </div>
+        <input type="email" id="email" name="email" placeholder="E-mail" required><br>
 
-     <div class="formPassword formBox">
-      <label for="password">
-        <p>Password</p>
-        <input type="password" name="password" required>
-      </label>
-     </div>
+        <h3 class="signupFormGenderTitle">Gender:</h3>
 
-     <div class="formBox">
-        <button type="submit" class="submitButton">Signup</button>
-     </div>
-    </form>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+
+
+        <h3>Interests:</h3>
+
+        <input type="checkbox" id="interest1" name="interest1" value="html">
+        <label for="interest1">HTML</label><br>
+
+        <input type="checkbox" id="interest2" name="interest2" value="css">
+        <label for="interest2">CSS</label><br>
+
+        <input type="checkbox" id="interest3" name="interest3" value="javascript">
+        <label for="interest3">Javascript</label><br>
+
+        <button type="submit" class="signupFormButton">Submit</button>
+      </form>
+
+    </div>
   </div>
-   <!-- Signup form end -->
+
+  <!-- Signup form end -->
+
 
 
   <!-- Javascript Import -->
