@@ -1,7 +1,178 @@
+
+body {
+  background-color: aquamarine;
+  margin: 0;
+}
+
+/* hero section */
+
+.header {
+  position: relative;
+  
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 90px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+ 
+}
+
+.hero-title {
+  font-size: 60px;
+  margin: 0;
+  font-family: 'Kaushan Script', cursive, sans-serif;
+  color: #1b2325;
+  /*background-color: rgb(111, 80, 141);*/
+}
+
+.hero-subtitle {
+  margin-top: -15px;
+  font-family: 'Open Sans', sans-serif;
+  color: #984400;
+  font-size: 25px;
+  
+  /*background-color: blueviolet;*/
+
+}
+
+/* Info section */
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #a7d9e6;
+  margin-top: -5px;
+  height: 400px;
+  padding: 35px 35px 15px 35px;
+  
+}
+
+.info-title-one {
+  text-align: center;
+  font-size: 27px;
+  width: 700px;
+  font-family: 'Open Sans', sans-serif;
+  color: #1b2325;
+  margin-bottom: 0%;
+  
+}
+
+.info-title-two {
+  text-align: center;
+  
+  width: 700px;
+  font-family: 'Open Sans', sans-serif;
+  color: #984400;
+  font-size: 35px;
+  margin: 10px;
+}
+
+
+
+.info-text {
+  font-size: 20px;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  color: #1b2325;
+}
+
+
+.sign-up-text {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #984400;
+  font-size: 27px;
+ 
+  
+}
+
+
+
+
+
+
+
+
+
+
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
   /* some styling here */
+}
+
+/** Media queires **/
+
+/* tablet */
+@media (min-width: 768px) {
+
+  .hero-image {
+
+  }
+
+  .title {
+    bottom: 110px;
+    
+  }
+
+  .hero-title {
+    margin: 0;
+    font-size: 65px;
+  }
+  
+  .hero-subtitle {
+    font-size: 27px;
+    margin: -5px;
+    margin-top: -15px;
+    
+  }
+  
+
+
+
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+
+  .hero-image {
+    
+  }
+
+  .title {
+    bottom: 160px;
+    
+  }
+
+  .hero-title {
+    margin: 0;
+    font-size: 100px;
+  
+  }
+  
+  .hero-subtitle {
+    margin-top: -15px;
+    font-size: 40px;
+  }
+
 }
