@@ -4,20 +4,61 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
+    <link rel="stylesheet" href="style.css">
     <!-- dont forget to add a css file and link it here! -->
   </head>
+
+
   <body>
     <!-- video or image as a header is cool :) -->
-
+    <header class="header">
+      <picture>
+        <source scr="/photo-1519751138087-5bf79df62d5b.jpeg" media="(max-width: 600px)">
+        <source scr="/photo-1519751138087-5bf79df62d5b.jpeg" media="(max-width: 900)">
+        <img class="header-image" src="/photo-1519751138087-5bf79df62d5b.jpeg" alt="Hero Image">
+      </picture>
+      <h1 class="header-text">NuttisPruttis</h1>
+    </header>
+  
+    <nav>
+      <ul>
+        <li>Nuttis</li>
+        <li>Nuttis</li>
+        <li>Nuttis</li>
+        <li>Nuttis</li>
+      </ul>
+    </nav>
     <!-- Signup form -->
 
-    <section class="accordion">
+    <section>
+      <form class="form" action=“http://httpbin.org/anything” method=“POST”>
+          <input class="input input-box" type="text" name="name" placeholder="Name" required>
+          <input class="input input-box" type="text" name="email" placeholder="Email" required>
+          <input class="input input-box" type="number" name="phone-number" placeholder="Phone Number" required>
+          <div class="radio">
+            <label class="input">one
+              <input type="radio" name="radio-button" id="" checked>
+            </label>
+            <label class="input">two
+              <input type="radio" name="radio-button" id="" checked>
+            </label>
+          </div>
+          <label class="input checkbox">
+            <input type="checkbox" name="checkbox" id="" checked>
+            I Agree to the Terms and Conditions
+          </label>
+          <button class="input signup-btn" type=“submit”>SIGN UP</button>
+      </form>
+    </section>
+
+    <section class="accordion-container">
       <!-- Accordion -->
       <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="accordion">
+        <div class="question" id="section1">Section 1</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
       </div>
 
       <div class="question" id="section2">Section 2</div>
@@ -26,5 +67,6 @@
       </div>
     </section>
     <!-- dont forget to link the javascript file here! -->
+    <script src="./script.js"></script>
   </body>
 </html>
