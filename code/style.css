@@ -211,9 +211,10 @@ input:required:invalid:focus {
 /** Styling the accordion **/
 
 .accordion-container {
-  background-color: black;
+  background-color: rgba(28, 28, 28, 0.99);
   color: white;
   border: 3px solid #e8eddf;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   margin: 40px auto;
@@ -222,25 +223,71 @@ input:required:invalid:focus {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.FAQ {
+.FAQ-header {
   margin: 0 auto;
 }
 
-.FAQ h3 {
-  font-weight: 100;
+.FAQ-header h3 {
+  font-weight: 200;
   padding: 15px;
+  margin-bottom:20px;
+} 
+
+.accordion {
+  cursor: pointer;
+}
+
+.accordion h3 {
+  margin: 0;
+}
+
+.accordion-question {
+  background-color:rgba(107, 133, 112, 0.85);
+  padding: 12px;
+  font-weight: 100;
+  font-size: 16px;
+  border-bottom: 1px solid black;
+}
+
+.answer {
+  overflow: hidden; 
+  height:0;
+  transition: height 0.5s ease;
+}
+
+.accordion-text {
+  padding: 12px;
+  background-color:rgba(149, 157, 151, 0.85);
+  margin: 0;
+  font-size: 12px;
+}
+
+.accordion-selected, .accordion:hover {
+  background-color:lightgrey;
+}
+
+.accordion-question:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion-selected {
+  height: auto;
 }
 
 /** Styling the footer **/
 
 footer {
-  background: #333533;
+  background: rgba(28, 28, 28, 0.99);
   color: white;
-  margin: 0;
+  font-family: papyrus;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 5px;
-  margin-top: 20px;
-  border-top: 2px solid black;
+  padding: 10px;
+  margin-top: 50px;
+  width: 100%;
 }
