@@ -114,7 +114,7 @@ h1 {
 }
 
 /* wrapper for several images in the header */
-.header_images {
+.header__bg {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -123,14 +123,14 @@ h1 {
   z-index: 1;
 }
 
-.image {
+.header__bg__img {
   height: 100%;
   width: 100%;
   overflow: hidden;
   position: relative;
 }
 
-.image img {
+.header__bg__img img {
   display: block;
   min-height: 100%;
   width: 100%;
@@ -139,52 +139,44 @@ h1 {
 }
 
 
-.image--hiddenOnDesktop .image {
+.header__bg__img--hidden-desktop {
   display: none;
-  width: 0%;
 }
 
-.image--hiddenOnMobile {
+.header__bg__img--hidden-mobile {
 display: block;
 }
 
-.image--mini {
 
-}
-
-.image--xs {
+.header__bg__img--xs {
   width: 20%;
 }
 
-.image--small {
+.header__bg__img--small {
   width: 30%;
 }
 
-.image--medium {
+.header__bg__img--medium {
   width: 50%;
 }
 
-.image--fullSize {
-  width: 100%;
-}
-
-.image--animationSlideDown {
+.header__bg__img--animation-down {
   animation-name: slidedown;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-.image--animationSlideUp {
+.header__bg__img--animation-up  {
   animation-name: slideup;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-.image--animationLong {
+.header__bg__img--animation-long {
   animation-duration: 20s;
 }
 
-.image--animationShort {
+.header__bg__img--animation-short {
   animation-duration: 10s; 
 }
 
@@ -259,7 +251,6 @@ display: block;
 .form-section h2 {
   position: absolute;
   left: 20px;
-  ;
   top: 10px;
 }
 
@@ -279,6 +270,29 @@ display: block;
   width: 80%;
   margin: 5px 20px;
 }
+
+.form-section__image {
+  height: 400px;
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.form-section__image img {
+  display: block;
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.form-section__image--hidden-desktop {
+  display: none;
+}
+
+.form-section__image--hidden-mobile {
+  display: block;
+  }
 
 .accordion-section {
   margin: 40px 0;
@@ -380,11 +394,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     font-size: 20px;
   }
 
-  .image--hiddenOnMobile {
-    display:none;
-   width: 0%;
+  .header__bg__img--hidden-mobile {
+    display: none;
   }
-  .image--hiddenOnDesktop {
+  .header__bg__img--hidden-desktop {
     display: block;
   }
 
@@ -404,8 +417,21 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   }
 
   /*puts the form image on top instead of bottom of the form */
-  .form-image {
-    order: 1;
+  .form-section__image--landscape{
+    width: 100%;
+    height: 100px;
+  }
+
+  .form-section__image--flex-first {
+    order:1;
+  }
+
+  .form-section__image--hidden-mobile {
+    display: none;
+    }
+  
+  .form-section__image--hidden-desktop {
+    display: block;
   }
 
   .form {
@@ -422,11 +448,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
   .form-row {
     width: 50%;
-  }
-
-  .form-image {
-    width: 100%;
-    height: 100px;
   }
 
   .accordion-section {
