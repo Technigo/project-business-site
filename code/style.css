@@ -6,77 +6,49 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   some styling here 
 }*/
 
-input:valid {
-  border-radius: 2px;
-  font-size: 20px;
-  background-color: green;
-}
-
-label {
-  display: block;
-}
-
 .hero {
-  /*position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
- width: 80%;
-  height: auto;
-  z-index: -100;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background: url(placeholder.jpg) no-repeat;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;*/
-  width: 100%;
-  height: auto;
-  background-size: cover;
-  background-position: relative;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  z-index: 1;
-  filter:grayscale(0.75);
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: relative;
+    background-repeat: no-repeat;
+    margin: 0;
+    /*overflow: hidden;*/
+    z-index: 1;
+    filter:grayscale(0.75);
   }
 
   .header {
-   display: flex;
-   flex-wrap: wrap;
-   border: solid 2px aquamarine;
-   
-  
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px aquamarine;
   }
-  .nav{
+
+  .nav {
     width: 80%;
     height: auto;
     position: absolute;
     text-align: right;
-   margin-left: 15%;
-   margin-top: 2%;
-    z-index: 2;
-    
+    margin-top: 3%;
+    margin-left: 17%;
+    z-index: 2
   }
 
   .nav-item {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    margin: 2%;
-   
-   
-    
+    font-size: 15px;
+    margin: 3%;
+    text-transform: uppercase;
     color:linen;
   }
 
-  .header h1{
-    
+  .header h1 {
     position:absolute;
     text-align: center;
-  margin-top: 35%;
-  font-size: 80px;
+    margin-top: 35%;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    font-size: 50px;
     width: 100%;
     height: auto;
     color: white;
@@ -86,17 +58,37 @@ label {
     font-family: 'Roboto Mono', monospace;
   }
 
+  .header p {
+    position:absolute;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    color: white;
+    z-index: 2;
+    background-color: black;
+    opacity: 0.5;
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 42%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 40px;
+  }
+ 
   .logo {
     position: absolute;
-    margin: 4%;
-    width: 17%;
-    height: auto;
+    margin: 2%;
+    /*width: 15px;
+    height: auto;*/
     z-index: 2;
+  }
+
+  #imglogo {
+    width: 40%;
+    height: auto;
   }
 
   a:link {
     text-decoration: none;
-
   }
 
   a:hover {
@@ -106,9 +98,142 @@ label {
 
   .main {
     background-color: darkgrey;
-    
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid red;
+    padding: 2%;
+  }
+  
+  .form {
+    display: block;
+    /*flex-wrap: wrap;
+    justify-content: left;*/
+    background-color: lightgrey;
+    width: 40%;
+    height: auto;
+    padding: 2%;
+    margin: 10px;
+    box-shadow:5px 5px rgba(0,0.15,0,0.15);
   }
 
+  input text{
+    width: 40%;
+  }
+
+  input:valid {
+    border-radius: 2px;
+    font-size: 20px;
+    background-color: green;
+  }
+
+  .form h3, h6 {
+    text-align:center;
+  }
+
+
+  button {
+    border: 1px solid #E8A53A;
+    background-color: #E8A53A;
+    width:40%;
+    height: auto;
+  }
+
+  .QandA {
+    display: block;
+    background-color: gray;
+    width: 40%;
+    height: auto;
+    padding: 1%;
+    margin: 10px;
+    box-shadow: 5px 5px rgba(0,0.15,0,0.15);
+  }
+
+  .QandA h3 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .accordion {
+    background-color: slategray;
+    padding: 10px 0 10px 0;
+    margin: 1%;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    
+    
+  }
+  /*.accordion-topic {
+    background-color: slategray;
+    text-align: left;
+    width: 100%;
+    height: 50px;
+    margin: 1px;
+    padding-top: 20px;
+    padding-left: 10px;
+  }*/
+  
+
+  .accordion-content{
+    display: none;
+  }
+
+  .accordion-selected{
+    display: block;
+  }
+
+  /*
+  .accordion {
+    background-color:silver;
+    width: 40%;
+    height: auto;
+    margin: 10px;
+    box-shadow:5px 5px rgba(0,0.15,0,0.15);
+  }
+
+  .accordion h3 {
+    text-align: center;
+  }
+  .accordionquestion {
+    background-color:darkgrey;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+
+  .active, .accordionquestion:hover {
+    background-color: slategray;
+  }
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+  .accordion:after {
+    content: '\02795'; Unicode character for "plus" sign (+) 
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; Unicode character for "minus" sign (-) 
+  }*/
+
  .footer {
-   background-color:ivory;
- }
+    display: flex;
+    flex-wrap: wrap;
+    background-color:slategray;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+  }
