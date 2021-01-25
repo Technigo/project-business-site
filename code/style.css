@@ -13,7 +13,7 @@ body {
 
 /** Header **/ 
 
-.header {
+.hero-image-container {
   position: relative;
 }
 
@@ -25,7 +25,7 @@ body {
 
 .navigation-menu {
   position: absolute;
-  top: 0;
+  top: 20px;
   right: 0;
   bottom: 0;
   left: 0; 
@@ -58,7 +58,7 @@ body {
   font-weight: 200;
 }
 
-/** Signup container**/ 
+/** Signup container **/ 
 
 .input-container {
   background-color: black;
@@ -68,7 +68,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 30px auto;
+  margin: 50px auto;
   max-width: 350px;
   min-width: 350px;
 }
@@ -87,7 +87,7 @@ body {
 }
 
 input[type=text] {
-width: 80%;
+  width: 85%;
   padding: 3px 3px;
   box-sizing: border-box;
   border-radius: 5px;
@@ -102,7 +102,7 @@ input[type=text]:focus {
 }
 
 input[type=email] {
-width: 80%;
+  width: 85%;
   padding: 3px 3px;
   box-sizing: border-box;
   border-radius: 5px;
@@ -117,7 +117,7 @@ input[type=email]:focus {
 }
 
 input[type=password] {
-  width: 80%;
+  width: 85%;
   padding: 3px 3px;
   box-sizing: border-box;
   border-radius: 5px;
@@ -172,7 +172,7 @@ input[type=password]:focus {
 }
 
 .radiobuttons-text {
-  padding-left: 10px;
+  padding-left: 6px;
 }
 
 .radiobutton-options {
@@ -186,6 +186,16 @@ input[type=submit] {
   background-color: #84a98c;
   outline: none;
   border-radius: 5px;
+}
+
+input:required:valid:focus {
+  border-color: rgb(8, 87, 8);
+  border-width: 3px;
+}
+
+input:required:invalid:focus {
+  border-color: red;
+  border-width: 3px;
 }
 
 .existing-member {
