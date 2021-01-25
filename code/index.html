@@ -5,11 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
     <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./style.css"/>
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
-
+    <header class="hero">
+      <picture>
+        <source srcset="./image/mobile.jpg" media="(max-width: 640px)"/>
+        <source srcset="./image/tablet.jpg" media="(max-width: 1199px)"/>
+        <img class="hero-image" src="./image/desktop.jpg" alt="Flower"/>
+      </picture>
+      <h1 class="hero-title">title</h1>
+    </header>
+    
     <!-- Signup form -->
+    <section class="container">
+    <form action="http://httpbin.org/anything" method="POST" class="signup-form">
+      <div class="name">
+        <label for="name">Enter your firstname: </label>
+        <input type="text" name="name" id="name" required>
+      </div>
+      <div class="name">
+        <label for="name">Enter your lastname: </label>
+        <input type="text" name="name" id="name" required>
+      </div>
+      <div class="password">
+        <label for="password">Enter your password: </label>
+        <input type="password" name="password" id="password" required>
+      </div>
+      <!--Radio Buttons-->
+      <div class="radio-buttons">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male">
+      </div>
+      <!--Checkbox-->
+      <div class="checkbox">
+        <label for="newsletter">Sign up for our newsletter?</label>
+        <input type="checkbox" name="newsletter" id="newsletter">
+        <label for="terms&conditions">Accept our terms & conditions?</label>
+        <input type="checkbox" name="term&conditions" id="terms&conditions" required>
+      </div>
+      <!--Submit-->
+      <div class="submit">
+        <button type="submit">submit</button>
+      </div>
+    </form>
+    </section>
 
     <section class="accordion">
       <!-- Accordion -->
