@@ -15,126 +15,67 @@ body {
   height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
   position: relative;
   background-color: rgb(46, 157, 165);
   overflow: hidden;
   border-bottom: solid white;
-}
-
-.nav {
-  width: 100%;
-  display: flex;
-  position: sticky;
-  top: 0;
   z-index: 1;
-  background: white;
-  justify-content: space-evenly;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color:rgb(46, 157, 165);
-}
-
-/*logo for the company on header */
-.logo {
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 40px;
-}
-
-h1 {
-  color: rgb(29, 66, 233);
-  font-family: 'Libre Barcode 128 Text', cursive;
-}
-
-.logo h1::before {
-  content: "N|C";
-  font-size: 80px;
-  animation: logo 20s linear infinite;
-}
-
-/* animation that makes logo spell out and change colors */
-@keyframes logo {
-  0% {
-    content: "N|C";
-    color: rgb(29, 66, 233);
-  }
-
-  20% {
-    content: "Nano | Colors";
-    color: rgb(0, 47, 255);
-  }
-
-  30% {
-    content: "Colors";
-    color: rgb(98, 0, 255);
-  }
-
-  50% {
-    content: "Colors";
-    color: rgb(234, 0, 255);
-  }
-
-  75% {
-    content: "Colors";
-    color: rgb(0, 238, 255);
-  }
-
-  80% {
-    content: "Nano | Colors";
-    color: rgb(8, 92, 202);
-  }
-
-  100% {
-    content: "N|C";
-    color: rgb(29, 66, 233);
-  }
 }
 
 /* some buzzwords in the header that reveals when the header images moves */
-.buzzwords {
+.header__buzz {
   width: 100%;
   height: 100%;
-  display: flex;
   position: absolute;
-  align-items: center;
-  justify-content: space-between;
-  color: rgb(119, 0, 255);
+  width: fit-content;
+  top: 50%;
+}
+
+.header__buzz__word {
   font-family: 'Indie Flower', cursive;
-}
-
-/*makes the second h2 of the buzzwords to have a different color than the first*/
-.buzzwords h2:nth-child(odd) {
-  color: rgb(0, 252, 231);
-}
-
-.buzzwords h2 {
-  margin: 40px;
   font-size: 30px;
 }
 
-/* wrapper for several images in the header */
+/* set the place of the buzzword */
+.header__buzz--left {
+  left: 0;
+  margin-left: 20px;
+}
+.header__buzz--right {
+  right: 0;
+  margin-right: 20px;
+}
+
+/*set the color for the buzzwords*/
+.header__buzz--turquoise {
+  color: rgb(0, 252, 231);
+}
+
+.header__buzz--purple {
+  color: rgb(119, 0, 255);
+}
+
+
+
+
+/* wrapper for several images in the header 
 .header__bg {
   width: 100%;
   height: 100%;
   overflow: hidden;
   display: flex;
   justify-content: space-evenly;
-  z-index: 1;
-}
+  z-index: 1;*/
 
-.header__bg__img {
+
+.header__img {
   height: 100%;
   width: 100%;
   overflow: hidden;
   position: relative;
 }
 
-.header__bg__img img {
+.header__img img {
   display: block;
   min-height: 100%;
   width: 100%;
@@ -142,45 +83,43 @@ h1 {
   object-fit: cover;
 }
 
-
-.header__bg__img--hidden-desktop {
+.header__img--hidden-desktop {
   display: none;
 }
 
-.header__bg__img--hidden-mobile {
+.header__img--hidden-mobile {
 display: block;
 }
 
-
-.header__bg__img--xs {
+.header__img--xs {
   width: 20%;
 }
 
-.header__bg__img--small {
+.header__img--small {
   width: 30%;
 }
 
-.header__bg__img--medium {
+.header__img--medium {
   width: 50%;
 }
 
-.header__bg__img--animation-down {
+.header__img--animation-down {
   animation-name: slidedown;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-.header__bg__img--animation-up  {
+.header__img--animation-up  {
   animation-name: slideup;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-.header__bg__img--animation-long {
+.header__img--animation-long {
   animation-duration: 20s;
 }
 
-.header__bg__img--animation-short {
+.header__img--animation-short {
   animation-duration: 10s; 
 }
 
@@ -230,6 +169,91 @@ display: block;
   }
 }
 
+
+/*logo for the company on header */
+.header__logo {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.header__logo__text {
+  color: rgb(29, 66, 233);
+  font-family: 'Libre Barcode 128 Text', cursive;
+}
+
+.header__logo h1::before {
+  content: "N|C";
+  font-size: 80px;
+  animation: logo 20s linear infinite;
+}
+
+/* animation that makes logo spell out and change colors */
+@keyframes logo {
+  0% {
+    content: "N|C";
+    color: rgb(29, 66, 233);
+  }
+
+  20% {
+    content: "Nano | Colors";
+    color: rgb(0, 47, 255);
+  }
+
+  30% {
+    content: "Colors";
+    color: rgb(98, 0, 255);
+  }
+
+  50% {
+    content: "Colors";
+    color: rgb(234, 0, 255);
+  }
+
+  75% {
+    content: "Colors";
+    color: rgb(0, 238, 255);
+  }
+
+  80% {
+    content: "Nano | Colors";
+    color: rgb(8, 92, 202);
+  }
+
+  100% {
+    content: "N|C";
+    color: rgb(29, 66, 233);
+  }
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: white;
+  justify-content: space-evenly;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:rgb(46, 157, 165);
+  padding: 0;
+  margin: 0;
+}
+
+.nav a:hover {
+  background:rgb(0, 238, 255);
+}
+
+.nav__link {
+  width: 20%;
+  text-align: center;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -270,7 +294,7 @@ display: block;
   margin-top: 80px;
 }
 
-.signup__form__row {
+.signup__row {
   width: 80%;
   margin: 5px 20px;
 }
@@ -298,7 +322,7 @@ display: block;
   display: block;
   }
 
-.accordion-section {
+.accordion {
   margin: 40px 0;
   display: flex;
   justify-content: space-between;
@@ -307,24 +331,35 @@ display: block;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.FAQ {
+.accordion__FAQ {
   display: block;
   width: 49%;
   border: solid rgb(255, 255, 255);
   background-color: rgb(70, 54, 131);
+  
 }
 
-.accordion,
-.accordion-expand,
-.accordion-section h2 {
+.accordion h2, .accordion p {
   margin-left: 20px;
 }
 
-.products {
+.accordion__product {
   display: block;
   width: 49%;
   border: solid rgb(255, 255, 255);
   background-color: rgb(70, 54, 131);
+}
+
+.accordion__image {
+
+}
+
+.accordion__display {
+
+}
+
+.accordion__expand {
+
 }
 
 .footer {
@@ -335,7 +370,7 @@ display: block;
   bottom: 0;
 }
 
-.footer-wrapper {
+.footer__wrapper {
   display: flex;
   width: 100%;
   min-height: 100%;
@@ -350,12 +385,13 @@ display: block;
 }
 
 /* container for a simplified company logo in the footer*/
-.small-logo {
+.footer__logo {
   margin-left: 10px;
+  font-family: 'Libre Barcode 128 Text', cursive;
 }
 
 /* wrapper for the social media icons*/
-.socialmedia {
+.footer__social {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -363,14 +399,14 @@ display: block;
 }
 
 /* image container for social media icons */
-.icon {
+.footer__icon {
   width: 15px;
   height: 15px;
   position: relative;
   overflow: hidden;
 }
 
-.icon img {
+.footer__icon img {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -389,20 +425,20 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 @media screen and (device-width: 600px),
 (max-width:600px) {
 
-  .logo {
+  .header__logo {
     font-size: 20px;
     margin-top: 0;
     align-items: flex-end;
   }
 
-  .buzzwords h2 {
+  .header__buzzwords h2 {
     font-size: 20px;
   }
 
-  .header__bg__img--hidden-mobile {
+  .header__img--hidden-mobile {
     display: none;
   }
-  .header__bg__img--hidden-desktop {
+  .header__img--hidden-desktop {
     display: block;
   }
 
