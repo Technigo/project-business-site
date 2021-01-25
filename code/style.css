@@ -44,11 +44,7 @@ body {
 }
 
 .content {
-  align-self:flex-start;
-  display: flex;
-  justify-content: space-between;
-
-  width: 60%;
+  display: none;
 }
 
 .content a {
@@ -57,6 +53,7 @@ body {
   text-transform: uppercase;
   font-size: 10px;
   text-decoration: none;
+  text-shadow: 2px 2px 3px rgb(98, 93, 110);
 }
 
 .nav-sign-in {
@@ -69,7 +66,7 @@ align-self: flex-start;
   text-transform: uppercase;
   font-size: 10px;
   text-decoration: none;
-  color: #fff;
+  color: rgb(45, 44, 51);
 }
 
 /***** LOGO *****/
@@ -85,10 +82,8 @@ align-self: flex-start;
   height: 150px;
   background: #ffffff;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 80px;
 }
-
-
 
 .name {
   font-family: 'Lobster', cursive;
@@ -98,7 +93,7 @@ align-self: flex-start;
 
 .info {
   padding: 10px;
-  margin-top: 30px;
+  margin-top: 50px;
   text-align: center;
   backdrop-filter: blur(10px);
 }
@@ -123,11 +118,11 @@ align-self: flex-start;
 
 /***** SIGN UP, SIGN IN BUTTONS *****/
 
-.button-container {
+.signup-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 70px;
   position: fixed;
   bottom: 0;
@@ -139,7 +134,9 @@ align-self: flex-start;
 }
 
 .sign-up {
-  margin: 0px;
+  display: flex;
+
+  margin: auto;
   width: 80%;
   height: 50px;
   border: solid 1px black;
@@ -150,6 +147,7 @@ align-self: flex-start;
   background-size: cover;
   background-repeat: no-repeat;
   filter: grayscale(100%);
+  text-decoration: none;
 }
 
 .sign-up h2 {
@@ -157,17 +155,41 @@ align-self: flex-start;
   font-size: 22px;
   color: #fff;
   margin: auto;
+  text-shadow: 2px 2px 3px rgb(50, 48, 56);
 }
 
+.accordion-container {
+  display: none;
+}
+
+.accordion div p {
+ display: none;
+}
 
 /***** FORM STYLING *****/
 
-form {
+/*form {
   position: fixed;
   bottom: 0; 
   right: 0;
   width: 100%;
+}*/
 
+.sign-up-form {
+  display: none;
+
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 -2px 5px #3b383f;
+  background: #fff;
 }
 
 .form-welcome {
@@ -198,19 +220,161 @@ p {
 }
 
 @media (min-width: 667px) and (max-width: 1024px) {
+
   .background-img {
     background-image: url("Images/jeans.jpg");
     width: 100vw;
     height: 60vh;
   }
+
+ 
+
+  /***** CONTENT *****/
+
+  .content {
+    display: flex;
+    align-self:flex-start;
+    justify-content: space-between;
+  
+    width: 60%;
+  }
+
+
+
+/***** SIGNUP *****/
+
+.signup-container {
+  width: 40vw;
+  border: none;
+  border-top-left-radius: none;
+  border-top-right-radius: none;
+  box-shadow: none;
 }
+
+.sign-up {
+  width: 95%;
+}
+
+/***** ACCORDION *****/
+
+.accordion-container {
+  display: block;
+  width: 60vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.accordion div a:hover {
+  color: pink;
+}
+.accordion div p {
+  display: none;
+}
+
+.accordion div:target p {
+  display: block;
+}
+}
+
 
 @media (min-width: 1025px) {
 
 .background-img {
     background-image: url("Images/jeans-smaller.jpg");
-    width: 60vw;
+    width: 70vw;
     height: 100vh;
   }
+
+   /***** HAMBURGER *****/
+
+   .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+  }
+  
+  .hamburger div {
+    width: 40px;
+    height: 6px;
+    background: white;
+    border-radius: 10px;
+  }
+
+  .content {
+    display: flex;
+    align-self:flex-start;
+    justify-content: space-between;
+  
+    width: 60%;
+  }
+
+  .content a {
+    font-size: 17px;
+  }
+
+  .nav-sign-in a {
+    font-size: 17px;
+  }
+
+/***** INFO *****/
+
+
+
+.info h2 {
+  font-size: 28px;
+}
+
+.info p {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+  /***** SIGNUP *****/
+
+  .signup-container {
+    width: 30vw;
+    border: none;
+    border-top-left-radius: none;
+    border-top-right-radius: none;
+    box-shadow: none;
+  }
+
+  /***** ACCORDION *****/
+
+  .accordion-container {
+      display: block;
+      width: 30vw;
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
+    
+    .accordion div a:hover {
+      color: pink;
+    }
+    .accordion div p {
+      display: none;
+    }
+    
+    .accordion div:target p {
+      display: block;
+    }
+  
+  .accordion div a:hover {
+    color: pink;
+  }
+  .accordion div p {
+    display: none;
+  }
+  
+  .accordion div:target p {
+    display: block;
+  }
+
+
 
 }
