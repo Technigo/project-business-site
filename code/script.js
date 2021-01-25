@@ -23,3 +23,15 @@ menuLinks.forEach(
   }
 )
 /* Hamburger menu ends */
+
+
+/* Accordion start */
+
+let accordionQuestionOne = document.getElementById("accordionQuestionOne");
+let accordionQuestionOneParagraph = document.getElementById("accordionQuestionOneParagraph");
+
+accordionQuestionOne.addEventListener("click", () => {
+  accordionQuestionOneParagraph.classList.toggle("accordionContentParagraphContentShown");
+})
+
+/* Accordion end */
