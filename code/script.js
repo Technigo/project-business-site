@@ -8,6 +8,15 @@ const answerTwo = document.getElementById('answer-2');
 const questionThree = document.getElementById('question-3');
 const answerThree = document.getElementById('answer-3');
 
+const questionFour = document.getElementById('question-4');
+const answerFour = document.getElementById('answer-4');
+
+const questionFive = document.getElementById('question-5');
+const answerFive = document.getElementById('answer-5');
+
+const questionSix = document.getElementById('question-6');
+const answerSix = document.getElementById('answer-6');
+
 console.log(answerOne);
 
 questionOne.addEventListener('click', () => {
@@ -20,6 +29,18 @@ questionTwo.addEventListener('click', () => {
 
 questionThree.addEventListener('click', () => {
   answerThree.classList.toggle('active');
+})
+
+questionFour.addEventListener('click', () => {
+  answerFour.classList.toggle('active');
+})
+
+questionFive.addEventListener('click', () => {
+  answerFive.classList.toggle('active');
+})
+
+questionSix.addEventListener('click', () => {
+  answerSix.classList.toggle('active');
 })
 
 

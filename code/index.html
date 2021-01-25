@@ -31,16 +31,96 @@
   
     <!-- Signup form -->
     
-      <div class="form">
-        <p>FORM</p>
+      <div class="form-container">
+        <h2>Offertförfrågan</h2>
+
+        <form class="form" action="">
+          <h3>Kontaktuppgifter</h2>
+          <label>
+            Förnamn
+            <input type="text" name="first-name" required>
+          </label>
+
+          <label>
+            Efternamn
+            <input type="text" name="first-name" required>
+          </label>
+
+          <label>
+            Företagsnamn
+            <input type="text" name="company" required>
+          </label>
+
+          <label>
+            Organisationsnummer
+            <input type="text" name="org-nr" required>
+          </label>
+
+          <label>
+            E-mailadress
+            <input type="email" name="email" required>
+          </label>
+
+          <label>
+            Telefonnummer
+            <input type="phone" name="phonenr" required>
+          </label>
+
+          <h3>Löpande tjänster</h2>
+
+            <label>
+              Bank
+              <select id="bank" name="bank">
+                <option value="handelsbanken">Handelsbanken</option>
+                <option value="seb">SEB</option>
+                <option value="swedbank">Swedbank</option>
+                <option value="nordea">Nordea</option>
+                <option value="skandiabanken">Skandiabanken</option>
+                <option value="other">Annan bank</option>
+              </select>
+            </label>
+
+            <label>
+              Ekonomisystem
+              <select id="economysystem" name="economysystem">
+                <option value="fortnox">Fortnox</option>
+                <option value="visma">Visma</option>
+                <option value="nav">Nav</option>
+                <option value="pe">PE</option>
+                <option value="marathon">Marathon</option>
+                <option value="other">Annat</option>
+              </select>
+            </label>
+
+            <label>
+              Hur många leverantörsfakturor per månad?
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          </label>
+
+          <label>
+            Hur många utlägg per månad?
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </label>
+
+
+          <p>Behöver du hjälp med lönehantering?</p>
+        <input type="radio" id="yes" name="salaries" value="yes">
+        <label for="yes">Ja</label>
+        <input type="radio" id="no" name="salaries" value="no">
+        <label for="no">Nej</label>
+
+
+          <button type="submit">Skicka</button>
+
+        </form>
       </div>
       <!-- FAQ -->
 
   <div class="accordion-container"> 
     <h2>FAQ</h2>
     <div class="accordion">
-      <h3 id="question-1" class="question">Header</h3>
-      <p id="answer-1" class="answer">Text of the accordion</p>
+      <h3 id="question-1" class="question">Hjälper ni med leverantörsfakturor?</h3>
+      <p id="answer-1" class="answer">Ja, det kan vi hjälpa till med!</p>
     </div>
 
     <div class="accordion">
