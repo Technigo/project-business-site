@@ -11,7 +11,6 @@
     <header>
     <!-- Nav bar -->
       <div class="logo">Art & Craft Studio</div>
-
       <nav class="navigation">
         <a href="#">HOME</a>
         <a href="#">PAINTING</a>
@@ -32,20 +31,61 @@
       </div>
     </header>
 
-
     <!-- Signup form -->
+    <form action="http://httpbin.org/anything" method="post">
+      <label for="fullName">
+        Full Name
+        <input type="text" name="fullName" placeholder=" ">
+      </label>
+      <label for="email">
+        Email Address
+        <input type="email" name="email" placeholder=" ">
+      </label>
+      <label for="phone">
+        Phone Number
+        <input type="tel" name="phone" placeholder=" ">
+      </label>
+      <label for="course">
+        Choose your course
+        <select name="course">
+          <option value="day">Daytime course 11:00-14:00</option>
+          <option value="evening">Evening course 18:00-21:00</option>
+        </select>
+      </label>
+     <button type="submit">Book your place</button>
+    </form>
 
     <!-- Accordion -->
     <section class="accordion">
-      
+      <h2>Frequently Asked Questions</h2>
 
-      <h1>Frequently Asked Questions</h1>
-
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">Where are classes held?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Classes are held at Art & Craft Studio, 222 St. Storvagen, Stockholm.</p>
+      </div>
+
+      <div class="question" id="section2">What is the price?</div>
+      <div class="answer">
+        <p>1 500SEK per month</p>
+      </div>
+
+      <div class="question" id="section3">What supplies do I need?</div>
+      <div class="answer">
+        <p>Classes will have a supply list in the description, and often supplies can be provided for an additional fee.</p>
+      </div>
+
+      <div class="question" id="section4">How many students are in each class?</div>
+      <div class="answer">
+        <p>Class sizes are small, typically between 5 and 8 students.</p>
+      </div>
+
+      <div class="question" id="section5">How often are classes held?</div>
+      <div class="answer">
+        <p>Twice per week.</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+
+    <script src="./script.js"></script>
   </body>
 </html>
