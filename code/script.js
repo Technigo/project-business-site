@@ -11,9 +11,18 @@
 // document.getElementById("section1").onclick = toggle
 
 
-const button1 = document.getElementById('button1');
+const buttonOne = document.getElementById('button1');
+const infoContentOne = document.getElementById('info-content-1');
+
+const buttonTwo = document.getElementById('button2');
+const infoContentTwo = document.getElementById('info-content-2');
+
 console.log(button1);
 
-button1.addEventListener('click', () => {
-  console.log('click!');
+buttonOne.addEventListener('click', () => {
+  infoContentOne.classList.toggle('info-selected');
+})
+
+buttonTwo.addEventListener('click', () => {
+  infoContentTwo.classList.toggle('info-selected');
 })
