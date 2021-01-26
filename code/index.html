@@ -28,49 +28,44 @@
     </header>
 
     <main class="main-container">
-  
-    <!-- Signup form -->
-    
-      <div class="form-container">
-        <h2>Offertförfrågan</h2>
+
+      <!-- Signup form -->
 
         <form class="form">
-          <ul class="flex-outer"></ul>
-          <h3>Kontaktuppgifter</h3>
-
-        <li class="form-items">
+        <h2 class="form-heading">Offertförfrågan</h2>
+        <h3 class="section-heading">Kontaktuppgifter</h3>
+        <div class="form-items">
           <label for="first-name">Förnamn</label>
           <input type="text" name="first-name" id="first-name" required placeholder="Förnamn">
-        </li>
+        </div>
 
-        <li class="form-items">
+        <div class="form-items">
           <label for="last-name">Efternamn</label>
           <input type="text" name="last-name" id="last-name" required>
-        </li>
+        </div>
 
-        <li class="form-items">
-          <label for="company">Efternamn</label>
+        <div class="form-items">
+          <label for="company">Företagsnamn</label>
           <input type="text" name="company" id="company" required>
-        </li>
+        </div>
           
-        <li class="form-items">
+        <div class="form-items">
           <label for="org-nr">Organisationsnummer</label>
           <input type="text" name="org-nr" id="org-nr" required>
-        </li>
+        </div>
 
-        <li class="form-items">
+        <div class="form-items">
           <label for="email">E-mail</label>
           <input type="email" name="email" id="email" required>
-        </li>
+        </div>
 
-        <li class="form-items">
+        <div class="form-items">
           <label for="phonenr">Telefon</label>
           <input type="phone" name="phonenr" id="phonenr" required>
-        </li>
+        </div>
 
-          <h3>Löpande tjänster</h3>
-
-        <li class="form-items">
+        <h3 class="section-heading">Löpande tjänster</h3>
+          <div class="form-items">
           <label for="bank">Bank</label>
           <select id="bank" name="bank" id="bank">
             <option value="handelsbanken">Handelsbanken</option>
@@ -80,9 +75,9 @@
             <option value="skandiabanken">Skandiabanken</option>
             <option value="other">Annan bank</option>
           </select>
-        </li>
+        </div>
 
-          <li class="form-items">
+          <div class="form-items">
             <label for="economysystem">Ekonomisystem</label>
               <select id="economysystem" name="economysystem" id="economysystem">
                 <option value="fortnox">Fortnox</option>
@@ -92,37 +87,36 @@
                 <option value="marathon">Marathon</option>
                 <option value="other">Annat</option>
               </select>
-          </li>
+            </div>
 
-          <li class="form-items">
+          <div class="form-items">
             <label for="invoices">Hur många leverantörsfakturor per månad?</label>
             <input type="range" min="1" max="100" value="0" class="slider" id="myInvoices">
             <span id="numberOfInvoices"></span>
-          </li>
+          </div>
 
-          <li class="form-items">
-          <label for="expenses">Hur många utlägg per månad?</label>
+          <div class="form-items">
+          <label for="myExpenses">Hur många utlägg per månad?</label>
           <input type="range" min="10" max="1000" value="0" class="slider" id="myExpenses">
           <span id="numberOfExpenses"></span>
-      </li>
-    </ul>
+          </div>
 
-    <ul class="flex-inner">
           <p>Behöver du hjälp med lönehantering?</p>
-          <li class="form-items">
-            <label for="yes">Ja</label>
+          <div class="radio-container">
+          <div class="radio-items">
             <input type="radio" id="yes" name="salaries" value="yes">
-          </li>
-          <li class="form-items">
+            <label for="yes">Ja</label>
+          </div>
+          <div class="radio-items">
+            <input type="radio" id="no" name="salaries" value="no">
             <label for="no">Nej</label>
-        <input type="radio" id="no" name="salaries" value="no">
-      </li>
+          </div>
+        </div>
 
-
-          <button type="submit">Skicka</button>
-      </ul>
+          <button class="submit-button" type="submit">Skicka</button>
         </form>
       </div>
+    
       <!-- FAQ -->
 
   <div class="accordion-container"> 
