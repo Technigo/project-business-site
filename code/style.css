@@ -16,6 +16,13 @@ body {
   z-index: -1;
 }
 
+h2,
+h3,
+p {
+  font-family: 'Varela', sans-serif;
+  margin: 0px;
+}
+
 /***** HEADER AND NAV *****/
 
 .header {
@@ -91,6 +98,8 @@ align-self: flex-start;
   margin: 0;
 }
 
+/***** INFO *****/
+
 .info {
   padding: 10px;
   margin-top: 50px;
@@ -148,6 +157,11 @@ align-self: flex-start;
   background-repeat: no-repeat;
   filter: grayscale(100%);
   text-decoration: none;
+}
+
+.sign-up:active {
+  box-shadow: 0 2px  rgb(192, 164, 184);
+  transform: translateY(2px);  
 }
 
 .sign-up h2 {
@@ -223,7 +237,7 @@ p {
   .background-img {
     background-image: url("Images/jeans.jpg");
     width: 100vw;
-    height: 60vh;
+    height: 70vh;
   }
 
  
@@ -244,33 +258,76 @@ p {
 
 .signup-container {
   width: 40vw;
+  height: 30vh;
   border: none;
   border-top-left-radius: none;
   border-top-right-radius: none;
   box-shadow: none;
+  display: flex;
+  justify-content:center;
+  align-items: center;
 }
 
 .sign-up {
-  width: 95%;
+  width: 90%;
+  box-shadow: 2px 5px 5px rgb(66, 62, 62);
+  margin-top: 20px;
 }
 
 /***** ACCORDION *****/
 
 .accordion-container {
-  display: inline;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   width: 60vw;
+  height: 30vh;
   position: fixed;
   bottom: 0;
   left: 0;
+
+}
+
+.accordion {
+  border: solid 1px black;
+  border-radius: 10px;
+  width: 90%;
+  margin-top: 20px;
+  box-shadow: 2px 5px 5px rgb(66, 62, 62);
+}
+
+.faq-container {
+  background-image: url("Images/fabric.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0px;
+  padding: 5px;
+}
+
+.faq-container h2 {
+  color: #fff;
+  text-shadow: 2px 2px 3px rgb(50, 48, 56);
+}
+.accordion-header {
+  padding: 5px;
+  cursor: pointer;
+  border-top: dashed 1px rgb(98, 100, 119);
 }
 
 .accordion-content {
   display: none;
+  padding: 5px;
+  font-size: 12px;
 }
 
 .accordion-selected {
   display: block;
 }
+
+
 }
 
 
@@ -339,18 +396,59 @@ p {
     box-shadow: none;
   }
 
+  .sign-up {
+    box-shadow: 2px 5px 5px rgb(66, 62, 62);
+  }
+
+
   /***** ACCORDION *****/
 
   .accordion-container {
-      display: inline;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
       width: 30vw;
+      height: 70vh;
       position: fixed;
       top: 0;
       right: 0;
     }
+
+    .accordion {
+      border: solid 1px black;
+      border-radius: 10px;
+      width: 80%;
+      margin: 40px;
+      box-shadow: 2px 5px 5px rgb(66, 62, 62);
+    }
+
+    .accordion-header {
+      padding: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      border-top: dashed 1px rgb(98, 100, 119);
+    }
+
+    .faq-container {
+      background-image: url("Images/fabric.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: grayscale(100%);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      margin: 0px;
+      padding: 10px;
+    }
+
+    .faq-container h2 {
+      color: #fff;
+      text-shadow: 2px 2px 3px rgb(50, 48, 56);
+    }
     
     .accordion-content {
       display: none;
+      padding: 10px;
+      font-size: 12px;
     }
     
     .accordion-selected {
