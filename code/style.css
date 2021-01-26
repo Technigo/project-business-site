@@ -107,6 +107,65 @@ select {
   width: 75px;
 }
 
+.checkbox-container {
+  /* display:flex;
+  flex-direction: column; */
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox {
+  position: absolute;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkbox-container:hover input ~ .custom-checkbox {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox {
+  background-color: #444444;
+}
+
+.custom-checkbox:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  top: 5px;
+  left: 7px;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox:after {
+  display: block;
+}
+
+/* .checkbox-container input:focus + .custom-checkbox {
+  outline: #333 auto 4px;
+} */
+
+
 .submit-button {
   margin-top: 30px;
   padding: 4px 6px 4px 6px;
@@ -129,7 +188,6 @@ select {
 /* ACCORDION */
 
 .accordion-container {
-  /* width: 500px; */
   margin: 10px;
 }
 
@@ -143,6 +201,15 @@ select {
   margin: 0;
   padding: 10px;
   font-size: 16px;
+}
+
+.fa-chevron-up, 
+.fa-chevron-down {
+  margin-right: 10px;
+}
+
+.fa-chevron-down {
+  display: none;
 }
 
 .answer {
