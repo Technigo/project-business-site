@@ -18,7 +18,7 @@ const accSvar = document.getElementById('acc-svar')
 const accSvar1 = document.getElementById('acc-svar1')
 const accSvar2 = document.getElementById('acc-svar2')
 const showMore =document.getElementById('question1')
-
+//Måste får till att den byter tillbaka
 showMore.onclick = () => {
   question1.innerHTML = "-"
 }
