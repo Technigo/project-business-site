@@ -15,16 +15,31 @@ const accordionQuestionOne = document.getElementById('accordion-question1');
 const accordionAnswerOne = document.getElementById('accordion-answer1');
 const accordionQuestionTwo = document.getElementById('accordion-question2');
 const accordionAnswerTwo = document.getElementById('accordion-answer2');
+const accordionQuestionThree = document.getElementById('accordion-question3');
+const accordionAnswerThree = document.getElementById('accordion-answer3');
+const accordionQuestionFour = document.getElementById('accordion-question4');
+const accordionAnswerFour = document.getElementById('accordion-answer4');
 
 
 accordionQuestionOne.addEventListener('click', () => {
+  accordionQuestionOne.classList.toggle("question-border-radius");
   accordionAnswerOne.classList.toggle("accordion-answer-display");
 });
 
 accordionQuestionTwo.addEventListener('click', () => {
+  accordionQuestionTwo.classList.toggle("question-border-radius");
   accordionAnswerTwo.classList.toggle("accordion-answer-display");
 });
 
+accordionQuestionThree.addEventListener('click', () => {
+  accordionQuestionThree.classList.toggle("question-border-radius");
+  accordionAnswerThree.classList.toggle("accordion-answer-display");
+});
+
+accordionQuestionFour.addEventListener('click', () => {
+  accordionQuestionFour.classList.toggle("question-border-radius");
+  accordionAnswerFour.classList.toggle("accordion-answer-display");
+});
 
 
 
