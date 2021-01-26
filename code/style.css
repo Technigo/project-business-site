@@ -5,3 +5,193 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .active + .answer {
   /* some styling here */
 }
+
+
+html {
+  background: rgb(201, 238, 220);
+  color: black;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: rgb(142, 226, 185);
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.logo {
+  width: 75px;
+  margin: 5px;
+  border: 4px solid black;
+
+}
+
+.navigation {
+  display: none;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  border-top: 2px solid black;
+}
+
+.intro-text {
+  margin: 10px;
+  text-align: center;
+}
+
+
+
+.form {
+  margin: 50px;
+  border: 2px solid black;
+  background-color: rgb(192, 207, 200);
+}
+
+.form-text {
+  font-size: 24px;
+  margin: 16px;
+  text-decoration: underline;
+}
+
+
+input[type=button], input[type=submit] {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 12px;
+  cursor: pointer;
+  outline: none; 
+  box-shadow: 0 4px #999; 
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 16px;
+}
+
+input[type=button], input[type=submit]:active {
+  background-color: #4CAF50;
+  box-shadow: 0 4px #999;
+  transform: translateY(6px);
+}
+
+
+
+
+.accordion {
+  margin: 50px;
+  border: 2px solid black;
+}
+
+
+
+.container {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+}
+
+.small-story img{
+  width: 75%;
+  height: auto;
+}
+
+/* .hero {
+  position: relative;
+}
+.hero-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+} */
+
+
+/* .navigation-text {
+  margin: 16px;
+}
+
+.navigation-text a {
+  text-decoration: none;
+}
+
+.hero-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    border-top: 2px solid black;
+} */
+
+
+/****FOOTER****/
+
+.footer {
+  padding: 2px;
+  text-align: center;
+  background-color: rgb(142, 226, 185);
+  margin-top: 24px;
+  border-top: 2px solid black; 
+}
+
+
+/*MEDIA QUERIES****/
+
+/* Tablet */
+@media (min-width: 768px) {
+  .navigation {
+    display: flex;
+    justify-content: row;
+    
+  }
+
+  
+  .navigation-text {
+    margin: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    color: black; 
+  }
+
+  .navigation a {
+    text-decoration: none;
+  }
+  
+  .hero-image {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      border-top: 2px solid black;
+  }
+  
+}
+
+
+/* Small desktop */
+
+@media (min-width: 992px) {
+
+}
