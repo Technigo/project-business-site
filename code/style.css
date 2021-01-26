@@ -2,6 +2,55 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+/*.active + .answer {
   /* some styling here */
-}
+/*} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    /*border: 2px solid rgb(230, 59, 87); */
+  }
+
+  h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+  }
+  
+  h2 {
+      font-size: 16px;
+  }
+  
+  /************** 1. HERO SECTION ******************************/
+    .hero-img{
+      position: relative; /* PARANT NEEDS TO BE RELATIVE */
+  }
+  
+  .hero-img img {
+      width: 100vw;
+      height: 40vh;
+      background-position: center;
+      object-fit: cover;
+  }
+  
+  .hero-text{
+      position: absolute;
+      top: 0; /* Genom att sätta noll på alla sidor så tar hero text upp hela space:et*/
+      right: 0;
+      bottom: 0; /* Puttar upp etxten lite högre upp */
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 30px;
+      /***** styling ****/
+      border: 2px solid pink;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+  }
+  
