@@ -7,16 +7,24 @@
     <link rel="stylesheet" href="style.css">
     <!-- dont forget to add a css file and link it here! -->
   </head>
-  <div class="header">
-    <img class=picture src="https://i.pinimg.com/originals/33/05/54/330554817fc1cf2d76b266ada55a1f12.jpg" alt="">
-  </div>
   <body>
+    <header class="hero">
+      <picture>
+           <source srcset="./pictures/3.jpg" media="(max-width: 767px)">
+           <source srcset="./pictures/2.jpg" media="(max-width: 1199px)">
+           <img class="hero-image" src="./pictures/1.jpg" alt="Hero image">
+      </picture> 
+      <h1 class="hero-title">Hero section title</h1>
+   </header>
+
+
+
+    <!-- Sign up section starts here -->
     <section class="flex-parent">
       <div class="flex-child one">
         <form action="http://httpbin.org/anything" method="POST">
           <label>
             <h1>Sign up for class</h1>
-            
           </label>
           <label>
             <input type="text" name="message" placeholder="Name" required>
@@ -25,7 +33,8 @@
             <input type="email" name="email" placeholder="Email" required>
           </label>
           <label>
-            <input type="number" name="Phone" placeholder="Phone number" minlength=10 required>
+            <input type="tel" name="Phone" placeholder="Phone number" required>
+            <p style="font-size:10px;" ><i>ex. 07X-XXX XX XX</i></p> 
           </label>
         
         <label class="checkbox1">
@@ -50,89 +59,47 @@
         </label>
 
         <button class="button" type="submit">SUBMIT</button>
-
-
-
-        </form>
+        
+      </form>
       </div>
 
+       <!-- Sign up section ends here -->
+
+      <!-- Accordion section starts here  -->
       <div class="flex-child two">
-        <section class="box accordion"> 
-          <!-- Accordion -->
-          <h1>FAQ</h1>
-    
-          <div class="question" id="section1">Section 1</div>
-          <div class="answer">
-            <p>Lorem ipsum...</p>
-          </div>
-    
-          <div class="question" id="section2">Section 2</div>
-          <div class="answer">
-            <p>Lorem ipsum...</p>
-          </div>
-        </section>
+        <h1>FAQ</h1>
+        <div class="accordion">
+          <h3 id="accordion-header-1" class="accordion-header">Header</h3>
+          <p id="accordion-content-1" class="accordion-content">
+              Text of the accordion
+          </p>
+      </div>
+  
+      <div class="accordion">
+          <h3 id="accordion-header-2" class="accordion-header">Header</h3>
+          <p id="accordion-content-2" class="accordion-content">
+              Text of the accordion
+          </p>
+      </div>
+  
+      <div class="accordion">
+          <h3 id="accordion-header-3" class="accordion-header">Header</h3>
+          <p id="accordion-content-3" class="accordion-content">
+              Text of the accordion
+          </p>
+      </div>
+  
+      <div class="accordion">
+          <h3 id="accordion-header-4" class="accordion-header">Header</h3>
+          <p id="accordion-content-4" class="accordion-content">
+              Text of the accordion
+          </p>
+      </div>
+  
       </div>
     </section>
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <!--
-    
+    <script src="script.js"></script>
 
-
-
-    <!-- video or image as a header is cool :) -->
-    <!--<section class=parent>
-      <section class="box sign-up">
-        <h1>Content</h1>
-        <p>Some content blablabla, some content blablabla.</p>
-        <p>Some content blablabla, some content blablabla.</p>
-        <p>Some content blablabla, some content blablabla.</p>
-      </section>-->
-
-      
-      
-      
-      
-      
-      
-      
-      
-      <!-- <section class="box accordion"> 
-        <!-- Accordion -->
-        <!--<h1>FAQ</h1>
-  
-        <div class="question" id="section1">Section 1</div>
-        <div class="answer">
-          <p>Lorem ipsum...</p>
-        </div>
-  
-        <div class="question" id="section2">Section 2</div>
-        <div class="answer">
-          <p>Lorem ipsum...</p>
-        </div>
-      </section> -->
-
-    </section>
-    <!-- Signup form -->
-
-
-    
-    <!--dont forget to link the javascript file here! -->
   </body>
 </html>
