@@ -1,5 +1,9 @@
 body {
   margin: 0px;
+  background:rgb(198, 215, 243);
+  color: navy;
+  
+
 }
 
 .hero {
@@ -20,46 +24,82 @@ body {
 }
 
 
-input, textarea, select, button {
+/*input, textarea, select, button {
   width: 150px;
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
 
 }
-
-
-/*form {
+*/
+.info-container {
   display: flex;
   flex-direction: column;
-} 
-
-
-.signup-container {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  
-  flex-wrap: nowrap;
-} 
-
-.personalia {
-  display: flex;
-  flex-direction: column;
-  
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  width: 100%;
 }
 
-.diving-experience {
+form {
+  border: solid 2px black;
+  border-radius: 5px;
+  box-shadow: 2px 5px 2px 2px rgba(7, 74, 100, 0.4);
+
+  padding: 10px;
+  margin: 10px;
+ 
   display: flex;
   flex-direction: column;
   
+  
 } 
 
-.accordion {
+input:valid {
+  background-color: rgb(202, 245, 202);
+}
+
+input:invalid {
+  background-color: rgb(250, 211, 211);
+}
+
+.accordion-container {
+  border: solid 2px black;
+  border-radius: 5px;
+  box-shadow: 2px 5px 2px 2px rgba(7, 74, 100, 0.4);
+
+  padding: 10px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
+  
+  
 
-}   */
+}
+
+
+a {
+
+  text-decoration: none;
+}
+/********************* FOOTER **********************/
+.footer {
+  display: flex;
+  background:rgb(153, 199, 200);
+  height: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid rgb(1, 30, 44);
+  box-shadow: 2px 5px 2px 2px rgba(2, 58, 80, 0.4);
+  margin: 5px;
+  
+
+}
+
+
+
+
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
@@ -75,46 +115,20 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 @media(min-width: 768px) {
 
-  /*form {
+
+  .info-container {
     flex-direction: row;
   }
-  .signup-container {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 10px;
-    
+
+
+
+  form {
+    width: 35%;
   }
 
-
-  .personalia {
-    display: flex;
-    width: 30%;
-    height: 100%; */
-    
-    /*float: left; */
-    
-    flex-direction: column;
-    padding: 50px;
-
-    
-    
+  .accordion-container {
+    width:45%;
   }
-  
-  .diving-experience {
-    display: flex;
-    width: 30%;
-    height: 100%;
-    
-    flex-direction: column;
-    
-  } 
-  
-  .accordion {
-    display: flex;
-    flex-direction: column;
-  
-  }
-  
 
+  
 }
