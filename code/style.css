@@ -1,16 +1,22 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #D2F1E4;
+  background-color: #f0f8ff;
+  font-family: 'Quicksand', sans-serif;
 }
 
+/*** HEADER ***/
 .hero-image {
-  background-image: linear-gradient(rgba(249, 246, 246, 0.098), rgba(233, 232, 232, 0.098)), url("Bakery-header.jpeg");
-  height: 600px;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   position: relative;
+  opacity: 0.8;
 }
 
 .hero-text {
@@ -19,51 +25,150 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: aliceblue;
-  width: 650px;
-  height: 250px;
-  opacity: 0.9;
-
+  background-color: #f0f8ff;
+  width: 100%;
+  height: 180px; 
 }
 
-.hero-text h1 {
-  font-size: 50px;
-  color: #F865B0;
-  margin-bottom: 0;
-}
-
-.hero-text p {
-  color: #5b9ea5;
-  font-size: 24px;
-}
-
-.btn{
-  background: #F865B0;
-  border: none;
-  color: #f9f9f9;
-  border-radius: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
+.hero-header {
+  font-size: 30px; /*CHANGE THIS TO 35px IN TABLET & DESKTOP*/ 
   font-weight: bold;
+  text-transform: uppercase;
+  color: #f865b1;
+  margin: 0;
+  padding: 40px 0 20px 0; /*CHANGE THIS TO 35px IN TABLET & DESKTOP*/ 
+}
+
+.button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #5b9ea5;
+  border-radius: 8px;
+  color: #f9f9f9;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
   transition: 0.3s ease-in-out;
 }
 
-.btn:hover{
-  background-color:#5b9ea5;
+.buttton:hover{
+  background-color:#f865b1;
   cursor: wait;
 }
 
+/*** FORM ***/
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 100px;
+  margin: 40px 0;
+}
 
+.contact-box {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.19);
+}
 
+.left {
+  background: url("./assets/baking-img2.jpeg") no-repeat center;
+  background-size: cover;
+}
 
+.right {
+  padding: 40px;
+}
 
+.form-header {
+  text-align: center;
+  font-size: 35px;
+  color: #f865b1;
+  margin: 10px 10px 25px 10px;
+}
 
+.field {
+	width: 100%;
+	border: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 10px;
+	font-size: 16px;
+	margin-bottom: 22px;
+	transition: .3s;
+}
 
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/*** ACCORDION ***/
+.accordion-container {
+  background: #dac3d0;
+  width: 100vw;
+  height: 100vh;
+}
+.accordion {
+  width: 70%;
+  margin: 20px auto;
+}
 
-.active + .answer {
-  /* some styling here */
+.accordion-header {
+  text-align: center;
+  font-size: 35px;
+  color: #F865B0;
+  margin-top: 0;
+  padding-top: 50px;
+}
+.accordion-item {
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.19);
+}
+
+.question {
+  padding: 15px 15px 15px 12px;
+  line-height: 25px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.question::after {
+  content: "\002B";
+  position: absolute;
+  font-size: 25px;
+  right: 20px;
+  transition:  0.2s ease-in-out;
+}
+
+.question.active::after {
+ transform: rotate(45deg);
+}
+
+.answer {
+  display: none;
+  padding: 15px 15px 15px 12px;
+  line-height: 25px;
+  border-top: 2px solid rgba(248, 101, 177, 0.281);
+}
+
+.question.active + .answer {
+  display: block;
+}
+
+/*** MEDIA QUERY ***/ 
+@media (max-width: 870px) {
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+
+  .left{
+		height: 400px;
+	}
 }

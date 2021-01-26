@@ -3,37 +3,105 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
     <title>Bakery online</title>
   </head>
   <body>
 
+    <!--HERO IMG-->
     <header>
-      <div class="hero-image">
-        <div class="hero-text">
-          <h1>Become a real baker</h1>
-          <p>- Let's bake online -</p>
-          <button class="btn">Sign up</button>
-        </div>
+      <picture>
+        <source srcset="./assets/mobile.jpeg" media="(max-width: 600px)" />
+        <source srcset="./assets/tablet.jpeg" media="(max-width: 900px)" />
+        <img class="hero-image" src="./assets/desktop.jpeg" alt="cupcakes" />
+      </picture>
+      <div class="hero-text">
+        <h1 class="hero-header">
+          Sweet & Pretty baking
+        </h1>
+        <a class="button" href="#sign-up">
+          Sign up
+        </a>
       </div>
     </header>
 
     <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <section class="container">
+      <div class="contact-box">
+        <div class="left">        
+        </div>
+        <div class="right">
+          <h1 class="form-header"><a name="sign-up">Sign up</a></h1>
+          <form action="https://httpbin.org/anything" method="POST">
+              <input class="field" type="text" name="fname" placeholder="Name" required>
+              <input class="field" type="text" name="lname" placeholder="Last Name" required>
+              <input class="field" type="email" name="email" placeholder="Email" required>
+              <input class="field" type="tel" name="phone"  placeholder="Number" required>
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label><br>
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label><br>
+              <input type="radio" id="other" name="gender" value="other">
+              <label for="other">Other</label> <br>
+              <input type="checkbox" name="checkbox" value="check" id="terms" required>
+              <label for="terms"> I agree to the Privacy Policy</label> <br>
+              <button class="button" type="submit">Submit</button> 
+          </form>
+        </div>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+  
+
+     <!-- Accordion -->
+    <section class="accordion-container">
+      <div class="accordion">
+        <h1 class="accordion-header">FAQ</h1>
+        <div class="accordion-item">
+           <div class="question">
+              How much does it cost? 
+           </div>
+           <div class="answer">
+             <div class="answer-content">
+               It cost 499 SEK for five classes.
+             </div>
+           </div>
+        </div>
+        <div class="accordion-item">
+           <div class="question">
+              Can I join the class if I am vegan?  
+           </div>
+           <div class="answer">
+             <div class="answer-content">
+               Yes, we have a lot of options for vegans.   
+             </div>
+           </div>
+        </div>
+        <div class="accordion-item">
+          <div class="question">
+            What kind of pastries are baked in the lessons?
+          </div>
+          <div class="answer">
+            <div class="answer-content">
+              We will bake muffins, macarons, cake and buns. 
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="question">
+            Are all the classes live or recorded?
+          </div>
+          <div class="answer">
+            <div class="answer-content">
+              All classes are recorded and we will send you them after your purchase.   
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <script src="script.js"></script>
   </body>
 </html>
