@@ -3,28 +3,75 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+   
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <!-- NEED TO FIX RESOLUTION -->
+    <!-- <header>
+      <picture>
+        <source srcset="./Images/hero-mobile.jpg" media="(min-width:768px)">
+        <source srcset="./Images/hero-tablet.jpg" media="(min-width:1199px)">
+        <img class="hero-img" src="Images/hero-desktop-big.jpg" alt="Snowboard hero image"/>
+      </picture>
+    </header>
+
+-->
+
 
     <!-- Signup form -->
+    
+    <form action="http://httpbin.org/anything" method="POST" class="sign-up-form">                   
+        <h1 class="sign-up-header">SIGN UP NOW</h1>
+        <label for="name">Name:</label>
+        <input type="text" name="name" required >
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" minlength="8" required>
+        <label for="radio1">Skier:</label>
+        <input type="radio" name="radio1">
+        <label for="radio2">Snowboarder:</label>
+        <input type="radio" name="radio2">
+        <label for="terms">I agree to the <a href="#"> Terms of service and Privacy Policy</a>:
+        </label>
+        <input type="checkbox" name="terms" required >
+        <label for="newsletter">Yes I would like to sign up for the newsletter:</label>
+        <input type="checkbox" name="newsletter">
+        <input type="submit" value="Sign up!" id="send-btn" class="send-btn">
+    </form>
 
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+      
+      <div class="test-question" id="section3">
+        <h2>FAQ</h2>
+        <h3 class ="fraga">Question 1 <button class="show-more" id="question1">+</button></h3>        
+        <p id="acc-svar" class="acc-svar">Pariatur incididunt tempor eiusmod elit sint anim eiusmod duis et. Cillum id eiusmod elit ex. 
+          Reprehenderit do consequat tempor excepteur sunt voluptate sit.
+          Est officia anim sit nostrud. Id elit consectetur nisi sit aliqua sit enim.
+          Reprehenderit nostrud consectetur in et mollit enim quis deserunt. Tempor deserunt ut ad nostrud est dolore.
+        </p> 
+        <h3 class ="fraga">Question 2 <button class="show-more" id="question2">+</button></h3>
+        <p id="acc-svar1" class="acc-svar">Pariatur incididunt tempor eiusmod elit sint anim eiusmod duis et. Cillum id eiusmod elit ex. 
+          Reprehenderit do consequat tempor excepteur sunt voluptate sit.
+          Est officia anim sit nostrud. Id elit consectetur nisi sit aliqua sit enim.
+          Reprehenderit nostrud consectetur in et mollit enim quis deserunt. Tempor deserunt ut ad nostrud est dolore.
+        </p> 
+        <h3 class ="fraga">Question 3 <button class="show-more" id="question3">+</button></h3>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <p id="acc-svar2" class="acc-svar">Pariatur incididunt tempor eiusmod elit sint anim eiusmod duis et. Cillum id eiusmod elit ex. 
+          Reprehenderit do consequat tempor excepteur sunt voluptate sit.
+          Est officia anim sit nostrud. Id elit consectetur nisi sit aliqua sit enim.
+          Reprehenderit nostrud consectetur in et mollit enim quis deserunt. Tempor deserunt ut ad nostrud est dolore.
+        </p> 
+        </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+
     </section>
-    <!-- dont forget to link the javascript file here! -->
+    
+
+    <script src="script.js">      
+    </script>
   </body>
 </html>
