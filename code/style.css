@@ -4,7 +4,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 body {
   margin: 0;
   width: 100%;
+  background-color: black;
 }
+
+/* Header and image */
 
 .header {
   position: relative;
@@ -13,16 +16,18 @@ body {
 
 .image {
   width: 100vw;
-  height: 735px;
-  object-fit: cover;
-  opacity: 0.9;
+  height: 800px;
+  object-fit: cover;  
 }
+
+/* Navigation bar */
 
 .navigation-container {
   position: absolute;
   top: 8px;
   right: 8px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .navigation-links {
@@ -38,11 +43,13 @@ body {
   opacity: 0.5;
 }
 
+/* Title */
+
 .title-container {
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
-  bottom: 0;
+  bottom: 0px;
   right: 0;
   display: flex;
   justify-content: center;
@@ -58,18 +65,19 @@ body {
 }
 
 .title-two {
-  font-family: "Caveat", serif;
-  font-size: 25px;
+  font-family: "Pompiere", serif;
+  font-size: 20px;
+  letter-spacing: 1.5px;;
   color: white;
   margin-top: -30px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .book-now {
   width: 120px;
   padding: 15px;
-  font-family: "Amatic SC", serif;
-  font-size: 30px;
+  font-family: "Pompiere", serif;
+  font-size: 24px;
   text-align: center;
   border: 2px solid white;
   background:rgba(5, 5, 5, .4);
@@ -98,33 +106,26 @@ body {
 .sign-up-container, .accordion-container {
   display: flex;
   flex-direction: column;
+  font-family: "Pompiere";
   padding: 20px;
   width: 80%;
-  border: 2px solid black;
+  border: 1px solid white;
   margin-bottom: 25px;
-  background-color: rgba(5, 5, 5, .9);
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
-  box-shadow: 1px 2px rgb(184, 180, 180);
-}
-
-@media (min-width: 768px) {
-  .sign-up-container, .accordion-container {
-    margin: 10px;
-  }
+  box-shadow: 2px 3px rgb(255, 255, 255);
 }
 
 .header-three {
-  font-family: "Cuprum", serif;
+  margin-top: 0;
   text-align: center;
-  font-size: 30px;
+  font-size: 36px;
   font-variant: small-caps;
 }
 
 .question {
   display: flex;
   flex-direction: column;
-  font-family: "Cuprum";
-  font-variant: small-caps;
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -141,11 +142,63 @@ body {
   border-right: none;
 }
 
+.date-number {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.question input[type=date] {
+  width: 130px;
+  margin-right: 100px;
+}
+
+.question input[type=number] {
+  width: 80px;
+}
+
 .radio {
   margin-top: 5px;
   margin-bottom: 30px;
-  font-family: "Cuprum", serif;
+  font-size: 18px;
 }
+
+.radio input[type='radio']:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  position: relative;
+  background-color: rgb(102, 4, 4);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.checkbox {
+  font-size: 20px;
+}
+.checkbox input[type='checkbox']:checked:after {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  background-color: rgb(102, 4, 4);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 1px solid white;
+}
+
+.terms-conditions-link {
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
+}
+
+.terms-conditions-link:hover {
+  opacity: 0.7;
+}
+
+/* Submit booking button */
 
 .submit-button {
   display: flex;
@@ -155,12 +208,13 @@ body {
 
 .book-button {
   padding: 6px;
-  font-family: sans-serif;
   font-size: 30px;
+  font-family: "Pompiere";
   width: 150px;
-  border: 2px solid black;
+  border: 2px solid white;
+  color: white;
   border-radius: 30px;
-  background-color: rgb(250, 250, 250);
+  background-color: black;
   font-variant: small-caps;
   cursor: pointer;
 }
@@ -178,9 +232,8 @@ body {
   justify-content: center;
   cursor: pointer;
   border: 2px solid white;
-  background-color: rgb(15, 15, 15);
-  font-family: "Caveat", serif;
-  font-size: 28px;
+  background-color: rgba(70, 67, 67, 0.1);
+  font-size: 26px;
   text-align: center;
   height: 100px;
   margin-bottom: 5px;
@@ -195,9 +248,8 @@ body {
   border: 2px solid black;
   background-color: rgba(216, 216, 216, 0.5);
   border: 2px solid white;
-  font-family: "Caveat", serif;
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
   padding: 10px;
   margin-bottom: 5px;
 }
@@ -206,18 +258,29 @@ body {
   display: block;
 }
 
+
+/* Footer */
+
 .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 50px;
   background-color: black;
+  width: 100%;
   bottom: 0;
-  margin-top: 50px;
+  margin-top: 90px;
+}
+
+.footer-text {
+  color: white;
+  font-family: "Pompiere", serif;
+  font-size: 22px;
+  padding-left: 10px;
 }
 
 .social-media {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 5px;
+  padding-right: 10px;
 }
 
 .social-media .fa {
@@ -233,18 +296,38 @@ body {
 
 
 @media (min-width: 768px) {
-  .title {
-    font-size: 75px;
+  .image {
+    height: 1020px;
   }
 
-  .sign-up-container {
-    width: 35%;
+  .title {
+    font-size: 85px;
   }
-  .accordion-container {
+
+  .sign-up-container, .accordion-container {
     width: 35%;
+    margin: 10px;
+  }
+  .question input[type=date] {
+    margin-right: 50px;
   }
 }
 
+@media (min-width: 1024px){
+  .image {
+    height: 1360px;
+  }
+  
+  .question input[type=date] {
+    margin-right: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .image {
+    height: 735px;
+  }
+}
 
 .active + .answer {
   margin: 0;

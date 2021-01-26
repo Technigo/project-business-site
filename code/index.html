@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maitree&family=Oregano&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maitree&family=Oregano&family=Pompiere&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- dont forget to add a css file and link it here! -->
   </head>
@@ -16,9 +18,9 @@
     <header class="header">
 
       <picture>
-        <source srcset="./images/bastian-riccardi-Hd_Edv-wXJ8-unsplash.jpg" media="(max-width: 767px)" />
-        <source srcset="./images/aashish-r-gautam-FWtmSjLXXk8-unsplash.jpg" media="(max-width: 1199px)" />
-        <img class="image" src="./images/bastian-riccardi-Hd_Edv-wXJ8-unsplash.jpg" alt="A Puggle" />
+        <source srcset="./images/michael-oeser-PCxvRoNoi6w-unsplash.jpg" media="(max-width: 767px)" />
+        <source srcset="./images/mae-mu-rgEHTLwaI_8-unsplash.jpg" media="(max-width: 1199px)" />
+        <img class="image" src="./images/michael-oeser-PCxvRoNoi6w-unsplash.jpg" alt="A Puggle" />
 
         <nav class="navigation-container">
           <a class="navigation-links" href="#">about</a>
@@ -28,7 +30,7 @@
         <div class="title-container">
           <h1 class="title">winecellar</h1>
           <h2 class="title-two">book your private wine tasting experience</h2>
-          <div class="book-now" id="book-now">book now</div>
+          <div class="book-now" id="book-now">BOOK NOW</div>
         </div>
       </picture>
 
@@ -58,14 +60,16 @@
           <input type="tel" id="number" class="input-text" name="number" placeholder="Your phone number goes here" required>
         </div>
 
-        <div class="question">
-          <label for="date">when do you want to book?</label>
-          <input type="date" id="date" min="2021-01-31" max="2022-01-31" required>
-        </div>
+        <div class="date-number">
+          <div class="question">
+            <label for="date">when do you want to book?</label>
+            <input type="date" id="date" min="2021-01-31" max="2022-01-31" required>
+          </div>
 
-        <div class="question">
-          <label for="people">how many?</label>
-          <input type="number" id="people" name="people" min="1" max="8" required>
+          <div class="question">
+            <label for="people">how many?</label>
+            <input type="number" id="people" name="people" min="1" max="8" required>
+          </div>
         </div>
 
         <div class="question">what type of wine do you prefer?</div>
@@ -80,14 +84,13 @@
 
         <div class="checkbox">
           <input type="checkbox" id="terms" name="terms" required>
-          <label for="terms">I accept the terms and conditions</label>
+          <label for="terms">I accept the <a href="#" class="terms-conditions-link">terms and conditions</a></label>
         </div>
     
         <div class="submit-button">
           <button type="submit" class="book-button">book</button>
         </div>
     </form>
-
 
 
     <!-- Accordion -->
@@ -100,21 +103,20 @@
         <p class="accordion-content">It ranges from $40-60pp. depending on how many you are.</p>
       </div>
 
-      <div class="accordion-question" id="accordion-question-two">Do you serve food to the wine?</div>
+      <div class="accordion-question" id="accordion-question-two">Do you serve food with the wine?</div>
       <div class="accordion-answer" id="accordion-answer-two">
         <p class="accordion-content">We will provide some small appetizers that fits with the wines, but no big meals.</p>
       </div>
 
-      <div class="accordion-question" id="accordion-question-three">How long are the sittings?</div>
+      <div class="accordion-question" id="accordion-question-three">How long are the sessions?</div>
       <div class="accordion-answer" id="accordion-answer-three">
-        <p class="accordion-content">The reserved time is three hous.</p>
+        <p class="accordion-content">The reserved time is three hours.</p>
       </div>
 
       <div class="accordion-question" id="accordion-question-four">How many people can we be in one tasting?</div>
       <div class="accordion-answer" id="accordion-answer-four">
         <p class="accordion-content">You can book for eight people. If you want to book for a larger company, please contact us by email.</p>
       </div>
-
 
     </section>
 
@@ -123,13 +125,13 @@
     <!-- Footer -->
 
     <footer class="footer">
+      <p class="footer-text">© winecellar.com</p>
 
       <div class="social-media">
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-pinterest"></a>
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-instagram"></a>
-
       </div>
 
     </footer>

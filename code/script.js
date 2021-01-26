@@ -20,7 +20,7 @@ const accordionAnswerFour = document.getElementById('accordion-answer-four');
 
 accordionQuestionOne.addEventListener('click', () => {
   accordionAnswerOne.classList.toggle('accordion-visible');
-});
+  });
 
 accordionQuestionTwo.addEventListener('click', () => {
   accordionAnswerTwo.classList.toggle('accordion-visible');
