@@ -6,14 +6,13 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   some styling here 
 }*/
 
-.hero {
+.bgvideo {
     width: 100%;
     height: auto;
     background-size: cover;
     background-position: relative;
     background-repeat: no-repeat;
     margin: 0;
-    /*overflow: hidden;*/
     z-index: 1;
     filter:grayscale(0.75);
   }
@@ -21,7 +20,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   .header {
     display: flex;
     flex-wrap: wrap;
-    border: solid 2px aquamarine;
   }
 
   .nav {
@@ -36,32 +34,54 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
   .nav-item {
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     margin: 3%;
     text-transform: uppercase;
     color:linen;
   }
 
-  .header h1 {
+  .headline {
+    
+    /*text-align: center;*/
+  
+    /*width: 100%;
+    height: auto;
     position:absolute;
+    z-index: 2;*/
+    
+    color: linen;
+    
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    
+  
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 20%;
+    text-align: center;
+  }
+
+  .header h1 {
+   /* position:absolute;
     text-align: center;
     margin-top: 35%;
     padding-top: 10px;
-    padding-bottom: 14px;
+    padding-bottom: 14px;*/
     font-size: 50px;
-    width: 100%;
+   /* width: 100%;
     height: auto;
     color: white;
     z-index: 2;
     background-color: black;
     opacity: 0.5;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Mono', monospace;*/
   }
 
   .header p {
-    position:absolute;
+   /* position:absolute;
     text-align: center;
-    width: 100%;
+   width: 100%;
     height: auto;
     color: white;
     z-index: 2;
@@ -70,7 +90,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     font-family: 'Roboto Mono', monospace;
     margin-top: 42%;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 20px;*/
     font-size: 40px;
   }
  
@@ -82,10 +102,96 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     z-index: 2;
   }
 
-  #imglogo {
+  .imglogo {
     width: 40%;
     height: auto;
   }
+
+  @media (max-width: 767px){
+  
+  .imglogo {
+    width: 25%;
+    height: auto;
+  }
+    
+  .nav {
+    display: none;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header p {
+    font-size: 10px;
+  }
+      
+    
+    .form {
+      
+      width: 100%;
+      height: auto;
+     
+    }
+    .QandA {
+     
+      width: 100%;
+      height: auto;
+      
+    }
+  }
+
+  @media (min-width: 768px){
+   
+    .headline {
+      margin-top: 25%;
+    }
+    .header h1 {
+      font-size: 30px;
+    }
+  
+    .header p {
+      font-size: 20px;
+    }
+    .nav {
+      display: none;
+    }
+    
+  }
+
+  @media (min-width: 769px){
+   
+    .hamburger div{
+      display: none;
+    }
+    .nav {
+      display: block;
+    }
+    .header h1 {
+      font-size: 40px;
+    }
+  
+    .header p {
+      font-size: 30px;
+    }
+  }
+
+
+.hamburger {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  margin-left: 85%;
+  margin-top: 1%;
+}
+.hamburger div {
+  width: 30px;
+  height: 5px;
+  background-color: #E8A53A;
+  margin: 3px;
+}
 
   a:link {
     text-decoration: none;
@@ -166,15 +272,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     
     
   }
-  /*.accordion-topic {
-    background-color: slategray;
-    text-align: left;
-    width: 100%;
-    height: 50px;
-    margin: 1px;
-    padding-top: 20px;
-    padding-left: 10px;
-  }*/
+  .accordion-topic {
+   cursor: pointer;
+  }
   
 
   .accordion-content{
