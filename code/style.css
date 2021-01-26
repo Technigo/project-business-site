@@ -1,6 +1,14 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+/* 
+.active + .answer {
+  some styling here 
+}
+
+the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+/***** 1. GENERAL *****/
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -23,7 +31,7 @@ p {
   margin: 0px;
 }
 
-/***** HEADER AND NAV *****/
+/***** 2. HEADER AND NAV *****/
 
 .header {
   display: flex;
@@ -63,6 +71,10 @@ p {
   text-shadow: 2px 2px 3px rgb(98, 93, 110);
 }
 
+.content a:hover {
+  transform: translateY(2px); 
+}
+
 .nav-sign-in {
 display: inline;
 align-self: flex-start;
@@ -76,7 +88,7 @@ align-self: flex-start;
   color: rgb(45, 44, 51);
 }
 
-/***** LOGO *****/
+/***** 3. LOGO *****/
 
 .logo {
   display: flex;
@@ -98,7 +110,7 @@ align-self: flex-start;
   margin: 0;
 }
 
-/***** INFO *****/
+/***** 4. INFO *****/
 
 .info {
   padding: 10px;
@@ -106,7 +118,6 @@ align-self: flex-start;
   text-align: center;
   backdrop-filter: blur(10px);
 }
-
 
 .info h2 {
   font-family: 'Varela', sans-serif;
@@ -124,8 +135,7 @@ align-self: flex-start;
   width: 90%;
 }
 
-
-/***** SIGN UP, SIGN IN BUTTONS *****/
+/***** 5. SIGN UP BUTTON *****/
 
 .signup-container {
   display: flex;
@@ -157,6 +167,7 @@ align-self: flex-start;
   background-repeat: no-repeat;
   filter: grayscale(100%);
   text-decoration: none;
+  box-shadow: 2px 5px 5px rgb(66, 62, 62);
 }
 
 .sign-up:active {
@@ -172,89 +183,123 @@ align-self: flex-start;
   text-shadow: 2px 2px 3px rgb(50, 48, 56);
 }
 
-/***** ACCORDION *****/
+/***** 6. ACCORDION *****/
 
 .accordion-container {
   display: none;
 }
 
+/***** 7. SIGN UP FORM *****/
 
-/***** FORM STYLING *****/
 
-/*form {
-  position: fixed;
-  bottom: 0; 
-  right: 0;
-  width: 100%;
-}*/
-
-.sign-up-form {
-  display: none;
-
-  /*display: flex;*/
+.form-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 70px;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  box-shadow: 0 -2px 5px #3b383f;
-  background: #fff;
+
+}
+form {
+  background-image: url("Images/jeans.jpg");
+  background-size: cover;
+  border: solid 1px black;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #fff;
+  width: 300px;
+  height: 400px;
+  margin: auto;
+  font-family: 'Varela', sans-serif;
+}
+
+.back {
+  color:#fff;
+  align-self: flex-end;
+  text-decoration: none;
+  margin-top: 5px;
+  margin-right: 4px;
+}
+
+.textboxes {
+  display: flex;
+  flex-direction: column;
+
+  width: 80%;
+}
+
+input {
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0px;
+  outline: none;
 }
 
 .form-welcome {
-
 }
 
-ul {
-
+.terms {
+  font-size: 10px;
 }
 
-li {
-
+.submit {
+ width: 150px;
+ background-color: cadetblue;
+ font-family: 'Varela', sans-serif;
+ color: #fff;
+ text-transform: uppercase;
+ border-radius: 10px;
+ outline: none;
+ border: solid 1px black;
 }
 
-li.button {
-
+.already-member {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:flex-end;
+  width: 95%;
+  margin-bottom: 5px;
 }
 
-/* END FORM */
-
-p {
-  margin: 0;
+.already-member a {
+  text-transform: uppercase;
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
 }
 
 
-.active + .answer {
-  /* some styling here */
-}
+/***** TABLET RESPONSIVE *****/
 
 @media (min-width: 667px) and (max-width: 1024px) {
 
-  .background-img {
-    background-image: url("Images/jeans.jpg");
-    width: 100vw;
-    height: 70vh;
-  }
+/***** 1. GENERAL *****/
 
- 
+.background-img {
+  background-image: url("Images/jeans.jpg");
+  width: 100vw;
+  height: 70vh;
+}
 
-  /***** CONTENT *****/
+/***** 2. HEADER AND NAV *****/
 
-  .content {
-    display: flex;
-    align-self:flex-start;
-    justify-content: space-between;
+.content {
+  display: flex;
+  align-self:flex-start;
+  justify-content: space-between;
   
-    width: 60%;
-  }
+  width: 60%;
+}
 
-
-
-/***** SIGNUP *****/
+/***** 5. SIGN UP BUTTON *****/
 
 .signup-container {
   width: 40vw;
@@ -274,7 +319,7 @@ p {
   margin-top: 20px;
 }
 
-/***** ACCORDION *****/
+/***** 6. ACCORDION *****/
 
 .accordion-container {
   display: flex;
@@ -285,7 +330,6 @@ p {
   position: fixed;
   bottom: 0;
   left: 0;
-
 }
 
 .accordion {
@@ -296,7 +340,7 @@ p {
   box-shadow: 2px 5px 5px rgb(66, 62, 62);
 }
 
-.faq-container {
+.accordion-title {
   background-image: url("Images/fabric.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -307,11 +351,12 @@ p {
   padding: 5px;
 }
 
-.faq-container h2 {
+.accordion-title h2 {
   color: #fff;
   text-shadow: 2px 2px 3px rgb(50, 48, 56);
 }
-.accordion-header {
+
+.accordion-question {
   padding: 5px;
   cursor: pointer;
   border-top: dashed 1px rgb(98, 100, 119);
@@ -327,54 +372,56 @@ p {
   display: block;
 }
 
+/***** 7. SIGN UP FORM *****/
 
 }
 
+/***** DESKTOP RESPONSIVE *****/
 
 @media (min-width: 1025px) {
 
+/***** 1. GENERAL *****/
+
 .background-img {
-    background-image: url("Images/jeans-smaller.jpg");
-    width: 70vw;
-    height: 100vh;
-  }
+  background-image: url("Images/jeans-smaller.jpg");
+  width: 70vw;
+  height: 100vh;
+}
 
-   /***** HAMBURGER *****/
+/***** 2. HEADER AND NAV *****/
 
-   .hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 40px;
-    height: 30px;
-  }
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 30px;
+}
   
-  .hamburger div {
-    width: 40px;
-    height: 6px;
-    background: white;
-    border-radius: 10px;
-  }
+.hamburger div {
+  width: 40px;
+  height: 6px;
+  background: white;
+  border-radius: 10px;
+}
 
-  .content {
-    display: flex;
-    align-self:flex-start;
-    justify-content: space-between;
-  
-    width: 60%;
-  }
+.content {
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-between;
 
-  .content a {
-    font-size: 17px;
-  }
+  width: 60%;
+}
 
-  .nav-sign-in a {
-    font-size: 17px;
-  }
+.content a {
+  font-size: 17px;
+}
 
-/***** INFO *****/
+.nav-sign-in a {
+  font-size: 17px;
+}
 
-
+/***** 4. INFO *****/
 
 .info h2 {
   font-size: 28px;
@@ -386,75 +433,74 @@ p {
   margin-bottom: 10px;
 }
 
-  /***** SIGNUP *****/
+/***** 5. SIGN UP BUTTON *****/
 
-  .signup-container {
-    width: 30vw;
-    border: none;
-    border-top-left-radius: none;
-    border-top-right-radius: none;
-    box-shadow: none;
-  }
+.signup-container {
+  width: 30vw;
+  border: none;
+  border-top-left-radius: none;
+  border-top-right-radius: none;
+  box-shadow: none;
+}
 
-  .sign-up {
-    box-shadow: 2px 5px 5px rgb(66, 62, 62);
-  }
+.sign-up {
+  box-shadow: 2px 5px 5px rgb(66, 62, 62);
+}
 
+/***** 6. ACCORDION *****/
 
-  /***** ACCORDION *****/
+.accordion-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 30vw;
+  height: 70vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
 
-  .accordion-container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      width: 30vw;
-      height: 70vh;
-      position: fixed;
-      top: 0;
-      right: 0;
-    }
+.accordion {
+  border: solid 1px black;
+  border-radius: 10px;
+  width: 80%;
+  margin: 40px;
+  box-shadow: 2px 5px 5px rgb(66, 62, 62);
+}
+.accordion-title {
+  background-image: url("Images/fabric.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0px;
+  padding: 10px;
+}
 
-    .accordion {
-      border: solid 1px black;
-      border-radius: 10px;
-      width: 80%;
-      margin: 40px;
-      box-shadow: 2px 5px 5px rgb(66, 62, 62);
-    }
+.accordion-title h2 {
+  color: #fff;
+  text-shadow: 2px 2px 3px rgb(50, 48, 56);
+}
 
-    .accordion-header {
-      padding: 10px;
-      font-size: 15px;
-      cursor: pointer;
-      border-top: dashed 1px rgb(98, 100, 119);
-    }
-
-    .faq-container {
-      background-image: url("Images/fabric.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      filter: grayscale(100%);
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      margin: 0px;
-      padding: 10px;
-    }
-
-    .faq-container h2 {
-      color: #fff;
-      text-shadow: 2px 2px 3px rgb(50, 48, 56);
-    }
+.accordion-question {
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  border-top: dashed 1px rgb(98, 100, 119);
+}
+  
+.accordion-content {
+  display: none;
+  padding: 10px;
+  font-size: 12px;
+}
     
-    .accordion-content {
-      display: none;
-      padding: 10px;
-      font-size: 12px;
-    }
-    
-    .accordion-selected {
-      display: block;
-    }
+.accordion-selected {
+  display: block;
+}
 
+/***** 7. SIGN UP FORM *****/
 
 
 }
