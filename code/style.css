@@ -7,6 +7,7 @@ body {
   background-color: #fafafa;
   margin: 0;
   font-family: 'Circular Bold';
+  width: 100%;
 }
 
 .hero {
@@ -20,19 +21,19 @@ body {
   width: 95vw;
   position: absolute;
   display: flex;
-  padding: 20px;
+  margin: 20px;
   justify-content: space-between;
 }
 
 .logo {
-  width: 150px;
+  width: 50px;
 }
 
 .menu {
   text-decoration: none;
   color: white;
   margin-left: 10px;
-  font-size: 13px;
+  font-size: 8px;
 }
 
 .hero-img {
@@ -42,7 +43,7 @@ body {
 }
 
 .hero-title {
-  font-size: 55px;
+  font-size: 20px;
   color: white;
   position: absolute;
   top: 0;
@@ -60,6 +61,7 @@ body {
   display: flex;
   margin: auto;
   justify-content: center;
+  flex-direction: column;
 }
 
 /* FORM */
@@ -67,7 +69,7 @@ body {
 .form {
   display: flex;
   flex-direction: column;
-  margin-right: 20%;
+  margin: 10px;
 }
 
 .form-items {
@@ -75,19 +77,18 @@ body {
   display: flex;
   flex-direction: column;
   margin: 7px;
-  /* border: 1px solid black; */
 }
 
 input,
 select {
   padding: 7px;
-  width: 350px;
+  /* width: 350px; */
 }
 
 .slider {
--webkit-appearance: none;  /* Override default CSS styles */
-appearance: none;
-outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
 }
 
 .submit-button [type="submit"] {
@@ -128,7 +129,8 @@ outline: none;
 /* ACCORDION */
 
 .accordion-container {
-  width: 500px;
+  /* width: 500px; */
+  margin: 10px;
 }
 
 .accordion {
@@ -162,4 +164,51 @@ outline: none;
   margin-top: 50px;
 }
 
+  /* RESPONSIVE TABLET */
 
+  @media (min-width:667px) and (max-width: 1024px) {
+    .logo {
+      width: 150px;
+    }
+  
+    .menu {
+      font-size: 13px;
+    }
+  
+    .hero-title {
+      font-size: 45px;
+    }
+
+  }
+
+
+  /* RESPONSIVE DESKTOP */
+
+@media (min-width: 1025px) {
+  .logo {
+    width: 150px;
+  }
+
+  .menu {
+    font-size: 13px;
+  }
+
+  .hero-title {
+    font-size: 55px;
+  }
+  
+  .main-container {
+    flex-direction: row;
+    flex-flow: row wrap;
+  }
+
+  .form {
+    margin-right: 20%;
+  }
+
+  input,
+  select {
+  width: 350px;
+}
+
+}
