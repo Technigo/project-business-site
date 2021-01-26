@@ -3,16 +3,65 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Project 3 - Business Site</title>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <!-- Hero Section -->
+
+    <header class="hero-section">
+      <video class="hero-video" controls autoplay muted loop>
+        <source src="./hero-video.mp4" type="video/mp4" media="(max-width: 767px)">
+        <p>This browser doesn't support video...</p>
+      </video>
+      <section class="headline">
+        <h1 class="hero-title">MT Construction</h1>
+        <p class="hero-tagline">building more<br> with less</p>
+      </section>
+      </header>
 
     <!-- Signup form -->
 
+    <section class="contact">
+
+      <form action="http://httpbin.org/anything" method="POST">
+          
+          <legend class="contact-header">Please contact me</legend>
+          <div class="form-fields">
+            <label>
+            Name
+              <input class="field" type="text" name="Name" required>
+            </label>
+          </div>
+          <div class="form-fields">
+            <label>
+              Email
+              <input class="field" type="email" name="Email" required>
+            </label>
+          </div>
+          <div class="form-fields">
+            <label>
+              Phone
+              <input class="field" type="tel" name="Phone" required>
+            </label>
+          </div>
+          <div class="form-fields" >
+            <label class="contact-by">
+              Contact me by
+              <select class="select" name="contact option">
+                <option value="email">email</option>
+                <option value="phone" data-countryCode="SE" value="46">phone</option>
+              </select>  
+            </label>
+          </div>
+          <div>
+            <button class="contact-button"type="submit">Contact me</button>
+          </div>
+      </form>
+    </section>
+
     <section class="accordion">
-      <!-- Accordion -->
+      
       <h1>FAQ</h1>
 
       <div class="question" id="section1">Section 1</div>
@@ -25,6 +74,6 @@
         <p>Lorem ipsum...</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+    <script src="./script.js"></script>
   </body>
 </html>
