@@ -39,6 +39,42 @@ body {
     color:deeppink;
   }
 
+  .accordion {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 18px;
+    width: 45%;
+    border: 4px solid gray;
+  }
+
+  .accordion-header {
+    color: black;
+    cursor: pointer;
+    margin: 10px;
+    padding: 18px;
+    width: 45%;
+  }
+  
+  .accordion-content {
+    display: none;
+    color: black;
+    cursor: pointer;
+    margin: 10px;
+    padding: 18px;
+    width: 45%;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  .accordion-selected {
+   display: block;
+   }
+
 @media (min-width: 667px) and (max-width: 1024px) {
   .header {
     background-image: url("header_medium.jpg");
@@ -49,11 +85,4 @@ body {
   .header {
     background-image: url("header_large.jpg");
   }
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
 }
