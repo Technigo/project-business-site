@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
     <title>Project 3</title>
@@ -65,34 +66,43 @@
     <form class="form" action=""> 
       <h2>Ready to get in touch?</h2>
       <div class="form-item">
-        <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+        <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
       </div>
       <div class="form-item">
         <input type="email" id="email" name="email" placeholder="Enter your email">
+      </div>
+      <div class="form-item">
+        <input type="tel" id="phone" name="phone" placeholder="Enter your mobile number">
       </div>
       <div class="form-item">
         <textarea placeholder="Enter your message..." name="message" rows="5" cols="20"></textarea>
       </div>
       <div class="form-item">
         <div>
-          <input type="radio" id="Booki"
+          <label for="contact">Preferable way of contacting you:</label><br>
+          <input type="radio" id="contact"
           name="contact" value="email">
-          <label for="contactChoice1">EMAIL</label>
+          <label for="contactChoice1">Email</label>
 
           <input type="radio" id="contactChoice2"
           name="contact" value="phone">
           <label for="contactChoice2">Phone</label>
         </div>
       </div>
-        <div class="form-item"></div>
-          <label><input type="checkbox"/>I agree to the terms
+        <div class="form-item">
+          <label><input class="checkbox" type="checkbox"/>I agree to the terms
           </label>
         </div>
-          <div class="form-item">
-              <input type="submit" value="Submit">
-            </div>
-            
-          </form>
+        <div class="form-item">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+
+      <footer>
+        <div class="footer">
+          <p>Author: Laima Duhovnaja</p>
+        </div>
+      </footer>
 
     <script src="script.js"></script>
   </body>
