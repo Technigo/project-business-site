@@ -322,7 +322,6 @@ select {
   margin-bottom: 20px;
 }
 
-
 /*hides image on desktop mode thats only used for mobile viewing */
 .signup__image--hidden-desktop {
   display: none;
@@ -344,51 +343,50 @@ select {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.accordion p {
+  margin: 10px;
+}
+
 /* to section up the 2 different accordion sections FAQ and products*/
 .accordion__section {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   width: 49%;
   height: 0%;
   border: solid rgb(255, 255, 255);
   background-color: rgb(109, 96, 160);
+  margin-bottom: 40px;
 }
 
-.accordion h2,
-.accordion p {
-  margin-left: 30px;
-}
-
-.accordion h2 {
-  text-align: center;
-}
-
-/* the accordion that always shows (collapsed)Ä */
-.accordion__display {
-  margin: 10px;
+/* the accordion styling */
+.accordion__display, .accordion__expand {
   border: solid rgb(255, 255, 255) 0.5px;
   background-color: rgb(76, 63, 136);
   border-radius: 10px;
+  width: 90%;
+  margin: 5px;
+}
+
+.accordion__display{
   display: flex;
   align-items: center;
+  height: 60px;
+}
+/* the expanding section of accordion is hidden when not toggled active */
+.accordion__expand {
+  height: 0;
+  visibility: hidden;
 }
 
-.accordion__display p {
-  margin-left: 10px;
-}
-
-.accordion__image {
-  position: relative;
-  height: 50px;
-  width: 50px;
-  margin-left: 30px; 
-  overflow: hidden;
-}
-
-.accordion__image img {
-  position: absolute;
-  height: 100%;
-  width: auto;
-  object-fit: scale-down;
+/* shows expanded accordion box when toggle on */
+.accordion__expand--selected {
+  height: 200px;
+  margin: 10px;
+  overflow-y: auto;
+  transition: height 0.5s ease-in-out;
+  visibility: visible;
 }
 
 /* +/- button for accordion expand/collapse */
@@ -410,22 +408,19 @@ select {
   box-shadow: 0px 0px 2px 1px rgb(24, 14, 37);
 }
 
-/*content in expanded accordion */
-.accordion__expand {
-  height: 0;
-  visibility: hidden;
-  border: solid rgb(255, 255, 255) 0.5px;
-  background-color: rgb(76, 63, 136);
-  border-radius: 10px;
+.accordion__image {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  margin-left: 30px; 
+  overflow: hidden;
 }
 
-/* shows expanded accordion box when toggle on */
-.accordion__expand--selected {
-  height: 200px;
-  margin: 10px;
-  overflow-y: auto;
-  transition: height 0.5s ease-in-out;
-  visibility: visible;
+.accordion__image img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  object-fit: scale-down;
 }
 
 .footer {
@@ -462,7 +457,8 @@ select {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 10%;
+  width: 80px;
+  margin: 15px;
 }
 
 /* image container for social media icons */
@@ -537,19 +533,14 @@ select {
 
   .accordion {
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     font-size: 14px;
   }
 
-  /*removes the nice transition, but overflow-y
-  scrolling doesn't work on mobile devices */
- .accordion__expand--selected {
-   height:fit-content;
+ .accordion__section {
+   width: 100%;
  }
 
-  .accordion__section {
-    width: 100%;
-    margin-bottom: 40px;
-  }
 }
