@@ -27,11 +27,32 @@ menuLinks.forEach(
 
 /* Accordion start */
 
+  /* Question 1 start */
 let accordionQuestionOne = document.getElementById("accordionQuestionOne");
 let accordionQuestionOneParagraph = document.getElementById("accordionQuestionOneParagraph");
 
 accordionQuestionOne.addEventListener("click", () => {
-  accordionQuestionOneParagraph.classList.toggle("accordionContentParagraphContentShown");
+  accordionQuestionOneParagraph.classList.toggle("accordionParagraphContentShown");
 })
+  /* Question 1 end */
+
+
+  /* Question 2 start */
+let accordionQuestionTwo = document.getElementById("accordionQuestionTwo");
+let accordionQuestionTwoParagraph = document.getElementById("accordionQuestionTwoParagraph");
+
+accordionQuestionTwo.addEventListener("click", () => {
+  accordionQuestionTwoParagraph.classList.toggle("accordionParagraphContentShown");
+})
+/* Question 2 end */
+
+  /* Question 3 start */
+  let accordionQuestionThree = document.getElementById("accordionQuestionThree");
+  let accordionQuestionThreeParagraph = document.getElementById("accordionQuestionThreeParagraph");
+  
+  accordionQuestionThree.addEventListener("click", () => {
+    accordionQuestionThreeParagraph.classList.toggle("accordionParagraphContentShown");
+  })
+  /* Question 3 end */
 
 /* Accordion end */
