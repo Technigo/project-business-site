@@ -1,15 +1,14 @@
-/* debug styles */
+/* 
+#8d8741;
+#659dbd;
+#daad86;
+#bc986a;
+#fbeec1; 
+*/
 
-section {
-  background: pink;
-  border: 1px solid black;
-}
-footer {
-  background: orange;
-}
-/* end of debug styles */
+/* Styling for the GRID and the containers */
 
-/* Layout specific styles and sizings for base skeleton */
+/* --- GRID LAYOUT --- */
 
 body {
   margin: 0;
@@ -19,9 +18,32 @@ body {
   grid-template-rows: auto repeat(2, 40%) auto;
 }
 
+/* --- ELEMENT specific layout styles --- */
+
 /* makes sure the video cover fullwidth and has appropriate height */
 .hero__video {
   width: 100%;
   height: 420px;
   object-fit: cover;
+}
+
+/* class to create a nice box around the contents of the page */
+.content__container {
+  display: block;
+  max-width: 80%;
+  margin: 1em auto;
+  /* padding: 30px; */
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.336);
+}
+/* Makes sure the title of the content box is good */
+.content__title {
+  background: #659dbd;
+  border-radius: 10px 10px 0 0;
+  margin: 0;
+  padding: 30px 20px 5px 20px;
+}
+
+.content {
+  padding: 30px;
 }
