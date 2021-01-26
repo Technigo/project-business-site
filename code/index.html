@@ -4,18 +4,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
 
     <!-- Signup form -->
+    <form action="https://httpbin.org/anything" method="post">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname"><br>
+      <label for="email">Email address:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <input type="radio" id="accept" name="terms" value="accept">
+      <label for="accept">I accept the Terms and conditions</label><br>
+      <input type="checkbox" id="news" name="news" value="newsletter">
+      <label for="news"> I would like the newsletter!</label><br>
+      <input type="submit" value="Submit">
+    </form>
+
+
+
 
     <section class="accordion">
       <!-- Accordion -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">Section 1
+      </div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
@@ -24,7 +41,18 @@
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
+
+      <div class="question" id="section3">Section 3</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+
+
+
+
+
+    <script src="./script.js"></script>
   </body>
 </html>
