@@ -5,20 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
     <title>Project 3</title>
     
   </head>
   <body>
 
     <header>
-      <picture>
-        <source srcset="" media="(max-width: 767px)">
+      <div class="hero-section">
+        <h1>Momento photography</h1>
+        <picture>
+        <source srcset="/code/media/hero-mobile.jpg" media="(max-width: 767px)">
         <source srcset="" media="(max-width: 1199px)">
-          <img class="hero-image" src="/code/media/hero.jpg" alt="Hero image">
+        <img class="hero-image" src="/code/media/hero.jpg" alt="Hero image">
       </picture>
+      </div>
+      
     </header>
 
+    <section class="first-section" >
+      <h2>Destination wedding photographer.<br>Serving worldwide </h2>
+    </section>
+    
+    
     <section class="middle-section">
       <div class="accordion">
         <!-- Accordion -->
@@ -51,18 +62,37 @@
     
     <!-- Signup form -->
     <form class="form" action=""> 
-      <label for="fname">First name:</label><br>
-      <input type="text" id="fname" name="fname"><br>
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email"><br><br>
-      <textarea name="message" rows="5" cols="20">
-        The cat was playing in the garden.
-      </textarea><br>
-      <label for="birthday">Event date:</label><br>
-      <input type="date" id="event-date" name="event-date"><br><br>
-      <input type="submit" value="Submit">
-      
-    </form>
+      <h2>Ready to get in touch?</h2>
+      <div class="form-item">
+        <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+      </div>
+      <div class="form-item">
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+      </div>
+      <div class="form-item">
+        <textarea placeholder="Enter your message..." name="message" rows="5" cols="20"></textarea>
+      </div>
+      <div class="form-item">
+        <div>
+          <input type="radio" id="Booki"
+          name="contact" value="email">
+          <label for="contactChoice1">EMAIL</label>
+
+          <input type="radio" id="contactChoice2"
+          name="contact" value="phone">
+          <label for="contactChoice2">Phone</label>
+        </div>
+      </div>
+        <div class="form-item"></div>
+          <label><input type="checkbox"/>I agree to the terms
+          </label>
+        </div>
+          <div class="form-item">
+              <input type="submit" value="Submit">
+            </div>
+            
+          </form>
+
     <script src="script.js"></script>
   </body>
 </html>
