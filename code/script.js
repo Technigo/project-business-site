@@ -11,7 +11,18 @@ for (let i = 0; i < accordionDisplay.length; i++) {
       accordionButton[i].textContent="-";}
     else {
         accordionButton[i].textContent="+";
-      }   
-  });
+      }
+//loops trhough the class array and if any other object has the expand--selected active, that will collapse//
+      for(let j=0; j<accordionDisplay.length; j++)
+      if(j!=i&&accordionExpand[j].classList.contains("accordion__expand--selected")&&(accordionExpand[i].classList.contains("accordion__expand--selected"))){
+        accordionExpand[j].classList.remove("accordion__expand--selected");
+        accordionButton[j].textContent="+";
+      }
+      else {
+        console.log("nothing applied")
+      }
+    }
+    
+  );
 }
 
