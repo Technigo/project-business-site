@@ -156,7 +156,6 @@ display: block;
   }
 }
 
-
 /*logo for the company on header */
 .header__logo {
   position: absolute;
@@ -184,12 +183,12 @@ display: block;
 @keyframes logo {
   0% {
     content: "N|C";
-    color: rgb(29, 66, 233);
+    color: rgb(16, 22, 110);
   }
 
   20% {
     content: "Nano | Colors";
-    color: rgb(0, 47, 255);
+    color:rgb(41, 41, 160);
   }
 
   30% {
@@ -214,7 +213,7 @@ display: block;
 
   100% {
     content: "N|C";
-    color: rgb(29, 66, 233);
+    color: rgb(16, 22, 110);
   }
 }
 
@@ -233,7 +232,8 @@ display: block;
 }
 
 .nav a:hover {
-  background:rgb(0, 238, 255);
+  background:rgb(143, 125, 173);
+  color: white;
 }
 
 .nav__link {
@@ -260,6 +260,7 @@ display: block;
   border: solid rgb(255, 255, 255);
   background-color: darkcyan;
   color: white;
+  font-size: 18px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -279,6 +280,18 @@ display: block;
   flex-grow: 1;
   align-self: flex-start;
   margin-top: 80px;
+}
+
+.signup__form input {
+  border: solid white;
+  border-radius: 10px;
+  margin-top: 5px;
+  color: white;
+}
+
+.signup__form input[type="submit"]{
+  background:rgb(76, 63, 136);
+  font-size: 18px;
 }
 
 .signup__row {
@@ -301,10 +314,13 @@ display: block;
   object-fit: cover;
 }
 
+
+/*hides image on desktop mode thats only used for mobile viewing */
 .signup__image--hidden-desktop {
   display: none;
 }
 
+/*hides image on mobile mode thats only used for desktop viewing */
 .signup__image--hidden-mobile {
   display: block;
   }
@@ -315,6 +331,7 @@ display: block;
   justify-content: space-between;
   width: 80%;
   color: white;
+  font-size: 18px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -349,8 +366,18 @@ display: block;
 .accordion__button {
   width: 25px;
   height: 25px;
+  margin-left: 10px;
   color: white;
   font-size: 16px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px 1px rgb(24, 14, 37);
+  text-align: center;
+  background-color:rgb(62, 54, 109);
+}
+
+.accordion__button:active {
+  transform: translateY(10%);
+  box-shadow: 0px 0px 2px 1px rgb(24, 14, 37);
 }
 
 .accordion__expand {
@@ -388,12 +415,14 @@ display: block;
 
 .footer p {
   font-size: 12px;
+  color: white;
 }
 
 /* container for a simplified company logo in the footer*/
 .footer__logo {
   margin-left: 10px;
   font-family: 'Libre Barcode 128 Text', cursive;
+  color: rgb(16, 22, 110);
 }
 
 /* wrapper for the social media icons*/
@@ -420,12 +449,6 @@ display: block;
 }
 
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-
-
 @media screen and (device-width: 600px),
 (max-width:600px) {
 
@@ -446,7 +469,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     display: block;
   }
 
- 
   /* changes the form and picture to be in one column instead of next to eachother */
   .signup {
     flex-direction: column;
@@ -483,6 +505,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     width: 100%;
     align-items: center;
     order: 2;
+    font-size: 14px;
   }
 
   /* makes sure there's no margin between the two form classes */
@@ -491,23 +514,24 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     margin-bottom: 20px;
   }
 
-  .signup__form__row {
+  .signup__row {
+    margin: 10px;
     width: 50%;
   }
 
-  .accordion-section {
+  .accordion {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+    font-size: 14px;
   }
 
-  .FAQ {
+  .accordion__section {
     width: 100%;
     margin-bottom: 40px;
   }
 
-
-  .products {
+  .accordion__section {
     width: 100%;
 
   }

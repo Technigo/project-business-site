@@ -10,8 +10,7 @@ for (let i = 0; i < accordionDisplay.length; i++) {
       accordionButton[i].textContent="-";}
     else {
         accordionButton[i].textContent="+";
-      }
-    
+      }   
   });
 }
 
