@@ -8,7 +8,7 @@
   </head>
   <body>
   <!--  Hero section -->
-    <header>
+    <header class="header">
       <picture>
         <source srcset="mobile photo" media="(max-width:767px)">
         <source srcset="tablet photo" media="(max-width:1199px)">
@@ -18,8 +18,9 @@
     </header>
     
   <!-- Signup form -->
+  <div class="container-style">
     <form action="http://httpbin.org/anything" method="POST" target="_blank"></form>
-      <div class="signup-form">
+      <div class="yoga-style"> <!-- delete class?-->
         <h2>Sign up form</h2>
         <p>Fill out below form to sign up</p>
         <p>Select your preferred yoga style</p>
@@ -29,30 +30,33 @@
         <label for="vinyasa">Vinyasa</label><br>
         <input type="radio" id="bikram" name="yoga-style" value="bikram">
         <label for="bikram">Bikram</label><br>
-        <br>
-        <br>
-        <br>
-        <label for="user-name">First name</label>
-        <input type="text" name="first-name" placeholder="First name" id="first-name" required>
-        <label for="">Last name</label>
-        <input type="text" name="last-name" placeholder="Last name" id="last-name" required>
-        <label for="user-name">Email</label>
-        <input type="text" name="email" placeholder="Email" id="email" required>
-        <label for="user-name">Password</label>
-        <input type="text" name="password" placeholder="password" id="password" minlength="8" required>
-        <br>
-        <br>
-        <input class="submit-button" type="submit" value="Submit">
       </div>
-        <br>
-        <br>
-        <br>
-        <input type="checkbox" id="agree" name="agree" value="agree" required>
-        <label for="agree"> I agree to Terms and conditions </label><br>
-        <a href="">Terms and conditions</a>
-        <br>
-        <br>
-        <br>
+  </div>
+  <div class= "container-level">
+    <h2>What's your yoga level?</h2> 
+      <select id="yoga-level" name="yoga-level">
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+  </div>
+  <div class ="container-input">
+    <label for="user-name">First name</label>
+    <input type="text" name="first-name" placeholder="First name" id="first-name" required>
+    <label for="">Last name</label>
+    <input type="text" name="last-name" placeholder="Last name" id="last-name" required>
+    <label for="user-name">Email</label>
+    <input type="text" name="email" placeholder="Email" id="email" required>
+    <label for="user-name">Password</label>
+    <input type="password" name="password" placeholder="password" id="password" minlength="8" required>
+  </div>        
+  <div class ="checkbox">
+    <input type="checkbox" id="agree" name="agree" value="agree" required>
+    <label for="agree"> I agree to Terms and conditions </label><br>
+    <a href="">Terms and conditions</a>
+    <br>
+    <input class="submit-button" type="submit" value="Submit">
+  </div>  
   <!-- Accordion-->
     <section class="accordion">
       <h2 class="accordion-faq">Frequently Asked Questions</h1> <!--Fixed header - no toggle, no  js needed-->
