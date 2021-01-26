@@ -15,8 +15,8 @@ body {
 }
 
 .header-image {
-  width: 100%;
-  height: auto;
+  width: 100vw;
+  height: 70vh;
   object-fit: cover;
 }
 
@@ -36,8 +36,10 @@ body {
 
 .signup-form {
   border: solid #fff;
+  border-radius: 7px;
   padding: 16px;
   margin: 30px;
+  background: #fff;
 }
 
 .signup-form div {
@@ -62,6 +64,21 @@ label {
 }
 
 
+/*** ACCORDION ***/
+
+.accordion {
+  border: solid #fff;
+  border-radius: 7px;
+  padding: 16px;
+  margin: 30px;
+  background: #fff;
+}
+
+.question {
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+}
 
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
@@ -69,8 +86,50 @@ in this case it is the div with the answer class next to the div with the active
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
-  /* some styling here */
+  overflow: hidden;
+  height: 0;
+  transition: height .3s ease;
+}
+
+.answer-content {
+  margin: 0;
+  padding: 10px;
+  border-top: 1px solid #FD805D;
+}
+
+
+/*** FOOOTER ***/
+
+
+
+
+
+
+/*** MEDIA QUERY ***/
+
+/* Tablet */
+@media (min-width: 768px) {
+  
+  
+  .ham {
+    display: none;
+  }
+
+  .hamburger {
+    display: none; 
+  }
+
 }
 
 
 
+/* Small desktop */
+@media (min-width: 992px) { 
+
+}
+
+
+/* Big desktop */
+@media (min-width: 1200px) { 
+
+}
