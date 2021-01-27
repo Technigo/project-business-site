@@ -1,30 +1,124 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Penguin lifestyle</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+
+    <header class="header">
+      <picture>
+        <source srcset="./images/emperor-penguins-mobile.png" media="(max-width 767px)">
+        <source srcset="./images/emperor-penguins-tablet.png" media=" (max-width 1999px)">
+        <img class="hero-image" src="./images/emperor-penguins.png" alt="picture of emperor penguins"/>
+      </picture>
+      <div class="title">
+      <h1 class="hero-title">PENGUIN LIFESTYLE</h1>
+      <h2 class="hero-subtitle">Learn how to live like a penguin in just 30 days!</h2>
+    </div>
+    </header>
+
+    <section class="info-container">
+      <h2 class="info-title-one">Do you have trouble walking on slippery ice? <br>
+        Or just want to learn how to survive the cold winter?</h2>
+        <h2 class="info-title-two">Then this is the course for you!</h2>
+      <p class="info-text">In this 30 day course you will not only learn all the servivor skills of a pinguing.
+        You will also learn there skills of eating a whole fish in one gulp and how to carry your kid safely on your feets. 
+        And a whole lots of other super important and life changing penguin life hacks.
+      <h3 class="sign-up-text">Sign up and join the penguin community TODAY!<br>You will not be disappointed! </h3>
+      </p>
+    </section>
+
+    <section class="interaction-container">
+      <div class="sign-up-box">
+        <form action="http://httpbin.org/anything" method="POST">
+          <div class="fill-in-form-box">
+            <label>
+              <p>Name</p>
+            <input class="input-text" type="text" name="namn" required>
+            </label>
+            <label>
+              <p>Lastname</p>
+            <input class="input-text" type="text" name="lastname" required>
+            </label>
+            <label>
+              <p>E-mail</p>
+            <input class="input-text" type="email" name="email" required>
+            </label>
+            <label>
+              <p>Password</p>
+            <input class="input-text" type="text" name="password" required>
+            </label>
+            <div class="radiobutton-box">
+              <h3>Do you like fish?</h3>
+              <section class="radiobuttons">
+                <label>
+                  <input class="radio" type="radio" name="fish-question" value="yes">
+                    YES!!!
+                  </label>
+                  <label>
+                  <input class="radio" type="radio" name="fish-question" value="no">
+                    NOOO!!!
+                  </label>
+                </section>
+              </div>
+          </div>
+          <div class="checkbox-box">
+            <div class="checkbox-box-title">
+            <h3>Do you agree to...</h3>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox" id="orcas" type="checkbox" name="eaten by orcas?">
+              <label class="checkbox-text" for="orcas">Risk getting eaten by orcas?</label>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox" id="frostbites" type="checkbox" name="frostbites?">
+              <label class="checkbox-text" for="frostbites">Risk getting frostbites and hypothermia?</label>
+            </div>
+          </div>
+          <div class="button-box">
+            <button type="submit">Submit!</button>
+          </div>
+        </form>
+
+        <!-- Accordion -->
+
+        <section class="accordion">
+          <div class="accordion-title">
+            <h2>Frequently Asked Questions</h2>
+          </div>
+          <div class="question" id="section1">Section 1</div>
+          <div class="answer">
+            <p>Lorem ipsum...</p>
+          </div>
+    
+          <div class="question" id="section2">Section 2</div>
+          <div class="answer">
+            <p>Lorem ipsum...</p>
+          </div>
+        </section>
+
+      </div>
+
+     
+
+     
+
+
+
+
+    </section>
 
     <!-- Signup form -->
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
+    
     <!-- dont forget to link the javascript file here! -->
   </body>
 </html>
