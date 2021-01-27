@@ -9,8 +9,9 @@
 
 .logo {
   text-decoration: none;
+  text-transform: uppercase;
   color: whitesmoke;
-  font-size: 5vh;
+  font-size: 4vh;
   font-weight: bold;
 }
 
@@ -53,12 +54,59 @@
 	border: .1em solid white;
 }
 
-@media only screen and (min-width: 32em) { .hero-title { font-size: 14vh; } }	
+@media only screen and (min-width: 667px) { .hero-title { font-size: 14vh; } }	
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+
+/* accordion style and functionality*/
+
+
+.did-you-know {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  }
+
+  .fact-did-you-know {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  .definition {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    }
+  
+  .fact-definition {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    }
+
+  .did-you-know:hover, .definition:hover {
+    background-color: #ccc; 
+  }
+
+/* class added with javaScript*/
+
+.selected {
+  display: block;
 }
