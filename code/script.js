@@ -11,16 +11,22 @@ bookButton.addEventListener('click', () => {
 
 const accordionQuestionOne = document.getElementById('accordion-question-one');
 const accordionAnswerOne = document.getElementById('accordion-answer-one');
+
 const accordionQuestionTwo = document.getElementById('accordion-question-two');
 const accordionAnswerTwo = document.getElementById('accordion-answer-two');
+
 const accordionQuestionThree = document.getElementById('accordion-question-three');
 const accordionAnswerThree = document.getElementById('accordion-answer-three');
+
 const accordionQuestionFour = document.getElementById('accordion-question-four');
 const accordionAnswerFour = document.getElementById('accordion-answer-four');
+
 const accordionQuestionFive = document.getElementById('accordion-question-five');
 const accordionAnswerFive = document.getElementById('accordion-answer-five');
+
 const accordionQuestionSix = document.getElementById('accordion-question-six');
 const accordionAnswerSix = document.getElementById('accordion-answer-six');
+
 const plusSignOne = document.getElementById('plus-one');
 const plusSignTwo = document.getElementById('plus-two');
 const plusSignThree = document.getElementById('plus-three');
@@ -30,8 +36,9 @@ const plusSignSix = document.getElementById('plus-six');
 
 accordionQuestionOne.addEventListener('click', () => {
   accordionAnswerOne.classList.toggle('accordion-visible');
+  accordionAnswerTwo.classList.remove('accordion-visible');
   if (plusSignOne.innerHTML === '+') {
-    plusSignOne.innerHTML = '-'
+    plusSignOne.innerHTML = '-';
   } else {
     plusSignOne.innerHTML = '+';
   }
@@ -81,7 +88,6 @@ accordionQuestionSix.addEventListener('click', () => {
     plusSignSix.innerHTML = '+';
   }
 });
-
 
 
 

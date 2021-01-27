@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Maitree&family=Oregano&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Maitree&family=Oregano&family=Pompiere&family=Stardos+Stencil&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maitree&family=Oregano&family=Playfair+Display&family=Pompiere&family=Stardos+Stencil&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- dont forget to add a css file and link it here! -->
   </head>
@@ -44,7 +44,7 @@
 
     <section class="sign-up-container">
 
-      <h3 class="header-three">book wine tasting</h3>
+      <h3 class="header-container">book wine tasting</h3>
 
       <form class="form" action="https://httpbin.org/anything" method="post">
         <div class="question">
@@ -59,28 +59,38 @@
 
         <div class="question">
           <label for="number">phone number:</label>
-          <input type="tel" id="number" class="input-text" name="number" placeholder="Your phone number goes here" required>
+          <input type="tel" id="number" class="input-text" name="phone-number" placeholder="Your phone number goes here" required>
         </div>
 
         <div class="date-number">
           <div class="question">
             <label for="date">when do you want to book?</label>
-            <input type="date" id="date" min="2021-01-31" max="2022-01-31" required>
+            <input type="date" id="date" name="date" min="2021-01-31" max="2022-01-31" required>
           </div>
 
           <div class="question">
             <label for="people">how many?</label>
-            <input type="number" id="people" name="people" min="1" max="8" required>
+            <select class="custom-select" id="people" name="number-of-people" required>
+              <option selected>0</option>
+              <option value="one">One</option>
+              <option value="two">Two</option>
+              <option value="three">Three</option>
+              <option value="four">Four</option>
+              <option value="five">Five</option>
+              <option value="six">Six</option>
+              <option value="seven">Seven</option>
+              <option value="eight">Eight</option>
+            </select>
           </div>
         </div>
 
         <div class="question">what type of wine do you prefer?</div>
         <div class="radio">
-          <input type="radio" id="red" name="type">
+          <input type="radio" id="red" name="preferred-wine" value="red-wine"required>
           <label for="red">red wine</label>
-          <input type="radio" id="white" name="type">
+          <input type="radio" id="white" name="preferred-wine" value="white-wine" required>
           <label for="white">white wine</label>
-          <input type="radio" id="both" name="type">
+          <input type="radio" id="both" name="preferred-wine" value="both-wines" required>
           <label for="both">both</label>
         </div>
 
@@ -100,7 +110,7 @@
     
     <section class="accordion-container">
 
-      <h3 class="header-three" id="header">most common questions</h3>
+      <h3 class="header-container" id="header">most common questions</h3>
       <div class="accordion-question" id="accordion-question-one">What are the prices?<div class="accordion-plus" id="plus-one">+</div></div>
       <div class="accordion-answer" id="accordion-answer-one">
         <p class="accordion-content">It ranges from $40-60pp. depending on how many you are.</p>
