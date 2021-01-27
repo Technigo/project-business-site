@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noemi's Fotostudio</title>
+    <title>someones fotolab</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&display=swap" rel="stylesheet">
@@ -13,22 +13,23 @@
   
   
   <body>
-    <header>
+    <header class="hero">
       <picture>
         <source srcset="./images/img_mobile.jpg" media="(max-width: 767px)">
         <source srcset="./images/img_tablet.jpg" media="(max-width: 1199px)">
         <img class="hero-img" src="./images/img_desktop.jpg" alt="hero image"/>
       </picture>
+      <h1 class="hero-title">someones fotolab.</h1>
     
     <nav>
-      <a href="#about">about us</a>
-      <a href="#offer">what we offer</a>
-      <a href="#contact">let's get in touch</a>
+      <a href="#about">about us.</a>
+      <a href="#offer">what we offer.</a>
+      <a href="#contact">let's get in touch.</a>
     </nav>
     </header>
 
     <section class="introduction">
-      <h2 id="about">about us</h2>
+      <h2 id="about">about us.</h2>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
           sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
@@ -38,14 +39,14 @@
 
     <section class="services">
       <!-- Accordion -->
-      <h2 id ="offer">what we offer</h2>
+      <h2 id ="offer">what we offer.</h2>
       <p>
         Lsed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquya, 
         sed diam voluptua. At vero eos et accusam et ju
         no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 
       </p>  
         <div>
-        <h3 id="service-header-1" class="service-header">portraits</h3>
+        <h3 id="service-header-1" class="service-header">people</h3>
           <p id="service-content-1" class="service-content">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
             sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
@@ -54,7 +55,7 @@
         </div>
 
         <div>
-        <h3 id="service-header-2" class="service-header">animals</h3>
+        <h3 id="service-header-2" class="service-header">fashion</h3>
           <p id="service-content-2" class="service-content">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
             sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
@@ -63,7 +64,7 @@
         </div>
   
         <div>
-        <h3 id="service-header-3" class="service-header">babys</h3>
+        <h3 id="service-header-3" class="service-header">events</h3>
           <p id="service-content-3" class="service-content">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
             sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,               no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
@@ -78,13 +79,33 @@
             no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
             </p>
         </div>
-  
-      
     </section>
 
     <section class="form">
-      <h2 id="contact">let's get in touch</h2>
-      <!-- Signup form -->
+      <h2 id="contact">let's get in touch.</h2>
+      <form>
+        <label for="fname">name:</label>
+        <input type="text" id="name" name=name><br>
+
+        <label for="phone">phone:</label>
+        <input type="text" id="phone" name=phone><br>
+
+        <label for="email">email:</label>
+        <input type="text" id="email" name=email><br>
+        
+        <p>what are you interested in?</p>
+
+        <input type="radio" id="service-header-1" name="interest" value="people">
+          <label for="interest">people</label><br>
+        <input type="radio" id="service-header-2" name="interest" value="fashion">
+          <label for="interest">fashion</label><br>
+        <input type="radio" id="service-header-3" name="interest" value="events">
+          <label for="interest">events</label><br>
+        <input type="radio" id="service-header-4" name="interest" value="othters">
+          <label for="interest">others</label><br>
+
+      <input type="submit" value="send and we'll talk soon">
+      </form>
   
     </section>
 
