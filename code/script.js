@@ -13,5 +13,6 @@ const accordionContent = document.getElementById('accordion-content')
 console.log(accordionHeader);
 
 accordionHeader.addEventListener('click', () => {
+    accordionContent.classList.toggle('accordion-selected')
     console.log('clicked!');
 })
