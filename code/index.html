@@ -33,37 +33,25 @@
   <main class="main">
     <!-- Signup form -->
     <section>
-      <h2> Signup to something</h2>
-      <form class="form" action="" method="POST">
-        <div class="input-container">
-          <!--Alternative 1-->
-          <label class="label" name="form-name">Name
-            <input class="input" type="text">
-            </input>
-          </label>
-        </div>
-        <div class="input-container">
-           <!--Alternative 2-->
-          <label for="form-username" class="label">Userame</label>
-          <input id="form-username" class="input" type="text">
-        </div>
-        <div class="input-container">
-          <label class="label">Email</label>
-          <input class="input" type="email">
-        </div>
-        <div class="input-container">
-          <label class="label">Password</label>
-          <input class="input" type="password" placeholder="6+ characters">
-        </div>
-        <div class="input-container">
-          <div class="checkbox">
-            <input class="input-checkbox" type="checkbox" name="" id="">
-            <label class="label-checkbox"> Accept and agree terms and conditions, privacy and policy</label>
-          </div>
-        </div>
-        <div class="submit">
-          <input class="input-submit" type="submit" value="submit">
-        </div>
+      <form class="form" action="https://httpbin.org/anything" method="POST">
+        <h2> Signup to something</h2>
+        <label class="label">
+          Name <input class="input" type="text" name="form-name"  required></input>
+        </label>
+        <label class="label" name="form-username">
+          Userame <input class="input" type="text" name="form-username" required></input>
+        </label>
+        <label class="label" >
+          Email <input class="input" type="email" name="form-email" required></input>
+        </label>
+        <label class="label">
+          Password <input class="input" type="password" name="form-password" placeholder="6+ characters" required></input>
+        </label>
+        <label class="label-checkbox">
+          Accept and agree terms and conditions, privacy and policy
+          <input class="input-checkbox" type="checkbox" name="form-agree" required></input>
+        </label>
+        <input class="input-submit" type="submit" value="submit">
       </form>
     </section>
     <!-- Accordion -->
