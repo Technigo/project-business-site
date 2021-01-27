@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background-color: #5dc3ff;
+  background-color: #FFF;
+  /* background-color: #5dc3ff; */
 }
 
 * {
@@ -54,7 +55,9 @@ h2 {
 h3 {
   font-family: 'Karla', sans-serif;
   font-weight: 600;
-  display: block;
+  margin: 12px 0 5px 0;
+  font-size: 26px;
+  text-align: center;
 }
 
 h4 {
@@ -62,7 +65,6 @@ h4 {
   font-weight: 200;
   margin: 17px 0 5px;
 }
-
 
 h5 {
   font-family: 'Karla', sans-serif;
@@ -85,53 +87,79 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
+  width: 75%;
   margin: 35px auto;
-  border: solid black 2px;
 }
 
 /*** Sign-up form ***/
 
 .signup-form {
-  border: solid black 2px;
+  background-color: #395D7F;
+  color: #FFF;
+  border-radius: 1%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: aquamarine;
-  width: 85%;
-  margin-bottom: 30px;
-  padding: 20px 30px;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 5px 50px 30px;
 }
+
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* input,
+textarea {
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-radius: 1%;
+} */
 
 .radiobuttons-gender {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   margin-top: 25px;
   border: solid black 1px;
 }
 
+input
+
+input:valid {
+  background-color: lightgreen;
+}
+
+/* input:invalid {
+  background-color: lightpink;
+} */
+
 /*** FAQ-accordion ***/
 
 .FAQ-accordion {
-  border: solid black 2px;
-  width: 85%;
+  border: solid #333 1px;
+  border-radius: 1%;
+  width: 100%;
   background-color: #FFF;
+  padding-top: 5px;
 }
 
 .accordion {
-  border: solid black 2px;
+  border: solid #333 1px;
 }
 
 .question {
   font-weight: bold;
   background-color: peru;
-  border: solid black 2px;
+  border: solid #333 1px;
 }
 
 .answer {
   margin: 0;
-  border-top: solid 1px #000;
+  border: solid #333 1px;
   display: none;
 }
 
@@ -150,7 +178,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   @media (min-width: 668px) {
     .main-content {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
+      width: 85%;
     }
 
     .signup-form {
@@ -173,7 +202,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     .desktop-video {
       display: none;
     }
-  }
+  }*/
 
   @media (min-width: 1025px) {
     .tablet-img {
@@ -182,6 +211,13 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
     .desktop-video {
       display: inline
-       
     }
-  }*/
+
+    .signup-form {
+      width: 470px;
+    }
+
+    .FAQ-accordion {
+      width: 400px;
+    }
+  }
