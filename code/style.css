@@ -2,19 +2,22 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+.active+.answer {
   /* some styling here */
 }
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /*** Mobile first***/
-/*** Navigation bar ***/
-.hero {
-position: relative;
+
+.header {
+  position: relative;
 }
+
+/*** Navigation bar ***/
 
 .navigation-container {
   position: absolute;
@@ -31,21 +34,23 @@ position: relative;
 }
 
 .nav-item {
-  margin 10px 15px
-}
-
-.nav-item {
+  margin: 10px 15px;
   text-decoration: none;
-  color:black;
+  color: black;
+  font-size: 10px;
   font-weight: bold;
-  font-size; 11px
-  
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+
 }
 
 /*** Heror image ***/
+
 .hero-image {
   width: 100vw;
-  height: 80vh;
+  height: 75vh;
   object-fit: cover;
 }
 
@@ -61,14 +66,14 @@ position: relative;
   flex-direction: column;
 }
 
-.hero h1 {
+.header h1 {
   font-size: 40px;
   font-weight: bold;
   color: #fff;
   margin-bottom: 10px;
 }
 
-.hero p {
+.header p {
   color: #fff
 }
 
@@ -78,7 +83,9 @@ position: relative;
   align-items: center;
   margin-top: 50px;
 }
+
 /*** Form section ***/
+
 .form {
   display: flex;
   flex-direction: column;
@@ -96,6 +103,7 @@ position: relative;
   font-weight: bold;
   margin-bottom: 5px;
 }
+
 .input {
   width: inherit;
   height: 30px;
@@ -112,6 +120,7 @@ position: relative;
   margin-bottom: 20px;
   margin-top: 0;
 }
+
 .input-checkbox {
   margin: 0px 15px 0px 0px;
 }
@@ -136,15 +145,23 @@ position: relative;
 }
 
 .input-submit:hover {
-  background-color:darkslateblue;
+  background-color: darkslateblue;
 }
 
 /*** Accordion ***/
+
 .accordion {
   margin-top: 50px;
 }
 
+.question {
+  background-color: lavender;
+  padding: 18px;
+}
 
-
-
-
+.answer {
+  display: none;
+  padding: 0 18px;
+  background-color:#fff;
+  
+}
