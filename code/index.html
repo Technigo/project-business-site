@@ -3,16 +3,121 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>International Cat Show by Ekaterina Klimenko</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <!-- Hero Image section -->
+    <header>
+                <!-- <img class="logo" src="./logo.png " alt=""> -->
+    </header>
+    <div class="hero-section">
+      <picture >
+        <source srcset="./background_tablet.jpg" media="(min-width:768px) and (max-width: 949px)">
+        <source srcset="./background_desktop.jpg" media="(min-width: 950px)">
+        <img class="hero-image" src="./background_phone.jpg" alt="Cat picture"/>
+      </picture>
+      <div class="welcome-text">
+        <div class="welcome-text-inner"> 
+          <h1 class="hero-title">2021 International Cat Show</h1>
+          <h2 class="hero-subtitle">15 September 2021</h2>
+          <h2 class="hero-subtitle">Artipelag, Värmdö</h2>
+          <div class="welcome-buttons-wrapper">
+            <div class="button-wrapper"><a href="" class="welcome-button">Enter competition</a></div>
+            <div class="button-wrapper"><a href="" class="welcome-button">Buy tickets</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Signup form -->
+    <section class="form-wrapper" id="form-link">
+      <h3 class="form-heading">Enter competition</h3>
 
-    <section class="accordion">
-      <!-- Accordion -->
+      <form action="http://httpbin.org/anything" method="POST">
+        <div class="inner-form-wrapper">
+          <h4 class="form-subheading">Owner Information</h4>
+          <div class="form-item">
+            <input class="text-input" type="text" id="owner-name" name="owner_name" placeholder="Name">
+          </div>
+          <div class="form-item">
+            <input class="text-input" type="text" id="owner-surname" name="owner_surname" placeholder="Surname">
+          </div>
+          <div class="form-item">
+            <input class="text-input" type="email" id="owner-email" name="owner_email" placeholder="Email">
+          </div>
+          <div class="form-item">
+            <input class="text-input" type="password" id="owner-password" name="owner_password" placeholder="Password">
+          </div>
+          <h4 class="form-subheading">Cat Information</h4>
+          <div class="form-item">
+            <label for="breed-selector">Breed</label>
+            <select class="selector" name="breed_selector" id="breed-selector">
+              <option class="breed-option" value="abyssinian">Abyssinian</option>
+              <option class="breed-option" value="bengal">Bengal</option>
+              <option class="breed-option" value="birman">Birman</option>
+              <option class="breed-option" value="british_shorthair">British shorthair</option>
+              <option class="breed-option" value="devon_rex">Devon Rex</option>
+              <option class="breed-option" value="himalayan">Himalayan</option>
+              <option class="breed-option" value="javanese">Javanese</option>
+              <option class="breed-option" value="laperm">LaPerm</option>
+              <option class="breed-option" value="main_coon">Maine Coon</option>
+              <option class="breed-option" value="norwegian">Norwegian forest cat</option>
+              <option class="breed-option" value="oriental">Oriental</option>
+              <option class="breed-option" value="persian">Persian</option>
+              <option class="breed-option" value="Ragdoll">Ragdoll</option>
+              <option class="breed-option" value="siamese">Siamese</option>
+              <option class="breed-option" value="siberian">Siberian</option>
+            </select>
+          </div>
+          <div class="form-item">
+            <label for="registration">Registration</label>
+            <input class="text-input" type="number" id="registration">
+            </select>
+          </div>
+          <fieldset class="fieldset-competition-classes">
+            <legend>Competition Class</legend>
+            <div class="radio-container">
+              <div>
+                <input type="radio" name="competition-class" id="class1" value="kitten">
+                <label for="class1">Kitten</label>
+              </div>
+              <div>
+                <input type="radio" name="competition-class" id="class2" value="championship">
+                <label for="class2">Championship</label>
+              </div>
+              <div>
+                <input type="radio" name="competition-class" id="class3" value="premiership">
+                <label for="class3">Premiership</label>
+              </div>
+              <div>
+                <input type="radio" name="competition-class" id="class4" value="household-pet">
+                <label for="class4">Household pet</label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="checkbox">
+            <input type="checkbox" name="agreeGDPR" id="GDPR-check">
+            <label for="GDPR-check">I agree with GDPR </label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="agreeNewsletter" id="newsletter-check">
+            <label for="newsletter-check">I want to sign up for IFA newsletter</label>
+          </div>
+          <div class="button">
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Accordion -->
+    <section class="accordion-wrapper">
+      
       <h1>FAQ</h1>
 
       <div class="question" id="section1">Section 1</div>
@@ -25,6 +130,6 @@
         <p>Lorem ipsum...</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+  <script src="./script.js"></script>
   </body>
 </html>

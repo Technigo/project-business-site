@@ -2,6 +2,137 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+/* General styling */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(190, 178, 145);
+  color: rgb(34, 46, 46);
+  font-family: 'Inter', sans-serif;
 }
+
+/** Hero section style **/
+
+.hero-section {
+  position:relative;
+  margin: 0;
+  padding: 0;
+}
+
+/** Hero section style: image **/
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+/** Hero section style: welcome text **/
+.welcome-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(238, 238, 245);
+}
+.welcome-text-inner {
+  background-color: rgba(128, 128, 128, 0.418);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.hero-title, .hero-subtitle {
+  text-align: center;
+}
+.hero-title {
+  font-size: 30px;
+  font-family: 'Cabin', sans-serif;
+}
+.welcome-buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(139, 138, 138, 0.658);
+  border-radius: 10px;
+  background-color: rgb(166, 148, 102);
+  padding: 10px;
+  margin: 10px;
+  width: 50%;
+}
+
+.welcome-button {
+  text-decoration: none;
+  color: rgb(233, 233, 237);
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Form styling */
+
+.form-wrapper {
+  padding: 5px;
+  background: rgb(165, 127, 86);
+  margin: 10px 10px;
+}
+
+.text-input {
+  background-color: rgb(red, green, blue);
+}
+
+
+
+/* Accordion styling */
+.accordion-wrapper {
+  padding: 5px;
+  background: rgb(165, 127, 86);
+  margin: 10px 10px;
+}
+
+/* Media Queries */
+@media (max-width: 370px) {
+  .hero-title {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 50px;
+  }
+  .welcome-buttons-wrapper {
+    flex-direction: row;
+  }
+  .button-wrapper {
+    width: 45%;
+  }
+  .welcome-button {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 950px) {
+  .hero-title {
+    font-size: 70px;
+  }
+
+}
+/* 
+.active + .answer {
+  background-color: red;
+} */
+
+
