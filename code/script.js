@@ -9,4 +9,9 @@ function toggle() {
 document.getElementById("section1").onclick = toggle
 
 const accordionHeader = document.getElementById('accordion-header');
+const accordionContent = document.getElementById('accordion-content')
 console.log(accordionHeader);
+
+accordionHeader.addEventListener('click', () => {
+    console.log('clicked!');
+})
