@@ -1,0 +1,196 @@
+/****FORM SECTION*****/
+
+
+input[type=text]
+{
+  padding: 10px;
+  border:0;
+  border-radius:10px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+input[type=email]
+{
+  padding: 10px;
+  border:0;
+  border-radius:10px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+select {
+  background-color: #f88379;
+  color: white;
+  padding: 10px;
+  width: 220px;
+  border: none;
+  outline: none; 
+  border-radius: 10px;
+  margin-left: 50px;
+}
+
+/******SIGN UP SECTION*****/
+
+.sign-up
+{
+  display: grid; 
+  grid-template-rows: 80% 20%;
+  gap: 10px;
+  border:#f88379 2px solid;
+  height: 600px;
+  margin: 6%;
+  border-radius: 3px;
+}
+form{
+  display: grid;
+  grid-template-rows: 20% 80%;
+  border: 2px blue solid; 
+}
+
+.form-heading
+{
+  justify-self: center;
+  color:#f88379;
+  font-size:30px;
+}
+
+.form-input{
+  border-radius: 3px;
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
+  justify-self: center;
+  padding: 5%;
+  margin-bottom: 50px;
+}
+
+.name-fields{
+margin-bottom: 10px;
+}
+
+.email-password
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.email-password input{
+  margin-bottom: 10px;
+}
+
+.option
+{
+  display: flex;
+  margin-bottom: 10px;
+  /* justify-content: space-around; */
+}
+
+.option label{
+  flex-grow: 1;
+}
+
+.option select{
+  flex-grow: 2;
+}
+.radio-buttons{
+  margin-bottom: 10px;
+}
+
+.check-boxes{
+  margin-bottom: 10px;
+}
+
+.sign-buttons
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-sign-up{
+  background-color: #f88379; /* Green */
+  border: none;
+  border-radius:10px;
+  color: #F8F8FF;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  outline: none; 
+}
+.button-sign-up:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button-sign-in{
+  background-color: #F8F8FF;
+  color:#f88379;
+  border: 2px solid #f88379;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:10px;
+  outline: none; 
+}
+.button-sign-in:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.sallad-pic 
+  {
+    border: 2px black solid;
+    display: flex;
+    justify-content: center;
+  }
+
+.sallad-pic img{
+  width: 100%;
+}
+
+/******VALIDATION FOR SIGN UP SECTION******/
+
+/* input:valid{
+  background-color: green;
+}
+
+input:invalid{
+  background-color: red;
+} */
+
+
+@media (min-width: 768px) and (max-width:1024px){
+    .sign-up
+    {
+      display: grid; 
+      grid-template-columns: 2fr 1fr;
+      height: 500px;
+      margin: 6%;
+      
+  }
+  
+  form{
+    height: 500px;
+  }
+  
+  .sallad-pic{
+    height: 500px;
+  }
+}
+
+
+@media (min-width: 1025px){
+
+    .sign-up
+    {
+      display: grid; 
+      grid-template-columns: 2fr 1fr;
+      height: 500px;
+      
+  }
+    form{
+      height: 500px;
+    }
+  
+    .sallad-pic{
+      height: 500px;
+    }
+
+}

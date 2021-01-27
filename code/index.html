@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a41f6ad251.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/main.css"/>
     <script src="script.js" defer></script>
     <title>Project 3</title>
@@ -10,7 +11,7 @@
   </head>
   <body>
     <header class="hero">
-      <video autoplay loop>
+      <video loop autoplay>
         <source src="./videos/Desktop.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -28,10 +29,9 @@
         <button>Read more</button>
       </div>
     </header>
-    
-    <!-- video or image as a header is cool :) -->
+  
 
-    <!-- Signup form -->
+    <!-- SIGNUP FORM SECTION -->
   <section class="sign-up">
     <form action="http://httpbin.org/anything" method="POST">
       <div class="form-heading">
@@ -40,34 +40,34 @@
 
       <div class="form-input">
         <div class="name-fields">
-          <input type="text" placeholder="First name" required>
-          <input type="text" placeholder="Last name" required>
+          <input name="first-name" type="text" placeholder="First name" required>
+          <input name="last-name" type="text" placeholder="Last name" required>
         </div>
 
         <div class="email-password">
-          <input type="email" placeholder="Email adress" required>
-          <input type="text" placeholder="Password" required>
+          <input name ="email" type="email" placeholder="Email adress" required>
+          <input name ="password" type="text" placeholder="Password" required>
         </div>
 
         <div class="option">
           <label>
           Level
-          </label>
+          
               <select>
                 <option value="Beginner">Beginner</option>
                 <option value="Intermediate">Intermediate</option>
                 <option value="Advanced">Advanced</option>
-              </select>   
-          
+              </select> 
+            </label>  
         </div>
 
         <div class="radio-buttons">
           <label>
-            <input type="radio">
+            <input name="radio" value= "radio" type="radio" required></input>
             Chef
           </label>
           <label>
-            <input type="radio">
+            <input name="radio" value= "radio" type="radio" required></input>
             Student
             </label>
           </div>
@@ -79,8 +79,8 @@
             </label>  
           </div>
           <div class="sign-buttons">
-            <button>Sign up</button>
-            <button>Sign in</button>
+            <input class="button-sign-up" type="submit" value="sign up"></input>
+            <input class="button-sign-in"type= "submit" value="sign in"></input>
           </div>
         </div>
       </form>
@@ -90,7 +90,7 @@
         </div>
     </section>
 
-<!-- Accordion -->
+<!-- ACCORDION FAQ SECTION -->
 
   <section class="accordion">
 
@@ -104,26 +104,27 @@
       </div>
 
       <div class="question-answers">
-        <div class="question" id="section1">Section 1</div>
-        <div class="answer">
-        <p>Lorem ipsum...</p>
+        <div class="question" id="section1"> <div class="head-section"> <h3>Section 1 </h3> <div class="icons"><i class="fas fa-minus"></i> <i class="fas fa-plus"></i></div></div>
+          <div class="answer">
+          <p>Lorem ipsum...</p>
+          </div>
         </div>
 
-        <div class="question" id="section2">Section 2</div>
-        <div class="answer">
-        <p>Lorem ipsum...</p>
+        <div class="question" id="section2"> <div class="head-section"> <h3>Section 2</h3> <i class="fas fa-plus"></i></div>
+          <div class="answer">
+          <p>Lorem ipsum...</p>
+          </div>
         </div>
 
-        <div class="question" id="section3">Section 3</div>
-        <div class="answer">
-        <p>Lorem ipsum...</p>
+        <div class="question" id="section3"> <div class="head-section"> <h3>Section 3</h3><i class="fas fa-plus"></i></div>
+          <div class="answer">
+          <p>Lorem ipsum...</p>
+          </div>
         </div>
       </div>
     </div>
 
   </section>
 
-
-    <!-- dont forget to link the javascript file here! -->
 </body>
 </html>

@@ -1,0 +1,124 @@
+/**** FAQ SECTION****/
+
+.accordion
+{
+  display: grid; 
+  grid-template-rows: 20% 80%;
+  gap: 10px;
+  border:red 2px solid;
+  height: 600px;
+  margin: 6%;
+}
+
+.question-pic{
+  display: flex;
+  justify-content: center;
+  border: solid 2px black;
+}
+
+.question-pic img{
+  width:100%;
+}
+
+.faq{
+  display: grid;
+  border: solid 2px black;
+  gap:40px;
+  grid-template-rows: 30% 70%;
+  border: 2px blue solid; 
+}
+
+.faq-heading{
+  justify-self: center;
+  border: red solid;
+}
+
+/* .question-answers{
+  margin: 5%;
+} */
+
+
+.question{
+  border: 2px solid black;
+  border-radius: 7px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.question h3{
+  margin: 0;
+}
+.answer > p
+{
+  display: none;
+}
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+.active .answer > p {
+  display: block;
+  border-top: 1px solid;
+}
+
+.head-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*****For ipad with screens between 650 and 1024px******/
+@media (min-width: 768px) and (max-width:1024px){
+ 
+  .accordion{
+    display: grid; 
+    grid-template-columns: 1fr 2fr;
+    height: 500px;
+  } 
+
+  .question-pic{
+    height: 500px;
+  }
+  
+  .question-pic img{
+    width:100%;
+  }
+  
+  .faq{
+    display: grid;
+    height: 500px;
+    gap:40px;
+    grid-template-rows: repeat(1);
+    border: 2px blue solid; 
+  }
+
+}
+/*****For desktop with screens 1025px and larger******/
+@media (min-width: 1025px){
+
+  .accordion
+  {
+    display: grid; 
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    height: 500px;
+  } 
+
+  .question-pic{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    border: solid 2px black;
+  }
+
+  .question-pic img{
+    width:100%;
+  }
+  .faq{
+    display: grid;
+    height: 500px;
+    gap:40px;
+    grid-template-rows: repeat(1);
+    border: 2px blue solid; 
+  }
+}
