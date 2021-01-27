@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 body {
   margin: 0;
-  background-color: #110e0e;
+  background-color: white;
   color: white;
   font-family: 'Noto Sans', sans-serif;
 }
@@ -10,34 +10,47 @@ body {
   width: 100vw;
 }
 
+header {
+  position: relative;
+}
+
 h1 {
-  border: 2px solid turquoise;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 .grid-container {
   border: 2px solid green;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-template-rows: 500px 400px;
 }
 
-form {
-  display: grid;
-  justify-items: center;
-}
-
-.grid-item1 {
-  border: 2px solid red; 
+.grid-item {
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+  padding: 40px;
+  margin: 40px;
+  border-radius: 5px;
+  box-shadow: 0 5px gray;
 } 
 
-.grid-item2 {
-  border: 2px solid blue;
+.user-information {
+  display: grid;
 }
 
 .answer {
   display: none;
 }
 
+/* remove sibling-selector!! */
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
@@ -48,5 +61,26 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 footer {
-  border: 2px solid yellow;
+  background-color: teal;
+  padding: 20px;
+}
+
+@media (min-width: 601px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 901px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .grid-item {
+    width: 350px;
+  }
 }

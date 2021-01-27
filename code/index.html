@@ -23,34 +23,43 @@
 
   <!-- sign up form -->
   <div class="grid-container">
-    <div class="grid-item1">
-      <form action="http://httpbin.org/anything" method="POST">
-        <label for="firstName">First name:</label>
-        <input type="text" name="firstName">
-        <label for="lastName">Last name:</label>
-        <input type="text" name="lastName">
-        <label for="email">Email:</label>
-        <input type="email" name="email">
+    <div class="grid-item">
+      <h2>Sign up</h2>
+      <form class="form" action="http://httpbin.org/anything" method="POST">
+
+        <div class="user-information">
+          <label for="firstName">First name:</label>
+          <input name="firstName" type="text" id="firstName" placeholder="Your first name" />
+          <label for="lastName">Last name:</label>
+          <input name="lastName" type="text" id="lastName" placeholder="Your last name" />
+          <label for="email">Email:</label>
+          <input name="email" type="email" id="email" required placeholder="your@email.com" />
+        </div>
 
         <div class="radiobuttons">
-          <input type="radio" name="bike" value="trek">
+          <h3>Which one do you prefer?</h3>
+          <input type="radio" name="bike" value="trek" />
           <label for="trek">TREK</label>
-          <input type="radio" name="bike" value="cannondale">
+          <input type="radio" name="bike" value="cannondale" />
           <label for="trek">Cannondale</label>
-          <input type="radio" name="bike" value="other">
+          <input type="radio" name="bike" value="other" />
           <label for="trek">Other</label>
         </div>
 
         <div class="checkbox">
-          <input type="checkbox" name="checkbox">
+          <input type="checkbox" name="checkbox" required />
           <label for="checkbox">I agree <a href="#">terms and conditions</a></label>
         </div>
-        <button type="submit">SUBMIT</button>
+
+        <div class="submit-button">
+          <input type="submit" value="SUBMIT" />
+        </div>
+
       </form>
     </div>
 
     <!-- Accordion -->
-    <div class="grid-item2">
+    <div class="grid-item">
       <section class="accordion">
         <h2>FAQ</h2>
 
@@ -72,7 +81,7 @@
     </div>
   </div>
 
-  <footer>This is footer</footer>
+  <footer>Technigo bootcamp spring 2021 project 3.</footer>
 
   <script src="./script.js"></script>
 </body>
