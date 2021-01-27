@@ -9,24 +9,24 @@ function toggle() {
 document.getElementById("section1").onclick = toggle
 
 const accordionHeaderOne = document.getElementById('accordion-header-1');
-const accordionContentOne = document.getElementById('accordion-content-1')
+const accordionContentOne = document.getElementById('accordion-content-1');
 
 const accordionHeaderTwo = document.getElementById('accordion-header-2');
-const accordionContentTwo = document.getElementById('accordion-content-2')
+const accordionContentTwo = document.getElementById('accordion-content-2');
 
 const accordionHeaderThree = document.getElementById('accordion-header-3');
-const accordionContentThree = document.getElementById('accordion-content-3')
+const accordionContentThree = document.getElementById('accordion-content-3');
 
 console.log(accordionHeaderOne);
 
-accordionHeaderOne.addEventListner('click' => {
-    accordionContentOne.classList.toggle('accordion-selected')
+accordionHeaderOne.addEventListner('click', () => {
+    accordionContentOne.classList.toggle('accordion-selected');
 });
 
-accordionHeaderTwo.addEventListener('click' => {
-    accordionContentTwo.classList.toggle('accorion-selected')
-})
+accordionHeaderTwo.addEventListener('click', () => {
+    accordionContentTwo.classList.toggle('accordion-selected');
+});
 
-accordionHeaderThree.addEventListener('click' => {
-    accordionContentThree.classList.toggle('accodion-selected')
-})
+accordionHeaderThree.addEventListener('click', () => {
+    accordionContentThree.classList.toggle('accordion-selected');
+});
