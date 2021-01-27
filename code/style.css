@@ -7,7 +7,8 @@ body {
   min-height: 100vh;
   position: relative;
   background-color: rgb(192, 250, 235);
-  cursor: url(./images/cursor.png) 1 1, pointer; /*custom cursor*/
+  cursor: url(./images/cursor.png) 1 1, pointer;
+  /*custom cursor*/
 }
 
 .header {
@@ -291,12 +292,12 @@ body {
   color: white;
   font-size: 18px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  
+
 }
 
 .signup a {
   text-decoration: none;
-  color:rgb(5, 85, 85);
+  color: rgb(5, 85, 85);
   font-weight: 500;
 }
 
@@ -337,13 +338,14 @@ body {
 }
 
 /* on hover and focus , the input get another bg-color */
-.signup__form input:focus, .signup__form input:hover  {
+.signup__form input:focus,
+.signup__form input:hover {
   background-color: rgb(158, 203, 211);
   outline: none;
 }
 
 ::placeholder {
-  color:rgba(7, 59, 63, 0.603);
+  color: rgba(7, 59, 63, 0.603);
 }
 
 .signup__form input[type=submit] {
@@ -363,7 +365,7 @@ body {
 }
 
 /* clear the default look of checkbox */
-.signup input[type=checkbox]{
+.signup input[type=checkbox] {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -393,7 +395,8 @@ body {
 }
 
 /*restyling radiobutton + checkbox*/
-.signup__check__radio, .signup__check__box {
+.signup__check__radio,
+.signup__check__box {
   background-color: rgb(171, 245, 235);
   height: 15px;
   width: 15px;
@@ -414,20 +417,20 @@ body {
 /*show nothing when the checkbox/radio is not clicked */
 .signup__check__radio:after,
 .signup__check__box:after {
-  content:"";
+  content: "";
   position: absolute;
   display: none;
 }
 
 /*when the checkbox/radio is checked the background color changes */
-.signup__check input:checked ~ .signup__check__radio,
-.signup__check input:checked ~ .signup__check__box  {
+.signup__check input:checked~.signup__check__radio,
+.signup__check input:checked~.signup__check__box {
   background-color: rgb(5, 85, 85);
 }
 
 /* when the checkbox/radio is checked, show an marker in it */
-.signup__check input:checked ~ .signup__check__radio:after,
-.signup__check input:checked ~ .signup__check__box:after {
+.signup__check input:checked~.signup__check__radio:after,
+.signup__check input:checked~.signup__check__box:after {
   display: block;
 }
 
@@ -443,12 +446,12 @@ body {
 
 /*styling of marker in checkbox */
 .signup__check .signup__check__box:after {
-  border-right:solid rgb(248, 248, 248)3px;
+  border-right: solid rgb(248, 248, 248)3px;
   border-bottom: solid rgb(253, 253, 253)3px;
   width: 5px;
   height: 10px;
   left: 4px;
-  transform:rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .signup__image {
@@ -514,7 +517,8 @@ select {
 }
 
 /* the accordion styling */
-.accordion__display, .accordion__expand{
+.accordion__display,
+.accordion__expand {
   border: solid rgb(255, 255, 255) 0.5px;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 10px;
@@ -537,7 +541,7 @@ select {
 
 /* when accordion__display is set to .active with js, the nearest sibling div will get these properties 
 (in this case accordion__expand) */
-.active+ div{
+.active+div {
   height: 200px;
   margin: 10px;
   overflow-y: auto;
