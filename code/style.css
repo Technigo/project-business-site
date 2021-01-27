@@ -19,25 +19,36 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 body {
   margin: 0;
+  /* box-sizing: border-box; */
 }
+
+
+/*** ACCORDION ***/
 
 .accordion-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
-  
-
-  
 }
 
 .accordion {
   display: flex;
   flex-direction: column;
   width:80%;
-  border: solid greenyellow;
-  
+  border: solid greenyellow; 
 }
+
+.info-content {
+  display: none;
+}
+
+.info-selected {
+  display: block;
+}
+
+.acc-button + div {
+  color:red;
+}
+
 /* .acc-button {
   background-color: #eee;
   color: #444;
@@ -51,16 +62,45 @@ body {
   transition: 0.4s;
 } */
 
+/*** FORM ***/
 
-
-.info-content {
-  display: none;
+.form-container { 
+  border: 1px solid blue;
+  background-color: beige;
+  padding: 20px;
 }
 
-.info-selected {
-  display: block;
+.colum25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
 }
 
-.acc-button + div {
-  color:red;
+.colum75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table; 
+  clear: both;
+}
+input [type=text] {
+  width:100%;
+  border: 1px solid black;
+  resize: vertical;
+}
+
+input [type=submit] {
+  background-color: blueviolet;
+  color: aqua;
+  padding: 12px 20px;
+  border: none;
+}  
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
 }
