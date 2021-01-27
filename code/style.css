@@ -32,17 +32,20 @@ body {
   margin: 0;
 }
 
-/*** SIGN UP FORM ***/
+/*** FORM - SIGN UP ***/
 
-.signup-form {
+.form-signup-container {
   border: solid #fff;
-  border-radius: 7px;
+  border-radius: 25px;
   padding: 16px;
   margin: 30px;
   background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.signup-form div {
+.form-signup div {
   padding: 20px;
 }
 
@@ -68,7 +71,7 @@ label {
 
 .accordion {
   border: solid #fff;
-  border-radius: 7px;
+  border-radius: 25px;
   padding: 16px;
   margin: 30px;
   background: #fff;
@@ -81,11 +84,12 @@ label {
 }
 
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+.active {
+  height: 38px;
+}
+
+.answer {
   overflow: hidden;
   height: 0;
   transition: height .3s ease;
@@ -101,6 +105,54 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 /*** FOOOTER ***/
 
 
+
+footer {                   
+  background: #000;
+  height: 150px;
+  width: 100%;
+  margin: 0px;
+  padding-top: 20px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container-footer {            
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 30px 16px;
+}
+
+.container-contact-info {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+}
+
+.container-contact-info a {
+  margin: 3px;
+}
+
+.container-contact-info a:hover, .container-contact-info a:focus {
+  color: rgb(189, 189, 189);
+}
+
+.container-social-media {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+}
+
+.container-social-media svg {
+  margin-right: 3px;
+}
+
+.container-social-media a:hover, .container-social-media a:focus {
+  color: rgb(189, 189, 189);
+}
 
 
 

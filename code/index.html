@@ -36,50 +36,63 @@
 
     <main>
       <div>
-        <section class="signup-form">
-          <h1>Sign up now!</h1>
+        <section class="form-signup-container">
           <div>
-            <form action="http://httpbin.org/anything" method="POST">
+            <h1>Sign up now!</h1>
+          </div>
+          <div>
+            <form class="form-signup" action="http://httpbin.org/anything" 
+            method="POST">
               <label>
                 First name
-                <input type="text" name="firstName" required>
+                <input type="text" id="first-name" name="form-signup-first-name" 
+                required>
               </label>
               <label>
                 Last name
-                <input type="text" name="lastName" required>
+                <input type="text" id="last-name" name="form-signup-last-name" 
+                required>
               </label>
               <p>
                 Age group
               </p>
               <label>
-                <input type="radio" name="ageGroup" value="ageGroup1518" checked>
+                <input type="radio" id="age-group" name="form-signup-age-group" 
+                value="ageGroup1518" checked required>
                 15-18 year
               </label>
               <label>
-                <input type="radio" name="ageGroup" value="ageGroup1825">
+                <input type="radio" id="age-group" name="form-signup-age-group" 
+                value="ageGroup1825" required>
                 18-25 year
               </label>
               <label>
-                <input type="radio" name="ageGroup" value="ageGroup25">
+                <input type="radio" id="age-group" name="form-signup-age-group" 
+                value="ageGroup25" required>
                 25+ year
               </label>
               <label>
                 Email  
-                <input type="email" name="email" required> 
+                <input type="email" id="email" name="form-signup-email" required> 
               </label>
               <label>
                 Password (8 characters minimum)
-                <input type="password" name="password" minlength="8" required>   
+                <input type="password" id="password" name="form-signup-password" 
+                minlength="8" required>   
               </label>
               <label>
-                <input type="checkbox" name="termsConditions" required>
+                <input type="checkbox" id="terms-conditions" 
+                name="form-signup-terms-conditions" required>
                 I accept the <a href="#" target="_blank">Terms & conditions</a>
               </label>
               <label>
-                <input type="checkbox" name="newsletter">
+                <input type="checkbox" id="news-letter" 
+                name="form-signup-news-letter">
                 I want to have the newsletter
               </label>
-              <button type="submit">Sign up</button>
+              <button type="submit" id="submit">
+                Sign up
+              </button>
             </form>
           </div>
         </section>
