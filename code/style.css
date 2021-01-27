@@ -41,16 +41,19 @@ body {
 }
 
 .hero-text {
+  font-size: 42px;
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: white; 
+  -webkit-text-stroke: 1px black;
 }
+
 
 .hero-image {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   object-fit: cover;
   border-top: 2px solid black;
 }
@@ -58,28 +61,45 @@ body {
 .intro-text {
   margin: 10px;
   text-align: center;
+  font-size: 26px;
 }
 
-
+.smaller-intro-text {
+  margin: 10px;
+  text-align: center;
+  font-size: 18px;
+}
 
 .form {
-  margin: 50px;
+  /* height: 560px;
+  width: 560px; */
+  margin: 100px;
   border: 2px solid black;
   background-color: rgb(192, 207, 200);
+
 }
 
 .form-text {
   font-size: 24px;
-  margin: 16px;
   text-decoration: underline;
+  text-align: center;
 }
+
+.check-boxes {
+  align-items: center;
+}
+/* .boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly
+} */
 
 
 input[type=button], input[type=submit] {
-  background-color: #4CAF50;
+  background-color:rgb(142, 226, 185);
   border: none;
   border-radius: 12px;
-  color: white;
+  color: black;
   padding: 16px 32px;
   text-decoration: none;
   margin: 12px;
@@ -90,28 +110,77 @@ input[type=button], input[type=submit] {
   font-size: 16px;
 }
 
+input[type=button], input[type=submit]:hover{
+background-color: white;
+}
+
 input[type=button], input[type=submit]:active {
-  background-color: #4CAF50;
+  background-color: white;
   box-shadow: 0 4px #999;
   transform: translateY(6px);
 }
 
-
-
-
-.accordion {
-  margin: 50px;
-  border: 2px solid black;
+input[type=text] {
+  border-radius: 5px;
+  padding: 6px;
 }
 
+input[type=email] {
+  border-radius: 5px;
+  padding: 6px;
+}
+
+/****ACCORDION****/
+
+.FAQ {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.accordion {
+  /* width: 560px;
+  height: 300px; */
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border: 2px solid black;
+  background-color: rgb(192, 207, 200);
+}
+
+.question {
+  font-size: 24px;
+  text-align: center;
+  border-radius: 16px;
+  text-decoration: underline;
+}
+
+.answer {
+  overflow: hidden;
+  height: 0px;
+  transition: height .3s ease;
+  text-align: center;
+}
+
+.question:hover {
+  background-color: rgb(142, 226, 185);
+  cursor: pointer;
+}
+
+
+.active +.answer {
+height: 75px;
+}
 
 
 .container {
   max-width: 760px;
   display: flex;
   flex-direction: column;
+  
 }
 
+
+/***EXTRA STORIES****/
 .small-story img{
   width: 75%;
   height: auto;
@@ -180,13 +249,23 @@ input[type=button], input[type=submit]:active {
     text-decoration: none;
   }
   
+  .navigation-text:hover {
+    background-color: white;
+  }
+
   .hero-image {
       width: 100vw;
-      height: 100vh;
+      height: 90vh;
       object-fit: cover;
       border-top: 2px solid black;
   }
   
+  .container {
+    max-width: 760px;
+    display: flex;
+    /* flex-direction: row;
+    justify-content: space-between; */
+  }
 }
 
 
