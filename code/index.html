@@ -28,7 +28,7 @@
     </header>
     <!-- Take away muted later -->
     <div class="hero-video">
-    <video class="hero-video1" autoplay loop muted controlsList="nodownload">
+    <video class="hero-video1" controls autoplay loop muted preload="auto" controlslist="nodownload">
       <source src="./videos/theIsland.mp4" type="video/mp4">
       <source src="./videos/Theisland.webm" type="video/webm">
 
@@ -61,7 +61,7 @@
         </section>
     </div> -->  
 
-      <!-- MDT search bar drop down menu -->
+      <!-- MDT search bar drop down menu 
       <li class="dcjq-parent-li search"><a href="#" class="active">Search</a><ul class="submenu" style="display: block;"><li>
         <form role="search" method="get" class="search-form" action="https://mdtsthlm.se/">
         <label>
@@ -70,7 +70,7 @@
         </label>
         <input type="submit" class="search-submit" value="OK">
       </form></li></ul></li>
-      <!-- STOP MDT  -->
+               STOP MDT  -->
 
 
 
@@ -79,6 +79,35 @@
         <p>Lorem ipsum...</p>
       </div>
     </section>
+
+    <form class="form-survey" action="https://httpbin.org/anything" method="POST">
+      <!-- Alternative 1 is inside of the element -->
+      <label> 
+        <!-- specify the name it make sit easier to see what the value the user is sending is all about -->
+        Name:<input name="form-survey-name" type="text" required><!--placeholder="name"--><
+             </input> 
+      </label>
+
+          <!-- Alternative 2 is outside of the element -->
+    <!-- <section> 
+    <label for="form-name">Name:
+      <input id="form-name" input type="text"></input>
+    </label>
+    </section> -->
+
+      <h3>What's your favourite activity?</h3>
+      <label>Outdoors walking
+        <input type="radio" value="outdoors-walking" name="form-survey-favourite">
+      </label>
+      <label>Video games
+        <input type="radio" value="Video-games" name="form-survey-favourite">
+      </label>
+      <label>Dining
+        <input type="radio" value="dining" name="form-survey-favourite">
+      </label>
+      <input type="submit" value="Submit"></input>
+  </form>
+
     <!-- dont forget to link the javascript file here! -->
     <script src="./script.js"></script>
   </body>
