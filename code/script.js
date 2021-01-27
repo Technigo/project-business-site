@@ -8,10 +8,35 @@
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
 //document.getElementById("section1").onclick = toggle
 
-const question1 = document.getElementById("question1");
-const answer = document.getElementById("answer");
-console.log(question1);
+const accordionHeader1 = document.getElementById("accordion-header-1");
+const accordionBody1 = document.getElementById("accordion-body-1");
 
-question1.addEventListener("click", () => {
-  answer.classList.toggle("question-selected");
-})
+
+
+const accordionHeader2 = document.getElementById("accordion-header-2");
+const accordionBody2 = document.getElementById("accordion-body-2");
+
+
+const accordionHeader3 = document.getElementById("accordion-header-3");
+const accordionBody3 = document.getElementById("accordion-body-3");
+
+
+
+accordionHeader1.addEventListener("click", () => {
+  accordionBody1.classList.toggle("accordion-selected");
+  accordionBody2.classList.remove("accordion-selected");
+  accordionBody3.classList.remove("accordion-selected");
+});
+
+  accordionHeader2.addEventListener("click", () => {
+  accordionBody1.classList.remove("accordion-selected");
+  accordionBody2.classList.toggle("accordion-selected");
+  accordionBody3.classList.remove("accordion-selected");
+});
+
+accordionHeader3.addEventListener("click", () => {
+  accordionBody1.classList.remove("accordion-selected");
+  accordionBody2.classList.remove("accordion-selected");
+  accordionBody3.classList.toggle("accordion-selected");
+});
+

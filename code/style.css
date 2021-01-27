@@ -1,18 +1,62 @@
 
 body {
   margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(58, 116, 114, 0.24);
+  min-width: 600px;
 }
+/*NAVBAR*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  /*overflow: hidden;*/
+  background-color:  rgb(58, 116, 114);
+
+}
+
+li {
+  display: inline;
+  float: left;
+  
+  
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  color: rgb(26, 53, 52);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:  rgb(142, 180, 179);
+}
+
+h3 {
+  color: rgb(142, 180, 179);
+  font-size: 40px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding-right: 10px;
+  /*text-shadow: 2px 2px 4px rgb(26, 53, 52);*/
+}
+
 
 /*HEADER*/
 .hero {
   position: relative;
+
 }
 
 .hero-image {
   width: 100vw;
   /*height: auto;*/
   height: 100vh;
-  object-fit: cover;
+  object-fit: cover;  
 }
 
 .hero-title {
@@ -21,11 +65,16 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  margin: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-size: 60px;;
+  color: rgb(200, 212, 212);
+  font-size: 70px;
+  text-shadow: 4px 4px 6px rgb(26, 53, 52);
+ 
+  
 }
 
 .big-container {
@@ -36,33 +85,32 @@ body {
 }
 /*SIGNUP FORM*/
 .container {
-background-color: cadetblue;
+background-color: rgb(58, 116, 114);
+color: rgb(26, 53, 52);
+font-size: 16px;
 width: 400px;
-height: 500px;
+height: 430px;
 margin-top: 40px;
+box-shadow: 2px 2px 4px rgb(26, 53, 52);
 display: flex;
 align-items: center;
-justify-content: center;
+/*justify-content: center;*/
 flex-direction: column;
-  /*background-image: url("image/boat.jpg");
-  padding: 50px;
-  /*height: 600px;
-  width: 400px; 
-  /*width:min-content;*/
+
 }
 
 .signup-form {
   background-color: rgba(255, 255, 255, 0.527);
-  display: table;
-  padding: 30px ;
+  /*display: table;*/
+  padding: 20px ;
+  margin: 50px 40px;
 
 }
 
 div .signup-form {
   display:table-row;
+  
 }
-
-
 
 label, input {
   display: table-cell;
@@ -73,6 +121,29 @@ label {
   padding-right: 10px;
 }
 
+.radio-buttons {
+  
+  margin: 10px 0;
+}
+.checkbox {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgb(58, 116, 114);
+  border-radius: 10px;
+  color: rgb(26, 53, 52);
+  font-size: 18px;
+  margin-top: 20px;
+  display: flex;
+ 
+}
+
 /*ACCORDION*/
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
@@ -81,26 +152,52 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 /*.active + .answer {
   /* some styling here */
+  h2 {
+    display: flex;
+    margin: 10px;
+    
+  }
   .accordion {
-    border: 5px, black;
-    border-radius: 7px;
-    background-color: brown;
-    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.527);
+    /*border: 2px solid rgb(45, 77, 78);*/
+    
     display: table;
+    margin: 0 40px;
+    
   }
 
-  .question {
+  .accordion-header{
     margin: 0;
-    padding: 10px;
+    padding: 20px;
+    cursor: pointer;
+    border: 1px solid rgb(58, 116, 114);
 
   }
-  .answer {
+  .accordion-body{
     display: none;
+    overflow: hidden;
+    background-color: rgb(212, 227, 228);
   }
 
-  .question-selected {
+  .accordion-selected {
   display: block;
+  
 }
 
+  p {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid rgb(26, 53, 52);
+}
+/*FOOTER*/
+footer {
+  background-color: rgb(58, 116, 114);
+  color: rgba(255, 255, 255, 0.527);
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  width: auto;
+  height: 120px;
+}
 
 
