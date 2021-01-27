@@ -37,62 +37,130 @@ const plusSignSix = document.getElementById('plus-six');
 accordionQuestionOne.addEventListener('click', () => {
   accordionAnswerOne.classList.toggle('accordion-visible');
   accordionAnswerTwo.classList.remove('accordion-visible');
+  accordionAnswerThree.classList.remove('accordion-visible');
+  accordionAnswerFour.classList.remove('accordion-visible');
+  accordionAnswerFive.classList.remove('accordion-visible');
+  accordionAnswerSix.classList.remove('accordion-visible');
   if (plusSignOne.innerHTML === '+') {
-    plusSignOne.innerHTML = '-';
+    plusSignOne.innerHTML = '-'
   } else {
     plusSignOne.innerHTML = '+';
-  }
+  };
+  if (plusSignTwo.innerHTML === '-' || plusSignThree.innerHTML === '-' || plusSignFour.innerHTML === '-' || plusSignFive.innerHTML === '-' || plusSignSix.innerHTML === '-') {
+    plusSignTwo.innerHTML = '+';
+    plusSignThree.innerHTML = '+';
+    plusSignFour.innerHTML = '+';
+    plusSignFive.innerHTML = '+';
+    plusSignSix.innerHTML = '+';
+  };
   });
 
 accordionQuestionTwo.addEventListener('click', () => {
+  accordionAnswerOne.classList.remove('accordion-visible');
   accordionAnswerTwo.classList.toggle('accordion-visible');
+  accordionAnswerThree.classList.remove('accordion-visible');
+  accordionAnswerFour.classList.remove('accordion-visible');
+  accordionAnswerFive.classList.remove('accordion-visible');
+  accordionAnswerSix.classList.remove('accordion-visible');
   if (plusSignTwo.innerHTML === '+') {
     plusSignTwo.innerHTML = '-'
   } else {
     plusSignTwo.innerHTML = '+';
-  }
+  };
+  if (plusSignOne.innerHTML === '-' || plusSignThree.innerHTML === '-' || plusSignFour.innerHTML === '-' || plusSignFive.innerHTML === '-' || plusSignSix.innerHTML === '-') {
+    plusSignOne.innerHTML = '+';
+    plusSignThree.innerHTML = '+';
+    plusSignFour.innerHTML = '+';
+    plusSignFive.innerHTML = '+';
+    plusSignSix.innerHTML = '+';
+  };
+
 });
 
 accordionQuestionThree.addEventListener('click', () => {
+  accordionAnswerOne.classList.remove('accordion-visible');
+  accordionAnswerTwo.classList.remove('accordion-visible');
   accordionAnswerThree.classList.toggle('accordion-visible');
+  accordionAnswerFour.classList.remove('accordion-visible');
+  accordionAnswerFive.classList.remove('accordion-visible');
+  accordionAnswerSix.classList.remove('accordion-visible');
   if (plusSignThree.innerHTML === '+') {
     plusSignThree.innerHTML = '-'
   } else {
     plusSignThree.innerHTML = '+';
-  }
+  };
+  if (plusSignOne.innerHTML === '-' || plusSignTwo.innerHTML === '-' || plusSignFour.innerHTML === '-' || plusSignFive.innerHTML === '-' || plusSignSix.innerHTML === '-') {
+    plusSignOne.innerHTML = '+';
+    plusSignTwo.innerHTML = '+';
+    plusSignFour.innerHTML = '+';
+    plusSignFive.innerHTML = '+';
+    plusSignSix.innerHTML = '+';
+  };
 });
 
 accordionQuestionFour.addEventListener('click', () => {
+  accordionAnswerOne.classList.remove('accordion-visible');
+  accordionAnswerTwo.classList.remove('accordion-visible');
+  accordionAnswerThree.classList.remove('accordion-visible');
   accordionAnswerFour.classList.toggle('accordion-visible');
+  accordionAnswerFive.classList.remove('accordion-visible');
+  accordionAnswerSix.classList.remove('accordion-visible');
   if (plusSignFour.innerHTML === '+') {
     plusSignFour.innerHTML = '-'
   } else {
     plusSignFour.innerHTML = '+';
-  }
+  };
+  if (plusSignOne.innerHTML === '-' || plusSignTwo.innerHTML === '-' || plusSignThree.innerHTML === '-' || plusSignFive.innerHTML === '-' || plusSignSix.innerHTML === '-') {
+    plusSignOne.innerHTML = '+';
+    plusSignTwo.innerHTML = '+';
+    plusSignThree.innerHTML = '+';
+    plusSignFive.innerHTML = '+';
+    plusSignSix.innerHTML = '+';
+  };
 });
 
 accordionQuestionFive.addEventListener('click', () => {
+  accordionAnswerOne.classList.remove('accordion-visible');
+  accordionAnswerTwo.classList.remove('accordion-visible');
+  accordionAnswerThree.classList.remove('accordion-visible');
+  accordionAnswerFour.classList.remove('accordion-visible');
   accordionAnswerFive.classList.toggle('accordion-visible');
+  accordionAnswerSix.classList.remove('accordion-visible');
   if (plusSignFive.innerHTML === '+') {
     plusSignFive.innerHTML = '-'
   } else {
     plusSignFive.innerHTML = '+';
-  }
+  };
+  if (plusSignOne.innerHTML === '-' || plusSignTwo.innerHTML === '-' || plusSignThree.innerHTML === '-' || plusSignFour.innerHTML === '-' || plusSignSix.innerHTML === '-') {
+    plusSignOne.innerHTML = '+';
+    plusSignTwo.innerHTML = '+';
+    plusSignThree.innerHTML = '+';
+    plusSignFour.innerHTML = '+';
+    plusSignSix.innerHTML = '+';
+  };
 });
 
 accordionQuestionSix.addEventListener('click', () => {
+  accordionAnswerOne.classList.remove('accordion-visible');
+  accordionAnswerTwo.classList.remove('accordion-visible');
+  accordionAnswerThree.classList.remove('accordion-visible');
+  accordionAnswerFour.classList.remove('accordion-visible');
+  accordionAnswerFive.classList.remove('accordion-visible');
   accordionAnswerSix.classList.toggle('accordion-visible');
   if (plusSignSix.innerHTML === '+') {
     plusSignSix.innerHTML = '-'
   } else {
     plusSignSix.innerHTML = '+';
-  }
+  };
+  if (plusSignOne.innerHTML === '-' || plusSignTwo.innerHTML === '-' || plusSignThree.innerHTML === '-' || plusSignFour.innerHTML === '-' || plusSignFive.innerHTML === '-') {
+    plusSignOne.innerHTML = '+';
+    plusSignTwo.innerHTML = '+';
+    plusSignThree.innerHTML = '+';
+    plusSignFour.innerHTML = '+';
+    plusSignFive.innerHTML = '+';
+  };
 });
 
-
-
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
 
 
 

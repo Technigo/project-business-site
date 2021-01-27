@@ -17,8 +17,7 @@ body {
 .image {
   width: 100vw;
   height: 100vh;
-  object-fit: cover;  
-  
+  object-fit: cover; 
 }
 
 /* Navigation bar */
@@ -33,7 +32,7 @@ body {
 
 .navigation-links {
   color: white;
-  font-family: "Cuprum", serif;
+  font-family: "Stardos Stencil", serif;
   font-size: 18px;
   padding: 5px;
   text-decoration: none;
@@ -58,14 +57,14 @@ body {
   flex-direction: column;
 }
 
-.title {
+.h1 {
   color: white;
   font-family: "Stardos Stencil", serif;
   font-size: 70px;
   letter-spacing: 3px;
 }
 
-.title-two {
+.h2 {
   font-family: "Playfair Display", serif;
   font-size: 16px;
   letter-spacing: 1.5px;;
@@ -74,7 +73,7 @@ body {
   margin-bottom: 100px;
 }
 
-.book-now {
+.book-now-button {
   width: 120px;
   padding: 15px;
   font-family: "Stardos Stencil", serif;
@@ -87,7 +86,7 @@ body {
   cursor: pointer;
 }
 
-.book-now:hover {
+.book-now-button:hover {
   opacity: 0.7;
 }
 
@@ -100,12 +99,11 @@ body {
   flex-flow: row wrap;
   padding-top: 50px;
   width: 100%;
-  
 }
 
 /* Sign-up form */
 
-.sign-up-container {
+.form-container {
   display: flex;
   flex-direction: column;
   font-family: "Playfair Display";
@@ -114,7 +112,6 @@ body {
   margin-bottom: 25px;
   background-color: rgb(247, 244, 244);
   color: black;
-  
 }
 
 .accordion-container {
@@ -142,31 +139,29 @@ body {
   padding: 15px;
 }
 
-.question {
+.form-question {
   display: flex;
   flex-direction: column;
-  font-size: 16px;
   margin-bottom: 10px;
 }
 
 .input-text {
   padding: 7px;
-  background: rgba(204, 203, 203, 0.4);
+  background: rgba(124, 117, 117, 0.1);
   width: 90%;
   font-family: "Playfair Display";
   outline: none;
-  outline-style: none;
   border-radius: 5px;
   border: none;
   margin-top: 5px;
 }
 
-.date-number {
+.date-and-number {
   display: flex;
   margin-bottom: 10px;
 }
 
-.question input[type=date] {
+.form-question input[type=date] {
   width: 130px;
   margin-right: 50px;
   margin-top: 5px;
@@ -179,17 +174,17 @@ body {
   margin-top: 5px;
 }
 
-.question input[type=number] {
+.form-question input[type=number] {
   width: 80px;
 }
 
-.radio {
+.form-radio-buttons {
   margin-top: 7px;
   margin-bottom: 30px;
   font-size: 15px;
 }
 
-.radio input[type='radio']:checked:after {
+.form-radio-buttons input[type='radio']:checked:after {
   width: 10px;
   height: 10px;
   border-radius: 15px;
@@ -201,10 +196,10 @@ body {
   border: 2px solid white;
 }
 
-.checkbox {
+.form-checkbox {
   font-size: 16px;
 }
-.checkbox input[type='checkbox']:checked:after {
+.form-checkbox input[type='checkbox']:checked:after {
   width: 12px;
   height: 12px;
   position: relative;
@@ -227,7 +222,7 @@ body {
 
 /* Submit booking button */
 
-.submit-button {
+.form-submit-button {
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -270,7 +265,7 @@ body {
 }
 
 .accordion-plus {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   color: black;
 }
@@ -278,8 +273,6 @@ body {
 .accordion-answer {
   display: none;
   background-color: rgba(124, 117, 117, 0.1);
-  border-bottom: 1px solid white;
-  font-size: 16px;
   padding: 5px;
   margin-bottom: 5px;
 }
@@ -287,7 +280,6 @@ body {
 .accordion-visible {
   display: block;
 }
-
 
 /* Footer */
 
@@ -333,7 +325,7 @@ body {
     margin-right: 50px;
   }
 
-  .sign-up-container, .accordion-container {
+  .form-container, .accordion-container {
     width: 40%;
   }
 
@@ -343,7 +335,7 @@ body {
 }
 
 @media (min-width: 1024px){
-  .sign-up-container, .accordion-container {
+  .form-container, .accordion-container {
     width: 35%;
   }
 
@@ -353,12 +345,11 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .sign-up-container, .accordion-container {
-    width: 30%;
+  .form-container, .accordion-container {
+    width: 25%;
   }
 
   .input-text {
     width: 60%;
   }
 }
-
