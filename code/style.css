@@ -17,7 +17,6 @@ body {
   background-color: rgb(46, 157, 165);
   overflow: hidden;
   border-bottom: solid white;
-  z-index: 1;
 }
 
 /* some buzzwords in the header that reveals when the header images moves */
@@ -25,32 +24,28 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  width: fit-content;
-  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__buzz__word {
+  display: inline-block;
   font-family: 'Indie Flower', cursive;
   font-size: 30px;
 }
 
-/* set the place of the buzzword */
-.header__buzz--left {
+/*makes buzzword 1 styled in a specific way*/
+.header__buzz__word:nth-of-type(1) {
   left: 0;
-  margin-left: 20px;
-}
-
-.header__buzz--right {
-  right: 0;
-  margin-right: 20px;
-}
-
-/*set the color for the buzzwords*/
-.header__buzz--turquoise {
+  margin-left: 30px;
   color: rgb(0, 252, 231);
 }
 
-.header__buzz--purple {
+/*makes buzzword 2 styled in a specific way*/
+.header__buzz__word:nth-of-type(2) {
+  right: 0;
+  margin-right: 30px;
   color: rgb(119, 0, 255);
 }
 
@@ -69,10 +64,17 @@ body {
   object-fit: cover;
 }
 
+/*img shows only on desktop */
 .header__img--desktop {
   display: block;
 }
 
+/* only tablet */
+.header__img--tablet {
+  display: none;
+}
+
+/* img shows only on mobile */
 .header__img--mobile {
   display: none;
 }
@@ -228,6 +230,7 @@ body {
   color: white;
 }
 
+/*important for the mobile mode drop down menu positioning */
 .nav__wrapper {
   position: relative;
 }
@@ -349,14 +352,19 @@ select {
   margin-bottom: 20px;
 }
 
-/*hides image on desktop mode thats only used for mobile viewing */
+/*shows image on desktop mode */
 .signup__image--desktop {
+  display: block;
+}
+
+/* only tablet */
+.signup__image--tablet {
   display: none;
 }
 
-/*hides image on mobile mode thats only used for desktop viewing */
+/*only mobile*/
 .signup__image--mobile {
-  display: block;
+  display: none;
 }
 
 /* section for all accordions */
@@ -511,6 +519,52 @@ select {
   position: absolute;
 }
 
+/*breakpoint at the largest tablets*/
+@media screen and (device-width: 1366px),
+(max-width:1366px) {
+
+  .header__img {
+    width: 50%;
+  }
+
+  .header__img--tablet {
+    display: block;
+  }
+
+  /* reusing 2 pictures, so they should not get display:none. targeting those that should */
+  .header__img--desktop:nth-of-type(1),
+  .header__img--desktop:nth-of-type(6) {
+    display: none;
+  }
+
+  .header__img--mobile {
+    display: none;
+  }
+
+  .signup__image--tablet {
+    display: block;
+  }
+
+  .signup__image--desktop {
+    display: none;
+  }
+
+  .signup__image--mobile {
+    display: none;
+  }
+
+  .accordion {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+  }
+
+  .accordion__section {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
 
 @media screen and (device-width: 600px),
 (max-width:600px) {
@@ -537,7 +591,7 @@ select {
     display: block;
     z-index: 2;
     width: 30px;
-    height:30px;
+    height: 30px;
   }
 
   .nav__menu {
@@ -547,17 +601,17 @@ select {
     position: absolute;
     width: 100%;
     height: 100vh;
-    top:0px;
+    top: 0px;
   }
 
   .nav__link {
     align-items: center;
     width: 100%;
-    flex:auto;
+    flex: auto;
   }
- 
+
   .nav__menu--active {
-   display: flex;
+    display: flex;
   }
 
   /* changes the form and picture to be in one column instead of next to eachother */
@@ -605,5 +659,4 @@ select {
     width: 100%;
     margin-bottom: 40px;
   }
-
 }
