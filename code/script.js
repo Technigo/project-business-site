@@ -23,7 +23,10 @@ for (let i = 0; i < accordionDisplay.length; i++) {
     } else {
       accordionButton[i].textContent = "+";
       acc.style.backgroundColor = "inherit";
-    }
+      // js overwrites css :hover, so putting it here //
+      acc.addEventListener("mouseover", () => {
+        acc.style.backgroundColor = "#4C3F88";
+    });}
   });
 }
 
