@@ -69,12 +69,12 @@ body {
   object-fit: cover;
 }
 
-.header__img--hidden-desktop {
-  display: none;
+.header__img--desktop {
+  display: block;
 }
 
-.header__img--hidden-mobile {
-  display: block;
+.header__img--mobile {
+  display: none;
 }
 
 .header__img--xs {
@@ -217,17 +217,10 @@ body {
 }
 
 .nav {
-  width: 100%;
-  display: flex;
   position: sticky;
   top: 0;
+  width: 100%;
   z-index: 1;
-  background: white;
-  justify-content: space-evenly;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: rgb(46, 157, 165);
-  padding: 0;
-  margin: 0;
 }
 
 .nav a:hover {
@@ -235,19 +228,48 @@ body {
   color: white;
 }
 
-.nav__link {
-  width: 20%;
-  text-align: center;
+.nav__wrapper {
+  position: relative;
 }
 
-/*put overflow-y: auto so footer will not jump up on the page when accordion
- isn't expanded */
+.nav__menu {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  z-index: 1;
+  background: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(46, 157, 165);
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link {
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+}
+
+/*button for drop-down menu. */
+.nav__button {
+  position: relative;
+  display: none;
+}
+
+.nav__button img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 /* wrapper for section */
@@ -259,7 +281,7 @@ body {
   width: 80%;
   height: fit-content;
   border: solid rgb(255, 255, 255);
-  background-color: darkcyan;
+  background-color: rgb(46, 157, 165);
   color: white;
   font-size: 18px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -296,10 +318,15 @@ body {
 }
 
 .signup__form input[type="submit"] {
-  background: rgb(76, 63, 136);
+  background-color: rgb(42, 138, 145);
   font-size: 18px;
+  color: rgb(255, 255, 255);
+  border: solid white 0.5px;
+  border: double white;
   margin: 20px 0;
   display: block;
+  width: fit-content;
+  align-self: center;
 }
 
 .signup__image {
@@ -323,12 +350,12 @@ select {
 }
 
 /*hides image on desktop mode thats only used for mobile viewing */
-.signup__image--hidden-desktop {
+.signup__image--desktop {
   display: none;
 }
 
 /*hides image on mobile mode thats only used for desktop viewing */
-.signup__image--hidden-mobile {
+.signup__image--mobile {
   display: block;
 }
 
@@ -357,14 +384,13 @@ select {
   height: 0%;
   border: solid rgb(255, 255, 255);
   background-color: rgb(109, 96, 160);
-  margin-bottom: 40px;
 }
 
 /* the accordion styling */
 .accordion__display,
 .accordion__expand {
   border: solid rgb(255, 255, 255) 0.5px;
-  background-color: rgb(76, 63, 136);
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 10px;
   width: 90%;
   margin: 5px;
@@ -376,10 +402,17 @@ select {
   height: 60px;
 }
 
+/* some extra space under the bottom display */
+.accordion__display:nth-of-type(7) {
+  margin-bottom: 20px;
+}
+
+
 /* the expanding section of accordion is hidden when not toggled active */
 .accordion__expand {
   height: 0;
   visibility: hidden;
+  background-color: rgb(76, 63, 136);
 }
 
 /* shows expanded accordion box when toggle on */
@@ -492,12 +525,39 @@ select {
     font-size: 20px;
   }
 
-  .header__img--hidden-mobile {
+  .header__img--mobile {
+    display: block;
+  }
+
+  .header__img--desktop {
     display: none;
   }
 
-  .header__img--hidden-desktop {
+  .nav__button {
     display: block;
+    z-index: 2;
+    width: 30px;
+    height:30px;
+  }
+
+  .nav__menu {
+    display: none;
+    flex-direction: column;
+    width: fit-content;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top:0px;
+  }
+
+  .nav__link {
+    align-items: center;
+    width: 100%;
+    flex:auto;
+  }
+ 
+  .nav__menu--active {
+   display: flex;
   }
 
   /* changes the form and picture to be in one column instead of next to eachother */
@@ -514,16 +574,16 @@ select {
   }
 
   /*puts the form image on top instead of bottom of the form */
-  .signup__image--flex-first {
+  .signup__image--first {
     order: 1;
   }
 
-  .signup__image--hidden-mobile {
-    display: none;
+  .signup__image--mobile {
+    display: block;
   }
 
-  .signup__image--hidden-desktop {
-    display: block;
+  .signup__image--desktop {
+    display: none;
   }
 
   .signup__inner {
@@ -543,6 +603,7 @@ select {
 
   .accordion__section {
     width: 100%;
+    margin-bottom: 40px;
   }
 
 }
