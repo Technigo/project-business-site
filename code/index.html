@@ -21,7 +21,7 @@
         <source scr="https://images.unsplash.com/photo-1526723476341-307183286978?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" media="(max-width: 900)">
         <img class="header-image" src="https://images.unsplash.com/photo-1526723476341-307183286978?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" alt="Hero Image">
       </picture>
-      <h1 class="header-text">NuttisPruttis</h1>
+      <h1 class="header-text">Travel the World</h1>
       <nav class="navbar">
         <div>
           <img class="logo" src="https://picsvg.com/example/owl.svg" alt="Logo">
@@ -31,67 +31,74 @@
           <div></div>
           <div></div>
         </div>
+
+        <div class="menu">
+          <a href="/html/">ADVENTURE</a>
+          <a href="/css/">RELAX</a>
+          <a href="/js/">GETAWAY</a>
+        </div>
       </nav>
     </header>
 
 
     <!-- Signup form -->
+    <div class="form-faq-container">
+      <section>
+        <form class="form" action=“https://httpbin.org/anything” method=“POST”>
+            <h3>Create an Account</h3>
+            <input class="input input-box" type="text" name="name" placeholder="Name" required>
+            <input class="input input-box" type="email" name="email" placeholder="Email" required>
+            <input class="input input-box" type="password" name="password" placeholder="Password" required>
+            <input class="input input-box" type="password" name="password" placeholder="Confirm Password" required>
+              <label for="form-select"> What travel floats your boat?</label>
+              <select id="form-select" name="form-select" class="form-select">
+                <option value="adventure">Adventure</option>
+                <option value="romantic">Romantic</option>
+                <option value="luxury">Luxury</option>
+                <option value="backpacking">Backpacking</option>
+                <option value="family">Family</option>
+              </select>
+            <label class="input checkbox">
+              <input type="checkbox" name="checkbox" id="" checked>
+              I Agree to the Terms and Conditions
+            </label>
+            <button class="input signup-btn" type=“submit”>SIGN UP</button>
+        </form>
+      </section>
 
-    <section>
-      <form class="form" action=“http://httpbin.org/anything” method=“POST”>
-          <h3>SIGN-UP</h3>
-          <input class="input input-box" type="text" name="name" placeholder="Name" required>
-          <input class="input input-box" type="text" name="email" placeholder="Email" required>
-          <input class="input input-box" type="number" name="phone-number" placeholder="Phone Number" required>
-          <div class="select-div">
-            <select class="form-select">
-              <option value="adventure">Adventure</option>
-              <option value="romantic">Romantic</option>
-              <option value="luxury">Luxury</option>
-              <option value="backpacking">Backpacking</option>
-              <option value="family">Family</option>
-            </select>
+      <section class="accordion-container">
+        <!-- Accordion -->
+
+        <h1 class="faq-header">FAQ</h1>
+        <div class="accordion">
+          <div class="question" id="accordion-question1">➕ How much?</div>
+          <div id="accordion-answer1" class="accordion-answer">
+            <p>Lorem ipsum...</p>
           </div>
-          <label class="input checkbox">
-            <input type="checkbox" name="checkbox" id="" checked>
-            I Agree to the Terms and Conditions
-          </label>
-          <button class="input signup-btn" type=“submit”>SIGN UP</button>
-      </form>
-    </section>
-
-    <section class="accordion-container">
-      <!-- Accordion -->
-
-      <h1 class="faq-header">FAQ</h1>
-      <div class="accordion">
-        <div class="question" id="accordion-question1">➕ How much?</div>
-        <div id="accordion-answer1" class="accordion-answer">
-          <p>Lorem ipsum...</p>
         </div>
-      </div>
 
-      <div class="accordion">
-        <div class="question" id="accordion-question2">➕ When?</div>
-        <div id="accordion-answer2" class="accordion-answer">
-          <p>Lorem ipsum...</p>
+        <div class="accordion">
+          <div class="question" id="accordion-question2">➕ When?</div>
+          <div id="accordion-answer2" class="accordion-answer">
+            <p>Lorem ipsum...</p>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion">
-        <div class="question" id="accordion-question3">➕ Why?</div>
-        <div id="accordion-answer3" class="accordion-answer">
-          <p>Lorem ipsum...</p>
+        <div class="accordion">
+          <div class="question" id="accordion-question3">➕ Why?</div>
+          <div id="accordion-answer3" class="accordion-answer">
+            <p>Lorem ipsum...</p>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion">
-        <div class="question" id="accordion-question4">➕ Porque?</div>
-        <div id="accordion-answer4" class="accordion-answer">
-          <p>Lorem ipsum...</p>
+        <div class="accordion">
+          <div class="question" id="accordion-question4">➕ Porque?</div>
+          <div id="accordion-answer4" class="accordion-answer">
+            <p>Lorem ipsum...</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <!-- dont forget to link the javascript file here! -->
     <script src="script.js"></script>
   </body>

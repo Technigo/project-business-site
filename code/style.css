@@ -18,15 +18,17 @@ body {
   opacity: 0.5;
   display: flex;
   justify-content: space-between;
-  margin: 10px 10px;
+  margin: 15px 10px;
   position: absolute;
   top: 0; 
   left: 0;
+  width: 94%;
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
 }
 
 .hamburger {
@@ -42,6 +44,13 @@ body {
   /* background-color: white; */
   background-color: black;
   border-radius: 5px;
+}
+
+.menu a {
+  text-decoration: none;
+  color:  rgba(230, 0, 0, 0.6);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 120%;
 }
 
 /* HERO-IMAGE */
@@ -66,15 +75,17 @@ body {
 /* FORM */
 
 .form {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
+  flex-direction: column;
   border: 0.2px solid #f8f1f1;
   width: 400px;
-  height: 440px;
+  height: 100%;
   padding: 30px;
   border-radius: 5px;
-  background-color: #d6b0b1;
-  position: relative;
+  background-color: #B4C7D3;
   margin: 0 auto;
   margin-top: 40px;
   font-family: 'Montserrat', sans-serif;
@@ -86,13 +97,12 @@ body {
 }
 
 .input {
-  width: 80%;
+  width: 90%;
   margin-bottom: 25px;
-  margin-left: 25px;
 }
 
 .input-box {
-  background-color: #e3d0b9;
+  background-color: #D2D6D9;
   border: none;
   border-radius: 5px;
   text-align: center;
@@ -100,8 +110,12 @@ body {
 }
 
 .form-select {
-  margin-left: 37%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border: none;
+  margin-top: 15px;
   margin-bottom: 20px;
   border-radius: 5px;
 }
@@ -110,13 +124,13 @@ body {
   border-radius: 15px;
   border: none;
   padding: 10px 7px 10px 7px;
-  background-color: #bee5d3;
+  background-color: rgba(230, 0, 0, 0.6);
   cursor: pointer;
   width: 40%;
-  position: absolute;
   left: 22%;
   bottom: 0%;
   font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
 }
 
 
@@ -164,11 +178,52 @@ body {
   border-radius: 5px 5px 0 0;
 }
 
+
+/* FORM AND FAQ CONTAINER */
+
+.form-faq-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
 /* FOOTER */
 
 
 /* MEDIA QUERIES */
 
+@media (max-device-width: 667px) {
+  .menu a {
+    display: none;
+  }
+}
 
+@media (min-device-width: 668px) and (max-device-width: 1024px) {
+  .menu a {
+    display: none;
+  }
+}
 
+@media (min-device-width: 1025px) {
+  .hamburger {
+    display: none;
+  }
 
+  .form-faq-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-device-width: 1698px) {
+  .hamburger {
+    display: none;
+  }
+
+  .form-faq-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
