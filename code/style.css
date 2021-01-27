@@ -9,14 +9,14 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 @import url('https://fonts.googleapis.com/css2?family=Podkova&display=swap');
 
 body {
-  background-color:whitesmoke;
+  background-color:rgba(0, 0, 0, 0.856);
   margin: 0;
 }
 
 .hero-img { 
-width: 100vw;
-height: 100vh;
-object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  object-fit:cover;
 }
 
 .site-content {   
@@ -24,7 +24,7 @@ object-fit: cover;
   padding:20px; 
   width: 90%;
   display: flex;  
-  justify-content: space-evenly;
+  justify-content: space-evenly;  
 }
 
 .show-more {
@@ -33,18 +33,23 @@ object-fit: cover;
   cursor: pointer;
   font-weight: bold;
   font-size: 15px;
+  outline:rgb(44, 247, 247);
 }
 .show-more:hover {
   background-color: rgb(44, 247, 247);
 }
 
+
+
 .accordion {
-  background-color: teal; 
-  border: 2px solid black;
+  background-color: rgb(44, 247, 247); 
+  border: 3px solid black;
   border-radius: 16px;
   width: 40%; 
-  box-shadow: 10px 10px 16px rgb(3,78,78);
   padding: 10px;
+  font-family: 'Podkova', serif;
+  box-shadow: 10px 10px 16px rgb(3, 78, 78);
+  /* box-shadow: 10px 10px 16px rgb(44, 247, 247); */
 }
 
 .fraga {
@@ -93,7 +98,7 @@ object-fit: cover;
 }
 
 input[type="radio" i] {
-    margin: 8px 3px 0px 3px;
+  margin: 8px 3px 0px 3px;
 }
 
 .send-btn {
@@ -111,5 +116,15 @@ input[type="radio" i] {
 }
 
 
+@media (max-witdh:768px) {
 
+.site-content {
+  flex-flow: column wrap;
+  display: flex;
+}
+
+.sign-up-form {
+  width: 90%;
+}
+}
 
