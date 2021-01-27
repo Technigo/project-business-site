@@ -1,23 +1,16 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active+.answer {
-  /* some styling here */
-}
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*** Mobile first***/
+/* Mobile first */
 
 .header {
   position: relative;
 }
 
-/*** Navigation bar ***/
+/* Navigation bar */
 
 .navigation-container {
   position: absolute;
@@ -45,7 +38,7 @@ body {
   cursor: pointer;
 }
 
-/*** Heror image ***/
+/* Heror image */
 
 .hero-image {
   width: 100vw;
@@ -71,7 +64,7 @@ body {
   color: #fff;
   margin-bottom: 10px;
   text-align: center;
-  padding: 0px 20px;
+  margin: 0px 20px;
 }
 
 .header p {
@@ -79,7 +72,7 @@ body {
   font-size: 12px;
   text-align: center;
   margin-top: 0;
-  padding: 0px 45px;
+  margin: 0px 45px;
 }
 
 .main {
@@ -89,9 +82,14 @@ body {
   margin-top: 50px;
 }
 
-/*** Form section ***/
+/* Form */
 
 .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-container {
   display: flex;
   flex-direction: column;
 }
@@ -143,43 +141,47 @@ body {
   background-color: #3700B3;
 }
 
-/*** Accordion ***/
+/* Accordion */
 
 .accordion {
   display: flex;
   flex-direction: column;
-  background-color:lavender;
+  background-color: lavender;
   width: 100%;
   align-items: center;
   margin-top: 50px;
   padding: 50px 0px 100px 0px;
 }
-.question-container{
+
+.question-container {
   width: 100%;
-  border-bottom: 1px solid #fff;
+  /* border-bottom: 1px solid #fff;*/
+  cursor: pointer;
 }
 
 .question {
   display: block;
-  padding: 18px;
+  background-color: lavender;
   text-align: center;
-  background-color:lavender;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 18px;
 }
 
 .answer {
- /* display: none;
-  padding: 0 18px;
+  /* display: none;*/
   background-color: lavender;
-  text-align: center;*/
-  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  padding: 0 18px;
   height: 0px;
   opacity: 0;
   overflow: hidden;
-  /*transition: all 1s ease-in-out;*/
-  -webkit-transition: all 0.5s ease-in-out;
-  /*-moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;*/
+  -webkit-transition: height 0.5s linear;
+  -moz-transition: height 0.5s linear;
+  -ms-transition: height 0.5s linear;
+  -o-transition: height 0.5s linear;
+  transition: height 0.5s linear;
 }
 
 .active+.answer {
@@ -187,6 +189,31 @@ body {
   opacity: 1;
   height: 100px;
   background-color: #fff;
+  -webkit-transition: height 0.5s linear;
+  -moz-transition: height 0.5s linear;
+  -ms-transition: height 0.5s linear;
+  -o-transition: height 0.5s linear;
+  transition: height 0.5s linear;
+}
 
-  
+/* Tablet */
+@media (min-width: 767px) {
+
+.header h1 {
+  font-size: 48px;
+}
+
+.header p {
+  font-size: 21px;
+}
+
+.label-container {
+  flex-direction: row;
+}
+
+.label-container .label {
+  margin-right: 10px;
+}
+
+
 }
