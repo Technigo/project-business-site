@@ -25,9 +25,10 @@ for (let i = 0; i < accordionDisplay.length; i++) {
       acc.style.backgroundColor = "inherit";
       // js overwrites css :hover, so putting it here //
       acc.addEventListener("mouseover", () => {
-        acc.style.backgroundColor = "#4C3F88";
-    });}
-  });
+        acc.style.backgroundColor = "#4C3F88";});
+      }
+    }
+  );
 }
 
 const navMenu = document.querySelector(".nav__menu");
