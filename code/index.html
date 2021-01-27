@@ -34,14 +34,18 @@
     <!-- Signup form -->
     <section>
       <h2> Signup to something</h2>
-      <form class="form">
+      <form class="form" action="" method="POST">
         <div class="input-container">
-          <label class="label">Name</label>
-          <input class="input" type="text">
+          <!--Alternative 1-->
+          <label class="label" name="form-name">Name
+            <input class="input" type="text">
+            </input>
+          </label>
         </div>
         <div class="input-container">
-          <label class="label">Userame</label>
-          <input class="input" type="text">
+           <!--Alternative 2-->
+          <label for="form-username" class="label">Userame</label>
+          <input id="form-username" class="input" type="text">
         </div>
         <div class="input-container">
           <label class="label">Email</label>
@@ -67,6 +71,7 @@
       <h1>Answers to something</h1>
 
       <div class="question" id="section1">How to get started</div>
+      <!-- needs an ID -->
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
