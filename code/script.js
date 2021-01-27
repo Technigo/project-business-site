@@ -12,17 +12,29 @@ const accordionSection4Content = document.getElementById('accordion-section4-con
 
 accordionSection1.addEventListener('click', () => {
     accordionSection1Content.classList.toggle('accordion-selected');
+    accordionSection2Content.classList.remove('accordion-selected');
+    accordionSection3Content.classList.remove('accordion-selected');
+    accordionSection4Content.classList.remove('accordion-selected');
 });
 
 accordionSection2.addEventListener('click', () => {
+    accordionSection1Content.classList.remove('accordion-selected');
     accordionSection2Content.classList.toggle('accordion-selected');
+    accordionSection3Content.classList.remove('accordion-selected');
+    accordionSection4Content.classList.remove('accordion-selected');
 });
 
 accordionSection3.addEventListener('click', () => {
+    accordionSection1Content.classList.remove('accordion-selected');
+    accordionSection2Content.classList.remove('accordion-selected');
     accordionSection3Content.classList.toggle('accordion-selected');
+    accordionSection4Content.classList.remove('accordion-selected');
 });
 
 accordionSection4.addEventListener('click', () => {
-  accordionSection4Content.classList.toggle('accordion-selected');
+    accordionSection1Content.classList.remove('accordion-selected');
+    accordionSection2Content.classList.remove('accordion-selected');
+    accordionSection3Content.classList.remove('accordion-selected');
+    accordionSection4Content.classList.toggle('accordion-selected');
 });
 
