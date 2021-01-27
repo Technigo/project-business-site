@@ -31,17 +31,13 @@
 
       <!-- Signup form -->
 
-        <form class="form">
+        <form class="form" action="https://httpbin.org/anything" method="POST">
         <h2 class="form-heading">Offertförfrågan</h2>
         <h3 class="section-heading">Kontaktuppgifter</h3>
-        <div class="form-items">
-          <label for="first-name">Förnamn</label>
-          <input type="text" name="first-name" id="first-name" required placeholder="Förnamn">
-        </div>
 
         <div class="form-items">
-          <label for="last-name">Efternamn</label>
-          <input type="text" name="last-name" id="last-name" required>
+          <label for="name">Namn</label>
+          <input type="text" name="name" id="name" required placeholder="Namn">
         </div>
 
         <div class="form-items">
@@ -65,7 +61,8 @@
         </div>
 
         <h3 class="section-heading">Löpande tjänster</h3>
-          <div class="form-items">
+
+        <div class="form-items">
           <label for="bank">Bank</label>
           <select id="bank" name="bank" id="bank">
             <option value="handelsbanken">Handelsbanken</option>
@@ -77,8 +74,8 @@
           </select>
         </div>
 
-          <div class="form-items">
-            <label for="economysystem">Ekonomisystem</label>
+        <div class="form-items">
+          <label for="economysystem">Ekonomisystem</label>
               <select id="economysystem" name="economysystem" id="economysystem">
                 <option value="fortnox">Fortnox</option>
                 <option value="visma">Visma</option>
@@ -87,91 +84,87 @@
                 <option value="marathon">Marathon</option>
                 <option value="other">Annat</option>
               </select>
-            </div>
+        </div>
 
           <div class="form-items">
             <label for="invoices">Antal leverantörsfakturor per månad: <span id="numberOfInvoices"></span></label>
-            <input type="range" min="1" max="100" value="0" class="slider" id="myInvoices">
+            <input name="monthly-invoices" type="range" min="1" max="100" value="0" class="slider" id="myInvoices">
           </div>
 
           <div class="form-items">
-          <label for="myExpenses">Antal utlägg per månad: <span id="numberOfExpenses"></span></label>
-          <input type="range" min="10" max="1000" value="0" class="slider" id="myExpenses">
+            <label for="myExpenses">Antal utlägg per månad: <span id="numberOfExpenses"></span></label>
+            <input name="monthly-expenses" type="range" min="10" max="1000" value="0" class="slider" id="myExpenses">
           </div>
 
           <p>Behöver du hjälp med lönehantering?</p>
-          <div class="radio-container">
-          <div class="radio-items">
-            <input type="radio" id="yes" name="salaries" value="yes">
-            <label for="yes">Ja</label>
-          </div>
-          <div class="radio-items">
-            <input type="radio" id="no" name="salaries" value="no">
-            <label for="no">Nej</label>
-          </div>
+          <!-- <div class="radio-container"> -->
+
+          <div class="radio">
+
+            <label class="radio-container">
+              Ja
+            <input type="radio" name="salaries" value="yes">
+            <span class="custom-radio"></span> 
+            </label>
+
+            <label class="radio-container">
+              Nej
+            <input type="radio" name="salaries" value="no">
+            <span class="custom-radio"></span> 
+            </label>
+
         </div>
 
         <p>Vilka övriga tjänster behöver du hjälp med?</p>
-        <div class="checkbox-container">
 
-        <div class="checkbox-items">
-          <label class="checkbox-containter"> 
+        <div class="checkbox">
+
+          <label class="checkbox-container"> 
             Momsdeklaration
-          <input type="checkbox" id="moms" name="momsdeklaration" value="momsdeklaration" checked>
+          <input type="checkbox" name="momsdeklaration" value="yes" checked>
         <span class="custom-checkbox"></span>  
         </label>
-        </div>
 
-        <div class="checkbox-items">
-          <label class="checkbox-containter"> 
+          <label class="checkbox-container"> 
             Budgetering
-          <input type="checkbox" id="budget" name="budget" value="budgetering">
+          <input type="checkbox" name="budget" value="yes">
           <span class="custom-checkbox"></span>  
           </label>
-        </div>
 
-        <div class="checkbox-items">
-          <label class="checkbox-containter"> 
+          <label class="checkbox-container"> 
             Inkomstdeklaration
-          <input type="checkbox" id="income" name="income" value="income">
+          <input type="checkbox" name="income" value="yes">
           <span class="custom-checkbox"></span> 
           </label>
-        </div>
 
-        <div class="checkbox-items">
-          <label class="checkbox-containter"> 
+          <label class="checkbox-container"> 
             Likviditetsplanering
-          <input type="checkbox" id="cashflow" name="cashflow" value="cashflow">
+          <input type="checkbox" name="cashflow" value="yes">
           <span class="custom-checkbox"></span> 
           </label>
-        </div>
 
-        <div class="checkbox-items">
-          <label class="checkbox-containter"> 
+          <label class="checkbox-container"> 
             Rapportering
-          <input type="checkbox" id="reports" name="reports" value="reports">
+          <input type="checkbox" name="reports" value="yes">
           <span class="custom-checkbox"></span> 
           </label>
-        </div>
 
-        <div class="checkbox-items">
-          <label class="checkbox-containter">
+          <label class="checkbox-container"> 
             Årsbokslut/årsredovisning 
-          <input type="checkbox" id="bokslut" name="bokslut" value="bokslut">
+          <input type="checkbox" name="bokslut" value="yes">
           <span class="custom-checkbox"></span> 
           </label>
-        </div>
 
       </div>
 
-          <button class="submit-button" type="submit">Skicka</button>
+      <button class="submit-button" type="submit">Skicka</button>
         </form>
       </div>
     
       <!-- FAQ -->
 
   <div class="accordion-container"> 
-    <h2>FAQ</h2>
+    <h2 class="faq">FAQ</h2>
     <div class="accordion">
       <h3 id="question-1" class="question"><i class="fas fa-chevron-up"></i><i class="fas fa-chevron-down"></i>Hjälper ni med leverantörsfakturor?</h3>
       <p id="answer-1" class="answer">Ja, det kan vi hjälpa till med!</p>
@@ -179,7 +172,7 @@
 
     <div class="accordion">
       <h3 id="question-2" class="question">Ut ac odio maximus?</h3>
-      <p id="answer-2" class="answer">Suspendisse ac hendrerit ante. Etiam rhoncus sagittis massa, vel aliquet lacus lobortis vitae. Cras faucibus fringilla felis sed vestibulum. Pellentesque justo libero, egestas eget libero vel, laoreet porttitor augue. In dictum libero in rutrum interdum. Vestibulum mollis nec nisl eu feugiat.</p>
+      <p id="answer-2" class="answer">Suspendisse ac hendrerit ante. Etiam rhoncus sagittis massa.</p>
     </div>
 
     <div class="accordion">

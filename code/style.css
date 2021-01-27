@@ -82,7 +82,7 @@ body {
 input,
 select {
   padding: 7px;
-  /* width: 350px; */
+  font-family: inherit;
 }
 
 .slider {
@@ -91,25 +91,66 @@ select {
   outline: none;
 }
 
-.submit-button [type="submit"] {
-  width: 100px;
-  font-family: 'Circular Bold';
+/* CUSTOM RADIO */
+
+.radio {
+  display: flex;
 }
 
 .radio-container {
-  display: flex;
-  flex-direction: row;
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
 }
 
-.radio-items {
-  display: flex;
-  align-items: flex-start;
-  width: 75px;
+.radio-container input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
+
+.custom-radio {
+  position: absolute;
+  left: 0px;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.radio-container:hover input ~ .custom-radio {
+  background-color: #ccc;
+}
+
+.radio-container input:checked ~ .custom-radio {
+  background-color: #444444;
+}
+
+.custom-radio:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 50%;
+  display: none;
+}
+
+.radio-container input:checked ~ .custom-radio:after {
+  display: block;
+}
+
+/* CUSTOM CHECKBOX */
 
 .checkbox-container {
-  /* display:flex;
-  flex-direction: column; */
   display: block;
   position: relative;
   padding-left: 25px;
@@ -132,7 +173,7 @@ select {
   height: 19px;
   width: 19px;
   background-color: #eee;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -147,12 +188,12 @@ select {
 .custom-checkbox:after {
   content: "";
   position: absolute;
-  width: 3px;
+  width: 4px;
   height: 6px;
   border: solid white;
-  border-width: 0 3px 3px 0;
-  top: 5px;
-  left: 7px;
+  border-width: 0 2.8px 2.8px 0;
+  top: 3px;
+  left: 6px;
   transform: rotate(45deg);
   display: none;
 }
@@ -160,11 +201,6 @@ select {
 .checkbox-container input:checked ~ .custom-checkbox:after {
   display: block;
 }
-
-/* .checkbox-container input:focus + .custom-checkbox {
-  outline: #333 auto 4px;
-} */
-
 
 .submit-button {
   margin-top: 30px;
@@ -189,6 +225,12 @@ select {
 
 .accordion-container {
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq {
+  margin-bottom: 40px;
 }
 
 .accordion {
@@ -218,6 +260,7 @@ select {
   display: none;
   border-top: 1px dotted grey;
   font-size: 14px;
+  max-width: fit-content;
 }
 
 .active {
