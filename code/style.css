@@ -81,25 +81,102 @@ body {
   text-align: center;
 }
 
+/* Styling form and accordion wrapper */
+
+.form-accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* Form styling */
 
 .form-wrapper {
   padding: 5px;
-  background: rgb(165, 127, 86);
+  background: rgb(172, 137, 101);
   margin: 10px 10px;
+  border-radius: 5px;
+}
+.owner-information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.form-item {
+  padding: 3px;
 }
 
 .text-input {
-  background-color: rgb(red, green, blue);
+  background-color: rgba(206, 186, 165, 0.788);
+  color: rgb(40, 52, 64);
+  padding: 2px;
+  border-radius: 5px;
+  margin: 5px;
+}
+::placeholder {
+  color: rgb(243, 240, 236);
+  font-size: 14px;
 }
 
+.cat-information {
+  display: flex;
+  justify-content: space-around;
+}
+.selector {
+  display: block;
+  background-color: rgba(206, 186, 165, 0.788);;
+  font-size: 14px;
+  color: rgb(243, 240, 236);
+  border-radius: 5px;
+}
+.number-input {
+  display: block;
+  background-color: rgba(206, 186, 165, 0.788);
+  color: rgb(40, 52, 64);
+  border-radius: 5px;
+}
 
+.label {
+  margin-bottom: 5px;
+}
+
+.fieldset-competition-classes {
+  margin: 10px 0;
+}
+.radio-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.inner-radio {
+  width: 45%;
+  padding: 3px;
+}
+.checkbox {
+  margin-bottom: 10px;
+} 
+.submit-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.submit-button {
+  margin-bottom: 10px;
+  background-color: rgb(66, 37, 11);
+  color: rgb(243, 240, 236);
+  padding: 3px;
+  border: 2px solid  rgba(66, 37, 11, 0.705);
+}
 
 /* Accordion styling */
 .accordion-wrapper {
   padding: 5px;
   background: rgb(165, 127, 86);
   margin: 10px 10px;
+  border-radius: 5px;
 }
 
 /* Media Queries */
@@ -110,17 +187,31 @@ body {
 }
 
 @media (min-width: 768px) {
+  .form-accordion-wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
   .hero-title {
     font-size: 50px;
   }
   .welcome-buttons-wrapper {
     flex-direction: row;
+    justify-content: center;
   }
   .button-wrapper {
     width: 45%;
+    max-width: 250px;
   }
   .welcome-button {
     font-size: 20px;
+  }
+  .form-wrapper {
+    width: 45%;
+    max-width: 450px;
+  }
+  .accordion-wrapper {
+    width: 45%;
+    max-width: 450px;
   }
 }
 
@@ -128,7 +219,10 @@ body {
   .hero-title {
     font-size: 70px;
   }
-
+  .form-accordion-wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 /* 
 .active + .answer {

@@ -9,12 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <!-- Hero Image section -->
-    <header>
-                <!-- <img class="logo" src="./logo.png " alt=""> -->
-    </header>
+    <header>             
+      <!-- <img class="logo" src="./logo.png " alt=""> -->
+    
     <div class="hero-section">
       <picture >
         <source srcset="./background_tablet.jpg" media="(min-width:768px) and (max-width: 949px)">
@@ -33,103 +34,120 @@
         </div>
       </div>
     </div>
-
+  </header>
     <!-- Signup form -->
-    <section class="form-wrapper" id="form-link">
-      <h3 class="form-heading">Enter competition</h3>
-
-      <form action="http://httpbin.org/anything" method="POST">
-        <div class="inner-form-wrapper">
-          <h4 class="form-subheading">Owner Information</h4>
-          <div class="form-item">
-            <input class="text-input" type="text" id="owner-name" name="owner_name" placeholder="Name">
-          </div>
-          <div class="form-item">
-            <input class="text-input" type="text" id="owner-surname" name="owner_surname" placeholder="Surname">
-          </div>
-          <div class="form-item">
-            <input class="text-input" type="email" id="owner-email" name="owner_email" placeholder="Email">
-          </div>
-          <div class="form-item">
-            <input class="text-input" type="password" id="owner-password" name="owner_password" placeholder="Password">
-          </div>
-          <h4 class="form-subheading">Cat Information</h4>
-          <div class="form-item">
-            <label for="breed-selector">Breed</label>
-            <select class="selector" name="breed_selector" id="breed-selector">
-              <option class="breed-option" value="abyssinian">Abyssinian</option>
-              <option class="breed-option" value="bengal">Bengal</option>
-              <option class="breed-option" value="birman">Birman</option>
-              <option class="breed-option" value="british_shorthair">British shorthair</option>
-              <option class="breed-option" value="devon_rex">Devon Rex</option>
-              <option class="breed-option" value="himalayan">Himalayan</option>
-              <option class="breed-option" value="javanese">Javanese</option>
-              <option class="breed-option" value="laperm">LaPerm</option>
-              <option class="breed-option" value="main_coon">Maine Coon</option>
-              <option class="breed-option" value="norwegian">Norwegian forest cat</option>
-              <option class="breed-option" value="oriental">Oriental</option>
-              <option class="breed-option" value="persian">Persian</option>
-              <option class="breed-option" value="Ragdoll">Ragdoll</option>
-              <option class="breed-option" value="siamese">Siamese</option>
-              <option class="breed-option" value="siberian">Siberian</option>
-            </select>
-          </div>
-          <div class="form-item">
-            <label for="registration">Registration</label>
-            <input class="text-input" type="number" id="registration">
-            </select>
-          </div>
-          <fieldset class="fieldset-competition-classes">
-            <legend>Competition Class</legend>
-            <div class="radio-container">
-              <div>
-                <input type="radio" name="competition-class" id="class1" value="kitten">
-                <label for="class1">Kitten</label>
+    <div class="form-accordion-wrapper">
+      <section class="form-wrapper" id="form-link">
+        <h3 class="form-heading">Enter competition</h3>
+        <form action="http://httpbin.org/anything" method="POST">
+          <div class="inner-form-wrapper">
+            <h4 class="form-subheading">Owner Information</h4>
+            <div class="owner-information">
+              <div class="form-item">
+                <input class="text-input" type="text" id="owner-name" name="owner_name" placeholder="Name">
               </div>
-              <div>
-                <input type="radio" name="competition-class" id="class2" value="championship">
-                <label for="class2">Championship</label>
+              <div class="form-item">
+                <input class="text-input" type="text" id="owner-surname" name="owner_surname" placeholder="Surname">
               </div>
-              <div>
-                <input type="radio" name="competition-class" id="class3" value="premiership">
-                <label for="class3">Premiership</label>
+              <div class="form-item">
+                <input class="text-input" type="email" id="owner-email" name="owner_email" placeholder="Email">
               </div>
-              <div>
-                <input type="radio" name="competition-class" id="class4" value="household-pet">
-                <label for="class4">Household pet</label>
+              <div class="form-item">
+                <input class="text-input" type="password" id="owner-password" name="owner_password" placeholder="Password">
               </div>
             </div>
-          </fieldset>
-          <div class="checkbox">
-            <input type="checkbox" name="agreeGDPR" id="GDPR-check">
-            <label for="GDPR-check">I agree with GDPR </label>
+            <h4 class="form-subheading">Cat Information</h4>   
+            <div class="cat-information"> 
+              <div class="form-item">
+                <label class="label" for="breed-selector">Breed</label>
+                <select class="selector" name="breed_selector" id="breed-selector">
+                  <option class="breed-option" value="abyssinian">Choose here</option>
+                  <option class="breed-option" value="abyssinian">Abyssinian</option>
+                  <option class="breed-option" value="bengal">Bengal</option>
+                  <option class="breed-option" value="birman">Birman</option>
+                  <option class="breed-option" value="british_shorthair">British shorthair</option>
+                  <option class="breed-option" value="devon_rex">Devon Rex</option>
+                  <option class="breed-option" value="himalayan">Himalayan</option>
+                  <option class="breed-option" value="javanese">Javanese</option>
+                  <option class="breed-option" value="laperm">LaPerm</option>
+                  <option class="breed-option" value="main_coon">Maine Coon</option>
+                  <option class="breed-option" value="norwegian">Norwegian forest cat</option>
+                  <option class="breed-option" value="oriental">Oriental</option>
+                  <option class="breed-option" value="persian">Persian</option>
+                  <option class="breed-option" value="Ragdoll">Ragdoll</option>
+                  <option class="breed-option" value="siamese">Siamese</option>
+                  <option class="breed-option" value="siberian">Siberian</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <label class="label" for="registration">Registration number</label>
+                <input class="number-input" type="number" id="registration">
+              </div>
+            </div>
+            <fieldset class="fieldset-competition-classes">
+              <legend>Choose competition class</legend>
+              <div class="radio-container">
+                <div class="inner-radio">
+                  <input type="radio" name="competition-class" id="class1" value="kitten">
+                  <label for="class1">Kitten</label>
+                </div>
+                <div class="inner-radio">
+                  <input type="radio" name="competition-class" id="class2" value="championship">
+                  <label for="class2">Championship</label>
+                </div>
+                <div class="inner-radio">
+                  <input type="radio" name="competition-class" id="class3" value="premiership">
+                  <label for="class3">Premiership</label>
+                </div>
+                <div class="inner-radio">
+                  <input type="radio" name="competition-class" id="class4" value="household-pet">
+                  <label for="class4">Household pet</label>
+                </div>
+              </div>
+            </fieldset>
+            <div class="checkbox">
+              <input type="checkbox" name="agreeGDPR" id="GDPR-check">
+              <label for="GDPR-check">I agree with GDPR </label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="agreeNewsletter" id="newsletter-check">
+              <label for="newsletter-check">I want to sign up for IFA newsletter</label>
+            </div>
+            <div class="submit-wrapper">
+              <button class="submit-button" type="submit">Submit</button>
+            </div>
           </div>
-          <div class="checkbox">
-            <input type="checkbox" name="agreeNewsletter" id="newsletter-check">
-            <label for="newsletter-check">I want to sign up for IFA newsletter</label>
-          </div>
-          <div class="button">
-            <button type="submit">Submit</button>
-          </div>
+        </form>
+      </section>
+
+      <!-- Accordion -->
+      <section class="accordion-wrapper">
+        
+        <h1>FAQ</h1>
+
+        <div class="question" id="section1">Section 1</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
         </div>
-      </form>
-    </section>
 
-    <!-- Accordion -->
-    <section class="accordion-wrapper">
-      
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+        <div class="question" id="section2">Section 2</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+      </section>
+  </div>
+  <footer>
+    <div class="footer-column">
+      <img src="" class="logo-footer" alt="Logo">
+      <div class="somedia-buttons">
+        <a href="" class="fa fa-facebook"></a>
+        <a href="" class="fa fa-twitter"></a>
+        <a href="" class="fa fa-linkedin"></a>
+        <a href="" class="fa fa-instagram"></a>
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
+      <a class="subscribe-button">Subscribe to our newsletter</a>
+    </div>
+  </footer>
   <script src="./script.js"></script>
   </body>
 </html>
