@@ -60,46 +60,57 @@
 
 
   <!-- Signup form start -->
-  <div class="signupFormWrapper">
-    <div class="signupFormContainer">
-
-      <h1>Sign up</h1>
+  <div class="signupFormFlexbox">
+    <div class="signupFormStyling">
       <form action="https://httpbin.org/anything" type="POST">
+        <h1 style="text-align: center; padding-bottom: 10px;">Sign up</h1>
+          <center>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name:" required><br>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name:" required><br>
+            <input type="email" id="email" name="email" placeholder="E-mail:" required><br>
+            <input type="password" id="password" name="password" placeholder="Password:" required><br>
+          </center>
+  
+        <h3 class="signupFormGenderTitle" style="text-align: center;">Gender:</h3>
+            <label for="">
+              <input type="radio" id="male" name="gender" value="male" required>
+              Male
+            </label>
+            
+            <label for="">
+              <input type="radio" id="female" name="gender" value="female" required>
+              Female
+            </label>
+  
+            <label for="">
+              <input type="radio" id="other" name="gender" value="other" required>
+              Other
+            </label>
+  
+        <h3 style="text-align: center;">Interests:</h3>
+          <div class="signupFormInterestsFlexbox">
 
-        <input type="text" id="firstName" name="firstName" placeholder="First Name" required><br>
+        <label for="">
+          <input type="checkbox" id="interest1" name="interest1" value="html">
+          HTML
+        </label>
 
+        <label for="">
+          <input type="checkbox" id="interest2" name="interest2" value="css" style="margin-left: 20px;">
+          CSS
+        </label>
 
-        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required><br>
-
-        <input type="email" id="email" name="email" placeholder="E-mail" required><br>
-
-        <h3 class="signupFormGenderTitle">Gender:</h3>
-
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label><br>
-
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label><br>
-
-
-
-        <h3>Interests:</h3>
-
-        <input type="checkbox" id="interest1" name="interest1" value="html">
-        <label for="interest1">HTML</label><br>
-
-        <input type="checkbox" id="interest2" name="interest2" value="css">
-        <label for="interest2">CSS</label><br>
-
-        <input type="checkbox" id="interest3" name="interest3" value="javascript">
-        <label for="interest3">Javascript</label><br>
-
-        <button type="submit" class="signupFormButton">Submit</button>
+        <label for="">
+          <input type="checkbox" id="interest3" name="interest3" value="javascript" style="margin-left: 20px">
+          Javascript
+        </label>
+          </div>
+     
+        <center><button type="submit" class="signupFormButton" style="margin-bottom: 10px;">Submit</button></center>
       </form>
-
-    </div>
   </div>
-
+  </div>
+  
   <!-- Signup form end -->
 
 
