@@ -241,17 +241,18 @@ body {
   width: 100%;
   z-index: 1;
   background: white;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: rgb(46, 157, 165);
   padding: 0;
   margin: 0;
 }
 
 .nav__link {
+  text-decoration: none;
   display: flex;
   width: 20%;
   align-items: center;
   justify-content: center;
+  color: rgb(46, 157, 165);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /*button for drop-down menu. */
@@ -333,6 +334,7 @@ body {
   margin-bottom: 10px;
 }
 
+/* on hover and focus , the input get another bg-color */
 .signup__form input:focus, .signup__form input:hover  {
   background-color: rgb(158, 203, 211);
   outline: none;
@@ -510,7 +512,7 @@ select {
 }
 
 /* the accordion styling */
-.accordion__display, .accordion__expand {
+.accordion__display, .accordion__expand{
   border: solid rgb(255, 255, 255) 0.5px;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 10px;
@@ -528,20 +530,17 @@ select {
   background-color: rgb(76, 63, 136);
 }
 
-/* some extra space under the bottom display */
-.accordion__display:nth-of-type(7) {
-  margin-bottom: 20px;
-}
 
-/* the expanding section of accordion is hidden when not toggled active */
+/* the expanding section of accordion is hidden when not active */
 .accordion__expand {
   height: 0;
   visibility: hidden;
   background-color: rgb(76, 63, 136);
 }
 
-/* shows expanded accordion box when toggle on */
-.accordion__expand--selected {
+/* when accordion__display is set to .active with js, the nearest sibling div will get these properties 
+(in this case accordion__expand) */
+.active+ div{
   height: 200px;
   margin: 10px;
   overflow-y: auto;

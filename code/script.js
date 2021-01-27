@@ -2,27 +2,27 @@ const accordionDisplay = document.querySelectorAll(".accordion__display");
 const accordionExpand = document.querySelectorAll(".accordion__expand");
 const accordionButton = document.querySelectorAll(".accordion__button");
 
-// loops through the array of multiple objects of the same class and toggles the --selected class on and off on mouseclick //
+// loops through the array of multiple objects of the same class and toggles the .active class on and off on mouseclick //
 for (let i = 0; i < accordionDisplay.length; i++) {
-  accordionDisplay[i].addEventListener("click", () => {
-    accordionExpand[i].classList.toggle("accordion__expand--selected");
+  const acc = accordionDisplay[i]; // added local const as I find it easier to follow the code when this is used many times//
 
+  acc.addEventListener("click", () => {
+    acc.classList.toggle("active");
 
-    if (accordionExpand[i].classList.contains("accordion__expand--selected")) {
-
-      // loops trhough the class array and if any other object has the expand--selected active, that will collapse //
+    if (acc.classList.contains("active")) {
+      // loops trhough the class array and if any other of the same class has the .active class, that will collapse //
       for (let j = 0; j < accordionDisplay.length; j++)
-        if (j != i && accordionExpand[j].classList.contains("accordion__expand--selected")) {
-          accordionExpand[j].classList.remove("accordion__expand--selected");
+        if (j != i && acc.classList.contains("active")) {
+          accordionDisplay[j].classList.remove("active");
           accordionButton[j].textContent = "+";
           accordionDisplay[j].style.backgroundColor = "inherit";
         }
-      //if the selected class is active the expand/collapse button has a minus and display other background color, otherwise + //
+      //if the selected class has .active the expand/collapse button has a minus and display other background color, otherwise + //
       accordionButton[i].textContent = "-";
-      accordionDisplay[i].style.backgroundColor = "#4C3F88";
+      acc.style.backgroundColor = "#4C3F88";
     } else {
       accordionButton[i].textContent = "+";
-      accordionDisplay[i].style.backgroundColor = "inherit";
+      acc.style.backgroundColor = "inherit";
     }
   });
 }
