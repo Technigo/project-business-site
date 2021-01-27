@@ -85,6 +85,11 @@ select {
   font-family: inherit;
 }
 
+input,
+select:hover {
+  cursor: pointer;
+}
+
 .slider {
   -webkit-appearance: none;
   appearance: none;
@@ -225,6 +230,7 @@ select {
 
 .accordion-container {
   margin: 10px;
+  width: 350px;
   display: flex;
   flex-direction: column;
 }
@@ -243,6 +249,7 @@ select {
   margin: 0;
   padding: 10px;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .fa-chevron-up, 
@@ -256,16 +263,26 @@ select {
 
 .answer {
   margin: 0;
-  padding: 10px;
-  display: none;
   border-top: 1px dotted grey;
   font-size: 14px;
-  max-width: fit-content;
+  /* max-width: fit-content; */
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 1s linear;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
 }
 
 .active {
-  display: block;
+  opacity: 1;
+  height: 60px;
+  padding: 10px;
 }
+
+/* FOOTER */
 
 .footer {
   background-color: black;
@@ -288,6 +305,10 @@ select {
     .hero-title {
       font-size: 45px;
     }
+
+    .accordion-container {
+      width: 450px;
+      }
 
   }
 
@@ -319,6 +340,10 @@ select {
   input,
   select {
   width: 350px;
-}
+  }
+
+  .accordion-container {
+  width: 400px;
+  }
 
 }
