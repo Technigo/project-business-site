@@ -27,7 +27,7 @@ h2 {
   justify-content: center;
   align-items: center;
   padding-bottom: 100px;
-  font-family: 'Bodoni Moda', serif;
+  font-family: 'Dancing Script', cursive;
   font-size: 7vw;
 
 }
@@ -35,6 +35,21 @@ h2 {
 .hero-image {
   object-fit: cover;
   width: 100vw;
+}
+
+video {
+  display: block;
+}
+
+.hero-video {
+  object-fit: cover;
+  width: 100vw;
+  max-height: 540px;
+  max-width: 960px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .middle-section {
@@ -82,11 +97,17 @@ h2 {
   cursor: pointer;
 }
 
+.question:hover {
+  background-color: #e2cbbc;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+}
+
 
 .answer {
   display: none;
   padding: 0 30px;
-  background-color: #ffffff;
+  background-color: #fffbf9;
 }
 
 .answer p {
@@ -94,6 +115,16 @@ h2 {
   padding: 10px 0px 15px;
 }
 
+.question:after {    /* Plus symbol */
+  content: "\002B";
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {   /* Minus symbol */
+  content: "\2212";
+}
 
 /*** Signup form ***/
 
