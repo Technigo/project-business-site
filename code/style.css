@@ -273,6 +273,7 @@ body {
   width: 100%;
   align-items: center;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 /* wrapper for section */
@@ -288,6 +289,22 @@ body {
   color: white;
   font-size: 18px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.signup a {
+  text-decoration: none;
+  color:rgb(5, 85, 85);
+  font-weight: 500;
+}
+
+/* adding active on hovers only for mobile purpose */
+.signup a:hover {
+  background: rgb(5, 85, 85);
+  color: white;
+}
+
+.signup a:visited {
+  color: rgb(76, 63, 136);
 }
 
 /* aligning of form content */
@@ -311,13 +328,18 @@ body {
   border: solid white;
   border-radius: 10px;
   margin-top: 5px;
-  color: white;
+  color: rgb(128, 45, 167);
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-.signup__form input:focus {
+.signup__form input:focus, .signup__form input:hover  {
   background-color: rgb(158, 203, 211);
   outline: none;
+}
+
+::placeholder {
+  color:rgba(7, 59, 63, 0.603);
 }
 
 .signup__form input[type=submit] {
@@ -330,6 +352,10 @@ body {
   display: block;
   width: fit-content;
   align-self: center;
+}
+
+.signup__form input[type=submit]:hover {
+  background-color: rgb(5, 85, 85);
 }
 
 /* clear the default look of checkbox */
@@ -410,6 +436,7 @@ body {
   left: 4px;
   top: 4px;
 }
+
 /*styling of marker in checkbox */
 .signup__check .signup__check__box:after {
   border-right:solid rgb(248, 248, 248)3px;
@@ -483,8 +510,7 @@ select {
 }
 
 /* the accordion styling */
-.accordion__display,
-.accordion__expand {
+.accordion__display, .accordion__expand {
   border: solid rgb(255, 255, 255) 0.5px;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 10px;
@@ -498,11 +524,14 @@ select {
   height: 60px;
 }
 
+.accordion__display:hover {
+  background-color: rgb(76, 63, 136);
+}
+
 /* some extra space under the bottom display */
 .accordion__display:nth-of-type(7) {
   margin-bottom: 20px;
 }
-
 
 /* the expanding section of accordion is hidden when not toggled active */
 .accordion__expand {
@@ -554,6 +583,28 @@ select {
   object-fit: scale-down;
 }
 
+.top {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.top-button {
+  width: 30px;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: rgba(5, 85, 85, 0.568);
+  text-align: center;
+  color: white;
+  padding: 5px;
+}
+
+.top-button:hover {
+  background: rgb(5, 85, 85);
+  color: white;
+}
+
 .footer {
   display: block;
   height: 50px;
@@ -568,7 +619,7 @@ select {
   justify-content: space-between;
   align-items: center;
   border-top: solid white;
-  background-color: rgba(0, 139, 139, 0.301);
+  background-color: rgba(5, 85, 85, 0.452);
 }
 
 .footer p {
