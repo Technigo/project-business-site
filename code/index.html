@@ -29,29 +29,40 @@
         <form class="content" action="https://httpbin.org/anything" method="post">
           <!-- Form part 1 -->
           <fieldset class="form__section">
-            <legend>Who is booking?</legend>
+            <legend class="form__section-title">Who is booking?</legend>
             <!-- Contact information -->
             <!-- insert inputs -->
-            <input type="text" name="fname" id="fname" placeholder="First name" />
+            <label class="form__input-wrapper" for="name">
+              Full name
+              <input class="form__input-field" type="text" name="fullName" id="name" />
+            </label>
+            <label class="form__input-wrapper" for="email">
+              Email
+              <input class="form__input-field" type="email" name="email" id="email" />
+            </label>
+            <label class="form__input-wrapper" for="tel">
+              Phone number
+              <input class="form__input-field" type="tel" name="phoneNumber" id="tel" />
+            </label>
           </fieldset>
           <!-- Form part 2 -->
           <fieldset class="form__section">
-            <legend>Adventure preferences</legend>
+            <legend class="form__section-title">Adventure preferences</legend>
             <!-- Info about the adventure to be booked -->
             <!-- insert inputs -->
           </fieldset>
           <fieldset class="form__section">
-            <legend>Almost done!</legend>
+            <legend class="form__section-title">Almost done!</legend>
             <!-- Account creation -->
             <!-- insert inputs -->
           </fieldset>
           <!-- Submit section -->
-          <div class="form__section-submit">
+          <div class="form__section">
             <!-- Submit and accept terms -->
             <!-- insert inputs -->
-            <input type="submit" value="GO ADVENTURE" />
-            <label for="">
-              <input type="checkbox" name="" id="" />
+            <input class="form__button" type="submit" value="GO ADVENTURE" />
+            <label for="terms">
+              <input type="checkbox" name="termsConfirm" id="terms" />
               Terms and conditions?
             </label>
           </div>
