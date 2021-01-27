@@ -6,16 +6,19 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   /* some styling here */
 /*} */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Rubik:wght@800&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap');
-
-* {
-    margin: 0px;
+*, *::before, *::after {
     box-sizing: border-box;
     /*border: 2px solid rgb(230, 59, 87); */
   }
 
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(17, 17, 17);
+    color: white;
+  }
  
   h2 {
       font-size: 16px;
@@ -56,11 +59,34 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     /***** styling ****/
     font-family:'Rubik', sans-serif;
     font-weight: 900;
+    white-space: nowrap;
   }
 
   /************** 2. SIGN UP FORM ******************************/
 
-  .input-container ul {
+  .form-container {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* i tablet sida och desktop sida */
+    border: 2px solid rgb(27, 26, 26);
+
+    /***** styling ****/
+    background-color: #0b0416;
+  }
+
+  .input-container ul { /* No bullets list */
     list-style-type: none;
   }
+
+  input { /* Text rutor */
+    display: block; /* rutor column ned */
+    padding: 6px;
+    margin: 6px 0;
+    border-radius: 10px;
+    box-shadow: lightgray;
+  }
+
+
   
