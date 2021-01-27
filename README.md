@@ -1,10 +1,12 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The project is to build a site i.g for people to sing u p for a class or ordering something. 
 
 ## The problem
+
+My main problem is to start in the right end, by doing a mockup of how i what the business site to look. For this I used a pp strukture.
+
+
 
 Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
