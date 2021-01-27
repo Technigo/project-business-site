@@ -17,46 +17,64 @@
       <img class="hero-image" src="./mtb1.jpg" alt="mtb image" />
     </picture>
 
-    <!-- video or image as a header is cool :) -->
-
     <h1>Luksanmäki-MTB</h1>
 
   </header>
-  <form action=" #">
-    <input type="text" name="firstName">
-    <input type="text" name="lastName">
-    <input type="text" name="email">
 
-    <div class="label-container">
-      <input type="radio" name="bike" value="trek">
-      <label for="trek">TREK</label>
-      <input type="radio" name="bike" value="cannondale">
-      <label for="trek">Cannondale</label>
-      <input type="radio" name="bike" value="other">
-      <label for="trek">Other</label>
+  <!-- sign up form -->
+  <div class="grid-container">
+    <div class="grid-item1">
+      <form action="http://httpbin.org/anything" method="POST">
+        <label for="firstName">First name:</label>
+        <input type="text" name="firstName">
+        <label for="lastName">Last name:</label>
+        <input type="text" name="lastName">
+        <label for="email">Email:</label>
+        <input type="email" name="email">
+
+        <div class="radiobuttons">
+          <input type="radio" name="bike" value="trek">
+          <label for="trek">TREK</label>
+          <input type="radio" name="bike" value="cannondale">
+          <label for="trek">Cannondale</label>
+          <input type="radio" name="bike" value="other">
+          <label for="trek">Other</label>
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" name="checkbox">
+          <label for="checkbox">I agree <a href="#">terms and conditions</a></label>
+        </div>
+        <button type="submit">SUBMIT</button>
+      </form>
     </div>
 
-    <button type="submit">SUBMIT</button>
-  </form>
-
-  <!-- Signup form -->
-
-  <section class="accordion">
     <!-- Accordion -->
-    <h1>FAQ</h1>
+    <div class="grid-item2">
+      <section class="accordion">
+        <h2>FAQ</h2>
 
-    <div class="question" id="section1">Section 1</div>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
+        <div class="question" id="section1">What is this?</div>
+        <div id="answer" class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
 
-    <div class="question" id="section2">Section 2</div>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
+        <div class="question" id="section2">Do I need a bike?</div>
+        <div id="answer" class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <div class="question" id="section3">Is this free?</div>
+        <div id="answer" class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+      </section>
     </div>
-  </section>
+  </div>
+
   <footer>This is footer</footer>
-  <!-- dont forget to link the javascript file here! -->
+
+  <script src="./script.js"></script>
 </body>
 
 </html>
