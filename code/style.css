@@ -197,12 +197,12 @@ input[type=submit] {
 
 input:required:valid:focus {
   border-color: rgb(8, 87, 8);
-  border-width: 3px;
+  border-width: 2px;
 }
 
 input:required:invalid:focus {
   border-color: red;
-  border-width: 3px;
+  border-width: 2px;
 }
 
 .existing-member {
@@ -294,4 +294,31 @@ footer {
   align-items: center;
   padding: 10px;
   margin-top: 50px;
+}
+
+/** Media queries **/
+
+@media (min-width: 768px) {
+  .input-container {
+    max-width: 500px;
+    min-width: 500px;
+  }
+
+  .signup-container {
+    width: 500px;
+  }
+
+  .terms {
+    padding-left: 35px;
+  }
+
+  .subscription {
+    padding-left: 35px;
+  }
+
+  .accordion-container {
+    max-width: 500px;
+    min-width: 500px;
+  }
+
 }
