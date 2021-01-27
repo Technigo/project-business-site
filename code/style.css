@@ -1,10 +1,11 @@
 body {
   margin: 0px;
-  background:rgb(198, 215, 243);
+  background:rgb(211, 226, 251);
   color: navy;
   
 
 }
+/********** HERO-IMAGE  ************/
 
 .hero {
   position: relative;
@@ -23,15 +24,21 @@ body {
   color: rgb(212, 11, 212);
 }
 
-
-/*input, textarea, select, button {
-  width: 150px;
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
+/****************** SIGN UP FORM  ************************/
+input, textarea, button {
+  border-radius: 5px;
 
 }
-*/
+
+
+/*input, textarea, select, button {
+  width: 200px;
+  padding: 0px;
+  margin: 0px; 
+  box-sizing: border-box; 
+
+} */
+
 .info-container {
   display: flex;
   flex-direction: column;
@@ -39,13 +46,14 @@ body {
   justify-content: space-between;
   justify-content: center;
   width: 100%;
+  
 }
 
 form {
   border: solid 2px black;
   border-radius: 5px;
   box-shadow: 2px 5px 2px 2px rgba(7, 74, 100, 0.4);
-
+  background: rgb(202, 216, 246);
   padding: 10px;
   margin: 10px;
  
@@ -56,18 +64,18 @@ form {
 } 
 
 input:valid {
-  background-color: rgb(202, 245, 202);
+  background-color: rgb(188, 240, 188);
 }
 
 input:invalid {
-  background-color: rgb(250, 211, 211);
+  background-color: rgb(255, 227, 244);
 }
 
 .accordion-container {
   border: solid 2px black;
   border-radius: 5px;
   box-shadow: 2px 5px 2px 2px rgba(7, 74, 100, 0.4);
-
+  background:rgb(210, 210, 243);
   padding: 10px;
   margin: 10px;
   display: flex;
@@ -82,6 +90,112 @@ a {
 
   text-decoration: none;
 }
+
+.name-subform {
+  display: flex;
+  justify-content: center;
+}
+
+
+/***************************  BUTTON STYLE ******************/
+.button {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  background: rgb(248, 133, 133);
+  width: 100px;
+  border:solid 1px rgb(246, 42, 42);
+  color: navy;
+  font-weight: bold;
+  /*box-shadow: 2px 5px 2px 2px rgba(10, 0, 0, 0.4); */
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+
+
+  -webkit-box-shadow: 0px 6px 0px  rgb(246, 42, 42);
+  -moz-box-shadow: 0px 6px 0px  rgb(246, 42, 42);
+  box-shadow: 0px 6px 0px  rgb(246, 42, 42);
+}
+
+.btn:hover {
+  background: rgb(155, 149, 246);
+  -webkit-box-shadow: 0px 6px 0px  rgb(120, 127, 179);
+  -moz-box-shadow: 0px 6px 0px  rgb(123, 131, 187);
+  box-shadow: 0px 6px 0px  rgb(126, 130, 160);
+    
+}
+
+
+
+.btn:active {
+  
+
+  -webkit-box-shadow: 0px 2px 0px rgba(68, 4, 4, 0.4);
+  -moz-box-shadow: 0px 2px 0px rgba(68, 4, 4, 0.4);
+  box-shadow: 0px 2px 0px rgba(68, 4, 4, 0.4);
+  position:relative;
+  top:3px;
+  background: rgb(4, 248, 4);
+  border:solid 1px rgb(4, 138, 4);
+   
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* 1. Accordion */
+
+.accordion {
+  border: 3px solid rgb(171, 161, 199);
+  border-radius: 7px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-header {
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.accordion-content {
+  display: flex;
+  overflow: hidden;
+  height: 0;
+  transition: height .3s ease;
+  /* Thanks to "transition" property we achieve smooth animation effect */
+
+}
+
+.accordion-selected {
+  height: 70px;
+}
+
+
+.accordion-text {
+  margin: 0;
+  padding: 10px;
+  border-top: 1px solid #999;
+
+}  
+
+
+
+
+
+
+
 /********************* FOOTER **********************/
 .footer {
   display: flex;
@@ -97,20 +211,6 @@ a {
 
 }
 
-
-
-
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
-
-
-
 /*********** MEDIA QUERIES  *************/
 
 @media(min-width: 768px) {
@@ -118,16 +218,19 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
   .info-container {
     flex-direction: row;
+    
   }
 
 
 
   form {
     width: 35%;
+    max-width: 250px;
   }
 
   .accordion-container {
     width:45%;
+    max-width: 330px;
   }
 
   

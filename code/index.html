@@ -34,7 +34,10 @@
 
     <section class = "info-container">
       <form action= "http://httpbin.org/anything" method = "POST">
-        <h2>SIGN UP</h2>   
+        <div class = "name-subform">
+          <h2 class ="name-subform">SIGN UP</h2>   
+        </div>
+        
         <label for "fname">First name:</label>
         <input type = "text" id ="fname" name = "fname" required><br>
         <label for "lname">Last name:</label>
@@ -44,7 +47,11 @@
         <label for "email">E-mail:</label>
         <input type = "email" id = "email" name = "email" required><br><br>
         
-      
+        
+
+
+
+
   
         
   
@@ -76,7 +83,11 @@
             
        <br>
        <br> 
-       <button type ="submit">SUBMIT</button>
+       <div class = "button">
+        <button class ="btn" type ="submit">SUBMIT</button>
+
+       </div>
+       
            
         
       </form>
@@ -84,17 +95,90 @@
     
       <section class="accordion-container">
         <!-- Accordion -->
-        <h1>FAQ</h1>
-  
-        <div class="question" id="section1">Section 1</div>
-        <div class="answer">
-          <p>Lorem ipsum...</p>
+        <div class = "name-subform">
+          <h2>FAQ</h2>
+        </div>
+        
+
+
+        <div class="accordion">
+          <h3 id="accordion-header-1" class="accordion-header">
+              When do we go?
+          </h3>
+          <div id="accordion-content-1" class="accordion-content">
+              <p class="accordion-text">
+                  Every day if weather permitts, boat leaves at 8:00 
+                  from the pier
+              </p>
+          </div>
         </div>
   
-        <div class="question" id="section2">Section 2</div>
-        <div class="answer">
-          <p>Lorem ipsum...</p>
+        <div class="accordion">
+            <h3 id="accordion-header-2" class="accordion-header">
+                When we will be back?
+            </h3>
+            <div id="accordion-content-2" class="accordion-content">
+                <p class="accordion-text">
+                    We will be back between 16:00 and 17:00
+                </p>
+            </div>
         </div>
+  
+        <div class="accordion">
+            <h3 id="accordion-header-3" class="accordion-header">
+                Picking up for the trip
+            </h3>
+            <div id="accordion-content-3" class="accordion-content">
+                <p class="accordion-text">
+                    We will pick you up at your hotel on the morning
+                </p>
+            </div>
+        </div>
+  
+        <div class="accordion">
+          <h3 id="accordion-header-4" class="accordion-header">
+              Lunch
+          </h3>
+          <div id="accordion-content-4" class="accordion-content">
+              <p class="accordion-text">
+                  We will prepare lunch and plenty of water for you
+              </p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <h3 id="accordion-header-5" class="accordion-header">
+              Do I need diving insurance?
+          </h3>
+          <div id="accordion-content-5" class="accordion-content">
+              <p class="accordion-text">
+                  Yes, you are free to arrange it yourself, 
+                  otherwise we will help you
+              </p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <h3 id="accordion-header-6" class="accordion-header">
+              Need more help and information?
+          </h3>
+          <div id="accordion-content-6" class="accordion-content">
+              <p class="accordion-text">
+                  Please send us message in the SIGN UP form or contact
+                  us by phone or e-mail and you are most welcome to visit 
+                  one of our offices.
+              </p>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+        
       </section>
   
 
@@ -115,10 +199,11 @@
       <h5>Adress: Kho Lanta, Thailand</h5>
       <h5>Phone</h5>
       <a href = "mailto: vlad.jnbykov@gmail.com">
-      Send e-mail</a>
+       e-mail</a>
     </div>
   </footer>  
     
     <!-- dont forget to link the javascript file here! -->
+    <script src = "./script.js"></script>
   </body>
 </html>
