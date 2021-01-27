@@ -23,37 +23,43 @@
      </header>
 
 
-    <!-- Signup form    Month of birth  Favourite color Spirit animal-->
-
+    <!-- Signup form -->
 <section class="main">
 
 <section class="signup">
-  <h2 class="h2"> PLEASE ENTER YOUR INFORMATION</h2>
+ <h2 class="h2"> PLEASE ENTER YOUR INFORMATION</h2>
 
-<label for="birth-month"> Your month of birth: </label>
+ <section class="forms">
+  <form class="signup-info" action="https://httpbin.org/anything" method="POST">
 
-<select class="birth-month" id="birth-month">
-<option class="option">January</option>
-<option class="option">February</option>
-<option class="option">March</option>
-<option class="option">April</option>
-<option class="option">May</option>
-<option class="option">June</option>
-<option class="option">July</option>
-<option class="option">August</option>
-<option class="option">September</option>
-<option class="option">October</option>
-<option class="option">November</option>
-<option class="option">December</option>
-</select>
+    <label> Your month of birth: 
+      <select class="birth-month" id="birth-month" required name="signup-info-birthmonth">      
+          <option class="option">January</option>
+          <option class="option">February</option>
+          <option class="option">March</option>
+          <option class="option">April</option>
+          <option class="option">May</option>
+          <option class="option">June</option>
+          <option class="option">July</option>
+          <option class="option">August</option>
+          <option class="option">September</option>
+          <option class="option">October</option>
+          <option class="option">November</option>
+          <option class="option">December</option>
+      </select>
+    </label>
 
-<div class="color">
-  <label for="color"> Your color: </label>
-  <input id="color" type="color">
-</div>
-
-<label for ="text">Your message: </label>
-<input id ="text" type="text" maxlength="20"> 
+      <label> Your color: 
+        <input id="color" type="color" required name="signup-info-color">
+      </label>
+    
+      <label> Your message: 
+        <input id ="text" type="text" maxlength="100" placeholder="Type here..." required name="signup-info-message"> 
+      </label>
+           
+      <input type="submit" class="submit" value="Let's go!">
+  </form>
+</section>
 
 </section>
 
@@ -63,12 +69,12 @@
 
       <div class="question" id="section1"> Where are you located? </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>We are a small business, located in the Nordics. </p>
       </div>
 
       <div class="question" id="section2"> How does the pricing work?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p> Every stone is unique, and therefor also the pricing model. Please reach out to us for more information!</p>
       </div>
     </section>
 
