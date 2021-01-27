@@ -1,11 +1,3 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active+.answer {
-  /* some styling here */
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -15,9 +7,13 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 body {
   background-color: #f0f0f0;
 }
+
+.TabletDesktopMenu a {
+  color: black;
+}
 .headerImage {
   width: 100%;
-  filter: blur(1px);
+  filter: blur(1px); 
 }
 
 .headerLogo {
@@ -49,8 +45,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  text-shadow: 2px 2px 2px #000000;
+  color: #e7e7e7;
+  text-shadow: 2px 2px 2px #000000; 
 }
 
 .signupFormFlexbox {
@@ -60,7 +56,7 @@ body {
 
 .signupFormStyling {
   background-color: #E7E7E7;
-  width: 80%;
+  width: 60%;
   display:flex;
   justify-content: center;
   border-radius: 10px;
@@ -119,6 +115,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .accordionQuestion {
@@ -198,15 +195,70 @@ body {
   transform: translateY(0);
 }
 
+.TabletDesktopMenu {
+  display: none;
+}
 /* Tablet */
 @media (min-width: 1023px) {
   .ham {
     display: none;
   }
+
+  .TabletDesktopMenu {
+    display: block;
+  }
+
+  .TabletDesktopMenu a {
+    text-decoration: none;
+    font-weight: bold;
+    padding-right: 30px;
+  }
+
+  .TabletDesktopMenu a:hover {
+    text-decoration: underline;
+  }
+
+ 
+
+  .signupFormStyling {
+    width: 40%;
+
+  }
+
+  .TabletDesktopMenu a {
+    text-decoration: none;
+    font-weight: bold;
+    padding-right: 30px;
+  }
+  
+  .accordionContainer {
+    width:40%;
+  }
+
 }
 
+/* Desktop */
 @media (min-width: 1439px) {
   .ham {
     display: none;
+  }
+
+  .TabletDesktopMenu {
+    display: block;
+  }
+
+  .signupFormStyling {
+    width: 40%;
+
+  }
+
+  .TabletDesktopMenu a {
+    text-decoration: none;
+    font-weight: bold;
+    padding-right: 30px;
+  }
+
+  .accordionContainer {
+    width:40%;
   }
 }
