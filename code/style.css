@@ -14,44 +14,41 @@ body {
 }
 
 .hero-img { 
-  width: 100vw;
+  width: 98.9vw;   /*I did this because i dint want to be able to scroll to the side, guess there is a much better option?*/
   height: 100vh;
-  object-fit:cover;
+}
+.hero-picture {
+  position:relative;   
 }
 
+.hero-title {
+  position:absolute;
+  top:20px;
+  color: black;
+}
 .site-content {   
   border-radius: 16px; 
-  padding:20px; 
-  width: 90%;
-  display: flex;  
-  justify-content: space-evenly;  
+  padding:20px 0;
+  margin-left:10px; 
+  width: 100%;
+  display: flex;   
+  flex-flow: column;  
+  margin-bottom: 10px; 
 }
-
-.show-more {
-  background-color: rgb(18, 150, 150);
-  border-radius: 50%;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 15px;
-  outline:rgb(44, 247, 247);
-}
-.show-more:hover {
-  background-color: rgb(44, 247, 247);
-}
-
-
-
 .accordion {
   background-color: rgb(44, 247, 247); 
   border: 3px solid black;
   border-radius: 16px;
-  width: 40%; 
+  width: 90%; 
   padding: 10px;
   font-family: 'Podkova', serif;
-  box-shadow: 10px 10px 16px rgb(3, 78, 78);
-  /* box-shadow: 10px 10px 16px rgb(44, 247, 247); */
+  
+  box-shadow: 10px 10px 16px rgb(3, 78, 78);  
+  margin-top: 20px; 
 }
-
+.accordion-title {
+text-decoration: underline;
+}
 .fraga {
   display: flex;
   justify-content: space-between;
@@ -68,16 +65,28 @@ body {
   border-radius: 16px;
   padding-left:20px;
 }
+.show-more {
+  background-color: rgb(18, 150, 150);
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  outline:rgb(44, 247, 247);  
+}
+.show-more:hover {
+  background-color: rgb(44, 247, 247);
+}
 
 .sign-up-form {
   background-color: rgb(3,78,78);
   color:whitesmoke;
   font-family: 'Podkova', serif;
-  width: 40%; 
+  width: 90%; 
   border: 3px solid black;
   border-radius: 10px;
   padding:10px;
   box-shadow: 10px 10px 16px rgb(44, 247, 247);
+  
 }
 .sign-up-form a:any-link {
   color: aqua;
@@ -116,15 +125,22 @@ input[type="radio" i] {
 }
 
 
-@media (max-witdh:768px) {
+@media (min-width:768px) {
 
 .site-content {
-  flex-flow: column wrap;
-  display: flex;
+  flex-direction: row; 
+  justify-content: space-evenly;
+  
 }
 
 .sign-up-form {
-  width: 90%;
+  width: 40%;  
 }
+
+.accordion {
+  width: 40%;
+  margin-top: 0;  
+}
+
 }
 
