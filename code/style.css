@@ -43,7 +43,6 @@ body {
   border-radius: 20px;
   padding: 5px 10px;
   cursor: pointer;
-
 }
 
 /*** Heror image ***/
@@ -67,14 +66,20 @@ body {
 }
 
 .header h1 {
-  font-size: 40px;
+  font-size: 28px;
   font-weight: bold;
   color: #fff;
   margin-bottom: 10px;
+  text-align: center;
+  padding: 0px 20px;
 }
 
 .header p {
-  color: #fff
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 0;
+  padding: 0px 45px;
 }
 
 .main {
@@ -127,7 +132,7 @@ body {
 .input-submit {
   color: white;
   font-weight: bold;
-  background-color: blueviolet;
+  background-color: #6200ee;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -135,23 +140,41 @@ body {
 }
 
 .input-submit:hover {
-  background-color: darkslateblue;
+  background-color: #3700B3;
 }
 
 /*** Accordion ***/
 
 .accordion {
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color:lavender;
+  width: 100%;
+  align-items: center;
+  margin: 50px 0px;
+}
+.question-container{
+  width: 100%;
 }
 
 .question {
-  background-color: lavender;
+  display: block;
   padding: 18px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);
+  margin-bottom: 5px;
 }
 
 .answer {
   display: none;
   padding: 0 18px;
-  background-color:#fff;
+  background-color: lavender;
+  text-align: center;
+}
+
+.active+.answer {
+  display: block;
+
   
 }
