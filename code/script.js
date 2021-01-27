@@ -38,35 +38,54 @@ console.log(answerOne);
 
 questionOne.addEventListener('click', () => {
   answerOne.classList.toggle('active');
+  answerTwo.classList.remove('active');
+  answerThree.classList.remove('active');
+  answerFour.classList.remove('active');
+  answerFive.classList.remove('active');
+  answerSix.classList.remove('active');
 })
 
 questionTwo.addEventListener('click', () => {
+  answerOne.classList.remove('active');
   answerTwo.classList.toggle('active');
+  answerThree.classList.remove('active');
+  answerFour.classList.remove('active');
+  answerFive.classList.remove('active');
+  answerSix.classList.remove('active');
 })
 
 questionThree.addEventListener('click', () => {
+  answerOne.classList.remove('active');
+  answerTwo.classList.remove('active');
   answerThree.classList.toggle('active');
+  answerFour.classList.remove('active');
+  answerFive.classList.remove('active');
+  answerSix.classList.remove('active');
 })
 
 questionFour.addEventListener('click', () => {
+  answerOne.classList.remove('active');
+  answerTwo.classList.remove('active');
+  answerThree.classList.remove('active');
   answerFour.classList.toggle('active');
+  answerFive.classList.remove('active');
+  answerSix.classList.remove('active');
 })
 
 questionFive.addEventListener('click', () => {
+  answerOne.classList.remove('active');
+  answerTwo.classList.remove('active');
+  answerThree.classList.remove('active');
+  answerFour.classList.remove('active');
   answerFive.classList.toggle('active');
+  answerSix.classList.remove('active');
 })
 
 questionSix.addEventListener('click', () => {
+  answerOne.classList.remove('active');
+  answerTwo.classList.remove('active');
+  answerThree.classList.remove('active');
+  answerFour.classList.remove('active');
+  answerFive.classList.remove('active');
   answerSix.classList.toggle('active');
 })
-
-
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-// function toggle() {
-//   this.classList.toggle("active")
-// }
-
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-// document.getElementById("section1").onclick = toggle
