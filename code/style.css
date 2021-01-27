@@ -3,15 +3,27 @@ body {
   background-color: #5dc3ff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .header {
   position: relative;
 }
 
-.hero-video {
+.hero-header {
   width: 100vW;
   height: 100vH;
   object-fit: cover;
 }
+
+/* .tablet-img {
+  display: none;
+}
+
+.desktop-video {
+  display: none;
+} */
 
 .hero-title {
   color: #FFF;
@@ -26,6 +38,7 @@ body {
   align-items: center;
   flex-direction: column;
   margin: 0;
+  padding: 20px;
 }
 
 h1 {
@@ -41,11 +54,26 @@ h2 {
 h3 {
   font-family: 'Karla', sans-serif;
   font-weight: 600;
+  display: block;
 }
 
 h4 {
   font-family: 'Karla', sans-serif;
   font-weight: 200;
+  margin: 17px 0 5px;
+}
+
+
+h5 {
+  font-family: 'Karla', sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+  margin: 3px;
+}
+.radiobuttons-gender h5 {
+  font-family: 'Karla', sans-serif;
+  font-weight: 200;
+  margin: 3px;
 }
 
 p {
@@ -56,13 +84,39 @@ p {
 .main-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 80%;
-  margin: auto;
+  margin: 35px auto;
+  border: solid black 2px;
 }
+
+/*** Sign-up form ***/
+
+.signup-form {
+  border: solid black 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: aquamarine;
+  width: 85%;
+  margin-bottom: 30px;
+  padding: 20px 30px;
+}
+
+.radiobuttons-gender {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 25px;
+  border: solid black 1px;
+}
+
+/*** FAQ-accordion ***/
 
 .FAQ-accordion {
   border: solid black 2px;
-  width: 45%;
+  width: 85%;
+  background-color: #FFF;
 }
 
 .accordion {
@@ -71,6 +125,8 @@ p {
 
 .question {
   font-weight: bold;
+  background-color: peru;
+  border: solid black 2px;
 }
 
 .answer {
@@ -84,21 +140,48 @@ p {
   display: block;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 /* .active + .answer {
   /* some styling here */
+
+  @media (min-width: 668px) {
+    .main-content {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .signup-form {
+      width: 45%;
+    }
+
+    .FAQ-accordion {
+      width: 45%;
+    }
+  }
+
+  /*  .mobile-img {
+      display: none;
+    }
+
+    .tablet-img {
+      display: inline;
+    }
+
+    .desktop-video {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .tablet-img {
+      display: none;
+    }
+
+    .desktop-video {
+      display: inline
+       
+    }
+  }*/

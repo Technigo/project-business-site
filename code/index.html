@@ -11,22 +11,68 @@
   <body>
     
     <header>
-      <video class="hero-video" controls loop>
-        <source src="./assets/video/ink-swirls.mp4" type="video/mp4" media="(max-width: 600px)">
-        <source src="./assets/video/lens-flares.mp4" type="video/mp4" media="(max-width: 900px)">
-        <source src="./assets/video/pink-and-blue-liquid.mp4" type="video/mp4">
+      
+      <video class="hero-header" controls autoplay loop>
+        <source class="desktop-video" src="./assets/video/pink-and-blue-liquid.mp4" type="video/mp4">
+        <img class="desktop-video" src="./assets/images/pink-and-blue-liquid.png" alt="Pink and blue liquid">
         <p>Your browser doesn't support video</p>
       </video>
+
+      <!-- <picture class="hero-header">
+        <source class="tablet-img" srcset="./assets/images/lens-flares.png" media="(max-width: 1024px)" />
+        <source class="mobile-img" srcset="./assets/images/ink-swirls.png" media="(max-width: 667px)" />
+        <img src="./assets/images/pink-and-blue-liquid.png" alt="Pink and blue liquid">
+      </picture> -->
+
+      <!-- <video class="hero-video" controls autoplay loop>
+        <source src="./assets/video/pink-and-blue-liquid.mp4" type="video/mp4">
+        <source src="./assets/video/lens-flares.mp4" type="video/mp4" media="(max-width: 900px)">
+        <source src="./assets/video/ink-swirls.mp4" type="video/mp4" media="(max-width: 600px)">
+        <img src="./assets/images/pink-and-blue-liquid.png" alt="Pink and blue liquid">
+        <p>Your browser doesn't support video</p>
+      </video> -->
       <div class="hero-title">
         <h1>YOGAone</h1>
-        <h2>Your new yogastudio</h2>
+        <h2>Your new virtual yogastudio</h2>
       </div>
     </header>
 
     <div class="main-content">
-      <section class="signup-form">
+        <form class="signup-form" action="http:httpbin.org/anything" method= "POST">
+          <h3>Sign up</h3>
+          <label for="">
+            <h4>Name:</h4>
+            <input type="text" name="signup-form-name" required>
+          </label>
+          <label for="">
+            <h4>E-mail (= your username):</h4>
+            <input type="email" name="signup-form-email" required>
+          </label>
+          <label for="">
+            <h4>Password:</h4>
+            <input type="password" name="signup-form-password" required>
+          </label>
+          <div class="radiobuttons-gender">
+            <label for="">
+              <input type="radio" name="signup-form-gender"><h5>Male</h5>
+            </label>
+            <label for="">
+              <input type="radio" name="signup-form-gender"><h5>Female</h5>
+            </label>
+            <label for="">
+              <input type="radio" name="signup-form-gender"><h5>Other</h5>
+            </label>
+          </div>
+          <label for="">
+            <input type="checkbox" name="signup-form-terms"><h5>I agree to the Terms & conditions</h5>
+          </label>
+          <label for="">
+            <input type="checkbox" name="signup-form-newsletter"><h5>I want to subscribe to the newsletter</h5>
+          </label>
 
-      </section>
+        </form>
+
+
 
       <section class="FAQ-accordion">
         <h3>Frequently asked questions</h3>
