@@ -162,6 +162,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 10px;
 }
 .submit-button {
   margin-bottom: 10px;
@@ -179,6 +180,75 @@ body {
   border-radius: 5px;
 }
 
+
+
+/* Footer styling */
+.footer-general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(51, 45, 30);
+  margin-top: 20px;
+  width: 100%;
+
+}
+
+.footer-link:hover, .footer-link:focus {
+  background: rgba(59, 81, 128, 0.774);
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.footer-image {
+  width: 100px;
+  border-radius: 50%;
+}
+.footer-headline {
+  color: #fff;
+}
+
+/*** FOOTER: Subscribe button ***/
+.subscribe-button {
+  background: rgb(143, 125, 61);
+  border: none;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px rgba(218, 204, 156, 0.404);
+  border-style: none;
+}
+
+.subscribe-button:hover, .subscribe-button:focus {
+  background: rgb(177, 164, 117);
+}
+.subscribe-button:active {
+  box-shadow: 0 3px rgba(180, 170, 134, 0.404);
+  transform: translateY(2px);
+}
+/*** FOOTER: Social media icons ***/
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-facebook, .fa-twitter, .fa-linkedin, .fa-instagram {
+  color: #fff;
+  text-decoration: none;
+  background:rgb(105, 144, 180);
+}
 /* Media Queries */
 @media (max-width: 370px) {
   .hero-title {
@@ -212,6 +282,17 @@ body {
   .accordion-wrapper {
     width: 45%;
     max-width: 450px;
+  }
+  .footer-general {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .footer-list {
+    align-items: flex-start;
+  }
+  .footer-column {
+    align-items: flex-start;
   }
 }
 
