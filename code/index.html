@@ -15,7 +15,7 @@
   <body>
     <header class="hero">
       <picture>
-        <source srcset="./images/img_mobile.jpg" media="(max-width: 767px)">
+        <source srcset="./images/img_mobile.jpg" media="(max-width: 667px)">
         <source srcset="./images/img_tablet.jpg" media="(max-width: 1199px)">
         <img class="hero-img" src="./images/img_desktop.jpg" alt="hero image"/>
       </picture>
@@ -28,6 +28,7 @@
     </nav>
     </header>
 
+  <div class="maincontent-page">
     <section class="introduction">
       <h2 id="about">about us.</h2>
         <p>
@@ -83,38 +84,46 @@
 
     <section class="formbox">
       <h2 id="contact">let's get in touch.</h2>
-     
       <form>
-        <div class="formelement">
-          <div class="personal-information"><label for="fname">name</label>
-          <input type="text" id="name" name=name><br></div>
-          <div class="personal-information"><label for="phone">phone</label>
-          <input type="text" id="phone" name=phone><br></div>
-          <div class="personal-information"><label for="email">email</label>
-          <input type="email" id="email" name=email><br></div>
+        <div class="formelement-personal">
+          <div><label for="fname" class="information-type">name</label>
+          <input type="text" id="name" name=name class="labelbox"><br></div>
+          <div><label for="phone" class="information-type">phone</label>
+          <input type="text" id="phone" name=phone class="labelbox"><br></div>
+          <div><label for="email" class="information-type">email</label>
+          <input type="email" id="email" name=email class="labelbox"><br></div>
         </div>
 
-        <div class="formelement"></div>
-          <p class="formtext">what are you interested in?</p>
-          <select name="offer" class="interest">
-            <option value="people">people</option>
-            <option value="fashion">fashion</option>
-            <option value="events">events</option>
-            <option value="others">others</option>
-          </select>
+        <div class="formelement-interest">
+          <div class="interest-options"><p class="formtext">what are you interested in?</p></div>
+          <div class="interest-options">
+            <select name="offer" class="interest">
+              <option value="people">people</option>
+              <option value="fashion">fashion</option>
+              <option value="events">events</option>
+              <option value="others">others</option>
+            </select>
+          </div>
         </div>
 
-        <div class="formelement">
-          <p class="formtext">do you agree with our conditions and to being kind to the world and yourself?</p>
-          <input type="checkbox" name="agree" class="conditions-agreement"
-          value="agree" required/> yes - i do! <br>
+        <div class="formelement-agreement">
+          <div>
+            <p class="formtext">do you agree with our conditions and 
+              to being kind to others, the world and yourself?
+            </p>
+          </div>
+          <div class="checkbox-box">
+            <input type="checkbox" class="checkbox" name="agree"
+              value="agree" required/>yes - i do! <br>
+          </div>
         </div>
 
-        <div class="formelement">
-          <input type="submit" value="send and we'll talk soon" class="submit" required>
+        <div class="formelement-submit">
+          <input type="submit" id="submit-button" value="send" class="submit" required>
         </div>
       </form>
     </section>
+  </div>
 
     <footer>
       

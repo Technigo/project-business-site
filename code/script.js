@@ -6,6 +6,7 @@ const serviceHeader3=document.getElementById("service-header-3");
 const serviceContent3=document.getElementById("service-content-3");
 const serviceHeader4=document.getElementById("service-header-4");
 const serviceContent4=document.getElementById("service-content-4");
+const btn = document.getElementById("submit-button");
 
 serviceHeader1.addEventListener("click", () =>{
     serviceContent1.classList.toggle("service-selected")
@@ -19,3 +20,4 @@ serviceHeader3.addEventListener("click", () =>{
 serviceHeader4.addEventListener("click", () => {
     serviceContent4.classList.toggle("service-selected")
 });
+
