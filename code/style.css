@@ -1,12 +1,3 @@
-/* 
-.active + .answer {
-  some styling here 
-}
-
-the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
 /***** 1. GENERAL *****/
 
 body {
@@ -20,8 +11,7 @@ body {
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  position: absolute;
-  z-index: -1;
+  /*position: absolute;*/
 }
 
 h2,
@@ -120,7 +110,6 @@ align-self: flex-start;
 }
 
 .info h2 {
-  font-family: 'Varela', sans-serif;
   color: #fff;
   font-size: 25px;
   margin: auto;
@@ -128,7 +117,6 @@ align-self: flex-start;
 }
 
 .info p {
-  font-family: 'Varela', sans-serif;
   color: #fff;
   font-size: 14px;
   margin: auto;
@@ -200,6 +188,7 @@ align-self: flex-start;
   align-items: center;
 
 }
+
 form {
   background-image: url("Images/jeans.jpg");
   background-size: cover;
@@ -240,9 +229,6 @@ input {
   outline: none;
 }
 
-.form-welcome {
-}
-
 .terms {
   font-size: 10px;
 }
@@ -280,9 +266,10 @@ input {
 }
 
 
+
 /***** TABLET RESPONSIVE *****/
 
-@media (min-width: 667px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 
 /***** 1. GENERAL *****/
 
@@ -294,12 +281,52 @@ input {
 
 /***** 2. HEADER AND NAV *****/
 
+.hamburger {
+  width: 40px;
+  height: 30px;
+  margin-left: 5px;
+}
+  
+.hamburger div {
+  width: 40px;
+  height: 6px;
+}
+
 .content {
   display: flex;
   align-self:flex-start;
   justify-content: space-between;
   
   width: 60%;
+}
+
+.content a {
+  font-size: 15px;
+}
+
+.nav-sign-in {
+  margin-right: 5px;
+}
+
+.nav-sign-in a {
+  font-size: 15px;
+}
+
+/***** 4. INFO *****/
+
+.info {
+  padding: 10px;
+  margin-top: 70px;
+}
+
+.info h2 {
+  font-size: 30px;
+}
+
+.info p {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /***** 5. SIGN UP BUTTON *****/
@@ -379,14 +406,12 @@ button:hover {
   display: block;
 }
 
-/***** 7. SIGN UP FORM *****/
-
-
 }
+
 
 /***** DESKTOP RESPONSIVE *****/
 
-@media (min-width: 1025px) {
+@media screen and (min-device-width: 1025px) {
 
 /***** 1. GENERAL *****/
 
@@ -399,18 +424,14 @@ button:hover {
 /***** 2. HEADER AND NAV *****/
 
 .hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   width: 40px;
   height: 30px;
+  margin-left: 15px;
 }
   
 .hamburger div {
   width: 40px;
   height: 6px;
-  background: white;
-  border-radius: 10px;
 }
 
 .content {
@@ -425,6 +446,10 @@ button:hover {
   font-size: 17px;
 }
 
+.nav-sign-in {
+  margin-right: 15px;
+}
+
 .nav-sign-in a {
   font-size: 17px;
 }
@@ -432,7 +457,7 @@ button:hover {
 /***** 4. INFO *****/
 
 .info h2 {
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .info p {
@@ -507,8 +532,5 @@ button:hover {
 .accordion-selected {
   display: block;
 }
-
-/***** 7. SIGN UP FORM *****/
-
 
 }
