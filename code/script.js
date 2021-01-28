@@ -20,12 +20,23 @@ const accordionAnswerThree = document.getElementById('accordion-answer-3');
 
 accordionQuestionOne.addEventListener('click', () => {
   accordionAnswerOne.classList.toggle('accordion-selected');
+  accordionAnswerTwo.classList.remove('accordion-selected');
+  accordionAnswerThree.classList.remove('accordion-selected');
 });
 
 accordionQuestionTwo.addEventListener('click', () => {
   accordionAnswerTwo.classList.toggle('accordion-selected');
+  accordionAnswerThree.classList.remove('accordion-selected');
+  accordionAnswerOne.classList.remove('accordion-selected');
 });
 
 accordionQuestionThree.addEventListener('click', () => {
   accordionAnswerThree.classList.toggle('accordion-selected');
+  accordionAnswerOne.classList.remove('accordion-selected');
+  accordionAnswerTwo.classList.remove('accordion-selected');
 });
+
+// refresh fields after submit form 
+document.getElementById("form").onsubmit = function() { 
+  location.reload(true); 
+}

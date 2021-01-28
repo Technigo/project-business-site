@@ -3,88 +3,87 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
+    <title>Yoga studio</title>
     <link rel="stylesheet" href="style.css">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');</style> 
   </head>
   <body>
   <!--  Hero section -->
     <header class="header">
-      <picture>
-        <source srcset="mobile photo" media="(max-width:767px)">
-        <source srcset="tablet photo" media="(max-width:1199px)">
-        <img class="hero-image" src="./assets/desktop.jpg" alt="Hero image"> <!--photo not showing-->
-      </picture>
-      <h1 class ="hero-title">Website Name</h1>
+      <picture class= "container-hero">
+        <source srcset="/assets/mobile.jpg" media="(max-width:600px)">
+        <source srcset="/assets/tablet.jpg" media="(max-width:900px)">
+        <img class="hero-image" src="/assets/desktop.jpg" alt="Hero image"> 
+      </picture> 
+      <h1 class ="hero-title">Yoga Studio </h1>
     </header>
-    
   <!-- Signup form -->
-  <div class="container-style">
-    <form action="http://httpbin.org/anything" method="POST" target="_blank"></form>
-      <div class="yoga-style"> <!-- delete class?-->
-        <h2>Sign up form</h2>
-        <p>Fill out below form to sign up</p>
-        <p>Select your preferred yoga style</p>
-        <input type="radio" id="ashtanga" name="yoga-style" value="ashtanga"> 
-        <label for="ashtanga">Ashtanga</label><br>
-        <input type="radio" id="vinyasa" name="yoga-style" value="vinyasa">
-        <label for="vinyasa">Vinyasa</label><br>
-        <input type="radio" id="bikram" name="yoga-style" value="bikram">
-        <label for="bikram">Bikram</label><br>
-      </div>
-  </div>
-  <div class= "container-level">
-    <h2>What's your yoga level?</h2> 
-      <select id="yoga-level" name="yoga-level">
-        <option value="beginner">Beginner</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="advanced">Advanced</option>
-      </select>
-  </div>
-  <div class ="container-input">
-    <label for="user-name">First name</label>
-    <input type="text" name="first-name" placeholder="First name" id="first-name" required>
-    <label for="">Last name</label>
-    <input type="text" name="last-name" placeholder="Last name" id="last-name" required>
-    <label for="user-name">Email</label>
-    <input type="text" name="email" placeholder="Email" id="email" required>
-    <label for="user-name">Password</label>
-    <input type="password" name="password" placeholder="password" id="password" minlength="8" required>
-  </div>        
-  <div class ="checkbox">
-    <input type="checkbox" id="agree" name="agree" value="agree" required>
-    <label for="agree"> I agree to Terms and conditions </label><br>
-    <a href="">Terms and conditions</a>
-    <br>
-    <input class="submit-button" type="submit" value="Submit">
-  </div>  
+    <form id="form" class= "form" action="http://httpbin.org/anything" method="POST" target="_blank">
+      <div class="container-forms">
+        <div class="yoga-style">
+          <h2>Sign up form</h2>
+          <p>Select your preferred yoga style:</p>
+          <label> 
+            <input type="radio" id="ashtanga" name="yoga-style" value="ashtanga" required>Ashtanga</input>
+             <br>
+             <input type="radio" id="bikram" name="yoga-style" value="bikram" required>Bikram</input>
+             <br>
+             <input type="radio" id="vinyasa" name="yoga-style" value="vinyasa" required>Vinyasa</input>
+            <br>
+            <br>
+        </label>
+        </div> 
+          <div class= "yoga-level">
+            <h3>What's your yoga level?</h3> 
+            <select id="yoga-level" name="yoga-level">
+              <option value="beginner" required >Beginner</option>
+              <option value="intermediate"required>Intermediate</option>
+              <option value="advanced" required>Advanced</option>
+            </select>
+            <br>
+            <br>
+          </div>
+          <div class ="input-fields">
+            <label>
+              First Name:<input type="text" name="first-name" placeholder="First name" id="first-name" required>
+              Last Name:<input type="text" name="last-name" placeholder="Last name" id="last-name" required>
+              Email: <input type="text" name="email" placeholder="Email" id="email" required>
+              Password: <input type="password" name="password" placeholder="Password" id="password" minlength="8" required>
+            </label>       
+            <div class ="checkbox"></div>
+            <label>
+              <br>
+              I agree: <input type="checkbox" id="terms" name="terms" value="agree" required>
+              <a href="">Terms and conditions</a>
+            </label>
+              <br>
+              <br>
+            <input class="submit-button" type="submit" value="Submit" value="refresh">
+          </div>
+      </div> 
   <!-- Accordion-->
-    <section class="accordion">
-      <h2 class="accordion-faq">Frequently Asked Questions</h1> <!--Fixed header - no toggle, no  js needed-->
-        <h3 id="accordion-question-1" class="accordion-question">Question number one</h3>
-          <p id="accordion-answer-1" class="accordion-answer">Answer  number one</p>
-    </section>
-    <section class="accordion">
-        <h3 id="accordion-question-2" class="accordion-question">Question number two</h3>
-          <p id="accordion-answer-2" class="accordion-answer">Answer  number two</p>
-    </section>    
-    <section class="accordion">
-        <h3 id="accordion-question-3" class="accordion-question">Question number three</h3>
-          <p id="accordion-answer-3" class="accordion-answer">Answer  number three</p>
-    </section>    
-        
-        
-        <!--
-        <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <div class = "container-faq">
+      <div class="accordion-faq">
+        <h2>¿FAQ? </h2>
+        <section class="accordion">
+          <h3 id="accordion-question-1" class="accordion-question">Question number one</h3>
+            <p id="accordion-answer-1" class="accordion-answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis soluta error illo vitae sed. Veniam ratione similique ipsum molestias natus deleniti, temporibus commodi culpa, consequuntur odit inventore laudantium ullam quod!</p>
+        </section>
+        <section class="accordion">
+          <h3 id="accordion-question-2" class="accordion-question">Question number two</h3>
+            <p id="accordion-answer-2" class="accordion-answer">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti necessitatibus ullam culpa ipsa pariatur. Omnis, at inventore. Molestias corrupti earum, iste obcaecati exercitationem, officia quaerat ea totam neque impedit nihil.</p>
+        </section>    
+        <section class="accordion">
+          <h3 id="accordion-question-3" class="accordion-question">Question number three</h3>
+            <p id="accordion-answer-3" class="accordion-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a blanditiis suscipit, assumenda accusamus ex architecto, vitae placeat praesentium pariatur necessitatibus atque deleniti nisi quia. Distinctio quos delectus nobis corrupti!</p>
+       </section>  
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div> -->
+    </div>  
+    </form>   
     
-    
+    <footer class="footer"> 
+      <p> Maria Sparre - Project 3, Business site</p> 
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
