@@ -1,7 +1,6 @@
 body {
   margin: 0;
   background-color: #FFF;
-  /* background-color: #5dc3ff; */
 }
 
 * {
@@ -12,19 +11,11 @@ body {
   position: relative;
 }
 
-.hero-header {
-  width: 100vW;
-  height: 100vH;
+.hero-video {
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
 }
-
-/* .tablet-img {
-  display: none;
-}
-
-.desktop-video {
-  display: none;
-} */
 
 .hero-title {
   color: #FFF;
@@ -40,6 +31,14 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 20px;
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: 35px auto; */
 }
 
 h1 {
@@ -71,13 +70,6 @@ h4 {
   margin: 0;
   font-weight: 600;
 } 
-/* 
-h5 {
-  font-family: 'Karla', sans-serif;
-  font-weight: 200;
-  font-size: 13px;
-  margin: 3px;
-} */
 
 h5 {
   font-family: 'Karla', sans-serif;
@@ -93,12 +85,19 @@ p {
   margin: 0;
 }
 
-.main-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 85%;
-  margin: 35px auto;
+a {
+  color: #000;
+  text-decoration: none;
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+}
+
+a:hover {
+  color: darkgray;
+}
+
+a:active {
+  color: gray;
 }
 
 /*** Sign-up form ***/
@@ -110,8 +109,8 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 100%;
-  margin-bottom: 70px;
+  width: 80%;
+  margin: 70px auto 0;
   padding: 5px 70px 65px;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
@@ -120,14 +119,6 @@ label {
   display: inline-block;
   margin: 0 0 20px;
 }
-
-/* input,
-textarea {
-  width: 200px;
-  box-sizing: border-box;
-  border: 1px solid #999;
-  border-radius: 1%;
-} */
 
 .radiobuttons-gender-container {
   display: flex;
@@ -141,10 +132,9 @@ textarea {
 .checkboxes-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: space-between;
   align-items: center;
-  border: solid black 1px;
+  width: 100%;
 }
 
 input[type=text],
@@ -161,7 +151,8 @@ input[type=text],
   text-decoration: none;
 }
 
-input[type=radio] {
+input[type=radio],
+[type=checkbox] {
   margin: 0;
 }
 
@@ -191,26 +182,31 @@ input[type=radio] {
 .FAQ-accordion {
   border: solid #999 0.5px;
   border-radius: 1%;
-  width: 100%;
+  width: 80%;
+  margin: 70px auto 0;
   background-color: #FFF;
-  padding-top: 5px;
+  padding: 5px 0 40px;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
 
 /* .accordion {
   border: solid purple 1px;
 } */
+.last-accordion {
+  border-bottom: solid #999 0.5px;
+}
 
 .question {
   background-color: #fadadd;
-  border: solid #999 0.5px;
+  border-top: solid #999 0.5px;
   padding: 12px;
   margin: 0;
 }
 
 .answer {
-  background-color: #8bbdd9;
-  /* border: solid #999 0.5px; */
+  background-color: #bcd9ea;
+  /* background-color: #8bbdd9; */
+  border-top: solid #999 0.5px; 
   padding: 12px;
   margin: 0;
   transition: height 0.3s ease;
@@ -218,8 +214,33 @@ input[type=radio] {
 }
 
 .active + .answer {
-  /* height: 38px; */
   display: block;
+}
+
+footer {
+  background-color: #5dc3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 100%;
+  margin: 60px 0 0;
+  padding: 10px;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 12px;
+}
+
+.icons {
+  width:25%;
+  display: flex;
+  justify-content: space-around;
+  font-size: medium;
 }
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
@@ -231,9 +252,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
   @media (min-width: 668px) {
     .main-content {
+      width: 100%;
       flex-direction: row;
       justify-content: space-around;
-      width: 85%;
     }
 
     .signup-form {
@@ -242,36 +263,35 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
     .FAQ-accordion {
       width: 45%;
+    }
+
+    /* footer {
+      margin: 30px auto 0;
+    } */
+    
+    .info {
+      width: 70%;
+    }
+    
+    .icons {
+      font-size: large;
     }
   }
 
-  /*  .mobile-img {
-      display: none;
-    }
-
-    .tablet-img {
-      display: inline;
-    }
-
-    .desktop-video {
-      display: none;
-    }
-  }*/
-
   @media (min-width: 1025px) {
-    /* .tablet-img {
-      display: none;
-    }
-
-    .desktop-video {
-      display: inline
-    } */
-
     .signup-form {
       width: 470px;
     }
 
     .FAQ-accordion {
       width: 470px;
+    }
+    
+    .info {
+      width: 70%;
+    }
+    
+    .icons {
+      font-size: x-large;
     }
   }
