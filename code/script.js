@@ -24,21 +24,25 @@ const accordionAnswerFour = document.getElementById('accordion-answer4');
 accordionQuestionOne.addEventListener('click', () => {
   accordionQuestionOne.classList.toggle("question-border-radius");
   accordionAnswerOne.classList.toggle("accordion-answer-display");
+  document.getElementById("fas-1").classList.toggle("fas-selected");
 });
 
 accordionQuestionTwo.addEventListener('click', () => {
   accordionQuestionTwo.classList.toggle("question-border-radius");
   accordionAnswerTwo.classList.toggle("accordion-answer-display");
+  document.querySelector('#fas-2').style.transform = 'rotate(90deg)';
 });
 
 accordionQuestionThree.addEventListener('click', () => {
   accordionQuestionThree.classList.toggle("question-border-radius");
   accordionAnswerThree.classList.toggle("accordion-answer-display");
+  document.querySelector('#fas-3').style.transform = 'rotate(90deg)';
 });
 
 accordionQuestionFour.addEventListener('click', () => {
   accordionQuestionFour.classList.toggle("question-border-radius");
   accordionAnswerFour.classList.toggle("accordion-answer-display");
+  document.querySelector('#fas-4').style.transform = 'rotate(90deg)';
 });
 
 
