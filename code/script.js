@@ -6,4 +6,39 @@ function toggle() {
 }
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
+
+
+
+const question1 = document.getElementById('question1');
+const answer1 = document.getElementById('answer1')
+;
+
+const question2 = document.getElementById('question2');
+const answer2 = document.getElementById('answer2')
+;
+
+const question3 = document.getElementById('question3');
+const answer3 = document.getElementById('answer3')
+;
+
+
+question1.addEventListener('click', () => {
+  answer1.classList.add('answer-selected');
+  answer2.classList.remove('answer-selected');
+  answer3.classList.remove('answer-selected');
+});
+
+
+question2.addEventListener('click', () => {
+  answer1.classList.remove('answer-selected');
+  answer2.classList.add('answer-selected');
+  answer3.classList.remove('answer-selected');
+});
+
+
+question3.addEventListener('click', () => {
+  answer1.classList.remove('answer-selected');
+  answer2.classList.remove('answer-selected');
+  answer3.classList.add('answer-selected');
+});
+

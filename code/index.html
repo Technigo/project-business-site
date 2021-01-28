@@ -4,27 +4,125 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   </head>
   <body>
+    <section>
+
+      <header class="hero-container">
+
+        <div class="navbar-container">
+          <div class="logo">
+            <h1>Waves</h1>
+          </div>
+          <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+          </div>   
+          <div class="navbar-menu">
+            <ul class="navbar-menu">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul> 
+          </div>      
+        </div>
+
+        
+        
+        <video class="waves" autoplay>
+          <source src="./videos/waves.mp4" type="video/mp4" media="(max-width: 767px)">
+          <source src="./videos/waves 1080p.mp4" type="video/mp4" media="(max-width: 1199px)">
+        </video>
+        <div class="shadow"></div>
+
+        <div class="head-box">
+          <h1 class="box-info">Learn how to surf
+          </h1>
+        </div>
+
+      </header>
+
+    </section>
+
+
+
     <!-- video or image as a header is cool :) -->
 
     <!-- Signup form -->
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+    <form class="signup-form" action="https://httpbin.org/anything" method="POST">
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <h1 class="signup-headline">Surf camp signup
+      </h1>
+      
+      <section class="signup-form-user">
+
+        <label>
+          Name: <input name="signup-name" type="text" required>
+        </label>
+        <label>
+          E-mail: <input name="signup-mail" type="email" required>
+        </label>
+        <label>
+          Password: <input name="signup-password" type="password" required>
+        </label>
+
+        <input type="submit" value="Submit">
+
+      </section>  
+       
+      <h3>When would you like to participate?
+      </h3>
+
+      <section class="signup-schedule-radio-group">
+        <label>
+          Weekdays <input name="schedule" type="radio" value="Weekdays" required>
+        </label>
+        <label>
+          Weekends <input name="schedule" type="radio" value="Weekends" required>
+        </label>
+        <label>
+          08:00-12.00 <input name="schedule" type="radio" value="Morning" required>
+        </label>
+        <label>
+          14:00-18:00 <input name="schedule" type="radio" value="Afternoon">
+        </label>
+      </section>
+
+    </form>
+
+    Select which activity you want to perform:
+    Surfing/chosen activity
+
+    <!-- Accordion -->
+
+    <section class="accordion">
+      <div class="accordion-header">
+      <h1>FAQ</h1>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <h2 id="question1" class="question">Question 1</h2>
+      <div id="answer1" class="answer">
+        <p>Answer blabla</p>
+      </div>
+
+      <h2 id="question2" class="question">Question 2</h2>
+      <div id="answer2" class="answer">
+        <p>Answer blabla</p>
+      </div>
+
+      <h2 id="question3" class="question">Question 3</h2>
+      <div id="answer3" class="answer">
+        <p>Answer blabla</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <script src="./script.js"></script>
   </body>
 </html>
