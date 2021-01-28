@@ -109,7 +109,7 @@ body {
 }
 
 .text-input {
-  background-color: rgba(206, 186, 165, 0.788);
+  background-color: rgb(147, 113, 77);
   color: rgb(40, 52, 64);
   padding: 2px;
   border-radius: 5px;
@@ -118,6 +118,10 @@ body {
 ::placeholder {
   color: rgb(243, 240, 236);
   font-size: 14px;
+}
+
+.text-input:focus {
+  outline-color: gray;
 }
 
 .cat-information {
@@ -151,6 +155,7 @@ body {
   align-items: center;
   justify-content: space-around;
 }
+
 .inner-radio {
   width: 45%;
   padding: 3px;
@@ -168,7 +173,7 @@ body {
   margin-bottom: 10px;
   background-color: rgb(66, 37, 11);
   color: rgb(243, 240, 236);
-  padding: 3px;
+  padding: 5px 10px;
   border: 2px solid  rgba(66, 37, 11, 0.705);
 }
 
@@ -176,40 +181,47 @@ body {
 /* Accordion styling */
 .accordion-wrapper {
   padding: 5px;
-  background: rgb(165, 127, 86);
+  background: rgb(172, 137, 101);
   margin: 10px 10px;
   border-radius: 5px;
 }
 
 .accordion-question {
-  background-color: gray;
+  background-color: rgb(147, 113, 77);
   cursor: pointer;
   position: relative;
+  padding: 10px;
+  border-bottom: 2px solid rgba(54, 54, 54, 0.596);
 }
+
 .accordion-question::after {
-  content:"\1F408";
+  content:"\002B";
+  font-size: 16px;
+  font-weight: bold;
   position: absolute;
   right: 0;
-  margin-right: 10px;
+  margin-right: 1%;
 }
 
 .question-clicked{
-  background-color: rgb(223, 210, 210);
+  border-bottom: 2px solid rgb(202, 199, 199);
+  position: relative;
 
 }
+.question-clicked::after {
+  content:"\002D";
+  position: absolute;
+  right: 0;
+  margin-right: 1%;
+  font-weight: bold;
+}
+
 
 .accordion-answer {
   height: 0;
   overflow: hidden;
-  transition: height, 0.5s, ease-out;
+  transition: height 0.5s ease-out;
   background-color: rgba(255, 255, 255, 0.452);
-
-}
-
-.answer-open {
-  height: auto;
-  transition: 5s;
-  height: auto;
 
 }
 

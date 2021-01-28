@@ -23,12 +23,11 @@ accordionQuestion.forEach(accordionHeader =>  {
       accordionHeader.addEventListener ('click', () => {
         accordionHeader.classList.toggle ('question-clicked');
         const accordionAnswer = accordionHeader.nextElementSibling;
-        accordionAnswer.classList.toggle ('answer-open');
+        if (accordionHeader.classList.contains('question-clicked') ) {
+          accordionAnswer.style.height = accordionAnswer.scrollHeight + "px";
+        }
+        else {
+          accordionAnswer.style.height = '0';
+        }
       })
 });
-
-        // if (accordionHeader.classList.contains('question-clicked')){
-        //     accordionAnswer.style.height = 'auto';}
-        // else {
-        //   accordionAnswer.style.height = '0';
-        // }
