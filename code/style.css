@@ -15,7 +15,7 @@ body {
     object-fit: cover;
   }
   
-  .hero-text {
+  .hero-text { /*Delete this part when your navbar is in place */
     position: absolute;
     top: 0;
     right: 0;
@@ -27,7 +27,58 @@ body {
     margin: 0;
   } 
 
+  .hero-picture {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
   /* Header ends here */
+
+  /* Navbar */
+
+.container {
+  position: absolute;
+  top: 0; /* 600 */
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  /*background-color: #333;*/ /* Ta bort denna, då blir det transparant */ 
+  display: flex;
+  justify-content: center;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 20px 22px; /* 14 16 */
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: #ffc478;
+  opacity: 0.70;
+  color: black;
+  border-radius: 25%;
+}
+
+/* Navbar ends here */
 
   
 
@@ -189,6 +240,9 @@ body {
 
       .button {
         font-size: 24px;
+        font-weight: bold;
+        border-radius: 10%;
+        background-color: #ffc478;
       }
 
       /* Submit button */ 
@@ -196,12 +250,27 @@ body {
 
 
 
-
+@media (min-width: 601px) {
+  
+  .topnav a {
+  padding: 28px 32px; /* 14 16 */
+  font-size: 32px;
+  }
 
 
 
 @media (min-width: 768px) {
-    .flex-parent {
+  
+  /*.topnav a {
+    padding: 28px 32px; /* 14 16 */
+    /*font-size: 32px;
+  } */
+
+  
+  
+
+
+  .flex-parent {
         display: flex;
         justify-content: center;
     }
@@ -222,6 +291,9 @@ body {
 }
 
 @media (min-width: 1024px) {
+
+  
+  
   .flex-parent {
     display: flex;
     justify-content: center;
@@ -239,10 +311,6 @@ body {
 
 
 @media (min-width: 1300px) {
-
 .flex-child {
     margin: 75px;
-  }
-}
-
-
+  } }
