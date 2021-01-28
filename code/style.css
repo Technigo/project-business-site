@@ -1,11 +1,15 @@
 html, body {
   height: 100%;
   margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #67746f;
+  font-family: 'Dosis', sans-serif;
+  background-color: #668483;
 }
+
+/********** HEADER **********/
+
 header {
   height: 100%;
+  margin-bottom: 100px;
 }
 .hero {
   background-image: url("hero.jpg");
@@ -16,76 +20,148 @@ header {
   box-sizing: border-box;
   margin: 0;
   padding: 100px;
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #00000080;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 .hero-text {
   width: 40%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #eec29b8f;
   padding: 40px;
   margin-right: 50px;
+  box-shadow: 0 0 20px#eec29b;
 }
 h1 {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 4em;
   margin: 0;
   text-align: center;
 }
+.hero-text p {
+  font-size: 1.3em;
+}
+nav {
+  background-color: #eec29b;
+  display: flex;
+  justify-content: center;
+}
+nav a {
+  margin: 40px 80px;
+}
+a {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 2em;
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #668483;
+}
+/********** FORM **********/
+
 .container {
   display: flex;
   justify-content: space-evenly;
   padding: 100px 0;
 }
-form {
+.form {
   background-color: #d8a272;
+  width: 30%;
+  padding: 40px;
+  box-shadow: 0 0 10px#eec29b;
+  box-sizing: border-box;
+}
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
 }
-.form {
-  width: 30%;
+form * {
   box-sizing: border-box;
 }
+label, .radio-label {
+  font-size: 1.2em;
+}
 input {
-  padding: 5px;
-  border-radius: 20px;
+  padding: 10px;
+  background-color:  #d8a272;
+  border: none;
+  border-bottom: 1px solid #eec29b;
+  font-family: 'Dosis', sans-serif;
 }
 .text-input {
+  width: 100%;
   margin-top: 5px;
   display: flex;
   flex-direction: column;
 }
-.radio-input {  
-  margin-top: 5px;
+::placeholder {
+  color: black;
 }
-button {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.radio-input {  
+  margin: 10px;
+}
+.radio-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 20px;
+}
+.radio-label {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  text-align: center;
+}
+.button {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 1.5em;
   padding: 10px 50px;
   border-radius: 10px;
-  background-color: #67746f;
+  background-color:  #000;
   color: white;
+  width: 50%;
+  margin-top: 20px;
+  border: none;
 }
+.button:hover {
+  background-color: #668483;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+/********** ACCORDION **********/
+
 .accordion {
   width: 30%;
   background-color: #d8a272;
   padding: 40px;
-  box-sizing: border-box;
+  box-sizing: border-box;  
+  box-shadow: 0 0 10px #eec29b;
 }
 h2 {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 2.5em;
   text-align: center;
+  margin: 0 0 40px 0;
 }
 .question {
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.1);
+  margin: 1px;
+  background-color: #eec29b;
+  box-sizing: border-box;
+  font-size: 1.2em;
 }
 .question:hover {
   box-shadow: 0px 0px 5px black;
 }
 .answer {
-  background-color: #67746f;
+  background-color:  #d8a272;
   padding: 10px;
+  margin: 1px;
   display: none;
+  border: 1px solid #eec29b;
 }
 .expanded {
   display: none;
@@ -98,4 +174,19 @@ h2 {
 }
 .active .expanded {
   display: inline;
+}
+
+/********** FOOTER **********/
+
+footer {
+  background-color: #eec29b;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+.footer-links a {
+  margin: 15px 100px;
 }

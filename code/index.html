@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Project 3</title>
 </head>
@@ -12,94 +15,115 @@
   <header>
     <div class="hero">
       <div class="hero-text">
-        <h1>Hi</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nesciunt natus magnam, cumque quos quis
-          tempora
-          neque officia sapiente similique! Aliquid est aliquam quaerat, velit error reprehenderit modi soluta aperiam.
+        <h1>Who's a good boy?</h1>
+        <p>If the answer is not your dog - even though you would never say that to their face - you might be in
+          need of some dog training. We believe that there's a good boy or girl slumbering in every dog.
         </p>
       </div>
     </div>
+    <nav>
+      <a href="#">Our Dog Trainers</a>
+      <a href="#">Our Methods</a>
+      <a href="#">Our Customers</a>
+    </nav>
   </header>
   <div class="container">
     <section class="form">
-      <form action="">
-        <h2>Sign up for a free lesson</h2>
+      <h2>Sign up for a free lesson</h2>
+      <form action="https://httpbin.org/anything" method="POST">
         <div class="text-input">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" placeholder="Your Name" required>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
         </div>
         <div class="text-input">
           <label for="email">E-mail</label>
-          <input type="email" id="email" placeholder="Your E-mail" required>
+          <input type="email" id="email" name="email" placeholder="Your E-mail" required>
         </div>
         <div class="text-input">
-          <label for="dog-name">Your Dog's Name</label>
-          <input type="text" id="dog-name" placeholder="Your Dog's Name" required>
+          <label for="dog-name">Dog's Name</label>
+          <input type="text" id="dog-name" name="dog-name" placeholder="Your Dog's Name" required>
         </div>
-        <div>
-          Your Dog's Gender
+        <div class="radio-container">
+          <div class="radio-label" title="We ask for this information because it affects your dog's
+            behavior.">Dog's
+            Gender
+            <img src="question-square-fill.svg" alt="">
+          </div>
           <div class="radio-input">
-            <input type="radio" name="gender" id="female" required>
+            <input type="radio" name="gender" id="female" value="female" required>
             <label for="female">Female</label>
           </div>
           <div class="radio-input">
-            <input type="radio" name="gender" id="female-neutered" required>
+            <input type="radio" name="gender" id="female-neutered" value="female-neutered" required>
             <label for="female-neutered">Female neutered</label>
           </div>
           <div class="radio-input">
-            <input type="radio" name="gender" id="male" required>
+            <input type="radio" name="gender" id="male" value="male" required>
             <label for="male">Male</label>
           </div>
           <div class="radio-input">
-            <input type="radio" name="gender" id="male-neutered" required>
+            <input type="radio" name="gender" id="male-neutered" value="male-neutered" required>
             <label for="male-neutered">Male neutered</label>
           </div>
         </div>
-        <button>Sign me up!</button>
+        <label>
+          <input type="checkbox" name="newsletter">I would like to receive your newsletter!
+        </label>
+        <input type="submit" class="button" value="Sign me up!">
       </form>
     </section>
     <section class="accordion">
-      <h2>FAQ</h2>
+      <h2>Frequently Asked Questions</h2>
 
-      <div class="question" id="section1">
+      <div class="question">
         <img class="collapsed" src="question-circle.svg" alt="">
         <img class="expanded" src="question-circle-fill.svg" alt="">
-        Section 1
+        How old should my puppy be before we can start dog training?
       </div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
-      <div class="question" id="section2">
+      <div class="question">
         <img class="collapsed" src="question-circle.svg" alt="">
-        <img class="expanded" src="question-circle-fill.svg" alt="">Section 2
+        <img class="expanded" src="question-circle-fill.svg" alt="">
+        What should I bring? Leash, collar, treats etc.
       </div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
-      <div class="question" id="section3">
+      <div class="question">
         <img class="collapsed" src="question-circle.svg" alt="">
-        <img class="expanded" src="question-circle-fill.svg" alt="">Section 3
+        <img class="expanded" src="question-circle-fill.svg" alt="">
+        My dog is scared of other dogs/humans. Should I still sign up for a group lesson?
       </div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
-      <div class="question" id="section4">
+      <div class="question">
         <img class="collapsed" src="question-circle.svg" alt="">
-        <img class="expanded" src="question-circle-fill.svg" alt="">Section 4
+        <img class="expanded" src="question-circle-fill.svg" alt="">
+        Can all family members come along to the lesson?
       </div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
-      <div class="question" id="section5">
+      <div class="question">
         <img class="collapsed" src="question-circle.svg" alt="">
-        <img class="expanded" src="question-circle-fill.svg" alt="">Section 5
+        <img class="expanded" src="question-circle-fill.svg" alt="">
+        My dog often shows problematic behavior at home. Do you offer home visits?
       </div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
-
     </section>
   </div>
+  <footer>
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Payment Options</a>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 
