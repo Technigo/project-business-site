@@ -53,41 +53,51 @@ h2 {
 }
 
 h3 {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Permanent Marker', cursive;
   font-weight: 600;
-  margin: 12px 0 5px 0;
-  font-size: 26px;
+  margin: 12px 0 25px 0;
+  font-size: 30px;
   text-align: center;
 }
 
 h4 {
   font-family: 'Karla', sans-serif;
-  font-weight: 200;
+  font-weight: 600;
+  font-size: 20px;
   margin: 17px 0 5px;
 }
 
+.FAQ-accordion h4 {
+  margin: 0;
+  font-weight: 600;
+} 
+/* 
 h5 {
   font-family: 'Karla', sans-serif;
   font-weight: 200;
   font-size: 13px;
   margin: 3px;
-}
-.radiobuttons-gender h5 {
+} */
+
+h5 {
   font-family: 'Karla', sans-serif;
-  font-weight: 200;
-  margin: 3px;
+  font-weight: 400;
+  display: inline;
+  margin: 0 0 0 7px;
 }
 
 p {
   font-family: 'Karla', sans-serif;
   font-style: italic;
+  font-size: 18px;
+  margin: 0;
 }
 
 .main-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 75%;
+  width: 85%;
   margin: 35px auto;
 }
 
@@ -99,16 +109,16 @@ p {
   border-radius: 1%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
   width: 100%;
-  margin-bottom: 50px;
-  padding: 5px 50px 30px;
+  margin-bottom: 70px;
+  padding: 5px 70px 65px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
 
 label {
-  display: block;
-  margin-bottom: 20px;
+  display: inline-block;
+  margin: 0 0 20px;
 }
 
 /* input,
@@ -119,52 +129,96 @@ textarea {
   border-radius: 1%;
 } */
 
-.radiobuttons-gender {
+.radiobuttons-gender-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 25px;
+  align-items: center;
+  width: 100%;
+  margin: 25px auto 30px;
+}
+
+.checkboxes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
   border: solid black 1px;
 }
 
-input
-
-input:valid {
-  background-color: lightgreen;
+input[type=text],
+[type=password],
+[type=email] {
+  background-color: #fadadd;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
 }
 
-/* input:invalid {
-  background-color: lightpink;
-} */
+input[type=radio] {
+  margin: 0;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.submit-button {
+  background: #395D7F;
+  color: #FFF;
+  /* outline: none; */
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  border: solid white 1.5px;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  outline: none;
+}
 
 /*** FAQ-accordion ***/
 
 .FAQ-accordion {
-  border: solid #333 1px;
+  border: solid #999 0.5px;
   border-radius: 1%;
   width: 100%;
   background-color: #FFF;
   padding-top: 5px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
 
-.accordion {
-  border: solid #333 1px;
-}
+/* .accordion {
+  border: solid purple 1px;
+} */
 
 .question {
-  font-weight: bold;
-  background-color: peru;
-  border: solid #333 1px;
+  background-color: #fadadd;
+  border: solid #999 0.5px;
+  padding: 12px;
+  margin: 0;
 }
 
 .answer {
+  background-color: #8bbdd9;
+  /* border: solid #999 0.5px; */
+  padding: 12px;
   margin: 0;
-  border: solid #333 1px;
+  transition: height 0.3s ease;
   display: none;
 }
 
 .active + .answer {
-  height: 38px;
+  /* height: 38px; */
   display: block;
 }
 
@@ -205,19 +259,19 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   }*/
 
   @media (min-width: 1025px) {
-    .tablet-img {
+    /* .tablet-img {
       display: none;
     }
 
     .desktop-video {
       display: inline
-    }
+    } */
 
     .signup-form {
       width: 470px;
     }
 
     .FAQ-accordion {
-      width: 400px;
+      width: 470px;
     }
   }
