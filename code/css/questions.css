@@ -4,8 +4,10 @@
 {
   display: grid; 
   grid-template-rows: 20% 80%;
-  gap: 10px;
-  border:red 2px solid;
+  gap: 5px;
+  border:#573B8C 4px solid;
+  border-radius: 7px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   height: 600px;
   margin: 6%;
 }
@@ -13,7 +15,6 @@
 .question-pic{
   display: flex;
   justify-content: center;
-  border: solid 2px black;
 }
 
 .question-pic img{
@@ -22,15 +23,14 @@
 
 .faq{
   display: grid;
-  border: solid 2px black;
   gap:40px;
   grid-template-rows: 30% 70%;
-  border: 2px blue solid; 
 }
 
 .faq-heading{
   justify-self: center;
-  border: red solid;
+  color: #573B8C;
+  font-size: 40px;
 }
 
 /* .question-answers{
@@ -39,32 +39,49 @@
 
 
 .question{
-  border: 2px solid black;
+  border: 3px solid #8066B3;
   border-radius: 7px;
   margin: 10px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .question h3{
   margin: 0;
+  
 }
-.answer > p
+.answer > p /*including all children p of .answers*/
 {
   display: none;
+  
 }
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active .answer > p {
   display: block;
-  border-top: 1px solid;
+  border-top: #D3D3D3 2px solid;
 }
 
 .head-section{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center;  
+}
+
+.fa-minus {
+    display: none; 
+}
+
+/***** added two classes***/
+.fa-minus.show {
+    display: block;
+}
+
+.fa-plus.hide{
+    display: none;
 }
 
 /*****For ipad with screens between 650 and 1024px******/
@@ -73,7 +90,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   .accordion{
     display: grid; 
     grid-template-columns: 1fr 2fr;
-    height: 500px;
+    height: 700px;
   } 
 
   .question-pic{
@@ -89,7 +106,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     height: 500px;
     gap:40px;
     grid-template-rows: repeat(1);
-    border: 2px blue solid; 
   }
 
 }
@@ -101,14 +117,13 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     display: grid; 
     grid-template-columns: 1fr 2fr;
     gap: 40px;
-    height: 500px;
+    height: 550px;
   } 
 
   .question-pic{
     height: 500px;
     display: flex;
     justify-content: center;
-    border: solid 2px black;
   }
 
   .question-pic img{
@@ -119,6 +134,5 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     height: 500px;
     gap:40px;
     grid-template-rows: repeat(1);
-    border: 2px blue solid; 
   }
 }

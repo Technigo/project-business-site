@@ -1,69 +1,139 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
-
-  .hero
-  {
-    display:flex;
-    height: 20%;
-    position: relative;
-    justify-content: center;
-  }
-  
-  video{
-  width:100vw;
-  height:80vh;
-  object-fit: cover;
-  }
-
-  
-  
-  nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-  }
-  nav a{
-    display: flex;
-    text-decoration: none; 
-    color: #F8F8FF;
-    font-family: 'Anton', sans-serif;
-    padding: 10px;
-    
-  }
-  
-  .header-title{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color:#F8F8FF;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
-  }
-  
-  .header-title button{
-    background-color: rgba(255, 255, 255, 0.482);
-    background: transparent;
-    color: #fff;
-    text-align: center;
-    font-size: 20px;
-    box-sizing: border-box;
-    display: inline-block;
-    margin: 0;
-    width: 150px;
-    padding: 10px 10px;
-    border-radius: 20px;
-    outline: none;
-    
-  }
-
-  .header-title:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap");
+.hero {
+  display: flex;
+  position: relative;
+  justify-content: center;
 }
-  
+
+video {
+  width: 100vw;
+  height: 80vh;
+  object-fit: cover;
+}
+
+#burger {
+  z-index: 99;
+}
+
+.hamburger div {
+  width: 35px;
+  height: 5px;
+  margin: 6px;
+  background-color: #573b8c;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.open.hamburger-menu > ul {
+  display: block;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+  position: fixed;
+  width: 100%;
+}
+.nav-middle {
+  display: none;
+}
+
+.logo h2 {
+  font-family: "Hachi Maru Pop", cursive;
+  margin-top: 0;
+  font-weight: 700;
+  margin: 6px;
+  color: #f88379;
+}
+.header-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f8f8ff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.header-title button {
+  background-color: rgba(255, 255, 255, 0.482);
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  width: 150px;
+  padding: 10px 10px;
+  border-radius: 20px;
+  outline: none;
+}
+
+.header-title:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*****For ipad with screens between 650 and 1024px******/
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    color: #f8f8ff;
+    font-family: "Anton", sans-serif;
+    padding: 20px;
+    
+  }
+
+  .nav-middle {
+    display: block;
+    margin-top: 15px;
+  }
+
+
+  .hamburger div {
+    display: none;
+  }
+}
+
+/*****For desktop with screens 1025px and larger******/
+@media (min-width: 1025px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    position: fixed;
+    width: 100%;
+  }
+  .nav-middle {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .hamburger div {
+    display: none;
+  }
+  nav a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    color: #f8f8ff;
+    font-family: "Anton", sans-serif;
+    padding: 20px;
+    
+
+  }
+}
