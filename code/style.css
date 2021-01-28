@@ -6,17 +6,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
   /* some styling here */
 
-
-
-/* .info {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}   */
-
-
 body {
   margin: 0;
 }
@@ -66,8 +55,8 @@ h1 {
 
 .big-container {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  border: solid 1px yellow;
 }
 
 /*** ACCORDION ***/
@@ -102,7 +91,6 @@ h1 {
 .acc-button + div {
   color:red;
 }
-
 
 .acc-button {
   background-color: gray;
@@ -142,6 +130,13 @@ h1 {
   margin-top: 6px;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .row:after {
   content: "";
   display: table; 
@@ -152,36 +147,34 @@ input [type=text], select {
   resize: vertical;
   width: 50%;
   height: 30px;
+  cursor: pointer;
 } 
+
+input [type=radio] {
+  cursor: pointer;
+}
 
 .text-field {
   width: 70%;
   height: 25px;
 }
 
-
-
 .btn {
   background-color: blueviolet;
   color: aqua;
   padding: 12px 20px;
   border: none;
+  cursor: pointer;
 }  
 
 
 label {
   width: 80%;
-  padding: 12px 12px 12px 0;
+  /* padding: 12px 12px 12px 0; */
   display: inline-block;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
 
 /*** MEDIA TABLET ***/
 
@@ -208,13 +201,16 @@ label {
 @media (min-with:1100px) {
   .form-container {
     width: 40%;
+    
   }
 
   .accordion {
     width: 40%;
+    
   }
 
   .big-container {
+    display: flex;
     flex-direction: row;
   }
 
