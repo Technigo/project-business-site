@@ -15,6 +15,7 @@ body {
   width:100vw;
   height: 100vh;
   object-fit: cover;
+  position:relative;
 }
 
 .hero-title {
@@ -31,6 +32,14 @@ body {
   font-weight: 100%
 }
 
+/*** FORMS LAYOUT ***/
+
+.forms {
+ display: flex;
+ justify-content: space-between;
+ flex-direction: column;
+}
+
 /*FORM*/
 
 form {
@@ -40,7 +49,7 @@ form {
   /* Form outline */
   padding: 1em;
   border: 1px solid #CCC;
-  border-radius: 1em;
+  border-radius: 7px;
 }
 
 input {
@@ -62,8 +71,34 @@ label {
 
 /* ACCORDION */
 
+.accordion {
+  border: 3px solid #CCC;
+  border-radius: 7px;
+}
+
+.accordion-header {
+  margin: 0;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.accordion-content {
+  display: none;
+  margin: 0;
+  padding: 10px;
+  border-top: 3px solid #CCC;
+}
+
+.accordion-selected {
+ display: block;
+}
 
 
 /*.active +.answer {
   /* some styling here */
 
+  @media (min-width: 640px) {
+    .forms {
+      flex-direction: row;
+    }
+  }
