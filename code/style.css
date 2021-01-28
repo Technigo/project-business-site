@@ -7,11 +7,10 @@ body {
 
 .background-img {
   background-image: url("Images/jeans.jpg");
-  width: 100vw;
-  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  /*position: absolute;*/
+  width: 100vw;
+  height: 100vh;
 }
 
 h2,
@@ -37,6 +36,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   width: 30px;
   height: 20px;
 }
@@ -54,9 +54,9 @@ p {
 
 .content a {
   font-family: 'Varela', sans-serif;
+  font-size: 10px;
   color: #fff;
   text-transform: uppercase;
-  font-size: 10px;
   text-decoration: none;
   text-shadow: 2px 2px 3px rgb(98, 93, 110);
 }
@@ -66,14 +66,14 @@ p {
 }
 
 .nav-sign-in {
-display: inline;
-align-self: flex-start;
+  display: inline;
+  align-self: flex-start;
 }
 
 .nav-sign-in a {
   font-family: 'Varela', sans-serif;
-  text-transform: uppercase;
   font-size: 10px;
+  text-transform: uppercase;
   text-decoration: none;
   color: rgb(45, 44, 51);
 }
@@ -85,10 +85,10 @@ align-self: flex-start;
   justify-content: center;
   align-items: center;
 
-  border: solid 3px black;
-  border-radius: 50%;
   width: 150px;
   height: 150px;
+  border: solid 3px black;
+  border-radius: 50%;
   background: #ffffff;
   margin: auto;
   margin-top: 80px;
@@ -110,17 +110,17 @@ align-self: flex-start;
 }
 
 .info h2 {
-  color: #fff;
   font-size: 25px;
-  margin: auto;
+  color: #fff;
   width: 90%;
+  margin: auto;
 }
 
 .info p {
-  color: #fff;
   font-size: 14px;
-  margin: auto;
+  color: #fff;
   width: 90%;
+  margin: auto;
 }
 
 /***** 5. SIGN UP BUTTON *****/
@@ -129,23 +129,24 @@ align-self: flex-start;
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 100vw;
   height: 70px;
+  background: #fff;
   position: fixed;
   bottom: 0;
   right: 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   box-shadow: 0 -2px 5px #3b383f;
-  background: #fff;
 }
 
 .sign-up {
   display: flex;
 
-  margin: auto;
   width: 80%;
   height: 50px;
+  margin: auto;
   border: solid 1px black;
   border-radius: 30px;
   background: rgb(91, 100, 107);
@@ -181,36 +182,36 @@ align-self: flex-start;
 
 
 .form-container {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
+  width: 100vw;
+  height: 100vh;
 }
 
 form {
-  background-image: url("Images/jeans.jpg");
-  background-size: cover;
-  border: solid 1px black;
-  border-radius: 10px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  color: #fff;
   width: 300px;
   height: 400px;
+  background-image: url("Images/jeans.jpg");
+  background-size: cover;
+  border: solid 1px black;
+  border-radius: 10px;
   margin: auto;
   font-family: 'Varela', sans-serif;
+  color: #fff;
 }
 
 .back {
-  color:#fff;
   align-self: flex-end;
   text-decoration: none;
+
+  color:#fff;
   margin-top: 5px;
   margin-right: 4px;
 }
@@ -232,6 +233,7 @@ input {
 .terms {
   font-size: 10px;
 }
+
 .terms a {
   color: #fff;
 }
@@ -239,37 +241,43 @@ input {
 .submit {
  width: 150px;
  background-color: cadetblue;
- font-family: 'Varela', sans-serif;
- color: #fff;
  text-transform: uppercase;
  border-radius: 10px;
  outline: none;
  border: solid 1px black;
+ font-family: 'Varela', sans-serif;
+ color: #fff;
  cursor: pointer;
 }
 
 .already-member {
-  font-size: 12px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items:flex-end;
+
+  font-size: 12px;
   width: 95%;
   margin-bottom: 5px;
 }
 
 .already-member a {
-  text-transform: uppercase;
   font-size: 12px;
   text-decoration: none;
+  text-transform: uppercase;
   color: #fff;
 }
 
+/***** 8. FOOTER *****/
+
+footer {
+  display: none;
+}
 
 
 /***** TABLET RESPONSIVE *****/
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
 /***** 1. GENERAL *****/
 
@@ -338,19 +346,13 @@ input {
   border-top-left-radius: none;
   border-top-right-radius: none;
   box-shadow: none;
-  display: flex;
-  justify-content:center;
-  align-items: center;
+
 }
 
 .sign-up {
   width: 90%;
   box-shadow: 2px 5px 5px rgb(66, 62, 62);
   margin-top: 20px;
-}
-
-button:hover {
-  cursor: pointer;
 }
 
 /***** 6. ACCORDION *****/
@@ -392,7 +394,6 @@ button:hover {
 
 .accordion-question {
   padding: 5px;
-  cursor: pointer;
   border-top: dashed 1px rgb(98, 100, 119);
 }
 
@@ -406,6 +407,19 @@ button:hover {
   display: block;
 }
 
+/***** 8. FOOTER *****/
+
+footer {
+  display: inline;
+
+  position:fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  color:rgb(91, 100, 107);
+  font-size: 8px;
+}
 }
 
 
@@ -533,4 +547,17 @@ button:hover {
   display: block;
 }
 
+/***** 8. FOOTER *****/
+
+footer {
+  display: inline;
+  
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  color:#fff;
+  font-size: 10px;
+}
 }
