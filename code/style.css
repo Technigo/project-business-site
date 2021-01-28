@@ -80,12 +80,26 @@ body {
   font-size: 14px;
 }
 
+.signup-text > p {
+  margin: 0;
+}
+
+.input-text > ul {
+  list-style: none;
+  text-align: left;
+  font-size: 12px;
+  padding: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 input[type=text] {
-  width: 85%;
+  width: 100%;
   padding: 3px 3px;
   box-sizing: border-box;
   border-radius: 5px;
   margin-top: 5px;
+  margin-bottom: 5px;
   background-color: #cad2c5;
   color: black;
 }
@@ -96,11 +110,12 @@ input[type=text]:focus {
 }
 
 input[type=email] {
-  width: 85%;
+  width: 100%;
   padding: 3px 3px;
   box-sizing: border-box;
   border-radius: 5px;
   margin-top: 5px;
+  margin-bottom: 5px;
   background-color: #cad2c5;
   color: black;
 }
@@ -111,12 +126,12 @@ input[type=email]:focus {
 }
 
 input[type=password] {
-  width: 85%;
+  width: 100%;
   padding: 3px 3px;
   box-sizing: border-box;
   border-radius: 5px;
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   background-color: #cad2c5;
   color: black;
 }
@@ -138,8 +153,7 @@ input[type=checkbox] {
 .terms {
   display: flex;
   font-size: 10px;
-  padding-left: 30px;
-  padding-bottom: 5px;
+  padding-left: 12px;
   text-align: left;
   line-height: 15px;
 }
@@ -156,7 +170,8 @@ input[type=checkbox] {
 .subscription {
   display: flex;
   font-size: 10px;
-  padding-left: 30px;
+  padding-left: 12px;
+  padding-top: 4px;
 }
 
 .subscription input {
@@ -182,9 +197,13 @@ input[type=radio] {
   justify-content: center;
 }
 
+.radiobutton-options > label {
+  padding: 0 5px 0 5px;
+}
+
 input[type=submit] {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 12px;
+  margin-bottom: 3px;
   background-color: #84a98c;
   outline: none;
   border-radius: 5px;
@@ -248,7 +267,7 @@ input:required:invalid:focus {
   background-color:rgba(107, 133, 112, 0.85);
   padding: 12px;
   font-weight: 100;
-  font-size: 16px;
+  font-size: 14px;
   border-bottom: 1px solid black;
 }
 
@@ -302,18 +321,27 @@ footer {
     width: 500px;
   }
 
+  .signup-text {
+    font-size: 16px;
+  }
+
   .terms {
-    padding-left: 35px;
+    padding-left: 15px;
   }
 
   .subscription {
-    padding-left: 35px;
+    padding-left: 15px;
   }
 
   .accordion-container {
     max-width: 500px;
     min-width: 500px;
   }
+
+  .accordion-question {
+    font-size: 16px;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -333,6 +361,19 @@ footer {
 
   .signup-container {
     width: 350px;
+    padding: 0 15px 0 15px;
+  }
+
+  .signup-text {
+    font-size: 12px;
+  }
+
+  .terms {
+    padding-left: 24px;
+  }
+
+  .subscription {
+    padding-left: 24px;
   }
 
   .radiobuttons-text {
@@ -343,5 +384,9 @@ footer {
   .accordion-container {
     max-width: 700px;
     min-width: 700px;
+  }
+
+  .accordion-question {
+    font-size: 14px;
   }
 }
