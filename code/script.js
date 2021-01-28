@@ -24,13 +24,13 @@ accordionHeader1.addEventListener('click', () => {
 });
 
 accordionHeader2.addEventListener('click', () => {
-  accordionContent1.classList.remove('accordion-selected');
-  accordionContent2.classList.add('accordion-selected');
-  accordionContent3.classList.remove('accordion-selected');
+   accordionContent1.classList.remove('accordion-selected');
+   accordionContent2.classList.add('accordion-selected');
+   accordionContent3.classList.remove('accordion-selected');
 });
 
 accordionHeader3.addEventListener('click', () => {
-  accordionContent1.classList.remove('accordion-selected');
-  accordionContent2.classList.remove('accordion-selected');
-  accordionContent3.classList.add('accordion-selected');
+   accordionContent1.classList.remove('accordion-selected');
+   accordionContent2.classList.remove('accordion-selected');
+   accordionContent3.classList.add('accordion-selected');
 });
