@@ -4,7 +4,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 body {
 margin: 0px;
-background-color: mistyrose;
+background-color: rgb(186, 186, 228);
 }
 
 /*HERO VIDEO SECTION*/
@@ -37,70 +37,165 @@ background-color: mistyrose;
 .welcome-title {
   font-family: "Caveat", cursive;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 60px;
+  cursor: crosshair;
+}
+
+.welcome-title:hover {
+  opacity: 0.5;
 }
 
 .welcome-sub {
   font-family: "Dosis", sans-serif;
+  cursor: crosshair;
+}
+
+.welcome-sub:hover {
+  opacity: 0.5;
 }
 
 /* MAIN SECTION */
 
 .main {
-  color: cornflowerblue;
+  color: rgb(186, 186, 228);
+  font-family: "Caveat", cursive;
   padding: 20px;
   text-align: center;
+  width: 300px;
+  margin: auto;
 }
 
 /* SIGN UP SECTION */
 
 .signup {
-  border: orchid;
-  border-width: 4px;
+  border: #999;
+  border-width: 8px;
   border-style: double;
   padding-bottom: 40px;
   border-radius: 8px;
+  margin-bottom: 15px;
+  padding-right: 10px;
+  padding-top: 20px;
+  background-color: mistyrose;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.forms {
+.birth-month {
+background-color:  rgb(186, 186, 228);
+}
+
+.color-header { 
+}
+
+.color {
+  background-color:  rgb(186, 186, 228);
+}
+
+.text {
+  background-color:  rgb(186, 186, 228);
+}
+
+.submit {
+  color: #999;
+  background-color: rgb(186, 186, 228);
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
   display: flex;
-  justify-content: space-around;
 }
 
 /* ACCORDION SECTION */
 
 .accordion {
-  border: orchid;
-  border-width: 4px;
+  border: #999;
+  border-width: 8px;
   border-style: double;
-    border-radius: 8px;
+  border-radius: 8px;
+  background-color: mistyrose;
+  padding-top: 20px;
 }
 
-.active + .answer {
-  /* some styling here */
+.accordionHeader {
+cursor: pointer;
+padding: 0px;
 }
+
+.accordionHeaderTwo {
+  cursor: pointer;
+  padding: 0px;
+}
+
+.answer {
+  display: none;
+}
+
+.answerTwo {
+  display: none;
+}
+
+.active {
+  display: contents;
+}
+
+.activeTwo {
+  display: contents;
+}
+
+
+/* FOOTER */
+
+.footer {
+  background-color: lightgray;
+  color: antiquewhite;
+  text-align: center;
+  padding: 15px;
+  font-family: fantasy;
+  margin-top: 26px;
+}
+
+/* .active + .answer {
+  /* some styling here */
+  /* display: block; */
+
 
 /* MEDIA QUERIES TABLET */
 @media (min-width: 768px) {
   .welcome-title {
-    font-size: 100px;
+    font-size: 150px;
+    margin: 0px;
   }
   .welcome-sub {
     font-size: 50px;
+    margin: 20px;
   }
 
   .main {
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
-    max-width: 768px;
+    width: 768px;
     margin: auto;
   }
 
   .signup {
     margin-right: 30px;
+    width: 50%;
+    height: 300px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+   }
+
+  .accordion {
+    width: 50%;
+    height: 300px;
+    font-size: 24px;
   }
- 
+
 }
 
 /* MEDIA QUERIES DESKTOP */
