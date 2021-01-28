@@ -48,25 +48,41 @@
       <section class="form-container">
         <form class="form" action="http://httpbin.org/anything" method="post">
           <h2 class="sign-up">Sign up</h2>
-          <label for="fullName">
+          <label class="input-label" for="fullName">
             Full Name
             <input class="input" type="text" name="fullName" placeholder=" ">
           </label>
-          <label for="email">
+          <label class="input-label" for="email">
             Email Address
             <input class="input"type="email" name="email" placeholder=" ">
           </label>
-          <label for="phone">
+          <label class="input-label" for="phone">
             Phone Number
             <input class="input"type="tel" name="phone" placeholder=" ">
           </label>
-          <label for="course">
+          <label class="input-experience" for="experience">
+            What is your experience with painting? <br>
+            <input type="radio" id="no" name="experience" value="no">
+            <label for="no">I have no experience</label><br>
+            <input type="radio" id="basic" name="experience" value="basic">
+            <label for="basic">I have some basic experience</label><br>
+            <input type="radio" id="advanced" name="experience" value="advanced">
+            <label for="advanced">I assess my skilss as advanced</label><br>
+          </label>
+          <label class="input-course" for="course">
             Choose your course
             <select class="course" name="course">
               <option value="day">Daytime course 11:00-14:00</option>
               <option value="evening">Evening course 18:00-21:00</option>
             </select>
           </label>
+          <label class="input-terms" for="terms">
+            <input type="checkbox" id="terms" name="terms" value="agree">
+            I agree to receive instructional and promotional emails.
+          </label>
+
+         
+
         <button class="submit-button" type="submit">Book your place</button>
         </form>
       </section>
