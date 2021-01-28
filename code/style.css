@@ -99,7 +99,7 @@ a:hover {
 }
 
 
-/*extra styling for different screens*/
+/*extra styling different screens*/
 @media (max-width: 767px){
   .imglogo {
     width: 25%;
@@ -117,12 +117,6 @@ a:hover {
   .header p {
     font-size: 10px;
   }
-  
-  /*.main {
-    display: block;
-    width: 100%;
-    height: auto;
-  }*/
 
   .form {
     width: 100%;
@@ -172,7 +166,7 @@ a:hover {
 }
 
 
-/*Styling for main section, including form and accordion*/
+/*Styling main section, including form and accordion*/
 
 .main {
   background-color: darkgrey;
@@ -184,17 +178,24 @@ a:hover {
 }
 
 .form {
-  display: block;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
   background-color: lightgrey;
   width: 40%;
   height: auto;
-  padding: 2%;
   margin: 10px;
   box-shadow:5px 5px rgba(0,0.15,0,0.15);
 }
 
+.form h2, h5 {
+  text-align: center;
+}
+
 input text {
-  width: 40%;
+  width: 80%;
 }
 
 input:valid {
@@ -203,8 +204,32 @@ input:valid {
   background-color: lightgreen;
 }
 
-.form h3, h6 {
-  text-align: center;
+.text-input {
+  display: block;
+}
+
+.name{
+  padding-bottom: 10px;
+}
+
+.select-menu-input {
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.radio-input {
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.checkbox-input {
+  padding-bottom: 20px;
+}
+
+.submit-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 button {
@@ -212,32 +237,35 @@ button {
   background-color: #E8A53A;
   width: 40%;
   height: auto;
+  border-radius: 15px;
+  padding: 5px;
+  margin: 20px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-/*.QandA {
-  display: block;
-  background-color: gray;
-  width: 40%;
-  height: auto;
-  padding: 1%;
-  margin: 10px;
-  box-shadow: 5px 5px rgba(0,0.15,0,0.15);
+button:hover {
+  opacity: 0.75;
 }
-
-.QandA h3 {
-  width: 100%;
-  height: auto;
-  text-align: center;
-}*/
 
 .QandA {
   display: block;
   background-color: lightgrey;
   width: 40%;
   height: auto;
-  padding: 2%;
   margin: 10px;
   box-shadow: 5px 5px rgba(0,0.15,0,0.15);
+}
+
+.accordion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+  width: 100%;
+}
+
+.QandA h2 {
+  text-align: center;
 }
 
 .accordion-item-header {
@@ -245,88 +273,48 @@ button {
   background-color: #E8A53A;
   width: 100%;
   height: auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
-.accordion-item-header::after {
+.accordion-item-header:hover {
+  opacity: 0.75;
+}
+
+.accordion-item-header::before {
   content: "+";
-  position: absolute;
+  font-size: 20px;
+  width: 20px;
+  padding-right: 4px;
+  padding-top: 17px;
 }
 
-.accordion-item-header.active::after {
-  content: "-";
+.accordion-item-header.active::before {
+  content: "-"; 
 }
 
 .accordion-item-body {
   display: none;
 }
 
+.accordion-item-body-content {
+  background-color: slategray;
+}
+
 .accordion-item-header.active + .accordion-item-body{
   display: block;
 }
 
-/*
-.accordion-topic {
- cursor: pointer;
-}
 
-
-.accordion-content{
-  display: none;
-}
-
-.accordion-selected{
-  display: block;
-}
-
-/*
-.accordion {
-  background-color:silver;
-  width: 40%;
-  height: auto;
-  margin: 10px;
-  box-shadow: 5px 5px rgba(0,0.15,0,0.15);
-}
-
-.accordion h3 {
-  text-align: center;
-}
-.accordionquestion {
-  background-color:darkgrey;
-  color: white;
-  cursor: pointer;
-  padding: 20px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-}
-
-.active, .accordionquestion:hover {
-  background-color: slategray;
-}
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
-}
-.accordion:after {
-  content: '\02795'; Unicode character for "plus" sign (+) 
-  font-size: 13px;
-  color: #777;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2796"; Unicode character for "minus" sign (-) 
-}*/
+/*Styling footer*/
 
 .footer {
   display: flex;
   flex-wrap: wrap;
   background-color: slategray;
   font-family: 'Roboto', sans-serif;
+  font-size: 14px;
   justify-content: center;
 }

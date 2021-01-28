@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,9 +11,13 @@
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
   </head>
 
+
   <body>
+
     <!-- video or image as a header is cool :) -->
     <header class="header">
       
@@ -48,88 +53,82 @@
     </header>
 
     <div class="main">
+
     <!-- Signup form -->
       <section class="form">
         <form action="http://httpbin.org/anything" method="POST">
       
-        <h3>Sign up here!</h3>
-        <h6>To get more information and notification alernatives.</h6>
+        <h2>Sign up here!</h2>
+        <h5>To get more information and notification alernatives.</h5>
      
-        <label>
-          Name<br>
-          <input type="text" name="message" required><br>
-        </label>
-
-        <label>
-          email<br>
-          <input type="email" name="email" required><br>
-        </label>
-
-        <label>
-          Course Location:<br>
-          <select name="Course Location" id=""><br>
-            <option value="Stockholm">Stockholm</option><br>
-            <option value="Gothenburg">Gothenburg</option><br>
-            <option value="Malmo">Malmo</option><br>
-          </select>
-        </label><br>
-
-        <label>
-          What type of information would you like to recieve?
-         
-          <label><br>
-            <input type="radio" name="WeeklyNewsletter">
-            Weekly Newsletter
+        <div class= "text-input">
+          <label class="name">
+            Name<br>
+            <input type="text" name="message" required></input><br>
           </label>
 
-          <label><br>
-            <input type="radio" name="Courseinfo">
-            Course Information
+          <label class="e-mail">
+            E-mail<br>
+            <input type="email" name="email" required><br>
           </label>
+        </div>
 
-          <label><br>
-            <input type="radio" name="ApplicationPapers">
-            Application Papers
+        <div class="select-menu-input">
+          <label>
+            Course Location:<br>
+            <select class="selection" name="location" id=""><br>
+              <option value="Stockholm">Stockholm</option><br>
+              <option value="Gothenburg">Gothenburg</option><br>
+              <option value="Malmo">Malmo</option><br>
+            </select>
+          </label><br>
+        </div>
+
+        <div class="radio-input">
+          <label>
+            What type of information would you like to recieve?
+          
+            <label><br>
+              <input type="radio" name="WeeklyNewsletter">
+              Weekly Newsletter
+            </label>
+
+            <label><br>
+              <input type="radio" name="Courseinfo">
+              Course Information
+            </label>
+
+            <label><br>
+              <input type="radio" name="ApplicationPapers">
+              Application Papers
+            </label>
+
+            <label><br>
+              <input type="radio" name="MonthlyNewsletter">
+              Monthly Newsletter
+            </label>
+
           </label>
+        </div>
 
+        <div class="checkbox-input">
           <label><br>
-            <input type="radio" name="MonthlyNewsletter">
-            Monthly Newsletter
+            <input type="checkbox" name="consent" required>
+            I consent to terms of use and privacy policy
           </label>
+        </div>
 
-        </label>
+        <div class="submit-button">
+          <button type="submit">Sign up</button>
+        </div>
 
-        <label><br>
-          I consent to terms of use and privacy policy
-          <input type="checkbox" name="consent" required>
-        </label>
-
-        <button type="submit">Sign up</button>
-
+        </form>
       </section>
-    
-<!-- Accordion
-      <section class="QandA">
-        <h3>Common questions and answers</h3>
-        
-        <div class="accordion">
-          <h4 id="accordion-topic-one" class="accordion-topic">Pricing</h4>
-          <p id="accordion-content-one" class="accordion-content">The cost...</p>
-        </div>
-        <div class="accordion">
-          <h4 id="accordion-topic-two" class="accordion-topic">Course options</h4>
-          <p id="accordion-content-two" class="accordion-content">We offer...</p>
-        </div>
-        <div class="accordion">
-          <h4 id="accordion-topic-three" class="accordion-topic">Application deadline</h4>
-          <p id="accordion-content-three" class="accordion-content">You apply...</p>
-        </div>
-      </section>-->
 
-     
+      <!--Accordion-->
       <section class="QandA">
       <div class=”accordion”>
-        <h1>Rubrik</h1>
+        <h2>Common questions</h2>
           <div class="accordion-item">
               <div class="accordion-item-header">
                   <h4>Pricing</h4>
@@ -164,55 +163,14 @@
           </div>
   
         </div>
-        </section>
-
-<!--
-      <div class="accordionquestion2">Course options</div>
-          <p>We offer...</p>
-        </div>
-
-      <div class="accordionquestion3">Application deadline</div>
-          <p>You apply...</p>
-        </div>-->
-
-
-      <!--<h3>Common Questions</h3>
-     
-      <button class="accordionquestion">Pricing</button>
-        <div class="panel">
-          <p>The cost...</p>
-        </div>
-
-      <button class="accordionquestion">Course options</button>
-        <div class="panel">
-          <p>We offer...</p>
-        </div>
-
-      <button class="accordionquestion">Application deadline</button>
-        <div class="panel">
-          <p>You apply...</p>
-        </div>-->
-
-        <!--<h1>FAQ</h1>
-
-        <div class="question" id="section1">Section 1</div>
-        
-        <div class="answer">
-          <p>Lorem ipsum...</p>
-        </div>
-
-        <div class="question" id="section2">Section 2</div>
-        
-        <div class="answer">
-          <p>Lorem ipsum...</p>
-        </div>
-
-      </section>-->
+        </section> 
     </div>
 
     <!-- dont forget to link the javascript file here! -->
   <script src="./script.js">
   </script>
+
+  <!--Footer-->
     <section class="footer">
       <p> &#169 2021 Binder's Club. All rights reserved.</p>
     </section>

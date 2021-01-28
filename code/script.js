@@ -8,26 +8,6 @@
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
 document.getElementById("section1").onclick = toggle*/
 
-//const accordionTopicOne = document.getElementById("accordion-topic-one");
-//const accordionTopicTwo = document.getElementById("accordion-topic-two");
-//const accordionTopicThree = document.getElementById("accordion-topic-three");
-//const accordionContentOne = document.getElementById("accordion-content-one");
-//const accordionContentTwo = document.getElementById("accordion-content-two");
-//const accordionContentThree = document.getElementById("accordion-content-three");
-//console.log(accordionTopicOne);//
-
-//accordionTopicOne.addEventListener('click', () => {
-  //accordionContentOne.classList.toggle("accordion-selected");
-//});
-
-//accordionTopicTwo.addEventListener('click', () => {
-  //accordionContentTwo.classList.toggle("accordion-selected");
-//});
-
-//accordionTopicThree.addEventListener('click', () => {
-  //accordionContentThree.classList.toggle("accordion-selected");
-//});
-
 const accordionItemHeader = document.querySelectorAll(".accordion-item-header");
 
 accordionItemHeader.forEach(accordionItemHeader => {
