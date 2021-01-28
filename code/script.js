@@ -13,6 +13,9 @@
 
 //selects all .question
 
+
+// ACCORDION //
+
 const faqQuestions = document.querySelectorAll(".accordion .question"); 
 faqQuestions.forEach(addClickEvent);
 
