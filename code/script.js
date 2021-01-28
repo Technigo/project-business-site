@@ -16,6 +16,12 @@ for (let i = 0; i < accordionDisplay.length; i++) {
 if (navButton.style.display = "block") {
   navButton.addEventListener("click", () => {
     navMenu.classList.toggle("nav__menu--active");
+    if(navMenu.classList.contains("nav__menu--active")){
+      navButton.style.backgroundColor="#4C3F88";
+    }
+    else {
+      navButton.style.backgroundColor="#ffffff00";
+    }
   })
 }
 

@@ -11,6 +11,10 @@ body {
   /*custom cursor*/
 }
 
+p { 
+  font-size: 20px;
+}
+
 .header {
   height: 100vh;
   width: 100%;
@@ -34,7 +38,7 @@ body {
 .header__buzz__word {
   display: inline-block;
   font-family: 'Indie Flower', cursive;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 /*makes buzzword 1 styled in a specific way*/
@@ -222,12 +226,11 @@ body {
 
 .nav__menu {
   display: flex;
+  position: absolute;
   justify-content: space-evenly;
   width: 100%;
-  z-index: 1;
+  z-index: 0.99;
   background: white;
-  padding: 0;
-  margin: 0;
 }
 
 .nav__link {
@@ -244,6 +247,8 @@ body {
 .nav__button {
   position: relative;
   display: none;
+  z-index:1;
+  border-radius: 4px;
 }
 
 .nav__button img {
@@ -265,15 +270,15 @@ body {
 /* wrapper for section */
 .signup {
   position: relative;
-  margin-top: 40px;
   display: flex;
   justify-content: space-evenly;
+  margin-top: 40px;
   width: 80%;
   height: fit-content;
   border: solid rgb(255, 255, 255);
   background-color: rgb(46, 157, 165);
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
@@ -284,7 +289,6 @@ body {
   font-weight: 500;
 }
 
-/* adding active on hovers only for mobile purpose */
 .signup a:hover {
   background: rgb(5, 85, 85);
   color: white;
@@ -333,9 +337,8 @@ body {
 
 .signup__form input[type=submit] {
   background-color: rgb(42, 138, 145);
-  font-size: 18px;
+  font-size: 20px;
   color: rgb(255, 255, 255);
-  border: solid white 0.5px;
   border: double white;
   margin: 20px 0;
   display: block;
@@ -370,10 +373,6 @@ body {
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 18px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -397,26 +396,6 @@ body {
   border-radius: 4px;
 }
 
-/*show nothing when the checkbox/radio is not clicked */
-.signup__check__radio:after,
-.signup__check__box:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/*when the checkbox/radio is checked the background color changes */
-.signup__check input:checked~.signup__check__radio,
-.signup__check input:checked~.signup__check__box {
-  background-color: rgb(5, 85, 85);
-}
-
-/* when the checkbox/radio is checked, show an marker in it */
-.signup__check input:checked~.signup__check__radio:after,
-.signup__check input:checked~.signup__check__box:after {
-  display: block;
-}
-
 /*styling of marker in radiobutton */
 .signup__check .signup__check__radio:after {
   border-radius: 50%;
@@ -435,6 +414,26 @@ body {
   height: 10px;
   left: 4px;
   transform: rotate(45deg);
+}
+
+/*show nothing when the checkbox/radio is not clicked */
+.signup__check__radio:after,
+.signup__check__box:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* when the checkbox/radio is checked, show an marker in it */
+.signup__check input:checked~.signup__check__radio:after,
+.signup__check input:checked~.signup__check__box:after {
+  display: block;
+}
+
+/*when the checkbox/radio is checked the background color changes */
+.signup__check input:checked~.signup__check__radio,
+.signup__check input:checked~.signup__check__box {
+  background-color: rgb(5, 85, 85);
 }
 
 .signup__image {
@@ -464,7 +463,6 @@ select {
   justify-content: space-between;
   width: 80%;
   color: white;
-  font-size: 18px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -503,6 +501,7 @@ select {
 /* the expanding section of accordion is hidden when not active */
 .accordion__expand {
   height: 0;
+  border: none;
   overflow-y: hidden;
   background-color: rgb(76, 63, 136);
 }
@@ -511,6 +510,7 @@ select {
 (in this case accordion__expand) */
 .active+div {
   height: 200px;
+  border: solid white 0.5px;
   margin: 10px;
   overflow-y: auto;
   transition: height 0.5s ease-in-out;
@@ -591,8 +591,9 @@ select {
 }
 
 .footer p {
-  font-size: 12px;
+  font-size: 14px;
   color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* container for a simplified company logo in the footer*/
@@ -630,6 +631,18 @@ select {
 @media screen and (device-width: 1024px),
 (max-width:1024px) {
 
+  p {
+    font-size: 16px;
+  }
+
+  .header__logo h1:before {
+    font-size: 70px;
+  }
+
+  .header__buzz__word {
+    font-size: 30px;
+  }
+
   .header__img--20-50 {
     width: 50%;
     min-width: 50%;
@@ -638,6 +651,10 @@ select {
   .header__img--30-0 {
     display: none;
     width: 0;
+  }
+
+  .signup {
+    font-size: 16px;
   }
 
   .accordion {
@@ -656,14 +673,21 @@ select {
 @media screen and (device-width: 600px),
 (max-width:600px) {
 
+  p {
+    font-size: 14px;
+  }
+
   .header__logo {
-    font-size: 20px;
     margin-top: 0;
     align-items: flex-end;
   }
 
-  .header__buzzwords h2 {
-    font-size: 20px;
+  .header__logo h1:before {
+    font-size: 60px;
+  }
+
+  .header__buzz__word {
+    font-size: 25px;
   }
 
   .nav__button {
@@ -698,6 +722,7 @@ select {
     flex-direction: column;
     width: 100%;
     height: fit-content;
+    font-size: 14px;
   }
 
   /* makes the signup form image rectangular */
@@ -711,7 +736,6 @@ select {
     width: 100%;
     align-items: center;
     order: 2;
-    font-size: 14px;
   }
 
   .accordion {
@@ -719,7 +743,6 @@ select {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    font-size: 14px;
   }
 
   .accordion__section {
