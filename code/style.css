@@ -22,6 +22,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .header {
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .nav {
@@ -100,7 +101,7 @@ a:hover {
 
 
 /*extra styling different screens*/
-@media (max-width: 767px){
+@media (max-width: 768px){
   .imglogo {
     width: 25%;
     height: auto;
@@ -129,7 +130,7 @@ a:hover {
   }
 }
 
-@media (min-width: 768px){
+/*@media (min-width: 768px){
   .headline {
     margin-top: 25%;
   }
@@ -145,7 +146,7 @@ a:hover {
   .nav {
     display: none;
   } 
-}
+}*/
 
 @media (min-width: 769px){
   .hamburger div{
@@ -169,46 +170,45 @@ a:hover {
 /*Styling main section, including form and accordion*/
 
 .main {
-  background-color: darkgrey;
+  background-color:darkgray;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 2%;
+  margin-bottom:4px;
+ 
 }
 
 .form {
-  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  background-color: lightgrey;
+  background-color: lightgray;
   width: 40%;
   height: auto;
   margin: 10px;
   box-shadow:5px 5px rgba(0,0.15,0,0.15);
+  
 }
 
 .form h2, h5 {
   text-align: center;
+ 
+  
 }
 
 input text {
   width: 80%;
+  
 }
 
 input:valid {
-  border-radius: 1px;
-  font-size: 15px;
   background-color: lightgreen;
 }
 
-.text-input {
-  display: block;
-}
-
-.name{
+.name {
   padding-bottom: 10px;
 }
 
@@ -242,6 +242,7 @@ button {
   margin: 20px;
   font-size: 18px;
   cursor: pointer;
+  
 }
 
 button:hover {
@@ -250,7 +251,7 @@ button:hover {
 
 .QandA {
   display: block;
-  background-color: lightgrey;
+  background-color:lightgray;
   width: 40%;
   height: auto;
   margin: 10px;
@@ -276,7 +277,8 @@ button:hover {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
+  margin-top: 10px;
 }
 
 .accordion-item-header:hover {
@@ -297,10 +299,19 @@ button:hover {
 
 .accordion-item-body {
   display: none;
+  
 }
 
 .accordion-item-body-content {
   background-color: slategray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 10px;
+  color: white;
+ 
+
 }
 
 .accordion-item-header.active + .accordion-item-body{
@@ -317,4 +328,6 @@ button:hover {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   justify-content: center;
+  color: white;
+  padding: 20px 0 20px 0;
 }
