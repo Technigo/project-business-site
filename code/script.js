@@ -1,9 +1,29 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-function toggle() {
-  this.classList.toggle("active")
-}
+const header1 = document.getElementById("header1");
+const content1 = document.getElementById('content1');
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
+const header2 =document.getElementById("header2");
+const content2 = document.getElementById('content2');
+
+const header3 = document.getElementById("header3");
+const content3 = document.getElementById('content3');
+
+const header4 = document.getElementById("header4");
+const content4 = document.getElementById('content4');
+
+
+header1.addEventListener('click', () => {
+    content1.classList.toggle("content-selected");
+});
+
+header2.addEventListener('click', () => {
+    content2.classList.toggle("content-selected");
+});
+
+header3.addEventListener('click', () => {
+    content3.classList.toggle("content-selected");
+});
+
+header4.addEventListener('click', () => {
+    content4.classList.toggle("content-selected");
+});
+
