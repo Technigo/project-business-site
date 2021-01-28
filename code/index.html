@@ -16,41 +16,29 @@
       <h2 class="header__buzz__word">be brave</h2>
       <h2 class="header__buzz__word">be bold</h2>
     </div>
-    <container
-      class="header__img header__img--small header__img--animation-up header__img--animation-short header__img--desktop ">
-      <img class="header__img" src="./images/hearthair1920px.jpg" alt="woman with long flowing on the floor">
-    </container>
-    <container
-      class="header__img header__img--medium header__img--animation-down header__img--animation-long header__img--mobile">
-      <img class="header__img" src="./images/leftMobile.png" alt="pruple haired woman">
-    </container>
-    <container
-      class="header__img header__img--xs header__img--animation-down header__img--animation-long header__img--desktop .header__img--tablet ">
-      <img class="header__img" src="./images/leftDesktop.png" alt="pruple haired woman">
-    </container>
-    <container
-      class="header__img header__img--medium header__img--animation-up header__img--animation-long header__img--mobile">
-      <img class="header__img" src="./images/rightMobile.png" alt="brown/green ombre haired woman">
-    </container>
-    <container
-      class="header__img header__img--xs header__img--animation-up header__img--animation-long  header__img--desktop .header__img--tablet">
-      <img class="header__img" src="./images/rightDesktop.png" alt="brown/green ombre haired woman">
-    </container>
-    <container
-      class="header__img header__img--small header__img--animation-down header__img--animation-short header__img--desktop">
-      <img class="header__img" src="./images/flowyhair1920px.jpg" alt="pink haired woman tosses head back">
-    </container>
-    </div>
+    <picture class="header__img header__img--30-0 header__img--animation-up header__img--animation-short">
+      <img class="header__img__src" src="./images/hearthair1920px.jpg" alt="woman with long flowing on the floor">
+    </picture>
+    <picture class="header__img header__img--20-50 header__img--animation-down header__img--animation-long">
+      <source media="(max-width: 1024px) and (max-device-width: 1024px)" srcset="./images/leftMobile.png ">
+      <img class="header__img" src="./images/leftDesktop.png" alt="Image description">
+    </picture>
+    <picture class="header__img header__img--20-50 header__img--animation-up header__img--animation-long">
+      <source media="(max-width: 1024px)" srcset="./images/rightMobile.png">
+      <img class="header__img" src="./images/rightDesktop.png" alt="Image description">
+    </picture>
+    <picture class="header__img header__img--30-0 header__img--animation-down header__img--animation-short">
+      <img class="header__img__src" src="./images/flowyhair1920px.jpg" alt="pink haired woman tosses head back">
+    </picture>
     <div class="header__logo">
       <h1 class="header__logo__text"></h1>
     </div>
   </header>
 
   <nav class="nav">
-    <container class="nav__button"> <img src="./images/menu.png"></container>
-    </div>
     <!-- Sticky navbar under hero-->
     <div class="nav__wrapper">
+    <container class="nav__button"> <img src="./images/menu.png"></container>
       <div class="nav__menu">
         <a class="nav__link" href="releases">New releases</a>
         <a class="nav__link" href="products">Products</a>
@@ -67,23 +55,31 @@
       <div class="signup__inner">
         <h2>Sign Up!</h2>
         <form class="signup__form" action="https://httpbin.org/anything" method="POST">
-          <label for="fname">First Name:</label>
-          <input type="text" id="fname" name="fname" placeholder="Nano" required>
-          <label for="lname">Last Name:</label>
-          <input type="text" id="lname" name="lname" placeholder="McColors">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Nano@colors.com" required>
+          <fieldset><legend><label for="fname">First Name</label></legend>
+          <input type="text" id="fname" name="fname" placeholder="Nano" required></fieldset>
+          <fieldset><legend><label for="lname">Last Name</label></legend>
+          <input type="text" id="lname" name="lname" placeholder="McColors"></fieldset>
+          <fieldset><legend><label for="email">E-mail</label></legend>
+          <input type="email" id="email" name="email" placeholder="Nano@colors.com" required></fieldset>
           <div><label class="signup__check" for="woman">Woman<input type="radio" id="woman" name="gender">
               <span class="signup__check__radio"></span></label></div>
           <div><label class="signup__check" for="man">Man<input type="radio" id="man" name="gender">
               <span class="signup__check__radio"></span></label></div>
           <div><label class="signup__check" for="other">Other<input type="radio" id="other" name="gender">
               <span class="signup__check__radio"></span></label></div>
+<<<<<<< HEAD
           <label for="user">Username:</label>
           <input type="text" id="user" name="user" placeholder="You Username" required>
           <label for="pwd">Password:</label>
           <input type="password" id="pwd" name="pwd" placeholder="You Password" minlength="4" maxlength="8"
             required><br>
+=======
+              <fieldset><legend><label for="user">Username</label></legend>
+          <input type="text" id="user" name="user" placeholder="You Username" required></fieldset>
+          <fieldset><legend><label for="pwd">Password</label></legend>
+          <input type="password" id="pwd" name="pwd" placeholder="You Password" minlength="4" maxlength="8"
+            required></fieldset><br>
+>>>>>>> 3cb5859dbf7b726c5b0fc493f81c8404fe39d586
           <label for="option">Where did you hear of us?</label>
           <select name="option">
             <option value="google">Google</option>
@@ -98,12 +94,17 @@
               I agree to the <a href="">privacy policy</a></label></div>
           <div><label for="subscribe" class="signup__check"><input type="checkbox" id="subscribe" name="subscribe"
                 required>
+<<<<<<< HEAD
               <span class="signup__check__box"></span>I would like to get weekly e-mail updates </label>
+=======
+              <span class="signup__check__box"></span>I ubscribe to the newsletter </label>
+>>>>>>> 3cb5859dbf7b726c5b0fc493f81c8404fe39d586
           </div>
           <input type="submit" value="Sign Up">
         </form>
         <p>Already a member? Login <a href="login" target="blank">here</a></p>
       </div>
+<<<<<<< HEAD
       <!-- Image next to (desktop) or on top of (mobile) form-->
       <container class="signup__image  signup__image--desktop">
         <img class="signup__image" src="./images/colors1920px.jpg" alt="clouds of colors">
@@ -113,6 +114,14 @@
       </container>
       <container class="signup__image signup__image--landscape signup__image--mobile signup__image--first">
         <img class="signup__image" src="./images/colors640px.jpg" alt="clouds of colors">
+=======
+      <!-- Image with responsive sizes next to (desktop/tablet) or on top of (mobile) form-->
+      <container class="signup__image">
+        <img srcset="./images/colors1240px.jpg 1367w, ./images/colors1920px.jpg 2000w, 
+        ./images/colors640px.jpg 640w, ./images/colors350px 320w" sizes="(min-width: 1367px) 1367px, 2000px"
+          sizes="(max-width: 1366px) 640px" sizes="(max-width: 600px) 320px" src="./images/colors1920px.jpg"
+          alt="Clouds of colors">
+>>>>>>> 3cb5859dbf7b726c5b0fc493f81c8404fe39d586
       </container>
     </section>
 

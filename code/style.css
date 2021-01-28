@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Libre+Barcode+128+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Libre+Barcode+128+Text&display=swap&family=Raleway:wght@300&display=swap');
 
 body {
   padding: 0;
@@ -9,6 +9,14 @@ body {
   background-color: rgb(192, 250, 235);
   cursor: url(./images/cursor.png) 1 1, pointer;
   /*custom cursor*/
+<<<<<<< HEAD
+=======
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  font-size: 18px;
+>>>>>>> 3cb5859dbf7b726c5b0fc493f81c8404fe39d586
 }
 
 .header {
@@ -34,7 +42,7 @@ body {
 .header__buzz__word {
   display: inline-block;
   font-family: 'Indie Flower', cursive;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 /*makes buzzword 1 styled in a specific way*/
@@ -66,31 +74,14 @@ body {
   object-fit: cover;
 }
 
-/*img shows only on desktop */
-.header__img--desktop {
-  display: block;
-}
-
-/* only tablet */
-.header__img--tablet {
-  display: none;
-}
-
-/* img shows only on mobile */
-.header__img--mobile {
-  display: none;
-}
-
-.header__img--xs {
+/*resizes 20% on desktop and 50% on tablet/mobile */
+.header__img--20-50 {
   width: 20%;
 }
 
-.header__img--small {
+/*resizes 30% on desktop and none on tablet/mobile*/
+.header__img--30-0 {
   width: 30%;
-}
-
-.header__img--medium {
-  width: 50%;
 }
 
 .header__img--animation-down {
@@ -239,12 +230,11 @@ body {
 
 .nav__menu {
   display: flex;
+  position: absolute;
   justify-content: space-evenly;
   width: 100%;
-  z-index: 1;
+  z-index: 0.99;
   background: white;
-  padding: 0;
-  margin: 0;
 }
 
 .nav__link {
@@ -254,13 +244,14 @@ body {
   align-items: center;
   justify-content: center;
   color: rgb(46, 157, 165);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /*button for drop-down menu. */
 .nav__button {
   position: relative;
   display: none;
+  z-index: 1;
+  border-radius: 4px;
 }
 
 .nav__button img {
@@ -282,17 +273,21 @@ body {
 /* wrapper for section */
 .signup {
   position: relative;
-  margin-top: 40px;
   display: flex;
   justify-content: space-evenly;
+  margin-top: 40px;
   width: 80%;
   height: fit-content;
   border: solid rgb(255, 255, 255);
   background-color: rgb(46, 157, 165);
   color: white;
+<<<<<<< HEAD
   font-size: 18px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
+=======
+  font-size: 20px;
+>>>>>>> 3cb5859dbf7b726c5b0fc493f81c8404fe39d586
 }
 
 .signup a {
@@ -301,7 +296,6 @@ body {
   font-weight: 500;
 }
 
-/* adding active on hovers only for mobile purpose */
 .signup a:hover {
   background: rgb(5, 85, 85);
   color: white;
@@ -324,43 +318,92 @@ body {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  width: 250px;
+  width: 300px;
   height: fit-content;
 }
 
-.signup__form input {
-  border: solid white;
+/* styling the input boxes with fieldset*/
+.signup fieldset {
+  padding: 0;
+  margin: 10px 0;
+  background-color: white;
+  border:none;
   border-radius: 10px;
-  margin-top: 5px;
-  color: rgb(128, 45, 167);
-  font-weight: bold;
-  margin-bottom: 10px;
 }
 
-/* on hover and focus , the input get another bg-color */
-.signup__form input:focus,
-.signup__form input:hover {
+/* on hover and focus , the fieldset get another bg-color */
+.signup fieldset:hover, 
+.signup fieldset:focus {
   background-color: rgb(158, 203, 211);
   outline: none;
 }
 
-::placeholder {
-  color: rgba(7, 59, 63, 0.603);
+.signup legend {
+  font-weight: bolder;
+  background-color: rgb(46, 157, 165);
+  border-radius: 5px;;
+  border: solid rgb(255, 255, 255);
+  font-size: 16px;
+  padding:2px 5px;
 }
 
-.signup__form input[type=submit] {
+.signup input {
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  width: 300px;
+  font-size: 16px;
+  color: rgb(128, 45, 167);
+  font-weight: bold;
+  background-color: rgba(0, 139, 139, 0);
+}
+
+<<<<<<< HEAD
+/* on hover and focus , the input get another bg-color */
+.signup__form input:focus,
+.signup__form input:hover {
+  background-color: rgb(158, 203, 211);
+=======
+.signup input:hover {
+  background-color:  rgb(158, 203, 211);
+}
+
+.signup input:focus {
+>>>>>>> 3cb5859dbf7b726c5b0fc493f81c8404fe39d586
+  outline: none;
+}
+
+
+::placeholder {
+<<<<<<< HEAD
+  color: rgba(7, 59, 63, 0.603);
+=======
+  color: rgba(7, 59, 63, 0.384);
+>>>>>>> 3cb5859dbf7b726c5b0fc493f81c8404fe39d586
+}
+
+.signup input[type=submit] {
   background-color: rgb(42, 138, 145);
-  font-size: 18px;
+  font-size: 20px;
   color: rgb(255, 255, 255);
-  border: solid white 0.5px;
   border: double white;
   margin: 20px 0;
+  padding: 10px;
+  height: fit-content;
+  border-radius: 50px;
   display: block;
   width: fit-content;
   align-self: center;
+  box-shadow: 1px 1px 2px 1px rgb(24, 14, 37);
 }
 
-.signup__form input[type=submit]:hover {
+/* makes the button look like a 3d button getting pressed down when active */
+.signup input[type=submit]:active {
+  transform: translateY(10%);
+  box-shadow: 0px 0px 2px 1px rgb(24, 14, 37);
+}
+
+.signup input[type=submit]:hover {
   background-color: rgb(5, 85, 85);
 }
 
@@ -387,10 +430,6 @@ body {
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 18px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -414,6 +453,7 @@ body {
   border-radius: 4px;
 }
 
+<<<<<<< HEAD
 /*show nothing when the checkbox/radio is not clicked */
 .signup__check__radio:after,
 .signup__check__box:after {
@@ -434,6 +474,8 @@ body {
   display: block;
 }
 
+=======
+>>>>>>> 3cb5859dbf7b726c5b0fc493f81c8404fe39d586
 /*styling of marker in radiobutton */
 .signup__check .signup__check__radio:after {
   border-radius: 50%;
@@ -452,6 +494,29 @@ body {
   height: 10px;
   left: 4px;
   transform: rotate(45deg);
+<<<<<<< HEAD
+=======
+}
+
+/*show nothing when the checkbox/radio is not clicked */
+.signup__check__radio:after,
+.signup__check__box:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* when the checkbox/radio is checked, show an marker in it */
+.signup__check input:checked~.signup__check__radio:after,
+.signup__check input:checked~.signup__check__box:after {
+  display: block;
+}
+
+/*when the checkbox/radio is checked the background color changes */
+.signup__check input:checked~.signup__check__radio,
+.signup__check input:checked~.signup__check__box {
+  background-color: rgb(5, 85, 85);
+>>>>>>> 3cb5859dbf7b726c5b0fc493f81c8404fe39d586
 }
 
 .signup__image {
@@ -474,21 +539,6 @@ select {
   margin-bottom: 20px;
 }
 
-/*shows image on desktop mode */
-.signup__image--desktop {
-  display: block;
-}
-
-/* only tablet */
-.signup__image--tablet {
-  display: none;
-}
-
-/*only mobile*/
-.signup__image--mobile {
-  display: none;
-}
-
 /* section for all accordions */
 .accordion {
   margin: 40px 0;
@@ -496,8 +546,10 @@ select {
   justify-content: space-between;
   width: 80%;
   color: white;
-  font-size: 18px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.accordion h2 {
+  font-size: 22px;
 }
 
 .accordion p {
@@ -535,7 +587,8 @@ select {
 /* the expanding section of accordion is hidden when not active */
 .accordion__expand {
   height: 0;
-  visibility: hidden;
+  border: none;
+  overflow-y: hidden;
   background-color: rgb(76, 63, 136);
 }
 
@@ -543,10 +596,10 @@ select {
 (in this case accordion__expand) */
 .active+div {
   height: 200px;
+  border: solid white 0.5px;
   margin: 10px;
   overflow-y: auto;
   transition: height 0.5s ease-in-out;
-  visibility: visible;
 }
 
 /* +/- button for accordion expand/collapse. Put the cursor to a pointer as it was an text-cursor*/
@@ -561,6 +614,7 @@ select {
   text-align: center;
   background-color: rgb(62, 54, 109);
   cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* makes the button look like a 3d button getting pressed down when active */
@@ -624,7 +678,7 @@ select {
 }
 
 .footer p {
-  font-size: 12px;
+  font-size: 14px;
   color: white;
 }
 
@@ -633,6 +687,7 @@ select {
   margin-left: 10px;
   font-family: 'Libre Barcode 128 Text', cursive;
   color: rgb(16, 22, 110);
+  width: 80px;
 }
 
 /* wrapper for the social media icons*/
@@ -660,37 +715,46 @@ select {
 }
 
 /*breakpoint at the largest tablets*/
-@media screen and (device-width: 1366px),
-(max-width:1366px) {
+@media screen and (device-width: 1024px),
+(max-width:1024px) {
 
-  .header__img {
+  p {
+    font-size: 16px;
+  }
+
+  .header__logo h1:before {
+    font-size: 70px;
+  }
+
+  .header__buzz__word {
+    font-size: 30px;
+  }
+
+  .header__img--20-50 {
     width: 50%;
+    min-width: 50%;
   }
 
-  .header__img--tablet {
-    display: block;
-  }
-
-  /* reusing 2 pictures, so they should not get display:none. targeting those that should */
-  .header__img--desktop:nth-of-type(1),
-  .header__img--desktop:nth-of-type(6) {
+  .header__img--30-0 {
     display: none;
+    width: 0;
   }
 
-  .header__img--mobile {
-    display: none;
+  .signup {
+    font-size: 16px;
   }
 
-  .signup__image--tablet {
-    display: block;
+  .signup legend {
+    font-size: 14px;
+    font-weight: bold;
   }
 
-  .signup__image--desktop {
-    display: none;
+  .signup input {
+    font-size: 14px;
   }
 
-  .signup__image--mobile {
-    display: none;
+  .signup input[type=submit] {
+    font-size: 18px;
   }
 
   .accordion {
@@ -704,27 +768,30 @@ select {
     width: 100%;
     margin-bottom: 40px;
   }
+
+  .accordion h2 {
+    font-size: 18px;
+  }
 }
 
 @media screen and (device-width: 600px),
 (max-width:600px) {
 
+  p {
+    font-size: 14px;
+  }
+
   .header__logo {
-    font-size: 20px;
     margin-top: 0;
     align-items: flex-end;
   }
 
-  .header__buzzwords h2 {
-    font-size: 20px;
+  .header__logo h1:before {
+    font-size: 60px;
   }
 
-  .header__img--mobile {
-    display: block;
-  }
-
-  .header__img--desktop {
-    display: none;
+  .header__buzz__word {
+    font-size: 25px;
   }
 
   .nav__button {
@@ -759,44 +826,57 @@ select {
     flex-direction: column;
     width: 100%;
     height: fit-content;
+    font-size: 14px;
   }
 
   /* makes the signup form image rectangular */
-  .signup__image--landscape {
+  .signup__image {
     width: 100%;
     height: 100px;
-  }
-
-  /*puts the form image on top instead of bottom of the form */
-  .signup__image--first {
     order: 1;
-  }
-
-  .signup__image--mobile {
-    display: block;
-  }
-
-  .signup__image--desktop {
-    display: none;
   }
 
   .signup__inner {
     width: 100%;
     align-items: center;
     order: 2;
-    font-size: 14px;
   }
+
+  .signup legend {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .signup input {
+    font-size: 12px;
+  }
+
+  .signup input[type=submit] {
+    font-size: 16px;
+  }
+
 
   .accordion {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    font-size: 14px;
   }
 
   .accordion__section {
     width: 100%;
     margin-bottom: 40px;
   }
+<<<<<<< HEAD
+=======
+
+  .accordion h2 {
+    font-size: 16px;
+  }
+
+  .footer p {
+    font-size: 12px;
+    color: white;
+  }
+>>>>>>> 3cb5859dbf7b726c5b0fc493f81c8404fe39d586
 }
