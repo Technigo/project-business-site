@@ -83,15 +83,68 @@
     justify-content: center;
   }
 
-  .first-box-items a:hover img {
-    /* animation: shake 0.3s ease-in-out forwards; */
-  }
-
   .accordion {
-    background-color: var(--primaryColorLight);
-
+    /* background-color: var(--primaryColorLight); */
+    background-color: #ecf3f4;
     background-image: url("../img/03.svg");
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: 90%;
+    padding: 0 calc(var(--spacing) * 4);
+    height: 450px;
+    overflow: hidden;
+  }
+
+  .accordion-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 450px;
+  }
+
+  .accordion-inner {
+    flex: 0.4;
+  }
+
+  .faq-container {
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: var(--spacing);
+  }
+
+  .accordion-header {
+    margin: 0;
+    cursor: pointer;
+    padding: calc(var(--spacing) * 2);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .accordion-header h5 {
+    margin: calc(var(--spacing) * 2) 0;
+  }
+
+  .accordion-header i {
+    align-self: center;
+    font-size: var(--small);
+  }
+
+  .accordion-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 0 calc(var(--spacing) * 2);
+  }
+
+  .accordion-content:last-child {
+    border-bottom: 0;
+  }
+
+  .accordion-content p {
+    margin: 0;
+  }
+
+  .accordion-selected {
+    height: 38px;
   }
 }
