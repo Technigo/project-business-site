@@ -1,13 +1,27 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
+// Header buttons that scrolls down to the right section
 
 const bookButton = document.getElementById('book-now');
 const bigContent = document.getElementById('big-content');
 
+const aboutUsButton = document.getElementById('about-us-button');
+const contactUsButton = document.getElementById('contact-us-button');
+const aboutUsContainer = document.getElementById('about-us');
+const contactUsContainer = document.getElementById('contact');
+
 bookButton.addEventListener('click', () => {
   bigContent.scrollIntoView({behavior: 'smooth'});
-})
+});
+
+aboutUsButton.addEventListener('click', () => {
+  aboutUsContainer.scrollIntoView({behavior: 'smooth'});
+});
+
+contactUsButton.addEventListener('click', () => {
+  contactUsContainer.scrollIntoView({behavior: 'smooth'});
+});
+
+
+// Accordion questions and answers variables
 
 const accordionQuestionOne = document.getElementById('accordion-question-one');
 const accordionAnswerOne = document.getElementById('accordion-answer-one');
@@ -27,12 +41,18 @@ const accordionAnswerFive = document.getElementById('accordion-answer-five');
 const accordionQuestionSix = document.getElementById('accordion-question-six');
 const accordionAnswerSix = document.getElementById('accordion-answer-six');
 
+
+// Accordion icons variables
+
 const plusSignOne = document.getElementById('plus-one');
 const plusSignTwo = document.getElementById('plus-two');
 const plusSignThree = document.getElementById('plus-three');
 const plusSignFour = document.getElementById('plus-four');
 const plusSignFive = document.getElementById('plus-five');
 const plusSignSix = document.getElementById('plus-six');
+
+
+// Accordion functions
 
 accordionQuestionOne.addEventListener('click', () => {
   accordionAnswerOne.classList.toggle('accordion-visible');

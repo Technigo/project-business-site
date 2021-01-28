@@ -106,24 +106,11 @@ body {
 .form-container {
   display: flex;
   flex-direction: column;
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", serif;
   padding: 20px;
   width: 80%;
   margin-bottom: 25px;
   background-color: rgb(247, 244, 244);
-  color: black;
-}
-
-.accordion-container {
-  display: flex;
-  flex-direction: column;
-  font-family: "Playfair Display";
-  font-size: 16px;
-  padding: 20px;
-  width: 80%;
-  margin-bottom: 25px;
-  background-color: rgb(247, 244, 244);
-  border-left: 1px solid black;
   color: black;
 }
 
@@ -143,13 +130,14 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .input-text {
   padding: 7px;
   background: rgba(124, 117, 117, 0.1);
-  width: 90%;
-  font-family: "Playfair Display";
+  width: 95%;
+  font-family: "Playfair Display", serif;
   outline: none;
   border-radius: 5px;
   border: none;
@@ -163,7 +151,7 @@ body {
 
 .form-question input[type=date] {
   width: 130px;
-  margin-right: 50px;
+  margin-right: 70px;
   margin-top: 5px;
   margin-left: 1px;
 }
@@ -181,33 +169,34 @@ body {
 .form-radio-buttons {
   margin-top: 7px;
   margin-bottom: 30px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .form-radio-buttons input[type='radio']:checked:after {
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   border-radius: 15px;
   position: relative;
-  background-color: rgb(107, 51, 79);
+  background-color: rgb(122, 6, 50);
   content: '';
   display: inline-block;
   visibility: visible;
-  border: 2px solid white;
+  border: 1px solid black;
 }
 
 .form-checkbox {
-  font-size: 16px;
+  font-size: 14px;
 }
+
 .form-checkbox input[type='checkbox']:checked:after {
   width: 12px;
   height: 12px;
   position: relative;
-  background-color: rgb(102, 4, 4);
+  background-color: rgb(122, 6, 50);
   content: '';
   display: inline-block;
   visibility: visible;
-  border: 1px solid white;
+  border: 1px solid black;
 }
 
 .terms-conditions-link {
@@ -248,14 +237,25 @@ body {
 
 /* Accordion Container */
 
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Playfair Display";
+  font-size: 15px;
+  padding: 20px;
+  width: 80%;
+  margin-bottom: 25px;
+  background-color: rgb(247, 244, 244);
+  border-left: 1px solid black;
+  color: black;
+}
+
 .accordion-question {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   border-bottom: 1px solid black;
-  font-size: 16px;
-  text-align: center;
   height: 70px;
   margin-bottom: 5px;
 }
@@ -280,6 +280,85 @@ body {
 .accordion-visible {
   display: block;
 }
+
+/* About us and contact us container */
+
+.about-contact-big-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding-top: 50px;
+  width: 100%;
+}
+
+.about-us-container, .contact-us-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Playfair Display";
+  font-size: 15px;
+  padding: 20px;
+  width: 80%;
+  margin-bottom: 25px;
+  background-color: rgb(247, 244, 244);
+  border-left: 1px solid black;
+  color: black;
+}
+
+.about-us-paragraph {
+  background-color: rgba(124, 117, 117, 0.1);
+  padding: 10px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  background-color: rgba(124, 117, 117, 0.1);
+  font-size: 16px;
+  padding-left: 10px;
+  margin-top: 13px;
+}
+
+.contact-info .fa, .fa-wine-glass-alt {
+  font-size: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.wine-glasses {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.wine-glasses .fas {
+  font-size: 50px;
+  margin: 4px;
+}
+
+.one {
+  animation-name: wineglassone;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes wineglassone {
+  from {transform: rotate(-10deg);}
+  to {transform: rotate(15deg);}
+}
+
+.two {
+  animation-name: wineglasstwo;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes wineglasstwo {
+  from {transform: rotate(10deg);}
+  to {transform: rotate(-15deg);}
+}
+
 
 /* Footer */
 
@@ -321,35 +400,28 @@ body {
   .title {
     font-size: 85px;
   }
-  .question input[type=date] {
-    margin-right: 50px;
+  
+  .form-question input[type=date] {
+    margin-right: 100px;
   }
 
-  .form-container, .accordion-container {
+  .form-container, .accordion-container, .about-us-container, .contact-us-container {
     width: 40%;
   }
 
   .accordion-question {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1024px){
-  .form-container, .accordion-container {
+  .form-container, .accordion-container, .about-us-container, .contact-us-container {
     width: 35%;
-  }
-
-  .question input[type=date] {
-    margin-right: 100px;
   }
 }
 
 @media (min-width: 1200px) {
-  .form-container, .accordion-container {
+  .form-container, .accordion-container, .about-us-container, .contact-us-container {
     width: 25%;
-  }
-
-  .input-text {
-    width: 60%;
   }
 }
