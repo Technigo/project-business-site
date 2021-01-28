@@ -10,7 +10,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 html {
   background: rgb(201, 238, 220);
   color: black;
-  /* font-family: 'Roboto', sans-serif; */
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
@@ -18,24 +17,25 @@ body {
   margin: 0;
 }
 
+/****HEADER***/
 .header {
   background-color: rgb(142, 226, 185);
   display: flex;
   justify-content: space-between;
 }
 
-
 .logo {
   width: 75px;
   margin: 5px;
   border: 4px solid black;
-
 }
 
 .navigation {
   display: none;
 }
 
+
+/****HERO IMG AND TEXT***/
 .hero {
   position: relative;
 }
@@ -58,6 +58,8 @@ body {
   border-top: 2px solid black;
 }
 
+
+/****INTRO TEXT***/
 .intro-text {
   margin: 10px;
   text-align: center;
@@ -70,19 +72,25 @@ body {
   font-size: 18px;
 }
 
+
+/****SIGN UP FORM****/
 .form {
   /* height: 560px;
   width: 560px; */
-  margin: 100px;
+  /* margin: 100px; */
+  margin: 24px;
   border: 2px solid black;
-  background-color: rgb(192, 207, 200);
-
+  /* background-color: rgb(192, 207, 200); */
+  background-color: #A1B2C3 (161,178,195) ;
+  /* padding: 10px; */
+  border-radius: 12px;
 }
 
 .form-text {
   font-size: 24px;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-align: center;
+  border-bottom: 1px solid black;
 }
 
 .check-boxes {
@@ -120,31 +128,64 @@ input[type=button], input[type=submit]:active {
   transform: translateY(6px);
 }
 
-input[type=text] {
-  border-radius: 5px;
-  padding: 6px;
+input[type=text]
+{
+  padding: 10px;
+  border:0;
+  border-radius:10px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+input[type=email] {
+  padding: 10px;
+  border:0;
+  border-radius:10px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+input[type=radio], [type=checkbox] {
+margin: 10px;
 }
 
-input[type=email] {
+.checkbox-text {
+  margin:10px;
+  font-size: 20px;
+}
+
+
+label {
+	padding: 10px;
+	margin: 3px;
+}
+
+
+/* input[type=text] {
   border-radius: 5px;
   padding: 6px;
-}
+} */
+
+/* input[type=email] {
+  border-radius: 5px;
+  padding: 6px;
+} */
 
 /****ACCORDION****/
 
 .FAQ {
   text-align: center;
   border-bottom: 1px solid black;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .accordion {
   /* width: 560px;
   height: 300px; */
-  margin-bottom: 100px;
+  /* margin-bottom: 100px;
   margin-left: 100px;
-  margin-right: 100px;
+  margin-right: 100px; */
+  margin: 24px;
   border: 2px solid black;
-  background-color: rgb(192, 207, 200);
+  border-radius: 10px;
+  /* background-color: rgb(133, 201, 169); */
 }
 
 .question {
@@ -152,6 +193,8 @@ input[type=email] {
   text-align: center;
   border-radius: 16px;
   text-decoration: underline;
+  margin-right: 12px;
+  margin-left: 12px;
 }
 
 .answer {
@@ -159,10 +202,11 @@ input[type=email] {
   height: 0px;
   transition: height .3s ease;
   text-align: center;
+  magin-bottom: 16px;
 }
 
 .question:hover {
-  background-color: rgb(142, 226, 185);
+ color: white;
   cursor: pointer;
 }
 
@@ -172,12 +216,12 @@ height: 75px;
 }
 
 
-.container {
+/* .container {
   max-width: 760px;
   display: flex;
   flex-direction: column;
   
-}
+} */
 
 
 /***EXTRA STORIES****/
@@ -225,8 +269,22 @@ height: 75px;
   margin-top: 24px;
   border-top: 2px solid black; 
 }
+ .footer-logo {
+   width: 40px;
+   height: auto;
+ }
 
+ .logos-in-accordion {
+   display: flex;
+   justify-content: space-evenly;
+ }
 
+ .logo-lift {
+   width: 75px;
+   height: auto;
+   margin-top:30px;
+
+ }
 /*MEDIA QUERIES****/
 
 /* Tablet */
@@ -234,10 +292,8 @@ height: 75px;
   .navigation {
     display: flex;
     justify-content: row;
-    
   }
 
-  
   .navigation-text {
     margin: 10px;
     border: 2px solid black;
@@ -260,14 +316,31 @@ height: 75px;
       border-top: 2px solid black;
   }
   
-  .container {
-    max-width: 760px;
-    display: flex;
-    /* flex-direction: row;
-    justify-content: space-between; */
+  .signup-container {
+    /* max-width: 760px; */
+     display: flex; 
+    /* flex-direction: row;*/
+    justify-content: space-around; 
   }
-}
 
+
+.form {
+  /* height: 560px;
+  width: 560px; */
+  /* margin: 100px; */
+  margin: 24px;
+  width: 40%;
+
+}
+.accordion {
+  /* width: 560px;
+  height: 300px; */
+  /* margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px; */
+  margin: 24px;
+  width: 40%;
+}
 
 /* Small desktop */
 

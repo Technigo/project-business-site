@@ -7,17 +7,14 @@
     <link rel="stylesheet" href="./style.css">
 
 
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> -->
-
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Imbue:wght@500&family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Imbue:wght@500&family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
 
 
     
   </head>
   <body>
-
+<!---------HEADER---------->
     <header class="header">
       <img class="logo" src="./img/logo.png" alt="logotype">
       <nav class="navigation">
@@ -33,44 +30,47 @@
       </nav>
     </header>
 
-      <div class="hero"></div>
-      <picture>
-        <source srcset="./img/battleropes.jpg" media="(max-width: 767px)" />
-      
-        <img class="hero-image" src="./img/highfive.jpg" alt="Hero image" />
-      </picture>
-      <h1 class="hero-text">"Strong people don't put others down, they lift them up"</h1>
-      
-    </div>
-    
-    <!-- video or image as a header is cool :) -->
 
+<!------HERO IMG AND TEXT-------->
+      <div class="hero"></div>
+        <picture>
+          <source srcset="./img/battleropes.jpg" media="(max-width: 767px)" />
+          <img class="hero-image" src="./img/highfive.jpg" alt="Hero image" />
+        </picture>
+        <h1 class="hero-text">"Strong people don't put others down, they lift them up"</h1>
+      </div>
+    
+    
+<!--------INTRO TEXT------->
 
     <h2 class="intro-text">Looking for a fun and varied type of training? Where you will learn new skills and build up both your strenght, condition as well as your self confidense.</h2> 
     <p class="smaller-intro-text"">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, ad. Odio cupiditate voluptate debitis fugiat ipsa necessitatibus,Lorem ipsum dolor sit amet consectetur adipisicing elit.
     </p>
 
-    <!-- Signup form -->
-<div class="container">
+
+    <!------SIGN UP FORM----->
+<div class="signup-container">
     <form action="https://httpbin.org/anything" method="POST" class="form">
         <p class="form-text"> Contact us for a free consultation!</p>
-        <label for="first-name">First Name</label>
+        <!--NAME,EMAIL-->
+        <label for="first-name">First Name &nbsp &nbsp </label>
         <input type="text" id="first-name" name="first-name" placeholder="Your first name" required>
         <br><br>
-        <label for="last-name">Last Name</label>
+        <label for="last-name">Last Name &nbsp &nbsp</label>
         <input type="text" id="last-name" name="last-name" placeholder="Your last name" required>
         <br><br>
         <label for="email">Email adress</label>
         <input type="email" id="email" name="email" placeholder="Your email" required>
         <br><br>
-       
+       <!--RADIO BUTTONS-->
     <div class="boxes">   
       <div class="radio-buttons">
-        <input type="radio" name="gender" value="male">Male <br>
-        <input type="radio" name="gender" value="female">Female <br>
-        <input type="radio" name="gender" value="other">Other <br><br>
+        <input type="radio" name="gender" value="male" required>Male <br>
+        <input type="radio" name="gender" value="female" required>Female <br>
+        <input type="radio" name="gender" value="other" required>Other <br><br>
       </div>
+      <!--CHECKBOXES-->
       <div class="checkboxes">
         <p class="checkbox-text">I'm interested in...</p>
         <input type="checkbox" name="group-training" id="group-training" value="group-traning">
@@ -81,24 +81,21 @@
         <br>
         <input type="checkbox" name="diet" id="diet" value="diet">
         <label for="diet">Diet</label>
-        
         <br><br>
       </div>
-      </div> 
+    </div> 
 
         <input type="submit" value="Try it out!">
     </form>
 
-
-    <section class="accordion">
       <!-- Accordion -->
+    <section class="accordion">
       <h1 class="FAQ">FAQ</h1>
-
       <div class="question" id="section1">Sounds like fun! Can I try?</div>
       <div class="answer">
-        <p>Of course! You are more than welcome to contact us and sign up for a free, but sweaty workout!</p>
+          <p>Of course! You are more than welcome to contact us and sign up for a free, but sweaty workout!</p>
       </div>
-        <br> 
+          <br> 
       <div class="question" id="section2">Do I have to be really fit to keep up?</div>
       <div class="answer">
         <p>No, not allt all! All of our WOD's (Workout Of the Day) have different levels, so everyone can participate to the best of their ability. </p>
@@ -108,8 +105,17 @@
       <div class="answer">
         <p>No, your usual workout clothes and shoes are fine!</p>
       </div>
-
+      <br>
+      <div class="question" id="section4">What is a"box"?</div>
+      <div class="answer">
+        <p>The Box = a crossfit gym. It's called a box because it's typically in a warehouse-type space. Instead of seeing the machines you see in a typical gym, you're more likely to see stacks of weights, barbells, pull-up bars and lots of open space.</p>
+      </div>
+      <div class="logos-in-accordion">
+      <img class="logo-lift" src="./img/lift.png" alt="logo">
+      <img class="logo-lift" src="./img/kettlebell-512.png" alt="logo">
+      <img class="logo-lift" src="./img/Run.png" alt="logo">
     </div>
+ </div>
 
 
 
@@ -124,15 +130,16 @@
         </div> -->
 
 
-
+          <!--FOOTER-->
     </section>
-
       <footer class="footer">
         <p>&copy Ann-Sofi Jönsson Technigo Bootcamp 2021</p>
+        <img class="footer-logo" src="./img/sport_barbell-512.png" alt="barbell">
       </footer>
-
     </section>
+
+    <!--LINK TO JAVASCRIPT-->
     <script src="./script.js"></script>
-    <!-- dont forget to link the javascript file here! -->
+    
   </body>
 </html>
