@@ -1,3 +1,97 @@
-.transform-sec {
-  transform: translateY(-130px);
+@media only screen and (min-width: 980px) {
+  .transform-sec {
+    transform: translateY(-130px);
+  }
+
+  .first-box {
+    width: 960px;
+    /* height: 960px; */
+    background-color: var(--white);
+    transition: transform 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+    padding: 0 calc(var(--spacing) * 4);
+    /* border-radius: var(--spacing); */
+  }
+
+  .first-box-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 111px;
+  }
+
+  .first-box-title h2 {
+    color: var(--secondaryColorNormal);
+  }
+
+  .first-box-list {
+    display: flex;
+    gap: calc(var(--spacing) * 4);
+    padding: 0 calc(var(--spacing) * 9);
+  }
+
+  .first-box-items {
+    flex: 1;
+    transition: all 0.15s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+  }
+
+  .first-box-items figure {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+  }
+
+  .first-box-items img {
+    transition: all 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+  }
+
+  .first-box-items figure::before,
+  .first-box-items figure::after {
+    background: rgba(202, 92, 52, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    content: "";
+    transition: all 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+    transform: scale(0, 0);
+  }
+
+  .first-box-items figure::before {
+    transform-origin: right top;
+  }
+
+  .first-box-items figure::after {
+    transform-origin: left bottom;
+  }
+
+  .first-box-items:hover figure::before,
+  .first-box-items:hover figure::after {
+    transform: scale(1, 1);
+  }
+
+  .first-box-items:hover img {
+    transform: scale(1.2);
+  }
+
+  .first-box-items figure {
+    overflow: hidden;
+  }
+
+  .first-box-items-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .first-box-items a:hover img {
+    /* animation: shake 0.3s ease-in-out forwards; */
+  }
+
+  .accordion {
+    background-color: var(--primaryColorLight);
+
+    background-image: url("../img/03.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
 }
