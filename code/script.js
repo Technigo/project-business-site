@@ -1,5 +1,8 @@
 const accordion = document.getElementById("accordion");
 
+const plusIcon = "&#10133;",
+  minusIcon = "&#10134";
+
 let currentQuestion;
 
 accordion.addEventListener("click", (event) => {
@@ -34,6 +37,9 @@ accordion.addEventListener("click", (event) => {
 
 // Function to toggle the accordion open/close
 const toggleAccordionItem = (question, answer) => {
+  question.firstElementChild.innerHTML = question.classList.contains("accordion__question--open")
+    ? plusIcon
+    : minusIcon;
   question.classList.toggle("accordion__question--open");
   answer.classList.toggle("accordion__answer--open");
 };
