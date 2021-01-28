@@ -82,7 +82,7 @@ body {
 input,
 select {
   padding: 7px;
-  font-family: inherit;
+  font-family: 'Roboto', sans-serif;
 }
 
 input,
@@ -270,6 +270,7 @@ input:focus {
   margin: 0;
   border-top: 1px dotted grey;
   font-size: 14px;
+  font-family: 'Roboto', sans-serif;
   /* max-width: fit-content; */
   height: 0px;
   opacity: 0;
@@ -283,8 +284,10 @@ input:focus {
 
 .active {
   opacity: 1;
-  height: 60px;
+  height: 40px;
   padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
 /* FOOTER */
@@ -292,8 +295,52 @@ input:focus {
 .footer {
   background-color: black;
   color: white;
-  height: 200px;
-  margin-top: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-logo {
+  width: 150px;
+}
+
+.footer-text {
+  margin: 10%;
+}
+ 
+.bold-text {
+  font-family: 'Circular Bold';
+  font-size: 18px;
+}
+
+.footer-text a{
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.copywrite {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  font-size: 10px;
 }
 
   /* RESPONSIVE TABLET */
@@ -349,6 +396,27 @@ input:focus {
 
   .accordion-container {
   width: 400px;
+  }
+
+.footer {
+  padding: 80px 100px 50px;
+  font-size: 16px;
+  margin-top: 50px;
+  }
+
+.footer-container {
+  flex-direction: row;
+  justify-content: space-between;
+  }
+
+  .logo-container {
+    display: block;
+    justify-content: center;
+  }
+
+  .footer-text {
+    margin: 0;
+    width: 50%;
   }
 
 }
