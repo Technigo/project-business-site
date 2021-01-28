@@ -12,4 +12,4 @@ If I hade more time I would make a sign up form that extends up from the sign up
 I would also make a dropdown menu in the mobile version where you can click on a FAQ link and have a FAQ accordion in that version too.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://romantic-hoover-c8f6e3.netlify.app/
