@@ -30,11 +30,12 @@ body {
   display: flex;
   justify-content:left;
   align-items: center;
+  margin: 0;
 }
 
 h1 {
   color: rgb(183, 216, 216);
-  font-size: 40px;
+  font-size: 50px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -70,8 +71,12 @@ h1 {
 .accordion {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: beige;
   width: 400px;
-  border: solid greenyellow; 
+  padding: 15px;
+  border: solid greenyellow;
+  border-radius: 20px;
   margin: auto;
   margin-top: 60px;
 }
@@ -97,7 +102,7 @@ h1 {
   color: black;
   cursor: pointer;
   padding: 18px;
-  width: 100%;
+  width: 70%;
   border: solid 0.5px black;
   text-align: left;
   outline: none;
@@ -175,6 +180,15 @@ label {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.footer {
+  background: #2B879E;
+  height: 80px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+} 
+
 
 /*** MEDIA TABLET ***/
 
@@ -194,11 +208,44 @@ label {
     width: 65%;
   }
   
+  .hero-title {
+    position: absolute;
+    top:50%;
+    left:5%;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    margin: 0;
+    font-size: 70px;
+  }
+
+  .p-header {
+    position: absolute;
+    top: 70%;
+    left:5%;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 50%;
+    font-size: 20px;
+  }
 }
 
 /*** MEDIA DESKTOP ***/
 
 @media (min-with:1024px) {
+ 
+  .big-container {
+    display: flex; 
+    /* flex-direction: row; */
+    justify-content: space-around;
+    width: 100%
+  }
+ 
   .form-container {
     width: 30%;
     
@@ -209,12 +256,33 @@ label {
     
   }
 
-  .big-container {
+  .hero-title {
+    position: absolute;
+    top:20%;
+    left:10%;
+    bottom: 0;
+    right: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%
+    justify-content:left;
+    align-items: center;
+    margin: 0;
+    font-size: 90px;
   }
+
+  .p-header {
+    position: absolute;
+    top: 70%;
+    left:5%;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 50%;
+    font-size: 20px;
+  }
+
+
 
   
 }
