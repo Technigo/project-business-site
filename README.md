@@ -1,10 +1,10 @@
 # Business Site
 
-The project was to design a business site.
+The project was to design a business site with hero image, accordion and a form.
 
 ## The problem
 
-I tried to keep it simple and only have the necessities in in the different versions.
+I tried to keep it simple and only have the necessities in the different versions.
 For example the FAQ and links in the header aren't displayed in the mobile version, and the layout changes depending on device.
 For the accordion I used javascript to toggle and collapse.
 
