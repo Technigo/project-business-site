@@ -13,7 +13,7 @@ body {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .header {
@@ -309,42 +309,81 @@ p {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  width: 250px;
+  width: 300px;
   height: fit-content;
 }
 
-.signup__form input {
-  border: solid white;
+/* styling the input boxes with fieldset*/
+.signup fieldset {
+  padding: 0;
+  margin: 10px 0;
+  background-color: white;
+  border:none;
   border-radius: 10px;
-  margin-top: 5px;
-  color: rgb(128, 45, 167);
-  font-weight: bold;
-  margin-bottom: 10px;
 }
 
-/* on hover and focus , the input get another bg-color */
-.signup__form input:focus,
-.signup__form input:hover {
+/* on hover and focus , the fieldset get another bg-color */
+.signup fieldset:hover, 
+.signup fieldset:focus {
   background-color: rgb(158, 203, 211);
   outline: none;
 }
 
-::placeholder {
-  color: rgba(7, 59, 63, 0.603);
+.signup legend {
+  font-weight: bolder;
+  background-color: rgb(46, 157, 165);
+  border-radius: 5px;;
+  border: solid rgb(255, 255, 255);
+  font-size: 16px;
+  padding:2px 5px;
 }
 
-.signup__form input[type=submit] {
+.signup input {
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  width: 300px;
+  font-size: 16px;
+  color: rgb(128, 45, 167);
+  font-weight: bold;
+  background-color: rgba(0, 139, 139, 0);
+}
+
+.signup input:hover {
+  background-color:  rgb(158, 203, 211);
+}
+
+.signup input:focus {
+  outline: none;
+}
+
+
+::placeholder {
+  color: rgba(7, 59, 63, 0.384);
+}
+
+.signup input[type=submit] {
   background-color: rgb(42, 138, 145);
   font-size: 20px;
   color: rgb(255, 255, 255);
   border: double white;
   margin: 20px 0;
+  padding: 10px;
+  height: fit-content;
+  border-radius: 50px;
   display: block;
   width: fit-content;
   align-self: center;
+  box-shadow: 1px 1px 2px 1px rgb(24, 14, 37);
 }
 
-.signup__form input[type=submit]:hover {
+/* makes the button look like a 3d button getting pressed down when active */
+.signup input[type=submit]:active {
+  transform: translateY(10%);
+  box-shadow: 0px 0px 2px 1px rgb(24, 14, 37);
+}
+
+.signup input[type=submit]:hover {
   background-color: rgb(5, 85, 85);
 }
 
@@ -461,6 +500,10 @@ select {
   justify-content: space-between;
   width: 80%;
   color: white;
+}
+
+.accordion h2 {
+  font-size: 22px;
 }
 
 .accordion p {
@@ -655,6 +698,19 @@ select {
     font-size: 16px;
   }
 
+  .signup legend {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .signup input {
+    font-size: 14px;
+  }
+
+  .signup input[type=submit] {
+    font-size: 18px;
+  }
+
   .accordion {
     flex-direction: column;
     align-items: center;
@@ -665,6 +721,10 @@ select {
   .accordion__section {
     width: 100%;
     margin-bottom: 40px;
+  }
+
+  .accordion h2 {
+    font-size: 18px;
   }
 }
 
@@ -736,6 +796,20 @@ select {
     order: 2;
   }
 
+  .signup legend {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .signup input {
+    font-size: 12px;
+  }
+
+  .signup input[type=submit] {
+    font-size: 16px;
+  }
+
+
   .accordion {
     flex-direction: column;
     align-items: center;
@@ -746,6 +820,10 @@ select {
   .accordion__section {
     width: 100%;
     margin-bottom: 40px;
+  }
+
+  .accordion h2 {
+    font-size: 16px;
   }
 
   .footer p {
