@@ -30,19 +30,19 @@ accordionQuestionOne.addEventListener('click', () => {
 accordionQuestionTwo.addEventListener('click', () => {
   accordionQuestionTwo.classList.toggle("question-border-radius");
   accordionAnswerTwo.classList.toggle("accordion-answer-display");
-  document.querySelector('#fas-2').style.transform = 'rotate(90deg)';
+  document.getElementById("fas-2").classList.toggle("fas-selected");
 });
 
 accordionQuestionThree.addEventListener('click', () => {
   accordionQuestionThree.classList.toggle("question-border-radius");
   accordionAnswerThree.classList.toggle("accordion-answer-display");
-  document.querySelector('#fas-3').style.transform = 'rotate(90deg)';
+  document.getElementById("fas-3").classList.toggle("fas-selected");
 });
 
 accordionQuestionFour.addEventListener('click', () => {
   accordionQuestionFour.classList.toggle("question-border-radius");
   accordionAnswerFour.classList.toggle("accordion-answer-display");
-  document.querySelector('#fas-4').style.transform = 'rotate(90deg)';
+  document.getElementById("fas-4").classList.toggle("fas-selected");
 });
 
 
