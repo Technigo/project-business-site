@@ -1,7 +1,8 @@
-const questionOne = document.querySelectorAll('.question');
+const question = document.querySelectorAll('.question');
 
-questionOne.forEach(questionOne => {
-  questionOne.addEventListener('click', event => {
-    questionOne.classList.toggle('active');
+question.forEach(question => {
+  question.addEventListener('click', event => {
+    question.classList.toggle('active');
+
   });
 });

@@ -31,16 +31,16 @@ body {
 }
 
 .hero-header {
-  font-size: 30px; /*CHANGE THIS TO 35px IN TABLET & DESKTOP*/ 
+  font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
   color: #f865b1;
   margin: 0;
-  padding: 40px 0 20px 0; /*CHANGE THIS TO 35px IN TABLET & DESKTOP*/ 
+  padding: 40px 0 30px 0;
 }
 
 .button {
-  padding: 8px 12px;
+  padding: 10px 16px;
   border: none;
   background-color: #5b9ea5;
   border-radius: 8px;
@@ -53,55 +53,109 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-.buttton:hover{
+.button:hover{
   background-color:#f865b1;
-  cursor: wait;
 }
 
 /*** FORM ***/
-.container {
+.contact-container {
   display: flex;
   justify-content: center;
-  padding: 40px 100px;
-  margin: 40px 0;
+  margin: 60px 40px;
 }
 
 .contact-box {
-  width: 1000px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   background-color: #fff;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.19);
+  border-radius: 8px;
 }
 
-.left {
-  background: url("./assets/baking-img2.jpeg") no-repeat center;
+.box-left {
+  background: url("./assets/baking-img2.jpeg");
+  background-position: center;
   background-size: cover;
+  height: 60vh;
 }
 
-.right {
-  padding: 40px;
+.box-right {
+  padding: 20px;
 }
 
 .form-header {
   text-align: center;
   font-size: 35px;
   color: #f865b1;
-  margin: 10px 10px 25px 10px;
+  margin: 10px 0 25px 0;
 }
 
-.field {
+.input-field {
 	width: 100%;
 	border: none;
 	background-color: rgba(230, 230, 230, 0.6);
-	padding: 10px;
+	padding: 12px;
 	font-size: 16px;
-	margin-bottom: 22px;
-	transition: .3s;
+	margin: 7px 0 22px 0;
 }
 
-.field:hover{
+.input-field:focus{
 	background-color: rgba(0, 0, 0, 0.1);
+}
+
+input:valid {
+  border: 1px solid #5b9ea5;
+}
+
+.input-field:invalid {
+  border-bottom: 1px solid #F865B0;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox input {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.last-checkbox {
+  margin-top: 8px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  height: 18px;
+  width: 18px;
+  background-color: rgba(230, 230, 230, 0.6);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+input[type="checkbox"]::after {
+  content: "\2573";
+  display: none;
+}
+
+input[type="checkbox"]:checked::after {
+  display: block;
+} 
+
+.form-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.form-button .button {
+  width: 100%;
+  cursor: pointer;
 }
 
 /*** ACCORDION ***/
@@ -163,12 +217,33 @@ body {
 }
 
 /*** MEDIA QUERY ***/ 
-@media (max-width: 870px) {
-  .contact-box {
-    grid-template-columns: 1fr;
+
+
+@media (min-width: 768px) {
+  .hero-header {
+    font-size: 30px;
   }
 
-  .left{
-		height: 400px;
-	}
+  .button {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  .contact-box {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .box-left {
+    height: 100%;
+    width: 100%;
+  }
+
+  .box-right {
+    padding: 40px;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+  
+  
 }

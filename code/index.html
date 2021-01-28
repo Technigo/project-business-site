@@ -10,16 +10,16 @@
   </head>
   <body>
 
-    <!--HERO IMG-->
+    <!--HERO IMAGE-->
     <header>
       <picture>
-        <source srcset="./assets/mobile.jpeg" media="(max-width: 600px)" />
+        <source srcset="./assets/mobile.jpeg" media="(max-width: 768px)" />
         <source srcset="./assets/tablet.jpeg" media="(max-width: 900px)" />
         <img class="hero-image" src="./assets/desktop.jpeg" alt="cupcakes" />
       </picture>
       <div class="hero-text">
         <h1 class="hero-header">
-          Sweet & Pretty baking
+          Sweet & Pretty baking online
         </h1>
         <a class="button" href="#sign-up">
           Sign up
@@ -28,32 +28,61 @@
     </header>
 
     <!-- Signup form -->
-    <section class="container">
+    <section class="contact-container">
       <div class="contact-box">
-        <div class="left">        
+        <div class="box-left">        
         </div>
-        <div class="right">
+        <div class="box-right">
           <h1 class="form-header"><a name="sign-up">Sign up</a></h1>
-          <form action="https://httpbin.org/anything" method="POST">
-              <input class="field" type="text" name="fname" placeholder="Name" required>
-              <input class="field" type="text" name="lname" placeholder="Last Name" required>
-              <input class="field" type="email" name="email" placeholder="Email" required>
-              <input class="field" type="tel" name="phone"  placeholder="Number" required>
-              <input type="radio" id="male" name="gender" value="male">
-              <label for="male">Male</label><br>
-              <input type="radio" id="female" name="gender" value="female">
-              <label for="female">Female</label><br>
-              <input type="radio" id="other" name="gender" value="other">
-              <label for="other">Other</label> <br>
-              <input type="checkbox" name="checkbox" value="check" id="terms" required>
-              <label for="terms"> I agree to the Privacy Policy</label> <br>
+          <form action="https://httpbin.org/anything" method="POST"> 
+            <label>
+              Name
+              <input class="input-field" type="text" name="fname" required>
+            </label>
+            <label>
+              Last name
+              <input class="input-field" type="text" name="lname" required>
+            </label>
+            <label>
+              Email
+              <input class="input-field" type="email" name="email" required>
+            </label>
+            <label>
+              Phone number
+              <input class="input-field" type="number" name="phone" required>
+            </label>
+            <label>
+              Let us know if you have any allergies
+              <textarea class="input-field" rows="4" cols="50" name="allergies">
+              </textarea>
+            </label>
+
+            <div class="checkbox">
+              <label>
+                <input type="radio" name="gender" value="male" required>
+                Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female">
+                Female
+              </label>
+              <label>
+                <input type="radio" name="gender" value="other">
+                Other
+              </label>
+              <label class="last-checkbox"> 
+                <input type="checkbox" name="checkbox" value="check" required>
+                I agree to the Privacy Policy
+              </label>
+            </div> 
+            <div class="form-button">
               <button class="button" type="submit">Submit</button> 
+            </div>
           </form>
         </div>
       </div>
     </section>
   
-
      <!-- Accordion -->
     <section class="accordion-container">
       <div class="accordion">
@@ -101,7 +130,6 @@
       </div>
     </section>
     
-
     <script src="script.js"></script>
   </body>
 </html>
