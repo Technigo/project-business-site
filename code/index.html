@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Excuse me - may I?</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@200&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,10 +19,26 @@
       </nav>
     </header>
     <header class="hero-header">
-      <h1 class="hero-title">May I steal a minute of your time?</h1>
+      <h1 class="hero-title">May I steal a minute?</h1>
     </header>
     <footer class="hero-footer">
-      <a class="button" href="#">Well of course!</a> <!-- look into making this a form -->
+      <form class="hero-form" action="https://httpbin.org/anything" method="post">
+        <label class="hero-labels">
+          I'm writing a phone book, can I have your number?
+          <input type="tel" name="phone" 
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          placeholder="070-123-4567"> 
+        </label>
+        <label class="hero-labels">
+          And your name please!
+          <input type="text" name="name"> 
+        </label>
+        <label class="hero-labels">
+          Are you ok with me saving this?
+          <input type="checkbox"name="consent" required> 
+        </label>
+        <button class="submit-button" type="submit">submit</button>
+      </form>
     </footer>
   </Section>
 
@@ -42,16 +60,8 @@
     </div>
   </section>
 
-
-  <!-- Signup form -->
-  <section class="form-survey">
-    <h1>Quick survey</h1>
-    <form action="get" class="survey-form"></form>
-  </section>
-
-
-      <!-- dont forget to link the javascript file here! -->
-      <script src="./script.js"></script>
+  <!-- dont forget to link the javascript file here! -->
+  <script src="./script.js"></script>
 
 </body>
 
