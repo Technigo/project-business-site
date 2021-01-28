@@ -81,33 +81,38 @@
         </div>
     </section>
 
-    <section class="form">
+    <section class="formbox">
       <h2 id="contact">let's get in touch.</h2>
+     
       <form>
-        <label for="fname">name</label>
-        <input type="text" id="name" name=name><br>
+        <div class="formelement">
+          <div class="personal-information"><label for="fname">name</label>
+          <input type="text" id="name" name=name><br></div>
+          <div class="personal-information"><label for="phone">phone</label>
+          <input type="text" id="phone" name=phone><br></div>
+          <div class="personal-information"><label for="email">email</label>
+          <input type="email" id="email" name=email><br></div>
+        </div>
 
-        <label for="phone">phone</label>
-        <input type="text" id="phone" name=phone><br>
+        <div class="formelement"></div>
+          <p class="formtext">what are you interested in?</p>
+          <select name="offer" class="interest">
+            <option value="people">people</option>
+            <option value="fashion">fashion</option>
+            <option value="events">events</option>
+            <option value="others">others</option>
+          </select>
+        </div>
 
-        <label for="email">email</label>
-        <input type="text" id="email" name=email><br>
-        
-        <p>what are you interested in?</p>
-        <select name="offer">
-          <option value="people">people</option>
-          <option value="fashion">fashion</option>
-          <option value="events">events</option>
-          <option value="others">others</option>
-        </select><br>
-      
-        <p>do you agree with our conditions and to being kind to the world and yourself?</p>
-      <input type="checkbox" name="agree"
-      value="agree" checked="checked"/> yes - i do! <br>
+        <div class="formelement">
+          <p class="formtext">do you agree with our conditions and to being kind to the world and yourself?</p>
+          <input type="checkbox" name="agree" class="conditions-agreement"
+          value="agree" required/> yes - i do! <br>
+        </div>
 
-      <input type="submit" value="send and we'll talk soon">
-
-
+        <div class="formelement">
+          <input type="submit" value="send and we'll talk soon" class="submit" required>
+        </div>
       </form>
     </section>
 
