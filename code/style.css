@@ -7,7 +7,8 @@ body {
   min-height: 100vh;
   position: relative;
   background-color: rgb(192, 250, 235);
-  cursor: url(./images/cursor.png) 1 1, pointer; /*custom cursor*/
+  cursor: url(./images/cursor.png) 1 1, pointer;
+  /*custom cursor*/
 }
 
 .header {
@@ -65,31 +66,14 @@ body {
   object-fit: cover;
 }
 
-/*img shows only on desktop */
-.header__img--desktop {
-  display: block;
-}
-
-/* only tablet */
-.header__img--tablet {
-  display: none;
-}
-
-/* img shows only on mobile */
-.header__img--mobile {
-  display: none;
-}
-
-.header__img--xs {
+/*resizes 20% on desktop and 50% on tablet/mobile */
+.header__img--20-50 {
   width: 20%;
 }
 
-.header__img--small {
+/*resizes 30% on desktop and none on tablet/mobile*/
+.header__img--30-0 {
   width: 30%;
-}
-
-.header__img--medium {
-  width: 50%;
 }
 
 .header__img--animation-down {
@@ -291,12 +275,12 @@ body {
   color: white;
   font-size: 18px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  
+
 }
 
 .signup a {
   text-decoration: none;
-  color:rgb(5, 85, 85);
+  color: rgb(5, 85, 85);
   font-weight: 500;
 }
 
@@ -337,13 +321,14 @@ body {
 }
 
 /* on hover and focus , the input get another bg-color */
-.signup__form input:focus, .signup__form input:hover  {
+.signup__form input:focus,
+.signup__form input:hover {
   background-color: rgb(158, 203, 211);
   outline: none;
 }
 
 ::placeholder {
-  color:rgba(7, 59, 63, 0.603);
+  color: rgba(7, 59, 63, 0.603);
 }
 
 .signup__form input[type=submit] {
@@ -363,7 +348,7 @@ body {
 }
 
 /* clear the default look of checkbox */
-.signup input[type=checkbox]{
+.signup input[type=checkbox] {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -393,7 +378,8 @@ body {
 }
 
 /*restyling radiobutton + checkbox*/
-.signup__check__radio, .signup__check__box {
+.signup__check__radio,
+.signup__check__box {
   background-color: rgb(171, 245, 235);
   height: 15px;
   width: 15px;
@@ -414,20 +400,20 @@ body {
 /*show nothing when the checkbox/radio is not clicked */
 .signup__check__radio:after,
 .signup__check__box:after {
-  content:"";
+  content: "";
   position: absolute;
   display: none;
 }
 
 /*when the checkbox/radio is checked the background color changes */
-.signup__check input:checked ~ .signup__check__radio,
-.signup__check input:checked ~ .signup__check__box  {
+.signup__check input:checked~.signup__check__radio,
+.signup__check input:checked~.signup__check__box {
   background-color: rgb(5, 85, 85);
 }
 
 /* when the checkbox/radio is checked, show an marker in it */
-.signup__check input:checked ~ .signup__check__radio:after,
-.signup__check input:checked ~ .signup__check__box:after {
+.signup__check input:checked~.signup__check__radio:after,
+.signup__check input:checked~.signup__check__box:after {
   display: block;
 }
 
@@ -443,12 +429,12 @@ body {
 
 /*styling of marker in checkbox */
 .signup__check .signup__check__box:after {
-  border-right:solid rgb(248, 248, 248)3px;
+  border-right: solid rgb(248, 248, 248)3px;
   border-bottom: solid rgb(253, 253, 253)3px;
   width: 5px;
   height: 10px;
   left: 4px;
-  transform:rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .signup__image {
@@ -469,21 +455,6 @@ body {
 
 select {
   margin-bottom: 20px;
-}
-
-/*shows image on desktop mode */
-.signup__image--desktop {
-  display: block;
-}
-
-/* only tablet */
-.signup__image--tablet {
-  display: none;
-}
-
-/*only mobile*/
-.signup__image--mobile {
-  display: none;
 }
 
 /* section for all accordions */
@@ -514,7 +485,8 @@ select {
 }
 
 /* the accordion styling */
-.accordion__display, .accordion__expand{
+.accordion__display,
+.accordion__expand {
   border: solid rgb(255, 255, 255) 0.5px;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 10px;
@@ -537,7 +509,7 @@ select {
 
 /* when accordion__display is set to .active with js, the nearest sibling div will get these properties 
 (in this case accordion__expand) */
-.active+ div{
+.active+div {
   height: 200px;
   margin: 10px;
   overflow-y: auto;
@@ -656,37 +628,17 @@ select {
 }
 
 /*breakpoint at the largest tablets*/
-@media screen and (device-width: 1366px),
-(max-width:1366px) {
+@media screen and (device-width: 1024px),
+(max-width:1024px) {
 
-  .header__img {
+  .header__img--20-50 {
     width: 50%;
+    min-width: 50%;
   }
 
-  .header__img--tablet {
-    display: block;
-  }
-
-  /* reusing 2 pictures, so they should not get display:none. targeting those that should */
-  .header__img--desktop:nth-of-type(1),
-  .header__img--desktop:nth-of-type(6) {
+  .header__img--30-0 {
     display: none;
-  }
-
-  .header__img--mobile {
-    display: none;
-  }
-
-  .signup__image--tablet {
-    display: block;
-  }
-
-  .signup__image--desktop {
-    display: none;
-  }
-
-  .signup__image--mobile {
-    display: none;
+    width: 0;
   }
 
   .accordion {
@@ -713,14 +665,6 @@ select {
 
   .header__buzzwords h2 {
     font-size: 20px;
-  }
-
-  .header__img--mobile {
-    display: block;
-  }
-
-  .header__img--desktop {
-    display: none;
   }
 
   .nav__button {
@@ -758,22 +702,10 @@ select {
   }
 
   /* makes the signup form image rectangular */
-  .signup__image--landscape {
+  .signup__image {
     width: 100%;
     height: 100px;
-  }
-
-  /*puts the form image on top instead of bottom of the form */
-  .signup__image--first {
     order: 1;
-  }
-
-  .signup__image--mobile {
-    display: block;
-  }
-
-  .signup__image--desktop {
-    display: none;
   }
 
   .signup__inner {
