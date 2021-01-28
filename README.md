@@ -1,12 +1,21 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+This is the second individual project made when doing the Technigo bootcamp. The project itself consisted in creating a one pager business website.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The focus was to learn about creating a hero image as a top section, creating a signup form with different input types as well as creating an accordion to which some functionality was added by using JavaScript.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I decided rather quickly to make a made up website for an online photography school, as photography is a personal interest of mine. I started from top to bottom, starting with the hero image and chose three different images from unsplash to clearly show that it was responsive and that it changed background for mobile, tablet and desktop.
+
+I then went on with building the signup form and added several different input types. I styled it and added validation that I styled as well. I did this with the help of several instruction videos as well as reading about different features at w3schools. When the structure and styling of the signup form was done I added the action to post the data into the service HTTPBin and tried out what results/responses I got when filling in the form in different ways. 
+
+Lastly I created the accordion FAQ section. I learned a lot by looking at Technigos live code sessions as well as reading about some basic JavaScript.
+
+I styled the whole webpage with a mobile first approach and added media queries for tablet and desktop where the only thing that changed was the hero image as well as the width of the signup form and accordion. 
+
+If I had more time, I would change the + sign in the accordion to change to a - when pressed on and simply try out more functions that could be added using JavaScript.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+View it live at Netlify - https://admiring-davinci-0d2948.netlify.app
