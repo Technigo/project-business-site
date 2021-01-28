@@ -13,12 +13,12 @@
 
 <body>
 
-    <!--Hero section-->
+    <!--Hero section picture-->
 
     <header class="hero">
         <picture>
-            <source srcset="./assets/Great.jpg" media="(max-width: 767px)">
-            <source srcset="./assets/Hong-Kong.jpg" media="(max-width: 1199px)">
+            <source srcset="./assets/Great.jpg" media="(min-width: 768px)">
+            <source srcset="./assets/Hong-Kong.jpg" media="(min-width: 1200px)">
             <img class="hero-image" src=".assets/Hong-Kong.jpg" alt="Hong-Kong image" />
         </picture>
         <h1 class="hero-title">Hero Section Titel</h1>
@@ -46,45 +46,53 @@
 
     <!-- Signup form -->
 
-    <form action="http://httpbin.org/anything" method="POST">
-        <label>
-            Message
-            <input type="text" name="message" required>
-        </label>
 
-        <label>
-        E-mail
-        <input type="email" name="email" required>
-    </label>
-
-        <label>
-        Size
-        <select name="tshirtSize">
-            <option value="s">Small</option>
-            <option value="m">Medium</option>
-            <option value="L">Large</option>
-        </label>
-        </select>
-
-        <button type="submit">Oreder item</button>
-    </form>
 
 
     <!-- Accordion -->
     <section class="accordion">
 
+        <form action="http://httpbin.org/anything" method="POST">
+            <label>
+                Name
+                <input type="text" name="message" required>
+            </label>
+
+            <label>
+            E-mail
+            <input type="email" name="email" required>
+        </label>
+
+            <label>
+            Size
+            <select name="tshirtSize">
+                <option value="s">Small</option>
+                <option value="m">Medium</option>
+                <option value="L">Large</option>
+            </label>
+
+            <label>
+            </select>
+
+            <button type="submit">Oreder item</button>
+        </form>
+    </section>
+
+    <section class="accordion">
+
         <h1>FAQ</h1>
 
-        <div class="question " id="section1 ">Section 1</div>
-        <div class="answer ">
+        <div class="question" id="accordion-section-1">Section 1</div>
+        <div class="answer" id="accordion-section-1">
             <p>Lorem ipsum...</p>
         </div>
 
-        <div class="question " id="section2 ">Section 2</div>
-        <div class="answer ">
+        <div class="question" id="accordion-section-2">Section 2</div>
+        <div class="answer">
             <p>Lorem ipsum...</p>
         </div>
     </section>
+
     <!-- dont forget to link the javascript file here! -->
     <script src="./script.js "></script>
 </body>
