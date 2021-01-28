@@ -1,6 +1,6 @@
 # Business Site
 
-The project was to design a business site with hero image, accordion and a form.
+The project was to design a business site.
 
 ## The problem
 
