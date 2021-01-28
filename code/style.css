@@ -17,8 +17,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #fff;
+    background-color: #E7E7E7;
     color: black;
+    width: 100%;
   }
  
   h2 {
@@ -28,16 +29,17 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   /************** 1. HERO SECTION ******************************/
     .hero-img{
       position: relative; /* PARANT NEEDS TO BE RELATIVE */
-      background-color: #2F243A;
+      background-color: #181417;
   }
   
   .hero-img img {
-      width: 100vw;
+      width: 100%;
       padding: 0;
       height: 50vh;
       background-position: center;
       object-fit: cover;
-      filter: brightness(80%); /* make the picture a bit darker for the text to pop */
+      filter: brightness(60%); /* make the picture a bit darker for the text to pop */
+      
   }
   
   .hero-text{
@@ -51,18 +53,25 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 0 10px;
+      padding: 0 5px;
       border: 2px solid pink;
       /***** styling ****/
       color: white;
-      font-family: 'Montserrat', sans-serif;
+      font-family:'Rubik', sans-serif;
   }
 
   .hero-text h1 {
     /***** styling ****/
-    font-family:'Rubik', sans-serif;
+    font-size: 34px;
     font-weight: 900;
     white-space: nowrap;
+    padding: 10px;
+    margin: 0 5px;
+  }
+
+  .hero-text h2 {
+    font-size: 22px;
+    margin: 0;
   }
 
   /************** 2. SIGN UP FORM ******************************/
@@ -75,7 +84,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     align-items: center; /* i tablet sida och desktop sida */
 
     /***** styling ****/
-    background-color: #2F243A;
+    background-color: #181417;
   }
 
   .input-container {
@@ -84,9 +93,17 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     align-items: center;
     padding: 10px 40px;
     /***** styling ****/
-    background-color: #BEBBBB;
-    border: 4px solid #de8663;
+    background-color: whitesmoke;
+    border: 2px solid #C179B9;
     border-radius: 10px;
+    font-size: 14px;
+    color: #6D6466;
+  }
+
+  .input-container h2 {
+    font-weight: 900;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #C179B9 ;
   }
 
   input { /* Text rutor */
@@ -96,8 +113,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     margin: 6px 0;
 
     /***** styling ****/
+    border: 2px solid #C179B9;
     border-radius: 10px;
-    box-shadow: rgb(212, 209, 209);
+    box-shadow: rgb(209, 159, 152);
   }
 
   .input-container ul { /* No bullets list */
@@ -105,22 +123,51 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     padding: 0;
   }
 
-  .btn-form{
-
-  }
-
   .btn-form button { /* Själva knappen */
     padding: 2px 12px;
+    margin-top: 10px;
     /***** styling ****/
-    border: 2px solid #9649CB;
+    background-color: #C179B9;
+    border: 2px solid #C179B9;
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
-    color: #9649CB;
+    color: white;
   }
 
   .btn-form button:hover{
-    background-color: #9649CB;
-    color: white;
+    border: 2px solid #C179B9;
+    background-color: white;
+    color: #C179B9;
     transition: ease-in-out 0.7s;
   }
+
+
+    /************** 3. Accordion ******************************/
+
+    .accordion-container {
+      display: flex;
+      
+
+
+    }
+    .accordion {
+      border: 2px solid black;
+      margin: 20px;
+    }
+
+    .question{
+      border-top: 2px solid red;
+      border-bottom: 2px solid red;
+      padding: 10px 10px;
+    }
+
+    .answer {
+      display: none;
+    }
+    .active + .answer {
+      background-color: royalblue;
+      color: white;
+      display: inline-block;
+    }
+
 
