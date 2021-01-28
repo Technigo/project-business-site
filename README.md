@@ -1,10 +1,10 @@
 # Business Site
 
-The project is to build a site i.g for people to sing u p for a class or ordering something. 
+The project is to build a Business-site i.g for people to sing u p for a class or ordering something. 
 
 ## The problem
 
-My main problem is to start in the right end, by doing a mockup of how i what the business site to look. For this I used a pp strukture.
+My main problem is to start in the right end, by doing a mockup of how i what the business site to look. For this I used a pp strukture. Also I haven't got hte hang of hte codeing part yest so I don' konw excatlly what to cod and were to get the site up and running in a smooth way. 
 
 
 
