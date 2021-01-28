@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vandra Med Barn</title>
+    <title>Tiddelipom</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet"> 
   </head>
   <body class="body">
     <header class="header">
@@ -16,12 +18,15 @@
       </picture>
 
       <div class="header-menue">
+        
+        <img class="logo" src="./assets/compass-symbol.svg" alt="logo" class="logo">
+        
         <div class="hamburger">
           <div></div>
           <div></div>
         </div>
         
-        <div class="nav">
+        <div class="nav-container">
           <nav>Book Now</nav>
           <nav>Contact</nav>
           <nav>About</nav>
@@ -33,58 +38,95 @@
     </header>
 <div class="wrapper">
 
-  <div class= "info-text">
-    <h2 class="h2">Ute är det nya inne!</h2>
+  <div class= "info-text1">
+    <h2 class="h2">Outside is the New Inside!</h2>
     <p><strong>ipsum dolor sit amet consectetur adipisicing elit. Id ab consequatur fugiat sed fuga, illo nihil consectetur amet suscipit modi, dolore consequuntur assumenda vitae beatae et accusamus voluptas!</strong>  Aperiam suscipit pariatur ducimus. Distinctio, nesciunt. Nisi deleniti dolorum quia, perspiciatis maxime temporibus, quas, consequuntur aperiam distinctio tempore sapiente ad. Sint, laboriosam!</p>
   </div>
 
-  <div class="insta-img">
-    <img class="leftside-img" src="./assets/vandra_med_barn_01.jpg" alt="">
-    <img class="leftside-img" src="./assets/vandra_med_barn_02.jpg" alt="">
-    <img class="leftside-img" src="./assets/vandra_med_barn_03.jpg" alt="">
-    <img class="leftside-img" src="./assets/vandra_med_barn_04.jpg" alt="">
+  <div class="insta-img-container">
+    <img class="insta-img" src="./assets/vandra_med_barn_01.jpg" alt="">
+    <img class="insta-img" src="./assets/vandra_med_barn_02.jpg" alt="">
+    <img class="insta-img" src="./assets/vandra_med_barn_03.jpg" alt="">
+    <img class="insta-img" src="./assets/vandra_med_barn_04.jpg" alt="">
   </div>
 
-<div class="text-form-wrapper">
-  <h3>Det är roligare att göra saker tillsamans!</h3>
-  <p>Nedan kan du boka in dig och din familj på vårens komande utflyckter och äventyr!</p>
+    <div class="text-form-wrapper">
+      <article class="info-text2">
+        <h3>It's more fun together!</h3>
+        <p>Sign up your family to join us durring our next family adventure! Aperiam suscipit pariatur ducimus. Distinctio, nesciunt. Nisi deleniti dolorum quia, perspiciatis maxime temporibus, quas, consequuntur aperiam distinctio tempore sapiente ad.</p>
+      </article>
 
-  <div class="form-section"></div>
-    <form class="form-container" action="http://httpbin.org/anything" method="POST">
+          <!-- Accordion -->
+      <div class="accordion-form-wrapper">
+        <section class="accordion-section">
+            <div class="accordion">
+                <h3 id="accordion-question-1" class="accordion-question">
+                    What is included?
+                </h3>
+                <div id="accordion-answer-1" class="accordion-answer">
+                    <p class="accordion-text">
+                      Food, insurance, travel from Odenplan
+                    </p>
+                </div>
+            </div>
+        
+            <div class="accordion">
+                <h3 id="accordion-question-2" class="accordion-question">
+                  What to bring?
+                </h3>
+                <div id="accordion-answer-2" class="accordion-answer">
+                  <p class="accordion-text">
+                    Snacks, warm clothes, drinks
+                  </p>
+                </div>
+            </div>
+    
+            <div class="accordion">
+              <h3 id="accordion-question-3" class="accordion-question">
+                About Corona?
+              </h3>
+              <div id="accordion-answer-3" class="accordion-answer">
+                <p class="accordion-text">
+                  No huggings
+                </p>
+              </div>
+            </div>
+    
+            <div class="accordion">
+              <h3 id="accordion-question-4" class="accordion-question">
+                What about bears?
+              </h3>
+              <div id="accordion-answer-4" class="accordion-answer">
+                <p class="accordion-text">
+                  Just run!
+                </p>
+              </div>
+            </div>  
+          </section>
 
-      <select name="Dates">
-        <option value="-">Välj ett datum:</option>
-        <option value="14/2">Sunday 14 Februari OBS! Singel föräldrar!</option>
-        <option value="21/2">Sunday 21 February</option>
-        <option value="28/2">Sunday 28 February</option>
-      </select>
+        <section class="form-section">
+          <form class="form-container" action="http://httpbin.org/anything" method="POST">
 
-      <input type="numbers" name="paticipents-adults" placeholder="Hur många vuxna?">
-      <input type="numbers" name="paticipents-children" placeholder="Hur många barn (under 12år)?">
-      <input type="text" name=" name" placeholder="Du som bokars förnamn" required>
-      <input type="text" name=" name" placeholder="Du som bokars efternamn" required>
-      <input type="email" name="email" placeholder="Din email" required>
-      
-      <button class="button" type="submit">Join Us!</button>
-    </form>
+            <select name="Dates">
+              <option value="-">Pick a date</option>
+              <option value="14/2">Sunday 14 February OBS! Singel singel parents and kids!</option>
+              <option value="21/2">Sunday 21 February</option>
+              <option value="28/2">Sunday 28 February</option>
+            </select>
+
+            <input type="numbers" name="paticipents-adults" placeholder="How many adults?">
+            <input type="numbers" name="paticipents-children" placeholder="How many kids (under 12y)?">
+            <input type="text" name="fname" placeholder="First name" required>
+            <input type="text" name="lname" placeholder="Family-name" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            
+            <button class="button" type="submit">Join Us!</button>
+          </form>
+        </section>  
+      </div>      
+    </div>
   </div>
-</div>
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
 </div>  
-    <link rel="stylesheet" href="./script.js">
+    <script src="./script.js"></script>
   </body>
 </html>

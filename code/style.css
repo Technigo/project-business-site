@@ -4,54 +4,59 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .active + .answer {
   /* some styling here */
+  
 }
+
+* {
+  box-sizing: border-box;
+  }
+
+
+
 .body {
-  width: 100%;
   margin: 0 auto;
   background: rgb(170, 197, 197);
   color: dimgrey;
   height: 2000px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .header {
   position: relative;
+  text-align: center;
 }
 
 .header-menue {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: cornsilk;
   height: 90px;
   width: 100%;
   margin: 0 auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
-}
-
-.nav {
-  display: none;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: right;
-  margin-right: 30px;
-}
-
-.header-menue:hover {
   background: cornsilk;
   color: black; 
   opacity: 0.6;
 }
 
+.logo {
+  width: 60px;
+  margin: 8px;
+}
+
+.nav-container {
+  display: none;
+}
 
 /* Hamburger */
 
 .hamburger {
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -77,7 +82,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   width: 100vw;
   height: 80vh;
   object-fit: cover;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .headline {
@@ -97,28 +102,27 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 /* Section info and pictures*/
 
 .wrapper {
+  padding: 5px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  /* border: 3px solid black; */
-  margin: auto;
+  margin: 0 auto;
   margin-top: 0;
   width: 100%;
   max-width: 1100px;
   justify-content: space-between;
 }
 
-.insta-img {
+.insta-img-container {
   display: flex;
   justify-content: space-between;
-  max-width: 1500px;
   margin: 0;
 }
 
-.leftside-img {
+.insta-img {
   display: flex;
   width: 22%;
-  border: black solid 2px;
+  border: darkgrey solid 2px;
   border-radius: 15px;
   margin: 3px;
   margin-top: 10px;
@@ -128,13 +132,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* border: coral solid 2px; */
-}
-.info-text-container {
-  display: flex;
-  width: 100%;
-  max-width: 600px;
-  border: cornflowerblue solid 2px;
 }
 
 .h2, h3{
@@ -154,31 +151,85 @@ p {
   margin-bottom: 20px;
 }
 
-/* Form */
+/* Form and accordion*/
+
+.accordion-form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+
+}
+
+.accordion-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 20px;
+}
+
+
+/* Accordion */
+
+.accordion {
+  width: 100%;
+}
+
+.accordion-question {
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.accordion-answer {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.accordion-selected {
+  height: 38px;
+}
+
+.active, .accordion:hover {
+  background-color:rgb(148, 184, 184);
+}
+
+.accordion-text {
+  margin: 0;
+  padding: 10px;
+  padding-bottom: 0;
+  border-top: 1px solid #999;
+}
+
+.accordion-question + div {
+  background:cornsilk;
+} 
+
+/* Input Form */
+
 .form-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 600px;
-  padding: 12px 20px;
-  margin: 0 auto;
-  /* box-sizing: border-box; */
-  /* border: black 2px solid; */
+  padding-top: 50px;
   }
 
 
 select, option {
-  padding: 10px;
-  margin: 5px;
+  padding: 12px;
   border-radius: 10px;
-  width: 50%;
+  width: 100%;
+  border: darkgrey solid 2px;
+
 }
 
 .form, input {
-  padding: 10px;
-  margin: 5px;
+  padding: 12px;
   border-radius: 10px;
-  width: 80%;
+  width: 100%;
+  margin-top: 5px;
+  border: darkgrey solid 2px;
 }
 
 .button {
@@ -187,6 +238,7 @@ select, option {
   border-radius: 10px;
   width: 30%;
   background-color: rgb(250, 211, 161);
+  border: darkgrey solid 2px;
   
 }
 
@@ -196,50 +248,71 @@ select, option {
 /* Tablet */
 @media (min-width: 768px) {
 
+  .body {
+    font-size: 18px;
+  }
+
+  .header-menue {
+    position: absolute;
+  }
+
   .header-menue .hamburger {
     display: none;
   }
 
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 0;
+    padding: 5px;
+    width: 40%;
+    color: #000000;
+  }
+
   .headline {
-    font-size: 60px;
+    font-size: 30px;
   }
 
-  .form-section {
-    display: flex;
-    justify-content:flex-end;
-  }
-
-  .nav {
-    display: flex;
-  }
-
-  .wrapper {
-  }
-
-
-  .insta-img {
+  .insta-img-container{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
   }
-  .leftside-img {
-    width: 25%;
-    margin: 10px;
+  
+  .insta-img {
+    width: 24%;
   }
 
-  .form-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border: darkmagenta solid 2 px;
+  .accordion-section {
+    width: 40%;
+    padding-top: 30px;
   }
-  
+
+  .form-container {
+    width: 90%;
+    padding-top: 30px;
+  }
+
 }
 
 /* Desktop */
 @media (min-width: 992px) {
+
+  .headline {
+    font-size: 45px;
+  }
+
+  .accordion-section {
+    width: 50%;
+    padding-top: 30px;
+  }
+
+  .form-container {
+    width: 90%;
+    padding-top: 30px;
+  }
 
 
 }

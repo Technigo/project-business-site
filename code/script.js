@@ -1,9 +1,46 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-function toggle() {
-  this.classList.toggle("active")
-}
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
+
+// // Accordion FAQ //
+
+const accordionQuestion1 = document.getElementById('accordion-question-1');
+const accordionAnswer1 = document.getElementById('accordion-answer-1');
+
+const accordionQuestion2 = document.getElementById('accordion-question-2');
+const accordionAnswer2 = document.getElementById('accordion-answer-2');
+
+const accordionQuestion3 = document.getElementById('accordion-question-3');
+const accordionAnswer3 = document.getElementById('accordion-answer-3');
+
+const accordionQuestion4 = document.getElementById('accordion-question-4');
+const accordionAnswer4 = document.getElementById('accordion-answer-4');
+
+
+accordionQuestion1.addEventListener('click', () => {
+  accordionAnswer1.classList.toggle('accordion-selected');
+  accordionAnswer2.classList.remove('accordion-selected');
+  accordionAnswer3.classList.remove('accordion-selected');
+  accordionAnswer4.classList.remove('accordion-selected');
+});
+
+accordionQuestion2.addEventListener('click', () => {
+  accordionAnswer1.classList.remove('accordion-selected');
+  accordionAnswer2.classList.toggle('accordion-selected');
+  accordionAnswer3.classList.remove('accordion-selected');
+  accordionAnswer4.classList.remove('accordion-selected');
+});
+
+accordionQuestion3.addEventListener('click', () => {
+  accordionAnswer1.classList.remove('accordion-selected');
+  accordionAnswer2.classList.remove('accordion-selected');
+  accordionAnswer3.classList.toggle('accordion-selected');
+  accordionAnswer4.classList.remove('accordion-selected');
+});
+
+accordionQuestion4.addEventListener('click', () => {
+  accordionAnswer1.classList.remove('accordion-selected');
+  accordionAnswer2.classList.remove('accordion-selected');
+  accordionAnswer3.classList.remove('accordion-selected');
+  accordionAnswer4.classList.toggle('accordion-selected');
+});
+
+
