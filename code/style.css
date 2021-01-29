@@ -1,25 +1,21 @@
-
 body {
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgba(58, 116, 114, 0.24);
-  min-width: 600px;
+  /*min-width: 600px;*/
 }
+
 /*NAVBAR*/
 ul {
   list-style-type: none;
   margin: 0;
   padding: 10px;
-  /*overflow: hidden;*/
-  background-color:  rgb(58, 116, 114);
-
+  background-color: rgb(58, 116, 114);
 }
 
 li {
   display: inline;
   float: left;
-  
-  
 }
 
 li a {
@@ -32,7 +28,7 @@ li a {
 }
 
 li a:hover {
-  background-color:  rgb(142, 180, 179);
+  background-color: rgb(142, 180, 179);
 }
 
 h3 {
@@ -42,26 +38,23 @@ h3 {
   justify-content: flex-end;
   margin: 0;
   padding-right: 10px;
-  /*text-shadow: 2px 2px 4px rgb(26, 53, 52);*/
 }
 
 
 /*HEADER*/
 .hero {
   position: relative;
-
 }
 
 .hero-image {
   width: 100vw;
-  /*height: auto;*/
   height: 100vh;
-  object-fit: cover;  
+  object-fit: cover;
 }
 
 .hero-title {
   position: absolute;
-  top:0 ;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -73,46 +66,41 @@ h3 {
   color: rgb(200, 212, 212);
   font-size: 70px;
   text-shadow: 4px 4px 6px rgb(26, 53, 52);
- 
-  
 }
 
+/*SIGNUP FORM*/
 .big-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-/*SIGNUP FORM*/
-.container {
-background-color: rgb(58, 116, 114);
-color: rgb(26, 53, 52);
-font-size: 16px;
-width: 400px;
-height: 430px;
-margin-top: 40px;
-box-shadow: 2px 2px 4px rgb(26, 53, 52);
-display: flex;
-align-items: center;
-/*justify-content: center;*/
-flex-direction: column;
 
+.container {
+  background-color: rgb(58, 116, 114);
+  color: rgb(26, 53, 52);
+  font-size: 16px;
+  width: 400px;
+  height: 430px;
+  margin-top: 40px;
+  box-shadow: 2px 2px 4px rgb(26, 53, 52);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .signup-form {
   background-color: rgba(255, 255, 255, 0.527);
-  /*display: table;*/
-  padding: 20px ;
+  padding: 20px;
   margin: 50px 40px;
-
 }
 
 div .signup-form {
-  display:table-row;
-  
+  display: table-row;
 }
 
-label, input {
+label,
+input {
   display: table-cell;
   margin-bottom: 10px;
 }
@@ -122,14 +110,20 @@ label {
 }
 
 .radio-buttons {
-  
   margin: 10px 0;
 }
+
 .checkbox {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+/*Style button*/
+.submit {
+  display: flex;
+  justify-content: center;
 }
 
 button {
@@ -140,55 +134,45 @@ button {
   color: rgb(26, 53, 52);
   font-size: 18px;
   margin-top: 20px;
-  display: flex;
- 
+  cursor: pointer;
 }
+
 
 /*ACCORDION*/
+h2 {
+  display: flex;
+  margin: 10px;
+}
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+.accordion {
+  background-color: rgba(255, 255, 255, 0.527);
+  display: table;
+  margin: 0 40px;
+}
 
-/*.active + .answer {
-  /* some styling here */
-  h2 {
-    display: flex;
-    margin: 10px;
-    
-  }
-  .accordion {
-    background-color: rgba(255, 255, 255, 0.527);
-    /*border: 2px solid rgb(45, 77, 78);*/
-    
-    display: table;
-    margin: 0 40px;
-    
-  }
+.accordion-header {
+  margin: 0;
+  padding: 20px;
+  cursor: pointer;
+  border: 1px solid rgb(58, 116, 114);
+}
 
-  .accordion-header{
-    margin: 0;
-    padding: 20px;
-    cursor: pointer;
-    border: 1px solid rgb(58, 116, 114);
+.accordion-body {
+  display: none;
+  overflow: hidden;
+  background-color: rgb(212, 227, 228);
+}
 
-  }
-  .accordion-body{
-    display: none;
-    overflow: hidden;
-    background-color: rgb(212, 227, 228);
-  }
-
-  .accordion-selected {
+.accordion-selected {
   display: block;
-  
 }
 
-  p {
-    margin: 0;
-    padding: 10px;
-    border: 1px solid rgb(26, 53, 52);
+p {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid rgb(26, 53, 52);
 }
+
 /*FOOTER*/
 footer {
   background-color: rgb(58, 116, 114);
@@ -199,5 +183,3 @@ footer {
   width: auto;
   height: 120px;
 }
-
-

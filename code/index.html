@@ -1,111 +1,117 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-    <link rel="stylesheet" href="./style.css"/>
-  </head>
-  <body>
-    <nav class="menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Aboute</a></li>
-        <li><a href="#">Contact</a></li>
-        <h3>GOitaly</h3>
-      </ul>
 
-    </nav>
-    <!-- video or image as a header is cool :) -->
-    <header class="hero">
-      <picture>
-        <source srcset="./image/mobile.jpg" media="(max-width: 667px)"/>
-        <source srcset="./image/tablet.jpg" media="(max-width: 1023px)"/>
-        <img class="hero-image" src="./image/desktop.jpg" alt="Flower"/>
-      </picture>
-      <h1 class="hero-title">Lago di Braies 
-        <span style="font-size: 30px"> Explore the best of Italy</span>
-      </h1>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 3</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-    <!-- Signup form -->
-    <section class="big-container">
+<body>
+  <!-- Navbar and the name of the company-->
+  <nav class="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <h3>GOitaly</h3>
+    </ul>
+  </nav>
+
+  <!--Hero-image in header-->
+  <header class="hero">
+    <picture>
+      <source srcset="./image/mobile.jpg" media="(max-width: 667px)" />
+      <source srcset="./image/tablet.jpg" media="(max-width: 1023px)" />
+      <img class="hero-image" src="./image/desktop.jpg" alt="Flower" />
+    </picture>
+    <h1 class="hero-title">Lago di Braies
+      <span style="font-size: 30px"> Explore the best of Italy</span>
+    </h1>
+  </header>
+
+  <!-- Signup form -->
+  <section class="big-container">
     <div class="container">
-    <form action="http://httpbin.org/anything" method="POST" class="signup-form">
-      <div class="name">
-        <label>
-          Firstname: <input type="text" name="firstname" id="firstname" required>
-        </label>
-      </div>
-      <div class="name">
-        <label>
-          Lastname: <input type="text" name="lastname" id="lastname" required>
-        </label>
-      </div>
-      <div class="password">
-        <label>
-          Password: <input type="password" name="password" id="password" required>
-        </label>
-      </div>
+      <form action="http://httpbin.org/anything" method="POST" class="signup-form">
+        <div class="name">
+          <label>
+            Firstname: <input type="text" name="firstname" id="firstname" required>
+          </label>
+        </div>
+        <div class="name">
+          <label>
+            Lastname: <input type="text" name="lastname" id="lastname" required>
+          </label>
+        </div>
+        <div class="password">
+          <label>
+            Password: <input type="password" name="password" id="password" required>
+          </label>
+        </div>
+        <!--Radio Buttons-->
+        <div class="radio-buttons">
+          <label>
+            Female <input name="gender" type="radio" value="female" required>
+          </label>
 
-      <!--Radio Buttons-->
-      <div class="radio-buttons">
-        <label>
-          Female <input name="gender" type="radio" value="female" required>
-        </label>
-        
-        <label> 
-          Male <input name="gender" type="radio" value="male" required>
-        </label>
+          <label>
+            Male <input name="gender" type="radio" value="male" required>
+          </label>
 
-        <label> 
-          Other <input name="gender" type="radio" value="other" required>
-        </label>
-      </div>
-      <!--Checkbox-->
-      <div class="checkbox">
-        <label>
-          Sign up for our newsletter? <input type="checkbox" name="newsletter">
-        </label>
-        
-        <label>
-          Accept terms & conditions? <input type="checkbox" name="term&conditions" required>
-        </label>
-      </div>
-      <!--Submit-->
-      <div class="submit">
-        <button type="submit">Login</button>
-      </div>
-    </form>
-  </div>
+          <label>
+            Other <input name="gender" type="radio" value="other" required>
+          </label>
+        </div>
+        <!--Checkbox-->
+        <div class="checkbox">
+          <label>
+            Sign up for our newsletter? <input type="checkbox" name="newsletter">
+          </label>
 
+          <label>
+            Accept terms & conditions? <input type="checkbox" name="term&conditions" required>
+          </label>
+        </div>
+        <!--Submit-->
+        <div class="submit">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Accordion -->
     <div class="container">
-      <!-- Accordion -->
       <h2>Q&A</h2>
       <div class="accordion">
-      <div class="accordion-header" id="accordion-header-1">Who are GOitaly?</div>
-      <div class="accordion-body" id="accordion-body-1">
-        <p>Goitaly are a travel agency that offer small private groups and small companies the chance to discover Italy from a new exciting perspective.</p>
-      </div>
+        <div class="accordion-header" id="accordion-header-1">Who are GOitaly?</div>
+        <div class="accordion-body" id="accordion-body-1">
+          <p>Goitaly are a travel agency that offer small private groups and small companies the chance to discover
+            Italy from a new exciting perspective.</p>
+        </div>
 
-      <div class="accordion-header" id="accordion-header-2">Where do they travel?</div>
-      <div class="accordion-body" id="accordion-body-2">
-        <p>Goitaly arranges trips according to your wishes within Italy. One of their most popular destinations is the fabulous lake Lago di Braies, which is ideal for hiking.</p>
-      </div>
+        <div class="accordion-header" id="accordion-header-2">Where do they travel?</div>
+        <div class="accordion-body" id="accordion-body-2">
+          <p>Goitaly arranges trips according to your wishes within Italy. One of their most popular destination is the
+            fabulous lake Lago di Braies, which is ideal for hiking.</p>
+        </div>
 
-      <div class="accordion-header" id="accordion-header-3">How can I get more information and book my next trip?</div>
-      <div class="accordion-body" id="accordion-body-3">
-        <p>Login and explore all of their trips and signup for our newsletter to get our latest news.</p>
-      </div>
+        <div class="accordion-header" id="accordion-header-3">How can I get more information and book my next trip?
+        </div>
+        <div class="accordion-body" id="accordion-body-3">
+          <p>Login and explore all of their trips and signup for their newsletter to get their latest news.</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!--Footer-->
   <footer>
     <h5>&copy Andrea Larsson - Technigo 2021</h5>
   </footer>
-    <!-- dont forget to link the javascript file here! -->
-    <script src="./script.js"></script>
-  </body>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>
