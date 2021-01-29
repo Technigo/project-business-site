@@ -1,6 +1,6 @@
 
 body {
-  background-color: aquamarine;
+  background-color: rgb(0, 0, 0);
   margin: 0;
 }
 
@@ -15,6 +15,7 @@ body {
   width: 100vw;
   height: 50vh;
   object-fit: cover;
+  
 }
 
 .title {
@@ -58,7 +59,7 @@ body {
   justify-content: center;
   background-color: #000000;
   margin-top: -5px;
-  height: 400px;
+  height: 380px;
   padding: 35px 35px 15px 35px;
   
 }
@@ -99,6 +100,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: hsl(53, 100%, 50%);
   font-size: 27px;
+  margin: 10px;
  
   
 }
@@ -106,12 +108,27 @@ body {
 /* sign up form */
 
 .interaction-container {
-  background-color: rgb(255, 255, 255);
-  padding: 0px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1050px;
+  background-color: black;
+  padding: 10px 30px 0px 30px;
+  
+}
+
+.submit-container {
+  border: 3px solid white;
+  width: 460px;
+  height: 490px;
+  margin: 0 0 10px 0;
+  padding: 20px;
+    
+
 }
 
 .sign-up-box {
-  width: 710px;
+  width: 300px;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -124,21 +141,21 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: violet;
-  padding: 20px 20px 0px 20px;
-  width: 300px;
-  margin: 0;
+  background-color: black;
+  width: 460px;
+  margin: -1px;
 }
 
 .radiobutton-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
+  width: 350px;
   height: 100px;
-  background-color: thistle;
+  background-color: black;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
+  color: white;
 }
 
 .radiobuttons {
@@ -148,7 +165,7 @@ body {
 }
 
 .input-text {
-  width: 110px;
+  width: 180px;
 }
 
 
@@ -159,51 +176,63 @@ label {
 
 label > p {
   font-family: 'Open Sans', sans-serif;
-  color: #1b2325;
+  color: white;
   margin: 0;
 }
 
 .checkbox-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: tomato;
-  padding: 20px;
-  width: 300px;
-  margin: 0;
+  
+  background-color: black;
+  width: 460px;
+  margin: -1px;
+  color: white;
 }
 
 .checkbox-box-title {
   display: flex;
   justify-content: center;
   font-family: 'Open Sans', sans-serif;
-  color: #1b2325;
-  background-color: teal;
-  width: 300px;
+  color: white;
+  background-color: black;
+  width: 460px;
+  
 }
 
 .checkbox {
-  margin-top: 10px;
+  margin-left: 10px;
 
 }
-
-
 
 .checkbox-text {
   font-family: 'Open Sans', sans-serif;
-  color: #1b2325;
-  font-size: 14px;
+  color: white;
+  font-size: 15px;
   margin-top: 10px;
 }
 
 
+
+
 .button-box {
-  background-color: thistle;
+  
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100px;
+  width: 460px;
+  margin: -1px;
+  background-color: black;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  background-color: gold;
+  font-size: 15px;
+  width: 100px;
   height: 50px;
-  width: 340px;
+  margin-top: 30px;
 }
 
 
@@ -211,17 +240,19 @@ label > p {
 /* FAQ SECTION */
 
 .accordion-container {
-  background-color: teal;
-  width: 300px;
+  border: 3px solid white;
+  width: 460px;
+  height: 470px;
   margin: 0;
-  padding: 0px 20px 20px 20px;
+  padding: 20px;
+  
 }
 
 .accordion-title {
-  background-color: thistle;
+  
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  color: #984400;
+  color: gold;
   font-size: 15px;
   width: 300px;
   margin: 0%;
@@ -238,6 +269,7 @@ label > p {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   margin: 0px;
+  color: white;
 
 
 }
@@ -248,6 +280,7 @@ label > p {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   margin: 10px 0px 0px 0px;
+  color: white;
   
 }
 
@@ -301,7 +334,70 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     margin-top: -15px;
     
   }
+
+  .interaction-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 550px;
+  }
+
+  .submit-container {
+    width: 340px;
+    height: 530px;
+    padding: 0;
+  }
+
+  .fill-in-form-box {
+    width: 340px;
+  }
+
+  .input-text{
+    width: 120px;
   
+  }
+  
+
+  label > p {
+    margin-top: 10px;
+    
+  }
+
+  .radiobutton-box {
+    width: 340px;
+  }
+
+  .checkbox-box-title {
+    width: 340px;
+  }
+
+  .checkbox-box {
+    width: 340px;
+  }
+
+  
+
+  .button-box {
+    width: 340px;
+    height: 110px;
+  }
+
+  button {
+  font-size: 20px;
+  width: 125px;
+  height: 75px;
+
+  }
+  
+  
+  .accordion-container {
+    width: 320px;
+    height: 530px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
 
 
 
@@ -331,5 +427,52 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     
     font-size: 30px;
   }
+
+  .submit-container {
+    width: 500px;
+    margin-left: 30px;
+  }
+
+  .fill-in-form-box {
+    width: 500px;
+  }
+
+  .input-text{
+    width: 160px;
+  
+  }
+  
+
+  label > p {
+    margin-top: 10px;
+    
+  }
+
+  .radiobutton-box {
+    width: 440px;
+  }
+
+  .checkbox-box-title {
+    width: 500px;
+  }
+
+  .checkbox-box {
+    width: 500px;
+  }
+
+  
+
+  .button-box {
+    width: 500px;
+    
+  }
+  
+  .accordion-container {
+    width: 500px;
+    margin-right: 30px;
+  }
+
+
+
 
 }
