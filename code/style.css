@@ -34,12 +34,23 @@ body {
 .content-container {
   display: flex;
   justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
 }
 /* Sign up form */
 .form-container {
-  width: 250px;
-  height: 350px;
+  width: 300px;
+  height: 500px;
   font-size: 18px;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+/*Accordion*/
+.accordion {
+  width: 300px;
+  height: 500px;
   border: 2px solid black;
   padding: 10px;
   margin: 10px;
@@ -62,5 +73,20 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 @media (min-width: 768px) and (max-width: 992px) {
   .text-hero {
     font-size: 30px;
+  }
+  .content-container {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 993px) {
+  .content-container {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: row;
   }
 }
