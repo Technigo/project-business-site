@@ -1,15 +1,19 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*** HERO SECTION ***/
 
 .hero {
-  position: relative;  
+  position: relative;
+  align-items: center  
 }
+
 
 .hero-image {
   width:100vw;
@@ -28,22 +32,47 @@ body {
   justify-content: center;
   align-items: center;
   color: whitesmoke;
-  font-size: 150px;
+  font-size: 100px;
   font-weight: 100%
 }
+
+.hero-subtitle {
+ display: flex;
+ color: whitesmoke;
+}
+
+.button {
+  background: #FED001;
+  font-weight: 100;
+  color: black;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  padding: 12px 28px;
+  border: whitesmoke;
+  border-radius: 8px;
+  transition-duration: 0.5s;
+}
+
+.button:hover {
+  background-color: white;
+  color: whitesmoke;
+}
+  
 
 /*** FORMS LAYOUT ***/
 
 .forms-container {
  display: flex;
  flex-direction: column;
+ justify-content: space-between;
 }
 
 /*FORM*/
 
 form {
   /* Center the form on the page */
-  margin: 0 auto;
+ align-items: center;
   width: 500px;
   /* Form outline */
   padding: 1em;
@@ -60,7 +89,7 @@ input:valid {
 }
 
 input:invalid {
-  background-color: red;
+  background-color: #F50480;
 }
 
 label {
@@ -99,4 +128,15 @@ label {
     .forms-container {
       flex-direction: row;
     }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 50%;   
+    background-color: #F50480;
+    height:50px;
   }
