@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
 html {
   
@@ -7,26 +8,23 @@ html {
 body {
   margin: 0; 
 }
-/* HEADER ---> clean header CSS*/
-header {
-  width: 100vw;
-  height: 20vh; 
-  background-color:/*	#d1cac7; */ black;
-  color: #fff;
+
+  .container {
+    margin: 3px; 
+    width: 100vw;
+    height: 15vh; 
+    background-color:#000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
 }
 
+  /*this could be set inside of container if nothing else needs a contiainer. The mid section needs it? for display: flex; ?*/
   .header {
     font-family: 'Major Mono Display', monospace;
     font-weight: 900px;
   }
 
-  .container {
-    width: 100vw;
-    margin: 3px; 
-    border: 3px solid black;
-    display: flex;
-    justify-content: space-between;
-}
 
   .header-l {
     margin-top: 45px; 
@@ -65,44 +63,114 @@ header {
 		cursor: wait;
 	}
 
-/* HErO VIDEO */
-.hero-video1 {
-  width: 100vw;
-  height: 90vh;
-  object-fit: cover;
+/* HERO VIDEO */
+  .hero-video {
+    position: relative;
+  }
+
+  .hero-video1 {
+    width: 100vw;
+    height: 90vh;
+    object-fit: cover;
 }
 
-  /* MID SECTION */
   .mid {
-  display: flex;
-  justify-content: space-between;
+    width: 100vw;
+    height: 60vh; /*take away ?*/
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Space Mono', monospace;
+    color: #fff;
+    background: #000;
 }
 
-.form-survey {
-  width: 50%;
-  height: 50vh;
+  .about {
+    width: 100%;
+  }
+
+a {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1.9px;
+    font-weight: 700;
+    font-size: 35px;
+    border-bottom:5px solid #fff;
+    transition: color 2s ease;
+    }
+
+a:hover {
+    color: #FDE7D6 ;
+    cursor: pointer; 
 }
+
+  .about-text {
+    position: relative; 
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    line-height: 200%;
+    overflow-wrap: break-word; /*does nothing I Think - check last weeks project*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+/*  FORM-SURVEY */
+  .form-survey {  
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border: 3px solid yellow; /*take away*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+  }
 
 /* ACCORDION */
   .accordion {
-    width: 50%;
-    height: 50vh; /*Should this be another height specs??*/
-    border: 3px solid #999;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    left: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0;
+    border: 3px solid #999; /*take away*/
     border-radius: 7px;
-    margin-bottom: 5px;
+    font-family: 'Major Mono Display', monospace;
+    color: #fff; 
   }
+
+  .header2 {
+    color: #fff;
+    transition: color 2s ease;
+    }
+
+  .header2:hover {
+    color: #FDE7D6 ;
+    cursor: pointer; 
+    }
 
   .accordion-header {
     margin: 0;
     padding: 10px;
-    border: 3px solid purple;
     cursor: pointer;
   }
 
   .answer {
     margin: 0;
     padding: 0px; 
-    border: 3px solid black;
     display: none;
   }
 
@@ -112,7 +180,10 @@ header {
   }
   
   .active + .answer {
-  background-color: red; 
+    background: #6b7686;
+    padding-top: 2px;
+    padding-left: 2px;
+    height: 10vh;
 }
 
   .big-container {
@@ -123,32 +194,17 @@ header {
     display: block;
   }
 
-/*  FORM-SURVEY */
-  .form-survey { 
-    width: 50%;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 0;
-    padding-right: 10px;
-    border: 3px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+/*
+  .footer { /*or should i target header and footer the same way? YES try to style by class in CSS*//*
+  font-family: 'Space Mono', monospace ;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }
+*/
 
-.form-survey-low {
-  cursor: wait;
-}
+/*ToDo Set display: flex; flex-direction: column; in mobile view and perhaps tablet  
 
-footer { /*or should i target header and footer the same way? YES try to style by class in CSS*/
-  margin-left: 10px; /*take away later*/
-  width: 100vw; 
-  height: 15vh;
-  border: 3px solid green;
-  font-family: 'Major Mono Display', monospace;;
-}
-
-/* Set accordion and form inside of a common <div> as display: flex; flex-direction: column; in mobile view and perhaps tablet  
 @media {
 
 }
