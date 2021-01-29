@@ -17,6 +17,14 @@ body {
   object-fit: cover;
 }
 
+.video-tablet {
+  display: none;
+}
+
+.video-desktop {
+  display: none;
+}
+
 .hero-title {
   color: #FFF;
   text-align: center;
@@ -38,7 +46,141 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* margin: 35px auto; */
+}
+
+/*** Sign-up form ***/
+
+.signup-form {
+  background-color: #395D7F;
+  color: #FFF;
+  border-radius: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 80%;
+  margin: 70px auto 0;
+  padding: 5px 30px 65px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 20px;
+}
+
+.radiobuttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 25px auto 30px;
+}
+
+.checkboxes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+input[type=text],
+[type=password],
+[type=email] {
+  background-color: #fadadd;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+
+input[type=radio],
+[type=checkbox] {
+  margin: 0;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.submit-button {
+  background: #395D7F;
+  color: #FFF;
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  border: solid white 1.5px;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  outline: none;
+}
+
+/*** FAQ-accordion ***/
+
+.FAQ-accordion {
+  border: solid #999 0.5px;
+  border-radius: 1%;
+  width: 80%;
+  margin: 70px auto 0;
+  background-color: #FFF;
+  padding-top: 5px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  border-bottom: solid #999 0.5px;
+}
+
+.question {
+  background-color: #fadadd;
+  border-top: solid #999 0.5px;
+  padding: 12px;
+  margin: 0;
+}
+
+.answer {
+  background-color: #bcd9ea;
+  border-top: solid #999 0.5px; 
+  padding: 12px;
+  margin: 0;
+  display: none;
+}
+
+.active + .answer {
+  display: block;
+}
+
+footer {
+  background-color: #5dc3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 100%;
+  margin: 60px 0 0;
+  padding: 10px;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 12px;
+}
+
+.icons {
+  width:25%;
+  display: flex;
+  justify-content: space-around;
+  font-size: medium;
 }
 
 h1 {
@@ -100,198 +242,51 @@ a:active {
   color: gray;
 }
 
-/*** Sign-up form ***/
 
-.signup-form {
-  background-color: #395D7F;
-  color: #FFF;
-  border-radius: 1%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 80%;
-  margin: 70px auto 0;
-  padding: 5px 70px 65px;
-  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
-}
-
-label {
-  display: inline-block;
-  margin: 0 0 20px;
-}
-
-.radiobuttons-gender-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin: 25px auto 30px;
-}
-
-.checkboxes-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-input[type=text],
-[type=password],
-[type=email] {
-  background-color: #fadadd;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  outline: none;
-  text-decoration: none;
-}
-
-input[type=radio],
-[type=checkbox] {
-  margin: 0;
-}
-
-.button-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.submit-button {
-  background: #395D7F;
-  color: #FFF;
-  /* outline: none; */
-  font-family: 'Karla', sans-serif;
-  font-weight: 600;
-  border: solid white 1.5px;
-  border-radius: 10px;
-  text-decoration: none;
-  padding: 15px 30px;
-  cursor: pointer;
-  outline: none;
-}
-
-/*** FAQ-accordion ***/
-
-.FAQ-accordion {
-  border: solid #999 0.5px;
-  border-radius: 1%;
-  width: 80%;
-  margin: 70px auto 0;
-  background-color: #FFF;
-  padding: 5px 0 40px;
-  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
-}
-
-/* .accordion {
-  border: solid purple 1px;
-} */
-.last-accordion {
-  border-bottom: solid #999 0.5px;
-}
-
-.question {
-  background-color: #fadadd;
-  border-top: solid #999 0.5px;
-  padding: 12px;
-  margin: 0;
-}
-
-.answer {
-  background-color: #bcd9ea;
-  /* background-color: #8bbdd9; */
-  border-top: solid #999 0.5px; 
-  padding: 12px;
-  margin: 0;
-  transition: height 0.3s ease;
-  display: none;
-}
-
-.active + .answer {
-  display: block;
-}
-
-footer {
-  background-color: #5dc3ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60px;
-  width: 100%;
-  margin: 60px 0 0;
-  padding: 10px;
-}
-
-.info {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 12px;
-}
-
-.icons {
-  width:25%;
-  display: flex;
-  justify-content: space-around;
-  font-size: medium;
-}
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-/* .active + .answer {
-  /* some styling here */
-
-  @media (min-width: 668px) {
-    .main-content {
-      width: 100%;
-      flex-direction: row;
-      justify-content: space-around;
-    }
-
-    .signup-form {
-      width: 45%;
-    }
-
-    .FAQ-accordion {
-      width: 45%;
-    }
-
-    /* footer {
-      margin: 30px auto 0;
-    } */
-    
-    .info {
-      width: 70%;
-    }
-    
-    .icons {
-      font-size: large;
-    }
+@media (min-width: 668px) { 
+  .main-content {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
-  @media (min-width: 1025px) {
-    .signup-form {
-      width: 470px;
-    }
-
-    .FAQ-accordion {
-      width: 470px;
-    }
-    
-    .info {
-      width: 70%;
-    }
-    
-    .icons {
-      font-size: x-large;
-    }
+  .signup-form {
+    width: 45%;
+    padding: 5px 40px 65px;
   }
+
+  .FAQ-accordion {
+    width: 45%;
+  }
+  
+  .info {
+    width: 70%;
+  }
+  
+  .icons {
+    font-size: large;
+  }
+}
+
+@media (min-width: 1025px) {
+  .main-content {
+    justify-content: space-between;
+  }
+  
+  .signup-form {
+    width: 470px;
+    padding: 5px 70px 65px;
+  }
+
+  .FAQ-accordion {
+    width: 470px;
+  }
+  
+  .info {
+    width: 70%;
+  }
+  
+  .icons {
+    font-size: x-large;
+  }
+}

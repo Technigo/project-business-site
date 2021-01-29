@@ -15,18 +15,3 @@ document.getElementById("question-2").onclick = toggle
 document.getElementById("question-3").onclick = toggle
 
 document.getElementById("question-4").onclick = toggle
-
-// // Vans code: open one at a time and close when another is opened
-// const accordionHeader1 = document.getElementById('question-1');
-
-// const accordionHeader1 = document.getElementById('question-2');
-
-// const accordionHeader1 = document.getElementById('question-3');
-
-// const accordionHeader1 = document.getElementById('question-4');
-
-// accordionHeader1.add
-
-// document.getElementById("question-1").onclick = toggle {
-//   this.classList.remove()
-// }
