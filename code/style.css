@@ -16,13 +16,12 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   background-repeat: no-repeat;
   margin: 0;
   z-index: 1;
-  filter:grayscale(0.75);
+  filter: grayscale(0.75);
 }
 
 .header {
   display: flex;
   flex-wrap: wrap;
-  
 }
 
 .nav {
@@ -32,7 +31,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   text-align: right;
   margin-top: 3%;
   margin-left: 17%;
-  z-index: 2
+  z-index: 2;
 }
 
 .nav-item {
@@ -101,10 +100,11 @@ a:hover {
 
 
 /*extra styling different screens*/
-@media (max-width: 768px){
+@media (max-width: 767px){
   .imglogo {
     width: 25%;
     height: auto;
+    margin: 2px;
   }
     
   .nav {
@@ -112,43 +112,44 @@ a:hover {
   }
 
   .header h1 {
-    font-size: 20px;
+    padding-top: 10px;
+    font-size: 18px;
   }
 
   .header p {
     font-size: 10px;
   }
-
-  .form {
-    width: 100%;
-    height: auto;
-  }
   
-  .accordion {
-    width: 100%;
-    height: auto;
-  }
+  
 }
 
-/*@media (min-width: 768px){
+@media (min-width: 768px){
   .headline {
     margin-top: 25%;
   }
 
   .header h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .header p {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .nav {
     display: none;
   } 
-}*/
 
-@media (min-width: 769px){
+  .hamburger div {
+    width: 45px;
+    height: 8px;
+    margin-left: 45px;
+  }
+
+  
+}
+
+@media (min-width: 1024px){
   .hamburger div{
     display: none;
   }
@@ -158,12 +159,13 @@ a:hover {
   }
 
   .header h1 {
-    font-size: 40px;
+    font-size: 45px;
   }
 
   .header p {
     font-size: 30px;
   }
+ 
 }
 
 
@@ -181,28 +183,34 @@ a:hover {
 }
 
 .form {
-  display: flex;
+  /*display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: flex-start;
+  
+  align-items: flex-start;*/
+  display: block;
+  
   background-color: lightgray;
   width: 40%;
   height: auto;
-  margin: 10px;
+margin: 10px;
+  padding: 10px;
   box-shadow:5px 5px rgba(0,0.15,0,0.15);
   
 }
 
 .form h2, h5 {
-  text-align: center;
  
+  text-align: center;
+  
   
 }
 
-input text {
-  width: 80%;
+
+/*.text-input {
+margin-left: 20px;
   
-}
+}*/
 
 input:valid {
   background-color: lightgreen;
@@ -210,26 +218,33 @@ input:valid {
 
 .name {
   padding-bottom: 10px;
+  
 }
 
 .select-menu-input {
   margin-top: 20px;
   justify-content: center;
+  
 }
 
 .radio-input {
   margin-top: 20px;
   justify-content: center;
+  
 }
 
 .checkbox-input {
+  
   padding-bottom: 20px;
+  
 }
 
 .submit-button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
+  height:auto;
 }
 
 button {
@@ -254,16 +269,17 @@ button:hover {
   background-color:lightgray;
   width: 40%;
   height: auto;
-  margin: 10px;
+margin: 10px;
+  padding: 10px;
   box-shadow: 5px 5px rgba(0,0.15,0,0.15);
 }
 
-.accordion {
+/*.accordion {
   display: flex;
   flex-wrap: wrap;
   align-items:center;
   width: 100%;
-}
+}*/
 
 .QandA h2 {
   text-align: center;
@@ -306,6 +322,7 @@ button:hover {
   background-color: slategray;
   padding-top: 20px;
   padding-bottom: 20px;
+  
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 10px;
@@ -316,6 +333,16 @@ button:hover {
 
 .accordion-item-header.active + .accordion-item-body{
   display: block;
+}
+
+
+@media (max-width: 767px){
+  .form {
+    width: 100%;
+  }
+  .QandA {
+    width: 100%;
+  }
 }
 
 
