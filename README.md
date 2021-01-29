@@ -1,6 +1,6 @@
 # Business Site
 
-The task was to buld a buiness site with a responsive hero image/video, a sign up form with a few differnt input types and also an accordion.
+The task was to buld a buiness site with a responsive hero image/video, a sign up form with a few different input types and also an accordion.
 
 ## The problem
 Styling of the form and accordion was a challange. How to reach for the right element and figure out how to make it like I wanted. It was a lot of trial and error and a lot of ctrl+k+c to figure out what the code does and what domioeffect it has. 
