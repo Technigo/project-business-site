@@ -35,11 +35,6 @@ function toggleTwo() {
   plusElement3.classList.toggle('hide')
   }
  
-// function toggleBurger(){
-//   this.classList.toggle("open")
-//   console.log("hello")
-
-// }
 
 function clickAlert() {
   alert("Welcome to Julia's🙋‍♀️. View your inbox for a starting treat👀🍲")
@@ -51,7 +46,6 @@ document.querySelector("#section2").onclick = toggleTwo
 document.querySelector("#section3").onclick = toggleThree
 document.querySelector(".button-sign-up").onclick = clickAlert
 
-// document.querySelector("#burger").onclick = toggleBurger
 
 
 
