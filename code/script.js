@@ -44,15 +44,16 @@ const accordionAnswerSix = document.getElementById('accordion-answer-six');
 
 // Accordion icons variables
 
-const plusSignOne = document.getElementById('plus-one');
-const plusSignTwo = document.getElementById('plus-two');
-const plusSignThree = document.getElementById('plus-three');
-const plusSignFour = document.getElementById('plus-four');
-const plusSignFive = document.getElementById('plus-five');
-const plusSignSix = document.getElementById('plus-six');
+const iconOne = document.getElementById('icon-one');
+const iconTwo = document.getElementById('icon-two');
+const iconThree = document.getElementById('icon-three');
+const iconFour = document.getElementById('icon-four');
+const iconFive = document.getElementById('icon-five');
+const iconSix = document.getElementById('icon-six');
 
 
 // Accordion functions
+
 
 accordionQuestionOne.addEventListener('click', () => {
   accordionAnswerOne.classList.toggle('accordion-visible');
@@ -61,17 +62,17 @@ accordionQuestionOne.addEventListener('click', () => {
   accordionAnswerFour.classList.remove('accordion-visible');
   accordionAnswerFive.classList.remove('accordion-visible');
   accordionAnswerSix.classList.remove('accordion-visible');
-  if (plusSignOne.innerHTML === '+') {
-    plusSignOne.innerHTML = '-'
+  if (iconOne.innerHTML === '+') {
+    iconOne.innerHTML = '-'
   } else {
-    plusSignOne.innerHTML = '+';
+    iconOne.innerHTML = '+';
   };
-  if (plusSignTwo.innerHTML === '-' || plusSignThree.innerHTML === '-' || plusSignFour.innerHTML === '-' || plusSignFive.innerHTML === '-' || plusSignSix.innerHTML === '-') {
-    plusSignTwo.innerHTML = '+';
-    plusSignThree.innerHTML = '+';
-    plusSignFour.innerHTML = '+';
-    plusSignFive.innerHTML = '+';
-    plusSignSix.innerHTML = '+';
+  if (iconTwo.innerHTML === '-' || iconThree.innerHTML === '-' || iconFour.innerHTML === '-' || iconFive.innerHTML === '-' || iconSix.innerHTML === '-') {
+    iconTwo.innerHTML = '+';
+    iconThree.innerHTML = '+';
+    iconFour.innerHTML = '+';
+    iconFive.innerHTML = '+';
+    iconSix.innerHTML = '+';
   };
   });
 
@@ -82,17 +83,17 @@ accordionQuestionTwo.addEventListener('click', () => {
   accordionAnswerFour.classList.remove('accordion-visible');
   accordionAnswerFive.classList.remove('accordion-visible');
   accordionAnswerSix.classList.remove('accordion-visible');
-  if (plusSignTwo.innerHTML === '+') {
-    plusSignTwo.innerHTML = '-'
+  if (iconTwo.innerHTML === '+') {
+    iconTwo.innerHTML = '-'
   } else {
-    plusSignTwo.innerHTML = '+';
+    iconTwo.innerHTML = '+';
   };
-  if (plusSignOne.innerHTML === '-' || plusSignThree.innerHTML === '-' || plusSignFour.innerHTML === '-' || plusSignFive.innerHTML === '-' || plusSignSix.innerHTML === '-') {
-    plusSignOne.innerHTML = '+';
-    plusSignThree.innerHTML = '+';
-    plusSignFour.innerHTML = '+';
-    plusSignFive.innerHTML = '+';
-    plusSignSix.innerHTML = '+';
+  if (iconOne.innerHTML === '-' || iconThree.innerHTML === '-' || iconFour.innerHTML === '-' || iconFive.innerHTML === '-' || iconSix.innerHTML === '-') {
+    iconOne.innerHTML = '+';
+    iconThree.innerHTML = '+';
+    iconFour.innerHTML = '+';
+    iconFive.innerHTML = '+';
+    iconSix.innerHTML = '+';
   };
 
 });
@@ -104,17 +105,17 @@ accordionQuestionThree.addEventListener('click', () => {
   accordionAnswerFour.classList.remove('accordion-visible');
   accordionAnswerFive.classList.remove('accordion-visible');
   accordionAnswerSix.classList.remove('accordion-visible');
-  if (plusSignThree.innerHTML === '+') {
-    plusSignThree.innerHTML = '-'
+  if (iconThree.innerHTML === '+') {
+    iconThree.innerHTML = '-'
   } else {
-    plusSignThree.innerHTML = '+';
+    iconThree.innerHTML = '+';
   };
-  if (plusSignOne.innerHTML === '-' || plusSignTwo.innerHTML === '-' || plusSignFour.innerHTML === '-' || plusSignFive.innerHTML === '-' || plusSignSix.innerHTML === '-') {
-    plusSignOne.innerHTML = '+';
-    plusSignTwo.innerHTML = '+';
-    plusSignFour.innerHTML = '+';
-    plusSignFive.innerHTML = '+';
-    plusSignSix.innerHTML = '+';
+  if (iconOne.innerHTML === '-' || iconTwo.innerHTML === '-' || iconFour.innerHTML === '-' || iconFive.innerHTML === '-' || iconSix.innerHTML === '-') {
+    iconOne.innerHTML = '+';
+    iconTwo.innerHTML = '+';
+    iconFour.innerHTML = '+';
+    iconFive.innerHTML = '+';
+    iconSix.innerHTML = '+';
   };
 });
 
@@ -125,17 +126,17 @@ accordionQuestionFour.addEventListener('click', () => {
   accordionAnswerFour.classList.toggle('accordion-visible');
   accordionAnswerFive.classList.remove('accordion-visible');
   accordionAnswerSix.classList.remove('accordion-visible');
-  if (plusSignFour.innerHTML === '+') {
-    plusSignFour.innerHTML = '-'
+  if (iconFour.innerHTML === '+') {
+    iconFour.innerHTML = '-'
   } else {
-    plusSignFour.innerHTML = '+';
+    iconFour.innerHTML = '+';
   };
-  if (plusSignOne.innerHTML === '-' || plusSignTwo.innerHTML === '-' || plusSignThree.innerHTML === '-' || plusSignFive.innerHTML === '-' || plusSignSix.innerHTML === '-') {
-    plusSignOne.innerHTML = '+';
-    plusSignTwo.innerHTML = '+';
-    plusSignThree.innerHTML = '+';
-    plusSignFive.innerHTML = '+';
-    plusSignSix.innerHTML = '+';
+  if (iconOne.innerHTML === '-' || iconTwo.innerHTML === '-' || iconThree.innerHTML === '-' || iconFive.innerHTML === '-' || iconSix.innerHTML === '-') {
+    iconOne.innerHTML = '+';
+    iconTwo.innerHTML = '+';
+    iconThree.innerHTML = '+';
+    iconFive.innerHTML = '+';
+    iconSix.innerHTML = '+';
   };
 });
 
@@ -146,17 +147,17 @@ accordionQuestionFive.addEventListener('click', () => {
   accordionAnswerFour.classList.remove('accordion-visible');
   accordionAnswerFive.classList.toggle('accordion-visible');
   accordionAnswerSix.classList.remove('accordion-visible');
-  if (plusSignFive.innerHTML === '+') {
-    plusSignFive.innerHTML = '-'
+  if (iconFive.innerHTML === '+') {
+    iconFive.innerHTML = '-'
   } else {
-    plusSignFive.innerHTML = '+';
+    iconFive.innerHTML = '+';
   };
-  if (plusSignOne.innerHTML === '-' || plusSignTwo.innerHTML === '-' || plusSignThree.innerHTML === '-' || plusSignFour.innerHTML === '-' || plusSignSix.innerHTML === '-') {
-    plusSignOne.innerHTML = '+';
-    plusSignTwo.innerHTML = '+';
-    plusSignThree.innerHTML = '+';
-    plusSignFour.innerHTML = '+';
-    plusSignSix.innerHTML = '+';
+  if (iconOne.innerHTML === '-' || iconTwo.innerHTML === '-' || iconThree.innerHTML === '-' || iconFour.innerHTML === '-' || iconSix.innerHTML === '-') {
+    iconOne.innerHTML = '+';
+    iconTwo.innerHTML = '+';
+    iconThree.innerHTML = '+';
+    iconFour.innerHTML = '+';
+    iconSix.innerHTML = '+';
   };
 });
 
@@ -167,17 +168,17 @@ accordionQuestionSix.addEventListener('click', () => {
   accordionAnswerFour.classList.remove('accordion-visible');
   accordionAnswerFive.classList.remove('accordion-visible');
   accordionAnswerSix.classList.toggle('accordion-visible');
-  if (plusSignSix.innerHTML === '+') {
-    plusSignSix.innerHTML = '-'
+  if (iconSix.innerHTML === '+') {
+    iconSix.innerHTML = '-'
   } else {
-    plusSignSix.innerHTML = '+';
+    iconSix.innerHTML = '+';
   };
-  if (plusSignOne.innerHTML === '-' || plusSignTwo.innerHTML === '-' || plusSignThree.innerHTML === '-' || plusSignFour.innerHTML === '-' || plusSignFive.innerHTML === '-') {
-    plusSignOne.innerHTML = '+';
-    plusSignTwo.innerHTML = '+';
-    plusSignThree.innerHTML = '+';
-    plusSignFour.innerHTML = '+';
-    plusSignFive.innerHTML = '+';
+  if (iconOne.innerHTML === '-' || iconTwo.innerHTML === '-' || iconThree.innerHTML === '-' || iconFour.innerHTML === '-' || plusSignFive.innerHTML === '-') {
+    iconOne.innerHTML = '+';
+    iconTwo.innerHTML = '+';
+    iconThree.innerHTML = '+';
+    iconFour.innerHTML = '+';
+    iconFive.innerHTML = '+';
   };
 });
 

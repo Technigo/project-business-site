@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Winecellar</title>
     <link rel="stylesheet" href="./style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Stardos+Stencil&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/37c653cfef.js" crossorigin="anonymous"></script>
@@ -40,104 +39,105 @@
 
     <!-- Signup form -->
 
-    <section class="form-container">
+      <section class="form-container">
 
-      <h3 class="header-container">book wine tasting</h3>
+        <h3 class="header-container">book wine tasting</h3>
 
-      <form class="form" action="https://httpbin.org/anything" method="post">
-        <div class="form-question">
-          <label for="name">name:</label>
-          <input type="text" id="name" class="input-text" name="name" placeholder="Enter your full name" required>
-        </div>
-
-        <div class="form-question">
-          <label for="email">e-mail:</label>
-          <input type="email" id="email" class="input-text" name="email" placeholder="Your e-mail address goes here" required>
-        </div>
-
-        <div class="form-question">
-          <label for="number">phone number:</label>
-          <input type="tel" id="number" class="input-text" name="phone-number" placeholder="Your phone number goes here" required>
-        </div>
-
-        <div class="date-and-number">
+        <form class="form" action="https://httpbin.org/anything" method="post">
           <div class="form-question">
-            <label for="date">when do you want to book?</label>
-            <input type="date" id="date" name="date" min="2021-01-31" max="2022-01-31" required>
+            <label for="name">name:</label>
+            <input type="text" id="name" class="input-text" name="name" placeholder="Enter your full name" required>
           </div>
 
           <div class="form-question">
-            <label for="people">how many?</label>
-            <select class="custom-select" id="people" name="number-of-people" required>
-              <option selected>0</option>
-              <option value="one">One</option>
-              <option value="two">Two</option>
-              <option value="three">Three</option>
-              <option value="four">Four</option>
-              <option value="five">Five</option>
-              <option value="six">Six</option>
-              <option value="seven">Seven</option>
-              <option value="eight">Eight</option>
-            </select>
+            <label for="email">e-mail:</label>
+            <input type="email" id="email" class="input-text" name="email" placeholder="Your e-mail address goes here" required>
           </div>
-        </div>
 
-        <div class="form-question">what type of wine do you prefer?</div>
-        <div class="form-radio-buttons">
-          <input type="radio" id="red" name="preferred-wine" value="red-wine"required>
-          <label for="red">red wine</label>
-          <input type="radio" id="white" name="preferred-wine" value="white-wine" required>
-          <label for="white">white wine</label>
-          <input type="radio" id="both" name="preferred-wine" value="both-wines" required>
-          <label for="both">both</label>
-        </div>
+          <div class="form-question">
+            <label for="number">phone number:</label>
+            <input type="tel" id="number" class="input-text" name="phone-number" placeholder="Your phone number goes here" required>
+          </div>
 
-        <div class="form-checkbox">
-          <input type="checkbox" id="terms" name="terms" required>
-          <label for="terms">I accept the <a href="#" class="terms-conditions-link">terms and conditions</a></label>
-        </div>
+          <div class="date-and-number">
+            <div class="form-question">
+              <label for="date">when do you want to book?</label>
+              <input type="date" id="date" name="date" min="2021-01-31" max="2022-01-31" required>
+            </div>
+
+            <div class="form-question">
+              <label for="people">how many?</label>
+              <select class="form-number-of-people" id="people" name="number-of-people" required>
+                <option selected>0</option>
+                <option value="one">One</option>
+                <option value="two">Two</option>
+                <option value="three">Three</option>
+                <option value="four">Four</option>
+                <option value="five">Five</option>
+                <option value="six">Six</option>
+                <option value="seven">Seven</option>
+                <option value="eight">Eight</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-question">what type of wine do you prefer?</div>
+          <div class="form-radio-buttons">
+            <input type="radio" id="red" name="preferred-wine" value="red-wine"required>
+            <label for="red">red wine</label>
+            <input type="radio" id="white" name="preferred-wine" value="white-wine" required>
+            <label for="white">white wine</label>
+            <input type="radio" id="both" name="preferred-wine" value="both-wines" required>
+            <label for="both">both</label>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I accept the <a href="#" class="terms-conditions-link">terms and conditions</a></label>
+          </div>
     
-        <div class="form-submit-button">
-          <button type="submit" class="book-button">book</button>
-        </div>
-    </form>
-  </section>
+          <div class="form-submit-button">
+            <button type="submit" class="book-button">book</button>
+          </div>
+
+        </form>
+      </section>
 
 
     <!-- Accordion -->
     
-    <section class="accordion-container">
+      <section class="accordion-container">
 
-      <h3 class="header-container" id="header">most common questions</h3>
-      <div class="accordion-question" id="accordion-question-one">What are the prices?<div class="accordion-plus" id="plus-one">+</div></div>
-      <div class="accordion-answer" id="accordion-answer-one">
-        <p class="accordion-content">It ranges from $40-60pp. depending on how many you are.</p>
-      </div>
+        <h3 class="header-container" id="header">most common questions</h3>
+        <div class="accordion-question" id="accordion-question-one">What are the prices?<div class="accordion-icon" id="icon-one">+</div></div>
+        <div class="accordion-answer" id="accordion-answer-one">
+          <p class="accordion-content">It ranges from $40-60pp. depending on how many you are.</p>
+        </div>
 
-      <div class="accordion-question" id="accordion-question-two">Do you serve food with the wine?<div class="accordion-plus" id="plus-two">+</div></div>
-      <div class="accordion-answer" id="accordion-answer-two">
-        <p class="accordion-content">We will provide some small appetizers that fits with the wines, but no big meals.</p>
-      </div>
+        <div class="accordion-question" id="accordion-question-two">Do you serve food with the wine?<div class="accordion-icon" id="icon-two">+</div></div>
+        <div class="accordion-answer" id="accordion-answer-two">
+          <p class="accordion-content">We will provide some small appetizers that fits with the wines, but no big meals.</p>
+        </div>
 
-      <div class="accordion-question" id="accordion-question-three">How long are the sessions?<div class="accordion-plus" id="plus-three">+</div></div>
-      <div class="accordion-answer" id="accordion-answer-three">
-        <p class="accordion-content">The reserved time is three hours.</p>
-      </div>
+        <div class="accordion-question" id="accordion-question-three">How long are the sessions?<div class="accordion-icon" id="icon-three">+</div></div>
+        <div class="accordion-answer" id="accordion-answer-three">
+          <p class="accordion-content">The reserved time is three hours.</p>
+        </div>
 
-      <div class="accordion-question" id="accordion-question-four">How many people can we be in one tasting?<div class="accordion-plus" id="plus-four">+</div></div>
-      <div class="accordion-answer" id="accordion-answer-four">
-        <p class="accordion-content">You can book for eight people. If you want to book for a larger company, please contact us by email.</p>
-      </div>
+        <div class="accordion-question" id="accordion-question-four">How many people can we be in one tasting?<div class="accordion-icon" id="icon-four">+</div></div>
+        <div class="accordion-answer" id="accordion-answer-four">
+          <p class="accordion-content">You can book for eight people. If you want to book for a larger company, please contact us by email.</p>
+        </div>
 
-      <div class="accordion-question" id="accordion-question-five">Can we purchase bottles that we try?<div class="accordion-plus" id="plus-five">+</div></div>
-      <div class="accordion-answer" id="accordion-answer-five">
-        <p class="accordion-content">Yes, you will be able to purchase them.</p>
-      </div>
+        <div class="accordion-question" id="accordion-question-five">Can we purchase bottles that we try?<div class="accordion-icon" id="icon-five">+</div></div>
+        <div class="accordion-answer" id="accordion-answer-five">
+          <p class="accordion-content">Yes, you will be able to purchase them.</p>
+        </div>
 
-      <div class="accordion-question" id="accordion-question-six">How many people can we be in one tasting?<div class="accordion-plus" id="plus-six">+</div></div>
-      <div class="accordion-answer" id="accordion-answer-six">
-        <p class="accordion-content">You can book for eight people. If you want to book for a larger company, please contact us by email.</p>
-      </div>
+        <div class="accordion-question" id="accordion-question-six">How many people can we be in one tasting?<div class="accordion-icon" id="icon-six">+</div></div>
+        <div class="accordion-answer" id="accordion-answer-six">
+          <p class="accordion-content">You can book for eight people. If you want to book for a larger company, please contact us by email.</p>
+        </div>
 
     </section>
   </div>
@@ -147,21 +147,21 @@
     <div class="about-contact-big-container">
 
       <div class="about-us-container" id="about-us">
-      <h3 class="header-container">about us</h3>
-      <p class="about-us-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quae excepturi inventore error, aperiam quas in odio maiores nobis recusandae reiciendis consequuntur, suscipit id exercitationem quasi ipsum non delectus! Cupiditate. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae consectetur, incidunt fuga atque maiores provident iure quam corrupti, harum nostrum consequatur cupiditate laborum vitae eum, illo fugit similique commodi! Commodi!</p>
+        <h3 class="header-container">about us</h3>
+        <p class="about-us-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quae excepturi inventore error, aperiam quas in odio maiores nobis recusandae reiciendis consequuntur, suscipit id exercitationem quasi ipsum non delectus! Cupiditate. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae consectetur, incidunt fuga atque maiores provident iure quam corrupti, harum nostrum consequatur cupiditate laborum vitae eum, illo fugit similique commodi! Commodi!</p>
       </div>
 
       <div class="contact-us-container" id="contact">
         <h3 class="header-container">contact us</h3>
         <div class="contact-info"><i class="fa fa-phone"></i>
-          <p>000 - 00 000</p>
+          <p class="contact-info-text">000 - 00 000</p>
         </div>
         <div class="contact-info"><i class="fa fa-envelope"></i>
-          <p>contact@winecellar.com</i></p>
+          <p class="contact-info-text">contact@winecellar.com</i></p>
         </div>
         <div class="wine-glasses">
-          <i class="fas fa-wine-glass-alt one"></i>
-          <i class="fas fa-wine-glass-alt two"></i>
+          <i class="fas fa-wine-glass-alt wine-glass-one"></i>
+          <i class="fas fa-wine-glass-alt wine-glass-two"></i>
         </div>
       </div>
     
