@@ -7,6 +7,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }*/
 
 
+
+/*My code starts here -->*/
+
 /*Styling header*/
 .bgvideo {
   width: 100%;
@@ -14,7 +17,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   background-size: cover;
   background-position: relative;
   background-repeat: no-repeat;
-  margin: 0;
   z-index: 1;
   filter: grayscale(0.75);
 }
@@ -39,7 +41,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   font-size: 20px;
   margin: 3%;
   text-transform: uppercase;
-  color:linen;
+  color: linen;
 }
 
 .headline {
@@ -54,11 +56,11 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 .header h1 {
-  font-size: 50px;
+  font-size: 70px;
 }
 
 .header p {
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .logo {
@@ -84,9 +86,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .hamburger div {
   width: 30px;
-  height: 5px;
+  height: 3px;
   background-color: #E8A53A;
   margin: 3px;
+  border-radius: 10px;
 }
 
 a:link {
@@ -95,77 +98,7 @@ a:link {
 
 a:hover {
   text-decoration: none;
-  border-bottom: 3px solid linen;
-}
-
-
-/*extra styling different screens*/
-@media (max-width: 767px){
-  .imglogo {
-    width: 25%;
-    height: auto;
-    margin: 2px;
-  }
-    
-  .nav {
-    display: none;
-  }
-
-  .header h1 {
-    padding-top: 10px;
-    font-size: 18px;
-  }
-
-  .header p {
-    font-size: 10px;
-  }
-  
-  
-}
-
-@media (min-width: 768px){
-  .headline {
-    margin-top: 25%;
-  }
-
-  .header h1 {
-    font-size: 40px;
-  }
-
-  .header p {
-    font-size: 25px;
-  }
-
-  .nav {
-    display: none;
-  } 
-
-  .hamburger div {
-    width: 45px;
-    height: 8px;
-    margin-left: 45px;
-  }
-
-  
-}
-
-@media (min-width: 1024px){
-  .hamburger div{
-    display: none;
-  }
-
-  .nav {
-    display: block;
-  }
-
-  .header h1 {
-    font-size: 45px;
-  }
-
-  .header p {
-    font-size: 30px;
-  }
- 
+  border-bottom: 2px solid linen;
 }
 
 
@@ -179,64 +112,58 @@ a:hover {
   justify-content: center;
   padding: 2%;
   margin-bottom:4px;
- 
 }
 
 .form {
-  /*display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  
-  align-items: flex-start;*/
   display: block;
-  
   background-color: lightgray;
-  width: 40%;
+  width: 30%;
   height: auto;
-margin: 10px;
+  margin: 10px;
   padding: 10px;
   box-shadow:5px 5px rgba(0,0.15,0,0.15);
-  
 }
 
 .form h2, h5 {
- 
   text-align: center;
-  
-  
 }
 
-
-/*.text-input {
-margin-left: 20px;
-  
-}*/
+.textfield {
+  width: 45%;
+  padding: 5px;
+  margin-left: 15%;
+  margin-bottom: 2%;
+  border-radius: 5px;
+  border: none;
+}
 
 input:valid {
   background-color: lightgreen;
 }
 
 .name {
-  padding-bottom: 10px;
-  
+  padding-left: 15%;
+}
+
+.e-mail {
+  padding-left: 15%;
 }
 
 .select-menu-input {
   margin-top: 20px;
+  margin-left: 15%;
   justify-content: center;
-  
 }
 
 .radio-input {
   margin-top: 20px;
+  margin-left: 15%;
   justify-content: center;
-  
 }
 
 .checkbox-input {
-  
   padding-bottom: 20px;
-  
+  margin-left: 15%;  
 }
 
 .submit-button {
@@ -256,8 +183,7 @@ button {
   padding: 5px;
   margin: 20px;
   font-size: 18px;
-  cursor: pointer;
-  
+  cursor: pointer; 
 }
 
 button:hover {
@@ -267,19 +193,12 @@ button:hover {
 .QandA {
   display: block;
   background-color:lightgray;
-  width: 40%;
+  width: 30%;
   height: auto;
-margin: 10px;
+  margin: 10px;
   padding: 10px;
   box-shadow: 5px 5px rgba(0,0.15,0,0.15);
 }
-
-/*.accordion {
-  display: flex;
-  flex-wrap: wrap;
-  align-items:center;
-  width: 100%;
-}*/
 
 .QandA h2 {
   text-align: center;
@@ -293,7 +212,6 @@ margin: 10px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  /*margin-bottom: 10px;*/
   margin-top: 10px;
 }
 
@@ -315,34 +233,20 @@ margin: 10px;
 
 .accordion-item-body {
   display: none;
-  
 }
 
 .accordion-item-body-content {
   background-color: slategray;
   padding-top: 20px;
   padding-bottom: 20px;
-  
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 10px;
   color: white;
- 
-
 }
 
-.accordion-item-header.active + .accordion-item-body{
+.accordion-item-header.active + .accordion-item-body {
   display: block;
-}
-
-
-@media (max-width: 767px){
-  .form {
-    width: 100%;
-  }
-  .QandA {
-    width: 100%;
-  }
 }
 
 
@@ -358,3 +262,77 @@ margin: 10px;
   color: white;
   padding: 20px 0 20px 0;
 }
+
+  /*extra styling different screens*/
+
+  @media (max-width: 650px) {
+  .imglogo {
+    width: 25%;
+    height: auto;
+    margin: 2px;
+  }
+    
+  .nav {
+    display: none;
+  }
+
+  .header h1 {
+    padding-top: 10px;
+    font-size: 15px;
+  }
+
+  .header p {
+    font-size: 10px;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .QandA {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 651px) {
+  .headline {
+    margin-top: 25%;
+  }
+
+  .header h1 {
+    font-size: 40px;
+  }
+
+  .header p {
+    font-size: 25px;
+  }
+
+  .nav {
+    display: none;
+  } 
+
+  .hamburger div {
+    width: 40px;
+    height: 5px;
+    margin-left: 30px;
+  } 
+}
+
+
+@media (min-width: 1024px) {
+  .hamburger div {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+  }
+}
+
+
