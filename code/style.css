@@ -5,27 +5,51 @@ this can be used for the FAQ-accordion.
 read more here: https://www.w3schools.com/css/css_combinators.asp */
 body {
   margin: 0;
-  font-family: Helvetica, sans-serif;
-  line-height: 1.5;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.5; 
+  background-color: #197163;
 }
+
+* { 
+  box-sizing: border-box; }
 
 h1 {
-  font-size: 60px;
+  font-size: 90px;
+  text-align: center;
+  font-weight: 500;
+  font-style: italic;
+  padding: 0 20px;
+  backdrop-filter: blur(10px);
+}
+h2 {
+  font-size: 50px;
+  text-align: center;
+  padding: 0 20px;
+  color: #065446;
+}
+h3 {
+  font-size: 35px;
   text-align: center;
 }
-
+h4 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
 
 /*** STYLING HEADER / HERO ***/
 .hero-image {
-  /* width: 100%; */
-  height: auto;
-  width: 100%;
-  object-fit: cover;
+  /* height: auto; */
+  max-width: 100%;
+  /* object-fit: cover; */
 }
 .header {
   position: relative;
-  
+  width: 100%;  
 }
+picture {
+  width: 100%
+}
+
 .hero-text {
   position: absolute;
   top: 0;
@@ -34,7 +58,7 @@ h1 {
   right: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -44,24 +68,34 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
+  width: 100%;
 }
-
 
 
 /*** STYLING FAQ ***/
 
 .accordion {
-  /* overflow: hidden; */
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #158467;
+  background-color: #fadcac;
+  border-radius: 7px;
+  padding: 20px 10px 20px 10px;
+  margin-bottom: 20px;
 }
 
 .question {
-  cursor: pointer
+  cursor: pointer;
 }
 
 .answer {
   display: none;
-
+  text-align: center;
+  font-size: 18px;
+  color: #065446;
+  border-top: 1px solid #065446;
 }
 
 .active + .answer {
@@ -73,49 +107,83 @@ h1 {
 .signUpForm {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: left;
+  justify-content: space-evenly;
+  align-items: center;
   padding: 20px 10px 20px 10px;
-  border: 3px solid silver;
+  border: 3px solid #158467;
   border-radius: 7px;
-  width: 300px;
-  background-color: rgb(186, 197, 206);
+  width: 80%;
+  background-color: #fadcac;
+  margin: 20px 0;
 } 
-
-input[type=text], input[type=email] {
-  padding:10px;
-  border-radius:10px;
-}
-
-.button {
-  appearance:none;
-  -webkit-appearance:none;
-  padding:15px;
-  border:none;
-  background-color:#3F51B5;
-  color:#fff;
-  font-weight:500;
-  font-size: 20px;
-  border-radius:5px;
-  width: 50%;
-  cursor: pointer;
-}
 
 .signUpForm div {
   padding-bottom: 20px;
 }
 
-.form {
-  /* border: 3px solid silver;
-   */
+input[type=text], input[type=email] {
+  padding:10px;
+  border-radius:10px;
+  border: 1px solid #158467;
+  font-size: 20px;
+}
+
+/* label[type=fname], label[type=lname] { */
+label {
+  color: #065446;
+  font-size: 20px;
+}
+
+
+.button {
+  appearance:none;
+  -webkit-appearance:none;
+  padding: 10px 30px;
+  border:none;
+  background-color:#065446;
+  color:#fff;
+  font-weight:500;
+  font-size: 30px;
+  font-family: 'Playfair Display', serif;;
+  border-radius:5px;
+  width: 100%;
+  cursor: pointer;
+  
+}
+
+
+
+.footer {
+  background-color: #065446;
+  height: 100px;
+  text-align: center;
 }
 
 
 /*** MEDIA QUERIES ***/
 
-@media (min-width: 661px) {
+@media (min-width: 767px) {
   
   .content {
-  flex-direction: row;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-top: 50px;
+  }
+  .signUpForm {
+    width: 45%;
+    margin: 0;
+  }
+  .accordion {
+    width: 45%;
+    margin: 0;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .content {
+    width: 992px;
+    margin: 0 auto;
   }
 }
