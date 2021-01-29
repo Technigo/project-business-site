@@ -1,11 +1,4 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-  
-}
 
 * {
   box-sizing: border-box;
@@ -17,7 +10,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   margin: 0 auto;
   background: rgb(170, 197, 197);
   color: dimgrey;
-  height: 2000px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -37,16 +29,17 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   height: 90px;
   width: 100%;
   margin: 0 auto;
+  background: cornsilk;
+  color: darkgray; 
+  opacity: 0.6;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
-  background: cornsilk;
-  color: black; 
-  opacity: 0.6;
 }
 
 .logo {
-  width: 60px;
   margin: 8px;
+  width: 60px;
+  color: darkgray;
 }
 
 .nav-container {
@@ -62,7 +55,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   justify-content: space-evenly;
   width: 30px;
   height: 30px;
-  position: fixed;
   top: 30px;
   right: 40px;
 }
@@ -70,10 +62,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .hamburger div {
   width: 30px;
   height: 6px;
-  background: #000000;
   border-radius: 5px;
   margin-right: 30px;
   margin-left: 20px;
+  background: #000000;
 }
 
 /* Hero image and H1 text */
@@ -102,15 +94,16 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 /* Section info and pictures*/
 
 .wrapper {
-  padding: 5px;
+  
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
   margin-top: 0;
+  padding: 5px;
   width: 100%;
   max-width: 1100px;
-  justify-content: space-between;
 }
 
 .insta-img-container {
@@ -120,18 +113,11 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 .insta-img {
-  display: flex;
   width: 22%;
-  border: darkgrey solid 2px;
-  border-radius: 15px;
   margin: 3px;
   margin-top: 10px;
-}
-
-.text-form-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  border: darkgrey solid 2px;
+  border-radius: 15px;
 }
 
 .h2, h3{
@@ -147,14 +133,14 @@ h3 {
 
 p {
   margin-top: 0;
-  margin-left: 5px;
   margin-bottom: 20px;
+  margin-left: 5px;
 }
 
 /* Form and accordion*/
 
 .accordion-form-wrapper {
-  display: flex;
+  display: flex;  
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
@@ -164,6 +150,7 @@ p {
 .accordion-section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
   padding-top: 20px;
 }
@@ -195,6 +182,17 @@ p {
   background-color:rgb(148, 184, 184);
 }
 
+.accordion-question::after {
+  content: "\002B";
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion-selected::after {
+  content: "\2212";
+} 
+
 .accordion-text {
   margin: 0;
   padding: 10px;
@@ -204,6 +202,7 @@ p {
 
 .accordion-question + div {
   background:cornsilk;
+  opacity: 0.6;
 } 
 
 /* Input Form */
@@ -213,7 +212,8 @@ p {
   flex-direction: column;
   width: 100%;
   padding-top: 50px;
-  }
+}
+  
 
 
 select, option {
@@ -221,7 +221,8 @@ select, option {
   border-radius: 10px;
   width: 100%;
   border: darkgrey solid 2px;
-
+  opacity: 0.;
+  cursor: pointer;
 }
 
 .form, input {
@@ -230,7 +231,10 @@ select, option {
   width: 100%;
   margin-top: 5px;
   border: darkgrey solid 2px;
+  opacity: 0.9;
+  cursor: pointer;
 }
+
 
 .button {
   padding: 10px;
@@ -239,8 +243,10 @@ select, option {
   width: 30%;
   background-color: rgb(250, 211, 161);
   border: darkgrey solid 2px;
-  
+  cursor: pointer;
 }
+
+  
 
 
 /* Media Queries */

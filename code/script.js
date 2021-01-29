@@ -1,5 +1,4 @@
 
-
 // // Accordion FAQ //
 
 const accordionQuestion1 = document.getElementById('accordion-question-1');
