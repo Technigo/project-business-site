@@ -18,17 +18,22 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--primary-color);
 }
 
 h1 {
   font-size: 3rem;
   font-weight: 300;
   line-height: 1.2;
-  margin-bottom: 15px;
 }
 
 h2 {
   font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  padding: 30px;
 }
 
 /*** HEADER ***/
@@ -62,29 +67,21 @@ h2 {
   object-fit: cover;
 }
 
-.hero-video:after {
-  content: "";
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.3);
-  position: absolute;
-}
-
 .hero-text {
   z-index: 2;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .hero-text h1 {
   font-family: "East Sea Dokdo", cursive, sans-serif;
   font-size: 7rem;
-  margin: -10px;
+  margin-bottom: -10px;
+  line-height: 1;
 }
 
 .hero-text h2 {
   letter-spacing: 2px;
+  font-weight: 700;
 }
 
 .btn {
@@ -94,7 +91,7 @@ h2 {
   color: #fff;
   border-radius: 5px;
   border: solid #fff 2px;
-  margin-top: 25px;
+  margin: 25px;
   opacity: 0.7;
 }
 
@@ -108,17 +105,6 @@ h2 {
   text-align: center;
 }
 
-#intro p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: auto;
-}
-
-#intro h2 {
-  margin: 30px 0;
-  color: var(--primary-color);
-}
-
 /**** FLEX PARENT ****/
 
 .flex-parent {
@@ -126,7 +112,7 @@ h2 {
   height: 1400px;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
   margin-bottom: 20px;
 }
 
@@ -138,10 +124,15 @@ h2 {
   font-size: 1.2rem;
 }
 
+.flex-child h1 {
+  padding-bottom: 15px;
+}
+
 /**** FORM ****/
 
 .form {
   width: 500px; /* nuevo */
+  padding: 20px;
 }
 
 .form-container {
@@ -153,7 +144,7 @@ h2 {
   background: #cfe6ad;
   color: #0e337d;
   border-radius: 5px;
-  margin: 15px; /*nuevo*/
+  /*margin: 15px; nuevo*/
 }
 
 .form-group {
@@ -165,7 +156,9 @@ h2 {
 
 .form-group label {
   width: 50%;
+  font-size: 18px;
 }
+
 .form-group input {
   width: 300px;
   height: 30px;
@@ -201,17 +194,25 @@ button:hover {
 }
 
 .accordion-element {
-  border-top: 1px solid #0b6ba8;
   padding: 0px;
 }
 
 .accordion-header {
+  border-top: 1px solid #0b6ba8;
   background: #b1882d;
   font-size: 22px;
   margin: 0;
   padding: 20px;
   cursor: grab;
-  /*  border-radius: 10px; nuevo */
+  /* border-radius: 5px; */
+}
+
+.one {
+  border-radius: 5px 5px 0 0;
+}
+
+.four {
+  border-radius: 0 0 5px 5px;
 }
 
 .accordion-text-container {
@@ -238,7 +239,7 @@ button:hover {
 
 .footer {
   display: flex;
-  background: #0b6ba8;
+  background: #3b3020;
   height: 60px;
   margin: 0px;
   justify-content: center;
@@ -249,10 +250,30 @@ button:hover {
 }
 
 .footer-text {
-  font-family: Helvetica;
-  font-size: 10px;
   color: #fff;
   text-align: center;
-  font-size: 15px;
   padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .flex-parent {
+    display: flex;
+    align-items: space-evenly;
+    height: 1200px;
+  }
+
+  .flex-child {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .flex-parent {
+    display: flex;
+    height: 500px;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
 }
