@@ -10,6 +10,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 body {
  margin: 0;
  font-family: Quicksand, Arial, Helvetica, sans-serif;
+ background: black;
 }
 .header{
   display: flex; 
@@ -29,18 +30,6 @@ body {
   left: 20px;
   top: 20px
 }
-.form {
-  display: flex;
-  background: black;
-  color: white;
-}
-input [type=text], select { 
-  padding: 2px;
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-size: 12px;
-  width: 200px;
-}
 .container-hero {
   position: relative;
 }
@@ -49,24 +38,54 @@ input [type=text], select {
   color: black;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
   border-radius: 20px;
   margin: 20px;
+  width: 350px;
+}
+.form {
+  display: flex;
+  background: black;
+  color: white;
+  }
+/* yoga level dropdown */
+input [type=text], select { 
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 200px;
 }
 .container-faq{
   display: flex;
   border-radius: 20px;
   padding:10px;
 }
-.input-fields  {
-  box-sizing: border-box;
+.input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid rgb(11, 10, 10);
+  transition: border-color 0.3s ease;
   font-size: 14px;
+  padding: 10px 0;
+  }
+.input:focus {
+  outline: none;
+  border-color:#377198;
 }
 .submit-button {
-  background: #ffff;
-  font-size: 15px;
+  background: #173252;
+  color: whitesmoke;
+  font-size: 14px;
   box-sizing: border-box;
   border-radius: 20px;  
+  box-shadow: 0 4px #999;
+  }
+.submit-button:active{
+  background-color: #29323c;
+  box-shadow: 0 1px rgb(80, 79, 79);
+  transform: translateY(5px);
 }
 .accordion {
   margin: 0px;
@@ -77,20 +96,23 @@ input [type=text], select {
   border-radius: 5px;
   cursor: pointer;
   width: 300px;
-  background:grey;
+  background:#173252;
 }
 .accordion-question:hover {
-  background-color:red;
-}
+  transition: all .9s ease-in-out;
+  background: linear-gradient(to left, #29323c, #485563, #2b5876);
+ }
 .accordion-faq {
   font-size: 20px;
   font-weight: 600;
-  padding: 0px;
+  padding: 20px;
   border: 2px solid black;
-  width: 300px;
+  /* width: 300px; */
+  width: 50%;
   border-radius: 5px;
   margin: 20px;
   font-size: 20px;
+ 
   }
 .accordion-question {
   margin: 0;
@@ -99,28 +121,33 @@ input [type=text], select {
   border-radius: 5px;
   font-size: 19px;
   border: 2px solid black;
+  transition: all 0.4s ease-in-out;
+  color: whitesmoke;
 }
 .accordion-answer {
-  font-size: 17px;
+  font-size: 15px;
+  font-weight: 200;
   display: none;
   margin: 0;
   padding: 10px;
   background: #ffff;
   border-radius: 0 0 5px 5px;
-  /* transition: 5s ease; not working???*/ 
-  }
+}
 .accordion-selected {
   display:block;
  }
- .footer {
-   height: 20px;
-   text-align: center;
- }
+ .footer{
+  text-align: center;
+  color: whitesmoke;
+  margin: 20px;
+  }
 
  /* mobile */
 @media (max-width: 767px) {
   .form {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 } 
 /* tablet */
@@ -137,6 +164,10 @@ input [type=text], select {
       font-size: 80px; 
       top: 280px;
     }
+    .footer {
+      height: 20px;
+      text-align: center;
+    }
   }  
     /* laptop */
   @media (min-width: 1200px) {
@@ -146,7 +177,7 @@ input [type=text], select {
     }
     .hero-image {
       width: 100vw;
-      height: 60vh;
+      height: 70vh;
       object-fit: cover;
     }
     .hero-title {
@@ -154,5 +185,8 @@ input [type=text], select {
        font-size: 80px; 
        top: 100px;
        left: 10px;
+    }
+    .form{
+      justify-content: center;
     }
   }
