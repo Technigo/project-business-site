@@ -9,21 +9,60 @@ body {
   color: white;
 }
 
+.logo{
+  position: absolute;
+  left: 20px;
+  top: 1px;
+  font-family: 'Lobster Two', cursive;
+  font-size: 3vw;;
+}
+
+.menu{
+  position: absolute;
+  right: 16px;
+  top: 2px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 2vw;
+}
+
+li{
+  float: right;
+}
+
+li a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+}
+
+li a:hover{
+  color:rgb(54, 15, 90);
+}
+
 .heroheader{
   position: absolute;
-  top: 35%;
+  top: 20%;
   left: 50%;
-  transform: translate(-50%, -50%); /*UNDERSTAND*/
+  transform: translate(-50%, -50%);/*UNDERSTAND*/
+  font-size: 3vw;
 }
 
 .herobutton{
   position: absolute;
-  top: 50%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 10px;
-  font-size: 20px;
+  padding: 5px;
   font-family: "Nunito", sans-serif;
+  width: 10%;
+  cursor: pointer;
+  text.align: center;
+  font-size: 2vw;
+  width: fit-content;
 }
 
 .heroimage{
@@ -50,20 +89,92 @@ max-width: 30%;
 
 .formparent{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+}
+h2{
+font-size: 3vw;
+text-align: center;
 }
 .signup-form{
   border: 1px solid black;
   padding: 10px;
-  width: 40%;
+  text-align: center;
+  width: 30%;
+  margin: 20px;
+  margin-bottom: 40px;
+  background-color: rgb(240, 233, 233);
+}
+
+.accordionparent{
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.accordion{
+  border: 1px solid black;
+  width: 30%;
+  margin: 20px;
+}
+.accordionheader{
+  background-color: rgb(241, 141, 157);
+  text-align: left;
+  padding: 0;
+  margin: 0;
   text-align: center;
 }
 
-@media only screen and (max-width: 768px) { /*Change to only 1 for mobile, 3 for tablet*/
-  .smallstory {
-    max-width: 49.99999%;
-    margin: 6px 0;
-  }
+.question{
+  background-color:rgb(248, 202, 210);
+  cursor: pointer;
+}
+
+.question:hover{
+  background-color: rgb(231, 125, 143) ;
+}
+
+.question::after{
+  content:'\002B';
+  float: right;
+}
+.answer::after{
+
+}
+.answer{
+  background-color: rgb(250, 232, 235);
+  display: none;
+  overflow: hidden;
+}
+
+.answer-selected{
+  display: block;
+}
+
+footer{
+  background-color: rgb(231, 125, 143);
+  text-align: center;
+  height: 100px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1vw;
+  
+}
+.footerleft{
+  padding: 10px;
+}
+.footerlink{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.footerlink:hover{
+  color:rgb(54, 15, 90);
+
 }
 
 @media only screen and (max-width: 375px) {
@@ -71,6 +182,20 @@ max-width: 30%;
     max-width: 100%;
   }
 
+  @media only screen and (max-width: 375px) {
+    .signup-form {
+      width: 90%;
+    }
+
+  @media only screen and (max-width: 375px) {
+    .accordionparent {
+      width: 90%;
+     }
+
+     @media only screen and (max-width: 375px) {
+      .footercontent {
+        width: 90%;
+       }
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */

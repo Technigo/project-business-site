@@ -4,77 +4,119 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project 3</title>
+  <title>Drag Doll</title>
   <link rel="stylesheet" href="style.css">
-  <link href="<link rel=" preconnect" href="https://fonts.gstatic.com">
+  <link href=link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
   <!-- dont forget to add a css file and link it here! -->
 </head>
 
 <body>
 
   <!--HERO-->
-  <div class=hero>
-    <img class=heroimage src="media/header.jpeg" alt="drag">
-    <h1 class=heroheader>Don't be a drag, do Drag!</h1>
-    <button class=herobutton type="button">Start Today</button>
+  <div class="hero">
+    <img class="heroimage" src="media/header.jpeg" alt="drag">
+    <h1 class='logo'>Drag Doll</h1>
+    <ul class='menu'>
+      <li><a href="/Resources/">Resources</a>
+      <li><a href="/Sign Up/">Sign-up</a>
+      <li><a href="/Q&A/">Q&A</a>
+    </ul>
+    <h1 class="heroheader">Don't be a drag, do Drag!</h1>
+    <button class="herobutton" type="button">Start Today</button>
   </div>
 
   <!-- RESOURCES -->
-  <section class=resources>
-    <div class=smallstory>
+  <section class="resources">
+    <div class="smallstory">
       <h3>Wigs</h4>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit alias dignissimos, repellendus perferendis
         </p>
     </div>
 
-    <div class=smallstory>
+    <div class="smallstory">
       <h3>Body-ody-ody</h4>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit alias dignissimos, repellendus perferendis
         </p>
     </div>
 
-    <div class=smallstory>
-      <h3>Make-up</h4>
+    <div class="smallstory">
+      <h3>Lip Synch Essentials</h4>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit alias dignissimos, repellendus perferendis
         </p>
     </div>
+    
+    <div class="smallstory">
+    <h3>Glitter, Rhinestones and fringe</h4>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit alias dignissimos, repellendus perferendis
+      </p>
+  </div>
+
+  <div class="smallstory">
+    <h3>Tucking</h4>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit alias dignissimos, repellendus perferendis
+      </p>
+  </div>
+
+  <div class="smallstory">
+    <h3>Make-up</h4>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit alias dignissimos, repellendus perferendis
+      </p>
+  </div>
   </section>
 
+  <hr>
+
   <!-- SIGNUP FORM -->
-  <section class=formparent>
-    <form class=signup-form action="/action_page.php">
+  <section class="formparent">
+    <h2>Sign-Up for personalized content today!</h2>
+    <form class="signup-form" action='https://httpbin.org/anything' method='post'>
       <label for="fname">First Drag Name</label><br>
       <input type="text" id=fname name="fname" value="Ru"><br>
       <label for="lname">Last Drag Name</label><br>
       <input type="text" id="lname" name="lname" value="Paul"><br>
       <label for="email">E-mail</label><br>
       <input type="text" id=email name="email" value="RuPaul@glamazon.com"><br><br>
-      <button class=signupbutton type="button">Shantay you stay</button> <!--STYLE-->
+      <button class=signupbutton type="button">Shantay you stay</button>
+      <!--STYLE-->
     </form>
   </section>
 
-   <!-- ACCORDION -->
-  <section class="accordion">
-   
-    <h1>Q&A</h1>
+  <hr>
 
-    <div class="question" id="section1">Can anyone do drag?</div>
-    <div class="answer">
-      <p>YES</p>
+  <!-- ACCORDION -->
+  <div class='accordionparent'>
+    <section class="accordion">
+      <h1 class='accordionheader'>Q&A</h1>
+      <div id='section1' class='question'>Can anyone do drag?</div>
+      <div id='answer1' class='answer'>
+        <p>YES</p>
+      </div>
+
+      <div id='section2' class='question'>How do I get a body-ody-ody?</div>
+      <div id='answer2' class='answer'>
+        <p>You already have it!</p>
+      </div>
+
+      <div id='section3' class='question'>Do high heels hurt?</div>
+      <div id='answer3' class='answer'>
+        <p>Yes, but it's worth it.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class='footercontent'>
+    <p class='footerleft'>Author: Hannah Jesinkey</p><br>
+      <a class='footerlink' href="">Contact</a>
+      <a class='footerlink' href="">Location</a>
+      <a class='footerlink' href="">What we do</a>
     </div>
 
-    <div class="question" id="section2">How do I get a body-ody-ody?</div>
-    <div class="answer">
-      <p>You already have it!</p>
-    </div>
-
-    <div class="question" id="section2">How do I get a body-ody-ody?</div>
-    <div class="answer">
-      <p>You already have it!</p>
-    </div>
-  </section>
-  <!-- dont forget to link the javascript file here! -->
+  </footer>
+  <script src='script.js'></script>
 </body>
 
 </html>
