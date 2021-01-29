@@ -47,13 +47,17 @@ accordionQuestionFour.addEventListener('click', () => {
   document.getElementById("fas-4").classList.toggle("fas-selected");
 });
 
-accordionQuestionFive.addEventListener('click', () => {
+accordionQuestionFive.addEventListener("click", () => {
   accordionQuestionFive.classList.toggle("question-border-radius");
   accordionAnswerFive.classList.toggle("accordion-answer-display");
   document.getElementById("fas-5").classList.toggle("fas-selected");
 });
 
+const hamburgerMenu = document.getElementById("hamburger");
 
+hamburgerMenu.addEventListener("click", () => {
+  hamburgerMenu.classList.toggle("hamburger-selected");
+});
 
 
 
