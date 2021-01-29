@@ -1,30 +1,104 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Simple Responsive Layout</title>
+        <link rel="stylesheet" href="dist/style.css">
+        
+    </head>
+    <body>
+        
+        <!-- Main Content -->
+        <main>
+            <!-- Header -->
+            <header class="header">                            
+                <p><a href="mailto:bergman.signe@gmail.com" class="square_btn">IN NEED OF A BABYSITTER? LOOK NO FURTHER!</a></p>
+            </header>
 
-    <!-- Signup form -->
+            <!-- Hero -->
+            <section class="hero">
+                <picture class="hero-image">
+                    <source media="(min-width:1200px)" srcset="./assets/desktopsmall.png">
+                    <source media="(min-width:768px)" srcset="./assets/tabletsmall.png">
+                    <img src="./assets/mobilsmall.png" alt="Signe" style="width:auto;">
+                  </picture> 
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+                <div class="hero-title">
+                    <h1>- SIGNE BERGMAN -</h1>
+            </section>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+            <div class="flex-container wrapper">
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+                <!-- Content -->
+                <section class="content">
+            <!-- FAQ -->
+
+            <button class="accordion">WHO AM I?</button>
+            <div class="panel">
+            <p>Hi! I am turning 16 this april and i am currently in ninth grade at Skarpängsskolan, Täby. 
+                This fall I plan to start studying gymnasium level Economics.</p>
+                <p>I come from a big family and have two older brothers and five bonus siblings!</p>
+                <p>I have a lot of previous experience with children from my job as a gymnastics coach for Sollentungymnasterna.</p>
+            </div>
+    
+            <button class="accordion">WHAT CAN I DO?</button>
+            <div class="panel">
+            <p>I will give 100% of my attention to your kids.</p>
+            <p>Sitting will take place at your house, I will get there myself.</p>
+            </div>
+    
+            <button class="accordion">HOW?</button>
+            <div class="panel">
+            <p>Looking forward to hearing from you. Feel free to fill out the form. Tell me a bit about your family, what you would like help with, and I will get back to you soon.</p>
+            <p>References available on request.<br><br>Best wishes //Signe
+            </p>
+            </div>
+        
+        <script src="app.js"></script>
+<!-- S -->           
+                </section>
+
+                <!-- Sidebar -->
+
+
+                <form class="form" action="https://httpbin.org/anything" method=post>
+                    <p>HOW MANY KIDS WILL I SIT FOR?</p>
+                <label class="container">ONE
+                  <input type="radio" checked="checked" name="radio" value="One">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">TWO
+                  <input type="radio" name="radio" value="Two">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">THREE (Max)
+                  <input type="radio" name="radio" value="Three">
+                  <span class="checkmark"></span>
+                </label>
+                
+                 <label for="fname">NAME
+                 </label><br>
+                  <input type="text" id="fname" name="fname">
+                  
+                 <label for="email">EMAIL
+                 </label>
+                 <input type="email" id="email" name="email" required>
+                 <label for="email">MESSAGE
+                 </label>
+                 <textarea name="message" placeholder="Tell me about your family..."></textarea>
+                 <input type="submit" value="SEND MESSAGE">
+                </form>
+                </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+              
+                <img class="avatar" src="./assets//ninnasquare.png">
+                    <p><a href="mailto:bergman.signe@gmail.com" class="square_btn">E-MAIL</a></p>
+            </footer>
+
+        </main>
+
+    </body>
 </html>

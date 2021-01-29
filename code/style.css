@@ -1,7 +1,272 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
+body {
+  margin: 0;
 }
+
+main, header, section, aside, footer {
+  margin: 0;
+  border: none;
+  color: #5B5B5B ;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: small;
+}
+
+main {
+  background: #FFFFFF;
+}
+
+.header {
+  background: #AAD6EC;
+  padding: 20px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+}
+
+.hero {
+  background: #5B5B5B ;
+  color: #FFFFFF ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.hero-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  height: 150px;
+  border-radius: 50%;
+  -webkit-filter: grayscale(100%); 
+} 
+
+.avatar:hover { 
+-webkit-filter: grayscale(0%); 
+-webkit-transition: -webkit-filter 1s;
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 75rem;
+}
+
+.content {
+  flex: 1;
+  background: #FFFFFF;
+}
+
+.sidebar {
+  background: #eee;
+  flex: 0 1 300px;
+  padding: 0px;
+}
+
+.footer {
+  background: #AAD6EC;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 640px){
+  .flex-container {
+      display: flex;
+  }    
+}
+.accordion {
+  background-color: #EEF9FF ;
+  color: #5B5B5B;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  border: none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: small;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+
+.active, .accordion:hover {
+  background-color: #FC9D9D ;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #5B5B5B;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 20px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+  /* The container */
+
+  .form {
+    width: 450px;
+    padding: 20px;
+    background-color: #eee;
+  }
+
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #5B5B5B;
+    border-radius: 50%;
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: #FC9D9D;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  input[type=email] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #FC9D9D;
+    color: white;
+    padding: 14px 20px;
+    margin: 0 0 10px 0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+    padding: 12px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    resize: none;
+    color: #5B5B5B ;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: small;
+  }
+  
+
+.button {
+  appearance: none;
+  background-color: #FC9D9D;
+  border: none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: small;
+  margin-top: 20px;
+  padding: 10px;
+  justify-self: start;
+}
+
+.square_btn{
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #FC9D9D;
+  border-left: solid 6px #5B5B5B;
+  color: #FFFFFF;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+}
+.square_btn:active {
+  box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+  transform: translateY(2px);
+}
+
+.hero-image {
+  width: 100vw;
+  height: 100wh;
+  object-fit: cover;
+  -webkit-filter: grayscale(100%); 
+} 
+.hero-image:hover { 
+-webkit-filter: grayscale(0%); 
+-webkit-transition: -webkit-filter 1s;
+}
+
