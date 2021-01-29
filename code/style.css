@@ -1,7 +1,384 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  background-color: #333533;
+  margin: 0;
+}
 
-.active + .answer {
-  /* some styling here */
+/** Header **/ 
+
+.hero-image {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.navigation-menu {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0; 
+  display: flex;
+  justify-content: space-evenly; 
+  margin: 0;
+}
+
+.navigation-menu a {
+  text-decoration: none;
+  color: #e8eddf;
+  font-family: papyrus;
+  font-weight: 200;
+  font-size: 18px;
+  z-index: 1000;
+}
+
+.company-name {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: papyrus;
+  font-size: 30px;
+  color: #e8eddf;
+  font-weight: 200;
+}
+
+/** Signup container **/ 
+
+.input-container {
+  background-color: black;
+  color: white;
+  border: 3px solid #e8eddf;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 50px auto;
+  max-width: 350px;
+  min-width: 350px;
+}
+
+.signup-container {
+  width: 350px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  display: none;
+}
+
+.signup-text {
+  font-size: 14px;
+}
+
+.signup-text > p {
+  margin: 0;
+}
+
+.input-text > ul {
+  list-style: none;
+  text-align: left;
+  font-size: 12px;
+  padding: 15px;
+  margin: 0;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 3px 3px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 5px 0;
+  background-color: #cad2c5;
+  color: black;
+}
+
+input[type=text]:focus {
+  outline: none;
+  background-color: #f1dca7;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: 3px 3px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 5px 0;
+  background-color: #cad2c5;
+  color: black;
+}
+
+input[type=email]:focus {
+  outline: none;
+  background-color: #f1dca7;
+}
+
+input[type=password] {
+  width: 100%;
+  padding: 3px 3px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  background-color: #cad2c5;
+  color: black;
+}
+
+input[type=password]:focus {
+  outline: none;
+  background-color: #f1dca7;
+}
+
+input[type=checkbox] {
+  cursor: pointer;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+}
+
+.terms {
+  display: flex;
+  font-size: 10px;
+  padding-left: 12px;
+  text-align: left;
+  line-height: 15px;
+}
+
+.terms a {
+  text-decoration: none;
+  color: #84a98c;
+}
+
+.terms input {
+  margin-right: 8px;
+}
+
+.subscription {
+  display: flex;
+  font-size: 10px;
+  padding: 4px 0 0 12px;
+}
+
+.subscription input {
+  margin-right: 8px;
+}
+
+input[type=radio] {
+  cursor: pointer;
+}
+
+.radiobuttons {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.radiobuttons-text {
+  padding-left: 6px;
+}
+
+.radiobutton-options {
+  display: flex;
+  justify-content: center;
+}
+
+.radiobutton-options > label {
+  padding: 0 5px 0 5px;
+}
+
+input[type=submit] {
+  margin: 12px 0 3px 0;
+  background-color: #84a98c;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input:required:valid:focus {
+  border-color: rgb(8, 87, 8);
+  border-width: 2px;
+}
+
+input:required:invalid:focus {
+  border-color: red;
+  border-width: 2px;
+}
+
+.existing-member {
+  font-size: 9px;
+  font-style: italic;
+}
+
+.existing-member a {
+  text-decoration: none;
+  color: #f1dca7;
+}
+
+/** Styling the accordion **/
+
+.accordion-container {
+  background-color: rgba(28, 28, 28, 0.99);
+  color: white;
+  border: 3px solid #e8eddf;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+  max-width: 350px;
+  min-width: 350px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.FAQ-header {
+  margin: 0 auto;
+}
+
+.FAQ-header h3 {
+  font-weight: 200;
+  padding: 15px;
+  margin-bottom:20px;
+} 
+
+.accordion {
+  cursor: pointer;
+}
+
+.accordion h3 {
+  margin: 0;
+}
+
+.accordion-question {
+  background-color:rgba(107, 133, 112, 0.85);
+  padding: 12px;
+  font-weight: 100;
+  font-size: 14px;
+  border-bottom: 1px solid black;
+}
+
+.answer {
+  display: none;
+  padding: 12px;
+  background-color:rgba(149, 157, 151, 0.85);
+  margin: 0;
+  font-size: 12px;
+}
+
+.accordion-selected, .accordion:hover {
+  background-color: grey;
+}
+
+.plus-sign {
+  color: white;
+  font-weight: bold;
+  float: right;
+}
+
+.accordion-selected {
+  height: auto;
+  display: block;
+}
+
+/** Styling the footer **/
+
+footer {
+  background: rgba(28, 28, 28, 0.99);
+  color: white;
+  font-family: papyrus;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+/** Media queries **/
+
+@media (min-width: 768px) {
+  .input-container {
+    max-width: 500px;
+    min-width: 500px;
+  }
+
+  .signup-container {
+    width: 500px;
+  }
+
+  .signup-text {
+    font-size: 16px;
+  }
+
+  .terms {
+    padding-left: 15px;
+  }
+
+  .subscription {
+    padding-left: 15px;
+  }
+
+  .accordion-container {
+    max-width: 500px;
+    min-width: 500px;
+  }
+
+  .accordion-question {
+    font-size: 16px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .input-container {
+    max-width: 700px;
+    min-width: 700px;
+  }
+
+  .image-container {
+    display: flex;
+    width: 350px;
+  }
+
+  .image-container img {
+    width:100%;
+  }
+
+  .signup-container {
+    width: 350px;
+    padding: 0 15px 0 15px;
+  }
+
+  .signup-text {
+    font-size: 12px;
+  }
+
+  .terms {
+    padding-left: 24px;
+  }
+
+  .subscription {
+    padding-left: 24px;
+  }
+
+  .radiobuttons-text {
+    padding: 0 30px 0 30px;
+  }
+
+  .accordion-container {
+    max-width: 700px;
+    min-width: 700px;
+  }
+
+  .accordion-question {
+    font-size: 14px;
+  }
 }

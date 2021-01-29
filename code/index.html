@@ -1,30 +1,154 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arzt Photo</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+<body>
+  <header>
+    <picture>
+      <source srcset="./images/hero-mobile.jpg" media="(max-width: 767px)" />
+      <source srcset="./images/hero-tablet.jpg" media="(max-width: 1199px)" />
+      <img class="hero-image" src="./images/hero-desktop3.jpg" alt="Hero image" />
+    </picture>
+    <nav>
+      <div class="navigation-menu">
+        <a href="#">Courses</a>
+        <a href="#">Career</a>
+        <a href="#">Stories</a>
+        <a href="#">Contact</a>
+        <a href="#">Sign in</a>
       </div>
+    </nav>
+    <div class="company-name">
+      <h1>Arzt Photo</h1>
+    </div>
+  </header>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+  <section>
+    <form class="input-container" action="http://httpbin.org/anything" method="POST">
+      <div class="image-container">
+        <img src="./images/blurry-camera.jpg" alt="Blurry picture of a camera">
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+      <div class="signup-container">
+        <div class="signup-text">
+          <h3>Sign up</h3>
+          <p>Interested in learning more about</p>
+          <p>photography? Sign up to get access</p>
+          <p>to our free online courses!</p>
+        </div>
+        <div class="input-text">
+          <ul>
+            <li>
+              <label for="fname">First Name:</label>
+              <input type="text" id="fname" name="fname" placeholder="First name" required>
+            </li>
+            <li>
+              <label for="lname">Last Name:</label>
+              <input type="text" id="lname" name="lname" placeholder="Last name" required>
+            </li>
+            <li>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Email" required>
+            </li>
+            <li>
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" placeholder="Password" required>
+            </li>
+          </ul>
+        </div>
+        <div class="checkboxes">
+          <div class="terms">
+            <input type="checkbox" id="terms" name="terms" value="Accept" required>
+            <label for="terms">I agree to the website's <a href="#">Privacy Policy & Terms and
+                Conditions</a>.</label>
+          </div>
+          <div class="subscription">
+            <input type="checkbox" id="subscription" name="subscription" value="Subscribe">
+            <label for="subscription">I would like to subscribe to your newsletter!</label>
+          </div>
+        </div>
+        <div class="radiobuttons">
+          <div class="radiobuttons-text">
+            <p>How would you rank your current level of knowledge?</p>
+          </div>
+          <div class="radiobutton-options">
+            <input type="radio" id="beginner" name="answer" value="Beginner">
+            <label for="beginner">Beginner</label>
+            <input type="radio" id="average" name="answer" value="Average" required>
+            <label for="average">Average</label>
+            <input type="radio" id="expert" name="answer" value="Expert">
+            <label for="expert">Expert</label>
+          </div>
+        </div>
+        <div class="submit-button">
+          <input type="submit" value="Sign Up">
+        </div>
+        <div class="existing-member">
+          <p>Already have an account? <a href="#">Sign in</a> here.</p>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <section class="accordion-container">
+    <div class="FAQ-header">
+      <h3>Frequently Asked Questions</h3>
+    </div>
+    <div class="accordion">
+      <h3 id="accordion-section1" class="accordion-question">
+        What courses do you offer? <span class="plus-sign">+</span>
+      </h3>
+      <div id="accordion-section1-content" class="answer">
+        <p>We offer the following courses:</p>
+        <p>- Fundamentals of Photography</p>
+        <p>- Wedding Photography Course</p>
+        <p>- Portrait Photography Course</p>
+        <p>- Nature and Landscape Photography Course</p>
+      </div>
+    </div>
+    <div class="accordion">
+      <h3 id="accordion-section2" class="accordion-question">
+        Do you offer any courses on site? <span class="plus-sign">+</span>
+      </h3>
+      <div id="accordion-section2-content" class="answer">
+        <p>
+          No, all of our courses are 100% remote.
+        </p>
+      </div>
+    </div>
+    <div class="accordion">
+      <h3 id="accordion-section3" class="accordion-question">
+        Can I choose the pace myself? <span class="plus-sign">+</span>
+      </h3>
+      <div id="accordion-section3-content" class="answer">
+        <p>
+          You can choose between 50% and 100% pace.
+        </p>
+      </div>
+    </div>
+    <div class="accordion">
+      <h3 id="accordion-section4" class="accordion-question">
+        What does it cost? <span class="plus-sign">+</span>
+      </h3>
+      <div id="accordion-section4-content" class="answer">
+        <p>
+          All of our courses are free. We want to spread our knowlegde
+          and inspire more people to get into the amazing world of photography!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Arzt Photo 2021 &copy</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>
