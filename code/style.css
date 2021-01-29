@@ -27,11 +27,11 @@
   margin: 10px 15px;
   text-decoration: none;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   border: 1px solid white;
-  border-radius: 20px;
-  padding: 5px 10px;
+  border-radius: 25px;
+  padding: 10px 15px;
   cursor: pointer;
 }
 
@@ -39,7 +39,7 @@
 
 .hero-image {
   width: 100vw;
-  height: 75vh;
+  height: 65vh;
   object-fit: cover;
 }
 
@@ -86,8 +86,8 @@
   flex-direction: column;
 }
 
-.form h2 {
-  margin: 0 0 30px 0;
+.form-heading{
+  margin: 0 0 40px 0;
 }
 
 .form-container {
@@ -172,9 +172,14 @@
 }
 
 .form-image-container {
-  display: flexbox;
+  display: flex;
   justify-content: center;
   margin: 50px 0px 0px 0px;
+}
+
+.form-image {
+  object-fit: cover;
+  width: 300px;
 }
 
 /* Accordion */
@@ -192,7 +197,7 @@
 .accordion-heading{
 width: 70%;
 margin-bottom: 20px;
-text-align: center;
+text-align: left;
 }
 
 .question-container {
@@ -204,10 +209,10 @@ text-align: center;
 .question {
   display: block;
   background-color: lavender;
-  text-align: center;
+  text-align: left;
   font-size: 14px;
   font-weight: bold;
-  padding: 25px 18px;
+  padding: 25px 0px;
 }
 
 .question:hover {
@@ -258,22 +263,28 @@ text-align: center;
   .header h1 {
     font-size: 48px;
   }
+
   .header p {
     font-size: 21px;
   }
+
   .label-container {
     flex-direction: row;
     justify-content: space-between;
   }
+
   .label-container .label {
     margin-right: 10px;
   }
+
   .input-name {
     width: 125px;
   }
+
   .input-username {
     width: 125px;
   }
+
   .active+.answer {
     height: 100px;
   }
@@ -286,7 +297,6 @@ text-align: center;
   .form-container {
     flex-direction: row;
     justify-content: start;
-    width: 70%;
     padding: 50px 0px 100px 0px;
   }
 
@@ -295,28 +305,39 @@ text-align: center;
     margin: auto;
   }
 
+  .form-image {
+    object-fit: cover;
+    width: 500px;
+  }
+
   .label-container {
     flex-direction: row;
     justify-content: space-between;
   }
+
   .accordion-container {
     margin: 0px;
   }
+
   .accordion-heading{
     margin-top: 0;
     text-align: left;
     }
+
   .question-container {
     display: flex;
     flex-direction: column;
     align-items: baseline;
   }
+
   .question {
     padding-left: 0;
   }
+
   .answer {
     padding-left: 0;
   }
+
   .active+.answer {
     margin: 0px 40px 0px 0px;
     height: 100px;
