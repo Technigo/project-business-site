@@ -3,9 +3,6 @@
   margin: 0;
 }
 
-.body {
- 
-}
 
 .header {
   position: relative;
@@ -40,7 +37,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: ;
+  color: black;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -57,8 +54,15 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+.active+.answer {
+ height: 55px;
+ color: magenta;
+}
+
+.answer {
+  height: 0px;
+  overflow:hidden;
+  transition: height .3s ease;
 }
 
 /*Styling for tablet and small desktop*/
