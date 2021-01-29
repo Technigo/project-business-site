@@ -17,8 +17,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #E7E7E7;
-    color: black;
+    background-color: #222324;
+    color: rgba(245, 245, 245, 0.863);
     width: 100%;
   }
  
@@ -29,7 +29,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   /************** 1. HERO SECTION ******************************/
     .hero-img{
       position: relative; /* PARANT NEEDS TO BE RELATIVE */
-      background-color: #181417;
+      background-color: #222324;
   }
   
   .hero-img img {
@@ -38,7 +38,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
       height: 50vh;
       background-position: center;
       object-fit: cover;
-      filter: brightness(60%); /* make the picture a bit darker for the text to pop */
+      filter: brightness(90%); /* make the picture a bit darker for the text to pop */
       
   }
   
@@ -84,7 +84,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     align-items: center; /* i tablet sida och desktop sida */
 
     /***** styling ****/
-    background-color: #181417;
+    background-color: #222324;
   }
 
   .input-container {
@@ -123,7 +123,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     padding: 0;
   }
 
-  .btn-form button { /* Själva knappen */
+   .btn-form button { /* Själva knappen */
     padding: 2px 12px;
     margin-top: 10px;
     /***** styling ****/
@@ -132,40 +132,69 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
     color: white;
+    transition: ease-in-out 0.7s;
   }
 
   .btn-form button:hover{
+    /***** styling ****/
     border: 2px solid #C179B9;
     background-color: white;
     color: #C179B9;
-    transition: ease-in-out 0.7s;
   }
 
 
     /************** 3. Accordion ******************************/
 
-    .accordion-container {
+    .accordion-container { /* Centering accordion */
       display: flex;
-      
+      align-items: center;
+      justify-content: center;
+     }
 
-
+     .accordion {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      padding: 0 15px;
+      /***** styling ****/
+      background: #1c1c1d;
+      border-radius: 6px;
+      box-shadow: 6px 2px 6px rgba(0,0,0,.1);
     }
-    .accordion {
-      border: 2px solid black;
-      margin: 20px;
+
+    .accordion h1 {
+      color: rgba(255, 255, 255, 0.774);
+      font-size: 30px;
+      padding: 10px;
     }
 
     .question{
-      border-top: 2px solid red;
-      border-bottom: 2px solid red;
-      padding: 10px 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+      /***** styling ****/
+      background-color: #0d0d0e;
+      border-radius: 4px;
+      box-shadow: 6px 2px 6px rgba(0,0,0,.1);
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.774);
+      cursor: pointer;
+    }
+ 
+    .answer {
+      padding: 0 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.774);
+      border: 1px groove white;
+
+
+
+      /*display: none; */
     }
 
-    .answer {
-      display: none;
-    }
     .active + .answer {
-      background-color: royalblue;
       color: white;
       display: inline-block;
     }
