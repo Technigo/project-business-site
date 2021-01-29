@@ -1,12 +1,3 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
-
-
 html {
   background: rgb(201, 238, 220);
   color: black;
@@ -17,7 +8,7 @@ body {
   margin: 0;
 }
 
-/****HEADER***/
+/****1. HEADER, LOGO, NAVIGATION***/
 .header {
   background-color: rgb(142, 226, 185);
   display: flex;
@@ -39,7 +30,7 @@ body {
 }
 
 
-/****HERO IMG AND TEXT***/
+/****2. HERO IMG AND TEXT***/
 .hero {
   position: relative;
 }
@@ -63,7 +54,7 @@ body {
 }
 
 
-/****INTRO TEXT***/
+/**** 3. INTRO TEXT***/
 .intro-text {
   margin: 10px;
   text-align: center;
@@ -77,22 +68,16 @@ body {
 }
 
 
-/****SIGN UP FORM****/
+/**** 4. SIGN UP FORM****/
 .form {
-  /* height: 560px;
-  width: 560px; */
-  /* margin: 100px; */
   margin: 24px;
   border: 2px solid black;
-  /* background-color: rgb(192, 207, 200); */
   background-color: #A1B2C3 (161,178,195) ;
-  /* padding: 10px; */
   border-radius: 12px;
 }
 
 .form-text {
   font-size: 24px;
-  /* text-decoration: underline; */
   text-align: center;
   border-bottom: 1px solid black;
 }
@@ -100,11 +85,6 @@ body {
 .check-boxes {
   align-items: center;
 }
-/* .boxes {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly
-} */
 
 
 input[type=button], input[type=submit] {
@@ -153,24 +133,13 @@ margin: 10px;
   font-size: 20px;
 }
 
-
 label {
 	padding: 10px;
 	margin: 3px;
 }
 
 
-/* input[type=text] {
-  border-radius: 5px;
-  padding: 6px;
-} */
-
-/* input[type=email] {
-  border-radius: 5px;
-  padding: 6px;
-} */
-
-/****ACCORDION****/
+/**** 5. ACCORDION****/
 
 .FAQ {
   text-align: center;
@@ -180,15 +149,9 @@ label {
 }
 
 .accordion {
-  /* width: 560px;
-  height: 300px; */
-  /* margin-bottom: 100px;
-  margin-left: 100px;
-  margin-right: 100px; */
   margin: 24px;
   border: 2px solid black;
   border-radius: 10px;
-  /* background-color: rgb(133, 201, 169); */
 }
 
 .question {
@@ -218,52 +181,19 @@ label {
 height: 125px;
 }
 
-
-/* .container {
-  max-width: 760px;
+.logos-in-accordion {
   display: flex;
-  flex-direction: column;
-  
-} */
-
-
-/***EXTRA STORIES****/
-.small-story img{
-  width: 75%;
-  height: auto;
+  justify-content: space-evenly;
 }
 
-/* .hero {
-  position: relative;
-}
-.hero-text {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-} */
-
-
-/* .navigation-text {
-  margin: 16px;
+.logo-lift {
+  width: 75px;
+  height: 100%;
+  margin-top:30px;
 }
 
-.navigation-text a {
-  text-decoration: none;
-}
 
-.hero-image {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    border-top: 2px solid black;
-} */
-
-
-/****FOOTER****/
+/**** 6. FOOTER****/
 
 .footer {
   padding: 2px;
@@ -277,21 +207,19 @@ height: 125px;
    height: 100%;
  }
 
- .logos-in-accordion {
-   display: flex;
-   justify-content: space-evenly;
- }
 
- .logo-lift {
-   width: 75px;
-   height: 100%;
-   margin-top:30px;
- }
+
 /*MEDIA QUERIES****/
 
-/* Tablet */
+/* Tablet & Desktop*/
 @media (min-width: 768px) {
-  
+  .hero-image {
+    width: 100vw;
+    height: 90vh;
+    object-fit: cover;
+    border-top: 2px solid black;
+}
+
   .hero-text {
     font-size: 42px;
     position: absolute;
@@ -322,45 +250,24 @@ height: 125px;
     background-color: white;
   }
 
-  .hero-image {
-      width: 100vw;
-      height: 90vh;
-      object-fit: cover;
-      border-top: 2px solid black;
+  .form {
+    margin: 24px;
+    width: 40%;
   }
   
   .signup-container {
-    /* max-width: 760px; */
      display: flex; 
-    /* flex-direction: row;*/
     justify-content: space-around; 
   }
 
 
-.form {
-  /* height: 560px;
-  width: 560px; */
-  /* margin: 100px; */
-  margin: 24px;
-  width: 40%;
-
-}
 .accordion {
-  /* width: 560px;
-  height: 300px; */
-  /* margin-bottom: 100px;
-  margin-left: 100px;
-  margin-right: 100px; */
   margin: 24px;
   width: 40%;
 }
+
 .active +.answer {
   height: 100px;
   }
-
-}
-/* Small desktop */
-
-@media (min-width: 992px) {
 
 }
