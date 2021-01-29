@@ -5,14 +5,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>To the rescue!</title>
-  <!-- dont forget to add a css file and link it here! -->
+  <!-- CSS & LINK -->
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- video or image as a header is cool :) -->
+
+  <!-- HERO IMAGES -->
+
   <header class="hero">
     <picture>
       <source srcset="./images/diving-mobil.jpg" media="(max-width: 767px)">
@@ -20,18 +22,19 @@
       <img class="hero-image" src="./images/diving-desktop.jpg" alt="Hero Image">
     </picture>
     <h1 class="hero-title">Ocean clean up</h1>
-    <p class="p-header">Our mission is to keep the amazing oceans clean and healthy for all creatures to enjoy for generations to come. Join us on
+    <p class="p-header">Our mission is to keep the amazing oceans clean and healthy for all creatures to enjoy for
+      generations to come. Join us on
       a clean up dive!</p>
   </header>
 
-    <div class="h2">
-      <h2>To the rescue!</h2>
-    </div>
+  <div class="h2">
+    <h2>To the rescue!</h2>
+  </div>
 
- <!-- ACCORDION -->
+  <!-- ACCORDION -->
 
   <section class="big-container">
-    
+
     <section class="accordion">
       <button class="acc-button" id="button1">What we do</button>
       <div class="info">
@@ -55,7 +58,7 @@
             <label for="fullname">Full Name</label>
           </div>
           <div class="colum75">
-            <input class="text-field" type="text" name="fullname" placeholder="Your full name" required>
+            <input class="text-field" type="text" name="fullname" required>
           </div>
         </div>
 
@@ -64,7 +67,7 @@
             <label for="email">E-mail</label>
           </div>
           <div class="colum75">
-            <input class="text-field" type="text" placeholder="Enter Email" name="email" id="email" required>
+            <input class="text-field" type="text" name="email" id="email" required>
           </div>
         </div>
 
@@ -74,9 +77,9 @@
           </div>
           <div class="colum75">
             <select name="logged-dives" id="Logged Dives" required>
-              <option value="0-500">0-500</option>
-              <option value="500-1000">500-1000</option>
-              <option value="1000+">1000+</option>
+              <option value="0-300">0-300</option>
+              <option value="300-600">300-600</option>
+              <option value="600+">600+</option>
             </select>
           </div>
         </div>
@@ -86,16 +89,16 @@
             <label for="certification">Certification</label>
           </div>
           <div class="colum75">
-              <input type="radio" id="Open Water" name="certification" value="Open Water">
-              <label for="Open Water">Open Water</label><br>
-              <input type="radio" id="Advanced" name="certification" value="Advanced">
-              <label for="Advanced">Advanced</label><br>
-              <input type="radio" id="Divemaster" name="certification" value="Divemaster">
-              <label for="Divemaster">Divemaster</label><br>
-            </div>
+            <input type="radio" id="Open Water" name="certification" value="Open Water" required>
+            <label for="Open Water">Open Water</label><br>
+            <input type="radio" id="Advanced" name="certification" value="Advanced">
+            <label for="Advanced">Advanced</label><br>
+            <input type="radio" id="Divemaster" name="certification" value="Divemaster">
+            <label for="Divemaster">Divemaster</label><br>
+          </div>
         </div>
 
-        <div class="row">
+        <div class="row-btn">
           <input class="btn" type="submit" value="Be an ocean rescuer!">
         </div>
       </form>
@@ -104,12 +107,10 @@
   </section>
 
   <footer class="footer">
-    <div class="icons">
 
-    </div>
   </footer>
 
-  <!-- dont forget to link the javascript file here! -->
+  <!-- JAVASCRIPT -->
   <script src="./script.js"></script>
 
 </body>
