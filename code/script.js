@@ -19,8 +19,7 @@ if (navButton.style.display = "block") {
     navMenu.classList.toggle("mobile-active");
     if (navMenu.classList.contains("mobile-active")) {
       navButton.style.backgroundColor = "#4C3F88";
-    }
-    else {
+    } else {
       navButton.style.backgroundColor = "#ffffff00";
     }
   })
@@ -34,8 +33,7 @@ function accordionExpand(acc, i) {
       accordionCollapse(i);
       //if the selected class has .active display other background color //
       acc.style.backgroundColor = "#4C3F88";
-    }
-    else {
+    } else {
       acc.style.backgroundColor = "inherit";
     }
   });
