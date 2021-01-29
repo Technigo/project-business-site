@@ -1,7 +1,7 @@
-const accordionDisplay = document.querySelectorAll(".accordion__display");
-const accordionButton = document.querySelectorAll(".accordion__button");
-const navMenu = document.querySelector(".nav__menu");
-const navButton = document.querySelector(".nav__button");
+const accordionDisplay = document.querySelectorAll(".accordion-section__display");
+const accordionButton = document.querySelectorAll(".accordion-section__display__button");
+const navMenu = document.querySelector(".nav-wrapper__menu");
+const navButton = document.querySelector(".nav-wrapper__button");
 
 
 // loops through the array of multiple objects of the same class and toggles the .active class on and off on mouseclick //
@@ -16,16 +16,15 @@ for (let i = 0; i < accordionDisplay.length; i++) {
 // when drop-down menu-button is pressed the menu will be toggled active/inactive //
 if (navButton.style.display = "block") {
   navButton.addEventListener("click", () => {
-    navMenu.classList.toggle("nav__menu--active");
-    if(navMenu.classList.contains("nav__menu--active")){
-      navButton.style.backgroundColor="#4C3F88";
+    navMenu.classList.toggle("mobile-active");
+    if (navMenu.classList.contains("mobile-active")) {
+      navButton.style.backgroundColor = "#4C3F88";
     }
     else {
-      navButton.style.backgroundColor="#ffffff00";
+      navButton.style.backgroundColor = "#ffffff00";
     }
   })
 }
-
 
 // function for expanding and collapsing accordion on mouseclick and also adding some dynamic styling //
 function accordionExpand(acc, i) {
@@ -33,11 +32,10 @@ function accordionExpand(acc, i) {
     acc.classList.toggle("active");
     if (acc.classList.contains("active")) {
       accordionCollapse(i);
-      //if the selected class has .active the expand/collapse button has a minus and display other background color, otherwise + //
-      accordionButton[i].textContent = "-";
+      //if the selected class has .active display other background color //
       acc.style.backgroundColor = "#4C3F88";
-    } else {
-      accordionButton[i].textContent = "+";
+    }
+    else {
       acc.style.backgroundColor = "inherit";
     }
   });
@@ -47,7 +45,6 @@ function accordionExpand(acc, i) {
     for (let j = 0; j < accordionDisplay.length; j++)
       if (j != i && accordionDisplay[j].classList.contains("active")) {
         accordionDisplay[j].classList.remove("active");
-        accordionButton[j].textContent = "+";
         accordionDisplay[j].style.backgroundColor = "inherit";
       }
   }

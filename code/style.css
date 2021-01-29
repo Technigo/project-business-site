@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Libre+Barcode+128+Text&display=swap&family=Raleway:wght@300&display=swap');
-
 body {
   padding: 0;
   margin: 0;
@@ -27,6 +26,7 @@ p {
 }
 
 /* some buzzwords in the header that reveals when the header images moves */
+
 .header__buzz {
   width: 100%;
   height: 100%;
@@ -43,6 +43,7 @@ p {
 }
 
 /*makes buzzword 1 styled in a specific way*/
+
 .header__buzz__word:nth-of-type(1) {
   left: 0;
   margin-left: 30px;
@@ -50,6 +51,7 @@ p {
 }
 
 /*makes buzzword 2 styled in a specific way*/
+
 .header__buzz__word:nth-of-type(2) {
   right: 0;
   margin-right: 30px;
@@ -72,11 +74,13 @@ p {
 }
 
 /*resizes 20% on desktop and 50% on tablet/mobile */
+
 .header__img--20-50 {
   width: 20%;
 }
 
 /*resizes 30% on desktop and none on tablet/mobile*/
+
 .header__img--30-0 {
   width: 30%;
 }
@@ -102,52 +106,47 @@ p {
 }
 
 /*animation for images to slideup of the header */
+
 @keyframes slideup {
   0% {
     transform: translateY(0);
   }
-
   10% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-200%);
   }
-
   70% {
     transform: translateY(0);
   }
-
   100% {
     transform: translateY(0);
   }
 }
 
 /* animation for pictures to slide down out of the header */
+
 @keyframes slidedown {
   0% {
     transform: translateY(0);
   }
-
   10% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(200%);
   }
-
   70% {
     transform: translateY(0);
   }
-
   100% {
     transform: translateY(0);
   }
 }
 
 /*logo for the company on header */
+
 .header__logo {
   position: absolute;
   z-index: 1;
@@ -171,37 +170,32 @@ p {
 }
 
 /* animation that makes logo spell out and change colors */
+
 @keyframes logo {
   0% {
     content: "N|C";
     color: rgb(16, 22, 110);
   }
-
   20% {
     content: "Nano | Colors";
     color: rgb(41, 41, 160);
   }
-
   30% {
     content: "Colors";
     color: rgb(98, 0, 255);
   }
-
   50% {
     content: "Colors";
     color: rgb(234, 0, 255);
   }
-
   75% {
     content: "Colors";
     color: rgb(0, 238, 255);
   }
-
   80% {
     content: "Nano | Colors";
     color: rgb(8, 92, 202);
   }
-
   100% {
     content: "N|C";
     color: rgb(16, 22, 110);
@@ -221,11 +215,12 @@ p {
 }
 
 /*important for the mobile mode drop down menu positioning */
-.nav__wrapper {
+
+.nav-wrapper {
   position: relative;
 }
 
-.nav__menu {
+.nav-wrapper__menu {
   display: flex;
   position: absolute;
   justify-content: space-evenly;
@@ -234,7 +229,7 @@ p {
   background: white;
 }
 
-.nav__link {
+.nav-wrapper__menu__link {
   text-decoration: none;
   display: flex;
   width: 20%;
@@ -244,14 +239,15 @@ p {
 }
 
 /*button for drop-down menu. */
-.nav__button {
+
+.nav-wrapper__button {
   position: relative;
   display: none;
   z-index: 1;
   border-radius: 4px;
 }
 
-.nav__button img {
+.nav-wrapper__button img {
   width: 90%;
   height: 90%;
   margin: 2px;
@@ -269,6 +265,7 @@ p {
 }
 
 /* wrapper for section */
+
 .signup {
   position: relative;
   display: flex;
@@ -298,7 +295,8 @@ p {
 }
 
 /* aligning of form content */
-.signup__inner {
+
+.signup-inner {
   display: flex;
   flex-direction: column;
   width: 600px;
@@ -306,7 +304,8 @@ p {
 }
 
 /* styling and aligning of form */
-.signup__form {
+
+.signup-inner__form {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -315,7 +314,8 @@ p {
 }
 
 /* styling the input boxes with fieldset*/
-.signup fieldset {
+
+.signup-inner__form__fieldset {
   padding: 0;
   margin: 10px 0;
   background-color: white;
@@ -324,20 +324,22 @@ p {
 }
 
 /* on hover , the fieldset get another bg-color */
-.signup fieldset:hover {
+
+.signup-inner__form__fieldset:hover {
   background-color: rgb(158, 203, 211);
 }
 
-.signup legend {
+.signup-inner__form__fieldset__legend {
   font-weight: bolder;
   background-color: rgb(46, 157, 165);
-  border-radius: 5px;;
+  border-radius: 5px;
+  ;
   border: solid rgb(255, 255, 255);
   font-size: 16px;
-  padding:2px 5px;
+  padding: 2px 5px;
 }
 
-.signup input {
+.signup-inner__form__input {
   border: none;
   border-radius: 10px;
   padding: 5px;
@@ -349,16 +351,133 @@ p {
 }
 
 /* on hover and focus , the input get another bg-color */
-.signup input:hover {
+
+.signup-inner__form__input:hover {
   background-color: rgb(158, 203, 211);
 }
 
-.signup input:focus {
-outline: none;
+.signup-inner__form__input:focus {
+  outline: none;
 }
 
 ::placeholder {
   color: rgba(7, 59, 63, 0.384);
+}
+
+/* clear the default look of checkbox */
+
+.signup input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* clear the default look of radio buttons */
+
+.signup input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/*retainer for checkbox/radiobutton */
+
+.signup-inner__form__check {
+  display: flex;
+  position: relative;
+  padding-left: 35px;
+  margin: 10px 0;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  align-self: center;
+}
+
+/*restyling radiobutton + checkbox*/
+
+.signup-inner__form__check__radio, .signup-inner__form__check__box {
+  background-color: rgb(171, 245, 235);
+  height: 15px;
+  width: 15px;
+  border: solid rgb(5, 85, 85) 1px;
+  position: absolute;
+  left: 0;
+}
+
+.signup-inner__form__check__radio {
+  border-radius: 50%;
+}
+
+.signup-inner__form__check__box {
+  border-radius: 4px;
+}
+
+/*show nothing when the checkbox/radio is not clicked */
+
+.signup-inner__form__check__radio:after, .signup-inner__form__check__box:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/*when the checkbox/radio is checked the background color changes */
+
+.signup-inner__form__check input:checked~.signup-inner__form__check__radio, .signup-inner__form__check input:checked~.signup-inner__form__check__box {
+  background-color: rgb(5, 85, 85);
+}
+
+/* when the checkbox/radio is checked, show an marker in it */
+
+.signup-inner__form__check input:checked~.signup-inner__form__check__radio:after, .signup-inner__form__check input:checked~.signup-inner__form__check__box:after {
+  display: block;
+}
+
+/*styling of marker in radiobutton */
+
+.signup-inner__form__check .signup-inner__form__check__radio:after {
+  border-radius: 50%;
+  background-color: white;
+  height: 7px;
+  width: 7px;
+  left: 4px;
+  top: 4px;
+}
+
+/*styling of marker in checkbox */
+
+.signup-inner__form__check .signup-inner__form__check__box:after {
+  border-right: solid rgb(248, 248, 248)3px;
+  border-bottom: solid rgb(253, 253, 253)3px;
+  width: 5px;
+  height: 10px;
+  left: 4px;
+  transform: rotate(45deg);
+}
+
+/*show nothing when the checkbox/radio is not clicked */
+
+.signup-inner__form__check__radio:after, .signup-inner__form__check__box:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* when the checkbox/radio is checked, show an marker in it */
+
+.signup-inner__form__check input:checked~.signup-inner__form__check__radio:after, .signup-inner__form__check input:checked~.signup-inner__form__check__box:after {
+  display: block;
+}
+
+/*when the checkbox/radio is checked the background color changes */
+
+.signup-inner__form__check input:checked~.signup-inner__form__check__radio, .signup-inner__form__check input:checked~.signup-inner__form__check__box {
+  background-color: rgb(5, 85, 85);
+}
+
+.signup-inner__form__select {
+  margin-bottom: 20px;
 }
 
 .signup input[type=submit] {
@@ -377,119 +496,13 @@ outline: none;
 }
 
 /* makes the button look like a 3d button getting pressed down when active */
+
 .signup input[type=submit]:active {
   transform: translateY(10%);
   box-shadow: 0px 0px 2px 1px rgb(24, 14, 37);
 }
 
 .signup input[type=submit]:hover {
-  background-color: rgb(5, 85, 85);
-}
-
-/* clear the default look of checkbox */
-.signup input[type=checkbox] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* clear the default look of radio buttons */
-.signup input[type=radio] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-/*retainer for checkbox/radiobutton */
-.signup__check {
-  display: flex;
-  position: relative;
-  padding-left: 35px;
-  margin: 10px 0;
-  cursor: pointer;
-  user-select: none;
-  align-items: center;
-  align-self: center;
-}
-
-/*restyling radiobutton + checkbox*/
-.signup__check__radio,
-.signup__check__box {
-  background-color: rgb(171, 245, 235);
-  height: 15px;
-  width: 15px;
-  border: solid rgb(5, 85, 85) 1px;
-  position: absolute;
-  left: 0;
-}
-
-.signup__check__radio {
-  border-radius: 50%;
-}
-
-.signup__check__box {
-  border-radius: 4px;
-}
-
-/*show nothing when the checkbox/radio is not clicked */
-.signup__check__radio:after,
-.signup__check__box:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/*when the checkbox/radio is checked the background color changes */
-.signup__check input:checked~.signup__check__radio,
-.signup__check input:checked~.signup__check__box {
-  background-color: rgb(5, 85, 85);
-}
-
-/* when the checkbox/radio is checked, show an marker in it */
-.signup__check input:checked~.signup__check__radio:after,
-.signup__check input:checked~.signup__check__box:after {
-  display: block;
-}
-
-/*styling of marker in radiobutton */
-.signup__check .signup__check__radio:after {
-  border-radius: 50%;
-  background-color: white;
-  height: 7px;
-  width: 7px;
-  left: 4px;
-  top: 4px;
-}
-
-/*styling of marker in checkbox */
-.signup__check .signup__check__box:after {
-  border-right: solid rgb(248, 248, 248)3px;
-  border-bottom: solid rgb(253, 253, 253)3px;
-  width: 5px;
-  height: 10px;
-  left: 4px;
-  transform: rotate(45deg);
-}
-
-/*show nothing when the checkbox/radio is not clicked */
-.signup__check__radio:after,
-.signup__check__box:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* when the checkbox/radio is checked, show an marker in it */
-.signup__check input:checked~.signup__check__radio:after,
-.signup__check input:checked~.signup__check__box:after {
-  display: block;
-}
-
-/*when the checkbox/radio is checked the background color changes */
-.signup__check input:checked~.signup__check__radio,
-.signup__check input:checked~.signup__check__box {
   background-color: rgb(5, 85, 85);
 }
 
@@ -509,11 +522,8 @@ outline: none;
   object-fit: cover;
 }
 
-select {
-  margin-bottom: 20px;
-}
-
 /* section for all accordions */
+
 .accordion {
   margin: 40px 0;
   display: flex;
@@ -531,7 +541,8 @@ select {
 }
 
 /* to section up the 2 different accordion sections FAQ and products*/
-.accordion__section {
+
+.accordion-section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -543,8 +554,8 @@ select {
 }
 
 /* the accordion styling */
-.accordion__display,
-.accordion__expand {
+
+.accordion-section__display, .accordion-section__expand {
   border: solid rgb(255, 255, 255) 0.5px;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 10px;
@@ -552,32 +563,41 @@ select {
   margin: 5px;
 }
 
-.accordion__display {
+.accordion-section__display {
   display: flex;
   align-items: center;
   height: 60px;
 }
 
 /* the expanding section of accordion is hidden when not active */
-.accordion__expand {
+
+.accordion-section__expand {
   height: 0;
   border: none;
   overflow-y: hidden;
   background-color: rgb(76, 63, 136);
 }
 
-/* when accordion__display is set to .active with js, the nearest sibling div will get these properties 
-(in this case accordion__expand) */
+/* when accordion-section__display is set to .active with js, the nearest sibling div will get these properties 
+(in this case accordion-section__expand) */
+
 .active+div {
   height: 200px;
   border: solid white 0.5px;
   margin: 10px;
   overflow-y: auto;
-  transition: height 0.5s ease-in-out;
+  transition: height .5s ease-in-out;
+}
+
+/* to add +sign before clicked button clicked */
+
+.accordion-section__display__button:before {
+  content: "+";
 }
 
 /* +/- button for accordion expand/collapse. Put the cursor to a pointer as it was an text-cursor*/
-.accordion__button {
+
+.accordion-section__display__button {
   width: 25px;
   height: 25px;
   margin-left: 10px;
@@ -593,9 +613,16 @@ select {
 }
 
 /* makes the button look like a 3d button getting pressed down when active */
-.accordion__button:active {
+
+.accordion-section__display__button:active {
   transform: translateY(10%);
   box-shadow: 0px 0px 2px 1px rgb(24, 14, 37);
+}
+
+/*change to - when accordion is expanded (.active class toggled on)*/
+
+.accordion-section__display.active .accordion-section__display__button:before {
+  content: "-";
 }
 
 .accordion__image {
@@ -642,7 +669,7 @@ select {
   position: absolute;
 }
 
-.footer__wrapper {
+.footer-wrapper {
   display: flex;
   width: 100%;
   min-height: 100%;
@@ -658,7 +685,8 @@ select {
 }
 
 /* container for a simplified company logo in the footer*/
-.footer__logo {
+
+.footer-wrapper__logo {
   margin-left: 10px;
   font-family: 'Libre Barcode 128 Text', cursive;
   color: rgb(16, 22, 110);
@@ -666,7 +694,8 @@ select {
 }
 
 /* wrapper for the social media icons*/
-.footer__social {
+
+.footer-wrapper__social {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -675,14 +704,15 @@ select {
 }
 
 /* image container for social media icons */
-.footer__icon {
+
+.footer-wrapper__social__icon {
   width: 15px;
   height: 15px;
   position: relative;
   overflow: hidden;
 }
 
-.footer__icon img {
+.footer-wrapper__social__icon img {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -690,111 +720,90 @@ select {
 }
 
 /*breakpoint at the largest tablets*/
-@media screen and (device-width: 1024px),
-(max-width:1024px) {
 
+@media screen and (device-width: 1024px), (max-width:1024px) {
   p {
     font-size: 16px;
   }
-
   .header__logo h1:before {
     font-size: 70px;
   }
-
   .header__buzz__word {
     font-size: 30px;
   }
-
   .header__img--20-50 {
     width: 50%;
     min-width: 50%;
   }
-
   .header__img--30-0 {
     display: none;
     width: 0;
   }
-
   .signup {
     font-size: 16px;
   }
-
-  .signup legend {
+  .signup-inner__form__fieldset__legend {
     font-size: 14px;
     font-weight: bold;
   }
-
-  .signup input {
+  .signup-inner__form__input {
     font-size: 14px;
   }
-
   .signup input[type=submit] {
     font-size: 18px;
   }
-
   .accordion {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 80%;
   }
-
-  .accordion__section {
+  .accordion-section {
     width: 100%;
     margin-bottom: 40px;
   }
-
   .accordion h2 {
     font-size: 18px;
   }
 }
 
-@media screen and (device-width: 600px),
-(max-width:600px) {
-
+@media screen and (device-width: 600px), (max-width:600px) {
   p {
     font-size: 14px;
   }
-
   .header__logo {
     margin-top: 0;
     align-items: flex-end;
   }
-
   .header__logo h1:before {
     font-size: 60px;
   }
-
   .header__buzz__word {
     font-size: 25px;
   }
-
-  .nav__button {
+  .nav-wrapper__button {
     display: block;
     width: 30px;
     height: 30px;
   }
-
-  .nav__menu {
-    display: none;
+  .nav-wrapper__menu {
+    overflow-y: hidden;
     flex-direction: column;
-    width: fit-content;
     position: absolute;
+    height: 0vh;
     width: 100%;
-    height: 100vh;
     top: 0px;
+    transition: height .5s;
   }
-
-  .nav__link {
+  .mobile-active {
+    overflow-y: visible;
+    height: 100vh;
+  }
+  .nav-wrapper__menu__link {
     align-items: center;
     width: 100%;
     flex: auto;
   }
-
-  .nav__menu--active {
-    display: flex;
-  }
-
   /* changes the form and picture to be in one column instead of next to eachother */
   .signup {
     flex-direction: column;
@@ -802,50 +811,40 @@ select {
     height: fit-content;
     font-size: 14px;
   }
-
   /* makes the signup form image rectangular */
   .signup__image {
     width: 100%;
     height: 100px;
     order: 1;
   }
-
-  .signup__inner {
+  .signup-inner {
     width: 100%;
     align-items: center;
     order: 2;
   }
-
-  .signup legend {
+  .signup-inner__form__fieldset__legend {
     font-size: 12px;
     font-weight: 600;
   }
-
-  .signup input {
+  .signup-inner__form__input {
     font-size: 12px;
   }
-
   .signup input[type=submit] {
     font-size: 16px;
   }
-
-
   .accordion {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 100%;
   }
-
-  .accordion__section {
+  .accordion-section {
     width: 100%;
     margin-bottom: 40px;
   }
-
   .accordion h2 {
     font-size: 16px;
   }
-
   .footer p {
     font-size: 12px;
     color: white;
