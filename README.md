@@ -11,4 +11,5 @@ Describe how you approached to problem, and what tools and techniques you used t
 One of the tasks hat was aimed to be achieved - adding an icon after the title in the accordion, indicating whether the section is expanded or collapsed. After trying out different ways of achieving this, on MDN Web documentations I found out, that a ::after selector can be used to achieve this. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+momento-photography.netlify.app
