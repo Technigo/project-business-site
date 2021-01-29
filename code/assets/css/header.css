@@ -20,12 +20,45 @@
   .signup-btn {
     transform: translate(-50%, -50%);
     position: absolute;
-    top: 65%;
+    top: 75%;
     left: 50%;
     background-color: var(--primaryColorDarker);
     padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4);
     border: 1px solid var(--primaryColorDarker);
     color: var(--white);
     border-radius: calc(var(--spacing) * 5);
+    transition: transform 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
   }
+
+  .main-title {
+    position: absolute;
+    top: 55%;
+    right: 15%;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+.menu i {
+  font-size: var(--xxLarge);
+  color: var(--secondaryColorNormal);
+  transition: transform 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+}
+
+.menu:hover i {
+  transform: scale(2);
+}
+
+.main-title {
+  color: var(--white);
+  text-shadow: 1px 1px 1px #000;
+  transition: text-shadow 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+}
+
+.main-title:hover {
+  text-shadow: 3px 3px 3px #000;
 }
