@@ -50,6 +50,7 @@ document.querySelector("#section1").onclick = toggleOne
 document.querySelector("#section2").onclick = toggleTwo
 document.querySelector("#section3").onclick = toggleThree
 document.querySelector(".button-sign-up").onclick = clickAlert
+
 // document.querySelector("#burger").onclick = toggleBurger
 
 
