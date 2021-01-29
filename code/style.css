@@ -1,6 +1,7 @@
 body {
   background: #FD805D;
   margin: 0;
+  font-family: 'Lora', serif;
 }
 
 
@@ -18,6 +19,7 @@ body {
   width: 100vw;
   height: 70vh;
   object-fit: cover;
+  /* filter: grayscale(50%); */
 }
 
 .header-text {
@@ -30,7 +32,120 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
+  color: #FCD9C8;
+  font-family: 'Pacifico', cursive;
+  font-size: 50px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
 }
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 20px;
+  z-index: 1;
+  /* width: 30px;
+  height: 30px;
+  margin-right: 20px; */
+}
+
+.navigation {
+  display: none;
+}
+
+.navigation.open-menu {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 70px;
+  left: 0;
+  background: #FCD9C8;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  animation-name: menu-animation;
+  animation-duration: 0.5s;
+}
+
+@keyframes menu-animation {   /* If there's time, adjust it so that it comes from the top */
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.navigation a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+.navigation a:hover, .navigation a:focus {
+  color: rgb(189, 189, 189);
+}
+
+.ham {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: 20px;
+  background-color: transparent;
+  border: none;
+  z-index: 1;
+}
+
+.hamburger {       /* ADD ANIMATION TO HAMBURGER */
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  border-radius: 25%;
+}
+
+.close-menu span:nth-child(1) {
+  transform: rotate(135deg);
+  position: absolute;
+  top: 10px;
+  left: 0px;
+}
+
+.close-menu span:nth-child(2) {
+  display: none;
+}
+
+.close-menu span:nth-child(3) {
+  transform: rotate(-135deg);
+  position: absolute;
+  top: 10px;
+  left: 0px;
+}
+
+
+/*** GENERAL CONTAINER ***/
+
+/*Set width for both sections + set the flexbow to column (mobile view)*/
+
 
 /*** FORM - SIGN UP ***/
 
@@ -42,7 +157,7 @@ body {
   background: #fff;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* set a width 50%?*/
 }
 
 .form-signup div {
@@ -61,6 +176,10 @@ input:valid {
   background: red; 
 } */
 
+input:hover {
+  cursor: pointer;
+}
+
 label {
   display: block;
   margin-bottom: 20px;
@@ -69,25 +188,37 @@ label {
 
 /*** ACCORDION ***/
 
-.accordion {
+.accordion {               
   border: solid #fff;
   border-radius: 25px;
   padding: 16px;
   margin: 30px;
-  background: #fff;
+  background: #fff; /* set a width 50%?*/
+}
+
+.accordion h1 {
+  margin-left: 30px;
+}
+
+.accordion .container {
+  margin: 15px;
 }
 
 .question {
   margin: 0;
   padding: 10px;
   cursor: pointer;
-  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.active + .answer {
-  display: block;
-  color: #000;
-  height: 50px;
+.question h2 {
+  font-size: 16px;
+}
+
+.question .question-plus, .question .question-minus {
+  font-size: 30px;
 }
 
 .answer {
@@ -99,14 +230,39 @@ label {
 .answer-content {
   margin: 0;
   padding: 10px;
-  border-top: 1px solid #FD805D;
+  /* border-top: 1px solid #FD805D; */
+}
+
+
+/*** ACCORDION ACTIVE ***/
+
+.active + .answer {
+  display: block;
+  color: #000;
+  height: 50px;
+  background: #FCD9C8;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.active {
+background: #FCD9C8;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+
+/*** ACCORDION HIDE "+" AND "-" ICONS ***/
+
+.hide {
+  display: none;
 }
 
 
 /*** FOOOTER ***/
 
 footer {                   
-  background: #000;
+  background: #FCD9C8;
   height: 150px;
   width: 100%;
   margin: 0px;
@@ -114,7 +270,7 @@ footer {
 }
 
 footer a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
@@ -122,7 +278,7 @@ footer a {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: 30px 16px;
+  padding: 12px 16px;
 }
 
 .container-contact-info {
@@ -153,7 +309,13 @@ footer a {
   color: rgb(189, 189, 189);
 }
 
-
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
 
 
 /*** MEDIA QUERY ***/

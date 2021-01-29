@@ -3,16 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bella's Book Club</title>
+    <title>📚 Bella's Book Club</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Pacifico&display=swap" rel="stylesheet">  
   </head>
   <body>
-
+ 
     <header class="header">
+      <a href="#">
+        <img class="logo" src="#" alt="Company logo"> <!-- add logo here -->
+      </a> 
       <nav class ="navigation">
         <a href="#">About</a>
         <a href="#">Pricing</a>
-        <a href="#">Contact us</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
       </nav>
       
       <button class="ham">
@@ -35,7 +44,11 @@
     </header>
 
     <main>
-      <div>
+      <section class="">
+        <h2>Time to dive into the wonderful world of books</h2>
+      </section>
+
+      <div> <!-- Desktop: se över om denna div kan användas för att flexa signup form och FAQ -->
         <section class="form-signup-container">
           <div>
             <h1>Sign up now!</h1>
@@ -57,17 +70,17 @@
                 Age group
               </p>
               <label>
-                <input type="radio" id="age-group" name="form-signup-age-group" 
+                <input type="radio" id="age-group15-18" name="form-signup-age-group" 
                 value="ageGroup1518" checked required>
                 15-18 year
               </label>
               <label>
-                <input type="radio" id="age-group" name="form-signup-age-group" 
+                <input type="radio" id="age-group18-25" name="form-signup-age-group" 
                 value="ageGroup1825" required>
                 18-25 year
               </label>
               <label>
-                <input type="radio" id="age-group" name="form-signup-age-group" 
+                <input type="radio" id="age-group25" name="form-signup-age-group" 
                 value="ageGroup25" required>
                 25+ year
               </label>
@@ -100,9 +113,11 @@
         <section class="accordion">
           <h1>FAQ</h1>
 
-          <div>
-            <div class="question" id="question1">
-              What will the subscription include?
+          <div class="container">
+            <div class="question">
+              <h2>What will the subscription include?</h2>  
+              <span class="question-plus">+</span>
+              <span class="question-minus hide">-</span>
             </div>
             <div class="answer">
               <p class="answer-content">
@@ -112,9 +127,11 @@
             </div>
           </div>
 
-          <div>
-            <div class="question" id="question2">
-              How much does it cost?
+          <div class="container">
+            <div class="question">
+              <h2>How much does it cost?</h2>  
+              <span class="question-plus">+</span>
+              <span class="question-minus hide">-</span>
             </div>
             <div class="answer">
               <p class="answer-content">
@@ -123,13 +140,15 @@
             </div>
           </div>
 
-          <div>
-            <div class="question" id="question3">
-              What's the notice period if I want to end the subscription?
+          <div class="container">
+            <div class="question">
+              <h2>What's the notice period if I want to end the subscription?</h2>  
+              <span class="question-plus">+</span>
+              <span class="question-minus hide">-</span>
             </div>
             <div class="answer">
               <p class="answer-content">
-                One month.
+                One month. No questions asked.
               </p>
             </div>
           </div>
@@ -147,32 +166,35 @@
         </div>
         <div class="container-social-media">
           <a href="#" target="_blank">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
             stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-            </svg> -->
+            </svg>
             Facebook
           </a>
           <a href="#" target="_blank">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
             stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>  -->
+            </svg>
             Instagram 
           </a>
           <a href="#" target="_blank">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
             stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube">
               <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 
               11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 
               0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
               <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-            </svg>  -->
+            </svg>
             Youtube 
           </a>
         </div>
+      </div>
+      <div class="copyright">
+        © Isabella Markskog 
       </div>
     </footer>
 
