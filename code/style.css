@@ -22,8 +22,13 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     width: 100%;
   }
  
-  h2 {
-      font-size: 16px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
   }
   
   /************** 1. HERO SECTION ******************************/
@@ -33,13 +38,12 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   }
   
   .hero-img img {
-      width: 100%;
+      width: 100vw;
       padding: 0;
       height: 50vh;
       background-position: center;
       object-fit: cover;
       filter: brightness(90%); /* make the picture a bit darker for the text to pop */
-      
   }
   
   .hero-text{
@@ -77,12 +81,12 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   /************** 2. SIGN UP FORM ******************************/
 
   .form-container {
-    width: 100%;
+    width: 100vw;
     padding: 20px 0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center; /* i tablet sida och desktop sida */
-
     /***** styling ****/
     background-color: #222324;
   }
@@ -93,11 +97,11 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     align-items: center;
     padding: 10px 40px;
     /***** styling ****/
-    background-color: whitesmoke;
+    background-color: #1c1c1d;
     border: 2px solid #C179B9;
     border-radius: 10px;
     font-size: 14px;
-    color: #6D6466;
+    color: rgba(255, 255, 255, 0.774);
   }
 
   .input-container h2 {
@@ -111,17 +115,32 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     display: block; /* rutor column ned */
     padding: 6px;
     margin: 6px 0;
-
     /***** styling ****/
     border: 2px solid #C179B9;
     border-radius: 10px;
     box-shadow: rgb(209, 159, 152);
+    background-color: white;
+    outline: none;
   }
 
   .input-container ul { /* No bullets list */
     list-style-type: none;
     padding: 0;
   }
+
+  input:focus:invalid {
+    border: 2px solid red;
+    outline: none;
+    }
+
+  input:focus:valid {
+    border: 2px solid green;
+    outline: none;
+  }
+
+
+
+  
 
    .btn-form button { /* Själva knappen */
     padding: 2px 12px;
@@ -142,17 +161,18 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     color: #C179B9;
   }
 
-
     /************** 3. Accordion ******************************/
 
     .accordion-container { /* Centering accordion */
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      padding: 20px 0px;
      }
 
      .accordion {
-      width: 100%;
+      width: 100vw;
       max-width: 300px;
       margin: 0 auto;
       margin-bottom: 20px;
@@ -167,6 +187,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
       color: rgba(255, 255, 255, 0.774);
       font-size: 30px;
       padding: 10px;
+      margin: 10px 0;
     }
 
     .question{
@@ -188,15 +209,63 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
       font-size: 12px;
       color: rgba(255, 255, 255, 0.774);
       border: 1px groove white;
-
-
-
-      /*display: none; */
+      display: none; 
     }
 
     .active + .answer {
       color: white;
-      display: inline-block;
+      display: block;
     }
+
+    @media (min-width: 768px){
+
+      .container {
+        flex-direction: row;
+        justify-content: center;
+        margin: 20px px;
+
+      }
+
+      /************** 2. SIGN UP FORM ******************************/
+      .form-container{
+        width: 40vw;
+      }
+
+      .input-container {
+        width: 35vw;
+      }
+
+      /************** 3. Accordion ******************************/
+      .accordion-container {
+        width: 40vw;
+        align-items: flex-start; /*make the accordion positioned further up */
+      }
+
+    }
+
+    @media (min-width: 990px) {
+      
+
+      /************** 2. SIGN UP FORM ******************************/
+
+      .form-container {
+        width:45vw;
+      }
+
+      .input-container{
+        width: 40vw;
+      }
+
+      input{
+        width:400px;
+      }
+
+      .accordion-container {
+        width: 45vw;
+      }
+
+
+    }
+     
 
 
