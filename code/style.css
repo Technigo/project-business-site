@@ -1,7 +1,103 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+html {
+  background: #e1c3e7;
+  color: pink;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
 
-.active + .answer {
-  /* some styling here */
+  .active + .answer {
+    /* some styling here */
+  }
+
+body {
+
+}
+/*** Hero ***/
+
+
+.hero-image {
+  width: 100vw;
+  height: 90vh;
+  object-fit: cover;
+}
+
+.hero-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f33cdb;
+  font-size: 50px;
+}
+
+.info-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/*** Form ***/
+.form {
+  border: 3px solid rgb(141, 16, 110);
+  border-radius: 10px;
+  background-color:rebeccapurple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: 50px;
+  padding: 20px;  
+}
+
+h2 {
+  color: pink;
+}
+
+/*** Accordion ***/
+.accordion-section {
+  border: 3px solid rgb(141, 16, 110);
+  border-radius: 10px;
+  background-color: rebeccapurple;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 50px;
+  padding: 20px; 
+}
+
+.accordion {
+  border: 3px solid rgb(141, 16, 110);
+  border-radius: 10px;
+  background-color: rgb(141, 99, 168);
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 20px;
+}
+
+h1 {
+margin: 20px;
+}
+
+.accordion-header {
+  margin: 0;
+  padding: 5px;
+  
+}
+
+.accordion-content {
+  margin: 10;
+  padding: 10px;
+  display: none;
+  border-top: 3px solid rgb(141, 16, 110);
+}
+
+.accordion-selected {
+  display: block;
 }
