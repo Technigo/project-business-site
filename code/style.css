@@ -103,6 +103,7 @@ h2 {
 }
 
 #intro {
+  margin: 20px;
   padding: 40px;
   text-align: center;
 }
@@ -115,13 +116,14 @@ h2 {
 
 #intro h2 {
   margin: 30px 0;
+  color: var(--primary-color);
 }
 
 /**** FLEX PARENT ****/
 
 .flex-parent {
   display: flex;
-  height: 1200px;
+  height: 1400px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -129,23 +131,29 @@ h2 {
 }
 
 .flex-child {
-  width: 345px;
+  width: 500px;
   border: 5px solid #0b6ba8;
   border-radius: 10px;
   margin: 30px;
+  font-size: 1.2rem;
 }
 
 /**** FORM ****/
+
+.form {
+  width: 500px; /* nuevo */
+}
 
 .form-container {
   display: flex;
   flex-direction: column;
   padding: 25px;
   justify-content: center;
-  height: 275px;
+  /* height: 400px; */
   background: #cfe6ad;
   color: #0e337d;
   border-radius: 5px;
+  margin: 15px; /*nuevo*/
 }
 
 .form-group {
@@ -159,7 +167,7 @@ h2 {
   width: 50%;
 }
 .form-group input {
-  width: 200px;
+  width: 300px;
   height: 30px;
   background: #0e337d;
   color: #cfe6ad;
@@ -171,10 +179,25 @@ input::placeholder {
   color: #cfe6ad;
 }
 
+button {
+  padding: 10px 30px;
+  background: rgba(17, 121, 217);
+  color: #fff;
+  border-radius: 5px;
+  border: solid #fff 2px;
+  margin-top: 25px;
+  opacity: 0.7;
+}
+
+button:hover {
+  transform: scale(0.98);
+}
+
 /**** ACCORDION ****/
 
 .accordion {
-  background: lightblue;
+  background: #0e337d;
+  padding: 20px; /* se lo quito o no?*/
 }
 
 .accordion-element {
@@ -183,11 +206,12 @@ input::placeholder {
 }
 
 .accordion-header {
-  background: #fff;
-  font-family: "Roboto Condensed", sans-serif;
+  background: #b1882d;
   font-size: 22px;
   margin: 0;
   padding: 20px;
+  cursor: grab;
+  /*  border-radius: 10px; nuevo */
 }
 
 .accordion-text-container {
@@ -201,7 +225,6 @@ input::placeholder {
 }
 
 .accordion-text {
-  font-family: "Roboto Condensed", sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 15px;
