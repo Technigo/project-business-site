@@ -30,6 +30,21 @@ body {
   left: 20px;
   top: 20px
 }
+.container-menu {
+   display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 20px;
+}
+.menu{
+text-align: center;  
+border-bottom: 1px solid whitesmoke;
+width: 100%;
+}
+.menu:hover {
+  background: linear-gradient(to left, #29323c, #485563, #2b5876);
+}
 .container-hero {
   position: relative;
 }
@@ -66,7 +81,7 @@ input [type=text], select {
   padding: 5px;
   border: none;
   border-bottom: 2px solid rgb(11, 10, 10);
-  transition: border-color 0.3s ease;
+  transition: border-color 0.4s ease;
   font-size: 14px;
   padding: 10px 0;
   }
@@ -74,6 +89,10 @@ input [type=text], select {
   outline: none;
   border-color:#377198;
 }
+.input:valid {
+  color: rgb(12, 151, 12);
+}
+
 .submit-button {
   background: #173252;
   color: whitesmoke;
@@ -91,7 +110,7 @@ input [type=text], select {
   margin: 0px;
   display: flex;
   flex-direction: column;
-  background: white; 
+  background: whitesmoke; 
   color: black;
   border-radius: 5px;
   cursor: pointer;
@@ -168,6 +187,13 @@ input [type=text], select {
       height: 20px;
       text-align: center;
     }
+    .container-menu {
+     flex-direction: row;
+     justify-content: space-between;
+     color: #fff;
+     font-size: 20px;
+     text-transform: uppercase;
+   }
   }  
     /* laptop */
   @media (min-width: 1200px) {
@@ -188,5 +214,9 @@ input [type=text], select {
     }
     .form{
       justify-content: center;
+    }
+    .container-menu {
+      font-size: 25px;
+      border-bottom: 2px solid whitesmoke;
     }
   }
