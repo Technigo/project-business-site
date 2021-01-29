@@ -13,4 +13,4 @@ For the accordion I used the toggle and onclick functions to reveal the answer w
 For the form I added some validation; the input is pink and changes to blue when correct. That also changed the background color for the submit-button, so I had to make a separate "valid"-styling for that. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://zealous-sammet-b73787.netlify.app
