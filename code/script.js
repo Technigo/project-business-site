@@ -57,6 +57,7 @@ const hamburgerMenu = document.getElementById("hamburger");
 
 hamburgerMenu.addEventListener("click", () => {
   hamburgerMenu.classList.toggle("hamburger-selected");
+  // hamburgerMenu.classList.toggle("pop-out-menu-selected");
 });
 
 
