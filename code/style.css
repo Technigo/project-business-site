@@ -3,13 +3,119 @@ next to the element you selected. in this case it is the div with
 the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. 
 read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.5;
 }
 
-/* form {
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+
+/*** STYLING HEADER / HERO ***/
+.hero-image {
+  /* width: 100%; */
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+.header {
+  position: relative;
+  
+}
+.hero-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
-  width: 200px;
-} */
+  justify-content: center;
+  align-items: center;
+}
+
+/*** STYLING CONTENT ***/
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+}
+
+
+
+/*** STYLING FAQ ***/
+
+.accordion {
+  /* overflow: hidden; */
+}
+
+.question {
+  cursor: pointer
+}
+
+.answer {
+  display: none;
+
+}
+
+.active + .answer {
+  display: block;
+}
+
+
+/*** STYLING FORM ***/
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 20px 10px 20px 10px;
+  border: 3px solid silver;
+  border-radius: 7px;
+  width: 300px;
+  background-color: rgb(186, 197, 206);
+} 
+
+input[type=text], input[type=email] {
+  padding:10px;
+  border-radius:10px;
+}
+
+.button {
+  appearance:none;
+  -webkit-appearance:none;
+  padding:15px;
+  border:none;
+  background-color:#3F51B5;
+  color:#fff;
+  font-weight:500;
+  font-size: 20px;
+  border-radius:5px;
+  width: 50%;
+  cursor: pointer;
+}
+
+.signUpForm div {
+  padding-bottom: 20px;
+}
+
+.form {
+  /* border: 3px solid silver;
+   */
+}
+
+
+/*** MEDIA QUERIES ***/
+
+@media (min-width: 661px) {
+  
+  .content {
+  flex-direction: row;
+  }
+}

@@ -7,47 +7,70 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-    <form action="https://httpbin.org/anything" method="post">
-      <label for="fname">First name:</label><br>
-      <input type="text" id="fname" name="fname"><br>
-      <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="lname"><br>
-      <label for="email">Email address:</label><br>
-      <input type="email" id="email" name="email"><br>
-      <input type="radio" id="accept" name="terms" value="accept">
-      <label for="accept">I accept the Terms and conditions</label><br>
-      <input type="checkbox" id="news" name="news" value="newsletter">
-      <label for="news"> I would like the newsletter!</label><br>
-      <input type="submit" value="Submit">
-    </form>
+    <header class="header">
+      <picture class="">
+        <source srcset="./images/mobile.jpg" media="(max-width: 660px)">
+        <source srcset="./images/tablet.jpg" media="(max-width: 1024px)">
+        <img src="./images/desktop.jpg" alt="Hero image" class="hero-image">
+      </picture>
+      <div class="hero-text">
+        <h1>Become a master chef!</h1>
+        <h2>Ace your kitchen skills with us</h2>
+      </div>
+    </header>
 
 
+    <section class="content">
+      <!-- Signup form -->
+      <section class="form">
+        <form class="signUpForm" action="https://httpbin.org/anything" method="post">
+          <h3>Sign up to our cooking class!</h3>
+          <div>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="email">Email address:</label><br>
+            <input type="email" id="email" name="email">
+          </div>
+          <div>
+            <input type="radio" id="acceptTerms" name="terms" value="acceptTerms">
+            <label for="acceptTerms">I accept the Terms and conditions</label><br>
+            <input type="checkbox" id="news" name="news" value="newsletter">
+            <label for="news"> I would like the newsletter!</label>
+          </div>
+          <div>
+            <input type="submit" value="Sign Up!" class="button">
+          </div> 
+        </form>
+      </section>
 
-
-    <section class="accordion">
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      <section class="accordion">
+        <h3>Frequently asked questions</h3>
+        <div class="question" id="section1">
+          <h4>What should I wear?</h4>
+        </div>
+        <div class="answer">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque cumque, omnis necessitatibus vitae consequatur voluptatum aspernatur obcaecati tempora tempore veritatis ipsa eveniet.</p>
+        </div>
 
-      <div class="question" id="section1">Section 1
-      </div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <div class="question" id="section2">
+          <h4>Are there any vegan cooking classes?</h4>
+        </div>
+        <div class="answer">
+          <p>Eaque cumque, omnis necessitatibus vitae consequatur voluptatum aspernatur obcaecati tempora tempore veritatis ipsa eveniet.</p>
+        </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <div class="question" id="section3">
+          <h4>What are the cancellation policy?</h4>
+        </div>
+        <div class="answer">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio.</p>
+        </div>
+      </section>
 
-      <div class="question" id="section3">Section 3</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
     </section>
-
 
 
 
