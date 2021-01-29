@@ -34,7 +34,7 @@ body {
 .content-container {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   flex-direction: column;
 }
 /* Sign up form */
@@ -62,7 +62,14 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .active + .answer {
   /* some styling here */
+  display: block;
 }
+
+.answer {
+  display: none;
+}
+
+/*Media queries*/
 
 @media (max-width: 767px) {
   .text-hero {
@@ -75,18 +82,12 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     font-size: 30px;
   }
   .content-container {
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
     flex-direction: row;
   }
 }
 
 @media (min-width: 993px) {
   .content-container {
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
     flex-direction: row;
   }
 }
