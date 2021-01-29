@@ -14,6 +14,7 @@ h2 {
 /** MOOBILE VIEW **/
 .hero-section {
   position: relative;
+  overflow:hidden;
 }
 
 .hero-section h1 {
@@ -33,8 +34,8 @@ h2 {
 }
 
 .hero-image {
-  object-fit: cover;
   width: 100vw;
+  object-fit: cover;
 }
 
 video {
@@ -99,7 +100,7 @@ video {
 
 .question:hover {
   background-color: #e2cbbc;
-  transition: all .5s ease-in-out;
+  transition: all .10s ease-in-out;
   overflow: hidden;
 }
 
@@ -115,14 +116,14 @@ video {
   padding: 10px 0px 15px;
 }
 
-.question:after {    /* Plus symbol */
+.question::after {    /* Plus symbol */
   content: "\002B";
   font-weight: bold;
   float: right;
   margin-left: 5px;
 }
 
-.active:after {   /* Minus symbol */
+.active::after {   /* Minus symbol */
   content: "\2212";
 }
 
@@ -168,6 +169,11 @@ textarea {
 
 .footer p {
   padding: 50px 0 50px;
+  margin-bottom: 0;
+}
+
+.submit-btn {
+  background-color: #F7F4F2;
 }
 
 
