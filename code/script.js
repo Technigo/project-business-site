@@ -8,6 +8,9 @@ function toggle() {
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
 document.getElementById('accordion-section-1').onclick = toggle
 
+
+
+
 const accordionHeaderOne = document.getElementById('accordion-header-1');
 const accordionContentOne = document.getElementById('accordion-content-1');
 

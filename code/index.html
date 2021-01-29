@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="https://fonts.googlepis.com/css2?family=Naum+Gothic&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap"
+      rel="stylesheet"> -->
+    <!--Need to fix the right font-->
     <link rel="stylesheet" href="./style.css">
 </head>
 <!-- video or image as a header is cool :) -->
@@ -21,6 +23,8 @@
             <img class="hero-image" src="./assets/Hong-Kong.jpg" alt="Hong-Kong image" />
             <!--i can put srcset="Backround image of threes"> command here-->
         </picture>
+
+
         <h1 class="hero-title">Hero Section Titel</h1>
 
         <div class="hamburger">
@@ -37,63 +41,45 @@
     </header>
 
 
+    <!-- Signup form -->
+    <section class="accordion"></section>
+
+    <form classs="form" action="http://httpbin.org/anything" method="POST">
+
+        <h3 class="header-join">FIND OUT MORE</h3>
+
+        <div class="form-item">
+            <input type="text" name="fname" id="fname" placeholder="Enter your first name" required/>
+        </div>
+
+        <div class="form-item">
+            <input type="email" name="email" class="email" id="emali" placeholder="Enter your Email" required/>
+        </div>
+
+        <div class="form-item">
+            <input type="phone" name="phone" class="phone" id="phone" placeholder="Enter your Phone-nr" />
+        </div>
 
 
-    Accordion 1
-    <div class="accordion">
-        <h3 id="accordion-header-1" class="accordion-header">Header</h3>
-        <p id="accordion-content-1" class="accordion-content">Text with accordion</p>
-    </div>
+        <div class="form-item">
+            <textarea name="message" rows="5" cols="20" placeholder="Enter your message...">
+                </textarea>
+        </div>
+        <div class="form-item">
+            <label for="contact">Preferable way of contact you</label>
 
-    <div class="accordion">
-        <h3 id="accordion-header-2" class="accordion-header">Header</h3>
-        <p id="accordion-content-2" class="accordion-content">Text with accordion</p>
-    </div>
+            <input type="checkbox" id="contact" name="contact" value="phone">
+            <label for="contactChoice1">Phone</label>
 
-    <div class="accordion">
-        <h3 id="accordion-header-3" class="accordion-header">Header</h3>
-        <p id="accordion-content-3" class="accordion-content">Text with accordion</p>
-    </div>
+            <input type="checkbox" id="contact" name="contact" value="email">
+            <label for="contactChoice1">Email</label>
+        </div>
 
-
-
-
-
-
+        <button type="submit">Submitt</button>
+    </form>
+    </section>
 
     <!-- Accordion -->
-    <section class="accordion">
-
-        <!-- Signup form -->
-        <form action="http://httpbin.org/anything" method="POST">
-
-            <h3 class="header-join">JOIN US NOW!</h3>
-
-
-            <label>
-                Name
-                <input type="text" name="message" required>
-            </label>
-
-            <label>
-            E-mail
-            <input type="email" name="email" required>
-        </label>
-
-            <label>
-            Size
-            <select name="tshirtSize">
-                <option value="s">Small</option>
-                <option value="m">Medium</option>
-                <option value="L">Large</option>
-            </label>
-
-            <label>
-            </select>
-
-            <button type="submit">Oreder item</button>
-        </form>
-    </section>
 
     <section class="accordion">
 
