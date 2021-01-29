@@ -4,27 +4,179 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+
+    <!-- Header -->
+    <header>
+      <video autoplay loop muted class="hero-video">
+        <source src="./videos/dnd_video.mp4" type="video/mp4">
+
+        <source src="./videos/dnd_video_720x203.mp4" type="video/mp4" media="(max-width: 900px)">
+
+        <source src="./videos/dnd_video_360x101.mp4" type="video/mp4" media="(max-width: 600px)">
+
+        <p>This browser doesn't support video...</p>
+      </video>
+
+      <div class="hero-image-1">
+        <img src="./dnd_logo_text_glow.png">
+      </div>
+
+    </header>
 
     <!-- Signup form -->
+    <container class="content">
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+    <form action="http://httpbin.org/anything" method="POST">
+
+      <div class="form-header">
+        <h2>Sign Up</h2>
+      </div>
+
+      <div class="form-content">
+    <section class="form-text-input">
+      <label>
+        Name
+        <input type="text" name="message" value="Name" required>
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" value="Name@Email" required>
+      </label>
+      <label>
+        Phone number
+        <input type="tel" name="phone" value="Phone number" required>
+      </label>
+    </section>
+
+    <section class="form-radio-buttons">
+      <p>Are you registering as a single player or a group?</p>
+      <div class="radio-style">
+      <label>
+        Single <input type="radio" value="single" name="player" required>
+      </label>
+      
+      <label>
+        Group <input type="radio" value="group" name="player" required>
+      </label>
+      </div>
+    </section>
+
+    <section class="form-checkboxes">
+      <p>Chose aviable weekday</p>
+      <div class="checkboxes-style-1">
+      <label>
+        Monday <input type="checkbox" value="mon" name="monday" required> 
+      </label>
+      <label>
+        Tuesday <input type="checkbox" value="tue" name="tuesday" required> 
+      </label>
+      <label>
+        Wednesday <input type="checkbox" value="wed" name="wednesday" required>
+      </label>
+      <label>
+        Thursday <input type="checkbox" value="thu" name="thursday" required> 
+      </label>
+    </div>
+    <div class="checkboxes-style-2">
+      <label>
+        Friday <input type="checkbox" value="fri" name="friday" required> 
+      </label>
+      <label>
+        Saturday <input type="checkbox" value="sat" name="saturday" required>
+      </label>
+      <label>
+        Sunday <input type="checkbox" value="sun" name="sunday" required>
+      </label>
+      </div>
+    </section>
+
+    <section class="form-time-select">
+      <p>Chose a time</p>
+    <label>
+      Time
+      <select name="form-time">
+        <option value="ten-two">10:00-14:00</option>
+        <option value="two-six">14:00-18:00</option>
+        <option value="six-ten">18:00-22:00</option>
+      </select>
+    </label>
+    </section>
+
+
+    <section class="other-text">
+      <p>Anything else we should know?</p>
+    <label>
+      Other
+      <input type="textarea" name="other" value="Other">
+    </label>
+    </section>
+
+      <input type="submit" value="Submit">
+      </div>
+    </form>
+
+  
+
+    <!-- Accordion -->
+    <!-- <section class="accordion">
+      <h1 id="accordion-header">FAQ</h1>
 
       <div class="question" id="section1">Section 1</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p id="accordion-content" class="accordion-content">Lorem ipsum...</p>
       </div>
 
       <div class="question" id="section2">Section 2</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
+    </section> -->
+
+
+    <section class="faq">
+
+
+        <div class="faq-header">
+        <h3>FAQ</h3>
+        </div>
+
+
+      <div class="accordion">
+        <h1 id="accordion-header-1" class="accordion-header">Question 1</h1>
+        <p id="accordion-content-1" class="accordion-content">
+          Text of the accordion
+        </p>
+      </div>
+
+      <div class="accordion">
+        <h1 id="accordion-header-2" class="accordion-header">Question 2</h1>
+        <p id="accordion-content-2" class="accordion-content">
+          Text of the accordion
+        </p>
+      </div>
+
+      <div class="accordion">
+        <h1 id="accordion-header-3" class="accordion-header">Question 3</h1>
+        <p id="accordion-content-3" class="accordion-content">
+          Text of the accordion
+        </p>
+      </div>
+
+      <div class="accordion">
+        <h1 id="accordion-header-4" class="accordion-header">Question 4</h1>
+        <p id="accordion-content-4" class="accordion-content">
+          Text of the accordion
+        </p>
+      </div>
+
     </section>
+    </container>
+
+
     <!-- dont forget to link the javascript file here! -->
+    <script src="./script.js"></script>
   </body>
 </html>

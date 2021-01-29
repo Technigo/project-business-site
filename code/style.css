@@ -5,3 +5,332 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .active + .answer {
   /* some styling here */
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #270604;
+}
+
+/* Hero */
+
+.header {
+  position: relative;
+}
+
+.hero-video {
+  /* width: 100%;
+  height: 100%;
+  object-fit: cover; */
+  width: 100vw;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.hero-image-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 100%;
+
+}
+
+img {
+  width: 50%;
+}
+
+/* Form */
+
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding: 30px;
+}
+
+form {
+  border-radius: 5px;
+  background-color: #4F0C07;
+  width: 40%;
+}
+
+.form-content {
+  padding: 40px;
+}
+
+h2 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+.form-header {
+  background-color: #830E07;
+  width: 100%;
+  margin: 0;
+  border-radius: 5px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=tel] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.radio-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.checkboxes-style-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.checkboxes-style-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* input:valid {
+  background-color: green;
+} */
+
+input:invalid {
+  border: 2px solid red;
+}
+
+.form-text-input {
+  margin-top: 50px;
+}
+
+.form-radio-buttons {
+  margin-top: 50px;
+}
+
+.form-checkboxes {
+  margin-top: 50px;
+}
+
+.form-time-select {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+select {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  height: 40px;
+  border-radius: 4px;
+  margin-top: 7px;  
+}
+
+.other-text {
+  margin-top: 50px;
+}
+
+input[type=textarea] {
+  width: 100%;
+  height: 150px;
+  padding: 12px 12px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+  margin-top: 7px;
+}
+
+label {
+  display: block;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #830E07;
+  color: white;
+  padding: 14px 20px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Accordion */
+
+.faq-header {
+  background-color: #830E07;
+  height: 100px;
+  border: 2px solid #830E07;
+  border-radius: 5px;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  background-color: #830E07;
+  height: 70px;
+  margin-top: 35px;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.faq {
+  width: 40%; 
+}
+
+.accordion {
+  border: 3px solid #830E07;
+  border-radius: 5px;
+  background-color: #4F0C07;
+}
+
+.accordion-header {
+  margin-top: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.accordion-content {
+  display: flex;
+  overflow: hidden;
+  height: 0;
+  transition: height .3s ease;
+  background-color: #830E07;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.accordion-selected {
+  height: 100px;
+  background-color: #830E07;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+.content {
+  margin-top: 100px;
+}
+
+/* .accordion {
+width: 90%;
+} */
+
+/* form {
+width: 30%;
+} */
+
+img{
+  width: 50%;
+}
+
+}
+
+@media (max-width: 767px) {
+
+.hero-image-1 {
+justify-content: center;
+align-content: center;
+margin: 0;
+}
+
+img {
+  width: 50%;
+}
+
+.content {
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 20px;
+  padding: 30px;
+}
+
+form {
+  width: 100%;
+  align-content: center;
+}
+
+/* .accordion {
+  width: 98%;
+} */
+
+.faq {
+  margin-top: 30px;
+  align-content: center;
+  width: 100%;
+}
+
+}
