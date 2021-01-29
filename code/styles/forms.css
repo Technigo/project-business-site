@@ -30,6 +30,7 @@
 }
 
 .form__input-field {
+  cursor: pointer;
   margin-top: 1em;
   font-size: 1em;
   padding: 1em;
@@ -37,6 +38,10 @@
   border-radius: 1em;
   border: 0;
   box-shadow: 2px 2px 5px #8d8741;
+}
+
+.form__input-field:hover {
+  background: #fbeec1;
 }
 
 .form__button {
@@ -82,6 +87,7 @@
 }
 
 /* -CHECKBOX&RADIO(states)-  */
+
 /* Checked style of checkbox and radio */
 .form__input-checkbox:checked::before,
 .form__input-radio:checked::before {
@@ -111,6 +117,11 @@
 /* DISABLED INPUTS */
 .form__input-field--disabled {
   opacity: 0.5;
+  cursor: default;
+}
+
+.form__input-field--disabled:hover {
+  background: #f3f3f3;
 }
 
 /* fix to make sure that the labels are aligned with the custom Checkboxes and radios */
