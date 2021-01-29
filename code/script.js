@@ -20,19 +20,19 @@ const accordionContentThree = document.getElementById("accordion-content-3");
 console.log(accordionHeaderOne);
 
 accordionHeaderOne.addEventListener("click", () => {
-  accordionContentOne.classList.add("accordion-selected");
+  accordionContentOne.classList.toggle("accordion-selected");
   accordionContentTwo.classList.remove("accordion-selected");
   accordionContentThree.classList.remove("accordion-selected");
 });
 
 accordionHeaderTwo.addEventListener("click", () => {
   accordionContentOne.classList.remove("accordion-selected");
-  accordionContentTwo.classList.add("accordion-selected");
+  accordionContentTwo.classList.toggle("accordion-selected");
   accordionContentThree.classList.remove("accordion-selected");
 });
 
 accordionHeaderThree.addEventListener("click", () => {
   accordionContentOne.classList.remove("accordion-selected");
   accordionContentTwo.classList.remove("accordion-selected");
-  accordionContentThree.classList.add("accordion-selected");
+  accordionContentThree.classList.toggle("accordion-selected");
 });

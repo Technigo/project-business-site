@@ -16,9 +16,8 @@ body {
 }
 /*** Hero ***/
 
-
 .hero-image {
-  width: 100vw;
+  width: 100%;
   height: 90vh;
   object-fit: cover;
 }
@@ -59,6 +58,10 @@ h2 {
   color: pink;
 }
 
+.checkbox-container:hover input ~ .checkmark {
+  background-color: rgb(204, 32, 32);
+}
+
 /*** Accordion ***/
 .accordion-section {
   border: 3px solid rgb(141, 16, 110);
@@ -66,9 +69,10 @@ h2 {
   background-color: rebeccapurple;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 300px;
   margin: 50px;
-  padding: 20px; 
+  padding: 70px 10px 70px 10px; 
 }
 
 .accordion {
@@ -77,6 +81,7 @@ h2 {
   background-color: rgb(141, 99, 168);
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 200px;
   margin: 20px;
 }
@@ -100,4 +105,33 @@ margin: 20px;
 
 .accordion-selected {
   display: block;
+}
+
+@media (max-width: 767px) {
+
+  .header {
+  align-items: center;
+  }
+
+.hero-image {
+  width: 100%;
+}
+
+  .info-section {
+  flex-direction: column;
+}
+
+.form {
+  width: 45%;
+}
+
+.accordion {
+  width: 45%;
+}
+}
+
+@media (max-width: 1199px) {
+  .hero-image {
+    width: 100%;
+  }
 }
