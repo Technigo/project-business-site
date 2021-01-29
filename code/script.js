@@ -19,7 +19,7 @@ const accordionContentThree = document.getElementById('accordion-content-3');
 
 console.log(accordionHeaderOne);
 
-accordionHeaderOne.addEventListner('click', () => {
+accordionHeaderOne.addEventListener('click', () => {
     accordionContentOne.classList.toggle('accordion-selected');
 });
 
