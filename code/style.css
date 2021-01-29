@@ -26,6 +26,10 @@ h1 {
   margin: 0;
 }
 
+.about {
+  color: pink;
+}
+
 .grid-container {
   border: 2px solid green;
   display: grid;
@@ -36,27 +40,28 @@ h1 {
   border: 1px solid black;
   color: black;
   background-color: white;
-  padding: 40px;
-  margin: 40px;
-  border-radius: 5px;
-  box-shadow: 0 5px gray;
+  padding: 20px;
+  margin: 20px;
 } 
 
 .user-information {
   display: grid;
 }
 
-.answer {
-  display: none;
+.accordion {
+  border: 2px solid pink;
 }
 
-/* remove sibling-selector!! */
+.question {
+  border: 2px solid turquoise;
+}
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+.answer {
+  display: none;
+  border: 2px solid red;
+} 
 
-.active + .answer {
+.answer-clicked {
   display: block;
 }
 
