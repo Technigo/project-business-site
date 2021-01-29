@@ -11,7 +11,6 @@
 body {
   font-family: "Open sans", sans-serif;
   line-height: 1.5;
-  font-size: 1rem;
   background: #0e337d;
   color: #cfe6ad;
 }
@@ -33,9 +32,11 @@ h2 {
 
 h3 {
   font-size: 1.6rem;
-  padding: 30px;
 }
 
+p {
+  font-size: 1.2rem;
+}
 /*** HEADER ***/
 
 .hero-section {
@@ -55,6 +56,9 @@ h3 {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  /* background: var(--primary-color)
+    url("./https://traversymedia.com/downloads/cover.jpg") no-repeat center
+    center/cover; */
 }
 
 .hero-video video {
@@ -66,10 +70,24 @@ h3 {
   transform: translate(-50%, -50%);
   object-fit: cover;
 }
-
+/* 
+.hero-video:after {
+  content: "";
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+}
+ */
 .hero-text {
   z-index: 2;
   background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 15px;
 }
 
 .hero-text h1 {
@@ -109,29 +127,26 @@ h3 {
 
 .flex-parent {
   display: flex;
-  height: 1400px;
+  height: 1200px;
   flex-direction: column;
   align-items: center;
-
   margin-bottom: 20px;
 }
 
 .flex-child {
-  width: 500px;
+  width: 300px;
   border: 5px solid #0b6ba8;
   border-radius: 10px;
   margin: 30px;
-  font-size: 1.2rem;
 }
 
-.flex-child h1 {
+.flex-child h2 {
   padding-bottom: 15px;
 }
 
 /**** FORM ****/
 
 .form {
-  width: 500px; /* nuevo */
   padding: 20px;
 }
 
@@ -151,21 +166,26 @@ h3 {
   margin-bottom: 15px;
   display: flex;
   align-items: center;
-  height: 25px;
+  /* height: 25px; */
 }
 
 .form-group label {
-  width: 50%;
-  font-size: 18px;
+  width: auto;
+  font-size: 0.8rem;
+}
+
+input#checkbox {
+  width: 15px;
 }
 
 .form-group input {
-  width: 300px;
-  height: 30px;
+  width: 600px;
+  height: 40px;
   background: #0e337d;
   color: #cfe6ad;
   border-radius: 5px;
   padding: 5px;
+  font-size: 1rem;
 }
 
 input::placeholder {
@@ -180,6 +200,7 @@ button {
   border: solid #fff 2px;
   margin-top: 25px;
   opacity: 0.7;
+  font-size: 1rem;
 }
 
 button:hover {
@@ -222,11 +243,11 @@ button:hover {
 }
 
 .accordion-text-container.active {
-  height: 150px;
+  height: 170px;
 }
 
 .accordion-text {
-  font-size: 16px;
+  font-size: 1rem;
   margin: 0;
   padding: 15px;
 }
@@ -250,12 +271,19 @@ button:hover {
 }
 
 .footer-text {
+  font-size: 0.8rem;
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 @media (min-width: 768px) {
+  #intro p {
+    max-width: 800px;
+    margin: 0 130px;
+    font-size: 1.2rem;
+  }
+
   .flex-parent {
     display: flex;
     align-items: space-evenly;
@@ -265,9 +293,17 @@ button:hover {
   .flex-child {
     width: 500px;
   }
+
+  .accordion-text-container.active {
+    height: 120px;
+  }
 }
 
 @media (min-width: 1024px) {
+  #intro p {
+    font-size: 1.4rem;
+  }
+
   .flex-parent {
     display: flex;
     height: 500px;
@@ -275,5 +311,14 @@ button:hover {
     align-items: space-between;
     justify-content: space-evenly;
     margin: 20px;
+  }
+
+  .flex-child {
+    height: 520px;
+    min-width: 470px;
+  }
+
+  .footer-text {
+    font-size: 1rem;
   }
 }
