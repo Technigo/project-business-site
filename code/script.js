@@ -1,3 +1,6 @@
+const ritualsDrop = document.getElementById('rituals');
+const bigContainer = document.getElementById('big-container')
+
 const accordionHeaderOne = document.getElementById('accordion-header-1');
 const accordionContentOne = document.getElementById('accordion-content-1');
 
@@ -33,11 +36,13 @@ accordionHeaderOne.addEventListener('click', toggleActive)
 accordionHeaderTwo.addEventListener('click', toggleActive)
 accordionHeaderThree.addEventListener('click', toggleActive)
 
+/* THIS DOES NOT WORK, why? */
 
-const buttonDrop = document.getElementById("button");
 
-function toggleDrinkMenu() {
-  this.classList.toggle("open")
+function toggleRituals() {
+  this.classList.toggle('open')
 }
 
-accordionHeaderOne.addEventListener('click', toggleActive)
+ritualsDrop.addEventListener('click', toggleRituals)
+
+

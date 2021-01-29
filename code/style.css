@@ -79,14 +79,14 @@ header {
 }
 
 .form-survey {
-  width: 100vw;
+  width: 50%;
   height: 50vh;
 }
 
 /* ACCORDION */
   .accordion {
-    width: 100vw;
-    height: 50vh;
+    width: 50%;
+    height: 50vh; /*Should this be another height specs??*/
     border: 3px solid #999;
     border-radius: 7px;
     margin-bottom: 5px;
@@ -115,19 +115,17 @@ header {
   background-color: red; 
 }
 
-/* FOOTER */
+  .big-container {
+    display: none;
+  }
 
-footer { /*or should i target header and footer the same way? */
-  margin-left: 10px; /*take away later*/
-  width: 100vw; 
-  height: 15vh;
-  border: 3px solid green;
-  font-family: 'Major Mono Display', monospace;;
-}
+  .open + .big-container {
+    display: block;
+  }
 
-
+/*  FORM-SURVEY */
   .form-survey { 
-    width: 100vw;
+    width: 50%;
     padding-top: 10px;
     padding-left: 10px;
     padding-bottom: 0;
@@ -141,3 +139,17 @@ footer { /*or should i target header and footer the same way? */
 .form-survey-low {
   cursor: wait;
 }
+
+footer { /*or should i target header and footer the same way? YES try to style by class in CSS*/
+  margin-left: 10px; /*take away later*/
+  width: 100vw; 
+  height: 15vh;
+  border: 3px solid green;
+  font-family: 'Major Mono Display', monospace;;
+}
+
+/* Set accordion and form inside of a common <div> as display: flex; flex-direction: column; in mobile view and perhaps tablet  
+@media {
+
+}
+*/
