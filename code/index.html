@@ -1,94 +1,92 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> &#10036; GEMS &#10036; </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dosis&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title> &#10036; GEMS &#10036; </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dosis&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
    </head>
   <body>
 
-
-    <!-- HERO VIDEO -->
-    <header class="hero">
+<!-- HERO VIDEO, Could not get it to change the video src -->
+ <header class="hero">
       <video loop muted autoplay preload="auto">
-      <source media="(min-width 768px" src="/videos/KellyLacyPexels.mp4" type="video/mp4" alt= "Your browser do not support this video :-(">  <!--TABLET DESKTOP VIDEO, Add mobile one-->
+        <source src="./videos/Mobile.mp4" media="screen and (max-width:767px)">
+        <source src="./videos/KellyLacyPexels.mp4" media="screen and (min-width:768px)">          
       </video>
+      
+        <!-- <picture>
+          <source srcset="./Pictures/MobilePic.jpg" media="(max-width: 767px)">
+          <img class="hero-img" src="./Pictures/DesktopPic.jpg" alt="Hero image of beautiful stones" />
+        </picture> -->
+
        <div class= "welcome">
          <h1 class="welcome-title">GEMS</h1>
          <h4 class="welcome-sub">Tailored for you</h4>
+         <p class="welcome-p">Photo by Karolina Grabowska from Pexels</p>
        </div>
-     </header>
+  </header>
 
-
-    <!-- Signup form -->
+<!-- SIGN UP FORM -->
+  
 <section class="main">
 
-<section class="signup">
- <h2 class="h2"> PLEASE ENTER YOUR INFORMATION</h2>
+  <section class="signup">
+    <h2 class="h2"> PLEASE ENTER YOUR INFORMATION</h2>
 
- <section class="forms">
-  <form class="signup-info" action="https://httpbin.org/anything" method="POST">
+    <section class="forms">
+      <form class="signup-info" action="https://httpbin.org/anything" method="POST">
+        <label> Your month of birth: 
+          <select class="birth-month" id="birth-month" required name="signup-info-birthmonth">      
+              <option class="option">January</option>
+              <option class="option">February</option>
+              <option class="option">March</option>
+              <option class="option">April</option>
+              <option class="option">May</option>
+              <option class="option">June</option>
+              <option class="option">July</option>
+              <option class="option">August</option>
+              <option class="option">September</option>
+              <option class="option">October</option>
+              <option class="option">November</option>
+              <option class="option">December</option>
+          </select>
+        </label>
 
-    <label> Your month of birth: 
-      <select class="birth-month" id="birth-month" required name="signup-info-birthmonth">      
-          <option class="option">January</option>
-          <option class="option">February</option>
-          <option class="option">March</option>
-          <option class="option">April</option>
-          <option class="option">May</option>
-          <option class="option">June</option>
-          <option class="option">July</option>
-          <option class="option">August</option>
-          <option class="option">September</option>
-          <option class="option">October</option>
-          <option class="option">November</option>
-          <option class="option">December</option>
-      </select>
-    </label>
-
-      <label class="color-header"> Your color: 
-        <input id="color" class="color" type="color" required name="signup-info-color">
-      </label>
-    
-      <label> Your message: 
-        <input id ="text" class="text" type="text" maxlength="100" placeholder="Type here..." required name="signup-info-message"> 
-      </label>
-           
-      <input type="submit" class="submit" value="Let's go!">
-  </form>
-</section>
-
+        <label class="color-header"> Your favourite color: 
+            <input id="color" class="color" type="color" required name="signup-info-color">
+        </label>
+        
+        <label> Your message: 
+            <input id ="text" class="text" type="text" maxlength="100" placeholder="Type here..." required name="signup-info-message"> 
+        </label>              
+            <input type="submit" class="submit" value="Let's go!">
+      </form>
+    </section>
 </section>
 
 
-<!-- Accordion -->
+<!-- ACCORDION -->
 
-    <section class="accordion">
-            <h1>FAQ!</h1>
+  <section class="accordion">
+      <h1>FAQ!</h1>
 
-          <h4 id ="accordionHeader" class="accordionHeader"> Where are you located?</h4>
-           <p id ="accordionContent" class="answer"> We are a small business, located in the Nordics.</p>
+         <h4 id ="accordionHeader" class="accordionHeader"> Where are you located?</h4>
+         <p id ="accordionContent" class="answer"> We are a small business, located in the Nordics.</p>
           
         <h4 id="accordionHeaderTwo" class="accordionHeaderTwo"> What is your pricing model?</h4>
-          <p id="accordionContentTwo" class="answerTwo"> Just as our gems, or pricing is unique to every item. Please reach out to us for more info!</p>
+         <p id="accordionContentTwo" class="answerTwo"> Just as our gems, or pricing is unique to every item. Please reach out to us for more info!</p>
       
-          <!--
-      <div class="question" id="accordion-header-two"> How does the pricing work?</div>
-      <div class="answer active" id="accordion-answer-two">
-        <p> Every stone is unique, and also the pricing model. Please reach out to us for more information!</p>
-      </div>
-      -->
-
-    </section>
-
-
   </section>
 
-  <footer class="footer"> &copy; Anna Lenksjö - Student Tecnhnigo Bootcamp Spring 2021 </footer>
-    <script src="/script.js"></script>
+</section>
 
-  </body>
+
+<footer class="footer"> &copy; Anna Lenksjö - Student Tecnhnigo Bootcamp Spring 2021 </footer>
+
+ <script src="./script.js"></script>
+
+</body>
 </html>

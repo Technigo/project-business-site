@@ -1,7 +1,3 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
 body {
 margin: 0px;
 background-color: rgb(186, 186, 228);
@@ -11,19 +7,19 @@ background-color: rgb(186, 186, 228);
 
 .hero {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  }
+  } 
 
 .hero video {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
+  position: absolute;  
   z-index: 1;
-  filter: opacity(50%);
+  filter: opacity(60%);
 }
 
 .welcome {
@@ -84,26 +80,39 @@ background-color: rgb(186, 186, 228);
 
 .birth-month {
 background-color:  rgb(186, 186, 228);
+margin-bottom: 10px;
+border-radius: 8px;
+padding: 4px;
 }
 
 .color-header { 
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  padding: 4px;
 }
 
 .color {
   background-color:  rgb(186, 186, 228);
+  border-radius: 8px;
 }
 
 .text {
   background-color:  rgb(186, 186, 228);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 4px;
 }
 
 .submit {
-  color: #999;
+  color: white;
   background-color: rgb(186, 186, 228);
   border: none;
-  padding: 6px;
+  padding: 8px 60px;
   border-radius: 4px;
-  display: flex;
+  display: inline-flex;
+  margin-bottom: 10px;
+  font-family: fantasy;
 }
 
 /* ACCORDION SECTION */
@@ -161,11 +170,13 @@ padding: 0px;
 
 
 /* MEDIA QUERIES TABLET */
+
 @media (min-width: 768px) {
   .welcome-title {
     font-size: 150px;
     margin: 0px;
   }
+
   .welcome-sub {
     font-size: 50px;
     margin: 20px;
@@ -182,7 +193,7 @@ padding: 0px;
   .signup {
     margin-right: 30px;
     width: 50%;
-    height: 300px;
+    height: auto;
     padding-bottom: 0px;
     margin-bottom: 0px;
     font-size: 24px;
@@ -192,7 +203,7 @@ padding: 0px;
 
   .accordion {
     width: 50%;
-    height: 300px;
+    height: auto;
     font-size: 24px;
   }
 
