@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
@@ -36,12 +37,13 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   left: 0;
   color: white;
   text-shadow: grey;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 100%; 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: 'Pacifico', cursive;
 }
 
 .hero-button {
@@ -55,6 +57,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   border: whitesmoke;
   border-radius: 8px;
   transition-duration: 0.5s;
+  cursor: pointer;
 }
 
 .hero-button:hover {
@@ -68,7 +71,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .forms-container {
  display: flex;
  flex-direction: column;
- justify-content: space-between;
+ justify-content: center;
 }
 
 /*FORM*/
@@ -76,12 +79,17 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 form {
   /* Center the form on the page */
  align-items: center;
+ justify-content: center;
   width: 500px;
   /* Form outline */
   padding: 1em;
-  border: 1px solid #CCC;
-  border-radius: 7px;
+  border: 5px solid #F50480;
+  border-radius: 10%;
   background: #FED001;
+  color:black;
+  font-family: 'Pacifico', cursive;
+  color: white;
+  font-size: 16px;
 }
 
 input {
@@ -101,8 +109,36 @@ label {
   margin-bottom: 20px;
 }
 
+button[type=submit] {
+  padding:5px 15px; 
+  background:#F50480; 
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: whitesmoke;  
+}
+
+button[type=submit]:hover {
+background: thistle;
+transition-duration: 0.5s;
+cursor: pointer;
+}
 
 /* ACCORDION */
+
+.accordion-container {
+align-items: center;
+justify-content: center;
+width: 500px;
+}
+
+.accordion-title {
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pacifico', cursive;
+  color: #F50480;
+}
 
 .accordion {
   border: 3px solid #CCC;
@@ -114,6 +150,7 @@ label {
   margin: 0;
   padding: 10px;
   color: whitesmoke;
+  font-family: 'Pacifico', cursive;
 }
 
 .accordion-content {
@@ -121,6 +158,9 @@ label {
   margin: 0;
   padding: 10px;
   border-top: 3px solid #CCC;
+  font-family: 'Pacifico', cursive;
+  color:#F50480;
+  font-size: 20px;
 }
 
 .accordion-selected {
@@ -131,7 +171,13 @@ label {
 /*.active +.answer {
   /* some styling here */
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
+    .forms-container {
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: 940px) {
     .forms-container {
       flex-direction: row;
     }
@@ -146,4 +192,5 @@ label {
     font-weight: 50%;   
     background-color: #F50480;
     height:50px;
+    margin-top: 16px;
   }
