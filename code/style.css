@@ -2,7 +2,6 @@ body {
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgba(58, 116, 114, 0.24);
-  /*min-width: 600px;*/
 }
 
 /*NAVBAR*/
@@ -40,10 +39,10 @@ h3 {
   padding-right: 10px;
 }
 
-
 /*HEADER*/
 .hero {
   position: relative;
+  overflow: hidden;
 }
 
 .hero-image {
@@ -69,7 +68,7 @@ h3 {
 }
 
 /*SIGNUP FORM*/
-.big-container {
+.section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -81,7 +80,7 @@ h3 {
   color: rgb(26, 53, 52);
   font-size: 16px;
   width: 400px;
-  height: 430px;
+  height: 540px;
   margin-top: 40px;
   box-shadow: 2px 2px 4px rgb(26, 53, 52);
   display: flex;
@@ -91,7 +90,7 @@ h3 {
 
 .signup-form {
   background-color: rgba(255, 255, 255, 0.527);
-  padding: 20px;
+  padding: 20px 40px;
   margin: 50px 40px;
 }
 
@@ -109,14 +108,17 @@ label {
   padding-right: 10px;
 }
 
+input {
+  display: block;
+}
+
 .radio-buttons {
   margin: 10px 0;
 }
 
 .checkbox {
-  margin-top: 20px;
+  margin-top: 15px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
 }
 
@@ -136,7 +138,6 @@ button {
   margin-top: 20px;
   cursor: pointer;
 }
-
 
 /*ACCORDION*/
 h2 {
@@ -182,4 +183,21 @@ footer {
   margin-top: 80px;
   width: auto;
   height: 120px;
+}
+
+/*MEDIA QUERIES MOBILE*/
+@media screen and (max-width: 767px) {
+  body {
+    min-width: 600px;
+  }
+
+  .hero-image {
+    min-width: 600px;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
