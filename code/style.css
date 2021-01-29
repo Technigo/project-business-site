@@ -1,51 +1,39 @@
 body {
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #75cfb8;
-  } 
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #75cfb8;
+} 
 
 /*------Header starts here------ */
 .header {
-    position: relative;
-  }
+  position: relative;
+}
   
-  .hero-image {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-  }
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
   
-  .hero-text { /*Delete this part when your navbar is in place */
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  } 
+.hero-picture {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
 
-  .hero-picture {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    bottom: 0;
-    left: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  }
+/*------Header ends here------*/
 
-  /* Header ends here */
-
-  /* Navbar */
+/*------Navbar starts here------*/
 
 .container {
   position: absolute;
-  top: 0; /* 600 */
+  top: 0; 
   right: 0;
   bottom: 0;
   left: 0;
@@ -55,7 +43,6 @@ body {
 /* The navbar */
 .topnav {
   overflow: hidden;
-  /*background-color: #333;*/ /* Ta bort denna, då blir det transparant */ 
   display: flex;
   justify-content: center;
 }
@@ -65,7 +52,7 @@ body {
   float: left;
   color: black;
   text-align: center;
-  padding: 20px 22px; /* 14 16 */
+  padding: 20px 22px; 
   text-decoration: none;
   font-size: 17px;
   font-weight: bold;
@@ -78,246 +65,214 @@ body {
   border-radius: 25%;
 }
 
-/* Navbar ends here */
+/*------Navbar ends here------*/
+
+.flex-parent {
+  height: 1200px;
+  margin: 5px;
+}
+    
+.flex-child {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+}
+    
+.one{
+  background:#bbdfc8;
+  text-align: center;
+}
+    
+.two {
+  background: #bbdfc8;
+  margin-top: 5px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+}
 
   
+/*------Accordion section starts here------*/
 
-    .flex-parent {
-        height: 1200px;
-        margin: 5px;
-    }
-    
-    .flex-child {
-        width: 100%;
-        height: 100%;
-        border-radius: 10%;
-    }
-    
-    .one{
-        background:#bbdfc8;
-        text-align: center;
-    }
-    
-    .two {
-        background: #bbdfc8;
-        margin-top: 5px;
-        text-align: center;
-    }
-
-    h1 {
-      font-size: 32px;
-    }
-
-  
-
-
-
-    /* Accordion */
-
-    .accordion {
-        border-radius: 7px;
-      }
+.accordion {
+  border-radius: 7px;
+}
       
-      .accordion-header {
-        margin: 0;
-        padding: 10px;
-        font-size: 28px;
-      }
+.accordion-header {
+  margin: 0;
+  padding: 10px;
+  font-size: 28px;
+}
       
-      .accordion-content {
-        display: none;
-        margin: 0;
-        padding: 10px;
-        border-top: 3px solid #ffc478;
-      }
+.accordion-content {
+  display: none;
+  margin: 0;
+  padding: 10px;
+  border-top: 3px solid #ffc478;
+}
       
-      .accordion-selected /* This one is not in out html anywhere, how come it recognizes it or connects it? */{
-        display: block;
-      }
+.accordion-selected { /* The content section thats pops up when clicking to the question */
+  display: block;
+}
       
-      .active, .accordion-content, .accordion:hover { /* Color of the table after clicking */
-        background-color: #f0e5d8; 
-        cursor: pointer;
-      }
+.active, .accordion-content, .accordion:hover { /* Color of the table after clicking */
+  background-color: #f0e5d8; 
+  cursor: pointer;
+}
       
-      .accordion-header:after { /* Plus sign, default */
-        content: "\002B"; /* Plus sign */
-        color: #ffc478;
-        font-weight: bold;
-        float: right;
-        margin-left: 5px;
-      }
+.accordion-header:after { /* Plus sign, as default */
+  content: "\002B"; /* Plus sign */
+  color: #ffc478;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
       
+.active:after { /* Minus sign after clicking to the question */
+content: "\2212"; /* Minus sign */
+} 
+
+/*------Accordion section ends here------*/
+
+/*------Form section starts here------*/
       
-      .active:after {
-        content: "\2212"; /* Minus sign */
-      } /* Minus sign after clicking to the question */
+form p {
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+
+form input {
+  font-size: 28px;
+}
+
+input:valid {
+  background-color: #ffc478;
+}
       
-
-
-
-    /* Accordion */
-
-
-
-
-
-
-    /* Form */
-      form p {
-          margin-bottom: 5px;
-          font-size: 28px;
-      }
-
-      form input {
-          font-size: 28px;
-          
-      }
-
-      input:valid {
-        background-color: #ffc478;
-      }
-      
-      input:invalid {
-        background-color: #75cfb8;
-      }
+input:invalid {
+  background-color: #75cfb8;
+}
 
    
-      /* Checkbox */
+/* Checkbox */
 
-      .gender {
-        font-size: 28px;
-        margin: 5px;
-        margin-top: 40px;
-      }
+.gender {
+  font-size: 28px;
+  margin: 5px;
+  margin-top: 40px;
+}
 
-      .checkbox {
-        display: block;
-        /*text-align: center; */
-        font-size: 36px;
-      }
-      .checkbox input {
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-      }
+.checkbox {
+  display: block;
+  font-size: 36px;
+}
 
-      .checkbox1 {
-        display: block;
-      }
+.checkbox input {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
 
-      .checkbox1 p {
-        margin: 0px;
-        margin-bottom: 40px;
-      }
+.checkbox1 {
+  display: block;
+}
 
-      
+.checkbox1 p {
+  margin: 0px;
+  margin-bottom: 40px;
+}
 
-      /* Checkbox ends */
+/* Checkbox */
 
+/* Terms & Conditions */
 
+.terms1 {
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+}
 
+.terms p{
+  font-size: 24px;
+  margin-bottom: 30px;
+}
 
-      /* Terms & Conditions */
+/*Terms & Conditions */
 
-      .terms1 {
-        /*display: block; */
-        align-items: center;
-        width: 30px;
-        height: 30px;
-        margin-top: 30px;
-        cursor: pointer;
-      }
+/* Submit button */ 
 
-      .terms p{
-        font-size: 24px;
-        margin-bottom: 30px;
-      }
+.button {
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10%;
+  background-color: #ffc478;
+}
 
-      /*Terms & Conditions */
+/* Submit button */ 
 
-      /* Submit button */ 
-
-      .button {
-        font-size: 24px;
-        font-weight: bold;
-        border-radius: 10%;
-        background-color: #ffc478;
-      }
-
-      /* Submit button */ 
-      /* Form */
+/*------Form section ends here------*/
 
 
+/*------Device Section starts here------*/
 
-  
-
-
-
+/* Small Tablet Device */
 @media (min-width: 601px) {
   
   .topnav a {
-  padding: 28px 32px; /* 14 16 */
-  font-size: 24px;
-  } }
+    padding: 28px 32px; /* 14 16 */
+    font-size: 24px;
+  } 
+}
 
-
-
+/* Big Tablet Device */
 @media (min-width: 768px) {
   
   .topnav a {
     font-size: 32px;
   } 
 
-  
-  
-
-
   .flex-parent {
-        display: flex;
-        justify-content: center;
-    }
+    display: flex;
+    justify-content: center;
+  }
 
-    .flex-child {
-        margin: 25px;
-    }
+  .flex-child {
+    margin: 25px;
+  }
 
-    .checkbox {
-      display: flex;
-      justify-content: space-evenly;
-      font-size: 18px;
-    }
+  .checkbox {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 18px;
+  }
 
-    .checkbox1 {
-      margin-top: 30px;
-    }
+  .checkbox1 {
+    margin-top: 30px;
+  }
 }
 
+/* Small Desktop */
 @media (min-width: 1024px) {
 
-  
-  
   .flex-parent {
     display: flex;
     justify-content: center;
     margin: 50px;
+  }
 
-
-}
-
-
-.flex-child {
+  .flex-child {
     margin: 25px;
   }
 }
 
-
-
+/* Large Desktop and above */ 
 @media (min-width: 1300px) {
-.flex-child {
-  margin-bottom: 50px;
-  margin: 100px; /* 25px */
-  
-    /* margin-bottom: 1000px; */
+  .flex-child {
+    margin-bottom: 50px;
+    margin: 100px; 
   } 
 }
