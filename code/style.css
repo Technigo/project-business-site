@@ -90,6 +90,15 @@
   margin: 0 0 30px 0;
 }
 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 70%;
+  padding: 0;
+}
+
 .label-container {
   display: flex;
   flex-direction: column;
@@ -162,6 +171,12 @@
   background-color: #3700B3;
 }
 
+.form-image-container {
+  display: flexbox;
+  justify-content: center;
+  margin: 50px 0px 0px 0px;
+}
+
 /* Accordion */
 
 .accordion-container {
@@ -222,11 +237,12 @@
 
 .footer {
   padding: 50px;
+  background-color: lavender;
 }
 
 .footer p {
   font-size: 10px;
-  color: lightgray;
+  color: black;
   text-align: center;
 }
 
@@ -260,26 +276,25 @@
 /* Desktop */
 
 @media (min-width: 1024px) {
-  .main {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 50px 0px 50px 0px;
-  }
+
   .form-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    flex-direction: row;
+    justify-content: start;
+    width: 70%;
     padding: 50px 0px 100px 0px;
   }
+
+  .form-image-container {
+    align-items: flex-end;
+    margin: auto;
+  }
+
   .label-container {
     flex-direction: row;
     justify-content: space-between;
   }
   .accordion-container {
-    align-items: baseline;
     margin: 0px;
-    background-color: #fff;
   }
   .accordion-container h1 {
     margin-top: 0;
@@ -290,14 +305,12 @@
     align-items: baseline;
   }
   .question {
-    background-color: #fff;
     padding-left: 0;
   }
   .answer {
     padding-left: 0;
   }
   .active+.answer {
-    background-color: #fff;
     margin: 0px 40px 0px 0px;
     height: 100px;
     text-align: left;
