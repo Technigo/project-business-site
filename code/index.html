@@ -34,17 +34,12 @@
             <!-- Name (text) -->
             <label class="form__input-wrapper" for="name">
               Full name
-              <input class="form__input-field" type="text" name="fullName" id="name" />
+              <input class="form__input-field" type="text" name="fullName" id="name" required />
             </label>
             <!-- Email (mail) -->
             <label class="form__input-wrapper" for="email">
               Email
-              <input class="form__input-field" type="email" name="email" id="email" />
-            </label>
-            <!-- Phone number (tel) -->
-            <label class="form__input-wrapper" for="tel">
-              Phone number
-              <input class="form__input-field" type="tel" name="phoneNumber" id="tel" />
+              <input class="form__input-field" type="email" name="email" id="email" required />
             </label>
           </fieldset>
           <!-- Form part 2 -->
@@ -54,12 +49,12 @@
             <!-- Month to book (date-month) -->
             <label class="form__input-wrapper" for="month">
               What month do you prefer to adventure in?
-              <input class="form__input-field" type="month" name="dateMonth" id="month" />
+              <input class="form__input-field" type="month" name="dateMonth" id="month" required />
             </label>
             <!-- Amount of People (select-opt) -->
             <label class="form__input-wrapper" for="groupSize">
               How many people in your party?
-              <select class="form__input-field" name="groupSize" id="groupSize">
+              <select class="form__input-field" name="groupSize" id="groupSize" required>
                 <option value="">--Select group size--</option>
                 <option value="duo">2</option>
                 <option value="small">3-5</option>
@@ -71,35 +66,90 @@
             <div class="form__input-wrapper">
               How experienced are you?
               <label class="form__input-field" for="exp1">
-                <input type="radio" name="experience" id="exp1" value="beginner" />
+                <input
+                  class="form__input-radio"
+                  type="radio"
+                  name="experience"
+                  id="exp1"
+                  value="beginner"
+                  required
+                />
                 Beginner
               </label>
               <label class="form__input-field" for="exp2">
-                <input type="radio" name="experience" id="exp2" value="intermediate" />
+                <input
+                  class="form__input-radio"
+                  type="radio"
+                  name="experience"
+                  id="exp2"
+                  value="intermediate"
+                />
                 Intermediate
               </label>
               <label class="form__input-field" for="exp3">
-                <input type="radio" name="experience" id="exp3" value="advanced" />
+                <input
+                  class="form__input-radio"
+                  type="radio"
+                  name="experience"
+                  id="exp3"
+                  value="advanced"
+                />
                 Advanced
               </label>
             </div>
             <!-- Activities (checkbox) -->
             <div class="form__input-wrapper">
               What activities would you like focus on?
+              <label class="form__input-field form__input-field--disabled" for="activity0">
+                <input
+                  class="form__input-checkbox"
+                  type="checkbox"
+                  name="activities"
+                  id="activity"
+                  value="basic"
+                  checked
+                  disabled
+                />
+                The Basics
+              </label>
               <label class="form__input-field" for="activity1">
-                <input type="checkbox" name="activities" id="activity1" value="hiking" />
+                <input
+                  class="form__input-checkbox"
+                  type="checkbox"
+                  name="activities"
+                  id="activity1"
+                  value="hiking"
+                />
                 Hiking
               </label>
               <label class="form__input-field" for="activity2">
-                <input type="checkbox" name="activities" id="activity2" value="camping" />
+                <input
+                  class="form__input-checkbox"
+                  type="checkbox"
+                  name="activities"
+                  id="activity2"
+                  value="camping"
+                />
                 Camping
               </label>
               <label class="form__input-field" for="activity3">
-                <input type="checkbox" name="activities" id="activity3" value="foraging" />
+                <input
+                  class="form__input-checkbox"
+                  type="checkbox"
+                  name="activities"
+                  id="activity3"
+                  value="foraging"
+                />
                 Foraging
               </label>
               <label class="form__input-field" for="activity4">
-                <input type="checkbox" name="activities" id="activity4" value="hunting" />
+                <input
+                  class="form__input-checkbox"
+                  type="checkbox"
+                  name="activities"
+                  id="activity4"
+                  value="hunting"
+                />
                 Hunting
               </label>
             </div>
@@ -127,7 +177,7 @@
             <!-- Username (text) -->
             <label class="form__input-wrapper" for="username">
               Username
-              <input class="form__input-field" type="text" name="username" id="username" />
+              <input class="form__input-field" type="text" name="username" id="username" required />
             </label>
             <!-- Password (password) -->
             <label class="form__input-wrapper" for="password">
@@ -138,6 +188,7 @@
                 name="password"
                 id="password"
                 minlength="8"
+                required
               />
             </label>
           </fieldset>
@@ -146,12 +197,18 @@
             <!-- Submit and accept terms -->
             <!-- Subscribe? (checkbox) -->
             <label class="form__input-wrapper--submit-section" for="subscribe">
-              <input class="form__input-field" type="checkbox" name="subscribe" id="subscribe" />
+              <input class="form__input-checkbox" type="checkbox" name="subscribe" id="subscribe" />
               I would like to subscribe to Adventure updates!
             </label>
             <!-- Accept Terms (checkbox) -->
             <label class="form__input-wrapper--submit-section" for="terms">
-              <input type="checkbox" name="terms" id="terms" />
+              <input
+                class="form__input-checkbox"
+                type="checkbox"
+                name="terms"
+                id="terms"
+                required
+              />
               I accept the terms and conditions
             </label>
             <!-- Submit button (button) -->
@@ -183,6 +240,17 @@
           <!-- Question 2 -->
           <div class="accordion__item-wrapper">
             <div class="accordion__question">What should I bring?<span>&#10133;</span></div>
+            <div class="accordion__answer">
+              Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis
+              porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non
+              nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit. Sed porttitor lectus nibh. Donec rutrum congue leo
+              eget malesuada.
+            </div>
+          </div>
+          <!-- Question 3 -->
+          <div class="accordion__item-wrapper">
+            <div class="accordion__question">How do I pay?<span>&#10133;</span></div>
             <div class="accordion__answer">
               Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis
               porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non

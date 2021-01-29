@@ -34,6 +34,9 @@
   font-size: 1em;
   padding: 1em;
   background: #f3f3f3;
+  border-radius: 1em;
+  border: 0;
+  box-shadow: 2px 2px 5px #8d8741;
 }
 
 .form__button {
@@ -44,4 +47,74 @@
   font-weight: bold;
   padding: 10px 0;
   border: 0;
+}
+
+/* change focus style of input fields */
+.form__input-field:focus,
+.form__input-checkbox:focus,
+.form__input-radio:focus {
+  outline: none !important;
+  border: 1px solid #8d8741;
+  box-shadow: inset 0 1px 1em 0 #8d8741;
+}
+
+/* --- CHECKBOX & RADIO --- */
+
+/* unchecked style */
+.form__input-checkbox,
+.form__input-radio {
+  /* set the checkbox&radio style to none inorder to style it */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* begin style and positioning */
+  border: solid 1px #cccccc;
+  border-radius: 5px;
+  background: white;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  position: relative;
+}
+.form__input-radio {
+  /* make the radio button round */
+  border-radius: 10px;
+}
+
+/* -CHECKBOX&RADIO(states)-  */
+/* Checked style of checkbox and radio */
+.form__input-checkbox:checked::before,
+.form__input-radio:checked::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #8d8741;
+  border-radius: 5px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+/* make the checked radio a circle */
+.form__input-radio:checked:before {
+  border-radius: 10px;
+}
+
+/* INVALID STYLES */
+.form__input-field:focus:invalid,
+.form__input-checkbox:focus:invalid,
+.form__input-radio:focus:invalid {
+  outline: none !important;
+  border: 1px solid #bc986a;
+  box-shadow: inset 0 1px 1em 0 #bc986a;
+}
+
+/* DISABLED INPUTS */
+.form__input-field--disabled {
+  opacity: 0.5;
+}
+
+/* fix to make sure that the labels are aligned with the custom Checkboxes and radios */
+label,
+label.form__input-wrapper--submit-section {
+  display: flex;
 }
