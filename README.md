@@ -1,12 +1,12 @@
+This is a project made during my third week at the Technigo bootcamp. The learning objective was to create a business one pager website.
+
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I chose to create a page for a business offering courses in bookbinding. The focus of the assignment was practicing image backgrounds, HTML forms and modify DOM with JavaScript. Therefore the main elements of the page consist of a video header, a signup form and an accordion. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I work in VS Code and started with the header, wanting to practice adding herovideos instead of images. For a responsive layout I tried adding different videos but in the end managed to get it working with just one size, I use flexbox and mediaqueries. I created a logo myself and got the video from pexels.com. If I had more time I would work more on the form and accordion layout. Unfortunately working on the responsive layout took to much time so I didn't get to work with styling of radio buttons for instance. Solving the accordion with javascript was also a brainer that took a while to get into work. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
