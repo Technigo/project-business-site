@@ -32,3 +32,12 @@ function toggleActive() {
 accordionHeaderOne.addEventListener('click', toggleActive)
 accordionHeaderTwo.addEventListener('click', toggleActive)
 accordionHeaderThree.addEventListener('click', toggleActive)
+
+
+const buttonDrop = document.getElementById("button");
+
+function toggleDrinkMenu() {
+  this.classList.toggle("open")
+}
+
+accordionHeaderOne.addEventListener('click', toggleActive)
