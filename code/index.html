@@ -11,13 +11,33 @@
 <body>
     <!-- Hero image section -->
 
+
+
     <header class="hero">
+
+
+
+        <div class="menu">
+            <ul class="menu-selections">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./reviews.html">REVIEWS</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+
         <picture>
             <source srcset="./images/mobile.jpg" media="(max-width: 768px)">
             <source srcset="./images/tablet.jpg" media="(max-width: 1199px)">
             <img class="hero-image" src="./images/desktop.jpg" alt="Aurora Sky">
         </picture>
 
+
+
+
+
+
+        <h2 class="company-title">Aurora Adventures</h2>
 
     </header>
 
@@ -48,7 +68,70 @@
 
     </section>
 
+    <section class="form">
 
+        <form class="form-fillout" action="https://httpbin.org/anything" method="POST">
+            <fieldset>
+                <legend>Please fill in your details to make a booking</legend>
+
+                <div class="text-fields">
+
+                    <label for="firstname">First name</label><br>
+                    <input type="text" name="firstname" placeholder="First name..."><br>
+                    <label for="lastname">Last name</label><br>
+                    <input type="text" name="lastname" placeholder="Last name..."><br>
+                    <label for="email">E-mail address</label><br>
+                    <input type="text" name="email" placeholder="E-mail..."><br>
+                </div>
+
+
+                <label for="radio-buttons" class="radio-section">
+                        <input type="radio" name="radio-field" id="radio-buttons" class="radio-input">
+                        <div class="radio-radio"></div>One day adventure
+                        
+
+                    </label>
+
+
+
+
+                <!-- <div class="radio-buttons">
+                    <h5>I would like to book:</h5>
+                    <input type="radio" name="excursions" value="1-day-excursion" checked>One day excursion<br>
+                    <input type="radio" name="excursions" value="2-day-excursion">Two days excursion<br>
+                    <input type="radio" name="excursions" value="weekend-excursion">Weekend package
+                </div> -->
+
+                <div class="guest">
+                    <h5>Number of guests:</h5>
+                    <select name="guests">
+                    <option value="1guest">1 guest</option>
+                    <option value="1guest">2 guests</option>
+                    <option value="1guest">3 guests</option>
+                    <option value="1guest">4 guests</option>
+                    <option value="1guest">5 guests</option>
+                    <option value="1guest">6 guests</option>
+                </select>
+                </div>
+
+                <div class="message">
+                    <h5>Addiontal enquiries:</h5>
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="Please type your message here..."></textarea>
+                </div>
+
+                <div class="submit">
+                    <button type="submit" name="submit">Make a booking!</button>
+                </div>
+            </fieldset>
+        </form>
+
+
+    </section>
+
+    <footer class="footer">
+        <p>&copy; Aurora Adventures AB</p>
+
+    </footer>
 
     <!-- dont forget to link the javascript file here! -->
 

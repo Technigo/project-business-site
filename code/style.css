@@ -12,10 +12,45 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
             }
             /************* HERO SECTION ***************/
             
+            .menu-selections {
+                list-style-type: none;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                padding-top: 20px;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            a {
+                color: rgb(85, 145, 85);
+                text-decoration: none;
+                padding: 50px;
+            }
+            
+            .hero {
+                position: relative;
+            }
+            
             .hero-image {
                 width: 100vw;
-                /* height: 100vh;
-    object-fit: cover; */
+                height: 90vh;
+                object-fit: cover;
+            }
+            
+            .company-title {
+                color: rgb(85, 145, 85);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 120px;
             }
             /*************** ACCORDION *****************/
             
@@ -33,6 +68,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
                 color: rgb(85, 145, 85);
                 margin: 0;
                 padding: 10px;
+                cursor: grab;
             }
             
             .accordion-answer {
@@ -45,4 +81,82 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
             
             .accordion-selected {
                 display: block;
+            }
+            /****************** FORM **************/
+            
+            .form {
+                color: rgb(85, 145, 85);
+                width: 500px;
+            }
+            
+            .fieldset {
+                color: rgb(85, 145, 85);
+            }
+            
+            .radio-section {
+                display: inline-flex;
+                align-items: center;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+            
+            .radio-input {
+                display: none;
+            }
+            
+            .radio-radio {
+                width: 1.25em;
+                height: 1.25em;
+                border: 2px solid rgb(85, 145, 85);
+                border-radius: 50%;
+                margin-right: 10px;
+                box-sizing: border-box;
+                padding: 2px;
+            }
+            
+            .radio-radio::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: rgb(85, 145, 85);
+                border-radius: 50%;
+                transform: scale(0);
+                transition: transform 0.15s;
+            }
+            
+            .radio-input:checked+.radio-radio::after {
+                transform: scale(1);
+            }
+            
+            textarea {
+                resize: vertical;
+                max-height: 150px;
+            }
+            
+            input,
+            select,
+            textarea,
+            button {
+                outline: none;
+                border: 3px solid rgb(85, 145, 85);
+                border-radius: 6px;
+                color: grey;
+            }
+            
+            input:focus,
+            select:focus,
+            textarea:focus,
+            button:focus {
+                box-shadow: rgba(85, 145, 85, 0.479);
+                border: 3px solid rgba(85, 145, 85, 0.479);
+            }
+            
+             ::placeholder {
+                color: grey;
+            }
+            /****************** FOOTER **************/
+            
+            .footer {
+                color: rgb(85, 145, 85);
             }
