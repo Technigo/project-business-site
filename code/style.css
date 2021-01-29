@@ -1,162 +1,307 @@
-            /* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-            
-            .active+.answer {
-                /* some styling here */
-            }
-            
-            body {
-                margin: 0;
-                background-color: rgb(12, 11, 11);
-            }
-            /************* HERO SECTION ***************/
-            
-            .menu-selections {
-                list-style-type: none;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                left: 0;
-                padding-top: 20px;
-                display: flex;
-                justify-content: flex-end;
-            }
-            
-            a {
-                color: rgb(85, 145, 85);
-                text-decoration: none;
-                padding: 50px;
-            }
-            
-            .hero {
-                position: relative;
-            }
-            
-            .hero-image {
-                width: 100vw;
-                height: 90vh;
-                object-fit: cover;
-            }
-            
-            .company-title {
-                color: rgb(85, 145, 85);
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                left: 0;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 120px;
-            }
-            /*************** ACCORDION *****************/
-            
-            .accordion {
-                border: 2px solid rgb(42, 43, 42);
-                border-radius: 10px;
-            }
-            
-            .faq-header {
-                color: rgb(85, 145, 85);
-                padding: 10px;
-            }
-            
-            .accordion-header {
-                color: rgb(85, 145, 85);
-                margin: 0;
-                padding: 10px;
-                cursor: grab;
-            }
-            
-            .accordion-answer {
-                color: rgb(85, 145, 85);
-                margin: 0;
-                padding: 10px;
-                border: 2px solid rgb(42, 43, 42);
-                display: none;
-            }
-            
-            .accordion-selected {
-                display: block;
-            }
-            /****************** FORM **************/
-            
-            .form {
-                color: rgb(85, 145, 85);
-                width: 500px;
-            }
-            
-            .fieldset {
-                color: rgb(85, 145, 85);
-            }
-            
-            .radio-section {
-                display: inline-flex;
-                align-items: center;
-                cursor: pointer;
-                margin-right: 10px;
-            }
-            
-            .radio-input {
-                display: none;
-            }
-            
-            .radio-radio {
-                width: 1.25em;
-                height: 1.25em;
-                border: 2px solid rgb(85, 145, 85);
-                border-radius: 50%;
-                margin-right: 10px;
-                box-sizing: border-box;
-                padding: 2px;
-            }
-            
-            .radio-radio::after {
-                content: "";
-                width: 100%;
-                height: 100%;
-                display: block;
-                background: rgb(85, 145, 85);
-                border-radius: 50%;
-                transform: scale(0);
-                transition: transform 0.15s;
-            }
-            
-            .radio-input:checked+.radio-radio::after {
-                transform: scale(1);
-            }
-            
-            textarea {
-                resize: vertical;
-                max-height: 150px;
-            }
-            
-            input,
-            select,
-            textarea,
-            button {
-                outline: none;
-                border: 3px solid rgb(85, 145, 85);
-                border-radius: 6px;
-                color: grey;
-            }
-            
-            input:focus,
-            select:focus,
-            textarea:focus,
-            button:focus {
-                box-shadow: rgba(85, 145, 85, 0.479);
-                border: 3px solid rgba(85, 145, 85, 0.479);
-            }
-            
-             ::placeholder {
-                color: grey;
-            }
-            /****************** FOOTER **************/
-            
-            .footer {
-                color: rgb(85, 145, 85);
-            }
+body {
+    margin: 0;
+    background-color: rgb(13, 15, 15);
+}
+
+
+/************************** HERO SECTION ************************/
+
+
+/********** MENU **********/
+
+.menu-selections {
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+li {
+    color: rgb(233, 240, 233);
+    text-decoration: none;
+    padding: 20px;
+    font-size: 16px;
+    font-family: Bangla MN;
+}
+
+li:last-child {
+    margin-right: 15px;
+}
+
+
+/******* HERO IMAGE *******/
+
+.hero {
+    position: relative;
+}
+
+.hero-image {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+}
+
+
+/******* COMPANY NAME *******/
+
+.company-title {
+    color: rgba(233, 240, 233, 0.856);
+    font-family: Snell Roundhand;
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 60px;
+}
+
+
+/************************ ACCORDION SECION **********************/
+
+.accordion {
+    border: 2px solid rgb(156, 156, 156);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.faq-header {
+    color: rgba(233, 240, 233, 0.87);
+    font-family: Bangla MN;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 10px 10px 10px 15px;
+    background: rgba(18, 19, 18, 0.664);
+    border-radius: 8px;
+    border: 2px solid rgb(94, 95, 94);
+}
+
+.questions {
+    background: rgba(121, 119, 119, 0.137);
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+
+.accordion-header {
+    color: rgba(233, 240, 233, 0.87);
+    font-family: Bangla MN;
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: grab;
+    padding: 10px 10px 10px 20px;
+    background: rgba(20, 20, 20, 0.527);
+    border: 1px solid rgb(94, 95, 94);
+    border-radius: 8px;
+}
+
+.accordion-answer {
+    color: rgba(233, 240, 233, 0.842);
+    font-family: Bangla MN;
+    font-size: 12px;
+    padding: 10px 30px 10px 30px;
+    background: #475a5a62;
+    border: 2px solid rgb(42, 43, 42);
+    display: none;
+}
+
+.accordion-selected {
+    display: block;
+}
+
+
+/***************************** FORM SECION ***********************/
+
+.form-fillout {
+    color: rgba(233, 240, 233, 0.87);
+    font-family: Bangla MN;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.text-fields {
+    font-size: 14px;
+    letter-spacing: 0;
+    padding: 10px 0px 20px 10px;
+}
+
+.text-box {
+    width: 350px;
+    padding: 6px;
+    border: 3px solid rgb(156, 156, 156);
+    border-radius: 8px;
+    margin: 10px 0px 10px 0px;
+}
+
+::placeholder {
+    color: grey;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/****** RADIO BUTTONS *******/
+
+.form-headings {
+    font-family: Bangla MN;
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.radio-buttons {
+    font-size: 14px;
+}
+
+.radio-button {
+    margin-left: 15px;
+}
+
+input.radio-button {
+    margin-right: 20px;
+}
+
+
+/***** DROP DOWN MENU ******/
+
+
+/***** MESSAGE FIELD ******/
+
+.message-box {
+    margin-left: 10px;
+}
+
+textarea {
+    resize: vertical;
+    max-height: 150px;
+    width: 350px;
+    border: 3px solid rgb(156, 156, 156);
+    border-radius: 8px;
+    padding: 5px 0px 0px 5px;
+}
+
+.message {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/***** SUMBIT BUTTON ******/
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button {
+    width: 160px;
+    height: 45px;
+    border: 3px solid rgb(156, 156, 156);
+    border-radius: 8px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    font-family: Bangla MN;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+
+/************************** FOOTER SECTION **********************/
+
+.footer {
+    color: rgba(233, 240, 233, 0.842);
+    font-family: Bangla MN;
+    font-size: 8px;
+    letter-spacing: 1px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+
+/************************** MEDIA QUARIES **********************/
+
+
+/********* TABLET *********/
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    body {
+        background-color: rgb(2, 2, 8);
+    }
+    .hero-image {
+        height: 75vh;
+    }
+    li {
+        color: rgba(233, 240, 233, 0.822);
+        padding: 30px;
+        font-size: 18px;
+    }
+    .company-title {
+        color: rgba(233, 240, 233, 0.637);
+        font-size: 60px;
+        margin-left: 25px;
+    }
+    .accordion {
+        margin-top: 20px;
+        margin-bottom: 0;
+        width: 50%;
+    }
+    .form {
+        width: 45%;
+    }
+    .main-content {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .footer {
+        margin-bottom: 20px;
+        margin-left: 40px;
+    }
+}
+
+
+/********* DESKTOP *********/
+
+@media (min-width: 1200px) {
+    body {
+        background-color: rgba(1, 1, 2, 0.959);
+    }
+    .hero-image {
+        height: 100vh;
+    }
+    li {
+        color: rgba(233, 240, 233, 0.822);
+        padding: 40px;
+        font-size: 20px;
+    }
+    .company-title {
+        color: rgba(233, 240, 233, 0.637);
+        font-size: 70px;
+        margin-left: 15px;
+    }
+    .accordion {
+        margin-top: 20px;
+        margin-bottom: 0;
+        width: 50%;
+    }
+    .form {
+        width: 45%;
+    }
+    .main-content {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .footer {
+        margin-bottom: 20px;
+        margin-left: 40px;
+    }
+}

@@ -17,6 +17,12 @@ const accordionAnswerTwo = document.getElementById('accordion-answer-2')
 const accordionQuestionThree = document.getElementById('accordion-question-3');
 const accordionAnswerThree = document.getElementById('accordion-answer-3')
 
+const accordionQuestionFour = document.getElementById('accordion-question-4');
+const accordionAnswerFour = document.getElementById('accordion-answer-4')
+
+const accordionQuestionFive = document.getElementById('accordion-question-5');
+const accordionAnswerFive = document.getElementById('accordion-answer-5')
+
 console.log(accordionQuestionOne);
 
 accordionQuestionOne.addEventListener('click', () => {
@@ -29,4 +35,12 @@ accordionQuestionTwo.addEventListener('click', () => {
 
 accordionQuestionThree.addEventListener('click', () => {
     accordionAnswerThree.classList.toggle('accordion-selected');
+});
+
+accordionQuestionFour.addEventListener('click', () => {
+    accordionAnswerFour.classList.toggle('accordion-selected');
+});
+
+accordionQuestionFive.addEventListener('click', () => {
+    accordionAnswerFive.classList.toggle('accordion-selected');
 });
