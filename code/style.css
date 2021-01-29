@@ -2,6 +2,136 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+.body {
+margin: 0;
 }
+
+/*  HEADER */
+
+.header {
+  position: relative;
+}
+
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+.hero-headline {
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTENT */
+
+.content-container {
+  display: flex;
+  display: block;
+}
+
+/* Signup */
+
+.signup-form {
+background-color: lightsteelblue;
+padding: 20px;
+margin: 20px;
+}
+
+.h2-headline {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-label { 
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  margin: 10px;
+  font-size: 15px;
+}
+
+.input-square {
+  font-size: 20px;
+}
+
+
+.radio-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  margin: 10px;
+  display: flex;
+  display: inline;
+  margin-top: 25px;
+}
+.checkbox-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  margin: 10px;
+  display: block;
+  margin-top: 15px;
+}
+
+.button {
+  background-color: white;
+  font-size: 20px;
+  display: block;
+  margin-top: 15px;
+} 
+
+/* Accordion */
+
+.accordion {
+background-color: lightsteelblue;
+padding: 20px;
+margin: 20px;
+}
+
+.question {
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+font-size: 15px;
+cursor: pointer;
+}
+
+.answer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  display: none;
+}
+
+.open + .answer {
+  display: block;
+}
+
+/* RESPONSIVENESS */
+
+
+/* Tablet + desktop */
+@media (min-width: 768px) {
+
+.content-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.signup-form {
+  width: 35vw;
+}
+
+.accordion {
+  width: 35vw;
+  display: block;
+}
+}
+
+

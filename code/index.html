@@ -2,29 +2,88 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./style.css">
   </head>
+
   <body>
-    <!-- video or image as a header is cool :) -->
+    
+    <!-- HEADER -->
+   
+    <header>  
+
+      <img class="hero-image" src="./images/sunrise.jpg" alt="sunrise" />
+      <h1 class="hero-headline">Adventure trips</h1>
+    </header>
+
+    <!-- CONTENT-->  
+    <div class="content-container">
 
     <!-- Signup form -->
+    <section class="signup-form">
 
+      <h2 class="h2-headline">Log in here</h2>
+
+      <form action="https://httpbin.org/anything" method="POST">
+
+        <label class="form-label"> 
+          Name </br>
+          <input class="input-square" type="text" name="name" required> 
+        </label>
+
+        <label class="form-label">
+          E-mail </br>
+          <input class="input-square" type="email" name="email"> 
+        </label>
+
+        <label class="form-label">
+          Password </br>
+          <input class="input-square" type="password" name="password"> 
+        </label>
+
+        <label class="radio-label"> 
+          <input type="radio">
+          Female
+        </label>
+
+        <label class="radio-label"> 
+          <input type="radio">
+          Male
+        </label>
+
+        <label class="radio-label"> 
+          <input type="radio">
+          Other
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox">
+          I accept Terms & Conditions
+        </label>
+
+        <button class="button" type="submit">Order t-shirt</button>
+
+      </form>
+
+    </section>
+
+    <!-- Accordion -->
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+     
+      <h2 class="h2-headline">FAQ</h2>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
+      <div class="question" id="question-1">Itinerary</div>
+      <div class="answer" id="answer-1">
         <p>Lorem ipsum...</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
+      <div class="question" id="question-2">Pricing</div>
+      <div class="answer" id="answer-2">
         <p>Lorem ipsum...</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+    </div>
+    <script src="./script.js"> </script>
   </body>
 </html>
