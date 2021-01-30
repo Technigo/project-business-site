@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
+    <title>Master Chef Cooking</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- Header with Hero -->
     <header class="header">
       <picture class="">
         <source srcset="./images/mobile.jpg" media="(max-width: 766px)">
@@ -21,10 +22,8 @@
       </div>
     </header>
 
-
     <section class="content">
       <!-- Signup form -->
-      <!-- <section class="form"> -->
       <form class="signUpForm" action="https://httpbin.org/anything" method="post">
           <h3>Sign up to our cooking class!</h3>
           <div>
@@ -33,10 +32,10 @@
             <label for="lname">Last name:</label><br>
             <input type="text" id="lname" name="lname"><br>
             <label for="email">Email address:</label><br>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
           </div>
           <div>
-            <input type="radio" id="acceptTerms" name="terms" value="acceptTerms">
+            <input type="radio" id="acceptTerms" name="terms" value="acceptTerms" required>
             <label for="acceptTerms">I accept the Terms and conditions</label><br>
             <input type="checkbox" id="news" name="news" value="newsletter">
             <label for="news"> I would like the newsletter!</label>
@@ -45,7 +44,6 @@
             <input type="submit" value="Sign Up!" class="button">
           </div> 
         </form>
-      <!-- </section> -->
 
       <!-- Accordion -->
       <section class="accordion">
@@ -71,14 +69,13 @@
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio.</p>
         </div>
       </section>
-
     </section>
 
-
     <footer class="footer">
+      <p> <a href="" >Contact us </a></p>
+      <p>Already a member? <a href="" >Sign in </a></p>
       <p>&copy 2021 The Kitchen Project</p>
     </footer>
-
 
     <script src="./script.js"></script>
   </body>

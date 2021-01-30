@@ -25,7 +25,9 @@ h2 {
   font-size: 50px;
   text-align: center;
   padding: 0 20px;
-  color: #065446;
+  color: black;
+  background: #fadcac80;
+  backdrop-filter: blur(10px);
 }
 h3 {
   font-size: 35px;
@@ -38,16 +40,11 @@ h4 {
 
 /*** STYLING HEADER / HERO ***/
 .hero-image {
-  /* height: auto; */
   max-width: 100%;
-  /* object-fit: cover; */
 }
 .header {
   position: relative;
   width: 100%;  
-}
-picture {
-  width: 100%
 }
 
 .hero-text {
@@ -71,9 +68,7 @@ picture {
   width: 100%;
 }
 
-
 /*** STYLING FAQ ***/
-
 .accordion {
   width: 80%;
   display: flex;
@@ -82,7 +77,7 @@ picture {
   border: 3px solid #158467;
   background-color: #fadcac;
   border-radius: 7px;
-  padding: 20px 10px 20px 10px;
+  padding: 20px 10px;
   margin-bottom: 20px;
 }
 
@@ -101,7 +96,6 @@ picture {
 .active + .answer {
   display: block;
 }
-
 
 /*** STYLING FORM ***/
 .signUpForm {
@@ -128,12 +122,10 @@ input[type=text], input[type=email] {
   font-size: 20px;
 }
 
-/* label[type=fname], label[type=lname] { */
 label {
   color: #065446;
   font-size: 20px;
 }
-
 
 .button {
   appearance:none;
@@ -148,27 +140,37 @@ label {
   border-radius:5px;
   width: 100%;
   cursor: pointer;
-  
 }
 
 
-
+/*** STYLING FOOTER ***/
 .footer {
   background-color: #065446;
-  height: 100px;
   text-align: center;
+  padding: 20px 0;
+  margin: 0; 
+  color: #fadcac;
+  font-size: 18px;
+  font-weight: 100;
 }
-
+.footer a {
+  text-decoration: none;
+  color: #fadcac;
+  background-color: #197163;
+  border: 1px solid #158467; 
+  border-radius: 10%;
+  padding: 7px;
+  cursor: pointer;
+}
 
 /*** MEDIA QUERIES ***/
 
 @media (min-width: 767px) {
-  
   .content {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
-    padding-top: 50px;
+    padding: 50px 0;
   }
   .signUpForm {
     width: 45%;
@@ -178,7 +180,6 @@ label {
     width: 45%;
     margin: 0;
   }
-
 }
 
 @media (min-width: 992px) {
