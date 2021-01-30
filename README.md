@@ -1,12 +1,16 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A business site containing a hero, sign up form and FAQ accordion.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started the project by making a sketch in Figma, illustrating the layoute in different views (mobile, tablet and desktop). https://www.figma.com/file/cR2Ua67mw2ZUOzXLPBHRWP/Business-site?node-id=0%3A1
+
+The webpage is developed with the mobile-first approach. The structure of the page are based on HTML, styled with CSS and JavaScript to create interactive elements.
+
+The moste difficult part was to style and aligne the form and how to modify the DOM using Javascript.
+
+If I hade more time i would add a button (+,-) to the accordion that changes when its open/closed.
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
