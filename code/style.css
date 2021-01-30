@@ -2,7 +2,11 @@ body {
   margin: 0;
   color: #fff;
   background-color: #55739e;
-}/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+  font-family: 'Poppins', sans-serif;
+  width: auto;
+}
+
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp 
 
@@ -14,6 +18,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .hero-section {
   position: relative;
+  height: 100vh;
 }
 
 .hero-video {
@@ -32,7 +37,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 32px;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .hero-title, .hero-tagline {
@@ -43,35 +48,45 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .hero-title {
   line-height: 40px;
   margin-bottom: 24px;
+  font-weight: bold;
+  font-size: 42px;
 }
 
 .hero-tagline {
   margin-top: 0;
+  font-size: 34px;
 }
 
 /* CONTACT SECTION */
 
 .contact {
-  margin-top: 40px;
-  background-color: #9f876b;
-  height: 500px;
+
+  background-color: #494E61;
+  height: 600px;
+  width: 100%;
 }
 
 .contact-header {
-  margin-top: 20px;
+  margin-top: 50px;
   font-size: 24px;
+}
+
+h2 {
+  margin-top: 0;
+  padding-top: 20px;
+  padding-left: 5px;
 }
 
 input { 
   font-size: 16px;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   color: #55739e;
 }
 
 
-form {
+.contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,9 +108,15 @@ label {
 
 input:valid {
   border-style: solid;
-  border-color: greenyellow;
+  border-width: 5px;
+  border-color: #3C7A1B;
 }
 
+input:focus:required:invalid {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #7A3022;
+}
 .contact-by {
   display: flex;
 }
@@ -104,7 +125,7 @@ input:valid {
   font-size: 16px;
   padding: 10px;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   color: #55739e;
 
 }
@@ -112,11 +133,126 @@ input:valid {
 .contact-button {
   margin-top: 40px;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   font-size: 18px;
   font-weight: bold;
   color: #55739e;
-
 }
 
+.contact-button:hover {
+  background-color: #C3D1E0;
+}
+
+/* ACCORDION */
+
+.accordion {
+  background-color: #fff;
+  height: inherit;
+  color: #55739e;
+  text-align: center;
+  padding: 0 20px 50px 20px;
+}
+
+.accordion-header {
+  padding-top: 50px;
+}
+
+.offer {
+  border-top: 3px solid #999;
+  margin-bottom: 5px;
+  
+}
+
+.offer-3 {
+  border-bottom: 3px solid #999;
+}
+
+.offer-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.offer-header {
+  padding: 10px;
+  cursor: pointer;
+  color: #494E61;
+}
+
+.offer-header-3 {
+  border-bottom: 3px solid #999;
+}
+
+.offer-content {
+  overflow: hidden;
+  height: 0;
+
+}
+.offer-selected {
+  height: auto;
+}
+
+.offer-text {
+  margin: 0;
+  padding: 20px;
+  border-top: 1px solid #999;
+}
+
+/* TABLET */
+
+@media (min-width: 768px) {
+
+  .main-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 52px;
+  }
+  
+  .hero-tagline {
+    margin-top: 0;
+    font-size: 34px;
+  }
+  
+  .contact {
+    width: 45%;
+    margin: 60px 30px 60px 60px;
+  }
+
+  .accordion {
+    width: 45%;
+    margin: 60px 60px 60px 30px;
+    text-align: center;
+  }
+}
+  
+
+  @media (min-width: 1200px) {
+
+    .main-area {
+      justify-content: center;
+    }
+
+    .hero-title {
+      font-size: 100px;
+    }
+    
+    .hero-tagline {
+      margin-top: 40px;
+      font-size: 42px;
+    }
+
+    .contact {
+      width: 25%;
+      margin-right: 60px;
+    }
+
+    .accordion {
+      width: 25%;
+      margin-left: 60px;
+      margin-top: 100px;
+    }
+  }

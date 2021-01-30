@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3 - Business Site</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Work+Sans:wght@400;900&display=swap" rel="stylesheet">
   </head>
   <body>
+
     <!-- Hero Section -->
 
     <header class="hero-section">
@@ -22,58 +26,98 @@
 
     <!-- Signup form -->
 
-    <section class="contact">
+    <main class="main-area">
+      <section class="contact">
 
-      <form action="http://httpbin.org/anything" method="POST">
-          
-          <legend class="contact-header">Please contact me</legend>
-          <div class="form-fields">
-            <label>
-            Name
-              <input class="field" type="text" name="Name" required>
-            </label>
-          </div>
-          <div class="form-fields">
-            <label>
-              Email
-              <input class="field" type="email" name="Email" required>
-            </label>
-          </div>
-          <div class="form-fields">
-            <label>
-              Phone
-              <input class="field" type="tel" name="Phone" required>
-            </label>
-          </div>
-          <div class="form-fields" >
-            <label class="contact-by">
-              Contact me by
-              <select class="select" name="contact option">
-                <option value="email">email</option>
-                <option value="phone" data-countryCode="SE" value="46">phone</option>
-              </select>  
-            </label>
-          </div>
-          <div>
-            <button class="contact-button"type="submit">Contact me</button>
-          </div>
-      </form>
-    </section>
+        <form class="contact-form" action="http://httpbin.org/anything" method="POST">
+            
+            <legend class="contact-header">Please contact me</legend>
+            <div class="form-fields">
+              <label>
+              Name
+                <input class="field" type="text" name="Name" required>
+              </label>
+            </div>
+            <div class="form-fields">
+              <label>
+                Email
+                <input class="field" type="email" name="Email" required>
+              </label>
+            </div>
+            <div class="form-fields">
+              <label>
+                Phone
+                <input class="field" type="tel" name="Phone" required>
+              </label>
+            </div>
+            <div class="form-fields" >
+              <label class="contact-by">
+                Contact me by
+                <select class="select" name="contact option">
+                  <option value="email">email</option>
+                  <option value="phone">phone</option>
+                </select>  
+              </label>
+            </div>
+            <div>
+              <button id="contact-button" class="contact-button"type="submit">Contact me</button>
+            </div>
+        </form>
+      </section>
 
-    <section class="accordion">
-      
-      <h1>FAQ</h1>
+      <!-- ACCORDION -->
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+      <section class="accordion">
+        
+        <h2 class="accordion-header">What do we offer?</h2>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
+        <div class="offer">
+          <h3 id="offer-header-1" class="offer-header">Project management</h3>
+          <div id="offer-1" class="offer-content">
+            <p class="offer-text">Words about Project management</p>
+          </div>
+
+        </div>
+
+        <div class="offer">
+          <h3 id="offer-header-2" class="offer-header">Design Management</h3>
+          <div id="offer-2" class="offer-content">
+          <p class="offer-text">Words about Design management</p>
+        </div>
+
+        <div class="offer offer-3">
+          <h3 id="offer-header-3" class="offer-header">Certified controls</h3>
+          <div id="offer-3" class="offer-content">
+            <p class="offer-text">Words about Design management</p>
+          </div>
+        </div>
+        <div class="offer-3"></div>
+
+        <h2 class="accordion-header">Reference projects</h2>
+
+        <div class="offer">
+          <h3 id="project-header-1" class="offer-header">Industrial</h3>
+          <div id="project-1" class="offer-content">
+            <p class="offer-text">Displays a list of industrial projects</p>
+          </div>
+        </div>
+
+        <div class="offer">
+          <h3 id="project-header-2" class="offer-header">Commercial</h3>
+          <div id="project-2" class="offer-content">
+            <p class="offer-text">Displays a list of commercial projects</p>
+          </div>
+        </div>
+
+        <div class="offer offer-3">
+          <h3 id="project-header-3" class="offer-header">Housing</h3>
+          <div id="project-3" class="offer-content">
+            <p class="offer-text">Displays a list of housing projects</p>
+          </div>
+        </div>
+        <div class="offer-3"></div>
+      </section>
+    </main>
     <script src="./script.js"></script>
   </body>
 </html>
