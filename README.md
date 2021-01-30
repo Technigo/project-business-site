@@ -4,7 +4,7 @@
 
 It is  **signup form** that we are building for this week. I am starting to get to know a little of Javascript better. 
 
-A simple sign up form that confused more on how to code than the content itself. It contains:
+A simple sign up form that focus more on how to code than the content itself. It contains:
 
 - 3 x Text fields
 - 1 x A email field
