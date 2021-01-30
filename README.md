@@ -12,3 +12,4 @@ If I would have had more time, I would have added a Navbar and also changed font
 
 ## View it live
 
+https://gracious-bartik-f2a661.netlify.app/
