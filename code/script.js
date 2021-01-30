@@ -84,7 +84,7 @@ accordionQuestionTwo.addEventListener('click', () => {
   accordionAnswerFive.classList.remove('accordion-visible');
   accordionAnswerSix.classList.remove('accordion-visible');
   if (iconTwo.innerHTML === '+') {
-    iconTwo.innerHTML = '-'
+    iconTwo.innerHTML = '-';
   } else {
     iconTwo.innerHTML = '+';
   };
@@ -106,7 +106,7 @@ accordionQuestionThree.addEventListener('click', () => {
   accordionAnswerFive.classList.remove('accordion-visible');
   accordionAnswerSix.classList.remove('accordion-visible');
   if (iconThree.innerHTML === '+') {
-    iconThree.innerHTML = '-'
+    iconThree.innerHTML = '-';
   } else {
     iconThree.innerHTML = '+';
   };
@@ -127,7 +127,7 @@ accordionQuestionFour.addEventListener('click', () => {
   accordionAnswerFive.classList.remove('accordion-visible');
   accordionAnswerSix.classList.remove('accordion-visible');
   if (iconFour.innerHTML === '+') {
-    iconFour.innerHTML = '-'
+    iconFour.innerHTML = '-';
   } else {
     iconFour.innerHTML = '+';
   };
@@ -148,7 +148,7 @@ accordionQuestionFive.addEventListener('click', () => {
   accordionAnswerFive.classList.toggle('accordion-visible');
   accordionAnswerSix.classList.remove('accordion-visible');
   if (iconFive.innerHTML === '+') {
-    iconFive.innerHTML = '-'
+    iconFive.innerHTML = '-';
   } else {
     iconFive.innerHTML = '+';
   };
@@ -169,11 +169,11 @@ accordionQuestionSix.addEventListener('click', () => {
   accordionAnswerFive.classList.remove('accordion-visible');
   accordionAnswerSix.classList.toggle('accordion-visible');
   if (iconSix.innerHTML === '+') {
-    iconSix.innerHTML = '-'
+    iconSix.innerHTML = '-';
   } else {
     iconSix.innerHTML = '+';
   };
-  if (iconOne.innerHTML === '-' || iconTwo.innerHTML === '-' || iconThree.innerHTML === '-' || iconFour.innerHTML === '-' || plusSignFive.innerHTML === '-') {
+  if (iconOne.innerHTML === '-' || iconTwo.innerHTML === '-' || iconThree.innerHTML === '-' || iconFour.innerHTML === '-' || iconFive.innerHTML === '-') {
     iconOne.innerHTML = '+';
     iconTwo.innerHTML = '+';
     iconThree.innerHTML = '+';
