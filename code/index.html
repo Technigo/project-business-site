@@ -4,27 +4,143 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <header class="header">
+      <div class="navbar">Blabla</div>
+      <video class="dog-video" loop autoplay muted>
+        <source class="vid-big" src="./videos/production ID_4267742.mp4" type="video/mp4">
+        <source class="vid-big" src="./videos/production-ID_4267742.webm" type="video/webm">
+        <p>Unfortunately your browser doesn't support the video.</p>
+    </video>
+    <h1 class="hero-text">Volunteer at an Animal Shelter Near You</h1>    
+    </header>
 
-    <!-- Signup form -->
+    <section class="form container">
+      <h1>Signup</h1>
+      <form class="form" action="https://httpbin.org/anything" method="POST">
+       
+        <!--Form1 Contact Details-->
+        
+        <section class="input-wrapper">
+          <label for="firstName">First Name</label>
+          <input name="firstName" id="firstName" type="text" required></input>  
+        </section>
+        <section class="input-wrapper">
+          <label for="lastName">Last Name</label>
+          <input name="lastName" id="lastName" type="text" required></input>  
+        </section>
+        <section class="input-wrapper">
+          <label for="email">E-mail address</label>
+          <input name="email" id="email" type="email" required></input>  
+        </section>
+      
+        <!--Form2 Experience (radiobutton)-->
+        <section class="radio-group">
 
-    <section class="accordion">
-      <!-- Accordion -->
+          <section class="input-wrapper">
+            <label for="experience1">No previous experience</label>
+            <input name="experience-level" value="no-experience" id="experience1" type="radio" required></input>  
+          </section>
+
+          <section class="input-wrapper">
+            <label for="experience2">Some experience</label>
+            <input name="experience-level" value="some-experience" id="experience2" type="radio" required></input>  
+          </section>
+
+          <section class="input-wrapper">
+            <label for="experience3">Lot of experience</label>
+            <input name="experience-level" value="lot-of-experience" id="experience3" type="radio" required></input>  
+          </section>
+        </section>
+
+        <!--Form3 Availability (checkboxes)-->
+
+        <section class="checkbox-group">
+
+          <section class="input-wrapper">
+            <label for="availability1">Mornings</label>
+            <input name="availability" value="morning" id="availability1" type="checkbox"></input>  
+          </section>
+
+          <section class="input-wrapper">
+            <label for="availability2">Afternoons</label>
+            <input name="availability" value="afternoon" id="availability2" type="checkbox"></input>  
+          </section>
+
+          <section class="input-wrapper">
+            <label for="availability3">Evenings</label>
+            <input name="availability" value="evening" id="availability3" type="checkbox"></input>  
+          </section>
+        </section>
+
+        <!--Free text-->
+          <section class="input-wrapper">
+            <label for="motivation">Why do you want to become a volunteer?</label>
+            <textarea name="more-info" id="motivation" cols="40" rows="8" placeholder="Give us a short description about yourself and why you want to volunteer."></textarea>  
+          </section>
+
+    
+        <!--Register with password-->
+
+        <section class="input-wrapper">
+          <label for="userName">Username</label>
+          <input name="userName" id="userName" type="text" required></input>  
+        </section>
+
+        <section class="input-wrapper">
+          <label for="password">Password</label>
+          <input name="password" id="password" type="password" required></input>  
+        </section>
+
+        <!--Terms and conditions-->
+
+        <section class="input-wrapper">
+          <label for="age">I am over 18 years</label>
+          <input name="Over-18" value="yes" id="age" type="checkbox" required></input>  
+        </section>
+
+        <section class="input-wrapper">
+          <label for="terms">I accept the terms and conditions</label>
+          <input name="terms-and-confitions" value="accept" id="terms" type="checkbox" required></input>  
+        </section>
+
+        
+        <input type="submit" value="Submit"></input>
+      </form>
+    </section>
+
+    
+    <section class="accordion container">
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
+        <div class="accordion-wrapper">
+        <div class="accordion-question" id="question1">Who can help?</div>
+        <div class="accordion-answer" id=answer1>
+          <p>Lorem ipsum...</p>
+        </div>
+        </div>
+
+        <div class="accordion-wrapper">
+      <div class="accordion-question" id="question2">When do you contact me?</div>
+      <div class="accordion-answer" id=answer2>
         <p>Lorem ipsum...</p>
+      </div>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
+      <div class="accordion-wrapper">
+      <div class="accordion-question" id="question3">Can I choose my volunteering hours?</div>
+      <div class="accordion-answer" id=answer3>
         <p>Lorem ipsum...</p>
       </div>
+    </div>
+
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <section class="footer container">
+    </section>
+
+    <script src="./script.js"></script>
   </body>
 </html>

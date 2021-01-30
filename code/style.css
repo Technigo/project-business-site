@@ -1,7 +1,100 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  margin: 0 auto;
+}
 
-.active + .answer {
-  /* some styling here */
+* {
+  box-sizing: border-box;
+}
+
+/* HERO */
+
+.header {
+  position: relative;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+}
+
+.dog-video {
+  width: 100vw;
+  object-fit: cover;
+  height: 100vh;
+}
+
+.container {
+  max-width: 90%;
+  margin: 30px auto;
+  /* margin: 30px auto; */
+}
+
+/* FORMS */
+
+
+/* ACCORDION */
+
+.accordion {
+  border: 2px solid black;
+}
+
+.accordion-wrapper {
+  border: 2px solid red;
+  margin: 5px;
+}
+.accordion-answer {
+  display: none;
+}
+
+.active + .accordion-answer {
+  display: block;
+  
+}
+
+.active {
+  background-color: chocolate;
+}
+
+
+/** RESPONSIVENESS **/
+
+  /** TABLET */
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  
+}
+
+/** LAPTOP **/
+
+@media (min-width: 992px) {
+
+  .container {
+    width: 992px;
+  }
+
 }
