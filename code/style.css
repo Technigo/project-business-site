@@ -3,13 +3,18 @@ in this case it is the div with the answer class next to the div with the active
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 /* General styling */
-
+html {
+  margin:0;
+  padding:0;
+  scroll-behavior: smooth;
+}
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   background: rgb(190, 178, 145);
   color: rgb(34, 46, 46);
   font-family: 'Inter', sans-serif;
+  width: 100vw;
 }
 
 /** Hero section style **/
@@ -93,7 +98,6 @@ body {
 .form-heading, .accordion-heading {
   font-family: 'Cabin', sans-serif;
   color: rgb(233, 233, 237);
-  
 }
 
 /* Form styling */
@@ -104,35 +108,51 @@ body {
   margin: 10px 10px;
   border-radius: 5px;
 }
-
-.owner-information {
+.form-heading {
+  padding: 5px;
+  margin: 0px;
+}
+.form-subheading {
+  padding: 5px;
+  margin: 0px;
+}
+.owner-information, .cat-information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.name-surname, .email-password {
+  width: 48%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-}
-.form-item {
-  padding: 3px;
-}
-
+  justify-content: center;
+  margin: 5px;
+} 
 .text-input {
   background-color: rgb(147, 113, 77);
   color: rgb(243, 240, 236);;
-  padding: 2px;
+  padding: 5px;
   border-radius: 5px;
   margin: 5px;
+  width: 100%;
 }
 ::placeholder {
   color: rgb(243, 240, 236);
   font-size: 14px;
 }
-
-.text-input:focus {
-  outline-color: gray;
+.form-item {
+  padding: 5px;
+  width: 48%;
+  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.cat-information {
-  display: flex;
-  justify-content: space-around;
+.label {
+  margin-bottom: 5px;
+  width: 100%;
 }
 .selector {
   display: block;
@@ -140,43 +160,54 @@ body {
   font-size: 14px;
   color: rgb(243, 240, 236);
   border-radius: 5px;
+  padding: 5px;
+  width: 100%;
 }
+
 .date {
   display: block;
-  width: 150px;
+  width: 100%;
   background-color: rgb(147, 113, 77);
   color: rgb(243, 240, 236);
   border-radius: 5px;
+  font-size: 14px;
+  padding: 3px;
   appearance: none;
 }
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
-.number-input {
-  display: block;
-  background-color: rgba(206, 186, 165, 0.788);
-  color: rgb(40, 52, 64);
-  border-radius: 5px;
-}
-
-.label {
-  margin-bottom: 5px;
+.text-input:focus, .selector:focus, .date:focus {
+  outline-color: gray;
 }
 
 .fieldset-competition-classes {
   margin: 10px 0;
-  border-color: rgba(54, 54, 54, 0.596);
+  border: none;
+  padding: 0px;
 }
+
 .radio-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  width: 100%;
 }
 
 .inner-radio {
-  width: 45%;
-  padding: 3px;
+  width: 100%;
+}
+.inner-radio-group {
+  width: 47%;
+  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.checkbox-wrapper {
+  width: 100%;
+  padding: 5px;
 }
 .checkbox {
   margin-bottom: 10px;
@@ -205,25 +236,26 @@ body {
   margin: 10px 10px;
   border-radius: 5px;
 }
-
+.accordion-heading {
+  padding: 5px;
+  margin: 0 0 20px 0;
+}
 .accordion-question {
   background-color: rgb(147, 113, 77);
   cursor: pointer;
   position: relative;
-  padding: 10px;
+  padding: 10px 15px 10px 10px;
   border-bottom: 2px solid rgba(54, 54, 54, 0.596);
-  margin-right: 5px;
+  margin: 0px 5px;
 }
 
 .accordion-question::after {
-  content:"\002B";
+  content:"\2207";
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  font-weight: bold;
   position: absolute;
-  right: 0;
-  top: 0;
-  margin: 5px;
+  right: 2px;
+  top: 2px;
 }
 
 .question-clicked{
@@ -232,11 +264,9 @@ body {
 
 }
 .question-clicked::after {
-  content:"\002D";
+  content:"\2206";
   position: absolute;
-  right: 0;
-  margin-right: 1%;
-  font-weight: bold;
+  right: 2px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
@@ -247,7 +277,7 @@ body {
   overflow: hidden;
   transition: height 0.5s ease-out;
   background-color: rgba(255, 255, 255, 0.452);
-
+  margin: 0px 5px;
 }
 
 .answer-text {
@@ -260,13 +290,12 @@ body {
 
 /* Footer styling */
 .footer-general {
+  margin:0;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: rgb(51, 45, 30);
-  margin-top: 20px;
-  width: 100%;
-  padding: 20px 0px;
+  width: 100vw;
 
 }
 .logo-footer {
