@@ -12,7 +12,7 @@ header {
   margin-bottom: 100px;
 }
 .hero {
-  background-image: url("hero.jpg");
+  background-image: url("./hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 30% 30%;
@@ -43,9 +43,11 @@ h1 {
   margin-bottom: 0;
 }
 nav {
+  position: relative;
   background-color: #eec29b;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 nav a {
   margin: 40px 80px;
@@ -58,6 +60,27 @@ a {
 }
 a:hover {
   color: #668483;
+}
+.logo {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 0;
+  margin-left: 20px;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  width: 30px;
+  height: 25px;
+  justify-content: space-between;
+  margin: 40px;
+}
+.hamburger div {
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #000;
 }
 /********** FORM **********/
 
@@ -132,6 +155,7 @@ input {
 	position:relative;
 	top:1px;
 }
+
 /********** ACCORDION **********/
 
 .accordion {
@@ -182,17 +206,31 @@ h2 {
 footer {
   background-color: #eec29b;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  padding: 0 40px;
+}
+.social {
+  display: flex;
+  align-items: center;
+}
+.social img {
+  height: 80px;
+  filter: grayscale(100%);
+  margin: 20px;
+}
+.social img:hover {
+filter: grayscale(0%);
 }
 .footer-links {
   display: flex;
   flex-direction: column;
 }
 .footer-links a {
-  margin: 15px 100px;
+  font-size: 1.8em;
+  margin: 15px;
 }
 
-/********** FOOTER **********/
+/********** MEDIA QUERIES **********/
 
 @media (max-width: 1199px) {
   .hero-text {
@@ -238,6 +276,9 @@ footer {
   .hero-text p {
     font-size: 1.1em;
   }
+  .hamburger {
+    display: flex;
+  }
   .form,
   .accordion {
     width: 80%;
@@ -251,5 +292,8 @@ footer {
   }
   .radio-input {
     margin: 5px;
+  }
+  .button {
+    padding: 10px;
   }
 }
