@@ -30,13 +30,18 @@ header {
 .about {
   color: pink;
   text-align: center;
+  font-style: italic;
   padding: 20px 30px;
 }
 
 .grid-container {
-  border: 2px solid green;
   display: grid;
-  grid-template-rows: 500px 400px;
+  grid-template-rows: auto;
+  justify-items: center;
+}
+
+h2:hover {
+  text-shadow: 2px 2px 4px pink;
 }
 
 .grid-item {
@@ -45,23 +50,25 @@ header {
   background-color: white;
   padding: 20px;
   margin: 20px;
+  border-radius: 10px;
 } 
 
 .user-information {
   display: grid;
 }
 
-.accordion {
-  border: 2px solid pink;
-}
-
 .question {
-  border: 2px solid turquoise;
+  background-color: cadetblue;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 0;
 }
 
 .answer {
   display: none;
-  border: 2px solid red;
+  font-style: italic;
+  padding: 10px;
+  margin: 0;
 } 
 
 .answer-clicked {
@@ -73,22 +80,19 @@ footer {
   padding: 20px;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 768px) {
   h1 {
     font-size: 45px;
   }
 
   .grid-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 45% 45%;
+    justify-content: space-evenly;
   }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1024px) {
   h1 {
     font-size: 60px;
-  }
-
-  .grid-item {
-    width: 350px;
   }
 }
