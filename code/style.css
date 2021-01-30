@@ -77,6 +77,7 @@
   margin: 0 auto;
 }
 
+/* Text ontop of hero image */
 .headline {
   position: absolute;
   top: 0;
@@ -106,6 +107,7 @@
   max-width: 1100px;
 }
 
+/* Small pictures in row */
 .insta-img-container {
   display: flex;
   justify-content: space-between;
@@ -137,7 +139,7 @@ p {
   margin-left: 5px;
 }
 
-/* Form and accordion*/
+/* Signup form and accordion*/
 
 .accordion-form-wrapper {
   display: flex;  
@@ -150,7 +152,6 @@ p {
 .accordion-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
   padding-top: 20px;
 }
@@ -183,29 +184,18 @@ p {
 }
 
 .accordion-question::after {
-  content: "\002B";
+  content: "+";
   font-weight: bold;
   float: right;
   margin-left: 5px;
-}
-
-.accordion-selected::after {
-  content: "\2212";
 } 
 
-.accordion-text {
-  margin: 0;
-  padding: 10px;
-  padding-bottom: 0;
-  border-top: 1px solid #999;
-}
+.accordion-question.accordion-selected::after {
+  content: "-";
+}  
 
-.accordion-question + div {
-  background:cornsilk;
-  opacity: 0.6;
-} 
-
-/* Input Form */
+  
+/* Submision Form */
 
 .form-container {
   display: flex;
@@ -232,9 +222,29 @@ select, option {
   margin-top: 5px;
   border: darkgrey solid 2px;
   opacity: 0.9;
-  cursor: pointer;
+  cursor: text;
 }
 
+/* checkbox */
+.checkbox-wrapper {
+  white-space: nowrap;
+  width: 40%;
+}
+.checkbox {
+  margin: 20px;
+  width: 50%;
+  display:inline-block;
+  cursor: pointer;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.checkbox-label {
+  white-space: normal;
+  display:inline-block;
+}
+
+/* submit button */
 
 .button {
   padding: 10px;
@@ -246,7 +256,15 @@ select, option {
   cursor: pointer;
 }
 
-  
+/* Footer */
+.footer {
+  border-top: darkgray solid 2px;
+  display: flex;
+  justify-content: center;
+  color: cornsilk;
+  margin: 40px;
+  padding: 30px;
+}
 
 
 /* Media Queries */
@@ -299,6 +317,9 @@ select, option {
   .form-container {
     width: 90%;
     padding-top: 30px;
+  }
+  .checkbox-wrapper {
+    width: 50%;
   }
 
 }
