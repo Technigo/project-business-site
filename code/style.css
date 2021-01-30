@@ -17,7 +17,7 @@ body {
 }
 
 .text-hero {
-  font-size: 40px;
+  font-size: 20px;
   margin: 0;
   color: white;
   position: absolute;
@@ -36,24 +36,34 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: rgb(242, 242, 242);
 }
 /* Sign up form */
 .form-container {
+  background-image: linear-gradient(rgb(255, 100, 96), rgb(255, 236, 234));
   width: 300px;
   height: 500px;
   font-size: 18px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   padding: 10px;
-  margin: 10px;
+  margin: 30px;
+  color: white;
+}
+
+.input-form {
+  background-color: rgb(255, 236, 234);
+  color: white;
+  border: none;
 }
 
 /*Accordion*/
 .accordion {
+  background-image: linear-gradient(rgb(255, 100, 96), rgb(255, 236, 234));
   width: 300px;
   height: 500px;
-  border: 2px solid black;
   padding: 10px;
   margin: 10px;
+  color: white;
 }
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
@@ -71,23 +81,43 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 /*Media queries*/
 
-@media (max-width: 767px) {
-  .text-hero {
-    font-size: 20px;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 992px) {
   .text-hero {
     font-size: 30px;
   }
   .content-container {
     flex-direction: row;
+    background-color: rgb(163, 174, 186);
+  }
+  .form-container {
+    background-image: linear-gradient(rgb(0, 20, 21), rgb(0, 93, 97));
+  }
+  .input-form {
+    background-color: rgb(0, 93, 97);
+    color: white;
+    border: none;
+  }
+  .accordion {
+    background-image: linear-gradient(rgb(0, 20, 21), rgb(0, 93, 97));
+    color: white;
   }
 }
 
 @media (min-width: 993px) {
+  .text-hero {
+    font-size: 40px;
+  }
   .content-container {
     flex-direction: row;
+    background-color: rgb(224, 224, 224);
+  }
+  .form-container {
+    background-image: linear-gradient(rgb(8, 8, 8), rgb(155, 166, 177));
+    margin: 50px 70px;
+  }
+  .accordion {
+    margin: 50px 70px;
+    background-image: linear-gradient(rgb(8, 8, 8), rgb(155, 166, 177));
+    color: white;
   }
 }
