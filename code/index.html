@@ -1,30 +1,95 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Kitten Transfer</title>
+</head>
+<body>
+  <main class="main">
+    <picture>
+      <source srcset="./resources/images/ella-jardim-mKWKbHZaN-0-unsplash-1000.jpg" media="(min-width: 640px)">
+      <source srcset="./resources/images/ella-jardim-mKWKbHZaN-0-unsplash-1920.jpg" media="(min-width: 1000px)">
+      <source srcset="./resources/images/ella-jardim-mKWKbHZaN-0-unsplash-2400.jpg" media="(min-width: 1200px)">
+      <img class="hero-image" src="./resources/images/ella-jardim-mKWKbHZaN-0-unsplash-640.jpg" alt="">
+    </picture>
+    <div class="content-container">
+      <div class="top-full-width">
+        <ul class="nav">
+          <li>About us</li>
+          <li>Products</li>
+          <li>Sign in</li>
+        </ul>
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="bottom-full-width">
+        <div class="bottom-upper">
+          <div class="upload-container">
+            <!-- HERE IS THE FORM PART...-->
+            <form class="kitten-form" action="https://httpbin.org/anything" method="POST">
+              <label class="kitten-file" for="kitten-file">
+                <p>
+                  <span>+</span>
+                  Upload your kitten
+                </p>
+                <input type="file" id="kitten-file" name="kitten-file">
+              </label>
+              <div class="divider"></div>
+              <label for="name">
+                <input type="text" id="name" name="name" placeholder="Your name">
+              </label>
+              <div class="divider"></div>
+              <label for="email">
+                <input type="email" id="email" name="email" placeholder="Your email address">
+              </label>
+              <div class="divider"></div>
+              <label for="message">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+              </label>
+              <!-- <div class="divider"></div> -->
+              <label id="agree-terms" for="agree-terms-input">
+                <input type="checkbox" id="agree-terms-input" name="agree-terms-input">
+                <span>
+                  I agree to the terms and conditions
+                </span>
+              </label>
+              <div class="divider"></div>
+              <label id="submit-label" for="submit">
+                <input id="submit-input" type="submit" value="Transfer">
+              </label>
+            </form>
+          </div>
+          <!-- HERE IS THE ACCORDION PART -->
+          <div class="faq-container">
+            <div id="accordion-1" class="accordion">
+              <h3 class="accordion-header">Can you really upload a kitten?</h3>
+              <p class="accordion-content">
+                  Text of the accordion
+              </p>
+            </div>
+            <div id="accordion-2" class="accordion">
+              <h3 class="accordion-header">What was that?</h3>
+              <p class="accordion-content">
+                  Text of the accordion
+              </p>
+            </div>
+            <div id="accordion-3" class="accordion">
+              <h3 class="accordion-header">Header</h3>
+              <p class="accordion-content">
+                  Text of the accordion
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-lower">
+          <div class="kt-logo">
+            <p>Thanks for flying with...</p>
+            <p class="logo-text">Kitten Transfer</p>
+          </div>
+        </div>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
 </html>

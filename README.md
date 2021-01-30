@@ -10,3 +10,15 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+
+## To do
+<!-- - Background image working
+- top menu and bottom logo
+- Form - text, textfield, radio button, file upload, submit  -->
+- Accordion, w changing icon
+- validation
+- more input types?
+- video background
+- style checkbox
+- background image better breakpoints
