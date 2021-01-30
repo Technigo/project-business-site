@@ -63,23 +63,21 @@ body {
 }
 
 .button-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 2px solid rgba(139, 138, 138, 0.658);
   border-radius: 10px;
   background-color: rgb(166, 148, 102);
   padding: 10px;
   margin: 10px;
   width: 50%;
-}
-
-.welcome-button {
   text-decoration: none;
   color: rgb(233, 233, 237);
   font-size: 14px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.button-wrapper:hover {
+  background-color: rgb(201, 180, 128);
 }
 
 /* Styling form and accordion wrapper */
@@ -111,6 +109,8 @@ body {
 .form-subheading {
   padding: 5px;
   margin: 5px;
+  color: rgb(77, 47, 20);
+  font-family: Arial, Helvetica, sans-serif;
 }
 .owner-information, .cat-information {
   display: flex;
@@ -137,6 +137,7 @@ body {
   color: rgb(243, 240, 236);
   font-size: 14px;
 }
+/* Selector and date styling */
 .form-item {
   padding: 5px;
   width: 48%;
@@ -159,7 +160,7 @@ body {
   padding: 5px;
   width: 100%;
 }
-
+/* Date of birth styling */
 .date {
   display: block;
   width: 100%;
@@ -173,10 +174,11 @@ body {
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
+/* All text-input effect */
 .text-input:focus, .selector:focus, .date:focus {
   outline-color: gray;
 }
-
+/* Radio buttons styling */
 .fieldset-competition-classes {
   margin: 10px 0;
   border: none;
@@ -191,9 +193,6 @@ body {
   width: 100%;
 }
 
-.inner-radio {
-  width: 100%;
-}
 .inner-radio-group {
   width: 47%;
   margin: 5px;
@@ -201,6 +200,44 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
+.inner-radio {
+  width: 100%;
+  position: relative;
+  user-select: none;
+}
+
+/* Custom radio button */
+.radio-label {
+  margin-left: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.radio-input {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  height: 0px;
+  width: 0px;
+  font-size: 16px;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  background-color: rgb(173, 167, 142);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  
+}
+
+.inner-radio .radio-input:checked ~ .custom-radio {
+  background-color: rgb(121, 92, 61);
+}
+
+/* Checkbox styling */
 .checkbox-wrapper {
   width: 100%;
   padding: 5px;
@@ -208,6 +245,10 @@ body {
 .checkbox {
   margin-bottom: 10px;
 } 
+.checkbox-input {
+  cursor: pointer;
+}
+/* Submit button styling */
 .submit-wrapper {
   width: 100%;
   display: flex;
@@ -225,7 +266,6 @@ body {
   margin-right: 10px;
   width: 30%;
 }
-
 
 /* Accordion styling */
 .accordion-wrapper {
@@ -252,7 +292,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   position: absolute;
-  right: 2px;
+  right: 4px;
   top: 2px;
 }
 
@@ -263,7 +303,7 @@ body {
 .question-clicked::after {
   content:"\2206";
   position: absolute;
-  right: 2px;
+  right: 4px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
