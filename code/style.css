@@ -1,17 +1,37 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-/* .active + .answer { */
-  /* some styling here */
-/* } */
-
+/* Google font for all site content */
 @import url('https://fonts.googleapis.com/css2?family=Podkova&display=swap');
 
 body {
-  background-color: rgba(0, 0, 0, 0.856);
+  background-color:rgba(0, 0, 0, 0.856);
   margin: 0;
 }
+/* The snowflakes */
+.snowflake-cyan {
+  position: absolute;
+  width: 200px;
+  height: 200px;  
+  top: 90%;
+  left: 50%;
+  display:none;
+}
+.snowflake-cyan2 {
+  position: absolute;
+  width: 230px;
+  height: 230px;  
+  top: 150%;
+  left: 80%;
+  display:none;
+}
+.snowflake-cyan3 {
+  position: absolute;
+  width: 180px;
+  height: 180px;  
+  top: 150%;
+  left: 30%;
+  display: none;
+}
+
+/* Header/Hero */
 .landing-page-header{
   position: relative; 
 }
@@ -26,95 +46,96 @@ body {
 }
 .hero-img { 
   width: 100vw;
-  height: auto;
+  height: 100vh;  
+  object-fit: cover;
 }
 
+/* Sign up form and Accordion */
 .site-content {   
-  border-radius: 16px; 
-  padding: 20px 0;
-  margin-left: 10px; 
+  border-radius: 16px;   
   width: 100%;
   display: flex;   
   flex-flow: column;  
-  margin-bottom: 10px; 
+  margin: 30px 0 10px 0; 
 }
-.accordion {  
-  background-color: whitesmoke;
-  border: 3px solid black;
-  border-radius: 16px;
+
+/* Accordion */
+.accordion {   
+  border: .5px solid rgba(128, 128, 128, 0.664);
+  border-radius: 6px;
   width: 90%; 
-  padding: 20px;
-  font-family: 'Podkova', serif;  
-  box-shadow: 10px 10px 16px rgb(44, 247, 247);
-  margin-top: 20px; 
-  
+  padding: 20px;  
+  margin-top: 10px; 
+  position: relative;   
+  backdrop-filter: blur(10px); 
 }
 .accordion-title {
 text-decoration: underline;
 }
+
 .fraga {
   display: flex;
+  backdrop-filter: blur(10px);
   justify-content: space-between;
   margin-top: 10px;
+  padding: 10px;
   margin-bottom: 0;
+  font-family: 'Podkova', serif;
+  border: 0;
+  border-radius: 2px; 
+  font-weight: bold;
+  font-size: 18px;
+  width: 90%;
+  transition: background 1s ease;  
 }
 
-.acc-svar {
+.fraga:hover {
+  background-color: rgb(110, 248, 234);  
+}
+
+.accsvar {
   display: none;
   max-width: 450px; 
+  padding: 10px;
+  border-radius: 16px;  
 }
 
 .acc-svar-klick { 
-  display: block;
-  background-color: rgb(31, 185, 185);
-  margin: 0;
-  border-radius: 16px;
-  padding-left: 20px;   
-  margin-bottom: 10px;
+  display: block; 
+  margin-top: 10px;    
 }
 
-.show-more {
-  background-color: whitesmoke;
-  border-radius: 50%;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 15px;
-  outline: rgb(44, 247, 247);    
-}
-
-.show-more:hover {
-  background-color: rgb(44, 247, 247);
-}
-
-.img-start {
-  display: block;
-}
-.img-click {
-  display: block;
-}
-
+/* Sign up form */
 .sign-up-form {
   background-color: rgb(3,78,78);
   color: whitesmoke;
   font-family: 'Podkova', serif;
   width: 90%; 
   border: 3px solid black;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 10px 10px 16px rgb(44, 247, 247);
+  padding: 20px;  
   
 }
+
 .sign-up-form a:any-link {
   color: aqua;
 }
+
 .sign-up-form label {
   display: block;
   padding: 5px;
 }
 
-.sign-up-form input {
+.sign-up-form input[type="text"],[type="email"],[type="password"] {
   display: block;
-  border: 2px solid cyan;  
+  border: 0px;
+  border-bottom: 1px solid white;
+  background-color: rgb(3,78,78);
+  color:white;
+  width: 34%;
+}
+
+textarea:focus, input:focus, button:focus{
+  outline:none; 
 }
 
 .radio-section-form {
@@ -130,8 +151,7 @@ input[type="radio" i] {
   background-color: rgb(18, 150, 150);
   padding: 10px;
   border-radius: 5px;
-  font-weight: bold;
-  margin: 10px;
+  font-weight: bold;  
   width: auto;
   cursor: pointer;
 }
@@ -141,33 +161,70 @@ input[type="radio" i] {
 }
 
 
+/* Responsive */
+
+@media (max-width:767px) {
+.accordion {
+  background-color: #efefef;
+}
+}
 @media (min-width:768px) {
+
+body {
+  background-color: whitesmoke;
+}
 
 .site-content {
   flex-direction: row; 
-  justify-content: space-evenly;
-  
+  justify-content: space-evenly;  
 }
 
 .sign-up-form {
   width: 40%;  
+  border-radius: 16px;
+  box-shadow: 10px 10px 16px rgb(44, 247, 247);
 }
 
 .accordion {
   width: 40%;
-  margin-top: 0;  
+  margin-top: 0; 
+  box-shadow: 10px 10px 16px rgb(44, 247, 247); 
+  border-radius: 16px;    
 }
 .hero-title {
-  font-size: 40px;
-  
+  font-size: 40px;  
+}
+.snowflake-cyan,
+.snowflake-cyan2{
+  display: block;
 }
 
 }
 
 @media (min-width:1199px) {
-  .hero-title {
-    font-size: 48px;    
-    top: 80px;
-  }
+body {
+  background-color: #e9eff8;
+}  
+.hero-title {
+  font-size: 48px;    
+  top: 80px;
+}
+
+.snowflake-cyan,
+.snowflake-cyan2,
+.snowflake-cyan3 {
+  display: block;
+}
+
+.sign-up-form {
+  width: 40%;  
+  border-radius: 16px;
+  box-shadow: 10px 10px 16px rgb(44, 247, 247);
+}
+.accordion {
+  box-shadow: 10px 10px 16px rgb(44, 247, 247);  
+  border-radius: 16px;
+}
+
 }
 
