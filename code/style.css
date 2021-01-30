@@ -1,7 +1,202 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  margin: 0;
+  font-family:'Georgia, 'Times New Roman', Times, serif ';
+  
+}
 
-.active + .answer {
-  /* some styling here */
+.webpage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+nav {
+  display: none;
+}
+
+.hero-video { 
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  font-size: 50px;
+  color: #fff;
+}
+
+.hero-quote {
+  position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    color: #fff;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+
+
+/* SIGN UP FORM (LABEL)*/
+
+
+
+.signup-form h1 {
+  color: #1c8abd;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border: 2px solid;
+  background: aliceblue;
+  box-shadow: inset 0 0 10px #000000;
+  padding-left: 10px;
+  border-radius: 20px;
+}
+
+
+.signup-row {
+    margin-bottom: 40px
+}
+
+
+
+
+
+
+
+/*FAQ*/
+
+.accordion {
+  border: 2px solid aliceblue;
+  background: aliceblue;
+  text-align: center;
+  margin: 20px;
+  box-shadow:  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+}
+
+.accordion h1 {
+  color: #1c8abd;
+}
+
+.question{
+  border: 3px solid rgb(5, 5, 5);
+  padding: 10px;
+    margin-bottom: 5px;
+    background: white;
+    box-shadow: inset 0 0 10px #000000;;
+    border-radius: 20px;
+
+}
+
+.question-header{
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+  color: #1c8abd;
+}
+
+.question-content {
+  overflow: hidden;
+  height: 0;
+  transition: height .3s ease;
+}
+
+.question-selected {
+  height: 140px;
+}
+
+/*footer*/
+
+.footer-end ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-end li {
+  padding:0 10px;
+}
+
+.footer-end ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-end .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+@media (min-width:668px) {
+  .webpage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+
+  nav {
+    position: absolute;
+      display: flex;
+      justify-content: space-evenly;
+      top: 30px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+  }
+  
+  nav a {
+    color: #fff;
+  }
+
+
+  .signup {
+    width: 100%;    
+  }
+
+
+  .accordion {
+    width: 100%;
+  }
+
+  .list {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+  }
 }
