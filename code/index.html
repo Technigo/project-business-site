@@ -3,28 +3,80 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Master Chef Cooking</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <!-- Header with Hero -->
+    <header class="header">
+      <picture class="">
+        <source srcset="./images/mobile.jpg" media="(max-width: 766px)">
+        <source srcset="./images/tablet.jpg" media="(max-width: 991px)">
+        <img src="./images/desktop.jpg" alt="Hero image" class="hero-image">
+      </picture>
+      <div class="hero-text">
+        <h1>Become a Master chef!</h1>
+        <h2>Ace your kitchen skills with us</h2>
+      </div>
+    </header>
 
-    <!-- Signup form -->
+    <section class="content">
+      <!-- Signup form -->
+      <form class="signUpForm" action="https://httpbin.org/anything" method="post">
+          <h3>Sign up to our cooking class!</h3>
+          <div>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="email">Email address:</label><br>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <input type="radio" id="acceptTerms" name="terms" value="acceptTerms" required>
+            <label for="acceptTerms">I accept the Terms and conditions</label><br>
+            <input type="checkbox" id="news" name="news" value="newsletter">
+            <label for="news"> I would like the newsletter!</label>
+          </div>
+          <div>
+            <input type="submit" value="Sign Up!" class="button">
+          </div> 
+        </form>
 
-    <section class="accordion">
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      <section class="accordion">
+        <h3>Frequently asked questions</h3>
+        <div class="question" id="section1">
+          <h4>What should I wear?</h4>
+        </div>
+        <div class="answer">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque cumque, omnis necessitatibus vitae consequatur voluptatum aspernatur obcaecati tempora tempore veritatis ipsa eveniet.</p>
+        </div>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <div class="question" id="section2">
+          <h4>Are there any vegan cooking classes?</h4>
+        </div>
+        <div class="answer">
+          <p>Eaque cumque, omnis necessitatibus vitae consequatur voluptatum aspernatur obcaecati tempora tempore veritatis ipsa eveniet.</p>
+        </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <div class="question" id="section3">
+          <h4>What is the cancellation policy?</h4>
+        </div>
+        <div class="answer">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio.</p>
+        </div>
+      </section>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <footer class="footer">
+      <p> <a href="" >Contact us </a></p>
+      <p>Already a member? <a href="" >Sign in </a></p>
+      <p>&copy 2021 The Kitchen Project</p>
+    </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
