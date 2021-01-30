@@ -1,12 +1,21 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+
+It is  **signup form** that we are building for this week. I am starting to get to know a little of Javascript better. 
+
+A simple sign up form that confused more on how to code than the content itself. It contains:
+
+- 3 x Text fields
+- 1 x A email field
+- 3 x Set of radio buttons
+- 1 x Set of placeholder
+- 1 x Submit button
+
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I could have done better, in having more varies like buttons, options, and more styling when time allows.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://nostalgic-keller-eae85f.netlify.app/code/
