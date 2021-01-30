@@ -16,15 +16,16 @@ body {
 
 .hero-image {
   width: 100vw;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   filter: contrast(130%) brightness(45%);
 }
 
 .hero {
+  width:100vw;
   position: relative;
   background-color: rgba(248, 247, 216, 0.7);
-  height: 100%;
-  width: 100%;
   margin-bottom: 0;
 }
 
@@ -35,7 +36,7 @@ body {
   right:0;
   left:0;
   display:flex;
-  height: 100%;
+  height: 200px;
   align-items: center;
   color: white;
   flex-direction: column;
@@ -94,17 +95,49 @@ body {
   font-family: 'Lobster', cursive;
 }
 
+.brush-icon {
+  width: 60px;
+  height: 50px;
+  margin-left: 30px;
+  animation-name: brush;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.logo-icon {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+}
+
+/** Keyframe for brush animation **/
+@keyframes brush {
+  from {transform:translateX(0);}
+  to {transform: translateX(40px);}
+}
+
+
 .nav-element {
   text-decoration: none;
   padding: 10px;
   color: black;
   font-size: 18px;
+  overflow: auto;
+  transition: background-color .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: flex;
+}
+
+.nav-element:hover {
+  background-color: rgb(180, 120, 170);
+  border-radius: 10px;
 }
 
 .navigation {
-  display:flex;
-  justify-content: space-between;
-  width: 30%;
+  overflow: auto;
+  width: 40%;
+  display: inline-flex;
 }
 
 /** Main content **/
@@ -169,6 +202,9 @@ body {
 
 .input-experience {
   line-height: 25px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .input-terms {
@@ -177,6 +213,10 @@ body {
 
 .input-color {
   margin-top: 10px;
+}
+
+.input:focus {
+  background-color:  #d8c6e9;
 }
 
 .course {
@@ -190,6 +230,9 @@ body {
   height: 30px; 
 }
 
+.course:focus {
+  background-color:  #d8c6e9;
+}
 
 .submit-button {
   border-radius: 10px;
@@ -255,7 +298,7 @@ body {
 /** Accordion answer and "+"/"-" icons **/
 /** not active **/
 .accordion .question .question-plus {
-  display:inline-block;
+  display:block;
   float: right;
   font-size: 30px; 
   position: absolute; 
@@ -283,7 +326,7 @@ body {
 }
 
 .accordion .question.active .question-minus {
-  display:inline-block;
+  display:block;
   float: right;
   font-size: 30px; 
   position: absolute; 
@@ -320,8 +363,6 @@ body {
 /** Media queries **/
 
 @media (max-width: 1023px){
-
-
 .hero-content{
   top:150px;
   font-size: 26px;  
@@ -345,6 +386,12 @@ body {
 .logo{
   font-size: 28px;
   padding-left: 55px;
+  width: 260px;
+}
+
+.brush-icon {
+  width: 50px;
+  height: 40px;
 }
 
 .nav-element{
@@ -353,7 +400,7 @@ body {
 }
 
 .navigation{
-  width: 40%;
+  width: 50%;
 }
 
 .form-container{

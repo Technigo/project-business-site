@@ -30,7 +30,10 @@
 
       <!-- Nav bar -->
       <div class="navigation-container">
-        <div class="logo">Art & Craft Studio</div>
+        <div class="logo-icon">
+          <div class="logo">Art & Craft Studio</div>
+          <img class="brush-icon" src="./image/icon-brush.png" alt="Paint Brush Icon">
+        </div>
         <nav class="navigation">
           <a class="nav-element" href="#">HOME</a>
           <a class="nav-element" href="#">PAINTING</a>
@@ -49,24 +52,30 @@
           <h2 class="form-header">Sign up</h2>
           <label class="input-label" for="fullName">
             Full Name
-            <input class="input" type="text" name="fullName" placeholder=" ">
+            <input class="input" type="text" name="fullName" placeholder="Irina Jekabsone" required>
           </label>
           <label class="input-label" for="email">
             Email Address
-            <input class="input"type="email" name="email" placeholder=" ">
+            <input class="input"type="email" name="email" placeholder="irina.jekabsone@gmail.com" required>
           </label>
           <label class="input-label" for="phone">
             Phone Number
-            <input class="input"type="tel" name="phone" placeholder=" ">
+            <input class="input"type="tel" name="phone" placeholder="4602512563" required>
           </label>
           <label class="input-experience" for="experience">
-            What is your experience with painting? <br>
-            <input type="radio" id="no" name="experience" value="no">
-            <label for="no">I have no experience</label><br>
-            <input type="radio" id="basic" name="experience" value="basic">
-            <label for="basic">I have some basic experience</label><br>
-            <input type="radio" id="advanced" name="experience" value="advanced">
-            <label for="advanced">I assess my skills as advanced</label><br>
+            What is your experience with painting?
+            <div class="experience-wrap">
+              <input type="radio" id="no" name="experience" value="no">
+              <label for="no">I have no experience</label>
+            </div>
+            <div class="experience-wrap">
+              <input type="radio" id="basic" name="experience" value="basic">
+              <label for="basic">I have some basic experience</label>
+            </div>
+            <div class="experience-wrap">
+              <input type="radio" id="advanced" name="experience" value="advanced">
+              <label for="advanced">I assess my skills as advanced</label>
+            </div>
           </label>
           <label class="input-course" for="course">
             Choose your course
@@ -80,7 +89,7 @@
             <input type="color" id="favorite-color" name="favorite-color" value="green">
           </label>
           <label class="input-terms" for="terms">
-            <input type="checkbox" id="terms" name="terms" value="agree">
+            <input type="checkbox" id="terms" name="terms" value="agree" required>
             I agree to receive instructional and promotional emails.
           </label>      
           <button class="submit-button" type="submit">Book your place</button>
