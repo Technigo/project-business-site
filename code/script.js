@@ -1,3 +1,4 @@
+// ACCORDION
 const accordionHeader1 = document.getElementById('accordion-header-1');
 const accordionContent1 = document.getElementById('accordion-content-1');
 
@@ -16,41 +17,31 @@ const accordionContent5 = document.getElementById('accordion-content-5');
 const accordionHeader6 = document.getElementById('accordion-header-6');
 const accordionContent6 = document.getElementById('accordion-content-6');
 
-
-
 accordionHeader1.addEventListener('click', () => {
-    accordionContent1.classList.toggle('accordion-selected');
-    accordionContent2.classList.remove('accordion-selected');
-    accordionContent3.classList.remove('accordion-selected');
-    accordionContent4.classList.remove('accordion-selected');
-    accordionContent5.classList.remove('accordion-selected');
-    accordionContent6.classList.remove('accordion-selected');
-
-
-
+  accordionContent1.classList.toggle('accordion-selected');
+  accordionContent2.classList.remove('accordion-selected');
+  accordionContent3.classList.remove('accordion-selected');
+  accordionContent4.classList.remove('accordion-selected');
+  accordionContent5.classList.remove('accordion-selected');
+  accordionContent6.classList.remove('accordion-selected');
 });
 
 accordionHeader2.addEventListener('click', () => {
-    accordionContent2.classList.toggle('accordion-selected');
-    accordionContent1.classList.remove('accordion-selected');
-    accordionContent3.classList.remove('accordion-selected');
-    accordionContent4.classList.remove('accordion-selected');
-    accordionContent5.classList.remove('accordion-selected');
-    accordionContent6.classList.remove('accordion-selected');
-
-
-
-
+  accordionContent2.classList.toggle('accordion-selected');
+  accordionContent1.classList.remove('accordion-selected');
+  accordionContent3.classList.remove('accordion-selected');
+  accordionContent4.classList.remove('accordion-selected');
+  accordionContent5.classList.remove('accordion-selected');
+  accordionContent6.classList.remove('accordion-selected');
 });
 
 accordionHeader4.addEventListener('click', () => {
-    accordionContent4.classList.toggle('accordion-selected');
-    accordionContent1.classList.remove('accordion-selected');
-    accordionContent2.classList.remove('accordion-selected');
-    accordionContent3.classList.remove('accordion-selected');
-    accordionContent5.classList.remove('accordion-selected');
-    accordionContent6.classList.remove('accordion-selected');
-
+  accordionContent4.classList.toggle('accordion-selected');
+  accordionContent1.classList.remove('accordion-selected');
+  accordionContent2.classList.remove('accordion-selected');
+  accordionContent3.classList.remove('accordion-selected');
+  accordionContent5.classList.remove('accordion-selected');
+  accordionContent6.classList.remove('accordion-selected');
 });
 
 accordionHeader5.addEventListener('click', () => {
@@ -60,7 +51,6 @@ accordionHeader5.addEventListener('click', () => {
   accordionContent3.classList.remove('accordion-selected');
   accordionContent4.classList.remove('accordion-selected');
   accordionContent6.classList.remove('accordion-selected');
-
 });
 
 accordionHeader6.addEventListener('click', () => {
@@ -70,7 +60,6 @@ accordionHeader6.addEventListener('click', () => {
   accordionContent3.classList.remove('accordion-selected');
   accordionContent4.classList.remove('accordion-selected');
   accordionContent5.classList.remove('accordion-selected');
-
 });
 
 accordionHeader3.addEventListener('click', () => {
@@ -80,29 +69,4 @@ accordionHeader3.addEventListener('click', () => {
   accordionContent4.classList.remove('accordion-selected');
   accordionContent5.classList.remove('accordion-selected');
   accordionContent6.classList.remove('accordion-selected');
-
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-
-//
-//function toggle() {
-//  this.classList.toggle("active")
-//}
-
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-//document.getElementById("section1").onclick = toggle

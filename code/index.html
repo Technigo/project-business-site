@@ -1,218 +1,167 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <link rel="stylesheet" href="./style.css" />
- 
-    
-  </head>
 
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 3</title>
+  <link rel="stylesheet" href="./style.css"/>
+</head>
 
-  <body>
-    <header class = "hero">
-      <picture>
-        <h1 class= "hero-title">Dive with us!</h1>
-        <source srcset="./images/mobil.JPG" media="(max-width: 767px)">
-        <source srcset="./images/tablet.JPG" media="(max-width: 1190px)">
-        <img class = "hero-image" src = "./images/desktop.JPG" alt = "cover image">
-        
-          
+<body>
+  <header class="hero">
+    <picture>
+      <h1 class="hero-title">Dive with us!</h1>
+      <source srcset="./images/mobil.JPG" media="(max-width: 767px)"/>
+      <source srcset="./images/tablet.JPG" media="(max-width: 1190px)"/>
+      <img class="hero-image" src="./images/desktop.JPG" alt="cover image"/>
+    </picture>
+  </header>
 
+  <!-- Signup form -->
+  <section class="info-container">
+    <form action="http://httpbin.org/anything" method="POST">
+      <div class="name-subform">
+        <h2 class="name-subform">SIGN UP</h2>
+      </div>
 
-      </picture>
+      <label for "fname">First name:</label>
+      <input class="itext" type="text" id="fname" name="fname" required/><br>
+      <label for "lname">Last name:</label>
+      <input class="itext" type="text" id="lname" name="lname" required/><br>
+      <label for "hotel">Hotel:</label>
+      <input class="itext" type="text" id="hotel" name="hotel" required/><br>
+      <label for "email">E-mail:</label>
+      <input class="itext" type="email" id="email" name="email" required/><br><br>
 
+      <label for "divecertificate">Diving certificate:</label>
+      <select class="box" id="divecertificate" name="divecertificate">
+        <option value="none">None</option>
+        <option value="ow">Open Water</option>
+        <option value="aow">Advance Open Water</option>
+        <option value="dm">Dive Master</option>
+      </select>
+      <br>
 
+      <div class="gender">
+        <p>Please select your gender:</p>
+        <input type="radio" id="male" name="gender" value="male"/>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female"/>
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other"/>
+        <label for="other">Other</label>
+      </div>
 
+      <br>
+      <div class="info-extra">
+        <label class="checkbox-container">
+          Send me more info about your trips
+          <input type="checkbox" id="add_info" name="add_info" value="checked"/>
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
 
-    </header>
+      <label for="message">Send us a message</label>
+      <textarea id="message" name="message" rows="10" col="30">
+      </textarea>
 
-    <!-- video or image as a header is cool :) -->
+      <br>
+      <div class="button">
+        <button class="btn" type="submit">SUBMIT</button>
+      </div>
 
-    <!-- Signup form -->
+    </form>
 
-    <section class = "info-container">
-      <form action= "http://httpbin.org/anything" method = "POST">
-        <div class = "name-subform">
-          <h2 class ="name-subform">SIGN UP</h2>   
+    <!-- Accordion -->
+    <section class="accordion-container">
+      <div class="name-subform">
+        <h2>FAQ</h2>
+      </div>
+
+      <div class="accordion">
+        <h3 id="accordion-header-1" class="accordion-header">
+          When do we go?
+        </h3>
+        <div id="accordion-content-1" class="accordion-content">
+          <p class="accordion-text">
+            Every day if weather permitts, boat leaves at 8:00
+            from the pier
+          </p>
         </div>
-        
-        <label for "fname">First name:</label>
-        <input class="itext" type = "text" id ="fname" name = "fname" required><br>
-        <label for "lname">Last name:</label>
-        <input class="itext" type = "text" id = "lname" name = "lname" required><br>
-        <label for "hotel">Hotel:</label>
-        <input class ="itext" type = "text" id = "hotel" name = "hotel" required><br>
-        <label for "email">E-mail:</label>
-        <input class="itext" type = "email" id = "email" name = "email" required><br><br>
-        
-        
-  
-        
-  
-        <label for "divecertificate">Diving certificate:</label>
-        <select class="box" id="divecertificate" name="divecertificate">
-          <option value = "none">None</option>
-          <option value="ow">Open Water</option>
-          <option value = "aow">Advance Open Water</option>
-          <option value = "dm">Dive Master</option>
-        </select>
-        <br>
+      </div>
 
-
-                
-        <div class= "gender">
-          <p>Please select your gender:</p>
-          <input type="radio" id="male" name="gender" value="male">
-          <label for="male">Male</label><br>
-          <input type="radio" id="female" name="gender" value="female">
-          <label for="female">Female</label><br>
-          <input type="radio" id="other" name="gender" value="other">
-          <label for="other">Other</label>
+      <div class="accordion">
+        <h3 id="accordion-header-2" class="accordion-header">
+          When we will be back?
+        </h3>
+        <div id="accordion-content-2" class="accordion-content">
+          <p class="accordion-text">
+            We will be back between 16:00 and 17:00
+          </p>
         </div>
+      </div>
 
-        <br>
-        <div class="info-extra">
-          <label class="checkbox-container">
-            I want receive more info about your trips
-            <input type="checkbox" id="add_info" name="add_info" value="checked">
-            
-
-            <span class="custom-checkbox"></span>
-          </label>
+      <div class="accordion">
+        <h3 id="accordion-header-3" class="accordion-header">
+          Picking up for the trip
+        </h3>
+        <div id="accordion-content-3" class="accordion-content">
+          <p class="accordion-text">
+            We will pick you up at your hotel on the morning
+          </p>
         </div>
-  
-        
-        
-        
-        <label for = "message">Send us a message</label>
-        <textarea id = "message" name = "message" rows="10" col="30">
-        </textarea>
-            
-       
-       <br> 
-       <div class = "button">
-        <button class ="btn" type ="submit">SUBMIT</button>
+      </div>
 
-       </div>
-       
-           
-        
-      </form>
-    
-    
-      <section class="accordion-container">
-        <!-- Accordion -->
-        <div class = "name-subform">
-          <h2>FAQ</h2>
+      <div class="accordion">
+        <h3 id="accordion-header-4" class="accordion-header">
+          Lunch
+        </h3>
+        <div id="accordion-content-4" class="accordion-content">
+          <p class="accordion-text">
+            We will prepare lunch and plenty of water for you
+          </p>
         </div>
-        
+      </div>
 
-
-        <div class="accordion">
-          <h3 id="accordion-header-1" class="accordion-header">
-              When do we go?
-          </h3>
-          <div id="accordion-content-1" class="accordion-content">
-              <p class="accordion-text">
-                  Every day if weather permitts, boat leaves at 8:00 
-                  from the pier
-              </p>
-          </div>
+      <div class="accordion">
+        <h3 id="accordion-header-5" class="accordion-header">
+          Do I need diving insurance?
+        </h3>
+        <div id="accordion-content-5" class="accordion-content">
+          <p class="accordion-text">
+            Yes, you are free to arrange it yourself,
+            otherwise we will help you
+          </p>
         </div>
-  
-        <div class="accordion">
-            <h3 id="accordion-header-2" class="accordion-header">
-                When we will be back?
-            </h3>
-            <div id="accordion-content-2" class="accordion-content">
-                <p class="accordion-text">
-                    We will be back between 16:00 and 17:00
-                </p>
-            </div>
+      </div>
+
+      <div class="accordion">
+        <h3 id="accordion-header-6" class="accordion-header">
+          Need more help and information?
+        </h3>
+        <div id="accordion-content-6" class="accordion-content">
+          <p class="accordion-text">
+            Please send us message in the SIGN UP form or contact
+            us by phone or e-mail and you are most welcome to visit
+            one of our offices.
+          </p>
         </div>
-  
-        <div class="accordion">
-            <h3 id="accordion-header-3" class="accordion-header">
-                Picking up for the trip
-            </h3>
-            <div id="accordion-content-3" class="accordion-content">
-                <p class="accordion-text">
-                    We will pick you up at your hotel on the morning
-                </p>
-            </div>
-        </div>
-  
-        <div class="accordion">
-          <h3 id="accordion-header-4" class="accordion-header">
-              Lunch
-          </h3>
-          <div id="accordion-content-4" class="accordion-content">
-              <p class="accordion-text">
-                  We will prepare lunch and plenty of water for you
-              </p>
-          </div>
-        </div>
-
-        <div class="accordion">
-          <h3 id="accordion-header-5" class="accordion-header">
-              Do I need diving insurance?
-          </h3>
-          <div id="accordion-content-5" class="accordion-content">
-              <p class="accordion-text">
-                  Yes, you are free to arrange it yourself, 
-                  otherwise we will help you
-              </p>
-          </div>
-        </div>
-
-        <div class="accordion">
-          <h3 id="accordion-header-6" class="accordion-header">
-              Need more help and information?
-          </h3>
-          <div id="accordion-content-6" class="accordion-content">
-              <p class="accordion-text">
-                  Please send us message in the SIGN UP form or contact
-                  us by phone or e-mail and you are most welcome to visit 
-                  one of our offices.
-              </p>
-          </div>
-        </div>
-
-
-
-
-
-
-
-
-        
-      </section>
-  
-
-
-
-
-
-
-
+      </div>
     </section>
-      
-    
+  </section>
 
-
-
+  <!-- FOOTER -->
   <footer>
-    <div class="footer"> 
+    <div class="footer">
       <h5>Adress: Koh Lanta, Thailand</h5>
       <h5>Phone</h5>
-      <a href = "mailto: vlad.jnbykov@gmail.com">
-       e-mail</a>
+      <a href="mailto: vlad.jnbykov@gmail.com">
+        e-mail</a>
     </div>
-  </footer>  
-    
-    <!-- dont forget to link the javascript file here! -->
-    <script src = "./script.js"></script>
-  </body>
+  </footer>
+
+  <!-- link the javascript file -->
+  <script src="./script.js"></script>
+</body>
 </html>

@@ -1,15 +1,14 @@
 body {
-  margin: 0px;
+  margin: 0;
   background:rgb(211, 226, 251);
   color: navy;
-  
-
 }
-/********** HERO-IMAGE  ************/
 
+/********** HERO-IMAGE  ************/
 .hero {
   position: relative;
 }
+
 .hero-image {
   width: 100vw;
   height: 100vh;
@@ -18,7 +17,7 @@ body {
 
 .hero-title {
   position: absolute;
-  top:0px;
+  top:0;
   left: 50px;
   font-size: 60px;
   color: rgb(212, 11, 212);
@@ -27,27 +26,18 @@ body {
 /****************** SIGN UP FORM  ************************/
 input, textarea, button {
   border-radius: 5px;
-
 }
+
 .itext {
   box-shadow: 2px 3px 2px 2px rgba(7, 74, 100, 0.4);
   height: 22px;
   padding: 2px;
-
 }
 
 textarea {
   box-shadow: 2px 3px 2px 2px rgba(7, 74, 100, 0.4);
   background:rgb(220, 223, 245)
-
 }
-/*input, textarea, select, button {
-  width: 200px;
-  padding: 0px;
-  margin: 0px; 
-  box-sizing: border-box; 
-
-} */
 
 .info-container {
   display: flex;
@@ -56,7 +46,6 @@ textarea {
   justify-content: space-between;
   justify-content: center;
   width: 100%;
-  
 }
 
 form {
@@ -66,11 +55,8 @@ form {
   background: rgb(202, 216, 246);
   padding: 10px;
   margin: 10px;
- 
   display: flex;
   flex-direction: column;
-  
-  
 } 
 
 input:valid {
@@ -88,9 +74,7 @@ input:invalid {
   background-color: rgb(226, 226, 246);
   border-radius: 5px;
   box-shadow: 2px 3px 2px 2px rgba(7, 74, 100, 0.4);
-
 }
-
 
 .accordion-container {
   border: solid 2px black;
@@ -101,16 +85,13 @@ input:invalid {
   margin: 10px;
   display: flex;
   flex-direction: column;
-  
 }
 
 .accordion:nth-of-type(2n+1) {
   background-color: rgb(191, 191, 250);
 }
 
-
 a {
-
   text-decoration: none;
 }
 
@@ -125,7 +106,7 @@ a {
   background: rgb(225, 218, 241);
 }
 
-/**************************  Checkbox styling  *****************/
+/**************************  CHECKBOX  *****************/
 .checkbox-container {
   display: block;
   position: relative;
@@ -134,7 +115,6 @@ a {
   font-size: 16px;
   user-select: none;
 }
-
 
 .checkbox-container input {
   position: absolute;
@@ -153,17 +133,15 @@ a {
   background-color: rgb(234, 240, 245);
   border-radius: 4px;
   box-shadow: 1px 2px 1px 1px rgba(7, 74, 100, 0.4);
-
   cursor: pointer;
 }
 
 .checkbox-container:hover input ~ .custom-checkbox {
   background-color: rgb(162, 179, 209);
-
 }
 
 .checkbox-container input:check ~ .custom-checkbox {
-  background-color: #444444;
+  background-color: rgb(84, 91, 104);
 }
 
 .custom-checkbox:after {
@@ -173,8 +151,6 @@ a {
   height: 8px;
   border: solid rgb(180, 122, 246);
   border-width: 0 3px 3px 0;
-  
-
   top: 3px;
   left: 7px;
   transform: rotate(45deg);
@@ -190,23 +166,21 @@ a {
   outline: #333 auto 4px;
 }
 
-/***************************  BUTTON STYLE ******************/
+/***************************  BUTTON ******************/
 .button {
   display: flex;
   justify-content: center;
 }
+
 .btn {
   background: rgb(248, 133, 133);
   width: 100px;
   border:solid 1px rgb(246, 42, 42);
   color: navy;
   font-weight: bold;
-  /*box-shadow: 2px 5px 2px 2px rgba(10, 0, 0, 0.4); */
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
   transition: all 0.1s;
-
-
   -webkit-box-shadow: 0px 6px 0px  rgb(246, 42, 42);
   -moz-box-shadow: 0px 6px 0px  rgb(246, 42, 42);
   box-shadow: 0px 6px 0px  rgb(246, 42, 42);
@@ -219,14 +193,9 @@ a {
   -moz-box-shadow: 0px 6px 0px  rgb(123, 131, 187);
   box-shadow: 0px 6px 0px  rgb(126, 130, 160);
   transition: all 1s ease;
-    
 }
 
-
-
 .btn:active {
-  
-
   -webkit-box-shadow: 0px 2px 0px rgba(68, 4, 4, 0.4);
   -moz-box-shadow: 0px 2px 0px rgba(68, 4, 4, 0.4);
   box-shadow: 0px 2px 0px rgba(68, 4, 4, 0.4);
@@ -234,22 +203,9 @@ a {
   top:3px;
   background: rgb(4, 248, 4);
   border:solid 1px rgb(4, 138, 4);
-   
+}
 
-  }
-
-
-
-
-
-
-
-
-
-
-
-/* 1. Accordion */
-
+/************* ACCORDION *************/
 .accordion {
   border: 3px solid rgb(171, 161, 199);
   border-radius: 7px;
@@ -269,27 +225,17 @@ a {
   overflow: hidden;
   height: 0;
   transition: height .6s ease;
-  /* Thanks to "transition" property we achieve smooth animation effect */
-
 }
 
 .accordion-selected {
   height: 70px;
 }
 
-
 .accordion-text {
   margin: 0;
   padding: 10px;
   border-top: 1px solid #999;
-
 }  
-
-
-
-
-
-
 
 /********************* FOOTER **********************/
 .footer {
@@ -302,21 +248,13 @@ a {
   border: 1px solid rgb(1, 30, 44);
   box-shadow: 2px 5px 2px 2px rgba(2, 58, 80, 0.4);
   margin: 5px;
-  
-
 }
 
 /*********** MEDIA QUERIES  *************/
-
 @media(min-width: 768px) {
-
-
   .info-container {
     flex-direction: row;
-    
   }
-
-
 
   form {
     width: 35%;
@@ -327,6 +265,4 @@ a {
     width:45%;
     max-width: 330px;
   }
-
-  
 }
