@@ -1,7 +1,3 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
 /* General styling */
 html {
   margin:0;
@@ -110,11 +106,11 @@ body {
 }
 .form-heading {
   padding: 5px;
-  margin: 0px;
+  margin: 5px;
 }
 .form-subheading {
   padding: 5px;
-  margin: 0px;
+  margin: 5px;
 }
 .owner-information, .cat-information {
   display: flex;
@@ -171,7 +167,7 @@ body {
   color: rgb(243, 240, 236);
   border-radius: 5px;
   font-size: 14px;
-  padding: 3px;
+  padding: 5px;
   appearance: none;
 }
 ::-webkit-calendar-picker-indicator {
@@ -226,6 +222,8 @@ body {
   border: 1px solid  rgba(66, 37, 11, 0.555);
   border-radius: 5px;
   cursor: pointer;
+  margin-right: 10px;
+  width: 30%;
 }
 
 
@@ -238,7 +236,7 @@ body {
 }
 .accordion-heading {
   padding: 5px;
-  margin: 0 0 20px 0;
+  margin: 5px 0 20px 5px;
 }
 .accordion-question {
   background-color: rgb(147, 113, 77);
@@ -246,7 +244,7 @@ body {
   position: relative;
   padding: 10px 15px 10px 10px;
   border-bottom: 2px solid rgba(54, 54, 54, 0.596);
-  margin: 0px 5px;
+  margin: 0px 10px;
 }
 
 .accordion-question::after {
@@ -259,7 +257,6 @@ body {
 }
 
 .question-clicked{
-  /* border-bottom: 2px solid rgb(202, 199, 199); */
   position: relative;
 
 }
@@ -277,7 +274,7 @@ body {
   overflow: hidden;
   transition: height 0.5s ease-out;
   background-color: rgba(255, 255, 255, 0.452);
-  margin: 0px 5px;
+  margin: 0px 10px;
 }
 
 .answer-text {
@@ -289,6 +286,7 @@ body {
 }
 
 /* Footer styling */
+
 .footer-general {
   margin:0;
   display: flex;
@@ -345,7 +343,14 @@ body {
   background:rgb(186, 153, 17);
   border-radius: 3px;
 }
-
+.copy-right {
+  background-color: rgb(27, 21, 14);
+  color: rgb(223, 219, 219);
+  font-size: 10px;
+  text-align: center;
+  margin: 0px;
+  padding: 5px;
+}
 
 /* Media Queries */
 @media (max-width: 370px) {
@@ -403,9 +408,6 @@ body {
     justify-content: center;
   }
 }
-/* 
-.active + .answer {
-  background-color: red;
-} */
+
 
 

@@ -41,26 +41,27 @@
 			<h1 class="form-heading">Enter competition</h3>
 				<form action="http://httpbin.org/anything" method="POST">
 					<div class="inner-form-wrapper">
+						<!-- Owner information: 2 text inputs, 1 email, 1 password -->
 						<h4 class="form-subheading">Owner Information</h4>
 						<div class="owner-information">
 							<div class="name-surname">
-								<input class="text-input" type="text" id="owner-name" name="owner_name" placeholder="Name">
-								<input class="text-input" type="text" id="owner-surname" name="owner_surname"
-									placeholder="Surname">
+								<input class="text-input" type="text" id="owner-name" name="owner_name" placeholder="Name" required>
+								<input class="text-input" type="text" id="owner-surname" name="owner_surname" placeholder="Surname"
+									required>
 							</div>
 							<div class="email-password">
-								<input class="text-input" type="email" id="owner-email" name="owner_email"
-									placeholder="Email">
+								<input class="text-input" type="email" id="owner-email" name="owner_email" placeholder="Email" required>
 								<input class="text-input" type="password" id="owner-password" name="owner_password"
-									placeholder="Password">
+									placeholder="Password" required>
 							</div>
 						</div>
+						<!-- Cat information: selector and  date-->
 						<h4 class="form-subheading">Cat Information</h4>
 						<div class="cat-information">
 							<div class="form-item">
 								<label class="label" for="breed-selector">Breed</label>
-								<select class="selector" name="breed_selector" id="breed-selector">
-									<option class="breed-option" value="abyssinian">Choose here</option>
+								<select class="selector" name="breed_selector" id="breed-selector" required>
+									<option selected disabled class="breed-option" value="abyssinian">Choose here</option>
 									<option class="breed-option" value="abyssinian">Abyssinian</option>
 									<option class="breed-option" value="bengal">Bengal</option>
 									<option class="breed-option" value="birman">Birman</option>
@@ -80,16 +81,16 @@
 							</div>
 							<div class="form-item">
 								<label class="label" for="birthDate">Birth date</label>
-								<input class="date" type="date" id="birthDate" max="2021-07-01" min="2013-12-31"
-									placeholder="yy-mm-dd">
+								<input class="date" type="date" id="birthDate" max="2021-07-01" min="2013-12-31" placeholder="yy-mm-dd" required>
 							</div>
 						</div>
+						<!-- Radio buttons -->
 						<fieldset class="fieldset-competition-classes">
 							<h4 class="form-subheading">Choose competition class</h4>
 							<div class="radio-container">
 								<div class="inner-radio-group">
 									<div class="inner-radio">
-										<input type="radio" name="competition-class" id="class1" value="kitten">
+										<input type="radio" name="competition-class" id="class1" value="kitten" required>
 										<label for="class1">Kitten</label>
 									</div>
 									<div class="inner-radio">
@@ -109,24 +110,25 @@
 								</div>
 							</div>
 						</fieldset>
-						<h4 class="form-subheading">Before you submit</h4>						
+						<!-- Checkboxes -->
+						<h4 class="form-subheading">Before you submit</h4>
 						<div class="checkbox-wrapper">
 							<div class="checkbox">
-								<input type="checkbox" name="agreeGDPR" id="GDPR-check">
+								<input type="checkbox" name="agreeGDPR" id="GDPR-check" required>
 								<label for="GDPR-check">I agree with Terms and Conditions </label>
 							</div>
 							<div class="checkbox">
-								<input type="checkbox" name="agreeNewsletter" id="newsletter-check">
+								<input type="checkbox" name="agreeNewsletter" id="newsletter-check" required>
 								<label for="newsletter-check">I want to receive ICA newsletter</label>
 							</div>
 						</div>
+						<!-- Submit button	 -->
 						<div class="submit-wrapper">
 							<button class="submit-button" type="submit">Submit </i></button>
 						</div>
 					</div>
 				</form>
 		</section>
-
 		<!-- Accordion -->
 		<section class="accordion-wrapper">
 			<h1 class="accordion-heading">Frequently asked questions</h1>
@@ -157,35 +159,38 @@
 			<div class="margin-fixer"></div>
 		</section>
 	</div>
-	<footer class="footer-general">
-		<div class="footer-column">
-			<img src="./logo_white.png" class="logo-footer" alt="Logo">
-			<div class="somedia-buttons">
-				<a href="" class="fa fa-facebook"></a>
-				<a href="" class="fa fa-twitter"></a>
-				<a href="" class="fa fa-linkedin"></a>
-				<a href="" class="fa fa-instagram"></a>
+	<!-- Footer -->
+	<footer>
+		<div class="footer-general">
+			<div class="footer-column">
+				<img src="./logo_white.png" class="logo-footer" alt="Logo">
+				<div class="somedia-buttons">
+					<a href="" class="fa fa-facebook"></a>
+					<a href="" class="fa fa-twitter"></a>
+					<a href="" class="fa fa-linkedin"></a>
+					<a href="" class="fa fa-instagram"></a>
+				</div>
+			</div>
+			<div class="footer-column">
+				<a class="footer-link" href="">
+					<img class="footer-image" src="./cat.jpg" alt="">
+					<h4 class="footer-headline">About Cat Show</h4>
+				</a>
+			</div>
+			<div class="footer-column">
+				<a class="footer-link" href="">
+					<img class="footer-image" src="./missy.jpg" alt="">
+					<h4 class="footer-headline">Our Judging Panel</h4>
+				</a>
+			</div>
+			<div class="footer-column">
+				<a class="footer-link" href="">
+					<img class="footer-image" src="./butch.jpg" alt="">
+					<h4 class="footer-headline">Venue and Hotel</h4>
+				</a>
 			</div>
 		</div>
-
-		<div class="footer-column">
-			<a class="footer-link" href="">
-				<img class="footer-image" src="./cat.jpg" alt="">
-				<h4 class="footer-headline">About Cat Show</h4>
-			</a>
-		</div>
-		<div class="footer-column">
-			<a class="footer-link" href="">
-				<img class="footer-image" src="./missy.jpg" alt="">
-				<h4 class="footer-headline">Our judging panel</h4>
-			</a>
-		</div>
-		<div class="footer-column">
-			<a class="footer-link" href="">
-				<img class="footer-image" src="./butch.jpg" alt="">
-				<h4 class="footer-headline">Venue and Hotel</h4>
-			</a>
-		</div>
+		<p class="copy-right"> 2021 CopyRight Ekaterina Klimenko. Project Business website for Technigo bootcamp</p>
 	</footer>
 	<script src="./script.js"></script>
 </body>
