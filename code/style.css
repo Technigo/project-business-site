@@ -173,22 +173,31 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
       cursor: pointer;
     }
   
-    .btn-form button:hover{
+    .btn-form button:hover {
       /***** styling ****/
       border: 2px solid rgba(255, 6, 102, 0.575);
       background-color: rgba(29, 26, 27, 0.575);
       color: white;
     }
 
-  /*.input-fields:focus:invalid { 
-    border: 2px solid white;
-    outline: none;
-    } */
+    /* Change autocomplete styles in WebKit */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      border: inherit;
+      border-bottom: 2px solid rgba(255, 6, 102, 0.575);
+      -webkit-text-fill-color: white;
+      transition: background-color 5000s ease-in-out 0s;
+    }
 
-   /* .input-fields:focus:valid {
-    border: 2px solid green;
-    outline: none;
-  } */
+
+
 
 
   /************** 3. Accordion **************/
@@ -198,7 +207,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      padding: 20px 0px;
+      padding: 20px;
       width: 100%;
      }
 
