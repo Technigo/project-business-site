@@ -1,161 +1,161 @@
-         /* the + sign is used to select the sibling that comes immediately next to the element you selected.
+																																                                     /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
- 
- .active+.answer {
-     /* some styling here */
- }
- 
- body {
-     margin: 0;
-     height: 100%;
-     box-sizing: border-box;
-     /*font-family?*/
- }
- 
- h1 {
-     /*font-size: ;
-    font-weight: ; */
- }
- /**mobil view first **/
- 
- .header {
-     position: relative;
-     verflow: hidden;
- }
- 
- .hero-image {
-     width: 100vw;
-     height: 100vw;
-     object-fit: cover;
- }
- 
- .hero-title {
-     position: absolute;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     color: white;
- }
- 
- .nav-container {
-     position: absolute;
-     display: flex;
-     top: 0;
-     right: 0%;
-     padding: 10px;
-     margin: 20px;
-     color: white;
-     /*need the words to seperat a bit, just don't know how*/
- }
- /*accordion*/
- 
- .header-join {
-     color: purple;
- }
- 
- .accordion {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     border: 3px solid pink;
-     border-radius: 7px;
-     margin-top: 50px;
- }
- /* Sign up form */
- 
- .from {
-     padding: 50px;
-     margin-bottom: 50px;
- }
- 
- input {
-     font-size: 20px;
-     margin-top: 10px;
- }
- 
- .accordion-header {}
- /* Hamburger 
- 
- .hamburger {
-     position: absolute;
-     display: flex;
-     justify-content: space-evenly;
-     width: 100vw;
-     height: 80vh;
-     object-fit: cover;
-     color: white;
+																																                         
+																																                         .active+.answer {
+																																                             /* some styling here */
+																																                         }
+																																                         
+																																                         body {
+																																                             margin: 0;
+																																                             height: 100%;
+																																                             box-sizing: border-box;
+																																                             /*font-family?*/
+																																                         }
+																																                         
+																																                         h1 {
+																																                             /*font-size: ;
+		font-weight: ; */
+																																                         }
+																																                         /**mobil view first **/
+																																                         
+																																                         .header {
+																																                             position: relative;
+																																                             verflow: hidden;
+																																                         }
+																																                         
+																																                         .hero-image {
+																																                             width: 100vw;
+																																                             height: 100vw;
+																																                             object-fit: cover;
+																																                         }
+																																                         
+																																                         .hero-title {
+																																                             position: absolute;
+																																                             top: 0;
+																																                             left: 0;
+																																                             bottom: 0;
+																																                             right: 0;
+																																                             display: flex;
+																																                             justify-content: center;
+																																                             align-items: center;
+																																                             color: white;
+																																                         }
+																																                         
+																																                         .nav-container {
+																																                             position: absolute;
+																																                             display: flex;
+																																                             top: 0;
+																																                             right: 0%;
+																																                             padding: 10px;
+																																                             margin: 20px;
+																																                             color: white;
+																																                         }
+																																                         /*need the words to seperat a bit, just don't know how*/
+																																                         /*accordion*/
+																																                         
+																																                         .header-join {
+																																                             color: purple;
+																																                         }
+																																                         
+																																                         .formparent {
+																																                             display: flex;
+																																                             justify-content: center;
+																																                             align-items: center;
+																																                             border: 3px solid pink;
+																																                             border-radius: 7px;
+																																                             margin-top: 50px;
+																																                         }
+																																                         /* Sign up form */
+																																                         
+																																                         .from {
+																																                             padding: 50px;
+																																                             margin-bottom: 50px;
+																																                         }
+																																                         
+																																                         input {
+																																                             font-size: 20px;
+																																                             margin-top: 10px;
+																																                         }
+																																                         
+																																                         .accordion-header {}
+																																                         /* Hamburger
+
+.hamburger {
+		 position: absolute;
+		 display: flex;
+		 justify-content: space-evenly;
+		 width: 100vw;
+		 height: 80vh;
+		 object-fit: cover;
+		 color: white;
  }
  */
- 
- label {
-     display: block;
-     margin-bottom: 20px;
- }
- /* THERI IS TWO ACCORDION IN THE HTML - THE ONE WISH  S CO CODING AND THE ONE WE CGOT WITH THE PROJECT
+																																                         
+																																                         label {
+																																                             display: block;
+																																                             margin-bottom: 20px;
+																																                         }
+																																                         /* THERI IS TWO ACCORDION IN THE HTML - THE ONE WISH  S CO CODING AND THE ONE WE CGOT WITH THE PROJECT
 SO CHANGES LATER ON */
- 
- .question {
-     font-weight: 500;
-     border-bottom: solid 1px #eaeaea;
-     padding: 15px 30px 15px;
-     cursor: pointer;
- }
- 
- .question:hover {
-     background-color: lightgray;
-     transition: all;
-     overflow: hidden;
- }
- 
- .answer {
-     display: none;
-     padding: 0 30px;
-     background-color: pink;
- }
- /*THE SOLID PING MADE THE BORDER BETWEEN HEAD AND TEXT WHEN CLICKING" */
- 
- .accordion-selected {
-     display: block;
- }
- 
- .footer {
-     padding: 50px;
-     margin-bottom: 50px;
- }
- 
- @media (min-width: 768px) {
-     
-     .hero-section h1 {
-         padding-bottom: 200px;
- }
-
- .fist-section h2 {
-     padding: 50px 50px;
- }
-
- .question {
-     paddiing: 30px 150px 30 px;
-     font-size: 17px;
- }
-
- .answer {
-     margin: 0px;
-     padding: 10px 150px 15px
- }
- }
-
-     @media (min-width: 992px) {
-         
-
-.accordion h2 {
-    padding-top: 90px;
-}
-
-.first-section h2 {
-    font-size: 20px
-}
+																																                         
+																																                         .accordionparent {
+																																                             display: flex;
+																																                             justify-content: center;
+																																                             align-items: center;
+																																                             border: 3px solid purple;
+																																                             border-radius: 7px;
+																																                             margin-top: 50px;
+																																                         }
+																																                         
+																																                         .question {
+																																                             font-weight: 500;
+																																                             border-bottom: solid 1px #eaeaea;
+																																                             padding: 15px 30px 15px;
+																																                             cursor: pointer;
+																																                         }
+																																                         
+																																                         .question:hover {
+																																                             background-color: lightgray;
+																																                             transition: all;
+																																                             overflow: hidden;
+																																                         }
+																																                         
+																																                         .answer {
+																																                             display: none;
+																																                             padding: 0 30px;
+																																                             background-color: pink;
+																																                         }
+																																                         /*THE SOLID PING MADE THE BORDER BETWEEN HEAD AND TEXT WHEN CLICKING" */
+																																                         
+																																                         .accordion-selected {
+																																                             display: block;
+																																                         }
+																																                         
+																																                         .footerparent {
+																																                             display: flex;
+																																                             padding: 50px;
+																																                             margin-bottom: 10px;
+																																                         }
+																																                         
+																																                         @media (min-width: 768px) {
+																																                             .hero-section h1 {
+																																                                 padding-bottom: 200px;
+																																                             }
+																																                             .fist-section h2 {
+																																                                 padding: 50px 50px;
+																																                             }
+																																                             .question {
+																																                                 padding: 30px 150px 30 px;
+																																                                 font-size: 17px;
+																																                                 .answer {
+																																                                     margin: 0px;
+																																                                     padding: 10px 150px 15px
+																																                                 }
+																																                             }
+																																                             @media (min-width: 992px) {
+																																                                 .accordion h2 {
+																																                                     padding-top: 90px;
+																																                                 }
+																																                                 .first-section h2 {
+																																                                     font-size: 20px ´
