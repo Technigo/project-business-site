@@ -3,7 +3,7 @@
 
 body {
   background-color:rgba(0, 0, 0, 0.856);
-  margin: 0;
+  margin: 0;   
 }
 /* The snowflakes */
 .snowflake-cyan {
@@ -34,6 +34,7 @@ body {
 /* Header/Hero */
 .landing-page-header{
   position: relative; 
+  margin: 0;    
 }
 .hero-title {
   position: absolute;
@@ -48,34 +49,32 @@ body {
   width: 100vw;
   height: 100vh;  
   object-fit: cover;
+  max-width: 100%;
 }
 
 /* Sign up form and Accordion */
-.site-content {   
-  border-radius: 16px;   
-  width: 100%;
+.site-content {    
   display: flex;   
-  flex-flow: column;  
-  margin: 30px 0 10px 0; 
+  flex-direction: column;  
+  width: 95%;  
 }
 
 /* Accordion */
 .accordion {   
   border: .5px solid rgba(128, 128, 128, 0.664);
   border-radius: 6px;
-  width: 90%; 
+  width: 85%; 
   padding: 20px;  
-  margin-top: 10px; 
-  position: relative;   
+  margin: 20px; 
+  position: relative;
   backdrop-filter: blur(10px); 
 }
 .accordion-title {
 text-decoration: underline;
 }
 
-.fraga {
-  display: flex;
-  backdrop-filter: blur(10px);
+.faq-item {
+  display: flex;  
   justify-content: space-between;
   margin-top: 10px;
   padding: 10px;
@@ -86,12 +85,14 @@ text-decoration: underline;
   font-weight: bold;
   font-size: 18px;
   width: 90%;
-  transition: background 1s ease;  
+  transition: background 1s ease; 
+  background-color: transparent; 
 }
 
-.fraga:hover {
-  background-color: rgb(110, 248, 234);  
+.faq-item:hover {
+  background-color: rgb(110, 248, 234);   
 }
+
 
 .accsvar {
   display: none;
@@ -110,9 +111,10 @@ text-decoration: underline;
   background-color: rgb(3,78,78);
   color: whitesmoke;
   font-family: 'Podkova', serif;
-  width: 90%; 
+  width: 85%; 
   border: 3px solid black;
   padding: 20px;  
+  margin: 20px;
   
 }
 
@@ -151,14 +153,18 @@ input[type="radio" i] {
   background-color: rgb(18, 150, 150);
   padding: 10px;
   border-radius: 5px;
-  font-weight: bold;  
+  font-weight: bold;
+  font-size: 20px;  
   width: auto;
   cursor: pointer;
+  font-family: 'Podkova', serif;
 }
 
 .send-btn:hover {
   background-color: rgb(44, 247, 247);
 }
+
+
 
 
 /* Responsive */
@@ -176,7 +182,7 @@ body {
 
 .site-content {
   flex-direction: row; 
-  justify-content: space-evenly;  
+  justify-content: space-evenly;    
 }
 
 .sign-up-form {
@@ -186,16 +192,20 @@ body {
 }
 
 .accordion {
-  width: 40%;
-  margin-top: 0; 
+  width: 40%;  
   box-shadow: 10px 10px 16px rgb(44, 247, 247); 
-  border-radius: 16px;    
+  border-radius: 16px;     
 }
 .hero-title {
   font-size: 40px;  
 }
-.snowflake-cyan,
-.snowflake-cyan2{
+
+.snowflake-cyan2 {
+  display: block;
+  left: 70%;
+}
+
+.snowflake-cyan {
   display: block;
 }
 
@@ -222,8 +232,9 @@ body {
   box-shadow: 10px 10px 16px rgb(44, 247, 247);
 }
 .accordion {
-  box-shadow: 10px 10px 16px rgb(44, 247, 247);  
+  width: 40%;
   border-radius: 16px;
+  box-shadow: 10px 10px 16px rgb(44, 247, 247);  
 }
 
 }
