@@ -25,25 +25,29 @@
 .logo {
 height: 30px;
 width: 30px;
-margin: 10px 15px;
+margin: 15px 0px 15px 25px;
 }
 
 .logo-name {
   color: #fff;
-  margin: 10px 15px;
+  margin: 15px 0px 15px 10px;
   font-size: 15px;
   font-weight: bold;
 }
 
-.nav-item {
-  margin: 10px 15px;
+.nav-item-links {
+  display: none;
+}
+
+.nav-item-signin {
+  margin: 15px 25px;
   text-decoration: none;
   color: white;
   font-size: 12px;
   font-weight: bold;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 25px;
-  padding: 10px 15px;
+  padding: 7px 25px;
   cursor: pointer;
 }
 
@@ -63,7 +67,9 @@ margin: 10px 15px;
 .hero-content {
   position: absolute;
   top: 0;
+  right: 0;
   bottom: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,7 +78,7 @@ margin: 10px 15px;
 }
 
 .hero-text {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: bold;
   color: #fff;
   margin-bottom: 10px;
@@ -302,6 +308,24 @@ margin: 10px 15px;
 /* Tablet */
 
 @media (min-width: 767px) {
+
+  .nav-item {
+    display: flex;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-item-links {
+    display: block;
+  margin: 15px 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 7px 5px;
+  cursor: pointer;
+  }
+
   .hero-content {
     right: 15%;
     left: 15%;
