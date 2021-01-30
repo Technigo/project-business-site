@@ -6,6 +6,7 @@ function toggle() {
 }
 
 
+
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
 document.getElementById("question-one").onclick = toggle
 document.getElementById('question-two').onclick = toggle
