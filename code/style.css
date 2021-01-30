@@ -583,13 +583,13 @@ p {
 }
 
 /*change backgroundcolor when accordion-section__display has active class */
-.active {
+.accordion-section__display--active {
   background-color: rgb(76, 63, 136);
 }
 
 /* when accordion-section__display is set to .active with js, the nearest sibling div will get these properties 
 (in this case accordion-section__expand) */
-.active+div {
+.accordion-section__display--active+div {
   height: 200px;
   border: solid white 0.5px;
   margin: 10px;
@@ -600,6 +600,12 @@ p {
 /* to add +sign before clicked button clicked */
 .accordion-section__display__button:before {
   content: "+";
+}
+
+/*change to - when accordion is expanded (.active class toggled on)*/
+.accordion-section__display.accordion-section__display--active 
+.accordion-section__display__button:before {
+  content: "-";
 }
 
 /* +/- button for accordion expand/collapse. Put the cursor to a pointer as it was an text-cursor*/
@@ -622,11 +628,6 @@ p {
 .accordion-section__display__button:active {
   transform: translateY(10%);
   box-shadow: 0px 0px 2px 1px rgb(24, 14, 37);
-}
-
-/*change to - when accordion is expanded (.active class toggled on)*/
-.accordion-section__display.active .accordion-section__display__button:before {
-  content: "-";
 }
 
 .accordion__image {
@@ -814,7 +815,7 @@ p {
     transition: height .5s;
   }
 
-  .mobile-active {
+  .nav-wrapper__menu--active {
     overflow-y: visible;
     height: 100vh;
   }
