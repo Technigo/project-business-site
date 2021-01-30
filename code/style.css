@@ -4,8 +4,29 @@ body {
   margin: 0;
   font-family: "Syne", sans-serif;
 }
-
 /* HEADER */
+.top-section-container {
+  display: none;
+  height: 90px;
+}
+
+.top-section-logo {
+  width: 70px;
+  height: 70px;
+  margin: 7px;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.nav-links {
+  margin: 20px;
+}
+.nav-links:link {
+  text-decoration: none;
+}
+
 .hero-container {
   position: relative;
 }
@@ -21,7 +42,7 @@ body {
   margin: 0;
   color: white;
   position: absolute;
-  top: 0;
+  top: 10vh;
   left: 0;
   bottom: 0;
   right: 0;
@@ -155,12 +176,23 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 /*Media queries*/
 
 @media (min-width: 768px) and (max-width: 992px) {
+  .top-section-container {
+    background-color: rgb(222, 228, 228);
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-links {
+    color: rgb(0, 93, 97);
+  }
+  .nav-links:hover {
+    color: white;
+  }
   .text-hero {
     font-size: 30px;
   }
   .content-container {
     flex-direction: row;
-    background-color: rgb(163, 174, 186);
+    background-color: rgb(222, 228, 228);
   }
   .form-container {
     background-image: linear-gradient(rgb(0, 20, 21), rgb(0, 93, 97));
@@ -198,6 +230,17 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 @media (min-width: 993px) {
+  .top-section-container {
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-links {
+    color: rgb(8, 8, 8);
+  }
+  .nav-links:hover {
+    color: white;
+  }
   .text-hero {
     font-size: 40px;
   }
