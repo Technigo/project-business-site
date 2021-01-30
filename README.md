@@ -10,7 +10,7 @@ The webpage is developed with the mobile-first approach. The structure of the pa
 
 The moste difficult part was to style and aligne the form and how to modify the DOM using Javascript.
 
-If I hade more time i would add a button (+,-) to the accordion that changes when its open/closed.
+If I had more time I would have trid out different functions with JS.
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
