@@ -109,6 +109,8 @@ label {
   margin: 0;
   border-top: 2px solid #739900;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 
@@ -120,11 +122,27 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
  height: 80px;
 }
 
+.active .plus {
+  display: none;
+}
+
+.active .minus {
+  display: block;
+}
+
 .answer {
   height: 0px;
   overflow:hidden;
   transition: height .3s ease;
   padding: 0 10px 0 10px;
+}
+
+.plus {
+  display:block;
+}
+
+.minus {
+  display: none;
 }
 
 /*Styling for tablet and small desktop*/
