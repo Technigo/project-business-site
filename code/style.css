@@ -51,8 +51,6 @@ nav {
 }
 nav a {
   margin: 40px 80px;
-}
-a {
   font-family: 'Londrina Solid', cursive;
   font-size: 2em;
   text-decoration: none;
@@ -101,9 +99,6 @@ form {
   flex-direction: column;
   align-items: center;
 }
-form * {
-  box-sizing: border-box;
-}
 label, .radio-label {
   font-size: 1.2em;
 }
@@ -125,6 +120,7 @@ input {
 }
 .radio-input {  
   margin: 10px;
+  position: relative;
 }
 .radio-container {
   display: grid;
@@ -150,10 +146,61 @@ input {
 }
 .button:hover {
   background-color: #668483;
+  box-shadow: 0px 0px 10px #eec29b;
 }
 .button:active {
 	position:relative;
 	top:1px;
+}
+
+/********** CUSTOM RADIO BUTTON & CHECKBOX **********/
+
+.newsletter {
+  position: relative;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: -3px;
+  height: 18px;
+  width: 18px;
+  background-color: #eec29b;
+  border-radius: 50%;
+  border: 2px solid #668483;
+}
+.newsletter input + .checkmark {
+  border-radius: 0;
+}
+input:checked ~ label .checkmark {
+  background-color: #eec29b;
+}
+input:hover ~ label .checkmark {
+  box-shadow: 0px 0px 8px #668483;
+}
+input:checked ~ .checkmark {
+  background-color: #eec29b;
+}
+input:hover ~ .checkmark {
+  box-shadow: 0px 0px 8px #668483;
+}
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 3px;
+  top: 3px;
+  width: 4px;
+  height: 4px;
+  background-color: #668483;
+  border: 4px solid #668483;
+  border-radius: 50%;
+}
+input:checked ~ label .checkmark::after {
+  display: block;
+}
+input:checked ~ .checkmark::after {
+  border-radius: 0;
+  display: block;
 }
 
 /********** ACCORDION **********/
@@ -175,7 +222,6 @@ h2 {
   padding: 10px;
   margin: 1px;
   background-color: #eec29b;
-  box-sizing: border-box;
   font-size: 1.2em;
 }
 .question:nth-of-type(2n+1) {
@@ -217,7 +263,7 @@ footer {
   align-items: center;
 }
 .social img {
-  height: 80px;
+  height: 70px;
   filter: grayscale(100%);
   margin: 20px;
 }
