@@ -3,28 +3,187 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Winecellar</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Stardos+Stencil&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/37c653cfef.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+
+    <!-- Header -->
+    <header class="header">
+
+      <picture>
+        <source srcset="./images/michael-oeser-PCxvRoNoi6w-unsplash.jpg" media="(max-width: 767px)" alt="wineglass" />
+        <source srcset="./images/mae-mu-rgEHTLwaI_8-unsplash.jpg" media="(max-width: 1199px)" alt="winebottle" />
+        <img class="image" src="./images/joost-crop-E5Ne2TfbTFw-unsplash.jpg" alt="Winebottle" />
+
+        <nav class="navigation-container">
+          <a id="about-us-button" class="navigation-links">about</a>
+          <a id="contact-us-button" class="navigation-links">contact</a>
+        </nav>
+        
+        <div class="title-container">
+          <h1 class="h1">winecellar</h1>
+          <h2 class="h2">book your private wine tasting experience</h2>
+          <div class="book-now-button" id="book-now">BOOK NOW</div>
+        </div>
+      </picture>
+
+    </header>
+
+    <!-- Sign up Form and Accordion -->
+
+    <div class="big-content-container" id="big-content">
 
     <!-- Signup form -->
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+      <section class="form-container">
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <h3 class="header-container">book wine tasting</h3>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <form class="form" action="https://httpbin.org/anything" method="post">
+          <div class="form-question">
+            <label for="name">name:</label>
+            <input type="text" id="name" class="input-text" name="name" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-question">
+            <label for="email">e-mail:</label>
+            <input type="email" id="email" class="input-text" name="email" placeholder="Your e-mail address goes here" required>
+          </div>
+
+          <div class="form-question">
+            <label for="number">phone number:</label>
+            <input type="tel" id="number" class="input-text" name="phone-number" placeholder="Your phone number goes here" required>
+          </div>
+
+          <div class="date-and-number">
+            <div class="form-question">
+              <label for="date">when do you want to book?</label>
+              <input type="date" id="date" name="date" min="2021-01-31" max="2022-01-31" required>
+            </div>
+
+            <div class="form-question">
+              <label for="people">how many?</label>
+              <select class="form-number-of-people" id="people" name="number-of-people" required>
+                <option selected>0</option>
+                <option value="one">One</option>
+                <option value="two">Two</option>
+                <option value="three">Three</option>
+                <option value="four">Four</option>
+                <option value="five">Five</option>
+                <option value="six">Six</option>
+                <option value="seven">Seven</option>
+                <option value="eight">Eight</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-question">what type of wine do you prefer?</div>
+          <div class="form-radio-buttons">
+            <input type="radio" id="red" name="preferred-wine" value="red-wine"required>
+            <label for="red">red wine</label>
+            <input type="radio" id="white" name="preferred-wine" value="white-wine" required>
+            <label for="white">white wine</label>
+            <input type="radio" id="both" name="preferred-wine" value="both-wines" required>
+            <label for="both">both</label>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I accept the <a href="#" class="terms-conditions-link">terms and conditions</a></label>
+          </div>
+    
+          <div class="form-submit-button">
+            <button type="submit" class="book-button">book</button>
+          </div>
+
+        </form>
+      </section>
+
+
+    <!-- Accordion -->
+    
+      <section class="accordion-container">
+
+        <h3 class="header-container" id="header">most common questions</h3>
+        <div class="accordion-question" id="accordion-question-one">What are the prices?<div class="accordion-icon" id="icon-one">+</div></div>
+        <div class="accordion-answer" id="accordion-answer-one">
+          <p class="accordion-content">It ranges from $40-60pp. depending on how many you are.</p>
+        </div>
+
+        <div class="accordion-question" id="accordion-question-two">Do you serve food with the wine?<div class="accordion-icon" id="icon-two">+</div></div>
+        <div class="accordion-answer" id="accordion-answer-two">
+          <p class="accordion-content">We will provide some small appetizers that fits with the wines, but no big meals.</p>
+        </div>
+
+        <div class="accordion-question" id="accordion-question-three">How long are the sessions?<div class="accordion-icon" id="icon-three">+</div></div>
+        <div class="accordion-answer" id="accordion-answer-three">
+          <p class="accordion-content">The reserved time is three hours.</p>
+        </div>
+
+        <div class="accordion-question" id="accordion-question-four">How many people can we be in one session?<div class="accordion-icon" id="icon-four">+</div></div>
+        <div class="accordion-answer" id="accordion-answer-four">
+          <p class="accordion-content">You can book for eight people. If you want to book for a larger company, please contact us by email.</p>
+        </div>
+
+        <div class="accordion-question" id="accordion-question-five">How many wines will we taste?<div class="accordion-icon" id="icon-five">+</div></div>
+        <div class="accordion-answer" id="accordion-answer-five">
+          <p class="accordion-content">It's usually around 8-10 different wines.</p>
+        </div>
+
+        <div class="accordion-question" id="accordion-question-six">Can we purchase bottles that we try?<div class="accordion-icon" id="icon-six">+</div></div>
+        <div class="accordion-answer" id="accordion-answer-six">
+          <p class="accordion-content">Yes, you will be able to purchase them.</p>
+        </div>
+
     </section>
-    <!-- dont forget to link the javascript file here! -->
+  </div>
+
+  <!--About us and Contact us containers -->
+
+    <div class="about-contact-big-container">
+
+      <div class="about-us-container" id="about-us">
+        <h3 class="header-container">about us</h3>
+        <p class="about-us-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quae excepturi inventore error, aperiam quas in odio maiores nobis recusandae reiciendis consequuntur, suscipit id exercitationem quasi ipsum non delectus! Cupiditate. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae consectetur, incidunt fuga atque maiores provident iure quam corrupti, harum nostrum consequatur cupiditate laborum vitae eum, illo fugit similique commodi! Commodi!</p>
+      </div>
+
+      <div class="contact-us-container" id="contact">
+        <h3 class="header-container">contact us</h3>
+        <div class="contact-info"><i class="fa fa-phone"></i>
+          <p class="contact-info-text">000 - 000 000</p>
+        </div>
+        <div class="contact-info"><i class="fa fa-envelope"></i>
+          <p class="contact-info-text">contact@winecellar.com</i></p>
+        </div>
+        <div class="wine-glasses">
+          <i class="fas fa-wine-glass-alt wine-glass-one"></i>
+          <i class="fas fa-wine-glass-alt wine-glass-two"></i>
+        </div>
+      </div>
+    
+    </div>
+
+    
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <p class="footer-text">© winecellar.com</p>
+
+      <div class="social-media">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-pinterest"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+
+    </footer>
+
+
+    <script src="./script.js"></script>
   </body>
 </html>
