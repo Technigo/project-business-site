@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Circular Bold';
-  src: url(./assets/circularstd-bold.otf)
+  font-family: "Circular Bold";
+  src: url(./assets/circularstd-bold.otf);
 }
 
 body {
   background-color: #fafafa;
   margin: 0;
-  font-family: 'Circular Bold';
+  font-family: "Circular Bold";
   width: 100%;
 }
 
@@ -82,7 +82,7 @@ body {
 input,
 select {
   padding: 7px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 input,
@@ -116,7 +116,7 @@ input:focus {
   user-select: none;
 }
 
-.radio-container input{
+.radio-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -225,7 +225,7 @@ input:focus {
   border: none;
 }
 
-.submit-button:hover{
+.submit-button:hover {
   background-color: white;
   color: black;
   border: 1px solid black;
@@ -257,24 +257,20 @@ input:focus {
   cursor: pointer;
 }
 
-.fa-chevron-up, 
-.fa-chevron-down {
-  margin-right: 10px;
-}
-
-.fa-chevron-down {
-  display: none;
+.rotate {
+  transform: rotate(180deg);
 }
 
 .answer {
   margin: 0;
   border-top: 1px dotted grey;
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   height: 0px;
+  padding-left: 10px;
   opacity: 0;
   overflow: hidden;
-  transition: all 1s linear;
+  transition: all 1s ease-in;
   -webkit-transition: all 0.5s ease-in;
   -moz-transition: all 1s ease-in;
   -ms-transition: all 1s ease-in;
@@ -294,7 +290,7 @@ input:focus {
 .footer {
   background-color: black;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   display: flex;
   flex-direction: column;
@@ -320,13 +316,13 @@ input:focus {
 .footer-text {
   margin: 10%;
 }
- 
+
 .bold-text {
-  font-family: 'Circular Bold';
+  font-family: "Circular Bold";
   font-size: 18px;
 }
 
-.footer-text a{
+.footer-text a {
   text-decoration: none;
   color: inherit;
   font-size: 14px;
@@ -344,39 +340,37 @@ input:focus {
   font-size: 10px;
 }
 
-  /* RESPONSIVE TABLET */
+/* RESPONSIVE TABLET */
 
-  @media (min-width:667px) and (max-width: 1024px) {
-    .logo {
-      width: 150px;
-    }
-  
-    .menu {
-      font-size: 13px;
-    }
-  
-    .hero-title {
-      font-size: 45px;
-    }
-
-    .form {
-      width: 500px;
-      margin: auto;
-    }
-
-    .accordion-container {
-      width: 500px;
-      margin: auto;
-      }
-
-      .footer {
-        margin-top: 50px;
-        }  
-
+@media (min-width: 667px) and (max-width: 1024px) {
+  .logo {
+    width: 150px;
   }
 
+  .menu {
+    font-size: 13px;
+  }
 
-  /* RESPONSIVE DESKTOP */
+  .hero-title {
+    font-size: 45px;
+  }
+
+  .form {
+    width: 500px;
+    margin: auto;
+  }
+
+  .accordion-container {
+    width: 500px;
+    margin: auto;
+  }
+
+  .footer {
+    margin-top: 50px;
+  }
+}
+
+/* RESPONSIVE DESKTOP */
 
 @media (min-width: 1025px) {
   .logo {
@@ -390,7 +384,7 @@ input:focus {
   .hero-title {
     font-size: 55px;
   }
-  
+
   .main-container {
     flex-direction: row;
     flex-flow: row wrap;
@@ -398,29 +392,29 @@ input:focus {
   }
 
   .form {
-  width: 400px;
-  margin: 0;
+    width: 400px;
+    margin: 0;
   }
 
   input,
   select {
-  width: 400px;
+    width: 400px;
   }
 
   .accordion-container {
-  width: 400px;
-  margin: 0;
+    width: 400px;
+    margin: 0;
   }
 
-.footer {
-  padding: 80px 100px 50px;
-  font-size: 16px;
-  margin-top: 50px;
+  .footer {
+    padding: 80px 100px 50px;
+    font-size: 16px;
+    margin-top: 50px;
   }
 
-.footer-container {
-  flex-direction: row;
-  justify-content: space-between;
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .logo-container {
@@ -432,5 +426,4 @@ input:focus {
     margin: 0;
     width: 50%;
   }
-
 }
