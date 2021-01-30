@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -17,12 +22,16 @@
     <h1 class="hero-text">Volunteer at an Animal Shelter Near You</h1>    
     </header>
 
-    <section class="form container">
-      <h1>Signup</h1>
+    <section class="container">
+      <div class="container-title">
+        <h1>Join Us and Help Homeless Dogs</h1>
+        <p>Sign up here</p>
+      </div>
       <form class="form" action="https://httpbin.org/anything" method="POST">
        
         <!--Form1 Contact Details-->
-        
+        <section class="form-group">
+        <h4>Contact Details</h4>
         <section class="input-wrapper">
           <label for="firstName">First Name</label>
           <input name="firstName" id="firstName" type="text" required></input>  
@@ -35,55 +44,62 @@
           <label for="email">E-mail address</label>
           <input name="email" id="email" type="email" required></input>  
         </section>
+      </section>
       
-        <!--Form2 Experience (radiobutton)-->
-        <section class="radio-group">
+        <!-- Experience (radiobutton)-->
 
-          <section class="input-wrapper">
-            <label for="experience1">No previous experience</label>
+        <section class="form-group">
+        <h4>Experience with dogs</h4>
+
+          <section class="input-wrapper-checkbox">
             <input name="experience-level" value="no-experience" id="experience1" type="radio" required></input>  
+            <label for="experience1">Little or no experience</label>
           </section>
 
-          <section class="input-wrapper">
-            <label for="experience2">Some experience</label>
+          <section class="input-wrapper-checkbox">
             <input name="experience-level" value="some-experience" id="experience2" type="radio" required></input>  
+            <label for="experience2">Some experience</label>
           </section>
 
-          <section class="input-wrapper">
-            <label for="experience3">Lot of experience</label>
+          <section class="input-wrapper-checkbox">
             <input name="experience-level" value="lot-of-experience" id="experience3" type="radio" required></input>  
+            <label for="experience3">Lot of experience</label>
           </section>
         </section>
 
-        <!--Form3 Availability (checkboxes)-->
+        <!-- Availability (checkboxes)-->
 
-        <section class="checkbox-group">
+        <section class="form-group">
+        <h4>What times are you able to volunteer?</h4>
 
-          <section class="input-wrapper">
-            <label for="availability1">Mornings</label>
+          <section class="input-wrapper-checkbox">
             <input name="availability" value="morning" id="availability1" type="checkbox"></input>  
+            <label for="availability1">Mornings</label>
           </section>
 
-          <section class="input-wrapper">
-            <label for="availability2">Afternoons</label>
+          <section class="input-wrapper-checkbox">
             <input name="availability" value="afternoon" id="availability2" type="checkbox"></input>  
+            <label for="availability2">Afternoons</label>
           </section>
 
-          <section class="input-wrapper">
-            <label for="availability3">Evenings</label>
+          <section class="input-wrapper-checkbox">
             <input name="availability" value="evening" id="availability3" type="checkbox"></input>  
+            <label for="availability3">Evenings</label>
           </section>
         </section>
 
         <!--Free text-->
+        <section class="form-group">
           <section class="input-wrapper">
-            <label for="motivation">Why do you want to become a volunteer?</label>
+            <label for="motivation" class="free-text-label">Why do you want to become a volunteer?</label>
             <textarea name="more-info" id="motivation" cols="40" rows="8" placeholder="Give us a short description about yourself and why you want to volunteer."></textarea>  
           </section>
+        </section>
 
     
         <!--Register with password-->
-
+        <section class="form-group">
+        <h4>Create an account</h4>
         <section class="input-wrapper">
           <label for="userName">Username</label>
           <input name="userName" id="userName" type="text" required></input>  
@@ -93,27 +109,32 @@
           <label for="password">Password</label>
           <input name="password" id="password" type="password" required></input>  
         </section>
-
+        </section>
         <!--Terms and conditions-->
 
-        <section class="input-wrapper">
+        <section class="form-group">
+        <section class="input-wrapper-checkbox">
           <label for="age">I am over 18 years</label>
           <input name="Over-18" value="yes" id="age" type="checkbox" required></input>  
         </section>
 
-        <section class="input-wrapper">
+        <section class="input-wrapper-checkbox">
           <label for="terms">I accept the terms and conditions</label>
           <input name="terms-and-confitions" value="accept" id="terms" type="checkbox" required></input>  
         </section>
+        </section>
 
-        
-        <input type="submit" value="Submit"></input>
+        <!--Button-->
+
+        <input class="button" type="submit" value="Submit"></input>
       </form>
     </section>
 
     
-    <section class="accordion container">
-      <h1>FAQ</h1>
+    <section class="container">
+      <div class="container-title">
+        <h1>FAQ</h1>
+      </div>
 
         <div class="accordion-wrapper">
         <div class="accordion-question" id="question1">Who can help?</div>
@@ -138,7 +159,7 @@
 
     </section>
 
-    <section class="footer container">
+    <section class="footer"> BLABLABLA
     </section>
 
     <script src="./script.js"></script>
