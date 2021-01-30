@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
     <link rel="stylesheet" href="/code/style.css">
-    
-    <!-- dont forget to add a css file and link it here! -->
   </head>
+
   <body>
 
-    <!-- 1. SIGNUP FORM -->
+    <!-- 1. HERO IMAGE -->
     <header class="hero-img">
       <picture>
         <source srcset="\code\images\hero_img_mobile3.jpg" media="(max-width: 776px)"/>
@@ -23,34 +22,41 @@
       </div>        
     </header>
 
-       <!-- 2. SIGNUP FORM -->
+    <!-- 2. SIGNUP FORM -->
     <div class="container">
-    <form class="form-container" action="https://httpbin.org/anything" method="POST" autocomplete="on"> <!--autocomplete when writing the form-->
-      <div class="input-container">
-        <ul>
-          <li>
-            <h2>Contact Us:</h2>
-          </li>
-          <li>
-            <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname" required>
-          </li>
-          <li>
-            <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname" required>
-          </li>
-          <li>
-            <label for="mail">E-mail:</label>
-            <input type="email" name="mail" id="mail" placeholder="hello@example.com" required>
-          </li>
-          <li>
-            <label for="phone">Phone number:</label>
-            <input type="tel" name="phone" id="phone" placeholder="+46" maxlength="12" required>
-          </li>
-          <li class="btn-form">
-            <button type="submit">Submit</button>
-          </li>
-        </ul>
+
+    <form class="form-wrapper" action="https://httpbin.org/anything" method="POST" > <!--autocomplete when writing the form-->
+      <div class="contact-form">
+        <div class="input-fields">
+          <ul>
+            <li>
+              <h2>Contact Us:</h2>
+            </li>
+            <li>
+              <label for="fname">First name:</label>
+              <input class="input-box" type="text" id="fname" name="fname" required>
+            </li>
+            <li>
+              <label for="lname">Last name:</label>
+              <input class="input-box" type="text" id="lname" name="lname" required>
+            </li>
+            <li>
+              <label for="mail">E-mail:</label>
+              <input class="input-box" type="email" name="mail" id="mail" placeholder="hello@example.com" required>
+            </li>
+            <li>
+              <label for="phone">Phone number:</label>
+              <input class="input-box" type="tel" name="phone" id="phone" placeholder="+46" maxlength="12" required>
+            </li>
+            <li class="input-news">
+              <label class="news-text" for="newsletter">Signup for newsletter!</label>
+              <input class="news-checkbox" type="checkbox" name="newsletter" id="newsletter"> 
+            </li>
+            <li class="btn-form">
+              <button type="submit">Submit</button>
+            </li>
+          </ul>
+        </div>
       </div>
     </form>
 
@@ -76,6 +82,12 @@
         <div class="answer">
           <p>The concern about music notes is that it will be too confusing. Learing to read notes is actually quite simple and is something a well rounded musican should be able to do. We give alot of exercises to students to learn the basic understanding of how ro read drum music. You will enjoy it!</p>
         </div>
+
+        <div class="question" id="section4"> Will weightlifting affect my drumming?</div>
+        <div class="answer">
+          <p>Weightlifting makes the muscles constrict and they need time to rebuild and relax. Being too tight can hamper your freedom of movement on the drums. Stretch after a work out and don't lift too heavily the day of a performance. </p>
+        </div>
+
       </section>
   </div>
 </div>

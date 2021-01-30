@@ -10,16 +10,17 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 *, *::before, *::after {
     box-sizing: border-box;
-    /*border: 2px solid rgb(230, 59, 87); */
+    outline: none; /*remove the outline when click on the form input boxes */
   }
 
   body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #222324;
+    background-color: #131212;
     color: rgba(245, 245, 245, 0.863);
     width: 100%;
+    font-size: 12px;
   }
  
 
@@ -31,10 +32,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     margin: 20px 0;
   }
   
-  /************** 1. HERO SECTION ******************************/
+  /************** 1. HERO SECTION **************/
     .hero-img{
       position: relative; /* PARANT NEEDS TO BE RELATIVE */
-      background-color: #222324;
+      background-color: #131212;
   }
   
   .hero-img img {
@@ -58,15 +59,14 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
       align-items: center;
       text-align: center;
       padding: 0 5px;
-      border: 2px solid pink;
       /***** styling ****/
-      color: white;
+      color: rgba(255, 255, 255, 0.904);
       font-family:'Rubik', sans-serif;
   }
 
   .hero-text h1 {
     /***** styling ****/
-    font-size: 34px;
+    font-size: 2rem;
     font-weight: 900;
     white-space: nowrap;
     padding: 10px;
@@ -74,94 +74,124 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   }
 
   .hero-text h2 {
-    font-size: 22px;
+    font-size: 1.2rem;
     margin: 0;
   }
 
-  /************** 2. SIGN UP FORM ******************************/
+  /************** 2. SIGN UP FORM **************/
 
-  .form-container {
+  .form-wrapper {
     width: 100vw;
-    padding: 20px 0;
+    padding: 20px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center; /* i tablet sida och desktop sida */
-    /***** styling ****/
-    background-color: #222324;
+    background-color: #131212;
   }
 
-  .input-container {
+  .contact-form {
+    width: 80vw;
+    margin: 0px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 40px;
+    /*flex-direction: column; */
+    /* align-items: center; */
+    padding: 5px 20px;
     /***** styling ****/
-    background-color: #1c1c1d;
-    border: 2px solid #C179B9;
-    border-radius: 10px;
+    background-color: rgba(29, 26, 27, 0.575);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(255, 6, 110, 0.445);
     font-size: 14px;
     color: rgba(255, 255, 255, 0.774);
   }
 
-  .input-container h2 {
-    font-weight: 900;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #C179B9 ;
+  .input-fields { /* behållaren för allt i formuläret */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
   }
 
-  input { /* Text rutor */
-    width: 200px; /*text rutor 200px breda */
-    display: block; /* rutor column ned */
-    padding: 6px;
-    margin: 6px 0;
-    /***** styling ****/
-    border: 2px solid #C179B9;
-    border-radius: 10px;
-    box-shadow: rgb(209, 159, 152);
-    background-color: white;
-    outline: none;
-  }
-
-  .input-container ul { /* No bullets list */
+  .input-fields ul { /* No bullets list */
     list-style-type: none;
     padding: 0;
   }
 
-  input:focus:invalid {
-    border: 2px solid red;
-    outline: none;
+  .input-fields li {
+    margin-bottom: 10px;
+  }
+
+  .input-fields, .input-box {
+    width: 100%;
+    margin: 10px;
+    padding: 5px;
+    background: transparent;
+    border: 0; /* så det bara blir en under linje */
+    border-bottom: 2px solid rgba(255, 6, 102, 0.575);
+    color: rgba(255, 255, 255, 0.774);
+  }
+
+  .input-news {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .input-news, .news-checkbox {
+    margin-right: 10px;
+  }
+
+  .input-news, .news-text{
+    font-size: 10px;
+  }
+
+  ::-webkit-input-placeholder { /* chrome moz mozilla ms internet explorer*/
+    color: rgba(224, 221, 221, 0.781);
     }
 
-  input:focus:valid {
+  
+    .input-fields, .btn-form {
+      border: none; /* no border under button */
+    }
+
+    .btn-form {
+      display: flex;
+      justify-content: center; /* button in the middle */
+    }
+
+    .btn-form button { /* Själva knappen */
+      padding: 6px 20px;
+      margin-top: 10px;
+      text-align: center;
+      /***** styling ****/
+      background-color:rgba(255, 6, 102, 0.575);
+      border: 2px solid rgba(255, 6, 102, 0.575);
+      box-shadow: 0 0 5px 5px rgba(255, 6, 110, 0.445);
+      border-radius: 10px;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      transition: ease-in-out 0.7s;
+      cursor: pointer;
+    }
+  
+    .btn-form button:hover{
+      /***** styling ****/
+      border: 2px solid rgba(255, 6, 102, 0.575);
+      background-color: rgba(29, 26, 27, 0.575);
+      color: white;
+    }
+
+  /*.input-fields:focus:invalid { 
+    border: 2px solid white;
+    outline: none;
+    } */
+
+   /* .input-fields:focus:valid {
     border: 2px solid green;
     outline: none;
-  }
+  } */
 
 
-
-  
-
-   .btn-form button { /* Själva knappen */
-    padding: 2px 12px;
-    margin-top: 10px;
-    /***** styling ****/
-    background-color: #C179B9;
-    border: 2px solid #C179B9;
-    border-radius: 10px;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    transition: ease-in-out 0.7s;
-  }
-
-  .btn-form button:hover{
-    /***** styling ****/
-    border: 2px solid #C179B9;
-    background-color: white;
-    color: #C179B9;
-  }
-
-    /************** 3. Accordion ******************************/
+  /************** 3. Accordion **************/
 
     .accordion-container { /* Centering accordion */
       display: flex;
@@ -169,14 +199,12 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
       align-items: center;
       justify-content: center;
       padding: 20px 0px;
+      width: 100%;
      }
 
      .accordion {
-      width: 100vw;
-      max-width: 300px;
-      margin: 0 auto;
-      margin-bottom: 20px;
-      padding: 0 15px;
+      width: 80%;
+      padding: 10px 20px;
       /***** styling ****/
       background: #1c1c1d;
       border-radius: 6px;
@@ -217,54 +245,76 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
       display: block;
     }
 
+
+    /************** Media Queries **************/ 
+
     @media (min-width: 768px){
 
       .container {
         flex-direction: row;
         justify-content: center;
         margin: 20px px;
-
+        width: 100%;
       }
 
-      /************** 2. SIGN UP FORM ******************************/
-      .form-container{
+      /************** 1. Hero Image **************/
+      .hero-text h1 {
+          font-size: 4rem;
+      }
+
+      .hero-text h2 {
+        font-size: 2.5rem;
+      }
+   
+
+      /************** 2. Sign up form **************/
+      .form-wrapper{
+        width: 45vw;
+      }
+
+      .contact-form {
         width: 40vw;
       }
 
-      .input-container {
-        width: 35vw;
-      }
-
-      /************** 3. Accordion ******************************/
+      /************** 3. Accordion **************/
       .accordion-container {
-        width: 40vw;
+        width: 45vw;
         align-items: flex-start; /*make the accordion positioned further up */
       }
 
     }
 
     @media (min-width: 990px) {
+
+      .container {
+        width: 100%;
+      }
+
+      .hero-img {
+        width: 100vw;
+      }
       
+      .hero-text h1 {
+        font-size: 60px;
+      }
 
       /************** 2. SIGN UP FORM ******************************/
 
-      .form-container {
-        width:45vw;
+      .form-wrapper {
+        width:40vw;
       }
 
-      .input-container{
-        width: 40vw;
-      }
-
-      input{
-        width:400px;
+      .contact-form {
+        width: 35vw;
       }
 
       .accordion-container {
-        width: 45vw;
+        width: 40vw;
       }
 
-
+      .accordion {
+        width: 35vw;
+      }
     }
      
 
