@@ -6,6 +6,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 body {
   margin:0px;
+  background-image: url('garden.jpg');
+  object-fit: cover;
+  background-attachment: fixed;
 }
 
 .hero-header {
@@ -16,28 +19,54 @@ body {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+  border-bottom: solid;
 }
 
-.hero-title {
-  font-size: 150px;
+.tenko {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(255, 255, 0, 0.5);
   transform: rotate(90deg);
-  color: rgb(100, 236, 45);
-  position:absolute;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: black;
+
 }
 
 /* Accordion section */
 
-.accordion {
-  border: 3px solid rgb(83, 58, 25);
-  margin: 8px;
+.faq-section {
+  margin:auto;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  border: solid;
+  padding: 5px 5px 10px 5px;
+  border-radius: 3%;
+  max-width: 380px;
+}
+
+.faq-topic {
+  font-size: 30px;
+  text-align: center;
+  background-color:rgba(255, 255, 0, 0.5);
+}
+
+h2 {
+  font-size: 18px;
   padding: 10px;
+}
+
+.accordion {
+  border: 3px solid;
+  margin: 15px;
+  padding: 20px;
+  text-align: center;
+  background: rgb(252, 214, 221);
 }
 
 
@@ -45,34 +74,89 @@ body {
   display: none;
 }
 
-.content-selected{
+.content-selected {
   display: block;
 }
 
-
-
 /* Form Section */
 
-
-h1 {
-  text-align: center;
-  padding: 10px;
-}
 .form-container {
-  margin-top: 30px;
-  padding: 4px 2px 30px 2px;
+  padding: 4px 2px 4px 2px;
+  background-color: rgba(17, 155, 29, 0.5);
   display:flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
+  margin-bottom:20px;
 
+}
+
+.form-topic {
+  text-align: center;
+  padding: 0px 25px 5px 25px;
+  font-size: 25px;
+  margin-top: 50px;
+  max-width: 380px;
+}
+
+.terms {
+  display:flex;
+  align-items: center;  
+}
+
+.radio-button {
+display: block;
+margin: 20px 0px;
 }
 
 
 @media (min-width: 667px) {
-  .hero-title {
+  .tenko {
     transform:rotate(0)
   }
-}
+
+  
+  .both {
+    display: flex;
+    justify-content: space-around;
+  } 
+
+  .form-container {
+    border:solid;
+    padding: 20px;
+    margin: 200px 30px 200px 30px;
+    background-color: rgb(252, 214, 221);
+    max-width: 400px;
+    
+  }
+
+  .form-topic {
+    text-align:left;
+    margin-top: 0px;
+    padding: 5px 5px 5px 5px;
+    font-size: 20px;
+  }
+
+  .faq-section {
+   margin: 40px 0px 40px 30px;
+    
+  }
+
+} 
+
+ @media (min-width: 1025) {
+  
+ .faq-section{
+  display: flex;
+ }
+ 
+ }
+
+
+
+
+
+
 
 
 
