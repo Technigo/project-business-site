@@ -12,4 +12,4 @@ If I hade more time I would make a sign up form that extends up from the sign up
 I would also make a dropdown menu in the mobile version where you can click on a FAQ link and have a FAQ accordion in that version too.
 
 ## View it live
-https://nostalgic-volhard-411b54.netlify.app/
+https://serene-montalcini-00490f.netlify.app/
