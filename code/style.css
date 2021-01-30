@@ -252,24 +252,7 @@ body {
   position: relative;
 }
 
-.answer {
-  overflow: hidden;
-  height: 0;
-  transition: 0.5s ease-in-out;
-}
-
-.answer-selected {
-  height: 80px;
-  padding-bottom: 10px;
-  background-color: #f4edfa;
-  padding: 0 8px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  display:flex;
-  align-items: center;
-}
-
-/** Accordion "+" and "-" icons **/
+/** Accordion answer and "+"/"-" icons **/
 /** not active **/
 .accordion .question .question-plus {
   display:inline-block;
@@ -285,6 +268,13 @@ body {
 
 .accordion .question .question-minus {
   display:none;
+}
+
+
+.answer {
+  overflow: hidden;
+  height: 0;
+  transition: 0.5s ease-in-out;
 }
 
 /** active **/
@@ -303,6 +293,18 @@ body {
   margin-right: 5%;
 }
 
+.active + .answer{
+  height: 80px;
+  padding-bottom: 10px;
+  background-color: #f4edfa;
+  padding: 0 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display:flex;
+  align-items: center;
+}
+
+
 /** Footer **/
 .footer {
   padding: 20px 0 15px 0;
@@ -312,20 +314,10 @@ body {
   margin-top: 150px;
   background-color: #7c4957;
   color: white;
-  font-family: 'Work Sans', sans-serif;
-  
+  font-family: 'Work Sans', sans-serif; 
 }
 
-
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-/**.active + .answer {
-  /* some styling here */
-
-  /** Media queries **/
+/** Media queries **/
 
 @media (max-width: 1023px){
 
