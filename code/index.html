@@ -4,125 +4,131 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
+
+    <script src="https://kit.fontawesome.com/4bfe1de3df.js" crossorigin="anonymous"></script>
+
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
     <title>Bakery online</title>
   </head>
   <body>
 
-    <!--HERO IMAGE-->
+    <!--HEADER-->
     <header>
       <picture>
         <source srcset="./assets/mobile.jpeg" media="(max-width: 768px)" />
         <source srcset="./assets/tablet.jpeg" media="(max-width: 900px)" />
-        <img class="hero-image" src="./assets/desktop.jpeg" alt="cupcakes" />
+        <img class="header__img" src="./assets/desktop.jpeg" alt="cupcakes" />
       </picture>
-      <div class="hero-text">
-        <h1 class="hero-header">
+      <div class="header__title">
+        <h1 class="header__content">
           Sweet & Pretty baking online
         </h1>
-        <a class="button" href="#sign-up">
+        <a class="header__button" href="#sign-up">
           Sign up
         </a>
       </div>
     </header>
 
-    <!-- Signup form -->
-    <section class="contact-container">
-      <div class="contact-box">
-        <div class="box-left">        
-        </div>
-        <div class="box-right">
-          <h1 class="form-header"><a name="sign-up">Sign up</a></h1>
+    <!-- SIGN UP FORM -->
+    <section class="form">
+      <div class="form__box">
+        <div class="form__box-left"></div>
+        <div class="form__box-right">
+          <a class="form__title" name="sign-up">
+              Sign up
+          </a>
           <form action="https://httpbin.org/anything" method="POST"> 
             <label>
               Name
-              <input class="input-field" type="text" name="fname" required>
+              <input class="form__input" type="text" name="fname" required>
             </label>
             <label>
               Last name
-              <input class="input-field" type="text" name="lname" required>
+              <input class="form__input" type="text" name="lname" required>
             </label>
             <label>
               Email
-              <input class="input-field" type="email" name="email" required>
+              <input class="form__input" type="email" name="email" required>
             </label>
             <label>
               Phone number
-              <input class="input-field" type="number" name="phone" required>
+              <input class="form__input" type="number" name="phone" required>
             </label>
             <label>
               Let us know if you have any allergies
-              <textarea class="input-field" rows="4" cols="50" name="allergies">
+              <textarea class="form__textarea" rows="4" cols="50" name="allergies">
               </textarea>
             </label>
-
-            <div class="checkbox">
+  
+            <div class="form__selectors">
               <label>
-                <input type="radio" name="gender" value="male" required>
+                <input class="form__radio-button" type="radio" name="gender" value="male" required>
                 Male
               </label>
               <label>
-                <input type="radio" name="gender" value="female">
+                <input class="form__radio-button" type="radio" name="gender" value="female">
                 Female
               </label>
               <label>
-                <input type="radio" name="gender" value="other">
+                <input class="form__radio-button" type="radio" name="gender" value="other">
                 Other
               </label>
-              <label class="last-checkbox"> 
+  
+              <label class="form__checkbox"> 
                 <input type="checkbox" name="checkbox" value="check" required>
                 I agree to the Privacy Policy
               </label>
             </div> 
-            <div class="form-button">
-              <button class="button" type="submit">Submit</button> 
-            </div>
+              <button class="form__button" type="submit">
+                Submit
+              </button> 
           </form>
         </div>
       </div>
     </section>
   
-     <!-- Accordion -->
-    <section class="accordion-container">
-      <div class="accordion">
-        <h1 class="accordion-header">FAQ</h1>
-        <div class="accordion-item">
-           <div class="question">
+     <!-- ACCORDION -->
+    <section class="accordion">
+      <div class="accordion__container">
+        <h1 class="accordion__header">FAQ</h1>
+        <div class="accordion__item">
+           <div class="accordion__title">
               How much does it cost? 
            </div>
-           <div class="answer">
-             <div class="answer-content">
+           <div class="accordion__content">
+             <div class="accordion__content-answer">
                It cost 499 SEK for five classes.
              </div>
            </div>
         </div>
-        <div class="accordion-item">
-           <div class="question">
+        <div class="accordion__item">
+           <div class="accordion__title">
               Can I join the class if I am vegan?  
            </div>
-           <div class="answer">
-             <div class="answer-content">
+           <div class="accordion__content">
+             <div class="accordion__content-answer">
                Yes, we have a lot of options for vegans.   
              </div>
            </div>
         </div>
-        <div class="accordion-item">
-          <div class="question">
+        <div class="accordion__item">
+          <div class="accordion__title">
             What kind of pastries are baked in the lessons?
           </div>
-          <div class="answer">
-            <div class="answer-content">
+          <div class="accordion__content">
+            <div class="accordion__content-answer">
               We will bake muffins, macarons, cake and buns. 
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <div class="question">
+        <div class="accordion__item">
+          <div class="accordion__title">
             Are all the classes live or recorded?
           </div>
-          <div class="answer">
-            <div class="answer-content">
+          <div class="accordion__content">
+            <div class="accordion__content-answer">
               All classes are recorded and we will send you them after your purchase.   
             </div>
           </div>
@@ -130,6 +136,16 @@
       </div>
     </section>
     
+      <!--FOOTER-->
+    <footer class="footer">
+      <div class="footer__icons">
+        <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="#"><i class="fas fa-envelope-square fa-2x"></i></a>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
