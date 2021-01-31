@@ -104,7 +104,7 @@ video {
 
 .faq-header h1 {
   font-weight: normal;
-  transition: 0.1s ease-in;
+  transition: 0.5s ease-in;
 }
 
 .faq-header h1:hover {
@@ -124,10 +124,9 @@ video {
 .faq-content {
   background-color: #9b828ad3;
   border-top: 1px dotted black;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
-  transition: height 0.5s ease-in-out;
-  transition-delay: -0.1s;
+  transition: max-height 0.6s ease-in-out;
 }
 
 .faq-content p {
@@ -136,7 +135,7 @@ video {
 
 /* Class to expand accordion content */
 .accordion-selected {
-  height: 320px;
+  max-height: 400px;
 }
 
 /* Sign up section, containing sign up form and contact info */
@@ -373,11 +372,6 @@ button:hover {
     width: 90%;
   }
   
-  /* Class to expand accordion content */
-  .accordion-selected {
-    height: 160px;
-  }
-
   /* Sign up section, containing sign up form and contact info */
   .sign-up-section {
     display: flex;
@@ -418,11 +412,7 @@ button:hover {
   .contact-box a {
     font-size: 30px;
   }
-  
 }
-
-
-
 @media (min-width: 992px) {
   /* HERO section */
   .hero-nav {
@@ -448,11 +438,6 @@ button:hover {
     width: 45%;
   }
   
-  /* Class to expand accordion content */
-  .accordion-selected {
-    height: 150px;
-  }
-
   /* Sign up section, containing sign up form and contact info */
   .sign-up-section {
     flex-direction: row;
