@@ -22,13 +22,13 @@ if (navButton.style.display = "block") {
 }
 
 // function for expanding and collapsing accordion on mouseclick//
-function accordionExpand(acc,i){
+function accordionExpand(acc, i) {
   acc.addEventListener("click", () => {
-    acc.classList.toggle("accordion-section__display--active");
+    acc.classList.toggle("accordion-section__display--active")
     if (acc.classList.contains("accordion-section__display--active")) {
-      accordionCollapse(i);
+      accordionCollapse(i)
     }
-  });
+  })
 }
 
 // loops trhough the class array and if any other of the same class has the .active class, that will collapse //
@@ -36,7 +36,6 @@ const accordionCollapse = (i) => {
   for (let j = 0; j < accordionDisplay.length; j++) {
     if (j != i && accordionDisplay[j].classList.contains("accordion-section__display--active")) {
       accordionDisplay[j].classList.remove("accordion-section__display--active")
-    } 
+    }
   }
 }
-
