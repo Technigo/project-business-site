@@ -1,30 +1,161 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubber Ducks Inc.</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <header>
 
-    <!-- Signup form -->
+        <!--The Hero Image and Nav Section-->
+        <section class="hero-image">
+            
+            <section class="actual-header">
+                
+                <!-- logo -->
+                <div class="logo">
+                    <a href="#">
+                        <img src="https://image.flaticon.com/icons/png/512/306/306940.png" alt="logo">
+                    </a>
+                </div>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+                <!--the Hamburger icon (not yet interactive)-->
+                <div class ="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            
+                <!-- top navigation menu -->
+                <nav>
+                    <a href="#">Rubber Ducks</a>
+                    <a href="#">Rubber Duck Clothes</a>
+                    <a href="#">Duck News</a>
+                    <a href="#">Partners</a>
+                    <br>
+                </nav>
+            </section>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+            <div class="text-box">
+                <h1> Rubber ducks: An icon of human prosperity.</h1>
+            </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        </section>
+        
+    </header>
+
+
+    <section class="signup-and-faq-flexbox">
+        
+        <!--The Accordion Section-->
+        <section class="accordion-section">
+            
+            <h2>Rubber Duck FAQ</h2>
+
+            <div class="accordion">
+                <h3 id="accordion-header-1" class="accordion-header">What are rubber ducks?</h3>
+                <div class="accordion-content" id="accordion-content-1">
+                    <blockquote cite="https://en.wikipedia.org/wiki/Rubber_duck">
+                        A rubber duck (also known as a rubber ducky) is a toy shaped like a stylized duck, generally yellow with a flat base. It may be made of rubber or rubber-like material such as vinyl plastic.
+                    </blockquote>
+                    <div class="quote-source">
+                        – Wikipedia
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <h3 id="accordion-header-2" class="accordion-header">Why rubber ducks?</h3>
+                <div class="accordion-content" id="accordion-content-2">
+                    <blockquote cite="https://en.wikipedia.org/wiki/Rubber_duck">
+                        Rubber ducks naturally inspire water play that develops muscle strength and coordination. With their bright color, smooth texture, and (for some) squeaky or quacky sounds, rubber ducks sharpen toddlers’ senses. Their presence in the bathtub soothes youngsters’ fears of water and water immersion and makes good clean fun of the routine hygiene they are learning.
+                    </blockquote>
+                    <div class="quote-source">
+                        – Wikipedia
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <h3 id="accordion-header-3" class="accordion-header">When is a rubber duck no longer a rubber duck?</h3>
+                <div class="accordion-content" id="accordion-content-3">
+                    <p>Here at Rubber Duck Inc. we believe that as long as it has the rough shape of a rubber duck, including a bill, it can be a rubber duck if it wants to.</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <!--The Signup Section-->
+        <section class="signup-section">
+            <h2>Sign-up</h2>
+
+            <form action="https://httpbin.org/anything">
+                
+                <section class="signup-text-fields-container">
+                    <div class="signup-text-field">
+                        <label for="first-name">First name</label>
+                        <br>
+                        <input type="text" name="first-name">
+                    </div>
+
+                    <div class="signup-text-field">
+                        <label for="last-name">Last name</label>
+                        <br>
+                        <input type="text" name="last-name">
+                    </div>
+
+                    <div class="signup-text-field">
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="email" id="email" name="email">
+                    </div>
+
+                    <div class="signup-text-field">
+                        <label for="password">Password</label>
+                        <br>
+                        <input type="password" id="password" name="password">
+                    </div>
+                </section>
+
+                <label for="account-type">Please select your account type</label>
+                
+                <section class="signup-radio-buttons-container">
+                    
+                    <div class="signup-radio-option">
+                        <input type="radio" id="personal" name="account-type" value="personal">
+                        <label for="personal">Personal</label>
+                    </div>
+                    
+                    <div class="signup-radio-option">
+                        <input type="radio" id="company" name="account-type" value="company">
+                        <label for="company">Company</label>
+                    </div>
+                
+                </section>
+            
+                <section class="signup-checkbox">
+                    <input type="checkbox" id="subscribe" name="subscribe" value="true">
+                    <label for="subscribe">I'd like to subscribe to the Rubber Duck Inc. Newsletter</label>
+                </section>  
+                
+                <section class="signup-button-container">
+                    <button class="signup-button">
+                        Sign Up
+                    </button>
+                </section>
+
+            </form>
+
+        </section>
+
     </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+
+    <script src="./script.js"></script>
+
+
+
+
+</body>
 </html>

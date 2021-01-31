@@ -1,7 +1,263 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/********** General SECTION **********/
 
-.active + .answer {
-  /* some styling here */
+body{
+  margin: 0;
+  background-color: #22bfbf;
 }
+
+h1 {
+  font-size: 48px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #fff;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #fff;
+}
+
+h3 {
+  font-size: 22px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p, blockquote, .quote-source {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  line-height: 28px;
+}
+
+.quote-source {
+  text-align: right;
+  padding-right: 20px;
+}
+
+  
+/*** TOP NAV MENU ***/
+
+/*** HAMBURGER ***/
+
+.hamburger {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 30px;
+  padding: 15px;
+}
+  
+.hamburger div {
+  width: 30px;
+  height: 5px;
+  background: #fff;
+}
+
+nav {
+  background:rgba(20, 20, 20, 0.7);
+  border-radius: 4px;
+  padding: 20px;
+  display: none;  /*turned off by default since "Mobile First"*/
+}
+  
+nav a {
+  margin-left: 20px;
+  color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 15px;
+  font-size: 22px;
+  line-height: 50px;
+  text-decoration: none;
+  display: inline;
+}
+
+/***** LOGO *****/
+
+.logo {
+  display: inline;
+}
+
+.logo img {
+  padding: 12px;
+  width: 100px;
+}
+
+.actual-header {
+  display: flex;
+  align-items: center;
+}
+
+/********** HERO IMAGE SECTION **********/
+
+.hero-image {
+  height: 100vh;
+  width: 100vw;
+}
+
+.text-box h1 {
+  background: rgba(20, 20, 20, 0.7);
+  border-radius: 4px;
+  color: #fff;
+  max-width: 900px;
+  padding: 30px 40px 40px 90px;
+}
+
+.hero-image {
+  background-image: url("https://images.unsplash.com/photo-1546094164-381e9487c464?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+/********** SIGNUP AND FAQ FLEXBOX **********/
+
+.signup-and-faq-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/********** ACCORDION SECTION **********/
+
+.accordion-section {
+  background:rgba(20, 20, 20, 0.3);
+  border-radius: 4px;
+  padding: 20px;
+  margin: 30px;
+  flex-basis: 100%;
+}
+
+.accordion {
+  border-radius: 4px;
+  max-width: 600px;
+  margin-bottom: 3px;
+}
+
+.accordion-header {
+  background:rgba(20, 20, 20, 0.5);
+  border-radius: 4px;
+  text-align: left;
+  padding: 15px;
+  margin: 0;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background:rgba(20, 20, 20, 0.3);
+  border-radius: 0px 0px 4px 4px;
+  margin: 0;
+}
+
+.accordion-selected {
+  display: block;
+}
+
+/********** SIGNUP SECTION **********/
+
+.signup-section {
+  background:rgba(20, 20, 20, 0.3);
+  border-radius: 4px;
+  padding: 20px;
+  margin: 30px;
+  flex-basis: 100%;
+}
+
+.signup-text-fields-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  line-height: 32px;
+}
+
+.signup-text-field {
+  flex-basis: 40%;
+}
+
+.signup-text-field input {
+  width: 200px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.signup-radio-buttons-container {
+  display: flex;
+  max-width: 300px;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+
+.signup-radio-option {
+  padding-right: 25px;
+}
+
+input {
+  background: #fff;
+}
+
+.signup-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-button {
+  margin: 60px 0px 40px 0px;
+  width: 40%;
+  line-height: 32px;
+  font-size: 18px;
+}
+
+/**************** MEDIA QUERIES *****************/
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+  .hero-image {
+    background-image: url("https://images.unsplash.com/photo-1525538182201-02cd1909effb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80");
+
+  }
+
+  nav {
+    display: inline;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .signup-and-faq-flexbox {
+    justify-content: center;
+  }
+
+  .accordion-section {
+    flex-basis: 80%;
+  }
+
+  .signup-section {
+    flex-basis: 80%;
+  }
+}
+
+/* For width 900px and larger: */
+@media only screen and (min-width: 900px) {
+  .hero-image {
+    background-image: url("https://images.unsplash.com/photo-1603736087997-5daec6092347?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80");
+  }
+  .accordion-section {
+    flex-basis: 37%;
+  }
+
+  .signup-section {
+    flex-basis: 37%;
+  }
+} 
