@@ -1,12 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A tour agency webpage where customer can fill in their contact details if they woud like to travel to Afghanistan with our tour agency.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The webpage is divided in three parts, 1) HTML, 2) CSS and 3) JavaScript. HTML and CSS was used to build and design the webpage and JS was used to make the FAQ section to dropdown Q&A section. I didn't face so much problem during this project, but I have now fully understand and learned why we always have to start to build our webpage looking from a mobile device point of view. 
+
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://gracious-euler-6ead17.netlify.app/ 
