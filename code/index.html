@@ -8,17 +8,17 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header container">
+    <header class="header-wrapper">
         <div class="header-l">
-          <h1>PAP.</h1>
+          <h1 class="pap">PAP.</h1>
         </div>
 
         <div class="header-r">
-          <div class="hamburger">
-            <h2>
+          <div class="hamburger-fake"> 
+            <h2 class="hamburger">
               =
             </h2>
-          </div>
+          </div>  
           <button class="contact">Contact</button>
         </div>
     </header>
@@ -35,6 +35,7 @@
       <source src="./videos/pap hands-1.webm" type="video/webm" media="(max-width: 767px)">
       <p>This browser does not support video ¯\_(ツ)_/¯</p>
     </video>
+
     <section class="accordion">
       <h2 id="rituals" class="header2">LOST & FOUND? - click here</h2>
       <div id="big-container" class="big-container">
@@ -89,60 +90,56 @@
 
       <section class="form-survey">
       <form class="form-survey" action="https://httpbin.org/anything" method="POST">
-        <div class="form-survey-start">
-          <label> 
-          First name:
-          <input name="form-survey-name" type="text" placeholder="First name" required>
-          </label>
-          <label> 
-          Last name:
-          <input name="form-survey-name" type="text" placeholder="Last name" required>
-          </label>
-        </div>
-      
-        <h3>It is very likely that nearly every one has been very nearly certain that something that is interesting is interesting them?
-        </h3>
+        <fieldset class="fieldset">
+          <legend>Interested in more citations?</legend>
+          <div class="form-survey-start">
+            <label class="fname"> 
+            First name:
+            <input name="form-survey-name" type="text" placeholder="First name" required>
+            </label>
+            <label class="lname"> 
+            Last name:
+            <input name="form-survey-name" type="text" placeholder="Last name" required>
+            </label>
+          </div>
       
         <div class="form-survey-mid">
-        <label>
-        Yes
-        <input type="radio" value="yes" name="form-survey-favourite">
-        </label>
-        <label>
-        Could be
-        <input type="radio" value="could-be" name="form-survey-favourite">
-        </label>
-        <label>
-        Please go away
-        <input type="radio" value="please-go-away" name="form-survey-favourite">
-        </label>
+          <h4 class="radio-header">It is very likely that nearly every one has been very nearly certain that something that is interesting is interesting them?<br>
+          </h4>
+            <label class="radio">
+            Yes
+            <input type="radio" value="yes" name="form-survey-favourite">
+            </label>
+            <label class="radio">
+            Could be
+            <input type="radio" value="could-be" name="form-survey-favourite">
+            </label>
+            <label class="radio">
+            Please go away
+            <input type="radio" value="please-go-away" name="form-survey-favourite">
+            </label>
         </div>
       
         <div class="form-survey-end">
-        <label>
+        <label class="quotes">
         I want to recieve more quotes
         <input type="checkbox" value="send-me-more-quotes" name="form-survey-quotes">
         </label>
-        <label>
+        <label class="local time">
         Your local time
         <input type="time" value="time" name="form-survey-time">
         </label>
         <label>
-        <input type="submit" value="Sign-up">
+        <input type="submit" value="Sign-up" class="submit">
         </label>
+    
+        </fieldset>
+      </form>
+      </section>
+      <!-- div class="mid" end -->
     </div>
-  </section>
-  </form>
   </div>
-  <!-- div class="mid" end -->
 
-  
-  <!-- <footer> 
-    <div class="footer container">
-      FOOTER HERE
-    </div>
-  </footer>
--->
     <script src="./script.js"></script>
   </body>
 </html>
