@@ -17,40 +17,12 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.header-image-container {
-  width: 100%;
-}
-
-.header-image {
-  width: 100vw;
-  height: 70vh;
-  object-fit: cover;
-}
-
-.header-text {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0;
-  color: #FCD9C8;
-  font-family: 'Pacifico', cursive;
-  font-size: 50px;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #000;
 }
 
 .logo {
@@ -69,7 +41,6 @@ body {
 .navigation.open-menu {
   position: absolute;
   width: 100%;
-  height: 30%;
   top: 70px;
   left: 0;
   background: rgba(252, 217, 200, 0.6);
@@ -82,13 +53,18 @@ body {
   font-weight: bold;
 }
 
-@keyframes menu-animation {   /* If there's time, adjust it so that it comes from the top */
+@keyframes menu-animation {  
   0% {
     left: 100%;
   }
   100% {
     left: 0;
   }
+}
+
+.navigation.open-menu a {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .navigation a {
@@ -144,6 +120,34 @@ body {
   left: 0px;
 }
 
+.header-image-container {
+  width: 100%;
+}
+
+.header-image {
+  width: 100vw;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.header-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  color: #FCD9C8;
+  font-family: 'Pacifico', cursive;
+  font-size: 50px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+
 
 /*** DIVIDER ***/
 
@@ -178,49 +182,13 @@ body {
 
 .form-signup-container { 
   width: 100%;
-  height: 600px;
+  height: 550px;
   border-radius: 25px;
   padding: 16px;
   background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center; 
-}
-
-input[type=text], input[type=email], input[type=password] {
-  font-size: 16px;
-  font-family: 'Lora', serif;
-  box-sizing: border-box;
-  border: 1px solid #FCD9C8;
-  border-radius: 5px;
-  width: 100%;
-  -webkit-transition: all 0.30s ease-in-out;
-  -moz-transition: all 0.30s ease-in-out;
-  -ms-transition: all 0.30s ease-in-out;
-  -o-transition: all 0.30s ease-in-out;
-  outline: none;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
-  border: 1px solid #DDDDDD;
-}
-
-input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
-  box-shadow: 0 0 5px #7565FA;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
-  border: 1px solid #7565FA;
-}
-
-input:valid {
-  border: solid 1px green;
-}
-
-input:invalid {
-  border: solid 1px red; 
-}
-
-label {
-  display: block;
 }
 
 .form-question {
@@ -260,29 +228,51 @@ label {
   box-sizing: border-box;
   border: 1px solid #FCD9C8;
   padding: 10px;
+  font-family: 'Lora', serif;
 }
 
 .form-signup-submit-button:hover {
   background: #FCD9C8;
 }
 
+input[type=text], input[type=email], input[type=password] {
+  font-size: 16px;
+  font-family: 'Lora', serif;
+  box-sizing: border-box;
+  border: 1px solid #FCD9C8;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input:valid {
+  border: solid 1px green;
+}
+
+input:invalid {
+  border: solid 1px red; 
+}
+
+label {
+  display: block;
+}
+
 
 /*** ACCORDION ***/
 
-.accordion {               
+.accordion-container {               
   width: 100%;
-  height: 600px;
+  height: 550px;
   border-radius: 25px;
   padding: 16px;
   margin: 30px 0px 50px 0px;
   background: #fff; 
 }
 
-.accordion h1 {
-  margin-left: 30px;
+.accordion-container h1 {
+  text-align: center;
 }
 
-.accordion .container {
+.accordion-container .container {
   margin: 15px;
 }
 
@@ -293,6 +283,7 @@ label {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .question h2 {
@@ -342,7 +333,7 @@ border-top-right-radius: 10px;
 
 /*** FOOOTER ***/
 
-footer {                   
+.footer {                   
   background: #FCD9C8;
   height: auto;
   width: 100%;
@@ -350,7 +341,7 @@ footer {
   padding-top: 20px;
 }
 
-footer a {
+.footer a {
   color: #000;
   text-decoration: none;
 }
@@ -425,7 +416,7 @@ footer a {
   }
 
   .main-container {
-    width: 60%;
+    width: 70%;
   }
 }
 
@@ -436,10 +427,7 @@ footer a {
     display: flex;
     flex-direction: row;
     align-content: center;
-  }
-
-  .main-container {
-    width: 85%;
+    width: 75%;
   }
 
   .form-signup-container {
@@ -447,7 +435,7 @@ footer a {
     margin: 0px 10px 10px 0px;
   }
 
-  .accordion {
+  .accordion-container {
     width: 50%;          
     margin: 0px 0px 10px 10px;
   }

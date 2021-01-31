@@ -1,14 +1,22 @@
 // ACCORDION & "+" AND "-" ICONS //
 
-const faqQuestions = document.querySelectorAll('.accordion .question'); 
+const faqQuestions = document.querySelectorAll('.accordion-container .question'); 
 faqQuestions.forEach(addClickEvent);
 
 function addClickEvent(question) {
   question.addEventListener('click', () => {
+    const currentOpenQuestion = document.querySelector('.active');
+    if(currentOpenQuestion && currentOpenQuestion != question){
+      currentOpenQuestion.classList.remove('active');
+      const plus = currentOpenQuestion.querySelector('.question-plus');
+      const minus = currentOpenQuestion.querySelector('.question-minus');
+      minus.classList.add('hide');
+      plus.classList.remove('hide');
+    }
     question.classList.toggle('active');
     const plus = question.querySelector('.question-plus');
-    plus.classList.toggle('hide');
     const minus = question.querySelector('.question-minus');
+    plus.classList.toggle('hide');
     minus.classList.toggle('hide');
   });
 }
