@@ -1,30 +1,152 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Who's a good boy?</title>
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+<body>
+  <header>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Who's a good boy?</h1>
+        <p>If the answer is not your dog - even though you would never say that to their face - you might be in
+          need of some dog training. We believe that there's a good boy or girl slumbering in every dog.
+        </p>
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    </div>
+    <nav>
+      <img class="logo" src="./logo.png" alt="">
+      <a href="#">Our Dog Trainers</a>
+      <a href="#">Our Methods</a>
+      <a href="#">Our Customers</a>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
+    </nav>
+  </header>
+  <div class="container">
+    <section class="form">
+      <h2>Sign up for a free lesson</h2>
+      <form action="https://httpbin.org/anything" method="POST">
+        <div class="text-input">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="text-input">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Your E-mail" required>
+        </div>
+        <div class="text-input">
+          <label for="dog-name">Dog's Name</label>
+          <input type="text" id="dog-name" name="dog-name" placeholder="Your Dog's Name" required>
+        </div>
+        <div class="radio-container">
+          <div class="radio-label" title="We ask for this information because it affects your dog's
+            behavior.">Dog's
+            Gender
+            <img src="./question-square-fill.svg" alt="">
+          </div>
+          <div class="radio-input">
+            <input type="radio" name="gender" id="female" value="female" required>
+            <label for="female"><span class="checkmark"></span>Female</label>
+          </div>
+          <div class="radio-input">
+            <input type="radio" name="gender" id="female-spayed" value="female-spayed" required>
+            <label for="female-spayed"><span class="checkmark"></span>Female spayed</label>
+          </div>
+          <div class="radio-input">
+            <input type="radio" name="gender" id="male" value="male" required>
+            <label for="male"><span class="checkmark"></span>Male</label>
+          </div>
+          <div class="radio-input">
+            <input type="radio" name="gender" id="male-neutered" value="male-neutered" required>
+            <label for="male-neutered"><span class="checkmark"></span>Male neutered</label>
+          </div>
+        </div>
+        <label class="newsletter">
+          <input type="checkbox" name="newsletter"><span class="checkmark"></span>I would like to receive your
+          newsletter!
+        </label>
+        <input type="submit" class="button" value="Sign me up!">
+      </form>
     </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+    <section class="accordion">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="question">
+        <img class="collapsed" src="./question-circle.svg" alt="">
+        <img class="expanded" src="./question-circle-fill.svg" alt="">
+        How old should my puppy be before we can start dog training?
+      </div>
+      <p class="answer">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, voluptatum ullam nobis quo fuga sequi,
+        quae aperiam, quibusdam sed maxime tempore nam quam consectetur labore et omnis at quasi quisquam.
+      </p>
+
+      <div class="question">
+        <img class="collapsed" src="./question-circle.svg" alt="">
+        <img class="expanded" src="./question-circle-fill.svg" alt="">
+        What should I bring? Leash, collar, treats etc.
+      </div>
+      <p class="answer">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ut, consequuntur delectus alias
+        ipsum,
+        excepturi ad laudantium eos eius dolore exercitationem corrupti reiciendis mollitia facere libero illo
+        voluptatem omnis quod?
+      </p>
+
+      <div class="question">
+        <img class="collapsed" src="./question-circle.svg" alt="">
+        <img class="expanded" src="./question-circle-fill.svg" alt="">
+        My dog is scared of other dogs/humans. Should I still sign up for a group lesson?
+      </div>
+      <p class="answer">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta maxime modi magni! Aperiam
+        consectetur
+        tempore, sit dolorem quae accusantium qui! Neque hic quis vitae, voluptates optio officia reiciendis illo
+        voluptas.
+      </p>
+
+      <div class="question">
+        <img class="collapsed" src="./question-circle.svg" alt="">
+        <img class="expanded" src="./question-circle-fill.svg" alt="">
+        Can all family members come along to the lesson?
+      </div>
+      <p class="answer">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam magni commodi velit perspiciatis? Voluptatem
+        magni dolor quas. Perferendis voluptatibus corporis delectus, perspiciatis quaerat, architecto sunt in vero,
+        maiores cupiditate eos.
+      </p>
+
+      <div class="question">
+        <img class="collapsed" src="./question-circle.svg" alt="">
+        <img class="expanded" src="./question-circle-fill.svg" alt="">
+        My dog often shows problematic behavior at home. Do you offer home visits?
+      </div>
+      <p class="answer">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius qui hic minus numquam! Placeat quia assumenda
+        qui porro illum inventore possimus repellat pariatur, sunt id. Explicabo nesciunt impedit veniam error?
+      </p>
+
+    </section>
+  </div>
+  <footer>
+    <div class="social">
+      <img src="./fb.svg" alt="Facebook logo">
+      <img src="./yt.png" alt="Youtube logo">
+      <img src="./insta.png" alt="Instagram logo">
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>

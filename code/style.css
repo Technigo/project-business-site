@@ -1,7 +1,351 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Dosis', sans-serif;
+  background-color: #668483;
+}
 
+/********** HEADER **********/
+
+header {
+  height: 100%;
+  margin-bottom: 100px;
+}
+.hero {
+  background-image: url("./hero-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% 30%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 100px;
+  border-bottom: 2px solid #00000080;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.hero-text {
+  width: 40%;
+  background-color: #eec29b8f;
+  padding: 40px;
+  margin-right: 50px;
+  box-shadow: 0 0 20px#eec29b;
+}
+h1 {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 4em;
+  margin: 0;
+  text-align: center;
+}
+.hero-text p {
+  font-size: 1.3em;
+  margin-bottom: 0;
+}
+nav {
+  position: relative;
+  background-color: #eec29b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav a {
+  margin: 40px 80px;
+  font-family: 'Londrina Solid', cursive;
+  font-size: 2em;
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #668483;
+}
+.logo {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 0;
+  margin-left: 20px;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  width: 30px;
+  height: 25px;
+  justify-content: space-between;
+  margin: 40px;
+}
+.hamburger div {
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #000;
+}
+/********** FORM **********/
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 100px 0;
+}
+.form {
+  background-color: #d8a272;
+  width: 30%;
+  padding: 40px;
+  box-shadow: 0 0 10px#eec29b;
+  box-sizing: border-box;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+label, .radio-label {
+  font-size: 1.2em;
+}
+input {
+  padding: 10px;
+  background-color:  #d8a272;
+  border: none;
+  border-bottom: 1px solid #eec29b;
+  font-family: 'Dosis', sans-serif;
+}
+.text-input {
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+::placeholder {
+  color: black;
+}
+.radio-input {  
+  margin: 10px;
+  position: relative;
+}
+.radio-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 20px;
+}
+.radio-label {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  text-align: center;
+}
+.button {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 1.5em;
+  padding: 10px 50px;
+  border-radius: 10px;
+  background-color:  #000;
+  color: white;
+  width: 50%;
+  margin-top: 20px;
+  border: none;
+}
+.button:hover {
+  background-color: #668483;
+  box-shadow: 0px 0px 10px #eec29b;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+/********** CUSTOM RADIO BUTTON & CHECKBOX **********/
+
+.newsletter {
+  position: relative;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: -3px;
+  height: 18px;
+  width: 18px;
+  background-color: #eec29b;
+  border-radius: 50%;
+  border: 2px solid #668483;
+}
+.newsletter input + .checkmark {
+  border-radius: 0;
+}
+input:hover ~ label .checkmark {
+  box-shadow: 0px 0px 8px #668483;
+}
+input:hover ~ .checkmark {
+  box-shadow: 0px 0px 8px #668483;
+}
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 3px;
+  top: 3px;
+  width: 4px;
+  height: 4px;
+  background-color: #668483;
+  border: 4px solid #668483;
+  border-radius: 50%;
+}
+input:checked ~ label .checkmark::after {
+  display: block;
+}
+input:checked ~ .checkmark::after {
+  border-radius: 0;
+  display: block;
+}
+
+/********** ACCORDION **********/
+
+.accordion {
+  width: 30%;
+  background-color: #d8a272;
+  padding: 40px;
+  box-sizing: border-box;  
+  box-shadow: 0 0 10px #eec29b;
+}
+h2 {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 2.5em;
+  text-align: center;
+  margin: 0 0 40px 0;
+}
+.question {
+  padding: 10px;
+  margin: 1px;
+  background-color: #eec29b;
+  font-size: 1.2em;
+}
+.question:nth-of-type(2n+1) {
+  background-color:#668483;
+}
+.question:hover {
+  box-shadow: 0px 0px 5px black;
+}
+.answer {
+  background-color:  #d8a272;
+  padding: 20px;
+  margin: 1px;
+  display: none;
+  border: 1px solid #eec29b;
+}
+.expanded {
+  display: none;
+}
 .active + .answer {
-  /* some styling here */
+  display: block;
+}
+.active .collapsed {
+  display: none;
+}
+.active .expanded {
+  display: inline;
+}
+
+/********** FOOTER **********/
+
+footer {
+  background-color: #eec29b;
+  display: flex;
+  justify-content: center;
+  padding: 0 40px;
+}
+.social {
+  display: flex;
+  align-items: center;
+}
+.social img {
+  height: 70px;
+  filter: grayscale(100%);
+  margin: 20px;
+}
+.social img:hover {
+filter: grayscale(0%);
+transition: filter 1s;
+}
+
+/********** MEDIA QUERIES **********/
+
+@media (max-width: 1199px) {
+  .hero-text {
+    margin-right: 0;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  nav a {
+    font-size: 1.8em;
+    margin: 40px 60px;
+  }
+  .form,
+  .accordion {
+    width: 40%;
+  }
+}
+@media (max-width: 991px) {
+  .hero {
+    background-image: url("./hero-tablet.jpg");
+    padding: 50px;
+    background-position: 60% 30%;
+  }
+  nav a {
+    font-size: 1.6em;
+    margin: 40px 30px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form,
+  .accordion {
+    width: 60%;
+    margin: 40px 0;
+  }
+}
+@media (max-width: 767px) {
+  .hero {
+    background-image: url("./hero-mobile.jpg");
+    align-items: flex-end;
+    justify-content: center;
+    background-position: 30% 80%;
+    padding: 20px;
+  }
+  .hero-text {
+    width: 80%;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .hero-text p {
+    font-size: 1.1em;
+  }
+  nav {
+    justify-content: flex-end;
+  }
+  nav a {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .form,
+  .accordion {
+    width: 80%;
+    padding: 20px;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  .radio-container {
+    margin: 20px 0;
+  }
+  .radio-input {
+    margin: 5px;
+  }
+  .button {
+    padding: 10px;
+  }
 }
