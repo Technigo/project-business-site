@@ -1,12 +1,13 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to make a business site that included a form, an accordion and a hero-image/video. The form should submit to HTTPbin and the accordion collapse and expand.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This time I started with looking through most of the course material before getting ahead of myself. I also did coded along with the lessons and made everything work before styling, so I wouldn’t get too carried away and having to stress through the actual assignment. I decided to make a sign up form for roleplay sessions and used my friend’s page as an inspiration. Turns out he’s keeping the page up to date and is indeed very inspirational (https://www.dndvisby.se). Peter (who made said site) let me borrow one of his videos to my project, which was very nice. I made some design choices that might not be correct, but I like it. For example I set the width of the form and accordion to percentage instead of something set as pixels, because I like that the space around changes depending on the size of the screen. I also used divs and different sections of checkboxes depending on the screen size instead of wrap because I can control them better that way. 
+I used StackOverflow a lot this time, as well as a lot of Googling, because I had a lot of questions, especially about the hero-video and image. Luckily I managed to find the answer for most of it. I think I also got a better hang of Flexbox this time. I also used Slack and Hangouts to talk to my team and ask questions and get help with the code in Technigos help-channel. And I got some great help. I also used VLC and Abraia to resize and convert the video, as well as Photoshop to edit the picture. I only used VScode for the coding.
+If I had more time I would have tried to style the checkboxes and radio buttons a bit. I also tried to change the name of the classes and variables in the script-file (and other places where it then became needed) but for some reason I couldn’t get the script to work then, so I just let it be the way it is for now while it works. I might learn what the problem is later and will update it then. I also tried for a while to add some script to make at least one of the checkboxes required, but I couldn’t manage to get it to work, and almost messed up the submit function in the process. But it eventually sorted itself out, but that’s something else I wanted to look at if I had more time.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+You can see my site here: 
