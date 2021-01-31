@@ -108,6 +108,7 @@ li a {
  }
 
  /*** SIGN UP FORM ***/
+
 .the-big-container {
   width: 100vw;
   margin: 16px;
@@ -130,6 +131,11 @@ form {
   border-radius: 1em;
 }
 
+.form-title {
+  text-align: center;
+  color: #009e71;
+}
+
 .form-info {
   display: flex;
   justify-content: center;
@@ -138,7 +144,6 @@ form {
   flex-wrap: wrap;
   padding: 5px;
   margin: 0;
-  
 }
 
 .form-info li {
@@ -156,27 +161,26 @@ form {
   display: block;
   text-align: left;
   margin-right: 16px;
-  
 }
 
 .dogsize-container {
   display: block;
   align-self: center;
-  margin-right: 50px;
+  margin-right: 60px;
   }
 
-  .dogsize-container label {
-    margin-bottom: -10px;
-    padding: 0;
-  }
+.dogsize-container label {
+  margin-bottom: -10px;
+  padding: 0;
+}
 
- .checkbox {
+.checkbox {
   display: flex;
   flex-direction: row;
   align-content: center;
   padding: 0;
   margin: 0;  
- }
+}
 
 .checkbox input {
   align-self: center;
@@ -195,7 +199,7 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-   
+  margin-top: 8px;   
 }
 
 button {
@@ -225,22 +229,44 @@ button:active {
   border: 1px solid #CCC;
   border-radius: 1em;
 }
+
+.accordion h1 {
+  color: #009e71;
+  margin-bottom: 1rem;
+  text-align: center;
+  border: 1px solid #CCC;
+  border-radius: 14px;
+}
   
 .question {
-  margin: 0;
+  margin-bottom: 1rem;
   padding: 10px;
   cursor: pointer;
+  border: 1px solid #CCC;
+  border-radius: 14px;
 }
 
 .answer {
   overflow: hidden;
   height: 0;
-  
 }
 
 .answer-selected {
-  height: 40px;
+  height: 100px;
+  padding: 10px;
 }
+
+.answer-text {
+  margin: 0;
+  color: #009e71;
+  text-align: justify;
+}
+
+/* this is for link text */
+.answer-text a {
+  color: #fff;
+}
+  
 
 /***FOOTER***/
 
@@ -279,17 +305,21 @@ footer {
 @media (max-width: 991px) {
 
   .navbar-container {
-    
+    width: 100%;
   }
 
-  .logo {
-    display: none;
-  }
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    }
 
   .hamburger-wrapper {
     display: flex;
+    width: 50%;
     justify-content: flex-start;
     align-items: center;
+    
   
   }
 
@@ -299,8 +329,9 @@ footer {
     height: 30px;
     flex-direction: column;
     justify-content: space-between;  
-    background: #000000;
+    background: #fff;
     border-radius: 10px;
+    margin-left: 2em;
     padding: 10px 10px;  
   }
 
@@ -308,23 +339,23 @@ footer {
     width: 30px;
     height: 5px;
     border-radius: 30px;
-    background: #fff;
+    background: #000;
+  }
+
+  .logo img {
+    display: flex;
+    margin-left: 1em;
+    
   }
 
   nav {
     display: none;
   }
 
-
-
   #hero {
     width: 100vw;
     height: 100vh;
   }
-
-  
-
-  
   
   
 }
@@ -332,14 +363,26 @@ footer {
 
 @media (max-width: 600px) {
   
-  #hero video {
-    display:  none;
+  #hero {
+    width: 100vw;
+    height: 100vh;
   }
 
-  #hero .hero-img {
-    display: flex;
-    object-fit: cover;
+  #hero video {
+    display: none;
   }
+
+  .the-big-container .form {
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+
+  }
+  
+
+  
   
   
   /***NAV BAR***/
