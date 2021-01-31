@@ -22,7 +22,6 @@ function addClickEvent(question) {
 }
 
 
-
 // HAMBURGER //
 
 const navigation = document.querySelector('.navigation');

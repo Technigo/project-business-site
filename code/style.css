@@ -74,7 +74,7 @@ body {
 }
 
 .navigation a:hover, .navigation a:focus {
-  color: #000;
+  color: #FD805D;
 }
 
 .ham {
@@ -86,7 +86,7 @@ body {
   z-index: 1;
 }
 
-.hamburger {       /* ADD ANIMATION TO HAMBURGER */
+.hamburger {      
   width: 30px;
   height: 25px;
   display: flex;
@@ -128,6 +128,7 @@ body {
   width: 100vw;
   height: 70vh;
   object-fit: cover;
+  filter: brightness(75%);
 }
 
 .header-text {
@@ -233,6 +234,17 @@ body {
 
 .form-signup-submit-button:hover {
   background: #FCD9C8;
+  animation-name: submit-button-animation;
+  animation-duration: 0.9s;
+}
+
+@keyframes submit-button-animation {  
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: #FCD9C8;
+  }
 }
 
 input[type=text], input[type=email], input[type=password] {
@@ -242,6 +254,10 @@ input[type=text], input[type=email], input[type=password] {
   border: 1px solid #FCD9C8;
   border-radius: 5px;
   width: 100%;
+}
+
+input[type=radio], input[type=checkbox], button[type=submit] {
+  cursor: pointer;
 }
 
 input:valid {
