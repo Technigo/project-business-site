@@ -21,13 +21,31 @@ const question3 = document.getElementById('question3');
 const answer3 = document.getElementById('answer3')
 ;
 
+question1.addEventListener('click', () => {
+  question1.classList.add('question-selected');
+  question2.classList.remove('question-selected');
+  question3.classList.remove('question-selected');
+});
 
+question2.addEventListener('click', () => {
+  question1.classList.remove('question-selected');
+  question2.classList.add('question-selected');
+  question3.classList.remove('question-selected');
+});
+
+question3.addEventListener('click', () => {
+  question1.classList.remove('question-selected');
+  question2.classList.remove('question-selected');
+  question3.classList.add('question-selected');
+});
+
+
+/*
 question1.addEventListener('click', () => {
   answer1.classList.add('answer-selected');
   answer2.classList.remove('answer-selected');
   answer3.classList.remove('answer-selected');
 });
-
 
 question2.addEventListener('click', () => {
   answer1.classList.remove('answer-selected');
@@ -35,10 +53,10 @@ question2.addEventListener('click', () => {
   answer3.classList.remove('answer-selected');
 });
 
-
 question3.addEventListener('click', () => {
   answer1.classList.remove('answer-selected');
   answer2.classList.remove('answer-selected');
   answer3.classList.add('answer-selected');
 });
+*/
 

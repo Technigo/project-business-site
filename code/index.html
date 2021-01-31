@@ -10,117 +10,114 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   </head>
   <body>
-    <section>
-
       <header class="hero-container">
-
         <div class="navbar-container">
           <div class="logo">
             <h1>Waves</h1>
           </div>
           <div class="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-          </div>   
-          <div class="navbar-menu">
-            <ul class="navbar-menu">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul> 
-          </div>      
+              <div></div>
+              <div></div>
+              <div></div>
+          </div>  
+          <nav class="navbar-menu">
+            <a href="about">About</a>
+            <a href="courses">Courses</a>
+            <a href="contact">Contact</a>
+          </nav>  
         </div>
-
-        
-        
-        <video class="waves" autoplay>
-          <source src="./videos/waves.mp4" type="video/mp4" media="(max-width: 767px)">
-          <source src="./videos/waves 1080p.mp4" type="video/mp4" media="(max-width: 1199px)">
+        <video class="waves-video" autoplay loop>
+          <source src="./videos/waves10s.mp4" type="video/mp4" media="(max-width: 767px)">
+          <source src="./videos/waves1080p.mp4" type="video/mp4" media="(min-width: 768px)">
         </video>
-        <div class="shadow"></div>
-
-        <div class="head-box">
-          <h1 class="box-info">Learn how to surf
+        <div class="header-box">
+          <span></span>
+          <h1>Join our surf camp!
           </h1>
+          <a href="#signup" type="button" value="Signup" class="signup-button">Sign up
+          </a> 
         </div>
-
       </header>
-
-    </section>
-
-
+    
 
     <!-- video or image as a header is cool :) -->
 
     <!-- Signup form -->
+    <form class="signup-form" action="https://httpbin.org/anything" method="POST" id="signup">
+      <section class="signup-form-container">
 
-    <form class="signup-form" action="https://httpbin.org/anything" method="POST">
-
-      <h1 class="signup-headline">Surf camp signup
-      </h1>
-      
-      <section class="signup-form-user">
-
-        <label>
-          Name: <input name="signup-name" type="text" required>
-        </label>
-        <label>
-          E-mail: <input name="signup-mail" type="email" required>
-        </label>
-        <label>
-          Password: <input name="signup-password" type="password" required>
-        </label>
-
-        <input type="submit" value="Submit">
+        <div class="signup-form-user">
+          <h2 class="signup-headline">Surf camp sign up
+          </h2>
+          <label class="user-info">
+            Name: <input name="signup-name" type="text" required>
+          </label>
+          <label class="user-info">
+            E-mail: <input name="signup-mail" type="email" required>
+          </label>
+          <label class="user-info">
+            Password: <input name="signup-password" type="password" required>
+          </label>
+        </div>
 
       </section>  
-       
-      <h3>When would you like to participate?
-      </h3>
+      
+      <section class="selection-form-container">
 
-      <section class="signup-schedule-radio-group">
-        <label>
-          Weekdays <input name="schedule" type="radio" value="Weekdays" required>
-        </label>
-        <label>
-          Weekends <input name="schedule" type="radio" value="Weekends" required>
-        </label>
-        <label>
-          08:00-12.00 <input name="schedule" type="radio" value="Morning" required>
-        </label>
-        <label>
-          14:00-18:00 <input name="schedule" type="radio" value="Afternoon">
-        </label>
+        <div class="selection-form-radio-group">
+          <h3 class="selection-headline">Select your level of experience:
+          </h3>
+          <label class="experience-radio">
+            Beginner <input name="experience" type="radio" value="Total beginner" required>
+          </label>
+          <label class="experience-radio">
+            Medium <input name="experience" type="radio" value="Medium" required>
+          </label>
+          <label class="experience-radio">
+            Advanced <input name="experience" type="radio" value="Advanced" required>
+          </label>
+        </div>
+
+        <div class="selection-form-checkbox-group">
+          <h3 class="selection-headline">Select your meal package:
+          </h3>
+          <label class="meal-checkbox">
+            Breakfast <input name="meal" type="checkbox" value="Breakfast" required>
+          </label>
+          <label class="meal-checkbox">
+            Lunch <input name="meal" type="checkbox" value="Lunch" required>
+          </label>
+          <label class="meal-checkbox">
+            Dinner <input name="meal" type="checkbox" value="Dinner" required>
+          </label>
+        </div>
+
       </section>
-
+      <input type="submit" value="Submit" class="submit-button">
     </form>
-
-    Select which activity you want to perform:
-    Surfing/chosen activity
 
     <!-- Accordion -->
 
-    <section class="accordion">
+    <section class="accordion-container">
+
       <div class="accordion-header">
-      <h1>FAQ</h1>
+      <h2>FAQ</h2>
+      </div>
+      <div class="accordion">
+        <h3 id="question1" class="question">Can you hire a surfboard?</h3>
+        <div id="answer1" class="answer">
+          <p>Yes, you can!</p>
+        </div>
+        <h3 id="question2" class="question">How do I get there?</h3>
+        <div id="answer2" class="answer">
+          <p>There will be shuttle buses at the central station that will take you to our location.</p>
+        </div>
+        <h3 id="question3" class="question">How much does it cost?</h3>
+        <div id="answer3" class="answer">
+          <p>Check out our course info in the menu on top of page</p>
+        </div>
       </div>
 
-      <h2 id="question1" class="question">Question 1</h2>
-      <div id="answer1" class="answer">
-        <p>Answer blabla</p>
-      </div>
-
-      <h2 id="question2" class="question">Question 2</h2>
-      <div id="answer2" class="answer">
-        <p>Answer blabla</p>
-      </div>
-
-      <h2 id="question3" class="question">Question 3</h2>
-      <div id="answer3" class="answer">
-        <p>Answer blabla</p>
-      </div>
     </section>
 
     <script src="./script.js"></script>
