@@ -195,7 +195,7 @@ h3 {
 
 .kitten-form input:hover,
 .kitten-form textarea:hover {
-  background-color: rosybrown;
+  background-color: #d3d3d3;
 }
 
 
@@ -286,20 +286,26 @@ h3 {
 /* ACCORDION */
 
 .accordion-header {
+  position: relative;
   padding: 10px;
   margin: 0;
+  z-index: 1;
 }
 
 .accordion {
   border-bottom: 1px solid black;
-
 }
+
+.accordion:nth-child(2n) {
+  background: #ebe8e8;
+}
+
 
 .accordion h3:hover {
-  background: #bcb1ab;
+  background: #d3d3d3;
 }
 
-/* .accordion-header::before {
+.accordion-header::before {
   position: relative;
   right: 8px;
   bottom: 1px;
@@ -310,39 +316,40 @@ h3 {
   padding: 3px;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-} */
+}
 
-/* .accordion.active .accordion-header::before {
+.accordion.active .accordion-header::before {
   bottom: 3px;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-}  */
+} 
 
-/* .accordion {
+.accordion {
   user-select: none;
   cursor: pointer;
-} */
+}
 
 .accordion-content {
   transition: padding 150ms ease-out;
   opacity: 0;
   padding: 0 10px;
   margin: 0;
-  background: #F7D2D2;
+  background: #e9dfcd;
   border-top: 1px solid black;
-  height: 0;
+  height: 1px;
 }
 
 .accordion.active .accordion-header {
-  background:wheat
+  background:#d3d3d3;
+  font-weight: 500;
 }
 
-/* .accordion.active .accordion-content {
+.accordion.active .accordion-content {
   transition: padding 150ms ease-in;
   padding: 16px 10px;
   opacity: 1;
   height: auto;
-} */
+}
 
 
 /* BREAKPOINTS */
