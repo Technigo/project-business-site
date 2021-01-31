@@ -1,35 +1,326 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
+* {
+  box-sizing: border-box; 
+  }
 
 body {
-  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  padding: 0 auto;
+  width: 100%;
+  color: #444;
+  background-color: #eee;
+} 
+
+h2 {
+  font-size: 20px;
 }
 
+h3 {
+  font-size: 32px;
+}
+
+/***Styling header/hero***/
 .hero {
   position: relative;
+}
+
+.hero-menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content:flex-start;
+  align-items: flex-start;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:none;
+  margin: 50px 0px 0px 20px;
+}
+
+.topnav a {
+  color: #eee;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: rgb(158, 207, 207);
+  color: black;
 }
 
 .hero-title {
   position: absolute;
   top: 0;
   bottom: 0;
+  right: 0;
   left: 0;
-  font-color: white;
+  color: #eee;
+  font-size: 85px;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-.hero-video {
+
+.hero-image {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  position: fixed;
   top:0;
   left: 0;
+}
+/***Intro section***/
+
+.introduction {
+  padding: 15px 100px;
+  text-align: center;
+}
+
+.introduction h2 {
+  font-size: 15x;
+}
+
+/***F&Q and Form section***/
+
+.information {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.information h2 {
+  font-size: px;
+}
+
+.container {
+   width: 45%;
+    }
+
+/***Accordion section***/
+
+.accordion {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 20px 50px 120px;
+   margin: 20px;
+   background-color: rgb(106, 165, 165);
+   width: 45%;
+}  
+
+.question {
+  padding: 5px 30px 5px 20px;
+  margin:  0px 15px 5px 15px;
+  background-color: #eee;
+  text-align: left; 
+}
+
+.question:hover {
+  background-color: #ccc; 
+} 
+
+.answer {
+  display: none;
+  padding: 20px;
+  margin: 0px 15px 10px 15px;
+  background-color:white;
+  } 
+
+.answer-selected {
+  display: block;
+}
+
+.accordion h2:after {
+  content: ' \276F';
+  float: right; 
+}
+
+.accordion h3 {
+  padding: 20px 10px 0px 20px;  
+}
+
+/***Righ-image Dad & Son***/
+
+.dad-son-img {
+  background-image: url("https://images.unsplash.com/photo-1564156280315-1d42b4651629?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=976&q=80;");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 0px;
+  margin: 20px;
+  width: 45%;
+}
+ 
+/***Form***/
+    
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ccc;
+  padding-left: 80px;
+  padding-bottom: 50px;
+  margin-top: 20px;
+}
+
+form h3 {
+  padding-left: 5x; 
+  padding-top: 5px;
+}
+.personal-information {
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  padding-bottom: 20px; 
+}
+
+input[type=text], input[type=password] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type=text]:hover, [type=password]:hover {
+  border: 2px solid #444;
+  border-radius: 4px;
+}
+ 
+.profession {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.profession label {
+  padding: 0px 10px; 
+}
+
+.terms-newsletter-checkbox {
+  padding: 10px 10px 25px 0px;
+  font-size: 15px;
+}
+
+button[type=submit] {
+  font-size: 20px;
+  padding: 10px 20px; 
+  margin-left: 5px;
+  background-color: rgb(106, 165, 165);;
+  border-radius: 5px; 
+  border: 2px solid #444;
+  width: 30%;
+}
+
+button  {
+  align-items: center;
+}
+button:hover {
+  background-color: rgb(112, 192, 192);
+}
+ 
+input[type=radio] input[type=checkbox] {
+  height: 15px;
+  width: 15px;
+  vertical-align: middle;
+}
+
+/**Footer***/
+footer  {
+  padding: 80px;
+  width: 100%;
+  text-align: center;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 10px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+/***Styling for Mobile***/
+
+@media screen and (max-width: 1024px) {
+
+  .topnav {
+    display: none;
+  }
+  
+  .hero-title {
+    font-size: 50px;
+    text-align: center;
+  }  
+
+  .introduction {
+    display: none;
+  }
+
+  .information {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .container{
+    width: 100%;
+  }
+  .accordion {
+    padding: 0px 0px 80px 0px;
+    margin: 15px 15px 20px 0px;
+    width: 100%; 
+  }
+
+  .dad-son-img {
+    display: none;
+  }
+
+  form {
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 30px;
+  }
+
+  .fa {
+    padding: 10px;
+    font-size: 15px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 10px;
+  }
+
 }

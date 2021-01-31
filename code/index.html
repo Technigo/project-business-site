@@ -3,65 +3,91 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Project 3</title>
-    
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <header>
-      <video controls autoplay>
-        <source src="/.C:\Users\eru\Desktop\Project-3\project-business-site\code\videos\SampleVideo_360x240_1mb.mp4" type="video/mp4">
-        <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
-      </video>
-    <!--  <h1 class="hero-title">The best company in the world!</h1> -->
+    <title>Project 3-Business Site</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+
+<body>
+   <header class:"hero">
+      <picture>
+        <source srcset="https://images.unsplash.com/photo-1605812830360-f2b3e3a48db4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" width="20%" media="(max-width: 1024px)" alt="desktop mobile image" />
+        <img class="hero-image" src="https://images.unsplash.com/photo-1605812830455-2fadc55bc4ba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="hero image" />     
+      </picture>
+     <h1 class="hero-title">Welcome to Dad's Corner</h1>
+     <div class="hero-menu">
+       <nav class="topnav">
+         <a href="#home">Home</a>
+         <a href="#news">News</a>
+         <a href="#contact">Contact</a>
+         <a href="#about">About</a>
+       </nav>
+      </div>
    </header>
-    
-    <!-- The form section -->
-<form action="http://httpbin.org/anything" method="POST">
 
-<label for="fname">First name</label><br>
-<input type="text" id="fname" name="Firstname" required><br>
-<label for="lname">Last name</label><br>
-<input type="text" id="lname" name="Lastname" required><br>
-<label for="psw">Password</label><br>
-<input type="password" id="psw" name="Password" required><br>
+<!-- Intro paragraph -->
+ 
+   <section class="introduction">
+      <h2>Are you a dad on paternity leave? This is the forum for you! Meet other dads, share experiences, have fun play-dates - it all happens here!</h2>
+   </section>
 
-<label for="std">Student</label>
-<input type="radio" id="std" name="profession" value="Student"><br>
-<label for="tchr">Teacher</label>
-<input type="radio" id="tchr" name="profession" value="Teacher">
+<!-- The accordion section -->
 
-<input type="checkbox" id="terms" name="terms" value="Terms" required>
-<label for="terms">I have read the Terms & Conditions</label><br>
-<input type="checkbox" id="nwsltr" name="nwsltr" value="Newsletter">
-<label for="nwsltr">I would like to receive your newsletter</label><br>
+   <section class="information">
+     <div class="accordion" class="container">
+       <h3>FAQ</h3>
+       <div class="question" id="section1"><h2>What is Dad's Corner?</h2></div>
+       <div class="answer" id="answer1"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p></div>
+       <div class="question" id="section2"><h2>How do I create an account?</h2></div>
+       <div class="answer" id="answer2"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p></div>
+       <div class="question" id="section3"><h2>How much does it cost?</h2></div>
+       <div class="answer" id="answer3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p></div>
+       <div class="question" id="section4"><h2>What are the benefits</h2></div>
+       <div class="answer" id="answer4"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut  labore et dolore magna aliqua. Ut enim ad minim veniam.</p></div>
+     </div>
 
-<button type="submit">Sign up</button>
-</form>
-   <!-- The Q&A section -->
+ <!-- The right image -->
 
+     <div class="dad-son-img" class="container"></div>
 
+ <!-- The form -->
 
+     <form class="container" action="http://httpbin.org/anything" method="POST">
+        <h3>Sign in here</h3>
+        <div class="personal-information">
+           <label for="fname">First name</label>
+          <input type="text" id="fname" name="firt-name" value="firstname" minlength="3" maxlength="10" placeholder="Your name.." required>
+          <label for="lname">Last name</label>
+          <input type="text" id="lname" name="last-name" value="lastname" placeholder="Your last name.." required>
+          <label for="psw">Password</label>
+          <input type="password" id="psw" name="password" value="password" minlength="6" maxlength="9"placeholder="Enter your password.." required>
+        </div>
+        <div class="profession">
+          <label for="p-leave">Dad on parental leave</label>
+          <input type="radio" id="p-leave" name="radio-button" value="parental-leave">
+          <label for="working">Working Dad</label>
+          <input type="radio" id="working" name="radio-button" value="working">
+        </div>
+        <div class="terms-newsletter-checkbox">
+          <input type="checkbox" id="terms" value="terms" name="terms-conditions" required>
+          <label for="terms">I have read the Terms & Conditions</label><br>
+          <input type="checkbox" id="nwsltr" value="newsletter" name="newsletter">
+          <label for="nwsltr">I would like to receive your newsletter</label><br>
+        </div>
+        <div class="submit">
+          <button type="submit" class="submit-button" value="submit" name="submit">Submit</button>
+       </div>
+     </form>
+   </section>
 
+   <footer>
+     <a href="#" class="fa fa-facebook"></a>
+     <a href="#" class="fa fa-twitter"></a>
+     <a href="#" class="fa fa-linkedin"></a>
+     <a href="#" class="fa fa-instagram"></a>
+    </footer>
 
-
-
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+    <script src="./script.js"></script>
+  
   </body>
 </html>
