@@ -1,11 +1,4 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
-
+/* To make the nav links scroll smoothly to the sections */
 html {
   scroll-behavior: smooth;
 }
@@ -16,6 +9,15 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Styling for all h2's */
+h2 {
+  font-size: 30px;
+  margin-top: 0;
+  border-bottom: 2px dotted;
+  width: auto;
+}
+
+/* HERO section */
 header {
   width: 100%;
   display: flex;
@@ -31,10 +33,11 @@ video {
   position: relative;
 }
 
-.hero-image {
+/* Styling for hero-image if it would be implemented instead of hero-video */
+/* .hero-image {
   width: 100%;
   position: relative;
-}
+} */
 
 .hero-title-box {
   position: absolute;
@@ -54,24 +57,20 @@ video {
   display: none;
 }
 
+/* About us section, containing both about us and FAQ */
 .about-us-section {
   min-height: 70vh;
   background-image: linear-gradient(to bottom left, #AABBB3, #936774);
 }
 
 .about-us-box {
-  box-sizing: border-box;
-  width: 100%;
+  width: 90%;
   padding: 15px;
 }
 
-.about-us-h2 {
-  margin-top: 0;
-  border-bottom: 2px dotted;
-  width: auto;
-}
-
+/* FAQ within About us section */
 .faq-box {
+  width: 90%;
   padding: 15px;
 }
 
@@ -94,6 +93,7 @@ video {
   justify-content: space-between;
 }
 
+/* Expand, collapse icon in accordion */
 .fas {
   color: #533942;
   font-size: 50px;
@@ -111,14 +111,12 @@ video {
   font-weight: bold;
 }
 
+/* Rotation of accordion icon */
 .active {
   transform: rotate(180deg);
 }
 
-.faq-header::after:nth-child(odd) {
-  border: solid #936774;
-}
-
+/* Every other accordion header in another background color */
 .faq-container:nth-child(odd) {
   background: #9b828ad3;
 }
@@ -136,36 +134,33 @@ video {
   padding: 0 10px;
 }
 
-.faq-h2 {
-  font-size: 30px;
-  margin-top: 0;
-  border-bottom: 2px dotted;
-}
-
+/* Class to expand accordion content */
 .accordion-selected {
-  height: 150px;
+  height: 320px;
 }
 
-
+/* Sign up section, containing sign up form and contact info */
 .sign-up-section {
   display: flex;
   flex-direction: column;
-  align-items:center;
   min-height: 70vh;
   background: #936774;
   padding: 15px;
 }
 
 .sign-up-box {
-  padding-right: 30px;
+  width: 90%;
+  margin-bottom: 30px;
 }
 
 .sign-up-control {
   margin-bottom: 20px;
 }
+
+/* Styling of inout fields */
 .sign-up-control .input-text {
   background-color: rgba(255, 255, 255, 0.5);
-  width: 100%;
+  width: 90%;
   border: 2px solid #533942;
   border-radius: 8px;
   box-shadow: 3px 3px 3px rgb(94, 84, 84);
@@ -205,6 +200,7 @@ video {
   z-index: 2;
 }
 
+/* Custom checkbox */
 .custom-checkbox {
   position: absolute;
   top: -3px;
@@ -234,15 +230,17 @@ video {
 .sign-up-checkboxes input:checked ~ .custom-checkbox::after {
   display: block;
 }
+
 .sign-up-checkboxes:hover input ~ .custom-checkbox {
   background-color: #9b828ad3;
 }
+
 .button {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-
 }
+
 button {
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 3px 3px 3px rgb(94, 84, 84);
@@ -250,7 +248,7 @@ button {
   padding: 10px 20px;
   border: 2px solid #533942;
   border-radius: 8px;
-  width: 40%;
+  width: 50%;
   text-align: center;
   cursor: pointer;
   transition: 0.3s ease-in;
@@ -259,32 +257,69 @@ button {
 button:hover {
   background-color:#9b828ad3;;
 }
+
+/* Contact box within sign up section */
+.contact-box {  
+  width: 90%;
+}
+
+.contact-box a {
+  text-decoration: none;
+  transition: 0.2s ease-in;
+  color: black;
+  font-size: 20px;
+  margin-left: 15px;
+  line-height: 50px;
+}
+
+.contact-box a:hover {
+  font-weight: bold;
+}
+
+.contact-box ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contact-box li {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.contact-email, .contact-phone {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Styling for validation if it would be implemented */
 .form-valid {
-  /*display: flex;*/
+  /* display: flex; */
   align-items: center;
   padding-left: 10px;
   display: none;
-}
+} 
 
 .form-invalid {
-  /*display: flex;*/
+  /* display: flex; */
   align-items: center;
   padding-left: 10px;
   display: none;
-}
+} 
 
 .form-required {
-  /*display: flex;*/
+  /* display: flex; */
   align-items: center;
   padding-left: 10px;
   display: none;
-}
+}  
 
 @media (min-width: 768px) { 
   .hamburger-menu-container {
     display: none;
   }
 
+  /* HERO section */
   .hero-nav {
     background:rgba(255, 255, 255, 0.6);
     position: absolute;
@@ -316,18 +351,16 @@ button:hover {
     font-size: 25px;
   }
 
+  /* About us section, containing about us and FAQ */
   .about-us-section {
     display: flex;
     justify-content: space-evenly;
-    padding: 60px;
+    flex-wrap: wrap;
+    padding: 30px;
   }
 
-  .faq-box {
-    width: 45%;
-  }
-  
   .about-us-box {
-    width: 45%;
+    width: 90%;
   }
 
   .about-us-p {
@@ -335,8 +368,26 @@ button:hover {
     font-size: 20px;
   }
 
- .sign-up-section {
-    padding: 60px;
+  /* FAQ box within About us section */
+  .faq-box {
+    width: 90%;
+  }
+  
+  /* Class to expand accordion content */
+  .accordion-selected {
+    height: 160px;
+  }
+
+  /* Sign up section, containing sign up form and contact info */
+  .sign-up-section {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .sign-up-box {
+    width: 90%;
+    padding: 15px;
   }
 
   .sign-up-control {
@@ -348,12 +399,32 @@ button:hover {
     height: 50px; 
     width: 250px;
     font-size: 20px;
-   
   }
 
+  .button {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  button {
+    width: 45%;
+  }
+
+  /* Contact within sign up section */
+  .contact-box {
+    padding: 15px;
+  }
+
+  .contact-box a {
+    font-size: 30px;
+  }
+  
 }
 
+
+
 @media (min-width: 992px) {
+  /* HERO section */
   .hero-nav {
     justify-content: flex-start;
   }
@@ -363,20 +434,44 @@ button:hover {
     margin-right: 60px;
   }
 
+  /* About us section, containing about us and FAQ */
   .about-us-box {
     border-bottom: none;
   }
 
-  .about-us-h2 {
-    font-size: 30px;
+  .about-us-box {
+    width: 45%;
+  }
+  
+  /* FAQ within About us section */
+  .faq-box {
+    width: 45%;
+  }
+  
+  /* Class to expand accordion content */
+  .accordion-selected {
+    height: 150px;
   }
 
+  /* Sign up section, containing sign up form and contact info */
   .sign-up-section {
-    padding: 60px 120px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .sign-up-box {
+    width: 45%;
+    padding: 15px;
   }
 
   .sign-up-h2 {
     font-size: 30px;
     text-align: left;
+  }
+
+  /* Contact within sign up section */
+  .contact-box {
+    width: 45%;
   }
 }
