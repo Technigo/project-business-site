@@ -4,39 +4,39 @@ const question2 = document.getElementById('question2')
 const question3 = document.getElementById('question3')
 const question4 = document.getElementById('question4')
 
-//Skapar accSvar elementet från html-filen som är min paragraf
-const accSvar1 = document.getElementById('acc-svar1')
-const accSvar2 = document.getElementById('acc-svar2')
-const accSvar3 = document.getElementById('acc-svar3')
-const accSvar4 = document.getElementById('acc-svar4')
+//Create accAnswer elementet from html-file in my case, p
+const accAnswer1 = document.getElementById('acc-answer1')
+const accAnswer2 = document.getElementById('acc-answer2')
+const accAnswer3 = document.getElementById('acc-answer3')
+const accAnswer4 = document.getElementById('acc-answer4')
 
 
 question1.addEventListener('click',() => {
-  accSvar1.classList.toggle('acc-svar-klick')
-  accSvar2.classList.remove('acc-svar-klick')
-  accSvar3.classList.remove('acc-svar-klick')
-  accSvar4.classList.remove('acc-svar-klick')
+  accAnswer1.classList.toggle('faq-answer-clicked')
+  accAnswer2.classList.remove('faq-answer-clicked')
+  accAnswer3.classList.remove('faq-answer-clicked')
+  accAnswer4.classList.remove('faq-answer-clicked')
 })
 
 question2.addEventListener('click',() => {
-  accSvar1.classList.remove('acc-svar-klick')
-  accSvar2.classList.toggle('acc-svar-klick')
-  accSvar3.classList.remove('acc-svar-klick')
-  accSvar4.classList.remove('acc-svar-klick') 
+  accAnswer1.classList.remove('faq-answer-clicked')
+  accAnswer2.classList.toggle('faq-answer-clicked')
+  accAnswer3.classList.remove('faq-answer-clicked')
+  accAnswer4.classList.remove('faq-answer-clicked') 
 })
 
 question3.addEventListener('click',() => {
-  accSvar1.classList.remove('acc-svar-klick')
-  accSvar2.classList.remove('acc-svar-klick')
-  accSvar3.classList.toggle('acc-svar-klick')
-  accSvar4.classList.remove('acc-svar-klick') 
+  accAnswer1.classList.remove('faq-answer-clicked')
+  accAnswer2.classList.remove('faq-answer-clicked')
+  accAnswer3.classList.toggle('faq-answer-clicked')
+  accAnswer4.classList.remove('faq-answer-clicked') 
 })
 
 question4.addEventListener('click',() => {
-  accSvar1.classList.remove('acc-svar-klick')
-  accSvar2.classList.remove('acc-svar-klick')
-  accSvar3.classList.remove('acc-svar-klick')
-  accSvar4.classList.toggle('acc-svar-klick') 
+  accAnswer1.classList.remove('faq-answer-clicked')
+  accAnswer2.classList.remove('faq-answer-clicked')
+  accAnswer3.classList.remove('faq-answer-clicked')
+  accAnswer4.classList.toggle('faq-answer-clicked') 
 })
 
 
