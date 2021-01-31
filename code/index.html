@@ -1,30 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css">
+  <title>Book A Doc | Doctors Online</title>
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+<body>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+  <!--- Hero -->
+  <header>
+    <div class="bg-img">
+
+      <!-- Hero Text -->
+      <div class="hero-text">
+        <i class="logo fas fa-user-md" aria-hidden="true"></i>
+        <h1>Book a Doc</h1>
+        <p>Find a doctor or get medical advice</p>
+        <button>Book Now</button>
       </div>
+    </div>
+  </header>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+  <!-- Section -->
+  <section class="section-container">
+    <!-- Form -->
+    <div class="section-container-form">
+      <h2>BOOKING FORM</h2>
+      <form action="http://httpbin.org/anything">
+        <input type="text" id="name" name="name" placeholder="First and Last Name.." required>
+        <input type="text" id="email" name="email" placeholder="Your Email.." required>
+        <input type="date" id="date" name="date" required>
+        <input type="time" id="time" name="time" required>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <!-- Accordion -->
+    <div class="section-container-faq">
+      <h2>FAQ</h2>
+      <button class="accordion">Section 1</button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.</p>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+      <button class="accordion">Section 2</button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.</p>
+      </div>
+      <button class="accordion">Section 3</button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.</p>
+      </div>
+      <button class="accordion">Section 4</button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Project built at Technigo Bootcamp 2021 - by <a href="https://github.com/petercreations"><i
+          class="fa fa-github fa-lg" aria-hidden="true"></i></a></p>
+  </footer>
+
+  <script src="./app.js"></script>
+  <script src="https://kit.fontawesome.com/7f1daa2471.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
