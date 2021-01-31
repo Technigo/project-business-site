@@ -1,30 +1,134 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap"
+      rel="stylesheet"> -->
+    <!--Need to fix the right font-->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<!-- video or image as a header is cool :) -->
+
+<body>
+    <!--Hero section -->
+
+    </div>
+    <header class="header">
+
+        <picture class="hero-image">
+            <source srcset="./assets/Go4Loyal-Main-hero.jpg" media="(max-width: 767px)">
+            <source srcset="./assets/Go4Loyal2.0.jpg" media="(max-width: 1199px)">
+            <img class="hero-image" src="./assets/Go4Loyal-Main-hero.jpg" alt="Great work image" />
+            <!--i can put srcset="Backround image of threes"> command here-->
+        </picture>
+
+
+        <h1 class="hero-title">Go4Loyal</h1>
+
+        <div class="nav-container">
+            <nav>Video</nav>
+            <nav>Get in touch!</nav>
+            <nav>More about us</nav>
+        </div>
+    </header>
+    <section class="h1">
+        <div>
+            <p>Happy Guest – Happy Hotel<br><br> The ultimate app for hotels to reactivate existing loyalty guests and attract new ones. Finally there´s an app that brings together different loyalty programs, letting users benefit from the loyalty programs
+                of their favorite hotels and manage all their hotel bookings with ease. For the hotels Go4Loyal provides hotels with an exceptional opportunity to reactivate passive loyalty members, find new loyal guests and gives the hotels a new exclusive
+                sales channel to reach loyal guests.</p>
+        </div>
+    </section>
 
     <!-- Signup form -->
+    <section class="accordion-header">
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+        <div class="formparent">
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+            <form classs="form" action="http://httpbin.org/anything" method="POST">
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+                <h3 class="header-join">FIND OUT MORE</h3>
+
+                <div class="form-item">
+                    <input type="text" name="fname" id="fname" placeholder="Enter your first name" required/>
+                </div>
+
+                <div class="form-item">
+                    <input type="email" name="email" class="email" id="emali" placeholder="Enter your Email" required/>
+                </div>
+
+                <div class="form-item">
+                    <input type="phone" name="phone" class="phone" id="phone" placeholder="Enter your Phone-nr" />
+                </div>
+
+                <div class="form-item">
+                    <textarea name="message" rows="5" cols="20" placeholder="Enter your message...">
+                </textarea>
+                </div>
+
+                <div class="form-item">
+                    <label for="contact">Preferable way of contact you</label>
+
+                    <input type="checkbox" id="contact" name="contact" value="phone">
+                    <label for="contactChoice1">Phone</label>
+
+                    <input type="checkbox" id="contact" name="contact" value="email">
+                    <label for="contactChoice1">Email</label>
+                </div>
+
+                <div class="form-item"></div>
+                <input class="radio" type="radio" required/>I agee to the terms and contions
+
+                <div>
+                    <button class="button" type="submit">Submitt</button>
+                </div>
+            </form>
+
+
     </section>
+
+    <!-- Accordion -->
+
+    <div class="accordionparent">
+        <section>
+            <h1 calss="accordionheader">Four common questions</h1>
+            <div id="section-1" class="question">How many hotels has joined</div>
+            <div class="answer">
+                <p>Yours would be one of the pioneers</p>
+            </div>
+
+            <div id="section-2" class="question">What is our initial cost?</div>
+            <div class="answer">
+                <p>We take care of all the costs except for your backend team.</p>
+            </div>
+
+            <div id="section-3" class="question">What do the users say about the app?</div>
+            <div class="answer">
+                <p>Frequent travelers prefer to have all loyalty programs in one app</p>
+            </div>
+
+            <div id="section-4" class="question">Why should we work with you?</div>
+            <div class="answer">
+                <p> We are the first to bring together hotels on a platform where both hotels and guests get great benefits and together they create a more loyal customer </p>
+            </div>
+        </section>
+    </div>
+    <!--Link the video below the upper two boxes-->
+
+    <footer class="footerparent">
+        <p>©Ontelier ©Go4Loyal<br>
+            <a href="info@go4loyal">Email: info@go4loyal.com</a><br>
+            <a href="https:/www.go4loyal.com">Web: Go4loyal</a><br>
+        </p>
+    </footer>
+
     <!-- dont forget to link the javascript file here! -->
-  </body>
+    <script src="./script.js "></script>
+</body>
+
+
+
 </html>
