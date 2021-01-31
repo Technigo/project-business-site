@@ -4,16 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yoga studio</title>
-    <link rel="stylesheet" href="style.css">
-    <style> @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');</style> 
-  </head> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css"/>
+    </head> 
   <body>
-  <!--  Hero section -->
+    <!--  Hero section -->
     <header class="header">
       <picture class= "container-hero">
         <source srcset="./mobile.jpg" media="(max-width:600px)">
         <source srcset="./tablet.jpg" media="(max-width:900px)">
-        <img class="hero-image" src="./desktop.jpg" alt="Hero image"> 
+        <img class="hero-image" src="./desktop.jpg" alt="Yoga image"> 
       </picture> 
       <h1 class ="hero-title">Yoga Studio </h1>
     </header>
@@ -34,7 +35,7 @@
           <p>Select your preferred yoga style:</p>
           <label> 
             <input type="radio" id="ashtanga" name="yoga-style" value="ashtanga" required>Ashtanga</input>
-            <br>
+            <br> <!-- How do I avoid <br> tag , which element can I adjust ?-->
             <input type="radio" id="bikram" name="yoga-style" value="bikram" required>Bikram</input>
             <br>
             <input type="radio" id="vinyasa" name="yoga-style" value="vinyasa" required>Vinyasa</input>
@@ -50,8 +51,6 @@
             <option value="advanced" required>Advanced</option>
             <option value="expert" required >Expert</option>
           </select>
-          <br>
-          <br>
         </div>
         <!-- Input fields -->
         <div class ="input-fields">
@@ -65,13 +64,9 @@
         <!--checkbox  -->
         <div class ="checkbox">
             <label class="label">
-              <br>
               I agree: <input type="checkbox" id="terms" name="terms" value="agree" required>
               <a href="">Terms and conditions</a> 
             </label>
-              <br>
-              <br>
-              <br>
             <input class="submit-button" type="submit" value="Submit" value="refresh">
         </div>
       </div> 
