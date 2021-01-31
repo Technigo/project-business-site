@@ -6,6 +6,7 @@
     <title>dogGO</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/epf8jwq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style></style>
   </head>
 
@@ -51,63 +52,53 @@
           <source src="/code/videos/Herovideo_1280x720.mp4" type="video/mp4">
           <source src="/code/videos/Herovideo_1280x720.webm" type="video/webm">
         
-  <!--
           <source class="tablet" src="/code/videos/Herovideo_720x480.mp4" media="(max-width: 991px)" type="video/mp4">
-          <source class="tablet" src="/code/videos/Herovideo_720x480.webm" media="(max-width: 991px)" type="video/webm">
-    
-          <source src="/code/videos/HeroVideo_360x240.mp4" media="(max-width: 600px)" type="video/mp4">
-          <source src="/code/videos/Herovideo_360x240.webm" media="(max-width: 600px)" type="video/webm">
-    -->
-        </video>
-        <img class="tablet-img" src="/code/images/desktop.jpg" alt="Dog in snowy forest">
+          <source class="tablet" src="/code/videos/Herovideo_720x480.webm" media="(max-width: 991px)" type="video/webm">  
+        </video> 
+        <img class="hero-img" src="/code/images/Hero_mobileimg.jpg" alt="Man running with dog beside him">      
       </div>   
     </section> 
 
     <!-- SIGN UP FORM -->
-
+  <div class="the-big-container">
     <section class=form>
       <form action="https://httpbin.org/anything" method="post">
-        <ul >
+        <ul class="form-info">
           <li>
-            <label for="name">Name:</label>
+            <label for="name">Name</label>
             <input type="text" id="name" name="user_name">
           </li>
           <li>
-            <label for="name">Dogs Name:</label>
-            <input type="text" id="name" name=dogs_name>
-          </li>
-          <li>
-            <label for="email">Email:</label>
+            <label for="email">Email</label>
             <input type="email" id="mail" name="user_email">
           </li>
           <li>
-            <label for="password">Password:</label>
-            <input type="password" id="papssword" name="user_password">
+            <label for="name">Dogs Name</label>
+            <input type="text" id="dog" name=dogs_name>
           </li>
+          <li class="dogsize-container">
+            <label for="dogssize">Size of Dog</label>
+            <select name="dogsize" id="">
+              <option value="s">Small</option>
+              <option value="m">Medium</option>
+              <option value="l">Large</option>
+              <option value="h">Might be a bear</option>
+            </select>
+          </li>          
           <li>
-            <label for="dogssize">Size of Dog:</label>
-          </li><br>
-          <!-- <ul class="radio-container"> 
-            <li>
-              <input type="radio" name="size" id="small" value="small">
-              <label for="small">Small</label>
-            </li>
-            <li>
-              <input type="radio" name="size" id="medium" value="medium">
-              <label for="medium">Medium</label>
-            </li>
-            <li>
-              <input type="radio" name="size" id="large" value="large">
-              <label for="large">Large</label>
-            </li>
-            <li>
-              <input type="radio" name="size" id="huge" value="huge">
-              <label for="huge">Could be a bear.</label>
-            </li>
-          </ul>  
-        -->
+            <label for="password">Password</label>
+            <input type="password" id="password" name="user_password">
+          </li> 
           <li>
-            <input type="checkbox" name="accept" id="accept" value="I understand and accept to the Terms & Conditions.">
+            <label for="password">Confirm Password</label>
+            <input type="password" id="password-confirm" name="user_password">
+          </li><br>       
+          <!--CHECK BOX-->
+          <li class="checkbox">
+            <input type="checkbox" id="acceptTerms" name="terms" value="Termsandconditions">
+            <label for="terms">
+              I have read and accepted DogGO's Terms & Conditions.
+            </label>
           </li>
           <div class="button-container">
             <button type="submit">Submit</button>
@@ -115,29 +106,39 @@
           </div>
         </ul>
       </form>
-
     </section>
-
-
-
   
     <!--FAQ SECTION-->
+
     <section class="accordion">
       <!-- Accordion -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="question" id="question-1">Are there any limitations to what breeds of dog can travel?</div>
+      <div class="answer" id="answer-1">
+        <p>All doggo breeds can travel, dogGO will make it happen. However depending on the destination
+           there could be some limitations depending on the rules around certain breeds there.</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="question" id="question-2">What is the best doggo to use with dogGO?</div>
+      <div class="answer" id="answer-2">
+        <p>All doggo's are best doggos. What a silly question.</p>
+      </div>
+
+      <div class="question" id="question-3">Can I bring Cat-Os?</div>
+      <div class="answer" id="answer-3">
+        <p>While a Cat-O is not a doggo, we recommend checkout out our 
+          sister company <a href="#">Kitten Transfer</a>!</p>
       </div>
     </section>
-
+  </div>
     <script src="script.js"></script>
-    <!-- dont forget to link the javascript file here! -->
+  
+    <footer>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-youtube"></a>
+    </footer>
   </body>
 </html>
