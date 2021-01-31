@@ -9,4 +9,4 @@ I had problems firs to make the accordion work and then to add + and - icons inf
 If I had more time I would rewrite the code using BEM
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://ylvall-business-site.netlify.app/
