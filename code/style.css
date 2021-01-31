@@ -1,20 +1,8 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active+.answer {
-    /* some styling here */
-}
-
 body {
     margin: 0;
     height: 100%;
     box-sizing: border-box;
-    /*font-family?*/
 }
-
-
-/**mobil view first **/
 
 .header {
     position: relative;
@@ -39,6 +27,11 @@ body {
     align-items: flex-start;
     color: white;
     font-size: 50px;
+}
+
+.h1 {
+    background-color: rgb(233, 229, 229);
+    padding: 50px;
 }
 
 .nav-container {
@@ -73,7 +66,7 @@ body {
 /* Sign up form */
 
 .form {
-    margin: 5px;
+    margin: 50px;
 }
 
 .form-item {
@@ -90,6 +83,9 @@ input {
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 5px;
+    background: lightgray;
+    border: solid rgb(91, 9, 91);
+    border-radius: 15px;
 }
 
 
@@ -98,10 +94,12 @@ input {
 .accordionparent {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .accordionheader {
     display: flex;
+    justify-content: center;
 }
 
 .question {
@@ -130,9 +128,6 @@ input {
     overflow: hidden;
 }
 
-
-/*THE SOLID PING MADE THE BORDER BETWEEN HEAD AND TEXT WHEN CLICKING" */
-
 .accordion-selected {
     display: block;
 }
@@ -144,36 +139,36 @@ input {
     border-top: 5px solid purple;
 }
 
+.active+.answer {
+    display: block;
+}
+
 @media (min-width: 768px) {
-    .hero-title {
+    .hero-section h1 {
         padding-bottom: 200px;
     }
-    .accordionheader {
+    .first-section h2 {
         padding: 50px 50px;
     }
-    .queststion {
+    .question {
         padding: 30px 150px 30px;
-        font-size: 15px;
+        font-size: 17px;
     }
     .answer {
-        padding: 30px 150px 30px;
-        font-size: 15px;
+        margin: 0px;
+        padding: 10px 150px 15px;
     }
 }
 
 @media (min-width: 992px) {
-    .hero-title {
-        padding-bottom: 200px;
+    .qa-photo {
+        display: inline;
+        width: 40%;
     }
-    .accordionheader {
+    .accordion h2 {
         padding-top: 90px;
     }
-    .question {
-        padding: 30px 150px 30px;
-        font-size: 15px;
-    }
-    .answer {
-        padding: 30px 150px 30px;
-        font-size: 15px;
+    .first-section h2 {
+        font-size: 20px;
     }
 }
