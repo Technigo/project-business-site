@@ -1,32 +1,193 @@
+.first-box {
+  background-color: var(--white);
+  transition: transform 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+}
+
+.first-box-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 111px;
+}
+
+.first-box-title h2 {
+  color: var(--secondaryColorNormal);
+}
+
+.first-box-items-content h4 {
+  color: var(--black);
+}
+
+.accordion {
+  background-color: #ecf3f4;
+  background-repeat: no-repeat;
+  background-position: 90%;
+  padding: calc(var(--spacing) * 4);
+  overflow: hidden;
+}
+
+.faq-container {
+  background-color: var(--white);
+}
+
+.accordion-header {
+  margin: 0;
+  cursor: pointer;
+  padding: calc(var(--spacing) * 4);
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-header h5 {
+  margin: 0;
+  color: var(--primaryColorDarker);
+  transition: color 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+  font-size: var(--medium);
+}
+
+.accordion-header i {
+  align-self: center;
+  font-size: var(--medium);
+  color: var(--primaryColorDarker);
+  transition: color 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+}
+
+.accordion-header:hover h5,
+.accordion-header:hover i {
+  color: var(--secondaryColorNormal);
+}
+
+.accordion-content {
+  overflow: hidden;
+  transition: height 0.3s ease;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 0 calc(var(--spacing) * 4) calc(var(--spacing) * 4)
+    calc(var(--spacing) * 4);
+}
+
+.faq-container i {
+  display: none;
+}
+
+.accordion-content:last-child {
+  border-bottom: 0;
+}
+
+.accordion-content p {
+  margin: 0;
+  font-size: var(--small);
+}
+
+.accordion-selected {
+  height: 220px;
+}
+
+/* OTHER INFORMATION */
+.other-information {
+  padding: calc(var(--spacing) * 8) 0;
+}
+
+.other-information-items-content:hover h4 {
+  color: var(--primaryColorDarker);
+}
+
+/* DESKTOP */
 @media only screen and (min-width: 980px) {
   .transform-sec {
     transform: translateY(-130px);
   }
 
-  .first-box {
-    width: 960px;
-    /* height: 960px; */
-    background-color: var(--white);
-    transition: transform 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+  .accordion {
+    /* background-color: var(--primaryColorLight); */
+    background-color: #ecf3f4;
+    background-image: url("../img/03.svg");
+    background-repeat: no-repeat;
+    background-position: 90%;
     padding: 0 calc(var(--spacing) * 4);
+    height: 450px;
+    overflow: hidden;
+  }
+
+  .accordion-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 450px;
+  }
+
+  .accordion-inner {
+    flex: 0.4;
+  }
+
+  .faq-container {
+    background-color: var(--white);
+    /*  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
     /* border-radius: var(--spacing); */
   }
 
-  .first-box-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 111px;
+  .accordion-header i {
+    display: block;
   }
 
-  .first-box-title h2 {
+  .accordion-header {
+    margin: 0;
+    cursor: pointer;
+    padding: calc(var(--spacing) * 4);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .accordion-header h5 {
+    margin: 0;
+    color: var(--primaryColorDarker);
+    transition: color 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+    font-size: var(--medium);
+  }
+
+  .accordion-header i {
+    align-self: center;
+    font-size: var(--medium);
+    color: var(--primaryColorDarker);
+    transition: color 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+  }
+
+  .accordion-header:hover h5,
+  .accordion-header:hover i {
     color: var(--secondaryColorNormal);
   }
 
-  .first-box-list {
+  .accordion-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 0 calc(var(--spacing) * 4);
+  }
+
+  .accordion-content:last-child {
+    border-bottom: 0;
+  }
+
+  .accordion-content p {
+    margin: 0;
+    font-size: var(--small);
+  }
+
+  .accordion-selected {
+    height: 220px;
+  }
+}
+
+/* TABLET AND DESKTOP */
+@media only screen and (min-width: 768px) {
+  .first-box-list,
+  .other-information-list {
     display: flex;
     gap: calc(var(--spacing) * 4);
-    padding: 0 calc(var(--spacing) * 9);
+  }
+
+  .other-information-items {
+    flex: 1;
   }
 
   .first-box-items {
@@ -91,86 +252,6 @@
   .first-box-items-content {
     display: flex;
     justify-content: center;
-  }
-
-  .first-box-items-content h4 {
-    color: var(--black);
-  }
-
-  .accordion {
-    /* background-color: var(--primaryColorLight); */
-    background-color: #ecf3f4;
-    background-image: url("../img/03.svg");
-    background-repeat: no-repeat;
-    background-position: 90%;
-    padding: 0 calc(var(--spacing) * 4);
-    height: 450px;
-    overflow: hidden;
-  }
-
-  .accordion-container {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    height: 450px;
-  }
-
-  .accordion-inner {
-    flex: 0.4;
-  }
-
-  .faq-container {
-    background-color: var(--white);
-    /*  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
-    /* border-radius: var(--spacing); */
-  }
-
-  .accordion-header {
-    margin: 0;
-    cursor: pointer;
-    padding: calc(var(--spacing) * 4);
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .accordion-header h5 {
-    margin: 0;
-    color: var(--primaryColorDarker);
-    transition: color 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
-    font-size: var(--medium);
-  }
-
-  .accordion-header i {
-    align-self: center;
-    font-size: var(--medium);
-    color: var(--primaryColorDarker);
-    transition: color 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
-  }
-
-  .accordion-header:hover h5,
-  .accordion-header:hover i {
-    color: var(--secondaryColorNormal);
-  }
-
-  .accordion-content {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease;
-    border-bottom: 1px solid #f1f1f1;
-    padding: 0 calc(var(--spacing) * 4);
-  }
-
-  .accordion-content:last-child {
-    border-bottom: 0;
-  }
-
-  .accordion-content p {
-    margin: 0;
-    font-size: var(--small);
-  }
-
-  .accordion-selected {
-    height: 220px;
   }
 
   /* OTHER INFORMATION */
