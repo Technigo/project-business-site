@@ -1,12 +1,20 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I created a business site for a Snowboard and Ski course. 
+The site includes a responsive hero image, a sign up form and a FAQ-Accordion. 
+The accordion is created with javascript for toggle between classes and styled as a glasmorphism. 
+My sing up form is connectet to httpbin for validation and includes text field, password, email, radio button, checkbox and submit button and styled with css.   
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+My javascript dident go as planned, I´ve solved all the basic functunality first and tried to do more advanced function later. 
+To understand the basic requriments of js I had to rename and re-do the code from the lecture and break it down in bits. Which unfortunly makes my name convention really messy and that is something I need to work on. 
+I had some issues to get the glass morphism to work before I saw on stackoverflow that you cant set background-color: none but you can use transparent, this helped me alot. 
+
+The images on the site took some time to load which I improved by shrinking them with tinypng.com 
+
+If I had more time I align my flexboxes better, they changes to much in differnt views. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://friendly-varahamihira-0d847e.netlify.app/
