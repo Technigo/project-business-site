@@ -1,12 +1,17 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+A business site for a fantasy company including a Hero image, a signup form, and an accordion.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+*The video is the background in the Hero section.
+*The signup form action is set to post to https://httpbin.org/anything so that httpbin will show how this response would look if it was sent to a ser
+ver.
+*When clicking on the accordion headers a description is shown, and when clicking again the description is hidden.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+The site is deployed on Netlify (the video could take some time to load)
+
+https://elastic-knuth-ca8a37.netlify.app/
