@@ -1,45 +1,39 @@
 
  // Accordion FAQ //
 
-const accordionQuestion1 = document.getElementById('accordion-question-1');
-const accordionAnswer1 = document.getElementById('accordion-answer-1');
+ const accordionHeaderOne = document.getElementById("accordion-headerOne");
+const accordionHeaderTwo = document.getElementById("accordion-headerTwo");
+const accordionHeaderThree = document.getElementById("accordion-headerThree");
+const accordionHeaderFour = document.getElementById("accordion-headerFour");
 
-const accordionQuestion2 = document.getElementById('accordion-question-2');
-const accordionAnswer2 = document.getElementById('accordion-answer-2');
+accordionHeaderOne.addEventListener("click", () => {
+  accordionHeaderOne.classList.toggle("active");
+  accordionHeaderTwo.classList.remove("active");
+  accordionHeaderThree.classList.remove("active");
+  accordionHeaderFour.classList.remove("active");
 
-const accordionQuestion3 = document.getElementById('accordion-question-3');
-const accordionAnswer3 = document.getElementById('accordion-answer-3');
-
-const accordionQuestion4 = document.getElementById('accordion-question-4');
-const accordionAnswer4 = document.getElementById('accordion-answer-4');
-
-
-accordionQuestion1.addEventListener('click', () => {
-  accordionAnswer1.classList.toggle('accordion-selected');
-  accordionAnswer2.classList.remove('accordion-selected');
-  accordionAnswer3.classList.remove('accordion-selected');
-  accordionAnswer4.classList.remove('accordion-selected');
 });
 
-accordionQuestion2.addEventListener('click', () => {
-  accordionAnswer1.classList.remove('accordion-selected');
-  accordionAnswer2.classList.toggle('accordion-selected');
-  accordionAnswer3.classList.remove('accordion-selected');
-  accordionAnswer4.classList.remove('accordion-selected');
+accordionHeaderTwo.addEventListener("click", () => {
+  accordionHeaderOne.classList.remove("active");
+  accordionHeaderTwo.classList.toggle("active");
+  accordionHeaderThree.classList.remove("active");
+  accordionHeaderFour.classList.remove("active");
+
 });
 
-accordionQuestion3.addEventListener('click', () => {
-  accordionAnswer1.classList.remove('accordion-selected');
-  accordionAnswer2.classList.remove('accordion-selected');
-  accordionAnswer3.classList.toggle('accordion-selected');
-  accordionAnswer4.classList.remove('accordion-selected');
+accordionHeaderThree.addEventListener("click", () => {
+  accordionHeaderOne.classList.remove("active");
+  accordionHeaderTwo.classList.remove("active");
+  accordionHeaderThree.classList.toggle("active");
+  accordionHeaderFour.classList.remove("active");
+
 });
 
-accordionQuestion4.addEventListener('click', () => {
-  accordionAnswer1.classList.remove('accordion-selected');
-  accordionAnswer2.classList.remove('accordion-selected');
-  accordionAnswer3.classList.remove('accordion-selected');
-  accordionAnswer4.classList.toggle('accordion-selected');
+accordionHeaderFour.addEventListener("click", () => {
+  accordionHeaderOne.classList.remove("active");
+  accordionHeaderTwo.classList.remove("active");
+  accordionHeaderThree.classList.remove("active");
+  accordionHeaderFour.classList.toggle("active");
+  
 });
-
-

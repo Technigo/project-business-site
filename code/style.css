@@ -115,6 +115,7 @@
 }
 
 .insta-img {
+  display: flex;
   width: 22%;
   margin: 3px;
   margin-top: 10px;
@@ -159,41 +160,36 @@ p {
 
 /* Accordion */
 
-.accordion {
-  width: 100%;
-}
-
-.accordion-question {
-  margin: 0;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.accordion-answer {
-  overflow: hidden;
-  height: 0;
-  transition: height 0.3s ease;
-}
-
-.accordion-selected {
-  height: 38px;
-}
-
-.active, .accordion:hover {
-  background-color:rgb(148, 184, 184);
-}
-
-.accordion-question::after {
+.accordion-button:before {
   content: "+";
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-} 
+  }
+  
+  .accordion-button {
+    width:100%;
+  }
+  
+  .accordion-header {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+  }
 
-.accordion-question.accordion-selected::after {
-  content: "-";
-}  
+  .accordion-content {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+    margin-left: 25px;
+  }
 
+  .active + div {
+  display: block;
+  width: 100%;
+  height: 40px;
+  }
+  
+  .accordion-header.active .accordion-button:before {
+  content:"-";
+  }
   
 /* Submision Form */
 
