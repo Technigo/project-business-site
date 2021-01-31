@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&display=swap" rel="stylesheet">
   </head>
-  <body>
 
+  <body>
     <!-- Header -->
     <header>
       <video autoplay loop muted class="hero-video">
@@ -20,10 +22,9 @@
         <p>This browser doesn't support video...</p>
       </video>
 
-      <div class="hero-image-1">
+      <div class="hero-image">
         <img src="./dnd_logo_text_glow.png">
       </div>
-
     </header>
 
     <!-- Signup form -->
@@ -36,113 +37,181 @@
       </div>
 
       <div class="form-content">
-    <section class="form-text-input">
-      <label>
-        Name
-        <input type="text" name="message" value="Name" required>
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" value="Name@Email" required>
-      </label>
-      <label>
-        Phone number
-        <input type="tel" name="phone" value="Phone number" required>
-      </label>
-    </section>
+        <section class="form-text-input">
+          <label>
+            Name:
+            <input type="text" name="name" placeholder="Boblin Goblinson"  minlength="2" required>
+          </label>
+          <label>
+            Email:
+            <input type="email" name="email" placeholder="Boblin@Goblin" required>
+          </label>
+          <label>
+            Phone number:
+            <input type="tel" name="phone" placeholder="070-1234567" required>
+          </label>
+        </section>
 
-    <section class="form-radio-buttons">
-      <p>Are you registering as a single player or a group?</p>
-      <div class="radio-style">
-      <label>
-        Single <input type="radio" value="single" name="player" required>
-      </label>
-      
-      <label>
-        Group <input type="radio" value="group" name="player" required>
-      </label>
-      </div>
-    </section>
+        <section class="form-radio-buttons">
+          <p>Are you registering as a single player or a group?</p>
+          <div class="radio-style">
+            <label>
+              Single 
+              <input type="radio" value="single" name="player" required>
+            </label>
+            <label>
+              Group 
+              <input type="radio" value="group" name="player" required>
+            </label>
+          </div>
+        </section>
 
-    <section class="form-checkboxes">
-      <p>Chose aviable weekday</p>
-      <div class="checkboxes-style-1">
-      <label>
-        Monday <input type="checkbox" value="mon" name="monday" required> 
-      </label>
-      <label>
-        Tuesday <input type="checkbox" value="tue" name="tuesday" required> 
-      </label>
-      <label>
-        Wednesday <input type="checkbox" value="wed" name="wednesday" required>
-      </label>
-      <label>
-        Thursday <input type="checkbox" value="thu" name="thursday" required> 
-      </label>
-    </div>
-    <div class="checkboxes-style-2">
-      <label>
-        Friday <input type="checkbox" value="fri" name="friday" required> 
-      </label>
-      <label>
-        Saturday <input type="checkbox" value="sat" name="saturday" required>
-      </label>
-      <label>
-        Sunday <input type="checkbox" value="sun" name="sunday" required>
-      </label>
-      </div>
-    </section>
+        <section class="form-checkboxes-desktop">
+          <p>Chose weekdays you're aviable:</p>
+          <div class="checkboxes-style-1">
+            <label>
+              Monday 
+              <input type="checkbox" value="mon" name="monday" required> 
+            </label>
+            <label>
+              Tuesday 
+              <input type="checkbox" value="tue" name="tuesday" required> 
+            </label>
+            <label>
+              Wednesday 
+              <input type="checkbox" value="wed" name="wednesday" required>
+            </label>
+            <label>
+              Thursday 
+              <input type="checkbox" value="thu" name="thursday" required> 
+            </label>
+          </div>
+          <div class="checkboxes-style-2">
+            <label>
+              Friday 
+              <input type="checkbox" value="fri" name="friday" required> 
+            </label>
+            <label>
+              Saturday 
+              <input type="checkbox" value="sat" name="saturday" required>
+            </label>
+            <label>
+              Sunday 
+              <input type="checkbox" value="sun" name="sunday" required>
+            </label>
+          </div>
+        </section>
 
-    <section class="form-time-select">
-      <p>Chose a time</p>
-    <label>
-      Time
-      <select name="form-time">
-        <option value="ten-two">10:00-14:00</option>
-        <option value="two-six">14:00-18:00</option>
-        <option value="six-ten">18:00-22:00</option>
-      </select>
-    </label>
-    </section>
+        <section class="form-checkboxes-tablet">
+          <p>Chose aviable weekday:</p>
+          <div class="checkboxes-style-1">
+            <label>
+              Monday 
+              <input type="checkbox" value="mon" name="monday" required> 
+            </label>
+            <label>
+              Tuesday 
+              <input type="checkbox" value="tue" name="tuesday" required> 
+            </label>
+          </div>
+          <div class="checkboxes-style-2">
+            <label>
+              Wednesday 
+              <input type="checkbox" value="wed" name="wednesday" required>
+            </label>
+            <label>
+              Thursday 
+              <input type="checkbox" value="thu" name="thursday" required> 
+            </label>
+          </div>
+          <div class="checkboxes-style-3">
+            <label>
+              Friday 
+              <input type="checkbox" value="fri" name="friday" required> 
+            </label>
+            <label>
+              Saturday 
+              <input type="checkbox" value="sat" name="saturday" required>
+            </label>
+            <label>
+              Sunday 
+              <input type="checkbox" value="sun" name="sunday" required>
+            </label>
+          </div>
+        </section>
 
+        
+        <section class="form-checkboxes-mobile">
+          <p>Chose aviable weekday:</p>
+          <div class="checkboxes-style-1">
+            <label>
+              Monday 
+              <input type="checkbox" value="mon" name="monday" required> 
+            </label>
+            <label>
+              Tuesday 
+              <input type="checkbox" value="tue" name="tuesday" required> 
+            </label>
+          </div>
+          <div class="checkboxes-style-2">
+            <label>
+              Wednesday 
+              <input type="checkbox" value="wed" name="wednesday" required>
+            </label>
+            <label>
+              Thursday 
+              <input type="checkbox" value="thu" name="thursday" required> 
+            </label>
+          </div>
+          <div class="checkboxes-style-3">
+            <label>
+              Friday 
+              <input type="checkbox" value="fri" name="friday" required> 
+            </label>
+            <label>
+              Saturday 
+              <input type="checkbox" value="sat" name="saturday" required>
+            </label>
+          </div>
+          <div class="checkboxes-style-4">
+            <label>
+              Sunday 
+              <input type="checkbox" value="sun" name="sunday" required>
+            </label>
+          </div>
+        </section>
 
-    <section class="other-text">
-      <p>Anything else we should know?</p>
-    <label>
-      Other
-      <input type="textarea" name="other" value="Other">
-    </label>
-    </section>
+        <section class="form-time-select">
+          <p>Chose a time:</p>
+          <label>
+            Time
+            <select name="form-time">
+              <option value="" selected disabled>Click to select</option>
+              <option value="ten-two">10:00-14:00</option>
+              <option value="two-six">14:00-18:00</option>
+              <option value="six-ten">18:00-22:00</option>
+            </select>
+          </label>
+        </section>
 
-      <input type="submit" value="Submit">
+        <section class="other-text">
+          <p>Anything else we should know?</p>
+          <label>
+            Other:
+            <input type="textarea" name="other" value="Other">
+          </label>
+        </section>
+
+        <input type="submit" value="Submit"></input>
       </div>
     </form>
 
-  
-
-    <!-- Accordion -->
-    <!-- <section class="accordion">
-      <h1 id="accordion-header">FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p id="accordion-content" class="accordion-content">Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section> -->
-
+  <!-- Accordion -->
 
     <section class="faq">
-
-
-        <div class="faq-header">
+      <div class="faq-header">
         <h3>FAQ</h3>
-        </div>
-
+      </div>
 
       <div class="accordion">
         <h1 id="accordion-header-1" class="accordion-header">Question 1</h1>
@@ -174,7 +243,6 @@
 
     </section>
     </container>
-
 
     <!-- dont forget to link the javascript file here! -->
     <script src="./script.js"></script>

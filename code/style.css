@@ -27,7 +27,7 @@ body {
   object-fit: cover;
 }
 
-.hero-image-1 {
+.hero-image {
   position: absolute;
   top: 0;
   right: 0;
@@ -42,7 +42,7 @@ body {
 }
 
 img {
-  width: 50%;
+  width: 40%;
 }
 
 /* Form */
@@ -69,7 +69,8 @@ form {
 
 h2 {
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Dosis', sans-serif;
+  font-size: 35px;
   text-align: center;
   margin: 0;
 }
@@ -90,9 +91,10 @@ input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid #830E07;
   border-radius: 4px;
   box-sizing: border-box;
+  margin-bottom: 30px;
 }
 
 input[type=email] {
@@ -100,9 +102,10 @@ input[type=email] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid #830E07;
   border-radius: 4px;
   box-sizing: border-box;
+  margin-bottom: 30px;
 }
 
 input[type=tel] {
@@ -110,7 +113,7 @@ input[type=tel] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid #830E07;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -132,26 +135,47 @@ input[type=tel] {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-/* input:valid {
-  background-color: green;
-} */
+.checkboxes-style-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.checkboxes-style-4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+input:valid {
+  border: 2px solid green;
+}
 
 input:invalid {
   border: 2px solid red;
 }
 
-.form-text-input {
-  margin-top: 50px;
-}
+  .form-text-input {
+    border-bottom: solid 2px #830E07;
+    padding-bottom: 50px;
+  }
 
-.form-radio-buttons {
-  margin-top: 50px;
-}
+  .form-checkboxes-tablet {
+    display: none;
+  }
 
-.form-checkboxes {
+  .form-checkboxes-mobile {
+    display: none;
+  }
+
+  .form-radio-buttons, .form-checkboxes-desktop {
   margin-top: 50px;
+  border-bottom: solid 2px #830E07;
+  padding-bottom: 50px;
 }
 
 .form-time-select {
@@ -159,18 +183,19 @@ input:invalid {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-bottom: solid 2px #830E07;
+  padding-bottom: 50px;
 }
 
 select {
   display: block;
-  font-family: inherit;
+  font-family: 'Dosis', sans-serif;
   font-size: 100%;
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
   width: 100%;
   padding: 12px 20px;
-  height: 40px;
+  height: 50px;
   border-radius: 4px;
   margin-top: 7px;  
 }
@@ -187,23 +212,26 @@ input[type=textarea] {
   border: 2px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
+  font-family: 'Dosis', sans-serif;
   font-size: 16px;
   resize: none;
-  margin-top: 7px;
+  margin-top: 10px;
 }
 
 label {
   display: block;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 18px;
+  font-size: 300;
 }
 
 p {
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Dosis', sans-serif;
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 23px;
 }
 
 input[type=submit] {
@@ -211,12 +239,13 @@ input[type=submit] {
   background-color: #830E07;
   color: white;
   padding: 14px 20px;
-  margin: 20px 0;
+  margin: 50px 0px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
+  font-family: 'Dosis', sans-serif;
 }
 
 /* Accordion */
@@ -229,20 +258,21 @@ input[type=submit] {
 }
 
 h3 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Dosis', sans-serif;
   text-align: center;
   color: white;
-  font-size: 25px;
+  font-size: 35px;
   background-color: #830E07;
   height: 70px;
   margin-top: 35px;
 }
 
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Dosis', sans-serif;
   text-align: center;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 .faq {
@@ -269,8 +299,8 @@ h1 {
   background-color: #830E07;
   align-items: center;
   justify-content: center;
+  font-weight: 100;
 }
-
 
 .accordion-selected {
   height: 100px;
@@ -279,26 +309,49 @@ h1 {
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
+.form-checkboxes-desktop {
+  display: none;
+}
+
+.form-checkboxes-mobile {
+  display: none;
+}
+
+.form-checkboxes-tablet {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  border-bottom: solid 2px #830E07;
+  padding-bottom: 50px;
+}
 
 .content {
   margin-top: 100px;
 }
 
-/* .accordion {
-width: 90%;
-} */
-
-/* form {
-width: 30%;
-} */
-
 img{
-  width: 50%;
+  width: 70%;
 }
 
 }
 
 @media (max-width: 767px) {
+
+.form-checkboxes-desktop {
+  display: none;
+}
+
+.form-checkboxes-tablet {
+  display: none;
+}
+
+.form-checkboxes-mobile {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  border-bottom: solid 2px #830E07;
+  padding-bottom: 50px;
+}
 
 .hero-image-1 {
 justify-content: center;
@@ -307,7 +360,7 @@ margin: 0;
 }
 
 img {
-  width: 50%;
+  width: 80%;
 }
 
 .content {
@@ -322,10 +375,6 @@ form {
   width: 100%;
   align-content: center;
 }
-
-/* .accordion {
-  width: 98%;
-} */
 
 .faq {
   margin-top: 30px;

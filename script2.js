@@ -23,17 +23,17 @@ const accordionContentFour = document.getElementById('accordion-content-4')
 console.log(accordionHeaderOne)
 
 accordionHeaderOne.addEventListener('click', () => {
-  accordionContentOne.classList.toggle('accordion-selected');
+    accordionContentOne.classList.toggle('accordion-selected');
 })
 
 accordionHeaderTwo.addEventListener('click', () => {
-  accordionContentTwo.classList.toggle('accordion-selected');
+    accordionContentTwo.classList.toggle('accordion-selected');
 })
 
 accordionHeaderThree.addEventListener('click', () => {
-  accordionContentThree.classList.toggle('accordion-selected');
+    accordionContentThree.classList.toggle('accordion-selected');
 })
 
 accordionHeaderFour.addEventListener('click', () => {
-  accordionContentFour.classList.toggle('accordion-selected');
+    accordionContentFour.classList.toggle('accordion-selected');
 })
