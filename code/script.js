@@ -9,15 +9,27 @@ const serviceContent4=document.getElementById("service-content-4");
 const btn = document.getElementById("submit-button");
 
 serviceHeader1.addEventListener("click", () =>{
-    serviceContent1.classList.toggle("service-selected")
+    serviceContent1.classList.toggle("service-selected");
+    serviceContent2.classList.remove("service-selected");
+    serviceContent3.classList.remove("service-selected");
+    serviceContent4.classList.remove("service-selected");
 });
 serviceHeader2.addEventListener("click", () =>{
-    serviceContent2.classList.toggle("service-selected")
+    serviceContent1.classList.remove("service-selected");
+    serviceContent2.classList.toggle("service-selected");
+    serviceContent3.classList.remove("service-selected");
+    serviceContent4.classList.remove("service-selected");
 });
 serviceHeader3.addEventListener("click", () =>{
-    serviceContent3.classList.toggle("service-selected")
+    serviceContent1.classList.remove("service-selected");
+    serviceContent2.classList.remove("service-selected");
+    serviceContent3.classList.toggle("service-selected");
+    serviceContent4.classList.remove("service-selected");
 });
 serviceHeader4.addEventListener("click", () => {
-    serviceContent4.classList.toggle("service-selected")
+    serviceContent1.classList.remove("service-selected");
+    serviceContent2.classList.remove("service-selected");
+    serviceContent3.classList.remove("service-selected");
+    serviceContent4.classList.toggle("service-selected");
 });
 

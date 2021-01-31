@@ -15,8 +15,8 @@
   <body>
     <header class="hero">
       <picture>
-        <source srcset="./images/img_mobile.jpg" media="(max-width: 667px)">
-        <source srcset="./images/img_tablet.jpg" media="(max-width: 1199px)">
+        <source srcset="./images/img_mobile.jpg" media="(max-width: 667px)" class="hero.img">
+        <source srcset="./images/img_tablet.jpg" media="(max-width: 1199px)" class="hero-img">
         <img class="hero-img" src="./images/img_desktop.jpg" alt="hero image"/>
       </picture>
       <h1 class="hero-title">someones fotolab.</h1>
@@ -84,14 +84,17 @@
 
     <section class="formbox">
       <h2 id="contact">let's get in touch.</h2>
-      <form>
+      <form action="http://httpbin.org/anything" method="POST">
         <div class="formelement-personal">
           <div><label for="fname" class="information-type">name</label>
-          <input type="text" id="name" name=name class="labelbox"><br></div>
+            <input type="text" id="name" name=name class="labelbox" required><br>
+          </div>
           <div><label for="phone" class="information-type">phone</label>
-          <input type="text" id="phone" name=phone class="labelbox"><br></div>
+            <input type="text" id="phone" name=phone class="labelbox" required><br>
+          </div>
           <div><label for="email" class="information-type">email</label>
-          <input type="email" id="email" name=email class="labelbox"><br></div>
+            <input type="email" id="email" name=email class="labelbox" required><br>
+          </div>
         </div>
 
         <div class="formelement-interest">
@@ -125,10 +128,6 @@
     </section>
   </div>
 
-    <footer>
-      
-    </footer>
-   
     <script src="./script.js"></script>
   </body>
 </html>
