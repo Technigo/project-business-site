@@ -1,6 +1,6 @@
 # Business Site
 
-The assignment was to create a business website of our choice. It had to contain a responsive hero video/image, a signup form  and an accordion made with basic JS.
+The assignment was to create a business website of our choice. It had to create a responsive hero video/image, a signup form  and an accordion made with basic JS.
 
 I chose to make one about a Rabbit convention. 
 
