@@ -8,4 +8,4 @@ To create a responsive website with a background image. Javascript was used for 
 
 ## View it live
 
-View the site here at [Book a Doc ](#)
+View the site here at [Book a Doc ](https://bookadoc.netlify.app/)
