@@ -143,6 +143,36 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 /*Styling for tablet and small desktop*/
 @media (min-width:768px) and (max-width: 1200px) {
 
+.hero-text {
+font-size: 40px;
+}
+
+.ornament {
+  width: 220px; 
+}
+
+.form {
+width: 400px; 
+margin: 60px 0 30px 0;
+padding: 20px;
+font-size: 20px; 
+}
+
+.check-box {
+  margin: 5px;
+  font-size: 17px;
+}
+
+.submit {
+  width: 100%;
+  font-size: 17px;
+}
+
+.accordion {
+  width: 400px; 
+  margin: 30px 0 30px 0;
+  font-size: 17px;
+}
 }
 
 
@@ -150,4 +180,59 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 /*Styling for big desktop*/
 @media (min-width: 1200px) {
 
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100vh 90vh 10vh;
+  grid-template-areas: 
+  "header header"
+  "form accordion"
+  "footer footer";
+  justify-items: center;
+}
+
+.header {
+  grid-area: header;
+}
+
+.hero-text {
+font-size: 40px;
+}
+
+.ornament {
+  width: 300px;
+}
+    
+.form {
+  width: 400px; 
+  margin: 60px 0 30px 0;
+  padding: 20px;
+  font-size: 20px; 
+  grid-area: form;
+}
+    
+.check-box {
+  margin: 5px;
+  font-size: 17px;
+}
+    
+.submit {
+  width: 100%;
+  font-size: 20px;
+}
+    
+.accordion {
+  width: 400px; 
+  margin: 30px 0 30px 0;
+  font-size: 17px;
+  grid-area: accordion;
+}
+
+.footer {
+  grid-area: footer;
+  width: 1200px;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+}
 }
