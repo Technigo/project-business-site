@@ -90,12 +90,16 @@ li a {
 
  #hero video {
    width: 100%;
-   height: 100%;
+   height: auto;
    position: fixed;
    top: 0;
    left: 0;
    z-index: -1;
    object-fit: cover;
+ }
+
+ .tablet-img {
+   display: none;
  }
 
  /*** SIGN UP FORM ***/
@@ -151,7 +155,6 @@ div .button-container {
   display: flex;
   flex-direction: row;
   
-  
 }
 
 button {
@@ -171,7 +174,51 @@ button:active {
 
 
 
+/***MEDIA QUERIES***/
 
+@media (max-width: 991px) {
+
+ 
+
+
+}
+
+
+@media (max-width: 600px) {
+  
+  
+  /***NAV BAR***/
+
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+  }
+
+
+
+  .hero-header {
+    width: 25%;
+  }
+
+  #hero video {
+    display: none;
+  }
+  
+  .tablet-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+  }
+}
 
 
 
