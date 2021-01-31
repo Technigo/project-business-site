@@ -13,318 +13,312 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     outline: none; /*remove the outline when click on the form input boxes */
   }
 
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #131212;
+  color: rgba(245, 245, 245, 0.863);
+  width: 100%;
+  font-size: 12px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+  
+/************** 1. HERO SECTION **************/
+  .hero-img{
+    position: relative; /* PARENT NEEDS TO BE RELATIVE */
     background-color: #131212;
-    color: rgba(245, 245, 245, 0.863);
-    width: 100%;
-    font-size: 12px;
-  }
- 
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 20px 0;
-  }
+}
   
-  /************** 1. HERO SECTION **************/
-    .hero-img{
-      position: relative; /* PARANT NEEDS TO BE RELATIVE */
-      background-color: #131212;
-  }
+.hero-img img {
+  width: 100vw;
+  padding: 0;
+  height: 50vh;
+  background-position: center;
+  object-fit: cover;
+  filter: brightness(90%); /* make the picture a bit darker for the text to pop */
+}
   
-  .hero-img img {
-      width: 100vw;
-      padding: 0;
-      height: 50vh;
-      background-position: center;
-      object-fit: cover;
-      filter: brightness(90%); /* make the picture a bit darker for the text to pop */
-  }
+.hero-text{
+  position: absolute;
+  top: 0; /* all on zero to make the div cover whole image*/
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 5px;
+  /***** styling ****/
+  color: rgba(255, 255, 255, 0.904);
+  font-family:'Rubik', sans-serif;
+}
+
+.hero-text h1 {
+/***** styling ****/
+  font-size: 2rem;
+  font-weight: 900;
+  white-space: nowrap;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.hero-text h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/************** 2. SIGN UP FORM **************/
+
+.form-wrapper {
+  width: 100vw;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #131212;
+}
+
+.contact-form {
+  width: 80vw;
+  margin: 0px;
+  display: flex;
+  padding: 5px 20px;
+  /***** styling ****/
+  background-color: rgba(29, 26, 27, 0.575);
+  border-radius: 5px;
+  box-shadow: 0 0 5px 5px rgba(255, 6, 110, 0.445);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.774);
+}
+
+.input-fields { 
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input-fields ul { /* No bullets list */
+  list-style-type: none;
+  padding: 0;
+}
+
+.input-fields li {
+  margin-bottom: 10px;
+}
+
+.input-fields, .input-box {
+  width: 100%;
+  margin: 10px;
+  padding: 5px;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid rgba(255, 6, 102, 0.575);
+  color: rgba(255, 255, 255, 0.774);
+}
+
+.input-news {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.input-news, .news-checkbox {
+  margin-right: 10px;
+}
+
+.input-news, .news-text{
+  font-size: 10px;
+}
   
-  .hero-text{
-      position: absolute;
-      top: 0; /* Genom att sätta noll på alla sidor så tar hero text upp hela space:et*/
-      right: 0;
-      bottom: 0; /* Puttar upp etxten lite högre upp */
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 5px;
-      /***** styling ****/
-      color: rgba(255, 255, 255, 0.904);
-      font-family:'Rubik', sans-serif;
-  }
+.input-fields, .btn-form {
+  border: none; /* no border under button */
+}
 
-  .hero-text h1 {
-    /***** styling ****/
-    font-size: 2rem;
-    font-weight: 900;
-    white-space: nowrap;
-    padding: 10px;
-    margin: 0 5px;
-  }
+.btn-form { /* centering the button */
+  display: flex;
+  justify-content: center; 
+}
 
-  .hero-text h2 {
-    font-size: 1.2rem;
-    margin: 0;
-  }
-
-  /************** 2. SIGN UP FORM **************/
-
-  .form-wrapper {
-    width: 100vw;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* i tablet sida och desktop sida */
-    background-color: #131212;
-  }
-
-  .contact-form {
-    width: 80vw;
-    margin: 0px;
-    display: flex;
-    /*flex-direction: column; */
-    /* align-items: center; */
-    padding: 5px 20px;
-    /***** styling ****/
-    background-color: rgba(29, 26, 27, 0.575);
-    border-radius: 5px;
-    box-shadow: 0 0 5px 5px rgba(255, 6, 110, 0.445);
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.774);
-  }
-
-  .input-fields { /* behållaren för allt i formuläret */
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-
-  .input-fields ul { /* No bullets list */
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .input-fields li {
-    margin-bottom: 10px;
-  }
-
-  .input-fields, .input-box {
-    width: 100%;
-    margin: 10px;
-    padding: 5px;
-    background: transparent;
-    border: 0; /* så det bara blir en under linje */
-    border-bottom: 2px solid rgba(255, 6, 102, 0.575);
-    color: rgba(255, 255, 255, 0.774);
-  }
-
-  .input-news {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .input-news, .news-checkbox {
-    margin-right: 10px;
-  }
-
-  .input-news, .news-text{
-    font-size: 10px;
-  }
-
-  ::-webkit-input-placeholder { /* chrome moz mozilla ms internet explorer*/
-    color: rgba(224, 221, 221, 0.781);
-    }
-
+.btn-form button { /* Styling the button */
+  padding: 6px 20px;
+  margin-top: 10px;
+  text-align: center;
+  /***** styling ****/
+  background-color:rgba(255, 6, 102, 0.575);
+  border: 2px solid rgba(255, 6, 102, 0.575);
+  box-shadow: 0 0 5px 5px rgba(255, 6, 110, 0.445);
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  transition: ease-in-out 0.7s;
+  cursor: pointer;
+}
   
-    .input-fields, .btn-form {
-      border: none; /* no border under button */
-    }
+.btn-form button:hover {
+  /***** styling ****/
+  border: 2px solid rgba(255, 6, 102, 0.575);
+  background-color: rgba(29, 26, 27, 0.575);
+  color: white;
+}
 
-    .btn-form {
-      display: flex;
-      justify-content: center; /* button in the middle */
-    }
-
-    .btn-form button { /* Själva knappen */
-      padding: 6px 20px;
-      margin-top: 10px;
-      text-align: center;
-      /***** styling ****/
-      background-color:rgba(255, 6, 102, 0.575);
-      border: 2px solid rgba(255, 6, 102, 0.575);
-      box-shadow: 0 0 5px 5px rgba(255, 6, 110, 0.445);
-      border-radius: 10px;
-      font-family: 'Poppins', sans-serif;
-      color: white;
-      transition: ease-in-out 0.7s;
-      cursor: pointer;
-    }
-  
-    .btn-form button:hover {
-      /***** styling ****/
-      border: 2px solid rgba(255, 6, 102, 0.575);
-      background-color: rgba(29, 26, 27, 0.575);
-      color: white;
-    }
-
-    /* Change autocomplete styles in WebKit */
-    input:-webkit-autofill,
-    input:-webkit-autofill:hover, 
-    input:-webkit-autofill:focus,
-    textarea:-webkit-autofill,
-    textarea:-webkit-autofill:hover,
-    textarea:-webkit-autofill:focus,
-    select:-webkit-autofill,
-    select:-webkit-autofill:hover,
-    select:-webkit-autofill:focus {
-      border: inherit;
-      border-bottom: 2px solid rgba(255, 6, 102, 0.575);
-      -webkit-text-fill-color: white;
-      transition: background-color 5000s ease-in-out 0s;
-    }
-
-
-
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: inherit;
+  border-bottom: 2px solid rgba(255, 6, 102, 0.575);
+  -webkit-text-fill-color: white;
+  transition: background-color 5000s ease-in-out 0s;
+}
 
 
   /************** 3. Accordion **************/
 
-    .accordion-container { /* Centering accordion */
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      width: 100%;
-     }
+.accordion-container { /* Centering accordion */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
 
-     .accordion {
-      width: 80%;
-      padding: 10px 20px;
-      /***** styling ****/
-      background: #1c1c1d;
-      border-radius: 6px;
-      box-shadow: 6px 2px 6px rgba(0,0,0,.1);
-    }
+.accordion {
+  width: 80%;
+  padding: 10px 20px;
+  /***** styling ****/
+  background: #1c1c1d;
+  border-radius: 6px;
+  box-shadow: 6px 2px 6px rgba(0,0,0,.1);
+}
 
-    .accordion h1 {
-      color: rgba(255, 255, 255, 0.774);
-      font-size: 30px;
-      padding: 10px;
-      margin: 10px 0;
-    }
+.accordion h1 {
+  color: rgba(255, 255, 255, 0.774);
+  font-size: 30px;
+  padding: 10px;
+  margin: 10px 0;
+}
 
-    .question{
-      margin-bottom: 10px;
-      padding: 10px;
-      /***** styling ****/
-      background-color: #0d0d0e;
-      border-radius: 4px;
-      box-shadow: 6px 2px 6px rgba(0,0,0,.1);
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.774);
-      cursor: pointer;
-    }
+.question{
+  margin-bottom: 10px;
+  padding: 10px;
+  /***** styling ****/
+  background-color: #0d0d0e;
+  border-radius: 4px;
+  box-shadow: 6px 2px 6px rgba(0,0,0,.1);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.774);
+  cursor: pointer;
+}
  
-    .answer {
-      padding: 0 10px;
-      margin-bottom: 10px;
-      text-align: center;
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.774);
-      border: 1px groove white;
-      display: none; 
-    }
+ .answer {
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.774);
+  display: none; 
+}
 
-    .active + .answer {
-      color: white;
-      display: block;
-    }
+.active + .answer {
+  color: white;
+  background-color: rgba(255, 6, 102, 0.575);
+  box-shadow: 0 0 5px 5px rgba(255, 6, 110, 0.445);
+  display: block;
+}
 
 
-    /************** Media Queries **************/ 
+/************** Media Queries **************/
+@media (min-width: 768px){
 
-    @media (min-width: 768px){
+  .container {
+    flex-direction: row;
+    justify-content: center;
+  }
 
-      .container {
-        flex-direction: row;
-        justify-content: center;
-        margin: 20px px;
-        width: 100%;
-      }
+/************** 1. Hero Image **************/
+  .hero-text h1 {
+    font-size: 4rem;
+  }
 
-      /************** 1. Hero Image **************/
-      .hero-text h1 {
-          font-size: 4rem;
-      }
-
-      .hero-text h2 {
-        font-size: 2.5rem;
-      }
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
    
 
-      /************** 2. Sign up form **************/
-      .form-wrapper{
-        width: 45vw;
-      }
+/************** 2. Sign up form **************/
+  .form-wrapper{
+    width: 45vw;
+  }
 
-      .contact-form {
-        width: 40vw;
-      }
+  .contact-form {
+    width: 40vw;
+  }
 
-      /************** 3. Accordion **************/
-      .accordion-container {
-        width: 45vw;
-        align-items: flex-start; /*make the accordion positioned further up */
-      }
+  .input-news, .news-text{
+    font-size: 12px;
+  }
 
-    }
+/************** 3. Accordion **************/
+  .accordion-container {
+    width: 45vw;
+    align-items: flex-start; /*make the accordion positioned further up */
+  }
 
-    @media (min-width: 990px) {
+  .accordion {
+    width: 40vw;
+  }
 
-      .container {
-        width: 100%;
-      }
+}
 
-      .hero-img {
-        width: 100vw;
-      }
-      
-      .hero-text h1 {
-        font-size: 60px;
-      }
+@media (min-width: 990px) {
 
-      /************** 2. SIGN UP FORM ******************************/
+/************** 1. Hero Image **************/
+  .hero-text h1 {
+    font-size: 6rem;
+  }
 
-      .form-wrapper {
-        width:40vw;
-      }
+  .hero-text h2 {
+    font-size: 3rem;
+  }
 
-      .contact-form {
-        width: 35vw;
-      }
 
-      .accordion-container {
-        width: 40vw;
-      }
+/************** 2. SIGN UP FORM ******************************/
+  .form-wrapper {
+    width: 50vw;;
+  }
 
-      .accordion {
-        width: 35vw;
-      }
-    }
+  .contact-form {
+    width: 45vw;;
+  }
+
+/************** 3. Accordion **************/
+  .accordion-container {
+    width: 50vw;
+  }
+
+  .accordion {
+    width: 45vw;;
+  }
+
+}
      
 
 
