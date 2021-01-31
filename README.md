@@ -1,14 +1,14 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to build a business site with: 
+a header with responsive image/video,
+a sign up form with minimum three different input types and
+accordion built with javascript. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+First I built site's basic structure and did the responsive header. Then I built the sign up form because it felt easier than the accordion section which I built last. I used javascript, flexbox, css-grid and media-queries. If I would have had more time I would have tried to do the blue and red level requirements. 
 
--css-grid
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
