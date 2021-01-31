@@ -1,15 +1,16 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
-
 body {
   margin: 0;
   padding: 0;
   background-color: #270604;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding: 30px;
 }
 
 /* Hero */
@@ -19,9 +20,6 @@ body {
 }
 
 .hero-video {
-  /* width: 100%;
-  height: 100%;
-  object-fit: cover; */
   width: 100vw;
   height: 50vh;
   object-fit: cover;
@@ -36,26 +34,44 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50%;
-  width: 100%;
-
+  height: 50vh;
+  width: 100vw;
 }
 
 img {
-  width: 40%;
+  width: 782px;
+  height: 274px;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+a:hover {
+  color: #830E07;
 }
 
 /* Form */
-
-
-main {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 100px;
-  margin-bottom: 50px;
-  padding: 30px;
-}
 
 form {
   border-radius: 5px;
@@ -63,8 +79,15 @@ form {
   width: 40%;
 }
 
-.form-content {
-  padding: 40px;
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #830E07;
+  width: 100%;
+  margin: 0;
+  border-radius: 5px;
+  height: 100px;
 }
 
 h2 {
@@ -75,15 +98,31 @@ h2 {
   margin: 0;
 }
 
-.form-header {
-  background-color: #830E07;
-  width: 100%;
-  margin: 0;
+.form-content {
+  padding: 40px;
+  border: 3px solid #830E07;
   border-radius: 5px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+label {
+  display: block;
+  color: white;
+  font-family: 'Dosis', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+p {
+  color: white;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  font-weight: 500;
+  font-size: 23px;
+}
+
+.form-text-input {
+  border-bottom: solid 2px #830E07;
+  padding-bottom: 50px;
 }
 
 input[type=text] {
@@ -91,7 +130,7 @@ input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #830E07;
+  border: 2px solid #830E07;
   border-radius: 4px;
   box-sizing: border-box;
   margin-bottom: 30px;
@@ -102,7 +141,7 @@ input[type=email] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #830E07;
+  border: 2px solid #830E07;
   border-radius: 4px;
   box-sizing: border-box;
   margin-bottom: 30px;
@@ -113,9 +152,13 @@ input[type=tel] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #830E07;
+  border: 2px solid #830E07;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+input:invalid {
+  border: 2px solid red;
 }
 
 .radio-style {
@@ -124,55 +167,22 @@ input[type=tel] {
   justify-content: space-around;
 }
 
-.checkboxes-style-1 {
+.checkboxes {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 10px;
 }
 
-.checkboxes-style-2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 10px;
+.form-checkboxes-tablet {
+  display: none;
 }
 
-.checkboxes-style-3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 10px;
+.form-checkboxes-mobile {
+  display: none;
 }
 
-.checkboxes-style-4 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-/* input:valid {
-  border: 2px solid green;
-} */
-
-input:invalid {
-  border: 2px solid red;
-}
-
-  .form-text-input {
-    border-bottom: solid 2px #830E07;
-    padding-bottom: 50px;
-  }
-
-  .form-checkboxes-tablet {
-    display: none;
-  }
-
-  .form-checkboxes-mobile {
-    display: none;
-  }
-
-  .form-radio-buttons, .form-checkboxes-desktop {
+.form-radio-buttons, .form-checkboxes-desktop {
   margin-top: 50px;
   border-bottom: solid 2px #830E07;
   padding-bottom: 50px;
@@ -197,7 +207,12 @@ select {
   padding: 12px 20px;
   height: 50px;
   border-radius: 4px;
+  border: 2px solid #830E07;
   margin-top: 7px;  
+}
+
+select:hover {
+  cursor: pointer;
 }
 
 .other-text {
@@ -207,31 +222,15 @@ select {
 input[type=textarea] {
   width: 100%;
   height: 150px;
-  padding: 12px 12px;
+  padding: 12px 20px;
   box-sizing: border-box;
-  border: 1px solid #830E07;
+  border: 2px solid #830E07;
   border-radius: 4px;
   background-color: #f8f8f8;
   font-family: 'Dosis', sans-serif;
   font-size: 16px;
   resize: none;
   margin-top: 10px;
-}
-
-label {
-  display: block;
-  color: white;
-  font-family: 'Dosis', sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-}
-
-p {
-  color: white;
-  font-family: 'Dosis', sans-serif;
-  text-align: center;
-  font-weight: 500;
-  font-size: 23px;
 }
 
 input[type=submit] {
@@ -248,7 +247,16 @@ input[type=submit] {
   font-family: 'Dosis', sans-serif;
 }
 
+input[type=submit]:hover {
+  color: gray;
+  background-color: #2e0604;
+}
+
 /* Accordion */
+
+.faq {
+  width: 40%; 
+}
 
 .faq-header {
   background-color: #830E07;
@@ -273,10 +281,6 @@ h1 {
   color: white;
   font-size: 25px;
   font-weight: 500;
-}
-
-.faq {
-  width: 40%; 
 }
 
 .accordion {
@@ -307,79 +311,81 @@ h1 {
   background-color: #830E07;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-
-.form-checkboxes-desktop {
-  display: none;
+footer p {
+  font-size: 15px;
+  font-weight: 300;
 }
 
-.form-checkboxes-mobile {
-  display: none;
+footer {
+  margin-bottom: 30px;
 }
 
-.form-checkboxes-tablet {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  border-bottom: solid 2px #830E07;
-  padding-bottom: 50px;
+/* Media */
+
+@media (min-width: 831px) and (max-width: 1130px) {
+
+  main {
+    margin-top: 100px;
+  }
+
+  .form-checkboxes-desktop {
+    display: none;
+  }
+
+  .form-checkboxes-mobile {
+    display: none;
+  }
+
+  .form-checkboxes-tablet {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    border-bottom: solid 2px #830E07;
+    padding-bottom: 50px;
+  }
+
 }
 
-main {
-  margin-top: 100px;
-}
+@media (max-width: 830px) {
 
-img{
-  width: 70%;
-}
+  img {
+    width: 450px;
+    height: 158px;
+  }
 
-}
+  main {
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 20px;
+    padding: 30px;
+  }
 
-@media (max-width: 767px) {
+  form {
+    width: 100%;
+    align-content: center;
+  }
 
-.form-checkboxes-desktop {
-  display: none;
-}
+  .form-checkboxes-desktop {
+    display: none;
+  }
 
-.form-checkboxes-tablet {
-  display: none;
-}
+  .form-checkboxes-tablet {
+    display: none;
+  }
 
-.form-checkboxes-mobile {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  border-bottom: solid 2px #830E07;
-  padding-bottom: 50px;
-}
+  .form-checkboxes-mobile {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    border-bottom: solid 2px #830E07;
+    padding-bottom: 50px;
+  }
 
-.hero-image-1 {
-justify-content: center;
-align-content: center;
-margin: 0;
-}
-
-img {
-  width: 80%;
-}
-
-main {
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
-  margin-top: 20px;
-  padding: 30px;
-}
-
-form {
-  width: 100%;
-  align-content: center;
-}
-
-.faq {
-  margin-top: 30px;
-  align-content: center;
-  width: 100%;
-}
+  .faq {
+    margin-top: 30px;
+    align-content: center;
+    width: 100%;
+  }
 
 }

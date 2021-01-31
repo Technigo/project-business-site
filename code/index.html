@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&display=swap" rel="stylesheet">
   </head>
 
-  <body>
     <!-- Header -->
+  <body>
     <header>
       <video autoplay loop muted class="hero-video">
         <source src="./videos/dnd_video.mp4" type="video/mp4">
@@ -27,9 +27,16 @@
       </div>
     </header>
 
-    <!-- Signup form -->
-    <main>
+    <nav class="hero-nav">
+      <a href="/form/">Sign Up</a> 
+      <a href="/about/">About</a> 
+      <a href="https://www.dndvisby.se/">DnD-Visby</a> 
+      <a href="/adventures/">Adventures</a> 
+    </nav>
 
+    <!-- Signup form -->
+
+    <main>
     <form action="http://httpbin.org/anything" method="POST">
 
       <div class="form-header">
@@ -67,8 +74,8 @@
         </section>
 
         <section class="form-checkboxes-desktop">
-          <p>Chose weekdays you're aviable: (required)</p>
-          <div class="checkboxes-style-1">
+          <p>Chose weekdays where you're aviable to play:</p>
+          <div class="checkboxes">
             <label>
               Monday 
               <input type="checkbox" value="mon" name="monday"> 
@@ -86,7 +93,7 @@
               <input type="checkbox" value="thu" name="thursday"> 
             </label>
           </div>
-          <div class="checkboxes-style-2">
+          <div class="checkboxes">
             <label>
               Friday 
               <input type="checkbox" value="fri" name="friday"> 
@@ -103,8 +110,8 @@
         </section>
 
         <section class="form-checkboxes-tablet">
-          <p>Chose weekdays you're aviable: (required)</p>
-          <div class="checkboxes-style-1">
+          <p>Chose weekdays where you're aviable to play:</p>
+          <div class="checkboxes">
             <label>
               Monday 
               <input type="checkbox" value="mon" name="monday"> 
@@ -114,7 +121,7 @@
               <input type="checkbox" value="tue" name="tuesday"> 
             </label>
           </div>
-          <div class="checkboxes-style-2">
+          <div class="checkboxes">
             <label>
               Wednesday 
               <input type="checkbox" value="wed" name="wednesday">
@@ -124,7 +131,7 @@
               <input type="checkbox" value="thu" name="thursday"> 
             </label>
           </div>
-          <div class="checkboxes-style-3">
+          <div class="checkboxes">
             <label>
               Friday 
               <input type="checkbox" value="fri" name="friday"> 
@@ -139,11 +146,10 @@
             </label>
           </div>
         </section>
-
         
         <section class="form-checkboxes-mobile">
-          <p>Chose weekdays you're aviable: (required)</p>
-          <div class="checkboxes-style-1">
+          <p>Chose weekdays where you're aviable to play:</p>
+          <div class="checkboxes">
             <label>
               Monday 
               <input type="checkbox" value="mon" name="monday"> 
@@ -153,7 +159,7 @@
               <input type="checkbox" value="tue" name="tuesday"> 
             </label>
           </div>
-          <div class="checkboxes-style-2">
+          <div class="checkboxes">
             <label>
               Wednesday 
               <input type="checkbox" value="wed" name="wednesday">
@@ -163,7 +169,7 @@
               <input type="checkbox" value="thu" name="thursday"> 
             </label>
           </div>
-          <div class="checkboxes-style-3">
+          <div class="checkboxes">
             <label>
               Friday 
               <input type="checkbox" value="fri" name="friday"> 
@@ -173,7 +179,7 @@
               <input type="checkbox" value="sat" name="saturday">
             </label>
           </div>
-          <div class="checkboxes-style-4">
+          <div class="checkboxes">
             <label>
               Sunday 
               <input type="checkbox" value="sun" name="sunday">
@@ -198,7 +204,7 @@
           <p>Anything else we should know?</p>
           <label>
             Other:
-            <input type="textarea" name="other" placeholder="Other">
+            <input type="textarea" name="other" placeholder="This textbox is acting stupid">
           </label>
         </section>
 
@@ -221,7 +227,7 @@
       </div>
 
       <div class="accordion">
-        <h1 id="accordion-header-2" class="accordion-header">How many players can there be in one group</h1>
+        <h1 id="accordion-header-2" class="accordion-header">How many players can there be in one group?</h1>
         <p id="accordion-content-2" class="accordion-content">
           There's a maximum of 8 players in one group. 4-6 players is recommended.
         </p>
@@ -240,11 +246,15 @@
           Of course! Both new and experienced players are welcome!
         </p>
       </div>
-
     </section>
   </main>
 
-    <!-- dont forget to link the javascript file here! -->
+  <footer>
+    <p>Website by Erika A Porath. Video (c) Peter Losonci</p>
+  </footer>
+
+  <!-- Script -->
+
     <script src="./script.js"></script>
   </body>
 </html>
