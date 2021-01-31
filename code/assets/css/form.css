@@ -4,3 +4,68 @@
 @import "./animations.css";
 @import "./formpage-header.css";
 @import "./footer.css";
+
+.main-body {
+  background-color: #f1f1f1;
+}
+
+.form-container {
+  padding: calc(var(--spacing) * 4) 0;
+}
+
+.form {
+  overflow: hidden;
+}
+
+.form-title {
+  color: var(--primaryColorDarker);
+  font-size: var(--medium);
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+.fieldset {
+  background-color: var(--white);
+  margin-bottom: calc(var(--spacing) * 6);
+  border: 1px solid #ccc;
+}
+
+.map iframe {
+  width: 100%;
+  margin-top: calc(var(--spacing) * 2);
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+textarea {
+  display: block;
+  margin-bottom: calc(var(--spacing) * 4);
+  width: 100%;
+  padding: calc(var(--spacing) * 2);
+  /* border: 1px solid red; */
+  border: none;
+  background-color: #f3f3f3;
+}
+
+label {
+  padding-bottom: calc(var(--spacing) * 2);
+  display: inline-block;
+}
+
+legend {
+  color: var(--primaryColorDarker);
+}
+
+.submit-btn {
+  border: none;
+  background-color: var(--secondaryColorNormal);
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+  color: var(--white);
+  float: right;
+}
+
+@media only screen and (min-width: 980px) {
+  .form-container {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    grid-gap: calc(var(--spacing) * 4);
+  }
+}
