@@ -6,7 +6,7 @@
     <title>Yoga studio</title>
     <link rel="stylesheet" href="style.css">
     <style> @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');</style> 
-  </head>
+  </head> 
   <body>
   <!--  Hero section -->
     <header class="header">
@@ -19,14 +19,14 @@
     </header>
 
     <!-- Navigation menu -->
-    <div class="container-menu">
+    <nav class="container-menu">
       <a class="menu menu1">About Us</a>
-      <a class="menu menu3">Yoga life</a>
-      <a class= "menu menu3">News</a>
+      <a class="menu menu2">Yoga life</a>
+      <a class="menu menu3">News</a>
       <a class="menu menu4">Level Up</a>
-      <a class="menu menu 5">Contact Us</a>
-    </div>
-  <!-- Signup form -->
+      <a class="menu menu5">Contact Us</a>
+    </nav>
+    <!-- Signup form -->
     <form id="form" class= "form" action="http://httpbin.org/anything" method="POST" target="_blank">
       <div class="container-forms">
         <div class="yoga-style">
@@ -34,61 +34,96 @@
           <p>Select your preferred yoga style:</p>
           <label> 
             <input type="radio" id="ashtanga" name="yoga-style" value="ashtanga" required>Ashtanga</input>
-             <br>
-             <input type="radio" id="bikram" name="yoga-style" value="bikram" required>Bikram</input>
-             <br>
-             <input type="radio" id="vinyasa" name="yoga-style" value="vinyasa" required>Vinyasa</input>
             <br>
+            <input type="radio" id="bikram" name="yoga-style" value="bikram" required>Bikram</input>
             <br>
-        </label>
+            <input type="radio" id="vinyasa" name="yoga-style" value="vinyasa" required>Vinyasa</input>
+            <br>
+          </label>
         </div> 
-          <div class= "yoga-level">
-            <p>What's your yoga level?</p> 
-            <select id="yoga-level" name="yoga-level">
-              <option value="beginner" required >Beginner</option>
-              <option value="intermediate"required>Intermediate</option>
-              <option value="advanced" required>Advanced</option>
-            </select>
-            <br>
-            <br>
-          </div>
-          <p>User details:</p> 
-          <div class ="input-fields">
-            <label class ="label">
-              First Name:<input class="input" type="text" name="first-name" id="first-name" required>
-              Last name:<input class="input" type="text" name="last-name" id="last-name" required>
-              Email:<input class="input" type="email" name="email"  id="email" placeholder="example@email.com" required>
-              Password:<input class="input" type="password" name="password" placeholder="minimum 8 characters" id="password" minlength="8" required>
-            </label>       
-            <div class ="checkbox"></div>
+        <!-- Yoga level chooser -->
+        <div class= "yoga-level">
+          <p>What's your yoga level?</p> 
+          <select id="yoga-level" name="yoga-level" size="2">
+            <option value="beginner" required >Beginner</option>
+            <option value="intermediate"required>Intermediate</option>
+            <option value="advanced" required>Advanced</option>
+            <option value="expert" required >Expert</option>
+          </select>
+          <br>
+          <br>
+        </div>
+        <!-- Input fields -->
+        <div class ="input-fields">
+          <label class ="label">
+            First Name:<input class="input" type="text" name="first-name" id="first-name" placeholder="John" required>
+            Last name:<input class="input" type="text" name="last-name" id="last-name" placeholder="Doe" required>
+            Email:<input class="input" type="email" name="email"  id="email" placeholder="example@email.com" required>
+            Password:<input class="input" type="password" name="password" placeholder="minimum 8 characters" id="password" minlength="8" required>
+          </label>  
+        </div>     
+        <!--checkbox  -->
+        <div class ="checkbox">
             <label class="label">
               <br>
               I agree: <input type="checkbox" id="terms" name="terms" value="agree" required>
-              <a href="">Terms and conditions</a>
+              <a href="">Terms and conditions</a> 
             </label>
               <br>
               <br>
+              <br>
             <input class="submit-button" type="submit" value="Submit" value="refresh">
-          </div>
+        </div>
       </div> 
-  <!-- Accordion-->
-    <div class = "container-faq">
-      <div class="accordion-faq">
-        <h2>¿FAQ? </h2>
-        <section class="accordion">
-          <h4 id="accordion-question-1" class="accordion-question">What do I bring?</h4>
-            <p id="accordion-answer-1" class="accordion-answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis soluta error illo vitae sed. Veniam ratione similique ipsum molestias natus deleniti, temporibus commodi culpa, consequuntur odit inventore laudantium ullam quod!</p>
-        </section>
-        <section class="accordion">
-          <h4 id="accordion-question-2" class="accordion-question">Is yoga for me?</h4>
-            <p id="accordion-answer-2" class="accordion-answer">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti necessitatibus ullam culpa ipsa pariatur. Omnis, at inventore. Molestias corrupti earum, iste obcaecati exercitationem, officia quaerat ea totam neque impedit nihil.</p>
-        </section>    
-        <section class="accordion">
-          <h4 id="accordion-question-3" class="accordion-question">What does it cost?</h4>
-            <p id="accordion-answer-3" class="accordion-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a blanditiis suscipit, assumenda accusamus ex architecto, vitae placeat praesentium pariatur necessitatibus atque deleniti nisi quia. Distinctio quos delectus nobis corrupti!</p>
-       </section>  
-      </div>
-    </div>  
+      <!-- Accordion section-->
+      <div class = "container-faq">
+        <div class="accordion-faq">
+          <h2>¿FAQ? </h2>
+          
+          <section class="accordion">
+            <h4 id="accordion-question-1" class="accordion-question">What do I bring?
+              <span class="arrow">▼</span>
+            </h4>
+              <p id="accordion-answer-1" class="accordion-answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis soluta error illo vitae sed. Veniam ratione similique ipsum molestias natus deleniti, temporibus commodi culpa, consequuntur odit inventore laudantium ullam quod!</p>
+          </section>
+
+          <section class="accordion">
+            <h4 id="accordion-question-2" class="accordion-question">Is yoga for me?
+              <span class="arrow">▼</span>
+            </h4>
+              <p id="accordion-answer-2" class="accordion-answer">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti necessitatibus ullam culpa ipsa pariatur. Omnis, at inventore. Molestias corrupti earum, iste obcaecati exercitationem, officia quaerat ea totam neque impedit nihil.</p>
+          </section>    
+
+          <section class="accordion">
+            <h4 id="accordion-question-3" class="accordion-question">When can I start?
+              <span class="arrow">▼</span>
+            </h4>
+              <p id="accordion-answer-3" class="accordion-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a blanditiis suscipit, assumenda accusamus ex architecto, vitae placeat praesentium pariatur necessitatibus atque deleniti nisi quia. Distinctio quos delectus nobis corrupti!</p>
+          </section>  
+
+          <section class="accordion">
+            <h4 id="accordion-question-4" class="accordion-question">How does the levels work? 
+              <span class="arrow">▼</span>
+            </h4>
+              <p id="accordion-answer-4" class="accordion-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a blanditiis suscipit, assumenda accusamus ex architecto, vitae placeat praesentium pariatur necessitatibus atque deleniti nisi quia. Distinctio quos delectus nobis corrupti!</p>
+          </section>  
+
+          <section class="accordion">
+            <h4 id="accordion-question-5" class="accordion-question">Where are you located?
+              <span class="arrow">▼</span>
+            </h4>
+              <p id="accordion-answer-5" class="accordion-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a blanditiis suscipit, assumenda accusamus ex architecto, vitae placeat praesentium pariatur necessitatibus atque deleniti nisi quia. Distinctio quos delectus nobis corrupti!</p>
+          </section>  
+        
+          <section class="accordion">
+            <h4 id="accordion-question-6" class="accordion-question">How much does it cost?
+              <span class="arrow">▼</span>
+            </h4>
+              <p id="accordion-answer-6" class="accordion-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a blanditiis suscipit, assumenda accusamus ex architecto, vitae placeat praesentium pariatur necessitatibus atque deleniti nisi quia. Distinctio quos delectus nobis corrupti!</p>
+          </section>  
+
+        </div>
+      </div>  
     </form>   
     
     <footer class="footer"> 

@@ -9,7 +9,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 body {
  margin: 0;
- font-family: Quicksand, Arial, Helvetica, sans-serif;
+ font-family: 'Quicksand', Arial, Helvetica, sans-serif;
  background: black;
 }
 .header{
@@ -31,16 +31,17 @@ body {
   top: 20px
 }
 .container-menu {
-   display: flex;
+  display: flex;
   align-items: center;
   flex-direction: column;
   color: #fff;
   font-size: 20px;
 }
-.menu{
-text-align: center;  
-border-bottom: 1px solid whitesmoke;
-width: 100%;
+.menu {
+  text-align: center;  
+  border-bottom: 1px solid whitesmoke;
+  width: 100%;
+  transition: background 2s ease;
 }
 .menu:hover {
   background: linear-gradient(to left, #29323c, #485563, #2b5876);
@@ -62,29 +63,26 @@ width: 100%;
   display: flex;
   background: black;
   color: white;
+  cursor: pointer;
   }
 /* yoga level dropdown */
 input [type=text], select { 
   padding: 5px;
   border-radius: 5px;
   font-size: 14px;
-  width: 200px;
+  width: 250px;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
 }
-.container-faq{
-  display: flex;
-  border-radius: 20px;
-  padding:10px;
-}
+/* Input fields */
 .input {
   width: 100%;
   margin-top: 10px;
-  padding: 5px;
   border: none;
   border-bottom: 2px solid rgb(11, 10, 10);
   transition: border-color 0.4s ease;
   font-size: 14px;
   padding: 10px 0;
-  }
+}
 .input:focus {
   outline: none;
   border-color:#377198;
@@ -92,7 +90,6 @@ input [type=text], select {
 .input:valid {
   color: rgb(12, 151, 12);
 }
-
 .submit-button {
   background: #173252;
   color: whitesmoke;
@@ -100,39 +97,38 @@ input [type=text], select {
   box-sizing: border-box;
   border-radius: 20px;  
   box-shadow: 0 4px #999;
-  }
-.submit-button:active{
+}
+.submit-button:active {
   background-color: #29323c;
   box-shadow: 0 1px rgb(80, 79, 79);
   transform: translateY(5px);
+}
+.container-faq {
+  display: flex;
+  border-radius: 20px;
+  padding:10px;
+}
+.accordion-faq {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px;
+  width: 50%;
+  margin: 20px;
+  font-size: 20px;
 }
 .accordion {
   margin: 0px;
   display: flex;
   flex-direction: column;
-  background: whitesmoke; 
   color: black;
   border-radius: 5px;
   cursor: pointer;
   width: 300px;
-  background:#173252;
+  border:2px solid #2b5876; 
 }
 .accordion-question:hover {
-  transition: all .9s ease-in-out;
   background: linear-gradient(to left, #29323c, #485563, #2b5876);
- }
-.accordion-faq {
-  font-size: 20px;
-  font-weight: 600;
-  padding: 20px;
-  border: 2px solid black;
-  /* width: 300px; */
-  width: 50%;
-  border-radius: 5px;
-  margin: 20px;
-  font-size: 20px;
- 
-  }
+}
 .accordion-question {
   margin: 0;
   padding: 10px;
@@ -140,8 +136,14 @@ input [type=text], select {
   border-radius: 5px;
   font-size: 19px;
   border: 2px solid black;
-  transition: all 0.4s ease-in-out;
+  transition: background 2s ease-in-out;  
   color: whitesmoke;
+}
+.accordion:nth-of-type(2n + 1) {
+  background: #2b5876; 
+}
+.accordion:hover {
+  background: linear-gradient(to left, #29323c, #485563, #2b5876);
 }
 .accordion-answer {
   font-size: 15px;
@@ -152,14 +154,25 @@ input [type=text], select {
   background: #ffff;
   border-radius: 0 0 5px 5px;
 }
-.accordion-selected {
+.accordion-selected + p {
   display:block;
- }
- .footer{
+}
+.arrow {
+  display: inline-block;
+  color: whitesmoke;
+  font-size: 15px;
+  float: right;
+}
+ .accordion-question.accordion-selected .arrow {
+  transform: rotate(180deg);
+  display: inline-block;
+  font-size: 15px;
+}
+ .footer {
   text-align: center;
   color: whitesmoke;
   margin: 20px;
-  }
+}
 
  /* mobile */
 @media (max-width: 767px) {
@@ -170,53 +183,53 @@ input [type=text], select {
   }
 } 
 /* tablet */
-  @media (min-width: 768px) {
-    .form {
-      flex-direction: row;
-    }
-    .hero-image {
-      width: 100vw;
-      height: 50vh;
-      object-fit: cover;
-    }
-    .hero-title {
-      font-size: 80px; 
-      top: 280px;
-    }
-    .footer {
-      height: 20px;
-      text-align: center;
-    }
-    .container-menu {
-     flex-direction: row;
-     justify-content: space-between;
-     color: #fff;
-     font-size: 20px;
-     text-transform: uppercase;
-   }
-  }  
-    /* laptop */
-  @media (min-width: 1200px) {
-    .form {
-       flex-direction: row;
-       justify-content: space-between;
-    }
-    .hero-image {
-      width: 100vw;
-      height: 70vh;
-      object-fit: cover;
-    }
-    .hero-title {
-       position: absolute;
-       font-size: 80px; 
-       top: 100px;
-       left: 10px;
-    }
-    .form{
-      justify-content: center;
-    }
-    .container-menu {
-      font-size: 25px;
-      border-bottom: 2px solid whitesmoke;
-    }
+@media (min-width: 768px) {
+  .form {
+    flex-direction: row;
   }
+  .hero-image {
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+  }
+  .hero-title {
+    font-size: 80px; 
+    top: 280px;
+  }
+  .footer {
+    height: 20px;
+    text-align: center;
+  }
+  .container-menu {
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}  
+  /* laptop */
+@media (min-width: 1200px) {
+  .form {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  .hero-image {
+    width: 100vw;
+    height: 70vh;
+    object-fit: cover;
+  }
+  .hero-title {
+    position: absolute;
+    font-size: 80px; 
+    top: 100px;
+    left: 10px;
+  }
+  .form{
+    justify-content: center;
+  }
+  .container-menu {
+    font-size: 25px;
+    border-bottom: 2px solid whitesmoke;
+  }
+}

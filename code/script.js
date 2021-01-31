@@ -12,31 +12,67 @@
 const accordionQuestionOne = document.getElementById('accordion-question-1');
 const accordionQuestionTwo = document.getElementById('accordion-question-2');
 const accordionQuestionThree = document.getElementById('accordion-question-3');
+const accordionQuestionFour = document.getElementById('accordion-question-4');
+const accordionQuestionFive = document.getElementById('accordion-question-5');
+const accordionQuestionSix = document.getElementById('accordion-question-6');
 
-/*** Toggle Answers ***/
-const accordionAnswerOne = document.getElementById('accordion-answer-1');
-const accordionAnswerTwo = document.getElementById('accordion-answer-2');
-const accordionAnswerThree = document.getElementById('accordion-answer-3');
-
+//*** Toggle the answers ***//
 accordionQuestionOne.addEventListener('click', () => {
-  accordionAnswerOne.classList.toggle('accordion-selected');
-  accordionAnswerTwo.classList.remove('accordion-selected');
-  accordionAnswerThree.classList.remove('accordion-selected');
+  accordionQuestionOne.classList.toggle('accordion-selected');
+  accordionQuestionTwo.classList.remove('accordion-selected');
+  accordionQuestionThree.classList.remove('accordion-selected');
+  accordionQuestionFour.classList.remove('accordion-selected');
+  accordionQuestionFive.classList.remove('accordion-selected');
+  accordionQuestionSix.classList.remove('accordion-selected');
 });
 
 accordionQuestionTwo.addEventListener('click', () => {
-  accordionAnswerTwo.classList.toggle('accordion-selected');
-  accordionAnswerThree.classList.remove('accordion-selected');
-  accordionAnswerOne.classList.remove('accordion-selected');
+  accordionQuestionOne.classList.remove('accordion-selected');
+  accordionQuestionTwo.classList.toggle('accordion-selected');
+  accordionQuestionThree.classList.remove('accordion-selected');
+  accordionQuestionFour.classList.remove('accordion-selected');
+  accordionQuestionFive.classList.remove('accordion-selected');
+  accordionQuestionSix.classList.remove('accordion-selected');
 });
 
 accordionQuestionThree.addEventListener('click', () => {
-  accordionAnswerThree.classList.toggle('accordion-selected');
-  accordionAnswerOne.classList.remove('accordion-selected');
-  accordionAnswerTwo.classList.remove('accordion-selected');
+  accordionQuestionOne.classList.remove('accordion-selected');
+  accordionQuestionTwo.classList.remove('accordion-selected');
+  accordionQuestionThree.classList.toggle('accordion-selected');
+  accordionQuestionFour.classList.remove('accordion-selected');
+  accordionQuestionFive.classList.remove('accordion-selected');
+  accordionQuestionSix.classList.remove('accordion-selected');
 });
 
-// refresh fields after submit form 
+accordionQuestionFour.addEventListener('click', () => {
+  accordionQuestionOne.classList.remove('accordion-selected');
+  accordionQuestionTwo.classList.remove('accordion-selected');
+  accordionQuestionThree.classList.remove('accordion-selected');
+  accordionQuestionFour.classList.toggle('accordion-selected');
+  accordionQuestionFive.classList.remove('accordion-selected');
+  accordionQuestionSix.classList.remove('accordion-selected');
+});
+
+accordionQuestionFive.addEventListener('click', () => {
+  accordionQuestionOne.classList.remove('accordion-selected');
+  accordionQuestionTwo.classList.remove('accordion-selected');
+  accordionQuestionThree.classList.remove('accordion-selected');
+  accordionQuestionFour.classList.remove('accordion-selected');
+  accordionQuestionFive.classList.toggle('accordion-selected');
+  accordionQuestionSix.classList.remove('accordion-selected');
+});
+
+accordionQuestionSix.addEventListener('click', () => {
+  accordionQuestionOne.classList.remove('accordion-selected');
+  accordionQuestionTwo.classList.remove('accordion-selected');
+  accordionQuestionThree.classList.remove('accordion-selected');
+  accordionQuestionFour.classList.remove('accordion-selected');
+  accordionQuestionFive.classList.remove('accordion-selected');
+  accordionQuestionSix.classList.toggle('accordion-selected');
+});
+
+// refresh input-fields after submit form 
 document.getElementById("form").onsubmit = function() { 
   location.reload(true); 
 }
+
