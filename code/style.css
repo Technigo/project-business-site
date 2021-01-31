@@ -31,8 +31,9 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
+    /*bottom: 0;
+    right: 0;*/
+    margin-left: 20px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -43,15 +44,14 @@ body {
 .nav-container {
     position: absolute;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     top: 0;
     right: 0%;
     padding: 10px;
     margin: 20px;
     color: white;
 }
-
-
-/*need the words to seperat a bit, just don't know how*/
 
 
 /*accordion*/
@@ -97,12 +97,11 @@ input {
 
 .accordionparent {
     display: flex;
+    justify-content: center;
 }
 
 .accordionheader {
     display: flex;
-    justify-content: center;
-    margin: 50px;
 }
 
 .question {
@@ -120,9 +119,15 @@ input {
 }
 
 .answer {
-    display: none;
-    padding: 0 30px;
-    background-color: pink;
+    display: list-item;
+    padding: 0 15 px;
+    margin-bottom: 20px;
+}
+
+.answer:hover {
+    background-color: lightpink;
+    transition: all;
+    overflow: hidden;
 }
 
 
