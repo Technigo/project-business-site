@@ -1,12 +1,10 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A project during Technigo Bootcamp to create a business one pager website that should contain an hero with image, a signup form, and an accordion. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I used a responsive background cover image as top section with position relative and a title and nav-bar with position absolute to bo on-top of hero-image. I modified the accordion with JavaScript and applied the html. form.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a58959d5-60fa-4ab7-8ed8-36a8c61f726b/deploy-status)](https://app.netlify.com/sites/dreamy-kepler-a171a5/deploys)
