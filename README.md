@@ -10,4 +10,4 @@ If I had more time I would have tried to style the checkboxes and radio buttons 
 
 ## View it live
 
-You can see my site here: https://dnd-signup.netlify.app/gi
+You can see my site here: https://dnd-signup.netlify.app/
