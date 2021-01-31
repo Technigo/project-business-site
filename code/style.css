@@ -14,7 +14,6 @@ body {
 }
 
 /** Hero section style **/
-
 .hero-section {
   position:relative;
   margin: 0;
@@ -118,6 +117,7 @@ body {
   align-items: center;
   width: 100%;
 }
+/* Styling text input, email and password inputs */
 .name-surname, .email-password {
   width: 48%;
   display: flex;
@@ -159,7 +159,9 @@ body {
   border-radius: 5px;
   padding: 5px;
   width: 100%;
+  cursor: context-menu;
 }
+
 /* Date of birth styling */
 .date {
   display: block;
@@ -170,14 +172,19 @@ body {
   font-size: 14px;
   padding: 5px;
   appearance: none;
+  cursor: text;
 }
+
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
+  cursor: context-menu;
 }
+
 /* All text-input effect */
 .text-input:focus, .selector:focus, .date:focus {
   outline-color: gray;
 }
+
 /* Radio buttons styling */
 .fieldset-competition-classes {
   margin: 10px 0;
@@ -204,15 +211,12 @@ body {
   width: 100%;
   position: relative;
   user-select: none;
+  cursor: pointer;
+  width: 100%;
+  padding-left: 20px;
 }
 
 /* Custom radio button */
-.radio-label {
-  margin-left: 20px;
-  cursor: pointer;
-  width: 100%;
-}
-
 .radio-input {
   cursor: pointer;
   position: absolute;
@@ -230,7 +234,6 @@ body {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  
 }
 
 .inner-radio .radio-input:checked ~ .custom-radio {
@@ -242,12 +245,12 @@ body {
   width: 100%;
   padding: 5px;
 }
+
 .checkbox {
   margin-bottom: 10px;
-} 
-.checkbox-input {
   cursor: pointer;
-}
+} 
+
 /* Submit button styling */
 .submit-wrapper {
   width: 100%;
@@ -255,6 +258,7 @@ body {
   justify-content: flex-end;
   margin-bottom: 10px;
 }
+
 .submit-button {
   margin-bottom: 10px;
   background-color: rgb(147, 113, 77);
@@ -274,10 +278,12 @@ body {
   margin: 10px 10px;
   border-radius: 5px;
 }
+
 .accordion-heading {
   padding: 5px;
   margin: 5px 0 20px 5px;
 }
+
 .accordion-question {
   background-color: rgb(147, 113, 77);
   cursor: pointer;
@@ -298,8 +304,8 @@ body {
 
 .question-clicked{
   position: relative;
-
 }
+
 .question-clicked::after {
   content:"\2206";
   position: absolute;
@@ -307,7 +313,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
-
 
 .accordion-answer {
   height: 0;
@@ -334,7 +339,6 @@ body {
   align-items: center;
   background: rgb(51, 45, 30);
   width: 100vw;
-
 }
 .logo-footer {
   width: 190px;
@@ -348,19 +352,23 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .footer-link {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .footer-link:hover, .footer-link:focus {
   background: rgba(128, 110, 59, 0.342);
 }
+
 .footer-image {
   width: 100px;
   border-radius: 50%;
   border: 1px #fff solid;
 }
+
 .footer-headline {
   color: #fff;
 }
@@ -374,15 +382,18 @@ body {
   text-decoration: none;
   margin: 5px 2px;
 }
+
 .fa:hover {
   opacity: 0.7;
 }
+
 .fa-facebook, .fa-twitter, .fa-linkedin, .fa-instagram {
   color: #fff;
   text-decoration: none;
   background:rgb(186, 153, 17);
   border-radius: 3px;
 }
+
 .copy-right {
   background-color: rgb(27, 21, 14);
   color: rgb(223, 219, 219);
