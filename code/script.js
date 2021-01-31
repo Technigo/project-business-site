@@ -10,9 +10,16 @@ const faqHeaderFive = document.getElementById('faqHeaderFive');
 const faqContentFive = document.getElementById('faqContentFive');
 const faqHeaderSix = document.getElementById('faqHeaderSix');
 const faqContentSix = document.getElementById('faqContentSix');
+const fasHeaderOne = document.getElementById('fasHeaderOne');
+const fasHeaderTwo = document.getElementById('fasHeaderTwo');
+const fasHeaderThree = document.getElementById('fasHeaderThree');
+const fasHeaderFour = document.getElementById('fasHeaderFour');
+const fasHeaderFive = document.getElementById('fasHeaderFive');
+const fasHeaderSix = document.getElementById('fasHeaderSix');
 
 
 faqHeaderOne.addEventListener('click', () => {
+  fasHeaderOne.classList.toggle('active')
   faqContentOne.classList.toggle('accordion-selected')
   faqContentTwo.classList.remove('accordion-selected')
   faqContentThree.classList.remove('accordion-selected')
@@ -22,6 +29,7 @@ faqHeaderOne.addEventListener('click', () => {
 });
 
 faqHeaderTwo.addEventListener('click', () => {
+  fasHeaderTwo.classList.toggle('active')
   faqContentTwo.classList.toggle('accordion-selected')
   faqContentOne.classList.remove('accordion-selected')
   faqContentThree.classList.remove('accordion-selected')
@@ -31,6 +39,7 @@ faqHeaderTwo.addEventListener('click', () => {
 });
 
 faqHeaderThree.addEventListener('click', () => {
+  fasHeaderThree.classList.toggle('active')
   faqContentThree.classList.toggle('accordion-selected')
   faqContentTwo.classList.remove('accordion-selected')
   faqContentOne.classList.remove('accordion-selected')
@@ -40,6 +49,7 @@ faqHeaderThree.addEventListener('click', () => {
 });
 
 faqHeaderFour.addEventListener('click', () => {
+  fasHeaderFour.classList.toggle('active')
   faqContentFour.classList.toggle('accordion-selected')
   faqContentTwo.classList.remove('accordion-selected')
   faqContentThree.classList.remove('accordion-selected')
@@ -49,6 +59,7 @@ faqHeaderFour.addEventListener('click', () => {
 });
 
 faqHeaderFive.addEventListener('click', () => {
+  fasHeaderFive.classList.toggle('active')
   faqContentFive.classList.toggle('accordion-selected')
   faqContentTwo.classList.remove('accordion-selected')
   faqContentThree.classList.remove('accordion-selected')
@@ -58,6 +69,7 @@ faqHeaderFive.addEventListener('click', () => {
 });
 
 faqHeaderSix.addEventListener('click', () => {
+  fasHeaderSix.classList.toggle('active')
   faqContentSix.classList.toggle('accordion-selected')
   faqContentTwo.classList.remove('accordion-selected')
   faqContentThree.classList.remove('accordion-selected')
@@ -70,9 +82,7 @@ faqHeaderSix.addEventListener('click', () => {
 // A function that adds and remove the class "active" on the section you click on.
 // We haven't really talked about ´this´ yet, but we will... ;)
 // console.log(this) to see how it works
-function toggle() {
-  this.classList.toggle("active")
-}
+
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
+

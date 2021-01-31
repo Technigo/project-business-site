@@ -1,0 +1,54 @@
+/*.hamburger-menu-container {
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}*/
+
+/* CHECKBOX TO MAKE NAV MENU VISIBLE */
+.hamburger-menu-checkbox {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    opacity: 0; 
+}
+
+.hamburger-menu-illustration {
+    position: absolute;
+    top: 25px;
+    left: 14px;
+    z-index: 1;
+    width: 40px;
+    height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+.hamburger-menu-illustration::before,
+.hamburger-menu-illustration::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.hamburger-menu-illustration::before {
+   top: -12px;
+}
+
+.hamburger-menu-illustration::after {
+    top: 12px;
+}
+
+/* ROTATION WHEN CHECKBOX IS CHECKED */
+.hamburger-menu-checkbox:checked + .hamburger-menu-illustration {
+    transform: rotate(90deg);
+}
