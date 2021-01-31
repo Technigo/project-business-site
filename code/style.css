@@ -18,6 +18,7 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--primary-color);
 }
 
 h1 {
@@ -110,13 +111,15 @@ h3 {
 
 .flex-parent {
   display: flex;
-  height: 1200px;
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
 }
 
 .flex-child {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
   width: 300px;
   border: 5px solid #0b6ba8;
   border-radius: 10px;
@@ -138,24 +141,23 @@ h3 {
   flex-direction: column;
   padding: 25px;
   justify-content: center;
+  /* height: 400px; */
   background: #cfe6ad;
   color: #0e337d;
   border-radius: 5px;
+  /*margin: 15px; nuevo*/
 }
 
 .form-group {
   margin-bottom: 15px;
   display: flex;
   align-items: center;
+  /*  height: 25px; */
 }
 
 .form-group label {
   width: auto;
   font-size: 0.8rem;
-}
-
-input#checkbox {
-  width: 15px;
 }
 
 .form-group input {
@@ -170,6 +172,122 @@ input#checkbox {
 
 input::placeholder {
   color: #cfe6ad;
+}
+
+.checkbox-label {
+  display: block;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 24px;
+  height: 24px;
+  width: 24px;
+  clear: both;
+}
+
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-label .checkbox-custom {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 29px;
+  width: 29px;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  border: 2px solid #ffffff;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom {
+  background-color: #0e337d;
+  border-radius: 5px;
+  -webkit-transform: rotate(0deg) scale(1);
+  -ms-transform: rotate(0deg) scale(1);
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+  border: 2px solid #ffffff;
+}
+
+.checkbox-label .checkbox-custom::after {
+  position: absolute;
+  content: "";
+  left: 12px;
+  top: 12px;
+  height: 0px;
+  width: 0px;
+  border-radius: 5px;
+  border: solid #009bff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(0deg) scale(0);
+  -ms-transform: rotate(0deg) scale(0);
+  transform: rotate(0deg) scale(0);
+  opacity: 1;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::after {
+  -webkit-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+  opacity: 1;
+  left: 8px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid #009bff;
+  border-width: 0 2px 2px 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.checkbox-label .checkbox-custom::before {
+  position: absolute;
+  content: "";
+  left: 10px;
+  top: 10px;
+  width: 0px;
+  height: 0px;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::before {
+  left: -3px;
+  top: -3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  -webkit-transform: scale(3);
+  -ms-transform: scale(3);
+  transform: scale(3);
+  opacity: 0;
+  z-index: 999;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+.input-title {
+  font-size: 0.5em;
 }
 
 button {
@@ -190,70 +308,86 @@ button:hover {
 /**** ACCORDION ****/
 
 .accordion {
-  background: #0e337d;
+  /* width: 90%;
+   max-width: 1000px;
+   margin: 2rem auto; */
+  width: 300px;
+  border: 5px solid #0b6ba8;
+  border-radius: 10px;
+  margin: 30px;
   padding: 20px;
 }
 
-.accordion-element {
-  padding: 0px;
+.accordion-item {
+  background-color: #b1882d;
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
-
-.accordion-header {
-  border-top: 1px solid #0b6ba8;
-  background: #b1882d;
-  font-size: 22px;
-  margin: 0;
-  padding: 20px;
-  cursor: grab;
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  color: #cfe6ad;
 }
-
-.one {
-  border-radius: 5px 5px 0 0;
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
 }
-
-.four {
-  border-radius: 0 0 5px 5px;
+.accordion-item-header.active::after {
+  content: "\2212";
 }
-
-.accordion-text-container {
-  height: 0;
+.accordion-item-body {
+  max-height: 0;
   overflow: hidden;
-  transition: height 0.3s ease;
+  transition: max-height 0.2s ease-out;
+  background: #0e337d;
 }
-
-.accordion-text-container.active {
-  height: 170px;
-}
-
-.accordion-text {
-  font-size: 1rem;
-  margin: 0;
-  padding: 15px;
-}
-
-.active {
-  height: auto;
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+  color: #cfe6ad;
 }
 
 /**** FOOTER ***/
 
 .footer {
+  height: 80px;
   display: flex;
-  background: #3b3020;
-  height: 60px;
-  margin: 0px;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 0;
+  right: 0;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  position: absolute;
-  margin-top: 20px;
+  background-color: #3c3021;
+  color: white;
 }
 
-.footer-text {
-  font-size: 0.8rem;
-  color: #fff;
-  text-align: center;
-  padding: 0 20px;
+.footer img {
+  max-width: 26px;
+  margin-left: 3px;
+}
+
+a {
+  color: inherit;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
 }
 
 @media (min-width: 768px) {
@@ -266,11 +400,13 @@ button:hover {
   .flex-parent {
     display: flex;
     align-items: space-evenly;
-    height: 1200px;
   }
 
   .flex-child {
     width: 500px;
+  }
+  .input-title {
+    font-size: 1em;
   }
 
   .accordion-text-container.active {
@@ -281,10 +417,12 @@ button:hover {
 @media (min-width: 1024px) {
   #intro p {
     font-size: 1.4rem;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .flex-parent {
+
+  /* .flex-parent {
     display: flex;
-    height: 500px;
     flex-direction: row;
     align-items: space-between;
     justify-content: space-evenly;
@@ -293,7 +431,7 @@ button:hover {
 
   .flex-child {
     min-width: 470px;
-  }
+  } */
 
   .footer-text {
     font-size: 1rem;
