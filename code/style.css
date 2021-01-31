@@ -178,7 +178,7 @@ body {
 
 .form-signup-container { 
   width: 100%;
-  height: 550px;
+  height: 600px;
   border-radius: 25px;
   padding: 16px;
   background: #fff;
@@ -194,6 +194,21 @@ input[type=text], input[type=email], input[type=password] {
   border: 1px solid #FCD9C8;
   border-radius: 5px;
   width: 100%;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+  box-shadow: 0 0 5px #7565FA;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #7565FA;
 }
 
 input:valid {
@@ -256,7 +271,7 @@ label {
 
 .accordion {               
   width: 100%;
-  height: 550px;
+  height: 600px;
   border-radius: 25px;
   padding: 16px;
   margin: 30px 0px 50px 0px;
@@ -291,7 +306,7 @@ label {
 .answer {
   overflow: hidden;
   display: none;
-  transition: height .3s ease;
+  transition: visibility 1s ease;
 }
 
 .answer-content {
