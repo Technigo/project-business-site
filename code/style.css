@@ -1,7 +1,423 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-.active + .answer {
-  /* some styling here */
+.header {
+  position: relative;
+}
+
+/* Navigation bar */
+
+.nav {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+  margin: 15px 0px 15px 25px;
+}
+
+.logo-name {
+  color: #fff;
+  margin: 15px 0px 15px 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-item-links {
+  display: none;
+}
+
+.nav-item-signin {
+  margin: 15px 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 7px 25px;
+  cursor: pointer;
+}
+
+/* Heror image */
+
+.picture {
+  height: 100vh;
+  display: block;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.hero-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+  margin: 0px 20px;
+}
+
+.hero-button {
+  margin: 40px 15px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  padding: 15px 25px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Form */
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-heading {
+  margin: 0 0 10px 0;
+}
+
+.form-text {
+  color: gray;
+  font-size: 12px;
+  margin: 0 0 40px 0;
+
+}
+
+.form-text a {
+  color: #536DFE;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 70%;
+  padding: 0;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.input-name {
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+  background-color: #EEEEEE;
+  border: none;
+  border-radius: 5px;
+  padding: 0px 0px 0px 10px;
+}
+
+.input-name:valid {
+  background-color: #CCD4ED;
+}
+
+.input-username {
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+  background-color: #EEEEEE;
+  border: none;
+  border-radius: 5px;
+  padding: 0px 0px 0px 10px;
+}
+.input-username:valid {
+  background-color: #CCD4ED;
+}
+
+.input {
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+  background-color: #EEEEEE;
+  border: none;
+  border-radius: 5px;
+  padding: 0px 0px 0px 10px;
+}
+
+.input:valid {
+  background-color: #CCD4ED;
+}
+
+.label-checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: end;
+  margin-bottom: 20px;
+  margin-top: 0;
+  font-size: 12px;
+  margin-top: 0;
+  width: 250px;
+}
+
+.input-checkbox {
+  margin: 0px 15px 0px 0px;
+}
+
+.input-submit {
+  color: white;
+  font-weight: bold;
+  background-color: #212121;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.input-submit:hover {
+  background-color: #536DFE;
+}
+
+.form-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px 0px 0px;
+}
+
+.form-image {
+  object-fit: cover;
+  width: 300px;
+}
+
+/* Accordion */
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #F4F4F4;
+  ;
+  width: 100%;
+  align-items: center;
+  margin-top: 50px;
+  padding: 50px 0px 100px 0px;
+}
+
+.accordion-heading {
+  width: 70%;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.question-container {
+  cursor: pointer;
+  border-bottom: 1px solid #3F3D56;
+  width: 70%;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F4F4F4;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 25px 0px;
+}
+
+
+
+.question:hover {
+  color: #536DFE;
+}
+
+.answer {
+  background-color: #F4F4F4;
+  font-size: 14px;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.5s linear;
+  -moz-transition: height 0.5s linear;
+  -ms-transition: height 0.5s linear;
+  -o-transition: height 0.5s linear;
+  transition: height 0.5s linear;
+}
+
+.active+.answer {
+  opacity: 1;
+  height: 150px;
+  background-color: #F4F4F4;
+  -webkit-transition: height 0.5s linear;
+  -moz-transition: height 0.5s linear;
+  -ms-transition: height 0.5s linear;
+  -o-transition: height 0.5s linear;
+  transition: height 0.5s linear;
+}
+
+/* Plus, minus symbols */
+
+.question::after {    /* Plus */
+  content: "\002B";
+  font-weight: bold;
+}
+
+.active::after {   /* Minus */
+  content: "\2212";
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background-color: #F4F4F4;
+  ;
+}
+
+.footer-text {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.footer-links {
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.footer-links a {
+  color: black;
+}
+
+.footer-links a:hover {
+  color: #536DFE;
+}
+
+/* Tablet */
+
+@media (min-width: 767px) {
+  .nav-item {
+    display: flex;
+    display: flex;
+    align-items: center;
+  }
+  .nav-item-links {
+    display: block;
+    margin: 15px 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 5px;
+    cursor: pointer;
+  }
+  .hero-content {
+    right: 15%;
+    left: 15%;
+  }
+  .heror-text {
+    font-size: 48px;
+  }
+  .label-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .input-name {
+    width: 135px;
+  }
+  .input-username {
+    width: 135px;
+  }
+  .active+.answer {
+    height: 100px;
+  }
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+  .form-container {
+    flex-direction: row;
+    padding: 50px 0px 100px 0px;
+  }
+  .form-image-container {
+    align-items: flex-end;
+    margin: auto;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  .form-image {
+    object-fit: cover;
+    width: 500px;
+  }
+  .label-container {
+    flex-direction: row;
+  }
+  .accordion-container {
+    margin: 0px;
+  }
+  .accordion-heading {
+    margin-top: 0;
+    text-align: left;
+  }
+  .question-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .question {
+    padding-left: 0;
+  }
+  .answer {
+    padding-left: 0;
+  }
+  .active+.answer {
+    margin: 0px 40px 0px 0px;
+    height: 100px;
+    text-align: left;
+  }
 }
