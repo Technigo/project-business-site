@@ -1,7 +1,172 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+
+body {
+  margin: 0;
+  background-color: #4d5d69;
+}
+
+
+
+/*HEADER*/
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: 'Amatic SC', cursive;
+  font-size: 100px;
+  color: #f5f5ea;
+  text-shadow: 3px 3px 3px #000000;
+}
+
+
+
+/*ACCORDION+SIGNUP*/
+
+.accordion-signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion, .signup-form {
+  width: 70%;
+  height: auto;
+  margin-top: 10%;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 5%;
+  padding-bottom: 10%;
+  background-color: #f5f5ea;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.616), 0 6px 20px 0 rgba(0, 0, 0, 0.616);
+}
+
+
+/*Accordion*/
+
+h2 {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 55px;
+  font-weight: 200;
+  color: #000000;
+}
+
+.accordion-question {
+  text-align: left;
+  font-family: 'Merriweather', serif;
+  font-size: 25px;
+  font-weight: 250;
+  color: #000000;
+}
+
+.accordion-answer {
+  display: none;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  padding: 4%;
+  background-color: #ffffff;
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  color: #000000;
+}
+
+.accordion-clicked {
+  display: block;
+}
+
+
+/*Signup*/
+
+.signup-form {
+  margin-bottom: 4%;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  font-weight: 200;
+  color: #000000;
+}
+
+.signup-form-text {
+  text-align: left;
+  font-size: 15px;
+  color: #000000;
+}
+
+input {
+  margin-top: 3px;
+  border: 0.5px solid #000000;
+}
+
+
+
+/*FOOTER*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 7%;
+  border: 1px solid transparent;
+  padding: 5%;
+  background-color: #000000;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  color: #f5f5ea;
+}
+
+
+
+
+
+/*MEDIA QUERIES for tablet & desktop*/
+
+
+@media (min-width: 768px) {
+  body {
+    background-color: #3f4958;
+  }
+
+  h1 {
+    font-size: 120px;
+  }
+
+  .accordion-signup-container {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 10%;
+  }
+
+  .accordion, .signup-form {
+    margin: 0;
+    box-shadow: 0 4px 8px 0 #000000, 0 6px 20px 0 #000000;
+  }
+
+  .accordion {
+    margin-right: 5%;
+  }
+
+  footer {
+    margin-top: 10%;
+  }
 }

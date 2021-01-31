@@ -1,12 +1,7 @@
-# Business Site
 
-Replace this readme with your own information about your project. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I love witches and witchy aesthetics so I decided to create a business site for a small witchy company. 
 
-## The problem
+I planned my project by looking around Pinterest and Instagram for inspiration. I used "Image color picker" for picking out background colors.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+If I had more time I would have put a lot more effort into the styling. I wanted to create a business site for Spellman Mortuary (from the Netflix show Chilling Adentures of Sabrina), but since I'm still a beginner (who gets stuck and has to google everthing for hours) I opted for something easier. 🦇 
