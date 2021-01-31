@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dogGO</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/epf8jwq.css">
+    <style></style>
   </head>
 
   <body>
+    
     <div class="navbar-container">
       <header class="navbar">
         <h2 class="logo">     
@@ -18,39 +21,102 @@
           <div></div>
           <div></div>
         </div>
-        <div class="navbar-menu-container">
+        <div class="menu-container">
           <nav>
-            <ul>
-              <li>Dog-stinations</li>
-              <li>Off-Leash Experiences</li>
-              <li>Booking</li>
-              <li>A-BARK Us</li>
-              <li>SIGN IN</li>
+            <ul class=nav-menu>
+              <li><a href="#">Dog-stinations</a></li>
+              <li><a href="#">Off-Leash Experiences</a></li>
+              <li><a href="#">Booking</a></li>
+              <li><a href="#">A-BARK Us</a></li>
+              <li><a href="#">SIGN IN</a></li>
             </ul>
           </nav> 
-        </div>  
-        <div class="hero-container" id="hero">
-          <video class="video" loop autoplay muted>
-            <source src="/code/videos/Herovideo_1280x720.mp4" type="video/mp4">
-            <source src="/code/videos/Herovideo_1280x720.webm" type="video/webm">
-        
-            <!--
-            <source class="video-tablet" src="/code/videos/Herovideo_720x480.mp4" media="(max-width: 991px)" type="video/mp4">
-            <source class="video-tablet" src="/code/videos/Herovideo_720x480.webm" media="(max-width: 991px)" type="video/webm">
-    
-            <source class="video-mobile" src="/code/videos/HeroVideo_360x240.mp4" media="(max-width: 600px)" type="video/mp4">
-            <source class="video-mobile" src="/code/videos/Herovideo_360x240.webm" media="(max-width: 600px)" type="video/webm">
-    -->
-          </video>
-        </div>   
+        </div> 
       </header>
-  </div>
+    </div>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero-section">
+      <div class="hero-header">
+        <h1>An Adventure<br>you can both enjoy!</h1>
+      </div>
+
+      <div class="hero-container" id="hero">
+        <video class="video" loop autoplay muted preload>
+          <source src="/code/videos/Herovideo_1280x720.mp4" type="video/mp4">
+          <source src="/code/videos/Herovideo_1280x720.webm" type="video/webm">
+        
+  <!--
+          <source src="/code/videos/Herovideo_720x480.mp4" media="(max-width: 991px)" type="video/mp4">
+          <source src="/code/videos/Herovideo_720x480.webm" media="(max-width: 991px)" type="video/webm">
+    
+          <source src="/code/videos/HeroVideo_360x240.mp4" media="(max-width: 600px)" type="video/mp4">
+          <source src="/code/videos/Herovideo_360x240.webm" media="(max-width: 600px)" type="video/webm">
+    -->
+        </video>
+      </div>   
+    </section> 
+
+    <!-- SIGN UP FORM -->
+
+    <section class=form>
+      <form action="https://httpbin.org/anything" method="post">
+        <ul >
+          <li>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name">
+          </li>
+          <li>
+            <label for="name">Dogs Name:</label>
+            <input type="text" id="name" name=dogs_name>
+          </li>
+          <li>
+            <label for="email">Email:</label>
+            <input type="email" id="mail" name="user_email">
+          </li>
+          <li>
+            <label for="password">Password:</label>
+            <input type="password" id="papssword" name="user_password">
+          </li>
+          <li>
+            <label for="dogssize">Size of Dog:</label>
+          </li><br>
+          <!-- <ul class="radio-container"> 
+            <li>
+              <input type="radio" name="size" id="small" value="small">
+              <label for="small">Small</label>
+            </li>
+            <li>
+              <input type="radio" name="size" id="medium" value="medium">
+              <label for="medium">Medium</label>
+            </li>
+            <li>
+              <input type="radio" name="size" id="large" value="large">
+              <label for="large">Large</label>
+            </li>
+            <li>
+              <input type="radio" name="size" id="huge" value="huge">
+              <label for="huge">Could be a bear.</label>
+            </li>
+          </ul>  
+        -->
+          <li>
+            <input type="checkbox" name="accept" id="accept" value="I understand and accept to the Terms & Conditions.">
+          </li>
+          <div class="button-container">
+            <button type="submit">Submit</button>
+            <button type="reset">Cancel</button>
+          </div>
+        </ul>
+      </form>
+
+    </section>
+
+
 
   
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
+    <!--FAQ SECTION-->
     <section class="accordion">
       <!-- Accordion -->
       <h1>FAQ</h1>
