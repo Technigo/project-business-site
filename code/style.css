@@ -1,7 +1,321 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  margin: 0 auto;
+  background-color: #ffffff;
+  font-family: 'Rubik', sans-serif;
+}
 
-.active + .answer {
-  /* some styling here */
+* {
+  box-sizing: border-box;
+}
+
+/* HERO */
+
+.header {
+  position: relative;
+  font-family: 'Paytone One', sans-serif;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin: 10px 30px 10px 30px;
+}
+
+.nav-button {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 12px 0 8px;
+  transition: .4s;
+}
+
+.nav-button::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  top:100%;
+  left: 0;
+  border-radius: 3px;
+  background: #BFE9DB;
+  transition: .2s;
+}
+
+.nav-button::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  top:0;
+  left: 0;
+  border-radius: 3px;
+  background: #BFE9DB;
+  transition: .2s;
+}
+
+.nav-button:hover:before {
+  top: -webkit-calc(100% - 3px);
+  top: calc(100% - 3px);
+}
+
+.nav-button:hover:after {
+  top: 3px;
+}
+
+.dog-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  font-size: 45px;
+}
+
+.container {
+  max-width: 90%;
+  margin: 30px auto;
+  background-color: rgb(246,244,246);
+  color: #000;
+  border-radius: 20px;
+  box-shadow: 1px 8px 6px #999;
+}
+
+.container-title {
+  background-color: #6AC1B7;
+  text-align: center;
+  padding: 30px;
+  color: #fff;
+  font-family: 'Paytone One', sans-serif;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 1px 0px 6px #999;
+}
+
+.container-title h1 {
+  font-size: 30px;
+}
+
+.container-title p {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+/* FORMS */
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group h4 {
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.form {
+  color: #454545;
+  padding: 30px;
+  display: block;
+}
+
+input {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid;
+  outline: none;
+}
+
+input:focus {
+  background-color: #DFEFED;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7px;
+}
+
+.input-wrapper label {
+  margin: 0 0 2px 2px;
+}
+
+.input-wrapper-checkbox {
+  display: flex;
+  margin-bottom: 2px;
+}
+
+.free-text-label {
+  font-weight: 600;
+}
+
+textarea {
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 5px;
+  outline: none;
+}
+
+textarea:focus {
+  background-color:#DFEFED;;
+  
+}
+::placeholder {
+  font-style: italic;
+}
+
+/* ACCORDION */
+
+.accordion-group {
+  padding: 20px;
+  color: #454545;
+}
+
+.accordion-wrapper {
+  border: none;
+  margin: 0px;
+}
+
+.accordion-question:hover {
+  background-color: #fff;
+  transition: 0.7s ease;
+  cursor: pointer;
+  
+} 
+
+.accordion-question {
+  padding: 20px;
+  border-top: 1px solid rgb(68, 141, 91, 0.192);
+  
+}
+
+.accordion-question::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f078";
+  font-weight:600;
+  color: rgba(68, 141, 91, 0.4);
+  font-size: 20px;
+  float: right;
+}
+
+.active::after {
+  content: "\f077";
+}
+
+.accordion-wrapper:nth-child(3) {
+  border-bottom: 1px solid rgba(68, 141, 91, 0.192);
+}
+
+.accordion-answer {
+  margin: 0;
+  background-color: #fff;
+  overflow: hidden;
+  max-height: 0;
+  transition: ease-in-out 0.4s;
+}
+
+.accordion-answer p {
+  margin: 0;
+  font-size: 13px;
+  padding: 15px 20px 20px 20px;
+}
+
+.active + .accordion-answer {
+  max-height: 200px;
+}
+
+.active {
+  background-color: rgba(255, 255, 255);
+}
+
+/* BUTTON */
+
+.button {
+  background-color:#517D99;
+  color: #fff;
+  border: none;
+  border-radius: 27px;
+  padding: 10px 50px;
+  justify-self: center;
+  box-shadow: 1px 4px 6px #999;
+}
+
+.button:hover {
+  background-color: #B4CCE3;
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+  .footer {
+    background-color: #517D99;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    padding: 30px;
+    width: 100vw;
+  }
+
+  .footer a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 13px;
+    margin: 5px;
+  }
+
+/** RESPONSIVENESS **/
+
+  /** TABLET */
+
+@media (min-width: 768px) {
+
+  .footer {
+  flex-direction: row;
+}
+
+/** LAPTOP **/
+
+@media (min-width: 992px) {
+
+  .join {
+    float: left;
+    width: 60%;
+    margin: 30px;
+  }
+
+  .faq {
+    float: left;
+    width: 30%;
+    margin: 30px 30px 30px 0;
+  }
+
+  .faq .container-title {
+    background-color: #BFE9DB;
+    height: 199.13px;
+  }
+
+  .faq h1 {
+    margin: 40px 0;
+  }
 }
