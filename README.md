@@ -8,6 +8,6 @@ The main problem so far is the understanding of how JavaScript works to implemen
 
 ## View it live
 To access the final result of this project you can go to:
-...
 
+https://objective-noyce-be8263.netlify.app/#faq
 
