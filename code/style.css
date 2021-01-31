@@ -1,6 +1,7 @@
 body {
   margin: 0 auto;
   background-color: #ffffff;
+  font-family: 'Rubik', sans-serif;
 }
 
 * {
@@ -18,13 +19,57 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
+  z-index: 1;
   color: white;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  margin-right: 30px;
+  margin: 10px 30px 10px 30px;
+
+}
+
+.nav-button {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 12px 0 8px;
+  transition: .4s;
+}
+
+.nav-button::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  top:100%;
+  left: 0;
+  border-radius: 3px;
+  background: rgb(108,211,140);
+  transition: .2s;
+}
+
+.nav-button::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  top:0;
+  left: 0;
+  border-radius: 3px;
+  background: rgb(108,211,140);
+  transition: .2s;
+}
+
+.nav-button:hover:before {
+  top: -webkit-calc(100% - 3px);
+  top: calc(100% - 3px);
+}
+
+.nav-button:hover:after {
+  top: 3px;
 }
 
 .hero-text {
@@ -53,7 +98,6 @@ body {
   max-width: 80%;
   margin: 30px auto;
   background-color: rgb(246,244,246);
-  font-family: 'Rubik', sans-serif;
   color: #000;
   border-radius: 20px;
   box-shadow: 1px 8px 6px #999;
@@ -115,26 +159,67 @@ h4 {
 
 /* ACCORDION */
 
-.accordion {
- /* border: 2px solid black; */
+.accordion-group {
+  padding: 20px;
+  color: rgb(51,25,64);
 }
 
 .accordion-wrapper {
-  border: 2px solid rgb(51,25,64);
-  margin: 5px;
+  border: none;
+  margin: 0px;
 }
+
+.accordion-question:hover {
+  background-color: rgb(218,241,230);
+  transition: 0.7s ease;
+} 
+
+.accordion-question {
+  padding: 20px;
+  border-top: 1px solid rgb(68, 141, 91, 0.192);
+}
+
+.accordion-question::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f078";
+  font-weight:600;
+  color: rgba(68, 141, 91, 0.4);
+  font-size: 20px;
+  float: right;
+}
+
+.active::after {
+  content: "\f077";
+}
+
+.accordion-wrapper:nth-child(3) {
+  border-bottom: 1px solid rgba(68, 141, 91, 0.192);
+}
+
 .accordion-answer {
-  display: none;
+  margin: 0;
+  background-color: #fff;
+  overflow: hidden;
+  max-height: 0;
+  transition: ease-in-out 0.4s;
+}
+
+.accordion-answer p {
+  margin: 0;
+  font-size: 13px;
+  padding: 15px 20px 20px 20px;
 }
 
 .active + .accordion-answer {
-  display: block;
+  max-height: 200px;
   
 }
 
 .active {
-  background-color: chocolate;
+  background-color: rgba(255, 255, 255);
 }
+
+/* BUTTON */
 
 .button {
   background-color: rgb(108,211,140);
@@ -143,6 +228,7 @@ h4 {
   border-radius: 27px;
   padding: 10px 50px;
   justify-self: center;
+  box-shadow: 1px 4px 6px #999;
 }
 
 .button:hover {
@@ -150,10 +236,23 @@ h4 {
 }
 
 /* FOOTER */
+
   .footer {
-    background-color: rgb(3,61,51);
+    background-color: rgb(82,66,84);
     color: #fff;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    padding: 30px;
+  }
+
+  .footer a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 13px;
+    margin: 5px;
   }
 
 /** RESPONSIVENESS **/
@@ -165,6 +264,8 @@ h4 {
     width: 768px;
   }
   
+  .footer {
+  flex-direction: row;
 }
 
 /** LAPTOP **/
