@@ -12,4 +12,4 @@ If I would have had more time with this site I would have continued with the acc
 
 ## View it live
 
-Click this link to view my business site project 
+Click this link to view my business site project https://objective-yonath-8b524c.netlify.app/
