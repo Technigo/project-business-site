@@ -4,18 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" href="./resources/images/favicon.ico">
   <title>Kitten Transfer</title>
+
 </head>
 <body>
   <main class="main">
-    <picture>
+    <picture class="bg-image">
       <source srcset="./resources/images/ella-jardim-mKWKbHZaN-0-unsplash-1000.jpg" media="(min-width: 640px)">
       <source srcset="./resources/images/ella-jardim-mKWKbHZaN-0-unsplash-1920.jpg" media="(min-width: 1000px)">
       <source srcset="./resources/images/ella-jardim-mKWKbHZaN-0-unsplash-2400.jpg" media="(min-width: 1200px)">
       <img class="hero-image" src="./resources/images/ella-jardim-mKWKbHZaN-0-unsplash-640.jpg" alt="">
     </picture>
+    <div class="video-container">
+      <video id="bg-video" class="bg-video" autoplay loop muted>
+        <source src="./resources/videos/Kitten-1080.mp4" type="video/mp4" media="(min-width: 720px)">
+        <source src="./resources/videos/Kitten-1080.webm" type="video/webm" media="(min-width: 720px)">
+        <source src="./resources/videos/Kitten-720.mp4" type="video/mp4" media="(min-width: 480px)">
+        <source src="./resources/videos/Kitten-720.webm" type="video/webm" media="(min-width: 480px)">
+        <source src="./resources/videos/Kitten-480.mp4" type="video/mp4">
+        <source src="./resources/videos/Kitten-480.webm" type="video/webm">
+
+          <p>This browser doesn't support video...</p>
+      </video>
+    </div>
     <div class="content-container">
       <div class="top-full-width">
+        <!-- Top-logo -->
+        <div class="top-logo">
+          <p class="logo-text">Kitten Transfer</p>
+        </div>
         <ul class="nav">
           <li>About us</li>
           <li>Products</li>
@@ -28,19 +46,19 @@
             <!-- HERE IS THE FORM PART...-->
             <form class="kitten-form" action="https://httpbin.org/anything" method="POST">
               <label class="kitten-file" for="kitten-file">
-                <p>
+                <h1>
                   <span>+</span>
-                  Upload your kitten
-                </p>
+                  Transfer kitten
+                </h1>
                 <input type="file" id="kitten-file" name="kitten-file">
               </label>
               <div class="divider"></div>
               <label for="name">
-                <input type="text" id="name" name="name" placeholder="Your name">
+                <input type="text" id="name" name="name" placeholder="Your name" required>
               </label>
               <div class="divider"></div>
               <label for="email">
-                <input type="email" id="email" name="email" placeholder="Your email address">
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
               </label>
               <div class="divider"></div>
               <label for="message">
@@ -48,7 +66,7 @@
               </label>
               <!-- <div class="divider"></div> -->
               <label id="agree-terms" for="agree-terms-input">
-                <input type="checkbox" id="agree-terms-input" name="agree-terms-input">
+                <input type="checkbox" id="agree-terms-input" name="agree-terms-input" required>
                 <span>
                   I agree to the terms and conditions
                 </span>
@@ -61,22 +79,36 @@
           </div>
           <!-- HERE IS THE ACCORDION PART -->
           <div class="faq-container">
+            <h1>Frekittenly asked questions</h1>
+
             <div id="accordion-1" class="accordion">
-              <h3 class="accordion-header">Can you really upload a kitten?</h3>
+              <h3 id="accordion-header-1" class="accordion-header">What is Kitten Transfer?</h3>
               <p class="accordion-content">
                   Text of the accordion
               </p>
             </div>
             <div id="accordion-2" class="accordion">
-              <h3 class="accordion-header">What was that?</h3>
+              <h3 id="accordion-header-2" class="accordion-header">Why would you want to transfer a kitten?</h3>
               <p class="accordion-content">
-                  Text of the accordion
+                  Oh a number of reasons! 
               </p>
             </div>
             <div id="accordion-3" class="accordion">
-              <h3 class="accordion-header">Header</h3>
+              <h3 id="accordion-header-3" class="accordion-header">Are there any side-effects?</h3>
               <p class="accordion-content">
-                  Text of the accordion
+                  Oh a number of reasons! 
+              </p>
+            </div>
+            <div id="accordion-4" class="accordion">
+              <h3 id="accordion-header-4" class="accordion-header">Can i transfer my puppy?</h3>
+              <p class="accordion-content">
+                  Oh a number of reasons! 
+              </p>
+            </div>
+            <div id="accordion-5" class="accordion">
+              <h3 id="accordion-header-5" class="accordion-header">Is insurance included in the price?</h3>
+              <p class="accordion-content">
+                  Oh a number of reasons! For example, have you ever had a cat on an airplane? Oh those poor things - hungry and afraid! Why put your darling through that. 
               </p>
             </div>
           </div>

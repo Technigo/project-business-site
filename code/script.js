@@ -9,64 +9,77 @@
 // document.getElementById("section1").onclick = toggle
 
 
+const accordionOne = document.getElementById('accordion-header-1')
+const accordionTwo = document.getElementById('accordion-header-2')
+const accordionThree = document.getElementById('accordion-header-3')
+const accordionFour = document.getElementById('accordion-header-4')
+const accordionFive = document.getElementById('accordion-header-5')
 
-// const accordionContentOne = document.getElementById('accordion-content-1')
-// const accordionHeaderOne = document.getElementById('accordion-header-1');
+console.log(accordionOne, accordionTwo, accordionThree, accordionFour, accordionFive)
 
-// const accordionContentTwo = document.getElementById('accordion-content-2')
-// const accordionHeaderTwo = document.getElementById('accordion-header-2');
-
-// const accordionContentThree = document.getElementById('accordion-content-3')
-// const accordionHeaderThree = document.getElementById('accordion-header-3');
-
-
-// accordionHeaderOne.addEventListener('click', () => {
-//     accordionHeaderOne.classList.toggle('active')
-//     accordionHeaderTwo.classList.remove('active')
-//     accordionHeaderThree.classList.remove('active')
-//     accordionContentOne.classList.toggle('accordion-selected')
-//     accordionContentTwo.classList.remove('accordion-selected')
-//     accordionContentThree.classList.remove('accordion-selected')
-//   });
-  
-//   accordionHeaderTwo.addEventListener('click', () => {
-//     accordionHeaderOne.classList.remove('active')
-//     accordionHeaderTwo.classList.toggle('active')
-//     accordionHeaderThree.classList.remove('active')
-//     accordionContentOne.classList.remove('accordion-selected')
-//     accordionContentTwo.classList.toggle('accordion-selected')
-//     accordionContentThree.classList.remove('accordion-selected')
-//   });
-  
-//   accordionHeaderThree.addEventListener('click', () => {
-//     accordionHeaderOne.classList.remove('active')
-//     accordionHeaderTwo.classList.remove('active')
-//     accordionHeaderThree.classList.toggle('active')
-//     accordionContentOne.classList.remove('accordion-selected')
-//     accordionContentTwo.classList.remove('accordion-selected')
-//     accordionContentThree.classList.toggle('accordion-selected')
-// });
-
-
-const accordionOne = document.getElementById('accordion-1')
-const accordionTwo = document.getElementById('accordion-2')
-const accordionThree = document.getElementById('accordion-3')
 
 
 accordionOne.addEventListener('click', () => {
-    alert(accordionOne.tagName);
-    accordionOne.classList.toggle('active')
-    accordionTwo.classList.remove('active')
-    accordionThree.classList.remove('active')
-  });
+  accordionOne.classList.toggle('active');
+  accordionTwo.classList.remove('active');
+  accordionThree.classList.remove('active');
+  accordionFour.classList.remove('active');
+  accordionFive.classList.remove('active');
+  console.log('1');
+});
 accordionTwo.addEventListener('click', () => {
-    accordionOne.classList.remove('active')
-    accordionTwo.classList.toggle('active')
-    accordionThree.classList.remove('active')
-  });
+  accordionOne.classList.remove('active');
+  accordionTwo.classList.toggle('active');
+  accordionThree.classList.remove('active');
+  accordionFour.classList.remove('active');
+  accordionFive.classList.remove('active');
+  console.log('2');
+});
+
+// accordionThree.addEventListener('click', () => {
+//   console.log('3');
+// });
+
+// accordionFour.addEventListener('click', () => {
+//   console.log('4');
+// });
+
+// accordionFive.addEventListener('click', () => {
+//   console.log('5');
+// });
+
 accordionThree.addEventListener('click', () => {
-    accordionOne.classList.remove('active')
-    accordionTwo.classList.remove('active')
-    accordionThree.classList.toggle('active')
+  accordionOne.classList.remove('active');
+  accordionTwo.classList.remove('active');
+  accordionThree.classList.toggle('active');
+  accordionFour.classList.remove('active');
+  accordionFive.classList.remove('active');
+  console.log('3');
+});
+accordionThree.addEventListener('click', () => {
+  accordionOne.classList.remove('active');
+  accordionTwo.classList.remove('active');
+  accordionThree.classList.toggle('active');
+  accordionFour.classList.remove('active');
+  accordionFive.classList.remove('active');
+  console.log(accordionThree);
+});
+accordionFour.addEventListener('click', () => {
+  accordionOne.classList.remove('active');
+  accordionTwo.classList.remove('active');
+  accordionThree.classList.remove('active');
+  accordionFour.classList.toggle('active');
+  accordionFive.classList.remove('active');
+  console.log('4');
+});
+accordionFive.addEventListener('click', () => {
+  accordionOne.classList.remove('active');
+  accordionTwo.classList.remove('active');
+  accordionThree.classList.remove('active');
+  accordionFour.classList.remove('active');
+  accordionFive.classList.toggle('active');
+  console.log('5');
   });
   
+const video = document.getElementById('bg-video');
+video.playbackRate = 0.4;

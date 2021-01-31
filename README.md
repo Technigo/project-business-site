@@ -16,9 +16,15 @@ Every project should be deployed somewhere. Be sure to include the link to the d
 <!-- - Background image working
 - top menu and bottom logo
 - Form - text, textfield, radio button, file upload, submit  -->
-- Accordion, w changing icon
-- validation
-- more input types?
-- video background
+<!-- - Accordion, w changing icon -->
+<!-- - Accordion animation -->
+<!-- - video background - change video -->
+- responsive below 600
+- make nice animations in form ( and try fieldset?)
 - style checkbox
 - background image better breakpoints
+- focus effect on inputs
+- every other accordion row different color
+- cursor change (red level)
+- form validation (and feedback)
+- more input types?

@@ -4,6 +4,7 @@
   -moz-osx-font-smoothing: grayscale;
   /* border: 1px solid pink; */
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
   box-sizing: border-box;
   font-family: 'Alegreya', serif;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 
 p, h1, h2, h3 {
@@ -19,8 +20,18 @@ p, h1, h2, h3 {
   font-weight: 400;
 }
 
+p {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: .5rem;
+}
+
 h3 {
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 /* BASIC PAGE LAYOUT */
@@ -29,14 +40,30 @@ h3 {
   position: relative;
 }
 
-.hero-image {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
+.video-container {
+  background: black;
 }
 
-.hero-image:hover {
-  filter: grayscale(100%);
+.bg-image {
+  display: none;
+}
+
+.bg-video {
+  opacity: .3;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+
+
+@media (max-aspect-ratio: 21/10) {
+  .bg-video {
+    width: auto;
+    height: 100vh;
+    object-position: 50% 50%;
+  }
 }
 
 .content-container {
@@ -45,17 +72,20 @@ h3 {
   right: 0;
   bottom: 0;
   left: 0;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0;
-  padding: .5rem;
+  padding: 0rem;
 }
 
 .content-container > div {
-  width: 100%;
+  width: auto;
   min-height: 10px;
   margin: 0;
+  padding: .5rem;
 }
 
 .bottom-full-width {
@@ -126,6 +156,9 @@ h3 {
   font-display: smooth;
 }
 
+.top-logo {
+  display: none;
+}
 
 /* THE UPLOAD PART */
 
@@ -138,7 +171,8 @@ h3 {
 .upload-container, .faq-container {
   height: 450px;
   background-color: #F7EDED;
-  border-radius: 2px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
   padding: .5rem;
 
 }
@@ -159,6 +193,12 @@ h3 {
   font-size: 1rem;
 }
 
+.kitten-form input:hover,
+.kitten-form textarea:hover {
+  background-color: rosybrown;
+}
+
+
 .kitten-form input:focus,
 .kitten-form textarea:focus {
   background: rgb(231, 200, 181);
@@ -173,14 +213,19 @@ h3 {
   font-size: 1rem;
   color: black;
   cursor: pointer;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+  height: 100%;
+}
+
+.kitten-file p {
+  font-weight: 500;
 }
 
 .kitten-form span {
   font-size: 3rem;
   position: relative;
   top: 7px;
-  margin: 0 1rem;
+  margin: 0 .25rem;
 }
 
 
@@ -188,10 +233,11 @@ h3 {
   color: black;
   opacity: 1; /* Firefox */
   font-family: 'Roboto', sans-serif;
+  font-size: 14px;
 }
 
 .kitten-form textarea {
-  height: 7rem;
+  height: 8rem;
 }
 
 .kitten-form #agree-terms {
@@ -205,8 +251,6 @@ h3 {
   top: 9px;
   width: 16px;
   height: 16px;
-  /* opacity: 100; */
-  /* margin-right: auto; */
 }
 
 .kitten-form #agree-terms span {
@@ -228,12 +272,15 @@ h3 {
 }
 
 .kitten-form #submit-label {
-  margin: 2rem auto;
+  margin: 2rem auto 1rem auto;
 }
 
 .kitten-form #submit-input {
   border: 1px solid black;
   width: fit-content;
+  line-height: .1;
+  padding: 1rem 2rem;
+  border-radius: 4px;
 }
 
 /* ACCORDION */
@@ -243,11 +290,16 @@ h3 {
   margin: 0;
 }
 
-.accordion:not(:first-child) {
-  border-top: 1px solid pink;
+.accordion {
+  border-bottom: 1px solid black;
+
 }
 
-.accordion-header::before {
+.accordion h3:hover {
+  background: #bcb1ab;
+}
+
+/* .accordion-header::before {
   position: relative;
   right: 8px;
   bottom: 1px;
@@ -258,47 +310,113 @@ h3 {
   padding: 3px;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-}
+} */
 
-.accordion.active .accordion-header::before {
+/* .accordion.active .accordion-header::before {
   bottom: 3px;
-  /* content: ''; */
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-} 
+}  */
 
-.accordion {
-  transition: all .5s ease-in;
-}
+/* .accordion {
+  user-select: none;
+  cursor: pointer;
+} */
 
 .accordion-content {
-  padding: 10px;
-  margin: 0;
-  display: none;
+  transition: padding 150ms ease-out;
   opacity: 0;
-  height: 0;
-
+  padding: 0 10px;
+  margin: 0;
   background: #F7D2D2;
   border-top: 1px solid black;
+  height: 0;
 }
 
-.accordion.active .accordion-content {
-  display: block;
-  opacity: 100%;
-  height: initial;
-  height: fit-content;
+.accordion.active .accordion-header {
+  background:wheat
 }
+
+/* .accordion.active .accordion-content {
+  transition: padding 150ms ease-in;
+  padding: 16px 10px;
+  opacity: 1;
+  height: auto;
+} */
+
 
 /* BREAKPOINTS */
 
-/* @media screen only and (max-width: 600px) {
+@media screen and (max-width: 800px) {
+  
+  p {
+    font-size: 1rem;
+  }
+
+  body {
+    background: grey;
+  }
+
   .content-container {
     position: relative;
+    margin: 0;
+    padding: 0;
   }
 
   .bottom-full-width > div {
     flex-direction: column;
   }
-} */
+
+  .video-container {
+    display: none;
+  }
+
+  .content-container {
+    position: block;
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 0rem;
+  }
+
+  .upload-container, .faq-container {
+    height: 450px;
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    box-shadow: none;
+  }
+
+  .upload-container {
+    margin-left: 0;
+  }
+
+  .bottom-full-width {
+    padding: 0;
+    margin: 0;
+    width: auto;
+  }
+
+  .top-logo {
+    display: none;
+  }
+
+  .accordion h3 {
+    font-size: 1rem;
+    margin: .5rem 0;
+  }
+
+ .kitten-form textarea ::placeholder, 
+ .kitten-form input:placeholder {
+    font-size: 1rem;
+  }
+
+  textarea ::placeholder{
+    font-size: 1rem;
+
+  }
+
+}
+
 
 
