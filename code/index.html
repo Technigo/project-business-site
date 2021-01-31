@@ -1,30 +1,227 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project 3</title>
+  <link rel="stylesheet" href="./styles/mobile-style.css">
+  <link rel="stylesheet" href="./styles/overlay.css">
+  <link rel="stylesheet" href="./styles/form.css">
+  <link rel="stylesheet" href="./styles/tablet.css">
+  <link rel="stylesheet" href="./styles/desktop.css">
+  <link rel="stylesheet" href="./styles/accordion.css">
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+<body>
+  <!--  -->
+  <section class="hero-home">
+    <img class="hero-mobile" src="/img/hero-background.jpg">
+    <video class="hero-desktop" src="videos/video.mp4" autoplay muted loop>
+    </video>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+
+    <!-- NAV BAR- Mobile Version -->
+    <div class="menu-mobile">
+      <a class="buttom" href=#modal>
+        <img src="/img/icon-mobile.png">
+      </a>
+      <div id="modal" class="overlay">
+        <a class="cancel" href="#"></a>
+        <div class="popup">
+          <h1 class="popup-title">WoodMood</h1>
+          <a class="close" href="#">&times;</a>
+          <div class="popup-container">
+            <p class="popup-content"> About</p>
+            <p class="popup-content"> Services</p>
+            <p class="popup-content"> Gallery</p>
+            <p class="popup-content"> Book a Consultation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="desktop-menu">
+      <p>About us</p>
+      <p>Services</p>
+      <p>Gallery</p>
+      <p><a href="#faq">FAQ</a></p>
+
+    </nav>
+    <h1 class="main-title">WoodMood</h1>
+
+    <div class="content">
+      <div class="text-content">
+        <h1 class="subtitle"> Designed for life</h1>
+        <p class="short-text"> Furniture and objects crafted from source hardwoods. </p>
+      </div>
+      <div class="button-content">
+        <a class="form-buttom" href="#form">Book a Consultation</a>
+      </div>
+    </div>
+  </section>
+  <!-- Company information. -->
+  <secion class="woodmood-about">
+    <div class="about-us">
+      <div class="text-content2">
+        <h1 class="subtitle2">Generations of experience crafting wood</h1>
+        <p class="short-text2">Founded in 1921, WoodMood is a fourth-generation family business dedicated to the art and
+          craft of fine carpentry.e approach every project as a unique opportunity to apple classic woodworking
+          techniques to modern aesthetics.</p>
+      </div>
+    </div>
+    <div class="wooodmood-img">
+      <img src="/img/img-sect-2.jpg">
+    </div>
+    </div>
+  </secion>
+
+  <!-- Book a Consultation form -->
+  <!-- Signup form (Personal data  -->
+  <section class="form" id="form">
+    <form action="/action_page.php">
+
+      <fieldset>
+        <legend>User data</legend>
+        <label class="label" for="fname">Firts Name</label><br>
+        <input class="box" type="text" id="fname" name="fname" required><br>
+
+        <label class="label" for="lname"> Last Name</label><br>
+        <input class="box" type="text" id="lname" name="lname" required><br>
+
+        <label class="label" for="email">Email</label><br>
+        <input class="box" type="email" id="email" name="email" required><br>
+
+        <label class="label" for="pass">Phone Number</label><br>
+        <input class="box" type="tel" id="phone" name="phone" placeholder="123-456-7890"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required minlength="8" maxlength="12"><br>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Subject of your Consultation</legend>
+        <div class="themes-options">
+          <div class="option">
+            <input class="radio" type="radio" id="furniture" value="furniture">
+            <label class="label-radio" for="furniture">Furniture</label>
+          </div>
+          <div class="option">
+            <input class="radio" type="radio" id="floaring" value="floaring">
+            <label class="label-radio" for="floaring">Floaring</label>
+          </div>
+          <div class="option">
+            <input class="radio" type="radio" id="illustration" value="illustration">
+            <label class="label-radio" for="illustration">Renovation</label>
+          </div>
+          <div class="option">
+            <input class="radio" type="radio" id="mobile-art" value="mobile-art">
+            <label class="label-radio" for="mobile-art">Custom project</label>
+          </div>
+        </div>
+        <label class="label2" for="message">Your message</label><br>
+        <input class="box2" type="text" id="message" name="message" maxlength="120">
+      </fieldset>
+      <div class="submit-buttom">
+        <input type="submit" value="SUBMIT">
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    </form>
+    <div class="testimonial">
+      <h1>Testimonial</h1>
+      <div class="testimonial-comments">
+        <p class="comment">“When we bought our 1890s home, the original front door was beyond repair. WoodMood was able
+          to make an exact copy, down to the hand chiseled details. It’s a work of art.”</p>
+        <p class="author">Mollie G.</p>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+
+      <div class="testimonial-comments">
+        <p class="comment">"WoodMood designed and built a custom dining set for our vacation home. Without fail, it’s
+          the
+          thing everyone comments on. I couldn’t be happier with the work and the experience of designing it with them.”
+        </p>
+        <p class="author">Gabriel H.</p>
+      </div>
+
+      <div class="testimonial-comments">
+        <p class="comment">“It’s nearly impossible to find people who still apply classic woodworking techniques, but
+          WoodMood is keeping those traditions alive. Their work has a beautiful and timeless quality.”</p>
+        <p class="author">Griffin H.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <img class="img-div" src="/img/hero-background-tablet.jpg">
+
+  <section id="faq" class="accordion">
+    <!-- Accordion -->
+    <div style="display: grid;">
+      <h1 class="subtitle3"> FAQ </h1>
+      <span class="short-text3"> Here you will find answers to our most common questions.</span>
+    </div>
+
+    <div class="question" id="section1">Do you only perform floor sanding and parquet laying?
+    </div>
+    <div class="answer" id="answer1">
+      <li> No, we started with parquet laying and floor sanding in 1986, but since then we have expanded our services in
+        the construction industry, see the tab Our services for more information.</li>
+    </div>
+
+    <div class="question" id="section2">Do you have a shop?</div>
+    <div class="answer" id="answer2">
+      <li> We do not have a shop. On the other hand, we have a smaller Showroom where we show different types of floors
+        that you can then choose to have installed, ie we do not only sell loose material. We sell work and installation
+      </li>
+    </div>
+
+    <div class="question" id="section3">Can you move existing walls?</div>
+    <div class="answer" id="answer3">
+      <li>TYes, we are moving existing walls. If these are load-bearing, we make a calculation and change the
+        load-bearing parts.
+        We can also put up new walls.
+      </li>
+    </div>
+
+    <div class="question" id="section4">How do I choose a surface treatment</div>
+    <div class="answer" id="answer4">
+      <li> The first thing to think about when treating parquet and wood floors is what the floor should be used for.
+        See the following example.</li>
+      <li>The first thing to think about when treating parquet and wood floors is what the floor should be used for.
+        See the following example.</li>
+      <li>Oiling, the floor becomes slightly darker than lacquered floors but requires maintenance about once a year due
+        to wear.
+        Oiling with pigment, there are lots of different shades here, but even here maintenance is required once a year
+        depending on wear. </li>
+    </div>
+
+    <div class="question" id="section5">What does it cost to sand a floor?</div>
+    <div class="answer" id="answer5">
+      <li> Sanding + varnishing 3 times a normal large living room 1-20 m2 in oak costs about 5500: - incl VAT. (You can
+        use the root deduction on this.)</li>
+    </div>
+
+    <div class="question" id="section6">Do you provide a guarantee?</div>
+    <div class="answer" id="answer6">
+      <li> We provide a 5-year guarantee on work performed.
+        The invoice is valid as proof of guarantee..</li>
+    </div>
+  </section>
+  <script src="/code/script.js"></script>
+
+</body>
+
+<footer>
+  <div class="footer-">
+    <img src="/img/woodmoodlogo01.png" alt="">
+  </div>
+  <div class="follow-us">
+    <p class="short-text"> Follow us </p>
+    <img
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPHBhdGggZD0iTTM1MiwwSDE2MEM3MS42NDgsMCwwLDcxLjY0OCwwLDE2MHYxOTJjMCw4OC4zNTIsNzEuNjQ4LDE2MCwxNjAsMTYwaDE5MmM4OC4zNTIsMCwxNjAtNzEuNjQ4LDE2MC0xNjBWMTYwICAgIEM1MTIsNzEuNjQ4LDQ0MC4zNTIsMCwzNTIsMHogTTQ2NCwzNTJjMCw2MS43Ni01MC4yNCwxMTItMTEyLDExMkgxNjBjLTYxLjc2LDAtMTEyLTUwLjI0LTExMi0xMTJWMTYwQzQ4LDk4LjI0LDk4LjI0LDQ4LDE2MCw0OCAgICBoMTkyYzYxLjc2LDAsMTEyLDUwLjI0LDExMiwxMTJWMzUyeiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNMjU2LDEyOGMtNzAuNjg4LDAtMTI4LDU3LjMxMi0xMjgsMTI4czU3LjMxMiwxMjgsMTI4LDEyOHMxMjgtNTcuMzEyLDEyOC0xMjhTMzI2LjY4OCwxMjgsMjU2LDEyOHogTTI1NiwzMzYgICAgYy00NC4wOTYsMC04MC0zNS45MDQtODAtODBjMC00NC4xMjgsMzUuOTA0LTgwLDgwLTgwczgwLDM1Ljg3Miw4MCw4MEMzMzYsMzAwLjA5NiwzMDAuMDk2LDMzNiwyNTYsMzM2eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8Y2lyY2xlIGN4PSIzOTMuNiIgY3k9IjExOC40IiByPSIxNy4wNTYiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvY2lyY2xlPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4=" />
+    <img
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTQzNyAwaC0zNjJjLTQxLjM1MTU2MiAwLTc1IDMzLjY0ODQzOC03NSA3NXYzNjJjMCA0MS4zNTE1NjIgMzMuNjQ4NDM4IDc1IDc1IDc1aDE1MXYtMTgxaC02MHYtOTBoNjB2LTYxYzAtNDkuNjI4OTA2IDQwLjM3MTA5NC05MCA5MC05MGg5MXY5MGgtOTF2NjFoOTFsLTE1IDkwaC03NnYxODFoMTIxYzQxLjM1MTU2MiAwIDc1LTMzLjY0ODQzOCA3NS03NXYtMzYyYzAtNDEuMzUxNTYyLTMzLjY0ODQzOC03NS03NS03NXptMCAwIiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PC9nPjwvc3ZnPg==" />
+  </div>
+</footer>
+
+
+
 </html>
