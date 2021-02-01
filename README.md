@@ -1,6 +1,6 @@
 # Business Site
 
-We were supposed to create a business site with a hero image, a form and a accordion.
+We were supposed to create a business site with a hero image, a form and an accordion.
 
 ## The problem
 
