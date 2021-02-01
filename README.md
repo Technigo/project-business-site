@@ -1,12 +1,23 @@
-# Business Site
+# Business Site 📚
 
-Replace this readme with your own information about your project. 
+In this project I've built a business website about a book subscription service which I've called "Bella's Book Club". 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
-## The problem
+## The problem 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The main task was to build a business site with a hero image, a signup form and a FAQ accordion. The tools/techniques used for this project was HTML, CSS (general styling, flexbox, responsive design) and JavaScript. 
+
+First I did a general sketch on paper of how I wanted the layout to look like on different devices. After that I started to create my backlog for the project which I continuously added tasks to. Then I started coding and began with the general layout for the mobile device. With most of the basic HTML-structure in place I started adding styling and content, which I continuously adjusted throughout the whole project with the help of the dev tools in Chrome. I also added the media query to be able to make the site responsive and look different on mobile, tablet and desktop. 
+
+For the <b>hero image</b> I used the picture HTML-tag and added three image sources with different resolutions and different breakpoints in order for the hero image to be responsive.
+
+For the <b>signup form</b> I used the form HTML-tag and added a lot of different input types and styled them a bit with CSS. 
+
+For the <b>FAQ accordion</b> I created a general structure by adding a lot of div HTML-tags and added some styling with CSS. To get the accordion to work (e.g. collapse to show and hide text) I used Javascript to modify the DOM. I tried to write the code as short and concise as possible in order to have the option to add more questions. The hardest part in my opinion was to get only one answer to be shown at a time and close the one open. I solved this by adding an if statement to test whether a question was open and if so, closed it (by removing the active class) if it wasn't the question that was clicked.  
+
+If I had more time, I would have added more animations to the project (the accordion, the hamburger menu) and styled the signup form a bit more. I especially wanted to style the radio buttons and checkboxes more but also the text input fields that is currently shown as invalid from the start (which from a user's point of view might seem a bit aggressive).
+
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+To view the site I've created, check it here: https://lucid-mccarthy-2987ec.netlify.app/

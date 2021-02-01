@@ -3,28 +3,252 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>📚 Bella's Book Club</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Pacifico&display=swap" rel="stylesheet">  
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+ 
+    <header class="header">
+      <div class="header-container">
+        <a class="logo" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>      
+        </a>
 
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+        <nav class ="navigation">
+          <a href="#">About</a>
+          <a href="#">Pricing</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Contact us</a>
+        </nav>
+        
+        <button class="ham">
+          <span class="hamburger"> 
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="header-image-container">
+        <picture>
+          <source srcset="./small.jpg" media="(max-width: 767px)" />  <!-- mobile-->
+          <source srcset="./medium.jpg" media="(max-width: 991px)" />  <!--tablet-->
+          <img class="header-image" src="./large.jpg" alt="Picture of books in shelves" />    <!-- desktop -->
+        </picture>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+
+      <h1 class="header-text">Bella's Book Club</h3>   
+    </header>
+
+    <div class="divider-top">
+    </div>
+
+    <main>
+      <div class="main-container"> 
+        <section class="form-signup-container">
+          <div>
+            <h1>Join the Book Club!</h1>
+          </div>
+          
+          <div>
+            <form action="http://httpbin.org/anything" method="POST">
+              <div class="form-question">
+                <label for="first-name">
+                  First name
+                </label>
+                <input type="text" id="first-name" name="form-signup-first-name" required>
+              </div>
+              <div class="form-question">  
+                <label for="last-name">
+                  Last name
+                </label>
+                <input type="text" id="last-name" name="form-signup-last-name"
+                required>
+              </div>
+
+              <div class="form-question">
+                <div class="heading">
+                  Age group
+                </div>
+                <div class="age-group-radio-buttons">
+                  <div class="form-question">
+                    <label>
+                      <input type="radio" id="age-group15-18" name="form-signup-age-group" 
+                      value="ageGroup1518" checked required>
+                      15-18 years
+                    </label>
+                  </div>
+                  <div class="form-question">
+                    <label>
+                      <input type="radio" id="age-group18-25" name="form-signup-age-group" 
+                      value="ageGroup1825" required>
+                      18-25 years
+                    </label>
+                  </div>
+                  <div class="form-question">
+                    <label>
+                      <input type="radio" id="age-group25" name="form-signup-age-group" 
+                      value="ageGroup25" required>
+                      25+ years
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-question">
+                <label for="email">
+                  Email  
+                </label>
+                <input type="email" id="email" name="form-signup-email" required> 
+              </div>
+
+              <div class="form-question">
+                <label for="password">
+                  Password (8 characters minimum)
+                </label>
+                <input type="password" id="password" name="form-signup-password" 
+                minlength="8" required>   
+              </div>
+
+              <div class="form-question"> 
+                <label>
+                  <input type="checkbox" id="terms-conditions" 
+                  name="form-signup-terms-conditions" required>
+                  I accept the <a href="#" target="_blank">Terms & Conditions</a>
+                </label>
+              <div>
+
+              <div class="form-question">  
+                <label>
+                  <input type="checkbox" id="news-letter" 
+                  name="form-signup-news-letter">
+                  I want to have the newsletter
+                </label>
+              </div>
+
+              <div class="form-submit">
+                <button class="form-signup-submit-button" type="submit" id="submit">
+                  Join
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="accordion-container">
+          <h1>FAQ</h1>
+
+          <div class="container">
+            <div class="question">
+              <h2>What's included in the subscription?</h2>  
+              <span class="question-plus">+</span>
+              <span class="question-minus hide">-</span>
+            </div>
+            <div class="answer">
+              <p class="answer-content">
+                You will get a package full of books that has been curated 
+                specifically for you.
+              </p>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="question">
+              <h2>How much does the subscription cost?</h2>  
+              <span class="question-plus">+</span>
+              <span class="question-minus hide">-</span>
+            </div>
+            <div class="answer">
+              <p class="answer-content">
+                It costs 299 SEK á month with a starter fee of 399 SEK.
+              </p>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="question">
+              <h2>Can you change what's included in the subscription?</h2>  
+              <span class="question-plus">+</span>
+              <span class="question-minus hide">-</span>
+            </div>
+            <div class="answer">
+              <p class="answer-content">
+                Yes of course! Contact us and we will arrange the changes you desire.
+              </p>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="question">
+              <h2>What's the notice period if I want to end the subscription?</h2>  
+              <span class="question-plus">+</span>
+              <span class="question-minus hide">-</span>
+            </div>
+            <div class="answer">
+              <p class="answer-content">
+                One month. No questions asked.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>  
+    </main>
+
+    <div class="divider-bottom">
+    </div>
+
+    <footer class="footer">
+      <div class="container-footer">
+        <div class="container-contact-info">
+          <a href="#">About</a> 
+          <a href="#">Pricing</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="container-social-media">
+          <a href="#" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+            stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+            Facebook
+          </a>
+          <a href="#" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+            stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            Instagram 
+          </a>
+          <a href="#" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+            stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 
+              11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 
+              0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+            Youtube 
+          </a>
+        </div>
+      </div>
+      <div class="copyright">
+        © Isabella Markskog 
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>

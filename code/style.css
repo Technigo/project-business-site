@@ -1,7 +1,460 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  background: #FD805D;
+  margin: 0;
+  font-family: 'Lora', serif;
+}
+
+
+/*** HEADER ***/
+
+.header {
+  position: relative;
+  height: 70vh;
+}
+
+.header-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigation {
+  display: none;
+}
+
+.navigation.open-menu {
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  left: 0;
+  background: rgba(252, 217, 200, 0.6);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  animation-name: menu-animation;
+  animation-duration: 0.5s;
+  font-weight: bold;
+  z-index: 1;
+}
+
+@keyframes menu-animation {  
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.navigation.open-menu a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.navigation a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+.navigation a:hover, .navigation a:focus {
+  color: #FD805D;
+}
+
+.ham {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: transparent;
+  border: none;
+  z-index: 1;
+}
+
+.hamburger {      
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  border-radius: 25%;
+}
+
+.close-menu .hamburger span:nth-child(1) {
+  transform: rotate(135deg);
+  position: absolute;
+  top: 10px;
+  left: 0px;
+}
+
+.close-menu .hamburger span:nth-child(2) {
+  display: none;
+}
+
+.close-menu .hamburger span:nth-child(3) {
+  transform: rotate(-135deg);
+  position: absolute;
+  top: 10px;
+  left: 0px;
+}
+
+.header-image-container {
+  width: 100%;
+}
+
+.header-image {
+  width: 100vw;
+  height: 70vh;
+  object-fit: cover;
+  filter: brightness(75%);
+}
+
+.header-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  color: #FCD9C8;
+  font-family: 'Pacifico', cursive;
+  font-size: 50px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+
+
+/*** DIVIDER ***/
+
+.divider-top {
+  padding: 50px;
+  background: #FCD9C8;
+  opacity: 0.4;
+  margin-bottom: 40px;
+}
+
+.divider-bottom {
+  padding: 50px;
+  background: #FCD9C8;
+  opacity: 0.4;
+  margin-top: 20px;
+}
+
+
+/*** GENERAL CONTAINER ***/
+
+.main-container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/*** FORM - SIGN UP ***/
+
+.form-signup-container { 
+  width: 100%;
+  height: 550px;
+  border-radius: 25px;
+  padding: 16px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.form-question {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.form-question a {
+  text-decoration: none;
+  color: #000;
+}
+
+.form-question a:hover {
+  color: rgb(167, 164, 164);
+  text-decoration: underline;
+}
+
+.form-question .heading {
+  margin-bottom: 5px;
+}
+
+.age-group-radio-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-submit {
+  margin-top: 20px;
+}
+
+.form-signup-submit-button {
+  width: 30%;
+  background: #fff;
+  border-radius: 5px;
+  margin-left: 35%;
+  box-sizing: border-box;
+  border: 1px solid #FCD9C8;
+  padding: 10px;
+  font-family: 'Lora', serif;
+}
+
+.form-signup-submit-button:hover {
+  background: #FCD9C8;
+  animation-name: submit-button-animation;
+  animation-duration: 0.9s;
+}
+
+@keyframes submit-button-animation {  
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: #FCD9C8;
+  }
+}
+
+input[type=text], input[type=email], input[type=password] {
+  font-size: 16px;
+  font-family: 'Lora', serif;
+  box-sizing: border-box;
+  border: 1px solid #FCD9C8;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input[type=radio], input[type=checkbox], button[type=submit] {
+  cursor: pointer;
+}
+
+input:valid {
+  border: solid 1px green;
+}
+
+input:invalid {
+  border: solid 1px red; 
+}
+
+label {
+  display: block;
+}
+
+
+/*** ACCORDION ***/
+
+.accordion-container {               
+  width: 100%;
+  height: 550px;
+  border-radius: 25px;
+  padding: 16px;
+  margin: 30px 0px 50px 0px;
+  background: #fff; 
+}
+
+.accordion-container h1 {
+  text-align: center;
+}
+
+.accordion-container .container {
+  margin: 15px;
+}
+
+.question {
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question h2 {
+  font-size: 16px;
+}
+
+.question .question-plus, .question .question-minus {
+  font-size: 30px;
+}
+
+.answer {
+  overflow: hidden;
+  display: none;
+  transition: visibility 1s ease;
+}
+
+.answer-content {
+  margin: 0;
+  padding: 10px;
+}
+
+
+/*** ACCORDION ACTIVE ***/
 
 .active + .answer {
-  /* some styling here */
+  display: block;
+  color: #000;
+  height: auto;
+  background: #FCD9C8;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
+
+.active {
+background: #FCD9C8;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+
+/*** ACCORDION HIDE "+" AND "-" ICONS ***/
+
+.hide {
+  display: none;
+}
+
+
+/*** FOOOTER ***/
+
+.footer {                   
+  background: #FCD9C8;
+  height: auto;
+  width: 100%;
+  margin: 0px;
+  padding-top: 20px;
+}
+
+.footer a {
+  color: #000;
+  text-decoration: none;
+}
+
+.container-footer {            
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 12px 16px;
+}
+
+.container-contact-info {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+}
+
+.container-contact-info a {
+  margin: 3px;
+}
+
+.container-contact-info a:hover, .container-contact-info a:focus {
+  color: #fff;
+}
+
+.container-social-media {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+}
+
+.container-social-media svg {
+  margin-right: 3px;
+}
+
+.container-social-media a:hover, .container-social-media a:focus {
+  color: #fff;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+
+/*** MEDIA QUERY ***/
+
+/* Tablet */
+@media (min-width: 768px) {
+  .navigation {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .navigation a {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .ham {
+    display: none;
+  }
+
+  .hamburger {
+    display: none; 
+  }
+
+  .main-container {
+    width: 70%;
+  }
+}
+
+
+/* Small desktop */
+@media (min-width: 992px) { 
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 75%;
+  }
+
+  .form-signup-container {
+    width: 50%;
+    margin: 0px 10px 10px 0px;
+  }
+
+  .accordion-container {
+    width: 50%;          
+    margin: 0px 0px 10px 10px;
+  }
+}
+
