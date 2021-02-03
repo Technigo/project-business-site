@@ -1,4 +1,3 @@
-
 const section1 = document.getElementById('section1');
 const answer1 = document.getElementById('answer1');
 
@@ -10,9 +9,9 @@ const answer3 = document.getElementById('answer3');
 
 
 
-console.log ('section1')
-console.log ('section2')
-console.log ('section3')
+console.log('section1')
+console.log('section2')
+console.log('section3')
 console.log('answer1')
 console.log('answer2')
 console.log('answer3')
@@ -21,13 +20,15 @@ console.log('answer3')
 // We haven't really talked about ´this´ yet, but we will... ;)
 // console.log(this) to see how it works
 function toggle1() {
-  answer1.classList.toggle('answer-selected')
+    answer1.classList.toggle('answer-selected')
 }
+
 function toggle2() {
-  answer2.classList.toggle('answer-selected')
+    answer2.classList.toggle('answer-selected')
 }
+
 function toggle3() {
-  answer3.classList.toggle('answer-selected')
+    answer3.classList.toggle('answer-selected')
 }
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
