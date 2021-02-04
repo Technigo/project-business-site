@@ -1,30 +1,107 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 3</title>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+  <!-- Google font import -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+  <!-- CSS Import -->
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+  <!-- Header container start -->
+  <header class="header-Container">
+
+    <div class="navigation">
+
+      <div class="TabletDesktopMenu">
+        <a href="./index.html" class="TabletDesktopMenuHomeLink">Home</a>
+        <a href="./signup.html">Sign up</a>
+      </div>
+      <!-- Mobile Hamburger menu start -->
+      <div>
+        <button class="ham"></button>
+        <nav class="navbar">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./signup.html">Sign up</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Mobile hamburger manu end -->
+
+      <!-- Header title start -->
+      <div>
+        <h2>What the stock</h2>
+      </div>
+      <!-- Header title end -->
+
+    </div>
+
+    <!-- Hero image and text start -->
+    <div class="heroContainer">
+      <!-- Hero Image -->
+      <img src="./images/heroImage.jpg" alt="" class="headerImage">
+      <div class="heroTitle">
+        <!-- Header Title -->
+        <h1>Stock Market FAQ's</h1>
+
+      </div>
+    </div>
+    <!-- Hero image and text end -->
+
+  </header>
+  <!-- Header container end -->
+
+
+  <!-- Accordion start -->
+  <section class="accordionWrapper">
+    <div id="accordionContainer" class="accordionContainer">
+      <h2>Click to expand the FAQs</h2>
+      <hr style="width:100%">
+
+      <div id="accordionHeaderOne" class="accordionQuestion">
+        <h3 id="accordionQuestionOne">What is the stock market? ↓</h3>
+        <p id="accordionQuestionOneParagraph" class="accordionParagraphContent">
+          The stock market is where investors connect to buy and sell investments — most commonly, stocks, which are shares of ownership in a public company.
+        </p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <hr style="width:100%">
+
+      <div id="accordionHeaderTwo" class="accordionQuestion">
+        <h3 id="accordionQuestionTwo">Can I trade when markets are closed or shut down? ↓</h3>
+        <p id="accordionQuestionTwoParagraph" class="accordionParagraphContent">
+          No, unfortunately you cannot trade after the marker is shut down. However, some passive trades can also place orders after the market is closed and that is known as After Market Orders (AMO).
+        </p>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+
+      <hr style="width:100%">
+
+      <div id="accordionHeaderThree" class="accordionQuestion">
+        <h3 id="accordionQuestionThree">Why do share prices move up and down? ↓</h3>
+        <p id="accordionQuestionThreeParagraph" class="accordionParagraphContent">
+          The answer in two words is "Demand & Supply". Simply if there is more demand of a company shares and less people are willing to sell them, the share will move upwards. If there is a huge supply but no body is interested in buying shares at the current price, the share will move downwards.
+        </p>
+      </div>
+
+
+    </div>
+  </section>
+  <!-- Accordion end -->
+
+
+
+  <!-- Javascript Import -->
+  <script src="./script.js"></script>
+</body>
+
 </html>

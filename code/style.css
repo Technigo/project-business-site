@@ -1,7 +1,276 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
 
-.active + .answer {
-  /* some styling here */
+body {
+  background-color: #f0f0f0;
+}
+
+.TabletDesktopMenu a {
+  color: black;
+}
+
+.headerImage {
+  width: 100%;
+  filter: blur(1px);
+  height: 300px;
+}
+
+.headerLogo {
+  width: 30px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+}
+
+/* Container holding the image and the text */
+.heroContainer {
+  position: relative;
+  z-index: -1;
+}
+
+.heroTitle {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e7e7e7;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+.signupFormFlexbox {
+  display: flex;
+  justify-content: center;
+}
+
+.signupFormStyling {
+  background-color: #E7E7E7;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 0px #000000;
+}
+
+.signupFormStylingH1 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.signupFormGenderTitle {
+  margin-top: 10px;
+}
+
+.signupFormInterestsFlexbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.signupFormButton {
+  margin-top: 10px;
+  box-shadow: inset 0px -3px 7px 0px #29bbff;
+  background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+  background-color: #2dabf9;
+  border-radius: 3px;
+  border: 1px solid #0b0e07;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  padding: 9px 23px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #263666;
+}
+
+.signupFormButton:hover {
+  background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+  background-color: #0688fa;
+}
+
+.signupFormButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.accordionWrapper {
+
+  display: flex;
+  justify-content: center;
+}
+
+.accordionContainer {
+  background-color: #E7E7E7;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 0px #000000;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.accordionQuestion {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.accordionParagraphContent {
+  display: none;
+}
+
+.accordionParagraphContentShown {
+  display: block;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.ham {
+  position: relative;
+  /* always keep ham on top of everything */
+  z-index: 1000;
+  width: 36px;
+  height: 36px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  /* show the menu image */
+  background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+  background-size: 100%;
+}
+
+/* change ham image to close */
+.showCloseSign {
+  background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+  color: white;
+  /* hide the menu above the screen by default */
+  transform: translateY(-100%);
+  /* transition adds a little animation when sliding in and out the menu */
+  transition: transform 0.2s ease;
+}
+
+.navbar ul {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar ul li a {
+  color: white;
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+  border-bottom: 2px solid white;
+}
+
+.showNav {
+  /* show the menu */
+  transform: translateY(0);
+}
+
+.TabletDesktopMenu {
+  display: none;
+}
+
+/* Tablet */
+@media (min-width: 1023px) {
+  .ham {
+    display: none;
+  }
+
+  .TabletDesktopMenu {
+    display: block;
+  }
+
+  .TabletDesktopMenu a {
+    text-decoration: none;
+    font-weight: bold;
+    padding-right: 30px;
+  }
+
+  .TabletDesktopMenu a:hover {
+    text-decoration: underline;
+  }
+
+
+
+  .signupFormStyling {
+    width: 40%;
+
+  }
+
+  .TabletDesktopMenu a {
+    text-decoration: none;
+    font-weight: bold;
+    padding-right: 30px;
+  }
+
+  .accordionContainer {
+    width: 40%;
+  }
+
+}
+
+/* Desktop */
+@media (min-width: 1439px) {
+  .ham {
+    display: none;
+  }
+
+  .TabletDesktopMenu {
+    display: block;
+  }
+
+  .signupFormStyling {
+    width: 40%;
+
+  }
+
+  .TabletDesktopMenu a {
+    text-decoration: none;
+    font-weight: bold;
+    padding-right: 30px;
+  }
+
+  .accordionContainer {
+    width: 40%;
+  }
 }
