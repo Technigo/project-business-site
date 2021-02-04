@@ -3,28 +3,96 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+       <!-- 1. Hero section -->
+   <header class="hero">
+     <picture>
+       <source srcset="./Images/Img.mobile.jpg" media="(max-width: 767px)">
+       <source srcset="./Images/Img.tablet.jpg" media="(max-width: 1199px)">
+       <img class="hero-image" src="./Images/Img.desktop.jpg" alt="Hero image" />
+      </picture>
+      <h1 class="hero-title">Sunshine Travels</h1>
+   </header> 
 
+   <section class="info-section">
     <!-- Signup form -->
+    <form class="form" action="https://httpbin.org/anything" method="POST">
+      
+      <h2>Sign up/ log in</h2>
+      <label>
+        Name: <input name= "form-name" type="text" required>
+      </label>
+      <br></br>
+      <label>
+        E-mail: <input name="form-email" type="email" required>
+      </label>
+      <br></br>
+      <label>
+        Password: <input name="form-password" type="password" required>
+      </label>
+      
+      <h3>
+        Have you traveled with us before?
+      </h3>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+      <label>
+        <input type="radio" value="yes" name="form-question" required> Yes
+      </label>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <label>
+        <input type="radio" value="no" name="form-question" required> No
+      </label>  
+      
+      <h3>Have you read the terms and agree?</h3>
+
+      <label class="checkbox-container">Sure!
+        <input type="checkbox" value="sure" name="form-answer1" required>
+        <span class="checkmark"></span>
+      </label>
+
+      <h3>Do you want our travel letter once a month?</h3>
+
+      <label class="checkbox-container">Absolutely!
+        <input type="checkbox" value="absolutely" name="form-answer2">
+      </label>
+
+    <br></br>
+
+      <input type="submit" value="Submit">
+    </form>
+
+     <!-- Accordion -->
+    <section class="accordion-section">
+    
+      <h1>Common questions:</h1>
+     
+      <div class="accordion">
+        <h3 id="accordion-header-1" class="accordion-header">Where can I travel with Sunny travels?</h3>
+        <div id="accordion-content-1" class="accordion-content">
+          <p>We can find travels to any place you like!</p>
+        </div>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="accordion">
+        <h3 id="accordion-header-2" class="accordion-header">Can I go by train with your travels?</h3>
+        <div id="accordion-content-2" class="accordion-content">
+         <p>You can go by plane, train, boat or what you prefer!</p>
+        </div>
       </div>
+
+      <div class="accordion">
+        <h3 id="accordion-header-3" class="accordion-header">How much does Sunny travels cost compared to others?</h3>
+        <div id="accordion-content-3" class="accordion-content">
+          <p>We always try to create a travel as cheap as possible!</p>
+        </div>
+      </div>
+
+
     </section>
-    <!-- dont forget to link the javascript file here! -->
+   </section>
+    <script src="./script.js"></script>
   </body>
 </html>
