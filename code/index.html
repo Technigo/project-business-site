@@ -3,28 +3,128 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <title>Momento photography</title>
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <header>
+      <div class="hero-section">
+        <picture>
+          <source
+            srcset="./media/hero-mobile.jpg"
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset=".media/hero-tablet.jpg"
+            media="(max-width: 992px)"
+          />
+          <img class="hero-image" src="./media/hero.jpg" alt="Hero image" />
+          <h1>Momento photography</h1>
+        </picture>
+      </div>
+    </header>
+
+    <section class="first-section">
+      <h2>Destination wedding photographer.<br />Serving worldwide</h2>
+    </section>
+
+    <section class="middle-section">
+      
+         <!-- Accordion -->
+
+      <div class="accordion">
+   
+        <h2>Frequently Asked Questions (FAQ)</h2>
+
+        <div class="question" id="section1">How do I reserve you for my date?</div>
+        <div class="answer">
+          <p>Date is reserved once we receive your signed contract and the deposit.</p>
+        </div>
+
+        <div class="question" id="section2">Do you provide the digital negatives after the shoot?</div>
+        <div class="answer">
+          <p>All of our packages come with Full Resolution image download.</p>
+        </div>
+
+        <div class="question" id="section3">How many images do you deliver on the image download?</div>
+        <div class="answer">
+          <p>I typically deliver 60-80 images per hour of coverage. Keep in mind these numbers may increase or decrease depending on the flow of the day and the number of events/activities needing to be captured.</p>
+        </div>
+
+        <div class="question" id="section4">Do you provide partial day coverage?</div>
+        <div class="answer">
+          <p>I typically do not provide partial day coverage on weekends. On weekends, I only accept clients that require at least 8 hours of coverage.</p>
+        </div>
+      </div>
+
+      <img
+        class="qa-photo"
+        src="./media/photo-girl.jpg"
+        alt="girl-photographer"
+      />
+    </section>
 
     <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <form class="form" action="https://httpbin.org/anything" method="POST">
+      <h2>Ready to get in touch?</h2>
+      <div class="form-item">
+        <label class="label" for="fname">Name</label><br />
+        <input type="text" id="fname" name="fname" placeholder="Enter your first name" required/>
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="form-item">
+        <label class="label" for="email">Email</label><br />
+        <input class="email" type="email" id="email" name="email" placeholder="Enter your email"/>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+      <div class="form-item">
+        <label class="label" for="phone">Phone number</label><br />
+        <input type="number" id="phone" name="phone" placeholder="Your mobile number"/>
+      </div>
+      <div class="form-item">
+        <label class="label" for="message">Message</label><br />
+        <textarea placeholder="Enter your message..." id="message" name="message" rows="5" cols="20"></textarea>
+      </div>
+      <div class="form-item">
+        <div>
+          <label for="contact">Preferable way of contacting you:</label><br />
+          <input type="radio" id="contact" name="contact" value="email" />
+          <label for="contactChoice1">Email</label>
+          <input type="radio" id="contactChoice2" name="contact" value="phone" />
+          <label for="contactChoice2">Phone</label>
+        </div>
+      </div>
+      <div class="form-item">
+        <label for="terms">
+          <input id="terms" class="checkbox" type="checkbox" required />
+          I agree to the terms
+        </label>
+      </div>
+      <div class="form-item">
+        <input class="submit-btn"type="submit" value="Submit" />
+      </div>
+    </form>
+
+    <footer>
+      <div class="footer">
+        <p>Author: Laima Duhovnaja</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

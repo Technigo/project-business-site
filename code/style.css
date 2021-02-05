@@ -1,7 +1,221 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/** MOOBILE VIEW **/
+.hero-section {
+  position: relative;
+  overflow:hidden;
+}
+
+.hero-section h1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #4F3B29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 7vw;
+
+}
+
+.hero-image {
+  width: 100vw;
+  object-fit: cover;
+}
+
+video {
+  display: block;
+}
+
+.hero-video {
+  object-fit: cover;
+  width: 100vw;
+  max-height: 540px;
+  max-width: 960px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.middle-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #F7F4F2
+}
+
+
+/*** First section ***/
+.first-section h2 {
+  background-color: #ffffff;
+  margin: 0;
+  text-align: center;
+  padding: 20px 20px;
+  font-family: 'Bodoni Moda', serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgba(20,1,1,.7);
+  letter-spacing: .3em;
+  font-size: 15px;
+}
+
+/*** Accordeon**/
+.qa-photo {
+  display: none;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.accordion h2 {
+  padding: 10px 30px 15px;
+  border-bottom: solid 1px #eaeaea;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.question {
+  font-weight: 500;
+  border-bottom: solid 1px #eaeaea;
+  padding: 15px 30px 15px;
+  cursor: pointer;
+}
+
+.question:hover {
+  background-color: #e2cbbc;
+  transition: all .10s ease-in-out;
+  overflow: hidden;
+}
+
+
+.answer {
+  display: none;
+  padding: 0 30px;
+  background-color: #fffbf9;
+}
+
+.answer p {
+  margin: 0px;
+  padding: 10px 0px 15px;
+}
+
+.question::after {    /* Plus symbol */
+  content: "\002B";
+  font-weight: bold;
+  float: right;
+  margin-left: 7px;
+}
+
+.active::after {   /* Minus symbol */
+  content: "\2212";
+}
+
+/*** Signup form ***/
+
+.form {
+  text-align: center;
+  background: white;
+  padding: 0 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+input {
+  text-align: center;
+  padding: 10px;
+  margin:10px 0;
+  border: 1px solid #eee;
+}
+
+.form-item {
+  font-size: 13px;
+  color: #707070;
+}
+
+textarea {
+  font-family: 'Roboto', sans-serif;
+  margin:10px 0;
+  border: 1px solid #eee;
+  padding-left: 10px;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.footer {
+  background-color: #F7F4F2;
+  text-align: center;
+}
+
+.footer p {
+  padding: 50px 0 50px;
+  margin-bottom: 0;
+}
+
+.submit-btn {
+  background-color: #F7F4F2;
+}
+
+.label {
+  letter-spacing: .1em;
+}
 
 .active + .answer {
-  /* some styling here */
+  display: block;
+}
+
+
+@media (min-width: 768px) {
+
+  .hero-section h1 {
+    padding-bottom: 200px;
+  }  
+
+  .first-section h2 {
+    padding: 50px 50px;
+  }
+
+  .question {
+    padding: 30px 150px 30px;
+    font-size: 17px;
+  }
+
+  .answer {
+    margin: 0px;
+    padding: 10px 150px 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .qa-photo {
+    display: inline;
+    width: 40%;
+  }
+
+  .accordion h2 {
+    padding-top: 90px;
+  }
+
+  .first-section h2 {
+    font-size: 20px;
+  }
 }
