@@ -1,7 +1,278 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #75cfb8;
+} 
 
-.active + .answer {
-  /* some styling here */
+/*------Header starts here------ */
+.header {
+  position: relative;
+}
+  
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+  
+.hero-picture {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/*------Header ends here------*/
+
+/*------Navbar starts here------*/
+
+.container {
+  position: absolute;
+  top: 0; 
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 20px 22px; 
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: #ffc478;
+  opacity: 0.70;
+  color: black;
+  border-radius: 25%;
+}
+
+/*------Navbar ends here------*/
+
+.flex-parent {
+  height: 1200px;
+  margin: 5px;
+}
+    
+.flex-child {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+}
+    
+.one{
+  background:#bbdfc8;
+  text-align: center;
+}
+    
+.two {
+  background: #bbdfc8;
+  margin-top: 5px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+  
+/*------Accordion section starts here------*/
+
+.accordion {
+  border-radius: 7px;
+}
+      
+.accordion-header {
+  margin: 0;
+  padding: 10px;
+  font-size: 28px;
+}
+      
+.accordion-content {
+  display: none;
+  margin: 0;
+  padding: 10px;
+  border-top: 3px solid #ffc478;
+}
+      
+.accordion-selected { /* The content section thats pops up when clicking to the question */
+  display: block;
+}
+      
+.active, .accordion-content, .accordion:hover { /* Color of the table after clicking */
+  background-color: #f0e5d8; 
+  cursor: pointer;
+}
+      
+.accordion-header:after { /* Plus sign, as default */
+  content: "\002B"; /* Plus sign */
+  color: #ffc478;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+      
+.active:after { /* Minus sign after clicking to the question */
+content: "\2212"; /* Minus sign */
+} 
+
+/*------Accordion section ends here------*/
+
+/*------Form section starts here------*/
+      
+form p {
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+
+form input {
+  font-size: 28px;
+}
+
+input:valid {
+  background-color: #ffc478;
+}
+      
+input:invalid {
+  background-color: #75cfb8;
+}
+
+   
+/* Checkbox */
+
+.gender {
+  font-size: 28px;
+  margin: 5px;
+  margin-top: 40px;
+}
+
+.checkbox {
+  display: block;
+  font-size: 36px;
+}
+
+.checkbox input {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.checkbox1 {
+  display: block;
+}
+
+.checkbox1 p {
+  margin: 0px;
+  margin-bottom: 40px;
+}
+
+/* Checkbox */
+
+/* Terms & Conditions */
+
+.terms1 {
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.terms p{
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+/*Terms & Conditions */
+
+/* Submit button */ 
+
+.button {
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10%;
+  background-color: #ffc478;
+}
+
+/* Submit button */ 
+
+/*------Form section ends here------*/
+
+
+/*------Device Section starts here------*/
+
+/* Small Tablet Device */
+@media (min-width: 601px) {
+  
+  .topnav a {
+    padding: 28px 32px; /* 14 16 */
+    font-size: 24px;
+  } 
+}
+
+/* Big Tablet Device */
+@media (min-width: 768px) {
+  
+  .topnav a {
+    font-size: 32px;
+  } 
+
+  .flex-parent {
+    display: flex;
+    justify-content: center;
+  }
+
+  .flex-child {
+    margin: 25px;
+  }
+
+  .checkbox {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 18px;
+  }
+
+  .checkbox1 {
+    margin-top: 30px;
+  }
+}
+
+/* Small Desktop */
+@media (min-width: 1024px) {
+
+  .flex-parent {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+  }
+
+  .flex-child {
+    margin: 25px;
+  }
+}
+
+/* Large Desktop and above */ 
+@media (min-width: 1300px) {
+  .flex-child {
+    margin-bottom: 50px;
+    margin: 100px; 
+  } 
 }
