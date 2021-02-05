@@ -1,7 +1,275 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+html {
+  background: rgb(201, 238, 220);
+  color: black;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
 
-.active + .answer {
-  /* some styling here */
+body {
+  margin: 0;
+}
+
+/****1. HEADER, LOGO, NAVIGATION***/
+.header {
+  background-color: rgb(142, 226, 185);
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  width: 75px;
+  height: 100%;
+  align-items: flex-start;
+  margin: 5px;
+  border: 4px solid black;
+}
+
+.navigation {
+  display: none;
+}
+
+
+/****2. HERO IMG AND TEXT***/
+.hero {
+  position: relative;
+}
+
+.hero-text {
+  font-size: 32px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+
+
+.hero-image {
+  width: 100vw;
+  height: 90vh;
+  object-fit: cover;
+  border-top: 2px solid black;
+}
+
+
+/**** 3. INTRO TEXT***/
+.intro-text {
+  margin: 10px;
+  text-align: center;
+  font-size: 26px;
+}
+
+.smaller-intro-text {
+  margin: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+
+/**** 4. SIGN UP FORM****/
+.form {
+  margin: 24px;
+  border: 2px solid black;
+  background-color: #A1B2C3 (161, 178, 195);
+  border-radius: 12px;
+}
+
+.form-text {
+  font-size: 24px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.check-boxes {
+  align-items: center;
+}
+
+
+input[type=submit] {
+  background-color: rgb(142, 226, 185);
+  border: none;
+  border-radius: 12px;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 12px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 4px #999;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 16px;
+}
+
+input[type=submit]:hover {
+  background-color: white;
+}
+
+input[type=submit]:active {
+  background-color: white;
+  box-shadow: 0 4px #999;
+  transform: translateY(6px);
+}
+
+input[type=text] {
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+}
+
+input[type=email] {
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+}
+
+input[type=radio],
+[type=checkbox] {
+  margin: 10px;
+}
+
+.checkbox-text {
+  margin: 10px;
+  font-size: 20px;
+}
+
+label {
+  padding: 10px;
+  margin: 3px;
+}
+
+
+/**** 5. ACCORDION****/
+
+.FAQ {
+  text-align: center;
+  border-bottom: 1px solid black;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.accordion {
+  margin: 24px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.question {
+  font-size: 24px;
+  text-align: center;
+  border-radius: 16px;
+  text-decoration: underline;
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+.answer {
+  overflow: hidden;
+  height: 0px;
+  transition: height .3s ease;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.question:hover {
+  color: white;
+  cursor: pointer;
+}
+
+
+.active+.answer {
+  height: 125px;
+}
+
+.logos-in-accordion {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logo-lift {
+  width: 75px;
+  height: 100%;
+  margin-top: 30px;
+}
+
+
+/**** 6. FOOTER****/
+
+.footer {
+  padding: 2px;
+  text-align: center;
+  background-color: rgb(142, 226, 185);
+  margin-top: 24px;
+  border-top: 2px solid black;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 100%;
+}
+
+
+
+/*MEDIA QUERIES****/
+
+/* Tablet & Desktop*/
+@media (min-width: 768px) {
+  .hero-image {
+    width: 100vw;
+    height: 90vh;
+    object-fit: cover;
+    border-top: 2px solid black;
+  }
+
+  .hero-text {
+    font-size: 42px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    -webkit-text-stroke: 1px black;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: row;
+  }
+
+  .navigation-text {
+    margin: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    color: black;
+  }
+
+  .navigation a {
+    text-decoration: none;
+  }
+
+  .navigation-text:hover {
+    background-color: white;
+  }
+
+  .form {
+    margin: 24px;
+    width: 40%;
+  }
+
+  .signup-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  .accordion {
+    margin: 24px;
+    width: 40%;
+  }
+
+  .active+.answer {
+    height: 100px;
+  }
+
 }
