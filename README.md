@@ -1,12 +1,12 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+Used the same skeleton for this as in my previous project, because i thought it fit perfectly.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Making a babysitting site for my daugther.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Well, the accordion was hard. Did not get Max tutorial to work, had to use one I googled. The same happended with the responsive images for the hero part. Did not get it to work as Max showed us. Så frustrating not finding your own errors. Did get the hero images to work using min-width instead os max-width. Puh!
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Yes, here it is on Netlify: https://stupefied-kirch-cac39a.netlify.app/
