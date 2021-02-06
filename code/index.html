@@ -3,28 +3,79 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css">
+    <title>Snowboard boot camp</title>
   </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+  <body>    
+    <header class="landing-page-header">
+      <picture class="hero-picture">
+        <h1 class="hero-title">Join our ski and snowboard school!</h1>
+        <source srcset="./Images/hero-mobile2.jpg" media="(max-width:768px)">
+        <source srcset="./Images/hero-tablet2.png" media="(max-width:1199px)">
+        <img class="hero-img" src="Images/hero-desktop-big.jpg" alt="Snowboard hero image"/>
+      </picture>
+    </header>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+    <section class="site-content"> 
+      <img class="snowflake-cyan" src="./Images/snowflake1.png">
+      <img class="snowflake-cyan2" src="./Images/snowflake1.png">
+      <img class="snowflake-cyan3" src="./Images/snowflake1.png">
+    
+      <form action="http://httpbin.org/anything" method="POST" class="sign-up-form">                   
+        <h1 class="sign-up-header">SIGN UP NOW</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required >
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+        <label for="password" >Password:</label>
+        <input type="password" id="password" name="password" placeholder="Minimun 8 char" minlength="8" required>
+          <section class="radio-section-form">
+            <label for="gear">Skier: </label>
+            <input type="radio" id="gear" name="gear" value="Skier" required>             
+            <label for="gear">Snowboarder:</label>
+            <input type="radio" id="gear" name="gear" value="Snowboard" required>
+          </section>
+        <label for="terms">I agree to the <a href="#"> Terms of service and Privacy Policy</a>:
+        </label>
+        <input type="checkbox" id="terms" name="terms" required >
+        <label for="newsletter">Yes I would like to sign up for the newsletter:</label>
+        <input type="checkbox" id="newsletter" name="newsletter"> 
+        <label for="send-btn"></label>            
+        <input type="submit" value="Sign up!" id="send-btn" class="send-btn">
+      </form>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+      <section class="accordion">     
+        <h2 class="accordion-title">FAQ</h2>  
+        
+        <button class="faq-item" id="question1">WHEN?</button>
+        <p id="acc-answer1" class="faq-answer">Pariatur incididunt tempor eiusmod elit sint anim eiusmod duis et. Cillum id  eiusmod elit ex. 
+        Reprehenderit do consequat tempor excepteur sunt voluptate sit.
+        Est officia anim sit nostrud. Id elit consectetur nisi sit aliqua sit enim.
+        Reprehenderit nostrud consectetur in et mollit enim quis deserunt. Tempor deserunt ut ad nostrud est dolore.
+        </p>         
+        <button class="faq-item" id="question2">WHERE?</button>
+        <p id="acc-answer2" class="faq-answer">Pariatur incididunt tempor eiusmod elit sint anim eiusmod duis et. Cillum id eiusmod elit ex. 
+        Reprehenderit do consequat tempor excepteur sunt voluptate sit.
+        Est officia anim sit nostrud. Id elit consectetur nisi sit aliqua sit enim.
+        eprehenderit nostrud consectetur in et mollit enim quis deserunt. Tempor deserunt ut ad nostrud est dolore.
+        </p> 
+        <button class="faq-item" id="question3">HOW?</button>
+        <p id="acc-answer3" class="faq-answer">Pariatur incididunt tempor eiusmod elit sint anim eiusmod duis et. Cillum id eiusmod elit ex. 
+        Reprehenderit do consequat tempor excepteur sunt voluptate sit.
+        Est officia anim sit nostrud. Id elit consectetur nisi sit aliqua sit enim.
+        Reprehenderit nostrud consectetur in et mollit enim quis deserunt. Tempor deserunt ut ad nostrud est dolore.
+        </p>
+        <button class="faq-item" id="question4">PRICE?</button>
+        <p id="acc-answer4" class="faq-answer">Pariatur incididunt tempor eiusmod elit sint anim eiusmod duis et. Cillum id eiusmod elit ex. 
+        Reprehenderit do consequat tempor excepteur sunt voluptate sit.
+        Est officia anim sit nostrud. Id elit consectetur nisi sit aliqua sit enim.
+        Reprehenderit nostrud consectetur in et mollit enim quis deserunt. Tempor deserunt ut ad nostrud est dolore.
+        </p>          
+      </section>
+    </section> 
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+    <script src="script.js">      
+    </script>
+  </body> 
 </html>
