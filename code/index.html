@@ -4,27 +4,272 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <!-- Header with full width video & nav links to login -->
+    <header class="hero">
+      <video class="hero__video" playsinline autoplay muted loop>
+        <source src="./assets/videos/adventures.mp4" type="video/mp4" />
+        <source src="./assets/videos/adventures.webm" type="video/webm" />
+        Sadly your browser not support HTML 5 video.
+      </video>
+      <h1 class="hero__title">
+        Let the
+        <span>ADVENTURE</span>
+        Begin
+      </h1>
+      <nav class="hero__nav">
+        <button class="button hero__button">LOGIN</button>
+      </nav>
+    </header>
 
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <!-- Section containing the form -->
+    <section class="forms">
+      <div class="content__container">
+        <h2 class="content__title">Book your adventure!<span>Learn the wilderness</span></h2>
+        <!-- The Form -->
+        <form class="content" action="https://httpbin.org/anything" method="post">
+          <!-- Form part 1 -->
+          <!-- Contact information -->
+          <fieldset class="form__section">
+            <legend class="form__section-title">Who is booking?</legend>
+            <!-- Name (text) -->
+            <label class="form__input-wrapper">
+              Full name
+              <input class="form__input-field" type="text" name="fullName" id="name" required />
+            </label>
+            <!-- Email (mail) -->
+            <label class="form__input-wrapper">
+              Email
+              <input class="form__input-field" type="email" name="email" id="email" required />
+            </label>
+          </fieldset>
+          <!-- Form part 2 -->
+          <!-- Info about the adventure to be booked -->
+          <fieldset class="form__section">
+            <legend class="form__section-title">Adventure preferences</legend>
+            <!-- Month to book (date-month) -->
+            <label class="form__input-wrapper">
+              What month do you prefer to adventure in?
+              <input class="form__input-field" type="month" name="dateMonth" id="month" required />
+            </label>
+            <!-- Amount of People (select-opt) -->
+            <label class="form__input-wrapper">
+              How many people in your party?
+              <select class="form__input-field" name="groupSize" id="groupSize" required>
+                <option value="">--Select group size--</option>
+                <option value="duo">2</option>
+                <option value="small">3-5</option>
+                <option value="medium">6-10</option>
+                <option value="large">10+</option>
+              </select>
+            </label>
+            <!-- Experience (radio) -->
+            <div class="form__input-wrapper">
+              How experienced are you?
+              <label class="form__input-field">
+                <input
+                  class="form__input-radio"
+                  type="radio"
+                  name="experience"
+                  id="exp1"
+                  value="beginner"
+                  required
+                />
+                Beginner
+              </label>
+              <label class="form__input-field">
+                <input
+                  class="form__input-radio"
+                  type="radio"
+                  name="experience"
+                  id="exp2"
+                  value="intermediate"
+                />
+                Intermediate
+              </label>
+              <label class="form__input-field">
+                <input
+                  class="form__input-radio"
+                  type="radio"
+                  name="experience"
+                  id="exp3"
+                  value="advanced"
+                />
+                Advanced
+              </label>
+            </div>
+            <!-- Activities (checkbox) -->
+            <div class="form__input-wrapper">
+              What activities would you like focus on?
+              <label class="form__input-field form__input-field--disabled">
+                <input
+                  class="form__input-checkbox"
+                  type="checkbox"
+                  name="activities"
+                  id="activity"
+                  value="basic"
+                  checked
+                  disabled
+                />
+                The Basics
+              </label>
+              <label class="form__input-field">
+                <input
+                  class="form__input-checkbox"
+                  type="checkbox"
+                  name="activities"
+                  id="activity1"
+                  value="hiking"
+                />
+                Hiking
+              </label>
+              <label class="form__input-field">
+                <input
+                  class="form__input-checkbox"
+                  type="checkbox"
+                  name="activities"
+                  id="activity2"
+                  value="camping"
+                />
+                Camping
+              </label>
+              <label class="form__input-field">
+                <input
+                  class="form__input-checkbox"
+                  type="checkbox"
+                  name="activities"
+                  id="activity3"
+                  value="foraging"
+                />
+                Foraging
+              </label>
+              <label class="form__input-field">
+                <input
+                  class="form__input-checkbox"
+                  type="checkbox"
+                  name="activities"
+                  id="activity4"
+                  value="hunting"
+                />
+                Hunting
+              </label>
+            </div>
+            <!-- Other info (text-area) -->
+            <label class="form__input-wrapper">
+              Anything else we should know?
+              <textarea
+                class="form__input-field"
+                name="otherInfo"
+                id="other"
+                cols="30"
+                rows="10"
+                placeholder="Dietary restrictions, medicinal concerns..."
+              ></textarea>
+            </label>
+          </fieldset>
+          <!-- Form part 3 -->
+          <!-- Account creation -->
+          <fieldset class="form__section">
+            <legend class="form__section-title">Almost done!</legend>
+            <span class="form__section-subtitle">
+              To complete the booking you need to create an account with us so you can track your
+              adventure!
+            </span>
+            <!-- Username (text) -->
+            <label class="form__input-wrapper">
+              Username
+              <input class="form__input-field" type="text" name="username" id="username" required />
+            </label>
+            <!-- Password (password) -->
+            <label class="form__input-wrapper">
+              Password (8 characters minimum)
+              <input
+                class="form__input-field"
+                type="password"
+                name="password"
+                id="password"
+                minlength="8"
+                required
+              />
+            </label>
+          </fieldset>
+          <!-- Submit section -->
+          <div class="form__section">
+            <!-- Submit and accept terms -->
+            <!-- Subscribe? (checkbox) -->
+            <label class="form__input-wrapper--submit-section">
+              <input class="form__input-checkbox" type="checkbox" name="subscribe" id="subscribe" />
+              I would like to subscribe to Adventure updates!
+            </label>
+            <!-- Accept Terms (checkbox) -->
+            <label class="form__input-wrapper--submit-section">
+              <input
+                class="form__input-checkbox"
+                type="checkbox"
+                name="terms"
+                id="terms"
+                required
+              />
+              I accept the terms and conditions
+            </label>
+            <!-- Submit button (button) -->
+            <button class="button form__submitBtn" type="submit">GO ADVENTURE</button>
+          </div>
+        </form>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <!-- Section containing the accordion -->
+    <section class="accordion">
+      <div class="content__container">
+        <h2 class="content__title">FaQ<span>Feel free to ask us more!</span></h2>
+        <!-- Accordion -->
+        <div class="content" id="accordion">
+          <!-- Question 1 -->
+          <div class="accordion__item-wrapper">
+            <div class="accordion__question">How old do you have to be?<span>&#10133;</span></div>
+            <div class="accordion__answer">
+              Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis
+              porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non
+              nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit. Sed porttitor lectus nibh. Donec rutrum congue leo
+              eget malesuada.
+            </div>
+          </div>
+          <!-- Question 2 -->
+          <div class="accordion__item-wrapper">
+            <div class="accordion__question">What should I bring?<span>&#10133;</span></div>
+            <div class="accordion__answer">
+              Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis
+              porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non
+              nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit. Sed porttitor lectus nibh. Donec rutrum congue leo
+              eget malesuada.
+            </div>
+          </div>
+          <!-- Question 3 -->
+          <div class="accordion__item-wrapper">
+            <div class="accordion__question">How do I pay?<span>&#10133;</span></div>
+            <div class="accordion__answer">
+              Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis
+              porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non
+              nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit. Sed porttitor lectus nibh. Donec rutrum congue leo
+              eget malesuada.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer with centered copy text -->
+    <footer class="footer">
+      <p class="footer__copyright">&copy; Lorem Ipsum Adventures</p>
+    </footer>
+
+    <!-- Javascript link -->
+    <script src="./script.js"></script>
   </body>
 </html>

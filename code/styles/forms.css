@@ -1,0 +1,120 @@
+/* Styling the form elements */
+
+.form__section {
+  display: flex;
+  flex-flow: column nowrap;
+  /* border: none; */
+  /* padding: 0; */
+  margin: 2em 0;
+  min-width: 230px;
+}
+
+.form__section-title {
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+.form__section-subtitle {
+  margin-bottom: 1em;
+}
+
+.form__input-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 1em;
+}
+
+.form__input-wrapper--submit-section {
+  display: flex;
+  align-items: center;
+  margin: 1em;
+}
+
+.form__submitBtn {
+  margin: 1em;
+}
+
+.form__input-field {
+  cursor: pointer;
+  margin-top: 1em;
+  font-size: 1em;
+  padding: 1em;
+  background: #f3f3f3;
+  border-radius: 1em;
+  border: 0;
+  box-shadow: 2px 2px 5px #8d8741;
+}
+
+.form__input-field:hover {
+  background: #fbeec1;
+}
+
+/* change focus style of input fields */
+.form__input-field:focus,
+.form__input-checkbox:focus,
+.form__input-radio:focus {
+  outline: none !important;
+  border: 1px solid #8d8741;
+  box-shadow: inset 0 1px 1em 0 #8d8741;
+}
+
+/* --- CHECKBOX & RADIO --- */
+
+/* unchecked style */
+.form__input-checkbox,
+.form__input-radio {
+  /* set the checkbox&radio style to none inorder to style it */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* begin style and positioning */
+  border: solid 1px #cccccc;
+  border-radius: 5px;
+  background: white;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  position: relative;
+}
+.form__input-radio {
+  /* make the radio button round */
+  border-radius: 10px;
+}
+
+/* -CHECKBOX&RADIO(states)-  */
+
+/* Checked style of checkbox and radio */
+.form__input-checkbox:checked::before,
+.form__input-radio:checked::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #8d8741;
+  border-radius: 5px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+/* make the checked radio a circle */
+.form__input-radio:checked:before {
+  border-radius: 10px;
+}
+
+/* INVALID STYLES */
+.form__input-field:focus:invalid,
+.form__input-checkbox:focus:invalid,
+.form__input-radio:focus:invalid {
+  outline: none !important;
+  border: 1px solid #bc986a;
+  box-shadow: inset 0 1px 1em 0 #bc986a;
+}
+
+/* DISABLED INPUTS */
+.form__input-field--disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.form__input-field--disabled:hover {
+  background: #f3f3f3;
+}
