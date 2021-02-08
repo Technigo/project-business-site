@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lizard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/form.css" />
+  </head>
+  <body>
+    <!-- START HEADER -->
+    <header class="main-header">header</header>
+    <!-- END OF HEADER -->
+
+    <!-- START FORM -->
+    <div class="main-body">
+      <div class="main-wrapper">
+        <div class="form-container">
+          <div class="form">
+            <h1 class="form-title">Registration Form</h1>
+            <form action="http://httpbin.org/anything" method="POST">
+              <fieldset class="fieldset">
+                <legend>Your contact information</legend>
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="phone">Your number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Don't forget your area code"
+                  required
+                />
+
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="email" required />
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend>About your climbing exprience</legend>
+
+                <div class="field-container">
+                  <label for="date">Request date</label>
+                  <input type="date" id="date" name="date" />
+                </div>
+
+                <div class="field-container">
+                  <label for="qty"
+                    >How many people would you like climing?</label
+                  >
+                  <input type="number" id="qty" name="qty" min="1" max="10" />
+                </div>
+
+                <div class="field-container">
+                  <p>What type of area for climbing do you prefer?</p>
+                  <label>
+                    <input type="radio" name="areatype" value="a" checked />
+                    A
+                  </label>
+                  <label>
+                    <input type="radio" name="areatype" value="b" /> B
+                  </label>
+                  <label>
+                    <input type="radio" name="areatype" value="c" />
+                    C
+                  </label>
+                  <label>
+                    <input type="radio" name="areatype" value="d" /> D
+                  </label>
+                  <label>
+                    <input type="radio" name="areatype" value="any" /> any
+                  </label>
+                </div>
+
+                <div class="field-container">
+                  <label for="abtype"
+                    >What type of climbing experience do you want?</label
+                  >
+                  <select id="climbingtype" name="climbingtype">
+                    <option selected>Select one...</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                    <option value="d">d</option>
+                  </select>
+                </div>
+
+                <div class="field-container">
+                  <label for="comments">Special requests:</label>
+                  <textarea
+                    id="comments"
+                    name="comments"
+                    placeholder="Tell me anything you want"
+                  ></textarea>
+                </div>
+
+                <div class="field-container">
+                  <label>
+                    <input
+                      id="subscribe"
+                      name="subscribe"
+                      type="checkbox"
+                      value="subscribe"
+                    />Add me to your email list
+                  </label>
+                </div>
+              </fieldset>
+              <button type="submit" class="submit-btn">Submit</button>
+            </form>
+          </div>
+          <aside class="address">
+            <address class="map">
+              <h3 class="form-title">Address</h3>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.8155758441599!2d18.07064171567532!3d59.336032817527624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d5c9843e367%3A0x4fed3f5b09623c84!2sStureplan%2C%20%C3%96stermalm%2C%20Stockholm!5e0!3m2!1sen!2sse!4v1611942571038!5m2!1sen!2sse"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </address>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <!-- END OF FORM -->
+
+    <!-- START FOOTER -->
+    <footer class="main-footer">
+      <div class="main-wrapper">
+        <div class="footer-container">
+          <div class="footer-items">
+            <h6>Useful Links</h6>
+            <ul class="footer-links">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Where are we?</a></li>
+              <li><a href="#">Further Questions</a></li>
+              <li><a href="#">Gyms Around</a></li>
+            </ul>
+          </div>
+          <div class="footer-items">
+            <h6>Other websites</h6>
+            <ul class="footer-links">
+              <li><a href="#">rockclimbing.com</a></li>
+              <li><a href="#">petzl.com</a></li>
+              <li><a href="#">mountainclimbing.com</a></li>
+              <li><a href="#">howtoclimb.com</a></li>
+              <li><a href="#">livelikeclimber.com</a></li>
+            </ul>
+          </div>
+          <div class="footer-items">
+            <h6>Social Media</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="#"><i class="fa fa-telegram"></i> Telegram</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-facebook"></i> Facebook</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-linkedin"></i> Linkedin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="end-footer">
+        <a href="/">Lizard</a>
+      </div>
+    </footer>
+    <!-- END OF FOOTER -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>

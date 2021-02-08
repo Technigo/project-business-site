@@ -1,0 +1,294 @@
+.first-box {
+  background-color: var(--white);
+  transition: transform 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+}
+
+.first-box-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 111px;
+}
+
+.first-box-title h2 {
+  color: var(--secondaryColorNormal);
+}
+
+.first-box-items-content h4 {
+  color: var(--black);
+}
+
+.accordion {
+  background-color: #ecf3f4;
+  background-repeat: no-repeat;
+  background-position: 90%;
+  padding: calc(var(--spacing) * 4);
+  overflow: hidden;
+}
+
+.faq-container {
+  background-color: var(--white);
+}
+
+.accordion-header {
+  margin: 0;
+  cursor: pointer;
+  padding: calc(var(--spacing) * 4);
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-header h5 {
+  margin: 0;
+  color: var(--primaryColorDarker);
+  transition: color 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+  font-size: var(--medium);
+}
+
+.accordion-header i {
+  align-self: center;
+  font-size: var(--medium);
+  color: var(--primaryColorDarker);
+  transition: color 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+}
+
+.accordion-header:hover h5,
+.accordion-header:hover i {
+  color: var(--secondaryColorNormal);
+}
+
+.accordion-content {
+  overflow: hidden;
+  transition: height 0.3s ease;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 0 calc(var(--spacing) * 4) calc(var(--spacing) * 4)
+    calc(var(--spacing) * 4);
+}
+
+.faq-container i {
+  display: none;
+}
+
+.accordion-content:last-child {
+  border-bottom: 0;
+}
+
+.accordion-content p {
+  margin: 0;
+  font-size: var(--small);
+}
+
+.accordion-selected {
+  height: 220px;
+}
+
+/* OTHER INFORMATION */
+.other-information {
+  padding: calc(var(--spacing) * 8) 0;
+}
+
+.other-information-items-content:hover h4 {
+  color: var(--primaryColorDarker);
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 980px) {
+  .transform-sec {
+    transform: translateY(-130px);
+  }
+
+  .accordion {
+    background-color: #ecf3f4;
+    background-image: url("../img/03.svg");
+    background-repeat: no-repeat;
+    background-position: 90%;
+    padding: 0 calc(var(--spacing) * 4);
+    height: 450px;
+    overflow: hidden;
+  }
+
+  .accordion-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 450px;
+  }
+
+  .accordion-inner {
+    flex: 0.4;
+  }
+
+  .faq-container {
+    background-color: var(--white);
+  }
+
+  .accordion-header i {
+    display: block;
+  }
+
+  .accordion-header {
+    margin: 0;
+    cursor: pointer;
+    padding: calc(var(--spacing) * 4);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .accordion-header h5 {
+    margin: 0;
+    color: var(--primaryColorDarker);
+    transition: color 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+    font-size: var(--medium);
+  }
+
+  .accordion-header i {
+    align-self: center;
+    font-size: var(--medium);
+    color: var(--primaryColorDarker);
+    transition: color 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+  }
+
+  .accordion-header:hover h5,
+  .accordion-header:hover i {
+    color: var(--secondaryColorNormal);
+  }
+
+  .accordion-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 0 calc(var(--spacing) * 4);
+  }
+
+  .accordion-content:last-child {
+    border-bottom: 0;
+  }
+
+  .accordion-content p {
+    margin: 0;
+    font-size: var(--small);
+  }
+
+  .accordion-selected {
+    height: 220px;
+  }
+}
+
+/* TABLET AND DESKTOP */
+@media only screen and (min-width: 768px) {
+  .first-box-list,
+  .other-information-list {
+    display: flex;
+    gap: calc(var(--spacing) * 4);
+  }
+
+  .other-information-items {
+    flex: 1;
+  }
+
+  .first-box-items {
+    flex: 1;
+    transition: all 0.15s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+  }
+
+  .first-box-items figure,
+  .other-information-items figure {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+  }
+
+  .first-box-items img,
+  .other-information-items img {
+    transition: all 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+  }
+
+  .first-box-items figure::before,
+  .first-box-items figure::after,
+  .other-information-items figure::before,
+  .other-information-items figure::after {
+    background: hsla(var(--secondaryColor), 87%, 67%, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    content: "";
+    transition: all 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+    transform: scale(0, 0);
+  }
+
+  .first-box-items figure::before,
+  .other-information-items figure::before {
+    transform-origin: right top;
+  }
+
+  .first-box-items figure::after,
+  .other-information-items figure::after {
+    transform-origin: left bottom;
+  }
+
+  .first-box-items:hover figure::before,
+  .first-box-items:hover figure::after,
+  .other-information-items:hover figure::before,
+  .other-information-items:hover figure::after {
+    transform: scale(1, 1);
+  }
+
+  .first-box-items:hover img,
+  .other-information-items:hover img {
+    transform: scale(1.2);
+  }
+
+  .first-box-items figure,
+  .other-information-items figure {
+    overflow: hidden;
+  }
+
+  .first-box-items-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* OTHER INFORMATION */
+  .other-information {
+    padding: calc(var(--spacing) * 8) 0;
+  }
+
+  .other-information-list {
+    display: flex;
+    gap: calc(var(--spacing) * 8);
+  }
+
+  .other-information-items {
+    flex: 1;
+  }
+
+  .other-information-items-content {
+    background-color: #fcfcfc;
+    transform: translateY(-100px);
+    width: 90%;
+    height: 200px;
+    position: relative;
+    z-index: 10;
+    padding: calc(var(--spacing) * 2);
+    border-bottom: var(--spacing) solid var(--secondaryColorNormal);
+  }
+
+  .other-information-items-content time {
+    font-weight: bold;
+    color: var(--secondaryColorNormal);
+    padding-bottom: calc(var(--spacing) * 2);
+    display: inline-block;
+  }
+
+  .other-information-items-content h4 {
+    margin: 0;
+    transition: color 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+    color: var(--black);
+  }
+  .other-information-items-content:hover h4 {
+    color: var(--primaryColorDarker);
+  }
+}

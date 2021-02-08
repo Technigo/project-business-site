@@ -1,0 +1,84 @@
+.header-video {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+  transition: filter 0.5s ease-in-out;
+}
+
+.menu {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+.menu i {
+  font-size: var(--xxLarge);
+  color: var(--secondaryColorNormal);
+  transition: transform 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+}
+
+.menu:hover i {
+  transform: scale(2);
+}
+
+.main-title {
+  color: var(--white);
+  text-shadow: 1px 1px 1px #000;
+  transition: text-shadow 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+  position: absolute;
+  top: 48%;
+  padding: 0 calc(var(--spacing) * 4);
+  font-size: var(--medium);
+}
+
+.main-title:hover {
+  text-shadow: 3px 3px 3px #000;
+}
+
+.main-header {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.signup-btn {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  background-color: var(--primaryColorDarker);
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+  border: 1px solid var(--primaryColorDarker);
+  color: var(--white);
+  border-radius: calc(var(--spacing) * 5);
+  transition: transform 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+}
+
+@media only screen and (min-width: 980px) {
+  .header-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+  }
+  .main-title {
+    position: absolute;
+    top: 55%;
+    right: 15%;
+    font-size: var(--xxLarge);
+  }
+
+  .signup-btn {
+    top: 75%;
+    transition: all 0.5s cubic-bezier(0.61, -0.01, 0.03, 1.08);
+    cursor: pointer;
+  }
+
+  .btn-container:hover .signup-btn {
+    background-color: var(--secondaryColorNormal);
+    border: 1px solid var(--secondaryColorDarker);
+  }
+}

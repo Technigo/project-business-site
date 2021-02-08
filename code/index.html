@@ -1,30 +1,292 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://use.fontawesome.com/bb61c0507d.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Lizard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <meta name="description" content="A cool company for workout" />
   </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
+  <body onscroll="transformSection()">
+    <!-- START HEADER -->
+    <header class="main-header">
+      <video autoplay muted loop class="header-video">
+        <!-- <source src="./assets/video/01.mp4" type="video/mp4" />
+        <source src="./assets/video/01.webm" type="video/webm" /> -->
 
-    <!-- Signup form -->
+        <source
+          src="./assets/video/SampleVideo_1280x720_1mb.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="./assets/video/SampleVideo_1280x720_1mb.webm"
+          type="video/webm"
+        />
 
+        <source
+          src="./assets/video/SampleVideo_720x480_1mb.mp4"
+          type="video/mp4"
+          media="(max-width: 900px)"
+        />
+        <source
+          src="./assets/video/SampleVideo_720x480_1mb.webm"
+          type="video/webm"
+          media="(max-width: 900px)"
+        />
+
+        <source
+          src="./assets/video/SampleVideo_360x240_1mb.mp4"
+          type="video/mp4"
+          media="(max-width: 600px)"
+        />
+        <source
+          src="./assets/video/SampleVideo_360x240_1mb.webm"
+          type="video/webm"
+          media="(max-width: 600px)"
+        />
+
+        <p>This browser doesn't support video...</p>
+      </video>
+      <!-- LOGO -->
+      <a href="/" class="block logo">
+        <img src="./assets/img/logo.png" alt="logo" />
+      </a>
+      <a href="#" class="menu"><i class="fa fa-bars"></i></a>
+
+      <h1 class="main-title">
+        <blockquote>
+          Every mountain top is within reach if you just keep climbing.
+        </blockquote>
+      </h1>
+      <!-- SIGN UP -->
+      <a href="./pages/form.html" class="btn-container">
+        <button type="submit" class="signup-btn">Join us</button></a
+      >
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- START FIRST BOX -->
+    <div class="main-wrapper">
+      <section id="first-box" class="first-box">
+        <header class="first-box-title">
+          <h2>
+            Explore more about climbing and how you can be a professional
+            climber.
+          </h2>
+        </header>
+        <ul class="first-box-list">
+          <li class="first-box-items">
+            <a href="#" class="block">
+              <figure>
+                <img
+                  src="./assets/img/02.webp"
+                  alt="Article Image"
+                  class="res-img"
+                />
+              </figure>
+            </a>
+
+            <div class="first-box-items-content">
+              <a href="#"><h4>Meet best climber in a world</h4></a>
+            </div>
+          </li>
+          <li class="first-box-items">
+            <a href="#" class="block">
+              <figure>
+                <img
+                  src="./assets/img/01.webp"
+                  alt="Article Image"
+                  class="res-img"
+                />
+              </figure>
+            </a>
+            <div class="first-box-items-content">
+              <a href="#"><h4>Why climbing is the best sport?</h4></a>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <!-- END OF FIRST BOX -->
+
+    <!-- START ACCORDION  -->
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+      <div class="main-wrapper">
+        <!-- Accordion -->
+        <div class="accordion-container">
+          <div class="accordion-inner">
+            <!-- <h3>FAQ</h3> -->
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+            <div class="faq-container">
+              <div class="accordion-header" id="accordion-header-1">
+                <h5>How can we join?</h5>
+                <i class="fa fa-plus"></i>
+              </div>
+              <div class="accordion-content" id="accordion-content-1">
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable. If you are going to use a passage of
+                  Lorem Ipsum, you need to be sure there isn't anything
+                  embarrassing hidden in the middle of text. All the Lorem Ipsum
+                  generators on the Internet tend to repeat predefined chunks as
+                  necessary, making this the first true generator on the
+                  Internet. It uses a dictionary of over 200 Latin words,
+                  combined with a handful of model sentence structures, to
+                  generate Lorem Ipsum which looks reasonable.
+                </p>
+              </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+              <div class="accordion-header" id="accordion-header-2">
+                <h5>What is the requirement?</h5>
+                <i class="fa fa-plus"></i>
+              </div>
+              <div class="accordion-content" id="accordion-content-2">
+                <p>
+                  Contrary to popular belief, Lorem Ipsum is not simply random
+                  text. It has roots in a piece of classical Latin literature
+                  from 45 BC, making it over 2000 years old. Richard McClintock,
+                  a Latin professor at Hampden-Sydney College in Virginia,
+                  looked up one of the more obscure Latin words, consectetur,
+                  from a Lorem Ipsum passage, and going through the cites of the
+                  word in classical literature, discovered the undoubtable
+                  source.
+                </p>
+              </div>
+
+              <div class="accordion-header" id="accordion-header-3">
+                <h5>Who should I contanct?</h5>
+                <i class="fa fa-plus"></i>
+              </div>
+              <div class="accordion-content" id="accordion-content-3">
+                <p>
+                  The standard chunk of Lorem Ipsum used since the 1500s is
+                  reproduced below for those interested. Sections 1.10.32 and
+                  1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
+                  also reproduced in their exact original form, accompanied by
+                  English versions from the 1914 translation by H. Rackham.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+    <!-- END OF ACCORDION -->
+
+    <!-- START OTHER INFORMATION -->
+    <div class="main-wrapper">
+      <section class="other-information">
+        <ul class="other-information-list">
+          <li class="other-information-items">
+            <a href="#" class="block">
+              <figure>
+                <img
+                  src="./assets/img/02.webp"
+                  alt="Article Image"
+                  class="res-img"
+                />
+              </figure>
+            </a>
+
+            <div class="other-information-items-content">
+              <time datetime="2020-07-07">2021-01-15</time>
+
+              <a href="#"><h4>What trainings do you need?</h4></a>
+              <p>
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system, and expound the actual
+                teachings of the great explorer of the truth, the master-builder
+                of human happiness.
+              </p>
+            </div>
+          </li>
+          <li class="other-information-items">
+            <a href="#" class="block">
+              <figure>
+                <img
+                  src="./assets/img/01.webp"
+                  alt="Article Image"
+                  class="res-img"
+                />
+              </figure>
+            </a>
+            <div class="other-information-items-content">
+              <time datetime="2020-07-07">2021-02-01</time>
+
+              <a href="#"><h4>She had an amazing climb</h4></a>
+              <p>
+                To take a trivial example, which of us ever undertakes laborious
+                physical exercise, except to obtain some advantage from it? But
+                who has any right to find fault with a man who chooses to enjoy
+                a pleasure that has no annoying consequences, or one who avoids
+                a pain that produces no resultant pleasure?
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <!-- END OF OTHER INFORMATION -->
+
+    <!-- START FOOTER -->
+    <footer class="main-footer">
+      <div class="main-wrapper">
+        <div class="footer-container">
+          <div class="footer-items">
+            <h6>Useful Links</h6>
+            <ul class="footer-links">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Where are we?</a></li>
+              <li><a href="#">Further Questions</a></li>
+              <li><a href="#">Gyms Around</a></li>
+            </ul>
+          </div>
+          <div class="footer-items">
+            <h6>Other websites</h6>
+            <ul class="footer-links">
+              <li><a href="#">rockclimbing.com</a></li>
+              <li><a href="#">petzl.com</a></li>
+              <li><a href="#">mountainclimbing.com</a></li>
+              <li><a href="#">howtoclimb.com</a></li>
+              <li><a href="#">livelikeclimber.com</a></li>
+            </ul>
+          </div>
+          <div class="footer-items">
+            <h6>Social Media</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="#"><i class="fa fa-telegram"></i> Telegram</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-facebook"></i> Facebook</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-linkedin"></i> Linkedin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="end-footer">
+        <a href="/">Lizard</a>
+      </div>
+    </footer>
+    <!-- END OF FOOTER -->
+    <script src="./script.js"></script>
   </body>
 </html>
