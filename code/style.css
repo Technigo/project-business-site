@@ -1,7 +1,328 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  margin: 0;
+}
 
-.active + .answer {
-  /* some styling here */
+/*Styling header*/
+.bgvideo {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: relative;
+  background-repeat: no-repeat;
+  z-index: 1;
+  filter: grayscale(0.75);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -5px;
+}
+
+.nav {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  text-align: right;
+  margin-top: 3%;
+  margin-left: 17%;
+  z-index: 2;
+}
+
+.nav-item {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  margin: 3%;
+  text-transform: uppercase;
+  color: linen;
+}
+
+.headline {
+  color: linen;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+}
+
+.logo {
+  position: absolute;
+  margin: 2%;
+  z-index: 2;
+}
+
+.imglogo {
+  width: 40%;
+  height: auto;
+}
+
+.hamburger {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  margin-left: 85%;
+  margin-top: 1%;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: #E8A53A;
+  margin: 3px;
+  border-radius: 10px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid linen;
+}
+
+/*Styling main section, including form and accordion*/
+.main {
+  background-color:darkgray;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.form {
+  display: block;
+  background-color: lightgray;
+  width: 40%;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  box-shadow:5px 5px rgba(0,0.15,0,0.15);
+}
+
+.form h2, h5 {
+  text-align: center;
+}
+
+.textfield {
+  width: 45%;
+  padding: 5px;
+  margin-left: 15%;
+  margin-bottom: 2%;
+  border-radius: 5px;
+  border: none;
+}
+
+input:valid {
+  background-color: lightgreen;
+}
+
+.name {
+  padding-left: 15%;
+}
+
+.e-mail {
+  padding-left: 15%;
+}
+
+.select-menu-input {
+  margin-top: 20px;
+  margin-left: 15%;
+  justify-content: center;
+}
+
+.checkbox-input1 {
+  margin-top: 20px;
+  margin-left: 15%;
+  justify-content: center;
+}
+
+.checkbox-input2 {
+  padding-bottom: 20px;
+  margin-left: 15%;  
+}
+
+.submit-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height:auto;
+}
+
+button {
+  border: 1px solid #E8A53A;
+  background-color: #E8A53A;
+  width: 40%;
+  height: auto;
+  border-radius: 15px;
+  padding: 5px;
+  margin: 20px;
+  font-size: 18px;
+  cursor: pointer; 
+}
+
+button:hover {
+  opacity: 0.75;
+}
+
+.q-and-a {
+  display: block;
+  background-color:lightgray;
+  width: 40%;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px rgba(0,0.15,0,0.15);
+}
+
+.q-and-a h2 {
+  text-align: center;
+}
+
+.accordion-item-header {
+  cursor: pointer;
+  background-color: #E8A53A;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.accordion-item-header:hover {
+  opacity: 0.75;
+}
+
+.accordion-item-header::before {
+  content: "+";
+  font-size: 20px;
+  width: 20px;
+  padding-right: 4px;
+  padding-top: 17px;
+}
+
+.accordion-item-header.active::before {
+  content: "-"; 
+}
+
+.accordion-item-body {
+  display: none;
+}
+
+.accordion-item-body-content {
+  background-color: slategray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 10px;
+  color: white;
+}
+
+.accordion-item-header.active + .accordion-item-body {
+  display: block;
+}
+
+/*Styling footer*/
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: slategray;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  justify-content: center;
+  color: white;
+  padding: 20px 0 20px 0;
+}
+
+/*extra styling different screens*/
+@media (max-width: 650px) {
+.imglogo {
+  width: 25%;
+  height: auto;
+  margin: 2px;
+}
+    
+.nav {
+  display: none;
+}
+
+.headline {
+  margin-top: 23%;
+}
+
+.header h1 {
+  font-size: 15px;
+}
+
+.header p {
+  font-size: 10px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+}
+
+.form {
+  width: 100%;
+}
+
+.q-and-a {
+  width: 100%;
+}
+}
+
+@media (min-width: 651px) {
+.headline {
+  margin-top: 25%;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+.header p {
+  font-size: 25px;
+}
+
+.nav {
+  display: none;
+} 
+
+.hamburger div {
+  width: 40px;
+  height: 5px;
+  margin-left: 30px;
+} 
+}
+
+@media (min-width: 1024px) {
+.hamburger div {
+  display: none;
+}
+
+.nav {
+  display: block;
+}
+
+.headline {
+  margin-top: 15%;
+}
+
+.header h1 {
+  font-size: 70px;
+}
+
+.header p {
+  font-size: 50px;
+}
 }

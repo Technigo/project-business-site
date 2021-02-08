@@ -1,30 +1,187 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
+    <title>Bookbinding Courses</title>
     <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./style.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap" rel="stylesheet">
   </head>
+
   <body>
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+     <!-- video or image as a header is cool :) -->
+    <header class="header">
+      <div class="hero">
+        <video playsinline autoplay muted loop poster="" class="bgvideo">
+          <source src="pageturner.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+      <div class="logo">
+        <img class="imglogo" src="BC_logoV2.png" alt="logotype for Bookbinders Club" />
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-    </section>
+      
+      <nav class="nav">
+        <a class="nav-item" href="#" >About</a>
+        <a class="nav-item" href="#">Courses</a>
+        <a class="nav-item" href="#">Merchandise</a>
+        <a class="nav-item" href="#">Contact</a>
+      </nav>
+
+      <section class="headline">
+        <h1>A Forgotten Craftsmanship</h1>
+        <p>Learn Bookbinding Today!</p>
+      </section>
+    </header>
+
+    <main class="main">
+
+      <!-- Signup form -->
+      <section class="form">
+        <form action="http://httpbin.org/anything" method="POST">
+        <h2>Sign up here!</h2>
+        <h5>To get more information and notification alernatives.</h5>
+        <div class= "text-input">
+          <label class="name">
+            Name<br>
+            <input 
+              class="textfield" 
+              type="text" 
+              name="message" 
+              required
+            /><br>
+          </label>
+          <label class="e-mail">
+            E-mail<br>
+            <input 
+              class="textfield" 
+              type="email" 
+              name="email" 
+              required
+              /><br>
+          </label>
+        </div>
+
+        <div class="select-menu-input">
+          <label>
+            Course Location:<br>
+            <select name="location"><br>
+              <option value="Stockholm">Stockholm</option><br>
+              <option value="Gothenburg">Gothenburg</option><br>
+              <option value="Malmo">Malmo</option><br>
+            </select>
+          </label><br>
+        </div>
+
+        <div class="checkbox-input1">
+          <label>
+            What type of information would you like to recieve?<br>
+              <input 
+                type="checkbox" 
+                name="WeeklyNewsletter"
+              />
+              Weekly Newsletter
+          </label>
+
+          <label><br>
+            <input 
+              type="checkbox" 
+              name="Courseinfo"
+            />
+            Course Information
+          </label>
+
+          <label><br>
+            <input 
+              type="checkbox" 
+              name="ApplicationPapers"
+            />
+            Application Papers
+          </label>
+
+          <label><br>
+            <input 
+              type="checkbox" 
+              name="MonthlyNewsletter"
+            />
+            Monthly Newsletter
+          </label>
+        </div>
+
+        <div class="checkbox-input2">
+          <label><br>
+            <input 
+              class="checkbox" 
+              type="checkbox" 
+              name="consent" 
+              required
+            />
+            I consent to terms of use and privacy policy
+          </label>
+        </div>
+
+        <div class="submit-button">
+          <button type="submit">Sign up</button>
+        </div>
+
+        </form>
+      </section>
+
+      <!--Accordion-->
+      <section class="q-and-a">
+        <div class=”accordion”>
+          <h2>Common questions</h2>
+          
+            <div class="accordion-item-header">
+              <h4>Pricing</h4>
+            </div>
+            <div class="accordion-item-body">
+              <div class="accordion-item-body-content">
+                <p>The cost…</p>
+              </div>
+            </div>
+          
+            <div class="accordion-item-header">
+              <h4>Courses</h4>
+            </div>
+            <div class="accordion-item-body">
+              <div class="accordion-item-body-content">
+                <p>We offer...</p>
+              </div>
+            </div>
+          
+            <div class="accordion-item-header">
+              <h4>Application</h4>
+            </div>
+            <div class="accordion-item-body">
+              <div class="accordion-item-body-content">
+                <p>You apply...</p>
+              </div>
+            </div>
+  
+        </div>
+      </section> 
+    </main>
+
     <!-- dont forget to link the javascript file here! -->
+    <script src="./script.js">
+    </script>
+
+    <!--Footer-->
+    <section class="footer">
+      <p> &#169 2021 Binder's Club. All rights reserved.</p>
+    </section>
+
   </body>
 </html>
