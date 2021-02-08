@@ -17,7 +17,7 @@
      <!-- video or image as a header is cool :) -->
     <header class="header">
       <div class="hero">
-        <video width="" height="" playsinline autoplay muted loop poster="" class="bgvideo">
+        <video playsinline autoplay muted loop poster="" class="bgvideo">
           <source src="pageturner.mp4" type="video/mp4">
         </video>
       </div>
@@ -45,29 +45,38 @@
       </section>
     </header>
 
-    <div class="main">
+    <main class="main">
 
       <!-- Signup form -->
       <section class="form">
         <form action="http://httpbin.org/anything" method="POST">
         <h2>Sign up here!</h2>
         <h5>To get more information and notification alernatives.</h5>
-     
         <div class= "text-input">
           <label class="name">
             Name<br>
-            <input class="textfield" type="text" name="message" required></input><br>
+            <input 
+              class="textfield" 
+              type="text" 
+              name="message" 
+              required
+            /><br>
           </label>
           <label class="e-mail">
             E-mail<br>
-            <input class="textfield" type="email" name="email" required><br>
+            <input 
+              class="textfield" 
+              type="email" 
+              name="email" 
+              required
+              /><br>
           </label>
         </div>
 
         <div class="select-menu-input">
           <label>
             Course Location:<br>
-            <select name="location" id=""><br>
+            <select name="location"><br>
               <option value="Stockholm">Stockholm</option><br>
               <option value="Gothenburg">Gothenburg</option><br>
               <option value="Malmo">Malmo</option><br>
@@ -75,32 +84,49 @@
           </label><br>
         </div>
 
-        <div class="radio-input">
+        <div class="checkbox-input1">
           <label>
             What type of information would you like to recieve?<br>
-              <input type="radio" name="WeeklyNewsletter">
+              <input 
+                type="checkbox" 
+                name="WeeklyNewsletter"
+              />
               Weekly Newsletter
           </label>
 
           <label><br>
-            <input type="radio" name="Courseinfo">
+            <input 
+              type="checkbox" 
+              name="Courseinfo"
+            />
             Course Information
           </label>
 
           <label><br>
-            <input type="radio" name="ApplicationPapers">
+            <input 
+              type="checkbox" 
+              name="ApplicationPapers"
+            />
             Application Papers
           </label>
 
           <label><br>
-            <input type="radio" name="MonthlyNewsletter">
+            <input 
+              type="checkbox" 
+              name="MonthlyNewsletter"
+            />
             Monthly Newsletter
           </label>
         </div>
 
-        <div class="checkbox-input">
+        <div class="checkbox-input2">
           <label><br>
-            <input class="checkbox" type="checkbox" name="consent" required>
+            <input 
+              class="checkbox" 
+              type="checkbox" 
+              name="consent" 
+              required
+            />
             I consent to terms of use and privacy policy
           </label>
         </div>
@@ -113,11 +139,10 @@
       </section>
 
       <!--Accordion-->
-      <section class="QandA">
+      <section class="q-and-a">
         <div class=”accordion”>
           <h2>Common questions</h2>
-            
-          <div class="accordion-item">
+          
             <div class="accordion-item-header">
               <h4>Pricing</h4>
             </div>
@@ -126,9 +151,7 @@
                 <p>The cost…</p>
               </div>
             </div>
-          </div>
-  
-          <div class="accordion-item">
+          
             <div class="accordion-item-header">
               <h4>Courses</h4>
             </div>
@@ -137,9 +160,7 @@
                 <p>We offer...</p>
               </div>
             </div>
-          </div>
-  
-          <div class="accordion-item">
+          
             <div class="accordion-item-header">
               <h4>Application</h4>
             </div>
@@ -148,11 +169,10 @@
                 <p>You apply...</p>
               </div>
             </div>
-          </div>
   
         </div>
       </section> 
-    </div>
+    </main>
 
     <!-- dont forget to link the javascript file here! -->
     <script src="./script.js">
