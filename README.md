@@ -17,4 +17,4 @@ When filling out the form and hitting "Submit" all information is sent to a http
 If I had more time the next step in my project would be to create a functioning menu and to style the Submit button in a slightly different manner to make it stand out more.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Please follow this link to view project live on Netlify: https://fervent-wozniak-ce39dc.netlify.app/
