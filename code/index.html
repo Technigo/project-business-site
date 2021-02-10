@@ -4,81 +4,114 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-<link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css">
   </head>
 
 <body>
+  <header class="hero-header">
+    <picture>
+      <source srcset="./images/heromsmall.jpg" media="(max-width: 667px)">
+      <source srcset="./images/heromedium.jpg" media="(max-width: 1024px)">
+      <img class="hero-image" src="./images/herobig.jpg" alt="Hero image"> 
+    </picture>
+      <h1 class="tenko">Tenko Museum of Modern Art</h1>
+  </header>
 
-  
-
-   <header class="hero-header">
-      <picture>
-        <source srcset="./images/heromsmall.jpg" media="(max-width: 667px)">
-        <source srcset="./images/heromedium.jpg" media="(max-width: 1024px)">
-        <img class="hero-image" src="./images/herobig.jpg" alt="Hero image"> 
-      </picture>
-        <h1 class="tenko">Tenko Museum of Modern Art</h1>
-    </header>
-
-    <div class="both"> 
-    <section class="faq-section">
-      <h1 class="faq-topic">FAQS</h1>
+<div class="both"> 
+<section class="faq-section">
+    <h1 class="faq-topic">FAQS</h1>
     
-    <div class="accordion">
-      <h2 class="header1" id="header1"> 
-        If I want to visit the café, do I need to buy an entrance ticket?</h2>
-        <p class= "content1" id="content1">
-          Yes, you will need to buy an entrance ticket to visit the café.</p>
-    </div>
+  <div class="accordion">
+    <h2 class="header1" id="header1"> 
+      If I want to visit the café, do I need to buy an entrance ticket?</h2>
+    <p class="content" id="content1">
+      Yes, you will need to buy an entrance ticket to visit the café.</p>
+  </div>
 
-    <div class="accordion">
-        <h2 class="header2" id="header2"> 
-          Can I bring my own food?</h2>
-        <p class= "content2" id="content2">
-          If you bring food from outside the museum, you need to eat it in the park.  </p>
-    </div>
+  <div class="accordion">
+    <h2 class="header2" id="header2"> 
+      Can I bring my own food?</h2>
+    <p class="content" id="content2">
+      If you bring food from outside the museum, you need to eat it in the park.  </p>
+  </div>
 
-    <div class="accordion">
-        <h2 class="header3" id="header3"> 
-          Is it allowed to take photos?</h2>
-        <p class= "content3" id="content3">
-          It is generally allowed to photograph without the use of flash.</p>
-    </div>
+  <div class="accordion">
+    <h2 class="header3" id="header3"> 
+      Is it allowed to take photos?</h2>
+    <p class="content" id="content3">
+      It is generally allowed to photograph without the use of flash.</p>
+  </div>
 
-    <div class="accordion">
-        <h2 class="header4" id="header4"> 
-          Can I bring my dog?</h2>
-        <p class= "content4" id="content4">
-          Animals are not allowed in the park or in the galleries.</p>
-    </div>
-    </section>
+  <div class="accordion">
+    <h2 class="header4" id="header4"> 
+      Can I bring my dog?</h2>
+    <p class="content" id="content4">
+      Animals are not allowed in the park or in the galleries.</p>
+</div>
+</section>
 
-    <div class="form-container">
-    <form action="https://httpbin.org/anything" method="post">
-      <h1 class="form-topic">Get the latest Updates - <br> Subscribe below!</h1>
-      <input name="Name" type="text" placeholder="Name">
-      <input name="E-mail" type="text" placeholder="Email">
-      <input name="Number" type="Phone-number" placeholder="Phone-number">
+<form class="form-container" action="https://httpbin.org/anything" method="post">
+    <h1 class="form-topic">Get the latest Updates - <br> Subscribe below!</h1>
+  
+<div class="personal-info">
+    <div class="info">
+    <label for="Name">Name:</label>
+    <input id="Name" 
+    name="Name" 
+    type="text">
+  </div>
 
-    <div class="terms">
-      <p>Accept terms and conditions</p>
-      <input type="checkbox">
-    </div>
+  <div>
+    <label for="E-mail">Email:</label>
+    <input id="E-mail" 
+    name="E-mail" 
+    type="text">
+  </div>
 
-      <label for="Male">Male</label>
-      <input type="radio">
+  <div>
+    <label for="Number">Phone:</label>
+    <input id="Number" 
+    name="Number" 
+    type="Phone-number">
+  </div>
+</div>
 
-      <label for="Female">Female</label>
-      <input type="radio">
+<div class="select-sex">
+  <div>
+    <label for="checkbox">Accept terms and conditions:</label>
+    <input id="checkbox" 
+    type="checkbox">
+  </div>
 
-      <label for="Genderqueer/Non-Binary">Genderqueer/Non-Binary</label>
-      <input type="radio" >
+  <div>
+    <label for="Male">Male</label>
+    <input id="Male" 
+    name="select-sex" 
+    type="radio">
+  </div>
 
-      <button class="radio-button" type="submit">Connect!</button>
-    </form>
-    </div>
-    </div>
-   
- <script src=./script.js></script>
-  </body>
+  <div>
+    <label for="Female">Female</label>
+    <input id="Female" 
+    name="select-sex" 
+    type="radio">
+  </div>
+
+  <div>
+    <label for="Genderqueer/Non-Binary">Genderqueer/Non-Binary</label>
+    <input id="Genderqueer/Non-Binary" 
+    name="select-sex" 
+    type="radio">
+  </div>
+</div>
+
+<div class="radio-button">
+  <button  
+  type="submit">Connect!</button>
+</div>
+
+</form>
+</div>
+  <script src=./script.js></script>
+</body>
 </html>
