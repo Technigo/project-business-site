@@ -1,30 +1,102 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
 
+  <title>Moonstone Witchery</title>
+</head>
+
+<body>
+
+  <!--HEADER-->
+  <header>
+    <picture>
+      <source srcset="./images/mobile.jpg" media="(max-width: 767px)" />
+      <source srcset="./images/tablet.jpg" media="(max-width: 1199px)" />
+      <img class="hero-image" src="./images/desktop.jpg" alt="Lavender flowers and a black tarot card." />
+    </picture>
+
+    <h1>Moonstone Witchery</h1>
+  </header>
+
+  <!--ACCORDION+SIGNUP-->
+  <div class="accordion-signup-container">
+
+    <!--Accordion -->
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+      <h2>About us</h2>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div>
+        <h3 id="accordion-question1" class="accordion-question">🧙🏻‍♀️ Lorem ipsum dolor</h3>
+        <p id="accordion-answer1" class="accordion-answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div>
+        <h3 id="accordion-question2" class="accordion-question">🔮 Lorem ipsum dolor</h3>
+        <p id="accordion-answer2" class="accordion-answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+
+      <div>
+        <h3 id="accordion-question3" class="accordion-question">🌙 Lorem ipsum dolor</h3>
+        <p id="accordion-answer3" class="accordion-answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+
+    <!--Signup-->
+    <form class="signup-form" action="https://httpbin.org/anything" method="POST">
+
+        <h3>Join the coven</h3><br>
+
+        <label class="signup-form-text">
+          First name<br>
+          <input type="text" name="First name" required>
+        </label><br><br>
+
+        <label class="signup-form-text">
+          Last name<br>
+          <input type="text" name="Last name" required>
+        </label><br><br>
+
+        <label class="signup-form-text">
+          E-mail<br>
+          <input type="email" name="E-mail" required>
+        </label><br><br>
+
+        <label class="signup-form-text">
+          <input type="radio" id="male" name="Gender" value="male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="Gender" value="female">
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="Gender" value="other">
+          <label for="other">Other</label>
+        </label><br><br>
+
+        <label class="signup-form-text">
+          <input type="checkbox" name="Newsletter">&nbsp;Subscribe to newsletter
+        </label><br><br>
+
+        <button type="submit">Signup</button>
+    </form>
+  </div>
+
+  <!-- FOOTER-->
+  <footer>
+    <p>&copy Caroline Fahlgren 🦇</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>
