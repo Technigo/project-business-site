@@ -1,7 +1,464 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+body {
+  background-color: rgb(0, 0, 0);
+  margin: 0;
+
+}
+
+/* hero section */
+
+.header {
+  position: relative;
+  
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 130px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.hero-title {
+  font-size: 25px;
+  margin-bottom: -5px;
+  font-family: 'Kaushan Script', cursive, sans-serif;
+  color: black;
+
+}
+
+.hero-subtitle {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+
+}
+
+/* Info section */
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -5px;
+  padding: 25px 25px 15px 25px;
+
+}
+
+.question-text {
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0;
+
+}
+
+.attention-text {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: gold;
+  font-size: 20px;
+  margin: 10px;
+  
+
+}
+
+.info-text {
+  font-size: 15px;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+
+}
+
+
+
+/* sign up form */
+
+.interaction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  padding: 10px 30px 0px 30px;
+
+}
+
+.submit-container {
+  border: 3px solid rgb(255, 255, 255);
+  margin: 0px;
+  padding: 20px;
+
+}
+
+.sign-up-box {
+  width: 300px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+}
+
+.fill-in-form-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgb(0, 0, 0);
+  margin: -1px;
+
+}
+
+.radiobutton-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: white;
+
+}
+
+h3 {
+  color: gold;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.radiobuttons {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+
+}
+
+.input-text {
+  width: 180px;
+
+}
+
+label {
+  margin-bottom: 20px;
+
+}
+
+label > p {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  margin: 0;
+
+}
+
+.checkbox-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: -1px;
+  color: white;
+
+}
+
+.checkbox-box-title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  color: gold;
+  font-size: 15px;
+  width: 300px;
+
+}
+
+
+.checkbox-text {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 12px;
+  
+}
+
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  background-color: gold;
+  font-size: 20px;
+  width: 125px;
+  height: 75px;
+  
+}
+
+
+/* FAQ SECTION */
+
+.accordion-container {
+  margin-top: 10px;
+  padding: 20px;
+
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  color: gold;
+  font-size: 20px;
+  background-color: rgb(0, 0, 0);
+  margin-bottom: 5px;
+
+}
+
+.accordion {
+  border: 3px solid gold;
+  margin-bottom: 10px;
+  padding: 10px;
+
+}
+
+.question-header {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  margin: 0px;
+  color: white;
+  cursor: pointer;
+
+}
+
+.question-answer {
+  display: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  margin: 10px 0px 0px 0px;
+  color: white;
+
+}
+
+.question-active {
+  display: block;
+
+}
+
+.footer {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  color: gold;
+  margin: 40px;
+}
+
+/** Media queires **/
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1999px) {
+
+  .title {
+    bottom: 260px;
+    
+  }
+  
+  .hero-title {
+    font-size: 55px;
+    margin-bottom: -5px;
+  
+  }
+  
+  .hero-subtitle {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 23px;
+  
+  }
+
+  .interaction-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1999px;
+   
+  }
+
+  .question-text {
+    font-size: 20px;
+    
+  }
+  
+  .attention-text {
+    font-size: 30px;
+    
+  }
+  
+  .info-text {
+    font-size: 15px;
+    padding: 0, 10px, 0, 10px;
+    
+  }
+  
+
+  .submit-container {
+    width: 45%;
+    margin-top: 25px;
+
+  }
+
+  .sign-up-box {
+    width: 100%;
+    
+  }
+
+  .fill-in-form-box {
+    width: 100%;
+   
+  }
+
+  .input-text{
+    width: 130px;
+    
+  }
+  
+  label > p {
+    margin-top: 10px;
+
+  }
+
+  .radiobutton-box {
+    width: 100%;
+
+  }
+
+  .checkbox-box-title {
+    width: 100%;
+
+  }
+
+  .checkbox-box {
+    width: 100%;
+
+  }
+
+  .checkbox-text {
+    font-size: 15px;
+
+  }
+
+  .button-box {
+    width: 100%;
+    height: 90px;
+    
+  }
+  
+  .accordion-container {
+    width: 45%;
+    padding: 0px,10px;
+    
+  }
+
+  .accordion-title {
+    width: 320px;
+
+  }
+
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+
+  .title {
+    bottom: 430px;
+
+  }
+
+  .hero-title {
+    margin: 0;
+    font-size: 110px;
+
+  }
+  
+  .hero-subtitle {
+    font-size: 45px;
+
+  }
+
+  .question-text {
+    font-size: 25px;
+    
+  }
+  
+  .attention-text {
+    font-size: 40px;
+    
+  }
+  
+  .info-text {
+    font-size: 20px;
+    
+  }
+
+  .submit-container {
+    width: 45%;
+    margin-left: 30px;
+    padding-top: 20px;
+
+  }
+
+  .fill-in-form-box {
+    width: 100%;
+
+  }
+
+  .input-text{
+    width: 200px;
+
+  }
+  
+  label > p {
+    margin-top: 10px;
+
+  }
+
+  .radiobutton-box {
+    width: 100%;
+
+  }
+
+  .checkbox-box-title {
+    width: 100%;
+
+  }
+
+  .checkbox-box {
+    width: 100%;
+
+  }
+
+  .button-box {
+    margin: 0px;
+    height: 105px;
+    width: 100%;
+
+  }
+
+  .accordion-container {
+    width: 45%;
+    margin-right: 30px;
+
+  }
+
 }
