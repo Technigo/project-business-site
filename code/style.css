@@ -1,7 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Syne", sans-serif;
+}
+/* HEADER */
+.top-section-container {
+  display: none;
+  height: 90px;
+}
+
+.top-section-logo {
+  width: 70px;
+  height: 70px;
+  margin: 7px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.nav-links {
+  margin: 20px;
+}
+
+.nav-links:link {
+  text-decoration: none;
+}
+
+.hero-container {
+  position: relative;
+}
+
+.bootcamp-img {
+  width: 100vw;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.text-hero {
+  font-size: 25px;
+  margin: 0;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(242, 242, 242);
+}
+
+/* Sign up form */
+.form-container {
+  background-image: linear-gradient(rgb(255, 100, 96), rgb(255, 236, 234));
+  width: 300px;
+  height: 500px;
+  font-size: 18px;
+  padding: 10px;
+  margin: 30px;
+  color: white;
+  box-shadow: 20px 20px 10px rgb(185 185 185);
+}
+.input-container-one {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-form {
+  background-color: rgb(255, 236, 234);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+  border: none;
+  outline: none;
+}
+.form-title-1 {
+  padding-left: 35px;
+}
+.form-title-small-2 {
+  margin-bottom: 15px;
+}
+
+.form-title-small-3 {
+  margin-top: 15;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: rgb(255, 196, 189);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 100px;
+  margin-top: 30px;
+  box-shadow: 10px 10px 5px rgb(185, 185, 185);
+}
+.button:hover {
+  color: black;
+}
+
+/*Accordion*/
+.accordion {
+  background-image: linear-gradient(rgb(255, 100, 96), rgb(255, 236, 234));
+  width: 300px;
+  height: 500px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  color: white;
+  box-shadow: 20px 20px 10px rgb(185, 185, 185);
+}
+.accordion-title {
+  margin-left: 115px;
+}
+
+.accordion-question-title {
+  margin-bottom: 40px;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.accordion-question-title:hover {
+  color: black;
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
   /* some styling here */
+  display: block;
+}
+
+.answer {
+  display: none;
+}
+
+/*Footer*/
+.footer-container {
+  width: 100vw;
+  height: 15vh;
+  border-top: 2px solid rgb(255, 100, 96);
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-links-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links {
+  color: rgb(255, 100, 96);
+  padding: 6px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.footer-links:link {
+  text-decoration: none;
+}
+
+.footer-links:hover {
+  color: black;
+}
+
+.footer-logo {
+  width: 30px;
+  margin: 20px 20px;
+}
+
+/*Media queries tablet*/
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .top-section-container {
+    background-color: rgb(222, 228, 228);
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-links {
+    color: rgb(0, 93, 97);
+  }
+  .nav-links:hover {
+    color: white;
+  }
+  .text-hero {
+    font-size: 30px;
+    top: 11vh;
+  }
+  .content-container {
+    flex-direction: row;
+    background-color: rgb(222, 228, 228);
+  }
+  .form-container {
+    background-image: linear-gradient(rgb(0, 20, 21), rgb(0, 93, 97));
+    box-shadow: 20px 20px 10px rgb(83, 83, 83);
+  }
+  .input-form {
+    background-color: rgb(0, 93, 97);
+    color: white;
+    border: none;
+  }
+  .button {
+    background-color: rgb(0, 20, 21);
+    color: rgb(0, 93, 97);
+    box-shadow: 10px 10px 5px rgb(37, 37, 37);
+  }
+  .button:hover {
+    color: white;
+  }
+
+  .accordion {
+    background-image: linear-gradient(rgb(0, 20, 21), rgb(0, 93, 97));
+    color: white;
+    box-shadow: 20px 20px 10px rgb(83, 83, 83);
+    margin-bottom: 10px;
+  }
+  .accordion-question-title:hover {
+    color: rgb(5, 151, 156);
+  }
+  .footer-container {
+    border-top: 2px solid rgb(0, 20, 21);
+  }
+  .footer-links {
+    color: rgb(0, 93, 97);
+  }
+}
+
+/*Media queries Desktop*/
+@media (min-width: 993px) {
+  .top-section-container {
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-links {
+    color: rgb(8, 8, 8);
+  }
+  .nav-links:hover {
+    color: white;
+  }
+  .text-hero {
+    font-size: 40px;
+    top: 11vh;
+  }
+  .content-container {
+    flex-direction: row;
+    background-color: rgb(224, 224, 224);
+  }
+  .form-container {
+    background-image: linear-gradient(rgb(8, 8, 8), rgb(155, 166, 177));
+    margin: 50px 70px;
+    box-shadow: 20px 20px 10px rgb(119, 118, 118);
+  }
+
+  .button {
+    background-color: rgb(15, 15, 15);
+    color: white;
+    box-shadow: 10px 10px 5px rgb(68, 68, 68);
+  }
+  .button:hover {
+    color: rgb(0, 204, 255);
+  }
+  .accordion {
+    margin: 50px 70px;
+    background-image: linear-gradient(rgb(8, 8, 8), rgb(155, 166, 177));
+    color: white;
+    box-shadow: 20px 20px 10px rgb(83, 83, 83);
+  }
+  .accordion-question-title:hover {
+    color: rgb(0, 204, 255);
+  }
+  .footer-container {
+    border-top: 2px solid rgb(8, 8, 8);
+  }
+  .footer-links {
+    color: rgb(155, 166, 177);
+  }
 }
