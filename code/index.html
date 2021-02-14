@@ -12,7 +12,7 @@
    
 <header>
   <div class="top-section-container">
-    <img class="top-section-logo" src="./Assets/Logo/Perfect gym.png" width="60px" height="60px">
+    <img class="top-section-logo" src="./assets/logo/perfect-gym.png">
       <nav class="nav-container">
         <a class="nav-links" href="Home">Home</a>
         <a class="nav-links" href="About">About</a>
@@ -23,9 +23,9 @@
   <div class="Hero-container">
     <h1 class="text-hero">-Come and join our Bootcamp this spring!</h1>
       <picture>
-        <source srcset="./Assets/Images/bootcamp3.jpg" media="(max-width: 767px)"/>
-        <source srcset="./Assets/Images/bootcamp6.jpg" media="(max-width: 992px)"/>
-        <img class="bootcamp-img " src="./Assets/Images/bootcamp5.jpg" alt="Picture of training"/>
+        <source srcset="./assets/images/bootcamp3.jpg" media="(max-width: 767px)"/>
+        <source srcset="./assets/images/bootcamp6.jpg" media="(max-width: 992px)"/>
+        <img class="bootcamp-img " src="./assets/images/bootcamp5.jpg" alt="Picture of training"/>
       </picture>
   </div>
 </header>
@@ -34,23 +34,62 @@
   <div class="content-container">
     <form class="form-container" action="https://httpbin.org/anything" method="post">
       <h3 class="form-title-1">Sign up for Bootcamp</h3>
-      <label for="fname">First name</label><br>
-      <input class="input-form" type="text" name="firstname" required><br>
-      <label for="lname">Last name</label><br>
-      <input class="input-form" type="text" name="lastname" required><br>
-      <label for="email">Email</label><br>
-      <input class="input-form" type="email" name="email"><br>
-      <h4 class="form-title-small-2">Are you:</h4>
-      <input type="radio" name="gender" value="female" required>
-      <label for="Female">Female</label><br>
-      <input type="radio" name="gender" value="male" required>
-      <label for="Male">Male</label><br>
-      <input type="radio" name="gender" value="other" required>
-      <label for="other">Other</label><br>
-      <h4 class="form-title-small-3">Do you accept with our terms and conditions>?</h4>
-      <input type="checkbox" name="terms and conditions" value="Terms and conditions accepted" required> 
-      <label for="terms">I accept the terms and conditions</label><br>
-      <input class="button" type="submit" value="Submit">
+      <div class="input-container-one">
+        <label for="fname">First name</label>
+        <input 
+          id="fname" 
+          class="input-form" 
+          type="text"
+          name="firstname" 
+          required=""/>
+       <label for="lname">Last name</label>
+       <input 
+         id="lname" 
+         class="input-form" 
+         type="text" 
+         name="lastname" 
+         required=""/>
+       <label for="email">Email</label>
+       <input 
+         id="email" 
+         class="input-form"
+         type="email" 
+         name="email"/>
+      </div>
+        <h4 class="form-title-small-2">Are you:</h4>
+        <input 
+          id="female" 
+          type="radio"
+          name="gender" 
+          value="female" 
+          required=""/>
+        <label for="Female">Female</label>
+        <input 
+          id="male"
+          type="radio" 
+          name="gender" 
+          value="male" 
+          required=""/>
+        <label for="Male">Male</label>
+        <input 
+          id="other" 
+          type="radio"
+          name="gender" 
+          value="other" 
+          required=""/>
+        <label for="other">Other</label>
+        <h4 class="form-title-small-3">Do you accept with our terms and conditions?</h4>
+        <input 
+          id="terms and conditions" 
+          type="checkbox" 
+          name="terms and conditions" 
+          value="Terms and conditions accepted" 
+          required=""/> 
+        <label for="terms">I accept terms and conditions</label>
+        <input 
+          class="button" 
+          type="submit" 
+          value="Submit"/>
     </form>
   
     
