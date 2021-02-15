@@ -1,7 +1,875 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Libre+Barcode+128+Text&display=swap&family=Raleway:wght@300&display=swap');
 
-.active + .answer {
-  /* some styling here */
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: rgb(192, 250, 235);
+  cursor: url(./images/cursor.png) 1 1, pointer;
+  /*custom cursor*/
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  font-size: 18px;
+}
+
+.header {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+  background-color: rgb(46, 157, 165);
+  overflow: hidden;
+  border-bottom: solid white;
+}
+
+/* some buzzwords in the header that reveals when the header images moves */
+
+.header__buzz {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__buzz__word {
+  display: inline-block;
+  font-family: 'Indie Flower', cursive;
+  font-size: 40px;
+}
+
+/*makes buzzword 1 styled in a specific way*/
+
+.header__buzz__word:nth-of-type(1) {
+  left: 0;
+  margin-left: 30px;
+  color: rgb(0, 252, 231);
+}
+
+/*makes buzzword 2 styled in a specific way*/
+
+.header__buzz__word:nth-of-type(2) {
+  right: 0;
+  margin-right: 30px;
+  color: rgb(119, 0, 255);
+}
+
+.header__img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.header__img img {
+  display: block;
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+/*resizes 20% on desktop and 50% on tablet/mobile */
+
+.header__img--20-50 {
+  width: 20%;
+}
+
+/*resizes 30% on desktop and none on tablet/mobile*/
+
+.header__img--30-0 {
+  width: 30%;
+}
+
+.header__img--animation-down {
+  animation: slidedown linear infinite;
+}
+
+.header__img--animation-up {
+  animation: slideup linear infinite;
+}
+
+.header__img--animation-long {
+  animation-duration: 20s;
+}
+
+.header__img--animation-short {
+  animation-duration: 10s;
+}
+
+/*animation for images to slideup of the header */
+
+@keyframes slideup {
+  0% {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-200%);
+  }
+
+  70% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* animation for pictures to slide down out of the header */
+
+@keyframes slidedown {
+  0% {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(200%);
+  }
+
+  70% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*logo for the company on header */
+
+.header__logo {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.header__logo__text {
+  color: rgb(29, 66, 233);
+  font-family: 'Libre Barcode 128 Text', cursive;
+}
+
+.header__logo h1::before {
+  content: "N|C";
+  font-size: 80px;
+  animation: logo 20s linear infinite;
+}
+
+/* animation that makes logo spell out and change colors */
+
+@keyframes logo {
+  0% {
+    content: "N|C";
+    color: rgb(16, 22, 110);
+  }
+
+  20% {
+    content: "Nano | Colors";
+    color: rgb(41, 41, 160);
+  }
+
+  30% {
+    content: "Colors";
+    color: rgb(98, 0, 255);
+  }
+
+  50% {
+    content: "Colors";
+    color: rgb(234, 0, 255);
+  }
+
+  75% {
+    content: "Colors";
+    color: rgb(0, 238, 255);
+  }
+
+  80% {
+    content: "Nano | Colors";
+    color: rgb(8, 92, 202);
+  }
+
+  100% {
+    content: "N|C";
+    color: rgb(16, 22, 110);
+  }
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav a:hover {
+  background: rgb(143, 125, 173);
+  color: white;
+}
+
+/*important for the mobile mode drop down menu positioning */
+
+.nav-wrapper {
+  position: relative;
+}
+
+.nav-wrapper__menu {
+  display: flex;
+  position: absolute;
+  justify-content: space-evenly;
+  width: 100%;
+  z-index: 0.99;
+  background: white;
+}
+
+.nav-wrapper__menu__link {
+  text-decoration: none;
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+  color: rgb(46, 157, 165);
+}
+
+/*button for drop-down menu. */
+
+.nav-wrapper__button {
+  position: relative;
+  display: none;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.nav-wrapper__button img {
+  width: 90%;
+  height: 90%;
+  margin: 2px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* wrapper for section */
+.signup {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+  width: 80%;
+  height: fit-content;
+  border: solid rgb(255, 255, 255);
+  background-color: rgb(46, 157, 165);
+  color: white;
+  font-size: 20px;
+}
+
+.signup a {
+  text-decoration: none;
+  color: rgb(5, 85, 85);
+  font-weight: 500;
+}
+
+.signup a:hover {
+  background: rgb(5, 85, 85);
+  color: white;
+}
+
+.signup a:visited {
+  color: rgb(76, 63, 136);
+}
+
+/* aligning of form content */
+.signup-inner {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  align-items: center;
+}
+
+/* styling and aligning of form */
+.signup-inner__form {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 300px;
+  height: fit-content;
+}
+
+/* styling the input boxes with fieldset*/
+.signup-inner__form__fieldset {
+  padding: 0;
+  margin: 10px 0;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+/* on hover , the fieldset get another bg-color */
+.signup-inner__form__fieldset:hover {
+  background-color: rgb(158, 203, 211);
+}
+
+.signup-inner__form__fieldset__legend {
+  font-weight: bolder;
+  background-color: rgb(46, 157, 165);
+  border-radius: 5px;
+  border: solid rgb(255, 255, 255);
+  font-size: 16px;
+  padding: 2px 5px;
+}
+
+.signup-inner__form__input {
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  width: 300px;
+  font-size: 16px;
+  color: rgb(128, 45, 167);
+  font-weight: bold;
+  background-color: rgba(0, 139, 139, 0);
+}
+
+/* on hover and focus , the input get another bg-color */
+.signup-inner__form__input:hover {
+  background-color: rgb(158, 203, 211);
+}
+
+.signup-inner__form__input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(7, 59, 63, 0.384);
+}
+
+/* clear the default look of checkbox */
+.signup input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* clear the default look of radio buttons */
+.signup input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/*retainer for checkbox/radiobutton */
+.signup-inner__form__check {
+  display: flex;
+  position: relative;
+  padding-left: 35px;
+  margin: 10px 0;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  align-self: center;
+}
+
+/*restyling radiobutton + checkbox*/
+.signup-inner__form__check__radio,
+.signup-inner__form__check__box {
+  background-color: rgb(171, 245, 235);
+  height: 15px;
+  width: 15px;
+  border: solid rgb(5, 85, 85) 1px;
+  position: absolute;
+  left: 0;
+}
+
+.signup-inner__form__check__radio {
+  border-radius: 50%;
+}
+
+.signup-inner__form__check__box {
+  border-radius: 4px;
+}
+
+/*show nothing when the checkbox/radio is not clicked */
+.signup-inner__form__check__radio:after,
+.signup-inner__form__check__box:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/*when the checkbox/radio is checked the background color changes */
+.signup-inner__form__check input:checked~.signup-inner__form__check__radio,
+.signup-inner__form__check input:checked~.signup-inner__form__check__box {
+  background-color: rgb(5, 85, 85);
+}
+
+/* when the checkbox/radio is checked, show an marker in it */
+.signup-inner__form__check input:checked~.signup-inner__form__check__radio:after,
+.signup-inner__form__check input:checked~.signup-inner__form__check__box:after {
+  display: block;
+}
+
+/*styling of marker in radiobutton */
+.signup-inner__form__check .signup-inner__form__check__radio:after {
+  border-radius: 50%;
+  background-color: white;
+  height: 7px;
+  width: 7px;
+  left: 4px;
+  top: 4px;
+}
+
+/*styling of marker in checkbox */
+.signup-inner__form__check .signup-inner__form__check__box:after {
+  border-right: solid rgb(248, 248, 248)3px;
+  border-bottom: solid rgb(253, 253, 253)3px;
+  width: 5px;
+  height: 10px;
+  left: 4px;
+  transform: rotate(45deg);
+}
+
+/*show nothing when the checkbox/radio is not clicked */
+.signup-inner__form__check__radio:after,
+.signup-inner__form__check__box:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* when the checkbox/radio is checked, show an marker in it */
+.signup-inner__form__check input:checked~.signup-inner__form__check__radio:after,
+.signup-inner__form__check input:checked~.signup-inner__form__check__box:after {
+  display: block;
+}
+
+/*when the checkbox/radio is checked the background color changes */
+.signup-inner__form__check input:checked~.signup-inner__form__check__radio,
+.signup-inner__form__check input:checked~.signup-inner__form__check__box {
+  background-color: rgb(5, 85, 85);
+}
+
+.signup-inner__form__select {
+  margin-bottom: 20px;
+}
+
+.signup input[type=submit] {
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  border: double white;
+  margin: 20px 0;
+  padding: 10px;
+  height: fit-content;
+  border-radius: 50px;
+  display: block;
+  width: fit-content;
+  align-self: center;
+  box-shadow: 1px 1px 2px 1px rgb(24, 14, 37);
+}
+
+/* makes the button look like a 3d button getting pressed down when active */
+.signup input[type=submit]:active {
+  transform: translateY(10%);
+  box-shadow: 0px 0px 2px 1px rgb(24, 14, 37);
+}
+
+.signup input[type=submit]:hover {
+  background-color: rgb(5, 85, 85);
+}
+
+.signup__image {
+  box-sizing: border-box;
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+  flex: 2 1 auto;
+}
+
+.signup__image img {
+  display: block;
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+/* section for all accordions */
+.accordion {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  color: white;
+}
+
+.accordion h2 {
+  font-size: 22px;
+}
+
+.accordion p {
+  margin: 10px;
+}
+
+/* to section up the 2 different accordion sections FAQ and products*/
+.accordion-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 49%;
+  height: 0%;
+  border: solid rgb(255, 255, 255);
+  background-color: rgb(109, 96, 160);
+}
+
+/* the accordion styling */
+.accordion-section__display,
+.accordion-section__expand {
+  border: solid rgb(255, 255, 255) 0.5px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  width: 90%;
+  margin: 5px;
+}
+
+.accordion-section__display {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.accordion-section__display:hover {
+  background-color: rgb(76, 63, 136);
+}
+
+/* the expanding section of accordion is hidden when not active */
+.accordion-section__expand {
+  height: 0;
+  border: none;
+  overflow-y: hidden;
+  background-color: rgb(76, 63, 136);
+}
+
+/*change backgroundcolor when accordion-section__display has active class */
+.accordion-section__display--active {
+  background-color: rgb(76, 63, 136);
+}
+
+/* when accordion-section__display is set to .active with js, the nearest sibling div will get these properties 
+(in this case accordion-section__expand) */
+.accordion-section__display--active+div {
+  height: 200px;
+  border: solid white 0.5px;
+  margin: 10px;
+  overflow-y: auto;
+  transition: height .5s ease-in-out;
+}
+
+/* to add +sign before clicked button clicked */
+.accordion-section__display__button:before {
+  content: "+";
+}
+
+/*change to - when accordion is expanded (.active class toggled on)*/
+.accordion-section__display.accordion-section__display--active 
+.accordion-section__display__button:before {
+  content: "-";
+}
+
+/* +/- button for accordion expand/collapse. Put the cursor to a pointer as it was an text-cursor*/
+.accordion-section__display__button {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  color: white;
+  font-size: 16px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px 1px rgb(24, 14, 37);
+  text-align: center;
+  align-self: center;
+  background-color: rgb(62, 54, 109);
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* makes the button look like a 3d button getting pressed down when active */
+.accordion-section__display__button:active {
+  transform: translateY(10%);
+  box-shadow: 0px 0px 2px 1px rgb(24, 14, 37);
+}
+
+.accordion__image {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  margin-left: 30px;
+  overflow: hidden;
+}
+
+.accordion__image img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  object-fit: scale-down;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.top-button {
+  width: 30px;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: rgba(5, 85, 85, 0.568);
+  text-align: center;
+  color: white;
+  padding: 5px;
+}
+
+.top-button:hover {
+  background: rgb(5, 85, 85);
+  color: white;
+}
+
+.footer {
+  display: block;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+}
+
+.footer-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid white;
+  background-color: rgba(5, 85, 85, 0.452);
+}
+
+.footer p {
+  font-size: 14px;
+  color: white;
+}
+
+/* container for a simplified company logo in the footer*/
+.footer-wrapper__logo {
+  margin-left: 10px;
+  font-family: 'Libre Barcode 128 Text', cursive;
+  color: rgb(16, 22, 110);
+  width: 80px;
+}
+
+/* wrapper for the social media icons*/
+.footer-wrapper__social {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80px;
+  margin: 15px;
+}
+
+/* image container for social media icons */
+.footer-wrapper__social__icon {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-wrapper__social__icon img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  position: absolute;
+}
+
+/*breakpoint at the largest tablets*/
+@media screen and (max-width: 1024px) {
+  p {
+    font-size: 16px;
+  }
+
+  .header__logo h1:before {
+    font-size: 70px;
+  }
+
+  .header__buzz__word {
+    font-size: 30px;
+  }
+
+  .header__img--20-50 {
+    width: 50%;
+    min-width: 50%;
+  }
+
+  .header__img--30-0 {
+    display: none;
+    width: 0;
+  }
+
+  .signup {
+    font-size: 16px;
+  }
+
+  .signup-inner__form__fieldset__legend {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .signup-inner__form__input {
+    font-size: 14px;
+  }
+
+  .signup input[type=submit] {
+    font-size: 18px;
+  }
+
+  .accordion {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+  }
+
+  .accordion-section {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .accordion h2 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  p {
+    font-size: 14px;
+  }
+
+  .header__logo {
+    margin-top: 0;
+    align-items: flex-end;
+  }
+
+  .header__logo h1:before {
+    font-size: 60px;
+  }
+
+  .header__buzz__word {
+    font-size: 25px;
+  }
+
+  .nav-wrapper__button {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-wrapper__menu {
+    overflow-y: hidden;
+    flex-direction: column;
+    position: absolute;
+    height: 0vh;
+    width: 100%;
+    top: 0px;
+    transition: height .5s;
+  }
+
+  .nav-wrapper__menu--active {
+    overflow-y: visible;
+    height: 100vh;
+  }
+
+  .nav-wrapper__menu__link {
+    align-items: center;
+    width: 100%;
+    flex: auto;
+  }
+
+  /* changes the form and picture to be in one column instead of next to eachother */
+  .signup {
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    font-size: 14px;
+  }
+
+  /* makes the signup form image rectangular */
+  .signup__image {
+    width: 100%;
+    height: 100px;
+    order: 1;
+  }
+
+  .signup-inner {
+    width: 100%;
+    align-items: center;
+    order: 2;
+  }
+
+  .signup-inner__form__fieldset__legend {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .signup-inner__form__input {
+    font-size: 12px;
+  }
+
+  .signup input[type=submit] {
+    font-size: 16px;
+  }
+
+  .accordion {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .accordion-section {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .accordion h2 {
+    font-size: 16px;
+  }
+
+  .footer p {
+    font-size: 12px;
+    color: white;
+  }
 }
