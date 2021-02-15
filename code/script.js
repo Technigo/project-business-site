@@ -72,7 +72,7 @@ accordionQuestionSix.addEventListener('click', () => {
 });
 
 // refresh input-fields after submit form 
-document.getElementById("form").onsubmit = function() { 
-  location.reload(true); 
-}
+// document.getElementById("form").onsubmit = function() { 
+//   location.reload(true); 
+// }
 

@@ -11,7 +11,7 @@
   <body>
     <!--  Hero section -->
     <header class="header">
-      <picture class= "container-hero">
+      <picture class="container-hero">
         <source srcset="./mobile.jpg" media="(max-width:600px)">
         <source srcset="./tablet.jpg" media="(max-width:900px)">
         <img class="hero-image" src="./desktop.jpg" alt="Yoga image"> 
@@ -33,19 +33,43 @@
         <div class="yoga-style">
           <h1>Sign up form</h1>
           <p>Select your preferred yoga style:</p>
-          <label> 
-            <input type="radio" id="ashtanga" name="yoga-style" value="ashtanga" required>Ashtanga</input>
-            <br> <!-- How do I avoid <br> tag , which element can I adjust ?-->
-            <input type="radio" id="bikram" name="yoga-style" value="bikram" required>Bikram</input>
-            <br>
-            <input type="radio" id="vinyasa" name="yoga-style" value="vinyasa" required>Vinyasa</input>
+          <label for= "yoga-opt"> 
+            <input 
+            type="radio" 
+            id="ashtanga" 
+            name="yoga-style" 
+            value="ashtanga" 
+            required>
+            Ashtanga
+            </input>
+          </label>
+          <label for=yoga-opt">
+            <input 
+            type="radio" 
+            id="bikram" 
+            name="yoga-style" 
+            value="bikram" 
+            required>
+            Bikram
+            </input>
+          </label>
+          <label for="yoga-opt">
+            <input 
+            type="radio" 
+            id="vinyasa" 
+            name="yoga-style" 
+            value="vinyasa" 
+            required>
+            Vinyasa
+            </input>
+          </label>
             <br>
           </label>
         </div> 
         <!-- Yoga level chooser -->
         <div class= "yoga-level">
-          <p>What's your yoga level?</p> 
-          <select id="yoga-level" name="yoga-level" size="2">
+          <p>What's your yoga level? (please select)</p> 
+          <select id="yoga-level" name="yoga-level" >
             <option value="beginner" required >Beginner</option>
             <option value="intermediate"required>Intermediate</option>
             <option value="advanced" required>Advanced</option>
@@ -53,13 +77,51 @@
           </select>
         </div>
         <!-- Input fields -->
-        <div class ="input-fields">
-          <label class ="label">
-            First Name:<input class="input" type="text" name="first-name" id="first-name" placeholder="John" required>
-            Last name:<input class="input" type="text" name="last-name" id="last-name" placeholder="Doe" required>
-            Email:<input class="input" type="email" name="email"  id="email" placeholder="example@email.com" required>
-            Password:<input class="input" type="password" name="password" placeholder="minimum 8 characters" id="password" minlength="8" required>
-          </label>  
+        <div class="input-fields">
+          <label> 
+            <label class="label" for="name"> 
+              <p> First Name:</p>
+              <input 
+              class="input" 
+              name="first-name" 
+              id="first-name" 
+              placeholder="First name" 
+              required
+              > 
+            </label>
+            <label class="label" for="name">
+             <p> Last name:</p>
+              <input 
+              class="input"
+              name="last-name" 
+              id="last-name" 
+              placeholder="Last name" 
+              required
+              >
+            </label>
+            <label class="label" for="email">
+             <p> Email:</p>
+              <input 
+              class="input" 
+              type="email" 
+              name="email"  
+              id="email" 
+              placeholder="example@email.com" 
+              required
+              >
+            </label>
+            <label class="label" for="pw">
+             <p> Password:</p>
+              <input 
+              class="input" 
+              type="password" 
+              name="password" 
+              placeholder="minimum 8 characters" 
+              id="password" 
+              minlength="8" 
+              required>
+            </label>
+          </label>
         </div>     
         <!--checkbox  -->
         <div class ="checkbox">

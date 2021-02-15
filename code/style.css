@@ -22,13 +22,19 @@ body {
   width: 100vw;
   height: 30vh;
   object-fit: cover;
-}
+ }
 .hero-title {
-  position: absolute;
-  color: #ffff;
-  font-size: 40px; 
-  left: 20px;
-  top: 20px
+position: absolute;
+left: 0;
+top: 0;
+right: 0;
+left: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+color:#ffff;
+flex-direction: column;
+
 }
 .container-menu {
   display: flex;
@@ -48,6 +54,7 @@ body {
 }
 .container-hero {
   position: relative;
+ 
 }
 .container-forms {
   background: white; 
@@ -74,20 +81,24 @@ input [type=text], select {
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
 }
 .yoga-level {
-  padding-bottom: 30px; 
-}
-.input-fields {
-  padding-bottom: 
+  padding-bottom: 20px; 
+  margin-top:20px;
 }
 /* Input fields */
 .input {
-  width: 100%;
+  display: flex;
+  width: 80%;
   margin-top: 10px;
   border: none;
-  border-bottom: 2px solid rgb(11, 10, 10);
+  border: 2px solid rgb(11, 10, 10);
   transition: border-color 0.4s ease;
   font-size: 14px;
-  padding: 10px 0;
+  padding: 0;
+  text-align: center;
+}
+.label > p {
+  flex-direction: column;
+  justify-content: end;
 }
 .input:focus {
   outline: none;
@@ -136,6 +147,7 @@ input [type=text], select {
   cursor: pointer;
   width: 300px;
   border:2px solid #2b5876; 
+  transition: background 3s ease-in-out;  
 }
 .accordion-question:hover {
   background: linear-gradient(to left, #29323c, #485563, #2b5876);
@@ -147,7 +159,6 @@ input [type=text], select {
   border-radius: 5px;
   font-size: 19px;
   border: 2px solid black;
-  transition: background 2s ease-in-out;  
   color: whitesmoke;
 }
 .accordion:nth-of-type(2n + 1) {
@@ -187,11 +198,16 @@ input [type=text], select {
 
  /* mobile */
 @media (max-width: 767px) {
+  .container-forms {
+    padding: 20;
+    width: 80%;
+  } 
   .form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+  
 } 
 /* tablet */
 @media (min-width: 768px) {
@@ -205,7 +221,6 @@ input [type=text], select {
   }
   .hero-title {
     font-size: 80px; 
-    top: 280px;
   }
   .footer {
     height: 20px;
@@ -234,7 +249,6 @@ input [type=text], select {
     position: absolute;
     font-size: 80px; 
     top: 100px;
-    left: 10px;
   }
   .form{
     justify-content: center;
