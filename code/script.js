@@ -1,20 +1,12 @@
-const section1 = document.getElementById('section1');
-const answer1 = document.getElementById('answer1');
+const section1 = document.getElementById('section1')
+const answer1 = document.getElementById('answer1')
 
-const section2 = document.getElementById('section2');
-const answer2 = document.getElementById('answer2');
+const section2 = document.getElementById('section2')
+const answer2 = document.getElementById('answer2')
 
-const section3 = document.getElementById('section3');
-const answer3 = document.getElementById('answer3');
+const section3 = document.getElementById('section3')
+const answer3 = document.getElementById('answer3')
 
-
-
-console.log('section1')
-console.log('section2')
-console.log('section3')
-console.log('answer1')
-console.log('answer2')
-console.log('answer3')
 
 // A function that adds and remove the class "active" on the section you click on.
 // We haven't really talked about ´this´ yet, but we will... ;)
