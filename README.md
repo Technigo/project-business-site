@@ -1,12 +1,15 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+To create a styled website site with a few more advanced functions in javascript (accordion and sign-up form).
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+At first I used felxbox to solve the layout and design och the website. This was surprisingly easy compared to last week. 
+To create the form I used the form-tag in HTML. To create the accordion I used a toggle-function in JS. I didn't plan much this time which I suffered from. I was better at designing the layout but should have spent more time on a code-structure in advance. 
+If I had more time I would have worked more on the layout and got it to a point where it was more responsive. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://objective-shaw-5d8317.netlify.app/code
+
+
+
