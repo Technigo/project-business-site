@@ -1,7 +1,292 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-.active + .answer {
-  /* some styling here */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/*** HEADER ***/
+.header__img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+  opacity: 0.8;
+}
+
+.header__title {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(240, 248, 255, 0.735);
+  width: 100%;
+  height: 180px; 
+}
+
+.header__content {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #f865b1;
+  margin: 0;
+  padding: 40px 0 30px 0;
+}
+
+.header__button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: #f9f9f9;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: #5b9ea5;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.header__button:hover {
+  background-color:#f865b1;
+}
+
+/*** SIGN UP FORM ***/
+.form {
+  margin: 60px 40px;
+}
+
+.form__box {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #fff;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.19);
+}
+
+.form__box-left {
+  background: url("./assets/baking-img2.jpeg");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+}
+
+.form__box-right {
+  padding: 20px;
+}
+
+.form__title {
+  display: flex;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #f865b1;
+  margin: 10px 0 25px 0;
+}
+
+.form__input,
+.form__textarea {
+	width: 100%;
+	border: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 12px;
+	font-size: 16px;
+	margin: 7px 0 22px 0;
+}
+
+.form__input:focus {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.form__input:valid { 
+  border: 1px solid #5b9ea5;
+}
+
+.form__input:invalid {
+  border-bottom: 1px solid #F865B0;
+}
+
+.form__selectors {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__selectors .form__radio-button {
+  margin: 8px;
+  cursor: pointer;
+}
+
+.form__checkbox {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  height: 18px;
+  width: 18px;
+  margin-right: 15px;
+  background-color: rgba(230, 230, 230, 0.6);
+  display: flex;
+  justify-content: center;
+}
+
+input[type="checkbox"]::after {
+  content: "\2573";
+  display: none;
+}
+
+input[type="checkbox"]:checked::after {
+  display: block;
+} 
+
+.form__button {
+  width: 100%;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  color: #f9f9f9;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: #5b9ea5;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.form__button:hover {
+  background-color: #F865B0;
+}
+
+/*** ACCORDION ***/
+.accordion {
+  width: 100%;
+  height: 700px;
+  background: #dac3d0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion__header {
+  text-align: center;
+  font-size: 26px;
+  color: #F865B0;
+}
+
+.accordion__item {
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.19);
+}
+
+.accordion__title {
+  padding: 15px 15px 15px 10px;
+  line-height: 25px;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion__title::after {
+  content: "\002B";
+  position: absolute;
+  right: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.accordion__title.active::after {
+ transform: rotate(45deg);
+}
+
+.accordion__content {
+  overflow: hidden;
+  height: 0;
+}
+
+.accordion__content-answer {
+  border-top: 2px solid #dac3d0;
+  padding: 15px 15px 15px 12px;
+  line-height: 25px;
+}
+
+.active + .accordion__content {
+  height: auto;
+}
+
+/*** FOOTER ***/ 
+.footer {
+  background-color: #5b9ea5;
+  height: 100px;
+}
+
+.footer__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__icons .fab, 
+.footer__icons .fas {
+  color: #dac3d0;
+  padding: 5px;
+  margin-top: 30px;
+}
+
+.footer__icons .fab:hover, 
+.footer__icons .fas:hover {
+  color: #f6f9fa;
+}
+
+
+/*** MEDIA QUERY ***/ 
+@media (min-width: 768px) {
+  .header__content {
+    font-size: 30px;
+  }
+  
+  .header__button {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .form__box {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form__box-left {
+    height: 100%;
+  }
+
+  .form__box-right {
+    padding: 40px;
+  }  
+
+  .form__title {
+    font-size: 35px;
+  }
+
+  .accordion {
+    height: 600px; 
+  }
+
+  .accordion__container {
+    width: 50%;
+  }
+
+  .accordion__header {
+    font-size: 35px;
+  }
+
+  .question::after {
+    font-size: 25px;
+    right: 25px;
+  }
 }
