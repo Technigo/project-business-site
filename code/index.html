@@ -3,28 +3,88 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Virtual Assistant Services</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
+    <header class="header">
+      <div class="title">
+        <h1 class="primary-header">Virtual Assistant Services</h1>
+      </div>
+      <div class="navigation-bar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#">Content Writing</a>
+        <a href="#">Social Media</a>
+        <a href="#">Customer Service</a>
+      </div>
+    </header>
+    <div class="placeholder">
+      <form class="form" action="https://httpbin.org/anything" method="POST">
+        <h3>Request your virtual assistance</h3>
+        <label>
+          Name:<input name="form-name" type="text" required></input>
+        </label>
+        <p>What kind of virtual assistant service are you interested in?</p>
+        <label>
+          Content writing <input type="checkbox" value="content" name="servicechoice"/>
+        </label>
+        <label>
+          Social Media <input type="checkbox" value="some" name="servicechoice"/>
+        </label>
+        <label>
+          Customer service <input type="checkbox" value="customerservice" name="servicechoice"/>
+        </label>
+        <label>
+          Other <input type="checkbox" value="otherservices" name="servicechoice"/>
+        </label>
+        <p>Would you like help on a monthly basis or one time help?</p>
+        <label>
+          Monthly basis <input type="radio" value="monthly" name="packagetype" required/>
+        </label>
+        <label>
+          One time <input type="radio" value="onetime" name="packagetype" required></label></input>
+        </label>
+        <label>
+          E-mail: <input type="email" name="form-email" required/>
+        </label>
+        <button type="submit" value="Submit" class="form-button">Submit</button>
+      </form>
+    </div>
 
     <section class="accordion">
-      <!-- Accordion -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="accordion-container">
+        <div>
+          <h3 id="accordion-header-1" class="accordion-header">Can you do translations?</h3>
+          <p id="accordion-content-1" class="accordion-content">
+            Yes, I can translate from English, Norwegian and Danish to Swedish.
+          </p>
+        </div>
+        <div>
+          <h3 id="accordion-header-2" class="accordion-header">Can you handle remote meetings?</h3>
+          <p id="accordion-content-2" class="accordion-content">
+            Yes, I have experience from using Teamviewer, Teams, Zoom and Scopia and can gladly give other tools a try too.
+          </p>
+        </div>
+        <div>
+          <h3 id="accordion-header-3" class="accordion-header">
+            Can you help with project management in an agile team?
+          </h3>
+          <p id="accordion-content-3" class="accordion-content">
+            Yes, I have experience from agile methods and have a certificate in Prince2 Agile Practitioner.
+          </p>
+        </div>
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+    </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>© Therese Hagelin</p>
+        <p>Project 3 - Business Site</p>
+          <p>Technigo Coding Bootcamp -  Spring 2021</p>
+        </div>
+    </footer>
+    <script type="text/JavaScript" src="script.js"></script>
   </body>
 </html>
