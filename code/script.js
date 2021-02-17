@@ -4,9 +4,7 @@ const accordionHeaderTwo = document.getElementById("accordion-header-2");
 const accordionContentTwo = document.getElementById("accordion-content-2");
 const accordionHeaderThree = document.getElementById("accordion-header-3");
 const accordionContentThree = document.getElementById("accordion-content-3");
-console.log(accordionHeaderOne);
-console.log(accordionHeaderTwo);
-console.log(accordionHeaderThree);
+
 
 accordionHeaderOne.addEventListener("click", () => {
   accordionContentOne.classList.toggle("accordion-selected");
