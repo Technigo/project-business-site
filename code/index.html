@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&display=swap" rel="stylesheet">
-    <style>html, body{scroll-behavior: smooth;}</style>
   </head>
   
   
@@ -20,12 +19,11 @@
         <img class="hero-img" src="./images/img_desktop.jpg" alt="hero image"/>
       </picture>
       <h1 class="hero-title">someones fotolab.</h1>
-    
-    <nav>
-      <a href="#about">about us.</a>
-      <a href="#offer">what we offer.</a>
-      <a href="#contact">let's get in touch.</a>
-    </nav>
+      <nav>
+        <a href="#about">about us.</a>
+        <a href="#offer">what we offer.</a>
+        <a href="#contact">let's get in touch.</a>
+      </nav>
     </header>
 
   <div class="maincontent-page">
@@ -86,28 +84,27 @@
       <h2 id="contact">let's get in touch.</h2>
       <form action="http://httpbin.org/anything" method="POST">
         <div class="formelement-personal">
-          <div><label for="fname" class="information-type">name</label>
-            <input type="text" id="name" name=name class="labelbox" required><br>
-          </div>
-          <div><label for="phone" class="information-type">phone</label>
-            <input type="text" id="phone" name=phone class="labelbox" required><br>
-          </div>
-          <div><label for="email" class="information-type">email</label>
-            <input type="email" id="email" name=email class="labelbox" required><br>
-          </div>
+          <label for="fname" class="information-type">name</label>
+            <input type="text" id="fname" name=name class="labelbox" required>
+          <label for="phone" class="information-type">phone</label>
+            <input type="text" id="phone" name=phone class="labelbox" required>
+          <label for="email" class="information-type">email</label>
+            <input type="email" id="email" name=email class="labelbox" required>
         </div>
 
-        <div class="formelement-interest">
-          <div class="interest-options"><p class="formtext">what are you interested in?</p></div>
-          <div class="interest-options">
+        <label class="formelement-interest">
+          <div class="interest-options"> 
+            <p class="formtext">what are you interested in?</p>
+          </div>
+          <label class="interest-options">
             <select name="offer" class="interest">
               <option value="people">people</option>
               <option value="fashion">fashion</option>
               <option value="events">events</option>
               <option value="others">others</option>
             </select>
-          </div>
-        </div>
+          </label>
+        </label>
 
         <div class="formelement-agreement">
           <div>
@@ -115,15 +112,14 @@
               to being kind to others, the world and yourself?
             </p>
           </div>
-          <div class="checkbox-box">
-            <input type="checkbox" class="checkbox" name="agree"
-              value="agree" required/>yes - i do! <br>
-          </div>
+          <label for="checkbox-box" class="checkbox-label">
+            <input id="checkbox-box" type="checkbox" class="checkbox" name="agree" value="agree" required/>yes - i do!
+          </label>
         </div>
 
-        <div class="formelement-submit">
+        <label class="formelement-submit">
           <input type="submit" id="submit-button" value="send" class="submit" required>
-        </div>
+        </label>
       </form>
     </section>
   </div>
