@@ -8,4 +8,4 @@ My biggest problem in this site was to work with JavaScript for the first time. 
 
 
 ## View it live
-https://ecstatic-morse-f45c39.netlify.app/git
+https://nostalgic-jackson-1a51ce.netlify.app
