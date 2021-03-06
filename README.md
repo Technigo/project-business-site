@@ -1,12 +1,11 @@
-# Business Site
+# Business Site 👩‍💼
 
-Replace this readme with your own information about your project. 
+The goal for this project was to make a business site that includes a hero image/video, a form and a Javascript accordion.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## The problem 💪
 
-## The problem
+I started with the idea in my head and draw a brief sketch on a piece of paper. My plan was to start with the hardest first, which to me was the Javascript accordion. That actually took me longer than expected, but I think I finally grabbed the concept. The problem was that I was left with very little time to think about the layout design and making the site responsive (which I'm still struggling with). If I had more time I would go over Flebox and responsiveness again and try different ways. I would also take a look at how to add more style to it. Styling forms looks actually really hard.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
-## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+## View it live ❤️
+https://esteficodes-technigo-project3.netlify.app/
