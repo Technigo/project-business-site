@@ -1,9 +1,20 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-function toggle() {
-  this.classList.toggle("active")
-}
+const accordionHeader = document.getElementById("accordionHeader")
+const accordionContent = document.getElementById("accordionContent")
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
+const accordionHeaderTwo = document.getElementById("accordionHeaderTwo")
+const accordionContentTwo = document.getElementById("accordionContentTwo")
+
+const accordionHeaderThree = document.getElementById("accordionHeaderThree")
+const accordionContentThree = document.getElementById("accordionContentThree")
+
+accordionHeader.addEventListener("click", () => {
+ accordionContent.classList.toggle("active")
+})
+
+accordionHeaderTwo.addEventListener("click", () => {
+accordionContentTwo.classList.toggle("activeTwo")
+})
+
+accordionHeaderThree.addEventListener("click", () => {
+    accordionContentThree.classList.toggle("activeThree")
+})

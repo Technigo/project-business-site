@@ -3,28 +3,84 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title> &#10036; GEMS &#10036; </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dosis&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   </head>
+
   <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <!-- HERO section -->
+    <header class="hero">
+      <picture>
+        <source srcset="./Pictures/desktop-pic.jpg" media="(min-width:768px)">
+        <img src="./Pictures/mobile-pic.jpg" media="(max-width:767px)" alt="Hero image of chrystal stones">
+      </picture>
+      <div class= "welcome">
+        <h1 class="welcome-title">GEMS</h1>
+        <h4 class="welcome-sub">Tailored for you</h4>
+        <p class="welcome-p">Photo by Karolina Grabowska from Pexels</p>
       </div>
+      </header>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+    <!-- SIGN UP FORM -->      
+    <section class="main">
+      <section class="signup">
+        <h2 class="h2"> PLEASE ENTER YOUR INFORMATION</h2>
+        <section class="forms">
+          <form class="signup-info" action="https://httpbin.org/anything" method="POST">
+
+            <label> Your month of birth: 
+              <select class="birth-month" id="birth-month" required name="signup-info-birthmonth">      
+                <option class="option">January</option>
+                <option class="option">February</option>
+                <option class="option">March</option>
+                <option class="option">April</option>
+                <option class="option">May</option>
+                <option class="option">June</option>
+                <option class="option">July</option>
+                <option class="option">August</option>
+                <option class="option">September</option>
+                <option class="option">October</option>
+                <option class="option">November</option>
+                <option class="option">December</option>
+              </select>
+            </label>
+
+            <label class="color-header"> Your favourite color: 
+              <input id="color" class="color" type="color" required name="signup-info-color">
+            </label>
+            
+            <label> Your message: 
+              <input id ="text" class="text" type="text" maxlength="100" placeholder="Type here..." required name="signup-info-message"> 
+            </label>              
+            
+            <input type="submit" class="submit" value="Let's go!">
+
+          </form>
+        </section>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+
+    <!-- ACCORDION -->
+      <section class="accordion">
+        <h1>FAQ!</h1>
+        <h4 id="accordionHeader" class="accordionHeader"> Where are you located?</h4>
+        <p id="accordionContent" class="answer"> We are a small business, located in the Nordics.</p>
+                  
+        <h4 id="accordionHeaderTwo" class="accordionHeaderTwo"> What is your pricing model?</h4>
+        <p id="accordionContentTwo" class="answerTwo"> Just as our gems, or pricing is unique to every item. Please reach out to us for more info!</p>
+
+        <h4 id="accordionHeaderThree" class="accordionHeaderThree"> How do I order? </h4>
+        <p id="accordionContentThree" class="answerThree"> Please fill out our form, and we'll reach out to you &#9825; </p>
+      </section>
+
+    </section>
+
+    <footer class="footer"> &copy; Anna Lenksjö - Student Tecnhnigo Bootcamp Spring 2021 </footer>
+
+    <script src="./script.js"></script>
+
   </body>
 </html>

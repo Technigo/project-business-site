@@ -1,7 +1,232 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
+body {
+margin: 0px;
+background-color: rgb(186, 186, 228);
 }
+
+/*HERO VIDEO SECTION*/
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+}
+
+.hero img {
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  position: absolute;
+  object-fit: cover;
+}
+
+.welcome {
+  z-index: 2;
+  position: relative;
+  color: white;
+  font-family: fantasy;
+  z-index: 2;
+  text-align: center;
+  justify-content: center;
+  padding-top: 50%;
+  margin: 0px;
+}
+
+.welcome-title {
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  font-size: 60px;
+  cursor: crosshair;
+  margin: 0px;
+}
+
+.welcome-title:hover {
+  opacity: 0.5;
+}
+
+.welcome-sub {
+  font-family: "Dosis", sans-serif;
+  cursor: crosshair;
+}
+
+.welcome-sub:hover {
+  opacity: 0.5;
+} 
+
+/* MAIN SECTION */
+
+.main {
+  color: rgb(186, 186, 228);
+  font-family: "Caveat", cursive;
+  padding: 20px 0px;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+}
+
+/* SIGN UP SECTION */
+
+.signup {
+  border: #999;
+  border-width: 8px;
+  border-style: double;
+  padding-bottom: 40px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding-right: 10px;
+  padding-top: 20px;
+  background-color: mistyrose;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.birth-month {
+background-color:  rgb(186, 186, 228);
+margin-bottom: 10px;
+border-radius: 8px;
+padding: 4px;
+margin-left: 5px;
+}
+
+.color-header { 
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 4px;
+}
+
+.color {
+  background-color:  rgb(186, 186, 228);
+  border-radius: 8px;
+  width: 100px;
+  margin-left: 10px;
+}
+
+.text {
+  background-color:  rgb(186, 186, 228);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 4px;
+  margin-left: 5px;
+}
+
+.submit {
+  color: white;
+  background-color: rgb(186, 186, 228);
+  border: none;
+  padding: 8px 60px;
+  border-radius: 4px;
+  display: inline-flex;
+  margin-bottom: 10px;
+  font-family: fantasy;
+}
+
+/* ACCORDION SECTION */
+
+.accordion {
+  border: #999;
+  border-width: 8px;
+  border-style: double;
+  border-radius: 8px;
+  background-color: mistyrose;
+  padding-top: 20px;
+}
+
+.accordionHeader {
+cursor: pointer;
+padding: 0px;
+}
+
+.accordionHeaderTwo {
+  cursor: pointer;
+  padding: 0px;
+}
+
+.accordionHeaderThree {
+  cursor: pointer;
+  padding: 0px;
+}
+
+.answer {
+  display: none;
+}
+
+.answerTwo {
+  display: none;
+}
+
+.answerThree {
+  display: none;
+}
+
+.active {
+  display: contents;
+}
+
+.activeTwo {
+  display: contents;
+}
+
+.activeThree {
+  display: contents;
+}
+
+
+/* FOOTER */
+
+.footer {
+  background-color: lightgray;
+  color: antiquewhite;
+  text-align: center;
+  padding: 15px;
+  font-family: fantasy;
+  margin-top: 26px;
+}
+
+/* MEDIA QUERIES TABLET */
+
+@media (min-width: 768px) {
+  
+  .welcome {
+  padding-top: 20%;
+  padding-left: 50%;
+  }
+
+  .welcome-title {
+    font-size: 150px;
+    margin: 0px;
+  }
+
+  .welcome-sub {
+    font-size: 50px;
+    margin: 0px;
+  }
+
+  .main {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0px;
+    width: 768px;
+    margin: auto;
+  }
+
+  .signup {
+    margin-right: 20px;
+    width: 45%;
+    height: auto;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+   }
+
+  .accordion {
+    width: 45%;
+    height: auto;
+    font-size: 24px;
+  }
+
+}
+
+/* MEDIA QUERIES DESKTOP */
+
