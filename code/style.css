@@ -2,114 +2,132 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.header{
+.header {
   position: relative;
-}
-
-
-.background{
   display: block;
   background-color: rgb(225, 189, 158);
-
 }
 
-
-
-.banner{
-  position: absolute;
-  width: 50%;
-  font-size: 200px;
-  color: black;
-  margin-left: 30%;
-}
-
-.sform{
-  width: 40%;
-  border: 3px solid rgb(46, 37, 37);
-  border-radius: 7px;
-  background-color: rgb(233, 209, 178);
-
-}
-
-.label{
-  display: block;
-  margin-bottom: 10px;
-}
-
-
-.accordion{
-  margin-left: 50%;
-  margin-bottom:0px;
-  width: 40%;
-  border: 3px solid rgb(45, 37, 37);
-  border-radius: 7px;
-  background-color: rgb(216, 196, 169);
-   }
-
-.accordion-header{
-  margin: 0;
-  padding: 10px;
-}
-
-.video-header{
+.title-wrapper {
+  height: 100%;
   width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+.banner {
+  font-size: 50px;
+  text-shadow: #ffffff;
+  color: black;
+}
 
-.example_d {
-  position:absolute;
-  top: 50%;
-  right: 50%;
-  left: 45%;
+.header-btn {
   color: #000000 !important;
   text-transform: uppercase;
   background: #b1a1a1;
   padding: 20px;
   border: 4px solid #2c2a23 !important;
   border-radius: 6px;
-  display: inline-block;
   transition: all 0.3s ease 0s;
-  }
+}
 
-  .example_d:hover {
-    color: #0e0c0c !important;
-    border-radius: 50px;
-    border-color: #292323 !important;
-    transition: all 0.3s ease 0s;
-    }
+.main {
+  display: flex;
+  flex-direction: row;
+}
 
-.input{
+.sform {
+  padding: 10px;
+  width: 100%;
+  margin-right: 5px;
+  border: 3px solid rgb(46, 37, 37);
+  border-radius: 7px;
+  background-color: rgb(233, 209, 178);
+  display: flex;
+  flex-direction: column;
+
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.accordion {
+  padding: 10px;
+  margin-left: 5px;
+  width: 100%;
+}
+
+
+.accordion div {
+ margin: 5px;
+}
+
+.box-border {
+  border: 3px solid rgb(45, 37, 37);
+  border-radius: 7px;
+  background-color: rgb(216, 196, 169);
+}
+
+.accordion-header {
+  margin: 0;
+  padding: 10px;
+}
+
+.video-header {
+  width: 100%;
+}
+
+
+
+
+
+
+.header-btn:hover {
+  color: #0e0c0c !important;
+  border-radius: 50px;
+  border-color: #292323 !important;
+  transition: all 0.3s ease 0s;
+}
+
+.input {
   font-size: 20px;
 }
 
-.footer{
+.footer {
   height: 100px;
   border: 4px solid rgb(255, 211, 211);
   background-color: antiquewhite;
 }
 
-.footer-text{
+.footer-text {
   margin-left: 45%;
 }
 
-
-
-
-.accordion-content{
+.accordion-content {
   margin: 0;
   padding: 10px;
   display: none;
   border-top: 3px solid rgb(120, 90, 90);
 }
-.accordion-selected{
+
+.accordion-selected {
   display: block;
   color: rgb(10, 6, 6);
 }
 
-@media (min-width: 768px)
-{
-  .video-header{
-    width: 100‰
-    height: 200%
+
+
+@media (min-width: 768px) {
+  .video-header {
+    width: 100‰;
+    height: 200%;
   }
 }
+
