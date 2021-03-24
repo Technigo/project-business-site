@@ -1,7 +1,237 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(58, 116, 114, 0.24);
+}
 
-.active + .answer {
-  /* some styling here */
+/*NAVBAR*/
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(58, 116, 114);
+}
+
+.li {
+  display: inline;
+  float: left;
+}
+
+.li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  color: rgb(26, 53, 52);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.li a:hover {
+  background-color: rgb(142, 180, 179);
+}
+
+.business {
+  color: rgb(142, 180, 179);
+  font-size: 40px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding-right: 10px;
+}
+
+/*HEADER*/
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.hero-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(200, 212, 212);
+  font-size: 70px;
+  text-shadow: 4px 4px 6px rgb(26, 53, 52);
+}
+
+.hero-text {
+  font-size: 30px;
+}
+
+/*SIGNUP FORM*/
+.section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.container {
+  background-color: rgb(58, 116, 114);
+  color: rgb(26, 53, 52);
+  font-size: 16px;
+  width: 400px;
+  height: 540px;
+  margin-top: 40px;
+  box-shadow: 2px 2px 4px rgb(26, 53, 52);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.signup-form {
+  background-color: rgba(255, 255, 255, 0.527);
+  padding: 20px 40px;
+  margin: 50px 40px;
+}
+
+div .signup-form {
+  display: table-row;
+}
+
+.label,
+.input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+.label {
+  padding-right: 10px;
+}
+
+.input {
+  display: block;
+}
+
+.radio-buttons {
+  margin: 10px 0;
+}
+
+.checkbox {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Style button*/
+.submit {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgb(58, 116, 114);
+  border-radius: 10px;
+  color: rgb(26, 53, 52);
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/*ACCORDION*/
+.accordion-title {
+  display: flex;
+  margin: 10px 0px;
+}
+
+.accordion {
+  background-color: rgba(255, 255, 255, 0.527);
+  display: table;
+  margin: 50px 40px;
+}
+
+.accordion-header {
+  margin: 0;
+  padding: 20px;
+  cursor: pointer;
+  border: 1px solid rgb(58, 116, 114);
+}
+
+.accordion-body {
+  display: none;
+  overflow: hidden;
+  background-color: rgb(212, 227, 228);
+}
+
+.accordion-selected {
+  display: block;
+}
+
+.answer {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid rgb(26, 53, 52);
+}
+
+/*FOOTER*/
+.footer {
+  background-color: rgb(58, 116, 114);
+  color: rgba(255, 255, 255, 0.527);
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  width: auto;
+  height: 120px;
+}
+
+/*MEDIA QUERIES MOBILE*/
+@media (max-width: 676px) {
+  body {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+
+
+  .li a {
+    font-size: 14px;
+    display: flex;
+    padding-right: 2px;
+    padding-left: 5px;
+  }
+
+  .business {
+    font-size: 30px;
+
+  }
+
+  /*HEADER*/
+  .hero {
+    width: auto;
+    overflow: hidden;
+  }
+
+  .hero-image {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .container {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
 }
