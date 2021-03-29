@@ -4,142 +4,180 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dogGO</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/epf8jwq.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/epf8jwq.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style></style>
   </head>
 
   <body>
-
     <!--HEADER SECTION-->
-    
-    <div class="navbar-container">
-      <header class="navbar">
-        <div class="hamburger-wrapper">
-          <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+
+    <header class="navbar">
+      <div class="hamburger-wrapper">
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <h2 class="logo">     
-          <img src="./images/logo.png" alt="DogGO logo image">
-        </h2>
-        <div class="menu-container">
-          <nav>
-            <ul class=nav-menu>
-              <li><a href="#">Dog-stinations</a></li>
-              <li><a href="#">Off-Leash Experiences</a></li>
-              <li><a href="#">Booking</a></li>
-              <li><a href="#">A-BARK Us</a></li>
-              <li><a href="#">SIGN IN</a></li>
-            </ul>
-          </nav> 
-        </div> 
-      </header>
-    </div>
+      </div>
+      <div class="logo">
+        <img src="./images/logo.png" alt="DogGO logo image" />
+      </div>
+      <div class="menu-container">
+        <nav class="nav-menu">
+          <a class="menu-button" href="#">Dog-stinations</a>
+          <a href="#">Off-Leash Experiences</a>
+          <a href="#">Booking</a>
+          <a href="#">A-BARK Us</a>
+          <a href="#">SIGN IN</a>
+        </nav>
+      </div>
+    </header>
 
     <!-- HERO SECTION -->
 
     <section class="hero-section">
-      <div class="hero-header">
-        <h1>An Adventure<br>you can both enjoy!</h1>
-      </div>
-
+      <!-- <div class="hero-header"></div>
+        <h1 class="hero-header">An Adventure<br>you can both enjoy!</h1>
+      </div> -->
       <div class="hero-container" id="hero">
+        <h1 class="hero-header">An Adventure<br />you can both enjoy!</h1>
         <video class="video" loop autoplay muted preload>
-          <source src="./videos/Herovideo_1280x720.mp4" type="video/mp4">
-          <source src="./videos/Herovideo_1280x720.webm" type="video/webm">
-        
-          <source class="tablet" src="./videos/Herovideo_720x480.mp4" media="(max-width: 991px)" type="video/mp4">
-          <source class="tablet" src="./videos/Herovideo_720x480.webm" media="(max-width: 991px)" type="video/webm">  
-        </video> 
-        <img class="hero-img" src="./images/Hero_mobileimg.jpg" alt="Man running with dog beside him">      
-      </div>   
-    </section> 
+          <source src="./videos/Herovideo_1280x720.mp4" type="video/mp4" />
+          <source src="./videos/Herovideo_1280x720.webm" type="video/webm" />
+
+          <source
+            class="tablet"
+            src="./videos/Herovideo_720x480.mp4"
+            media="(max-width: 991px)"
+            type="video/mp4"
+          />
+          <source
+            class="tablet"
+            src="./videos/Herovideo_720x480.webm"
+            media="(max-width: 991px)"
+            type="video/webm"
+          />
+        </video>
+        <img
+          class="hero-img"
+          src="./images/Hero_mobileimg.jpg"
+          alt="Man running with dog beside him"
+        />
+      </div>
+    </section>
 
     <!-- SIGN UP FORM -->
-  <div class="the-big-container">
-    <section class=form>
-      <form action="https://httpbin.org/anything" method="post">
-        <h1 class=form-title>Sign Up for More Info!</h1>
-        <ul class="form-info">
-          <li>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="user_name">
-          </li>
-          <li>
-            <label for="email">Email</label>
-            <input type="email" id="mail" name="user_email">
-          </li>
-          <li>
-            <label for="name">Dogs Name</label>
-            <input type="text" id="dog" name=dogs_name>
-          </li>
-          <li class="dogsize-container">
-            <label for="dogssize">Size of Dog</label>
-            <select name="dogsize" id="">
-              <option value="s">Small</option>
-              <option value="m">Medium</option>
-              <option value="l">Large</option>
-              <option value="h">Might be a bear</option>
-            </select>
-          </li>          
-          <li>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="user_password">
-          </li> 
-          <li>
-            <label for="password">Confirm Password</label>
-            <input type="password" id="password-confirm" name="user_password">
-          </li><br>       
-          <!--CHECK BOX-->
-          <li class="checkbox">
-            <input type="checkbox" id="acceptTerms" name="terms" value="Termsandconditions">
-            <label for="terms">
-              I have read and accepted DogGO's Terms & Conditions.
-            </label>
-          </li>
-          <div class="button-container">
-            <button type="submit">Submit</button>
-            <button type="reset">Cancel</button>
-          </div>
-        </ul>
-      </form>
-    </section>
-  
-    <!--FAQ SECTION-->
+    <main class="the-big-container">
+      <section class="form">
+        <form action="https://httpbin.org/anything" method="post">
+          <h1 class="form-title">Sign Up for More Info!</h1>
+          <ul class="form-info">
+            <li>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="user_name" />
+            </li>
+            <li>
+              <label for="email">Email</label>
+              <input type="email" id="mail" name="user_email" />
+            </li>
+            <li>
+              <label for="name">Dogs Name</label>
+              <input type="text" id="dog" name="dogs_name" />
+            </li>
+            <li class="dogsize-container">
+              <label for="dogssize">Size of Dog</label>
+              <select name="dogsize" id="">
+                <option value="s">Small</option>
+                <option value="m">Medium</option>
+                <option value="l">Large</option>
+                <option value="h">Might be a bear</option>
+              </select>
+            </li>
+            <li>
+              <label for="password">Password</label>
+              <input type="password" id="password" name="user_password" />
+            </li>
+            <li>
+              <label for="password-confirm">Confirm Password</label>
+              <input
+                type="password"
+                id="password-confirm"
+                name="user_password"
+              />
+            </li>
+            <br />
+            <!--CHECK BOX-->
+            <li class="checkbox">
+              <input
+                type="checkbox"
+                id="accept-terms"
+                name="terms"
+                value="Termsandconditions"
+              />
+              <label for="accept-terms">
+                I have read and accepted DogGO's Terms & Conditions.
+              </label>
+            </li>
+            <div class="button-container">
+              <button type="submit">Submit</button>
+              <button type="reset">Cancel</button>
+            </div>
+          </ul>
+        </form>
+      </section>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+      <!--FAQ SECTION-->
 
-      <div class="question" id="question-1">Are there any limitations to what breeds of dog can travel?</div>
-      <div class="answer" id="answer-1">
-        <p class="answer-text">All doggo breeds can travel, dogGO will make it happen. However depending on the destination
-           there could be some limitations depending on the rules around certain breeds there.</p>
-      </div>
+      <section class="accordion">
+        <!-- Accordion -->
+        <h1>FAQ</h1>
 
-      <div class="question" id="question-2">What is the best doggo to use with dogGO?</div>
-      <div class="answer" id="answer-2">
-        <p class="answer-text">All doggo's are best doggos. What a silly question.</p>
-      </div>
+        <div class="question" id="question-1">
+          Are there any limitations to what breeds of dog can travel?
+        </div>
+        <div class="answer" id="answer-1">
+          <p class="answer-text">
+            All doggo breeds can travel, dogGO will make it happen. However
+            depending on the destination there could be some limitations
+            depending on the rules around certain breeds there.
+          </p>
+        </div>
 
-      <div class="question" id="question-3">Can I bring Cat-Os?</div>
-      <div class="answer" id="answer-3">
-        <p class="answer-text">While a Cat-O is not a doggo, we recommend checkout out our 
-          sister company <a href="https://adoring-hugle-335540.netlify.app/">Kitten Transfer</a>!</p>
-      </div>
-    </section>
-  </div>
+        <div class="question" id="question-2">
+          What is the best doggo to use with dogGO?
+        </div>
+        <div class="answer" id="answer-2">
+          <p class="answer-text">
+            All doggo's are best doggos. What a silly question.
+          </p>
+        </div>
+
+        <div class="question" id="question-3">Can I bring Cat-Os?</div>
+        <div class="answer" id="answer-3">
+          <p class="answer-text">
+            While a Cat-O is not a doggo, we recommend checkout out our sister
+            company
+            <a href="https://adoring-hugle-335540.netlify.app/"
+              >Kitten Transfer</a
+            >!
+          </p>
+        </div>
+      </section>
+    </main>
     <script src="./script.js"></script>
-  
+
     <footer>
+      <div class="icon-container">
       <a href="#" class="fa fa-facebook"></a>
       <a href="#" class="fa fa-twitter"></a>
       <a href="#" class="fa fa-instagram"></a>
       <a href="#" class="fa fa-youtube"></a>
+      </div>
     </footer>
   </body>
 </html>
