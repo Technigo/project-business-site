@@ -10,130 +10,173 @@
     <link rel="stylesheet" href="./style.css">
     <title>YOGAone</title>
   </head>
+ 
   <body>
-    
     <header class="hero-header">
-      <video class="hero-video" controls autoplay loop>
+      <video class="hero-video" autoplay loop>
         <source src="./assets/video/pink-and-blue-liquid.mp4" type="video/mp4">
         <img src="./assets/images/pink-and-blue-liquid.png" alt="Pink and blue liquid">
         <p>Your browser doesn't support video</p>
       </video>
-      <header class="top-header">  
-        <nav>
-          <a href="#">ABOUT</a>
-          <a href="#">CONTACT</a>
-          <a href="#">LINKS</a>
-        </nav>
-      </header>  
+      <nav>
+        <a href="#">ABOUT</a>
+        <a href="#">CONTACT</a>
+        <a href="#">LINKS</a>
+      </nav>
       <div class="hero-title">
         <h1>YOGAone</h1>
         <h2>Your new virtual yogastudio</h2>
       </div>
     </header>
 
-    <div class="main-content">
-      <form class="signup-form" action="http:httpbin.org/anything" method= "POST">
-        <h3>Sign up!</h3>
-        
-        <label>
-          <h4>Name:</h4><input type="text" name="signup-form-name" required>
-        </label>
-        
-        <label>
-          <h4>E-mail (= your username):</h4>
-          <input type="email" name="signup-form-email" required>
-        </label>
-        
-        <label>
-          <h4>Password:</h4>
-          <input type="password" name="signup-form-password" required>
-        </label>
-        
-        <section class="radiobuttons-container">
-          <label>
-            <input type="radio" value="male" name="signup-form-gender" required><h5>Male</h5>
-          </label>
-          
-          <label>
-            <input type="radio" value="female" name="signup-form-gender" required><h5>Female</h5>
-          </label>
-          
-          <label>
-            <input type="radio" value="other" name="signup-form-gender" required><h5>Other</h5>
-          </label>
-        </section>
-        
-        <section class="checkboxes-container">
-          <label>
-            <input type="checkbox" name="signup-form-terms"><h5>I agree to the Terms & conditions</h5>
-          </label>
-          
-          <label>
-            <input type="checkbox" name="signup-form-newsletter"><h5>I want to subscribe to the newsletter</h5>
-          </label>
-        </section>
-        
-        <section class="button-container">
-          <input class="submit-button" type="submit" value="SUBMIT"></submit>
-        </section>
-      </form>
+    <section class="welcome">
+      <h3>Welcome!</h3>
+      <p class="welcome-p">Soon we'll open YOGAone; the virtual yogastudio that offers live classes as well as videos. 
+        Here you'll be guided by some of the most appreciated and knowledgeable yoga teachers. Sign 
+        up now to get the latest info.
+      </p>
+    </section>
 
-      <section class="FAQ-accordion">
-        <h3>Frequently asked questions</h3>
+    <main>
+      <div class="signup-form">
+      <h3 class="form-header">Sign up!</h3>
+        <form action="http:httpbin.org/anything" method= "POST">
+          <div class="text-input-container">
+            <label for="signup-form-name">Name:</label>
+            <input 
+              type="text" 
+              id="signup-form-name" required
+            >
+          </div>
+          <div class="text-input-container">
+            <label for="signup-form-email">E-mail:</label>
+            <input 
+              type="email" 
+              id="signup-form-email" 
+              required
+            >
+          </div>
+          <div class="text-input-container">
+            <label for="signup-form-password">Password:</label>
+            <input 
+              type="password" 
+              id="signup-form-password" 
+              required
+            >
+          </div>
+          <div class="radiobuttons-container">
+            <div class="input-radio">
+              <label for="signup-form-gender-male"><span class="label-radio">Male</span></label>
+              <input 
+                type="radio" 
+                value="male" 
+                id="signup-form-gender-male" 
+                required
+              > 
+            </div>
+            <div class="input-radio">
+              <label for="signup-form-gender-female"><span class="label-radio">Female</span></label>
+              <input 
+                type="radio" 
+                value="female" 
+                id="signup-form-gender-female" 
+                required
+              > 
+            </div>
+            <div class="input-radio">
+              <label for="signup-form-other"><span class="label-radio">Other</span></label>
+              <input 
+                type="radio" 
+                value="other" 
+                id="signup-form-gender-other" 
+                required
+              >
+            </div>
+          </div>
+          <div class="input-checkbox">
+            <label for="signup-form-terms"><span class="label-checkbox">I agree to the Terms & conditions</span></label>
+            <input 
+              type="checkbox" 
+              value="agree-to-terms"
+              id="signup-form-terms"
+            >
+          </div>
+          <div class="input-checkbox">
+            <label for="signup-form-newsletter"><span class="label-checkbox">I want to subscribe to the newsletter</span></label>
+            <input 
+              type="checkbox"
+              value="newsletter" 
+              id="signup-form-newsletter"
+            >
+          </div>
+          <div class="button-container">
+            <button 
+              class="submit-button" 
+              type="submit" 
+              value="SUBMIT"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
 
-        <div class="accordion">  
-          <div class="question" id="question-1">
-            <h4>
+      <div class="FAQ-accordion-wrapper">
+        <h3 class="FAQ-header">Frequently asked questions</h3>
+
+        <div class="accordion-container">  
+          <div class="question-container" id="question-1">
+            <span class="accordion-question-plus"><i class="fas fa-plus"></i></span>
+            <span class="accordion-question-minus"><i class="fas fa-minus"></i></span>
+            <p class="question">
               How does it work?
-              <span class="accordion-question-plus"><i class="fas fa-plus"></i></span>
-              <span class="accordion-question-minus"><i class="fas fa-minus"></i></span>
-            </h4>
+            </p>
           </div>
-          <div class="answer" id="answer-1">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, aspernatur culpa accusantium aliquid magnam iste cumque quasi quos hic.</p>
+          <div class="answer-container" id="answer-1">
+            <p class="answer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, aspernatur culpa accusantium aliquid magnam iste cumque quasi quos hic.</p>
           </div>
         </div>
         
-        <div class="accordion">
-          <div class="question" id="question-2">
-            <h4>
+        <div class="accordion-container">
+          <div class="question-container" id="question-2">
+            <p class="question">
+              <span class="accordion-question-plus"><i class="fas fa-plus"></i></span>
+              <span class="accordion-question-minus"><i class="fas fa-minus"></i></span>
               How much does it cost?
-              <span class="accordion-question-plus"><i class="fas fa-plus"></i></span>
-              <span class="accordion-question-minus"><i class="fas fa-minus"></i></span>
-            </h4>
+            </p>
           </div>
-          <div class="answer" id="answer-2">
-            <p>The price for a membership is xx/month. If you don't want to become a member you can instead choose to only pay for the classes you attend; the price is xx SEK per class.</p>
+          <div class="answer-container" id="answer-2">
+            <p class="answer">The price for a membership is xx/month. If you don't want to become a member you can instead choose to only pay for the classes you attend; the price is xx SEK per class.</p>
           </div>
         </div>
         
-        <div class="accordion">
-          <div class="question" id="question-3">
-            <h4>
-              What different styles of yoga do you offer?
+        <div class="accordion-container">
+          <div class="question-container" id="question-3">
+            <p class="question">
               <span class="accordion-question-plus"><i class="fas fa-plus"></i></span>
               <span class="accordion-question-minus"><i class="fas fa-minus"></i></span>
-            </h4>
+              What different styles of yoga do you offer?
+            </p>
           </div>
-          <div class="answer" id="answer-3">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quae quo consequatur sed porro ut tempore quas quos a ad tempora veritatis.</p>
+          <div class="answer-container" id="answer-3">
+            <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quae quo consequatur sed porro ut tempore quas quos a ad tempora veritatis.</p>
           </div>
         </div>
 
-        <div class="accordion">
-          <div class="question" id="question-4">
-            <h4>
+        <div class="accordion-container">
+          <div class="question-container" id="question-4">
+            <p class="question">
               <span class="accordion-question-plus"><i class="fas fa-plus"></i></span>
               <span class="accordion-question-minus"><i class="fas fa-minus"></i></span>
               Do you have different classes for beginners and more experienced yogis?
-            </h4>
+            </p>
           </div>
-          <div class="answer" id="answer-4">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quae quo consequatur sed porro ut tempore quas quos a ad tempora veritatis.</p>
+          <div class="answer-container" id="answer-4">
+            <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quae quo consequatur sed porro ut tempore quas quos a ad tempora veritatis.</p>
           </div>          
         </div>
-      </section> 
-    </div> 
+      </div> 
+    </main> 
 
     <footer>
         <div class="icons">

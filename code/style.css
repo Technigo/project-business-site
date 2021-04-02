@@ -1,37 +1,58 @@
-body {
-  margin: 0;
-  background-color: #FFF;
-}
-
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
-.hero-header {
-  position: relative;
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 60px;
 }
 
-.top-header {
+h2 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 35px;
+}
+
+h3 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+nav {
   background-color: #5dc3ff;
   opacity: 0.3;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 50px;
   width: 100%;
   position: fixed;
   top: 0;
+  padding: 0 28px;
 }
 
-nav {
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
+nav:hover {
+  opacity: 1;
 }
 
-.nav a {
+a {
   color: #000;
-  margin: 120px;
+  text-decoration: none;
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #FFF;
+}
+
+a:active {
+  color: #395D7F;
+}
+
+.hero-header {
+  position: relative;
 }
 
 .hero-video {
@@ -56,14 +77,32 @@ nav {
   padding: 20px;
 }
 
-.main-content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.welcome {
+  background-color: #bcd9ea;
+  margin-top: -5px;
+  padding: 20px 18px 28px;
+  text-align: center;
 }
 
-/*** Sign-up form ***/
+.welcome-p {
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-header,
+.FAQ-header {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 600;
+  margin: 15px 0 15px 0;
+  font-size: 30px;
+  text-align: center;
+}
 
 .signup-form {
   background-color: #395D7F;
@@ -72,22 +111,35 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 80%;
-  margin: 70px auto 0;
-  padding: 5px 30px 65px;
+  width: 90%;
+  margin-top: 50px;
+  padding: 5px 30px 48px;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
 
 label {
-  display: inline-block;
-  margin: 0 0 20px;
+  display: block;
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.label-radio,
+.label-checkbox {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  margin-right: 5px;
+}
+
+.text-input-container {
+  padding: 10px 0 10px;
 }
 
 .radiobuttons-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   margin: 25px auto 30px;
 }
@@ -96,17 +148,30 @@ label {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
+}
+
+.input-radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.input-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 input[type=text],
 [type=password],
 [type=email] {
-  /* background-color: #395D7F; */
   width: 100%;
-  box-sizing: border-box;
   padding: 12px 20px;
+  margin-top: 10px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -126,16 +191,11 @@ input[type=submit]:valid {
   background-color: #395D7F;
 }
 
-input[type=radio],
-[type=checkbox] {
-  margin: 0;
-}
-
 .button-container {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .submit-button {
@@ -148,38 +208,52 @@ input[type=radio],
   border-radius: 10px;
   text-decoration: none;
   padding: 15px 30px;
+  margin: auto;
   cursor: pointer;
   outline: none;
 }
 
-/*** FAQ-accordion ***/
+.submit-button:hover {
+  background: #2D4A65;
+}
 
-.FAQ-accordion {
+.submit-button:active {
+  background: #22374C;
+}
+
+.FAQ-accordion-wrapper {
   border: solid #999 0.5px;
   border-radius: 1%;
-  width: 80%;
-  margin: 70px auto 0;
+  width: 90%;
+  margin-top: 50px;
   background-color: #FFF;
   padding-top: 5px;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
   border-bottom: solid #999 0.5px;
 }
 
-.accordion:nth-of-type(even) { /* even rows are pink*/
+.accordion-container:nth-of-type(even) { 
   background-color: #fadadd;
 }
 
-.accordion:nth-of-type(odd) { /* odd rows are blue*/
+.accordion-container:nth-of-type(odd) { 
   background-color: #bcd9ea;
 }
 
-.question {
+.question-container {
   border-top: solid #999 0.5px;
   padding: 12px;
   margin: 0;
 }
 
-.answer {
+.question {
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.answer-container {
   border-top: solid #999 0.5px; 
   padding: 12px;
   margin: 0;
@@ -187,32 +261,38 @@ input[type=radio],
   transition: height .5s ease;
 }
 
+.answer {
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  font-style: italic;
+}
+
 .accordion-question-plus {
   display: block;
   float: right;
+  margin-left: 5px;
+  font-size: 18px;
 }
 
 .accordion-question-minus {
   display: none;
   float: right;
+  margin-left: 5px;
+  font-size: 18px;
 }
 
-/*** active classes ***/
-
-.active + .answer {
+.active + .answer-container {
   display: block;
   transition: height .5s ease;
 }
 
-.question.active .accordion-question-plus {
+.question-container.active .accordion-question-plus {
   display: none;
 }
 
-.question.active .accordion-question-minus {
+.question-container.active .accordion-question-minus {
   display: inline-block;
 }
-
-/*** footer ***/
 
 footer {
   background-color: #5dc3ff;
@@ -226,116 +306,103 @@ footer {
 }
 
 .icons {
-  width:25%;
+  width: 250px;
   display: flex;
   justify-content: space-around;
   font-size: medium;
 }
 
-h1 {
-  font-family: 'Permanent Marker', cursive;
-  font-size: 60px;
-}
+@media (min-width: 767px) { 
+  h1 {
+    font-size: 80px;
+  }
+  
+  h2 {
+    font-size: 50px;
+  }
 
-h2 {
-  font-family: 'Permanent Marker', cursive;
-  font-size: 45px;
-}
+  h3 {
+    margin-bottom: 10px;
+  }
+  
+  nav {
+    padding: 0 90px;
+  }
 
-h3 {
-  font-family: 'Permanent Marker', cursive;
-  font-weight: 600;
-  margin: 12px 0 25px 0;
-  font-size: 30px;
-  text-align: center;
-}
+  .hero-title {
+    padding: 0 100px;
+  }
 
-h4 {
-  font-family: 'Karla', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  margin: 17px 0 5px;
-}
+  .welcome {
+    padding: 25px 70px 50px;
+  }
 
-.FAQ-accordion h4 {
-  margin: 0;
-  font-weight: 600;
-} 
-
-h5 {
-  font-family: 'Karla', sans-serif;
-  font-weight: 400;
-  display: inline;
-  margin: 0 0 0 7px;
-}
-
-p {
-  font-family: 'Karla', sans-serif;
-  font-style: italic;
-  font-size: 18px;
-  margin: 0;
-}
-
-a {
-  color: #000;
-  text-decoration: none;
-  font-family: 'Karla', sans-serif;
-  font-weight: 600;
-}
-
-a:hover {
-  color: darkgray;
-}
-
-a:active {
-  color: gray;
-}
-
-
-@media (min-width: 668px) { 
-  .main-content {
-    width: 100%;
+  main {
     flex-direction: row;
+    align-items: flex-start;
     justify-content: space-around;
   }
 
   .signup-form {
     width: 45%;
-    padding: 5px 40px 65px;
+    padding: 5px 40px 55px;
   }
 
-  .FAQ-accordion {
+  .FAQ-accordion-wrapper {
     width: 45%;
+    height: 100%;
   }
-  
-  .info {
-    width: 70%;
-  }
-  
+
   .icons {
+    width: 375px;
     font-size: large;
   }
 }
 
-@media (min-width: 1025px) {
-  .main-content {
-    justify-content: space-between;
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 110px;
+  }
+  
+  h2 {
+    font-size: 60px;
+  }
+  
+  nav {
+    padding: 0 150px;
+  }
+
+  .hero-title {
+    padding: 0 200px;
+  }
+
+  .welcome-p  {
+    width: 650px;
+    margin: auto;
+  }
+
+  main {
+    justify-content: center;
   }
   
   .signup-form {
-    width: 470px;
+    width: 440px;
     padding: 5px 70px 65px;
+    margin-right: 30px;
   }
 
-  .FAQ-accordion {
-    width: 470px;
+  .FAQ-accordion-wrapper {
+    width: 400px;
+    margin-left: 30px;
   }
-  
-  .info {
-    width: 70%;
-  }
-  
+
   .icons {
     font-size: x-large;
+  }
+}
+
+@media (min-width: 1500px) {
+  nav {
+    justify-content: space-evenly;
   }
 }
