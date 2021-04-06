@@ -1,4 +1,5 @@
 
+
 body {
   margin: 0;
   height: 100%;
@@ -6,15 +7,212 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #fff;
-  /* box-sizing: border-box; */
-  
+  background-color: red; 
 }
+
+/*MOBILE VIEW*/
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.425);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1px;
+}
+
+  .navbar .logo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar .logo img {
+    height: 60px; 
+    
+  }
+.hamburger-wrapper {
+  display: flex;
+  width: 30%;
+  justify-content: flex-start;
+  align-items: center;  
+  margin-right: 60px;
+}
+
+.hamburger-wrapper .hamburger {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: space-between;  
+  background: #fff;
+  border-radius: 10px;
+  margin-left: 2em;
+  padding: 10px 10px;  
+}
+
+.hamburger-wrapper .hamburger div {
+  width: 30px;
+  height: 5px;
+  border-radius: 30px;
+  background: #000;
+}
+
+.nav-menu {
+  display: none;
+}
+
+/***HERO SECTION***/
+
+.hero-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.hero-header {
+  font-family: nobel-condensed, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 80px;
+  color: rgba(255, 255, 255, 0.603);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  z-index: 1;
+
+}
+  
+.video-container {
+  display: none;
+}
+
+.hero-container .hero-img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+  
+/*FOOTER*/
+
+  footer {
+    height: 100px;
+    background: rgba(0, 0, 0, 0.425);
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  
+  .icon-container {
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*SOCIAL MEDIA ICONS*/
+
+  .fa {
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .fa-facebook {
+    color: white;
+  }
+  
+  .fa-twitter {
+    color: white;
+  }
+  
+  .fa-instagram {
+    color: white;
+  }
+  
+  .fa-youtube {
+    color: white;
+  }
+  
+  
+  
+
+
+/***MEDIA QUERIES***/
+
+@media (min-width: 601px) {
+
+  body {
+    background-color: blue;
+  }  
+
+  /* .hero-header {
+    font-size: 60px;
+    margin-top: 300px;
+    margin-bottom: 0;
+  } */
+
+  .video-container {
+    width: auto;
+    height: 100vh;  
+  }
+
+  .the-big-container {
+    width: 40%;
+    margin: 0 50px;
+    padding: 0;
+    display: flex;
+    flex-wrap: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {      
+    margin-bottom: 30px;   
+    margin-right: 20px;
+  }
+
+  /* .button-container {
+    width: 80%;
+    font-size: 20px;
+  } */
+
+  .accordion {      
+    margin-left: 0;
+    margin-right: 20px;
+  } 
+
+  .icon-container {
+    width: 80%;
+  }
+}
+  
+
+
+/*DESKTOP*/
+
+@media (min-width: 991px) {
+  
+  body {
+    background-color: green;
+  }
+
 
 /*** NAV-BAR MENU ***/
 
-
-
-.navbar {
+/* .navbar {
   width: 100%;
   height: 100px;
   background: rgba(0, 0, 0, 0.425);
@@ -24,18 +222,18 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1px;
-}
+} */
 
-.navbar .logo {
+/* .navbar .logo {
   width: 20%;
   display: flex;
   justify-content: center;
-}
+} */
 
-.navbar .logo img {
+/* .navbar .logo img {
   height: 60px; 
   
-}
+} */
 
 .hamburger {
   display: none;
@@ -71,7 +269,7 @@ body {
 
 /*** HERO Section ***/
 
-.hero-header {
+/* .hero-header {
   width: 100%;
   margin-top: 250px;
   font-family: nobel-condensed, sans-serif;
@@ -82,11 +280,11 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-}
+} */
 
 
 
-#hero {
+/* #hero {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -104,7 +302,8 @@ body {
 
  .hero-img {
    display: none;
- }
+   position: absolute;
+ } */
 
  /*** SIGN UP FORM ***/
 
@@ -266,147 +465,4 @@ button:active {
 }
   
 
-/***FOOTER***/
-
-footer {
-  height: 100px;
-  background: rgba(0, 0, 0, 0.425);
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
 }
-
-.icon-container {
-  width: 100%;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.fa {
-  padding: 10px;
-  width: 100px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.fa-facebook {
-  color: white;
-}
-
-.fa-twitter {
-  color: white;
-}
-
-.fa-instagram {
-  color: white;
-}
-
-.fa-youtube {
-  color: white;
-}
-
-
-/***MEDIA QUERIES***/
-
-@media (max-width: 990px) {
-  
-  .navbar {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    flex-direction: row;
-    }
-
-  .hamburger-wrapper {
-    display: flex;
-    width: 30%;
-    justify-content: flex-start;
-    align-items: center;  
-  }
-
-  .hamburger-wrapper .hamburger {
-    display: flex;
-    width: 30px;
-    height: 30px;
-    flex-direction: column;
-    justify-content: space-between;  
-    background: #fff;
-    border-radius: 10px;
-    margin-left: 2em;
-    padding: 10px 10px;  
-  }
-
-  .hamburger-wrapper .hamburger div {
-    width: 30px;
-    height: 5px;
-    border-radius: 30px;
-    background: #000;
-  }
-  
-  .nav-menu {
-    display: none;
-  }
-
-  .hero-header {
-    font-size: 60px;
-    margin-top: 300px;
-    margin-bottom: 0;
-  }
-
-  #hero video {
-    width: auto;
-    height: 100vh;  
-  }
-
-  .the-big-container {
-    width: 40%;
-    margin: 0 50px;
-    padding: 0;
-    display: flex;
-    flex-wrap: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  form {      
-    margin-bottom: 30px;   
-    margin-right: 20px;
-  }
-
-  /* .button-container {
-    width: 80%;
-    font-size: 20px;
-  } */
-
-  .accordion {      
-    margin-left: 0;
-    margin-right: 20px;
-  } 
-
-  .icon-container {
-    width: 80%;
-  }
-}
-  
-/*MOBILE VIEW*/
-
- @media (max-width: 600px) {
-  
-  #hero video {
-    display: none;
-  }
-  
-
-  
-
-}
-
-
-  
-
-  
-  
-  
