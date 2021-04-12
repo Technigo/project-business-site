@@ -18,4 +18,4 @@ d. to allign all elements of the webpage and ensure responsive design I used Fle
 
 
 ## View it live
-The live page is available at Netlify: https://jovial-payne-983ed5.netlify.app/
+The live page is available at Netlify: https://cat-show-klimenko.netlify.app
