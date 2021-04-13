@@ -3,28 +3,110 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Business site for Love-ocado</title>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+
+    <!--hero-section-->
+
+    <header class="hero-section">
+      <picture>
+        <!--mobile-->
+        <source srcset="./images/avocado1.jpeg" media="(max-width: 767px)">
+        <!--tablet-->
+        <source srcset="./images/avocado7.jpeg" media="(max-width: 1199px)">
+        <!--desktop-->
+        <img class="hero-image" src="./images/avocado4.jpeg" alt="Hero image"/>
+      </picture>
+      <div class="hero-content">
+        <h1 class="hero-heading">Love-ocado</h1>
+        <p class="hero-paragraph">Super-healthy, <br> eniroment-friendly, <br>
+          Locally produced in Stockholm</p>
+      </div>
+      <div class="navbar">
+        <a class="nav-menu" href="#">Home</a>
+        <a class="nav-menu" href="#">About us</a>
+        <a class="nav-menu" href="#">Stories</a>
+        <a class="nav-menu" href="#">Join us</a>
+      </div>
+      <div class="hamburger-logo" onclick="toggleHamburger(this)">
+        <img class="hero-logo" src="./images/avocados-logo.png" alt="Logo of avocados">
+        
+        </div>
+
+      </div>
+    </header>
+
+
+    <section class="form-section">
+    <form action="http://httpbin.org/anything" method="POST" class="form">
+      <h4>Sign up for a weekly prenumeration</h4>
+      <ul>
+        <li>
+          <label>First Name:
+            <input class="user-info" type="fname" name="First Name" required>
+          </label>
+        </li>
+        
+        <li>
+          <label>Last Name:
+            <input class="user-info" type="lname" name="Last Name" required>
+          </label>
+        </li>
+
+        <li>
+          <label>E-mail:
+            <input class="user-info" type="email" name="E-mail" required>
+          </label>
+        </li>
+
+        <li>
+          <label>Address:
+            <input class="user-info" type="address" name="Address" required>
+          </label>
+        </li>
+      </ul>
+
+          <h4>Choose your weekly prenumeration here!</h4>
+          <label class="user-recieve"> 
+            <select name="guide-choice">
+              <option value="xs">2 avocados a week</option>
+              <option value="s">5 avocados a week</option>
+              <option value="m">10 avocados a week</option>
+              <option value="l">15 avocados a week</option>
+            </select>
+          </label>
+          <div class="button-submit">
+            <button type="submit">Order now</button>
+        </div>
+      </section>
+
+
+    </form>
 
     <!-- Signup form -->
 
-    <section class="accordion">
+    <section class="accordion" id="button">
       <!-- Accordion -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">Where are you based?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>In Stockholm</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">Why don't you deliver outside Stockholm?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>We believe that locally produced should be only delivered close by.</p>
       </div>
+
+      <div class="question" id="section3">How is your delivery enviroment-friendly?</div>
+        <div class="answer">
+          <p>We only use e-cars, and therefor not contributing to air pollution.</p>
+        </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+    <!-- JS script file here -->
+    <script src="script.js"></script>
   </body>
 </html>

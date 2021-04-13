@@ -2,6 +2,190 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+/*
 .active + .answer {
-  /* some styling here */
+  some styling here 
+}*/
+
+
+body {
+  margin: 0;
+}
+
+.hero-section {
+  position: relative;
+  font-family: fantasy;
+  color: white;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 40px;
+  margin: 5px;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+
+.nav-menu{
+  margin: 20px 20px;
+  font-size: 20px;
+  color: rgb(144, 194, 113);
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
+.hamburger-logo {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+display: flex;
+justify-content: flex-start;
+}
+
+.hero-logo {
+  width: 10vw;
+  height: 10vh;
+  object-fit: scale-down;
+  margin-top: 15px;
+}
+
+.form-section {
+  width: 45%;
+
+}
+
+.form {
+  background: rgb(144, 194, 113);
+  border-radius: 4px;
+  margin: 10px;
+  margin-top: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;
+  width: 45%;
+  object-fit: cover;
+}
+
+.form h4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+input {
+  font-size: 20px;
+}
+
+input:valid {
+  background-color: green;
+}
+/*
+input:invalid {
+  background-color: indigo; 
+}*/
+
+ul {
+  list-style: none;
+}
+
+label {
+  display: inline-block;
+  padding: 20px;
+  margin: 10px 20px;
+  width: 300px;
+  text-align: right;
+}
+
+.user-info {
+  font: 1em sans-serif;
+}
+
+.user-recieve {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.button-submit {
+  display: flex;
+  justify-content: center;
+ 
+
+
+
+}
+
+
+@media screen and (min-width:768px)and (max-width:1199px) {
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+
+@media screen and (min-width:1200px) {
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .nav-menu { 
+    font-size: 25px;
+    cursor: pointer;
+    color: grey;
+  }
+
+  .hero-title {
+    font-size: 25px;
+    margin-left: 20px;
+  }
+
 }
