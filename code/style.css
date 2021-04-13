@@ -1,7 +1,467 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
+/* General styling */
+html {
+  margin:0;
+  padding:0;
+  scroll-behavior: smooth;
 }
+body {
+  margin: 0px;
+  padding: 0px;
+  background: rgb(190, 178, 145);
+  color: rgb(34, 46, 46);
+  font-family: 'Inter', sans-serif;
+  width: 100vw;
+}
+
+/** Hero section style **/
+.hero-section {
+  position:relative;
+  margin: 0;
+  padding: 0;
+}
+
+/** Hero section style: image **/
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+/** Hero section style: welcome text **/
+.welcome-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(238, 238, 245);
+}
+.welcome-text-inner {
+  background-color: rgba(128, 128, 128, 0.418);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.hero-title, .hero-subtitle {
+  text-align: center;
+}
+.hero-title {
+  font-size: 30px;
+  font-family: 'Cabin', sans-serif;
+}
+.welcome-buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.button-wrapper {
+  border: 2px solid rgba(139, 138, 138, 0.658);
+  border-radius: 10px;
+  background-color: rgb(166, 148, 102);
+  padding: 10px;
+  margin: 10px;
+  width: 50%;
+  text-decoration: none;
+  color: rgb(233, 233, 237);
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.button-wrapper:hover {
+  background-color: rgb(201, 180, 128);
+}
+
+/* Styling form and accordion wrapper */
+
+.form-accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.form-heading, .accordion-heading {
+  font-family: 'Cabin', sans-serif;
+  color: rgb(233, 233, 237);
+}
+
+/* Form styling */
+
+.form-wrapper {
+  padding: 5px;
+  background: rgb(172, 137, 101);
+  margin: 10px 10px;
+  border-radius: 5px;
+}
+.form-heading {
+  padding: 5px;
+  margin: 5px;
+}
+.form-subheading {
+  padding: 5px;
+  margin: 5px;
+  color: rgb(77, 47, 20);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.owner-information, .cat-information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+/* Styling text input, email and password inputs */
+.name-surname, .email-password {
+  width: 48%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+} 
+.text-input {
+  background-color: rgb(147, 113, 77);
+  color: rgb(243, 240, 236);;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  width: 100%;
+}
+::placeholder {
+  color: rgb(243, 240, 236);
+  font-size: 14px;
+}
+/* Selector and date styling */
+.form-item {
+  padding: 5px;
+  width: 48%;
+  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.label {
+  margin-bottom: 5px;
+  width: 100%;
+}
+.selector {
+  display: block;
+  background-color: rgb(147, 113, 77);
+  font-size: 14px;
+  color: rgb(243, 240, 236);
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  cursor: context-menu;
+}
+
+/* Date of birth styling */
+.date {
+  display: block;
+  width: 100%;
+  background-color: rgb(147, 113, 77);
+  color: rgb(243, 240, 236);
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 5px;
+  appearance: none;
+  cursor: text;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: context-menu;
+}
+
+/* All text-input effect */
+.text-input:focus, .selector:focus, .date:focus {
+  outline-color: gray;
+}
+
+/* Radio buttons styling */
+.fieldset-competition-classes {
+  margin: 10px 0;
+  border: none;
+  padding: 0px;
+}
+
+.radio-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.inner-radio-group {
+  width: 47%;
+  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.inner-radio {
+  width: 100%;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  width: 100%;
+  padding-left: 20px;
+}
+
+/* Custom radio button */
+.radio-input {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  height: 0px;
+  width: 0px;
+  font-size: 16px;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  background-color: rgb(173, 167, 142);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.inner-radio .radio-input:checked ~ .custom-radio {
+  background-color: rgb(121, 92, 61);
+}
+
+/* Checkbox styling */
+.checkbox-wrapper {
+  width: 100%;
+  padding: 5px;
+}
+
+.checkbox {
+  margin-bottom: 10px;
+  cursor: pointer;
+} 
+.checkbox-input {
+  cursor: pointer;
+}
+
+/* Submit button styling */
+.submit-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  margin-bottom: 10px;
+  background-color: rgb(147, 113, 77);
+  color: rgb(243, 240, 236);
+  padding: 5px 10px;
+  border: 1px solid  rgba(66, 37, 11, 0.555);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  width: 30%;
+}
+
+/* Accordion styling */
+.accordion-wrapper {
+  padding: 5px;
+  background: rgb(172, 137, 101);
+  margin: 10px 10px;
+  border-radius: 5px;
+}
+
+.accordion-heading {
+  padding: 5px;
+  margin: 5px 0 20px 5px;
+}
+
+.accordion-question {
+  background-color: rgb(147, 113, 77);
+  cursor: pointer;
+  position: relative;
+  padding: 10px 15px 10px 10px;
+  border-bottom: 2px solid rgba(54, 54, 54, 0.596);
+  margin: 0px 10px;
+}
+
+.accordion-question::after {
+  content:"\2207";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  position: absolute;
+  right: 4px;
+  top: 2px;
+}
+
+.question-clicked{
+  position: relative;
+}
+
+.question-clicked::after {
+  content:"\2206";
+  position: absolute;
+  right: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.accordion-answer {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-out;
+  background-color: rgba(255, 255, 255, 0.452);
+  margin: 0px 10px;
+}
+
+.answer-text {
+  border-top: white;
+  padding: 10px;
+}
+.margin-fixer {
+  margin-bottom: 20px;
+}
+
+/* Footer styling */
+
+.footer-general {
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(51, 45, 30);
+  width: 100vw;
+}
+.logo-footer {
+  width: 190px;
+  margin: 3px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-link:hover, .footer-link:focus {
+  background: rgba(128, 110, 59, 0.342);
+}
+
+.footer-image {
+  width: 100px;
+  border-radius: 50%;
+  border: 1px #fff solid;
+}
+
+.footer-headline {
+  color: #fff;
+}
+
+/*** FOOTER: Social media icons ***/
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook, .fa-twitter, .fa-linkedin, .fa-instagram {
+  color: #fff;
+  text-decoration: none;
+  background:rgb(186, 153, 17);
+  border-radius: 3px;
+}
+
+.copy-right {
+  background-color: rgb(27, 21, 14);
+  color: rgb(223, 219, 219);
+  font-size: 10px;
+  text-align: center;
+  margin: 0px;
+  padding: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 370px) {
+  .hero-title {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-accordion-wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .hero-title {
+    font-size: 50px;
+  }
+  .welcome-buttons-wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .button-wrapper {
+    width: 45%;
+    max-width: 250px;
+  }
+  .welcome-button {
+    font-size: 20px;
+  }
+  .form-wrapper {
+    width: 45%;
+    max-width: 450px;
+  }
+  .accordion-wrapper {
+    width: 45%;
+    max-width: 450px;
+  }
+  .footer-general {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .footer-list {
+    align-items: flex-start;
+  }
+  .footer-column {
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 950px) {
+  .hero-title {
+    font-size: 70px;
+  }
+  .form-accordion-wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+
+

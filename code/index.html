@@ -1,30 +1,203 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>International Cat Show by Ekaterina Klimenko</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+<body>
+	<!-- Hero Image section -->
+	<header class="hero-section">
+		<!-- Hero picture -->
+		<picture class="hero-picture">
+			<source srcset="./background_tablet.jpg" media="(min-width:768px) and (max-width: 949px)">
+			<source srcset="./background_desktop.jpg" media="(min-width: 950px)">
+			<img class="hero-image" src="./background_phone.jpg" alt="Cat picture" />
+		</picture>
+		<!-- Hero text -->
+		<div class="welcome-text">
+			<div class="welcome-text-inner">
+				<h1 class="hero-title">2021 International Cat Show</h1>
+				<h2 class="hero-subtitle">15 September 2021</h2>
+				<h2 class="hero-subtitle">Artipelag, Värmdö</h2>
+				<div class="welcome-buttons-wrapper">
+					<a class="button-wrapper" href="#form-link" class="welcome-button">Enter competition</a>
+					<a class="button-wrapper" href="" class="welcome-button">Buy tickets</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Signup form -->
+	<div class="form-accordion-wrapper">
+		<section class="form-wrapper" id="form-link">
+			<h1 class="form-heading">Enter competition</h3>
+				<form action="http://httpbin.org/anything" method="POST">
+					<div class="inner-form-wrapper">
+						<!-- Owner information: 2 text inputs, 1 email, 1 password -->
+						<h4 class="form-subheading">Owner Information</h4>
+						<div class="owner-information">
+							<div class="name-surname">
+								<input class="text-input" type="text" id="owner-name" name="owner_name" placeholder="Name" required>
+								<input class="text-input" type="text" id="owner-surname" name="owner_surname" placeholder="Surname"
+									required>
+							</div>
+							<div class="email-password">
+								<input class="text-input" type="email" id="owner-email" name="owner_email" placeholder="Email" required>
+								<input class="text-input" type="password" id="owner-password" name="owner_password"
+									placeholder="Password" required>
+							</div>
+						</div>
+						<!-- Cat information: selector and  date-->
+						<h4 class="form-subheading">Cat Information</h4>
+						<div class="cat-information">
+							<div class="form-item">
+								<label class="label" for="breed-selector">Breed</label>
+								<select class="selector" name="breed_selector" id="breed-selector" required>
+									<option selected disabled class="breed-option" value="">Choose here</option>
+									<option class="breed-option" value="abyssinian">Abyssinian</option>
+									<option class="breed-option" value="bengal">Bengal</option>
+									<option class="breed-option" value="birman">Birman</option>
+									<option class="breed-option" value="british_shorthair">British shorthair</option>
+									<option class="breed-option" value="devon_rex">Devon Rex</option>
+									<option class="breed-option" value="himalayan">Himalayan</option>
+									<option class="breed-option" value="javanese">Javanese</option>
+									<option class="breed-option" value="laperm">LaPerm</option>
+									<option class="breed-option" value="main_coon">Maine Coon</option>
+									<option class="breed-option" value="norwegian">Norwegian forest cat</option>
+									<option class="breed-option" value="oriental">Oriental</option>
+									<option class="breed-option" value="persian">Persian</option>
+									<option class="breed-option" value="Ragdoll">Ragdoll</option>
+									<option class="breed-option" value="siamese">Siamese</option>
+									<option class="breed-option" value="siberian">Siberian</option>
+								</select>
+							</div>
+							<div class="form-item">
+								<label class="label" for="birthDate">Birth date</label>
+								<input class="date" type="date" id="birthDate" max="2021-07-01" min="2013-12-31" placeholder="yy-mm-dd"
+									required>
+							</div>
+						</div>
+						<!-- Radio buttons -->
+						<fieldset class="fieldset-competition-classes">
+							<h4 class="form-subheading">Choose competition class</h4>
+							<div class="radio-container">
+								<div class="inner-radio-group">
+									<label class="inner-radio">
+										<input class="radio-input" type="radio" name="competition-class" value="kitten" required checked>
+										<span class="custom-radio"></span>
+										Kitten
+									</label>
+									<label class="inner-radio">
+										<input class="radio-input" type="radio" name="competition-class" value="championship">
+										<span class="custom-radio"></span>
+										Championship
+									</label>
+								</div>
+								<div class="inner-radio-group">
+									<label class="inner-radio">
+										<input class="radio-input" type="radio" name="competition-class" id="class3" value="premiership">
+										<span class="custom-radio"></span>
+										Premiership
+									</label>
+									<label class="inner-radio">
+										<input class="radio-input" type="radio" name="competition-class" id="class4" value="household-pet">
+										<span class="custom-radio"></span>
+										Household pet
+									</label>
+								</div>
+							</div>
+						</fieldset>
+						<!-- Checkboxes -->
+						<h4 class="form-subheading">Before you submit</h4>
+						<div class="checkbox-wrapper">
+							<div class="checkbox">
+								<input class="checkbox-input" type="checkbox" name="agreeGDPR" id="GDPR-check" required>
+								<label for="GDPR-check">I agree with Terms and Conditions </label>
+							</div>
+							<div class="checkbox">
+								<input class="checkbox-input" type="checkbox" name="agreeNewsletter" id="newsletter-check" required>
+								<label for="newsletter-check">I want to receive ICA newsletter</label>
+							</div>
+						</div>
+						<!-- Submit button	 -->
+						<div class="submit-wrapper">
+							<button class="submit-button" type="submit">Submit </i></button>
+						</div>
+					</div>
+				</form>
+		</section>
+		<!-- Accordion -->
+		<section class="accordion-wrapper">
+			<h1 class="accordion-heading">Frequently asked questions</h1>
+			<div class="accordion-inner-wrapper">
+				<div class="accordion-question"> How can I register my cats for competition?</div>
+				<div class="accordion-answer">
+					<p class="answer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				</div>
+				<div class="accordion-question">What are the fees to enter the competition?</div>
+				<div class="accordion-answer">
+					<p class="answer-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+						eu fugiat nulla pariatur.</p>
+				</div>
+				<div class="accordion-question">Where can I but tickets to the show?</div>
+				<div class="accordion-answer">
+					<p class="answer-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+						eu fugiat nulla pariatur. </p>
+				</div>
+				<div class="accordion-question">Can I come to the show even if I don't like cats?</div>
+				<div class="accordion-answer">
+					<p class="answer-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+						eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+						officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+			<div class="margin-fixer"></div>
+		</section>
+	</div>
+	<!-- Footer -->
+	<footer>
+		<div class="footer-general">
+			<div class="footer-column">
+				<img src="./logo_white.png" class="logo-footer" alt="Logo">
+				<div class="somedia-buttons">
+					<a href="" class="fa fa-facebook"></a>
+					<a href="" class="fa fa-twitter"></a>
+					<a href="" class="fa fa-linkedin"></a>
+					<a href="" class="fa fa-instagram"></a>
+				</div>
+			</div>
+			<div class="footer-column">
+				<a class="footer-link" href="">
+					<img class="footer-image" src="./cat.jpg" alt="">
+					<h4 class="footer-headline">About Cat Show</h4>
+				</a>
+			</div>
+			<div class="footer-column">
+				<a class="footer-link" href="">
+					<img class="footer-image" src="./missy.jpg" alt="">
+					<h4 class="footer-headline">Our Judging Panel</h4>
+				</a>
+			</div>
+			<div class="footer-column">
+				<a class="footer-link" href="">
+					<img class="footer-image" src="./butch.jpg" alt="">
+					<h4 class="footer-headline">Venue and Hotel</h4>
+				</a>
+			</div>
+		</div>
+		<p class="copy-right"> &#169 2021 Ekaterina Klimenko: Project Business website for Technigo bootcamp</p>
+	</footer>
+	<script src="./script.js"></script>
+</body>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
 </html>
