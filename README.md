@@ -3,12 +3,15 @@
 Project 3 of Technigo bootcamp. Build a business site containing a sign up form and FAQ accordion built with javaScript. 
 
 ## The problem
+- Use image or video in the header, for responsive webpages
+- How to use HTML forms and simple requests
+- How to modify the DOM using Javascript
 
-Learning from the previous project to structire the "blue print" first before tackling the functionality worked well and saved some time on this project. 
-
-The diffrent form selections was tricky but after a lot of tutorials and reading I managed to get the look I wanted. If I had more time I would definitely focus more on the design of the labels and default checkboxes. 
-
-I am most proud of getting the javascript to work even though I needed to get some help with the last piece getting the arrow on the header to turn on click. 
+Requirements:
+- Style your page
+- Site should have a header with responsive image/video
+- Site should have a signup form with at least three different input types
+- Site should have an FAQ accordion, built with JavaScript
 
 ## View it live
 Link to project: https://project3mariasparre.netlify.app/

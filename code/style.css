@@ -34,7 +34,6 @@ align-items: center;
 justify-content: center;
 color:#ffff;
 flex-direction: column;
-
 }
 .container-menu {
   display: flex;
@@ -54,30 +53,32 @@ flex-direction: column;
 }
 .container-hero {
   position: relative;
- 
 }
 .container-forms {
   background: white; 
   color: black;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  padding: 10px 20px;
   border-radius: 20px;
   margin: 20px;
-  width: 350px;
+  /* width: 50%; */
 }
 .form {
   display: flex;
+  flex-direction: column;
   background: black;
   color: white;
   cursor: pointer;
-  }
+  justify-content: space-evenly;
+}
 /* yoga level dropdown */
 input [type=text], select { 
   padding: 5px;
   border-radius: 5px;
   font-size: 14px;
-  width: 250px;
+  width: 80%;
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
 }
 .yoga-level {
@@ -128,7 +129,6 @@ input [type=text], select {
 .container-faq {
   display: flex;
   border-radius: 20px;
-  padding:10px;
 }
 .accordion-faq {
   font-size: 20px;
@@ -136,7 +136,6 @@ input [type=text], select {
   padding: 20px;
   width: 50%;
   margin: 20px;
-  font-size: 20px;
 }
 .accordion {
   margin: 0px;
@@ -145,12 +144,8 @@ input [type=text], select {
   color: black;
   border-radius: 5px;
   cursor: pointer;
-  width: 300px;
   border:2px solid #2b5876; 
-  transition: background 3s ease-in-out;  
-}
-.accordion-question:hover {
-  background: linear-gradient(to left, #29323c, #485563, #2b5876);
+  transition: background 3s ;  
 }
 .accordion-question {
   margin: 0;
@@ -180,7 +175,7 @@ input [type=text], select {
   display:block;
 }
 .arrow {
-  display: inline-block;
+  /* display: inline-block; */
   color: whitesmoke;
   font-size: 15px;
   float: right;
@@ -192,6 +187,7 @@ input [type=text], select {
 }
  .footer {
   text-align: center;
+  justify-content: center;
   color: whitesmoke;
   margin: 20px;
 }
@@ -205,9 +201,8 @@ input [type=text], select {
   .form {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-  }
-  
+    justify-content: center;  
+  } 
 } 
 /* tablet */
 @media (min-width: 768px) {
