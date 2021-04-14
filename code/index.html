@@ -3,28 +3,159 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Online Painting Classes</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <!--HEADER-->
+    <header>
+     <!-- Hero image  -->
+      <div class="hero">
+        <picture>
+          <source srcset="./image/hero-image-mobile.jpg" media="(max-width: 667px)">
+          <source srcset="./image/hero-image-tablet.jpg" media="(max-width: 1023px)">
+          <img class="hero-image" src="./image/hero-image-desktop.jpg" alt="Hero image"/> 
+        </picture>
+        <div class="hero-content">
+          <div class="welcome-message">
+            <h1 class="welcome-heading" >Online Painting Classes</h1>
+            <p class="welcome-text" >Develop your artist´s eye and learn how to paint.</p>
+          </div>
+            <button class="welcome-button" >BOOK YOUR PLACE</button>
+        </div>
+      </div>
+
+      <!-- Nav bar -->
+      <div class="navigation-container">
+        <div class="logo-icon">
+          <div class="logo">Art & Craft Studio</div>
+          <img class="brush-icon" src="./image/icon-brush.png" alt="Paint Brush Icon">
+        </div>
+        <nav class="navigation">
+          <a class="nav-element" href="#">HOME</a>
+          <a class="nav-element" href="#">PAINTING</a>
+          <a class="nav-element" href="#">COMMUNITY</a>
+          <a class="nav-element" href="#">CONTACT</a>
+        </nav>
+      </div>
+    </header>
+
+<!-- MAIN CONTENT-->
+    <div class="main-content">  
 
     <!-- Signup form -->
+      <section class="form-container">
+        <form class="form" action="http://httpbin.org/anything" method="post">
+          <h2 class="form-header">Sign up</h2>
+          <label class="input-label" for="fullName">
+            Full Name
+            <input class="input" type="text" name="fullName" placeholder="Irina Jekabsone" required>
+          </label>
+          <label class="input-label" for="email">
+            Email Address
+            <input class="input"type="email" name="email" placeholder="irina.jekabsone@gmail.com" required>
+          </label>
+          <label class="input-label" for="phone">
+            Phone Number
+            <input class="input"type="tel" name="phone" placeholder="4602512563" required>
+          </label>
+          <label class="input-experience" for="experience">
+            What is your experience with painting?
+            <div class="experience-wrap">
+              <input type="radio" id="no" name="experience" value="no">
+              <label for="no">I have no experience</label>
+            </div>
+            <div class="experience-wrap">
+              <input type="radio" id="basic" name="experience" value="basic">
+              <label for="basic">I have some basic experience</label>
+            </div>
+            <div class="experience-wrap">
+              <input type="radio" id="advanced" name="experience" value="advanced">
+              <label for="advanced">I assess my skills as advanced</label>
+            </div>
+          </label>
+          <label class="input-course" for="course">
+            Choose your course
+            <select class="course" name="course">
+              <option value="day">Daytime course 11:00-14:00</option>
+              <option value="evening">Evening course 18:00-21:00</option>
+            </select>
+          </label>
+          <label class="input-color" for="favorite-color">
+            Select your favorite color: 
+            <input type="color" id="favorite-color" name="favorite-color" value="green">
+          </label>
+          <label class="input-terms" for="terms">
+            <input type="checkbox" id="terms" name="terms" value="agree" required>
+            I agree to receive instructional and promotional emails.
+          </label>      
+          <button class="submit-button" type="submit">Book your place</button>
+        </form>
+      </section>
 
-    <section class="accordion">
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      <section class="questions-container">
+        <h2 class="faq-header">Frequently Asked Questions</h2>  
+        <section class="accordion" id="accordion">
+          <div class="question" id="section1">
+            Where are classes held?
+            <span class="question-plus">+</span>
+            <span class="question-minus">-</span>
+          </div>
+          <div class="answer" id="answer-1">
+            <p>Classes are held at Art & Craft Studio, 222 St. Storvagen, Stockholm.</p>
+          </div>
+        </section>
+        <section class="accordion" id="accordion">
+          <div class="question" id="section2">
+            What is the price?
+            <span class="question-plus">+</span>
+            <span class="question-minus">-</span>
+          </div>
+          <div class="answer" id="answer-2">
+            <p>1 500SEK per month</p>
+          </div>
+        </section>   
+        <section class="accordion" id="accordion">
+          <div class="question" id="section3">
+            What supplies do I need?
+            <span class="question-plus">+</span>
+            <span class="question-minus">-</span>
+          </div>
+          <div class="answer" id="answer-3">
+            <p>Classes will have a supply list in the description, and often supplies can be provided for an additional fee.</p>
+          </div>
+        </section>
+        <section class="accordion" id="accordion">
+          <div class="question" id="section4">
+            How many students are in each class?
+            <span class="question-plus">+</span>
+            <span class="question-minus">-</span>
+          </div>
+          <div class="answer" id="answer-4">
+            <p>Class sizes are small, typically between 5 and 8 students.</p>
+          </div>
+        </section>
+        <section class="accordion" id="accordion">
+          <div class="question" id="section5">
+            How often are classes held?
+            <span class="question-plus">+</span>
+            <span class="question-minus">-</span>
+          </div>
+          <div class="answer" id="answer-5">
+            <p>Twice per week.</p>
+          </div>
+        </section>
+      </section>
+    </div>
+    <div class="footer">
+      <footer>Created by Irina Jekabsone - Technigo Bootcamp 2021</footer>
+    </div>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+    <script src="./script.js"></script>
   </body>
 </html>

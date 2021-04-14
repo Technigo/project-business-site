@@ -1,9 +1,50 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-function toggle() {
-  this.classList.toggle("active")
-}
+// Defining variables
+const section1 = document.getElementById("section1");
+const section2 = document.getElementById("section2");
+const section3 = document.getElementById("section3");
+const section4 = document.getElementById("section4");
+const section5 = document.getElementById("section5");
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
+// A function that adds and removes the class "active" on the section clicked.
+section1.addEventListener('click', () => {
+  section1.classList.toggle('active');
+  section2.classList.remove('active');
+  section3.classList.remove('active');
+  section4.classList.remove('active');
+  section5.classList.remove('active');
+});
+
+section2.addEventListener('click', () => {
+  section1.classList.remove('active');
+  section2.classList.toggle('active');
+  section3.classList.remove('active');
+  section4.classList.remove('active');
+  section5.classList.remove('active');
+});
+
+section3.addEventListener('click', () => {
+  section1.classList.remove('active');
+  section2.classList.remove('active');
+  section3.classList.toggle('active');
+  section4.classList.remove('active');
+  section5.classList.remove('active');
+});
+
+section4.addEventListener('click', () => {
+  section1.classList.remove('active');
+  section2.classList.remove('active');
+  section3.classList.remove('active');
+  section4.classList.toggle('active');
+  section5.classList.remove('active');
+});
+
+section5.addEventListener('click', () => {
+  section1.classList.remove('active');
+  section2.classList.remove('active');
+  section3.classList.remove('active');
+  section4.classList.remove('active');
+  section5.classList.toggle('active');
+});
+
+
+
