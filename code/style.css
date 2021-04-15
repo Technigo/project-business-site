@@ -1,7 +1,387 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+    margin: 0;
+    background-color: rgb(13, 15, 15);
+    font-size: 14px;
+}
 
-.active + .answer {
-  /* some styling here */
+
+/************************** HERO SECTION ************************/
+
+
+/********** HAMBURGER MENU **********/
+
+.hamburger {
+    position: absolute;
+    padding-top: 2%;
+    padding-right: 4%;
+    right: 0;
+}
+
+.hamburger-bar {
+    width: 35px;
+    height: 4px;
+    background-color: rgb(233, 240, 233);
+    margin: 6px 0;
+    border-radius: 15px;
+}
+
+
+/********** NAV BAR MENU **********/
+
+.menu-selections {
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+}
+
+li {
+    color: rgb(233, 240, 233);
+    text-decoration: none;
+    padding: 20px;
+    font-size: 16px;
+    font-family: Bangla MN;
+}
+
+li:last-child {
+    margin-right: 15px;
+}
+
+
+/******* HERO IMAGE *******/
+
+.hero {
+    position: relative;
+}
+
+.hero-image {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+}
+
+
+/******* COMPANY NAME *******/
+
+.company-title {
+    color: rgba(233, 240, 233, 0.856);
+    font-family: Snell Roundhand;
+    font-size: 36px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50px;
+}
+
+
+/************************ ACCORDION SECION **********************/
+
+.accordion {
+    border: 2px solid rgb(156, 156, 156);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.faq-header {
+    color: rgba(233, 240, 233, 0.87);
+    font-family: Bangla MN;
+    letter-spacing: 1px;
+    padding: 10px 10px 10px 15px;
+    background: rgba(18, 19, 18, 0.664);
+    border-radius: 8px;
+    border: 2px solid rgb(94, 95, 94);
+}
+
+.questions {
+    background: rgba(121, 119, 119, 0.137);
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+
+.accordion-header {
+    color: rgba(233, 240, 233, 0.87);
+    font-family: Bangla MN;
+    letter-spacing: 1px;
+    cursor: grab;
+    padding: 10px 10px 10px 20px;
+    background: rgba(20, 20, 20, 0.527);
+    border: 1px solid rgb(94, 95, 94);
+    border-radius: 8px;
+}
+
+.accordion-answer {
+    color: rgba(233, 240, 233, 0.842);
+    font-family: Bangla MN;
+    font-size: 12px;
+    padding: 10px 30px 10px 30px;
+    background: #475a5a62;
+    border: 2px solid rgb(42, 43, 42);
+    display: none;
+}
+
+.accordion-selected {
+    display: block;
+}
+
+
+/***************************** FORM SECION ***********************/
+
+
+/****** TEXT FIELDS *******/
+
+.form-fillout {
+    color: rgba(233, 240, 233, 0.87);
+    font-family: Bangla MN;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.text-fields {
+    font-size: 14px;
+    letter-spacing: 0;
+    padding: 10px 0px 20px 10px;
+}
+
+.text-box {
+    width: 240px;
+    padding: 6px;
+    border: 3px solid rgb(156, 156, 156);
+    border-radius: 8px;
+    margin: 10px 0px 10px 15px;
+}
+
+::placeholder {
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/****** RADIO BUTTONS *******/
+
+.radiobutton-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin: 10px 28px;
+    user-select: none;
+    font-family: Bangla MN;
+    font-size: 14px;
+}
+
+.radiobutton-container input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.custom-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    background-color: rgb(233, 240, 233);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.radiobutton-container:hover input~.custom-radio {
+    background-color: rgb(158, 154, 154);
+}
+
+.radiobutton-container input:checked~.custom-radio {
+    background-color: rgba(66, 92, 95, 0.89);
+}
+
+.custom-radio:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 7px;
+    height: 7px;
+    background-color: rgba(233, 240, 233, 0.87);
+    border-radius: 50%;
+    display: none;
+}
+
+.radiobutton-container input:checked~.custom-radio:after {
+    display: block;
+}
+
+
+/***** DROP DOWN MENU ******/
+
+.guest {
+    font-size: 14px;
+    letter-spacing: 0;
+    padding: 10px 10px 20px 10px;
+}
+
+.guest-drop-down {
+    margin-top: 15px;
+    margin-left: 15px;
+    padding: 4px;
+    border: 3px solid rgb(156, 156, 156);
+    border-radius: 8px;
+    color: rgb(110, 106, 106);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/***** MESSAGE FIELD ******/
+
+.message {
+    font-family: Bangla MN;
+    letter-spacing: 0;
+    padding: 20px 10px 20px 10px;
+}
+
+.message-box {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+textarea {
+    resize: vertical;
+    height: 300px;
+    width: 260px;
+    border: 3px solid rgb(156, 156, 156);
+    border-radius: 8px;
+    padding: 10px 0px 0px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/***** SUBMIT BUTTON ******/
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button {
+    width: 170px;
+    height: 38px;
+    border: 4px solid rgba(66, 92, 95, 0.89);
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    font-family: Bangla MN;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+
+/************************** FOOTER SECTION **********************/
+
+.footer {
+    color: rgba(233, 240, 233, 0.842);
+    font-family: Bangla MN;
+    font-size: 8px;
+    letter-spacing: 1px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+
+/************************** MEDIA QUARIES **********************/
+
+
+/********* TABLET *********/
+
+@media (min-width: 768px) {
+    body {
+        background-color: rgb(2, 2, 8);
+    }
+    .hero-image {
+        height: 75vh;
+    }
+    .hamburger {
+        display: none;
+    }
+    .menu-selections {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .company-title {
+        color: rgba(233, 240, 233, 0.637);
+        font-size: 55px;
+        margin-left: 25px;
+    }
+    .accordion {
+        margin-top: 20px;
+        margin-bottom: 0;
+        width: 50%;
+    }
+    .form-fillout {
+        width: 50%;
+    }
+    .text-box {
+        width: 255px;
+    }
+    textarea {
+        width: 300px;
+    }
+    .main-content {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .footer {
+        margin-bottom: 20px;
+        margin-left: 40px;
+        font-size: 12px;
+    }
+}
+
+
+/********* DESKTOP *********/
+
+@media (min-width: 1200px) {
+    body {
+        background-color: rgba(1, 1, 2, 0.959);
+    }
+    .hero-image {
+        height: 100vh;
+    }
+    li {
+        color: rgba(233, 240, 233, 0.822);
+        padding: 40px;
+        font-size: 20px;
+    }
+    .company-title {
+        color: rgba(233, 240, 233, 0.637);
+        font-size: 70px;
+        margin-left: 15px;
+        padding-left: 60px;
+    }
+    .accordion {
+        margin-top: 20px;
+        margin-bottom: 0;
+        width: 45%;
+    }
+    .form-fillout {
+        width: 55%;
+    }
+    .text-box {
+        width: 400px;
+    }
+    textarea {
+        width: 550px;
+        max-height: 150px;
+    }
 }
