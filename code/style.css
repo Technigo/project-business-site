@@ -1,7 +1,429 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+@font-face {
+  font-family: "Circular Bold";
+  src: url(./assets/circularstd-bold.otf);
+}
 
-.active + .answer {
-  /* some styling here */
+body {
+  background-color: #fafafa;
+  margin: 0;
+  font-family: "Circular Bold";
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.topbar {
+  width: 95%;
+  position: absolute;
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 50px;
+}
+
+.menu {
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.hero-img {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero-title {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN CONTAINER */
+
+.main-container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* FORM */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.form-items {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 7px;
+}
+
+input,
+select {
+  padding: 7px;
+  font-family: "Roboto", sans-serif;
+}
+
+input,
+select:hover {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid black;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+/* CUSTOM RADIO */
+
+.radio {
+  display: flex;
+}
+
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  left: 0px;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.radio-container:hover input ~ .custom-radio {
+  background-color: #ccc;
+}
+
+.radio-container input:checked ~ .custom-radio {
+  background-color: #444444;
+}
+
+.custom-radio:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 50%;
+  display: none;
+}
+
+.radio-container input:checked ~ .custom-radio:after {
+  display: block;
+}
+
+/* CUSTOM CHECKBOX */
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox {
+  position: absolute;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox-container:hover input ~ .custom-checkbox {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox {
+  background-color: #444444;
+}
+
+.custom-checkbox:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 2.8px 2.8px 0;
+  top: 3px;
+  left: 6px;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox:after {
+  display: block;
+}
+
+.submit-button {
+  margin-top: 30px;
+  padding: 4px 6px 4px 6px;
+  width: 120px;
+  font-family: inherit;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  align-self: center;
+  border: none;
+}
+
+.submit-button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+/* ACCORDION */
+
+.accordion-container {
+  margin: auto;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq {
+  margin-bottom: 40px;
+}
+
+.accordion {
+  border: 1px solid grey;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+.question {
+  margin: 0;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.answer {
+  margin: 0;
+  border-top: 1px dotted grey;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  height: 0px;
+  padding-left: 10px;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 1s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+}
+
+.active {
+  opacity: 1;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: black;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.footer-logo {
+  width: 150px;
+}
+
+.footer-text {
+  margin: 10%;
+}
+
+.bold-text {
+  font-family: "Circular Bold";
+  font-size: 18px;
+}
+
+.footer-text a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.copywrite {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  font-size: 10px;
+}
+
+.copywrite a {
+  color: white;
+}
+
+/* RESPONSIVE TABLET */
+
+@media (min-width: 667px) and (max-width: 1024px) {
+  .logo {
+    width: 150px;
+    height: 50px;
+  }
+
+  .hero-title {
+    font-size: 45px;
+  }
+
+  .form {
+    width: 500px;
+    margin: auto;
+  }
+
+  .accordion-container {
+    width: 500px;
+    margin: auto;
+  }
+
+  .footer {
+    margin-top: 50px;
+  }
+}
+
+/* RESPONSIVE DESKTOP */
+
+@media (min-width: 1025px) {
+  .logo {
+    width: 150px;
+    height: 50px;
+  }
+
+  .hero-title {
+    font-size: 55px;
+  }
+
+  .main-container {
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
+  .form {
+    width: 400px;
+    margin: 0;
+  }
+
+  input,
+  select {
+    width: 400px;
+    padding: 7px;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .accordion-container {
+    width: 400px;
+    margin: 0;
+  }
+
+  .footer {
+    padding: 80px 100px 50px;
+    font-size: 16px;
+    margin-top: 50px;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    display: block;
+    justify-content: center;
+  }
+
+  .footer-text {
+    margin: 0;
+    width: 50%;
+  }
 }

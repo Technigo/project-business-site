@@ -3,28 +3,230 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Accoutable</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/e58657a886.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+   <!-- Hero Section -->
 
-    <!-- Signup form -->
+    <header class="hero">
+      <div class="topbar">
+        <img class="logo" src="./assets/logo.png"/>
+        <nav class="navigation">
+          <a class="menu" href="#">Om oss</a>
+          <a class="menu" href="#">Tjänster</a>
+          <a class="menu" href="#">Kontakt</a>
+        </nav>
+      </div>
+      <picture>
+        <source srcset="./assets/hero-img-mobile.jpg" media="(max-width: 767px)"/>
+        <source srcset="./assets/hero-img-tablet.jpg" media="(max-width: 1199px)"/>
+        <img class="hero-img" src="./assets/hero-img-desktop.jpg" alt="Picture of dandilion" />
+      </picture>
+      <h1 class="hero-title">Outsourca din ekonomihantering <br>- så du kan fokusera på annat</h1>
+    </header>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+    <main class="main-container">
+      <!-- Signup form -->
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+        <form class="form" action="https://httpbin.org/anything" method="POST">
+          <h2 class="form-heading">Offertförfrågan</h2>
+          <h3 class="section-heading">Kontaktuppgifter</h3>
+
+          <div class="form-items">
+            <label for="name">Namn</label>
+            <input type="text" name="name" id="name" required>
+          </div>
+
+          <div class="form-items">
+            <label for="company">Företagsnamn</label>
+            <input type="text" name="company" id="company" required>
+          </div>
+          
+          <div class="form-items">
+            <label for="org-nr">Organisationsnummer</label>
+            <input type="number" name="org-nr" id="org-nr" required>
+          </div>
+
+          <div class="form-items">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" required>
+          </div>
+
+          <div class="form-items">
+            <label for="phone">Telefon</label>
+            <input type="tel" name="phone" id="phone" required>
+          </div>
+
+          <h3 class="section-heading">Löpande tjänster</h3>
+
+          <div class="form-items">
+            <label for="bank">Bank</label>
+            <select id="bank" name="bank">
+              <option value="handelsbanken">Handelsbanken</option>
+              <option value="seb">SEB</option>
+              <option value="swedbank">Swedbank</option>
+              <option value="nordea">Nordea</option>
+              <option value="skandiabanken">Skandiabanken</option>
+              <option value="other">Annan bank</option>
+            </select>
+          </div>
+
+          <div class="form-items">
+            <label for="economysystem">Ekonomisystem</label>
+            <select id="economysystem" name="economysystem" id="economysystem">
+              <option value="fortnox">Fortnox</option>
+              <option value="visma">Visma</option>
+              <option value="nav">Nav</option>
+              <option value="pe">PE</option>
+              <option value="marathon">Marathon</option>
+              <option value="other">Annat</option>
+            </select>
+          </div>
+
+          <div class="form-items">
+            <label for="myInvoices">Antal leverantörsfakturor per månad: <span id="numberOfInvoices"></span></label>
+            <input name="monthly-invoices" type="range" min="1" max="100" value="0" class="slider" id="myInvoices">
+          </div>
+
+          <div class="form-items">
+            <label for="myExpenses">Antal utlägg per månad: <span id="numberOfExpenses"></span></label>
+            <input name="monthly-expenses" type="range" min="10" max="1000" value="0" class="slider" id="myExpenses">
+          </div>
+
+          <p>Behöver du hjälp med lönehantering?</p>
+
+          <div class="radio">
+            <label for="salaries-yes" class="radio-container">
+              Ja
+            <input type="radio" name="salaries" value="yes" id="salaries-yes">
+            <span class="custom-radio"></span> 
+            </label>
+            <label for="salaries-no" class="radio-container">
+              Nej
+            <input type="radio" name="salaries" value="no" id="salaries-no">
+            <span class="custom-radio"></span> 
+            </label>
+          </div>
+
+          <p>Vilka övriga tjänster behöver du hjälp med?</p>
+
+          <div class="checkbox">
+            <label for="momsdeklaration" class="checkbox-container"> 
+              Momsdeklaration
+            <input type="checkbox" name="other-services" value="momsdeklaration" id="momsdeklaration">
+            <span class="custom-checkbox"></span>  
+            </label>
+
+            <label for="budget" class="checkbox-container"> 
+              Budgetering
+            <input type="checkbox" name="other-services" value="budget" id="budget">
+            <span class="custom-checkbox"></span>  
+            </label>
+
+            <label for="income" class="checkbox-container"> 
+              Inkomstdeklaration
+            <input type="checkbox" name="other-services" value="income" id="income">
+            <span class="custom-checkbox"></span> 
+            </label>
+
+            <label for="cashflow" class="checkbox-container"> 
+              Likviditetsplanering
+            <input type="checkbox" name="other-services" value="cashflow" id="cashflow">
+            <span class="custom-checkbox"></span> 
+            </label>
+
+            <label for="reports" class="checkbox-container"> 
+              Rapportering
+            <input type="checkbox" name="other-services" value="reports" id="reports">
+            <span class="custom-checkbox"></span> 
+            </label>
+
+            <label for="bokslut" class="checkbox-container"> 
+              Årsbokslut/årsredovisning 
+            <input type="checkbox" name="other-services" value="bokslut" id="bokslut">
+            <span class="custom-checkbox"></span> 
+            </label>
+          </div>
+          <button class="submit-button" type="submit">Skicka</button>
+        </form>
+      </div>
+    
+      <!-- FAQ -->
+
+  <div class="accordion-container"> 
+    <h2 class="faq">FAQ</h2>
+    <div class="accordion">
+      <h3 id="question-1" class="question">
+        <i id="arrow1" class="fas fa-chevron-up"></i>
+        Hjälper ni med leverantörsfakturor?</h3>
+      <p id="answer-1" class="answer">Ja, det kan vi hjälpa till med!</p>
+    </div>
+
+    <div class="accordion">
+      <h3 id="question-2" class="question">
+        <i id="arrow2" class="fas fa-chevron-up"></i>
+        Ut ac odio maximus?</h3>
+      <p id="answer-2" class="answer">Suspendisse ac hendrerit ante. Etiam rhoncus sagittis massa.</p>
+    </div>
+
+    <div class="accordion">
+      <h3 id="question-3" class="question">
+        <i id="arrow3" class="fas fa-chevron-up"></i>
+        Nulla quis dignissim ex?</h3>
+      <p id="answer-3" class="answer">Fusce varius justo pharetra, congue magna sed, aliquam mi. </p>
+    </div>
+
+    <div class="accordion">
+      <h3 id="question-4" class="question">
+        <i id="arrow4" class="fas fa-chevron-up"></i> 
+        Donec vitae convallis odio?</h3>
+      <p id="answer-4" class="answer">Donec posuere faucibus quam, vitae dapibus nisl. Pellentesque lacinia magna ante, non lacinia nunc rutrum ut. Vivamus at viverra urna, id tempor lectus.</p>
+    </div>
+
+    <div class="accordion">
+      <h3 id="question-5" class="question">
+        <i id="arrow5" class="fas fa-chevron-up"></i>
+        Donec vulputate risus et enim scelerisque ultrices?</h3>
+      <p id="answer-5" class="answer">Nulla lorem diam, lobortis ac magna vitae, maximus egestas leo. Aenean cursus dui sit amet porttitor accumsan.</p>
+    </div>
+
+    <div class="accordion">
+      <h3 id="question-6" class="question">
+        <i id="arrow6" class="fas fa-chevron-up"></i>
+        Maecenas tempor laoreet arcu et euismod?</h3>
+      <p id="answer-6" class="answer">Suspendisse commodo tortor sed enim varius, non luctus nisi fermentum. Sed aliquet molestie ipsum, eu sollicitudin felis tempus quis.</p>
+    </div>
+  </div>
+
+    </main>
+
+<!-- FOOTER -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="logo-container">
+          <img class="footer-logo" src="assets/footer-logo.png"/>
+        </div>
+        <div class="footer-text">
+          <p class="bold-text">Ingen huvudvärk, inget krångel, ingen stress och inga bekymmer.</p>
+          <p class="normal-text">Du kan fokusera på att driva ditt företag, samtidigt som du vet att din bokföring och lönehantering bokförs korrekt och effektivt.</p>
+          <div class="contact-container">
+            <a href="mailto:info@accountable.se">info@accountable.se</a>
+            <a href="tel:0046707737176">+46 707 73 71 76</a>
+          </div> 
+        </div>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="copywrite">
+        <small>Copywrite Siri Hemsley 2020 & created with permission from <a href="https://accountable.se/">Accoutable AB</a></small>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+    </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
