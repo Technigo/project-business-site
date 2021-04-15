@@ -1,30 +1,115 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To the rescue!</title>
+  <!-- CSS & LINK -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HERO IMAGES -->
+
+  <header class="hero">
+    <picture>
+      <source srcset="./images/diving-mobil.jpg" media="(max-width: 767px)">
+      <source srcset="./images/diving-tablet.jpg" media="(max-width: 1024px)">
+      <img class="hero-image" src="./images/diving-desktop.jpg" alt="Hero Image">
+    </picture>
+    <h1 class="hero-title">Ocean clean up</h1>
+    <p class="p-header">Our mission is to keep the amazing oceans clean and healthy for all creatures to enjoy for
+      generations to come. Join us on
+      a clean up dive!</p>
+  </header>
+
+  <div class="h2">
+    <h2>To the rescue!</h2>
+  </div>
+
+  <!-- ACCORDION -->
+
+  <main class="big-container">
 
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <button class="acc-button" id="button1">What we do</button>
+      <div class="info">
+        <p class="info-content" id="info-content-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <button class="acc-button" id="button2">How you can help</button>
+      <div class="info">
+        <p class="info-content" id="info-content-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+
+    <!-- SIGNUP FORM -->
+    <section class="form-container">
+
+      <form action="http://httpbin.org/anything" method="POST">
+
+        <div class="row">
+          <div class="colum25">
+            <label for="fullname">Full Name</label>
+          </div>
+          <div class="colum75">
+            <input id="fullname"class="text-field" type="text" name="fullname" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="colum25">
+            <label for="email">E-mail</label>
+          </div>
+          <div class="colum75">
+            <input id="email" class="text-field" type="Email" name="email" id="email" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="colum25">
+            <label for="logged-dives">Logged Dives</label>
+          </div>
+          <div class="colum75">
+            <select name="logged-dives" id="Logged Dives" required>
+              <option value="0-300">0-300</option>
+              <option value="300-600">300-600</option>
+              <option value="600+">600+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="colum25">
+            <label for="certification">Certification</label>
+          </div>
+          <div class="colum75">
+            <input id="Open Water" type="radio" id="Open Water" name="certification" value="Open Water" required>
+            <label for="Open Water">Open Water</label><br>
+            <input id="Advanced" type="radio" id="Advanced" name="certification" value="Advanced">
+            <label for="Advanced">Advanced</label><br>
+            <input id="Divemaster" type="radio" id="Divemaster" name="certification" value="Divemaster">
+            <label for="Divemaster">Divemaster</label><br>
+          </div>
+        </div>
+
+        <div class="row-btn">
+          <input class="btn" type="submit" value="Be an ocean rescuer!">
+        </div>
+      </form>
+
+    </section>
+  </main>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="./script.js"></script>
+
+</body>
+
 </html>
