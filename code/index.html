@@ -3,28 +3,141 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>TravelBug</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
+
+
   <body>
-    <!-- video or image as a header is cool :) -->
+
+    <header class="header">
+      <picture>
+        <source scr="https://images.unsplash.com/photo-1526723476341-307183286978?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" media="(max-width: 600px)">
+        <source scr="https://images.unsplash.com/photo-1526723476341-307183286978?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" media="(max-width: 900)">
+        <img class="header-image" src="https://images.unsplash.com/photo-1526723476341-307183286978?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" alt="Hero Image">
+      </picture>
+      <h1 class="header-text">Travel the World</h1>
+      <h3 class="header-under-text">Find Inspiration for Your Next Post-Covid Trip</h3>
+      <a class="hero-btn" href="https://www.momondo.se/?ispredir=true">Book Your Trip Now!</a>
+      <nav class="navbar">
+        <div>
+          <img class="logo" src="https://picsvg.com/example/owl.svg" alt="Logo">
+        </div>
+        <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div class="menu">
+          <a href="https://images.unsplash.com/photo-1584005609794-ed5c60133802?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2498&q=80">ADVENTURE</a>
+          <a href="https://images.unsplash.com/photo-1512552288940-3a300922a275?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2102&q=80">RELAX</a>
+          <a href="https://images.unsplash.com/photo-1504896287989-ff1fbde00199?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2390&q=80">GETAWAY</a>
+        </div>
+      </nav>
+    </header>
 
     <!-- Signup form -->
+    <div class="form-faq-container">
+      <section>
+        <form class="form" action="https://httpbin.org/anything" method="post">
+            <h3>Create an Account</h3>
+            <input class="input input-box" type="text" name="name" placeholder="Name" required>
+            <input class="input input-box" type="email" name="email" placeholder="Email" required>
+            <input class="input input-box" type="password" name="password" placeholder="Password" required>
+            <input class="input input-box" type="password" name="comfirmed password" placeholder="Confirm Password" required>
+            <label for="form-select"> What travel floats your boat?</label>
+            <select id="form-select" name="form-select" class="form-select">
+              <option value="adventure">Adventure</option>
+              <option value="romantic">Romantic</option>
+              <option value="luxury">Luxury</option>
+              <option value="backpacking">Backpacking</option>
+              <option value="family">Family</option>
+            </select>
+            <p>Do you want to recieve our Newsletter?</p>
+            <div class="radio">
+              <label for="radio-1">Yes!</label>
+              <input id="radio-1" name="radio" type="radio">
+              <label for="radio-2">No!</label>
+              <input id="radio-2" name="radio" type="radio">
+            </div>
+            <label class="input checkbox">
+              <input type="checkbox" name="checkbox" checked>
+              I Agree to the Terms and Conditions
+            </label>
+            <button class="input signup-btn" type=“submit”>SIGN UP</button>
+        </form>
+      </section>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+      <section class="accordion-container">
+        <!-- Accordion -->
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <h1 class="faq-header">FAQ</h1>
+        <div class="accordion">
+          <div class="question" id="accordion-question1">
+            <i class="fas fa-chevron-right" id="fas-1"></i>
+            <p>How much?</p> 
+          </div>
+          <div id="accordion-answer1" class="accordion-answer">
+            <p class="animate__animated animate__pulse">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+        <div class="accordion">
+          <div class="question" id="accordion-question2">
+            <i class="fas fa-chevron-right" id="fas-2"></i>
+            <p>When?</p>
+          </div>
+          <div id="accordion-answer2" class="accordion-answer">
+            <p class="animate__animated animate__pulse">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="question" id="accordion-question3">
+            <i class="fas fa-chevron-right" id="fas-3"></i>
+            <p>Why?</p>
+          </div>
+          <div id="accordion-answer3" class="accordion-answer">
+            <p class="animate__animated animate__pulse">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="question" id="accordion-question4">
+            <i class="fas fa-chevron-right" id="fas-4"></i>
+            <p>Porque?</p>
+          </div>
+          <div id="accordion-answer4" class="accordion-answer">
+            <p class="animate__animated animate__pulse">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="question" id="accordion-question5">
+            <i class="fas fa-chevron-right" id="fas-5"></i>
+            <p>Where?</p>
+          </div>
+          <div id="accordion-answer5" class="accordion-answer">
+            <p class="animate__animated animate__pulse">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-instagram"></i>
+    </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

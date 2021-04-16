@@ -2,6 +2,308 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+body {
+  margin: 0;
+}
+
+/* NAV-BAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 10px;
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 92%;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.hamburger {
+  display: flex;
+  height: 40px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 5px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.hamburger-selected {
+  transform: rotate(90deg);
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 230%;
+  font-weight: 900;
+  margin-left: 42px;
+}
+
+/* HERO-IMAGE */
+
+.header-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+}
+
+.header-text {
+  position: absolute;
+  bottom: 50%;
+  left: 8%;
+  font-family: "Tulpen One", cursive;
+  font-size: 778%;
+  color: rgb(60, 60, 60);
+  font-weight: lighter;
+}
+
+.header-under-text {
+  position: absolute;
+  bottom: 44%;
+  left: 8%;
+  font-family: "Tulpen One", cursive;
+  font-size: 370%;
+  color: rgb(60, 60, 60);
+  font-weight: lighter;
+}
+
+.hero-btn {
+  border: 2px solid #3C3C3C;
+  border-radius: 45px;
+  background-color: black;
+  padding: 20px;
+  position: absolute;
+  top: 56vh;
+  left: 7vw;
+  font-size: 25px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  transition: background .5s ease-in-out;
+  opacity: 0.5;
+}
+
+.hero-btn:hover {
+  opacity: 0.6;
+  background-color: white;
+  color: black;
+}
+
+/* FORM */
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 0.2px solid #f8f1f1;
+  width: 400px;
+  height: 100%;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #B4C7D3;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.input {
+  width: 90%;
+  margin-bottom: 25px;
+}
+
+.input-box {
+  background-color: #D2D6D9;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 0 10px 20px;
+}
+
+.form-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.signup-btn {
+  border-radius: 15px;
+  border: none;
+  padding: 10px 7px 10px 7px;
+  background-color: rgba(230, 0, 0, 0.6);
+  cursor: pointer;
+  width: 40%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+}
+
+.signup-btn:hover {
+  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.3);
+}
+
+/* FAQ */
+
+.faq-header {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.accordion {
+  margin-bottom: 20px;
+}
+
+.question {
+  background-color: #F0ECEC;
+  padding: 20px 0;
+  margin: 0 auto;
+  border-radius: 5px;
+  width: 400px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  cursor: grab;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 0;
+}
+
+.accordion-answer {
+  padding: 20px 0 20px 0;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 0 0 5px 5px;
+  width: 400px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  display: none;
+  background-color: white;
+  border: 0.2px solid #F0ECEC;
+}
+
+.accordion-answer-display {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.question-border-radius {
+  border-radius: 5px 5px 0 0;
+}
+
+.fas {
+  color: rgba(230, 0, 0, 0.6);
+}
+
+.fas-selected {
+  transform: rotate(90deg);
+}
+
+.radio {
+  margin-bottom: 20px;
+}
+
+/* FORM AND FAQ CONTAINER */
+
+.form-faq-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #D2D6D9;
+  height: 100px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fab {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+/* MEDIA QUERIES */
+
+
+@media (max-device-width: 667px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (min-device-width: 668px) and (max-device-width: 1024px) {
+  .menu {
+    display: none;
+  }
+  
+}
+
+@media (min-device-width: 1025px) {
+  .hamburger {
+    display: none;
+  }
+
+  .form-faq-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .header-under-text {
+    bottom: 36%;
+    left: 8%;
+    font-size: 600%;
+  }
+
+  .header-text {
+    bottom: 50%;
+    left: 8;
+    font-size: 900%;
+  }
+
+  .hero-btn {
+    top: 60vh;
+    left: 8vw;
+    font-size: 39px;
+  }
+}
+
+@media (min-device-width: 1698px) {
+  .hamburger {
+    display: none;
+  }
+
+  .form-faq-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
