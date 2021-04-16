@@ -54,7 +54,8 @@ body {
 .nav-menu{
   margin: 20px 20px;
   font-size: 20px;
-  color: rgb(144, 194, 113);
+  color: white;
+  
 }
 
 a:link {
@@ -67,24 +68,24 @@ a:hover {
 
 .user-sections {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
 }
 
 .form-section {
-  width: 35%;
+  width: 100%;
  
 }
 
 .form {
-  background: rgb(144, 194, 113);
-  border-radius: 4px;
+  border: solid grey 1px;
   padding: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 100%;
+  margin: 5%;
+  width: 40%;
 }
 
 .form h4 {
@@ -132,15 +133,24 @@ label {
 }
 
 .accordion {
-  background: rgb(144, 194, 113);
-  border-radius: 4px;
+  background: rgba(206, 207, 205, 0.7);
+  border-bottom: black solid 1px;
   padding: 50px;
   margin-top: 100px;
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  width: 35%;
-  height: 300px;
+  height: 450px;
+}
+
+.accordion-header {
+  width: 80%;
+}
+
+.question-container {
+  border-bottom: solid black 1px;
+  width: 80%;
+  cursor: pointer;
 }
 
 .answer {
@@ -152,7 +162,23 @@ label {
 }
 
 
-@media screen and (min-width:768px)and (max-width:1199px) {
+@media screen and (max-width:767px) {
+  .navbar {
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+
+
+
+@media screen and (min-width:768px)and (max-width:1168px) {
   .navbar {
     position: absolute;
     top: 0;
@@ -165,7 +191,7 @@ label {
 }
 
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1169px) {
   .navbar {
     position: absolute;
     top: 0;
@@ -178,7 +204,6 @@ label {
   .nav-menu { 
     font-size: 25px;
     cursor: pointer;
-    color: grey;
   }
 
   .hero-title {
