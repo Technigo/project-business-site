@@ -36,9 +36,6 @@ accordionHeaderOne.addEventListener('click', toggleActive)
 accordionHeaderTwo.addEventListener('click', toggleActive)
 accordionHeaderThree.addEventListener('click', toggleActive)
 
-/* THIS DOES NOT WORK, why? */
-
-
 function toggleRituals() {
   this.classList.toggle('open')
 }
