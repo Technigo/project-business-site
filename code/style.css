@@ -1,7 +1,308 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/*GENERAL*/
+html{
+  scroll-behavior: smooth;
+}
 
-.active + .answer {
-  /* some styling here */
+body{
+  margin: 0px;
+}
+
+section{
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 70px;
+}
+
+a:link, a:visited{
+  text-decoration: none;
+  color: black;
+}
+
+/*FONTS*/
+p{
+  font-family: open sans;
+  padding-bottom: 10px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+h2{
+  font-family: abril fatface;
+  font-size: 35px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h3{
+  font-family: abril fatface;
+  font-size: 35px;
+  margin: 0px;
+}
+
+
+/*HEADER*/
+.hero{ 
+  position: relative;
+}
+
+.hero-img{
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.hero-title{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  font-family: abril fatface;
+  font-size: 40px;
+  margin-top: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: pink; 
+}
+
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-family: abril fatface;
+  font-size: 17px;
+  margin-bottom: 50px;
+}
+
+/*section SERVICES*/
+
+.service-header{
+  font-size: 20px;
+  padding-bottom: 8px;
+  text-align: center;
+  border-bottom: 0.4px solid #94A5A4;
+}
+
+.service-content{
+  margin: 0px;
+  padding-bottom: 15px;
+  margin-right: 10%;
+  margin-left: 10%;
+  font-size: 15px;
+  text-align: justify;
+  display: none;
+}
+
+.service-selected{
+  display: block;
+  color: grey;
+  font-size: 15px;
+}
+
+/*section FORM*/
+.formbox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+form{
+  font-family: open sans;
+  font-size: 15px;
+  margin: 15px;
+  border: 3px solid pink;
+  border-radius: 5px;
+  padding: 15px;
+  padding-right: 20px;
+  align-items: center;
+}
+
+.formtext{
+  font-size: 15px;;
+}
+
+/*Personal Information Customer*/ 
+.personal-information{
+  padding-bottom: 9px;
+}
+
+.label{
+  min-width: 40px;
+}
+
+.labelbox{
+  width: 100%;
+  height: 25px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+.information-type{
+  font-family: abril fatface;
+  font-size: 20px;
+}
+
+.formelement-personal{
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+/*Interest Customer*/
+.formelement-interest{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.interest-options{
+  display: flex;
+  justify-content: center;
+}
+
+.interest{
+  font-family: abril fatface;
+  font-size: 20px;
+  padding-bottom: 10px;
+  border: none;
+ }
+
+/*Agreement*/
+.formelement-agreement{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.checkbox-label{
+  text-align: center;
+  font-family: abril fatface;
+  font-size: 20px;
+}
+
+/*Submit*/
+.formelement-submit{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.submit{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: abril fatface;
+  background: white;
+  border: 3px solid whitesmoke;
+  font-size: 20px;
+  box-shadow: 5px 5px 2px whitesmoke;
+}
+
+
+@media (min-width: 668px){
+  /*HEADER*/
+  .hero-title{
+    color: #DBA87A;
+    font-size: 70px;
+    justify-content: flex-start;
+    padding-left: 30px;
+  }
+
+  nav{
+    font-size: 25px;
+  }
+
+  /*GENERAL*/
+  section{
+    width: 400px;
+    margin: 10px; 
+  }
+  .maincontent-page{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  /*section FROM*/
+  form{
+    border: 3px solid #DBA87A;
+  }
+}
+
+
+@media (min-width:1200px){
+/*HEADER*/
+  .hero-title{
+    color: #BDECD5;
+    font-size:100px;
+    justify-content: flex-end;
+  }
+
+  nav{
+    font-size: 35px;
+  }
+
+    /*General*/ 
+  section{
+    width: 400px;
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+
+    /*FONTS*/
+  p{
+    font-size: 25px;
+  }
+
+  h2{
+    font-size: 55px;
+  }
+
+    /*section SERVICES*/
+
+  .service-header{
+    font-size: 25px;
+  }
+
+  .service-content{
+    font-size: 20px;
+  }
+
+  .service-selected{
+    font-size: 20px;
+  }
+
+    /*section FORM*/
+
+  form{
+    border: 3px solid #BDECD5;
+  }
+
+  .formtext{
+    font-size: 18px
+  }
+
+  .information-type{
+    font-size: 25px;
+  }
+
+  .interest{
+    font-size: 25px;
+  }
+
+  .checkbox-box{
+    font-size: 25px;
+  }
+
+  .submit{
+    font-size: 25px;
+  }
 }

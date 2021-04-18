@@ -3,28 +3,127 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>someones fotolab</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&display=swap" rel="stylesheet">
   </head>
+  
+  
+  
   <body>
-    <!-- video or image as a header is cool :) -->
+    <header class="hero">
+      <picture>
+        <source srcset="./images/img_mobile.jpg" media="(max-width: 667px)" class="hero-img">
+        <source srcset="./images/img_tablet.jpg" media="(max-width: 1199px)" class="hero-img">
+        <img class="hero-img" src="./images/img_desktop.jpg" alt="hero image"/>
+      </picture>
+      <h1 class="hero-title">someones fotolab.</h1>
+      <nav>
+        <a href="#about">about us.</a>
+        <a href="#offer">what we offer.</a>
+        <a href="#contact">let's get in touch.</a>
+      </nav>
+    </header>
 
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+  <div class="maincontent-page">
+    <section class="introduction">
+      <h2 id="about">about us.</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+          no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 
+        </p>  
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <section class="services">
+      <!-- Accordion -->
+      <h2 id ="offer">what we offer.</h2>
+      <p>
+        Lsed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquya, 
+        sed diam voluptua. At vero eos et accusam et ju
+        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 
+      </p>  
+        <div>
+        <h3 id="service-header-1" class="service-header">people</h3>
+          <p id="service-content-1" class="service-content">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+
+        <div>
+        <h3 id="service-header-2" class="service-header">fashion</h3>
+          <p id="service-content-2" class="service-content">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+  
+        <div>
+        <h3 id="service-header-3" class="service-header">events</h3>
+          <p id="service-content-3" class="service-content">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,               no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+  
+        <div>
+        <h3 id="service-header-4" class="service-header">others</h3>
+          <p id="service-content-4" class="service-content">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+            </p>
+        </div>
+    </section>
+
+    <section class="formbox">
+      <h2 id="contact">let's get in touch.</h2>
+      <form action="http://httpbin.org/anything" method="POST">
+        <div class="formelement-personal">
+          <label for="fname" class="information-type">name</label>
+            <input type="text" id="fname" name=name class="labelbox" required>
+          <label for="phone" class="information-type">phone</label>
+            <input type="text" id="phone" name=phone class="labelbox" required>
+          <label for="email" class="information-type">email</label>
+            <input type="email" id="email" name=email class="labelbox" required>
+        </div>
+
+        <label class="formelement-interest">
+          <div class="interest-options"> 
+            <p class="formtext">what are you interested in?</p>
+          </div>
+          <label class="interest-options">
+            <select name="offer" class="interest">
+              <option value="people">people</option>
+              <option value="fashion">fashion</option>
+              <option value="events">events</option>
+              <option value="others">others</option>
+            </select>
+          </label>
+        </label>
+
+        <div class="formelement-agreement">
+          <div>
+            <p class="formtext">do you agree with our conditions and 
+              to being kind to others, the world and yourself?
+            </p>
+          </div>
+          <label for="checkbox-box" class="checkbox-label">
+            <input id="checkbox-box" type="checkbox" class="checkbox" name="agree" value="agree" required/>yes - i do!
+          </label>
+        </div>
+
+        <label class="formelement-submit">
+          <input type="submit" id="submit-button" value="send" class="submit" required>
+        </label>
+      </form>
+    </section>
+  </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
