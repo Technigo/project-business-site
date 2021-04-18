@@ -49,7 +49,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 250px; 
-  margin: 30px 0 15px 0;
+  margin: 30px 0 15px;
   background-color: #ffffb3;
   padding: 10px;
   font-size: 13px; 
@@ -89,7 +89,7 @@ label {
 .accordion {
   flex-direction: column;
   width: 250px; 
-  margin: 15px 0 15px 0;
+  margin: 15px 0;
   background-color: #ffffb3;
   font-size: 15px;
   border: 2px solid #739900;
@@ -126,10 +126,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 .answer {
-  height: 0px;
+  height: 0;
   overflow:hidden;
   transition: height .3s ease;
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
 }
 
 .plus {
@@ -143,36 +143,36 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 /*Styling for tablet and small desktop*/
 @media (min-width:768px) and (max-width: 1200px) {
 
-.hero-text {
-font-size: 40px;
-}
+  .hero-text {
+  font-size: 40px;
+  }
 
-.ornament {
-  width: 220px; 
-}
+  .ornament {
+    width: 220px; 
+  }
 
-.form {
-width: 400px; 
-margin: 60px 0 30px 0;
-padding: 20px;
-font-size: 20px; 
-}
-
-.check-box {
-  margin: 5px;
-  font-size: 17px;
-}
-
-.submit {
-  width: 100%;
-  font-size: 17px;
-}
-
-.accordion {
+  .form {
   width: 400px; 
-  margin: 30px 0 30px 0;
-  font-size: 17px;
-}
+  margin: 60px 0 40px;
+  padding: 20px;
+  font-size: 20px; 
+  }
+
+  .check-box {
+    margin: 5px;
+    font-size: 17px;
+  }
+
+  .submit {
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .accordion {
+    width: 400px; 
+    margin: 30px 0 45px;
+    font-size: 17px;
+  }
 }
 
 
@@ -180,59 +180,48 @@ font-size: 20px;
 /*Styling for big desktop*/
 @media (min-width: 1200px) {
 
-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100vh 90vh 10vh;
-  grid-template-areas: 
-  "header header"
-  "form accordion"
-  "footer footer";
-  justify-items: center;
-}
+  .hero-text {
+  font-size: 40px;
+  }
 
-.header {
-  grid-area: header;
-}
+  .ornament {
+    width: 300px;
+  }
 
-.hero-text {
-font-size: 40px;
-}
+  .form-accordion-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+      
+  .form {
+    width: 400px; 
+    margin: 200px 300px 300px 0;
+    padding: 20px;
+    font-size: 20px; 
+  }
+      
+  .check-box {
+    margin: 5px;
+    font-size: 17px;
+  }
+      
+  .submit {
+    width: 100%;
+    font-size: 20px;
+  }
+      
+  .accordion {
+    width: 400px; 
+    margin: 200px 60px 0px;
+    font-size: 17px;
+  }
 
-.ornament {
-  width: 300px;
-}
-    
-.form {
-  width: 400px; 
-  margin: 60px 0 30px 0;
-  padding: 20px;
-  font-size: 20px; 
-  grid-area: form;
-}
-    
-.check-box {
-  margin: 5px;
-  font-size: 17px;
-}
-    
-.submit {
-  width: 100%;
-  font-size: 20px;
-}
-    
-.accordion {
-  width: 400px; 
-  margin: 30px 0 30px 0;
-  font-size: 17px;
-  grid-area: accordion;
-}
-
-.footer {
-  grid-area: footer;
-  width: 1200px;
-  justify-self: center;
-  display: flex;
-  justify-content: center;
-}
+  .footer {
+    width: 1200px;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+  }
 }
