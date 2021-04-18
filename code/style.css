@@ -1,7 +1,227 @@
+/*Styling for mobile phone*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #660033;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #ffe6eb;
+  background-image: url("./assets/Repeating-Chevrons.svg")
+   /* background by SVGBackgrounds.com */
+}
+
+.header {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(75%);
+}
+
+.hero-text {
+  position: absolute;
+  text-align: center;
+  color: white;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Parisienne', cursive;
+  font-size: 25px;
+}
+
+.hero-title {
+  margin: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 250px; 
+  margin: 30px 0 15px;
+  background-color: #ffffb3;
+  padding: 10px;
+  font-size: 13px; 
+  border: 2px solid #739900;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  margin: 3px;
+}
+
+input {
+  border: 1px solid #739900;
+}
+
+label {
+  text-align: right;
+  display: inline-block;
+}
+
+.check-box {
+  display: flex;
+  flex-direction: row;
+  margin: 3px;
+  font-size: 12px;
+}
+
+.submit {
+  background-color: #ffe6eb;
+  font-family:'Noto Sans JP', sans-serif;
+  color: #660033;
+  border: 1px solid #660033; 
+  width: 100px;
+}
+
+.accordion {
+  flex-direction: column;
+  width: 250px; 
+  margin: 15px 0;
+  background-color: #ffffb3;
+  font-size: 15px;
+  border: 2px solid #739900;
+}
+
+.h3-accordion {
+  padding: 10px;
+  font-size: 17px;
+}
+
+.question {
+  margin: 0;
+  border-top: 2px solid #739900;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+.active+.answer {
+ height: 80px;
+}
+
+.active .plus {
+  display: none;
+}
+
+.active .minus {
+  display: block;
+}
+
+.answer {
+  height: 0;
+  overflow:hidden;
+  transition: height .3s ease;
+  padding: 0 10px;
+}
+
+.plus {
+  display:block;
+}
+
+.minus {
+  display: none;
+}
+
+/*Styling for tablet and small desktop*/
+@media (min-width:768px) and (max-width: 1200px) {
+
+  .hero-text {
+  font-size: 40px;
+  }
+
+  .ornament {
+    width: 220px; 
+  }
+
+  .form {
+  width: 400px; 
+  margin: 60px 0 40px;
+  padding: 20px;
+  font-size: 20px; 
+  }
+
+  .check-box {
+    margin: 5px;
+    font-size: 17px;
+  }
+
+  .submit {
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .accordion {
+    width: 400px; 
+    margin: 30px 0 45px;
+    font-size: 17px;
+  }
+}
+
+
+
+/*Styling for big desktop*/
+@media (min-width: 1200px) {
+
+  .hero-text {
+  font-size: 40px;
+  }
+
+  .ornament {
+    width: 300px;
+  }
+
+  .form-accordion-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+      
+  .form {
+    width: 400px; 
+    margin: 200px 300px 300px 0;
+    padding: 20px;
+    font-size: 20px; 
+  }
+      
+  .check-box {
+    margin: 5px;
+    font-size: 17px;
+  }
+      
+  .submit {
+    width: 100%;
+    font-size: 20px;
+  }
+      
+  .accordion {
+    width: 400px; 
+    margin: 200px 60px 0px;
+    font-size: 17px;
+  }
+
+  .footer {
+    width: 1200px;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+  }
 }

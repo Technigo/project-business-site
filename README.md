@@ -1,12 +1,12 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+This is my business site. It's for a made-up pastry chef that holds master classes in piping. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to make a business site with a hero image,  a form and an accordion.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started with choosing a hero image and a theme and went from there. My focus was to get the form and accordion to function. I put less effort into the layout. I used the provided javascript function toggle() both for expanding and collapsing the accordion as well as for changing the plus icons to minus icons as the accordion sections expand. If I had had more time I would try to imitate the looks of some nice-looking form and accordion. I would also try to make a better desktop layout. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://elastic-pare-73b816.netlify.app 
