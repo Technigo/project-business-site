@@ -2,6 +2,254 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+/*
 .active + .answer {
   /* some styling here */
+/*}*/
+
+body {
+ margin: 0;
+ font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+ background: black;
+}
+.header{
+  display: flex; 
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.hero-image {
+  width: 100vw;
+  height: 30vh;
+  object-fit: cover;
+ }
+.hero-title {
+position: absolute;
+left: 0;
+top: 0;
+right: 0;
+left: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+color:#ffff;
+flex-direction: column;
+}
+.container-menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 20px;
+}
+.menu {
+  text-align: center;  
+  border-bottom: 1px solid whitesmoke;
+  width: 100%;
+  transition: background 2s ease;
+}
+.menu:hover {
+  background: linear-gradient(to left, #29323c, #485563, #2b5876);
+}
+.container-hero {
+  position: relative;
+}
+.container-forms {
+  background: white; 
+  color: black;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 20px;
+  /* width: 50%; */
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  background: black;
+  color: white;
+  cursor: pointer;
+  justify-content: space-evenly;
+}
+/* yoga level dropdown */
+input [type=text], select { 
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 80%;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+}
+.yoga-level {
+  padding-bottom: 20px; 
+  margin-top:20px;
+}
+/* Input fields */
+.input {
+  display: flex;
+  width: 80%;
+  margin-top: 10px;
+  border: none;
+  border: 2px solid rgb(11, 10, 10);
+  transition: border-color 0.4s ease;
+  font-size: 14px;
+  padding: 0;
+  text-align: center;
+}
+.label > p {
+  flex-direction: column;
+  justify-content: end;
+}
+.input:focus {
+  outline: none;
+  border-color:#377198;
+}
+.input:valid {
+  color: rgb(12, 151, 12);
+}
+.checkbox {
+  padding-top:20px;
+}
+.submit-button {
+  background: #173252;
+  color: whitesmoke;
+  font-size: 14px;
+  box-sizing: border-box;
+  border-radius: 20px;  
+  box-shadow: 0 4px #999;
+  margin-top: 30px;
+  display: block;
+}
+.submit-button:active {
+  background-color: #29323c;
+  box-shadow: 0 1px rgb(80, 79, 79);
+  transform: translateY(5px);
+}
+.container-faq {
+  display: flex;
+  border-radius: 20px;
+}
+.accordion-faq {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px;
+  width: 50%;
+  margin: 20px;
+}
+.accordion {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  border:2px solid #2b5876; 
+  transition: background 3s ;  
+}
+.accordion-question {
+  margin: 0;
+  padding: 10px;
+  font-weight: 200;
+  border-radius: 5px;
+  font-size: 19px;
+  border: 2px solid black;
+  color: whitesmoke;
+}
+.accordion:nth-of-type(2n + 1) {
+  background: #2b5876; 
+}
+.accordion:hover {
+  background: linear-gradient(to left, #29323c, #485563, #2b5876);
+}
+.accordion-answer {
+  font-size: 15px;
+  font-weight: 200;
+  display: none;
+  margin: 0;
+  padding: 10px;
+  background: #ffff;
+  border-radius: 0 0 5px 5px;
+}
+.accordion-selected + p {
+  display:block;
+}
+.arrow {
+  /* display: inline-block; */
+  color: whitesmoke;
+  font-size: 15px;
+  float: right;
+}
+ .accordion-question.accordion-selected .arrow {
+  transform: rotate(180deg);
+  display: inline-block;
+  font-size: 15px;
+}
+ .footer {
+  text-align: center;
+  justify-content: center;
+  color: whitesmoke;
+  margin: 20px;
+}
+
+ /* mobile */
+@media (max-width: 767px) {
+  .container-forms {
+    padding: 20;
+    width: 80%;
+  } 
+  .form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+  } 
+} 
+/* tablet */
+@media (min-width: 768px) {
+  .form {
+    flex-direction: row;
+  }
+  .hero-image {
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+  }
+  .hero-title {
+    font-size: 80px; 
+  }
+  .footer {
+    height: 20px;
+    text-align: center;
+  }
+  .container-menu {
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}  
+  /* laptop */
+@media (min-width: 1200px) {
+  .form {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .hero-image {
+    width: 100vw;
+    height: 70vh;
+    object-fit: cover;
+  }
+  .hero-title {
+    position: absolute;
+    font-size: 80px; 
+    top: 100px;
+  }
+  .form{
+    justify-content: center;
+  }
+  .container-menu {
+    font-size: 25px;
+    border-bottom: 2px solid whitesmoke;
+  }
 }

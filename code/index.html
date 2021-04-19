@@ -3,28 +3,189 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
+    <title>Yoga studio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css"/>
+    </head> 
   <body>
-    <!-- video or image as a header is cool :) -->
+    <!--  Hero section -->
+    <header class="header">
+      <picture class="container-hero">
+        <source srcset="./mobile.jpg" media="(max-width:600px)">
+        <source srcset="./tablet.jpg" media="(max-width:900px)">
+        <img class="hero-image" src="./desktop.jpg" alt="Yoga image"> 
+      </picture> 
+      <h1 class ="hero-title">Yoga Studio </h1>
+    </header>
 
+    <!-- Navigation menu -->
+    <nav class="container-menu">
+      <a class="menu menu1">About Us</a>
+      <a class="menu menu2">Yoga life</a>
+      <a class="menu menu3">News</a>
+      <a class="menu menu4">Level Up</a>
+      <a class="menu menu5">Contact Us</a>
+    </nav>
     <!-- Signup form -->
+    <form id="form" class= "form" action="http://httpbin.org/anything" method="POST" target="_blank">
+      <div class="container-forms">
+        <div class="yoga-style">
+          <h1>Sign up form</h1>
+          <p>Select your preferred yoga style:</p>
+          <label for= "yoga-opt"> 
+            <input 
+            type="radio" 
+            id="ashtanga" 
+            name="yoga-style" 
+            value="ashtanga" 
+            required>
+            Ashtanga
+            </input>
+          </label>
+          <label for=yoga-opt">
+            <input 
+            type="radio" 
+            id="bikram" 
+            name="yoga-style" 
+            value="bikram" 
+            required>
+            Bikram
+            </input>
+          </label>
+          <label for="yoga-opt">
+            <input 
+            type="radio" 
+            id="vinyasa" 
+            name="yoga-style" 
+            value="vinyasa" 
+            required>
+            Vinyasa
+            </input>
+          </label>
+            <br>
+          </label>
+        </div> 
+        <!-- Yoga level chooser -->
+        <div class= "yoga-level">
+          <p>What's your yoga level? (please select)</p> 
+          <select id="yoga-level" name="yoga-level" >
+            <option value="beginner" required >Beginner</option>
+            <option value="intermediate"required>Intermediate</option>
+            <option value="advanced" required>Advanced</option>
+            <option value="expert" required >Expert</option>
+          </select>
+        </div>
+        <!-- Input fields -->
+        <div class="input-fields">
+          <label> 
+            <label class="label" for="name"> 
+              <p> First Name:</p>
+              <input 
+              class="input" 
+              name="first-name" 
+              id="first-name" 
+              placeholder="First name" 
+              required
+              > 
+            </label>
+            <label class="label" for="name">
+             <p> Last name:</p>
+              <input 
+              class="input"
+              name="last-name" 
+              id="last-name" 
+              placeholder="Last name" 
+              required
+              >
+            </label>
+            <label class="label" for="email">
+             <p> Email:</p>
+              <input 
+              class="input" 
+              type="email" 
+              name="email"  
+              id="email" 
+              placeholder="example@email.com" 
+              required
+              >
+            </label>
+            <label class="label" for="pw">
+             <p> Password:</p>
+              <input 
+              class="input" 
+              type="password" 
+              name="password" 
+              placeholder="minimum 8 characters" 
+              id="password" 
+              minlength="8" 
+              required>
+            </label>
+          </label>
+        </div>     
+        <!--checkbox  -->
+        <div class ="checkbox">
+            <label class="label">
+              I agree: <input aria-label="I agree to Terms and conditions"type="checkbox" id="terms" name="terms" value="agree" required>
+              <a href="">Terms and conditions</a> 
+            </label>
+            <input aria-label="send in form" class="submit-button" type="submit" value="Submit" value="refresh">
+        </div>
+      </div> 
+      <!-- Accordion section-->
+      <!-- <div class = "container-faq"> -->
+        <div class="accordion-faq">
+          <h2>¿FAQ? </h2>
+          
+          <section class="accordion">
+            <h4 id="accordion-question-1" class="accordion-question">What do I bring?
+              <span class="arrow">▼</span>
+            </h4>
+              <p id="accordion-answer-1" class="accordion-answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis soluta error illo vitae sed. Veniam ratione similique ipsum molestias natus deleniti, temporibus commodi culpa, consequuntur odit inventore laudantium ullam quod!</p>
+          </section>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+          <section class="accordion">
+            <h4 id="accordion-question-2" class="accordion-question">Is yoga for me?
+              <span class="arrow">▼</span>
+            </h4>
+              <p id="accordion-answer-2" class="accordion-answer">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti necessitatibus ullam culpa ipsa pariatur. Omnis, at inventore. Molestias corrupti earum, iste obcaecati exercitationem, officia quaerat ea totam neque impedit nihil.</p>
+          </section>    
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+          <section class="accordion">
+            <h4 id="accordion-question-3" class="accordion-question">When can I start?
+              <span class="arrow">▼</span>
+            </h4>
+              <p id="accordion-answer-3" class="accordion-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a blanditiis suscipit, assumenda accusamus ex architecto, vitae placeat praesentium pariatur necessitatibus atque deleniti nisi quia. Distinctio quos delectus nobis corrupti!</p>
+          </section>  
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+          <section class="accordion">
+            <h4 id="accordion-question-4" class="accordion-question">How does the levels work? 
+              <span class="arrow">▼</span>
+            </h4>
+              <p id="accordion-answer-4" class="accordion-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a blanditiis suscipit, assumenda accusamus ex architecto, vitae placeat praesentium pariatur necessitatibus atque deleniti nisi quia. Distinctio quos delectus nobis corrupti!</p>
+          </section>  
+
+          <section class="accordion">
+            <h4 id="accordion-question-5" class="accordion-question">Where are you located?
+              <span class="arrow">▼</span>
+            </h4>
+              <p id="accordion-answer-5" class="accordion-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a blanditiis suscipit, assumenda accusamus ex architecto, vitae placeat praesentium pariatur necessitatibus atque deleniti nisi quia. Distinctio quos delectus nobis corrupti!</p>
+          </section>  
+        
+          <section class="accordion">
+            <h4 id="accordion-question-6" class="accordion-question">How much does it cost?
+              <span class="arrow">▼</span>
+            </h4>
+              <p id="accordion-answer-6" class="accordion-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a blanditiis suscipit, assumenda accusamus ex architecto, vitae placeat praesentium pariatur necessitatibus atque deleniti nisi quia. Distinctio quos delectus nobis corrupti!</p>
+          </section>  
+
+        </div>
+      <!-- </div>   -->
+    </form>   
+    
+    <footer class="footer"> 
+      <p> Maria Sparre - Project 3, Business site</p> 
+    </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
