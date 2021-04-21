@@ -1,30 +1,175 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Project 3: Business site</title>
+    <link rel="icon" href="./videos/icon-fish.png" type="image/png" sizes="16x16">
+</head>
+<body>
+    
+    <header class="hero-section">
+      <div class="hero-video">
+        <video src="./videos/video_large.mp4" autoplay muted loop></video>
+<!--         <img src="./videos/poster1.png" title="Your browser does not support the video tag."> -->
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="hero-text">
+        <h1>Two Fish</h1>
+        <h2>Contest</h2>
+        <h3>Win a scuba-diving trip for you and your special-one!</h3>
+        <a href="#intro" class="btn">Register now</a>
       </div>
+    </header>
+
+    <section id="intro">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      Vitae error ratione a dolorem odio sit omnis, iure est optio sunt nulla.
+      Vitae error ratione a dolorem.</p>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <section class="flex-parent">    
+      <!--    FORM -->
+      <div class= "flex-child form">
+        <h2>Registration</h2>
+        <form 
+            class="form-container" 
+            action="http://httpbin.org/anything" 
+            method="POST">
+            
+            <div class="form-group">
+            <label for="firstName"></label>
+            <input 
+              id="firstName" 
+              type="text" 
+              placeholder="First name *"
+              name="firstNameValue"
+              required>  
+            </div>
+            
+            <div class="form-group">
+            <label for="lastName"></label>
+            <input 
+              id="lastName" 
+              type="text"
+              placeholder="Last name *"
+              name="lastNameValue"
+              required> 
+            </div>
+    
+            <div class="form-group">
+            <label for="telephoneNumber"></label>
+            <input 
+              id="telephoneNumber" 
+              type="tel" 
+              placeholder="Telephone number"
+              name="telephoneNumberValue">
+            </div>
+            
+            <div class="form-group">
+            <label for="email"></label>
+            <input 
+              id="email" 
+              type="email"
+              placeholder="E-mail*"
+              name="emailValue"
+              required>
+            </div>
+
+            <div class="form-group">
+            <label class="checkbox-label">
+            <input
+              name="conditions"
+              type="checkbox">
+              <span class="checkbox-custom rectangular"></span>
+              </label>
+              <div class="input-title">I accept the terms and conditions</div>
+            </div>
+
+            <div>
+            <button 
+              class="form-submit" 
+              type="submit">Submit
+            </button>
+            </div>   
+          </div>
+        </form>    
+      </div> 
+
+    <!-- ACCORDION -->
+    <div class="flex-child accordion">
+      <h2>FAQ</h2>
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          How to participate
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, voluptatibus? Doloribus consequatur facilis neque a met perspiciatis cumque ullam repudiandae.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          Tickets
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, voluptatibus? Doloribus consequatur facilis neque a met perspiciatis cumque ullam repudiandae.
+          </div>
+        </div>
+      </div>
+             
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          Rules
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, voluptatibus? Doloribus consequatur facilis neque a met perspiciatis cumque ullam repudiandae.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item-header">
+          The price
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, voluptatibus? Doloribus consequatur facilis neque a met perspiciatis cumque ullam repudiandae.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="./script.js"></script>
+
   </body>
+
+  <footer>
+    
+    <div class="footer">
+
+      <p class="footer-text">
+        Business site <span>&#183;</span> Technigo Bootcamp <span>&#183;</span> Daniela Zacarías 
+      </p>
+      <div class="social-media">
+        <a href="https://www.linkedin.com/in/danielazacarias/" target="_blank">
+          <img src="./videos/icons8-linkedin-white.png" alt "LinkedIn">  
+        </a>
+        <a href="https://www.instagram.com/nini.nz/"target="_blank">
+          <img src="./videos/icons8-instagram-white.png" alt "Instagram">  
+        </a>      
+      </div> 
+      
+    </div>
+    
+  </footer>
+    
 </html>
+
