@@ -1,7 +1,106 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+body {
+  margin: 0;
+  background-color: #202020;
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+}
 
-.active + .answer {
-  /* some styling here */
+.hero-image {
+  width: 100vw;
+}
+
+header {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+
+.about {
+  color: cadetblue;
+  text-align: center;
+  font-style: italic;
+  padding: 20px 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto;
+  justify-items: center;
+}
+
+h2:hover {
+  text-shadow: 2px 2px 4px teal;
+}
+
+.grid-item {
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+} 
+
+.user-information {
+  display: grid;
+}
+
+.question {
+  background-color: cadetblue;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 0;
+}
+
+.question:hover {
+  cursor: pointer;
+  background-color: #93d2d3;
+}
+
+.answer {
+  display: none;
+  font-style: italic;
+  background-color: #cadaeb;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 0;
+} 
+
+.answer-clicked {
+  display: block;
+}
+
+footer {
+  background-color: teal;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  .grid-container {
+    grid-template-columns: 45% 45%;
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 60px;
+  }
 }

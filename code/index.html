@@ -1,30 +1,91 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luksanmäki-MTB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+<body>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+  <header>
+    <picture>
+      <source srcset="./mtb3.jpg" media="(max-width: 600px)" />
+      <source srcset="./mtb4.jpg" media="(max-width: 900px)" />
+      <img class="hero-image" src="./mtb5.jpg" alt="mtb image" />
+    </picture>
+    <div class="title">
+      <h1>Luksanmäki-MTB</h1>
+    </div>
+  </header>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+  <div class="about">
+    <p>Luksanmäki-MTB is a group of eager mountain bikers who love challenges and mud.</p>
+  </div>
+
+  <!-- sign up form -->
+  <div class="grid-container">
+    <div class="grid-item">
+      <h2>Join Us!</h2>
+      <form class="form" action="https://httpbin.org/anything" method="POST">
+        <div class="user-information">
+          <label for="first-name">First name:</label>
+          <input name="first-name" type="text" id="first-name" placeholder="Your first name" />
+          <label for="last-name">Last name:</label>
+          <input name="last-name" type="text" id="last-name" placeholder="Your last name" />
+          <label for="email">Email:</label>
+          <input name="email" type="email" id="email" required placeholder="your@email.com" />
+        </div>
+        <div class="radiobuttons">
+          <h3>Which one do you prefer?</h3>
+          <input type="radio" id="bike1" name="bike" value="trek" />
+          <label for="bike1">TREK</label>
+          <input type="radio" id="bike2" name="bike" value="cannondale" />
+          <label for="bike2">Cannondale</label>
+          <input type="radio" id="bike3" name="bike" value="other" />
+          <label for="bike3">Other</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox" required />
+          <label for="checkbox">I agree <a href="#">terms and conditions</a></label>
+        </div>
+        <div class="submit-button">
+          <input type="submit" value="SUBMIT" />
+        </div>
+      </form>
+    </div>
+
+    <!-- Accordion -->
+    <div class="grid-item">
+      <section class="accordion">
+        <h2>FAQ</h2>
+        <div class="accordion-section">
+          <h3 class="question" id="question1">What is this?</h3>
+          <p class="answer" id="answer1">Lorem ipsum...</p>
+        </div>
+        <div class="accordion-section">
+          <h3 class="question" id="question2">Do I need a bike?</h3>
+          <p class="answer" id="answer2">Lorem ipsum...</p>
+        </div>
+        <div class="accordion-section">
+          <h3 class="question" id="question3">I'm a total beginner. Can I join?</h3>
+          <p class="answer" id="answer3">Lorem ipsum...</p>
+        </div>
+        <div class="accordion-section">
+          <h3 class="question" id="question4">What is "Luksanmäki"?</h3>
+          <p class="answer" id="answer4">Lorem ipsum...</p>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <footer>Honkonen A-K 2021</footer>
+
+  <script src="./script.js"></script>
+
+</body>
+
 </html>
