@@ -2,29 +2,190 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,600;1,200&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/025421cb6e.js" crossorigin="anonymous"></script>
+    <link rel='icon' href='favicon.ico' type='image/x-icon'/>
+    <link rel="stylesheet" href="./style.css">
+    <title>YOGAone</title>
   </head>
+ 
   <body>
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <header class="hero-header">
+      <video class="hero-video" autoplay loop>
+        <source src="./assets/video/pink-and-blue-liquid.mp4" type="video/mp4">
+        <img src="./assets/images/pink-and-blue-liquid.png" alt="Pink and blue liquid">
+        <p>Your browser doesn't support video</p>
+      </video>
+      <nav>
+        <a href="#">ABOUT</a>
+        <a href="#">CONTACT</a>
+        <a href="#">LINKS</a>
+      </nav>
+      <div class="hero-title">
+        <h1>YOGAone</h1>
+        <h2>Your new virtual yogastudio</h2>
       </div>
+    </header>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+    <section class="welcome">
+      <h3>Welcome!</h3>
+      <p class="welcome-p">Soon we'll open YOGAone; the virtual yogastudio that offers live classes as well as videos. 
+        Here you'll be guided by some of the most appreciated and knowledgeable yoga teachers. Sign 
+        up now to get the latest info.
+      </p>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <main>
+      <div class="signup-form">
+      <h3 class="form-header">Sign up!</h3>
+        <form action="http:httpbin.org/anything" method= "POST">
+          <div class="text-input-container">
+            <label for="signup-form-name">Name:</label>
+            <input 
+              type="text" 
+              id="signup-form-name" required
+            >
+          </div>
+          <div class="text-input-container">
+            <label for="signup-form-email">E-mail:</label>
+            <input 
+              type="email" 
+              id="signup-form-email" 
+              required
+            >
+          </div>
+          <div class="text-input-container">
+            <label for="signup-form-password">Password:</label>
+            <input 
+              type="password" 
+              id="signup-form-password" 
+              required
+            >
+          </div>
+          <div class="radiobuttons-container">
+            <div class="input-radio">
+              <label for="signup-form-gender-male"><span class="label-radio">Male</span></label>
+              <input 
+                type="radio" 
+                value="male" 
+                id="signup-form-gender-male" 
+                required
+              > 
+            </div>
+            <div class="input-radio">
+              <label for="signup-form-gender-female"><span class="label-radio">Female</span></label>
+              <input 
+                type="radio" 
+                value="female" 
+                id="signup-form-gender-female" 
+                required
+              > 
+            </div>
+            <div class="input-radio">
+              <label for="signup-form-other"><span class="label-radio">Other</span></label>
+              <input 
+                type="radio" 
+                value="other" 
+                id="signup-form-gender-other" 
+                required
+              >
+            </div>
+          </div>
+          <div class="input-checkbox">
+            <label for="signup-form-terms"><span class="label-checkbox">I agree to the Terms & conditions</span></label>
+            <input 
+              type="checkbox" 
+              value="agree-to-terms"
+              id="signup-form-terms"
+            >
+          </div>
+          <div class="input-checkbox">
+            <label for="signup-form-newsletter"><span class="label-checkbox">I want to subscribe to the newsletter</span></label>
+            <input 
+              type="checkbox"
+              value="newsletter" 
+              id="signup-form-newsletter"
+            >
+          </div>
+          <div class="button-container">
+            <button 
+              class="submit-button" 
+              type="submit" 
+              value="SUBMIT"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="FAQ-accordion-wrapper">
+        <h3 class="FAQ-header">Frequently asked questions</h3>
+
+        <div class="accordion-container">  
+          <div class="question-container" id="question-1">
+            <span class="accordion-question-plus"><i class="fas fa-plus"></i></span>
+            <span class="accordion-question-minus"><i class="fas fa-minus"></i></span>
+            <p class="question">
+              How does it work?
+            </p>
+          </div>
+          <div class="answer-container" id="answer-1">
+            <p class="answer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, aspernatur culpa accusantium aliquid magnam iste cumque quasi quos hic.</p>
+          </div>
+        </div>
+        
+        <div class="accordion-container">
+          <div class="question-container" id="question-2">
+            <p class="question">
+              <span class="accordion-question-plus"><i class="fas fa-plus"></i></span>
+              <span class="accordion-question-minus"><i class="fas fa-minus"></i></span>
+              How much does it cost?
+            </p>
+          </div>
+          <div class="answer-container" id="answer-2">
+            <p class="answer">The price for a membership is xx/month. If you don't want to become a member you can instead choose to only pay for the classes you attend; the price is xx SEK per class.</p>
+          </div>
+        </div>
+        
+        <div class="accordion-container">
+          <div class="question-container" id="question-3">
+            <p class="question">
+              <span class="accordion-question-plus"><i class="fas fa-plus"></i></span>
+              <span class="accordion-question-minus"><i class="fas fa-minus"></i></span>
+              What different styles of yoga do you offer?
+            </p>
+          </div>
+          <div class="answer-container" id="answer-3">
+            <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quae quo consequatur sed porro ut tempore quas quos a ad tempora veritatis.</p>
+          </div>
+        </div>
+
+        <div class="accordion-container">
+          <div class="question-container" id="question-4">
+            <p class="question">
+              <span class="accordion-question-plus"><i class="fas fa-plus"></i></span>
+              <span class="accordion-question-minus"><i class="fas fa-minus"></i></span>
+              Do you have different classes for beginners and more experienced yogis?
+            </p>
+          </div>
+          <div class="answer-container" id="answer-4">
+            <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quae quo consequatur sed porro ut tempore quas quos a ad tempora veritatis.</p>
+          </div>          
+        </div>
+      </div> 
+    </main> 
+
+    <footer>
+        <div class="icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>          
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>

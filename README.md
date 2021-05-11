@@ -1,12 +1,11 @@
+This is a project made during the Technigo Bootcamp.
+
 # Business Site
+ The objective was to learn how to use HTML forms and requests, and a bit of Javascript. The site should include a hero video- or image-header, a signup form, and an accordion. 
 
-Replace this readme with your own information about your project. 
+I made a site for a fictional business that runs an online yogastudio. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I used flexbox to make the site responsive, so the form and accordion move from row to column when looked at in mobile. For the accordion I used the toggle and onclick functions to reveal the answer when clicking on the question. For the form I added some validation; the input is pink and changes to blue when correct.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://zealous-sammet-b73787.netlify.app
