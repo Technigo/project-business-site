@@ -11,39 +11,39 @@ const accordionHeaderFour = document.getElementById('accordion-header-4')
 const accordionHeaderFive = document.getElementById('accordion-header-5')
 
 accordionHeaderOne.addEventListener('click', () => {
-  accordionOne.classList.toggle('active');
-  accordionTwo.classList.remove('active');
-  accordionThree.classList.remove('active');
-  accordionFour.classList.remove('active');
-  accordionFive.classList.remove('active');
+  accordionOne.classList.toggle('active')
+  accordionTwo.classList.remove('active')
+  accordionThree.classList.remove('active')
+  accordionFour.classList.remove('active')
+  accordionFive.classList.remove('active')
 });
 accordionHeaderTwo.addEventListener('click', () => {
-  accordionOne.classList.remove('active');
-  accordionTwo.classList.toggle('active');
-  accordionThree.classList.remove('active');
-  accordionFour.classList.remove('active');
-  accordionFive.classList.remove('active');
+  accordionOne.classList.remove('active')
+  accordionTwo.classList.toggle('active')
+  accordionThree.classList.remove('active')
+  accordionFour.classList.remove('active')
+  accordionFive.classList.remove('active')
 });
 accordionHeaderThree.addEventListener('click', () => {
-  accordionOne.classList.remove('active');
-  accordionTwo.classList.remove('active');
-  accordionThree.classList.toggle('active');
-  accordionFour.classList.remove('active');
-  accordionFive.classList.remove('active');
+  accordionOne.classList.remove('active')
+  accordionTwo.classList.remove('active')
+  accordionThree.classList.toggle('active')
+  accordionFour.classList.remove('active')
+  accordionFive.classList.remove('active')
 });
 accordionHeaderFour.addEventListener('click', () => {
-  accordionOne.classList.remove('active');
-  accordionTwo.classList.remove('active');
-  accordionThree.classList.remove('active');
-  accordionFour.classList.toggle('active');
-  accordionFive.classList.remove('active');
+  accordionOne.classList.remove('active')
+  accordionTwo.classList.remove('active')
+  accordionThree.classList.remove('active')
+  accordionFour.classList.toggle('active')
+  accordionFive.classList.remove('active')
 });
 accordionHeaderFive.addEventListener('click', () => {
-  accordionOne.classList.remove('active');
-  accordionTwo.classList.remove('active');
-  accordionThree.classList.remove('active');
-  accordionFour.classList.remove('active');
-  accordionFive.classList.toggle('active');
+  accordionOne.classList.remove('active')
+  accordionTwo.classList.remove('active')
+  accordionThree.classList.remove('active')
+  accordionFour.classList.remove('active')
+  accordionFive.classList.toggle('active')
   });
   
 const video = document.getElementById('bg-video');

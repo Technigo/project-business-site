@@ -40,14 +40,15 @@ h3 {
 
 .video-container {
   background: black;
+  overflow: hidden;
 }
 
-.bg-image {
+.hero-image {
   display: none;
 }
 
 .bg-video {
-  opacity: .3;
+  opacity: .4;
   height: auto;
   width: 100%;
   object-fit: cover;
@@ -160,7 +161,6 @@ h3 {
 /* THE UPLOAD PART */
 
 .upload-container {
-  /* padding: .5rem; */
   width: 260px;
   margin-left: 6vw;
 }
@@ -360,8 +360,13 @@ h3 {
     background: grey;
   }
 
+  .kt-logo {
+    position: absolute;
+    top: 8px;
+  }
+
   .content-container {
-    position: relative;
+    position: absolute;
     margin: 0;
     padding: 0;
   }
@@ -370,9 +375,18 @@ h3 {
     flex-direction: column;
   }
 
-  .video-container {
+  .bg-video {
     display: none;
   }
+
+  .hero-image {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+  }
+
 
   .content-container {
     position: block;
@@ -383,10 +397,11 @@ h3 {
   }
 
   .upload-container, .faq-container {
+    opacity: .8;
     height: 450px;
     width: auto;
     margin-right: 0;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     box-shadow: none;
   }
 
