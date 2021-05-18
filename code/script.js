@@ -24,13 +24,14 @@ accordionHeaderThree.addEventListener('click', () => {
   accordionAnswerThree.classList.toggle('accordion-selected');
 });
 
-
-
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
 function toggle() {
   this.classList.toggle("active")
+}
+
+const btn = document.getElementById('btn')
+
+btn.onclick = () => {
+  alert('Thank you for submitting!')
 }
 
 

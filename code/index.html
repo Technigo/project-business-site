@@ -6,101 +6,94 @@
     <title>Business site for Love-ocado</title>
     <link rel="stylesheet" href="./style.css">
   </head>
-  <body>
 
-    <!--hero-section-->
+  <header class="hero-section">
+    <picture>
+      <source srcset="./images/avocado1.jpeg" media="(max-width: 767px)">
+      <source srcset="./images/avocado7.jpeg" media="(max-width: 1168px)">
+      <img class="hero-image" src="./images/avocado4.jpeg" alt="Hero image"/>
+    </picture>
+    <div class="hero-content">
+      <h1 class="hero-heading">Love-ocado</h1>
+      <p class="hero-paragraph">Super-healthy, <br> eniroment-friendly, <br>
+        Locally produced in Stockholm</p>
+    </div>
+    <div class="navbar">
+      <a class="nav-menu" href="#">Home</a>
+      <a class="nav-menu" href="#">About us</a>
+      <a class="nav-menu" href="#">Stories</a>
+      <a class="nav-menu" href="#">Join us</a>
+    </div>
+  </header>
 
-    <header class="hero-section">
-      <picture>
-        <source srcset="./images/avocado1.jpeg" media="(max-width: 767px)">
-        <source srcset="./images/avocado7.jpeg" media="(max-width: 1168px)">
-        <img class="hero-image" src="./images/avocado4.jpeg" alt="Hero image"/>
-      </picture>
-      <div class="hero-content">
-        <h1 class="hero-heading">Love-ocado</h1>
-        <p class="hero-paragraph">Super-healthy, <br> eniroment-friendly, <br>
-          Locally produced in Stockholm</p>
-      </div>
-      <div class="navbar">
-        <a class="nav-menu" href="#">Home</a>
-        <a class="nav-menu" href="#">About us</a>
-        <a class="nav-menu" href="#">Stories</a>
-        <a class="nav-menu" href="#">Join us</a>
-      </div>
-    </header>
-
-    <main class="user-sections">
+  <main class="user-sections">
     <section class="form-section">
-    <form action="http://httpbin.org/anything" method="POST" class="form">
-      <div class="form-input">
-        <h4>Sign up for a weekly prenumeration</h4>
-        <div class="label-container">
-          <label class="user-name">First Name:
-            <input class="user-info" type="fname" name="First Name" required>
+      <form action="http://httpbin.org/anything" method="POST" class="form">
+        <div class="form-input">
+          <h4>Sign up for a weekly prenumeration</h4>
+          <div class="label-container">
+            <label class="user-name">First Name:
+              <input class="user-info" type="fname" name="First Name" required>
+            </label>
+
+            <label class="user-name">Last Name:
+              <input class="user-info" type="lname" name="Last Name" required>
+            </label>
+          </div>
+          <label>E-mail:
+            <input class="user-info" type="email" name="E-mail" required>
           </label>
-          <label class="user-name">Last Name:
-            <input class="user-info" type="lname" name="Last Name" required>
+          
+          <label>Address:
+            <input class="user-info" type="address" name="Address" required>
           </label>
+          
+          <h4>Choose your weekly prenumeration here!</h4>
+
+          <label class="user-recieve"> 
+            <select name="guide-choice">
+              <option value="2 avocados">2 avocados a week</option>
+              <option value="5 avocados">5 avocados a week</option>
+              <option value="10 avocados">10 avocados a week</option>
+              <option value="15 avocados">15 avocados a week</option>
+            </select>
+          </label>
+          <div class="button-submit">
+            <button id="btn" type="submit">Order now</button>
+          </div>
         </div>
-
-        <label>E-mail:
-          <input class="user-info" type="email" name="E-mail" required>
-        </label>
-
-        <label>Address:
-          <input class="user-info" type="address" name="Address" required>
-        </label>
-
-        <h4>Choose your weekly prenumeration here!</h4>
-
-        <label class="user-recieve"> 
-          <select name="guide-choice">
-            <option value="xs">2 avocados a week</option>
-            <option value="s">5 avocados a week</option>
-            <option value="m">10 avocados a week</option>
-            <option value="l">15 avocados a week</option>
-          </select>
-        </label>
-        <div class="button-submit">
-          <button type="submit">Order now</button>
-        </div>
-      </div>
-      </section>
-    </form>
-
-    <!-- Signup form -->
+      </form>
+    </section>
 
     <section class="accordion" id="accordion">
-      <!-- Accordion -->
       <h1 class="accordion-header">FAQ</h1>
-
-      <div class="question-container">
-        <div class="question" id="accordion-header-1">
-          <h3>Where are you based?</h3>
+        <div class="question-container">
+          <div class="question" id="accordion-header-1">
+            <h3>Where are you based?</h3>
+          </div>
+          <div class="answer" id="accordion-answer-1">
+            <p>In Stockholm</p>
+          </div>
         </div>
-        <div class="answer" id="accordion-answer-1">
-          <p>In Stockholm</p>
+        <div class="question-container">
+          <div class="question" id="accordion-header-2">
+            <h3>Why don't you deliver outside Stockholm?</h3>
+          </div>
+          <div class="answer" id="accordion-answer-2">
+            <p>We believe that locally produced should be only delivered close by.</p>
+          </div>
         </div>
-      </div>
-      <div class="question-container">
-        <div class="question" id="accordion-header-2">
-          <h3>Why don't you deliver outside Stockholm?</h3>
+        <div class="question-container">
+          <div class="question" id="accordion-header-3">
+            <h3>How is your delivery enviroment-friendly?</h3>
+          </div>
+          <div class="answer" id="accordion-answer-3">
+            <p>We only use e-cars or bike, and therefor not contributing to air pollution.</p>
+          </div>
         </div>
-        <div class="answer" id="accordion-answer-2">
-          <p>We believe that locally produced should be only delivered close by.</p>
-        </div>
-      </div>
-      <div class="question-container">
-        <div class="question" id="accordion-header-3">
-          <h3>How is your delivery enviroment-friendly?</h3>
-        </div>
-        <div class="answer" id="accordion-answer-3">
-          <p>We only use e-cars or bike, and therefor not contributing to air pollution.</p>
-        </div>
-      </div>
     </section>
   </main>
-    <!-- JS script file here -->
+
     <script src="./script.js"></script>
   </body>
 </html>
