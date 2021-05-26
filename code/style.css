@@ -4,13 +4,12 @@
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  box-sizing: border-box;
   font-family: 'Alegreya', serif;
-  font-family: 'Roboto', sans-serif;
 }
 
 p, h1, h2, h3 {
@@ -70,8 +69,8 @@ h3 {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -79,34 +78,31 @@ h3 {
   padding: 0rem;
 }
 
-.content-container > div {
-  width: auto;
-  min-height: 10px;
-  margin: 0;
-  padding: .5rem;
-}
+/* .content-container {
+  padding: 1rem;
+} */
 
-.bottom-full-width {
-  margin-top: auto;
+header {
   display: flex;
-  flex-direction: column;
-}
-
-.bottom-full-width > div {
-  margin-top: 10px;
+  justify-content: flex-end;
   width: 100%;
-  min-height: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  padding: 1rem;
 }
 
-.bottom-lower {
-  min-height: 50px;
+.top-logo {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 
-.bottom-upper {
-  margin-bottom: 10vh;
+p.logo-text {
+  color: white;
+  font-family: Alegreya;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.2rem;
+  letter-spacing: 1.1;
+  font-display: smooth;
 }
 
 /* NAV */
@@ -115,6 +111,7 @@ h3 {
   display: flex;
   list-style: none;
   justify-content: flex-end;
+  /* margin-right: 2rem; */
 }
 
 .nav ul {
@@ -123,8 +120,10 @@ h3 {
 }
 
 .nav li {
-  padding: 0 1rem;
+
+  padding: .6rem 1rem;
   color: white;
+  font-size: .8rem;
   font-family: 'Alegreya', serif;
   border-right: .5px solid white;
   line-height: .8;
@@ -133,46 +132,29 @@ h3 {
 
 .nav li:last-child  {
   border-right: 0;
-  padding-right: 0;
 }
 
-/* BOTTOM LEFT LOGO */
-
-.kt-logo p {
-  line-height: 1;
-  font-size: .65rem;
-  margin: 0;
-  color: white;
-}
-
-.kt-logo .logo-text {
-  font-family: Alegreya;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 1.5rem;
-  letter-spacing: 1.1;
-  font-display: smooth;
-}
-
-.top-logo {
-  display: none;
-}
 
 /* THE UPLOAD PART */
 
-.upload-container {
-  width: 260px;
-  margin-left: 6vw;
-}
-
 .upload-container, .faq-container {
-  height: 450px;
+  margin-top: 1rem;
+  /* height: fit-content; */
   background-color: #F7EDED;
   border-radius: 8px;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
   padding: .5rem;
-
+  /* width: auto; */
+  margin: 0;
 }
+    /* UPLOAD CONTAINER */
+    .upload-container {
+      position: absolute;
+      bottom: 15%;
+      left: 7%;
+      width: 280px;
+      margin-left: 6vw;
+    }
 
 .kitten-form {
   display: flex;
@@ -210,7 +192,6 @@ h3 {
   font-size: 1rem;
   color: black;
   cursor: pointer;
-  /* margin-bottom: 1rem; */
   height: 100%;
 }
 
@@ -262,11 +243,14 @@ h3 {
   margin: .25rem 0;
 }
 
-
-.faq-container {
-  width: 360px;
-  margin-right: 6vw;
-}
+    /* FAQ CONTAINER */
+    .faq-container {
+      position: absolute;
+      bottom: 15%;
+      right: 7%;
+      width: 280px;
+      margin-right: 6vw;
+    }
 
 .kitten-form #submit-label {
   margin: 2rem auto 1rem auto;
@@ -356,23 +340,20 @@ h3 {
     font-size: 1rem;
   }
 
-  body {
-    background: grey;
-  }
-
-  .kt-logo {
-    position: absolute;
-    top: 8px;
+  header {
+    justify-content: space-between;
   }
 
   .content-container {
-    position: absolute;
+    position: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 40px 0;
   }
 
-  .bottom-full-width > div {
-    flex-direction: column;
+  .top-logo {
+    position: static;
   }
 
   .bg-video {
@@ -387,36 +368,14 @@ h3 {
     position: fixed;
   }
 
-
-  .content-container {
-    position: block;
-    height: auto;
-    width: auto;
-    margin: 0;
-    padding: 0rem;
-  }
-
   .upload-container, .faq-container {
-    opacity: .8;
-    height: 450px;
-    width: auto;
-    margin-right: 0;
+    opacity: .9;
+    position: static;
+    /* height: 450px; */
+    width: 90vw;
+    margin: 0 auto;
     margin: 2rem 0;
     box-shadow: none;
-  }
-
-  .upload-container {
-    margin-left: 0;
-  }
-
-  .bottom-full-width {
-    padding: 0;
-    margin: 0;
-    width: auto;
-  }
-
-  .top-logo {
-    display: none;
   }
 
   .accordion h3 {
@@ -436,5 +395,16 @@ h3 {
 
 }
 
+@media screen and (max-width: 400px) {
+  /* * {
+    border: 1px solid pink;
+  } */
+  .nav li {
+    /* color: red; */
+    padding-left: 4px;
+    padding-right: 4px;
+    border: none;
+  }
 
+}
 
