@@ -1,30 +1,131 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" href="./resources/images/favicon.ico">
+  <title>Kitten Transfer</title>
 
-    <!-- Signup form -->
+</head>
+<body>
+  <main class="main">
+    <div class="video-container">
+      <img class="hero-image" src="./resources/images/ella-jardim-mKWKbHZaN-0-unsplash-640.jpg" alt="">
+      <video id="bg-video" class="bg-video" autoplay loop muted>
+        <source src="./resources/videos/Kitten-1080.mp4" type="video/mp4" media="(min-width: 720px)">
+        <source src="./resources/videos/Kitten-1080.webm" type="video/webm" media="(min-width: 720px)">
+        <source src="./resources/videos/Kitten-720.mp4" type="video/mp4" media="(min-width: 480px)">
+        <source src="./resources/videos/Kitten-720.webm" type="video/webm" media="(min-width: 480px)">
+        <source src="./resources/videos/Kitten-480.mp4" type="video/mp4">
+        <source src="./resources/videos/Kitten-480.webm" type="video/webm">
+          <p>This browser doesn't support video...</p>
+      </video>
+    </div>
+    <div class="content-container">
+      <!-- <div class="top-full-width"> -->
+        <header>
+          <div class="top-logo">
+            <p class="logo-text">Kitten Transfer</p>
+          </div>
+          <ul class="nav">
+            <li>About us</li>
+            <li>Products</li>
+            <li>Sign in</li>
+          </ul>
+        </header>
+      <!-- </div> -->
+      <!-- <div class="bottom-full-width">
+        <div class="bottom-upper"> -->
+          <div class="upload-container"> 
+            
+            <!-- HERE IS THE FORM PART...-->
+            <form class="kitten-form" action="https://httpbin.org/anything" method="POST">
+              <label class="kitten-file" for="kitten-file">
+                <h1>
+                  <span>+</span>
+                  Transfer kitten
+                </h1>
+                <input type="file" id="kitten-file" name="kitten-file">
+              </label>
+              <div class="divider"></div>
+              <label for="name">
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+              </label>
+              <div class="divider"></div>
+              <label for="email">
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+              </label>
+              <div class="divider"></div>
+              <label for="message">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+              </label>
+              <label id="agree-terms" for="agree-terms-input">
+                <input type="checkbox" id="agree-terms-input" name="agree-terms-input" required>
+                <span>
+                  I agree to the terms and conditions
+                </span>
+              </label>
+              <div class="divider"></div>
+              <label id="submit-label" for="submit">
+                <input id="submit-input" type="submit" value="Transfer">
+              </label>
+            </form>
+          </div>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+          <!-- HERE IS THE ACCORDION PART -->
+          <div class="faq-container">
+            <h1>Frekittenly asked questions</h1>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+            <div class="accordion-container">
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+              <div id="accordion-1" class="accordion">
+                <h3 id="accordion-header-1" class="accordion-header">What is Kitten Transfer?</h3>
+                <p class="accordion-content">
+                    Kitten Transfer is a service for kitten owners who enjoy transferring their kitten quickly and at low cost. Kittens of all sizes and shapes can be transferred, just make sure you have a reliable internet connection!
+                </p>
+              </div>
+
+              <div id="accordion-2" class="accordion">
+                <h3 id="accordion-header-2" class="accordion-header">Why would you want to transfer a kitten?</h3>
+                <p class="accordion-content">
+                    Oh a number of reasons! For example, have you ever had a cat on an airplane? Oh those poor things - hungry and afraid! Why put your darling through that. 
+                </p>
+              </div>
+
+              <div id="accordion-3" class="accordion">
+                <h3 id="accordion-header-3" class="accordion-header">Are there any side-effects?</h3>
+                <p class="accordion-content">
+                    We are happy to say that there are no known side-effects to our Kitten Transfers. Years of R&D has really paid off!
+                </p>
+              </div>
+
+              <div id="accordion-4" class="accordion">
+                <h3 id="accordion-header-4" class="accordion-header">Can i transfer my puppy?</h3>
+                <p class="accordion-content">
+                    At the moment no, but our product team is always on the lookout for new features -- so check back in shortly! 
+                </p>
+              </div>
+
+              <div id="accordion-5" class="accordion">
+                <h3 id="accordion-header-5" class="accordion-header">Is insurance included in the price?</h3>
+                <p class="accordion-content">
+                    Meow
+                </p>
+              </div>
+            </div>
+
+          </div>
+        <!-- </div> -->
+        <!-- <div class="bottom-lower"> -->
+          <!-- <div class="kt-logo">
+            <p>Thanks for flying with...</p>
+            <p class="logo-text">Kitten Transfer</p>
+          </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
 </html>

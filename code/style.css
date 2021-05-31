@@ -1,7 +1,410 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,700;1,700;1,900&family=Roboto:wght@300;400;500&display=swap');
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  font-family: 'Alegreya', serif;
+}
+
+p, h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: .5rem;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+/* BASIC PAGE LAYOUT */
+
+.main {
+  position: relative;
+}
+
+.video-container {
+  background: black;
+  overflow: hidden;
+}
+
+.hero-image {
+  display: none;
+}
+
+.bg-video {
+  opacity: .4;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+/* Change the video sizing depending on window aspect ratio */
+@media (max-aspect-ratio: 21/10) {
+  .bg-video {
+    width: auto;
+    height: 100vh;
+    object-position: 50% 50%;
+  }
+}
+
+.content-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* height: 100vh;
+  width: 100vw; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0rem;
+}
+
+/* .content-container {
+  padding: 1rem;
+} */
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 1rem;
+}
+
+.top-logo {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+p.logo-text {
+  color: white;
+  font-family: Alegreya;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.2rem;
+  letter-spacing: 1.1;
+  font-display: smooth;
+}
+
+/* NAV */
+
+.nav {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  /* margin-right: 2rem; */
+}
+
+.nav ul {
+  margin: 0;
+  margin-left: auto;
+}
+
+.nav li {
+
+  padding: .6rem 1rem;
+  color: white;
+  font-size: .8rem;
+  font-family: 'Alegreya', serif;
+  border-right: .5px solid white;
+  line-height: .8;
+  cursor: pointer;
+}
+
+.nav li:last-child  {
+  border-right: 0;
+}
+
+
+/* THE UPLOAD PART */
+
+.upload-container, .faq-container {
+  margin-top: 1rem;
+  /* height: fit-content; */
+  background-color: #F7EDED;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
+  padding: .5rem;
+  /* width: auto; */
+  margin: 0;
+}
+    /* UPLOAD CONTAINER */
+    .upload-container {
+      position: absolute;
+      bottom: 15%;
+      left: 7%;
+      width: 280px;
+      margin-left: 6vw;
+    }
+
+.kitten-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kitten-form input,
+.kitten-form textarea {
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  height: 2rem;
+  width: 100%;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.kitten-form input:hover,
+.kitten-form textarea:hover {
+  background-color: #d3d3d3;
+}
+
+
+.kitten-form input:focus,
+.kitten-form textarea:focus {
+  background: rgb(231, 200, 181);
+}
+
+.kitten-form input[type=file] {
+  display: none;
+  cursor: pointer;
+}
+
+.kitten-form p {
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  height: 100%;
+}
+
+.kitten-file p {
+  font-weight: 500;
+}
+
+.kitten-form span {
+  font-size: 3rem;
+  position: relative;
+  top: 7px;
+  margin: 0 .25rem;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.kitten-form textarea {
+  height: 8rem;
+}
+
+.kitten-form #agree-terms {
+  position: relative;
+  top: -14px
+}
+
+.kitten-form #agree-terms-input {
+  margin-top: 1rem;
+  position: relative;
+  top: 9px;
+  width: 16px;
+  height: 16px;
+}
+
+.kitten-form #agree-terms span {
+  font-size: .85rem;
+  margin-left: 10px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: black;
+  margin: .25rem 0;
+}
+
+    /* FAQ CONTAINER */
+    .faq-container {
+      position: absolute;
+      bottom: 15%;
+      right: 7%;
+      width: 280px;
+      margin-right: 6vw;
+    }
+
+.kitten-form #submit-label {
+  margin: 2rem auto 1rem auto;
+}
+
+.kitten-form #submit-input {
+  border: 1px solid black;
+  width: fit-content;
+  line-height: .1;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+
+/* ACCORDION */
+
+.accordion-header {
+  position: relative;
+  padding: 10px;
+  margin: 0;
+  z-index: 1;
+}
+
+.accordion {
+  border-bottom: 1px solid black;
+}
+
+.accordion:nth-child(2n) {
+  background: #ebe8e8;
+}
+
+.accordion h3:hover {
+  background: #d3d3d3;
+}
+
+.accordion-header::before {
+  position: relative;
+  right: 8px;
+  bottom: 1px;
+  content: '';
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.accordion.active .accordion-header::before {
+  bottom: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+} 
+
+.accordion {
+  user-select: none;
+  cursor: pointer;
+}
+
+.accordion-content {
+  transition: padding 150ms ease-out;
+  opacity: 0;
+  padding: 0 10px;
+  margin: 0;
+  background: #e9dfcd;
+  border-top: 1px solid black;
+  height: 1px;
+}
+
+.accordion.active .accordion-header {
+  background:#d3d3d3;
+  font-weight: 500;
+}
+
+.accordion.active .accordion-content {
+  transition: padding 150ms ease-in;
+  padding: 16px 10px;
+  opacity: 1;
+  height: auto;
+}
+
+
+/* BREAKPOINTS */
+
+@media screen and (max-width: 800px) {
+  
+  p {
+    font-size: 1rem;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  .content-container {
+    position: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 40px 0;
+  }
+
+  .top-logo {
+    position: static;
+  }
+
+  .bg-video {
+    display: none;
+  }
+
+  .hero-image {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+  }
+
+  .upload-container, .faq-container {
+    opacity: .9;
+    position: static;
+    /* height: 450px; */
+    width: 90vw;
+    margin: 0 auto;
+    margin: 2rem 0;
+    box-shadow: none;
+  }
+
+  .accordion h3 {
+    font-size: 1rem;
+    margin: .5rem 0;
+  }
+
+ .kitten-form textarea ::placeholder, 
+ .kitten-form input:placeholder {
+    font-size: 1rem;
+  }
+
+  textarea ::placeholder{
+    font-size: 1rem;
+
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  /* * {
+    border: 1px solid pink;
+  } */
+  .nav li {
+    /* color: red; */
+    padding-left: 4px;
+    padding-right: 4px;
+    border: none;
+  }
+
+}
+
