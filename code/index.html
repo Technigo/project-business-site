@@ -1,30 +1,201 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/a41f6ad251.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/main.css" />
+  <script src="script.js" defer></script>
+  <title>Project 3</title>
+  <!-- dont forget to add a css file and link it here! -->
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+<body>
+  <header class="hero">
+    <video loop autoplay>
+      <source src="./videos/Desktop.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <nav>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div id="burger" class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div class="nav-middle">
+        <a href="#">ABOUT</a>
+        <a href="#">CONTACT</a>
+        <a href="#">BUSINESS</a>
+        <a href="#">COURSES</a>
+        <a href="#">PRICES</a>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+      <div class="logo">
+        <h2>Julia's</h2>
+      </div>
+    </nav>
+
+    <div class=header-title>
+      <h1>Make cooking fun!</h1>
+      <h3>Online Cooking classes</h3>
+      <button>Read more</button>
+    </div>
+  </header>
+
+
+  <!-- SIGNUP FORM SECTION -->
+  <section class="sign-up">
+    <form action="http://httpbin.org/anything" method="POST">
+      <div class="form-heading">
+        <h3>Create Account</h3>
+      </div>
+
+      <div class="sign-up-form">
+        <div class="social-media">
+          <i class="fab fa-google"></i>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+        </div>
+        <div class="name-fields">
+          <label for="first-name">
+            <input name="first-name" type="text" placeholder="First name" required>
+          </label>
+          <label for="last-name">
+            <input name="last-name" type="text" placeholder="Last name" required>
+          </label>
+        </div>
+
+        <div class="email-password">
+          <label for="email">
+            <input name="email" type="email" placeholder="Email adress" required>
+          </label>
+          <label for="password">
+            <input name="password" type="text" placeholder="Password" required>
+          </label>
+        </div>
+
+        <div class="option">
+          <label>
+            Level
+            <select>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="radio-buttons">
+          <label>
+            <input name="level" value="chef" type="radio" required></input>
+            Chef
+          </label>
+          <label>
+            <input name="level" value="student" type="radio" required></input>
+            Student
+          </label>
+        </div>
+
+        <div class="check-boxes">
+          <label for="check-boxes">
+            <input name="check-box" type="check-box" value="agreement">
+            I have read the Terms and condition
+          </label>
+        </div>
+        <div class="sign-buttons">
+          <label for="sign-in">
+            <input class="button-sign-up" type="submit" value="sign up" name="sign up"></input>
+          </label> 
+          <label for="sign-in">
+            <input class="button-sign-in" type="submit" value="sign in" name="sign in"></input>
+          </label> 
+        </div>
+      </div>
+    </form>
+
+    <div class="sallad-pic">
+      <img src="Sallad.svg" alt="">
+    </div>
+  </section>
+
+  <!-- ACCORDION FAQ SECTION -->
+
+  <section class="accordion">
+
+    <div class="question-pic">
+      <img src="Question.svg" alt="">
+    </div>
+
+    <div class="faq">
+      <div class="faq-heading">
+        <h1>FAQ</h1>
+      </div>
+
+      <div class="question-answers">
+        <div class="question" id="section1">
+          <div class="head-section">
+            <h3>How much does it cost</h3>
+            <div class="icons">
+              <i id="minus1" class="fas fa-minus"></i>
+              <i id="plus1" class="fas fa-plus"></i>
+            </div>
+          </div>
+          <div class="answer">
+            <p>from 100Euros and up</p>
+          </div>
+        </div>
+
+        <div class="question" id="section2">
+          <div class="head-section">
+            <h3>How many courses can I sign up for?</h3>
+            <div class="icons">
+              <i id="minus2" class="fas fa-minus"></i>
+              <i id="plus2" class="fas fa-plus"></i>
+            </div>
+          </div>
+          <div class="answer">
+            <p>How many as you want</p>
+          </div>
+        </div>
+
+        <div class="question" id="section3">
+          <div class="head-section">
+            <h3>Are there vegitarian options?</h3>
+            <div class="icons">
+              <i id="minus3" class="fas fa-minus"></i>
+              <i id="plus3" class="fas fa-plus"></i>
+            </div>
+          </div>
+          <div class="answer">
+            <p>Of course!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class=info-one>
+      <p>About</p>
+      <p>Values</p>
+      <p>Community</p>
+    </div>
+    <div class=info-two>
+      <p><i class="fab fa-twitter"></i> Twitter</p>
+      <p><i class="fab fa-facebook-f"></i> Facebook</p>
+      <p><i class="fab fa-instagram"></i> Instagram</p>
+    </div>
+    <div class=info-three>
+      <p>how it works</p>
+      <p>Terms of conditions</p>
+      <p>Tell me more</p>
+    </div>
+  </footer>
+
+</body>
+
 </html>

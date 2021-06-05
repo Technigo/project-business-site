@@ -1,0 +1,199 @@
+/****FORM SECTION*****/
+
+input[type=text], input[type=email]
+{
+  padding: 10px;
+  border:0;
+  border-radius:10px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+select {
+  background-color: #f88379;
+  color: white;
+  padding: 10px;
+  width: 220px;
+  border: none;
+  outline: none; 
+  border-radius: 10px;
+  margin-left: 50px;
+}
+
+/******SIGN UP SECTION*****/
+
+.sign-up
+{
+  display: grid; 
+  grid-template-rows: 80% 20%;
+  gap: 5px;
+  border:#f88379 3px solid;
+  border-radius: 10px;
+  height: 800px;
+  margin: 6%;
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
+}
+form{
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
+
+.form-heading
+{
+  justify-self: center;
+  color:#f88379;
+  font-size:30px;
+}
+
+.sign-up-form{
+  border-radius: 3px;
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
+  justify-self: center;
+  padding: 5%;
+  margin-bottom: 50px;
+}
+
+.social-media{
+    display: flex;
+    justify-content: center;
+}
+
+.social-media i{
+    color:#573B8C;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.name-fields{
+margin-bottom: 15px;
+}
+
+.email-password
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.email-password input{
+  margin-bottom: 15px;
+}
+
+.option
+{
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.option label{
+  flex-grow: 1;
+}
+
+.option select{
+  flex-grow: 2;
+}
+.radio-buttons{
+  margin-bottom: 15px;
+}
+
+.check-boxes{
+  margin-bottom: 15px;
+}
+
+.sign-buttons
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-sign-up{
+  background-color: #f88379;
+  border: 2px solid #f88379;
+  border-radius:10px;
+  color: #F8F8FF;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  outline: none; 
+  cursor: pointer;
+}
+.button-sign-up:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button-sign-in{
+  background-color: #F8F8FF;
+  color:#f88379;
+  border: 2px solid #f88379;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:10px;
+  outline: none; 
+  cursor: pointer;
+}
+.button-sign-in:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.sallad-pic 
+  {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+.sallad-pic img{
+  width: 100%;
+}
+
+/******VALIDATION FOR SIGN UP SECTION******/
+
+/* input:valid{
+  border: 1px green;
+} */
+
+input:invalid{
+  background-color: #E8E8E8;
+} 
+
+
+@media (min-width: 768px) and (max-width:1024px){
+    .sign-up
+    {
+      display: grid; 
+      grid-template-columns: 2fr 1fr;
+      height: 700px;
+      margin: 6%;
+      
+  }
+  
+  form{
+    height: 600px;
+  }
+  
+  .sallad-pic{
+    height: 500px;
+  }
+}
+
+
+@media (min-width: 1025px){
+
+    .sign-up
+    {
+      display: grid; 
+      grid-template-columns: 2fr 1fr;
+      height: 700px;
+      
+  }
+    form{
+      height: 600px;
+    }
+  
+    .sallad-pic{
+      height: 600px;
+    }
+
+}
