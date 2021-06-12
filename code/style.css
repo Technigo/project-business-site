@@ -1,7 +1,440 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/* To make the nav links scroll smoothly to the sections */
+html {
+  scroll-behavior: smooth;
+}
 
-.active + .answer {
-  /* some styling here */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Styling for all h2's */
+h2 {
+  font-size: 30px;
+  margin-top: 0;
+  border-bottom: 2px dotted;
+  width: auto;
+}
+
+/* HERO section */
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-bottom: -4px;
+}
+
+video {
+  width: 100%;
+  position: relative;
+}
+
+/* Styling for hero-image if it would be implemented instead of hero-video */
+/* .hero-image {
+  width: 100%;
+  position: relative;
+} */
+
+.hero-title-box {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-h3 {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.hero-nav {
+  display: none;
+}
+
+/* About us section, containing both about us and FAQ */
+.about-us-section {
+  min-height: 70vh;
+  background-image: linear-gradient(to bottom left, #AABBB3, #936774);
+}
+
+.about-us-box {
+  width: 90%;
+  padding: 15px;
+}
+
+/* FAQ within About us section */
+.faq-box {
+  width: 90%;
+  padding: 15px;
+}
+
+.faq-container {
+  background: #936774;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgb(43, 36, 36);
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.faq-header {
+  overflow: hidden;
+  box-shadow: 5px 5px 5px rgb(43, 36, 36);
+  padding-left: 20px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Expand, collapse icon in accordion */
+.fas {
+  color: #533942;
+  font-size: 50px;
+  align-self: center;
+  margin-right: 15px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.faq-header h1 {
+  font-weight: normal;
+  transition: 0.5s ease-in;
+}
+
+.faq-header h1:hover {
+  font-weight: bold;
+}
+
+/* Every other accordion header in another background color */
+.faq-container:nth-child(odd) {
+  background: #9b828ad3;
+}
+
+.faq-content {
+  background-color: #9b828ad3;
+  border-top: 1px dotted black;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out;
+}
+
+.faq-content p {
+  padding: 0 10px;
+}
+
+/* Class to expand accordion content */
+.faq-header.activated + .faq-content {
+  max-height: 400px;
+}
+
+/* Rotation of accordion icon */
+.faq-header.activated > .fa-angle-down {
+  transform: rotate(180deg);
+}
+
+/* Sign up section, containing sign up form and contact info */
+.sign-up-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  background: #936774;
+  padding: 15px;
+}
+
+.sign-up-box {
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.sign-up-control {
+  margin-bottom: 20px;
+}
+
+/* Styling of inout fields */
+.sign-up-control .input-text {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 90%;
+  border: 2px solid #533942;
+  border-radius: 8px;
+  box-shadow: 3px 3px 3px rgb(94, 84, 84);
+  height: 50px;
+  padding: 0 15px;
+  margin: 5px 0;
+  transition: 0.1s ease-in;
+}
+
+.sign-up-control .input-text:hover {
+  background-color: #9b828ad3;
+}
+
+input::placeholder {
+  font-size: 16px;
+  color: rgb(92, 83, 83);
+}
+
+.sign-up-checkboxes {
+  margin-bottom: 10px;
+  position: relative;
+  margin-left: 10px;
+}
+
+.sign-up-checkboxes label {
+  margin-left: 30px;
+}
+
+.sign-up-checkboxes input {
+  position: absolute;
+  top: -3px;
+  left: -2px;
+  opacity: 0;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  z-index: 2;
+}
+
+/* Custom checkbox */
+.custom-checkbox {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #533942;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.custom-checkbox::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border: solid #533942;
+  border-width: 0 4px 4px 0;
+  top: 2px;
+  left: 6px;
+  transform: rotate(45deg);
+  display: none;
+} 
+
+.sign-up-checkboxes input:checked ~ .custom-checkbox::after {
+  display: block;
+}
+
+.sign-up-checkboxes:hover input ~ .custom-checkbox {
+  background-color: #9b828ad3;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 3px 3px 3px rgb(94, 84, 84);
+  font-size: 20px;
+  padding: 10px 20px;
+  border: 2px solid #533942;
+  border-radius: 8px;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+button:hover {
+  background-color:#9b828ad3;;
+}
+
+/* Contact box within sign up section */
+.contact-box {  
+  width: 90%;
+}
+
+.contact-box a {
+  text-decoration: none;
+  transition: 0.2s ease-in;
+  color: black;
+  font-size: 20px;
+  margin-left: 15px;
+  line-height: 50px;
+}
+
+.contact-box a:hover {
+  font-weight: bold;
+}
+
+.contact-box ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contact-box li {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.contact-email, .contact-phone {
+  display: flex;
+  flex-direction: row;
+} 
+
+@media (min-width: 768px) { 
+  .hamburger-menu-container {
+    display: none;
+  }
+
+  /* HERO section */
+  .hero-nav {
+    background:rgba(255, 255, 255, 0.6);
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 40px;
+  }
+
+  .hero-nav a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease-in;
+  }
+
+  .hero-nav a:hover {
+    font-weight: bold;
+  }
+
+  .hero-h3 {
+    font-weight: 100px;
+    font-size: 60px;
+    margin-bottom: 0;
+  }
+
+  .hero-p {
+    font-size: 25px;
+  }
+
+  /* About us section, containing about us and FAQ */
+  .about-us-section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 30px;
+  }
+
+  .about-us-box {
+    width: 90%;
+  }
+
+  .about-us-p {
+    line-height: 25px;
+    font-size: 20px;
+  }
+
+  /* FAQ box within About us section */
+  .faq-box {
+    width: 90%;
+  }
+  
+  /* Sign up section, containing sign up form and contact info */
+  .sign-up-section {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .sign-up-box {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .sign-up-control {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .sign-up-control .input-text {
+    height: 50px; 
+    width: 250px;
+    font-size: 20px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  button {
+    width: 45%;
+  }
+
+  /* Contact within sign up section */
+  .contact-box {
+    padding: 15px;
+  }
+
+  .contact-box a {
+    font-size: 30px;
+  }
+}
+@media (min-width: 992px) {
+  /* HERO section */
+  .hero-nav {
+    justify-content: flex-start;
+  }
+  .hero-nav a {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 60px;
+  }
+
+  /* About us section, containing about us and FAQ */
+  .about-us-box {
+    border-bottom: none;
+  }
+
+  .about-us-box {
+    width: 45%;
+  }
+  
+  /* FAQ within About us section */
+  .faq-box {
+    width: 45%;
+  }
+  
+  /* Sign up section, containing sign up form and contact info */
+  .sign-up-section {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .sign-up-box {
+    width: 45%;
+    padding: 15px;
+  }
+
+  .sign-up-h2 {
+    font-size: 30px;
+    text-align: left;
+  }
+
+  /* Contact within sign up section */
+  .contact-box {
+    width: 45%;
+  }
 }
