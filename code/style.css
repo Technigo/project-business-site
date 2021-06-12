@@ -111,11 +111,6 @@ video {
   font-weight: bold;
 }
 
-/* Rotation of accordion icon */
-.active {
-  transform: rotate(180deg);
-}
-
 /* Every other accordion header in another background color */
 .faq-container:nth-child(odd) {
   background: #9b828ad3;
@@ -134,8 +129,13 @@ video {
 }
 
 /* Class to expand accordion content */
-.accordion-selected {
+.faq-header.activated + .faq-content {
   max-height: 400px;
+}
+
+/* Rotation of accordion icon */
+.faq-header.activated > .fa-angle-down {
+  transform: rotate(180deg);
 }
 
 /* Sign up section, containing sign up form and contact info */
@@ -173,7 +173,7 @@ video {
   background-color: #9b828ad3;
 }
 
-::placeholder {
+input::placeholder {
   font-size: 16px;
   color: rgb(92, 83, 83);
 }
@@ -289,29 +289,7 @@ button:hover {
 .contact-email, .contact-phone {
   display: flex;
   flex-direction: row;
-}
-
-/* Styling for validation if it would be implemented */
-.form-valid {
-  /* display: flex; */
-  align-items: center;
-  padding-left: 10px;
-  display: none;
 } 
-
-.form-invalid {
-  /* display: flex; */
-  align-items: center;
-  padding-left: 10px;
-  display: none;
-} 
-
-.form-required {
-  /* display: flex; */
-  align-items: center;
-  padding-left: 10px;
-  display: none;
-}  
 
 @media (min-width: 768px) { 
   .hamburger-menu-container {
