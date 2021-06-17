@@ -1,3 +1,5 @@
+Project week 3 of Technigo bootcamp
+
 # Business Site
 
 The project was to design a business site with hero image, accordion and a form.
