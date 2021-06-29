@@ -1,12 +1,17 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This weeks project contains three vital parts
+ - A hero image / video with responsive properties, for example by making use of the picture tag
+ - A form that actually collects and sends data
+ - An accordion making use of our first lines of JavaScript.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Create a business site containing all three parts, make it responsive and add som detalils.
+
+I continued last weeks exersises and made use of flexbbox again to structure and layout mu site. I knew from the start that I wanted to have my form as part (inbedded) in my hero section and used the bakground image option and used a gif instead of either a img or video. 
+Since I don't own my artwork this was a bit problematic but I mede sure to implement the functionality all though the source is the same troughout.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://quirky-keller-aa2088.netlify.app

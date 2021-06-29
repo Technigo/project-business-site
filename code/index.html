@@ -1,30 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excuse me - may I?</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@200&display=swap" rel="stylesheet">
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+<body>
+  <section class="hero">
+    <header class="header-container">
+      <a class="logo" href="">logo</a>
+      <nav>
+        <a class="menu">&#8801;</a>
+      </nav>
+    </header>
+    <div class="hero-header">
+      <h1 class="hero-title">May I steal a minute?</h1>
+    </div>
+    <main class="hero-footer">
+      <form class="hero-form" action="https://httpbin.org/anything" method="post">
+        <label class="hero-labels">
+          <input type="text" name="name" placeholder="Name">
+        </label>
+        <label class="hero-labels">
+          <input type="tel" name="phone" placeholder="Phone number">
+        </label>
+        <label class="hero-labels">
+          <input type="email" name="email" placeholder="Email">
+        </label>
+        <label class="hero-labels">
+          <input type="checkbox" name="consent" required>Are you ok with me saving this?
+        </label>
+        <button class="submit-button" type="submit">submit</button>
+      </form>
+    </main>
+  </section>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+  <section class="accordion">
+    <h1>Brief history of theiving</h1>
+
+    <div class="accordion-header" id="accordion-header-1">Did you know?</div>
+    <div class="accordion-description" id="accordion-description-1">
+      <p>The word theft is also used as an informal shorthand term for some crimes against property, such as burglary,
+        embezzlement, larceny, looting, robbery, shoplifting, library theft or fraud.</p>
+    </div>
+
+    <div class="accordion-header" id="accordion-header-2">Definition</div>
+    <div class="accordion-description" id="accordion-description-2">
+      <p>Theft is the taking of another person's property or services or scrap money without that person's permission or
+        consent with the intent to deprive the rightful owner of it.</p>
+    </div>
+  </section>
+
+  <!-- dont forget to link the javascript file here! -->
+  <script src="./script.js"></script>
+
+</body>
+
 </html>
