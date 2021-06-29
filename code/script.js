@@ -2,18 +2,18 @@
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
 
 
-const didYouKnow = document.getElementById("did-you-know");
-const factDidYouKnow = document.getElementById("fact-did-you-know");
+const accordionHeaderOne = document.getElementById("accordion-header-1")
+const accordionDescriptionOne = document.getElementById("accordion-description-1")
 
-const defintionClick = document.getElementById("definition");
-const factDefintion = document.getElementById("fact-definition");
+const accordionHeaderTwo = document.getElementById("accordion-header-2")
+const accordionDescriptionTwo = document.getElementById("accordion-description-2")
 
 
-didYouKnow.addEventListener("click", ()=> {
-  factDidYouKnow.classList.toggle("selected");
+accordionHeaderOne.addEventListener("click", ()=> {
+  accordionDescriptionOne.classList.toggle("selected")
 })
 
-defintionClick.addEventListener("click", ()=> {
-  factDefintion.classList.toggle("selected");
+accordionHeaderTwo.addEventListener("click", ()=> {
+  accordionDescriptionTwo.classList.toggle("selected")
 })
 
