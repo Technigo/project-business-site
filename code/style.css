@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 html {
   box-sizing: border-box;
 }
@@ -12,12 +13,15 @@ html {
 body {
   margin: 0px;
   padding: 0px;
+  font-family: "Roboto", sans-serif;
 }
 
 .title {
   position: absolute;
   display: flex;
-  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
   width: 100%;
   background-color: rgb(0, 0, 0, 0.25);
@@ -30,8 +34,13 @@ h1 {
   font-weight: 100;
   color: rgb(255, 255, 255);
   width: 100%;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   font-size: 40px;
+}
+
+.arrow {
+  color: white;
+  margin-bottom: 40px;
 }
 
 .header-container {
@@ -56,6 +65,9 @@ h1 {
   align-items: center;
   padding-right: 30px;
   column-gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logotype {
@@ -69,8 +81,22 @@ h1 {
   display: grid;
   grid-template-rows: auto auto;
   row-gap: 10px;
+  text-decoration: none;
+  color: white;
+  padding-bottom: 5px;
 }
 
+.icon-container:hover {
+  color: rgb(255, 147, 6);
+  transition: color 1s ease-in;
+  border-bottom: 1px solid rgb(255, 147, 6);
+}
+
+.icon-container:active {
+  transition: all 1s ease-in;
+  color: rgb(255, 147, 6);
+  border-bottom: 1px solid rgb(255, 147, 6);
+}
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
