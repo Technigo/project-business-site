@@ -8,6 +8,7 @@
       src="https://kit.fontawesome.com/7ed1b41d25.js"
       crossorigin="anonymous"
     ></script>
+
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -22,12 +23,15 @@
       </video>
     </header>
 
+    <div id="top"></div>
     <section class="navbar-container">
-      <img
-        class="logotype"
-        src="./pictures/Escape-house-logotype.png"
-        alt="Escape house logotype"
-      />
+      <a href="#top">
+        <img
+          class="logotype"
+          src="./pictures/escape-house-logotype.png"
+          alt="Escape house logotype"
+        />
+      </a>
       <a href="#faq" class="icon-container">
         <i class="fas fa-question icon"></i>
         <span class="icon-text">FAQ</span>
@@ -41,45 +45,87 @@
 
     <!-- Signup form -->
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h2 id="faq">FAQ</h2>
-
-      <div class="question" id="section1">Section 1</div>
+    <section class="accordion-container">
+      <div class="hidden-anchor" id="faq"></div>
+      <h2>FAQ</h2>
+      <div class="question" id="question1">
+        <span>What is an Escape Room?</span>
+        <i class="fas fa-chevron-down faq-arrow"></i>
+      </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <span class="answer-text">
+          An escape room is a interactive game where you get 60 minutes to find
+          a way out of the room by solving clues, codes and use the resources to
+          break out into freedom.
+        </span>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="question2">
+        <span> How much does a Escape room cost?</span>
+        <i class="fas fa-chevron-down faq-arrow"></i>
+      </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
-        <p>Lorem ipsum...</p>
+        <span>
+          The regular price is SEK 275 per person. Student and senior prizes
+          (valid student card required, and at least 65 years respectively) are
+          SEK 225 and children and youth prizes (up to 15 years) SEK 175 per
+          person.</span
+        >
+      </div>
+
+      <div class="question" id="question3">
+        <span>What are the payment options?</span>
+        <i class="fas fa-chevron-down faq-arrow"></i>
+      </div>
+
+      <div class="answer">
+        <span>
+          We take card payments and Swish. We do NOT accept cash. Companies that
+          do not have the option of card payment are offered invoice payment.
+        </span>
+      </div>
+
+      <div class="question" id="question4">
+        <span>What languages can you play in?</span>
+        <i class="fas fa-chevron-down faq-arrow"></i>
+      </div>
+
+      <div class="answer">
+        <span> All rooms can be played in Swedish and English.</span>
+      </div>
+
+      <div class="question" id="question5">
+        <span>What happens if you do not break out in an hour?</span>
+        <i class="fas fa-chevron-down faq-arrow"></i>
+      </div>
+      <div class="answer last-answer">
+        <span>You get released.</span>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <section class="form-container">
+      <h2>Booking requests</h2>
+
+      <form class="form-layout" action="">
+        <div class="form-row">
+          <span>First name:</span>
+          <input type="text" name="first-name" />
+        </div>
+        <div class="form-row">
+          <span>Last name:</span>
+          <input type="text" name="last-name" />
+        </div>
+        <div class="form-row">
+          <span>Rooms:</span>
+          <select>
+            <option value="empty"></option>
+            <option value="cellblock">Cellblock</option>
+            <option value="assassination">Assassination</option>
+            <option value="asylum">Asylum</option>
+          </select>
+        </div>
+      </form>
+    </section>
+    <script src="script.js"></script>
   </body>
 </html>

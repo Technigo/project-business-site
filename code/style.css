@@ -63,16 +63,17 @@ h1 {
   display: grid;
   grid-template-columns: 1fr auto auto;
   align-items: center;
-  padding-right: 30px;
-  column-gap: 20px;
+  padding-right: 20px;
+  column-gap: 10px;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 .logotype {
-  height: 70px;
-  width: 230px;
+  height: 30px;
+  width: 200px;
+  margin-left: 10px;
   object-fit: cover;
 }
 
@@ -97,10 +98,86 @@ h1 {
   color: rgb(255, 147, 6);
   border-bottom: 1px solid rgb(255, 147, 6);
 }
+
+h2 {
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.accordion-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(211, 209, 209);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+
+  padding-bottom: 50px;
+}
+
+.question {
+  display: grid;
+  background-color: rgb(155, 155, 155);
+  width: 340px;
+  height: 100%;
+  font-weight: 500;
+  align-items: center;
+  padding: 10px;
+  border: 0.5px solid black;
+  grid-template-columns: 1fr auto;
+  column-gap: 10px;
+}
+
+.answer {
+  width: 340px;
+  background-color: rgb(228, 228, 228);
+  height: 0px;
+  border-right: 0.5px solid black;
+  border-left: 0.5px solid black;
+  overflow: hidden;
+}
+
+.last-answer {
+  border-bottom: 0.5px solid black;
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
-  /* some styling here */
+  height: 120px;
+  overflow-y: scroll;
+  transition: height 400ms ease;
+  padding: 10px;
+}
+
+#faq {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
+}
+
+.faq-arrow {
+  color: black;
+}
+
+.form-container {
+  background-color: cadetblue;
+  width: 100%;
+  height: 400px;
+  padding: 30px;
+}
+
+.form-layout {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 10px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
