@@ -3,5 +3,229 @@ in this case it is the div with the answer class next to the div with the active
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
-  /* some styling here */
+  /* si9pu9bome styling here */ }
+
+ *{
+   margin: 0% 0% ;
+   padding:0% 0%;
+overflow-x: hidden;
+
+
+ }
+
+ 
+
+.container{
+  height: 130rem;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows:  2.5fr 3fr 0.2fr;
+grid-template-areas: 
+"header header header header"
+"accordion-one accordion-one accordion-two accordion-two"
+"footer footer footer footer";
+   
+}
+
+
+
+header{
+grid-area: header;
+ position:relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  }
+
+
+
+
+ audio{
+position: absolute;
+width: 25vw;
+margin-left: 75vw;
+align-self: baseline;
+
+}
+
+
+
+#video-hero{
+
+position: fixed;
+z-index: -10;
+
+}
+
+
+#hero-text-div{
+  position: fixed;
+ z-index: -9;
+   }
+
+
+
+
+#hero-text{
+color: rgb(253, 255, 230);
+font-size: 20vw;
+text-shadow: 0 0 20px rgb(98, 143, 135);
+
+  }
+
+
+#accordion-one{
+grid-area: accordion-one;
+background-color: rgba(255, 255, 255, 0.651);
+color: rgb(0, 0, 0);
+position: relative;
+
+
+}
+
+
+.signup-form{
+margin: 5vw 10vw;
+height: 40%;
+width: 60%;
+background-color: rgb(255, 255, 255);
+
+}
+
+
+
+
+
+#accordion-two{
+grid-area: accordion-two;
+background-color: rgba(255, 255, 255, 0.651);
+color: rgb(0, 0, 0);
+position: relative;
+
+
+}
+
+  
+.accordion-form{
+  
+  margin: 5vw 10vw;
+  height: 40%;
+  width: 60%;
+background-color: rgb(255, 255, 255);
+
+}
+
+
+
+footer {
+grid-area: footer;
+background-color: rgb(255, 255, 255);
+
+}
+
+
+/*  Phone  */
+
+@media  (min-width:0) and (max-width:767px) {
+
+  .container{
+   
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2.1fr 2fr 2fr 0.2fr;
+    grid-template-areas: 
+    
+    "header header header header"
+    "accordion-one accordion-one accordion-one accordion-one"
+    "accordion-two accordion-two accordion-two accordion-two"
+    "footer footer footer footer";
+  }
+  
+  .signup-form{
+    
+    margin: 15vw 10vw 0vw 10vw;
+    height: 70%;
+    width: 80%;
+ 
+    
+    }
+
+    .accordion-form{
+      
+      margin: 5vw 10vw 0vw 10vw;
+      height: 70%;
+      width: 80%;
+     
+      
+      }
+
+
+   }
+
+
+
+/*  Tablett  */
+
+@media (min-width:767px) and (max-width:991px){
+
+ 
+ .container{
+  
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: 2.3fr 2fr 2fr 0.3fr;
+   grid-template-areas: 
+   
+   "header header header header"
+   "accordion-one accordion-one accordion-one accordion-one"
+   "accordion-two accordion-two accordion-two accordion-two"
+   "footer footer footer footer";
+ }
+ 
+ .signup-form{
+ 
+   margin: 8vw 10vw 0vw 25vw;
+   height: 70%;
+   width: 50%;
+
+   
+   }
+
+   .accordion-form{
+     
+     margin: 3vw 10vw 0vw 25vw;
+     height: 70%;
+     width: 50%;
+    
+     
+     }
+
+
+  }
+
+    
+
+
+
+  
+
+
+
+
+/*  Desktop  */
+
+@media  (min-width:992px){
+
+.container{
+
+  height: 130rem;
+}
+
+
+  audio{
+    position: absolute;
+    width: 20vw;
+    margin-left: 80vw;
+    
+    
+      }
+  
 }
