@@ -30,12 +30,10 @@ body {
 
 h1 {
   text-align: center;
-  margin: 0;
   font-family: "Cinzel Decorative", cursive;
   font-weight: 100;
   color: rgb(255, 255, 255);
-
-  margin-bottom: 40px;
+  margin: 0px 0px 40px 0px;
   font-size: 40px;
 }
 
@@ -198,7 +196,7 @@ h2 {
 
 .question {
   display: grid;
-  background-color: rgb(155, 155, 155);
+  background-color: rgb(156, 212, 214);
   width: 340px;
   height: 100%;
   font-weight: 500;
@@ -223,7 +221,6 @@ h2 {
 
 .active + .answer {
   height: 120px;
-  overflow-y: scroll;
   transition: height 400ms ease;
   padding: 10px;
 }
@@ -284,10 +281,11 @@ h2 {
 
   h1 {
     font-size: 60px;
+    margin-bottom: 20px;
   }
 
   .arrow {
-    font-size: 2px;
+    font-size: 20px;
   }
 
   .video-ipad {
@@ -356,4 +354,87 @@ h2 {
 }
 
 @media only screen and (min-width: 1025px) {
+  .video-mobile {
+    display: none;
+  }
+
+  .video-desktop {
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  .title {
+    height: 80vh;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .arrow {
+    font-size: 20px;
+  }
+
+  .header-container {
+    height: 80vh;
+  }
+
+  .icon-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .form-container {
+    padding: 60px 80px;
+    width: 60%;
+  }
+
+  .form-faq-contact-container {
+    align-items: center;
+    background-color: rgb(156, 212, 214);
+  }
+
+  .user-agreement {
+    text-align: center;
+  }
+
+  .book-btn {
+    border: rgb(0, 0, 0) solid 1.5px;
+  }
+
+  .faq-contact-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .accordion-container {
+    flex: 55%;
+    grid-template-rows: repeat(12, auto) 1fr;
+  }
+
+  .faq-title {
+    width: 340px;
+  }
+
+  .contact-container {
+    flex: 45%;
+    background-color: rgb(211, 209, 209);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px 50px 0px;
+    row-gap: 0px;
+    justify-content: flex-start;
+  }
+
+  .information {
+    padding-bottom: 10px;
+  }
+
+  .map {
+    padding-right: 40px;
+    height: 300px;
+  }
 }
