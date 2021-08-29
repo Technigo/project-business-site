@@ -1,30 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 3 Business Site</title>
+  <link rel="stylesheet" href="./style.css" type="text/css" />
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+<body>
+  <!-- video or image as a header is cool :) -->
+  <header class=hero>
+    <div class=hero-menu>
+      <h2>About us</h2>
+      <h2>Courses</h2>
+      <h2>Contact us</h2>
+      <h2>FAQ</h2>
+    </div>
+    <div class="hero-text">
+      <h1>Design green</h1>
+      <h3>Add a touch of green to your life</h3>
+      <button>Try for free</button>
+    </div>
+  </header>
 
-      <div class="question" id="section1">Section 1</div>
+  <!-- Signup form -->
+  <section class=form>
+    <h2>Sign up your sesion</h2>
+
+    <form class="form-item" action="https://httpbin.org/anything" method="POST">
+
+
+      <!-- text fields -->
+      <label for="name" id="name">
+        First Name
+        <input type="text" name="name" id="name" required>
+      </label>
+
+
+      <label for="lastName" id="lastName">
+        Last Name
+        <input type="text" name="lastName" id="lastName" required />
+      </label>
+
+
+      <!--password -->
+      <label for="passsword" id="passsword">
+        Password
+        <input type="password" name="passsword" id="passsword" required>
+      </label>
+
+
+      <!-- radio -->
+      <input type="radio" name="student" id="student" value="true">
+      <label for="student">Student</label>
+
+      <input type="radio" name="teacher" id="teacher" value="true">
+      <label for="teacher">Teacher</label>
+
+
+      <!-- checkboxes -->
+      <input type="checkbox" name="terms&Conditions" id="terms&Conditions" value="true" required>
+      <label for="terms&Conditions">I accept the <a href="#">Terms and Conditions</a></label>
+
+
+      <input type="checkbox" name="newsletter" id="newsletter" value="true">
+      <label for="newsletter">I want to have the newsletter</label>
+
+      <!-- submit button-->
+      <button type="submit">Sign up</button>
+
+    </form>
+  </section>
+
+
+  <!-- Accordion -->
+  <section class="accordion">
+    <h1>FAQ</h1>
+
+
+    <div class=accordionItem>
+      <button class="question" id="question1">Question 1</button>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
+    </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+    <button class="question" id="question2">Question 2</button>
+    <div class="answer">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <button class="question" id="question3">Question 3</button>
+    <div class="answer">
+      <p>Lorem ipsum...</p>
+    </div>
+  </section>
+  <script type="text/javascript" src="./script.js"></script>
+  <!-- dont forget to link the javascript file here! -->
+</body>
+
 </html>
