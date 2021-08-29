@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 html {
   box-sizing: border-box;
+  width: 100%;
 }
 
 *,
@@ -33,7 +34,7 @@ h1 {
   font-family: "Cinzel Decorative", cursive;
   font-weight: 100;
   color: rgb(255, 255, 255);
-  width: 100%;
+
   margin-bottom: 40px;
   font-size: 40px;
 }
@@ -43,16 +44,24 @@ h1 {
   margin-bottom: 40px;
 }
 
-.header-container {
-  height: 100vh;
-  width: 100%;
-}
-
-.video {
+.video-mobile {
   height: 100vh;
   width: 100%;
   z-index: -1;
   object-fit: cover;
+}
+
+.video-ipad {
+  display: none;
+}
+
+.video-desktop {
+  display: none;
+}
+
+.header-container {
+  height: 100vh;
+  width: 100%;
 }
 
 .navbar-container {
@@ -105,67 +114,16 @@ h2 {
   width: 100%;
 }
 
-.accordion-container {
+.form-faq-contact-container {
   width: 100%;
-  height: 100%;
-  background-color: rgb(211, 209, 209);
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
 }
-
-.question {
-  display: grid;
-  background-color: rgb(155, 155, 155);
-  width: 340px;
-  height: 100%;
-  font-weight: 500;
-  align-items: center;
-  padding: 10px;
-  border: 0.5px solid black;
-  grid-template-columns: 1fr auto;
-  column-gap: 10px;
-}
-
-.answer {
-  width: 340px;
-  background-color: rgb(228, 228, 228);
-  height: 0px;
-  border-right: 0.5px solid black;
-  border-left: 0.5px solid black;
-  overflow: hidden;
-}
-
-.last-answer {
-  border-bottom: 0.5px solid black;
-}
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  height: 120px;
-  overflow-y: scroll;
-  transition: height 400ms ease;
-  padding: 10px;
-}
-
-#faq {
-  display: block;
-  position: relative;
-  top: -80px;
-  visibility: hidden;
-}
-
-.faq-arrow {
-  color: black;
-}
+/* 
+------------- FORM CONTAINER ---------------- */
 
 .form-container {
-  background-color: cadetblue;
+  background-color: rgb(156, 212, 214);
   width: 100%;
   padding: 30px;
 }
@@ -222,13 +180,74 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   display: block;
 }
 
-.footer-container {
+.faq-contact-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ------------- ACCORDIAN CONTAINER ----------------  */
+
+.accordion-container {
   width: 100%;
   background-color: rgb(211, 209, 209);
+  display: grid;
+  justify-content: center;
+  padding: 10px 0px 50px 0px;
+}
+
+.question {
+  display: grid;
+  background-color: rgb(155, 155, 155);
+  width: 340px;
+  height: 100%;
+  font-weight: 500;
+  padding: 10px;
+  border: 0.5px solid black;
+  grid-template-columns: 1fr auto;
+  column-gap: 10px;
+}
+
+.answer {
+  width: 340px;
+  background-color: rgb(228, 228, 228);
+  height: 0px;
+  border-right: 0.5px solid black;
+  border-left: 0.5px solid black;
+  overflow: hidden;
+}
+
+.last-answer {
+  border-bottom: 0.5px solid black;
+}
+
+.active + .answer {
+  height: 120px;
+  overflow-y: scroll;
+  transition: height 400ms ease;
+  padding: 10px;
+}
+
+#faq {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
+}
+
+.faq-arrow {
+  color: black;
+}
+/*
+------------- CONTACT-CONTAINER ----------------  */
+
+.contact-container {
+  background-color: rgb(156, 212, 214);
   display: grid;
   grid-template-rows: auto;
   row-gap: 10px;
   padding: 30px;
+  justify-content: center;
 }
 
 .bold {
@@ -243,4 +262,98 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .information a:hover {
   color: rgb(255, 147, 6);
+}
+
+.information {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+}
+
+.map {
+  padding-top: 10px;
+}
+
+@media only screen and (min-width: 668px) and (max-width: 1024px) {
+  html {
+    width: 100%;
+  }
+
+  .title {
+    height: 70vh;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .arrow {
+    font-size: 2px;
+  }
+
+  .video-ipad {
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  .video-mobile {
+    display: none;
+  }
+
+  .header-container {
+    height: 70vh;
+  }
+
+  .icon-container {
+    display: none;
+  }
+
+  .form-container {
+    padding: 60px 80px;
+  }
+
+  .user-agreement {
+    text-align: center;
+  }
+
+  .book-btn {
+    border: rgb(0, 0, 0) solid 1.5px;
+  }
+
+  .faq-contact-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .accordion-container {
+    flex: 55%;
+    grid-template-rows: repeat(12, auto) 1fr;
+  }
+
+  .faq-title {
+    width: 340px;
+  }
+
+  .contact-container {
+    flex: 45%;
+    background-color: rgb(211, 209, 209);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px 50px 0px;
+    row-gap: 0px;
+    justify-content: flex-start;
+  }
+
+  .information {
+    padding-bottom: 10px;
+  }
+
+  .map {
+    padding-right: 40px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
 }
