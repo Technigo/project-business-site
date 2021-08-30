@@ -5,15 +5,17 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 body {
 	margin: 0;
 }
+
 header {
 	position: relative;
-	/* text-align: center; */
 }
+
 .header-text-center {
 	position: absolute;
 	top: 20%;
 	left: 45%;
 }
+
 .hero-img {
 	width: 100%;
 	height: 100vh;
@@ -34,7 +36,8 @@ header {
 }
 
 .form-container,
-.accordion-container {
+.accordion-container,
+.radio-container {
 	display: flex;
 	justify-content: center;
 }
@@ -44,19 +47,35 @@ header {
 	width: min(80%, 320px);
 	border: 1px solid black;
 }
+.form {
+	align-items: center;
+}
 
-/* input[type='text'],
-input[type='email'],
-input[type='tel'] {
-	width: 100%;
-} */
+.radio-container {
+	flex-wrap: wrap;
+}
+
+.checkbox-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.text-field,
+button[type='submit'] {
+	width: 80%;
+	margin: 5px;
+}
 
 input[type='radio'] {
-	width: 50%;
+	width: 10%;
 }
-.active + .answer {
-	/* some styling here */
+.radio {
+	width: 40%;
 }
+/* .active + .answer {
+	some styling here
+} */
 
 @media (min-width: 768px) {
 	.flex-container {
