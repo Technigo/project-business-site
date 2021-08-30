@@ -1,7 +1,104 @@
+/* GLOBAL STYLES */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+
+  border: 3px solid yellow;
+}
+
+
+/* HEADER & NAVIGATION */
+
+.logo-image {
+  height: 50px;
+  width: auto;
+}
+
+.head-container {
+  width: 375px;
+  height: 667px;
+  position: relative;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  background-image: url("https://via.placeholder.com/375x667");
+  background-repeat: no-repeat;
+
+
+  border: 3px solid green;
+  
+}
+
+
+
+/* FORM */
+
+.subscription-form {
+  max-width: 375px;
+  height: 667px;
+
+
+  border: 3px solid red;
+}
+
+.form-label {
+  display: block;
+}
+
+.send-button {
+  display: block;
+}
+
+/* Accordion */
+
+.accordion {
+  max-width: 375px;
+  height: 667px;
+
+
+  border: 3px solid blue;
+}
+
+.question {
+  margin: 0;
+  background-color: grey;
+
+
+  border: 1px solid green;
+}
+
+
+.answer {
+  margin: 0;
+  background-color: lightgray;
+  display: none;
+
+
+/*   border: 1px solid blueviolet; */
+}
+
+
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
-  /* some styling here */
+  display: block;
 }
