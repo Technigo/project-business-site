@@ -46,7 +46,7 @@ body {
   background: #eeeeec;
 }
 header {
-  background: url(images/hero3.jpg);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0.13)), url(images/hero3.jpg);
   background-size: cover;
   background-position: center;
   height: 80vh;
@@ -169,10 +169,6 @@ header div button:hover {
   width: calc(50% - 5px);
 }
 
-.active + .answer {
-  /* some styling here */
-}
-
 .signup__form {
   width: 100%;
 }
@@ -223,11 +219,12 @@ input {
 
 textarea {
   font-family: "Roboto", sans-serif;
-  background: white;
+  background:none;
+  border-bottom:1px solid #4f4f4f;
   border: none;
   width: calc(100% - 10px);
-  min-height: 100px;
   padding: 5px;
+  color:white;
 }
 
 form button {
@@ -250,8 +247,7 @@ form button:hover {
 
 .accordion {
   width:100%;
-  color:white;
-  background:#444;
+  color:black;
   cursor:pointer;
   transition: .4s;
   padding:18px;
@@ -271,6 +267,34 @@ form button:hover {
   background-color: #ccc; 
 }
 
+.question {
+  padding:0 18px;
+}
+
+.active + .answer {
+  display:block;
+}
+
+footer {
+  background:#353535;
+  color:white;
+  padding:40px;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+footer i {
+  margin:5px 10px;
+  color:white;
+  font-size: 28px !important;
+}
+
+footer i:hover {
+  color:#4f4f4f;
+  cursor:pointer;
+}
 @media only screen and (min-width: 599px) {
   .gallery div img {
     transition: transform 0.5s;
@@ -342,4 +366,6 @@ form button:hover {
   .signup__form form {
     width: 40%;
   }
+
+  form {padding:50px;}
 }
