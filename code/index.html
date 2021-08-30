@@ -1,30 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+      <!-- meta tag for responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+     <!-- link to font-family -->
+     <link rel="preconnect" href="https://fonts.googleapis.com"> 
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+ 
+      <!-- link for icon? -->
+
+     <!-- link to css file -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>Andbrew</title>
   </head>
+
   <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+      <!-- video or image as a header is cool :) -->
+    <header>
+      <div class="header">
+        <h1>Andbrew</h1>
+        <h2>- Andrew's micro brewery</h2>
+      </div>
+    </header>
 
-    <section class="accordion">
+    
+
+      <div class="sign-up-form">
+        <h4>Keep up to date about upcoming classes in the microbrewery by signing up here! </h4>
+        
+        <form action=""> 
+          <label class="input-container" for="name">Name</label>
+          <input type="text" id="name" placeholder="ex Beery Beerson">
+           
+          <label class="input-container" for="email">E-mail</label>
+          <input type="email" id="email" placeholder="ex beery@beerson.com">
+          
+          <div class="favourite-beer">
+            <h4>Favourite beer(s)?</h4> 
+            <input type="checkbox" id="lager" name="lager" value="lager">
+            <label for="lager">Lager</label><br>
+            <input type="checkbox" id="ale" name="ale" value="ale">
+            <label for="ale"> Ale</label><br>
+            <input type="checkbox" id="IPA" name="IPA" value="IPA">
+            <label for="IPA"> IPA</label><br>
+          </div>
+
+          <div class="brewing-knowledge">
+            <h4>Have you brewed before?</h4> 
+            <input type="radio" id="yes" name="brewing_skills" value="yes">
+            <label for="yes">Yeah, a lot! Cheers! </label><br>
+            <input type="radio" id="aBit" name="brewing_skills" value="aBit">
+            <label for="aBit">Just a little </label><br>
+            <input type="radio" id="no" name="brewing_skills" value="no">
+            <label for="no">No, only in my dreams</label>
+          </div>
+       
+          <button class="button" type="submit">Sign Up</button>
+        
+        </form>
+        </div>
+
+      <section class="faq">
       <!-- Accordion -->
-      <h1>FAQ</h1>
+        <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <div class="question" id="section1">Section 1</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+        <div class="question" id="section2">Section 2</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+      </section>
+   
+      <footer>
+        <h5 class="navigation">About</h5>
+        <h5 class="navigation">Contact</h5>
+      </footer>
+      <!-- dont forget to link the javascript file here! -->
+
   </body>
 </html>

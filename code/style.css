@@ -1,3 +1,116 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 5px;
+  margin: 0px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(247, 217, 216);
+  color: rgb(238, 208, 209);
+}
+
+header {
+  grid-column: span 6;
+}
+
+.header {
+  background-image: url("https://images.unsplash.com/photo-1445140463371-d8036feedc2f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZGVyJTIwaW1hZ2UlMjBiZWVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60");
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Dont know what this one does?
+  position: relative;*/
+}
+
+h1 {
+  margin: 0px;
+  text-align: center;
+  padding-top: 75px;
+  font-size: 55px;
+ 
+}
+
+h2 {
+  text-align: center;
+  margin: 0px;
+  font-size: 30px;
+}
+
+.sign-up-form {
+  text-align: center;
+  background-color: rgb(245, 142, 117);
+  margin: 10px;
+  grid-column: span 6;
+  padding-bottom: 21px;
+  
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+
+}
+
+.input-container {
+  display: block;
+  text-align: center;
+}
+
+.favourite-beer {
+  width: 50%;
+
+}
+
+.brewing-knowledge {
+  width: 50%;
+}
+
+
+.faq {
+  text-align: center;
+  background-color: rgb(245, 142, 117);
+  margin: 10px;
+  grid-column: span 6;
+  
+}
+
+footer {
+  grid-column: span 6;
+  background-image: url("https://images.unsplash.com/photo-1505075106905-fb052892c116?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGhlYWRlciUyMGltYWdlJTIwYmVlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60");
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation {
+  background-color: black;
+  color: white;
+  display: inline;
+  text-align: center;
+  font-size: 16px;
+  margin: 20px;
+}
+
+/*tablet version*/
+@media (min-width: 668px) and (max-width: 1023px) {
+  .sign-up-form, .faq {
+    grid-column: span 3;
+  }
+
+}
+
+/*desktop version*/
+@media (min-width: 1024px) {
+
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
