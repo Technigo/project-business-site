@@ -3,14 +3,35 @@ in this case it is the div with the answer class next to the div with the active
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 body {
-  margin: 0;
+	margin: 0;
+}
+header {
+	position: relative;
+	/* text-align: center; */
+}
+.header-text-center {
+	position: absolute;
+	top: 20%;
+	left: 45%;
 }
 .hero-img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
 }
 
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+
+.form-container {
+	display: grid;
+	grid-template-columns: repeat(1fr, 4);
+	grid-template-rows: repeat(1fr, 4);
+}
 .active + .answer {
-  /* some styling here */
+	/* some styling here */
 }

@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
-    <img class="hero-img" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" alt="image of solarplant">
-    <!-- Signup form -->
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Project 3</title>
+		<link rel="stylesheet" href="style.css" />
+		<!-- dont forget to add a css file and link it here! -->
+	</head>
+	<body>
+		<header>
+			<!-- video or image as a header is cool :) -->
+			<img class="hero-img" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" alt="image of solarplant" />
+			<h1 class="header-text-center">Farm the sun</h1>
+		</header>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+		<main class="flex-container">
+			<!-- Signup form -->
+			<section class="form">
+				<form class="form-container" action="https://httpbin.org/anything/post">
+					<h2>This is the form</h2>
+					<input type="text" name="name" id="name" placeholder="Name" />
+					<input type="email" name="email" id="email" placeholder="Email" />
+					<input type="tel" name="phone" id="phone" placeholder="Phone number" />
+					<input type="radio" name="date" id="date1" />
+					<label for="date1">Datum 1</label>
+					<input type="radio" name="date" id="date2" />
+					<label for="date2">Datum 2</label>
+					<input type="radio" name="date" id="date3" />
+					<label for="date3">Datum 3</label>
+					<input type="radio" name="date" id="date4" />
+					<label for="date4">Datum 4</label>
+					<input type="checkbox" name="terms" id="terms" />
+					<label for="terms">I accept ther <a href="" target="_blank">Terms & Conditions</a></label>
+					<input type="checkbox" name="newsletter" id="newsletter" />
+					<label for="newsletter">I want the awesome Newsletter!</label>
+					<button type="submit">Submit</button>
+				</form>
+			</section>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+			<!-- FAQ -->
+			<section class="accordion">
+				<!-- Accordion -->
+				<h1>FAQ</h1>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+				<div class="question" id="section1">Section 1</div>
+				<div class="answer">
+					<p>Lorem ipsum...</p>
+				</div>
+
+				<div class="question" id="section2">Section 2</div>
+				<div class="answer">
+					<p>Lorem ipsum...</p>
+				</div>
+			</section>
+		</main>
+
+		<!-- dont forget to link the javascript file here! -->
+	</body>
 </html>
