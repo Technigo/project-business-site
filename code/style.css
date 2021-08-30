@@ -20,18 +20,50 @@ header {
 	object-fit: cover;
 }
 
-.flex-container {
+/* Defining flex-box elements */
+.flex-container,
+.form {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 20px;
 }
 
-.form-container {
-	display: grid;
-	grid-template-columns: repeat(1fr, 4);
-	grid-template-rows: repeat(1fr, 4);
+.flex-container {
+	gap: 20px;
+	margin: 20px;
+}
+
+.form-container,
+.accordion-container {
+	display: flex;
+	justify-content: center;
+}
+
+.form,
+.accordion {
+	width: min(80%, 320px);
+	border: 1px solid black;
+}
+
+/* input[type='text'],
+input[type='email'],
+input[type='tel'] {
+	width: 100%;
+} */
+
+input[type='radio'] {
+	width: 50%;
 }
 .active + .answer {
 	/* some styling here */
+}
+
+@media (min-width: 768px) {
+	.flex-container {
+		flex-direction: row;
+	}
+	.form,
+	.accordion {
+		width: 320px;
+	}
 }
