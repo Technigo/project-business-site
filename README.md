@@ -1,12 +1,10 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+Week 3 of Technigo - the assigment of the week is to create a business site. The site should contain a hero image or video, an accordion and a signup form. The accordion have to be built with Javascript.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## Issues
 
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The video in the header did not display in Netlify. Instead of using a file, I switched to a link which worked. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://sofiawillebrand-week3-business-site.netlify.app/
