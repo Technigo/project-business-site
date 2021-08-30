@@ -40,11 +40,10 @@ body {
   line-height: 1.5;
 }
 
-
 /* MY CSS STARTS HERE */
 body {
   font-family: "Roboto", sans-serif;
-  background:#eeeeec;
+  background: #eeeeec;
 }
 header {
   background: url(images/hero3.jpg);
@@ -61,12 +60,12 @@ header {
 }
 
 hr {
-  width:calc(100% - 20px);
-  background-color:#353535;
-  margin:0 auto;
-  margin-top:20px;
-  margin-bottom:20px;
-  max-width:1200px;
+  width: calc(100% - 20px);
+  background-color: #353535;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 1200px;
 }
 
 .logo {
@@ -95,6 +94,7 @@ hr {
 .mobile {
   height: 45px;
   margin-top: 0px;
+  height: 50px;
 }
 
 header nav {
@@ -106,8 +106,7 @@ header nav {
   font-size: 14px;
   order: 1;
   position: relative;
-  background: #380e4a;
-  height: 70px;
+  background: #353535;
   margin-top: 20px;
 }
 
@@ -122,7 +121,6 @@ header nav a {
 header div {
   order: 3;
   margin-top: 30px;
-  padding: 20px;
 }
 
 header div h2 {
@@ -148,28 +146,27 @@ header div button:hover {
 }
 
 .gallery {
-  display:flex;
+  display: flex;
   flex-direction: column;
   text-align: center;
-  gap:5px;
 }
 
 .gallery div {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   padding: 20px 0px;
 }
 
 .gallery h2 {
-  color:#353535;
+  color: #353535;
   font-size: 24px;
-  margin:20px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
 }
 
 .gallery img {
-  width:calc(50% - 10px);
+  width: calc(50% - 5px);
 }
 
 .active + .answer {
@@ -181,97 +178,131 @@ header div button:hover {
 }
 
 .signup__form img {
-  width:100%;
+  width: 100%;
 }
 
 form {
-  background:#353535;
-  color:white;
+  background: #353535;
+  color: white;
   position: relative;
-  padding:20px;
+  padding: 20px;
 }
 
 form h2 {
-  margin:0px 0px 10px 0px;
+  margin: 0px 0px 10px 0px;
 }
 
 label,
 input {
   margin-bottom: 5px;
   background: none;
+  color: white;
 }
 
-input[type="text"]:focus, input[type=password]:focus {
-  border:none;
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: none;
 }
 
-input[type=text], input[type=password] {
-  width:calc(100% - 20px);
-  padding:10px;
-  background:none;
-  border-bottom:1px #4F4F4F solid;
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  background: none;
+  border-bottom: 1px #4f4f4f solid;
 }
 
-input[type=radio] {
+input[type="radio"] {
   cursor: pointer;
-
 }
 
 input {
   border: none;
-  background:white;
+  background: white;
 }
 
 textarea {
   font-family: "Roboto", sans-serif;
-  background:white;
-  border:none;
+  background: white;
+  border: none;
   width: calc(100% - 10px);
   min-height: 100px;
-  padding:5px;
+  padding: 5px;
 }
 
 form button {
-  background:none;
-  border:4px solid white;
+  background: none;
+  border: 4px solid white;
   border-radius: 20px;
-  padding:10px 25px;
-  color:white;
-  right:40px;
-  margin-top:10px;
-  bottom:40px;
+  padding: 10px 25px;
+  color: white;
+  right: 40px;
+  margin-top: 10px;
+  bottom: 40px;
 }
 
 form button:hover {
-  background:white;
-  transition: .5s;
-  color:blacK;
+  background: white;
+  transition: 0.5s;
+  color: blacK;
   cursor: pointer;
 }
 
-@media only screen and (min-width: 599px) {
+.accordion {
+  width:100%;
+  color:white;
+  background:#444;
+  cursor:pointer;
+  transition: .4s;
+  padding:18px;
+}
 
+.answer {
+  padding: 0 18px;
+  background-color:white;
+  display:none;
+}
+
+.active {
+  display:block;
+}
+
+.active {
+  background-color: #ccc; 
+}
+
+@media only screen and (min-width: 599px) {
   .gallery div img {
-    transition: transform .5s;
+    transition: transform 0.5s;
   }
 
   .gallery div img:hover {
     transform: scale(1.02);
-    box-shadow: 1px 1px 10px #4F4F4F;
+    box-shadow: 1px 1px 10px #4f4f4f;
     cursor: pointer;
   }
 
-  .gallery, .signup__form, .accordion {
-    max-width:1200px;
-    margin:0 auto;
+  .gallery,
+  .signup__form,
+  .accordion {
+    max-width: 1200px;
+    margin: 0 auto;
   }
-  
+
   header div h2 {
     font-size: 60px;
   }
 
+  header div {
+    padding: 40px 80px;
+  }
+
   .gallery img {
-    width:calc(25% - 15px);
+    width: calc(25% - 15px);
+  }
+
+  .gallery div {
+    gap: 20px;
   }
 
   .gallery h2 {
@@ -295,17 +326,20 @@ form button:hover {
     background: none;
     font-size: 18px;
   }
-  
 }
 
-@media only screen and (min-width:769px) {
+@media only screen and (min-width: 769px) {
   header {
     height: 50vh;
   }
   .signup__form {
-    display:flex;
+    display: flex;
   }
-  
-  .signup__form img {width:60%;}
-  .signup__form form {width:40%;}
+
+  .signup__form img {
+    width: 60%;
+  }
+  .signup__form form {
+    width: 40%;
+  }
 }
