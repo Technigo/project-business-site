@@ -1,7 +1,135 @@
+* { box-sizing: border-box; margin: 0 } 
+body {
+  
+  font-family: sans-serif;
+ 
+}
+
+
+header img{
+ height: 100px;
+ margin: 0%;
+}
+header{
+display: flex;
+  background: rgba(232, 233, 227, 0.7);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-link{
+  color: rgb(3, 49, 49);
+  
+}
+.hero {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+
+
+/* Flexbox stuff */
+display: flex;
+   justify-content: center;
+   align-items: center;
+
+ /* Text styles */
+ text-align: center;
+}
+
+.hero::after{
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(23, 24, 18, 0.3);
+  z-index: -1;
+
+}
+  /* Background styles */
+  video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: Absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+  .hero h1 {
+        /* Text styles */
+        font-size: 5em;
+        margin-top: 0;
+        margin-bottom: 0.5em;
+    }
+  
+    .texture{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .grid-container{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 80px auto 80px;
+      column-gap: 10px;
+      row-gap: 15px;
+    }
+    
+    .grid-item{
+      background-color: burlywood;
+    }
+.main-content{
+  background-color: aliceblue;
+}
+
+input {
+  font-size: 20px;
+}
+
+input:valid{
+  background-color: green;
+}
+
+input:invalid{
+/*   background-color: red; */
+}
+
+label{
+  display: block;
+  margin-bottom: 20px;
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
   /* some styling here */
+}
+
+@media (min-width:768px) {
+  .grid-container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1040px){
+.navigation .navigation-link {
+    text-align: center;
+    display: inline;
+}
+
+    .grid-container{
+      grid-template-columns: repeat(4, 1fr);
+}
 }
