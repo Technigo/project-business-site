@@ -3,28 +3,92 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css">
+    <title>Business site</title>
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <section class="full-container">
+    <article class="showcase">
+      <header>
+        <h2 class="logo">Bionics</h2>
+        <div class="toggle"></div>
+      </header>
+      <video src="./videos/header-video1.mp4" muted loop autoplay></video>
 
-    <!-- Signup form -->
+      <div class="text">
+        <h2>Grab the future</h2>
+        <h3>bionic arms for everyday use</h3>
+        <p>Latest technology delivering bionic strenght for endless of people around the globe. Live as you did before or as you always wanted.</p>
+      </div>
 
-    <section class="accordion">
+      <u class="social">
+        <li><a href="#"><img src="./icons/facebook.png" alt="facebook icon"></a></li>
+        <li><a href="#"><img src="./icons/instagram.png" alt="instagram icon"></a></li>
+        <li><a href="#"><img src="./icons/twitter.png" alt="twitter icon"></a></li>
+      </u>
+    </article>
+
+    <div class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Signup form, dont forget to change br to something in css -->
+    <div class="grid-container">
+
+      <div class="information">
+        <h1>Bionic strenght</h1>
+        <p>Our bionic arms have delivered possibilities beyond the imagination for endless of people. 
+          Iusto nam vel esse eum, eveniet perferendis laboriosam itaque error iste adipisci nesciunt ut quos facilis dicta, nisi id dolore labore tempore?</p>
+      </div>
+      
+        <form class="apply-form">
+          <label for="fname">Full name:</label><br>
+          <input type="text" id="fname" name="fname" value=""><br>
+          <label for="email">Email:</label><br>
+          <input type="text" id="lname" name="lname" value=""><br>
+          <label for="phone">Phone number:</label><br>
+          <input type="tel" id="phone" name="phone" value=""><br>
+          <label for="date">Date for demo:</label><br>
+          <input type="date" id="date" name="date" value=""><br>
+          <button class="form-button" type="submit" value="send">Send</button>
+        </form>
+      
+      <div class="grid-item-img">
+        <img src="./img/robotarm_example.jpg" style="width:100%" alt="prototype of robotarm">
+      </div>
+      <div class="grid-item-img">
+        <img src="./img/robotarm1.jpg" style="width:100%" alt="girl with robotarm">
+      </div>
+      </div>
+    
+
+    <section class="accordion-container">
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      <h1 class="accordion-title">Frequently asked questions</h1>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+      <button class="accordion">How strong is the bionic arm?</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+      <button class="accordion">Is it water and fire resistant?</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+      <button class="accordion">How long is the warranty?</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
     </section>
+
+  </section>
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
   </body>
 </html>
