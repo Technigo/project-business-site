@@ -4,14 +4,85 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <!-- video section with 3 different formats -->
+    <section class="header-container">
+      <div class="video-container">
+          <!-- PHONE VIDEO -->
+        <!-- <video id="hero-video-phone"> -->
+            <video autoplay muted loop id="hero-video-phone">
+          <source src="videos/SampleVideo_360x240_1mb.mp4">
+          <source src= "videos/SampleVideo_360x240_1mb.webm">
+          Your browser does not support HTML video
+        </video>
+        
+        <!-- TAABLET VIDEO -->
+        <video id="hero-video-tablet">
+          <!-- <video autoplay muted loop id="hero-video-tablet"> -->
+        <source src="videos/SampleVideo_720x480_1mb.mp4">
+        <source src= "videos/SampleVideo_720x480_1mb.webm">
+        Your browser does not support HTML video
+      </video>
+       <!-- DESKTOP VIDEO -->
+      <video id="hero-video-desktop">
+        <!-- <video autoplay muted loop id="hero-video-desktop"> -->
+      <source src="videos/SampleVideo_1280x720_1mb.mp4">
+      <source src= "videos/SampleVideo_1280x720_1mb.webm">
+      Your browser does not support HTML video
+    </video>
 
+
+      </div>
+        <div class="content-hero">
+          <h1>Heading</h1>
+          <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+        </div>
+    </section>
+   
+    <section class="main-content">
     <!-- Signup form -->
+    <div class = "sign-up-content">  <!-- Item1 & 2 -->
+      <h1>Become a member!</h1>
+      <form class="sign-up-form" action="http://httpbin.org/anything" method="post">
+        <label >
+          User Name
+            <input  class="input-box" type="text" required name="UserName" placeholder="Enter your user name">
+        </label>
+        <label>
+          Password
+            <input class="input-box" type="password" required name="Password" placeholder="Enter your password">
+        </label>
+        <label>
+          Email
+            <input  class="input-box" type="email" required name="Email" placeholder="example@gmail.com">
+        </label>
+        <label>
+          <input type="checkbox" required name="Terms">
+            I Agree on Terms and
+        </label>
+        <label>
+          <input type="checkbox"  name="News">
+            I want to recieve news from 
+        </label>
+        <label>
+            <button type="submit">Sign up</button>
+        </label>
+        </form>
+    </div>
 
-    <section class="accordion">
+   
+
+     <!-- Item 3-->
+     <div class=img-sign-up>
+      <img src="../grid-shubby.jpg" alt="">
+    </div>
+  
+
+
+<!-- Item 5-6 -->
+    <div class="faq-content">
       <!-- Accordion -->
       <h1>FAQ</h1>
 
@@ -24,7 +95,15 @@
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
-    </section>
+    </div>
+    
+    <!-- Item 4 -->
+    <div class ="img-faq">
+      <img src="../grid-shubby.jpg" alt="">
+    </div> 
+   
+
+  </section>
     <!-- dont forget to link the javascript file here! -->
   </body>
 </html>
