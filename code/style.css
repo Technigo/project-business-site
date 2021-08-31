@@ -1,18 +1,10 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
-
 body {
   font-family: 'Hina Mincho', serif;
   margin: 0;
 }
 
 .hero-video {
-  position: absolute;  
+  position: absolute;             /* stays as a background when header-title has position relative and higher z-index */
   object-fit: cover;
   width: 100%;
   height: 300px;
@@ -20,7 +12,7 @@ body {
 
 .header-title {
   position: relative;
-  z-index: 1;                     /*the header title on top of the video*/
+  z-index: 1;                     /* the header title stays one layer on top of the video */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -41,113 +33,139 @@ nav {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-
   background-color: white;
-  position: sticky;
+  position: sticky;               /* navbar that stays at the top of the page when scrolling down */
   top: 0;
   z-index: 1;
 }
 
 .nav-icon, .book-online-btn  {
   border: 2px solid gray;
-  border-radius: 10%;             /*rounded corners*/
-  padding: 5px;                   /*space between text and the border*/
+  border-radius: 10%;             /* rounded corners */
+  padding: 5px;                   /* space between text and the border */
   height: 50px;
   width: 100px;
   display: flex;
-  align-items: center;            /*center the content, vertically*/
+  align-items: center;            /* center the content, vertically */
   justify-content: center;   
   text-transform: uppercase;
-  font-family: 'Hina Mincho', serif;  /*the font dosen't apply here from the body beacuse the button tag default styles have been overriding(?)*/
+  font-family: 'Hina Mincho', serif;  /* the font dosen't apply here from the body beacuse the button tag default styles have been overwritten(?) */
   cursor: pointer;
 }
 
-/*The Modal (background)*/
-.modal-form {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+/* The Modal (background) */
+.modal-form, .modal-accordion {
+  display: none;                        /* Hidden by default */
+  position: fixed;                      /* Stay in place */
+  z-index: 1;                           /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.3); /* Black with opacity 0.3*/
+  width: 100%;                          /* Full width */
+  height: 100%;                         /* Full height */
+  overflow: auto;                       /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.3);  /* Black with opacity 0.3*/
   
 }
 
-/*Modal Content/Pane*/
+/* Modal Content/Pane */
 .modal-content {
-  background-color: #fefefe;
-  margin: 5% auto; /* 5% from the top and centered*/
+  background-color: white;
+  margin: 5% auto;                      /* 5% from the top and centered */
   padding: 50px;
   border: 2px solid;
-  width: 50%; /* Could be more or less, depending on screen size */
-
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative; */
+  width: 50%;                           /* Could be more or less, depending on screen size, almost 100% for mobile? */
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
 
-/* .modal-content p {
-  margin: 10px;
-} */
+  background-image: url("./favicon_copy.png");
+}
 
 .modal-sign-up {
-  /* border: 1px solid red; */
   grid-column: span 1;
+  background-color: white;
+  padding: 20px;
+
 }
 
-.modal-img {                  /*hide the img in mobile?? .modal-sign upp take span 2, and center the content?*/
-  /* border: 1px solid red; */
+.modal-img {                  /* hide the img in mobile?? .modal-sign upp take span 2, and center the content? */
   grid-column: span 1;
   width: 100%;
-  /* object-fit: contain; doesn't need object-fit because of grid? */
-  transform: rotate(90deg);       /*rotate the img 90deg*/
-  align-self: center;             /*center the img*/
+                              /* object-fit: contain; doesn't need object-fit because of grid? */
+  transform: rotate(90deg);   /* rotate the img 90de g*/
+  align-self: center;         /* center the img */
 }
-
-/* The Close Button */
-.close-btn {
-  color: #aaa;
-  font-size: 28px;
-  position: absolute;
-  top: 0;
-  right: 25px;
-}
-
-.close-btn:hover, .close-btn:focus {                /*focus??*/
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-
-.check-mark {         /*display chech-mark when input are valid*/
-  visibility: hidden;
-  color: green;
-}
-
-input:valid + .check-mark {
-  /* want to display check-mark when input are valid */
-  visibility: visible;
-}
-
-input:not(:placeholder-shown):not(:focus):invalid{
-  /*want a red border when validation say invalid when it is not a placeholder and on focus*/
-  border: 0.5px solid red;
-}
-
 
 .inputs {
   display: flex;
   flex-direction: column;
 }
 
-.inputs input {
+.inputs label {
   margin-top: 15px;
+}
+
+/* The Close Button */
+.close-btn {
+  color: rgba(241, 106, 27, 0.703);
+  font-size: 32px;
+  font-weight: bolder;
+  position: absolute;
+  top: 0;
+  right: 25px;
+}
+
+.close-btn:hover, .close-btn:focus {       /* when hovering and focusing on the close button */
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.check-mark {                              /* display chech-mark when input are valid */
+  visibility: hidden;
+  color: green;
+}
+
+input:valid + .check-mark {               /* want to display check-mark when input are valid */
+  visibility: visible;
+}
+
+/* want a red border when validation say invalid when it is not a placeholder and on focus */
+input:not(:placeholder-shown):not(:focus):invalid {
+  border: 0.5px solid red;
+}
+
+.accordion-title {
+  grid-column: span 2;
+  justify-self: center;
+}
+
+.question {
+  background: white;
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;         /* want space between the question and the arrow */
+  align-items: center;
+  padding: 0 12px;
+  cursor: pointer;                        /* the whole question is clickable therefore added pointer-cursor */
+}
+
+.arrow {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.answer {                               
+  display: none;                          /* the answers are hidden by default */
+  background-color: rgb(252, 252, 231);
+  grid-column: span 2;
+  padding: 0 18px;
+}
+
+.active + .answer {                        /*when clicking/activating the function toggle -> display the answer*/
+  display: block;
+}
+
+.active .arrow {                          /*when activating the function toggle, rotate the arrow 180deg */
+  transform: rotate(180deg);
 }
