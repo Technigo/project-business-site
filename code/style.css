@@ -10,6 +10,7 @@ body, html {
 
 body {
   max-width: 1300px;
+  margin: auto;
 }
 
 header {
@@ -31,6 +32,21 @@ header {
   transform: translate(-50%, -50%);
 }
 
+.question:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.answer {
+  display: none;
+}
+
+.active + .answer {
+  display: block;
+}
 
 /* hero-image info here: https://www.w3schools.com/howto/howto_css_hero_image.asp*/
 /* .hero-image {
@@ -50,7 +66,3 @@ header {
   transform: translate(-50%, -50%);
   color: white;
 } */
-
-.active + .answer {
-  /* some styling here */
-}

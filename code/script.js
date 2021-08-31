@@ -5,22 +5,13 @@ function toggle() {
   this.classList.toggle("active")
 }
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
+// // Selects an HTML element, and calls a function which will be executed when the element is clicked.
+// document.getElementById("section1").onclick = toggle
+// document.getElementById("section2").onclick = toggle
+// document.getElementById("section3").onclick = toggle
 
-// Get the video
-var video = document.getElementById("myVideo");
+let sections = document.getElementsByClassName("question")
 
-// Get the button
-var btn = document.getElementById("myBtn");
-
-// Pause and play the video, and change the button text
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
+for (let i=0; i < sections.length; i++) {
+  sections[i].onclick = toggle;
 }
