@@ -12,8 +12,23 @@
   <body>
 
     <header class="header">
-    <!-- video or image as a header is cool :) -->
-      <h1>Business business</h1>
+      
+        <video
+        id="hero"
+        loop
+        muted
+        autoplay
+        preload="auto"
+        >
+          
+          <source src="./videos/production ID_3756153.mp4" type="video/mp4" media="(max-width: 667px)">
+          <source src="./videos/SampleVideo_720x480_1mb.mp4" type="video/mp4" media="(max-width: 991pz)">
+          <source src="./videos/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+          <p>Your browser does not support video</p>
+        </video>
+        <h1>Business business</h1>
+      
+
       <nav class="nav-bar">
         <h5>About</h5>
         <h5>Contact</h5>
@@ -27,9 +42,9 @@
     <main class="main-content">
 
       <section>
-        <form class="form" action="">
+        <form class="form" id="my-form" target="_blank" action="https://httpbin.org/anything" method="POST">
 
-          <label class="form-labels" for="name">Your name: 
+          <label class="form-labels">Your name: 
             <input
             type="text"
             name="name"
@@ -38,7 +53,7 @@
             />
           </label>
 
-          <label for="email">Email: 
+          <label class="form-labels">Email: 
             <input
             type="email"
             name="email"
@@ -47,15 +62,20 @@
             />
           </label>
 
-          <select name="size" id="">
-            <option value="s">Small</option>
-            <option value="m">Medium</option>
-            <option value="l">Large</option>
-          </select>
+          <label class="form-labels">Choose size:
+            <select name="size" id="">
+              <option value="s">Small</option>
+              <option value="m">Medium</option>
+              <option value="l">Large</option>
+            </select>
+          </label>
+        
 
-          <button type="submit">
+          <button type="submit" id="submit-button">
             Sumbit
           </button>
+
+          <p id="submit-confirmation">Your form has been submitted</p>
 
         </form>
       </section>
@@ -87,8 +107,9 @@
     </footer>
 
     <footer class="small-print">
-      <p>Some small print here</p>
+      <p>Video by cottonbro from Pexels</p>
     </footer>
     <!-- dont forget to link the javascript file here! -->
+    <script src="../code/script.js"></script>
   </body>
 </html>
