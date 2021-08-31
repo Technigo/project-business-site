@@ -86,13 +86,11 @@ img {
 }
 
 form {
-    grid-column-start: 3;
-    grid-column-end: 8;
+    grid-column: 2 /span 10;
 }
 
 .h1-signup {
     color: rgb(16, 104, 192);
-    margin-left: 5%;
     align-items: center;
     font-size: 1.8rem;
     text-align: left;
@@ -102,7 +100,6 @@ form {
 .p-sprinkling {
     color: rgb(16, 104, 192);
     display: grid;
-    margin-left: 5%;
     align-items: center;
     font-size: 0.8rem;
     text-align: left;
@@ -110,27 +107,11 @@ form {
 
 .info-box {
     justify-content: space-around;
-    padding: 10px 10px 5px 10px;
 }
 
-input[type=text], select {
-    width: 80%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 4px;
-}
-
-input[type=email], select {
-    width: 80%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 4px;
-}
-
-input[type=password], select {
-    width: 80%;
+input, select {
+    width: 100%;
+    box-sizing: border-box;
     padding: 12px 20px;
     margin: 8px 0;
     border: 1px solid rgb(255, 255, 255);
@@ -229,8 +210,8 @@ display: block;
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0;
+    /* height: 0;
+    width: 0; */
 }
 
 .custom-checkbox {
@@ -269,11 +250,6 @@ display: block;
         }
 
 
-
-
-
-
-
 .button {
     background-color: rgb(16, 104, 192);
     border-radius: 0.8rem;
@@ -282,10 +258,9 @@ display: block;
     text-align: center;
     font-size: 28px;
     padding: 15px;
-    width: 150px;
+    width: 100%;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 15px;
 }
 
 .button span {
@@ -315,6 +290,7 @@ display: block;
 
 .signup-box {
     margin-top: 20px;
+    grid-template-columns: repeat(12, 1fr);
     display: grid;
     grid-column: span 12;
     background-color: #86B9D6;
@@ -339,7 +315,6 @@ display: block;
 
 .h1-faq {
     color: white;
-    margin-left: 5%;
     align-items: center;
     font-size: 1.8rem;
     text-align: left;
@@ -348,7 +323,6 @@ display: block;
 .p-faq {
     color: white;
     display: grid;
-    margin-left: 5%;
     align-items: center;
     font-size: 0.8rem;
     text-align: left;
@@ -434,15 +408,17 @@ display: block;
         grid-template-columns: repeat(12, 1fr);
         grid-column-gap: 30px;
     }
+    
     .signup-box {
         grid-column: 3 / span 4;
     }
+    
     .faq-box {
         grid-column: 7 / span 4;
     }
-    form {
+    /* form {
         grid-column: span 12;
-        display: grid;
+        display: grid; */
     }
     .accordion {
         margin-left: 10px;
@@ -451,4 +427,3 @@ display: block;
     .header ul li {
         padding-top: 15px;
     }
-}
