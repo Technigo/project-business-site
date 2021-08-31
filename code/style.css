@@ -1,7 +1,78 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
+/* 
 .active + .answer {
   /* some styling here */
+  background-color: aquamarine;
+} */
+
+
+
+body{
+  font-family: 'Courier Prime', monospace;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("camera.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e3dfd4;
+  font-family: 'Special Elite', cursive;
+  font-size: xx-large;
+}
+
+.main-box {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.order-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #737373;
+
+}
+
+.accordion {
+  text-align: center;
+}
+
+/* exemplo */
+/* input:valid{
+  background-color: cadetblue;
+} */
+
+label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+footer{
+  background-color: #4e5454;
+  color: #e3dfd4;
+}
+
+@media (min-width: 667px) {
+
+ .main-box {
+   grid-template-columns: 1fr 1fr;
+ } 
+
+ .order-box {
+   span: 1;
+ }
+
 }
