@@ -46,6 +46,7 @@ header {
 .accordion {
 	width: min(80%, 320px);
 	border: 1px solid black;
+	padding: 10px 20px 20px 20px;
 }
 .form {
 	align-items: center;
@@ -53,6 +54,7 @@ header {
 
 .radio-container {
 	flex-wrap: wrap;
+	flex-direction: column;
 }
 
 .checkbox-container {
@@ -63,7 +65,7 @@ header {
 
 .text-field,
 button[type='submit'] {
-	width: 80%;
+	width: 100%;
 	margin: 5px;
 }
 
@@ -71,11 +73,19 @@ input[type='radio'] {
 	width: 10%;
 }
 .radio {
-	width: 40%;
+	width: 50vw;
 }
 /* .active + .answer {
 	some styling here
 } */
+@media (min-width: 460px) {
+	.radio-container {
+		flex-direction: row;
+	}
+	.radio {
+		width: 40%;
+	}
+}
 
 @media (min-width: 768px) {
 	.flex-container {
