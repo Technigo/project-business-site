@@ -16,56 +16,63 @@
 
     </section>
 
-    <form class="subscription-form" action="">
-      <p>
-        Every first monday of the month we give an introduction to meditation. Please fill in the contact-form and we will send you an invitation to the next introduction. You can find further information in the FAQ.
-      </p>
+    <section class="form-section">
+      <form class="subscription-form" action="http://httpbin.org/anything" method="POST">
+        <p>
+          Every first monday of the month we give an introduction to meditation. Please fill in the contact-form and we will send you an invitation to the next introduction. You can find further information in the FAQ.
+        </p>
 
-      <label class="form-label">Name
-        <input 
-          type="text"
-          name="text"
-          placeholder="Your full name"
-          required 
-          />
-      </label>
+        <label class="form-label">
+          <input 
+            class="text-input"
+            type="text"
+            name="text"
+            placeholder="Full name"
+            required 
+            />
+        </label>
 
-      <label class="form-label">Email
-        <input 
-          type="email"
-          name="email"
-          placeholder="mail@example.com"
-          required
-          />
-      </label>
+        <label class="form-label">
+          <input
+            class="text-input" 
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            />
+        </label>
 
-      <label class="form-label">Phone
-        <input 
-          type="tel"
-          name="phone"
-          placeholder="076 123 456 00"
-          />
-      </label>
+        <label class="form-label">
+          <input
+            class="text-input" 
+            type="tel"
+            name="phone"
+            placeholder="Mobile Phone"
+            />
+        </label>
 
-      <p>Do you have experience with meditation?</p>
+        <fieldset class="experience-fieldset">
+          <legend>Do you have prior experience with meditation?</legend>
+          <label>yes
+            <input 
+              type="radio"
+              name="experience"
+              value="yes"
+              />
+          </label>
+          <label>no
+            <input 
+              type="radio"
+              name="experience"
+              value="no"
+              />
+          </label>
+        </fieldset>
 
-      <label>yes
-        <input 
-          type="radio"
-          name="experience"
-          />
-      </label>
+        <button class="send-button" type="submit">Send</button>
 
-      <label>no
-        <input 
-          type="radio"
-          name="experience"
-          />
-      </label>
-
-      <button class="send-button" type="submit">Send</button>
-
-    </form>
+      </form>
+    </section>
 
     <section class="accordion">
       <!-- Accordion -->
