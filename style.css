@@ -46,9 +46,18 @@ audio {
   color: rgb(255, 255, 255);
   font-size: 20vw;
   text-shadow: 0 0 20px rgb(98, 143, 135);
+  
 }
 
+#hero-text-p{
+  text-decoration:line-through 2px;
+  color: rgb(255, 255, 255);
+  font-size: 5vw;
+  text-shadow: 0 0 20px rgb(98, 143, 135);
+  margin: -4% 0 0 40%;
+  letter-spacing: 20px;
 
+}
 
 
 fieldset{
@@ -61,22 +70,24 @@ border: none;
 
 .form-div {
   
+  background-color: rgba(255, 255, 255, 0.39);
   grid-area: form;
-  backdrop-filter: blur(5px);
-  color: rgb(36, 116, 102);
+  color: rgb(20, 58, 52);
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 0 0 0.1px rgba(38, 63, 58, 0.781);
+  
 }
 
 .signup-form {
   display: block;
   overflow: hidden;
   margin: 1vw 10vw;
-  background-color: rgba(255, 255, 255, 0.883);
+
+  backdrop-filter: blur(10px);
+  background-color: rgba(201, 221, 217, 0.219);
 }
 
 
@@ -84,6 +95,7 @@ border: none;
 .form-text {
   font-weight: bold;
   font-family: "Lato", sans-serif;
+
   
 }
 
@@ -101,8 +113,10 @@ input[type="text"],[type="email"],[type="tel"],[type="password"] {
   width: 30%;
   display: block;
   padding: 1%;
-  color: rgb(36, 116, 102);
-  border: 1px solid rgb(36, 116, 102);
+  color: rgb(20, 58, 52);
+  font-weight: bold;
+  border: 1.5px solid rgb(36, 116, 102);
+ 
 }
 
 
@@ -124,7 +138,8 @@ input[type="submit"]:hover {
 }
 
 .accordion-div {
-  
+ 
+  background-color: rgba(255, 255, 255, 0.39);
   grid-area: accordion;
   color: rgb(232, 241, 240);
   position: relative;
@@ -137,12 +152,12 @@ input[type="submit"]:hover {
 }
 
 .accordion-form {
-  
+  backdrop-filter: blur(10px);
+  background-color: rgba(219, 235, 231, 0.219);
   display: block;
   overflow: hidden;
   margin: 1vw 10vw;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.788);
   font-family: "Lato", sans-serif;
  
   
@@ -157,7 +172,7 @@ input[type="submit"]:hover {
   display: flex;
   justify-content: center;
   color: rgb(25, 85, 75);
-  background-color:#ffffff44;
+  
   
  
 }
@@ -208,9 +223,9 @@ margin-top: -4%;
 
   height: 100%;
   visibility:visible;
-  color:  rgb(255, 255, 255);
-  background-color:rgba(25, 85, 75, 0.438);
-  text-shadow: 0 0 2px black;
+  color:  rgb(6, 83, 72);
+  background-color:rgba(25, 85, 75, 0.13);
+  text-shadow: 0 0 0.1px black;
   margin-top: 0%;
   line-height: 170%;
   
@@ -223,13 +238,51 @@ margin-top: -4%;
 
 footer {
   grid-area:footer;
-  background-color: rgba(219, 255, 249, 0.658);
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.26);
  text-align: center;
+ 
+
+}
+
+footer p{
+margin: 0.5%;
+  color:  rgb(255, 255, 255);
+  text-shadow: 0 0 1px rgb(2, 34, 26), 
+  0 0 2px rgb(200, 255, 242),
+  0 0 3px rgb(25, 85, 75), 
+  0 0 5px rgb(25, 85, 75);
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+footer p:hover{
+  
+  transform: scale(93%); }
+
+i{
+  overflow: hidden;
+
+ 
+}
+footer span{
+padding: 1%;
+text-shadow: 0 0 2px rgb(2, 34, 26);
+}
+
+footer a{
+text-decoration: none;
+color: rgb(255, 255, 255);
+
+
 }
 
 
 
 
+
+}
 
 
 /*  Phone  */
@@ -241,24 +294,20 @@ footer {
     grid-template-rows: 2fr 2.5fr 1.5fr 0.1fr;
     grid-template-areas:
     "header header header header"
-    "all all all all"
-    "all all all all"
+    "form form form form"
+    "accordion accordion accordion accordion"
     "footer footer footer footer";
   }
  
 
-  .all{
-    grid-area: all;
-    
-     
-  }
+  
 
 
   
 
   .signup-form {
     margin: 1vw 10vw 0vw 10vw;
-    width: 80%;
+    width: 90%;
   }
 
   .form-text {
@@ -272,7 +321,7 @@ footer {
   .accordion-form {
     margin: 1vw 10vw 0vw 10vw;
     
-    width: 80%;
+    width: 90%;
     
   }
 
@@ -317,26 +366,21 @@ footer {
 @media (min-width: 767px) and (max-width: 991px) {
   .container {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 2.3fr 2.1fr 1.3fr 0.3fr;
+    grid-template-rows: 2.3fr 2.1fr 1.3fr 0.1fr;
     grid-template-areas:
       "header header header header"
-      "all all all all"
-      "all all all all"
+      "form form form form"
+    "accordion accordion accordion accordion"
       "footer footer footer footer";
   }
 
 
-  .all{
-    grid-area: all;
-    
-     
-  }
-
+  
 
 
   .signup-form {
     margin: 1vw 10vw 0vw 15vw;
-    width: 70%;
+    width: 90%;
   }
 
   .accordion-div{
@@ -345,7 +389,7 @@ footer {
 
   .accordion-form {
     margin: 1vw 10vw 0vw 15vw;
-    width: 70%;
+    width: 90%;
     
   }
 
@@ -401,10 +445,10 @@ footer {
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 2.5fr 2.5fr 0.2fr;
+  grid-template-rows: 2.5fr 2.5fr 0.1fr;
   grid-template-areas:
     "header header header header"
-    "all all all all"
+    "form form accordion accordion"
     "footer footer footer footer";
 }
 
@@ -414,11 +458,7 @@ footer {
   }
 
 
-  .all{
-    position: relative;
-    grid-area: all;
-    
-  }
+ 
 
   
 
