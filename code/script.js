@@ -5,6 +5,7 @@ function toggle() {
   this.classList.toggle("active")
 }
 
+
 // Navbar sticky
 window.onscroll = function() {myFunction()};
 
@@ -18,11 +19,11 @@ var sticky = navbar.offsetTop;
 function myFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
-  } else {
+  } 
+  else {
     navbar.classList.remove("sticky");
   }
 }
-
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
 document.getElementById("section1").onclick = toggle
