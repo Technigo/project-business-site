@@ -42,8 +42,18 @@ h2 {
   background-color: rgb(245, 142, 117);
   margin: 10px;
   grid-column: span 6;
-  padding-bottom: 21px;
-  
+  padding-bottom: 30px;
+}
+
+h3 {
+  font-size: 27px;
+  margin: 30px 10px 0px 10px;
+}
+
+.arrow {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  font-size: 30px;
 }
 
 form {
@@ -51,24 +61,63 @@ form {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  align-items: center;
+  justify-content: center;
+}
 
+.item-name-email {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .input-container {
-  display: block;
-  text-align: center;
+  font-size: 20px;
+}
+
+.textbox {
+  border: 1px solid rgba(138, 56, 19, 0.911);
+  height: 20px;
+  width: 190px;
+  background-color: rgb(247, 217, 216);
+}
+
+h4 {
+  font-size: 25px;
+  padding: 0px 10px;
 }
 
 .favourite-beer {
-  width: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
+.checkbox-item {
+  text-align: left;
+  padding-left: 43%;
 }
 
 .brewing-knowledge {
-  width: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
+.radio-item {
+  text-align: left;
+  padding-left: 33%;
+}
+
+button {
+  width: 110px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 35px;
+  background-color: rgb(247, 217, 216);
+  margin-top: 30px;
+  color: rgba(138, 56, 19, 0.911);
+  border: 2px solid rgba(138, 56, 19, 0.911);
+  font-size: 19px;
+}
 
 .faq {
   text-align: center;
@@ -79,36 +128,68 @@ form {
 }
 
 footer {
-  grid-column: span 6;
+  grid-column: 1 / 7;
+  /* detta nedan gör sign-up-form till förälder */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   background-image: url("https://images.unsplash.com/photo-1505075106905-fb052892c116?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGhlYWRlciUyMGltYWdlJTIwYmVlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60");
   height: 150px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .navigation {
+  grid-column: 3 / 4;
   background-color: black;
   color: white;
-  display: inline;
   text-align: center;
   font-size: 16px;
-  margin: 20px;
+  padding: 5px 0px;
 }
 
 /*tablet version*/
 @media (min-width: 668px) and (max-width: 1023px) {
-  .sign-up-form, .faq {
+
+  .sign-up-form {
     grid-column: span 3;
+    margin-right: 5px;
+  }
+  
+  .faq {
+    grid-column: span 3;
+    margin-left: 5px;
   }
 
 }
 
 /*desktop version*/
 @media (min-width: 1024px) {
+  
 
+  .sign-up-form, .faq {
+    grid-column: span 3;
+  }
+
+  .favourite-beer {
+    width: 50%;
+  }
+
+  .brewing-knowledge {
+    width: 50%;
+  }
+
+.checkbox-item {
+  padding-left: 25%;
+  font-size: 17px;
+}
+
+  .radio-item {
+    padding-left: 17%;
+    font-size: 17px;
+  }
 }
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
