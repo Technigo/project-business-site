@@ -1,7 +1,334 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Glory;
+}
 
-.active + .answer {
-  /* some styling here */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-start: 2;
+    grid-column-end: 12;
+    padding-top: 10px;
+}
+
+/* .active + .answer {
+    /* some styling here */
+
+/* } */
+
+/*navigation*/
+
+.menu {
+    grid-column: span 12;
+}
+
+li.sign-in {
+    font-weight: 600;
+}
+
+.logo {
+    display: grid;
+    grid-column-start: 4;
+    grid-column-end: 10;
+}
+
+.header ul {
+    padding-top: 20px;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.header ul li {
+    display: inline-block;
+}
+
+.header li a {
+    grid-column-start: 8;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.header a {
+    color: black;
+}
+
+.menu a:hover {
+    color: #EAACDD;
+}
+
+/*images*/
+
+img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 100%;
+}
+
+.hero-image {
+    margin-top: 30px;
+    object-fit: cover;
+    grid-column: span 12;
+}
+
+/*form*/
+
+.signup {
+    grid-column: span 12;
+    display: grid;
+}
+
+form {
+    grid-column-start: 3;
+    grid-column-end: 8;
+}
+
+.h1-signup {
+    color: rgb(16, 104, 192);
+    margin-left: 5%;
+    align-items: center;
+    font-size: 1.8rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.p-sprinkling {
+    color: rgb(16, 104, 192);
+    display: grid;
+    margin-left: 5%;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+.info-box {
+    justify-content: space-around;
+    padding: 10px 10px 5px 10px;
+}
+
+input[type=text], select {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+input[type=email], select {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+input[type=password], select {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.checkbox {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.radio-button {
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+.button {
+    background-color: rgb(16, 104, 192);
+    border-radius: 0.8rem;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 15px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.signup-box {
+    margin-top: 20px;
+    display: grid;
+    grid-column: span 12;
+    background-color: #86B9D6;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 1em 0em 1em 0em;
+    box-shadow: 2px 0px 5px 5px rgba(149, 149, 149, 0.2);
+}
+
+/* faq */
+
+.faq-box {
+    margin-top: 20px;
+    display: grid;
+    grid-column: span 12;
+    background-color: #65be93;
+    border-radius: 10px;
+    border-radius: 0em 1em 0em 1em;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 2px 0px 5px 5px rgba(149, 149, 149, 0.2);
+}
+
+.h1-faq {
+    color: white;
+    margin-left: 5%;
+    align-items: center;
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+.p-faq {
+    color: white;
+    display: grid;
+    margin-left: 5%;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+.question {
+    background-color: white;
+    cursor: pointer;
+    padding: 10px 10px 10px 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+    outline: none;
+    border-radius: 1em 1em 0em 0em;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .question:hover {
+    background-color: #b5e2cc;
+}
+
+.answer {
+    font-size: 0.8em;
+    background-color: white;
+    cursor: pointer;
+    padding: 10px 10px 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    outline: none;
+    border-radius: 0px 0px 1em 1em;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.active+.answer {
+    display: block;
+}
+
+/* tablet */
+
+@media (min-width: 768px) {
+    .logo {
+        grid-column: 5 / span 4;
+    }
+    .signup {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 20px;
+    }
+    .signup-box {
+        grid-column: 2 / span 5;
+    }
+    .faq-box {
+        grid-column: 7 / span 5;
+    }
+}
+
+/* desktop */
+
+@media (min-width: 992px) {
+    .logo {
+        display: grid;
+        grid-column-start: 4;
+        grid-column-end: 2;
+    }
+    .hero-image {
+        margin-top: 15px;
+    }
+    .header ul {
+        padding-top: 20px;
+        float: right;
+    }
+    .menu {
+        grid-column: 8 / span 5;
+    }
+    .signup {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 30px;
+    }
+    .signup-box {
+        grid-column: 3 / span 4;
+    }
+    .faq-box {
+        grid-column: 7 / span 4;
+    }
+    form {
+        grid-column: span 12;
+        display: grid;
+    }
+    .accordion {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .header ul li {
+        padding-top: 15px;
+    }
 }
