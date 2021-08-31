@@ -113,7 +113,7 @@ input[type="text"],[type="email"],[type="tel"],[type="password"] {
   width: 30%;
   display: block;
   padding: 1%;
-  color: rgb(20, 58, 52);
+  color:  rgb(24, 63, 56);
   font-weight: bold;
   border: 1.5px solid rgb(36, 116, 102);
  
@@ -171,64 +171,53 @@ input[type="submit"]:hover {
   position: relative;
   display: flex;
   justify-content: center;
-  color: rgb(25, 85, 75);
+  color:  rgb(24, 63, 56);
   
   
  
 }
 
-.question{
+.accordion{
+  color:  rgb(24, 63, 56);
+  text-shadow: 0 0 0.1px rgba(250, 250, 250, 0.781);
+  line-height: 170%;
+  background-color:#ffffff44;
+  text-shadow: 0 0 1px rgb(25, 85, 75);
+ position: relative;
+ border-bottom: 0.5px solid rgba(11, 37, 33, 0.418);
+ cursor: pointer;
+  padding: 2%;
 
-  color:  rgb(25, 85, 75);
-   text-shadow: 0 0 0.1px rgba(250, 250, 250, 0.781);
-   line-height: 170%;
-   background-color:#ffffff44;
-   text-shadow: 0 0 1px rgb(25, 85, 75);
-  position: relative;
-  border-bottom: 0.5px solid rgba(11, 37, 33, 0.418);
-  cursor: pointer;
  }
  
+ .accordion.active{
+  
+  border-radius: 4px 4px 0 0;
+ }
 
 
 
 
 
-
-.question::before{
-
-content: "+";
-position: absolute;
-left:93%;
-padding-top: 2.5%;
-transform: translateY(-50%);
+  .answer{
+   
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+  backdrop-filter: blur(20px);
 }
 
-.question + .answer{
-
-height: 0;
-visibility: hidden;
-transition:  0.2s;
-transition: ease-out;
-margin-top: -4%;
-}
-
-.question:active::before{
-
-  content: "-";
-  
-  }
-
-  .question:active + .answer{
-
-  height: 100%;
-  visibility:visible;
-  color:  rgb(6, 83, 72);
-  background-color:rgba(25, 85, 75, 0.13);
-  text-shadow: 0 0 0.1px black;
-  margin-top: 0%;
-  line-height: 170%;
-  
+.answer.show{
+opacity: 1;
+max-height:500px;
+color:  rgb(24, 63, 56);
+line-height: 170%;
+text-shadow: 0 0 1px rgb(0, 0, 0);
+border-bottom: 0.5px solid rgba(11, 37, 33, 0.418);
+cursor: pointer;
+backdrop-filter: blur(20px);
+background-color: rgba(98, 143, 135, 0.137);
+padding: 2%;
 }
 
 
@@ -239,7 +228,7 @@ margin-top: -4%;
 footer {
   grid-area:footer;
   backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 0.219);
+  background-color: rgba(91, 102, 100, 0.466);
  text-align: center;
  
 
@@ -291,7 +280,7 @@ color: rgb(255, 255, 255);
   .container {
     height: 110rem;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 2fr 2fr 1fr 0.06fr;
+    grid-template-rows: 2fr 2.5fr 2fr 0.06fr;
     grid-template-areas:
     "header header header header"
     "form form form form"
@@ -306,9 +295,9 @@ color: rgb(255, 255, 255);
   
 
   .signup-form {
-    margin: 1vw 10vw 0vw 10vw;
+    margin: 1vw 5vw 0vw 5vw;
     background-color: rgba(219, 235, 231, 0.849);
-    width: 90%;
+    width: 99%;
   }
 
   .form-text {
@@ -320,9 +309,9 @@ color: rgb(255, 255, 255);
   }
 
   .accordion-form {
-    margin: 1vw 10vw 0vw 10vw;
+    margin: 1vw 5vw 0vw 5vw;
     background-color: rgba(219, 235, 231, 0.849);
-    width: 90%;
+    width: 99%;
     
   }
 
@@ -330,33 +319,31 @@ color: rgb(255, 255, 255);
   .top-according{
 
     padding: 2%;
-    font-size: 2vw;
+    font-size: 1.9vw;
   }
   
-  .question{
+ .accordion{
   
-  font-size: 2.3vw;
-  padding: 2%;
-  
-  
-  }
-  
-
-  .answer{
   
     font-size: 2vw;
-    padding: 2%;
-    font-weight: bold;
-  }
-
-  .question:active + .answer{
-
-    height: auto;
-    overflow: hidden;
     
-  }
+    
+    }
 
-}
+    .answer{
+      
+  
+        font-size: 1.6vw;
+        
+        
+        }
+
+    }
+ 
+  
+
+
+
 
 
 
@@ -368,12 +355,13 @@ color: rgb(255, 255, 255);
   .container {
     height: 155rem;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 2.3fr 2.1fr 1.3fr 0.07fr;
+    grid-template-rows: 2.3fr 1.5fr 1.5fr 0.07fr;
     grid-template-areas:
       "header header header header"
       "form form form form"
     "accordion accordion accordion accordion"
       "footer footer footer footer";
+
   }
 
 
@@ -381,20 +369,24 @@ color: rgb(255, 255, 255);
 
 
   .signup-form {
-    margin: 1vw 10vw 0vw 15vw;
+    margin: 1vw 10vw 0vw 10vw;
     width: 90%;
     background-color: rgba(219, 235, 231, 0.849);
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
 
 
   }
 
   .accordion-div{
+    display: flex;
     align-items: flex-start;
   }
 
   .accordion-form {
-    margin: 1vw 10vw 0vw 15vw;
-    width: 90%;
+    margin: 0vw 10vw 0vw 10vw;
+    width: 100%;
     background-color: rgba(219, 235, 231, 0.849);
     
   }
@@ -417,28 +409,19 @@ color: rgb(255, 255, 255);
     font-size: 1.8vw;
   }
   
-  .question{
+  .accordion{
   
-  font-size: 2.1vw;
-  padding: 2%;
+  font-size: 2vw;
   
   
   }
   
-
   .answer{
   
-    font-size: 1.8vw;
-    padding: 2%;
-  }
-  
-  .question:active + .answer{
-
-    height: auto;
-    overflow: hidden;
+    font-size: 1.5vw;
     
-  }
-
+    
+    }
 
 
 
@@ -502,22 +485,44 @@ padding-top: 10%;
 
   .top-according{
     padding: 2%;
-    font-size: 0.9vw;
+    font-size: 1vw;
     
   }
-  
-  .question{
-  font-size: 1vw;
-  padding: 2%;
-  
-  
-  }
-  
-  
-  .answer{
-    font-size: 1vw;
-    padding: 2%;
-  }
+  .accordion{
+    font-size: 1.2vw;
+    
+    
+    }
+    
+    
+    .answer{
+      font-size: 0.9vw;
+      
+    }
+
  
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
