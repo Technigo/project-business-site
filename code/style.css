@@ -2,20 +2,27 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-*{
+/* ----Color---
+#DE8971
+#7B6079
+#A7D0CD
+#FFE9D6 
+*/
+
+/* *{
   border: 1px solid red;
-}
+} */
 
 body {
-  background-color: pink;
+  background-color: #DE8971;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   margin:0;
 }
-
-.active + .answer {
+/* 
+.active + .answer { */
   /* some styling here */
-}
+/* } */
 
 
 .header-container {
@@ -46,7 +53,7 @@ body {
   position: relative;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
+  color: #FFE9D6;
   width: 100%;
   padding: 20px;
 }
@@ -59,6 +66,7 @@ body {
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
+  font-size: 2vh;
   
 }
 
@@ -74,6 +82,8 @@ body {
   .input-box{
     display: block;
     padding: 10px 20px;
+    font-size: 2vh;
+    background-color: #FFE9D6;
     
   }
 
@@ -82,7 +92,8 @@ body {
     padding: 10px 20px;
     border-radius: 10%;
     background-color: black;
-    color: white;
+    color: #FFE9D6;
+    font-size: 2vh;
   }
 
   
@@ -94,7 +105,7 @@ body {
   img {
     max-width: 100%;
     object-fit: contain;
-    height: 200px;
+    height: auto;
   }
 
   .img-sign-up {
@@ -104,14 +115,42 @@ body {
 
   .faq-content {
     grid-row: 4 / 7;
-
+    color:#FFE9D6
   }
+
+  .question {
+      background-color: #7B6079;
+      color: white;
+      cursor: pointer;
+      width: 100%;
+      transition: 0.5s;
+      height: 30px;
+      margin:0;
+      box-sizing: border-box;
+      padding: 20px;
+      
+  }
+
+  
+.answer{
+  display: none;
+}
+
+
+.active{
+  display: block;
+  background-color: azure;
+  margin:0;
+  height: 200px;
+
+}
+
+
+  
   /* --------------------TABLET---------------------------------*/
 
 @media (min-width: 720px){
-  body{
-    background-color: yellow;
-  }
+
   #hero-video-phone {
     display: none;
   }
@@ -141,17 +180,15 @@ body {
     grid-row: 2 / 4;
 
   }
+
+
   }
   
 
   /* --------------------TABLET---------------------------------*/
 
 @media (min-width: 1280px){
-  body{
-    background-color: grey;
-   
-  
-  }
+ 
   #hero-video-phone {
     display: none;
   }

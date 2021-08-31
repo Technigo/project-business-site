@@ -42,13 +42,18 @@
     </section>
    
     <section class="main-content">
-    <!-- Signup form -->
-    <div class = "sign-up-content">  <!-- Item1 & 2 -->
+    <!---------------------------- Signup form ---------------------------->
+    <!-- Grid Item1 & 2 -->
+    <div class = "sign-up-content">  
       <h1>Become a member!</h1>
       <form class="sign-up-form" action="http://httpbin.org/anything" method="post">
         <label >
           User Name
             <input  class="input-box" type="text" required name="UserName" placeholder="Enter your user name">
+        </label>
+        <label >
+          Name
+            <input  class="input-box" type="text" required name="Name" placeholder="Enter your name">
         </label>
         <label>
           Password
@@ -59,6 +64,16 @@
             <input  class="input-box" type="email" required name="Email" placeholder="example@gmail.com">
         </label>
         <label>
+        <p>Please select your age:</p>
+        <label for="age1"> 18- 30
+          <input type="radio" id="age1" name="age" value="30">
+        </label>
+        <label for="age2"> 30- 45
+          <input type="radio" id="age1" name="age" value="45">
+        </label>
+        <label for="age3">46 - 65
+          <input type="radio" id="age1" name="age" value="60">
+        </label>
           <input type="checkbox" required name="Terms">
             I Agree on Terms and
         </label>
@@ -74,34 +89,77 @@
 
    
 
-     <!-- Item 3-->
+     <!-- GRID Item 3-->
      <div class=img-sign-up>
-      <img src="../grid-shubby.jpg" alt="">
+      <img src="../yellow.jpg" alt="">
     </div>
   
 
-
-<!-- Item 5-6 -->
+ <!-----------------------FAQ CORDION -->
+    <!-- Grid Item 4-5 -->
     <div class="faq-content">
       <!-- Accordion -->
       <h1>FAQ</h1>
 
       <div class="question" id="section1">Section 1</div>
-      <div class="answer">
+      <div class="answer" id="answer1">
         <p>Lorem ipsum...</p>
       </div>
 
       <div class="question" id="section2">Section 2</div>
-      <div class="answer">
+      <div class="answer"id="answer2">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <div class="question" id="section3">Section 3</div>
+      <div class="answer" id="answer3">
         <p>Lorem ipsum...</p>
       </div>
     </div>
     
-    <!-- Item 4 -->
+    <!-- Item 6 -->
     <div class ="img-faq">
-      <img src="../grid-shubby.jpg" alt="">
+      <img src="../blue.jpg" alt="">
     </div> 
    
+    <script>
+      var section1Title = document.getElementById("section1")
+      var section2Title = document.getElementById("section2")
+      var section3Title = document.getElementById("section3")
+      // var answer1 = document.getElementById("answer1")
+      
+      
+      
+      section1Title.onclick = () => {
+        // alert("Hello")
+        answer1.classList.toggle('active')
+        // answer1.style.display ="block";
+
+      }
+
+          
+      section2Title.onclick = () => {
+        answer2.classList.toggle('active')
+
+      }
+
+      section3Title.onclick = () => {
+        answer3.classList.toggle('active')
+
+      }
+
+    //  document.getElementsByClassName("question").textContent = "Hey";
+     
+     // var faq = document.getElementsByClassName("answer");
+      // for (i = 0; i<answer.length; i++){
+      //   answer[i].addEventListener('click', function(){
+      //     this.classList.toggle('active')
+      //   })
+      // }    
+      
+  
+   
+   </script>
 
   </section>
     <!-- dont forget to link the javascript file here! -->
