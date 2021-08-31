@@ -38,169 +38,221 @@
           alt="Escape house logotype"
         />
       </a>
-      <a href="#faq" class="icon-container">
-        <i class="fas fa-question icon"></i>
-        <span class="icon-text">FAQ</span>
-      </a>
       <a href="#book" class="icon-container">
-        <i class="fas fa-file-signature icon"></i>
+        <i class="fas fa-file-signature"></i>
         <span class="icon-text">Book</span>
       </a>
+      <a href="#faq" class="icon-container">
+        <i class="fas fa-question"></i>
+        <span class="icon-text">FAQ</span>
+      </a>
+      <a href="#contact" class="icon-container">
+        <i class="fas fa-envelope"></i>
+        <span class="icon-text">Contact</span>
+      </a>
     </section>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
     <div class="form-faq-contact-container">
       <div class="hidden-anchor" id="book"></div>
+
       <section class="form-container">
-        <h2>Booking requests</h2>
-
-        <form class="form-layout" action="">
-          <div class="form-row">
-            <span>First name:</span>
-            <input type="text" name="first-name" />
-          </div>
-          <div class="form-row">
-            <span>Last name:</span>
-            <input type="text" name="last-name" />
-          </div>
-          <div class="form-row">
-            <span>Room:</span>
-            <select>
-              <option value="empty"></option>
-              <option value="cellblock">Cellblock</option>
-              <option value="assassination">Assassination</option>
-              <option value="asylum">Asylum</option>
-            </select>
-          </div>
-
-          <div class="form-row radio-btns">
-            <span>Available time slots:</span>
-            <div class="radio-btns-container">
-              <label class="container-available-times"
-                >13:40
-                <input type="radio" name="booking-time" />
-              </label>
-              <label class="container-available-times"
-                >15:00
-                <input type="radio" name="booking-time" />
-              </label>
-
-              <label class="container-available-times"
-                >16:20
-                <input type="radio" name="booking-time" />
-              </label>
-
-              <label class="container-available-times"
-                >17:40
-                <input type="radio" name="booking-time" />
-              </label>
-
-              <label class="container-available-times"
-                >19:00
-                <input type="radio" name="booking-time" />
-              </label>
-
-              <label class="container-available-times"
-                >20:20
-                <input type="radio" name="booking-time" />
-              </label>
+        <div class="form-content">
+          <h2>Booking requests</h2>
+          <form
+            class="form-layout"
+            action="http://httpbin.org/anything"
+            method="POST"
+          >
+            <div class="form-row">
+              <span>Full name:</span>
+              <input
+                type="text"
+                name="full-name"
+                required
+                placeholder="Amelie Davis"
+              />
             </div>
-          </div>
-          <label class="user-agreement"
-            >I agree with the terms of the booking
-            <input type="checkbox" />
+            <div class="form-row">
+              <span>E-mail:</span>
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="user@gmail.com"
+              />
+            </div>
+            <div class="form-row">
+              <span>Telephone number:</span>
+              <input
+                type="tel"
+                name="telephone"
+                required
+                placeholder="0703-123456"
+              />
+            </div>
+            <div class="form-row">
+              <span>Room:</span>
+              <select name="room" required>
+                <option value="">Not chosen</option>
+                <option value="cell-block">Cell Block</option>
+                <option value="assassination">Assassination</option>
+                <option value="black-market">Black Market</option>
+              </select>
+            </div>
+
+            <div class="form-row radio-btns">
+              <span>Available time slots:</span>
+              <div class="radio-btns-container">
+                <label class="container-available-times"
+                  >13:40
+                  <input
+                    type="radio"
+                    name="booking-time"
+                    value="13:40"
+                    required
+                  />
+                </label>
+                <label class="container-available-times"
+                  >15:00
+                  <input type="radio" name="booking-time" value="15:00" />
+                </label>
+
+                <label class="container-available-times"
+                  >16:20
+                  <input type="radio" name="booking-time" value="16:20" />
+                </label>
+
+                <label class="container-available-times"
+                  >17:40
+                  <input type="radio" name="booking-time" value="17:40" />
+                </label>
+
+                <label class="container-available-times"
+                  >19:00
+                  <input type="radio" name="booking-time" value="19:00" />
+                </label>
+
+                <label class="container-available-times"
+                  >20:20
+                  <input type="radio" name="booking-time" value="20:20" />
+                </label>
+              </div>
+            </div>
+            <label class="user-agreement"
+              >I agree with the terms of the booking
+              <input
+                type="checkbox"
+                id="user-agreement"
+                name="user-agreement"
+                required
+              />
+            </label>
             <button class="book-btn">Book</button>
-          </label>
-        </form>
+          </form>
+        </div>
+        <div class="form-room-posters">
+          <img
+            src="pictures/cellblock.jpg"
+            alt="Poster of the room Cell Block"
+          />
+          <img
+            src="pictures/assassination.jpg"
+            alt="Poster of the room Cell Block"
+          />
+          <img
+            src="pictures/blackmarket.jpg"
+            alt="Poster of the room Cell Block"
+          />
+        </div>
       </section>
-
+      <div class="hidden-anchor" id="faq"></div>
       <div class="faq-contact-container">
-        <section class="accordion-container">
-          <div class="hidden-anchor" id="faq"></div>
-          <h2 class="faq-title">FAQ</h2>
-          <div class="question" id="question1">
-            <span>What is an Escape Room?</span>
-            <i class="fas fa-chevron-down faq-arrow"></i>
-          </div>
-          <div class="answer">
-            <span class="answer-text">
-              An escape room is a interactive game where you get 60 minutes to
-              find a way out of the room by solving clues, codes and use the
-              resources to break out into freedom.
-            </span>
-          </div>
+        <div class="faq-contact-content">
+          <section class="accordion-container">
+            <h2 class="faq-title">FAQ</h2>
+            <div class="question" id="question1">
+              <span>What is an Escape Room?</span>
+              <i class="fas fa-chevron-down faq-arrow"></i>
+            </div>
+            <div class="answer">
+              <span class="answer-text">
+                An escape room is a interactive game where you get 60 minutes to
+                find a way out of the room by solving clues, codes and use the
+                resources to break out into freedom.
+              </span>
+            </div>
 
-          <div class="question" id="question2">
-            <span> How much does a Escape room cost?</span>
-            <i class="fas fa-chevron-down faq-arrow"></i>
-          </div>
-          <div class="answer">
-            <span>
-              The regular price is SEK 275 per person. Student and senior prizes
-              (valid student card required, and at least 65 years respectively)
-              are SEK 225 and children and youth prizes (up to 15 years) SEK 175
-              per person.</span
-            >
-          </div>
+            <div class="question" id="question2">
+              <span> How much does a Escape room cost?</span>
+              <i class="fas fa-chevron-down faq-arrow"></i>
+            </div>
+            <div class="answer">
+              <span>
+                The regular price is SEK 275 per person. Student and senior
+                prizes (valid student card required, and at least 65 years
+                respectively) are SEK 225 and children and youth prizes (up to
+                15 years) SEK 175 per person.</span
+              >
+            </div>
 
-          <div class="question" id="question3">
-            <span>What are the payment options?</span>
-            <i class="fas fa-chevron-down faq-arrow"></i>
-          </div>
+            <div class="question" id="question3">
+              <span>What are the payment options?</span>
+              <i class="fas fa-chevron-down faq-arrow"></i>
+            </div>
 
-          <div class="answer">
-            <span>
-              We take card payments and Swish. We do NOT accept cash. Companies
-              that do not have the option of card payment are offered invoice
-              payment.
-            </span>
-          </div>
+            <div class="answer">
+              <span>
+                We take card payments and Swish. We do NOT accept cash.
+                Companies that do not have the option of card payment are
+                offered invoice payment.
+              </span>
+            </div>
 
-          <div class="question" id="question4">
-            <span>What languages can you play in?</span>
-            <i class="fas fa-chevron-down faq-arrow"></i>
-          </div>
+            <div class="question" id="question4">
+              <span>What languages can you play in?</span>
+              <i class="fas fa-chevron-down faq-arrow"></i>
+            </div>
 
-          <div class="answer">
-            <span> All rooms can be played in Swedish and English.</span>
-          </div>
+            <div class="answer">
+              <span> All rooms can be played in Swedish and English.</span>
+            </div>
 
-          <div class="question" id="question5">
-            <span>What happens if you do not break out in an hour?</span>
-            <i class="fas fa-chevron-down faq-arrow"></i>
-          </div>
-          <div class="answer last-answer">
-            <span>You get released.</span>
-          </div>
-          <div></div>
-        </section>
+            <div class="question" id="question5">
+              <span>What happens if you do not break out in an hour?</span>
+              <i class="fas fa-chevron-down faq-arrow"></i>
+            </div>
+            <div class="answer last-answer">
+              <span>You get released.</span>
+            </div>
+          </section>
 
-        <section class="contact-container">
-          <h2>Contact</h2>
-          <div class="bold">Escape House Gothenburg</div>
+          <section class="contact-container">
+            <div class="hidden-anchor" id="contact"></div>
+            <h2>Contact</h2>
+            <div class="bold">Escape House Gothenburg</div>
 
-          <div class="information">
-            <i class="fas fa-envelope footer-icon"> </i>
-            <a href="mailto: info@escapehouse.se">info@escapehouse.se</a>
-          </div>
-          <div class="information">
-            <i class="fas fa-mobile-alt footer-icon"></i>
-            <a href="tel:0702282736">+46 31 388 00 60</a>
-          </div>
+            <div class="information">
+              <i class="fas fa-envelope footer-icon"> </i>
+              <a href="mailto: info@escapehouse.se">info@escapehouse.se</a>
+            </div>
+            <div class="information">
+              <i class="fas fa-mobile-alt footer-icon"></i>
+              <a href="tel:0702282736">+46 31 388 00 60</a>
+            </div>
 
-          <div class="information">
-            <i class="fas fa-home footer-icon"></i>
-            <span class="adress">Stortoppsgatan 3, 414 57 Göteborg</span>
-          </div>
-          <iframe
-            class="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1066.29127456236!2d11.922995707437895!3d57.68957204859496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff33148da33c9%3A0x63c15e3bdb36d6aa!2sStortoppsgatan%203%2C%20414%2057%20G%C3%B6teborg!5e0!3m2!1ssv!2sse!4v1630076789247!5m2!1ssv!2sse"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
-        </section>
+            <div class="information">
+              <i class="fas fa-home footer-icon"></i>
+              <span class="adress">Stortoppsgatan 3, 414 57 Göteborg</span>
+            </div>
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1066.29127456236!2d11.922995707437895!3d57.68957204859496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff33148da33c9%3A0x63c15e3bdb36d6aa!2sStortoppsgatan%203%2C%20414%2057%20G%C3%B6teborg!5e0!3m2!1ssv!2sse!4v1630076789247!5m2!1ssv!2sse"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </section>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>

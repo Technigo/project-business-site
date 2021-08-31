@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 html {
   box-sizing: border-box;
-  width: 100%;
+  min-width: 350px;
 }
 
 *,
@@ -12,34 +13,16 @@ html {
 }
 
 body {
-  margin: 0px;
-  padding: 0px;
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.title {
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  align-items: center;
+/* -------HEADER CONTENT-------- */
+
+.header-container {
   height: 100vh;
   width: 100%;
-  background-color: rgb(0, 0, 0, 0.25);
-}
-
-h1 {
-  text-align: center;
-  font-family: "Cinzel Decorative", cursive;
-  font-weight: 100;
-  color: rgb(255, 255, 255);
-  margin: 0px 0px 40px 0px;
-  font-size: 40px;
-}
-
-.arrow {
-  color: white;
-  margin-bottom: 40px;
 }
 
 .video-mobile {
@@ -51,15 +34,45 @@ h1 {
 
 .video-ipad {
   display: none;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
 }
 
 .video-desktop {
   display: none;
-}
-
-.header-container {
   height: 100vh;
   width: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.title {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.25);
+  min-width: 350px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+  margin-bottom: 3%;
+  font-size: 6vw;
+}
+
+.arrow {
+  color: white;
+  margin-bottom: 3%;
+  font-size: 2vw;
 }
 
 .navbar-container {
@@ -68,20 +81,18 @@ h1 {
   background-color: rgb(0, 0, 0);
   color: white;
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto auto auto;
   align-items: center;
-  padding-right: 20px;
+  padding: 0 3%;
   column-gap: 10px;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1;
 }
 
 .logotype {
   height: 30px;
   width: 200px;
-  margin-left: 10px;
-  object-fit: cover;
 }
 
 .icon-container {
@@ -91,7 +102,7 @@ h1 {
   row-gap: 10px;
   text-decoration: none;
   color: white;
-  padding-bottom: 5px;
+  font-size: 14px;
 }
 
 .icon-container:hover {
@@ -100,7 +111,7 @@ h1 {
   border-bottom: 1px solid rgb(255, 147, 6);
 }
 
-.icon-container:active {
+.icon-container a:active {
   transition: all 1s ease-in;
   color: rgb(255, 147, 6);
   border-bottom: 1px solid rgb(255, 147, 6);
@@ -117,18 +128,19 @@ h2 {
   display: flex;
   flex-direction: column;
 }
-/* 
+/*
 ------------- FORM CONTAINER ---------------- */
 
 .form-container {
   background-color: rgb(156, 212, 214);
-  width: 100%;
-  padding: 30px;
+  padding: 30px 0;
+  display: grid;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .form-layout {
   display: grid;
-  grid-template-rows: 1fr 1fr;
   row-gap: 10px;
 }
 
@@ -146,10 +158,11 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  column-gap: 10px;
+  column-gap: 20px;
+  row-gap: 4px;
 }
 
-#book {
+.hidden-anchor {
   display: block;
   position: relative;
   top: -80px;
@@ -157,7 +170,8 @@ h2 {
 }
 
 .user-agreement {
-  padding-top: 20px;
+  margin: 20px 0;
+  text-align: center;
 }
 
 .book-btn {
@@ -165,49 +179,61 @@ h2 {
   background-color: rgb(0, 0, 0, 0);
   font-weight: 100;
   border: rgb(0, 0, 0) solid 0.5px;
-  position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  padding: 30px 10% 50px 10%;
   width: 200px;
   border-radius: 40px;
   font-weight: 600;
   text-decoration: none;
-  text-align: center;
   padding: 25px;
-  display: block;
+}
+
+.form-content {
+  width: 100%;
+  background-color: rgb(156, 212, 214);
+  padding: 0 10%;
 }
 
 .faq-contact-container {
   display: flex;
-  flex-direction: column;
-  width: 100%;
 }
 
-/* ------------- ACCORDIAN CONTAINER ----------------  */
+.faq-contact-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------- FORM POSTERS----------------  */
+
+.form-room-posters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-room-posters img {
+  width: 80%;
+  margin-top: 40px;
+}
+
+/* ------------- ACCORDIAN CONTAINER----------------  */
 
 .accordion-container {
-  width: 100%;
   background-color: rgb(211, 209, 209);
-  display: grid;
-  justify-content: center;
-  padding: 10px 0px 50px 0px;
+  padding: 30px 10% 50px 10%;
 }
 
 .question {
   display: grid;
   background-color: rgb(156, 212, 214);
-  width: 340px;
-  height: 100%;
   font-weight: 500;
   padding: 10px;
   border: 0.5px solid black;
   grid-template-columns: 1fr auto;
-  column-gap: 10px;
 }
 
 .answer {
-  width: 340px;
   background-color: rgb(228, 228, 228);
   height: 0px;
   border-right: 0.5px solid black;
@@ -220,41 +246,33 @@ h2 {
 }
 
 .active + .answer {
-  height: 120px;
+  height: 170px;
   transition: height 400ms ease;
   padding: 10px;
-}
-
-#faq {
-  display: block;
-  position: relative;
-  top: -80px;
-  visibility: hidden;
 }
 
 .faq-arrow {
   color: black;
 }
-/*
-------------- CONTACT-CONTAINER ----------------  */
+
+/*------------- CONTACT-CONTAINER ----------------  */
 
 .contact-container {
   background-color: rgb(156, 212, 214);
   display: grid;
-  grid-template-rows: auto;
+  grid-template-rows: 1fr;
   row-gap: 10px;
-  padding: 30px;
-  justify-content: center;
+  padding: 30px 10% 50px 10%;
 }
 
 .bold {
   font-weight: 500;
-  width: 100%;
   margin-bottom: 10px;
 }
+
 .information a {
   text-decoration: none;
-  color: black;
+  color: rgb(77, 165, 168);
 }
 
 .information a:hover {
@@ -270,88 +288,59 @@ h2 {
   padding-top: 10px;
 }
 
+/*------------- IPAD ADJUSTEMENTS ----------------  */
+
 @media only screen and (min-width: 668px) and (max-width: 1024px) {
   html {
     width: 100%;
   }
 
-  .title {
-    height: 70vh;
-  }
-
-  h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
-  }
-
-  .arrow {
-    font-size: 20px;
-  }
-
   .video-ipad {
     display: flex;
-    height: 70vh;
-    width: 100%;
-    z-index: -1;
-    object-fit: cover;
   }
 
   .video-mobile {
     display: none;
   }
 
-  .header-container {
-    height: 70vh;
+  .form-content {
+    padding: 10px 40px 50px 40px;
   }
 
-  .icon-container {
-    display: none;
-  }
-
-  .form-container {
-    padding: 60px 80px;
-  }
-
-  .user-agreement {
-    text-align: center;
-  }
-
-  .book-btn {
-    border: rgb(0, 0, 0) solid 1.5px;
-  }
-
-  .faq-contact-container {
+  .form-room-posters {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    column-gap: 10px;
+  }
+
+  .form-room-posters img {
+    width: 30%;
+    margin-top: 0;
   }
 
   .accordion-container {
-    flex: 55%;
-    grid-template-rows: repeat(12, auto) 1fr;
+    padding: 10px 20px 50px 40px;
   }
 
-  .faq-title {
-    width: 340px;
+  .faq-contact-content {
+    flex-direction: row;
   }
 
   .contact-container {
-    flex: 45%;
     background-color: rgb(211, 209, 209);
     display: flex;
     flex-direction: column;
-    padding: 10px 0px 50px 0px;
+    padding: 10px 40px 50px 20px;
     row-gap: 0px;
-    justify-content: flex-start;
   }
 
   .information {
     padding-bottom: 10px;
   }
-
-  .map {
-    padding-right: 40px;
-  }
 }
+
+/*------------- DESKTOP ADJUSTMENTS ----------------  */
 
 @media only screen and (min-width: 1025px) {
   .video-mobile {
@@ -360,73 +349,64 @@ h2 {
 
   .video-desktop {
     display: flex;
-    height: 80vh;
-    width: 100%;
-    z-index: -1;
-    object-fit: cover;
-  }
-
-  .title {
-    height: 80vh;
-  }
-
-  h1 {
-    font-size: 60px;
-  }
-
-  .arrow {
-    font-size: 20px;
-  }
-
-  .header-container {
-    height: 80vh;
-  }
-
-  .icon-container {
-    margin-left: 20px;
-    margin-right: 20px;
   }
 
   .form-container {
-    padding: 60px 80px;
-    width: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 60px 40px;
+    justify-content: center;
+  }
+
+  .form-content {
+    flex: 50%;
+    padding: 0;
+    margin: 0 40px 0 0;
+  }
+
+  .form-room-posters {
+    flex: 50%;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 40px;
+  }
+
+  .form-room-posters img {
+    width: 33%;
+    margin-top: 0;
   }
 
   .form-faq-contact-container {
-    align-items: center;
     background-color: rgb(156, 212, 214);
   }
 
-  .user-agreement {
-    text-align: center;
-  }
-
-  .book-btn {
-    border: rgb(0, 0, 0) solid 1.5px;
-  }
-
   .faq-contact-container {
-    display: flex;
+    width: 100%;
+    background-color: rgb(211, 209, 209);
+    padding: 60px 40px;
+  }
+
+  .faq-contact-content {
+    max-width: 1200px;
     flex-direction: row;
+    margin: auto;
   }
 
   .accordion-container {
-    flex: 55%;
-    grid-template-rows: repeat(12, auto) 1fr;
-  }
-
-  .faq-title {
-    width: 340px;
+    flex: 50%;
+    padding: 0 40px 0 0;
   }
 
   .contact-container {
-    flex: 45%;
+    flex: 50%;
     background-color: rgb(211, 209, 209);
     display: flex;
     flex-direction: column;
-    padding: 10px 0px 50px 0px;
     row-gap: 0px;
-    justify-content: flex-start;
+    padding: 0 0 0 40px;
   }
 
   .information {
@@ -434,7 +414,6 @@ h2 {
   }
 
   .map {
-    padding-right: 40px;
     height: 300px;
   }
 }
