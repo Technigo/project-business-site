@@ -2,6 +2,88 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+
+body {
+  background-color: rgba(222, 223, 215, 0.924);
+  width: 100%;
+}
+
+.header {
+  background-color: aquamarine;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.form {
+  display: inline-flex;
+  flex-direction: column;
+  border: black solid 1px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.accordion {
+  border: solid black 1px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.accordion h1 {
+  text-align: center;
+}
+
 .active + .answer {
-  /* some styling here */
+  color: beige;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: burlywood;
+  text-align: center;
+
+}
+.small-print {
+  background-color: blanchedalmond;
+  font-size: xx-small;
+  text-align: center;
+}
+
+@media screen and (min-width: 667px) {
+
+  .nav-bar {
+    grid-template-columns: repeat(6,1fr);
+  }
+
+  .main-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-nav {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+}
+
+@media screen and (min-width: 991px) {
+
+
+  .footer-nav {
+    grid-template-columns:repeat(6, 1fr);
+  }
+  
 }
