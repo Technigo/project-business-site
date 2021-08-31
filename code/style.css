@@ -2,6 +2,83 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+/*.active + .answer {
   /* some styling here */
+html{
+  scroll-behavior: smooth;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80') center;
+  background-size: cover;
+  width: 100%;
+  height:100vh;
+  padding: 4rem 2rem;
+  display: grid;
+  display:block;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: center;
+}
+
+.hero > * {
+  color: white;
+}
+
+.hero > h1 {
+  font-size: 9rem;
+  padding-bottom: 1rem;
+  color:#EFEEED;
+  text-decoration: underline;
+  
+}
+
+.hero > h3 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: orange;
+  
+  
+  
+}
+
+.hero > article > a > {
+  padding: 1rem;
+  margin-top:1rem;
+}
+
+.joinnow{
+  background-color: orange;
+  border:none;
+  color:black;
+  padding: 1rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  display:inline-block;
+  Font-size:2rem;
+  border-radius: 1rem;
+  transition-duration: 0.4s;
+}
+.joinnow:hover{
+  background-color:white;
+  color:gray;
+  box-shadow: 0 0.8rem 1rem 0 rgba(0,0,0,0.24), 0 1rem 3rem 0 rgba(0,0,0,0.19);;
+}
+
+.forms{
+  display:flex;
+  align-items: left;
+  flex-direction: column;
+  max-width: 20vh;
+  margin-left: 10rem;
+  
+  
+}
+
+.formq{
+  height: 3rem;
+}
+
+select{
+  margin-top: 2rem;
+  height:3rem;
 }
