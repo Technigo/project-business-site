@@ -1,13 +1,7 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-/* .active + .answer {
-  /* some styling here */
-
 body {
   margin: 0;
-  background: rgb(255, 229, 229);
+  background: #f78154;
+  color: #292e1e;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -28,18 +22,48 @@ header {
   position: absolute;
   top: 15%;
   left: 50%;
-  color: whitesmoke;
   transform: translate(-50%, -50%);
   z-index: 999;
 }
 
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  align-content: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
 .main-box {
   margin: 5px;
-  display: grid;
-  align-items: center;
+  display: flex;
   justify-content: center;
-  background-color: lightblue;
-  width: 200px;
+  background-color: #f2c14e;
+  width: auto;
   border-radius: 10px;
 }
 
@@ -49,14 +73,85 @@ header {
 
 .button {
   border-radius: 10px;
-  border: 0.1px solid darkblue;
+  border: 0.1px solid #4d9078;
   padding: 5px 10px 5px 10px;
-  background-color: red;
+  background-color: #5fad56;
 }
 
 .window {
+  border-radius: 4px;
+  border: 0.5px dotted #4d9078;
+}
+
+/* ACCORDION */
+.accordion {
+  margin: 20px auto;
+  text-align: center;
+  background-color: #5fad56;
+  padding-top: 20px;
+  width: 90%;
+  border: 2px solid #5fad56;
   border-radius: 5px;
 }
+
+.contentBox {
+  margin: 0 auto;
+  position: relative;
+}
+
+.label {
+  border: 1px solid black;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #4d9078;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.label::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+
+.content {
+  position: relative;
+  overflow-y: auto;
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  margin: 0 auto;
+}
+
+.contentBox.active .content {
+  height: 150px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.contentBox.active .label::before {
+  content: "-";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+/* .active + .answer {
+  background: chartreuse;
+} */
+/* some styling here
 
 /* tablet
 @media (min-width: 768px){
