@@ -33,3 +33,121 @@ h1, h2 {
   background-color: white;
   padding: 5px;
 }
+
+nav {
+  padding: 0 10px 0 10px;
+  margin: 5px 0 5px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.nav-icon, .book-online-btn  {
+  border: 2px solid gray;
+  border-radius: 10%;             /*rounded corners*/
+  padding: 5px;                   /*space between text and the border*/
+  height: 50px;
+  width: 100px;
+  display: flex;
+  align-items: center;            /*center the content, vertically*/
+  justify-content: center;   
+  text-transform: uppercase;
+  font-family: 'Hina Mincho', serif;  /*the font dosen't apply here from the body beacuse the button tag default styles have been overriding(?)*/
+  cursor: pointer;
+}
+
+/*The Modal (background)*/
+.modal-form {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.3); /* Black with opacity 0.3*/
+  
+}
+
+/*Modal Content/Pane*/
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 5% from the top and centered*/
+  padding: 50px;
+  border: 2px solid;
+  width: 50%; /* Could be more or less, depending on screen size */
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; */
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* .modal-content p {
+  margin: 10px;
+} */
+
+.modal-sign-up {
+  /* border: 1px solid red; */
+  grid-column: span 1;
+}
+
+.modal-img {                  /*hide the img in mobile?? .modal-sign upp take span 2, and center the content?*/
+  /* border: 1px solid red; */
+  grid-column: span 1;
+  width: 100%;
+  /* object-fit: contain; doesn't need object-fit because of grid? */
+  transform: rotate(90deg);       /*rotate the img 90deg*/
+  align-self: center;             /*center the img*/
+}
+
+/* The Close Button */
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  position: absolute;
+  top: 0;
+  right: 25px;
+}
+
+.close-btn:hover, .close-btn:focus {                /*focus??*/
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.check-mark {         /*display chech-mark when input are valid*/
+  visibility: hidden;
+  color: green;
+}
+
+input:valid + .check-mark {
+  /* want to display check-mark when input are valid */
+  visibility: visible;
+}
+
+input:not(:placeholder-shown):not(:focus):invalid{
+  /*want a red border when validation say invalid when it is not a placeholder and on focus*/
+  border: 0.5px solid red;
+}
+
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs input {
+  margin-top: 15px;
+}
