@@ -3,17 +3,55 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
+    <title>Business site</title>
+    <link rel="stylesheet" href="./style.css">
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
-
+    <div class="container">
+      <nav class="navbar">
+   <a href="#">Link</a>
+   <a href="#">Link</a>
+   <a href="#">Link</a>
+      </nav>
+      <video class="bg-video" autoplay muted loop>
+        <source src="./videos/relax.mp4" type="video/mp4">
+        <p>This browser doesn't support video...</p>
+      </video>
+      <img src="./img/relaxlogobrons.png" alt="">
+      <h1>Treat yourself as you treat others</h1>
+    </div>
     <!-- Signup form -->
-
-    <section class="accordion">
+    <section class="form-and-faq-container">
+      <form action="http://httpbin.org/anything" method="POST">
+        <h2 class="form-title">Sign up for a retreat</h2>
+        <label for="name">
+        <input type="text" required placeholder="Name">
+      </label>
+      <label for="email" >
+        <input type="email" required placeholder="Email">
+      </label>
+      <label for="Phonenumber">
+        <input type="text" required placeholder="Phone number">
+      </label>
+      <label id="date" for="date">
+        <input type="date" required>
+      </label>
+      <h3 class="form-title">How many would you like to book for?</h3>
+      <label class="checkbox">I agree to the Terms & Conditions
+        <input type="checkbox"  required>
+        <span class="checkmark"></span>
+      </label>
+      <button class="submit" type="submit">BOKA</button>
+      </form>
+      <div class="faq">
+    <h2>FAQ</h2>
+      </div>
+    </section>
+    
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      
 
       <div class="question" id="section1">Section 1</div>
       <div class="answer">
@@ -26,5 +64,6 @@
       </div>
     </section>
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
   </body>
 </html>
