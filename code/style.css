@@ -149,10 +149,130 @@ label {
     padding-bottom: 5px;
 }
 
-.radio-button {
-    margin-bottom: 5px;
-    padding-left: 10px;
+/*radiobutton*/
+
+.wrapper-row {
+    display: flex;
+    justify-content: left;
 }
+
+.wrapper-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.radiobutton-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin: 10px 5px;
+    font-size: 16px;
+    user-select: none;
+    font-size: 0.8rem;
+}
+
+.radiobutton-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;  
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.radiobutton-container:hover input ~.custom-radio{
+    background-color: rgb(100, 152, 203);
+}
+
+.radiobutton-container input:checked ~.custom-radio{
+    background-color: rgb(16, 104, 192);
+}
+
+.custom-radio:after {
+content: "";
+position: absolute;
+top: 6px;
+left:6px;
+width: 7px;
+height: 7px;
+background-color: white;
+border-radius: 50%;
+display: none;
+}
+
+.radiobutton-container input:checked ~.custom-radio::after{
+display: block;
+}
+
+/*checkbox*/
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin: 10px 5px;
+    font-size: 16px;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.custom-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    background-color: #eee;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkbox-container:hover input ~ .custom-checkbox {
+    background-color: rgb(100, 152, 203);
+}
+
+.checkbox-container input:checked  ~ .custom-checkbox {
+    background-color: rgb(16, 104, 192);
+    }
+
+    .custom-checkbox:after {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 6px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        top: 5px;
+        left: 7px;
+        transform: rotate(45deg);
+        display: none;
+    }
+        .checkbox-container input:checked ~.custom-checkbox:after {
+            display: block;
+        }
+
+
+
+
+
+
 
 .button {
     background-color: rgb(16, 104, 192);
