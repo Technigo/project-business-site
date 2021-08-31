@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+    
     <link rel="stylesheet" href="./style.css" type="text/css" />
     <link rel="shortcut icon" type="image/png"
       href="">
    
-      <title>Butik</title>
+      <title>Amnesia</title>
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
@@ -41,12 +44,75 @@
   
 
 
-<section class="background-form" id="accordion-one">
+<section class="form-div">
    <div class="signup-form"> 
 
     <!-- Signup form -->
-    Section 1
+    <form class="form-text" action="https://httpbin.org/anything" method="post">
+<fieldset>
+  <legend>Choose your ticket</legend>
+  <br>
+  <input class="space-form" type="radio" id="full-ticket-bungalow" name="ticket" value="full-ticket-bungalow">
+  <label for="full-ticket-bungalow">Full Festival Ticket, 1250$ </label>
+<p class="space-form">The full 8 days of Amnesia festival including bungalow</p>
+<br>
 
+  <input class="space-form" type="radio" id="full-ticket-camping" name="ticket" value="full-ticket-camping">
+  <label for="full-ticket-camping">Full Festival Ticket, 750$ </label>
+  <p class="space-form">The full 8 days of Amnesia festival including camping</p>
+<br>
+
+  <input class="space-form" type="radio" id="one-day-ticket" name="ticket" value="one-day-ticket">
+  <label for="one-day-ticket">One day ticket, 200$</label>
+  <p class="space-form">One day ticket for Friaday or Saturday</p>
+
+
+
+<div class="contact-information">
+    <label for="name">Name </label>
+<input type="text" name="name" id="firstname" placeholder="Name" required>
+</div>
+    
+<div class="contact-information">
+    <label for="lastname">Lastname </label>
+<input type="text" name="lastname" id="lastname" placeholder="Lastname" required>
+</div>
+
+<div class="contact-information">
+<label for="phonenumber">Phonenumber</label>
+<input type="tel" name="phonenumber" id="phone" placeholder="Phonenumber" required>
+</div>
+
+<div class="contact-information">
+<label for="mail">Mail</label>
+<input type="email" name="mail" id="mail" placeholder="Youremail@here.com" required>
+</div>
+
+<div class="contact-information">
+<label for="username">Username</label>
+<input type="text" name="username" id="username" placeholder="Username" required>
+</div>
+
+<div class="contact-information">
+<label for="pass">Password: </label>
+<input type="password" id="password" name="password" minlength="6" placeholder="6 characters minimum" required>
+</div>
+
+<div class="contact-information">
+<label for="adult">I comfirm that Im over 20 years or older</label>
+<input type="checkbox" id="adult" name="adult">
+</div>
+
+<div class="contact-information">
+<label for="newsletter">subscribe to our newsletter</label>
+<input type="checkbox" id="newsletter" name="newsletter">
+</div>
+
+<input type="submit" value="save">
+
+
+</fieldset>
+  </form>
    </div> 
    
 
@@ -54,20 +120,34 @@
   
 
   </section>
-    <section class="background-form" id="accordion-two">
+    <section class="accordion-div">
       
       <div class="accordion-form">
-      <!-- Accordion -->
+      <div class="top-according">
       <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
+    </div>
+      <div class="question" id="section1">Full festival ticket</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Ticket for the entire festival. The days with full music schedules 
+          are the last four days of the festival, from 30 June till 3 July..</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">One-day ticket</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>You have the opportunity to buy One-Day tickets to the following days; 
+          Friday 2 July and Saturday 3 July. Every One-Day ticket/wristband is valid 
+          from 8am until 10am the next day.</p>
+      </div>
+      <div class="question" id="section3">Name on the ticket?</div>
+      <div class="answer">
+        <p>The name on the ticket does not restrict the ticket to that person. 
+          So don't worry if a friend bought your ticket or you received it as a present. 
+          You can still use it.</p>
+      </div>
+      <div class="question" id="section4">Buying tickets at the entrance</div>
+      <div class="answer">
+        <p>If tickets aren’t sold out before the festival begins, 
+          you can buy them at the entrance at a slightly higher price.</p>
       </div>
     
     </section>
