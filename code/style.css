@@ -2,6 +2,96 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+body {
+  margin: 0;
+}
+
+.hero-wrapper-container {
+  display: flex;
+  justify-content: center;
+  justify-self: stretch;
+  align-items: flex-start;
+  margin: 0 0 50px;
+}
+
+.hero-styling {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  object-fit: cover;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  background: black;
+}
+
+.hero-inner-container {
+  display: flex;
+  flex: 1;
+}
+
+.video {
+  flex: 1;
+}
+
+.hero-video {
+  opacity: 0.8;
+}
+
+.title-container {
+  position: absolute;
+}
+
+.title h1 {
+  font-size: 5em;
+  margin-top: 2.5em;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.title p {
+  width: 200px;
+  padding: 1.5em;
+  margin: auto;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.btn {
+  width: 200px;
+  border: 3px solid white;
+  padding: 1rem;
+  margin: 20px auto 0;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.158);
+  color: #fff;
+}
+
+.btn:hover {
+  cursor: url('pointer.png'), pointer;
+  transform: scale(1.2);
+  transition: 0.1s;
+  background-color: rgba(255, 255, 255, 0.336);
+}
+
+.info-section-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  /* temporary styles  */
+  background: cadetblue;
+}
+
+.wrapper-container {
+  flex: 1 1 50%;
+  /* temporary styles  */
+  background: burlywood;
+  border: 1px solid black;
+}
+
+.active+.answer {
   /* some styling here */
 }

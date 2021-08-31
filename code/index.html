@@ -9,37 +9,66 @@
 </head>
 
 <body>
+
   <!-- Hero Header -->
-  <header>
-    <div class="hero hero-container">
-      <video loop muted autoplay>
-        <source src="forest.mp4">
+  <header class="hero-wrapper-container hero-styling">
+    <div class="hero-inner-container hero-video">
+      <video class="video" loop muted autoplay>
+        <source src="forest.mp4" type="video/mp4">
       </video>
-      <div class="title">
-        <h1>Title</h1>
-        <p>Some text here</p>
-      </div>
+    </div>
+    <div class="title title-container">
+      <h1>Title</h1>
+      <p>Some text here</p>
+      <button class="btn">Get started</button>
     </div>
   </header>
+
   <!-- Signup form -->
-  <form class="form-container">
+  <div class="info-section-wrapper">
+    <form id="form" class="wrapper-container" action="http://httpbin.org/anything" method="POST">
 
-  </form>
+      <label for="name">Full name
+        <input id="name" type="text" placeholder="Jane Daniels" value=""></label>
 
-  <section class="accordion accordion-container">
-    <!-- Accordion -->
-    <h1>FAQ</h1>
+      <label for="password">Password
+        <input id="password" type="password" placeholder="Password" value=""></label>
 
-    <div class="question" id="section1">Section 1</div>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
+      <label for="email">Contact email
+        <input id="email" type="email" placeholder="Email" value=""></label>
 
-    <div class="question" id="section2">Section 2</div>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
-  </section>
+      <button type="submit">Submit</button>
+
+    </form>
+
+    <section class="accordion wrapper-container">
+      <!-- Accordion -->
+      <h1>FAQ</h1>
+      <div><button><img class="icon" src="plus.png"><img class="icon hidden active" src="minus.png"></button></div>
+      <div class="question" id="section1">Section 1</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <div><button><img class="icon" src="plus.png"><img class="icon hidden active" src="minus.png"></button></div>
+      <div class="question" id="section2">Section 2</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <div><button><img class="icon" src="plus.png"><img class="icon hidden active" src="minus.png"></button></div>
+      <div class="question" id="section2">Section 2</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <div><button><img class="icon" src="plus.png"><img class="icon hidden active" src="minus.png"></button></div>
+      <div class="question" id="section2">Section 2</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+    </section>
+  </div>
 
   <script src="script.js"></script>
 </body>
