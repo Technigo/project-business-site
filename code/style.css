@@ -5,7 +5,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #fff;
+  background-color: white;
 }
 
 .hero-wrapper-container {
@@ -13,7 +13,6 @@ body {
   justify-content: center;
   justify-self: stretch;
   align-items: flex-start;
-  margin: 0 0 50px;
 }
 
 .hero-styling {
@@ -48,12 +47,28 @@ body {
 }
 
 .title h1 {
+  display: flex;
   font-size: 3rem;
   font-weight: 600;
   margin-top: 9rem;
   color: #fff;
   letter-spacing: 0.2rem;
   margin-bottom: 0;
+}
+
+/* Title styles for mobile and tablets */
+
+@media only screen and (max-width: 767px) {
+  .title h1 {
+    margin-top: 7rem;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .title h1 {
+    font-size: 2.5rem;
+  }
 }
 
 .title p {
@@ -63,6 +78,14 @@ body {
   color: #fff;
   font-size: 2rem;
   font-weight: 500;
+}
+
+/* paragrah styles for mobile version */
+
+@media only screen and (max-width: 767px) {
+  .title p {
+    font-size: 1.5rem;
+  }
 }
 
 .btn {
@@ -83,21 +106,65 @@ body {
   background-color: rgba(255, 255, 255, 0.336);
 }
 
+@media only screen and (max-width: 767px) {
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 10px auto 0;
+    width: 150px;
+  }
+}
+
 .info-section-wrapper {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
+  margin-top: 50px;
+}
+
+/* Mobile view for form and acardion / making them jump into a column */
+
+@media only screen and (max-width: 767px) {
+  .info-section-wrapper {
+    flex-direction: column;
+    margin-top: 10px;
+  }
 }
 
 .wrapper-container {
   flex: 1 1 50%;
-  border: 1px solid rgba(122, 109, 109, 0.541);
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  flex-direction: column;
+  border: 1px solid rgba(206, 203, 203, 0.541);
+  border-radius: 4px;
   margin: 0 50px 0;
   box-sizing: border-box;
 }
 
+/* Making space between form and accordion on Mobile view */
+
+@media only screen and (max-width: 767px) {
+  .wrapper-container {
+    margin-top: 20px;
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.accordion-button-styling {
+  border: none;
+  background-color: #fff;
+}
+
 .active+.answer {
   /* some styling here */
+}
+
+/* hiding the remove (minus) icon */
+
+.hidden {
+  display: none;
 }
