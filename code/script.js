@@ -15,3 +15,11 @@ let sections = document.getElementsByClassName("question")
 for (let i=0; i < sections.length; i++) {
   sections[i].onclick = toggle;
 }
+
+// source for code: https://stackoverflow.com/a/62460881/7478955
+var myVideo = document.getElementById("header-video");
+
+myVideo.addEventListener('click', function(e){
+   e.preventDefault();
+   this[this.paused ? 'play' : 'pause']();
+});
