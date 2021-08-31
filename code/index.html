@@ -3,28 +3,65 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
-
+    <header>
+     <h1>Businness is our passion</h1>
+    </header>
+    
+      <div class="main-content">
     <!-- Signup form -->
+        <div class="sign-up">
+          <h2>Sign up</h2>
+          <form action="https://httpbin.org/anything" method="POST">
+              <div class="name-form">
+                <label for="fname">Fisrt Name</label>
+                <input type="text" id="fname" name="fname">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname">
+              </div>
+            <label for="email">Enter your e-mail</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com">
+            <label for="password">Enter your password</label>
+            <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+              title="Must contain at least one number and one uppercase and lowercase letter, 
+              and at least 8 or more characters">
+            <label for="age">I am over 18</label>
+            <input type="checkbox" id="age" required>
+            <button type="submit">Sign Up</button>
+          </form>
+      </div>
 
     <section class="accordion">
       <!-- Accordion -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">What are FAQ?</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">What is FAQ full form?</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
+
+      <div class="question" id="section3">What should be in a FAQ?</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>  
+
+      <div class="question" id="section4">What should be in a FAQ?</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div> 
+
     </section>
+  </div>
+  
     <!-- dont forget to link the javascript file here! -->
+    <script src="./script.js"></script>
   </body>
 </html>
