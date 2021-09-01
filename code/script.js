@@ -1,5 +1,5 @@
 
-/*******************************COMMENTS AND EXPLANATIONS FOR SMOOTH CODE REVIEW******************************************/
+/****************************** COMMENTS AND EXPLANATIONS FOR SMOOTH CODE REVIEW *****************************************/
 // getElementById - returns one and first match what forces us to give a unique ids to each section 
 // and manually select each element
 // this approach is perfectly working (* each section should have a separate unique id like section1 section2 etc 
@@ -13,17 +13,17 @@
 // const sectionThree = document.getElementById('section3');
 // const sectionFour = document.getElementById('section4');
 
-// sectionOne.onclick = toggle; /* connecting onclick event with the function*/
+// sectionOne.onclick = toggle; /* connecting onclick event with the function */
 // sectionTwo.onclick = toggle;
 // sectionThree.onclick = toggle;
 // sectionFour.onclick = toggle;
 
-// function toggle() { /* function that toggles (switches) class to active 
-// word THIS in current situation is refering to the each individual section*/
+// function toggle() { /* function that toggles (switches) class to active  */
+// word THIS in current situation is refering to the each individual section
 //   this.classList.toggle('active'); 
 // }
 
-//For optimization reasons and educational purposes following approach was implamented instead:
+// For self-educational purposes following approach was implamented instead:
 
 let question = document.querySelectorAll(".question")  /* querySelectorAll returns a Nodelist object collection 
 - in other words all element with exact class name/names*/
@@ -36,17 +36,14 @@ for (i = 0; i < question.length; i++) {  /* here is for loop starts by assigning
   question[i].addEventListener("click", function() { /*here an "Event listener" listens for a user's "click" and triggers the function
   for every element in the "question" array  */
 
-    /* Toggle between adding and removing the "active" class*/
+  // This nested for loop is aimed to check if the current "question" is the same as user had clicked on or not.
+  // if it is the same one, then class "active" is toggled on the "question". if it is not the one that was selected by user 
+  // then class active is removed from the question.
+   for (let j=0; j<question.length; j++) { 
+   if (question[j] === this) {
     this.classList.toggle("active");
-
-    /* Toggle between hiding and showing the answer */
-    const answer = this.nextElementSibling;
-   
-    if (answer.style.display === "block") { /* "style" object helps assign or change css styles via DOM manupulations */
-      answer.style.display = "none";  /* ."display" is one many properties of style object */
-    } else {
-      answer.style.display = "block";
-    }
+   } else {question[j].classList.remove("active")}  
+   }
   });
 }
 

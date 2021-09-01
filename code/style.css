@@ -191,7 +191,11 @@ body {
   background-color: #dee2e6;
 }
 
-.active, .question:hover {
+.active {
+  background-color: #bfedc1c0 !important;
+}
+
+.question:hover {
   background-color: #bfedc1c0;
 }
 
@@ -215,9 +219,13 @@ div.section:nth-child(odd) .question {
 }
 
 div.section:nth-child(odd):hover .question {
-  background-color: #d59f2142;
+  background-color: #bfedc1c0;
 }
 
 .active:after {
   content: '\2796';
+}
+
+.active+.answer {
+  display: inline-block;
 }
