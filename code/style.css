@@ -8,7 +8,7 @@ header {
 .header-text-center {
 	position: absolute;
 	top: 20%;
-	color: #ffd25d;
+	color: #ffc942;
 	font-weight: 500;
 	font-size: 6em;
 	text-shadow: 3px 3px 5px #5c5c5c;
@@ -30,6 +30,9 @@ header {
 .form {
 	display: flex;
 	flex-direction: column;
+}
+.form {
+	gap: 5px;
 }
 
 .flex-container {
@@ -76,7 +79,7 @@ header {
 
 .text-field,
 button[type='submit'] {
-	margin: 5px;
+	/* margin: 5px; */
 	width: 100%;
 	border-radius: 4px;
 	border: 1px solid #f9b44c;
@@ -106,18 +109,35 @@ input[type='radio'] {
 }
 .answer p {
 	margin: 0;
-	padding: 5px;
+	padding: 10px 10px;
 	border: 1px solid #f9b44c;
 	background-color: #ffffff;
+	font-size: 0.9rem;
+	/* font-weight: 500; */
 }
 .active + .answer {
-	display: initial;
+	display: inherit;
+	animation: growDown 500ms ease-in-out forwards;
+	transform-origin: top center;
 	/* border: 1px solid red; */
 }
 .greeting-container {
 	display: none;
 	text-align: center;
 }
+
+@keyframes growDown {
+	0% {
+		transform: scaleY(0);
+	}
+	80% {
+		transform: scaleY(1.1);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+
 @media (min-width: 460px) {
 	.radio-container {
 		flex-direction: row;
