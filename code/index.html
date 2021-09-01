@@ -1,30 +1,137 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 3: Businnes site</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ballet&family=Dancing+Script&family=Open+Sans+Condensed:wght@300&display=swap"
+    rel="stylesheet">
 
-      <div class="question" id="section1">Section 1</div>
+</head>
+
+<body>
+
+  <!-----------  HEADER  ----------->
+  <header>
+
+    <nav class="navigation">
+      <!-- <img class="logo" src="./images/logoa.png" alt="Logo"> -->
+      <h2> Dance Academy</h2>
+      <ul>
+        <li> <a class="links" href="#">Contact</a> </li>
+        <li> <a class="links" href="#">Home</a> </li>
+      </ul>
+    </nav>
+    <div class="hero-video">
+      <video id="" autoplay="" loop="" muted="" preload="auto">
+        <source src="./videos/dance-video.mp4" type="video/mp4">
+      </video>
+      <img class="logo" src="./videos/logo.png" alt="Logo">
+      <p> Dancing Woman Video 2</p>
+    </div>
+
+  </header>
+
+
+
+
+
+
+
+
+  <!--------- SIGN-UP FORM -------->
+
+  <div class="sign-up">
+
+    <form action="http://httpbin.org/anything" method="POST">
+      <fieldset>
+        <legend>
+          <h2 class="hear-you"> We like to hear you!</h2>
+        </legend>
+
+        <label for="name">Name</label>
+        <input type="text" name="fName" id="fName" required /> <br>
+        <label for="lName">Last name</label>
+        <input type="text" name="lName" id="lName" required /> <br>
+        <label for="email">Email adress</label>
+        <input type="email" name="email" id="email" required /> <br>
+        <label for="message">Your message</label>
+        <input type="text" name="message" id="message" required /> <br>
+
+        <label for="age">Child`s age:</label>
+        <select name="age" id="age">
+          <option value="toddler">1-3</option>
+          <option value="smallKid">3-6</option>
+          <option value="olderKid">6-12</option>
+        </select> <br>
+
+        <input type="checkbox" name="newsletter" id="checkbox">
+        <label for="newsletter"> I wish to receive newsletter </label>
+        <br><br>
+        <input class="send-button" type="submit" value="Send">
+      </fieldset>
+    </form>
+  </div>
+
+
+
+  <!-------- FREQUENTLY ASKED QUESTIONS accordion -------->
+
+  <section class="accordion">
+
+    <fieldset>
+      <legend>
+        <h2 class="faq"> Frequently Asked Questions </h2>
+      </legend>
+
+      <!-- <h2>Frequently Asked Questions</h2> -->
+
+      <div class="question" id="section1">Why should I learn to dance? </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>By stepping onto the dance floor, you are improving many areas of your life. It will not only boost your
+          confidence, mood and social skills, but your body tone and posture, too. Learning to dance is more than an
+          investment in technique; it is an investment in a fun and healthier lifestyle. </p>
+        <!-- <p> Studies have shown that learning to dance can improve brain function and cognitive ability, while helping prevent or delay Alzheimer’s disease in late adulthood.</p> -->
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2"> Can parents be present during the class?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Dance class is a new world for your child to discover, and all students must be comfortable in their
+          environment for them to flourish. For this reason, family members are not invited into the classroom. </p>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+
+      <div class="question" id="section3"> Can I try a class out first to see if I like it?</div>
+      <div class="answer">
+        <p>We offer “Open Class” weeks, which is the best time to try out a new style. </p>
+      </div>
+
+      <div class="question" id="section4"> Do I need to buy special dance shoes/uniform for my child?</div>
+      <div class="answer">
+        <p>Yes, a special uniform is required for most of the classes. Dance class involves physical activity and we
+          must ensure comfort and safety of the child. </p>
+      </div>
+    </fieldset>
+  </section>
+
+
+
+
+  <!-------- FOOTER SECTION -------->
+  <footer>
+    <p class="footer-info"> © 2021 Pınar Demirel Etli <a href="https://github.com/pdetli"> <i class="fa fa-github"
+          style="font-size:20px"></i> </a> </p>
+    <p class="footer-info">This page was made as a student project during the <a
+        href="https://www.technigo.io/">Technigo </a> Boot Camp.</p>
+  </footer>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
 </html>

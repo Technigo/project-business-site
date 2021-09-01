@@ -1,7 +1,164 @@
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: #F9F3F3;
+  margin: 0;
+}
+
+/* ------HEADER SECTION STYLING ----- */
+
+header {
+  overflow: hidden;
+  /* font-family: cursive; */
+  font-size: 1rem;
+}
+
+.navigation {
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #F7D9D9;
+  height: 40px;
+  padding: 5px;
+}
+
+
+nav h2 {
+  font-family: 'Ballet', cursive;
+  margin: 0;
+  font-size: 20px;
+}
+
+.logo {
+  position: absolute;
+  top: 6%;
+  left: 6%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+}
+.links {
+  text-decoration: none;
+  font-size: 14px;
+  color: #F7D9D9;
+  padding: 5px;
+  display: inline;
+}
+
+li {
+  display: inline;
+}
+
+.hero-video {
+  position: relative;
+}
+
+.hero-video video {
+  max-width: 100%;
+}
+
+.hero-video p {
+  font-family: 'Dancing Script', cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #ffffff;
+  margin: 0px;
+
+}
+
+
+/* ------SIGN-UP FORM STYLING ----- */
+form { 
+  font-family: 'Dancing Script', cursive;
+  margin: 10px;
+  font-size: 22px;
+  
+}
+
+.sign-up{
+  width: 60%;
+  max-width: 700px;
+  min-width: 400px;
+  margin: auto;
+}
+
+label {
+  padding: 20px;
+  /* margin: 20px; */
+}
+
+.send-button {
+  font-size: 24px;
+  font-family: 'Dancing Script', cursive;
+  width: 100%;
+  height: 40px;
+  margin: auto;
+  background-color: rgb(237, 215, 215);
+  border: 1px solid white;
+}
+/* ------FAQ SECTION STYLING ----- */
+
+.accordion {
+  width: 60%;
+  max-width: 700px;
+min-width: 400px;
+  margin: auto;
+  /* border: 1px solid white; */
+  padding: 20px;
+}
+
+.question {
+font-size: 18px;
+background-color: rgb(237, 215, 215);
+/* border: 1px solid white; */
+margin: 10px 10px 0 10px;
+padding: 10px;
+}
+
+.answer {
+  overflow: hidden;
+  display: none;
+  font-size: 16px;
+  background-color: rgb(238, 234, 227);
+  border: 1px solid white;
+  margin: 0 10px 10px 10px;
+  padding: 10px;
+}
+
+
+.active + .answer {
+  display: block;
+  height: 110px;
+}  
+
+
+
+/* ------FOOTER SECTION STYLING ----- */
+
+footer {
+  text-align: center;
+  background-color: rgb(237, 215, 215);
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.footer-info {
+padding: 5px;
+margin: 0;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: blue;
+}
+
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-}
