@@ -2,8 +2,14 @@
 // We haven't really talked about ´this´ yet, but we will... ;)
 // console.log(this) to see how it works
 function toggle() {
+	if (document.getElementsByClassName('question')[0].classList.contains('active')) {
+		document.getElementsByClassName('question')[0].classList.remove('active');
+	}
+	if (document.getElementsByClassName('question')[1].classList.contains('active')) {
+		document.getElementsByClassName('question')[1].classList.remove('active');
+	}
+	console.log(document.getElementsByClassName('question')[0].classList.contains('active'));
 	this.classList.toggle('active');
-	console.log(this);
 }
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
