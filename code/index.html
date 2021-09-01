@@ -3,13 +3,47 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
     <title>Project 3</title>
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <!-- hero header with video -->
 
     <!-- Signup form -->
+    <form action="http://httpbin.org/anything">
+      <label>First name:
+        <input class="text-input" type="text" name="firstName" required>
+      </label>
+
+      <label>Last name:
+        <input class="text-input" type="text" name="lastName" required>
+      </label>
+
+      <label>Email:
+        <input class="text-input" type="email" name="email" required>
+      </label>
+
+      <label for="email">Password:
+        <input class="text-input" type="password" name="password" required>
+      </label>
+
+      <label>Repeat password:
+        <input class="text-input" type="password" name="passwordcheck" required>
+      </label>
+
+      <label>
+        <input class="radio" type="radio" name="radio"> Alt 1
+        <input class="radio" type="radio" name="radio"> Alt 2
+      </label>
+
+      <label>
+        <input class="checkbox" type="checkbox" name="checkboxTermsConditions"> I agree to <a href="#">terms and conditions</a>
+        <input class="checkbox" type="checkbox" name="checkboxNewsletter"> I want information and newsletters
+      </label>
+
+      <button type="submit">Register</button>
+    </form>
 
     <section class="accordion">
       <!-- Accordion -->
@@ -24,7 +58,13 @@
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
+
+      <div class="question" id="section3">Section 3</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
     </section>
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
   </body>
 </html>

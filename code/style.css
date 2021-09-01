@@ -2,6 +2,55 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+body {
+  background-color:rgb(205, 245, 205);
+  display: flex;
+}
+
 .active + .answer {
   /* some styling here */
+}
+
+form {
+display: block;
+box-shadow: 1px 3px 19px -1px rgba(0,0,0,0.7);
+border-radius: 5px;
+padding: 0.5rem;
+margin: 5%;
+width: 50%;
+}
+
+.text-input {
+  display: grid;
+  margin-bottom: 0.5rem;
+}
+
+/* .radio {
+  display: flex;
+  flex-direction: column;
+} */
+
+.accordion {
+  display: block;
+  box-shadow: 1px 3px 19px -1px rgba(0,0,0,0.7);
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 5%;
+  width: 50%;
+  justify-content: right;
+}
+
+.question {
+  display: block;
+  /* border-top-color:darkkhaki;
+  border-top-style: solid;
+  border-width: 0.1rem; */
+}
+
+.answer {
+  display: none;
+}
+
+.question + .answer {
+  display: block;
 }
