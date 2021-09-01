@@ -1,4 +1,5 @@
 body {
+  font-size: 12px;
   margin: 0;
   background: #f78154;
   color: #292e1e;
@@ -14,10 +15,11 @@ header {
 .hero-video {
   width: 100%;
   position: relative;
+  object-fit: cover;
 }
 
 .hero-text {
-  width: 180px;
+  width: 150px;
   text-align: center;
   position: absolute;
   top: 15%;
@@ -151,11 +153,38 @@ header {
   font-size: 1.5em;
 }
 
-/* tablet
-@media (min-width: 768px){
-
+/* tablet */
+@media (min-width: 768px) {
+  body {
+    font-size: 15px;
   }
-} */
+
+  .hero-text {
+    top: 20%;
+    width: 200px;
+  }
+
+  .navbar {
+    justify-content: space-evenly;
+  }
+
+  .media-row {
+    display: flex;
+    flex-flow: row;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .window {
+    font-size: 20px;
+    height: 35px;
+  }
+
+  .button {
+    width: 100px;
+  }
+}
+
 /* Desktop */
 @media (min-width: 992px) {
   .hero-text {
