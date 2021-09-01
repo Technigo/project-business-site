@@ -1,7 +1,328 @@
+
+* {margin:0;}
+
+body {
+  background-color: #271916;
+}
+#hero {
+  height: 1000px; 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-container {
+  width: 100%;
+  height: 1500px;
+}
+
+#hero video {
+  width: 100%;
+  height: 1000px;
+  position: absolute;
+  top: 0;
+  left:0;
+  z-index: 5;
+  object-fit: cover;
+}
+
+#hero .caption {
+  position: relative;
+  z-index: 20;
+  color: white;
+  text-align: center;
+}
+
+#hero .caption h1 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif
+  margin-bottom: 20px;
+}
+
+.navigation-container {
+  position: absolute;
+  display: none;
+  font-size: 20px;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  z-index: 20;
+  color: white;
+}
+.navigation-tabs {
+  margin: 20px;
+}
+.shopping-card {
+  display: none;
+}
+
+.hero-button {
+  margin-top: 20px;
+  padding: 17px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color:white;
+  background-color:#271916;
+  border-radius: 20px;
+  border: 1px solid beige;
+}
+
+.myLogo {
+  border-radius: 80px;
+  width: 150px;
+  margin-bottom: 25px;
+}
+
+
+.big-content-container {
+  display: flex; 
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px 20px 20px 40px;
+}
+
+
+.header-accordion {
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.form-container {
+  background-color: #ede7e4;
+  /* box-sizing: border-box; */
+  padding: 10px;
+  color: black;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  border-radius: 30px;
+}
+.header-form {
+
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 17px;
+  text-align: center;
+}
+.form-question {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+.input-text {
+  padding: 8px;
+  width: 90%;
+  background: #dacec9;
+  border-radius: 5px;
+  border: none;
+  margin-top: 4px;
+}
+.form-radio {
+  margin-bottom: 13px;
+  font-size: 15px;
+  display: block;
+  margin-left: 20px;
+}
+.type-coffee {
+  margin-bottom: 5px;
+}
+
+.form-checkbox {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+.order-button {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 10px 30px 10px 30px;
+  border-radius: 10px;
+}
+
+.header-accordion {
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 18px;
+  text-transform: uppercase;
+  font-size: 17px;
+  text-align: center;
+}
+.accordion-container{
+  background-color: #ede7e4;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+.accordion-item {
+  background-color: #dacec9;
+  color: black;
+  margin: 10px 20px 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+.accordion-item-header {
+  padding: 10px 10px 20px 10px;
+  min-height: 30px;
+  font-weight: bold;
+  display:flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 28px;
+  color: antiquewhite;
+  position: absolute;
+  right: 16px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.accordion-item-header.active::after {
+  transform: rotate(45deg);
+}
+
+.accordion-item-body {
+  background-color: #ebe0de;
+  display: none;
+  padding: 10px;
+  line-height: 20px;
+  border-top: 0.5px solid #a38e8a;
+  border-radius: 5px ;
+}
+footer {
+  display: none;
+}
+
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+.accordion-item-header.active + .accordion-item-body {
   /* some styling here */
+  display: block;
+}
+
+
+/* TABLET view */
+@media (min-width: 768px) {
+  #hero .caption h1 {
+    font-size: 30px;
+  }
+
+  .big-content-container {
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .accordion-container {
+    width: 80%;
+  }
+  .form-container {;
+    width: 80%;
+  }
+  #hero {
+    height: 1000px; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer {
+    display: none;
+  }
+}
+
+/* DESKTOP view */
+@media (min-width: 992px) {
+    #hero .caption h1 {
+      font-size: 40px;
+    }
+    #hero video {
+      width: 100%;
+      height: 1000px;
+    }
+    .big-content-container {
+      display: flex; 
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: row;
+      margin:10px 20px 60px 20px;
+    }
+    /* .big-body-container {
+      margin-bottom: 10px;
+    } */
+    /* #hero {
+      height: 770px;
+    } */
+    .shopping-card {
+      margin-top: 5px;
+      width: 30px;
+      display: inline;
+    }
+    .navigation-container {
+      display: inline;
+      position: absolute;
+      font-size: 20px;
+      top: 8px;
+      right: 8px;
+      cursor: pointer;
+      z-index: 20;
+      color: white;
+    }
+    .form-container {
+      margin-right: 10px;
+      height: 550px;
+      width: 40%;
+    }
+    .accordion-container {
+      height: 570px;
+      width: 40%;
+    }
+    .form-radio {
+      display: flex;
+      flex-direction: row;
+      margin-left: 20px;
+    }
+    .type-coffee {
+      margin-right: 20px;
+      margin-left: 2px;
+    }
+    .submit-button {
+      margin-top: 40px;
+    }
+    
+
+    footer {
+      /* position: fixed; */
+      /* left: 0;
+      bottom: 0; */
+      width: 100%;
+      height: 40px;
+      background-color: #271916;
+      display: flex;
+      justify-content: center;
+      font-family:'Nanum Gothic', sans-serif;
+      color: #a7a5a5;
+    }
+    .footer {
+      font-size: 15px;
+      color: white;
+    }
 }

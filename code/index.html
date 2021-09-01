@@ -1,30 +1,150 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koffie business site</title>
+  <!-- dont forget to add a css file and link it here! -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+<body>
+  <!-- video or image as a header is cool :) -->
+  <header-container>>
+    <header id="hero">
+      <video preload="auto" autoplay muted loop>
+        <source src="./hero-seeds-video.mp4">
+        <p>Your browser does not support the video tag.</p>
+      </video>
+      <nav class="navigation-container">
+        <a class="navigation-tabs">about us</a>
+        <a class="navigation-tabs">shop</a>
+        <a class="navigation-tabs">learn</a>
+        <a class="navigation-tabs">contact us</a>
+        <img class="shopping-card" src="https://image.flaticon.com/icons/png/512/5498/5498014.png"
+          alt="shopping-cart" />
+      </nav>
+      <div class="caption">
+        <img class="myLogo" src="logo.png" alt="logo" />
+        <h1>Welcome to Koffie</h1>
+        <h2>Try our coffee tasting experience directly from Africa</h2>
+        <button class="hero-button">Visit our shop</button>
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+    </header>
+  </header-container>
+  <!-- Signup form -->
+  <div class="big-body-container">
+    <div class="big-content-container">
+      <section class="form-container">
+        <h3 class="header-form">Get a free sample of our coffee worldwide</h3>
+        <form action="https://httpbin.org/anything" method="POST">
+          <div class="form-question">
+            <label for="name">Your name:</label>
+            <input type="text" class="input-text" name="name" id="name" placeholder="Type your full name" required>
+          </div>
+          <div class="form-question">
+            <label for="email">Your email:</label>
+            <input type="email" class="input-text" name="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-question">
+            <label for="address">Your address:</label>
+            <input type="text" class="input-text" name="address" id="address" placeholder="Your address goes here"
+              required>
+          </div>
+          <div class="form-question">How strong coffee do you prefer?</div>
+          <div class="form-radio">
+            <div class="type-coffee">
+              <input type="radio" id="medium" name="preffered-coffee">
+              <label for="medium" class="label-roast">Medium</label>
+            </div>
+            <div class="type-coffee">
+              <input type="radio" id="medium-dark" name="preffered-coffee">
+              <label for="medium-dark" class="label-roast">Medium to dark</label>
+            </div>
+            <div class="type-coffee">
+              <input type="radio" id="dark" name="preffered-coffee">
+              <label for="dark" class="label-roast">Dark</label>
+            </div>
+            <div class="type-coffee">
+              <input type="radio" id=" very-dark" name="preffered-coffee">
+              <label for="very-dark" class="label-roast">Very dark </label>
+            </div>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" name="accept" id="accept" required>
+            <label for="accept">I accept the terms and conditions</label>
+          </div>
+          <div class="submit-button">
+            <button type="submit" class="order-button">Order</button>
+          </div>
+        </form>
+      </section>
+      <section class="accordion-container">
+        <h3 class="header-accordion">Most common questions</h3>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            What is Lorem Ipsum?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            Why do we use it?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              It is a long established fact that a reader will be distracted by the readable content of a page when
+              looking at its layout
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            What is Lorem Ipsum?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            What is Lorem Ipsum?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            What is Lorem Ipsum?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+          </div>
+        </div>
+    </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+  </div>
+  <!-- <footer>
+    <p class="footer">🐢 by Julia Nikitina</p>
+  </footer> -->
+  </div>
+  <footer>
+    <p class="footer"> 🐢 by Julia Nikitina ☕️</p>
+  </footer>
+  <script src="./script.js"></script>
+  <!-- dont forget to link the javascript file here! -->
+</body>
+
 </html>
