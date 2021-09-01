@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dance Studio</title>
     <link rel="icon" href="./dancer.png" type="image.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     
   </head>
@@ -19,7 +21,7 @@
         </video>
 
         <div class="hero-text-and-btn">
-        <h1>Dance Studio</h1>
+        <h1>Evelyn's Dance Studio</h1>
         <button class="top-btn">Book class</button>
         </div>
       </div>
@@ -27,35 +29,33 @@
 
     <!-- Signup form -->
     <section class="form-section">
-        <h2>Book class</h2>
+        <div class="form-title">Book class</div>
         <form action="book-class">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name">
+          
+          <div class="user-details">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
 
           <label for="email">Email</label>
-          <input type="email" id="email" name="email">
+          <input type="email" id="email" name="email" required>
 
           <label for="phonenumber">Phone number</label>
           <input type="number" id="phonenumber" name="phonenumber">
+        </div>
 
-          <p>Select dance class</p>
+            <p>Select a dance class</p>
+            <input class="select-a-class-btn" type="button" value="Ballet beginner">
+            <input class="select-a-class-btn" type="button" value="Ballet intermediate">
+            <input class="select-a-class-btn" type="button" value="Contemporary">
+            <input class="select-a-class-btn" type="button" value="Kids Dance">
 
-          <label for="ballet-beginner">Ballet beginner</label>
-          <input type="radio" id="balletBeginner" name="dance-class" value="ballet-beginner">
 
-          <label for="ballet-intermediate">Ballet intermediate</label>
-          <input type="radio" id="balletIntermediate" name="dance-class" value="ballet-intermediate">
-
-          <label for="contemporary">Contemporary</label>
-          <input type="radio" id="contemporary" name="dance-class" value="contemporary">
-
-          <label for="kids-dance">Kids Dance</label>
-          <input type="radio" id="kidsDance" name="dance-class" value="kids-dance">
-
-          <label for="terms">I agree to the Terms and Conditions</label>
+        <div class="checkbox">
           <input type="checkbox" id="terms" name="terms" value="Checked">
+          <label for="terms">I agree to the terms and conditions</label>
+        </div>
 
-          <input class="form-btn" type="button" value="Let's dance">
+          <input class="book-btn" type="button" value="Book">
 
         </form>
       
@@ -65,12 +65,12 @@
       <!-- Accordion -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">About us</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">About our classes</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
