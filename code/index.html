@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion blog</title>
     <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Padauk&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -14,7 +16,7 @@
     <header>
     <div class="heroimage">
       <div class="herotext">
-      <h1>FASHION</h1>
+      <h1>Fashion</h1>
       <h3><em>fashion blog with all the quierky stuff</em></h3>
       </div>
     </div>
@@ -24,48 +26,53 @@
 
     <section class ="container">
    
+      <!--<form action="http://httpbin.org/anything" method="POST"></form>-->
       <form>
       <section class="signupform">
-
+      
       <div class="personalinfo">
-        <label for="name">Your name:
+        <h2>To get access to this blog please fill in the form:</h2>
+        <label>Your name:
         <input 
           type="name" 
           id="name" 
-          placeholder="Name Nameson">
-      </label>
+          placeholder="Name Nameson" required>
+        </label>
 
-        <lable for="email">
-          Enter your email:
-        <input 
-          type="email" 
-          id="email" 
-          placeholder="email@email.com">
-      </lable>
+        <lable style="margin: 5px;">Your email:
+          <input 
+          type="email"
+          id="email"
+          placeholder="email@email.com" required>
+        </lable>
+
       </div>
 
       <div class="styleselection">
         <p>How would you describe your style?</p>
 
-        <label for="identification">
+        <label>
           <input class="feminine"
           type="checkbox" 
-          name="feminine">feminine</label>
+          name="feminine">feminine
+        </label>
         
         
-        <label for="identification">
+         <label>
           <input class="masculine"
           type="checkbox" 
-          name="masculine">masculine</label>
+          name="masculine">masculine
+        </label>
       
         
-        <label for="identification">
+        <label>
           <input class="genderneutral"
           type="checkbox" 
-          name="genderneutral">gender neutral</label>
+          name="genderneutral">gender neutral
+        </label>
       </div>
 
-      <button class="joinbtn" type="submit">Join</button>
+      <button class="joinbtn" id="joinbtn" type="submit">Join</button>
     
     </section>
     </form>
@@ -74,6 +81,7 @@
      
      <section class="accordionParent">
 
+      <h2>Important to know</h1>
       <button class="accordion">Whats new in fashion?</button>
       <div class="panel">
         <p>Gender Neutral and the 90's unfortunatly</p>
@@ -88,7 +96,12 @@
       <div class="panel">
         <p>No. But they will never disapear anyhow do to people having poor taste.</p>
       </div>
-      
+
+      <button class="accordion">How can I be fabulous?</button>
+      <div class="panel">
+        <p><a href="https://www.viviennewestwood.com/en/">Click me..</a></p>
+      </div>
+
      </section>
     
       <!--<h1>FAQ</h1>
@@ -116,11 +129,11 @@
         </div>  -->
 
     <!--</section>-->
-
+
   </section>
 
   <footer>
-      <p>end of fashion</p>
+      <p><em>..end of fashion</em></p>
     </footer>
 
       

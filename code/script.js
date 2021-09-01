@@ -18,6 +18,8 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+const inputValue = document.getElementById('joinbtn')
+alert('🥳 J´adore DIOR!')
 
 
 
@@ -27,11 +29,13 @@ for (i = 0; i < acc.length; i++) {
 
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById('section1').onclick = toggleDrinkMenu
+
+//document.getElementById('section1').onclick = toggleDrinkMenu//
 
 // A function that adds and remove the class "active" on the section you click on.
 // We haven't really talked about ´this´ yet, but we will... ;)
 // console.log(this) to see how it works
+
 function toggle() {
   section1.classList.toggle('active')
 }

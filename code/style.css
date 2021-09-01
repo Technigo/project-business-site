@@ -4,15 +4,14 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 body {
  background-color: black;
+ font-family: 'Padauk', sans-serif;
+ height: 100%;
 }
 
 .heroimage {
   background-image: url(pictures/IMG_6257.JPG);
-  height: 50%;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   padding: 50px;
   color: white;
 }
@@ -21,6 +20,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Bebas Neue', cursive;
+}
+
+h1 {
+  font-size: 60px;
+
 }
 
 /* the form styling */
@@ -29,18 +34,20 @@ body {
   margin: 30px auto;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-evenly;
 }
 
 form {
   width: fit-content;
   padding: 10px;
-  background-color: turquoise;
+  background-color: rgba(134, 233, 240, 0.801);
   border: solid white;
-  margin-top: 20px;
+  border-radius: 5px;
+  margin: 10px;
   width: 300px;
 }
+
 
 .personalinfo {
   display: flex;
@@ -51,27 +58,54 @@ form {
 
 .styleselection {
   display: grid;
-  justify-content: center;
-  align-items: center;
-  color: blue;
+  color: black;
   margin: 10px 0;
 }
 
-label {
-  margin: 10px 0;
+input:valid {
+  background-color: cornflowerblue;
 }
+
+label {
+  display: block;
+  margin: 5px;
+}
+/* input:invalid {
+  background-color: red;
+} */
 
 /* .feminine, .masculine .genderneutral {
   display: block;
 } */
 
 .joinbtn {
-  width: 50px;
-  margin: 50px 0;
+  width: fit-content;
+  margin: 20px 10px;
+  background-color:rgb(250, 0, 208);
+  padding: 10px;
+  color: white;
+  border: solid 2px white;
+  border-radius: 12px;
 }
 
+.joinbtn:hover{
+  background-color: white;
+  color:rgb(250, 0, 208);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.4), 0 17px 50px 0 rgba(0,0,0,0.2);
+}
 /* Acordion styling */
 
+
+.accordionParent {
+  background-color: rgba(134, 233, 240, 0.801);
+  border: solid white;
+  border-radius: 5px;
+}
+
+h2 {
+  color: white;
+  padding-left: 18px;
+}
 .accordion {
   display:grid;
   background-color: #eee;
@@ -85,6 +119,11 @@ label {
   transition: 0.4s;
 }
 
+button {
+  font-family: 'Padauk', sans-serif;
+  font-size: 15px;
+}
+
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
   background-color: #ccc;
@@ -93,12 +132,17 @@ label {
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background-color: lightblue;
+  background-color:rgb(250, 0, 208, 0.5);
   width: 264px;
   display: none;
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+
+}
 /* .accordion {
   background-color: rgb(177, 177, 231);
   width: 300px;
@@ -137,32 +181,29 @@ footer {
   padding: 20px 10px;
   text-align: center;
   border-top: solid gray;
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
 
 /* .active + .answer {
-  /* some styling here */
-} */
+  /* some styling here 
+}*/
+
 
 
 @media (min-width: 768px) {
 
   .heroimage {
     background-image: url(pictures/IMG_6288.JPG);
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    padding: 50px;
     color: white;
   }
 
-/* .signupform {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-} */
+  h3 {
+    color: rgb(250, 0, 208);
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 10px;
+    border: 2px solid rgb(250, 0, 208);
+    border-radius: 20px;
+  }
 
 }
