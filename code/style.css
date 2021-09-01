@@ -1,7 +1,175 @@
+/* 
+
+🔵  Blue Level (Minimum Requirements)**
+
+- Style your page
+- Site should have a header with responsive image/video
+
+DONE
+- Site should have a signup form with at least three different input types
+- Site should have an FAQ accordion, built with JavaScript 
+
+🔴  Red Level (Intermediary Goals)**
+
+- Try out some other form elements or input types. [Here](https://www.w3schools.com/html/html_form_elements.asp), you can read about what other form elements there are
+- Add an icon before the title in the accordion indicates whether the section is expanded or collapsed. It should update when the section expands or collapses.
+- Add some [validation](https://technigo.wistia.com/medias/bvq814g0bk) to the form
+- Use CSS selectors to make every other row in the accordion have another background color, or add a focus effect on the input tags. [Here](https://www.w3schools.com/cssref/css_selectors.asp) you can check what selectors to use.
+- On hover, change the mouse cursor to something other than the default with help from 👉 [MDN Web docs: cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
+
+⚫  Black Level (Advanced Goals)**
+
+- Add some animations to your project. For example, a slide-down effect when the accordion expands and collapses.
+- One of the harder things to do in CSS is to style checkboxes and radio buttons. Try to create custom [checkboxes](https://www.notion.so/Create-and-style-checkboxes-77dfbec5fa8346978f02db9934f447e8) and [radio buttons](https://www.notion.so/Create-and-style-radio-buttons-0739d9f6b7824c748f78f20e231bdb14).
+- Add a header and/or a button on top of your video, just like Confetti, by using `position: absolute;` and `z-index` to get everything in the right place.
+- Read up on the [BEM](http://getbem.com/introduction/) methodology and use it for the project
+
+*/
+
+
+button {
+  border: none;
+  background: #DB398D;
+  border-radius: 2em;
+  padding: 5px 20px;
+}
+
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 50vh;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 90px;
+  text-align: left;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+/* accordion */
+
+.accordion-container {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 50vh;
+    padding: 1em;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  margin: 4px auto;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  display: none;
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+.active + .panel {
+  display: block;
 }
+
+/* hover effect on links */
+
+a, a > span {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:before, a:after, a > span:before, a > span:after {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+
+a:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #DB398D;
+  transform: scaleX(0);
+}
+
+a:hover:before {
+  transform: scaleX(1);
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center; 
+  height: 64px;
+  width: 100%;
+  padding-top: 16px;
+  border-top: 1px solid #e0dfdf;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  position: flex;
+  bottom: 0;
+}
+
+footer a:link {
+  color: #DB398D;
+}
+
+footer a:visited {
+  color: grey;
+}
+
+footer a:active {
+  background-color: cyan;
+}
+
+/* styling for tablet and desktop */
