@@ -9,14 +9,14 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 #FFE9D6 
 */
 
-/* *{
+*{
   border: 1px solid red;
-} */
+}
 
 body {
   background-color: #DE8971;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 17px;
+  font-size: 2vh;
   margin:0;
 }
 /* 
@@ -26,57 +26,59 @@ body {
 
 
 .header-container {
-  background-color: rebeccapurple;
-
+  background-color: #7B6079;
+ 
 }
 
-#hero-video-phone {
-  position: relative; /* om jag sätter absolut kan texten komma över videon*/
+.hero-video-phone {
+  position: relative; 
+  top: 20px;
   right: 0;
   /* bottom: 0; */
   min-width: 100%; 
-  /* min-height: 100%; */
+  min-height: 20%;
   display: block;
-  height: auto; 
+  /* height: auto;  */
 }
 
-#hero-video-desktop {
+.hero-video-tablet {
   display: none;
 }
 
-#hero-video-tablet {
+.hero-video-desktop {
   display: none;
 }
+
+
 
 .content-hero {
   box-sizing: border-box; /*makes padding stay inside box*/
-  position: relative;
-  bottom: 0;
+  position: absolute; /* om jag sätter absolut kan texten komma över videon*/
+  top: 100px;
   background: rgba(0, 0, 0, 0.5);
   color: #FFE9D6;
-  width: 100%;
-  padding: 20px;
+  max-width: 5000px;
+  margin: auto;
+  padding: 0 20px;
 }
 
 .main-content {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
   grid-gap: 10px;
   padding: 20px;
-  width: 100%;
+  max-width: 5000px;
+  margin: auto;
   box-sizing: border-box;
   font-size: 2vh;
   
 }
 
-.sign-up-content {
-  
-  grid-row: 1 / 3;
-}
   
   input {
-    margin:20px;
+    margin:5px 0 20px 0;
+ 
   }
 
   .input-box{
@@ -84,6 +86,7 @@ body {
     padding: 10px 20px;
     font-size: 2vh;
     background-color: #FFE9D6;
+    border-radius: 12px;
     
   }
 
@@ -109,14 +112,14 @@ body {
   }
 
   .img-sign-up {
-    background-color: blue;
+  
 
   }
 
-  .faq-content {
-    grid-row: 4 / 7;
+  /* .faq-content {
+    grid-row: 3;
     color:#FFE9D6
-  }
+  } */
 
   .question {
       background-color: #7B6079;
@@ -124,13 +127,22 @@ body {
       cursor: pointer;
       width: 100%;
       transition: 0.5s;
-      height: 30px;
-      margin:0;
+      height: 10vh;
+      margin:10px 0 0 0;
       box-sizing: border-box;
-      padding: 20px;
+      padding: 2vh;
+      text-align: center;
+      font-size: 3vh;
+      color:#FFE9D6;
+      
       
   }
-
+h1 {
+  margin-top: 0;
+  text-align: center;
+  color: #FFE9D6;
+  font-size: 5vh;
+}
   
 .answer{
   display: none;
@@ -151,59 +163,84 @@ body {
 
 @media (min-width: 720px){
 
-  #hero-video-phone {
+  .hero-video-phone {
     display: none;
   }
   
-  #hero-video-tablet {
-    position: relative; /* om jag sätter absolut kan texten komma över videon*/
+  .hero-video-tablet {
+    position: relative; 
+    top: 20px;
     right: 0;
     /* bottom: 0; */
     min-width: 100%; 
-    /* min-height: 100%; */
+    min-height: 20%;
     display: block;
-    height: auto; 
+    /* height: auto;  */
+    
   }
-  #hero-video-desktop {
+  .hero-video-desktop {
     display: none;
+  }
+
+  .content-hero {
+    top: 400px;
+
+
   }
 
   .main-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     grid-gap: 20px;
     padding: 20px;
     
   }
+
+  .sign-up-content{
+    grid-row: 1 / 3;
+    grid-column: 1;
+    border: 3px solid green;
+  }
+
   .faq-content {
-    grid-row: 2 / 4;
+   grid-row: 2 / 4;
+   grid-column: 2;
+   border: 3px solid blue;
 
   }
 
+  .img-sign-up {
+    grid-row: 3;
+  }
+
+  .img-faq {
+    grid-row: 1;
+    grid-column: 2;
+  }
 
   }
   
 
-  /* --------------------TABLET---------------------------------*/
+  /* --------------------Desktop---------------------------------*/
 
 @media (min-width: 1280px){
  
-  #hero-video-phone {
+  .hero-video-phone {
     display: none;
   }
   
-  #hero-video-tablet {
+  .hero-video-tablet {
     display: none;
   }
-  #hero-video-desktop {
-    position: relative; /* om jag sätter absolut kan texten komma över videon*/
+  .hero-video-desktop {
+    position: relative; 
     right: 0;
     /* bottom: 0; */
     min-width: 100%; 
-    /* min-height: 100%; */
+    min-height: 100%; 
     display: block;
-    height: auto; 
+    /* height: auto;  */
   }
 
   .main-content {
