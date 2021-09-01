@@ -25,34 +25,56 @@
     <!-- Signup form -->
     <section class="form-and-faq-container">
       <form action="http://httpbin.org/anything" method="POST">
-        <h2 class="form-title">Sign up for a retreat</h2>
-        <label for="name">
-        <input type="text" required placeholder="Name">
+        <h2 class="title">Sign up for a retreat</h2>
+        <h3 class="form-title">contact details</h3>
+        <label for="name">Your Name:
+        <input type="text" name="name" required placeholder="Name">
       </label>
-      <label for="email" >
-        <input type="email" required placeholder="Email">
+      <label for="email" > your Email:
+        <input type="email" name="email" required placeholder="Email">
       </label>
-      <label for="Phonenumber">
-        <input type="text" required placeholder="Phone number">
+      <label for="Phonenumber">Your Phone number:
+        <input type="text" name="phonenumber" required placeholder="Phone number">
       </label>
-      <label id="date" for="date">
-        <input type="date" required>
+      <h3 class="form-title">Booking details</h3>
+      <label id="arrival" for="arrival">Arrival:
+        <input type="date" name="arrival" required>
       </label>
-      <h3 class="form-title">How many would you like to book for?</h3>
+      <label id="departure" for="departure">Departure:
+        <input type="date" name="departure" required>
+      </label>
+      <label for="nr of guests">Number of guests
+      <select name="nr of guests">
+        <option value="1">one</option>
+        <option value="2">two</option>
+        <option value="3">three</option>
+        <option value="4">four</option>
+      </select>
+      </label>
+      <div class="radio-buttons">
+        <label for="man">Man
+       <input type="radio" id="man" name="what are you?" value="man">
+       </label>
+        <label for="whomman">Whomman
+       <input type="radio" id="whomman" name="what are you?" value="whomman">
+       </label>
+        <label for="unicorn">Unicorn
+       <input type="radio" id="unicorn" name="what are you?" value="unicorn">
+       </label>
+      </div>
+      <div class="agrees">
       <label class="checkbox">I agree to the Terms & Conditions
-        <input type="checkbox"  required>
+        <input class="ckeck" type="checkbox" name="pollicyagree" required>
         <span class="checkmark"></span>
       </label>
       <button class="submit" type="submit">BOKA</button>
+      </div>
       </form>
+      <!-- Accordion -->
       <div class="faq">
     <h2>FAQ</h2>
       </div>
-    </section>
-    
-      <!-- Accordion -->
-      
-
+    </section>  
       <div class="question" id="section1">Section 1</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
