@@ -12,6 +12,8 @@ body {
   margin: 0;
 }
 
+/* HEADER & NAVIGATION */
+
 header {
   position: absolute;
   top: 0;
@@ -19,18 +21,26 @@ header {
   width: 100%;
   background-color: #297F55;
   z-index: 1;
-
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-
-/* HEADER & NAVIGATION */
+nav a {
+  color: yellow;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  margin-right: 10px;
+}
 
 .logo-image {
   height: 50px;
   width: auto;
   margin-left: 3px;
 }
+
+
 
 .head-container {
   width: 100%;
@@ -83,7 +93,7 @@ header {
   box-sizing: border-box;
   padding: 20px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   margin-top: 10px;
   background-color: whitesmoke;
   opacity: 0.9;
@@ -109,6 +119,11 @@ header {
   width: 100%;
 }
 
+.text-input:focus {         /* one can style the input fields that are activated with input:focus */
+  color: white;
+  background-color: #297F55;
+}
+
 .experience-fieldset {
   border: none;
   padding-left: 0;
@@ -126,7 +141,7 @@ header {
   display: block;
   border-radius: 12px;
   border: 0;
-  cursor: pointer;
+  cursor: pointer;          /* changes the cursor to a pointing hand on hover */
   font-size: 18px;
   height: 35px;
   width: 30%;
@@ -139,11 +154,18 @@ header {
 /* Accordion */
 
 .accordion {
-  max-width: 375px;
+  width: 100%;
   height: 667px;
+  background-color:  #297F55;
 
 
-  border: 3px solid blue;
+  border: 3px solid #297F55;
+}
+
+.accordion h2 {
+  color: yellow;
+  margin-left: 5px; 
+  font-size: 40px;
 }
 
 .question {
@@ -198,6 +220,12 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 @media (min-width: 668px) {
+  nav a {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 20px;
+  }
+
   .head-container {
     background-image: none;
   }
@@ -212,6 +240,17 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     top: 50px;
     margin-top: 0;
     font-size: 100px;
+  }
+
+  .subscription-form {
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .send-button {
+    margin-top: 50px;
+    height: 40px;
+    width: 35%
   }
 }
   
