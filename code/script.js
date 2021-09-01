@@ -6,4 +6,12 @@ function toggle() {
 }
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
+// document.getElementById("section1").onclick = toggle;
+
+// I wrote a looping function that gets runned as soon as page is loaded and adds listeners to all the FAQ sessions
+function loopThrough(){
+  for(let i=1; i<7; i++){
+    document.getElementById(`section${i}`).addEventListener("click", toggle);
+  }
+}
+window.onload = loopThrough;

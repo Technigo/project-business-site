@@ -1,7 +1,191 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+*{
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
+
+*, *::before, *::after{
+  box-sizing:border-box;
+}
 
 .active + .answer {
-  /* some styling here */
+  display:block;
 }
+
+/* -------- THE DESIGN IS MADE MOBILE FIRST---------- */
+
+
+/* following styling affects the header section */
+.header{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid black;
+
+
+}
+
+.navigation{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 10px;
+  display:none;
+  
+}
+        .navigation-link{
+          font-size: 20px;
+          color: white;
+          font-size: 14px;
+        }
+
+
+.hamburger {
+  display: flex;
+  height: 18px;
+  width: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1.5rem;
+  z-index: 5;
+}
+
+      .hamburger div{
+        width: 20px;
+        height: 4px;
+        background: white;
+      }
+
+.video-wrapper{
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left:0;
+  z-index: -100;
+}
+
+    .header-video{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position:absolute;
+      top: 0;
+      left:0;
+    }
+
+    .medium{
+      display: none;
+    }
+
+    .large{
+      display:none;
+    }
+
+.header h1 {
+  display: inline;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+
+.content-wrapper{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #DFDFDF;
+  padding: 10px 10%;
+  
+}
+/* ----- Styling for the FAQ session ------ */
+
+.accordion{
+  width: 100%;
+  background-color: #A7BBC7;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 10px;
+}
+
+.question{
+  border: 2px solid #DA7F8F;
+  padding: 5px 10px;
+}
+
+.answer{
+  display: none;
+  padding: 5px 10px;
+  background-color: #DA7F8F;
+}
+
+/* ----- Styling for Signup form----- */
+.signup{
+  display:flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.input-field{
+  font-size: 20px;
+  width: 300px;
+  padding: 5px;
+  display: block;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+/* 
+--------- START OF MEDIA QUERIES -------- */
+
+@media (min-width: 768px){
+
+  .hamburger{
+    display: none;
+  }  
+
+  .navigation{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .small{
+    display:none;
+  }
+
+  .medium{
+    display:inline;
+  }
+
+  .header, .video-wrapper{
+    height: 400px;
+  }
+
+  .header h1{
+    margin-top: 120px;
+  }
+
+}
+
+
+@media (min-width: 1200px){
+  .medium{
+    display: none;
+  }
+
+  .large{
+    display: inline;
+  }
+
+}
+
