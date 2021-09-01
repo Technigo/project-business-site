@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Festival</title>
     <link rel="stylesheet" href="./style.css" />
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+   
+</head>
   <body>
     <header class="header">
 
         <div class="video-wrapper">
             <video class="header-video small" autoplay loop muted>
-            <source src="./videos/smoke-small.mp4" alt="video of smoke slowly lifting">
+            <source src="./videos/plants-small.mp4" alt="video of girl filming plants">
             </video>
             <video class="header-video medium" autoplay loop muted>
-              <source src="./videos/smoke-medium.mp4" alt="video of smoke slowly lifting">
+              <source src="./videos/plants-medium.mp4" alt="video of girl filming plants">
             </video>
             <video class="header-video large" autoplay loop muted>
-              <source src="./videos/smoke-large-hd.mp4" alt="video of smoke slowly lifting">
+              <source src="./videos/plants-large.mp4" alt="video of smoke slowly lifting">
             </video>
         </div>
 
@@ -34,7 +38,7 @@
             <div></div>
         </div>
 
-        <h1>FESTIVAL</h1>
+        <h1>Plant Film Festival</h1>
 
     </header>
     
@@ -42,7 +46,7 @@
 
       <section class="accordion">
         <!-- Accordion -->
-          <h1>FAQ</h1>
+          <div class="headline"><h1>I want to watch plants grow...</h1></div>
   
           <div class="question" id="section1">How can I find the schedule of screenings?</div>
           <div class="answer">
@@ -77,44 +81,109 @@
         </section>
     <!-- Signup form -->
         <sectionc class="accordion">
-          <form class="signup">
-            <label> First Name:
-              <input type="text" class="input-field" name="first-name" id="first-name">
-            </label>
-            <labe> Last Name:
-            <input type="text" class="input-field" name="last-name" id="last-name">
-            </labe>
-            <label> Password:
-              <input type="password" class="input-field" name="password" id="password">
-            </label>
-            <fieldset>
-              <legend>Have you attended this festival before?</legend>
-            <label> No
-              <input type="radio" id="first-time" name="firs-time" value="first-time">
-            </label>
-            <label> Yes
-              <input type="radio" id="not-first" name="not-first" value="not-first">
-            </label>
-          </fieldset>
-            <label> Producer:
-              <input type="checkbox" id="producer" name="profession" value="producer">
-            </label>
-            <label> Director:
-              <input type="checkbox" id="director" name="profession" value="director">
-            </label>
-            <labe> Writer
-              <input type="checkbox" id="writer" name="profession" value="writer">
-            </labe>
-            <input type="submit" class="input-field" value="Submit">
 
-          </form>
+            <div class="headline"><h1>Register</h1></div>
+
+            <form class="signup-form">
+                <!-- <div class="text-forms"> -->
+                    <label> First Name: 
+                       <input
+                       type="text"
+                       class="input-field"
+                       name="first-name"
+                       id="first-name"
+                       required
+                       placeholder="Mads"
+                        autocomplete="off">
+                    </label>
+
+                    <label> Last Name:
+                        <input
+                        type="text"
+                        class="input-field"
+                        name="last-name"
+                        id="last-name"
+                        required
+                        placeholder="Mikkelsen"
+                        autocomplete="off">
+                    </label>
+
+                    <label> Password:
+                        <input
+                        type="password"
+                        class="input-field"
+                        name="password"
+                        id="password"
+                        placeholder="*****"
+                        required>
+                     </label>
+                <!-- </div> -->    
+                    
+                    <div class="on-same-line">
+                        <h2 class="input-field">Have you attended this festival before?</h2>
+                        <label> Yes
+                            <input
+                            class="radio"
+                            type="radio"
+                            id="first-time"
+                            name="not-first-time"
+                            value="not-first-time"
+                            >
+                        </label>
+                        <label> No
+                            <input
+                            class="radio"
+                            type="radio"
+                            id="first-time"
+                            name="first-time"
+                            value="first-time"
+                            >
+                        </label>
+                    </div>
+        
+
+                    <div class="on-same-line">      
+                        <label> Producer:
+                            <input
+                            class="checkbox"
+                            type="checkbox"
+                            id="producer"
+                            name="profession"
+                            value="producer">
+                        </label>
+                        <label> Director:
+                            <input
+                            class="checkbox"
+                            type="checkbox"
+                            id="director"
+                            name="profession"
+                            value="director">
+                        </label>
+                         <label> Writer
+                            <input
+                            class="checkbox"
+                            type="checkbox"
+                            id="writer"
+                            name="profession"
+                            value="writer">
+                        </label>
+                    </div>  
+
+                    <input
+                    type="submit"
+                    class="input-field submit"
+                    value="Submit">
+
+            </form>
           
 
 
         </sectionc>
-      
+      </div>
+      <footer class="footer">
+        <!-- <img class="footer-image" src="https://www.amexessentials.com/wp-content/uploads/2019/06/Monstera-Deliciosa-Trend-Opener.jpg" alt="plants" /> -->
+      </footer>
     <!-- dont forget to link the javascript file here! -->
     <script src="./script.js"></script>
-    </div>
   </body>
 </html>
