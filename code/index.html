@@ -1,30 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Project 3</title>
+		<link rel="stylesheet" href="style.css"/>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap");
+		</style>
+	</head>
+	<body>
+		<div class="hero-image">
+			<div class="hero-text">
+				<h1>Your Dog's Closet</h1>
+				<p>Let's double your dog's fabulousness</p>
+			</div>
+		</div>
 
-    <!-- Signup form -->
-
-    <section class="accordion">
+		<!-- Sign up form -->
+		<div class="form-wrapper">
+			<div class="form-container">
+				<div class="title-container">
+					<h2>Sign up for membership</h2>
+				</div>
+				<form action="post" method="post" class="form-example">
+					<div class="form-example">
+						<label for="email">Email: </label>
+						<input type="email" name="email" id="email" required />
+					</div>
+					<div class="form-example">
+						<label for="pass">Password (8 characters minimum):</label>
+						<input
+							type="password"
+							id="pass"
+							name="password"
+							minlength="8"
+							required/>
+					</div>
+					<div class="form-example">
+            <label for="phone">Phone number (123-456-7890):</label>
+						<input
+							type="tel"
+							id="phone"
+							name="phone"
+							pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+							required/>
+          </div>
+					<div class="form-example">
+							<div class="form-example">
+								<input
+									type="radio"
+									id="gender"
+									name="male"
+									value="male"
+									check="checked"/>
+								<label for="gender">Male</label>
+							</div>
+							<div class="form-example">
+								<input type="radio" id="gender" name="female" value="female" />
+								<label for="gender">Female</label>
+							</div>
+					</div>
+					<div class="form-example">
+						<input type="checkbox" id="agree" name="agree" required />
+						<label for="agree">I agree with terms and conditions</label>
+					</div>
+					<div class="form-example">
+						<input type="submit" value="Sign Up" />
+					</div>
+				</form>
+			</div>
+  
       <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+		<div class="accordion">
+			<h1>Frequently Asked Questions</h1>
+			
+      <button id="question1">
+        Does your site offer plus size costumes?
+      </button>
+			<div id="answer1" class="answer">
+				<p>Your dog, your choice. There is no shame in size number. You tell us the size, we make it happen!</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <button id="question2">
+        Can I add customized decorations to an existing design?
+      </button>
+			<div id="answer2" class="answer">
+				<p>Of course! There is an option button when you have chosen a basic design. You can add a delightful set of angel wings, a santa hat, chiffon organza... dream big!</p>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+
+			<button id="question3">
+        Do I need to pay for size up?
+      </button>
+			<div id="answer3" class="answer">
+				<p>No you don't!</p>
+      </div>
+      
+		</div>
+    </div>
+    <script src="script.js"></script>
+	</body>
 </html>

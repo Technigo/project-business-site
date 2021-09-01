@@ -1,7 +1,94 @@
+body, html {
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  background:cornflowerblue;
+}
+.hero-image {
+height: 50%;
+background-image: url(/img/heroimage.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+position: relative;
+}
+
+.hero-text {
+text-align: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+font-size: 1.5rem;
+}
+
+/* Sign up form */
+.form-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-container {
+  background: gainsboro;
+    width: 45%;
+    box-sizing: border-box;
+    padding: 25px;
+    margin: 8% auto 0;
+    position: relative;
+    /* z-index: 1; */
+    border-top: 5px solid #f5ba1a;
+}
+
+.title-container {
+  text-align: center;
+}
+form.form-example {
+  display: flex;
+  flex-direction: column;
+  align-items:stretch;
+}
+
+div.form-example {
+  display: flex;
+  flex-direction: row;
+}
+
+label, input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+.accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: gainsboro;
+  width: 45%;
+  box-sizing: border-box;
+  padding: 25px;
+  margin: 8% auto 0;
+  position: relative;
+  /* z-index: 1; */
+  border-top: 5px solid #f5ba1a;
+}
+
+/* answer이 액티브 됐을때: 보여줘라 */
+.answer.active {
+  display: block;
+}
+
+/* answer이 논액티브됐을때 (question이 안 눌린 상태): 보여주지 마라 */
+.answer {
+  display: none;
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-}
