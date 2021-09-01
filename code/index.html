@@ -1,18 +1,118 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+
+    <!-- Google Fonts – Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts – Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
   </head>
+
+
   <body>
     <!-- video or image as a header is cool :) -->
+    <section class="hero-image-section">
+      <picture>
+        <!-- <source srcset="#" media="(max-width: 600px)"/> 
+        <source srcset="#" media="(max-width: 900px)"/> -->
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3450&q=80" alt="forest-placeholder-image"/>
+      </picture>
+    </section>
+
 
     <!-- Signup form -->
 
+    <section class="signup-section">
+      <form class="form-container">
+
+        <h3>Sign up</h3>
+        <label class="uppercase" for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          class="input-text-block"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label class="uppercase" for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="input-text-block"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label class="uppercase" for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="input-text-block"
+          placeholder="Password"
+          required
+        />
+
+        <h4 class="form-headline uppercase">What describes you?</h4>
+
+        <input
+          type="radio"
+          id="teacher"
+          name="teacherOrStudent"
+        />
+        <label class="inline-label" for="teacher">Teacher</label>
+
+        <input
+          type="radio"
+          id="student"
+          name="teacherOrStudent"
+        />
+        <label class="inline-label" for="student">Student</label>
+
+        <h4 class="form-headline uppercase">Terms and conditions</h4>
+
+        <input
+          type="checkbox"
+          id="termsCond"
+        />
+        <label class="inline-label" for="termsCond">I accept the Terms & Conditions</label>
+
+        <br>
+
+        <input
+          type="checkbox"
+          id="newsletter"
+        />
+        <label class="inline-label" for="newsletter">I want to receive newsletter</label>
+
+        <br>
+
+        <button class="sign-up-btn" type="submit">
+          Sign up
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <!-- Accordion -->
     <section class="accordion">
-      <!-- Accordion -->
       <h1>FAQ</h1>
 
       <div class="question" id="section1">Section 1</div>
@@ -25,6 +125,9 @@
         <p>Lorem ipsum...</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <!-- Link to the Javascript file -->
+    <script src="./script.js"></script>
+
   </body>
 </html>
