@@ -1,3 +1,35 @@
+body {
+  margin: 0;
+}
+
+.hero-image {
+  width: 100vw;
+  height: 50vh;
+  background-image: url(../hero-image-padlet.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.smaller-text {
+  text-align: center;
+}
+
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
@@ -5,3 +37,5 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .active + .answer {
   /* some styling here */
 }
+
+@media (min-width: 768px) {
