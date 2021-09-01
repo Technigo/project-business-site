@@ -17,9 +17,10 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  background-color: #297F55;
+  z-index: 1;
 
 
-  border: 3px solid yellow;
 }
 
 
@@ -28,21 +29,29 @@ header {
 .logo-image {
   height: 50px;
   width: auto;
+  margin-left: 3px;
 }
 
 .head-container {
-  width: 375px;
+  max-width: 375px;
   height: 667px;
   position: relative;
   top: 0;
   left: 0;
-  opacity: 0.3;
-  background-image: url("https://via.placeholder.com/375x667");
+  background-image: url(./images/Buddha_img\(small\).jpg);
+  background-size: contain;
   background-repeat: no-repeat;
+  background-color:  #297F55;
 
 
-  border: 3px solid green;
+  border: 3px solid #297F55;
   
+}
+
+.head-container h1 {
+  color: yellow;
+  max-width: 375px;
+  font-size: 80px;
 }
 
 
@@ -52,28 +61,30 @@ header {
 .form-section {
   height: 667px;
   max-width: 375px;
+  background-image: url(./images/Buddha_img\(small\).jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
   display: flex;
   align-items: flex-end;
   text-align: justify;
 
 
-  border: 3px solid hotpink;
 }
 
 
 .subscription-form {
   max-width: 375px;
   height: 530px;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   box-sizing: border-box;
   padding: 20px;
-  font-family: sans-serif;
   font-size: 16px;
   font-weight: 600;
   margin-top: 10px;
+  background-color: whitesmoke;
 
 
-  border: 3px solid red;
+  border: 1px solid #297F55;
 }
 
 
@@ -85,10 +96,8 @@ header {
 }
 
 .text-input {
-  background-color: #303245;
   border-radius: 12px;
-  border: 0;
-  color: #eee;
+  border: 1px #297F55 solid;
   font-size: 18px;
   height: 50px;
   padding: 4px 20px 0;
@@ -96,21 +105,28 @@ header {
 }
 
 .experience-fieldset {
-  text-align: center;
   border: none;
+  padding-left: 0;
+}
+
+.experience-fieldset legend {
+  padding: 0;
 }
 
 
+
 .send-button {
-  background-color: #08d;
+  background-color: #297F55;
+  color: whitesmoke;
+  display: block;
   border-radius: 12px;
   border: 0;
-  color: #eee;
   cursor: pointer;
   font-size: 18px;
-  height: 50px;
-  text-align: center;
-  width: 100%;
+  height: 35px;
+  width: 30%;
+  margin: 0 auto;
+
 }
 
 
@@ -127,12 +143,19 @@ header {
 
 .question {
   margin: 0;
+  padding: 5px;
   background-color: grey;
 
 
   border: 1px solid green;
 }
 
+.question::after {
+  content: '+';
+  font-size: 30px;
+  font-weight: bold;
+  float: right;
+}
 
 .answer {
   margin: 0;
@@ -140,9 +163,9 @@ header {
   display: none;
 
 
+
 /*   border: 1px solid blueviolet; */
 }
-
 
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
@@ -152,3 +175,13 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .active + .answer {
   display: block;
 }
+
+/* **********MEDIA QUERIES********** */
+
+
+@media (max-width: 255px) {                 /* This is for making the h1 responsive. I am using a very big font-size and hence it was not breaking the word. */
+  .head-container h1 {
+    word-break: break-all;
+  }
+}
+  
