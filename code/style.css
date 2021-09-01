@@ -93,18 +93,21 @@ h4 {
 
 .checkbox-item {
   text-align: left;
-  padding-left: 43%;
+  width: 70px;
+  margin: auto;
 }
 
 .brewing-knowledge {
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 
 .radio-item {
   text-align: left;
-  padding-left: 33%;
+  width: 180px;
+  margin: auto;
 }
 
 button {
@@ -124,8 +127,85 @@ button {
   background-color: rgb(245, 142, 117);
   margin: 10px;
   grid-column: span 6;
-  
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+ 
 }
+
+.faq-header {
+    font-size: 50px;
+    padding: 50px;
+  }
+
+/* .accordion {
+} */
+
+/*.accordion-item {
+  width: 80%;
+  margin: 0 auto 10px;
+  height: 100px;
+  background-color: rgb(241, 226, 226);
+  color: brown;
+  border-radius: 20px;
+}*/
+
+.question {
+  width: 80%;
+  margin: 20px auto 0px;
+  height: 70px;
+  background-color: rgb(241, 226, 226);
+  color: brown;
+  padding-left: 15px;
+  border-radius: 20px 20px 0px 0px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold; /*why doenst it get bolder?*/
+  display: flex;
+  align-items: center;
+  position: relative; /*what does it do?*/
+  cursor: pointer;
+}
+  
+.answer1, .answer2, .answer3, .answer4  {
+  width: 80%;
+  margin: 0px auto 10px;
+  height: 70px;
+  background-color: rgb(241, 226, 226);
+  color: brown;
+  padding-top: 5px;
+  padding-left: 15px;
+  border-radius: 0px 0px 20px 20px;
+  text-align: left;
+  font-weight: bold; /*why doenst it get bolder?*/
+  display: flex;
+  align-items: center;
+  position: relative;
+  display: none;
+}
+
+p {
+  margin: 2px;
+  font-size: 15px;
+}
+
+/* javascript rules */
+.active + .answer1 {
+  display: block;
+}
+
+.active + .answer2 {
+  display: block;
+}
+
+.active + .answer3 {
+  display: block;
+}
+
+.active + .answer4 {
+  display: block;
+}
+/* end of javascript rules */
 
 footer {
   grid-column: 1 / 7;
@@ -163,7 +243,16 @@ footer {
     margin-left: 5px;
   }
 
+  .question {
+    width: 70%;
+    margin: 25px auto 0px;
+    height: 80px;
 }
+
+  .answer1, .answer2, .answer3, .answer4  {
+    width: 70%;
+    height: 80px;
+  }
 
 /*desktop version*/
 @media (min-width: 1024px) {
@@ -181,10 +270,10 @@ footer {
     width: 50%;
   }
 
-.checkbox-item {
-  padding-left: 25%;
-  font-size: 17px;
-}
+  .checkbox-item {
+    padding-left: 25%;
+    font-size: 17px;
+  }
 
   .radio-item {
     padding-left: 17%;
