@@ -2,15 +2,20 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+/* .active + .answer {
+  some styling here
+} */
+
+html {
+  scroll-behavior: smooth;
 }
+
 
 body {
   margin: 0;
   background: #353636;
-  font-family: 'Montserrat', sans-serif;
 }
+
 
 .hero {
   height: 100vh;
@@ -30,6 +35,26 @@ body {
   align-items: center;
 }
 
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+
+.hero-button {
+  background-color:whitesmoke; 
+  opacity: 0.5;
+  border: 1px solid lightsteelblue;
+  width:180px;
+  padding: 10px
+}
+
+
 video { 
   width: 100%; 
   height: 100vh;
@@ -40,51 +65,76 @@ video {
   object-fit: cover;
 }
 
+
 .sign-up-form {
   border: 2px solid black;
   background-color: #dcdcde;
+  font-family: 'Montserrat', sans-serif; 
   width: 400px; 
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;  
-}
-
-form {
+  height: 500px;
+  padding: 30px 10px 0px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
+
+
+
+.sign-up-form h3 {
+  padding-bottom: 20px;
+}
+
+
+::placeholder {
+  font-size: 15px;
+  font-style: italic;
+}
+
+
+form {
+  
+  display: flex;
+  flex-direction: column;
+}
+
 
 input {
   font-size: 20px;
-  margin: 10px;
+  margin: 15px;
+  /* display: block; */
 }
 
 
 label {
-  font-size: 20px;
-  
+  font-size: 20px; 
 }
 
 
-  button {
-  font-size: 20px;
+button {
+  border: 1px solid gray;
+  background-color: lightblue;
+  font-size: 17px;
   width: 130px;
   border-radius: 20px;
   padding: 10px 15px 10px 15px;
-  margin-top: 25px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+button:hover {
+  background-color: lightsteelblue;
+}
 
 .accordion {
   border: 2px solid black;
   background-color: #dcdcde;
-  width: 400px;
-  height: 400px;
-  margin-bottom: 10em;
+  width: 430px;
+  height: 530px;
+  margin-bottom: 8em;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -94,8 +144,10 @@ label {
   column-gap: 2em;
   justify-content: center;
   margin-top: 5em;
-  margin-bottom: 50em;
 }
+
+
+
 
 @media screen and (min-width: 768px) {
    .caption {
@@ -117,4 +169,3 @@ label {
       column-gap: 4em;
   }
 }
-
