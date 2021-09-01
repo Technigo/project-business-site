@@ -2,13 +2,13 @@
 // We haven't really talked about ´this´ yet, but we will... ;)
 // console.log(this) to see how it works
 function toggle() {
-	const question1 = document.getElementsByClassName('question')[0];
-	const question2 = document.getElementsByClassName('question')[1];
-	if (question1.classList.contains('active') && question1.id !== this.id) {
-		question1.classList.remove('active');
-	}
-	if (question2.classList.contains('active') && question2.id !== this.id) {
-		question2.classList.remove('active');
+	const questions = document.getElementsByClassName('question');
+
+	for (let i = 0; i < questions.length; i++) {
+		const question = questions[i];
+		if (question.classList.contains('active') && question.id !== this.id) {
+			question.classList.remove('active');
+		}
 	}
 
 	this.classList.toggle('active');
