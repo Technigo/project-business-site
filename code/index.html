@@ -50,25 +50,40 @@
       </nav>
     </header>
 
-    <p class="business-text">"Extraction mocha est breve shot robusta As aromatic seasonal, mazagran Aroma spice whipped trifecta affogato Affogato aroma decaffeinated, rich au  mug caramelization turkish Americano. Seasonal con Aromatic spice mug press grounds cup plunger Cappuccino french, Brewed au half Americano cappuccino white Blue whipped dripper."</p>
+    <div class="b-container">
+      <p class="business-text">"Extraction mocha est breve shot robusta As aromatic seasonal, mazagran Aroma spice whipped trifecta affogato Affogato aroma decaffeinated, rich au  mug caramelization turkish Americano. Seasonal con Aromatic spice mug press grounds cup plunger Cappuccino french, Brewed au half Americano cappuccino white Blue whipped dripper."</p>
+    </div>
 
     <main class="main-content">
 
       
       
       <form class="form" id="my-form" target="_blank" action="https://httpbin.org/anything" method="POST">
+        <h1>Order now</h1>
 
-        <label class="form-labels">Your name: 
+        <label class="form-labels">First name: 
           <input
+            class="input"
             type="text"
             name="name"
-            placeholder="Sam Smith"
+            placeholder="Sam"
+            required
+          />
+        </label>
+
+        <label class="form-labels">Surname: 
+          <input
+            class="input"
+            type="text"
+            name="name"
+            placeholder="Smith"
             required
           />
         </label>
 
         <label class="form-labels">Email: 
           <input
+            class="input"
             type="email"
             name="email"
             placeholder="email@example.com"
@@ -76,17 +91,66 @@
           />
         </label>
 
-        <label class="form-labels">Choose size:
+        <label class="form-labels">Coffee flavour:
           <select name="size" id="">
-            <option value="s">Small</option>
-            <option value="m">Medium</option>
-            <option value="l">Large</option>
+            <option value="1">El Sunzita, Red Bourbon, El Salvador</option>
+            <option value="2">Kamwangi</option>
+            <option value="3">Las Delicias, Natural Java, Nicaragua</option>
+            <option value="4">Wote, Washed, Ethiopia</option>
+            <option value="5">Limoncillo Washed, Nicaragua</option>
+            <option value="6">Carmelita, Anaerobic Caturra, Bolivia</option>
           </select>
+        </label>
+
+        <label class="form-labels">Quantity: 
+          <input
+            class="input"
+            type="number"
+            name="quantity"
+            required
+          />
+        </label>
+
+        <label class="form-labels">Whole or ground beans:
+          <div class="radio-buttons">
+            <input
+              class="input"
+              type="radio"
+              name="bean"
+              id="ground"
+            />
+            <label for="ground">Ground</label>
+
+            <input
+              class="input"
+              type="radio"
+              name="bean"
+              id="whole"
+            />
+            <label for="whole">Whole</label>
+          </div> 
+        </label>
+
+        <label class="form-labels">I have understood the terms and conditions 
+          <input
+            class="input"
+            type="checkbox"
+            name="terms-conditions"
+            required
+          />
+        </label>
+
+        <label class="form-labels">I would like to receive email updates from The Grind
+          <input
+            class="input"
+            type="checkbox"
+            name="updates"
+          />
         </label>
         
 
         <button type="submit" id="submit-button">
-          Sumbit
+          Add to cart
         </button>
 
         <p id="submit-confirmation"></p>
