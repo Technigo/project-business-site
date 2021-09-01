@@ -18,13 +18,13 @@
         <h1>ESCAPE HOUSE</h1>
         <i class="fas fa-chevron-down arrow"></i>
       </div>
-      <video class="video-mobile" autoplay muted loop>
+      <video class="video-mobile video" autoplay muted loop>
         <source src="./videos/header-video-iphone.mp4" />
       </video>
-      <video class="video-ipad" autoplay muted loop>
+      <video class="video-ipad video" autoplay muted loop>
         <source src="./videos/header-video-ipad.mp4" />
       </video>
-      <video class="video-desktop" autoplay muted loop>
+      <video class="video-desktop video" autoplay muted loop>
         <source src="./videos/header-video-desktop.mp4" />
       </video>
     </header>
@@ -65,9 +65,10 @@
             autocomplete="off"
           >
             <div class="form-row">
-              <span>Full name:</span>
+              <label for="name">Full name:</label>
               <input
                 class="input-text"
+                id="name"
                 type="text"
                 name="full-name"
                 placeholder="Amelie Davis"
@@ -75,18 +76,20 @@
               />
             </div>
             <div class="form-row">
-              <span>E-mail:</span>
+              <label for="name">Email:</label>
               <input
                 class="input-text"
                 type="email"
                 name="email"
+                id="email"
                 placeholder="user@gmail.com"
                 required
               />
             </div>
             <div class="form-row">
-              <span>Telephone number:</span>
+              <label for="number">Telephone number:</label>
               <input
+                id="number"
                 class="input-text"
                 type="tel"
                 name="telephone"
@@ -94,14 +97,27 @@
                 required
               />
             </div>
-            <div class="form-row">
-              <span>Room:</span>
-              <select class="room" name="room" required>
+            <div class="form-row styleing-room-datepicker">
+              <label for="room">Room:</label>
+              <select class="room" name="room" id="room" required>
                 <option value="">Choose a room to play</option>
                 <option value="cell-block">Cell Block</option>
                 <option value="assassination">Assassination</option>
                 <option value="black-market">Black Market</option>
               </select>
+            </div>
+
+            <div class="form-row styleing-room-datepicker">
+              <label for="date">Date:</label>
+              <input
+                class="date-picker"
+                type="date"
+                id="date"
+                name="date-picker"
+                min="2021-09-06"
+                max="2022-01-01"
+                required
+              />
             </div>
 
             <div class="form-row radio-btns">
@@ -110,6 +126,7 @@
                 <label class="container-available-times"
                   >13:40
                   <input
+                    class="radio-btn"
                     type="radio"
                     name="booking-time"
                     value="13:40"
@@ -118,27 +135,52 @@
                 </label>
                 <label class="container-available-times"
                   >15:00
-                  <input type="radio" name="booking-time" value="15:00" />
+                  <input
+                    class="radio-btn"
+                    type="radio"
+                    name="booking-time"
+                    value="15:00"
+                  />
                 </label>
 
                 <label class="container-available-times"
                   >16:20
-                  <input type="radio" name="booking-time" value="16:20" />
+                  <input
+                    class="radio-btn"
+                    type="radio"
+                    name="booking-time"
+                    value="16:20"
+                  />
                 </label>
 
                 <label class="container-available-times"
                   >17:40
-                  <input type="radio" name="booking-time" value="17:40" />
+                  <input
+                    class="radio-btn"
+                    type="radio"
+                    name="booking-time"
+                    value="17:40"
+                  />
                 </label>
 
                 <label class="container-available-times"
                   >19:00
-                  <input type="radio" name="booking-time" value="19:00" />
+                  <input
+                    class="radio-btn"
+                    type="radio"
+                    name="booking-time"
+                    value="19:00"
+                  />
                 </label>
 
                 <label class="container-available-times"
                   >20:20
-                  <input type="radio" name="booking-time" value="20:20" />
+                  <input
+                    class="radio-btn"
+                    type="radio"
+                    name="booking-time"
+                    value="20:20"
+                  />
                 </label>
               </div>
             </div>
