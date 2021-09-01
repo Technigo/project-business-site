@@ -162,26 +162,46 @@ body {
 
 .accordion-inner-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-}
-
-.icon {
-  width: 14px;
-  height: 14px;
 }
 
 .accordion-button-styling {
   border: none;
-  background-color: #fff;
+  background-color: #eee;
+  color: #444;
+  cursor: url('cursor.png'), pointer;
+  padding: 18px 10px;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  /* might be will have to move it away */
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.answer {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.question:after {
+  content: '\02795';
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: '\2796';
 }
 
 .active+.answer {
-  /* some styling here */
-}
-
-/* hiding the remove (minus) icon */
-
-.hidden {
-  display: none;
+  display: inline-block;
 }
