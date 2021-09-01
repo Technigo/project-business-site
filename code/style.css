@@ -1,11 +1,3 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
-
 /*mobile first*/
 * {
   box-sizing: border-box;
@@ -13,7 +5,11 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   padding: 0;
 }
 
+body {
+  background-color: #000120;
+}
 
+/* header and navbar down to row 160*/
 .showcase {
   position: relative;
   right: 0;
@@ -30,7 +26,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 .showcase.active {
-  right: 300px;
+  right: 200px;
 }
 
 .showcase header {
@@ -48,6 +44,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .logo {
   text-transform: uppercase;
   cursor: pointer;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 3px;
 }
 
 .toggle {
@@ -81,6 +79,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .text {
   position: relative;
   z-index: 10;
+  font-family: 'Barlow';
 }
 
 .text h2 {
@@ -137,11 +136,14 @@ h1 {
   position: absolute;
   top: 0;
   right: 0;
-  width: 300px;
+  width: 200px;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Barlow';
+  font-weight: bold;
+  background: #fff;
 }
 
 .menu ul {
@@ -159,6 +161,7 @@ h1 {
   color: blueviolet;
 }
 
+/*body starts*/
 .grid-container {
   display: flex;
   flex-wrap: wrap;
@@ -167,6 +170,7 @@ h1 {
   padding: 0px;
 }
 
+
 .information {
   display: block;
   text-align: center;
@@ -174,18 +178,11 @@ h1 {
   padding: 80px;
   font-size: 35px;
   line-height: 50px;
+  font-family: 'barlow';
 }
 
 .information h1 {
   padding: 10px;
-}
-
- .grid-item-img {
-  grid-column: span 4;
-  display: block;
-  flex-direction: column;
-  margin: 0px;
-  width: 100%;
 }
 
 .apply-form {
@@ -193,6 +190,7 @@ h1 {
   margin: 5px;
   display: block;
   justify-content: center;
+  font-family: 'barlow';
 }
 
 label, input {
@@ -208,16 +206,53 @@ label, input {
   margin-top: 10px;
   width: 90px;
   font-size: 15px;
+  font-family: 'barlow';
+  font-weight: bold;
+}
+
+.img-container {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-item-img {
+  grid-column: span 2;
+  display: grid;
+  flex-direction: column;
+}
+
+.interview-container {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #fff;
+  color: #000;
+  margin-top: 10px;
+  font-family: 'barlow';
+}
+
+.interview p, h3 {
+  padding: 10px
+}
+
+.interview {
+  grid-column: span 3;
+  display: grid;
+  flex-direction: column;
+  padding-bottom: 20px;
 }
 
 .accordion-container {
   padding: 40px 0px 40px 0px;
   margin: 0px;
   background-color: #000120;
+  font-family: 'barlow';
 }
 
 .accordion-title {
   padding: 0px 0px 20px 40px;
+  text-align: center;
 }
 
 .accordion {
@@ -231,6 +266,13 @@ label, input {
   outline: none;
   font-size: 15px;
   transition: 0.5s;
+  text-align: center;
+  font-family: 'barlow';
+  font-size: 20px;
+}
+
+.panel p {
+  padding: 20px;
 }
 
 .active, .accordion:hover {
@@ -244,19 +286,173 @@ label, input {
   overflow: hidden;
 }
 
+/*tablet*/
+@media (min-width: 668px) and (max-width: 1024px) {
 
-@media (min-width: 798px) and (max-width: 1300px) {
+  .grid-container {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #000120;
+    
+  }
+
+  .information, .apply-form, .grid-item-img {
+    grid-column: span 2;
+    display: grid;
+    flex-direction: column;
+  }
+
+  .interview-container {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #fff;
+    color: #000;
+    margin-top: 10px;
+  }
+
+  .interview p, h3 {
+    padding: 10px;
+  }
+
+  .interview {
+    grid-column: span 1;
+    display: grid;
+    flex-direction: column;
+  }
+  
+  .information {
+    text-align: center;
+    color: #fff;
+    padding: 25px 80px 25px 80px;
+    font-size: 20px;
+    line-height: 40px;
+  }
+  
+  .information h1 {
+    padding: 10px;
+  }
+  
+   .grid-item-img {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 100%;
+    
+  }
+  
+  .apply-form {
+    padding: 40px;
+    margin: 5px;
+    display: block;
+    justify-content: center;
+  }
+  
+  label, input {
+    display: block;
+    margin: 1px;
+    padding: 3px;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .form-button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 90px;
+    font-size: 15px;
+  }
+
+}
+
+
+
+
+/*desktop*/
+@media (min-width: 1025px) and (max-width: 1900px)  {
 
   .showcase, .showcase header {
     padding: 100px;
   }
 
-  .text h2 {
-    font-size: 5em;
+  .showcase.active {
+    right: 300px;
   }
 
-  .text h3 {
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text h2 {
     font-size: 4em;
   }
 
+  .text h3 {
+    font-size: 3em;
+  }
+
+  .grid-container {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #000120;
+    
+  }
+
+  .information, .apply-form, .grid-item-img {
+    grid-column: span 2;
+    display: grid;
+    flex-direction: column;
+  }
+
+  .interview-container {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #fff;
+    color: #000;
+    margin-top: 10px;
+  }
+
+  .interview p, h3 {
+    padding: 10px;
+  }
+
+  .interview {
+    grid-column: span 1;
+    display: grid;
+    flex-direction: column;
+  }
+  
+  .information {
+    text-align: center;
+    color: #fff;
+    padding: 25px 80px 25px 80px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  
+  .information h1 {
+    padding: 10px;
+  }
+  
+   .grid-item-img {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 100%;
+    
+  }
+
 }
+
