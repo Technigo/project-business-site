@@ -24,7 +24,11 @@ document.getElementById('section5').onclick = toggle;
 // code for alert on submit
 document.getElementById('form').addEventListener('submit', (event) => {
 	event.preventDefault();
-
-	const name = document.getElementById('name');
-	alert(`Hello ${name.value}`);
+	const name = document.getElementById('name').value;
+	const greetingContainer = document.getElementById('greeting');
+	const formContainer = document.getElementById('form');
+	greetingContainer.innerHTML = `Välkommen ${name}`;
+	greetingContainer.style.display = 'inherit';
+	formContainer.style.display = 'none';
+	console.log(greetingContainer);
 });

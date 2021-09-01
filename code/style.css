@@ -24,7 +24,8 @@ header {
 
 /* Defining flex-box elements */
 .flex-container,
-.form {
+.form,
+.greeting {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -43,12 +44,14 @@ header {
 }
 
 .form,
-.accordion {
+.accordion,
+.greeting {
 	width: min(80%, 320px);
 	border: 1px solid black;
 	padding: 10px 20px 20px 20px;
 }
-.form {
+.form,
+.greeting {
 	align-items: center;
 }
 
@@ -89,6 +92,9 @@ input[type='radio'] {
 .active + .answer {
 	display: initial;
 	/* border: 1px solid red; */
+}
+.greeting {
+	display: none;
 }
 @media (min-width: 460px) {
 	.radio-container {
