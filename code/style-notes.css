@@ -1,0 +1,154 @@
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+.active + .answer {
+    /* some styling here */
+  }
+  
+  
+  
+  body {
+    color: #ffffff90;
+    background-color: #1a1a1a;
+    margin: 0;
+    font-family: raleway;
+    font-weight: 200;
+  }
+  
+  /* h1 {
+    font-size: 64px;
+    font-family: raleway dots;
+    font-weight: 100;
+  } */
+  
+  h2 {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-family: raleway;
+    font-weight: 200;
+  }
+  
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+    padding: 1rem;
+    width: 50%;
+    margin-left:  3rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  
+  .accordion .question {
+    position: relative;
+    background-color: #444;
+    padding-left: 1rem;
+    /* padding: 1rem; */
+  }
+  
+  .accordion .answer {
+    position: relative;
+    background-color: #333;
+    padding-left: 1rem;
+  }
+  
+  
+  .accordion .question::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    font-size: 40px;
+  }
+   
+  
+  .question:hover {
+    background-color: #222;
+    text-decoration: ;
+  }
+  
+  /* .expand-icon {
+    width: 1.5rem;
+    height: auto;
+  }
+  
+  .answer p {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+  .question h2 {
+    font-weight: 600;
+  }
+  
+  .answer {
+    background-color: #333;
+    padding: 0.8rem;
+    overflow: hidden;
+  } */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    /* align-items: center; */
+    /* background-color: #9FD8DF; */
+    
+  
+  /* .button {
+    background-color: aqua;
+    padding: 12px 20px;
+  }
+  
+  
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+  
+  .input-text {
+    width: 100%
+    color: white;
+  } */ */
+  
+  
+  /* .accordion {
+    width: 50%
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  } */
+  
+  /* .jes-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .jes-img {
+    border-radius: 50%;
+    width: 30%;
+    object-fit: cover;
+  } */

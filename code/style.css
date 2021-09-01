@@ -1,69 +1,114 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
-
-
-/* REMOVE DEFAULT STYLING ON...
-Can I specify for example * .input-field 
-or will that take away the styling I write? */
-* .input-text {
-  padding: 0;
-  margin: 0;
-  border: 0 none;
-}
-
 body {
-  color: #333;
-  background-color: #F5C0C090;
-}
-
-h1 {
-  font-size: 96px;
-  font-family: raleway dots;
-  font-weight: 100;
-}
-
-h2 {
-  font-size: 1.5rem;
+  color: #ffffff90;
+  background-color: #000;
+  margin: 0;
   font-family: raleway;
   font-weight: 200;
 }
 
-form {
+h1 {
+  font-size: 64px;
+  font-family: raleway dots;
+  font-weight: 100;
+  margin: 0;
+}
+
+.hero-image {
+  background-image: url("unsplash_pic.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 320px;
+}
+
+.hero-text {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: 0 auto;
   align-items: center;
-  background-color: #9FD8DF;
-  padding: 10px 0;
-  
+  padding-top: 96px;
 }
 
-.input-field {
-  border: 10px #333;
-  color: #333;
+.hero-text p {
+  font-size: 2rem;
+  margin: 0;
 }
 
-.input-text{
-  width: 300px;
-  height: 30px;
-  display: block;
-  font-size: 14px;
+.hero-button {
+  border-radius: 24px;
+  background-color: aqua;
+  font-family: raleway;
+  font-size: 1.125rem;
+  border: 0;
+  height: 48px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 2rem;
 }
 
 .accordion {
-  width: 50%
-  background-color: #eee;
-  color: #444;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+  padding: 1rem;
+  margin-left:  1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
   cursor: pointer;
-  padding: 18px;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: #141414;
+}
+
+.question:hover {
+  background-color: #191919;
+}
+
+.expand-icon {
+  width: 1.125rem;
+  height: auto;
+  margin-right: 1rem;
+  opacity: 70%;
+}
+
+/* .accordion .question::before {
+  content: "+";
+  position: absolute;
+  right: 1rem;
+  font-size: 40px;
+} */
+
+h2 {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-family: raleway;
+  font-weight: 200;
+  margin-left: 1rem;
+}
+
+.answer {
+  position: relative;
+  background-color: #222;
+  display: none;
+}
+
+
+.answer p {
+  margin-left: 1rem;
+  line-height: 1.5rem;
+  max-width: 90%;
+  font-size: 1rem;
+}
+
+
+.active {
+  background-color: #111;
+}
+
+.active + .answer {
+  display: block;
 }
