@@ -30,7 +30,7 @@ document.getElementById('form').addEventListener('submit', (event) => {
 	const formContainer = document.getElementById('form');
 
 	// changeing the DOM
-	greetingContainer.innerHTML = `Välkommen ${name}`;
+	greetingContainer.innerHTML = `<h1>Välkommen ${name}</h1>`;
 	greetingContainer.style.display = 'inherit';
 	formContainer.style.display = 'none';
 });
