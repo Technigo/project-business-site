@@ -1,7 +1,7 @@
 * {
   margin: 0;
 }
-
+/*The heading session*/
 .container {
   display: flex;
   justify-content: center;
@@ -48,14 +48,14 @@ img {
   width: 300px;
   height: auto;
 }
-
+/* Form and FAQ section*/
 .form-and-faq-container {
   display: flex;
   flex-direction: column;
   background-color: teal;
 }
-
-form {
+/*The Form*/
+.form {
   display: block;
   background-color: lightblue;
   border-radius: 5px;
@@ -72,18 +72,24 @@ label {
 input {
   display: block;
   font-size: 25px;
+  border: none;
   border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(56, 43, 82,0.5)
 }
+
 input:focus {
   background-color: #c5e4f0;
 }
+
 .title {
   text-align: center;
   margin: 60px auto 40px auto;
 }
+
 .form-title {
   margin-left: 35px;
 }
+
 .radio-buttons {
   display: flex;
   margin-bottom: 10px;
@@ -105,16 +111,60 @@ input:focus {
   box-shadow: 5px 5px 10px rgb(110, 119, 96);
 }
 
-.faq {
+.accordion-collumn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: tomato;
-  margin: 25px;
+  background-color: lavender;
+  margin: 10px;
   border-radius: 5px;
-  height: 600px;
+  height: 1000px;
 }
+.faq-header {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+.accordion {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+.accordion-item {
+  background-color: white;
+  color: black;
+  margin: 15px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(56, 43, 82,0.5)
+}
+.accordion-item-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  padding: 8px 48px 8px 16px;
+  min-height: 50px;
+  line-height: 1.25rem;
+  font-weight: bold;
+}
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 30px;
+  position: absolute;
+  right: 16px;
+}
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+.answer {
+  display: none;
+}
+.active + .answer {
+  display: block;
+}
+
 /*Tablet View*/
+
 @media(min-width: 768px) {
 .form-and-faq-container {
   flex-direction: row;
@@ -122,13 +172,18 @@ input:focus {
 
 form {
   width: 50%;
+  margin: 10px 5px 10px 10px;
 }
 
-.faq {
+.accordion-collumn {
   width: 50%;
+  margin: 10px 10px 10px 5px;
+
 }
 }
+
 /*Desktop View*/
+
 @media(min-width: 992px) {
 }
 
@@ -136,6 +191,6 @@ form {
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+
   /* some styling here */
 }
