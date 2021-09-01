@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-html {
-  box-sizing: border-box;
-  min-width: 350px;
-}
-
 *,
 *:before,
 *:after {
@@ -13,9 +8,12 @@ html {
 }
 
 body {
+  box-sizing: border-box;
+  min-width: 350px;
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: rgb(156, 212, 214);
 }
 
 /* -------HEADER CONTENT-------- */
@@ -25,27 +23,23 @@ body {
   width: 100%;
 }
 
-.video-mobile {
+.video {
   height: 100vh;
   width: 100%;
   z-index: -1;
   object-fit: cover;
+}
+
+.video-mobile {
+  display: flex;
 }
 
 .video-ipad {
   display: none;
-  height: 100vh;
-  width: 100%;
-  z-index: -1;
-  object-fit: cover;
 }
 
 .video-desktop {
   display: none;
-  height: 100vh;
-  width: 100%;
-  z-index: -1;
-  object-fit: cover;
 }
 
 .title {
@@ -132,35 +126,76 @@ h2 {
 ------------- FORM CONTAINER ---------------- */
 
 .input-text {
-  font-size: 15px;
   padding: 5px 5px 5px;
   -webkit-appearance: none;
   background-color: rgb(255, 254, 253, 0);
   border: 0;
   border-bottom: 1px solid gray;
-}
-
-.input-text:focus,
-.room:focus {
-  outline: none;
-  border: 1px solid rgb(255, 147, 6);
-  transition: all 1s ease-in;
+  font-size: 16px;
   background-color: white;
 }
 
-input:valid {
-  background-color: rgb(194, 250, 218);
+input[type="radio"] {
+  -webkit-appearance: none;
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.1em solid black;
+  margin: auto;
+  box-shadow: 1px 1px black;
+}
+
+input[type="radio"]:checked {
+  background-color: black;
+  box-shadow: none;
+  transition: all 1s ease-in;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  display: block;
+  width: 1em;
+  height: 1em;
+  border: 0.1em solid black;
+  margin: auto;
+  box-shadow: 1px 1px black;
+  margin-top: 10px;
+}
+
+input[type="checkbox"]:checked {
+  box-shadow: none;
+  background-color: black;
+  transition: all 1s ease-in;
+}
+
+.input-text:focus,
+.room:focus,
+.date-picker:focus {
+  outline: none;
+  border: 1px solid rgb(255, 147, 6);
+  transition: all 1s ease-in;
+}
+
+input:focus::placeholder {
+  color: white;
   transition: all 1s ease-in;
 }
 
 .room {
   font-size: 15px;
   padding: 5px 5px 5px;
-  background-color: rgb(156, 212, 214);
+  outline: none;
+}
+
+.date-picker {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  outline: none;
+  padding: 5px 5px 5px;
 }
 
 .form-container {
-  background-color: rgb(156, 212, 214);
   padding: 30px 0;
   display: grid;
   max-width: 1200px;
@@ -173,6 +208,7 @@ input:valid {
 }
 
 .form-row {
+  font-size: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -215,11 +251,16 @@ input:valid {
   font-weight: 600;
   text-decoration: none;
   padding: 25px;
+  box-shadow: 2px 2px black;
+}
+
+.book-btn:hover {
+  cursor: grab;
+  transition: all 1s ease-in;
+  box-shadow: none;
 }
 
 .form-content {
-  width: 100%;
-  background-color: rgb(156, 212, 214);
   padding: 0 10%;
 }
 
