@@ -23,13 +23,18 @@ html {
   align-items: center;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 form {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 300px;
+  width: fit-content;
   padding: 10px;
   background-color: turquoise;
-  border: solid;
+  border: solid white;
   margin-top: 20px;
 }
 
@@ -40,11 +45,21 @@ form {
 }
 
 
-.checkbox {
-  display: block;
+.styleselection {
+  display: grid;
+  justify-content: center;
+  align-items: center;
   color: blue;
   margin: 10px 0;
 }
+
+label {
+  margin: 10px 0;
+}
+
+/* .feminine, .masculine .genderneutral {
+  display: block;
+} */
 
 button {
   width: 50px;
@@ -76,6 +91,7 @@ button {
 
 footer {
   color: white;
+  background-color: rgba(51, 51, 51, 0.808);
   padding: 20px 10px;
   text-align: right;
   border-top: solid gray;
