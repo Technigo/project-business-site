@@ -5,3 +5,258 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .active + .answer {
   /* some styling here */
 }
+body{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header{
+  width: 100%;
+}
+img{
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  top: 0px;
+}
+
+h1{
+  font-size: 30px;
+  color: white;
+  z-index: 1;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  margin: 0;
+}
+
+h2{
+  font-size: 20px;
+  color: white;
+  z-index: 1;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  margin: 0;
+}
+h3{
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center;
+  color: white;
+}
+h4{
+  padding-left: 25px;
+  font-size: 17px;
+  font-weight: 200;
+  text-align: left;
+  color: white;
+}
+p{
+  margin: 0px;
+  padding: 10px;
+  font-size: 13px;
+  color: white;
+}
+.p-padding-none{
+  padding: 0;
+}
+
+.headline-text{
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  top: 100px;
+}
+
+form{
+  max-width: 100%;
+  padding: 10px;
+}
+.form-header{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:lightslategray;
+  border-radius: 5px 5px 0px 0px;
+  padding-bottom: 10px;
+  background-color: #577e83;
+}
+
+.form-wrapper{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #578378;
+  align-items: center;
+  width: 95%;
+  border-radius: 5px;
+  position: static;
+  margin: 30px 0px 30px 0px;
+  box-shadow: 5px 5px 5px #7A8C8E;
+}
+label{
+ margin: 10px 10px 0px 0px;
+ font-size: 15px;
+ font-weight: 300;
+ color: white;
+}
+input{
+  margin: 5px;
+  width: auto;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+
+}
+
+.text-field{
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.button{
+  width: 70%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 3px #577e83;
+  font-size: 17px;
+  font-weight:100;
+  background-color: #3C767D;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.button-wrapper{
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.accordion{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #577e83;
+  align-items: center;
+  width: 95%;
+  border-radius: 5px;
+  position: static;
+  margin-top: 30px;
+  box-shadow: 5px 5px 5px #7A8C8E;
+  margin: 30px 0px 30px 0px;
+}
+  .question{
+    background-color: #578378;
+    margin: auto;
+    width: 100%;
+    font-size: 17px;
+    color: white;
+    border-radius: 5px;
+  }
+  .answer{
+    background-color:#6F6854;
+    width: 100%;
+    margin: auto;
+    display: none;
+    margin: 0;
+  }
+
+  .active + .answer {
+    display: block;
+  }
+.footer-wrapper{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: #577e83;
+  width: 100%;
+  padding: 30px 0px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/*mobile*/
+@media (min-width:0px) and (max-width:767px){
+ 
+}
+
+  /*tablet*/
+ @media (min-width: 768px) and (max-width: 991px) {
+   body{
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     align-items:flex-start ;
+   }
+   img{
+     max-height: 300px;
+   }
+   h1{
+     font-size: 50px;
+   }
+   h2{
+      font-size: 40px;
+   }
+   .form-wrapper{
+    width: 40%;
+   }
+   .footer-wrapper{
+     flex-direction: row;
+     justify-content: space-evenly;
+   }
+   .accordion{
+     width: 40%;
+
+   }
+ }
+
+  /*desktop*/
+@media (min-width: 992px) {
+  img{
+    max-height: 400px;
+  }
+  h1{
+    font-size: 60px;
+  }
+  h2{
+     font-size: 50px;
+  }
+  .form-wrapper{
+    width: 40%;
+   }
+   .footer-wrapper{
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .accordion{
+    width: 40%;
+  }
+  body{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:flex-start ;
+  }
+  
+}
