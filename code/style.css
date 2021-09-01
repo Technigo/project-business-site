@@ -135,7 +135,7 @@ body {
 .wrapper-container {
   flex: 1 1 50%;
   flex-direction: column;
-  border: 1px solid rgba(206, 203, 203, 0.541);
+  border: 1px solid #e9ecef;
   border-radius: 4px;
   margin: 0 50px 0;
   box-sizing: border-box;
@@ -168,8 +168,8 @@ body {
 
 .accordion-button-styling {
   border: none;
-  background-color: #eee;
-  color: #444;
+  background-color: rgba(255, 255, 255, 0.932);
+  color: rgb(68, 68, 68);
   cursor: url('cursor.png'), pointer;
   padding: 18px 10px;
   text-align: left;
@@ -179,8 +179,20 @@ body {
   /* might be will have to move it away */
 }
 
-.active, .accordion:hover {
-  background-color: #ccc;
+.accordion h1 {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
+
+.accordion {
+  background-color: #dee2e6;
+}
+
+.active, .question:hover {
+  background-color: #bfedc1c0;
 }
 
 .answer {
@@ -198,10 +210,14 @@ body {
   margin-left: 5px;
 }
 
-.active:after {
-  content: '\2796';
+div.section:nth-child(odd) .question {
+  background-color: #dee2e6;
 }
 
-.active+.answer {
-  display: inline-block;
+div.section:nth-child(odd):hover .question {
+  background-color: #d59f2142;
+}
+
+.active:after {
+  content: '\2796';
 }
