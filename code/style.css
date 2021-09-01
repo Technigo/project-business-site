@@ -5,3 +5,116 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .active + .answer {
   /* some styling here */
 }
+
+body {
+  margin: 0;
+  background: #353636;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background: white;
+
+}
+.caption {
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  position: relative;
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+video { 
+  width: 100%; 
+  height: 100vh;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: 5; 
+  object-fit: cover;
+}
+
+.sign-up-form {
+  border: 2px solid black;
+  background-color: #dcdcde;
+  width: 400px; 
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+input {
+  font-size: 20px;
+  margin: 10px;
+}
+
+
+label {
+  font-size: 20px;
+  
+}
+
+
+  button {
+  font-size: 20px;
+  width: 130px;
+  border-radius: 20px;
+  padding: 10px 15px 10px 15px;
+  margin-top: 25px;
+}
+
+
+.accordion {
+  border: 2px solid black;
+  background-color: #dcdcde;
+  width: 400px;
+  height: 400px;
+  margin-bottom: 10em;
+}
+
+
+.flex-container {
+  display: flex; 
+  flex-direction: row;
+  column-gap: 2em;
+  justify-content: center;
+  margin-top: 5em;
+  margin-bottom: 50em;
+}
+
+@media screen and (min-width: 768px) {
+   .caption {
+       font-size: 1.5rem;  
+   }
+
+   .flex-container {
+      display: flex;
+      justify-content: row;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .caption {
+      font-size: 1rem; 
+  }
+
+  .flex-container {
+      column-gap: 4em;
+  }
+}
+
