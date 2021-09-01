@@ -26,11 +26,12 @@ document.getElementById('form').addEventListener('submit', (event) => {
 
 	// defining constants
 	const name = document.getElementById('name').value;
-	const greetingContainer = document.getElementById('greeting');
-	const formContainer = document.getElementById('form');
+	const greetingMessage = document.getElementById('greeting');
+	const greetingContainer = document.getElementById('greeting-container');
+	const formContainer = document.getElementById('form-container');
 
 	// changeing the DOM
-	greetingContainer.innerHTML = `<h1>Välkommen ${name}</h1>`;
+	greetingMessage.innerHTML = `<h1>Välkommen ${name}</h1>`;
 	greetingContainer.style.display = 'inherit';
 	formContainer.style.display = 'none';
 });
