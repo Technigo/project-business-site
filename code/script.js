@@ -31,7 +31,7 @@ document.getElementById('form').addEventListener('submit', (event) => {
 	const formContainer = document.getElementById('form-container');
 
 	// changeing the DOM
-	greetingMessage.innerHTML = `<h1>Välkommen ${name}</h1>`;
+	greetingMessage.innerHTML = `<h1>Välkommen</h1><h1>${name}</h1>`;
 	greetingContainer.style.display = 'inherit';
 	formContainer.style.display = 'none';
 });
