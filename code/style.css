@@ -25,6 +25,8 @@ body {
 #hero {
   position: relative;
   width: 100%;
+  height: 500px;
+  object-fit: cover;
   overflow: hidden;
   z-index: 0;
 }
@@ -32,8 +34,8 @@ body {
 .header-text {
   font-family: 'Alegreya Sans SC', sans-serif;
   position: absolute;
-  top: 30%;
-  left: 20%;
+  top: 10%;
+  left: 12%;
   z-index: 1;
   
 }
@@ -48,6 +50,13 @@ body {
   grid-template-columns: 1fr;
   border-bottom: black solid 1px;
   border-top: black solid 1px;
+}
+
+.nav-bar a {
+  color: black;
+  text-decoration: none;
+  align-self: center;
+  padding: 30px;
 }
 
 .main-content {
@@ -112,17 +121,33 @@ input:invalid {
 .footer-nav {
   display: grid;
   grid-template-columns: 1fr;
+  text-decoration: none;
   background-color: burlywood;
   text-align: center;
-
 }
+
+.footer-nav a {
+  color: black;
+  text-decoration: none;
+  align-self: center;
+  padding: 30px;
+}
+
 .small-print {
+  position: absolute;
+  width: 100%;
   background-color: blanchedalmond;
   font-size: xx-small;
   text-align: center;
+  
 }
 
 @media screen and (min-width: 667px) {
+
+  .header-text {
+      top: 23%;
+      left: 12%;
+  }
 
   .nav-bar {
     grid-template-columns: repeat(6,1fr);
@@ -139,6 +164,11 @@ input:invalid {
 }
 
 @media screen and (min-width: 991px) {
+
+  .header-text {
+    top: 30%;
+    left: 18%;
+  }
 
 
   .footer-nav {
