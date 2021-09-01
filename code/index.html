@@ -3,28 +3,94 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
+    <title>Project 3: The Business Site</title>
+    <link rel="stylesheet" href="style.css">
     <!-- dont forget to add a css file and link it here! -->
   </head>
+
   <body>
     <!-- video or image as a header is cool :) -->
+    <header>
+      <video class="hero-video" autoplay loop muted playsinline>
+        <source src="./videos/pexels-ivan-khmelyuk-8642288-1080p.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay-text">
+        <h1 class="top-text-a">Business text over a video here</h1>
+        <p class="top-text-b">more text about business stuff</p>
+      </div>
+    </header>
 
     <!-- Signup form -->
+    <section class="forms">
+      
+      <form class="form" id="form">  
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+        <h2 class="sign-up">Sign up today!</h2>
+        <label for="name">Your name:</label>
+          <input type="text" required id="name" placeholder="Write your name here"/> <!-- required= needs to be filled -->
+        <label for="email">Your email:</label>
+          <input type="email" id="email" placeholder="Your E-mail here"/>
+        <label for="password">Password:</label>
+          <input type="password" id="password" placeholder="Your password"/> 
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <h3 class="radio-question"> Select one</h2>
+        <div class="radio-buttons">
+          <input type="radio" class="radio" id="male" name="gender" value="MALE">
+            <label for="male">Male</label><br>
+          <input type="radio" class="radio" id="female" name="gender" value="FEMALE">
+            <label for="female">Female</label><br>
+          <input type="radio" class="radio" id="other" name="gender" value="OTHER">
+            <label for="other">Other</label>
+        </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <h3 class="check-question">Select more than one</h2>
+        <div class="check-boxes">
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label>
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label>
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label>
+        </div>
+          
+        <button class="button" type="submit">Submit form</button>
+
+     </form>
     </section>
+
+
+    
+      <!-- Accordion -->
+    <section class="accordion-container">
+
+      <div class="accordion">
+        <h2 class="faq">FAQ</h2>
+
+        <div class="question" id="section1">Section 1
+          <div class="answer">
+            <p>Lorem ipsum...</p>
+          </div>
+        </div>
+
+        <div class="question" id="section2">Section 2</div>
+          <div class="answer">
+            <p>Lorem ipsum...</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    
+
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
+
   </body>
+
+  <footer>
+    <div>Project for Technigo</div>
+    <div>By Daniel Vestin</div>
+  </footer>
 </html>
