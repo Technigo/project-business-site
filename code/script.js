@@ -2,13 +2,13 @@
 // We haven't really talked about ´this´ yet, but we will... ;)
 // console.log(this) to see how it works
 function toggle() {
-	if (document.getElementsByClassName('question')[0].classList.contains('active')) {
+	if (document.getElementsByClassName('question')[0].classList.contains('active') && document.getElementsByClassName('question')[0].id !== this.id) {
 		document.getElementsByClassName('question')[0].classList.remove('active');
 	}
-	if (document.getElementsByClassName('question')[1].classList.contains('active')) {
+	if (document.getElementsByClassName('question')[1].classList.contains('active') && document.getElementsByClassName('question')[1].id !== this.id) {
 		document.getElementsByClassName('question')[1].classList.remove('active');
 	}
-	console.log(document.getElementsByClassName('question')[0].classList.contains('active'));
+
 	this.classList.toggle('active');
 }
 
