@@ -9,18 +9,15 @@
 // document.getElementById("section1").onclick = toggle
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
-    var acc = document.getElementsByClassName("accordion-button");
+    console.log('All HTML and CSS loaded Js going');
+var acc = document.getElementsByClassName("accordion-button");
 var i;
 
-console.log('DOM full loaded and parsed');
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
     this.classList.toggle("active");
 
-    /* Toggle between hiding and showing the active panel */
+    
     var panel = this.nextElementSibling;
     if (panel.style.display === "block") {
         panel.style.display = "none";
@@ -28,8 +25,13 @@ for (i = 0; i < acc.length; i++) {
         panel.style.display = "block";
     }
 });
-console.log('DUM fully loaded and parsed');
 }
+
+// document.getElementsByClassName(".accordion-button").addEventListener("mouseover", myFunction(){
+//     document.querySelector(".accordion-button").classList.toggle(".active")
+// })
+
+
 });
 
 
