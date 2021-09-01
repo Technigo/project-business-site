@@ -10,25 +10,27 @@ function toggle() {
 			question.classList.remove('active');
 		}
 	}
-
 	this.classList.toggle('active');
 }
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
+// adds eventlisteners to DOM elements
 document.getElementById('section1').onclick = toggle;
 document.getElementById('section2').onclick = toggle;
 document.getElementById('section3').onclick = toggle;
 document.getElementById('section4').onclick = toggle;
 document.getElementById('section5').onclick = toggle;
 
-// code for alert on submit
+// code for on submit event
 document.getElementById('form').addEventListener('submit', (event) => {
 	event.preventDefault();
+
+	// defining constants
 	const name = document.getElementById('name').value;
 	const greetingContainer = document.getElementById('greeting');
 	const formContainer = document.getElementById('form');
+
+	// changeing the DOM
 	greetingContainer.innerHTML = `Välkommen ${name}`;
 	greetingContainer.style.display = 'inherit';
 	formContainer.style.display = 'none';
-	console.log(greetingContainer);
 });
