@@ -1,9 +1,17 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
+
+
 function toggle() {
+  
   this.classList.toggle("active")
+  console.log('click')
 }
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
+// A function that adds and remove the class "active" on the section you click on.
 document.getElementById("section1").onclick = toggle
+
+document.getElementById("section2").onclick = toggle
+
+document.getElementById("section3").onclick = toggle
+
+document.getElementById("section4").onclick = toggle
+

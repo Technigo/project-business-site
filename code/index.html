@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap" rel="stylesheet">
-    <link rel="icon" href="./images/cactus-cartoon.jpg">
-    
-  </head>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Project 3</title>
+      <link rel="stylesheet" href="./style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap" rel="stylesheet">
+      <link rel="icon" href="./images/cactus-cartoon.jpg">
+      
+    </head>
+
   <body>
 
     <header>
@@ -43,73 +44,109 @@
 
     </header>
    
-  <section class="formaccordian-container">
+      <section class="formaccordion-container">
 
-    <form action="http://httpbin.org/anything" method="POST">
-    
-          <h3>Sign up for our Newsletter</h3>
+        <form action="http://httpbin.org/anything" method="POST">
+        
+              <h3>Sign up for our Newsletter</h3>
 
-          <fieldset>
+              <fieldset>
 
-              <label for="firstname">
-                <input type="text" 
-                name="name" 
-                placeholder="First Name" 
-                required>
-              </label>  
+                  <label for="firstname">
+                    <input type="text" 
+                    name="name" 
+                    placeholder="First Name" 
+                    required>
+                  </label>  
 
-              <label for="surname">
-                <input type="text" 
-                name="surname" 
-                placeholder="Surname" 
-                required>
-              </label>
+                  <label for="surname">
+                    <input type="text" 
+                    name="surname" 
+                    placeholder="Surname" 
+                    required>
+                  </label>
 
-              <label for="email">
-                <input type="email" 
-                name="email" 
-                placeholder="Email" 
-                required>
-              </label>
+                  <label for="email">
+                    <input type="email" 
+                    name="email" 
+                    placeholder="Email" 
+                    required>
+                  </label>
 
-              <label for="password">
-                <input type="password" 
-                name="password" 
-                placeholder="Password" 
-                required>
-              </label>
+                  <label for="password">
+                    <input type="password" 
+                    name="password" 
+                    placeholder="Password" 
+                    required>
+                  </label>
+
+                  <div class="radio-row">  
+                      <label class="radiobutton-container">Newbie
+                        <input type="radio" name="answer" checked>
+                        <span class="custom-radio"></span>
+                      </label>
+
+                      <label class="radiobutton-container">Green-Fingered Pro
+                        <input type="radio" name="answer">
+                        <span class="custom-radio"></span>
+                      </label>
+
+                  </div>
+
+                <div class="checkbox-row">
+                  <label class="checkbox-container"> <b>I accept the terms and conditions</b>
+                    <input type="checkbox" required>
+                  </label>
+
+                  <label class="checkbox-container"> <b>I am over 18 years of age</b>
+                    <input type="checkbox" required>
+                    
+                  </label>
 
 
-              <label for="send">
-                <input type="submit" 
-                class="button-submit" 
-                value="Send" 
-                title="Go, on, Green-thumbs are a click away">
-              </label>
+                </div>
 
-          </fieldset>
+                  <label for="send">
+                    <input type="submit" 
+                    class="button-submit" 
+                    value="Send" 
+                    title="Go, on, Green-thumbs are a click away">
+                  </label>
 
+              </fieldset>
+
+          
+        </form>
+
+           <!-- Accordion -->
+
+        <section class="accordion">
        
-    </form>
+          <h4>FAQs</h4>
 
-    <!-- Signup form -->
+          <div class="question" id="section1">I am not green-fingered, which is the best plant for me?</div>
+          <div class="answer">
+            <p>There are many plants for Newbies.... theZZ (XFXC( is practically undestroyable</p>
+          </div>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+          <div class="question" id="section2">Can you recommend a plant for a dark area?</div>
+          <div class="answer">
+            <p>Again the ZZ is great for darker areas, as are spider plants</p>
+           
+          </div>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+          <div class="question" id="section3">How often should I water my plant?</div>
+          <div class="answer">
+            <p>It depends on the plant, but in General we are guilty of giving our plants too much love. Usually a good watering once-a-week is enough, although some plants benefit from a good misting on leaves and soil</p>
+          </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-
-  </section>
+          <div class="question" id="section4">My plant looks sad, how can I rescue it?              </div>
+          <div class="answer">
+            <p>Usually the culprit is over-watering, so give the plant a few days to dry out and re-assess from there</p>
+           
+          </div>
+        </section>
+        <script src="script.js"></script>
+      </section>
   </body>
 </html>

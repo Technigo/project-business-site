@@ -38,6 +38,12 @@ h3{
   text-align: center;
   color: white;
 }
+h4 {
+  font-family: 'Nunito';
+  text-align: center;
+  color: black;
+
+}
 /*** Header ***/
 
 
@@ -96,13 +102,10 @@ nav a {
 /*** Form ***/
 
 
-.formaccordian-container {
+.formaccordion-container {
   display: flex;
   flex-direction: column;
-}
-form {
   justify-content: center;
-  border: 1px solid black;
   padding: 20px;
   border-radius: 10px;
   width: 80%;
@@ -111,16 +114,12 @@ form {
   margin-right: auto;
   background-color: #60A9A6;
 
+}
 
-  
-}
-form:hover {
-  border: solid 2px #60A9A6;
-}
 
 fieldset {
   border-radius: 10px;
-  box-shadow: 0 1px 3px 0;
+  box-shadow: 10px 10px 15px 0 #3B5249;
   border: none;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -129,6 +128,7 @@ fieldset {
   margin-left: auto;
   margin-right: auto;
   background-color: white;
+  max-width: 400px;
 }
 
 label {
@@ -136,10 +136,11 @@ label {
   padding: 10px;
   margin: 5px;
   align-items: center;
-  font-family: 'Ubuntu';
+  font-family: 'Nunito';
   display: flex;
+  font-size: 10px;
   
-  
+
 }
 
 input{
@@ -155,12 +156,86 @@ input{
    
 }
 
-span{
-  width: 40%;
-  font-weight: bold;
+.radio-row{
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+
+.checkbox-row {
+  
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+}
+.checkbox-container {
+  
+  font-size: 12px;
+  font-family: 'Nunito';
+  font-weight: bold; 
+  }
+
 
 .button-submit{ 
   background-color: #FDDEDE;
   width: 100%;
 }
+
+/*** Accordion styling ***/
+
+.accordion {
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px 0 #3B5249;
+  border: none;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  max-width: 400px;
+  min-width: 200px;
+  cursor: pointer;
+  
+}
+
+.question {
+  margin: 20px 0;
+  padding: 10px 10px;
+  width: 90%;
+  padding: 10px;
+  margin: 5px;
+  align-items: center;
+  font-family: 'Nunito';
+  /*display: flex;*/
+  font-size: 15px;
+  font-weight: bold;
+}
+.question:hover{
+  color:#A39161;
+  background-color:#CAF2D7;
+  margin-left: 5px;
+}
+
+.answer {
+  display:none;
+  margin: 15px 0;
+  font-family: 'Nunito';
+  background-color: #FDDEDE;
+  color: black;
+  padding: 10px;
+  font-size: 12px;
+ 
+  
+}
+.active {}
+
+.active + .answer {
+  display: block;
+}
+
+  
+
