@@ -47,8 +47,8 @@ for (i = 0; i < question.length; i++) {  /* here is for loop starts by assigning
   });
 }
 
-const input = document.querySelectorAll(".input")
 
+const input = document.querySelectorAll(".input")
 
 for (let i=0; i<input.length; i++) {
 

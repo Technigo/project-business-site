@@ -435,6 +435,7 @@
    background-color: white;
    display: none;
    overflow: hidden;
+   line-height: 28px;
  }
 
  .question:after {
@@ -459,4 +460,22 @@
 
  .active+.answer {
    display: inline-block;
+   animation: active 0.3s;
+ }
+
+ @keyframes active {
+   0% {
+     display: none;
+     transform: translate3d(0, -1rem, 0);
+     opacity: 0;
+   }
+   1% {
+     display: block;
+     transform: translate3d(0, -1rem, 0);
+     opacity: 0;
+   }
+   100% {
+     transform: translate3d(0, 0, 0);
+     opacity: 1;
+   }
  }
