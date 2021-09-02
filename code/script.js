@@ -25,7 +25,7 @@
 
 // For self-educational purposes following approach was implamented instead:
 
-let question = document.querySelectorAll(".question")  /* querySelectorAll returns a Nodelist object collection 
+const question = document.querySelectorAll(".question")  /* querySelectorAll returns a Nodelist object collection 
 - in other words all element with exact class name/names*/
 let i; /* declaring i */
 
@@ -46,6 +46,21 @@ for (i = 0; i < question.length; i++) {  /* here is for loop starts by assigning
    }
   });
 }
+
+const input = document.querySelectorAll(".input")
+
+
+for (let i=0; i<input.length; i++) {
+
+  input[i].addEventListener("focus", function() {
+    this.parentElement.classList.add("focus")
+  })
+
+  input[i].addEventListener("blur", function() {
+    this.parentElement.classList.remove("focus")
+  })
+}
+
 
 // document.getElementById('form').addEventListener('submit', (event) => {
 // 	const name = document.getElementById('name').value;
