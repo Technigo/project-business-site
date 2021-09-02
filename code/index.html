@@ -4,9 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Site</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
+    <!--HEADER-->
     <header>
       <div class="header">
         <img src="./Images/logo.png" class="logo" />
@@ -14,20 +19,33 @@
       </div>
     </header>
     <div class="space"></div>
+    <!-- This div it will show when the screen is minimum 767px and it will display a background-color to give more space to the header-->
     <nav>
       <a>Home</a>
       <a>About Us</a>
       <a>Classes</a>
       <a>Gallery</a>
     </nav>
-
+    <!--FORM SECTION-->
     <section class="form-section">
       <h2>Register with Us!</h2>
       <form action="htpp://htppbin.org/anything" method="POST" id="form">
         <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname" placeholder="Name" required />
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Name"
+          required
+        />
         <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname" placeholder="Last name" required />
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="Last name"
+          required
+        />
         <label for="email">Enter your email:</label><br />
         <input type="email" id="email" name="email" placeholder="Email" />
         <label for="pwd">Create password:</label><br />
@@ -35,28 +53,84 @@
 
         <input type="checkbox" id="terms" name="terms" value="agree" checked />
         <label for="terms">
-          I agree to the terms and conditions of Privacy Policy</label>
+          I agree to the terms and conditions of Privacy Policy</label
+        >
         <input type="checkbox" id="age" name="age" value="agree" checked />
-        <label for="age"> I am 18 or older</label><br>
+        <label for="age"> I am 18 or older</label><br />
         <button type="submit">Register</button>
       </form>
     </section>
 
-
+    <!--ACCORDION SECTION-->
     <section class="accordion-section">
-
       <h1>FAQ</h1>
 
-      <div class="question" id="question1"><b>What do I need to wear?</b></div>
-      <div class="answer">
-        <p>Lorem, ipsum dolor sit amet consectetur </p>
+      <div class="contentBox">
+        <div class="label" id="question1">What do I need to wear?</div>
+        <div class="answer">
+          <p>
+            We would encourage all gymnasts to wear shorts and t-shirts or
+            something similar like leggings. Clothing should not be baggy as it
+            can catch on equipment and increases the risk of injury. Leotards
+            are optional. Gymnasts do not wear socks or trainers, all activities
+            are performed in bare feet. All jewellery including earrings and
+            watches must be removed.
+          </p>
+        </div>
       </div>
 
-      <!-- <div class="question" id="section2"><b>How long does it last?</b></div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>  -->
+      <div class="contentBox">
+        <div class="label" id="question2">
+          How do I cancel my booking?
+        </div>
+        <div class="answer">
+          <p>
+            You can cancel a class by clicking on the ‘My Schedule’ section of
+            your account and clicking the ‘cancel’ icon next to the class you
+            would like to cancel.
+          </p>
+        </div>
+      </div>
 
+      <div class="contentBox">
+        <div class="label" id="question3">
+          Can I start gymnastics if I am an adult?
+        </div>
+        <div class="answer">
+          <p>
+            Absolutely yes. We don’t believe in “you are too old to do
+            gymnastics”.
+          </p>
+        </div>
+      </div>
+
+      <div class="contentBox">
+        <div class="label" id="question4">
+          Do you offer classes for complete beginners?
+        </div>
+        <div class="answer">
+          <p>
+            Yes, we do. You don’t need to be able to do gymnastics to join our
+            beginner level. In level 1 Tumbling, we’ll offer you all you need to
+            build strong gymnatic foundations. You can also join our Flexibility
+            and Gymnastic Strength Class even if you don’t have any experience.
+          </p>
+        </div>
+      </div>
+
+      <div class="contentBox">
+        <div class="label" id="question5">
+          Do you accept cash to pay for the classes?
+        </div>
+        <div class="answer">
+          <p>
+            Yes, we do. Come to the gym with the exact amount and we will add
+            the credits to your account. Keep in mind we do not accept drop-ins.
+            You will still be required to book your class in advance on our
+            booking system.
+          </p>
+        </div>
+      </div>
     </section>
 
     <script src="./script.js"></script>

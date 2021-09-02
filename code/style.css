@@ -1,27 +1,23 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-/* .active + .answer {
-  /* some styling here} */
-
-/* Universal selector: removes default stylings of all html tags */
-* { 
+* {
+  /* Universal selector: removes default stylings of all html tags */
   box-sizing: border-box;
   padding: 0;
-  margin:0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 /* HEADER */
 header {
-  background-color:black; /* This is a back up for the background-image, in case doesn't load or if some browsers don't support the image, this color will show */
+  background-color: black; /* This is a back up for the background-image, in case doesn't load or if some browsers don't support the image, this color will show */
   background-image: url(./Images/Gymnastics-picture.jpg.crdownload);
-  height: 250px; 
+  height: 250px;
   width: 100%;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: contain;
-  /* background-size: cover; /*Resize the background image to cover the entire container */
   border: 2px solid;
 }
 
@@ -32,11 +28,11 @@ div.header {
 p.logo-text {
   align-self: center;
   font-size: 1.4rem;
-  margin-top:1rem;
-  color:rgb(235, 100, 100);
+  margin-top: 1rem;
+  color: rgb(235, 100, 100);
 }
-span { 
-  color:rgb(238, 185, 194);
+span {
+  color: rgb(238, 185, 194);
   font-weight: bold;
 }
 
@@ -49,11 +45,11 @@ span {
 }
 
 nav {
- display: flex;
- flex-direction: column;
- align-items: center;
- background-image: linear-gradient(black, rgb(197, 17, 17));
- color: blanchedalmond;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(black, rgb(197, 17, 17));
+  color: blanchedalmond;
 }
 
 a {
@@ -61,33 +57,78 @@ a {
   font-size: 1.1rem;
 }
 a:hover {
-  transform:scale(1.2,1.2);
+  transform: scale(1.2, 1.2);
 }
 /************* */
- div.space {
+div.space {
   height: 150px;
-  background-color:black;
+  background-color: black;
   display: none;
-} 
+}
+
+/* FORM SECTION*/
 .form-section {
-  background-color:blanchedalmond;
+  background-color: blanchedalmond;
   border: 2px solid;
   margin: 30px 20px;
   width: 50%;
 }
+
+/* ACCORDION SECTION*/
 .accordion-section {
   border: 2px solid;
-  margin: 10px;
+  margin: 20px;
+  width: 400px;
 }
-.question {
-  color:red;
-  background-color: pink;
+.contentBox {
+  position: relative;
+  width: 400px;
 }
-.question + .answer {
+
+.label {
+  background-color: cornflowerblue;
+  border-bottom: 1px solid red;
+  padding: 10px;
+  margin-top: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+.label:before {
+  content: '-';
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.3rem;
+  color: red;
+}
+
+.active::before {
+  content: '+';
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.3rem;
+  color: red;
+}
+.active {background-color: darkviolet;}
+/* #question1,
+#question2,
+#question3,
+#question4,
+#question5 {
+  background-color: cornflowerblue;
+  border-bottom: 1px solid red;
+  padding: 10px;
+  margin-top: 10px;
+  color: #fff;
+  cursor: pointer;
+} */
+
+
+.active + div.answer {
+  /* Adjacent Sibling Selector (+) */
   display: none;
 }
-
-
 
 /* MEDIA QUERIES */
 
@@ -95,19 +136,14 @@ a:hover {
   html {
     font-size: 18px;
   }
-  
+
   header {
-    height: 350px ;
+    height: 350px;
   }
+
   nav {
     flex-direction: row;
     justify-content: center;
     height: 100px;
   }
-}
-@media (min-width: 920px) {
-  header {
-    height:450px ;
-  }
-
 }
