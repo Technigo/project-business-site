@@ -70,10 +70,27 @@ h1 {
   transform: rotate(45deg);
 }
 
-/* FAQ box styling - for linear gradient remember to set boarder-image to 1 */
 .accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+/* FAQ box styling - for linear gradient remember to set boarder-image to 1 */
+.accordion-item-body-content {
   padding: 1rem;
   line-height: 1.5rem;
   border-top: 2px solid;
   border-image: linear-gradient(to right, #359286, #692d9b) 1;
+}
+
+/* .accordion-item-header.active + .accordion-item-body {
+  display: block;
+} */
+
+/* Adding more accurate responsiv font size to FAQ box */
+@media (max-width:767px) {
+  html {
+     font-size: 14px;
+  }
 }
