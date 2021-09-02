@@ -7,10 +7,11 @@ header {
 }
 .header-text-center {
 	position: absolute;
-	top: 30vh;
+	top: 20vh;
 	color: #ffc942;
 	font-weight: 500;
-	font-size: 10vw;
+	text-align: center;
+	font-size: 5em;
 	text-shadow: 3px 3px 5px #5c5c5c;
 }
 .hero-img {
@@ -21,8 +22,8 @@ header {
 }
 .scroll-down-icon {
 	position: absolute;
-	width: 40px;
-	top: 85%;
+	width: 50px;
+	top: 80%;
 }
 main {
 	padding-top: 20px;
@@ -47,7 +48,8 @@ main {
 .accordion-container,
 .radio-container,
 .greeting-container,
-header {
+header,
+.text-field-container {
 	display: flex;
 	justify-content: center;
 }
@@ -67,6 +69,22 @@ header {
 .form {
 	align-items: center;
 }
+
+.text-field-container {
+	align-items: center;
+}
+.icon-textbox {
+	box-sizing: border-box;
+	background-color: #ffffff;
+	border-radius: 4px 0 0 4px;
+	/* border: 1px solid #f9b44c; */
+	height: 1.8rem;
+	padding: 5px;
+	border-bottom: 1px solid #f9b44c;
+	border-top: 1px solid #f9b44c;
+	border-left: 1px solid #f9b44c;
+}
+
 .radio-container {
 	flex-wrap: wrap;
 	flex-direction: column;
@@ -80,8 +98,11 @@ header {
 button[type='submit'] {
 	box-sizing: border-box;
 	width: 95%;
-	border-radius: 4px;
-	border: 1px solid #f9b44c;
+	border-radius: 0px 4px 4px 0px;
+	border-bottom: 1px solid #f9b44c;
+	border-top: 1px solid #f9b44c;
+	border-right: 1px solid #f9b44c;
+	border-left: 0px solid #f9b44c;
 	height: 1.8rem;
 	padding: 1px 10px;
 	font-size: 0.9rem;
@@ -90,7 +111,8 @@ button[type='submit'] {
 	background: url(images/user.png) no-repeat scroll 7px 7px;
 	padding-left: 30px;
 } */
-.text-field:focus {
+.text-field:focus,
+.text-field-container:focus-within > .icon-textbox {
 	outline-width: 0px;
 	box-sizing: border-box;
 	box-shadow: inset 0 0 4px #000000;
