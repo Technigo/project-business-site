@@ -1,19 +1,12 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-/* .active + .answer {
-  some styling here
-} */
 
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
   margin: 0;
   background: #353636;
+  
 }
 
 
@@ -63,25 +56,36 @@ video {
   left: 0;
   z-index: 5; 
   object-fit: cover;
+  overflow: hidden;
+}
+
+.flex-container {
+  display: flex; 
+  flex-direction: column;
+   row-gap: 1em;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
 }
 
 
 .sign-up-form {
   border: 2px solid black;
+  border-radius: 10px;
   background-color: #dcdcde;
   font-family: 'Montserrat', sans-serif; 
-  width: 400px; 
-  height: 500px;
-  padding: 30px 10px 0px 10px;
+  width: 350px; 
+  height: auto;
+  padding: 30px 0px 30px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 
-
-.sign-up-form h3 {
-  padding-bottom: 20px;
+.checkboxes {
+  display: flex; 
+  flex-direction: column;
 }
 
 
@@ -92,21 +96,25 @@ video {
 
 
 form {
-  
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 
 input {
   font-size: 20px;
   margin: 15px;
-  /* display: block; */
 }
 
 
 label {
-  font-size: 20px; 
+  font-size: 15px; 
+}
+
+.text-labels {
+  display: block;
+  margin-left: 14px;
 }
 
 
@@ -117,55 +125,84 @@ button {
   width: 130px;
   border-radius: 20px;
   padding: 10px 15px 10px 15px;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 10px;
 }
 
-button:hover {
+  button:hover {
   background-color: lightsteelblue;
 }
 
 .accordion {
   border: 2px solid black;
+  border-radius: 10px;
   background-color: #dcdcde;
-  width: 430px;
-  height: 530px;
-  margin-bottom: 8em;
+  width: 360px;
+  height: auto;
+  /* padding: 10px; */
+  margin-bottom: 2em;
   font-family: 'Montserrat', sans-serif;
-  display: flex;
-  flex-direction: column;
+}
+
+.answer {
+  display: none;
+}
+
+.active + .answer {
+  display: block;
+}
+  
+.question {
+  border-radius: 5px;
+  background-color: gray; 
+  width: 97%;
+  padding: 10px 0px 10px 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 
-.flex-container {
-  display: flex; 
-  flex-direction: row;
-  column-gap: 2em;
-  justify-content: center;
-  margin-top: 5em;
-}
-
+/* .footer {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: white; 
+    text-align: center;
+} */
 
 
 
 @media screen and (min-width: 768px) {
    .caption {
-       font-size: 1.5rem;  
+       font-size: 10px;
+       width: 90%;
    }
 
    .flex-container {
+      max-width: auto;
       display: flex;
-      justify-content: row;
+      flex-direction: column;
   }
 }
 
 @media screen and (min-width: 992px) {
   .caption {
-      font-size: 1rem; 
+      font-size: 25px; 
   }
 
   .flex-container {
+      display: flex; 
+      flex-direction: row;
       column-gap: 4em;
+  }
+
+  .sign-up-form {
+  width: 500px; 
+  height: 500px;
+  padding: 30px 10px 20px 10px;
+  }
+
+  .accordion {
+    width: 500px;
+    height: 500px; 
   }
 }
