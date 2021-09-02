@@ -4,20 +4,21 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 /* 
 .active + .answer {
   /* some styling here */
-  background-color: aquamarine;
-} */
+  /* background-color: aquamarine;
+} */ */
 
 
 
 body{
   font-family: 'Courier Prime', monospace;
+  margin: 0;
+  width: 100%;
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("camera.jpg");
+  background-image: url("camera.jpg");
   height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* background-position: center; */
   background-size: cover;
   position: relative;
 }
@@ -25,25 +26,39 @@ body{
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 40%;
+  transform: translate(-50%, -50%);  /*needs explanation*/
+  top: 25%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: #e3dfd4;
+  color: #ddded8;
   font-family: 'Special Elite', cursive;
   font-size: xx-large;
+}
+
+.black-white-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  object-fit: cover;
+  /* justify-content: space-evenly; */
+}
+
+.bw-pic{
+  height: 200px;
+  width: 400px;
 }
 
 .main-box {
   display: grid;
   grid-template-columns: 1fr;
+  /* grid-gap: 10px; */
   margin-top: 15px;
 }
 
 .order-box {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #737373;
+  background-color: #ababab;
   width: 50%;
   margin: 0 0 4% 20%;
   padding: 5%;
@@ -58,22 +73,25 @@ label{
 .accordion {
   text-align: center;
   padding: 5px 20px;
-  background-color: #c3c3c3;
-  /* display: flex;
+  background-color: #ababab;
+  display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center; */
+  justify-content: center;
+  margin: 0 20% 4% 0;
+  padding: 5%;
 }
 
 .question { 
-  background-color: #565656;
-  color: #c0c0c2;
+  background-color: #c3c3c3;
+  color: #5b5f62;
   cursor: pointer;
   text-align: left;
-  border: 0.5px solid black;
+  border: 0.5px solid #939393;
   /* border: none; */
   outline: none;
   transition: 0.4s;
+  width: 50%;
 }
 
 .active, .question:hover {
@@ -82,7 +100,7 @@ label{
 
 .answer {
   padding: 0 18px;
-  background-color: #c0c0c0c2;
+  background-color: #939393;
   display: none;
   overflow: hidden;
 }
@@ -90,7 +108,7 @@ label{
 .question:after {
   content: '\002B'; /* Unicode character for "plus" sign (+) */
   font-size: 15px;
-  color: #c0c0c0c2;
+  color: #5b5f62;
   float: right;
   margin-left: 5px;
 }
@@ -117,6 +135,24 @@ footer {
 }
 
 @media (min-width: 667px) {
+
+.hero-image{
+  background-position: 100%;
+}
+
+.black-white-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: 0;
+  width: 100%;
+ 
+}
+
+.bw-pic{
+  height: 300px;
+  width: 100%;
+  
+}
 
  .main-box {
    grid-template-columns: 1fr 1fr;
