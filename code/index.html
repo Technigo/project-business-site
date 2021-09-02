@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Festival</title>
+    <title>Plant Film Festival</title>
+    <link rel="icon" href="./montera-favicon.png">
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- Adding google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
@@ -12,7 +15,7 @@
 </head>
   <body>
     <header class="header">
-
+        <!-- 3 different video sizes, only one gets displayed depending on the size -->
         <div class="video-wrapper">
             <video class="header-video small" autoplay loop muted>
             <source src="./videos/plants-small.mp4" alt="video of girl filming plants">
@@ -42,10 +45,11 @@
 
     </header>
     
+    <!-- Content-wrapper contains all content of the website, it has grid column layout -->
     <div class="content-wrapper">
 
-      <section class="accordion">
-        <!-- Accordion -->
+      <!-- One of two content-boxes, FAQ section -->
+      <section class="content-box">
           <div class="headline"><h1>I want to watch plants grow...</h1></div>
   
           <div class="question" id="section1">How can I find the schedule of screenings?</div>
@@ -79,13 +83,15 @@
           </div>
 
         </section>
-    <!-- Signup form -->
-        <sectionc class="accordion">
+
+
+    <!-- 2 of 2 content-box, this is sign up form -->
+        <sectionc class="content-box">
 
             <div class="headline"><h1>Register</h1></div>
 
-            <form class="signup-form">
-                <!-- <div class="text-forms"> -->
+            <form class="signup-form" action="http://httpbin.org/anything" method="POST">
+           
                     <label> First Name: 
                        <input
                        type="text"
@@ -117,8 +123,8 @@
                         placeholder="*****"
                         required>
                      </label>
-                <!-- </div> -->    
-                    
+            
+                    <!-- Smaller form elements I have rapped in a div with a class "on-same-line"  -->
                     <div class="on-same-line">
                         <h2 class="input-field">First time here?</h2>
                         <label> Yes
@@ -126,7 +132,7 @@
                             class="radio"
                             type="radio"
                             id="first-time"
-                            name="not-first-time"
+                            name="first-time"
                             value="not-first-time"
                             >
                         </label>
@@ -134,7 +140,7 @@
                             <input
                             class="radio"
                             type="radio"
-                            id="first-time"
+                            id="not-first-time"
                             name="first-time"
                             value="first-time"
                             >
@@ -159,7 +165,7 @@
                             name="profession"
                             value="director">
                         </label>
-                         <label> Writer
+                         <label> Writer:
                             <input
                             class="checkbox"
                             type="checkbox"
@@ -181,9 +187,9 @@
         </sectionc>
       </div>
       <footer class="footer">
-        <!-- <img class="footer-image" src="https://www.amexessentials.com/wp-content/uploads/2019/06/Monstera-Deliciosa-Trend-Opener.jpg" alt="plants" /> -->
+        <!-- There is a background picture to the footer see CSS file -->
       </footer>
-    <!-- dont forget to link the javascript file here! -->
+    <!-- A link to javascript file! -->
     <script src="./script.js"></script>
   </body>
 </html>

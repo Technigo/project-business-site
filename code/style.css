@@ -1,12 +1,12 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+/* Removing default margins and boarder for all document */
 *{
   margin: 0;
   padding: 0;
   border: 0 none;
 }
 
+/* Implementing box-sizing model */
 *, *::before, *::after{
   box-sizing:border-box;
 }
@@ -15,7 +15,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   display:block;
 }
 
-/* -------- THE DESIGN IS MADE MOBILE FIRST---------- */
+/* -------- THE DESIGN OF SITE IS MADE MOBILE FIRST---------- */
 
 
 /* following styling affects the header section */
@@ -25,8 +25,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   display: flex;
   flex-direction: column;
   border-bottom: 2px solid black;
-
-
 }
 
 .navigation{
@@ -77,20 +75,15 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
       top: 0;
       left:0;
     }
-
-    .medium{
+    /* Creating classes to add to the video so it is easier to display or hid them */
+    .medium .large{
       display: none;
-    }
-
-    .large{
-      display:none;
     }
 
 .header h1 {
   font-family: 'Permanent Marker', cursive;
   text-shadow: 2px 1px black;
   display: block;
-  /* text-align: center; */
   color: #C82F37;
   margin-top: 30px;
   margin: 0 auto;
@@ -99,7 +92,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 }
 
-/* ----- STARTS THE CONTENT SECTION------- */
+/* ----- STYLING OF THE CONTENT SECTION------- */
+
 .content-wrapper{
   width: 100%;
   display: grid;
@@ -110,11 +104,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   padding: 10px 30px;
   
 }
-/* ----- Styling for the FAQ session ------ */
 
-.accordion{
+.content-box{
   width: 100%;
-  /* background-color: rgb(159, 217, 186); */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -124,10 +116,17 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   font-family: 'Kaisei HarunoUmi', serif;
 }
 
+
+/* ----- Styling for the FAQ session ------ */
+
 .question{
   border: 2px solid black;
   padding: 5px 10px;
 
+}
+
+.question:hover{
+  cursor: s-resize;
 }
 
 .answer{
@@ -136,9 +135,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   background-color: rgb(159, 217, 186);
 }
 
-/* ----- Styling for Signup form----- */
+/* ----- Signup form part----- */
 
-/* This code performs "form reset" so we would eliminate weired default formating */
+/* This code performs "form reset" so we would eliminate weired default formating for form elements*/
 button,
 input,
 select,
@@ -150,7 +149,9 @@ textarea {
   margin: 0;
 } 
 
+/* --Styling of the form itself-- */
 .signup-form{
+  width: 100%;
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -159,36 +160,36 @@ textarea {
 
 .input-field{
   width: 250px;
-  /* width: 100%; */
   height: 24px;;
   display: block;
   font-size: 14px;
-  border: 0;
+  border: 0; 
   border-bottom: 2px solid rgb(159, 217, 186);  
 }
 
+/* styles the input field when it is being filled */
 .input-field:focus{
   background-color: rgb(159, 217, 186);
 }
 
 .headline{
   color: red;
- margin:0 auto;
- font-family: 'Permanent Marker', cursive;
+  margin:0 auto;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .on-same-line{
   width: 250px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
   align-items: center;
 }
 
 .on-same-line label{
   padding-right: 10px;
-  font-size: 14px;
+  font-size: 12px;
 }
+
 
 .checkbox, .radio{
   vertical-align: middle;
@@ -200,6 +201,7 @@ textarea {
   border-radius: 10px;
   height: 35px;
   width: 40%;
+  max-width: 200px;
 }
 
 .submit:hover{
@@ -209,18 +211,15 @@ textarea {
 .footer{
   width: 100%;
   height: 70px;
-  background-image: url("https://www.amexessentials.com/wp-content/uploads/2019/06/Monstera-Deliciosa-Trend-Opener.jpg");
+  background-image: url("./monstera-background.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 
+/* --------- START OF MEDIA QUERIES -------- */
 
-
-
-/* 
---------- START OF MEDIA QUERIES -------- */
-
+/* --- Tablet version---- */
 @media (min-width: 768px){
 
   .hamburger{
@@ -248,10 +247,14 @@ textarea {
     margin-top: 120px;
   }
 
-
+  .content-wrapper{
+    padding: 20px 100px;
+  }
 
 }
 
+/* --- Desktop version ---
+Changes here are more extensive, video covers the whole background */
 
 @media (min-width: 1200px){
   .medium{
@@ -259,12 +262,12 @@ textarea {
   }
 
   .large{
-    display: inline;
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
   
   }
 
@@ -282,9 +285,10 @@ textarea {
     grid-template-columns: 1fr 1fr;
     margin-top: 25vh;
     background-color: transparent;
+    padding: 10px 20px;
   }
 
-  .accordion{
+  .content-box{
     background-color: rgb(0, 0,0, 0.5);
     box-shadow: none;
     color:white;
@@ -301,7 +305,6 @@ textarea {
   .answer{
     color:black;
   }
-
 
   .input-field{
     background-color: rgb(159, 217, 186);
