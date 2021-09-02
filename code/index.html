@@ -14,23 +14,24 @@
 <body>
     
     <header>
+      <!--makes it possible to jump to the top-->
+      <div id="top"></div>
         <nav class="navigation">
             <a href="#join"><i class="fas fa-tint"></i>Join us</a>
             <!---Doesn't lead anywhere-->
             <a href=""><i class="fas fa-sign-in-alt"></i>Sign in</a> 
             <a href="#faq"><i class="far fa-question-circle">FAQ</i></a>
-            <a href=""><i class="fas fa-envelope-square">Contact us</i></a>
-
-            
+            <a href="#contact"><i class="fas fa-envelope-square">Contact us</i></a>   
         </nav>
+        
         <div class="hero">
-            <video loop muted autoplay>
+            <video loop muted autoplay playsinline>
                 <source src="videos/production ID_5197762.mp4" type="video/mp4">
                 <source src="videos/production ID_5197762.ogg" type="video/mp4">
             </video>
             <div class="caption">
                 <h1>Rain<i class="far fa-check-square"></i></h1>
-                <p>We might be called rain check, but we believe in delivering when we said we would</p>
+                <p><em>We might be called rain check, but we believe in delivering when we said we would</em></p>
             </div>
         </div>
     </header>
@@ -41,57 +42,62 @@
             <h3>Your perfect rainy saturday</h3>
             <div class="form-box-radio">
                 <p class="radio-title">Early morning or sleep in?</p>
-                <label for="fav-time">Early morning</label>
                 <input type="radio" id="early" name="wake-time"/>
-                <label for="fav-time">Sleep in</label>
+                <label for="fav-time">Early morning</label>
                 <input type="radio" id="late" name="wake-time">
+                <label for="fav-time">Sleep in</label>
             </div>
             <div class="form-box-radio">
                 <p class="radio-title">Stay inside or savour the rain?</p>
-                <label for="inorout">Stay inside</label>
                 <input type="radio" id="inside" name="inorout">
-                <label for="inorout">Savour the rain</label>
+                <label for="inorout">Stay inside</label>
                 <input type="radio" id="outside" name="inorout">
+                <label for="inorout">Savour the rain</label>
             </div>
             <div class="form-box-checkbox">
                 <p class="checkbox-title">I like to spend my day like this..</p>
-                <label for="alone">Alone</label>
                 <input type="checkbox" id="alone" name="alone">
-                <label for="friendsfam">With friends or family</label>
+                <label for="alone">Alone</label>
                 <input type="checkbox" id="friends">
-                <label for="cleaning">Cleaning</label>
+                <label for="friendsfam">With friends or family</label>
                 <input type="checkbox" id="checkbox" name="cleaning">
-                <label for="relaxing">Relaxing</label>
+                <label for="cleaning">Cleaning</label>
                 <input type="checkbox" id="relaxing" name="relaxing">
-                <label for="TV">Watching TV</label>
+                <label for="relaxing">Relaxing</label>
                 <input type="checkbox" id="tv" name="tv">
-                <label for="books">Reading books</label>
+                <label for="TV">Watching TV</label>
                 <input type="checkbox" id="books" name="books">
-                <label for="cooking">Cooking</label>
+                <label for="books">Reading books</label>
                 <input type="checkbox" id="cooking" name="cooking">
-                <label for="orderin">Order food</label>
+                <label for="cooking">Cooking</label>
                 <input type="checkbox" id="order" name="order">
+                <label for="orderin">Order food</label> 
             </div>
             <div class="form-button" >
               <button type="submit">Save</button>
             </div>
+          </form>
         </div>
-        </form>
+        
+
+      
        
         <!--sign-up box-->
-
+        <section>
         <div class="signup-box">
              <!--makes it possible to scroll to here from "join us" link-->
             <div id="join"></div>
-            <h3>Sign up here for...</h3>
+            <h3>Sign up here for personalized rain-mail</h3>
             <form id="signup">
-            <div class="gender"><p><strong>Gender</strong></p>
+            <div class="gender gender-title"><p><strong>Gender</strong></p>
                 <label for="fmale">Female</label>
                 <input type="radio" id="fmale" name="gender">
                 <label for="male">Male</label>
                 <input type="radio" id="male" name="gender">
                 <label for="other">Other</label>
                 <input type="radio" id="other" name="gender">
+                <label for="other">Prefer not to answer</label>
+                <input type="radio" id="noanswr" name="gender">
             </div>
             <div class="form-box">
                 <label for="fname">First name:</label>
@@ -115,55 +121,60 @@
                 <label for="terms">*I agree to let you rain on my parade</label>
                 <input type="checkbox" required id="terms" name="terms" class="terms">
             </div>
+            <div class="rain-mail">
+              <label for="terms">*Yes, send me personalized rain-mails</label>
+                <input type="checkbox" required id="rainMail" name="rain-mail" checked>
+            </div>
             <div class="signup-button" >
                 <button type="submit">Sign up!</button>
             </div>
-            
             </form>
             <div class="greeting" id="greeting"></div>
         </div>
+      </section>  
         
+        
+          <!--makes it possible to scroll to here from "FAQ" link-->
+            <section> 
+            <div class="accordion">
+                <h4>FAQ</h4>
+                <div class="content-box" id="section1">
+                    <div class="label"><p>What is a rain-mail? </p></div>
+                    <div class="content">
+                        <p>A rain-mail is a personalized email with tips on how you can spend your perfect rainy saturday (or any other day) based on your answers in our form.  </p>
+                    </div>
+                </div>
+                <div class="content-box" id="section2">
+                    <div class="label label-dark"><p>How often do you send out rain-mail?</p></div>
+                    <div class="content">
+                        <p>Any time the forecast shows more than 50% chance of rain in your area, we create a collection of things you can do. Wether it's a nice brunch at a cafe or a new netflix show, we've got you covered. We even throw in some amazing cleaning hacks for those who loves to spend their rainy days tidying up at home.  </p>
+                    </div>
+                </div>
+                <div class="content-box" id="section3">
+                    <div class="label"><p>Can i change my answers in the form?</p></div>
+                    <div class="content">
+                        <p>Of course, just go to the form section on your profile and then click edit to change preferences. </p>
+                    </div>
+                </div>
+                <div class="content-box" id="section4">
+                    <div class="label label-dark"><p>Can i unsubscribe?</p></div>
+                    <div class="content">
+                        <p>Yes, you can cancel your subscription anytime by just following the link down at the footer of the page.</p>
+                    </div>
+                </div>
+            </div>   
+          </section>
     </section>
     
 
     
-   
-    <section class="accordion-container">
-      <!--makes it possible to scroll to here from "FAQ" link-->
-        <div id="faq"></div>    
-        <div class="accordion">
-            <h4>FAQ</h4>
-            <div class="content-box" id="section1">
-                <div class="label"><p>List 1</p></div>
-                <div class="content">
-                    <p>Sit on the laptop spend all night ensuring people don't sleep sleep all day sees bird in air, breaks into cage and attacks creature weigh eight pounds but take up a full-size bed kitty power nyaa nyaa if it fits i sits. </p>
-                </div>
-            </div>
-            <div class="content-box" id="section2">
-                <div class="label label-dark"><p>List 2</p></div>
-                <div class="content">
-                    <p>Sit on the laptop spend all night ensuring people don't sleep sleep all day sees bird in air, breaks into cage and attacks creature weigh eight pounds but take up a full-size bed kitty power nyaa nyaa if it fits i sits. </p>
-                </div>
-            </div>
-            <div class="content-box" id="section3">
-                <div class="label"><p>List 3</p></div>
-                <div class="content">
-                    <p>Sit on the laptop spend all night ensuring people don't sleep sleep all day sees bird in air, breaks into cage and attacks creature weigh eight pounds but take up a full-size bed kitty power nyaa nyaa if it fits i sits. </p>
-                </div>
-            </div>
-            <div class="content-box" id="section4">
-                <div class="label label-dark"><p>List 4</p></div>
-                <div class="content">
-                    <p>Sit on the laptop spend all night ensuring people don't sleep sleep all day sees bird in air, breaks into cage and attacks creature weigh eight pounds but take up a full-size bed kitty power nyaa nyaa if it fits i sits. </p>
-                </div>
-            </div>
-        </div>   
-    </section>
+    <footer>
+      <a href="#top"><i class="fas fa-umbrella"></i>To the top!</a>
+      <div id="contact"></div>    <!--link to jump from header to here-->
+        <p>By Sofia Wallerberg</p>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Unsubscribe from rain-mail here</a>
+    </footer>
 
-
-<footer>
-    <p>By Sofia Wallerberg</p>
-</footer>
 <script src="script.js"></script>
 </body>
 </html>

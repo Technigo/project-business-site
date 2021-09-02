@@ -6,6 +6,7 @@
 
 body {
   background-color: #11324D;
+
 }
 
 /* HEADER */
@@ -17,10 +18,24 @@ body {
 
 .navigation a {
   position: relative;
-  z-index: 13;
+  z-index: 20;
   color: white;
   font-size: 1em;
   font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+}
+/* makes the underline animated */
+.navigation a::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: orange;
+  display: block;
+  transition: 0.5s ease;
+}
+
+.navigation a:hover::after {
+  width: 100%;
 }
 
 .hero {
@@ -54,19 +69,19 @@ body {
 
 .hero .caption {
   position: relative;
-  z-index: 20;
+  z-index: 13;
   text-align: center;
   color: white;
 }
 
-.hero h1 {
+.caption h1 {
   text-transform: uppercase;
   font-size: 3em;
   font-family: 'Oswald', sans-serif;
 }
 
-.hero p {
-  font-size: 2em;
+.caption p {
+  font-size: 1.5em;
 }
 
 /* FORMS */
@@ -83,7 +98,7 @@ body {
   padding: 20px auto;
   line-height: 1.6em;
   margin: 20px 20px;
-  background-color: #4B6587;
+  background-color: #22577A;
   border: 2px solid orange;
   border-radius: 20px;
 }
@@ -114,15 +129,59 @@ input:focus {
   border: 2px solid orange;
 }
 
-.signup-box input, .terms, .age, .gender{
+.signup-box input, .terms, .age, .gender, .rain-mail {
   padding: 10px 0;
   font-size: 0.8em;
   text-align: center;
 }
 
+.gender-title p {
+  margin-bottom: 10px;
+}
+
 .radio-title, .checkbox-title, .bold {
   font-weight: bold;
 }
+
+/* försök att styla radioknapparna
+
+input[type="radio"] {
+  display: none;
+}
+
+.form-box-radio label {
+  position: relative;
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.form-box-radio label::before {
+  content: " ";
+  border: 2px solid orange;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.form-box-radio label::after {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 166, 0, 0);
+  left: 4px;
+  top: 2px;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + label::after {
+  background-color: rgba(255, 166, 0, 1);
+  vertical-align: ;
+} */
+
 
 .form-box, .signup-button {
   display: flex;
@@ -136,6 +195,11 @@ button {
   border: 2px solid orange;
   box-shadow: 2px 2px 2px black;
   margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+button:focus {
+  box-shadow: none;
 }
 
 /* message when user registers */
@@ -147,10 +211,12 @@ button {
    font-family: 'Oswald' , sans-serif;
   margin: auto;
   padding-top: 20px;
-  font-size: 1.3em;  
+  font-size: 0.88em;  
 }
 
 /* accordion */
+
+
 .accordion {
   margin: 20px auto;
   text-align: center;
@@ -204,11 +270,11 @@ float: right;
 
 /* the content in the accordion when the label is pressed */
 .content-box.active .content {
-  height: 120px;
+  height: 150px;
   margin: 0 auto;
   text-align: center;
-  padding: 20px 0;
-  background-color: white;
+  padding: 20px 10px;
+  background-color: #E7E0C9;
 }
 
 
@@ -218,19 +284,33 @@ footer {
   left: 0;
   text-align: center;
   background-color: #E7E0C9;
+  padding: 10px 0;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+}
+
+footer a:hover {
+  color: rgb(68, 68, 119);
+  text-decoration: underline;
 }
 
 
 
 /* MEDIA QUERIES */
-
+/* tablet */
 @media (min-width: 767px) {
   .navigation a {
       font-size: 1.8em;
   }
 
+  
+
   .caption, .form, .signup-box, .accordion {
-    margin: auto;
+    margin: 0 auto;
       font-size: 1.5em;
   }
 
@@ -247,23 +327,36 @@ footer {
       padding-top: 30px;
   }
 
-  h2 {
-      margin-top: 10px;
+  .navigation a {
+    font-size: 1.5em;
   }
 
   .container {
-      display: grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 0;
+      /* display: grid;
       grid-template-columns: repeat(2, 50%);
-      margin: 0 20px;
+      align-items: center;
+      margin: 0 20px; */
+      
   }
-/* accordion */
 
- .accordion-container {
-     position: relative;
-     padding-top: 30px;
-     width: 50%;
-     margin: 20px auto;
-    border-radius: 20px;
- }
- 
+  .form-box {
+    margin: 0 auto;
+  }
+
+  .form {
+    height: 60%;
+  }
+  
+
+/* accordion */
+.accordion {
+  /* position: relative;
+  width: 80%;
+  bottom: 300px; */
+}
+
 }
