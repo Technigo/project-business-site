@@ -155,9 +155,6 @@ header {
 
 
 
-
-
-
 /* ------SIGN-UP FORM STYLING ----- */
 form { 
   font-family: 'Open Sans Condensed', sans-serif;
@@ -182,7 +179,7 @@ form {
 }
 
 .message {
-  height: 80px;
+  padding-bottom: 60px;
 }
 
 .radio-age {
@@ -249,7 +246,7 @@ fieldset {
 }
 
 .question {
-font-size: 20px;
+font-size: 18px;
 font-weight: bold;
 background-color: rgb(237, 215, 215);
 /* border: 1px solid white; */
@@ -261,9 +258,10 @@ border-radius: 10px;
 .question:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
-  color: #777;
+  color: rgb(167, 163, 163);
   float: right;
   margin-left: 5px;
+  margin: auto;
 }
 
 .active, .question:hover {
@@ -275,7 +273,7 @@ border-radius: 10px;
 }
 
 .answer {
-  overflow: hidden;
+  /* overflow: hidden; */
   display: none;
   font-size: 16px;
   background-color: white;
@@ -288,8 +286,12 @@ border-radius: 10px;
   display: block;
 }  
 
-
-
+.form-input:valid {
+  border: 0.8px solid rgb(46, 181, 51);  
+}
+.form-input:invalid {
+  border: 0.6px solid red;  
+}
 
 /* ------FOOTER SECTION STYLING ----- */
 
