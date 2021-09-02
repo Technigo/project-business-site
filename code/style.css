@@ -43,7 +43,7 @@ body {
 /* MY CSS STARTS HERE */
 body {
   font-family: "Roboto", sans-serif;
-  background: #eeeeec;
+  background:white;
 }
 header {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0.13)), url(images/hero3.jpg);
@@ -61,7 +61,6 @@ header {
 
 hr {
   width: calc(100% - 20px);
-  background-color: #353535;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -72,15 +71,19 @@ hr {
   max-width: 80%;
   top: 5px;
   order: 2;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .desktop {
   display: none;
 }
 
+.desktop a {
+  border-top:2px solid #FF925C;
+}
+
 .desktop a:hover {
-  border-bottom: 2px solid white;
+  border-top: 2px solid white;
   cursor: pointer;
 }
 
@@ -88,7 +91,8 @@ hr {
   position: absolute;
   display: block;
   right: 20px;
-  top: 10px;
+  top: 15px;
+  font-size:25px;
 }
 
 .mobile {
@@ -107,7 +111,7 @@ header nav {
   order: 1;
   position: relative;
   background: #353535;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 header nav a {
@@ -120,11 +124,12 @@ header nav a {
 
 header div {
   order: 3;
-  margin-top: 30px;
+  margin-top: 50px;
+  padding:20px;
 }
 
 header div h2 {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -160,7 +165,7 @@ header div button:hover {
 }
 
 .gallery h2 {
-  color: #353535;
+  color: #EB6424;
   font-size: 24px;
   margin: 20px 0px 0px 0px;
 }
@@ -178,8 +183,8 @@ header div button:hover {
 }
 
 form {
-  background: #353535;
-  color: white;
+  background: #FFF2EB;
+  color: #FA9500;
   position: relative;
   padding: 20px;
 }
@@ -192,7 +197,7 @@ label,
 input {
   margin-bottom: 5px;
   background: none;
-  color: white;
+  color: #F1956A;
 }
 
 input[type="text"]:focus,
@@ -205,12 +210,13 @@ input[type="password"] {
   width: calc(100% - 20px);
   padding: 10px;
   background: none;
-  border-bottom: 1px #4f4f4f solid;
+  border-bottom: 1px #FFE4D6 solid;
 }
 
 input[type="radio"] {
   cursor: pointer;
 }
+
 
 input {
   border: none;
@@ -219,56 +225,72 @@ input {
 
 textarea {
   font-family: "Roboto", sans-serif;
-  background:none;
-  border-bottom:1px solid #4f4f4f;
-  border: none;
-  width: calc(100% - 10px);
-  padding: 5px;
-  color:white;
+    width: 100%;
+    height: 150px;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border: 1px solid #FFE4D6;
+    border-radius: 4px;
+    background-color: transparent;
+    resize: none;
 }
 
 form button {
   background: none;
-  border: 4px solid white;
+  border: 2px solid #F1956A;
   border-radius: 20px;
   padding: 10px 25px;
-  color: white;
+  color: #F1956A;
   right: 40px;
   margin-top: 10px;
   bottom: 40px;
 }
 
 form button:hover {
-  background: white;
+  background: #F1956A;
   transition: 0.5s;
-  color: blacK;
+  color: white;
   cursor: pointer;
 }
 
 .accordion {
   width:100%;
-  color:black;
   cursor:pointer;
   transition: .4s;
-  padding:18px;
+  padding-bottom:20px;
+}
+
+.accordion h2 {
+  background:#FF925C;
+  color:white;
+  padding:10px 20px;
+  display:block;
 }
 
 .answer {
-  padding: 0 18px;
-  background-color:white;
+  padding: 10px 18px;
+  background-color:#FFE4D6;
   display:none;
 }
 
 .active {
   display:block;
+  transition: all 0.5s ease-in-out;
 }
 
 .active {
-  background-color: #ccc; 
+  background-color: #ccc;
 }
 
 .question {
-  padding:0 18px;
+  padding:10px 20px;
+  background:#FFAD85;
+  color:white;
+}
+
+.question:hover {
+  background:#FFC9AD;
+  transition: .2s;
 }
 
 .active + .answer {
@@ -318,6 +340,7 @@ footer i:hover {
   }
 
   header div {
+    margin-top:50px;
     padding: 40px 80px;
   }
 
@@ -343,6 +366,8 @@ footer i:hover {
 
   .logo {
     order: 1;
+    max-width:500px;
+    margin-top:40px;
   }
 
   header nav {
@@ -354,8 +379,13 @@ footer i:hover {
 
 @media only screen and (min-width: 769px) {
   header {
-    height: 50vh;
+    min-height: 50vh;
   }
+
+  header div {
+    margin-top:150px;
+  }
+
   .signup__form {
     display: flex;
   }
