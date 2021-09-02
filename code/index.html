@@ -13,13 +13,15 @@
     <header>
       <img class="logo-image" src="./images/Zen_logo_green_cropped.png" alt="logo">
       <nav>
-        <a href="#form-section-id">Introduction</a>
-        <a href="#accordion-id">FAQ</a>
+        <a id="home-anchor" href="#header-id">Home</a>
+        <a id="intro-anchor" href="#form-section-id">Introduction</a>
+        <a id="faq-anchor" href="#accordion-id">FAQ</a>
       </nav>
     </header>
 
 
-    <section class="head-container">
+    <section class="head-container" id="header-id">
+      <div class="hidden-anchor"></div>
       <video autoplay muted loop>
         <source src="./videos/buddha_640x360.mp4" type="video/mp4">
         <source src="./videos/buddha_1280x720.mp4" type="video/mp4">
@@ -28,7 +30,7 @@
     </section>
 
     <section class="form-section" id="form-section-id">
-      <form class="subscription-form" action="http://httpbin.org/anything" method="POST">
+      <form class="subscription-form" id="intro-form" action="http://httpbin.org/anything" method="POST">
         <p>
           Every first sunday of the month we give an introduction to meditation. Please fill in the contact-form and we will send you an invitation to the next introduction. You can find further information in the FAQ.
         </p>
@@ -87,7 +89,7 @@
 
     <section class="accordion-section" id="accordion-id">
       <!-- Accordion -->
-      <article class="accordion">
+      <article class="accordion" id="faq-accordion">
         <h2>FAQ</h2>
         <div class="question" id="section1">
           For the meditation classes, do I need to bring a cushion and will I have to sit cross-legged on the floor?</div>
