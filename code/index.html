@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PASTA WARS</title>
     <link rel="stylesheet" href="./style.css">
+    <!--here is a link to get an icon on the tab!-->
+    <link rel="icon" href="https://res.cloudinary.com/occsn/image/upload/v1579300893/products/Pasta_Wars_event_pnjw9n.jpg" type="image/png" sizes="16x16">
+    <!--here is the linksheet to get the plus and minus signs for the FAQ-->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <!-- https://codetheweb.blog/fullscreen-image-hero/ -->
+    <!-- here is the link where i created my logo with: https://codetheweb.blog/fullscreen-image-hero/ -->
 <header>
-  <img class="logo" src="./LOGO.png" alt="Pasta Wars logo">
+  <img class="logo" src="./LOGO.png" alt="Pasta Wars logo with a fork and knife above the words">
   <nav class="navigation">
     <a class="navigation-link" href="https://www.youtube.com/watch?v=aD-fFyGvDW8">Big Meows</a>
     <a class="navigation-link" href="https://www.youtube.com/watch?v=W86cTIoMv2U">Small Meows</a>
@@ -28,6 +32,7 @@
   </section>
 
       <!-- Signup form -->
+  <Section class="signupForm">
   <form action="http://httpbin.org/anything" method="POST">
     <label>
     Message
@@ -47,11 +52,29 @@
         <option value="MON">Mongolia</option>
     </select>
     </label>
+    
+    <label class="cheese"> 
+      Some cheese:
+      <input type="radio" name="cheese"/>
+     </label>
+    
+     <label class="cheese"> 
+      Extra cheese:
+      <input type="radio" name="cheese"/>
+     </label>
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+    
 
     <button type="submit">Order t-shirt</button>
 </form>
+</Section>
 
-    <!-- grid with pasta -->
+    <!-- Okay so my thought here was to practice once again how to make an responsive
+    website with one, two and four columns depending on the scren size. -->
 <section class="main-content">
 <div class="grid-container">
   <div class= "grid-item"><img src="http://www.fillmurray.com/300/200" alt=""> <p>aaaaaa</p></div>
@@ -64,24 +87,46 @@
       <div class= "grid-item"><img src="http://www.fillmurray.com/300/200" alt=""></div>
     </div>
  
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <div class="container">
+ 
+      <h2>Frequently Asked Questions</h2>
+     
+      <div class="accordion">
+        <div class="accordion-item">
+          <a>What the frick is Pasta Wars?</a>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <a>Is this expensive?</a>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <a>Is there any hidden fees?</a>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <a>Im gluten intolerant 😥</a>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <a>How To Create a Light FAQ Element?</a>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+          </div>
+        </div>
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="texture"></div>
-    </section>
-  </section>
-    <!-- dont forget to link the javascript file here! -->
+      
+    </div>
+     
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
     <script src="./script.js"></script>
   </body>
 </html>

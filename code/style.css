@@ -1,7 +1,10 @@
-* { box-sizing: border-box; margin: 0 } 
+* { box-sizing: 
+  border-box; margin: 0
+ } 
 body {
   
   font-family: sans-serif;
+  
  
 }
 
@@ -23,7 +26,7 @@ display: flex;
 }
 .hero {
   /* Sizing */
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 
 
@@ -48,8 +51,8 @@ display: flex;
 
   /* Background styles */
   video {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     position: Absolute;
     left: 0;
@@ -67,22 +70,23 @@ display: flex;
         margin-top: 0;
         margin-bottom: 0.5em;
     }
-  
-    .texture{
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
 
+    .signupForm{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5%;
+      
+      
+    }
+  
     .grid-container{
       display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 80px auto 80px;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
       column-gap: 10px;
       row-gap: 15px;
+      justify-items: center;
     }
     
     .grid-item{
@@ -121,17 +125,14 @@ label{
   margin-bottom: 20px;
 }
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-}
+
+
 
 @media (min-width:768px) {
   .grid-container{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
+grid-template-rows: auto auto;
   }
 }
 
@@ -142,6 +143,102 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
     .grid-container{
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: auto auto auto auto;
+grid-template-rows: auto auto;
+    }
+.grid-item{
+  size: inherit;
+    }
+
+
+      .img{
+width: 100%;
+align-items: center;
+      }
 }
+.container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 48rem;
+}
+h3 {
+  font-size: 1.75rem;
+  color: #373d51;
+  padding: 1.3rem;
+  margin: 0;
+}
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion a:hover,
+.accordion a:hover::after {
+  cursor: pointer;
+  color: #ff5353;
+}
+.accordion a:hover::after {
+  border: 1px solid #ff5353;
+}
+.accordion a.active {
+  color: #ff5353;
+  border-bottom: 1px solid #ff5353;
+}
+.accordion a::after {
+  font-family: 'Ionicons';
+  content: '\f218';
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 1rem;
+  color: #7288a2;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+}
+.accordion a.active::after {
+  font-family: 'Ionicons';
+  content: '\f209';
+  color: #ff5353;
+ 
+}
+.accordion .content {
+  opacity: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+.accordion .content p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.accordion .content.active {
+  opacity: 1;
+  padding: 1rem;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
 }
