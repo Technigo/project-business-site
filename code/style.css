@@ -16,7 +16,7 @@ header {
   top: 6%;
   left: 4%;
   transform: translate(-50%, -50%);
-  width: 40px;
+  width: 80px;
 }
 
 .hero-slide {
@@ -29,7 +29,7 @@ header {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 36px;
+  font-size: 28px;
   color: #ffffff;
   margin: 0px;
 }
@@ -50,15 +50,14 @@ header {
   display: inline;
   top: 10px;
   right: 10px;
-  font-size: 22px;
+  font-size: 24px;
   color: #ffffff;
   margin: 10px;
   text-decoration: none;
 }
 
 .contact-link:hover  {
-  color: rgb(237, 215, 215);
-  font-weight: bolder;
+  color: black;
 }
 
 
@@ -134,10 +133,11 @@ header {
   display: inline-block;
   cursor: pointer;
   border-radius: 50%;
-  margin: 0 6px;
-  padding: 8px;
+  margin: 0 4px;
+  padding: 6px;
   background: white;
 }
+
 .slider > .dots label:hover:after {
   opacity: 1;
 }
@@ -161,7 +161,7 @@ header {
 
 /* ------SIGN-UP FORM STYLING ----- */
 form { 
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Open Sans Condensed', sans-serif;
   margin: 10px;
   font-size: 22px;
   display: flex;
@@ -175,6 +175,11 @@ form {
   margin: 5px 20px 5px 20px;
   font-size: 18px;
   font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.text-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
 }
 
 .message {
@@ -199,7 +204,7 @@ form {
 .radio-button {
     display: block;
     /* position: relative; */
-    margin: 0 20px;
+    margin-right: 20px;
     font-size: 16px;
     user-select: none;
   
@@ -214,11 +219,12 @@ form {
 
 fieldset {
   border-radius: 3%;
+  border-color: #000000c4;
 }
 
 
 .send-button {
-  font-size: 24px;
+  font-size: 32px;
   font-family: 'Dancing Script', cursive;
   width: 100%;
   height: 50px;
@@ -241,11 +247,12 @@ fieldset {
 }
 
 .question {
-font-size: 18px;
+font-size: 20px;
+font-weight: bold;
 background-color: rgb(237, 215, 215);
 /* border: 1px solid white; */
 margin: 10px 10px 0 10px;
-padding: 10px;
+padding: 20px;
 border-radius: 10px;
 }
 
@@ -256,17 +263,14 @@ border-radius: 10px;
   background-color: white;
   margin: 0 10px 10px 10px;
   padding: 10px;
+  border-radius: 12px;
 }
-
 
 .active + .answer {
   display: block;
-  height: 110px;
 }  
 
-#section4 {
-  margin-bottom: 30px;
-}
+
 
 
 /* ------FOOTER SECTION STYLING ----- */
@@ -357,17 +361,27 @@ margin: 0;
   color: orange;
 }
 
-.technigo :hover {
+.technigo:hover {
   color: blue;
 }
 
 
 
 /* ------MEDIA QUERY STYLING ----- */
+@media (min-width: 768px) {
+ 
+  
+}
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
 
+  fieldset {
+    height: 800px;
+  }
 
+  .container {
+display: flex;
+  };
 }
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
