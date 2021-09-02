@@ -28,8 +28,7 @@ Derivations:
 
 body {
   background-color: #fff;
-  font-family: 'Fira Sans', 'Arial', sans-serif;
-  font-family: 'Roboto', 'Arial', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
 }
 
@@ -48,20 +47,20 @@ body {
 .hero {
   position: fixed;
   width: 100%;
-  height: 80%;
+  height: 200px;
   text-align: center;
   overflow: hidden;
 }
 
 .hero .hero__overlay {
-    width: 100%;
-    height: 40%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 2;
-    background: #0f0f0f;
-    opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  background: #240747;
+  opacity: 0.5;
 }
 
 .hero__video {
@@ -74,24 +73,68 @@ body {
   object-fit: cover;
 }
 
-.hero__nav-container__nav-bar__nav-link {
-  display: none;
-}
-
 .hero__nav-container__logo {
   height: 10vw;
   width: auto;
   float: left;
+  z-index: 10;
 }
+
+.hero__nav-container__nav-bar__nav-link {
+  display: none;
+  padding: 15px 15px;
+  }
 
 .hero__contents {
   position: relative;
-  top: 15%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 1px 0 black;
+}
+
+.hero__contents__container__title {
+  font-size: 6vw;
+}
+
+.hero__contents__container__subtitle {
+  font-size: 4vw;
+}
+
+.hero__contents__container__cta-button {
+  margin: 1vw 20vh; 
+  padding: 1vw;
+  width: 20%;
+  font-size: 3vw;
+  border-radius: 60%;
+  background-color: rgba(255,255,255,0.2);
+  backdrop-filter: blur(15px);
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  white-space: nowrap;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 
+/* ----------------------------------------------- */
+/*                    ACCORDEON                    */
+/* ----------------------------------------------- */
+
+.accordion_question {
+  background-color: #c4c4c4;
+  color: #444;
+  cursor: pointer;
+  padding-top: 100px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
@@ -108,7 +151,11 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 /* Desktop */
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (min-width: 1366px) {
+
+  .hero {
+    height: 80vh;
+  }
 
   .hero__nav-container {
     display: flex;
@@ -117,8 +164,14 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     align-items: center;
   }
   
-  .nav-container__nav-bar__nav-link {
+  .hero__nav-container__nav-bar__nav-link {
     display: inline-block;
-    padding: 15px 15px;
+    color: #fff;
+    z-index: 10;
     }
+
+  .hero__contents {
+      top: 25%;
+  }
+
 }
