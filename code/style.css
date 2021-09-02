@@ -32,7 +32,7 @@ nav h2 {
 .logo {
   position: absolute;
   top: 6%;
-  left: 6%;
+  left: 4%;
   transform: translate(-50%, -50%);
   width: 40px;
 }
@@ -43,10 +43,10 @@ nav h2 {
   padding: 5px;
   display: inline;
 }
-
+/* 
 li {
   display: inline;
-}
+} */
 
 .hero-video {
   position: relative;
@@ -65,16 +65,51 @@ li {
   font-size: 24px;
   color: #ffffff;
   margin: 0px;
-
 }
 
+.contact-link {
+  position: absolute;
+  display: inline;
+  /* top: 10px; */
+  right: 10px;
+  font-size: 18px;
+  color: #ffffff;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.contact-link:hover  {
+  color: rgb(237, 215, 215);
+  font-weight: bolder;
+}
 
 /* ------SIGN-UP FORM STYLING ----- */
 form { 
   font-family: 'Dancing Script', cursive;
   margin: 10px;
   font-size: 22px;
-  
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  /* display: inline-block; */
+  width:85%;
+  padding: 10px;
+  margin: 5px 20px 5px 20px;
+  font-size: 18px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.message {
+  height: 80px;
+}
+
+.radio-age {
+  display: flex;
+  /* flex-direction: row;
+  width: 100%; */
+  margin-left: 20px;
 }
 
 .sign-up{
@@ -82,28 +117,45 @@ form {
   max-width: 700px;
   min-width: 400px;
   margin: auto;
+   padding: 20px;
 }
 
-label {
-  padding: 20px;
-  /* margin: 20px; */
+.radio-button {
+    display: block;
+    /* position: relative; */
+    margin: 0 20px;
+    font-size: 16px;
+    user-select: none;
+  
 }
+
+.checkbox {
+  margin-left: 20px;
+}
+.form-text {
+  padding: 0 20px;
+}
+
+
+
 
 .send-button {
   font-size: 24px;
   font-family: 'Dancing Script', cursive;
   width: 100%;
-  height: 40px;
+  height: 50px;
   margin: auto;
   background-color: rgb(237, 215, 215);
-  border: 1px solid white;
+  border: 1px solid transparent;
+
+
 }
 /* ------FAQ SECTION STYLING ----- */
 
 .accordion {
   width: 60%;
   max-width: 700px;
-min-width: 400px;
+  min-width: 400px;
   margin: auto;
   /* border: 1px solid white; */
   padding: 20px;
@@ -121,7 +173,7 @@ padding: 10px;
   overflow: hidden;
   display: none;
   font-size: 16px;
-  background-color: rgb(238, 234, 227);
+  background-color: rgb(238, 237, 234);
   border: 1px solid white;
   margin: 0 10px 10px 10px;
   padding: 10px;
@@ -158,7 +210,22 @@ footer a:hover {
 }
 
 
+/* ------MEDIA QUERY STYLING ----- */
+
+@media (min-width: 1200px) {
+
+
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+/* things to do 
+- contact link
+- media query
+- multiple heros & text 
+- footer
+- logo?
+- accordion +    */
 
