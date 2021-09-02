@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     
-    <title>Document</title>
+    <title>Rain check</title>
 </head>
 <body>
     
@@ -37,8 +37,8 @@
 
     <section class="container">
         <div class="form">
-          <h2>Your perfect rainy saturday</h2>
           <form action="https://httpbin.org/anything" method="post">
+            <h3>Your perfect rainy saturday</h3>
             <div class="form-box-radio">
                 <p class="radio-title">Early morning or sleep in?</p>
                 <label for="fav-time">Early morning</label>
@@ -72,15 +72,19 @@
                 <label for="orderin">Order food</label>
                 <input type="checkbox" id="order" name="order">
             </div>
+            <div class="form-button" >
+              <button type="submit">Save</button>
+            </div>
         </div>
         </form>
        
-        
+        <!--sign-up box-->
+
         <div class="signup-box">
              <!--makes it possible to scroll to here from "join us" link-->
             <div id="join"></div>
             <h3>Sign up here for...</h3>
-            <form id="form">
+            <form id="signup">
             <div class="gender"><p><strong>Gender</strong></p>
                 <label for="fmale">Female</label>
                 <input type="radio" id="fmale" name="gender">
@@ -97,15 +101,22 @@
                 <label for="Email">E-mail:</label>
                 <input type="email" required name="email" id="email" placeholder="example@hotmail.com">
                 <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Password">  
+                <input type="password" id="password" placeholder="Password">
+                <label for="age">Age</label>
+                <select name="age" id="age" class="age">
+                  <option class="bold" value="15-20">15-20</option>
+                  <option value="20-30">20-30</option>
+                  <option class="bold" value="30-40">30-40</option>
+                  <option value="40-50">40-50</option>
+                  <option class="bold" value="50">50+</option>
+                </select>  
             </div>
             <div class="terms">
                 <label for="terms">*I agree to let you rain on my parade</label>
                 <input type="checkbox" required id="terms" name="terms" class="terms">
             </div>
-            <div class="button" >
+            <div class="signup-button" >
                 <button type="submit">Sign up!</button>
-                
             </div>
             
             </form>

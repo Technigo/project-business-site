@@ -71,10 +71,7 @@ body {
 
 /* FORMS */
 
-.container, .signup-box, .form {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
+.signup-box, .form {
   color: white;
   text-shadow: -1px 1px black;
   padding: 10px 5px;
@@ -84,40 +81,73 @@ body {
   text-align: center;
   width: 90%;
   padding: 20px auto;
-  line-height: 1.6;
+  line-height: 1.6em;
   margin: 20px 20px;
   background-color: #4B6587;
   border: 2px solid orange;
   border-radius: 20px;
 }
 
+.form-button {
+  padding-top: 10px;
+}
+/* sign-up form */
+
 h3 {
-  padding-bottom: 10px;
+  text-align: center;
+  border-bottom: 2px solid white;
 }
 
 .signup-box {
-  margin: 20px 0;
+  margin: auto;
   border: 2px solid orange;
   border-radius: 20px;
+  width: 80%;
 }
 
 .signup-box label {
-  margin: 3px 0;
+  margin: 10px 0;
 }
 
-.signup-box input, .terms{
-  padding: 10px;
+input:focus {
+  background-color: lightgray;
+  border: 2px solid orange;
 }
 
-.radio-title, .checkbox-title {
+.signup-box input, .terms, .age, .gender{
+  padding: 10px 0;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.radio-title, .checkbox-title, .bold {
   font-weight: bold;
 }
 
-.form-box, .button {
+.form-box, .signup-button {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* both buttons */
+button {
+  border: 2px solid orange;
+  box-shadow: 2px 2px 2px black;
+  margin-bottom: 10px;
+}
+
+/* message when user registers */
+.greeting {
+  width: 150px;
+  height: 100px;
+  color: white;
+   text-align: center;
+   font-family: 'Oswald' , sans-serif;
+  margin: auto;
+  padding-top: 20px;
+  font-size: 1.3em;  
 }
 
 /* accordion */
@@ -125,89 +155,71 @@ h3 {
   margin: 20px auto;
   text-align: center;
   width: 90%;
-  border: 2px solid white;
   border-radius: 20px;
+  cursor: pointer;
 }
 
+/* header for FAQ */
 h4 {
   padding: 20px 0;
   text-transform: uppercase;
-  color: white;
   border: 2px solid white;
+  border-radius: 20px;
   background-color: #22577A;
-}
-
-.content-box {
-  margin: 0 auto;
-  position: relative;
+  color: orange;
+  text-shadow: -1px 1px black;
 }
 
 .label {
   margin: 0 auto;
   padding: 10px;
   cursor: pointer;
-  position: relative;
   color: white;
-  border: 2px solid white;
   background-color: #548CA8;
+  border: 2px solid white;
+  border-radius: 20px;
 }
 .label-dark {
   background-color: #22577A;
 }
 
-/* add the + on the label */ 
+/* add the + on the label before content is shown */ 
 .label::before {
 content: '+';
-position: absolute;
-top: 50%;
-right: 20px;
-transform: translateY(-50%);
-font-size: 1.5em;
+float: right;
+}
+
+/* changes to "-" when the content is shown */
+.content-box.active .label::before {
+  content: '-';
 }
 
 .content {
   position: relative;
-  overflow-y: auto;
   height: 0;
-  transition: 0.5s ease-in-out;
-  margin: 0 auto;
+  overflow-y: auto;
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
 }
+
 /* the content in the accordion when the label is pressed */
 .content-box.active .content {
   height: 120px;
   margin: 0 auto;
   text-align: center;
   padding: 20px 0;
-  border: 2px solid white;
-}
-/* shows a "-" when the content is shown */
-.content-box.active .label::before {
-  content: '-';
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  font-size: 1.5em;
+  background-color: white;
 }
 
-footer {
-  text-align: center;
-  background-color: #E7E0C9;
-}
-
-.terms {
-  text-align: center;
-}
-
-h3, .gender {
-  text-align: center;
-}
 
 footer {
   position: relative;
   bottom: 0;
   left: 0;
+  text-align: center;
+  background-color: #E7E0C9;
 }
+
 
 
 /* MEDIA QUERIES */
@@ -217,16 +229,9 @@ footer {
       font-size: 1.8em;
   }
 
-  .caption {
+  .caption, .form, .signup-box, .accordion {
+    margin: auto;
       font-size: 1.5em;
-  }
-
-  .form, .signup-box, .accordion {
-      font-size: 1.5em;
-  }
-
-  h2 {
-      height: 1em;
   }
 
   form input, button{
@@ -237,11 +242,6 @@ footer {
 /* desktop */
 
 @media (min-width: 1023px) {
-  .form, .signup-box {
-      height: 100%;
-      border: 2px solid white;
-      margin: 0;
-  }
 
   p.checkbox-title, .radio-title  {
       padding-top: 30px;
@@ -251,59 +251,19 @@ footer {
       margin-top: 10px;
   }
 
-  input:focus {
-      background-color: lightgray;
-  }
-
-  .caption p {
-      font-size: 18px;
-  }
-
   .container {
       display: grid;
       grid-template-columns: repeat(2, 50%);
-      background-color: #11324D;
-      margin: 0 30px;
+      margin: 0 20px;
   }
-
-
+/* accordion */
 
  .accordion-container {
      position: relative;
      padding-top: 30px;
-     display: flex;
-     height: 50vh;
-     width: 40%;
+     width: 50%;
      margin: 20px auto;
-    height: 100%;
+    border-radius: 20px;
  }
-
- .signup-box input {
-     padding: 5px;
- }
-
- .signup-box {
-     display: flex;
-     flex-direction: column;
-      align-items: center;
- }
-
- .content  {
-     border: 2px solid orange;
-     background-color: white;
-      padding: 0 10px;
-      font-size: 20px;
- }
-
- .greeting {
-     width: 150px;
-     height: 100px;
-     color: white;
-      text-align: center;
-      font-family: 'Oswald' , sans-serif;
-      
- }
-
- button {
-     margin-bottom: 10px;
- }
+ 
+}
