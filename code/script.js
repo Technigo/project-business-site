@@ -18,7 +18,7 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-const inputValue = document.getElementById('joinbtn')
+const inputValue = document.getElementById('joinbtn').onclick
 alert('🥳 J´adore DIOR!')
 
 
@@ -39,3 +39,5 @@ alert('🥳 J´adore DIOR!')
 function toggle() {
   section1.classList.toggle('active')
 }
+
+
