@@ -36,46 +36,59 @@
 
       <section class="inputs-wrapper">
         <label class="child-form-container" for="name">
-          <input class="input" id="name" type="text" name="name" placeholder="Name" value="" autocomplete="off"
-            required>
-          <div class="tip" id="tip">Some next will be placed here with details</div>
+          <input class="input custom-input" id="name" type="text" name="name" placeholder="Name" value=""
+            autocomplete="off" required>
+          <div class="tip" id="tip">&#128161 Example: Jane Ostin.</div>
         </label>
 
         <label class="child-form-container" for="email">
-          <input class="input" id="email" type="email" name="email" placeholder="Email" value="" autocomplete="none"
-            required>
-          <div class="tip" id="tip">Your contact email.</div>
+          <input class="input custom-input" id="email" type="email" name="email" placeholder="Email" value=""
+            autocomplete="none" required>
+          <div class="tip" id="tip">&#128161 Example: your_email@gmail.com</div>
         </label>
 
         <label class="child-form-container" for="phone">
-          <input class="input" id="phone" type="tel" name="phone" placeholder="Phone Number" value=""
+          <input class="input custom-input" id="phone" type="tel" name="phone" placeholder="Phone Number" value=""
             autocomplete="none" required>
-          <div class="tip" id="tip">Some next will be placed here with detailsill be placed here with details</div>
+          <div class="tip" id="tip">&#128161 Should contain at least 10 digit.</div>
         </label>
+      </section>
+
+      <section class="child-form-container">
+        <p>Please specify your location:</p>
+        <div class="radio-wrapper">
+          <label class="radio-style" for="europe">
+            <input type="radio" id="europe" name="radio" value="europe">Europe
+            <span class="mark"></span></label>
+
+          <label class="radio-style" for="usa">
+            <input type="radio" id="usa" name="radio" value="usa">USA
+            <span class="mark"></span></label>
+
+          <label class="radio-style" for="australia">
+            <input type="radio" id="australia" name="radio" value="australia">Australia
+            <span class="mark"></span></label>
+
+          <label class="radio-style" for="other">
+            <input type="radio" id="other" name="radio" value="other">Other
+            <span class="mark"></span></label>
+        </div>
       </section>
 
       <section class="child-form-container">
         <label class="checkbox-container" for="checkbox">
-          <div class="input checkbox"> <input id="checkbox" type="checkbox" name="checkbox" value="" autocomplete="none"
+          <div class="checkbox"> <input id="checkbox" type="checkbox" name="checkbox" value="" autocomplete="none"
               required checked> <span class="checkmark"></span></div>
           <div class="terms-message"><a href="#">I argee to the Terms & Conditions.</a></div>
         </label>
       </section>
-      <!-- 
-      <input type="radio" id="html" name="fav_language" value="HTML">
-  <label for="html">HTML</label><br>
-  <input type="radio" id="css" name="fav_language" value="CSS">
-  <label for="css">CSS</label><br>
-  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-  <label for="javascript">JavaScript</label> -->
 
-
-      <section class="child-form-container">
-        <div class="form-buttons-container">
-          <input class="form-button submit" type="submit" value="Submit">
-          <input class="form-button reset" type="reset">
+      <div class="child-form-container">
+        <div class="form-button-wrapper">
+          <button class="submit-button form-button">Submit</button>
+          <label for="reset"><input class="reset-button form-button" name="reset" id="reset" type="reset"></label>
         </div>
-      </section>
+      </div>
 
 
     </form>

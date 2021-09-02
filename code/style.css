@@ -1,361 +1,462 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+ body {
+   margin: 0;
+   font-family: 'Source Sans Pro', sans-serif;
+   background-color: white;
+   color: #333;
+ }
 
-body {
-  margin: 0;
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: white;
-  color: #333;
-}
+ a {
+   color: #333;
+ }
 
-a {
-  color: #333;
-}
+ /***************** Hero Video ****************/
 
-.hero-wrapper-container {
-  display: flex;
-  justify-content: center;
-  justify-self: stretch;
-  align-items: flex-start;
-}
+ .hero-wrapper-container {
+   display: flex;
+   justify-content: center;
+   justify-self: stretch;
+   align-items: flex-start;
+ }
 
-.hero-styling {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  object-fit: cover;
-  overflow: hidden;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  text-align: center;
-  background: black;
-}
+ .hero-styling {
+   width: 100%;
+   height: 100%;
+   position: relative;
+   object-fit: cover;
+   overflow: hidden;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   text-align: center;
+   background: black;
+ }
 
-.hero-inner-container {
-  display: flex;
-  flex: 1;
-}
+ .hero-inner-container {
+   display: flex;
+   flex: 1;
+ }
 
-.video {
-  flex: 1;
-}
+ .video {
+   flex: 1;
+ }
 
-.hero-video {
-  opacity: 0.8;
-}
+ .hero-video {
+   opacity: 0.8;
+ }
 
-.title-container {
-  position: absolute;
-}
+ .title-container {
+   position: absolute;
+ }
 
-.title h1 {
-  display: flex;
-  font-size: 3rem;
-  font-weight: 600;
-  margin-top: 9rem;
-  color: #fff;
-  letter-spacing: 0.2rem;
-  margin-bottom: 0;
-}
+ .title h1 {
+   display: flex;
+   font-size: 3rem;
+   font-weight: 600;
+   margin-top: 9rem;
+   color: #fff;
+   letter-spacing: 0.2rem;
+   margin-bottom: 0;
+ }
 
-/* Title styles for mobile and tablets */
+ /* Title styles for mobile and tablets */
 
-@media only screen and (max-width: 767px) {
-  .title h1 {
-    margin-top: 7rem;
-    font-size: 2rem;
-  }
-}
+ @media only screen and (max-width: 767px) {
+   .title h1 {
+     margin-top: 7rem;
+     font-size: 2rem;
+   }
+ }
 
-@media only screen and (max-width: 991px) and (min-width: 768px) {
-  .title h1 {
-    font-size: 2.5rem;
-  }
-}
+ @media only screen and (max-width: 991px) and (min-width: 768px) {
+   .title h1 {
+     font-size: 2.5rem;
+   }
+ }
 
-.title p {
-  width: 400px;
-  padding: 2rem;
-  margin: auto;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 500;
-}
+ .title p {
+   width: 400px;
+   padding: 2rem;
+   margin: auto;
+   color: #fff;
+   font-size: 2rem;
+   font-weight: 500;
+ }
 
-/* paragrah styles for mobile version */
+ /* paragrah styles for mobile version */
 
-@media only screen and (max-width: 767px) {
-  .title p {
-    font-size: 1.5rem;
-  }
-}
+ @media only screen and (max-width: 767px) {
+   .title p {
+     font-size: 1.5rem;
+   }
+ }
 
-.btn {
-  width: 200px;
-  border: 3px solid white;
-  padding: 1.2rem;
-  margin: 20px auto 0;
-  font-size: 1.5rem;
-  font-weight: 500;
-  background-color: rgba(255, 255, 255, 0.158);
-  color: #fff;
-}
+ .btn {
+   width: 200px;
+   border: 3px solid white;
+   padding: 1.2rem;
+   margin: 20px auto 0;
+   font-size: 1.5rem;
+   font-weight: 500;
+   background-color: rgba(255, 255, 255, 0.158);
+   color: #fff;
+ }
 
-.btn:hover {
-  cursor: url('pointer.png'), pointer;
-  transform: scale(1.2);
-  transition: 0.1s;
-  background-color: rgba(255, 255, 255, 0.336);
-}
+ .btn:hover {
+   cursor: url('pointer.png'), pointer;
+   transform: scale(1.2);
+   transition: 0.1s;
+   background-color: rgba(255, 255, 255, 0.336);
+ }
 
-@media only screen and (max-width: 767px) {
-  .btn {
-    font-size: 1rem;
-    padding: 0.5rem;
-    margin: 10px auto 0;
-    width: 150px;
-  }
-}
+ @media only screen and (max-width: 767px) {
+   .btn {
+     font-size: 1rem;
+     padding: 0.5rem;
+     margin: 10px auto 0;
+     width: 150px;
+   }
+ }
 
-.info-section-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: center;
-  margin-top: 50px;
-}
+ .info-section-wrapper {
+   display: flex;
+   flex-direction: row;
+   align-items: stretch;
+   justify-content: center;
+   margin-top: 50px;
+ }
 
-/* Mobile view for form and acardion / making them jump into a column */
+ /* Mobile view for form and acardion / making them jump into a column */
 
-@media only screen and (max-width: 767px) {
-  .info-section-wrapper {
-    flex-direction: column;
-    margin-top: 10px;
-  }
-}
+ @media only screen and (max-width: 767px) {
+   .info-section-wrapper {
+     flex-direction: column;
+     margin-top: 10px;
+   }
+ }
 
-.wrapper-container {
-  flex: 1 1 50%;
-  flex-direction: column;
-  margin: 20px 30px 50px 10px;
-  padding: 20px;
-  box-sizing: border-box;
-}
+ .wrapper-container {
+   flex: 1 1 50%;
+   flex-direction: column;
+   margin: 20px 30px 50px 10px;
+   padding: 20px;
+   box-sizing: border-box;
+ }
 
-/* Making space between form and accordion on Mobile view */
+ /* Making space between form and accordion on Mobile view */
 
-@media only screen and (max-width: 767px) {
-  .wrapper-container {
-    margin-top: 20px;
-  }
-}
+ @media only screen and (max-width: 767px) {
+   .wrapper-container {
+     margin-top: 20px;
+   }
+ }
 
-/* Form styling  */
+ /******************** Form styling  *******************/
 
-.child-form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+ form {
+   font-size: 0.8rem;
+ }
 
-.tip {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-flow: wrap;
-  box-sizing: border-box;
-  margin-top: 10px;
-  font-size: 0.8rem;
-  display: none;
-}
+ .child-form-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ }
 
-.focus .tip {
-  display: block;
-}
+ .tip {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   flex-flow: wrap;
+   box-sizing: border-box;
+   margin-top: 10px;
+   display: none;
+ }
 
-input {
-  margin-top: 20px;
-  max-width: 200px;
-  height: 1.5rem;
-  cursor: url('cursor.png'), pointer;
-}
+ .focus .tip {
+   display: block;
+ }
 
-.inputs-wrapper {
-  /* aligning the form */
-  margin-top: 10px;
-}
+ .input {
+   margin-top: 20px;
+   max-width: 300px;
+   height: 1.5rem;
+   width: 200px;
+   cursor: pointer;
+   /* border: 1px solid rgb(118, 118, 118);
+   border-radius: 4px; */
+   border: 2px solid teal;
+   border-radius: 4px;
+ }
 
-.terms-message {
-  display: block;
-  font-size: 0.8rem;
-  margin-left: 10px;
-  margin-top: 40px;
-}
+ .input:focus {
+   outline: none;
+ }
 
-.checkbox-container {
-  display: flex;
-  flex-direction: row;
-}
+ .inputs-wrapper {
+   margin-top: 10px;
+ }
 
-/* Custom checkbox */
+ .terms-message {
+   display: block;
+   margin-left: 10px;
+   margin-top: 40px;
+ }
 
-.checkbox {
-  margin-top: 38px;
-  display: block;
-  position: relative;
-  padding-left: 30px;
-  /* margin-bottom: 12px; */
-  cursor: url('cursor.png'), pointer;
-  font-size: 16px;
-  /* -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; */
-}
+ form p {
+   display: flex;
+   align-self: center;
+   justify-content: center;
+   margin-top: 40px;
+   margin-bottom: 0;
+ }
 
-.checkbox input {
-  position: absolute;
-  opacity: 0;
-}
+ /******* Custom Radio Buttons ********/
 
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 16px;
-  width: 16px;
-  background-color: #fff;
-  border: 1px solid rgba(51, 51, 51, 0.575);
-}
+ .radio-wrapper {
+   flex-direction: row;
+   margin-bottom: 0;
+   margin-top: 10px;
+ }
 
-.checkbox:hover input~.checkmark {
-  background-color: #f2f3f4;
-  border-color: teal;
-}
+ .radio-style {
+   display: block;
+   position: relative;
+   padding-left: 25px;
+   margin-top: 12px;
+   user-select: none;
+   cursor: pointer;
+ }
 
-/* glow on focus */
+ /* hide the default radio button */
 
-input:focus~.checkmark {
-  border-color: teal;
-  box-shadow: 0px 0px 4px teal;
-}
+ .radio-style input {
+   position: absolute;
+   opacity: 0;
+   height: 0;
+   width: 0;
+ }
 
-/* creation of indicator hidde when not checked */
+ /* Create a custom radio button */
 
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
+ .mark {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 16px;
+   width: 16px;
+   background-color: #eee;
+   border: 1px solid rgba(51, 51, 51, 0.575);
+   border-radius: 50%;
+ }
 
-/* showing the checkmark when checked */
+ /* On mouse-over, add a background color and new border color */
 
-.checkbox input:checked~.checkmark:after {
-  display: block;
-}
+ .radio-style:hover input~.mark {
+   background-color: #ccc;
+   border-color: teal;
+ }
 
-/* checkmark indicator */
+ /* When the radio button is checked: */
 
-.checkbox .checkmark:after {
-  left: 5px;
-  top: 1px;
-  width: 4px;
-  height: 8px;
-  border: 1px solid teal;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
+ .radio-style input:checked~.mark {
+   background-color: rgba(0, 128, 128, 0.404);
+   border-color: teal;
+   box-shadow: 0px 0px 4px teal;
+ }
 
-.form-buttons-container {
-  display: flex;
-  flex-direction: row;
-}
+ /* The indicator (the dot/circle - hidden when not checked) */
 
-.form-button {
-  display: flex;
-  align-self: center;
-  color: #333;
-  font-size: 0.9rem;
-  max-width: 100px;
-  margin-top: 20px;
-  cursor: url('cursor.png'), pointer;
-}
+ .mark:after {
+   content: "";
+   position: absolute;
+   display: none;
+ }
 
-.submit {
-  margin-right: 10px;
-}
+ /* Show the indicator (dot/circle) when checked */
 
-.reset {
-  margin-right: 10px;
-}
+ .radio-style input:checked~.mark:after {
+   display: block;
+ }
 
-/* accordion styles */
+ /* Style the indicator (dot/circle) */
 
-.accordion-inner-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+ .radio-style .mark:after {
+   top: 4px;
+   left: 4px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: #fff;
+ }
 
-.accordion-button-styling {
-  border: none;
-  background-color: rgba(255, 255, 255, 0.932);
-  cursor: url('cursor.png'), pointer;
-  padding: 18px 10px;
-  text-align: left;
-  outline: none;
-  transition: 0.4s;
-}
+ /****** Custom checkbox ******/
 
-.accordion h1 {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  font-weight: 500;
-}
+ .checkbox-container {
+   display: flex;
+   flex-direction: row;
+ }
 
-.active {
-  background-color: #bfedc1c0 !important;
-}
+ .checkbox {
+   margin-top: 38px;
+   display: block;
+   position: relative;
+   padding-left: 30px;
+   cursor: pointer;
+   font-size: 16px;
+ }
 
-.question:hover {
-  background-color: #bfedc1c0;
-}
+ .checkbox input {
+   position: absolute;
+   opacity: 0;
+ }
 
-.answer {
-  padding: 0 18px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
-}
+ /* creating a tick mark */
 
-.question:after {
-  content: '\02795';
-  font-size: 13px;
-  color: #777;
-  float: right;
-  margin-left: 5px;
-}
+ .checkmark {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 16px;
+   width: 16px;
+   background-color: #fff;
+   border: 1px solid rgba(51, 51, 51, 0.575);
+ }
 
-div.section:nth-child(odd) .question {
-  background-color: #dee2e6;
-}
+ .checkbox:hover input~.checkmark {
+   background-color: #ccc;
+   border-color: teal;
+ }
 
-div.section:nth-child(odd):hover .question {
-  background-color: #bfedc1c0;
-}
+ /* glow on focus */
 
-.active:after {
-  content: '\2796';
-}
+ input:focus~.checkmark {
+   border-color: teal;
+   box-shadow: 0px 0px 4px teal;
+ }
 
-.active+.answer {
-  display: inline-block;
-}
+ /* creation of indicator hidde when not checked */
+
+ .checkmark:after {
+   content: "";
+   position: absolute;
+   display: none;
+ }
+
+ /* showing the checkmark when checked */
+
+ .checkbox input:checked~.checkmark:after {
+   display: block;
+ }
+
+ /* checkmark indicator */
+
+ .checkbox .checkmark:after {
+   left: 5px;
+   top: 1px;
+   width: 4px;
+   height: 8px;
+   border: 1px solid teal;
+   border-width: 0 3px 3px 0;
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);
+ }
+
+ /******* Form buttons *******/
+
+ .form-button-wrapper {
+   display: flex;
+   flex-direction: row;
+ }
+
+ .form-button {
+   display: flex;
+   align-self: center;
+   color: rgba(51, 51, 51, 0.822);
+   max-width: 100px;
+   margin-top: 30px;
+   padding: 10px;
+   cursor: pointer;
+   border: 2px solid teal;
+   background-color: rgba(255, 255, 255, 0.555);
+ }
+
+ .form-button:hover {
+   transform: scale(1.2);
+   transition: 0.1s;
+ }
+
+ .submit-button {
+   margin-right: 20px;
+ }
+
+ .reset-button {
+   margin-right: 20px;
+ }
+
+ /****************** Accordion styles **************/
+
+ .accordion-inner-wrapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+
+ .accordion-button-styling {
+   border: none;
+   background-color: rgba(255, 255, 255, 0.932);
+   cursor: url('pointer.png'), pointer;
+   padding: 18px 10px;
+   text-align: left;
+   outline: none;
+   transition: 0.4s;
+ }
+
+ .accordion h1 {
+   display: flex;
+   align-self: center;
+   justify-content: center;
+   font-weight: 500;
+ }
+
+ .active {
+   background-color: teal !important;
+ }
+
+ .question:hover {
+   background-color: teal;
+ }
+
+ .answer {
+   padding: 0 18px;
+   background-color: white;
+   display: none;
+   overflow: hidden;
+ }
+
+ .question:after {
+   content: '\02795';
+   font-size: 13px;
+   color: #777;
+   float: right;
+   margin-left: 5px;
+ }
+
+ div.section:nth-child(even) .question {
+   background-color: #dee2e6;
+ }
+
+ div.section:nth-child(even):hover .question {
+   background-color: teal;
+ }
+
+ .active:after {
+   content: '\2796';
+ }
+
+ .active+.answer {
+   display: inline-block;
+ }
