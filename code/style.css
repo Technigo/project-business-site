@@ -4,7 +4,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 
 body {
-  background-color: rgb(244, 245, 238)
+  background-color: rgb(245, 240, 231);
   width: 100%;
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -13,14 +13,7 @@ body {
 .header {
   background-color:rgba(222, 223, 215, 0.924);
   position: relative;
-  width: 100%;
   text-align: center;
-  
-}
-
-.video-container {
-  position: relative;
-  
 }
 
 #hero {
@@ -89,7 +82,6 @@ body {
   justify-items: stretch;
   gap: 10px;
   padding: 5%;
-  
 }
 
 
@@ -111,12 +103,19 @@ body {
 }
 
 .form-labels {
-  margin-bottom: 20px;
+  margin: 0 20px 20px 20px;
+}
+
+.fieldset {
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  
 }
 
 .input {
   display: block;
-
 }
 
 input:valid {
@@ -132,12 +131,24 @@ select {
 }
 
 .radio-buttons {
-  display: inline-flex;
+  padding: 10px;
+}
+
+.radio-buttons > input {
+  display: inline;
 }
 
 #submit-button {
+  font-family: 'Poppins', sans-serif;
   width: 50%;
   margin: 20px auto;
+  border-radius: 5px;
+  height: 50px;
+}
+
+#submit-button:hover {
+  color: white;
+  background-color: slategray;
 }
 
 #submit-confirmation {
@@ -186,10 +197,6 @@ select {
   display:none;
 }
 
-.active {
-
-}
-
 .active + .answer {
   display: block;
 }
@@ -227,8 +234,7 @@ select {
   width: 100%;
   background-color: blanchedalmond;
   font-size: xx-small;
-  text-align: center;
-  
+  text-align: center;  
 }
 
 @media screen and (min-width: 667px) {
@@ -258,7 +264,6 @@ select {
     top: 30%;
     left: 18%;
   }
-
 
   .footer-nav {
     grid-template-columns:repeat(6, 1fr);

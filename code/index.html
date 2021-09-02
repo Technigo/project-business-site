@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
+    <title>The Grind</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,17 +17,16 @@
     <header class="header">
       <div class="video-container">
         <video
-        id="hero"
-        loop
-        muted
-        autoplay
-        preload="auto"
-        >
-          
+          id="hero"
+          loop
+          muted
+          autoplay
+          preload="auto"
+          >  
           <source src="./videos/production ID_3756153.mp4" type="video/mp4">
           <source src="./videos/FoodPack1_16_Videvo.mov" type="video/mp4">
           <source src="" type="video/">
-          <p>Your browser does not support video</p>
+          <p>Unfortunately your browser does not support video</p>
         </video>
       </div>
 
@@ -35,11 +34,7 @@
         <h1>The Grind</h1>
         <p>~fresh coffee to your door~</p>
       </div>
-
       
-
-      
-
       <nav class="nav-bar">
         <a href="">About</a>
         <a href="">Fair Trade Promise</a>
@@ -55,65 +50,102 @@
     </div>
 
     <main class="main-content">
-
-      
-      
+ 
       <form class="form" id="my-form" target="_blank" action="https://httpbin.org/anything" method="POST">
         <h1>Order now</h1>
 
-        <label class="form-labels">First name: 
-          <input
-            class="input"
-            type="text"
-            name="name"
-            placeholder="Sam"
-            required
-          />
-        </label>
+        <fieldset class="fieldset">
+          <legend>Personal Details</legend>
 
-        <label class="form-labels">Surname: 
-          <input
-            class="input"
-            type="text"
-            name="name"
-            placeholder="Smith"
-            required
-          />
-        </label>
-
-        <label class="form-labels">Email: 
-          <input
-            class="input"
-            type="email"
-            name="email"
-            placeholder="email@example.com"
-            required
-          />
-        </label>
-
-        <label class="form-labels">Coffee flavour:
-          <select name="size" id="">
-            <option value="1">El Sunzita, Red Bourbon, El Salvador</option>
-            <option value="2">Kamwangi</option>
-            <option value="3">Las Delicias, Natural Java, Nicaragua</option>
-            <option value="4">Wote, Washed, Ethiopia</option>
-            <option value="5">Limoncillo Washed, Nicaragua</option>
-            <option value="6">Carmelita, Anaerobic Caturra, Bolivia</option>
-          </select>
-        </label>
-
-        <label class="form-labels">Quantity: 
-          <input
-            class="input"
-            type="number"
-            name="quantity"
-            required
-          />
-        </label>
-
-        <label class="form-labels">Whole or ground beans:
-          <div class="radio-buttons">
+          <label class="form-labels">
+            First name: 
             <input
+              class="input"
+              type="text"
+              name="name"
+              placeholder="Sam"
+              required
+            />
+          </label>
+
+          <label class="form-labels">
+            Surname: 
+            <input
+              class="input"
+              type="text"
+              name="name"
+              placeholder="Smith"
+              required
+            />
+          </label>
+
+          <label class="form-labels">
+            Email: 
+            <input
+              class="input"
+              type="email"
+              name="email"
+              placeholder="email@example.com"
+              required
+            />
+          </label>
+
+          <label class="form-labels">
+            Password: 
+            <input
+              class="input"
+              type="password"
+              name="password"
+              placeholder="password"
+              required
+            />
+          </label>
+
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend>Coffee</legend>
+
+          <label class="form-labels">
+            Coffee blend:
+            <select name="size" id="">
+              <option value="1">
+                El Sunzita, Red Bourbon, El Salvador
+              </option>
+              <option value="2">
+                Kamwangi
+              </option>
+              <option value="3">
+                Las Delicias, Natural Java, Nicaragua
+              </option>
+              <option value="4">
+                Wote, Washed, Ethiopia
+              </option>
+              <option value="5">
+                Limoncillo Washed, Nicaragua
+              </option>
+              <option value="6">
+                Carmelita, Anaerobic Caturra, Bolivia
+              </option>
+            </select>
+          </label>
+
+          <label class="form-labels">
+            Quantity: 
+            <input
+              class="input"
+              type="number"
+              name="quantity"
+              required
+            />
+          </label>
+
+      </fieldset>
+
+        <fieldset class="fieldset">
+          <legend>Whole or ground beans</legend>
+          <div class="radio-buttons">
+            <input 
               class="input"
               type="radio"
               name="bean"
@@ -127,11 +159,12 @@
               name="bean"
               id="whole"
             />
-            <label for="whole">Whole</label>
-          </div> 
-        </label>
+            <label for="whole">Whole</label> 
+          </div>  
+        </fieldset>
 
-        <label class="form-labels">I have understood the terms and conditions 
+        <label class="form-labels">
+          I have understood the terms and conditions 
           <input
             class="input"
             type="checkbox"
@@ -140,7 +173,8 @@
           />
         </label>
 
-        <label class="form-labels">I would like to receive email updates from The Grind
+        <label class="form-labels">
+          I would like to receive email updates from The Grind
           <input
             class="input"
             type="checkbox"
@@ -148,7 +182,6 @@
           />
         </label>
         
-
         <button type="submit" id="submit-button">
           Add to cart
         </button>
@@ -226,16 +259,16 @@
       <a href="">About</a>
       <a href="">Fair Trade Promise</a>
       <a href="">Our Products</a>
-      <a href="">Subscription Service</a>
+      <a href="">Subscription Sersvice</a>
       <a href="">Our Partners</a>
       <a href="">Contact</a>
     </footer>
 
     <footer class="small-print">
-      <p>Video by cottonbro from Pexels</p>
-      <p>Photo by Lood Goosen from Pexels</p> 
+      <p>The Grind is an imaginary business created by Sarah Mottram (https://github.com/smelbows/) with bean desriptions stolen shamelessly from https://www.dropcoffee.com/</p>
+      <p>Video by cottonbro from Pexels and Photo by Lood Goosen from Pexels</p>> 
     </footer>
-    <!-- dont forget to link the javascript file here! -->
+
     <script src="./script.js"></script>
   </body>
 </html>

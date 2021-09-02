@@ -3,11 +3,11 @@ const myButton = document.getElementById("submit-button")
 const submitConfirmation = document.getElementById("submit-confirmation")
 
 myForm.onsubmit = () => {
-  alert("One item added to your basket")
+  alert("Items added to your basket")
 }
 
 myButton.onclick = () => {
-  submitConfirmation.innerText = "Thank you, your form has been submitted"
+  submitConfirmation.innerText = "Thank you, your order has been submitted"
   
 }
 
