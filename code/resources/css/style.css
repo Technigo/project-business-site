@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+COLOR PALETTE: 
+
+Main colors: 
+
+Dark purple: #240747;
+Red: #eb2632; 
+
+Derivations: 
+
+#bc1c34
+#74143c
+#5b11b5
+#ff4989
+#000000
+
+*/
+
+/* ----------------------------------------------- */
+/*                GLOBAL COMPONENTS                */
+/* ----------------------------------------------- */
+
+body {
+  background-color: #fff;
+  font-family: 'Fira Sans', 'Arial', sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  color: #fff;
+}
+
+/* ----------------------------------------------- */
+/*                REUSABLE COMPONENTS              */
+/* ----------------------------------------------- */
+
+/* ----------------------------------------------- */
+/*                    HEADINGS                     */
+/* ----------------------------------------------- */
+
+/* ----------------------------------------------- */
+/*                    HEADER                       */
+/* ----------------------------------------------- */
+
+.hero {
+  position: fixed;
+  width: 100%;
+  height: 80%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero .hero__overlay {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    background: #0f0f0f;
+    opacity: 0.5;
+}
+
+.hero__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  object-position: center;
+  object-fit: cover;
+}
+
+.hero__nav-container__nav-bar__nav-link {
+  display: none;
+}
+
+.hero__nav-container__logo {
+  height: 10vw;
+  width: auto;
+  float: left;
+}
+
+.hero__contents {
+  position: relative;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+.active + .answer {
+  /* some styling here */
+}
+
+
+/* ----------------------------------------------- */
+/*                  MEDIA QUERIES                  */
+/* ----------------------------------------------- */
+
+/* Desktop */
+
+@media only screen and (max-width: 1366px) {
+
+  .hero__nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-container__nav-bar__nav-link {
+    display: inline-block;
+    padding: 15px 15px;
+    }
+}
