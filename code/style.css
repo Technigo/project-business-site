@@ -16,7 +16,7 @@ header {
   top: 6%;
   left: 4%;
   transform: translate(-50%, -50%);
-  width: 80px;
+  width: 50px;
 }
 
 .hero-slide {
@@ -50,7 +50,7 @@ header {
   display: inline;
   top: 10px;
   right: 10px;
-  font-size: 24px;
+  font-size: 20px;
   color: #ffffff;
   margin: 10px;
   text-decoration: none;
@@ -93,7 +93,6 @@ header {
   z-index: 1;
   font-size: 0;
   line-height: 0;
-  border: 5px solid #ffffff;
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
@@ -232,9 +231,12 @@ fieldset {
   background-color: rgb(237, 215, 215);
   border: 1px solid transparent;
   border-radius: 15px;
-
-
 }
+.send-button:hover {
+  background-color: #F4DFD0;
+}
+
+
 /* ------FAQ SECTION STYLING ----- */
 
 .accordion {
@@ -254,6 +256,22 @@ background-color: rgb(237, 215, 215);
 margin: 10px 10px 0 10px;
 padding: 20px;
 border-radius: 10px;
+}
+
+.question:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active, .question:hover {
+  background-color: #F4DFD0;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 .answer {
@@ -304,9 +322,9 @@ color: black;
 margin: 0 0 30px 0;
 }
 
-.footer-content h3:hover {
+/* .footer-content h3:hover {
   color: rgb(133, 85, 120);
-}
+} */
 
 .fa {
   padding: 5px;
@@ -349,8 +367,8 @@ margin: 0 0 30px 0;
   width: 100px;
   margin: 0;
   filter: brightness(0%);
- 
-}
+ }
+
 .footer-info {
 padding: 0;
 margin: 0;
@@ -369,11 +387,18 @@ margin: 0;
 
 /* ------MEDIA QUERY STYLING ----- */
 @media (min-width: 768px) {
- 
-  
+
 }
 
 @media (min-width: 1200px) {
+
+  .logo {
+    position: fixed;
+    top: 6%;
+    left: 4%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+  }
 
   fieldset {
     height: 800px;
