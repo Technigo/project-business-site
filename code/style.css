@@ -1,8 +1,9 @@
 body {
   margin: 0;
+  padding: 0;
   width: 100%;
   box-sizing: border-box;
-  background-color:  #adebeb;
+  background-color: white;
 }
 
 header {
@@ -28,7 +29,7 @@ header > h1 {
 }
 
 .sign-up {
-  border: 1px solid blue;
+  border: 1px solid #005580;
   width: 300px;
   margin: 50px auto;
   padding: 10px;
@@ -47,31 +48,40 @@ input {
 }
 
 .accordion {
-  border: 1px solid cadetblue;
+  border: 1px solid #005580;
+  border-radius: 4%;
   width: 300px;
   margin: 30px auto;
 }
 
 .accordion > h1 {
   margin-bottom: 1.5rem;
-  margin-left: 2rem;
+  margin-left: 2rem; 
+}
+
+.accordion-question {
+  margin: 1rem 2rem;
+  box-shadow: 3px 5px 2px grey;
+  padding: 0.2rem;
 }
 
 .question {
-  margin: 2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
 }
 
  .answer {
-  margin-top: 2rem;
-  margin-left: 2rem;
+  background-color: tomato;
   display: none;
+  
 }
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
-  background-color: darkgray;
   color: black;
   display: block;
 }
