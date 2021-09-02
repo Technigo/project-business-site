@@ -1,8 +1,10 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+The assignment was to build a one-page business site with a sign-up form and accordion. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+- Use image or video in the header, for responsive webpages
+- How to use HTML forms and simple requests
+- How to modify the DOM using Javascript
 
 ## The problem
 
