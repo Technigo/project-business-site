@@ -1,30 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Bussiness Site</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cortico Vox</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+<body>
+  <!-- video or image as a header is cool :) -->
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1>Cortico Vox</h1>
+      <p>Discover new wavelengths of music</p>
+    </div>
+  </div>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+  <!-- Signup form -->
+  <div class="form-faq">
+    <div class="form">
+      <form action="https://httpbin.org/anything" method="POST">
+        <h2>Sign up for music</h2>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <label for="name" class="name">
+          <input class="signup-name" type="text" id="name" name="name" placeholder="Name" />
+        </label>
+
+        <label for="email" class="email">
+          <input class="signup-email" type="email" id="email" name="email" placeholder="E-mail" />
+        </label>
+
+        <label for="phonenumber" class="phonenumber">
+          <input class="signup-phonenumber" type="number" id="phonenumber" name="phonenumber"
+            placeholder="Phone number" />
+        </label>
+
+        <label for="electronica" class="electronica">
+          <input type="radio" id="electronica" name="genre" />Electronica
+          <span class="radiobtn"></span>
+        </label>
+
+        <label for="minimal" class="minimal">
+          <input type="radio" id="minimal" name="genre" />Minimal
+          <span class="radiobtn"></span>
+        </label>
+
+        <label for="techno" class="techno">
+          <input type="radio" id="techno" name="genre" />Techno
+          <span class="radiobtn"></span>
+        </label>
+
+        <br>
+
+        <label for="terms" class="terms">
+          <input type="checkbox" id="terms" name="terms" />I accept the terms and conditions
+          <span class="termsbtn"></span>
+        </label>
+
+        <br>
+
+        <button class="sub-button">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="faq">
+      <section class="accordion">
+        <!-- Accordion -->
+        <h2>Frequently Asked Questions</h2>
+
+        <button class="question one" id="section1">How do I subscribe?</button>
+        <div class="answer" id="answer1">
+          <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast
+            quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon
+            starboard grog black jack gangway rutters.</p>
+        </div>
+
+        <button class="question two" id="section2">When will I get my first delivery?</button>
+        <div class="answer" id="answer2">
+          <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast
+            quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon
+            starboard grog black jack gangway rutters.</p>
+        </div>
+
+        <button class="question three" id="section3">How much does it cost?</button>
+        <div class="answer" id="answer3">
+          <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast
+            quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon
+            starboard grog black jack gangway rutters.</p>
+        </div>
+
+        <button class="question four" id="section4">Will I get a verification e-mail?</button>
+        <div class="answer" id="answer4">
+          <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast
+            quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon
+            starboard grog black jack gangway rutters.</p>
+        </div>
+    </div>
+
     </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+  </div>
+  <!-- dont forget to link the javascript file here! -->
+  <script src="./script.js"></script>
+</body>
+
+<footer>
+  <p>Created by Anna D.</p>
+</footer>
+
 </html>
