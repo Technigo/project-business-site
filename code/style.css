@@ -5,15 +5,19 @@ body {
   margin: 0;
 }
 
+header {
+  max-height: 350px;
+}
+
 .hero-parent {
   width: 100%;
-  height: 100%;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   /* text-align: center; */
-  background-image:url('./images/llama-mobile.jpg');
+  background-image:url('./images/llama.jpg');
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
@@ -29,6 +33,7 @@ h1 {
   font-size: 4em;
   color: #FFFCFC;
   margin-bottom: 0;
+  margin-top: 150px;
 }
 
 h2 {
@@ -36,34 +41,49 @@ h2 {
   margin-top: 0;
 }
 
+
 .boxes {
   display: flex;
   align-items: center;
   background-color: rgba(198, 193, 193, 0.8);;
-  border-radius: 8px;
-  margin: 30px auto;
+  /* border-radius: 8px; */
+    /* make it centered with the auto, but width is needed */
+  /* margin: 30px auto;*/
+  margin: 50px;
   padding: 40px;
-  width: 80%;
+  /*width: 80%; */
 }
-
-/* .accordion {
-  background-color: rgba(198, 193, 193, 0.8);;
-  border-radius: 8px;
-  /* make it centered with the auto, but width is needed */
-  /* margin: 30px auto;
-  padding: 10px;
-  width: 80%;
-} */
 
 label {
   display: block;
-  margin: 5px 0;
+  margin: 20px 0 0;
+  color: #262223;
 }
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+.checkbox {
+  display:flex;
+  align-items: flex-end;
+  font-size:smaller;
+  margin-bottom: 15px;
+}
 
+::placeholder {
+  opacity: 0.4;
+}
+
+button {
+  /* box-shadow: 1px 2px; */
+  color: #262223;
+  border: 0,5px solid black;
+}
+
+button:hover {
+  /* box-shadow: 0px 0px; */
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Display the accordion when its not active */
 .active + .description {
   display: block;
 }
@@ -74,9 +94,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 /* Selects every <p> element that is the first child of its parent */
-/* p:nth-child(1) {
+p:nth-child(1) {
   background-color: #FFFCFC;
-} */
+} 
 /* Selects all divs inside menu-class */
 /* div.menu {
 
@@ -85,6 +105,20 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 /* Adding styling for tablets*/
 @media (min-width: 668px) and (max-width: 1024px) {
 }
+
+/* .hero-parent {
+  width: 100vW;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 50px; */
+  /* text-align: center; */
+  /* background-image:url('./images/llama.jpg');
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */ 
 /* header {
   display: none;
 }
