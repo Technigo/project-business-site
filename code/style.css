@@ -49,6 +49,7 @@ h2 {
   background-color: rgb(247, 217, 216);
   position: sticky;
   top: 0;
+  z-index: 99; /*makes it appear above all other elements*/
 }
 
 .nav1, .nav2, .nav3, .nav4, .nav5 {
@@ -121,10 +122,15 @@ form {
 }
 
 .textbox {
-  border: 1px solid rgba(138, 56, 19, 0.911);
+  border: 1px solid brown;
   height: 20px;
   width: 190px;
   background-color: rgb(247, 217, 216);
+}
+
+::placeholder {
+  color: brown;
+  opacity: 1; /* Firefox */
 }
 
 h4 {
@@ -159,10 +165,6 @@ h4 {
   width: 150px;
   margin-left: 34%;
   font-weight: 200;
-}
-
-.radiobutton {
-  margin: 3px 3px 3px 4px;
 }
 
 button {
