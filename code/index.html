@@ -24,7 +24,7 @@
     <!-- HERO BACKGROUND PARENT -->
 
   <div id="hero">
-   <video loop muted autoplay preload="auto">
+   <video loop muted autoplay playsinline="auto">
     <source src="videolarge.mp4" media="screen and (min-width:800px)">
     <source src="videolarge.mp4" media="screen and (min-width:800px)">
     <source src="videosmall.mp4" media="screen and (max-width:799px)">
@@ -41,7 +41,7 @@
     <ul>
       <li><a href="https://www.itsreleased.com/about">About</a></li>
       <li><a href="https://www.itsreleased.com/closet/featured">The Closet</a></li>
-      <li><a href="https://www.itsreleased.com/about">FAQ</a></li>
+      <li><a href="https://www.itsreleased.com/how-to">FAQ</a></li>
     </ul>
   </nav>
 
@@ -55,29 +55,36 @@
       <h1>Become a Fashion Friend</h1>
 
       <!--TEXT INPUTS-->
-
+    <div class="formInput">
       <label class="userName" for="name">Username:</label>
       <input type="text" id="name" name="username" placeholder="choose a username"required> 
-      
+    </div>
+
+    <div class="formInput">
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" placeholder="your email"required> 
+    </div>
 
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" placeholder="choose a password" required>
 
 
       <!-- terms and conditions + newsletter select boxes here!!-->
+
+    <div class="selectBoxes"> 
+
       <label class="termsAndConditions" for="terms-and-conditions">I agree with terms & conditions</label>
       <input type="checkbox" name="terms-and-conditions" id="terms-and-conditions">
 
       <label for="newsletter">I want to recieve Friendly News</label>
       <input type="checkbox" name="newsletter" id="newsletter">
 
+    </div>
 
   <!--SUBMIT BUTTON-->
 
-   <div class="Button">
-    <input class="submitButton" type="submit" value="Sign Up">
+   <div class="button">
+    <input class="submitButton" type="submit" value="Subscribe">
     </div>
 
   </form>   
@@ -87,20 +94,33 @@
      
     <h1>Frequently Asked Questions</h1>
 
+  <div id="question1">
     <div class="question" id="section1">What is Friendly Fashion?</div>
     <div class="answer">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  </p>
+      <p>Friendly Fashion is a clothing rental service.</p>
     </div>
+  </div>
 
+  <div id="question2">
     <div class="question" id="section2">Why rent?</div>
     <div class="answer">
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut .</p>
+      <p>Europe throws away 2,080,544 tonnes of unused clothes every year. Renting is a great way to decrease your climate imprint.</p>
     </div>
+  </div>
 
-    <div class="question" id="section2">How does it work?</div>
+<div id="question3">
+    <div class="question" id="section3">How does it work?</div>
     <div class="answer">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,  </p>
+      <p>Step 1. Choose items from our closet. Step 2. Our bike Messenger will deliver your items to your door. We also pickup at your door. 3. Switch items whenever you please.</p>
     </div>
+  </div>
+
+  <div id="question4">
+    <div class="question" id="section4">How much does it cost?</div>
+    <div class="answer">
+      <p>Our monthly fee is 600kr. Cancel or pause your subscription whenever you want.</p>
+    </div>
+  </div>
 
 
   </section>
@@ -115,7 +135,6 @@
     </section>
     
   </div>
- 
-    <!-- dont forget to link the javascript file here! -->
+ <script src="script.js"></script>
   </body>
 </html>

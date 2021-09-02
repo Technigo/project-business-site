@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 #hero {
@@ -11,7 +12,7 @@ body {
 }
 
 #hero video {
-  width: 150%;
+  width: 100%;
   height: 150%;
   object-fit: cover;
   position: absolute;
@@ -31,16 +32,14 @@ body {
   justify-content: center;
   margin: auto;
   font-family: permanent marker;
-  font-size: 30px;
+  font-size: 36px;
   margin-top: 20px;
-  color: white;
+  color: #FAF7B9;
 }
 
 /* NAVBAR */
 
 .navbar {
-  background-color: none;
-  color: white;
   width: 100vw;
   margin: auto;
   padding: 6%;
@@ -65,7 +64,7 @@ li {
 }
 
 li a {
-  color: white;
+  color: #FAF7B9;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
@@ -80,6 +79,8 @@ li a {
 }
 
 
+/* FORMS CONTAINER */
+
 .forms {
   display: flex;
   flex-direction: column;
@@ -88,13 +89,34 @@ li a {
   padding: 5%;
   width: 70vw;
   font-size: 12px;
-  background-color: lavender;
+  background-color: #E0D4FE;
   opacity: 0.95;
   position: relative;
   z-index: 20;
   border-radius: 5%;
+}
+
+label, input {
+  display: block;
+  margin: 2%;
+}
+
+selectBoxes {
+  display: inline;
+  padding-top: 10px;
+}
+
+.submitButton {
+  background-color: #FAF7B9;
+  padding: 3%;
+  margin-top: 5%;
+  border: solid;
+  border-width: 1px;
+  border-color: #9D98FA;
   
 }
+
+/* ACCORDION CONTAINER */
 
 .accordion {
   display: flex;
@@ -104,12 +126,45 @@ li a {
   margin-bottom: 8%;
   padding: 5%;
   width: 70vw;
-  color: black;
-  background-color: lavender;
+  background-color: #E0D4FE;
   opacity: 0.95;
   position: relative;
   z-index: 20;
   border-radius: 5%;
+}
+
+.question {
+  background-color: #FAF7B9;
+  padding: 5%;
+  border:solid;
+  border-width: 1px;
+  border-color: #9D98FA;
+  font-weight: 600;
+}
+
+.answer {
+  line-height: 1.5;
+  background-color: #FAF3EB;
+  border:solid;
+  border-width: 1px;
+  border-color: #9D98FA;
+  padding: 5%;
+}
+
+#question1, #question2, #question3, #question4 {
+  margin: 2%;
+  width: 200px;
+}
+
+
+/* JAVASCRIPT */
+
+.answer {
+  display: none;
+}
+
+.active + .answer {
+  display: block;
 }
 
 /* FOOTER */
@@ -118,12 +173,16 @@ li a {
   font-family: Permanent Marker;
   width: 80vw;
   margin: auto;
+  padding: 10%;
+  margin-top: 20px;
   font-size: 18px;
-  color: white;
+  color: #FAF7B9;
+  background-color: #E0D4FE;
   position: relative;
-  text-align: center;
   z-index: 20;
 }
+
+
 
 
 /* --------!!! MEDIA QUERIES !!!-------------- */
@@ -149,7 +208,6 @@ li a {
 
 .navbar {
   background-color: none;
-  color: white;
   margin: auto;
   padding: 3%;
   position: relative;
@@ -171,7 +229,6 @@ li {
 }
 
 li a {
-  color: white;
   font-size: 26px;
   font-weight: 600;
   text-decoration: none;
@@ -183,30 +240,34 @@ li a {
   .flexParent {
     display: flex;
     flex-direction: row;
-    width: 70vw;
+    width: 80vw;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 5%;
   }
   
   .forms {
     display: flex;
     flex-direction: column;
-    margin-right: 2%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    margin-right: 3%;
     margin-bottom: 5%;
-    padding: 4%;
-    width: 50vw;
-    height: 90wh;
+    padding: 3%;
+    width: 60vw;
+    height: 70wh;
   }
   
   .accordion {
     display: flex;
     flex-direction: column;
-    margin: auto;
-    margin-top: 15%;
-    margin-left: 2%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: 3%;
     margin-bottom: 5%;
     padding: 3%;
-    width: 90vw;
+    width: 60vw;
     height: 70wh;
   }
   
@@ -214,11 +275,8 @@ li a {
   
   .footer {
     padding-top: 8%;
-    margin-top: 10%;
-    position: relative;
-    z-index: 20;
-    font-size: 26px;
-    color: white;
+    margin-top: 5%;
+    font-size: 24px;
   }
 
 }
@@ -263,37 +321,39 @@ li a {
   
     .flexParent {
       flex-direction: row;
-      width: 80vw;
+      width: 90vw;
       margin: auto;
-      padding-top: 15%;
+      padding-top: 5%;
     }
     
     .forms {
-     margin-left: 10%;
-      margin-right: 5%;
-      padding: 9%;
-      width: 50vw;
-      height: 70wh;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5%;
+      margin-left: 10%;
+      margin-right: 3%;
+      padding: 2%;
+      width: 30vw;
+      height: 40wh;
     }
     
     .accordion {
-     
-      margin-top: 10%;
-      margin-left: 5%;
+
+      justify-content: center;
+      align-items: center;
+      margin-top: 5%;
+      margin-left: 3%;
       margin-bottom: 5%;
-      padding: 8%;
-      width: 90vw;
-      height: 70wh;
+      padding: 1%;
+      width: 30vw;
+      height: 10wh;
     }
     
     /* FOOTER */
     
     .footer {
       padding-top: 10%;
-      position: relative;
-      z-index: 20;
-      font-size: 28px;
-      color: white;
+      font-size: 32px;
     }
   
   }
