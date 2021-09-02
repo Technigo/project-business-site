@@ -1,7 +1,342 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+}
 
-.active + .answer {
-  /* some styling here */
+body {
+  max-width: 100vw;
+  font-family: "Merriweather", serif;
+  background-color: hsl(213, 12%, 83%);
+}
+
+.header-top {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-brand {
+  font-family: "Special Elite", cursive;
+  padding: 4vh 3vh;
+  display: inline-block;
+  font-size: 1.75em;
+  color: rgb(0, 0, 0, 0.88);
+}
+
+.header-hero {
+  min-height: 100vh;
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  background-color: rgba(104, 102, 102, 0.35);
+  position: fixed;
+  z-index: 100;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-links a {
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(0, 0, 0, 0.88);
+  background-color: rgb(189, 219, 227);
+  position: relative;
+}
+
+.nav-icon {
+  position: absolute;
+  right: 1rem;
+  top: 1.2rem;
+  font-size: 2em;
+  color: rgb(0, 0, 0, 0.88);
+  z-index: 1;
+}
+
+.nav-icon.active {
+  transform: rotate(90deg);
+}
+
+.nav-icon.active + .nav-links {
+  display: block;
+}
+
+.video-box {
+  z-index: -1;
+}
+
+video {
+  min-height: 100vh;
+  max-width: 100vw;
+  height: auto;
+  width: auto;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.header-desktop-video {
+  display: none;
+}
+
+main {
+  width: 100%;
+}
+/* accordion */
+.accordion-box {
+  max-height: 140vh;
+  height: auto;
+  padding: 2rem 0;
+}
+
+.accordion {
+  max-width: 80%;
+  width: auto;
+  margin: 2rem auto;
+  background-color: rgb(249, 249, 251);
+  border-radius: 2rem;
+  box-shadow: 0.3rem 0.3rem rgb(0, 0, 0, 0.15);
+  padding: 2rem 0;
+}
+
+.accordion h2 {
+  text-align: center;
+}
+
+.accordion-items {
+  color: rgb(0, 0, 0, 0.88);
+  margin: 1rem 0;
+}
+
+.accordion-question {
+  min-height: 1.5rem;
+  line-height: 1.25rem;
+  font-size: 0.85em;
+  padding: 1em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-bottom: 3px solid rgb(189, 219, 227);
+}
+
+/* creates a plus sign */
+.accordion-question:after {
+  content: "\002B";
+  font-size: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* creates a minus sign for active */
+.accordion-question.active:after {
+  transform: rotate(45deg);
+}
+
+/* hides the answers if not active */
+/* .accordion-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+} */
+
+.accordion-answer {
+  display: none;
+  padding: 1.2rem;
+  line-height: 1.2rem;
+  font-style: italic;
+  border-top: 3px solid rgb(189, 219, 227);
+}
+
+/* shows the sibling immediately next to question if question is active */
+.accordion-question.active + .accordion-answer {
+  display: block;
+}
+
+.form-box {
+  min-height: 80vh;
+  height: auto;
+  max-width: 100%;
+  background-image: url(photos/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 2rem 0;
+}
+
+form h2 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+form {
+  max-width: 65%;
+  width: auto;
+  padding: 2rem;
+  min-height: 62vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(249, 249, 251, 0.95);
+  border-radius: 2rem;
+  margin: 2rem auto;
+  box-shadow: 0.3rem 0.3rem rgb(0, 0, 0, 0.15);
+}
+
+label,
+input,
+.form-button {
+  font-size: 1em;
+  font-family: "Merriweather", serif;
+  margin: 0.5rem 0;
+  color: rgb(0, 0, 0, 0.88);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  font-style: italic;
+}
+
+.terms {
+  font-size: 0.75em;
+  display: inline;
+  text-align: center;
+}
+
+.form-button {
+  border: 5px solid rgb(189, 219, 227);
+  border-radius: 0.5rem;
+  background-color: rgb(249, 249, 251);
+  padding: 1rem 0;
+}
+
+footer {
+  max-height: 20%;
+  background-color: hsl(213, 12%, 83%);
+  padding: 0 10vw;
+}
+
+footer h2 {
+  font-family: "Special elite", cursive;
+  padding: 1rem 0;
+}
+
+.address {
+  padding-right: 9rem;
+}
+
+.arrow-up-box {
+  width: 5rem;
+  margin: 0 auto;
+}
+
+a.arrow-up {
+  color: rgb(249, 249, 251);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .header-mobile-video {
+    display: none;
+  }
+
+  .header-desktop-video {
+    display: block;
+  }
+
+  body {
+    width: 70vw;
+    margin: 0 auto;
+    max-height: 100vh;
+  }
+
+  .header-brand {
+    font-size: 3em;
+  }
+
+  nav {
+    width: 70vw;
+    height: 8vh;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    position: relative;
+    top: -3rem;
+    align-items: baseline;
+  }
+
+  .nav-links > * {
+    flex-basis: 100%;
+  }
+
+  video {
+    max-width: 70vw;
+    width: auto;
+    min-height: 50vh;
+  }
+
+  .header-hero {
+    min-height: 50vh;
+  }
+
+  .form-box {
+    min-height: 50vh;
+  }
+
+  form {
+    min-height: 36vh;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .accordion-box {
+    background-image: url("photos/desktop-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .accordion {
+    background-color: rgb(249, 249, 251, 0.95);
+  }
+
+  footer {
+    display: flex;
+  }
+
+  footer > * {
+    flex-basis: 100%;
+  }
+
+  footer h2 {
+    font-size: 2em;
+    padding: 2rem 2rem;
+  }
+
+  .address {
+    padding: 1rem 0 0 9rem;
+  }
 }

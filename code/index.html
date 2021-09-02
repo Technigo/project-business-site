@@ -3,28 +3,183 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Business Website</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <!-- create video or image as a header-->
+    <header class="header-hero"  role="banner">
+      <div class="header-top">
+        <nav>
+          <a href="">
+            <h1 class="header-brand" id="home">Laboratorie</h1>
+          </a>
+          <div class="nav-icon" id="nav">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="nav-links">
+            <a href="">FAQ</a>
+            <a href="">Follow us</a>
+            <a href="">Join here</a>
+          </div>
+        </nav>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <!-- supplies an image file as placeholder until video plays
+         supplies an image if browser can't display the video -->
+      <div class="video-box">
+        <video
+          class="header-mobile-video"
+          autoplay
+          muted
+          poster="photos/mobile-photo.jpg"
+        >
+          <source src="videos/mobile-hero-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <video
+          class="header-desktop-video"
+          autoplay
+          muted
+          poster="photos/desktop-photo.jpg"
+        >
+          <source src="videos/desktop-hero-video.mp4" type="video/mp4" />
+          <source src="videos/desktop-hero-video-webm.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+    </div>
+    </header>
+
+    <main>
+      <section class="accordion-box">
+        <!-- Accordion -->
+
+        <div class="accordion">
+          <h2>FAQ</h2>
+          <div class="accordion-items">
+            <div class="accordion-question" id="section1">
+              What is Organic Chemistry?
+            </div>
+            <div class="accordion-answer">
+              <div class="accordion-answer-content">
+                <p>
+                  So you've actually never been to a real school before? Shut
+                  up!
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-items">
+              <div class="accordion-question" id="section2">
+                How much is the course?
+              </div>
+              <div class="accordion-answer">
+                <div class="accordion-answer-content">
+                  <p>
+                    Twice the larger of two numbers is three more than five
+                    times the smaller and the sum of four times the larger and
+                    three times the smaller is 71.
+                  </p>
+                </div>
+              </div>
+          </div>
+
+          <div class="accordion-items">
+            <div class="accordion-question" id="section3">
+              What should I wear?
+            </div>
+            <div class="accordion-answer">
+              <div class="accordion-answer-content">
+                <p>
+                  On Mondays: Wear colored shoes On Tuesdays: Wear shirts with
+                  slogans On Wednesdays: Wear pink On Fridays: Wear jeans or
+                  track pants • Never wear strappy shoes with a mini-skirt.
+                  Don't wear hoop earrings.
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Signup form -->
+      <section class="form-box">
+        <form action="http://httpbin.org/anything" method="POST">
+          <h2>Sign up here!</h2>
+          <label for="name">
+            Name:
+            <input type="text" id="name" name="name" placeholder="Name" />
+          </label>
+          <label for="email">
+            E-mail:
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@gmail.com"
+              required
+            />
+          </label>
+          <label for="phoneNumber">
+            Phone Number
+            <input
+              type="tel"
+              pattern="[0][7][0-9]{1}-[0-9]{4}-[0-9]{3}"
+              maxlength="10"
+              required
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="070-0000-000"
+            />
+          </label>
+          <label class="terms" for="terms">
+            <input
+              class="checkbox"
+              type="checkbox"
+              id="scales"
+              name="scales"
+              checked
+            />
+            Grool! I agree to the Terms & Condition
+          </label>
+          <button class="form-button" type="submit" value="sign-up">
+            Sign-up
+          </button>
+        </form>
+      </section>
+    </main>
+
+      <footer>
+        <h2>Laboratorie</h2>
+        <div class="social-media-icons">
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+        </div>
+        <div class="address">
+          1 Kätleen, 111 11 Stockholm, Sweden 08-111-11
+        </div>
+      </footer>
+
+      <div class="arrow-up-box">
+        <a href="" class="arrow-up">
+          &#8673
+        </a>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+      <script src="script.js"></script>
   </body>
 </html>
