@@ -1,9 +1,9 @@
 function toggle() {
-	const questions = document.getElementsByClassName('question'); // Array reference to all elements with the class question
+	const questions = document.getElementsByClassName('question'); // Array reference to all elements with the class 'question'
 
-	/* A loop that goes through each element in question above, checks if the element contains
-	the clas 'active' and does not have the same id as the clicked elements.
-	If this is the case, then remove the class 'active' from element */
+	/* A loop that goes through each element in questions array above, checks if the element contains
+	the class 'active' and does not have the same id as the clicked elements.
+	If this is the case, then it removes the class 'active' from element */
 	for (let i = 0; i < questions.length; i++) {
 		const question = questions[i];
 		if (question.classList.contains('active') && question.id !== this.id) {
@@ -31,7 +31,7 @@ document.getElementById('form').addEventListener('submit', (event) => {
 	const formContainer = document.getElementById('form-container');
 
 	// changeing the DOM
-	greetingMessage.innerHTML = `<h1>Välkommen</h1><h1>${name}</h1>`;
+	greetingMessage.innerHTML = `<h1>See you there,</h1><h1>${name}</h1>`;
 	greetingContainer.style.display = 'inherit';
 	formContainer.style.display = 'none';
 });
