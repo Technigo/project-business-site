@@ -10,6 +10,7 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  background-color: #297F55;
 }
 
 /* HEADER & NAVIGATION */
@@ -52,9 +53,6 @@ nav a {
   background-size: 100%;
   background-repeat: no-repeat;
   background-color:  #297F55;
-
-
-  border: 3px solid #297F55;
   
 }
 
@@ -81,25 +79,19 @@ nav a {
   display: flex;
   align-items: flex-end;
   text-align: justify;
-
-
 }
 
 
-.subscription-form {
+.subscription-form, .accordion {
   max-width: 375px;
-  height: 530px;
+  height: 530px;          /* Form takes up only 80% of the height on mobile */
   border-radius: 20px 20px 0 0;
-  box-sizing: border-box;
   padding: 20px;
   font-size: 16px;
   font-weight: 400;
   margin-top: 10px;
   background-color: whitesmoke;
   opacity: 0.9;
-
-
-  border: 1px solid #297F55;
 }
 
 
@@ -153,39 +145,41 @@ nav a {
 
 /* Accordion */
 
-.accordion {
-  width: 100%;
+
+.accordion-section {
   height: 667px;
-  background-color:  #297F55;
-
-
-  border: 3px solid #297F55;
+  width: 100%;
+  background-image: url(./images/lantern_small.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  text-align: justify;
 }
 
+
+
 .accordion h2 {
-  color: yellow;
+  color: #297F55;
   margin-left: 5px; 
   font-size: 40px;
 }
 
-.question {
+.accordion div {
   margin: 0;
   padding: 5px;
-  background-color: grey;
-
-
-  border: 1px solid green;
+  border: 1px solid #297F55;
+  border-radius: 5px;
 }
 
-.question::after {
+/* .question::after {          makes a plussign after the question, but I can't manage to change to minus on click later        
   content: '+';
   font-size: 30px;
   font-weight: bold;
   float: right;
-}
+} */
 
 .answer {
-  margin: 0;
   background-color: lightgray;
   display: none;
 
@@ -228,6 +222,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
   .head-container {
     background-image: none;
+    height: 768px;
   }
 
   .head-container video {
@@ -242,7 +237,11 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     font-size: 100px;
   }
 
-  .subscription-form {
+  .form-section {
+    background-image: url(./images/Buddha_img\(big\).jpg);
+  }
+
+  .subscription-form, .accordion {
     height: 100%;
     border-radius: 0;
   }
@@ -251,6 +250,18 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     margin-top: 50px;
     height: 40px;
     width: 35%
+  }
+
+  .accordion-section {
+    background-image: url(./images/lantern_big.jpg);
+  }
+
+}
+
+
+@media (min-width: 1025px) {
+  .form-section, .accordion-section {
+    display: none;
   }
 }
   
