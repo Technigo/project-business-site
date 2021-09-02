@@ -2,96 +2,121 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-body {
+* {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.active + .answer {
-  /* some styling here */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(210, 189, 228);
 }
 
 video {
   width: 100%;
 }
-
 .overlay-text {
   position: absolute;
   top: 25vw;
   margin-left: 20px;
   z-index: 1;
 }
-
-.top-text-a,
-.top-text-b {
+.top-text {
   color: white;
-  align-self: center;
-}
-
-.top-text-a {
   font-size: 5vw;
 }
 
-.top-text-b {
-  font-size: 3vw;
-  margin-left: 20px;
+/* Form */
+.form-container {
+  /* same as accordian-container, double code atm */
+  background-color: rgb(237, 199, 255);
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding-bottom: 2rem;
+  line-height: 2rem;
 }
-
-.forms {
+.form-boxes {
   display: flex;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
-
-.sign-up {
-  color: rgb(41, 14, 66);
-  text-align: center;
-}
-
-.form {
-  background-color: rgb(134, 83, 201);
-  display: inline-block;
-  text-align: center;
-  width: 400px;
-  margin-top: 10px;
-  padding: 10px;
-}
-
-label,
 button {
   display: block;
-  margin: 10px 0;
-  color: rgb(39, 10, 66);
+  margin: 0 auto; /* Måste ändra det här på nåt sätt.. vill lägga till margin top! */
 }
 
-.radio-buttons,
-.check-boxes {
-  display: flex;
-  align-items: baseline;
+h2 {
+  text-align: center;
+  padding-top: 2rem; /* la till för FAQ texten i lådan är konstig ;( */
+  margin: 2rem 0;
+  font-size: 2rem;
 }
 
-.button {
-  border: none;
-  display: inline-block;
-  padding: 5px 10px;
-  background-color: rgb(191, 125, 245);
+p {
+  padding-top: 1.2rem;
 }
 
-.accordion-container {
-  display: flex;
-  justify-content: center;
-}
-
+/* Accordion */
 .accordion {
-  background-color: rgb(134, 83, 201);
-  margin: 20px;
-  width: 400px;
-  padding: 10px;
+  background-color: rgb(237, 199, 255);
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+.question {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  background-color: rgb(173, 135, 222);
+  color: #111;
+  margin: 1rem 0;
+}
+.question::after {
+  content: "\25BC"; /* CSS entity for triangle down */
+  font-size: 1.2rem;
+  position: absolute;
+  right: 1rem;
+}
+.question.active::after {
+  content: "\25B2"; /* CSS entity for triangle up */
+}
+.answer {
+  display: none;
+  padding: 1rem;
+  line-height: 1.5rem;
+  background-color: rgb(238, 217, 250);
+  border-top: 2px solid rgb(210, 189, 228);
+}
+.active {
+  background-color: rgb(117, 94, 218);
+  content: "\25B2";
+}
+.active + .answer {
+  display: block;
 }
 
+/* Footer */
 footer {
   background-color: rgb(134, 83, 201);
   width: 100%;
   padding: 10px;
   text-align: center;
 }
+
+/* @media (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
