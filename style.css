@@ -1,21 +1,23 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-
 * {
   margin: 0% 0%;
   padding: 0% 0%;
   overflow-x: hidden;
 }
 
-.container{
+.container {
   display: grid;
   height: 130rem;
 }
 
 
-header {
+
+
+
+
+/* HEADER - Trying implement BEM-tags for block, element and modifier*/
+
+
+.header-block {
   grid-area: header;
   position: relative;
   display: flex;
@@ -23,7 +25,7 @@ header {
   align-items: center;
 }
 
-audio {
+.header-block__audio {
   position: absolute;
   width: 25vw;
   margin-left: 75vw;
@@ -32,149 +34,132 @@ audio {
   background-color: rgb(237, 243, 243);
 }
 
-#video-hero {
+.header-block__video {
   position: fixed;
   z-index: -10;
 }
 
-#hero-text-div {
+.header-block__text {
   position: fixed;
   z-index: -9;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 20px rgb(98, 143, 135);
 }
 
-#hero-text {
-  color: rgb(255, 255, 255);
+.header-block__text__h1 {
   font-size: 20vw;
-  text-shadow: 0 0 20px rgb(98, 143, 135);
-  
 }
 
-#hero-text-p{
-  text-decoration:line-through 2px;
-  color: rgb(255, 255, 255);
+.header-block__text__p {
+  text-decoration: line-through 2px;
   font-size: 5vw;
-  text-shadow: 0 0 20px rgb(98, 143, 135);
   margin: -4% 0 0 40%;
   letter-spacing: 20px;
-
 }
 
 
 
 
 
-.fieldset{
-
-margin: 1% 0% 0 1%;
-border: none;
-position: relative;
 
 
-}
+/* FORM & ACCORDIAN */
 
 
 
- 
+/* FORM */
+
+.fieldset {
+  margin: 1% 0% 0 1%;
   
+  position: relative;
+}
 
-  .radioallitems{
-position: relative;
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+#form__fieldset{
+border: none;
+margin: 1%;
+}
 
-   margin: 1% 0 1% 2%;
 
-   overflow: hidden;
+.radioallitems {
+  position: relative;
+  height: 100%;
+  width: 120%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 
-  }
+  margin: 1% 0 1% 2%;
 
-.radiocontainer{
+  overflow: hidden;
+}
+
+.radiocontainer {
   height: 100%;
   width: 100%;
   display: block;
   overflow: hidden;
 }
-  
 
-
-  .containerradio input {
-   
-    opacity: 0;
-    cursor: pointer;
-    height: 10%;
-    width: 10%;
-    margin: 2% 0 2.9% 0;
-   
-    
-  }
-  
-  
-  .radiobtn {
-
-    position: absolute;
-    left: 0;
-    height: 11%;
-    width: 2%;
-    background-color:rgba(100, 99, 99, 0.651);
-    border-radius: 50%;
-    margin: 1% 0% 0% 0%;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .containerradio:hover input ~ .radiobtn {
-    background-color: rgb(90, 86, 86);
-    box-shadow: 0 0 2px black;
-  }
-  
-  /* When the radio button is checked, add a blue background */
-  .containerradio input:checked ~ .radiobtn {
-    background-color: #359273a8;
-    
-  }
-  
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .radiobtn:after {
-    content: "";
-    position: absolute;
-    display: none;
-   
-  }
-  
-  /* Show the indicator (dot/circle) when checked */
-  .containerradio input:checked ~ .radiobtn:after {
-    display: block;
-  }
-  
-  /* Style the indicator (dot/circle) */
-  .containerradio .radiobtn:after {
-    
-  margin: 15% 25%;
-  height: 60%;
-  width: 54%;
-    border-radius: 60%;
-    background: rgb(147, 226, 206);
-    
-  }
-  
-
-
-
-.radio-btn-text{
-font-size: 1.3vh;;
-position: absolute;
-
-margin: -5% 0% 0% 3%;
+.containerradio input {
+  opacity: 0;
+  cursor: pointer;
+  height: 10%;
+  width: 10%;
+  margin: 2% 0 2.9% 0;
 }
 
 
+/* Radio buttons */
+
+.radiobtn {
+  position: absolute;
+  left: 0;
+  height: 12%;
+  width: 1.8%;
+  background-color: rgba(100, 99, 99, 0.651);
+  border-radius: 50%;
+  margin: 0.8% 0% 0% 0%;
+}
+
+.containerradio:hover input ~ .radiobtn {
+  background-color: rgb(90, 86, 86);
+  box-shadow: 0 0 2px black;
+}
+
+.containerradio input:checked ~ .radiobtn {
+  background-color: #359273a8;
+}
+
+.radiobtn:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.containerradio input:checked ~ .radiobtn:after {
+  display: block;
+}
+
+.containerradio .radiobtn:after {
+  margin: 19% 21%;
+  height: 60%;
+  width: 56%;
+  border-radius: 60%;
+  background: rgb(147, 226, 206);
+}
+
+.radio-btn-text {
+  font-size: 1em;
+  position: absolute;
+
+  margin: -5% 0% 0% 3%;
+}
 
 
+/* form - contact information */
 
 .form-div {
-  
   background-color: rgba(255, 255, 255, 0.39);
   grid-area: form;
   color: rgb(20, 58, 52);
@@ -183,105 +168,82 @@ margin: -5% 0% 0% 3%;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .signup-form {
   display: block;
   overflow: hidden;
   margin: 1vw 10vw;
-
   backdrop-filter: blur(10px);
-  background-color:#ffffff44;
+  background-color: rgba(219, 235, 231, 0.671);
 }
-
-
 
 .form-text {
   font-weight: bolder;
   font-family: "Lato", sans-serif;
-
-
-  
 }
 
 .text-form {
   margin: 0% 0 0% 2%;
-  
+  font-size: 5em;
 }
 
 .contact-information {
   margin: 2% 0% 0% 2%;
- 
-  
 }
 
-input[type="text"],[type="email"],[type="tel"],[type="password"] {
+input[type="text"],
+[type="email"],
+[type="tel"],
+[type="password"] {
   align-content: center;
   width: 50%;
   display: block;
   margin-top: 0.5%;
   padding: 1%;
-  color:  rgb(24, 63, 56);
+  color: rgb(24, 63, 56);
   font-weight: bold;
   border: 1px solid rgb(9, 31, 27);
   background-color: rgba(163, 192, 187, 0.37);
 }
 
-input:valid{
-    
+input:valid {
   background-color: rgba(60, 158, 112, 0.336);
-  
-  
 }
 
-input:invalid{
-
+input:invalid {
   background-color: rgba(158, 60, 60, 0.226);
+}
 
-
-} 
-
-input:focus{
+input:focus {
   outline: none;
   border: 3px dotted rgb(100, 100, 102);
   color: rgb(22, 56, 52);
   font-weight: bolder;
-  
-  
-
 }
 
 
-
-
+/* Checkbox - did try a diffrent way to style these (used a other method on the radio-btn)*/
 
 input[type="checkbox"] {
-	appearance: none;
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-	background-clip: content-box;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-clip: content-box;
   background-color: rgba(100, 99, 99, 0.651);
   border: 1px solid rgba(100, 99, 99, 0.651);
 }
 
 input[type="checkbox"]:hover {
-	background-color: rgba(51, 48, 48, 0.842);
+  background-color: rgba(51, 48, 48, 0.842);
   border: 1px solid rgba(63, 61, 61, 0.747);
 }
 
-
-
 input[type="checkbox"]:checked {
- 
   background-color: rgba(89, 207, 172, 0.644);
   border: 3px solid #2a6d55a8;
 }
-
-
-
-
 
 input[type="submit"] {
   background-color: rgb(25, 85, 75);
@@ -297,11 +259,18 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: rgb(17, 58, 51);
   transform: scale(95%);
-  cursor:cell;
+  cursor: cell;
 }
 
+
+
+
+
+
+/* ACCORDIAN */
+
+
 .accordion-div {
- 
   background-color: rgba(255, 255, 255, 0.39);
   grid-area: accordion;
   color: rgb(232, 241, 240);
@@ -310,91 +279,73 @@ input[type="submit"]:hover {
   display: flex;
   justify-content: center;
   align-items: center;
- 
-
 }
 
 .accordion-form {
   backdrop-filter: blur(10px);
-  background-color: rgba(219, 235, 231, 0.219);
+  background-color: rgba(219, 235, 231, 0.671);
   display: block;
   overflow: hidden;
   margin: 1vw 10vw;
   font-weight: bold;
   font-family: "Lato", sans-serif;
- 
-  
- 
 }
 
 .top-according {
-  background-color:#ffffff31;
+  background-color: #ffffff31;
   border-bottom: 0.5px solid rgba(11, 37, 33, 0.657);
   position: relative;
   display: flex;
   justify-content: center;
-  color:  rgb(24, 63, 56);
-  
-  
- 
+  color: rgb(24, 63, 56);
 }
 
-.accordion{
-  color:  rgb(24, 63, 56);
+.accordion {
+  color: rgb(24, 63, 56);
   line-height: 170%;
-  background-color:#ffffff44;
- position: relative;
- border-bottom: 0.5px solid rgba(11, 37, 33, 0.418);
- cursor:cell;
+  background-color: #ffffff44;
+  position: relative;
+  border-bottom: 0.5px solid rgba(11, 37, 33, 0.418);
+  cursor: cell;
   padding: 2%;
+}
 
-
- }
-
- .accordion:after {
-  content: '\002B';
+.accordion:after {
+  content: "\002B";
   color: rgb(36, 83, 76);
   font-weight: bold;
   float: right;
   padding: 0 1%;
-  
-  
 }
 
 .accordion.active:after {
   content: "\2212";
 }
- 
- 
- .accordion.active{
-  
+
+.accordion.active {
   border-radius: 4px 4px 0 0;
-  cursor:zoom-out;
-  
- }
+  cursor: zoom-out;
+}
 
-
-
-
-  .answer{
-    overflow: hidden;
-    opacity: 0;
-    max-height: 0;
+.answer {
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0;
   backdrop-filter: blur(20px);
   transition: 0.2s ease-out;
 }
 
-.answer.show{
-opacity: 1;
-max-height:500px;
-color:  rgb(7, 20, 18);
-line-height: 170%;
-border-bottom: 0.5px solid rgba(11, 37, 33, 0.418);
-cursor: pointer;
-backdrop-filter: blur(20px);
-background-color: rgba(98, 143, 135, 0.137);
-padding: 2%;
-transition: 0.3s ease-in-out;
+.answer.show {
+  opacity: 1;
+  max-height: 500px;
+  color: rgb(7, 20, 18);
+  line-height: 170%;
+  border-bottom: 0.5px solid rgba(11, 37, 33, 0.418);
+  cursor: pointer;
+  backdrop-filter: blur(20px);
+  background-color: rgba(98, 143, 135, 0.137);
+  padding: 2%;
+  transition: 0.3s ease-in-out;
 }
 
 
@@ -402,46 +353,43 @@ transition: 0.3s ease-in-out;
 
 
 
-footer {
-  grid-area:footer;
+
+
+/* FOOTER */
+
+
+.footer-div {
+  grid-area: footer;
   backdrop-filter: blur(4px);
   background-color: rgba(91, 102, 100, 0.466);
- text-align: center;
- 
-
+  text-align: center;
 }
 
-footer p{
-margin: 0.5%;
-  color:  rgb(255, 255, 255);
-  text-shadow: 0 0 1px rgb(2, 34, 26), 
-  0 0 2px rgb(200, 255, 242),
-  0 0 3px rgb(25, 85, 75), 
-  0 0 5px rgb(25, 85, 75);
+.footer-div p {
+  margin: 0.5%;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 1px rgb(2, 34, 26), 0 0 2px rgb(200, 255, 242),
+    0 0 3px rgb(25, 85, 75), 0 0 5px rgb(25, 85, 75);
   font-family: "Lato", sans-serif;
   font-weight: bold;
   overflow: hidden;
   transition: 0.2s ease-in-out;
 }
-footer p:hover{
-  
-  transform: scale(93%); }
+.footer-div p:hover {
+  transform: scale(93%);
+}
 
-i{
+i {
   overflow: hidden;
-
- 
 }
-footer span{
-padding: 1%;
-text-shadow: 0 0 2px rgb(2, 34, 26);
+.footer-div span {
+  padding: 1%;
+  text-shadow: 0 0 2px rgb(2, 34, 26);
 }
 
-footer a{
-text-decoration: none;
-color: rgb(255, 255, 255);
-
-
+.footer-div a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
 
@@ -451,7 +399,11 @@ color: rgb(255, 255, 255);
 
 
 
-/*  Phone  */
+
+/* MEDIA QUERIES */
+
+
+/*  PHONE  */
 
 @media (min-width: 0) and (max-width: 767px) {
   .container {
@@ -459,12 +411,14 @@ color: rgb(255, 255, 255);
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 2fr 2.5fr 2fr 0.06fr;
     grid-template-areas:
-    "header header header header"
-    "form form form form"
-    "accordion accordion accordion accordion"
-    "footer footer footer footer";
+      "header header header header"
+      "form form form form"
+      "accordion accordion accordion accordion"
+      "footer footer footer footer";
   }
- 
+
+
+  /* form */
 
   input[type="text"],
   [type="email"],
@@ -473,13 +427,7 @@ color: rgb(255, 255, 255);
   [type="user"] {
     padding: 1%;
     width: 50%;
-    
   }
-
-
-
-
-  
 
   .signup-form {
     margin: 1vw 2vw 0vw 2vw;
@@ -491,18 +439,16 @@ color: rgb(255, 255, 255);
     font-size: 1.9vw;
   }
 
-
-
   input[type="checkbox"] {
     appearance: none;
     width: 10px;
     height: 10px;
-
-    }
-
+  }
 
 
-  .accordion-div{
+/* accordion */
+
+  .accordion-div {
     align-items: flex-start;
   }
 
@@ -510,44 +456,26 @@ color: rgb(255, 255, 255);
     margin: 1vw 2vw 0vw 2vw;
     background-color: rgba(219, 235, 231, 0.849);
     width: 99%;
-    
   }
 
-
-  .top-according{
-
+  .top-according {
     padding: 2%;
     font-size: 1.9vw;
   }
-  
- .accordion{
-  
-  
+
+  .accordion {
     font-size: 2vw;
-    
-    
-    }
+  }
 
-    .answer{
-      
-  
-        font-size: 1.6vw;
-        
-        
-        }
-
-    }
- 
-  
+  .answer {
+    font-size: 1.6vw;
+  }
+}
 
 
 
 
-
-
-
-
-/*  Tablett  */
+/*  TABLETT  */
 
 @media (min-width: 767px) and (max-width: 991px) {
   .container {
@@ -557,14 +485,12 @@ color: rgb(255, 255, 255);
     grid-template-areas:
       "header header header header"
       "form form form form"
-    "accordion accordion accordion accordion"
+      "accordion accordion accordion accordion"
       "footer footer footer footer";
-
   }
 
 
-  
-
+/* form */
 
   .signup-form {
     margin: 1vw 10vw 0vw 10vw;
@@ -573,11 +499,33 @@ color: rgb(255, 255, 255);
     display: flex;
     justify-content: flex-start;
     align-content: center;
-
-
   }
 
-  .accordion-div{
+  input[type="text"],
+  [type="email"],
+  [type="tel"],
+  [type="password"],
+  [type="user"] {
+    padding: 2%;
+    width: 90%;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    width: 12.5px;
+    height: 12.5px;
+  }
+
+
+  .form-text {
+    font-size: 1.6vw;
+    width: 100vw;
+  }
+
+
+  /* accordion */
+
+  .accordion-div {
     display: flex;
     align-items: flex-start;
   }
@@ -586,78 +534,50 @@ color: rgb(255, 255, 255);
     margin: 1vw 10vw 1vw 10vw;
     width: 100%;
     background-color: rgba(219, 235, 231, 0.849);
-    
   }
 
-  .form-text {
-    font-size: 1.6vw;
-    width: 100vw;
-    
-  }
-
-  input[type="text"],
-  [type="email"],
-  [type="tel"],
-  [type="password"],
-  [type="user"] {
-    padding: 2%;
-    width: 90%;
-    
-  }
-
-
-  input[type="checkbox"] {
-    appearance: none;
-    width: 12.5px;
-    height: 12.5px;
-
-    }
-
-
-  .top-according{
-
+  .top-according {
     padding: 2%;
     font-size: 1.8vw;
   }
-  
-  .accordion{
-  
-  font-size: 2vw;
-  
-  
+
+  .accordion {
+    font-size: 2vw;
   }
-  
-  .answer{
-  
+
+  .answer {
     font-size: 1.5vw;
-    
-    
-    }
-
-
-
+  }
 }
 
-/*  Desktop  */
+
+
+
+
+/*  DESKTOP  */
 
 @media (min-width: 992px) {
-  
-.container {
-  height: 135rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 2.5fr 3fr 0.1fr;
-  grid-template-areas:
-    "header header header header"
-    "form form accordion accordion"
-    "footer footer footer footer";
-}
+  .container {
+    height: 135rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2.5fr 3fr 0.1fr;
+    grid-template-areas:
+      "header header header header"
+      "form form accordion accordion"
+      "footer footer footer footer";
+  }
 
-  audio {
+
+/* header */
+
+  .header-block__audio {
     width: 20vw;
     margin-left: 80vw;
   }
 
+
+/* form */
 
   input[type="text"],
   [type="email"],
@@ -666,35 +586,15 @@ color: rgb(255, 255, 255);
   [type="user"] {
     padding: 1%;
     width: 40%;
-    
   }
 
-  
-
-.form-div{
-grid-area: form;
-  align-items: flex-start;
-padding-top: 10%;
-}
-
-  .signup-form {
-    margin: 1vw 3vw 0vw 3vw;
-    width: 90%;
-  }
-
-
-
-  
-
-  .accordion-div {
-      grid-area: accordion;
+  .form-div {
+    grid-area: form;
     align-items: flex-start;
     padding-top: 10%;
-  
   }
 
-
-  .accordion-form {
+  .signup-form {
     margin: 1vw 3vw 0vw 3vw;
     width: 90%;
   }
@@ -703,46 +603,30 @@ padding-top: 10%;
     font-size: 0.9vw;
   }
 
-  .top-according{
+
+  /* accordion */
+
+  .accordion-div {
+    grid-area: accordion;
+    align-items: flex-start;
+    padding-top: 10%;
+  }
+
+  .accordion-form {
+    margin: 1vw 3vw 0vw 3vw;
+    width: 90%;
+  }
+
+  .top-according {
     padding: 2%;
     font-size: 1vw;
-    
   }
-  .accordion{
+
+  .accordion {
     font-size: 1vw;
-    
-    
-    }
-    
-    
-    .answer{
-      font-size: 0.9vw;
-      
-    }
+  }
 
- 
-  
+  .answer {
+    font-size: 0.9vw;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
