@@ -7,8 +7,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 body{
-  background-color: rgb(245, 242, 238);
+  background-color: rgb(223, 241, 172);
   margin: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 /* ----------hero-header------------ */
 header{
@@ -44,70 +45,136 @@ color: white;
 border-radius: 10%;
 
 }
+
+.form_accordion{
+  display: flex;
+  flex-direction: column;
+}
+
+
 /* ------------form--------------- */
 .form {
+  font-size: 1rem;
   border: 1px solid red;
   margin: 10px;
   text-align: center;
-  max-width: 100%;
-  position : relative;
   padding: 1rem;
   background-color: hotpink;
-}
-
-input, button {
-  font-family: inherit;
-  font-size: 100%;
-  width : 200px;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  border-radius: 5%;
 }
 
 .form-item{
   display: flex;
   flex-direction: column;
+}
+
+.text-type{
+  background-color:cyan;
+  display: flex;
+  flex-direction: column;
+  /* text-align-last: justify; */
+  
+}
+
+.text-type input{
+min-width: 200px;
+min-height: 17px;
+margin: 5px 0px;
 
 }
 
 
+.radio-type{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.check-type{
+  background-color:rgb(252, 238, 116);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.submit-type{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
+}
+.submit-type button{
+  border-radius: 10%;
+ background-color: green;
+ color: honeydew;
+ padding: 10px;
+}
+
+label{
+font-size: 0.8rem;
+}
+
+input {
+  font-family: inherit;
+  font-size: 0.5rem;
+}
 
 input:invalid{
   border: 1px solid red;
 }
 
-input:valid{
-  border: 1px solid green;
-}
+
 
 
 
 /* ------------accordion--------------- */
 .accordion {
   border: 1px solid blue;
+  background-color:rgb(235, 234, 220);
+  display: block;
+  text-align: -webkit-center;
+ height: 350px;
+  margin: 10px;
+  border-radius: 5%;
 }
 
 .question{
-  background-color:rgb(95, 104, 134);
+  background-color:rgb(132, 156, 235);
+  border: 1px solid rgb(159, 178, 241);
   color: white;
   cursor: pointer;
-  border: 1px solid orange;
-  width: 30%;
+  width: 100%;
   display: block;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.active{
+  background-color:rgb(197, 132, 235);
+  border: 1px solid rgb(208, 159, 241);
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
 }
 
 .answer {
  display:none;
- overflow: hidden;
-background-color: rgb(250, 242, 195);
 }
 
 .active + .answer {
-  /* some styling here */
  display: flex;
- width: 30%;
- background-color: skyblue;
+ width: 100%;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ color:rgb(4, 54, 21);
+ background-color: rgb(231, 213, 243);
 }
+
 .question:after {
   content: '\02795';
   font-size: 13px;
@@ -115,15 +182,60 @@ background-color: rgb(250, 242, 195);
   margin-left: 5px;
 }
 
-
 .active:after{
   content: "\2796";
 }
 
-.active{
-  background-color: lightgrey;
-  color:black;
-  padding: 5px;
-  font-size: 10px;
-  height: 40px;
+/* -------footer------ */
+footer{
+  background-color: rgb(236, 243, 232);
+  margin-top: 3rem;
+  padding: 1rem 0rem;
+  display: grid;
+  justify-content: center;
+  font-size: small;
+  font-style: italic;
+  text-align: center;
+}
+
+footer a{
+  font-size: 0.8rem;
+  font-style: normal;
+}
+
+/*--------TABLET - ------------*/
+@media screen and (min-width: 768px){
+
+.form_accordion{
+  display: flex;
+  justify-content: space-around;
+  margin: 80px;
+  gap:80px
+}
+
+.accordion {
+  width: 100%;
+}
+
+.form {
+  width:100%;
+}
+
+.hero-menu{
+  display: flex;
+}
+
+
+}
+
+
+/*--------DESKTOP ------------*/
+@media screen and (min-width: 991px){
+.accordion {
+  width: 90%;
+}
+
+.form {
+  width:90%;
+}
 }

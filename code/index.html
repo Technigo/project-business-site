@@ -25,77 +25,111 @@
   </header>
 
   <!-- Signup form -->
-  <section class=form>
-    <h2>Sign up your sesion</h2>
+  <section class=form_accordion>
+    <section class=form>
+      <h2>Sign up your sesion</h2>
 
-    <form class="form-item" action="https://httpbin.org/anything" method="POST">
-
-
-      <!-- text fields -->
-      <label for="name" id="name">
-        First Name
-        <input type="text" name="name" id="name" required>
-      </label>
+      <form class="form-item" action="https://httpbin.org/anything" method="POST">
 
 
-      <label for="lastName" id="lastName">
-        Last Name
-        <input type="text" name="lastName" id="lastName" required />
-      </label>
+        <!-- text fields -->
+        <div class="text-type">
+          <label for="name" id="name">
+            First Name
+            <input type="text" name="name" id="name" required>
+          </label>
 
 
-      <!--password -->
-      <label for="passsword" id="passsword">
-        Password
-        <input type="password" name="passsword" id="passsword" required>
-      </label>
+          <label for="lastName" id="lastName">
+            Last Name
+            <input type="text" name="lastName" id="lastName" required />
+          </label>
+
+          <!--password -->
+          <label for="passsword" id="passsword">
+            Password
+            <input type="password" name="passsword" id="passsword" required>
+          </label>
+        </div>
+
+        <!-- radio -->
+        <div class="radio-type">
+
+          <label for="student">
+            <input type="radio" name="student" id="student" value="true">
+            Student
+          </label>
 
 
-      <!-- radio -->
-      <input type="radio" name="student" id="student" value="true">
-      <label for="student">Student</label>
-
-      <input type="radio" name="teacher" id="teacher" value="true">
-      <label for="teacher">Teacher</label>
-
-
-      <!-- checkboxes -->
-      <input type="checkbox" name="terms&Conditions" id="terms&Conditions" value="true" required>
-      <label for="terms&Conditions">I accept the <a href="#">Terms and Conditions</a></label>
+          <label for="teacher">
+            <input type="radio" name="teacher" id="teacher" value="true">
+            Teacher
+          </label>
+        </div>
 
 
-      <input type="checkbox" name="newsletter" id="newsletter" value="true">
-      <label for="newsletter">I want to have the newsletter</label>
-
-      <!-- submit button-->
-      <button type="submit">Sign up</button>
-
-    </form>
-  </section>
+        <!-- checkboxes -->
+        <div class="check-type">
 
 
-  <!-- Accordion -->
-  <section class="accordion">
-    <h1>FAQ</h1>
+          <label for="terms&Conditions">
+            <input type="checkbox" name="terms&Conditions" id="terms&Conditions" value="true" required>
+            I accept the <a href="#">Terms and Conditions</a>
+          </label>
 
 
-    <div class=accordionItem>
+          <label for="newsletter">
+            <input type="checkbox" name="newsletter" id="newsletter" value="true">
+            I want to have the newsletter
+          </label>
+        </div>
+
+        <!-- submit button-->
+        <div class="submit-type">
+          <button type="submit" class="form-button">SUBMIT</button>
+        </div>
+      </form>
+    </section>
+
+
+    <!-------------------- Accordion ------------------>
+    <section class="accordion">
+      <h1>FAQ</h1>
+
       <button class="question" id="question1">Question 1</button>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
-    </div>
 
-    <button class="question" id="question2">Question 2</button>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
+      <button class="question" id="question2">Question 2</button>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
 
-    <button class="question" id="question3">Question 3</button>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
+      <button class="question" id="question3">Question 3</button>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <button class="question" id="question3">Question 3</button>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <button class="question" id="question3">Question 3</button>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+    </section>
   </section>
+
+  <footer>
+    <a href="mailto: techNews@example.com" target="_blank" alt="email">
+      <p>Contact us</p>
+    </a>
+    <p>Copyright @2021 | Designed by Priscila Alfaro | Stockholm, Sweden </p>
+  </footer>
+
   <script type="text/javascript" src="./script.js"></script>
   <!-- dont forget to link the javascript file here! -->
 </body>
