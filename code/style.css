@@ -95,6 +95,17 @@ header {
 
 /* ACCORDION */
 .accordion {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #5fad56;
+  width: 85%;
+  border: 2px solid #4d9078;
+  border-radius: 5px;
+  height: auto;
+}
+
+.accordion-box {
   margin: 10px auto;
   text-align: center;
   background-color: #5fad56;
@@ -103,12 +114,14 @@ header {
   border-radius: 5px;
 }
 
-.contentBox {
+.accordion-box.open .contentbox {
   margin: 0 auto;
-  position: relative;
+  text-align: center;
+  padding: 15px 0;
 }
 
 .label {
+  line-height: 40px;
   margin: 0 auto;
   padding: 5px;
   background-color: #4d9078;
@@ -126,31 +139,38 @@ header {
   font-size: 1.5em;
 }
 
-.content {
-  position: relative;
-  overflow-y: auto;
-  background: whitesmoke;
-  height: 0;
-  overflow: hidden;
-  transition: 0.5s ease-in-out;
-  margin: 4px;
-  padding: 0;
-}
-
-.contentBox.active .content {
-  height: 150px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 15px 0;
-}
-
-.contentBox.active .label::before {
+.open .label::before {
   content: "\25b4";
   position: absolute;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
   font-size: 1.5em;
+}
+
+.contentbox {
+  margin: 0 auto;
+  height: fit-content;
+  background: whitesmoke;
+  display: none;
+  position: relative;
+}
+
+.open {
+  background: whitesmoke;
+  height: 150px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2px;
+  overflow-y: auto;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.open .contentbox {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* tablet */
