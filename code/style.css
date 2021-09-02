@@ -2,9 +2,6 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-}
 
 body {
   display: grid;
@@ -20,15 +17,18 @@ header {
 h1 {
   font-size: 4em;
   text-align: center;
-
 }
 
-.accordion {
+.question-accordion p {
+  margin: 5px 0px;
+  text-align: center;
+}
 
+.answer p {
+  margin: 10px;
 }
 
 .sign-up {
-  
   Grid-column: span 1;
 }
 
@@ -54,6 +54,9 @@ h1 {
   display: none;
 }
 
+.active + .answer {
+  display:block;
+}
 
 
 
