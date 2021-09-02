@@ -4,15 +4,20 @@
     font-family: 'Glory', sans-serif;
 }
 
+/*Using CSS, simply set your BODY font size to 16px, and then use CSS again to set the INPUT and SELECT field font size to 1em OR 100%. */
+
+
 body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Glory', sans-serif;
     padding-bottom: 50px;
     font-size: 16px; 
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus, textarea:focus select:focus {
     outline: none;
     font-size: 100%;
-
 }
 
 .header {
@@ -310,11 +315,16 @@ display: block;
     margin-top: 20px;
     display: grid;
     grid-column: span 12;
+    grid-template-columns: repeat(12, 1fr);
     background-color: #a6e4e0;
     border-radius: 10px;
     border-radius: 0em 1em 0em 1em;
     padding: 10px 20px 10px 20px;
     box-shadow: 2px 0px 5px 5px rgba(149, 149, 149, 0.2);
+}
+
+.accordion{
+    grid-column: span 12;
 }
 
 .h1-faq {
@@ -328,7 +338,7 @@ display: block;
     color: #2c918b;
     display: grid;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-align: left;
 }
 
@@ -379,12 +389,13 @@ display: block;
 textarea {
     margin-top: 5px;
     padding: 10px 10px;
-    width: 310px;
     line-height: 1.5;
     border-radius: 1em;
     border: 1px solid rgb(255, 255, 255);
     box-shadow: 1px 1px 1px #999;
     outline: none;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .button-faq {
