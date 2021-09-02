@@ -1,8 +1,8 @@
 # Business Site
 
-The assignment was to build a one-page business site with a sign-up form and accordion. 
+The assignment was to build a one-page business site with a sign-up form and accordion. I've learned:
 
-- Use image or video in the header, for responsive webpages
+- Use an image in the header, for responsive webpages
 - How to use HTML forms and simple requests
 - How to modify the DOM using Javascript
 
