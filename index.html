@@ -52,26 +52,49 @@
     <!-- Signup form -->
     <form class="form-text" action="https://httpbin.org/anything" method="post">
 <fieldset>
+
+
+
   <legend>Choose your ticket</legend>
-  <br>
-  <input class="space-form" type="radio" id="full-ticket-bungalow" name="ticket" value="full-ticket-bungalow">
-  <label for="full-ticket-bungalow">Full Festival Ticket, 1250$ </label>
-<p class="space-form">The full 8 days of Amnesia festival including bungalow</p>
-<br>
 
-  <input class="space-form" type="radio" id="full-ticket-camping" name="ticket" value="full-ticket-camping">
-  <label for="full-ticket-camping">Full Festival Ticket, 750$ </label>
-  <p class="space-form">The full 8 days of Amnesia festival including camping</p>
-<br>
+<div class="radioallitems">
+  <div class="radiocontainer">
+  <label class="containerradio" for="full-ticket-bungalow"> 
+    <input type="radio" id="full-ticket-bungalow" name="ticket" value="full-ticket-bungalow">  
+    <span class="radiobtn"></span>  
+    <p class="radio-btn-text">Full Festival Ticket, 1250$ <br> The full 8 days of Amnesia festival including bungalow</p>
+</label>
+</div> 
 
-  <input class="space-form" type="radio" id="one-day-ticket" name="ticket" value="one-day-ticket">
-  <label for="one-day-ticket">One day ticket, 200$</label>
-  <p class="space-form">One day ticket for Friaday or Saturday</p>
+
+
+<div class="radiocontainer">
+ 
+  <label class="containerradio" for="full-ticket-camping">
+  <input type="radio" id="full-ticket-camping" name="ticket" value="full-ticket-camping">
+  <span class="radiobtn"></span>
+  <p class="radio-btn-text">Full Festival Ticket, 750$ <br> The full 8 days of Amnesia festival including camping</p>
+</label>
+</div>
+
+<div class="radiocontainer">
+  <label class="containerradio" for="one-day-ticket"> 
+  <input type="radio" id="one-day-ticket" name="ticket" value="one-day-ticket"/>
+  <span class="radiobtn"></span>
+  <p class="radio-btn-text"> One day ticket, 200$ <br> day ticket for Friaday or Saturday</p>
+</label>
+</div>
+
+
+</div>
+
+
+
 
 
 
 <div class="contact-information">
-    <label for="name">Name </label>
+    <label class="containerradio" for="name">Name </label>
 <input type="text" name="name" id="firstname" placeholder="Name" required>
 </div>
     
@@ -87,7 +110,7 @@
 
 <div class="contact-information">
 <label for="mail">Mail</label>
-<input type="email" name="mail" id="mail" placeholder="Youremail@here.com" required>
+<input type="email" name="mail" id="mail" placeholder="Your-email@here.com" required>
 </div>
 
 <div class="contact-information">
@@ -106,7 +129,7 @@
 </div>
 
 <div class="contact-information">
-<label for="newsletter">subscribe to our newsletter</label>
+<label class="checkbox-label" for="newsletter">subscribe to our newsletter</label>
 <input type="checkbox" id="newsletter" name="newsletter">
 </div>
 
