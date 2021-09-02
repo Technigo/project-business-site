@@ -1,19 +1,15 @@
 "use strict";
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
 
-function toggle() {
-  this.classList.toggle("active");
+// This is a function that toggles the class "active"
+function toggle() { 
+  // this. is a keyword which lets me add a class to the element I click on
+  this.classList.toggle("active"); 
 }
 
-let elements = document.getElementsByClassName("question");
-for (let i = 0; i < elements.length; ++i) {
-  elements[i].onclick = toggle;
+// I create a variable and name it elements, i get my information from the class names and put it as an array in this variable
+let elements = document.getElementsByClassName("question"); 
+// this for loop lets me loop through the elements on my page and put them into an array
+for (let i = 0; i < elements.length; ++i) { 
+  // this lets me get the right element from the right position in my array (i.e the element I click on)
+  elements[i].onclick = toggle; 
 }
-
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-// document.getElementById("section1").onclick = toggle;
-// document.getElementById("section2").onclick = toggle;
-// document.getElementById("section3").onclick = toggle;
-// document.getElementById("section4").onclick = toggle;
