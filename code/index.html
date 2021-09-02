@@ -3,79 +3,124 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
+    <title>Your gig-life</title>
+  
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    
     <!-- video section with 3 different formats -->
     <section class="header-container">
-      <!-- <div class="video-container"> -->
-          <!-- PHONE VIDEO -->
-        <!-- <video id="hero-video-phone"> -->
-        <video autoplay muted loop class="hero-video-phone">
-          <source src="videos/SampleVideo_360x240_1mb.mp4">
-          <source src= "videos/SampleVideo_360x240_1mb.webm">
+   
+      <!-- PHONE VIDEO -->
+      <video autoplay muted loop class="hero-video-phone">
+          <source src="./videos/heromovie2.mp4">
+          <!-- <source src= "videos/SampleVideo_360x240_1mb.webm"> -->
           Your browser does not support HTML video
-        </video>
+      </video>
         
-        <!-- TAbsLET VIDEO -->
-        <video class="hero-video-tablet">
-          <!-- <video autoplay muted loop class="hero-video-tablet"> -->
-          <source src="videos/SampleVideo_720x480_1mb.mp4"/>
+      <!-- TAbLET VIDEO -->
+       <video autoplay muted loop class="hero-video-tablet">
+          <source src="./videos/heromovie2.mp4"/>
           <source src= "videos/SampleVideo_720x480_1mb.webm">
           Your browser does not support HTML video
-        </video>
+      </video>
        <!-- DESKTOP VIDEO -->
-        <!-- <video class="hero-video-desktop"> -->
-        <video autoplay muted loop class="hero-video-desktop">
-          <source src="./videos/SampleVideo_1280x720_1mb.mp4">
+      <video autoplay muted loop class="hero-video-desktop">
+          <source src="./videos/heromovie2.mp4">
           <source src= "videos/SampleVideo_1280x720_1mb.webm">
           Your browser does not support HTML video
-        </video>
-      </div>
+      </video>
+
+      <nav class="nav-bar">
+        <img class="img-logo" src="../favicon-16x16 (kopia).png" alt="">
+        <div>
+          <ul></ul>
+            <a href="">Stories</a>
+            <a href="#footer">About us</a>
+          </ul>
+        </div>
+      </nav>
+    
       <div class="content-hero">
-          <h1>Heading</h1>
+          <h1>Looking for a bit more freedom?</h1>
           <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. </p>
       </div>
-
     </section>
    
     <section class="main-content">
     <!---------------------------- Signup form ---------------------------->
-    <!-- Grid Item1-->
+
     <div class = "sign-up-content">  
       <h1>Become a member!</h1>
       <p>It is so nice to have you here! We really want to improve your way of living so please sign up to make it possible for us to.. It is so nice to have you here! We really want to improve your way of living so please sign up to make it possible for us to..</p>
       <form class="sign-up-form" action="http://httpbin.org/anything" method="post">
         <label >
           User Name
-            <input  class="input-box" type="text" required name="UserName" placeholder="Enter your user name">
+            <input 
+              class="input-box"
+              type="text" 
+              required
+              name="UserName" 
+              placeholder="Enter your user name">
         </label>
         <label >
           Name
-            <input  class="input-box" type="text" required name="Name" placeholder="Enter your name">
+            <input  
+              class="input-box" 
+              type="text" 
+              required 
+              name="Name" 
+              placeholder="Enter your name">
         </label>
         <label>
           Password
-            <input class="input-box" type="password" required name="Password" placeholder="Enter your password">
+            <input 
+              class="input-box" 
+              type="password"
+              required
+              name="Password" 
+              placeholder="Enter your password">
         </label>
         <label>
           Email
-            <input  class="input-box" type="email" required name="Email" placeholder="example@gmail.com">
+            <input  
+              class="input-box" 
+              type="email" 
+              required 
+              name="Email"
+              placeholder="example@gmail.com">
+        </label>
+        
+        <p>Please your favorite fruit:</p>
+        <label> 
+          <input 
+            type="radio"
+            id="fruit1"
+            name="fruit"
+            value="banana">
+          Banana 
         </label>
         <label>
-        <p>Please select your age:</p>
-        <label for="age1"> 18- 30
-          <input type="radio" id="age1" name="age" value="30">
+          <input
+            type="radio"
+            id="fruit2"
+            name="fruit"
+            value="apple">
+          Apple
         </label>
-        <label for="age2"> 30- 45
-          <input type="radio" id="age1" name="age" value="45">
+        <label>
+          <input
+            type="radio"
+            id="fruit3"
+            name="fruit"
+            value="pineapple">
+          Pineapple
         </label>
-        <label for="age3">46 - 65
-          <input type="radio" id="age1" name="age" value="60">
-        </label>
+        <p>Please agree on terms and if you want our newsletter:</p>
+        <label>
           <input type="checkbox" required name="Terms">
-            I Agree on Terms and
+            I Agree on Terms and Conditions
         </label>
         <label>
           <input type="checkbox"  name="News">
@@ -87,29 +132,29 @@
         </form>
     </div>
 
-     <!-- GRID Item 3-->
+  <!-- GRID  img -->
   <div class=img-sign-up>
     <img src="../yellow.jpg" alt="">
   </div>
  
 
-   <!-- Grid Item 4-5 -->
+  <!-- Accordion FAQ -->
    <div class="faq-content">
-    <!-- Accordion -->
     <h1>FAQ</h1>
 
-    <div class="question" id="section1">Section 1</div>
-    <div class="answer" id="answer1">
+    <div  class="question" id="section1">Section 1</div>
+    <!-- it is the class in the same div that will get the active class (if there is none class it will only get active)-->
+    <div class="answer">
       <p>Lorem ipsum 1...</p>
     </div>
 
     <div class="question" id="section2">Section 2</div>
-    <div class="answer"id="answer2">
+    <div class="answer">
       <p>Lorem ipsum 2...</p>
     </div>
 
     <div class="question" id="section3">Section 3</div>
-    <div class="answer" id="answer3">
+    <div class="answer">
       <p>Lorem ipsum 3...</p>
     </div>
   </div>
@@ -120,11 +165,16 @@
      <div class ="img-faq">
       <img src="../blue.jpg" alt="">
     </div> 
+    <div id="footer"></div>
     <footer>
       Video av Marian Croitoru från Pexels
     </footer>
  
    <!------------------------ SCRIPT -------------------->
+   <script src="script.js"></script>
+    
+    
+<!--     
     <script>
       var section1Title = document.getElementById("section1")
       var section2Title = document.getElementById("section2")
@@ -155,7 +205,7 @@
    
    </script>
 
-  </section>
+  </section> -->
     <!-- dont forget to link the javascript file here! -->
   </body>
 </html>
