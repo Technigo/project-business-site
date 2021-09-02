@@ -2,6 +2,78 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+/* .active + .answer { 
   /* some styling here */
+} */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+background-color: blueviolet;
+font-family: Arial, Helvetica, sans-serif;
+color: cornflowerblue;
+}
+
+img {
+  width: 400px;
+  height: 600px; 
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+.accordion {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.accordion-item {
+  background-color: green;
+  color:#111;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+}
+
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+/* FAQ adding "+" sign and style. changed it to 👽 insted */
+.accordion-item-header::after {
+  /* content: "\002B";  */
+  content: "👽"; 
+  font-size: 2rem; 
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.2s ease-in-out;
+} 
+
+/* FAQ styling when clicked */
+.accordion-item-header.active::after {
+  /* content: "\2212"; taken away - */
+  transform: rotate(45deg);
+}
+
+/* FAQ box styling - for linear gradient remember to set boarder-image to 1 */
+.accordion-item-body {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 2px solid;
+  border-image: linear-gradient(to right, #359286, #692d9b) 1;
 }
