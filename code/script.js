@@ -1,12 +1,8 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
 function toggleAccordion () {
   this.classList.toggle('open')
 }
-
+// Accordion
 document.getElementById('section1').onclick = toggleAccordion
 document.getElementById('section2').onclick = toggleAccordion
 document.getElementById('section3').onclick = toggleAccordion
