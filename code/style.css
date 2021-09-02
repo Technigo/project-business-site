@@ -56,7 +56,9 @@ img {
 }
 /*The Form*/
 .form {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: lightblue;
   border-radius: 5px;
   height: 1000px;
@@ -65,25 +67,42 @@ img {
 
 label { 
   display: block;
-  margin: 20px
+  margin: 15px
  
 }
 
 input {
   display: block;
-  font-size: 25px;
+  font-size: 20px;
   border: none;
   border-radius: 5px;
   box-shadow: 0 2px 5px 0 rgba(56, 43, 82,0.5)
+}
+.guest-input {
+  display: block;
+  border: none;
+  border-radius: 5px;
+  
+}
+select {
+  font-size: 20px;
+  margin: 5px;
+}
+.radio[type=radio] {
+  box-shadow: none;
+  width: 100%;
+  height: 15px;
+  background-color: pink;
 }
 
 input:focus {
   background-color: #c5e4f0;
 }
 
-.title {
+.form-header {
   text-align: center;
   margin: 60px auto 40px auto;
+  text-transform: uppercase;
 }
 
 .form-title {
@@ -102,7 +121,7 @@ input:focus {
 }
 
 .submit {
-  margin-left: 150px;
+  margin: 0;
   margin-top: 30px;
   padding: 20px 30px;
   background-color: white;
@@ -120,9 +139,8 @@ input:focus {
   border-radius: 5px;
   height: 1000px;
 }
-.faq-header {
-  text-align: center;
-  margin: 2rem 0;
+.accordion-header {
+  margin: 30px auto;
   font-size: 2.5rem;
 }
 .accordion {
@@ -156,6 +174,12 @@ input:focus {
 .accordion-item-header.active::after {
   content: "\2212";
 }
+.accordion-item-body {
+  padding: 20px;
+  line-height: 25px;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #747982, transparent)1;
+}
 .answer {
   display: none;
 }
@@ -174,6 +198,9 @@ form {
   width: 50%;
   margin: 10px 5px 10px 10px;
 }
+input {
+  font-size: 25px;
+}
 
 .accordion-collumn {
   width: 50%;
@@ -185,12 +212,22 @@ form {
 /*Desktop View*/
 
 @media(min-width: 992px) {
+  .contact-booking {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10px;
+  }
+  .radio-condition {
+    margin-right: 110px;
+  }
+
+  input {
+    font-size: 20px;
+  }
+  .submit {
+    margin-right: 400px;;
+    
+  }
 }
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-
-  /* some styling here */
-}

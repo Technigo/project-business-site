@@ -25,99 +25,106 @@
     <!-- Signup form -->
     <section class="form-and-faq-container">
       <form class="form" action="http://httpbin.org/anything" method="POST">
-        <h2 class="title">Sign up for a retreat</h2>
-        <h3 class="form-title">contact details</h3>
-        <label for="name">Your Name:
-        <input type="text" name="name" required placeholder="Name">
-      </label>
-      <label for="email" > your Email:
-        <input type="email" name="email" required placeholder="Email">
-      </label>
-      <label for="Phonenumber">Your Phone number:
-        <input type="text" name="phonenumber" required placeholder="Phone number">
-      </label>
-      <h3 class="form-title">Booking details</h3>
-      <label id="arrival" for="arrival">Arrival:
-        <input type="date" name="arrival" required>
-      </label>
-      <label id="departure" for="departure">Departure:
-        <input type="date" name="departure" required>
-      </label>
-      <label for="nr of guests">Number of guests
-      <select name="nr of guests">
-        <option value="1">one</option>
-        <option value="2">two</option>
-        <option value="3">three</option>
-        <option value="4">four</option>
-      </select>
-      </label>
-      <div class="radio-buttons">
-        <label for="man">Man
-       <input type="radio" id="man" name="what are you?" value="man">
-       </label>
-        <label for="whomman">Whomman
-       <input type="radio" id="whomman" name="what are you?" value="whomman">
-       </label>
-        <label for="unicorn">Unicorn
-       <input type="radio" id="unicorn" name="what are you?" value="unicorn">
-       </label>
+        <h2 class="form-header">Sign up for retreat</h2>
+        <div class="contact-booking">
+        <div class="contact-details">
+          <h3 class="form-title">contact details</h3>
+          <label for="name">Your Name:
+            <input type="text" name="name" required placeholder="Name">
+          </label>
+          <label for="email" > your Email:
+            <input type="email" name="email" required placeholder="Email">
+          </label>
+          <label for="Phonenumber">Your Phone number:
+            <input type="text" name="phonenumber" required placeholder="Phone number">
+          </label>
+        </div>
+        <div class="booking-details">
+          <h3 class="form-title">Booking details</h3>
+          <label id="arrival" for="arrival">Arrival:
+            <input type="date" name="arrival" required>
+          </label>
+          <label id="departure" for="departure">Departure:
+            <input type="date" name="departure" required>
+          </label>
+          <label class="guest-input" for="nr of guests">Number of guests<br>
+            <select name="nr of guests">
+              <option value="1">one</option>
+              <option value="2">two</option>
+              <option value="3">three</option>
+              <option value="4">four</option>
+            </select>
+          </label>
+        </div>
+        <div class="radio-condition">
+        <div class="radio-buttons">
+          <label for="man">Man
+            <input class="radio" type="radio" id="man" name="what are you?" value="man">
+          </label>
+          <label for="whomman">Whomman
+            <input class="radio" type="radio" id="whomman" name="what are you?" value="whomman">
+          </label>
+          <label for="unicorn">Unicorn
+            <input class="radio" type="radio" id="unicorn" name="what are you?" value="unicorn">
+          </label>
+        </div>
+        <div class="agrees">
+          <label class="checkbox">I agree to the Terms & Conditions
+            <input class="ckeck" type="checkbox" name="pollicyagree" required>
+            <span class="checkmark"></span>
+          </label>
+        </div>
       </div>
-      <div class="agrees">
-      <label class="checkbox">I agree to the Terms & Conditions
-        <input class="ckeck" type="checkbox" name="pollicyagree" required>
-        <span class="checkmark"></span>
-      </label>
       <button class="submit" type="submit">BOKA</button>
       </div>
-      </form>
+    </form>
       <!-- Accordion -->
-      <div class="accordion-collumn">
-    <h2>FAQ</h2>
-    <div class="accordion">
-      <div class="accordion-item" >
-        <div class="accordion-item-header" id="question" onclick="toggle()">
+    <div class="accordion-collumn">
+      <h2 class="accordion-header">FAQ</h2>
+      <div class="accordion">
+        <div class="accordion-item" >
+          <div class="accordion-item-header" id="question">
           Can I bring my pet?
-        </div>
-        <div class="accordion-item-body answer">   
-        <div class="accordion-item-body-content">
+          </div>
+          <div class="accordion-item-body answer">   
+          <div class="accordion-item-body-content">
           The answere
-        </div>
+          </div>
         </div>
       </div>
       <div class="accordion-item">
-        <div class="accordion-item-header" id="question1" onclick="toggle()">
+        <div class="accordion-item-header" id="question1">
           Can I bring my pet?
         </div>
         <div class="accordion-item-body answer">   
-        <div class="accordion-item-body-content">
+          <div class="accordion-item-body-content">
           The answere
-        </div>
+          </div>
         </div>
       </div>
       <div class="accordion-item">
-        <div class="accordion-item-header" id="question2" onclick="toggle()">
+        <div class="accordion-item-header" id="question2">
           Can I bring my pet?
         </div>
         <div class="accordion-item-body answer">   
-        <div class="accordion-item-body-content">
+          <div class="accordion-item-body-content">
           The answere
-        </div>
+          </div>
         </div>
       </div>
       <div class="accordion-item">
-        <div class="accordion-item-header" id="question3" onclick="toggle()">
+        <div class="accordion-item-header" id="question3">
           Can I bring my pet?
         </div>
-        <div class="accordion-item-body answer">   
-        <div class="accordion-item-body-content">
+        <div class="accordion-item-body answer">
+          <div class="accordion-item-body-content">
           The answere
-        </div>
+          </div>
         </div>
       </div>
     </div>
-
-      </div>
-    </section>  
+  </div>
+</section>  
       <!--<div class="question" id="section1">Section 1</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
