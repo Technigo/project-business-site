@@ -1,7 +1,165 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  background-color: black;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
 
-.active + .answer {
-  /* some styling here */
+header {
+  background-image: url(https://i.ibb.co/wY0sPt0/egor-myznik-ZZ1-Zr-HKWASY-unsplash.jpg);
+  background-size: cover;
+  height: 500px;
+  background-position: center;
+  margin-bottom: 50px;
+}
+
+.container {
+  margin-top: 25%;
+}
+
+a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: rgb(135, 133, 133);
+  font-weight: bold;
+}
+
+a:hover {
+  color: black;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
+  font-size: 1cm;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
+  font-size: 0.7cm;
+}
+
+p {
+  color: whitesmoke;
+}
+
+.accordion {
+  margin-bottom: 40px;
+  margin-top: 25px;
+}
+
+div {
+  color: #283027;
+  padding-bottom: 15px;
+}
+
+div:hover {
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.answer {
+  display: none;
+  color: rgb(135, 133, 133);
+  padding: 0px 40px 15px 40px;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.question + .answer {
+  display: block;
+}
+
+form {
+  margin-top: 25px;
+}
+
+input {
+  width: 50%;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  margin-left: 25%;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  background-color: rgb(243, 239, 239);
+}
+
+.form-content {
+  color: rgb(135, 133, 133);
+  display: flex;
+  margin-left: 25%;
+}
+
+.radio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 25%;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  color: rgb(135, 133, 133);
+  text-align: left;
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 25%;
+  margin-bottom: 10px;
+  color: rgb(135, 133, 133);
+  text-align: left;
+}
+
+.submit-button {
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
+  background-color: rgb(135, 133, 133);
+  font-weight: bold;
+  padding: 10px; 
+  margin-top: 25px;
+  border-radius: 0.2cm;
+}
+
+.footer {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.logo {
+  height: 150px;
+}
+
+
+/* tablet menu */
+
+@media (min-width: 768px) {
+ header {
+    height: 600px;
+  }
+}
+
+/* big screen menu */
+
+@media (min-width:992px) {
+  body {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header {
+    grid-column: span 2;
+    height: 800px;
+  }
+
+  .container {
+    margin-top: 15%;
+  }
+
+  .footer {
+    grid-column: span 2;
+  }
 }
