@@ -1,213 +1,188 @@
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-/* .active + .answer {
-  /* some styling here 
-} /*
-
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  letter-spacing: 1.6;
+  letter-spacing: 0.05em;
 }
 
 body {
-  background-color: #1D2D50;
-  height: 100%;
+  background-color: #11324D;
 }
 
-.header {
-  margin-bottom: 40px;
-  background-image: url("images/autumn-calm-cosy-drops-5197762.jpeg");
+/* HEADER */
+.navigation {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+
+.navigation a {
+  position: relative;
+  z-index: 13;
+  color: white;
+  font-size: 1em;
+  font-family: 'Oswald', sans-serif;
+}
+
+.hero {
+  height: 100vh;
   width: 100%;
-  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* a filter that darkens the video */
+.hero::after { 
+  width: 100%;
+  height: 100%;
+  content: '';
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
 }
 
-.header video {
-  display: none;
+.hero video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  object-fit: cover;
 }
 
-.overlay {
-  font-size: 12px;
-  position:absolute;
-   top: 60px;
-   z-index:1;
-   background: rgba(0, 0, 0, 0.432);
-  color: #fff;
+.hero .caption {
+  position: relative;
+  z-index: 20;
   text-align: center;
-  margin: 0 10px;
+  color: white;
 }
 
-/* FORM */
+.hero h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+  font-family: 'Oswald', sans-serif;
+}
 
-.container {
-  background-color: #0C7B93;
-  margin-top: 30px;
+.hero p {
+  font-size: 2em;
+}
+
+/* FORMS */
+
+.container, .signup-box, .form {
   display: grid;
   grid-template-columns: auto;
-  width: 90%;
-  margin: 20px auto;
-  font-size: 1.2em;
+  grid-template-rows: auto auto;
   color: white;
+  text-shadow: -1px 1px black;
+  padding: 10px 5px;
 }
 
-.signup {
-  background-color: #0C7B93;
+.form {
+  text-align: center;
   width: 90%;
-  margin: 0 auto;
-  padding-bottom: 20px;
-  font-size: 1.2em;
-  color: white;
-  border: 2px solid #fff;
-  
+  padding: 20px auto;
+  line-height: 1.6;
+  margin: 20px 20px;
+  background-color: #4B6587;
+  border: 2px solid orange;
+  border-radius: 20px;
 }
 
-.form-box  {
-  padding: 5px 0;
+h3 {
+  padding-bottom: 10px;
+}
+
+.signup-box {
+  margin: 20px 0;
+  border: 2px solid orange;
+  border-radius: 20px;
+}
+
+.signup-box label {
+  margin: 3px 0;
+}
+
+.signup-box input, .terms{
+  padding: 10px;
+}
+
+.radio-title, .checkbox-title {
+  font-weight: bold;
+}
+
+.form-box, .button {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
 }
 
-
-h2 {                                          /* "your perfect rainy saturday */
-  text-align: center;
-  background-color: #065061;
-  color: white;
-  margin: 0 auto;
-  width: 100%;
-  border-bottom: 1px solid black;
-  text-shadow: 1px 1px black;
-  padding: 10px 0;
-}
-
-h3 {                                           /* signup here */
-  width: 90%;
+/* accordion */
+.accordion {
   margin: 20px auto;
-  background-color: #27496D;
-  text-decoration: underline;
   text-align: center;
-  font-size: 1em;
-  font-weight: 100;
-  border: 2px solid #fff;
-  padding: 5px 0;
+  width: 90%;
+  border: 2px solid white;
+  border-radius: 20px;
 }
 
 h4 {
   padding: 20px 0;
-  color: white;
   text-transform: uppercase;
-  text-shadow: 1px 1px black;
-}
-
-.radio, .checkbox, .gender {
-  padding: 5px 0;
-  margin: 5px auto;
-  font-weight: bold;
-  
-}
-
-.form-box-radio {
-  margin: 5px 5px; 
-  text-align: center;
-}
-
-.form-box-checkbox {
-  text-align: center;
-  padding: 5px;
-  
-}
-
-.form-box label {
-  display: none;
-}
-
-input, button {
-  padding: 10px;
-  background-color: #86b1e069;
-  border: 2px solid white;
-  color: #fff;
-}
-
-.form-box button:active {
-  background-color: #fff;
-  color: #0C7B93;
-}
-
-
-input::placeholder {
   color: white;
+  border: 2px solid white;
+  background-color: #22577A;
 }
 
-
-/* ACCORDION */
-
-
-
-.accordion {
-  margin: 20px auto;
-  text-align: center;
-  background-color: #26486d;
-  padding-top: 20px;
-  width: 90%;
-  border: 2px solid #fff;
-}
-
-.contentBox {
+.content-box {
   margin: 0 auto;
   position: relative;
 }
 
- .label {
-   border: 1px solid black;
-   margin: 0 auto;
+.label {
+  margin: 0 auto;
   padding: 10px;
-  background-color: #27496D;;
-  color: white;
   cursor: pointer;
-  position: relative; 
+  position: relative;
+  color: white;
+  border: 2px solid white;
+  background-color: #548CA8;
 }
-
 .label-dark {
-  background-color: #0C7B93
+  background-color: #22577A;
 }
 
+/* add the + on the label */ 
 .label::before {
-  content: "+";
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  font-size: 1.5em;
+content: '+';
+position: absolute;
+top: 50%;
+right: 20px;
+transform: translateY(-50%);
+font-size: 1.5em;
 }
 
 .content {
   position: relative;
   overflow-y: auto;
-  background: #fff;
   height: 0;
-  overflow: hidden;
   transition: 0.5s ease-in-out;
   margin: 0 auto;
 }
-
-.contentBox.active .content {
-  height: 150px;
- margin: 0 auto;
- text-align: center;
- padding: 20px 0;
+/* the content in the accordion when the label is pressed */
+.content-box.active .content {
+  height: 120px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+  border: 2px solid white;
 }
-
-.contentBox.active .label::before {
-  content: "-";
+/* shows a "-" when the content is shown */
+.content-box.active .label::before {
+  content: '-';
   position: absolute;
   top: 50%;
   right: 20px;
@@ -217,125 +192,118 @@ input::placeholder {
 
 footer {
   text-align: center;
-  color: white;
+  background-color: #E7E0C9;
 }
 
- /* MEDIA QUERIES FOR TABLET */
- 
-@media (min-width: 767px) {
-
-} 
-
-/* MEDIA QUERIES FOR DESKTOP */
-
- @media (min-width: 1024px) {
- html {
-   padding-bottom: 100px;
-   position: relative;     
- }
-
-.header {
-  background-image: none;
+.terms {
+  text-align: center;
 }
 
-.overlay  {
-  font-size: 2em;
-  background-color: rgba(0,0,0,0.3);
-  transform: translateY(100%);
-  margin-bottom: 100px;
-}   
-
-.hero-text p, h3{
-  
+h3, .gender {
+  text-align: center;
 }
-             
-.header .hero-video {       
-  display: block;
-  float:left;
-  width: 100%;
-  margin-bottom: 100px;
- }
 
- .form-box {
-   width: 50%;
-   margin: 0 auto;
-   padding-bottom: 20px;
-   border: 2px solid black;
-   background-color: #27496D;
- }
-
- .form-box label {
-   display: block;
- }
-
- .container  {
-   position: relative;
-  float:left; 
-  display:inline; 
-  width: 45%;
-  margin: 0 20px 20px 80px;
-  box-shadow: 4px 4px 6px #87e7eb;
- }
-
- .accordion {
-   position: relative;
-   margin: 0;
-  float:left; 
-  display:inline; 
-  width: 45%;
-  box-shadow: 4px 4px 6px #87e7eb;
-  padding: 40px 30px 95px 30px;
-  border: none;
- }
-
- .signup  {
-   position: relative;
-   width: 50%;
-   float:right;
-   margin: 40px 0;
-   
- }
-
- .gender {
-   margin-bottom: 5px;
- }
-
- h3 {
-   width: 50%;
- }
-
-
-
- .contentBox {
-  border: 1px solid black;
- }
-
- .footer {
-  position: absolute;
+footer {
+  position: relative;
   bottom: 0;
-  background: #fff;
-  width: 100%;
-  color: black;
- }
-
- .footer p {
-  position: absolute;
   left: 0;
-  padding-bottom: 20px;
-  width: 100%;
-  height: 100px;
-   
- }
- 
- .label:hover {
-  border: 2px solid #fff;
- }
- 
-
 }
 
 
- /*
-.active + .answer {
-  some styling here 
-} */
+/* MEDIA QUERIES */
+
+@media (min-width: 767px) {
+  .navigation a {
+      font-size: 1.8em;
+  }
+
+  .caption {
+      font-size: 1.5em;
+  }
+
+  .form, .signup-box, .accordion {
+      font-size: 1.5em;
+  }
+
+  h2 {
+      height: 1em;
+  }
+
+  form input, button{
+      font-size: 0.9em;
+  }
+}
+
+/* desktop */
+
+@media (min-width: 1023px) {
+  .form, .signup-box {
+      height: 100%;
+      border: 2px solid white;
+      margin: 0;
+  }
+
+  p.checkbox-title, .radio-title  {
+      padding-top: 30px;
+  }
+
+  h2 {
+      margin-top: 10px;
+  }
+
+  input:focus {
+      background-color: lightgray;
+  }
+
+  .caption p {
+      font-size: 18px;
+  }
+
+  .container {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      background-color: #11324D;
+      margin: 0 30px;
+  }
+
+
+
+ .accordion-container {
+     position: relative;
+     padding-top: 30px;
+     display: flex;
+     height: 50vh;
+     width: 40%;
+     margin: 20px auto;
+    height: 100%;
+ }
+
+ .signup-box input {
+     padding: 5px;
+ }
+
+ .signup-box {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+ }
+
+ .content  {
+     border: 2px solid orange;
+     background-color: white;
+      padding: 0 10px;
+      font-size: 20px;
+ }
+
+ .greeting {
+     width: 150px;
+     height: 100px;
+     color: white;
+      text-align: center;
+      font-family: 'Oswald' , sans-serif;
+      
+ }
+
+ button {
+     margin-bottom: 10px;
+ }

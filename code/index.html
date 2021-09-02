@@ -1,158 +1,159 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <nav class="navigation">
+            <a href="#join"><i class="fas fa-tint"></i>Join us</a>
+            <!---Doesn't lead anywhere-->
+            <a href=""><i class="fas fa-sign-in-alt"></i>Sign in</a> 
+            <a href="#faq"><i class="far fa-question-circle">FAQ</i></a>
+            <a href=""><i class="fas fa-envelope-square">Contact us</i></a>
 
-    <header class="header">
-      <video class="hero-video" plays-inline autoplay loop poster="images/autumn-calm-cosy-drops-5197762.jpeg" id="bgvideo">
-        <source src="videos/production ID_5197762.mp4" type="video/mp4">
-        <source src="videos/production ID_5197762.ogg" type="video/ogg">
-        </video> 
-      <div class="overlay">
-        <h1 class="hero-text">"Life isn't about waiting for the storm to pass. It's about learning to dance in the rain."
-          </h1>
-        <p class="hero-text">- Vivian Greene.</p>
-      </div>
+            
+        </nav>
+        <div class="hero">
+            <video loop muted autoplay>
+                <source src="videos/production ID_5197762.mp4" type="video/mp4">
+                <source src="videos/production ID_5197762.ogg" type="video/mp4">
+            </video>
+            <div class="caption">
+                <h1>Rain<i class="far fa-check-square"></i></h1>
+                <p>We might be called rain check, but we believe in delivering when we said we would</p>
+            </div>
+        </div>
     </header>
 
-  <body>
-
-
-  
     <section class="container">
-      <h2>Your perfect rainy saturday</h2>
-      <form action="https://httpbin.org/anything" method="post">
-        <!--RADIO BUTTONS-->
-        <div class="form-box-radio">
-          <p class="radio">Early morning or sleep in?</p>
-            <input type="radio" id="early" name="day" value="early">
-            <label for="fav-time"></label>
-            <span>Early morning</span>
-            <input type="radio" id="late" name="day" value="sleepin">
-            <label for="fav-time">Sleep in</label>
-            <span >Sleep in</span>
-        </div>
+        <div class="form">
+          <h2>Your perfect rainy saturday</h2>
+          <form action="https://httpbin.org/anything" method="post">
             <div class="form-box-radio">
-              <p class="radio">Stay inside or savour the rain?</p>
-                <input type="radio" id="inside" name="spend" value="inside">
-                <label for="inorout"></label>
-                <span>Stay inside</span>
-                <input type="radio" id="outside" name="spend" value="outside">
-                <label for="inorout"></label>
-                <span>Savour the rain</span>
-        </div>
-        <!--CHECKBOXES-->
-        <div class="form-box-checkbox">
-          <p class="checkbox">I like to spend my day like this..</p>
-          <label  for="alone">Alone</label>
-            <input  type="checkbox" id="alone" name="alone" value="alone">
-            <label  for="friendsfam">With friends or family</label>
-            <input type="checkbox" id="friendsfam" name="friendsfam" value="friendsfam">
-            <div class="form-box-checkbox">
-              <label  for="cleaning">Cleaning</label>
-              <input type="checkbox" id="cleaning" name="cleaning" value="cleaning">
-              <label  for="relaxing">Relaxing</label>
-              <input type="checkbox" id="relaxing" name="relaxing" value="relaxing">
+                <p class="radio-title">Early morning or sleep in?</p>
+                <label for="fav-time">Early morning</label>
+                <input type="radio" id="early" name="wake-time"/>
+                <label for="fav-time">Sleep in</label>
+                <input type="radio" id="late" name="wake-time">
             </div>
-          </div>
-          <div class="form-box-checkbox">
-            <label  for="tv">Watching TV</label> 
-              <input type="checkbox" id="tv" name="tv" value="tv">
-              <label  for="books">Reading books</label>
-              <input type="checkbox" id="books" name="books" value="books">      
+            <div class="form-box-radio">
+                <p class="radio-title">Stay inside or savour the rain?</p>
+                <label for="inorout">Stay inside</label>
+                <input type="radio" id="inside" name="inorout">
+                <label for="inorout">Savour the rain</label>
+                <input type="radio" id="outside" name="inorout">
+            </div>
+            <div class="form-box-checkbox">
+                <p class="checkbox-title">I like to spend my day like this..</p>
+                <label for="alone">Alone</label>
+                <input type="checkbox" id="alone" name="alone">
+                <label for="friendsfam">With friends or family</label>
+                <input type="checkbox" id="friends">
+                <label for="cleaning">Cleaning</label>
+                <input type="checkbox" id="checkbox" name="cleaning">
+                <label for="relaxing">Relaxing</label>
+                <input type="checkbox" id="relaxing" name="relaxing">
+                <label for="TV">Watching TV</label>
+                <input type="checkbox" id="tv" name="tv">
+                <label for="books">Reading books</label>
+                <input type="checkbox" id="books" name="books">
+                <label for="cooking">Cooking</label>
+                <input type="checkbox" id="cooking" name="cooking">
+                <label for="orderin">Order food</label>
+                <input type="checkbox" id="order" name="order">
+            </div>
         </div>
-        <div class="form-box-checkbox">
-          <label  for="order">Ordering food</label> 
-          <input type="checkbox" id="order" name="order" value="order">
-          <label  for="cook">Cooking</label>
-          <input type="checkbox" id="cook" name="cook" value="cook"> 
+        </form>
+       
+        
+        <div class="signup-box">
+             <!--makes it possible to scroll to here from "join us" link-->
+            <div id="join"></div>
+            <h3>Sign up here for...</h3>
+            <form id="form">
+            <div class="gender"><p><strong>Gender</strong></p>
+                <label for="fmale">Female</label>
+                <input type="radio" id="fmale" name="gender">
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender">
+                <label for="other">Other</label>
+                <input type="radio" id="other" name="gender">
+            </div>
+            <div class="form-box">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" required name="fname" placeholder="First name">
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" required name="lname" placeholder="Last name">
+                <label for="Email">E-mail:</label>
+                <input type="email" required name="email" id="email" placeholder="example@hotmail.com">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">  
+            </div>
+            <div class="terms">
+                <label for="terms">*I agree to let you rain on my parade</label>
+                <input type="checkbox" required id="terms" name="terms" class="terms">
+            </div>
+            <div class="button" >
+                <button type="submit">Sign up!</button>
+                
+            </div>
+            
+            </form>
+            <div class="greeting" id="greeting"></div>
         </div>
-      </form>
+        
+    </section>
+    
+
+    
+   
+    <section class="accordion-container">
+      <!--makes it possible to scroll to here from "FAQ" link-->
+        <div id="faq"></div>    
+        <div class="accordion">
+            <h4>FAQ</h4>
+            <div class="content-box" id="section1">
+                <div class="label"><p>List 1</p></div>
+                <div class="content">
+                    <p>Sit on the laptop spend all night ensuring people don't sleep sleep all day sees bird in air, breaks into cage and attacks creature weigh eight pounds but take up a full-size bed kitty power nyaa nyaa if it fits i sits. </p>
+                </div>
+            </div>
+            <div class="content-box" id="section2">
+                <div class="label label-dark"><p>List 2</p></div>
+                <div class="content">
+                    <p>Sit on the laptop spend all night ensuring people don't sleep sleep all day sees bird in air, breaks into cage and attacks creature weigh eight pounds but take up a full-size bed kitty power nyaa nyaa if it fits i sits. </p>
+                </div>
+            </div>
+            <div class="content-box" id="section3">
+                <div class="label"><p>List 3</p></div>
+                <div class="content">
+                    <p>Sit on the laptop spend all night ensuring people don't sleep sleep all day sees bird in air, breaks into cage and attacks creature weigh eight pounds but take up a full-size bed kitty power nyaa nyaa if it fits i sits. </p>
+                </div>
+            </div>
+            <div class="content-box" id="section4">
+                <div class="label label-dark"><p>List 4</p></div>
+                <div class="content">
+                    <p>Sit on the laptop spend all night ensuring people don't sleep sleep all day sees bird in air, breaks into cage and attacks creature weigh eight pounds but take up a full-size bed kitty power nyaa nyaa if it fits i sits. </p>
+                </div>
+            </div>
+        </div>   
     </section>
 
-  
-    <!-- Accordion -->
 
-     <div class="accordion">
-       <h4>intro to accordion</h4>
-       <div class="contentBox" id="section1">
-         <div class="label label-dark">List 1</div>
-         <div class="content">
-           <p>Sit on the laptop spend all night ensuring people don't sleep sleep all day sees bird in air, breaks into cage and attacks creature weigh eight pounds but take up a full-size bed kitty power nyaa nyaa if it fits i sits. Ccccccccccccaaaaaaaaaaaaaaatttttttttttttttttssssssssssssssss have my breakfast spaghetti yarn i like fish steal the warm chair right after you get up for cat snacks sit in window and stare oooh, a bird, yum freak human out make funny noise </p>
-         </div>
-       </div>
-       <div class="contentBox" id="section2">
-        <div class="label">List 2</div>
-        <div class="content">
-          <p>Sit on the laptop spend all night ensuring people don't sleep sleep all day sees bird in air, breaks into cage and attacks creature weigh eight pounds but take up a full-size bed kitty power nyaa nyaa if it fits i sits. Ccccccccccccaaaaaaaaaaaaaaatttttttttttttttttssssssssssssssss have my breakfast spaghetti yarn i like fish steal the warm chair right after you get up for cat snacks sit in window and stare oooh, a bird, yum freak human out make funny noise </p>
-        </div>
-      </div>
-      <div class="contentBox" id="section3">
-        <div class="label label-dark">List 3</div>
-        <div class="content">
-          <p>Sit on the laptop spend all night ensuring people don't sleep sleep all day sees bird in air, breaks into cage and attacks creature weigh eight pounds but take up a full-size bed kitty power nyaa nyaa if it fits i sits. Ccccccccccccaaaaaaaaaaaaaaatttttttttttttttttssssssssssssssss have my breakfast spaghetti yarn i like fish steal the warm chair right after you get up for cat snacks sit in window and stare oooh, a bird, yum freak human out make funny noise </p>
-        </div>
-      </div>
-      <div class="contentBox" id="section4">
-        <div class="label">List 4</div>
-        <div class="content">
-          <p>Sit on the laptop spend all night ensuring people don't sleep sleep all day sees bird in air, breaks into cage and attacks creature weigh eight pounds but take up a full-size bed kitty power nyaa nyaa if it fits i sits. Ccccccccccccaaaaaaaaaaaaaaatttttttttttttttttssssssssssssssss have my breakfast spaghetti yarn i like fish steal the warm chair right after you get up for cat snacks sit in window and stare oooh, a bird, yum freak human out make funny noise </p>
-        </div>
-      </div>
-     </div>
-
-             <!--SIGN UP-->
-
-        <!--gender-->
-    <section class="signup">
-      <div class="signup-box">
-      <h3>Sign up here for some rainy day tips</h3>
-      <div class="form-box-checkbox">
-        <div class="gender"><label for="gender" >Gender</label></div>
-       <label for="female">Female</label>
-         <input type="radio" id="female" name="female" value="female">
-         <label for="gender">Male</label>   
-         <input type="radio" id="male" name="male" value="male">
-         <label for="other">Other</label>
-          <input type="radio" id="other" name="other" value="other">      
-     </div>
-     <!-- NAME, EMAIL PASSWORD -->
-       <div class="form-box">
-         <label for="fname">First name:</label>
-           <input placeholder="First name" type="text" id="lname">
-       </div>
-     <div class="form-box">
-       <label for="lname">Last name:</label>
-         <input placeholder="Last name" type="text" id="lname">
-     </div>
-     <div class="form-box">
-       <label for="email">Email:</label>
-         <input placeholder="Email" required type="email" id="email">
-     </div>
-     <div class="form-box">
-       <label for="password">Password:</label>
-         <input placeholder="Password" required type="password" id="password">
-     </div>
-     <div class="form-box">
-       <button>Sign up</button>
-     </div>
-     </form>
-    </div>
-   </section>
-     
-    
-
-    <script src="script.js"></script>
-    
-  </body>
-
-  <footer class="footer">
-   <div>By Sofia Wallerberg</div>
-   <div><em> Video by Aleks BM from Pexels</em></div>
-  </footer>
+<footer>
+    <p>By Sofia Wallerberg</p>
+</footer>
+<script src="script.js"></script>
+</body>
 </html>
+
