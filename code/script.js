@@ -3,7 +3,7 @@ const myButton = document.getElementById("submit-button");
 const submitConfirmation = document.getElementById("submit-confirmation");
 
 myForm.onsubmit = () => {
-  alert("Itemsgit added to your basket");
+  alert("Items have been added to your basket");
 };
 
 myButton.onclick = () => {
