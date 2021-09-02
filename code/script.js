@@ -1,9 +1,9 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
 function toggle() {
-	const questions = document.getElementsByClassName('question');
+	const questions = document.getElementsByClassName('question'); // Array reference to all elements with the class question
 
+	/* A loop that goes through each element in question above, checks if the element contains
+	the clas 'active' and does not have the same id as the clicked elements.
+	If this is the case, then remove the class 'active' from element */
 	for (let i = 0; i < questions.length; i++) {
 		const question = questions[i];
 		if (question.classList.contains('active') && question.id !== this.id) {
