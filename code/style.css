@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: Glory;
+    font-family: 'Glory', sans-serif;
 }
 
 body{
@@ -37,12 +37,11 @@ li.sign-in {
 
 .logo {
     display: grid;
-    grid-column-start: 4;
-    grid-column-end: 10;
+    grid-column-start: 5;
+    grid-column-end: 9;
 }
 
 .header ul {
-    padding-top: 20px;
     list-style: none;
     width: 100%;
     text-align: center;
@@ -65,7 +64,7 @@ li.sign-in {
 }
 
 .menu a:hover {
-    color: #EAACDD;
+    color: #d26ca5;
 }
 
 /*images*/
@@ -76,11 +75,27 @@ img {
     max-height: 100%;
 }
 
-.hero-image {
-    margin-top: 30px;
-    object-fit: cover;
+.hero-container {
+    display: grid;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+    color: white;
+    display: grid;
     grid-column: span 12;
-}
+  }
+  
+.centered-text {
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    top: 80%;
+    left: 50%;
+    display: grid;
+    grid-column: span 12;
+    transform: translate(-50%, -50%);
+    font-family: 'Shadows Into Light', cursive;
+  }
 
 /*form*/
 
@@ -89,7 +104,7 @@ img {
     grid-template-columns: repeat(12, 1fr);
     display: grid;
     grid-column: span 12;
-    background-color: #86B9D6;
+    background-color: #f0cee1;
     border-radius: 10px;
     padding: 10px 10px 10px 10px;
     border-radius: 1em 0em 1em 0em;
@@ -106,22 +121,23 @@ form {
 }
 
 .h1-signup {
-    color: rgb(16, 104, 192);
+    color: #d26ca5;
     align-items: center;
     font-size: 1.8rem;
     text-align: left;
-    text-transform: uppercase;
+    font-family: Shadows+Into+Light+Two;
 }
 
 .p-sprinkling {
-    color: rgb(16, 104, 192);
+    color:#d26ca5;
     display: grid;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-align: left;
 }
 
 .info-box {
+    padding-top: 10px;
     justify-content: space-around;
 }
 
@@ -134,10 +150,15 @@ input, select {
     border-radius: 4px;
 }
 
+input:focus-within {
+    background: #cee6f9;
+  }
+
+
 label {
     font-size: 12px;
     text-transform: uppercase;
-    color: white;
+    color: #d26ca5;
 }
 
 .checkbox {
@@ -188,11 +209,11 @@ label {
 }
 
 .radiobutton-container:hover input ~.custom-radio{
-    background-color: rgb(100, 152, 203);
+    background-color:#6ca5d2;
 }
 
 .radiobutton-container input:checked ~.custom-radio{
-    background-color: rgb(16, 104, 192);
+    background-color: #6ca5d2;
 }
 
 .custom-radio:after {
@@ -243,11 +264,11 @@ display: block;
 }
 
 .checkbox-container:hover input ~ .custom-checkbox {
-    background-color: rgb(100, 152, 203);
+    background-color: #6ca5d2;;
 }
 
 .checkbox-container input:checked  ~ .custom-checkbox {
-    background-color: rgb(16, 104, 192);
+    background-color: #6ca5d2;
     }
 
     .custom-checkbox:after {
@@ -269,7 +290,7 @@ display: block;
 /*button sign up form*/
 
 .button {
-    background-color: rgb(16, 104, 192);
+    background-color: #d26ca5;
     border-radius: 0.8rem;
     border: none;
     color: #FFFFFF;
@@ -292,22 +313,22 @@ display: block;
     margin-top: 20px;
     display: grid;
     grid-column: span 12;
-    background-color: #65be93;
+    background-color: #a6e4e0;
     border-radius: 10px;
     border-radius: 0em 1em 0em 1em;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 20px 10px 20px;
     box-shadow: 2px 0px 5px 5px rgba(149, 149, 149, 0.2);
 }
 
 .h1-faq {
-    color: white;
+    color:#2c918b;
     align-items: center;
     font-size: 1.8rem;
     text-align: left;
 }
 
 .p-faq {
-    color: white;
+    color: #2c918b;
     display: grid;
     align-items: center;
     font-size: 0.8rem;
@@ -327,7 +348,7 @@ display: block;
 }
 
 .active, .question:hover {
-    background-color: #b5e2cc;
+    background-color: #cef0ee;
 }
 
 .answer {
@@ -348,11 +369,52 @@ display: block;
     display: block;
 }
 
+.p-textarea {
+    padding-top: 25px;
+    color: #2c918b;
+    display: grid;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-align: left;
+}
+
+textarea {
+    margin-top: 5px;
+    padding: 10px 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 1em;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 1px #999;
+    outline: none;
+}
+
+.button-faq {
+    background-color: #2c918b;
+    border-radius: 0.8rem;
+    border: none;
+    color: #FFFFFF;
+    text-align:center;
+    font-weight: 400;
+    font-size: 15x;
+    padding: 15px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px 0 5px;
+}
+
+.button-faq:hover{
+    transform: scale(0.90);
+}
+
+
 /* tablet */
 
 @media (min-width: 768px) {
     .logo {
-        grid-column: 5 / span 4;
+        grid-column: 6 / span 2;
     }
     .signup {
         display: grid;
@@ -364,6 +426,11 @@ display: block;
     }
     .faq-box {
         grid-column: 7 / span 5;
+    }
+    
+    .centered-text {
+        position: absolute;
+        font-size: 4rem;
     }
 }
 
@@ -398,8 +465,7 @@ display: block;
     .faq-box {
         grid-column: 7 / span 4;
     }
-
-    }
+    
     .accordion {
         margin-left: 10px;
         margin-right: 10px;
@@ -407,3 +473,14 @@ display: block;
     .header ul li {
         padding-top: 15px;
     }
+
+    .button-faq {
+        margin: 10px 0 5px;
+    }
+
+    .centered-text {
+        font-size: 5rem;
+        }
+
+
+}
