@@ -15,6 +15,8 @@ body{
   width: 100%;
 }
 
+/* -- Header -- */
+
 .hero-image {
   background-image: url("camera.jpg");
   height: 400px;
@@ -34,6 +36,8 @@ body{
   font-size: xx-large;
 }
 
+/* -- Photo grid -- */
+
 .black-white-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -48,18 +52,20 @@ body{
 .main-box {
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 15px;
+  align-items: center;
+  grid-gap: 15px;
+  margin: 15px 0;
 }
+
+/* -- Form -- */
 
 .order-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-color: #ababab;
-  width: 50%;
-  margin: 0 0 4% 20%;
-  padding: 5%;
+  border-radius: 1rem;
+  padding-bottom: 20px;
 }
 
 label{
@@ -67,6 +73,143 @@ label{
   margin-bottom: 10px;
   justify-content: center;
 }
+
+/* -- Radio button -- */
+
+.wrapper-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.radiobutton-container{
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.radiobutton-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.radiobutton-container:hover input ~ .custom-radio {
+  background-color: #ccc;
+}
+
+.radiobutton-container input:checked ~ .custom-radio {
+  background-color: #444444;
+}
+
+.custom-radio:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: none;
+}
+
+.radiobutton-container input:checked ~ .custom-radio::after {
+  display: block;
+}
+
+.radiobutton-container input:focus + .custom-radio {
+  outline: #333 auto 4px;
+}
+
+/* -- Checkbox -- */
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.checkbox-container input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox-container:hover input ~ .custom-checkbox {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox {
+  background-color: #444444;
+}
+
+.custom-checkbox:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  top: 5px;
+  left: 7px;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox:after {
+  display: block;
+}
+
+.checkbox-container input:focus + .custom-checkbox {
+  outline: #333 auto 4px;
+}
+
+.order-now {
+  border-radius: 1rem;
+  box-shadow: none;
+  padding: 5px 10px;
+  margin-left: 35%;
+}
+
+/* -- Accordion -- */
 
 .accordion {
   text-align: center;
@@ -76,8 +219,8 @@ label{
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin: 0 20% 4% 0;
   padding: 5%;
+  border-radius: 1rem;
 }
 
 .question { 
@@ -115,6 +258,7 @@ label{
   content: "\2212"; /* Unicode character for "minus" sign (-) */
 }
 
+/* -- Footer -- */
 
 footer {
   background-color: black;
