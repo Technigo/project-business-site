@@ -27,7 +27,8 @@ h1 {
   margin: 0px;
   text-align: center;
   padding-top: 75px;
-  font-size: 55px;
+  font-size: 60px;
+  font-weight: 200;
  
 }
 
@@ -35,6 +36,50 @@ h2 {
   text-align: center;
   margin: 0px;
   font-size: 30px;
+  font-weight: 200;
+}
+
+.navigator-top {
+  grid-column: span 6;
+  display: grid;
+  grid-template-columns: 5;
+  height: 50px;
+  padding: 10px;
+  display: none;
+  background-color: rgb(247, 217, 216);
+  position: sticky;
+  top: 0;
+}
+
+.nav1, .nav2, .nav3, .nav4, .nav5 {
+  color: brown;
+  font-size: 15px;
+  margin: 10px 0 0 0;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.nav1 {
+  grid-column: 1;
+}
+
+.nav2 {
+  grid-column: 2;
+}
+
+.nav3 {
+  grid-column: 3;
+  font-size: 30px;
+  margin-top: 4px;
+  transform: rotate(10deg);
+}
+
+.nav4 {
+  grid-column: 4;
+}
+
+.nav5 {
+  grid-column: 5;
 }
 
 .sign-up-form {
@@ -48,10 +93,12 @@ h2 {
 h3 {
   font-size: 27px;
   margin: 30px 10px 0px 10px;
+  font-weight: 200;
+  line-height: 40px;
 }
 
 .arrow {
-  margin-top: 0px;
+  margin-top: 10px;
   margin-bottom: 40px;
   font-size: 30px;
 }
@@ -83,6 +130,7 @@ form {
 h4 {
   font-size: 25px;
   padding: 0px 10px;
+  font-size: 22px;
 }
 
 .favourite-beer {
@@ -93,8 +141,10 @@ h4 {
 
 .checkbox-item {
   text-align: left;
-  width: 70px;
-  margin: auto;
+  width: 90px;
+  margin-left: 40%;
+  font-weight: 200;
+  padding-bottom: 3px;
 }
 
 .brewing-knowledge {
@@ -106,8 +156,13 @@ h4 {
 
 .radio-item {
   text-align: left;
-  width: 180px;
-  margin: auto;
+  width: 150px;
+  margin-left: 34%;
+  font-weight: 200;
+}
+
+.radiobutton {
+  margin: 3px 3px 3px 4px;
 }
 
 button {
@@ -117,6 +172,7 @@ button {
   border-radius: 35px;
   background-color: rgb(247, 217, 216);
   margin-top: 30px;
+
   color: rgba(138, 56, 19, 0.911);
   border: 2px solid rgba(138, 56, 19, 0.911);
   font-size: 19px;
@@ -130,25 +186,12 @@ button {
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
- 
 }
 
 .faq-header {
     font-size: 50px;
     padding: 50px;
   }
-
-/* .accordion {
-} */
-
-/*.accordion-item {
-  width: 80%;
-  margin: 0 auto 10px;
-  height: 100px;
-  background-color: rgb(241, 226, 226);
-  color: brown;
-  border-radius: 20px;
-}*/
 
 .question {
   width: 80%;
@@ -160,11 +203,24 @@ button {
   border-radius: 20px 20px 0px 0px;
   text-align: left;
   font-size: 20px;
-  font-weight: bold; /*why doenst it get bolder?*/
+  font-weight: bold;
   display: flex;
   align-items: center;
-  position: relative; /*what does it do?*/
+  position: relative;
   cursor: pointer;
+}
+
+/*original look of faq question with plus to the right*/
+.question::after {
+  content: "\002B";
+  font-size: 30px;
+  position: absolute;
+  right: 30px;
+}
+
+/*makes plus change so minus when active*/
+.question.active::after {
+  content: "\2212";
 }
   
 .answer1, .answer2, .answer3, .answer4  {
@@ -209,7 +265,6 @@ p {
 
 footer {
   grid-column: 1 / 7;
-  /* detta nedan gör sign-up-form till förälder */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   background-image: url("https://images.unsplash.com/photo-1505075106905-fb052892c116?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGhlYWRlciUyMGltYWdlJTIwYmVlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60");
@@ -217,11 +272,9 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* display: flex;
-  flex-direction: column; */
 }
 
-.navigation {
+.navigation-bottom {
   grid-column: 3 / 4;
   background-color: black;
   color: white;
@@ -232,6 +285,13 @@ footer {
 
 /*tablet version*/
 @media (min-width: 668px) and (max-width: 1023px) {
+  h1, h2, h3 {
+    font-weight: 400;
+  }
+
+  .navigator-top {
+    display: grid;
+  }
 
   .sign-up-form {
     grid-column: span 3;
@@ -247,17 +307,27 @@ footer {
     width: 70%;
     margin: 25px auto 0px;
     height: 80px;
-}
+  }
 
   .answer1, .answer2, .answer3, .answer4  {
     width: 70%;
     height: 80px;
   }
+  .navigation-bottom {
+    display: none;
+  }
+}
 
 /*desktop version*/
 @media (min-width: 1024px) {
-  
+  h1, h2, h3 {
+    font-weight: 400;
+  }
 
+  .navigator-top {
+    display: grid;
+  }
+  
   .sign-up-form, .faq {
     grid-column: span 3;
   }
@@ -271,13 +341,19 @@ footer {
   }
 
   .checkbox-item {
+    margin-left: 10%;
     padding-left: 25%;
     font-size: 17px;
   }
 
   .radio-item {
+    margin-left: 10%;
     padding-left: 17%;
     font-size: 17px;
+  }
+
+  .navigation-bottom {
+    display: none;
   }
 }
 
@@ -285,6 +361,7 @@ footer {
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+/* 
 .active + .answer {
-  /* some styling here */
-}
+  some styling here */
+
