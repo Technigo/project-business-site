@@ -8,66 +8,69 @@
       src="https://kit.fontawesome.com/7ed1b41d25.js"
       crossorigin="anonymous"
     ></script>
-
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header class="header-container">
-      <div class="title">
+    <header class="header">
+      <div class="header__title">
         <h1>ESCAPE HOUSE</h1>
-        <i class="fas fa-chevron-down arrow"></i>
+        <i class="fas fa-chevron-down header__title__arrow"></i>
       </div>
-      <video class="video-mobile video" autoplay muted loop>
+      <video class="header__video header__video--mobile" autoplay muted loop>
         <source src="./videos/header-video-iphone.mp4" />
       </video>
-      <video class="video-ipad video" autoplay muted loop>
+      <video class="header__video header__video--ipad" autoplay muted loop>
         <source src="./videos/header-video-ipad.mp4" />
       </video>
-      <video class="video-desktop video" autoplay muted loop>
+      <video class="header__video header__video--desktop" autoplay muted loop>
         <source src="./videos/header-video-desktop.mp4" />
       </video>
     </header>
 
     <div id="top"></div>
-    <section class="navbar-container">
+    <section class="navbar">
       <a href="#top">
         <img
-          class="logotype"
+          class="navbar__logotype"
           src="./pictures/escape-house-logotype.png"
           alt="Escape house logotype"
         />
       </a>
-      <a href="#book" class="icon-container">
+      <a href="#book" class="navbar__item">
         <i class="fas fa-file-signature"></i>
-        <span class="icon-text">Book</span>
+        <span>Book</span>
       </a>
-      <a href="#faq" class="icon-container">
+      <a href="#faq" class="navbar__item">
         <i class="fas fa-question"></i>
-        <span class="icon-text">FAQ</span>
+        <span>FAQ</span>
       </a>
-      <a href="#contact" class="icon-container">
+      <a href="#contact" class="navbar__item">
         <i class="fas fa-envelope"></i>
-        <span class="icon-text">Contact</span>
+        <span>Contact</span>
       </a>
     </section>
 
-    <div class="form-faq-contact-container">
+    <!-- ------------- Flex containers & hidden anchor----------------  -->
+
+    <div class="container__form-accordion-contact">
       <div class="hidden-anchor" id="book"></div>
 
-      <section class="form-container">
-        <div class="form-content">
+      <!-- ------------- Flex containers etc----------------  -->
+
+      <section class="form">
+        <div class="form__content">
           <h2>Booking requests</h2>
           <form
-            class="form-layout"
+            class="form__content__layout"
             action="http://httpbin.org/anything"
             method="POST"
             autocomplete="off"
           >
-            <div class="form-row">
+            <div class="form__content__layout__row">
               <label for="name">Full name:</label>
               <input
-                class="input-text"
+                class="form__content__layout__row__input-text"
                 id="name"
                 type="text"
                 name="full-name"
@@ -75,10 +78,10 @@
                 required
               />
             </div>
-            <div class="form-row">
+            <div class="form__content__layout__row">
               <label for="name">Email:</label>
               <input
-                class="input-text"
+                class="form__content__layout__row__input-text"
                 type="email"
                 name="email"
                 id="email"
@@ -86,20 +89,25 @@
                 required
               />
             </div>
-            <div class="form-row">
+            <div class="form__content__layout__row">
               <label for="number">Telephone number:</label>
               <input
                 id="number"
-                class="input-text"
+                class="form__content__layout__row__input-text"
                 type="tel"
                 name="telephone"
                 placeholder="0703-123456"
                 required
               />
             </div>
-            <div class="form-row styleing-room-datepicker">
+            <div class="form__content__layout__row">
               <label for="room">Room:</label>
-              <select class="room" name="room" id="room" required>
+              <select
+                class="form__content__layout__row__room-selector"
+                name="room"
+                id="room"
+                required
+              >
                 <option value="">Choose a room to play</option>
                 <option value="cell-block">Cell Block</option>
                 <option value="assassination">Assassination</option>
@@ -107,10 +115,10 @@
               </select>
             </div>
 
-            <div class="form-row styleing-room-datepicker">
+            <div class="form__content__layout__row">
               <label for="date">Date:</label>
               <input
-                class="date-picker"
+                class="form__content__layout__row__date-picker"
                 type="date"
                 id="date"
                 name="date-picker"
@@ -120,83 +128,51 @@
               />
             </div>
 
-            <div class="form-row radio-btns">
+            <div
+              class="
+                form__content__layout__row
+                form__content__layout__row--radio-btns
+              "
+            >
               <span>Available time slots:</span>
-              <div class="radio-btns-container">
-                <label class="container-available-times"
-                  >13:40
-                  <input
-                    class="radio-btn"
-                    type="radio"
-                    name="booking-time"
-                    value="13:40"
-                    required
-                  />
-                </label>
-                <label class="container-available-times"
-                  >15:00
-                  <input
-                    class="radio-btn"
-                    type="radio"
-                    name="booking-time"
-                    value="15:00"
-                  />
-                </label>
+              <div class="form__content__layout__row__radio-btn-container">
+                <label>13:40 </label>
+                <input
+                  type="radio"
+                  name="booking-time"
+                  value="13:40"
+                  required
+                />
+                <label>15:00</label>
+                <input type="radio" name="booking-time" value="15:00" />
 
-                <label class="container-available-times"
-                  >16:20
-                  <input
-                    class="radio-btn"
-                    type="radio"
-                    name="booking-time"
-                    value="16:20"
-                  />
-                </label>
+                <label>16:20 </label>
+                <input type="radio" name="booking-time" value="16:20" />
 
-                <label class="container-available-times"
-                  >17:40
-                  <input
-                    class="radio-btn"
-                    type="radio"
-                    name="booking-time"
-                    value="17:40"
-                  />
-                </label>
+                <label>17:40 </label>
+                <input type="radio" name="booking-time" value="17:40" />
 
-                <label class="container-available-times"
-                  >19:00
-                  <input
-                    class="radio-btn"
-                    type="radio"
-                    name="booking-time"
-                    value="19:00"
-                  />
-                </label>
+                <label>19:00</label>
+                <input type="radio" name="booking-time" value="19:00" />
 
-                <label class="container-available-times"
-                  >20:20
-                  <input
-                    class="radio-btn"
-                    type="radio"
-                    name="booking-time"
-                    value="20:20"
-                  />
-                </label>
+                <label>20:20</label>
+                <input type="radio" name="booking-time" value="20:20" />
               </div>
             </div>
-            <label class="user-agreement"
-              >I agree with the terms of the booking
+            <div class="form__content__layout__user-agreement">
+              <label>I agree with the terms of the booking </label>
               <input
                 type="checkbox"
                 id="user-agreement"
                 name="user-agreement"
                 required
               />
-            </label>
-            <button class="book-btn">Book</button>
+            </div>
+            <button class="form__content__layout__btn">Book</button>
           </form>
         </div>
-        <div class="form-room-posters">
+
+        <div class="form__posters">
           <img
             src="pictures/cellblock.jpg"
             alt="Poster of the room Cell Block"
@@ -211,28 +187,33 @@
           />
         </div>
       </section>
+
+      <!-- ------------- Flex containers----------------  -->
+
       <div class="hidden-anchor" id="faq"></div>
-      <div class="faq-contact-container">
-        <div class="faq-contact-content">
-          <section class="accordion-container">
-            <h2 class="faq-title">FAQ</h2>
-            <div class="question" id="question1">
+      <div class="container__accordion-contact">
+        <div class="content__accordion-contact">
+          <!-- ------------------ ACCORDION--------------------- -->
+
+          <section class="accordion">
+            <h2>FAQ</h2>
+            <div class="accordion__question">
               <span>What is an Escape Room?</span>
-              <i class="fas fa-chevron-down faq-arrow"></i>
+              <i class="fas fa-chevron-down accordion__question__arrow"></i>
             </div>
-            <div class="answer">
-              <span class="answer-text">
+            <div class="accordion__answer">
+              <span>
                 An escape room is a interactive game where you get 60 minutes to
                 find a way out of the room by solving clues, codes and use the
                 resources to break out into freedom.
               </span>
             </div>
 
-            <div class="question" id="question2">
+            <div class="accordion__question">
               <span> How much does a Escape room cost?</span>
-              <i class="fas fa-chevron-down faq-arrow"></i>
+              <i class="fas fa-chevron-down accordion__question__arrow"></i>
             </div>
-            <div class="answer">
+            <div class="accordion__answer">
               <span>
                 The regular price is SEK 275 per person. Student and senior
                 prizes (valid student card required, and at least 65 years
@@ -241,12 +222,12 @@
               >
             </div>
 
-            <div class="question" id="question3">
+            <div class="accordion__question">
               <span>What are the payment options?</span>
-              <i class="fas fa-chevron-down faq-arrow"></i>
+              <i class="fas fa-chevron-down accordion__question__arrow"></i>
             </div>
 
-            <div class="answer">
+            <div class="accordion__answer">
               <span>
                 We take card payments and Swish. We do NOT accept cash.
                 Companies that do not have the option of card payment are
@@ -254,44 +235,45 @@
               </span>
             </div>
 
-            <div class="question" id="question4">
+            <div class="accordion__question">
               <span>What languages can you play in?</span>
-              <i class="fas fa-chevron-down faq-arrow"></i>
+              <i class="fas fa-chevron-down accordion__question__arrow"></i>
             </div>
 
-            <div class="answer">
+            <div class="accordion__answer">
               <span> All rooms can be played in Swedish and English.</span>
             </div>
 
-            <div class="question" id="question5">
+            <div class="accordion__question">
               <span>What happens if you do not break out in an hour?</span>
-              <i class="fas fa-chevron-down faq-arrow"></i>
+              <i class="fas fa-chevron-down accordion__question__arrow"></i>
             </div>
-            <div class="answer last-answer">
+            <div class="accordion__answer accordion__answer--last">
               <span>You get released.</span>
             </div>
           </section>
 
-          <section class="contact-container">
+          <!-- ------------------ CONTACT--------------------- -->
+
+          <section class="contact">
             <div class="hidden-anchor" id="contact"></div>
             <h2>Contact</h2>
-            <div class="bold">Escape House Gothenburg</div>
-
-            <div class="information">
-              <i class="fas fa-envelope footer-icon"> </i>
-              <a href="mailto: info@escapehouse.se">info@escapehouse.se</a>
+            <div class="contact__text--bold">Escape House Gothenburg</div>
+            <div class="contact__information">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@escapehouse.se">info@escapehouse.se</a>
             </div>
-            <div class="information">
-              <i class="fas fa-mobile-alt footer-icon"></i>
+            <div class="contact__information">
+              <i class="fas fa-mobile-alt"></i>
               <a href="tel:0702282736">+46 31 388 00 60</a>
             </div>
 
-            <div class="information">
-              <i class="fas fa-home footer-icon"></i>
+            <div class="contact__information">
+              <i class="fas fa-home"></i>
               <span class="adress">Stortoppsgatan 3, 414 57 Göteborg</span>
             </div>
             <iframe
-              class="map"
+              class="contact__map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1066.29127456236!2d11.922995707437895!3d57.68957204859496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff33148da33c9%3A0x63c15e3bdb36d6aa!2sStortoppsgatan%203%2C%20414%2057%20G%C3%B6teborg!5e0!3m2!1ssv!2sse!4v1630076789247!5m2!1ssv!2sse"
               style="border: 0"
               allowfullscreen=""

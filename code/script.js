@@ -22,7 +22,7 @@ function toggle() {
 // document.getElementById("question4").onclick = toggle;
 // document.getElementById("question5").onclick = toggle;
 
-let questions = document.getElementsByClassName("question");
+let questions = document.getElementsByClassName("accordion__question");
 
 // questions[0].onclick = toggle;
 // questions[1].onclick = toggle;

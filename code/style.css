@@ -18,31 +18,12 @@ body {
 
 /* -------HEADER CONTENT-------- */
 
-.header-container {
+.header {
   height: 100vh;
   width: 100%;
 }
 
-.video {
-  height: 100vh;
-  width: 100%;
-  z-index: -1;
-  object-fit: cover;
-}
-
-.video-mobile {
-  display: flex;
-}
-
-.video-ipad {
-  display: none;
-}
-
-.video-desktop {
-  display: none;
-}
-
-.title {
+.header__title {
   position: absolute;
   display: flex;
   justify-content: flex-end;
@@ -63,13 +44,32 @@ h1 {
   font-size: 6vw;
 }
 
-.arrow {
+.header__title__arrow {
   color: white;
   margin-bottom: 3%;
   font-size: 2vw;
 }
 
-.navbar-container {
+.header__video {
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.header__video--mobile {
+  display: flex;
+}
+
+.header__video--ipad {
+  display: none;
+}
+
+.header__video--desktop {
+  display: none;
+}
+
+.navbar {
   width: 100%;
   height: 80px;
   background-color: rgb(0, 0, 0);
@@ -84,12 +84,12 @@ h1 {
   z-index: 1;
 }
 
-.logotype {
+.navbar__logotype {
   height: 30px;
   width: 200px;
 }
 
-.icon-container {
+.navbar__item {
   text-align: center;
   display: grid;
   grid-template-rows: auto auto;
@@ -99,16 +99,42 @@ h1 {
   font-size: 14px;
 }
 
-.icon-container:hover {
+.navbar__item:hover {
   color: rgb(255, 147, 6);
   transition: color 1s ease-in;
   border-bottom: 1px solid rgb(255, 147, 6);
 }
 
-.icon-container a:active {
+.navbar__item a:active {
   transition: all 1s ease-in;
   color: rgb(255, 147, 6);
   border-bottom: 1px solid rgb(255, 147, 6);
+}
+
+.form-accordion-contact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden-anchor {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
+}
+
+/*------------- FORM CONTAINER ---------------- */
+
+.form {
+  padding: 30px 0;
+  display: grid;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.form__content {
+  padding: 0 10%;
 }
 
 h2 {
@@ -117,15 +143,18 @@ h2 {
   width: 100%;
 }
 
-.form-faq-contact-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.form__content__layout {
+  display: grid;
+  row-gap: 10px;
 }
-/*
-------------- FORM CONTAINER ---------------- */
 
-.input-text {
+.form__content__layout__row {
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form__content__layout__row__input-text {
   padding: 5px 5px 5px;
   -webkit-appearance: none;
   background-color: rgb(255, 254, 253, 0);
@@ -133,6 +162,45 @@ h2 {
   border-bottom: 1px solid gray;
   font-size: 16px;
   background-color: white;
+}
+
+.form__content__layout__row__input-text:focus,
+.form__content__layout__row__room-selector:focus,
+.form__content__layout__row__date-picker:focus {
+  outline: none;
+  border: 1px solid rgb(255, 147, 6);
+  transition: all 1s ease-in;
+}
+
+input:focus::placeholder {
+  color: white;
+  transition: all 1s ease-in;
+}
+
+.form__content__layout__row__room-selector {
+  font-size: 15px;
+  padding: 5px 5px 5px;
+  outline: none;
+}
+
+.form__content__layout__row__date-picker {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  outline: none;
+  padding: 5px 5px 5px;
+}
+
+.form__content__layout__row--radio-btns {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.form__content__layout__row__radio-btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 4px;
 }
 
 input[type="radio"] {
@@ -152,6 +220,11 @@ input[type="radio"]:checked {
   transition: all 0.5s ease-in;
 }
 
+.form__content__layout__user-agreement {
+  margin: 20px 0;
+  text-align: center;
+}
+
 input[type="checkbox"] {
   -webkit-appearance: none;
   display: block;
@@ -169,76 +242,7 @@ input[type="checkbox"]:checked {
   transition: all 0.5s ease-in;
 }
 
-.input-text:focus,
-.room:focus,
-.date-picker:focus {
-  outline: none;
-  border: 1px solid rgb(255, 147, 6);
-  transition: all 1s ease-in;
-}
-
-input:focus::placeholder {
-  color: white;
-  transition: all 1s ease-in;
-}
-
-.room {
-  font-size: 15px;
-  padding: 5px 5px 5px;
-  outline: none;
-}
-
-.date-picker {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  outline: none;
-  padding: 5px 5px 5px;
-}
-
-.form-container {
-  padding: 30px 0;
-  display: grid;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.form-layout {
-  display: grid;
-  row-gap: 10px;
-}
-
-.form-row {
-  font-size: 16px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.radio-btns {
-  display: grid;
-  grid-template-columns: 1fr auto;
-}
-
-.radio-btns-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  column-gap: 20px;
-  row-gap: 4px;
-}
-
-.hidden-anchor {
-  display: block;
-  position: relative;
-  top: -80px;
-  visibility: hidden;
-}
-
-.user-agreement {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.book-btn {
+.form__content__layout__btn {
   color: rgb(0, 0, 0);
   background-color: rgb(0, 0, 0, 0);
   font-weight: 100;
@@ -254,46 +258,42 @@ input:focus::placeholder {
   box-shadow: 2px 2px black;
 }
 
-.book-btn:hover {
+.form__content__layout__btn:hover {
   cursor: grab;
   transition: all 1s ease-in;
   box-shadow: none;
 }
 
-.form-content {
-  padding: 0 10%;
-}
-
-.faq-contact-container {
-  display: flex;
-}
-
-.faq-contact-content {
-  display: flex;
-  flex-direction: column;
-}
-
-/* ------------- FORM POSTERS----------------  */
-
-.form-room-posters {
+.form__posters {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.form-room-posters img {
+.form__posters img {
   width: 80%;
   margin-top: 40px;
 }
 
-/* ------------- ACCORDIAN CONTAINER----------------  */
+/* ------------- Flex containers----------------  */
 
-.accordion-container {
+.container__accordion-contact {
+  display: flex;
+}
+
+.content__accordion-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------- ACCORDION----------------  */
+
+.accordion {
   background-color: rgb(211, 209, 209);
   padding: 30px 10% 50px 10%;
 }
 
-.question {
+.accordion__question {
   display: grid;
   background-color: rgb(156, 212, 214);
   font-weight: 500;
@@ -302,31 +302,31 @@ input:focus::placeholder {
   grid-template-columns: 1fr auto;
 }
 
-.answer {
+.accordion__answer {
   background-color: rgb(228, 228, 228);
-  height: 0px;
+  max-height: 0px;
   border-right: 0.5px solid black;
   border-left: 0.5px solid black;
   overflow: hidden;
 }
 
-.last-answer {
-  border-bottom: 0.5px solid black;
-}
-
-.active + .answer {
-  height: 170px;
+.active + .accordion__answer {
+  max-height: 170px;
   transition: height 400ms ease;
   padding: 10px;
 }
 
-.faq-arrow {
+.accordion__question__arrow {
   color: black;
 }
 
-/*------------- CONTACT-CONTAINER ----------------  */
+.accordion__answer--last {
+  border-bottom: 0.5px solid black;
+}
 
-.contact-container {
+/*------------- CONTACT ----------------  */
+
+.contact {
   background-color: rgb(156, 212, 214);
   display: grid;
   grid-template-rows: 1fr;
@@ -334,26 +334,26 @@ input:focus::placeholder {
   padding: 30px 10% 50px 10%;
 }
 
-.bold {
+.contact__text--bold {
   font-weight: 500;
   margin-bottom: 10px;
 }
 
-.information a {
-  text-decoration: none;
-  color: rgb(77, 165, 168);
-}
-
-.information a:hover {
-  color: rgb(255, 147, 6);
-}
-
-.information {
+.contact__information {
   display: grid;
   grid-template-columns: 30px 1fr;
 }
 
-.map {
+.contact__information a {
+  text-decoration: none;
+  color: black;
+}
+
+.contact__information a:hover {
+  color: rgb(255, 147, 6);
+}
+
+.contact__map {
   padding-top: 10px;
 }
 
@@ -364,39 +364,39 @@ input:focus::placeholder {
     width: 100%;
   }
 
-  .video-ipad {
-    display: flex;
-  }
-
-  .video-mobile {
+  .header__video--mobile {
     display: none;
   }
 
-  .form-content {
+  .header__video--ipad {
+    display: flex;
+  }
+
+  .form__content {
     padding: 10px 40px 50px 40px;
   }
 
-  .form-room-posters {
+  .form__posters {
     display: flex;
     flex-direction: row;
     justify-content: center;
     column-gap: 10px;
   }
 
-  .form-room-posters img {
+  .form__posters img {
     width: 30%;
     margin-top: 0;
   }
 
-  .accordion-container {
+  .accordion {
     padding: 10px 20px 50px 40px;
   }
 
-  .faq-contact-content {
+  .accordion-contact-content {
     flex-direction: row;
   }
 
-  .contact-container {
+  .contact {
     background-color: rgb(211, 209, 209);
     display: flex;
     flex-direction: column;
@@ -404,7 +404,7 @@ input:focus::placeholder {
     row-gap: 0px;
   }
 
-  .information {
+  .contact__information {
     padding-bottom: 10px;
   }
 }
@@ -412,15 +412,15 @@ input:focus::placeholder {
 /*------------- DESKTOP ADJUSTMENTS ----------------  */
 
 @media only screen and (min-width: 1025px) {
-  .video-mobile {
+  .header__video--mobile {
     display: none;
   }
 
-  .video-desktop {
+  .header__video--desktop {
     display: flex;
   }
 
-  .form-container {
+  .form {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -428,13 +428,13 @@ input:focus::placeholder {
     justify-content: center;
   }
 
-  .form-content {
+  .form__content {
     flex: 50%;
     padding: 0;
     margin: 0 40px 0 0;
   }
 
-  .form-room-posters {
+  .form__posters {
     flex: 50%;
     flex-direction: row;
     column-gap: 10px;
@@ -443,33 +443,33 @@ input:focus::placeholder {
     margin: 0 0 0 40px;
   }
 
-  .form-room-posters img {
+  .form__posters img {
     width: 33%;
     margin-top: 0;
   }
 
-  .form-faq-contact-container {
+  .container__form-accordion-contact {
     background-color: rgb(156, 212, 214);
   }
 
-  .faq-contact-container {
+  .container__accordion-contact {
     width: 100%;
     background-color: rgb(211, 209, 209);
     padding: 60px 40px;
   }
 
-  .faq-contact-content {
+  .content__accordion-contact {
     max-width: 1200px;
     flex-direction: row;
     margin: auto;
   }
 
-  .accordion-container {
+  .accordion {
     flex: 50%;
     padding: 0 40px 0 0;
   }
 
-  .contact-container {
+  .contact {
     flex: 50%;
     background-color: rgb(211, 209, 209);
     display: flex;
@@ -478,11 +478,11 @@ input:focus::placeholder {
     padding: 0 0 0 40px;
   }
 
-  .information {
+  .contact__information {
     padding-bottom: 10px;
   }
 
-  .map {
+  .contact__map {
     height: 300px;
   }
 }
