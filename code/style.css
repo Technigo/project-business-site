@@ -193,13 +193,28 @@ h1 {
   font-family: 'barlow';
 }
 
-label, input {
+label {
   display: block;
   margin: 1px;
   padding: 3px;
   color: #fff;
   font-size: 20px;
 }
+
+input {
+  display: block;
+  margin: 1px;
+  padding: 3px;
+  color: #000;
+  font-size: 20px;
+  font-family: 'barlow';
+  outline: none;
+}
+
+input:focus {
+  border: 3px solid #BD789A;
+}
+
 
 .form-button {
   padding: 10px;
@@ -220,6 +235,16 @@ label, input {
   grid-column: span 2;
   display: grid;
   flex-direction: column;
+}
+
+.more-information {
+  display: block;
+  text-align: center;
+  color: #fff;
+  padding: 80px;
+  font-size: 35px;
+  line-height: 50px;
+  font-family: 'barlow';
 }
 
 .interview-container {
@@ -327,11 +352,11 @@ label, input {
     color: #fff;
     padding: 25px 80px 25px 80px;
     font-size: 20px;
-    line-height: 40px;
+    line-height: 30px;
   }
   
   .information h1 {
-    padding: 10px;
+    padding: 0px;
   }
   
    .grid-item-img {
@@ -405,6 +430,7 @@ label, input {
     flex-wrap: wrap;
     grid-template-columns: repeat(4, 1fr);
     background-color: #000120;
+    padding: 20px 0px 20px 0px;
     
   }
 
