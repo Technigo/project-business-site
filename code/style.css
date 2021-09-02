@@ -11,7 +11,7 @@ header {
   /* font-family: cursive; */
   font-size: 1rem;
 }
-
+/* 
 .navigation {
   background: #000;
   display: flex;
@@ -30,7 +30,7 @@ nav h2 {
 }
 
 .logo {
-  position: absolute;
+  position: fixed;
   top: 6%;
   left: 4%;
   transform: translate(-50%, -50%);
@@ -43,10 +43,6 @@ nav h2 {
   padding: 5px;
   display: inline;
 }
-/* 
-li {
-  display: inline;
-} */
 
 .hero-video {
   position: relative;
@@ -70,7 +66,7 @@ li {
 .contact-link {
   position: absolute;
   display: inline;
-  /* top: 10px; */
+top: 10px; 
   right: 10px;
   font-size: 18px;
   color: #ffffff;
@@ -81,7 +77,167 @@ li {
 .contact-link:hover  {
   color: rgb(237, 215, 215);
   font-weight: bolder;
+} */
+
+
+header {
+  overflow: hidden;
+  /* font-family: cursive; */
+  font-size: 1rem;
 }
+
+.logo {
+  position: fixed;
+  top: 6%;
+  left: 4%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+}
+
+.hero-slide {
+  position: relative;
+}
+
+.hero-slide p {
+  font-family: 'Dancing Script', cursive;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  color: #ffffff;
+  margin: 0px;
+}
+
+/* 
+.image-text{
+  bottom: 30%;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 50%;
+} */
+
+
+
+
+.contact-link {
+  position: absolute;
+  display: inline;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  color: #ffffff;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.contact-link:hover  {
+  color: rgb(237, 215, 215);
+  font-weight: bolder;
+}
+
+
+
+.slider {
+  -moz-perspective: 1300px;
+  -ms-perspective: 1300px;
+  -webkit-perspective: 1300px;
+  perspective: 1300px;
+  display: inline-block;
+  text-align: left;
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.slider > input {
+  display: none;
+}
+.slider > input:nth-of-type(3):checked ~ ul li:first-of-type {
+  margin-left: -200%;
+}
+.slider > input:nth-of-type(2):checked ~ ul li:first-of-type {
+  margin-left: -100%;
+}
+.slider > input:nth-of-type(1):checked ~ ul li:first-of-type {
+  margin-left: 0%;
+}
+
+.slider > ul {
+  position: relative;
+  width: auto;
+ 
+  z-index: 1;
+  font-size: 0;
+  line-height: 0;
+  border: 5px solid #ffffff;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.slider > ul > li {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.slider > ul > li video {
+  width: 100%;
+}
+
+.dance-image {
+  width: 100%;
+  height: auto;
+
+}
+.slider > .dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 10;
+}
+/* 
+.slider > .dots > div {
+  margin-left: -100%;
+} */
+.slider > .dots label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 6px;
+  padding: 8px;
+  background: white;
+}
+.slider > .dots label:hover:after {
+  opacity: 1;
+}
+.slider > .dots label:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -6px;
+  margin-top: -6px;
+  background: pink;
+  border-radius: 50%;
+  padding: 6px;
+  opacity: 0;
+}
+
+
+
+
+
 
 /* ------SIGN-UP FORM STYLING ----- */
 form { 
@@ -136,7 +292,9 @@ form {
   padding: 0 20px;
 }
 
-
+fieldset {
+  border-radius: 3%;
+}
 
 
 .send-button {
@@ -147,6 +305,7 @@ form {
   margin: auto;
   background-color: rgb(237, 215, 215);
   border: 1px solid transparent;
+  border-radius: 33px;
 
 
 }
@@ -173,8 +332,7 @@ padding: 10px;
   overflow: hidden;
   display: none;
   font-size: 16px;
-  background-color: rgb(238, 237, 234);
-  border: 1px solid white;
+  background-color: white;
   margin: 0 10px 10px 10px;
   padding: 10px;
 }
@@ -185,6 +343,9 @@ padding: 10px;
   height: 110px;
 }  
 
+#section4 {
+  margin-bottom: 30px;
+}
 
 
 /* ------FOOTER SECTION STYLING ----- */

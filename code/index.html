@@ -20,26 +20,54 @@
 
   <!-----------  HEADER  ----------->
   <header>
+  <div class="hero-slide">
+      <div class="slider " id="slider1">
+        <input type="radio" name="slides" checked="checked" id="slides_1" />
+        <input type="radio" name="slides" id="slides_2" />
+        <input type="radio" name="slides" id="slides_3" />
 
-    <!-- <nav class="navigation">
-      <img class="logo" src="./images/logoa.png" alt="Logo"> 
-      <h2> Dance Academy</h2>
-      <ul>
-        <li> <a class="links" href="#">Contact</a> </li>
-        <li> <a class="links" href="#">Home</a> </li>
-      </ul>
-    </nav> -->
-    <div class="hero-video">
-      <video id="" autoplay="" loop="" muted="" preload="auto">
-        <source src="./videos/dance-video.mp4" type="video/mp4">
-      </video>
-      <img class="logo" src="./videos/logo.png" alt="Logo">
-      <!-- <p> Dancing Woman Video 2</p> -->
-      <p> Dance is an investment in a fun and healthy lifestyle... </p> 
+        <ul>
+          <li> <video id="" autoplay="" loop="" muted="" preload="auto">
+              <source src="./videos/dance-video.mp4" type="video/mp4">
+            </video>
+            <img class="logo" src="./videos/logo.png" alt="Logo">
+            <p> Dance is an investment in a fun and healthy lifestyle... </p>
+            <a class="contact-link" href="#signup">Contact</a>
+          </li>
 
-       <a class="contact-link" href="#">Contact</a> </li>
-        <!-- <li> <a class="links" href="#">Home</a> </li> -->
-     
+          <li>
+            <video id="" autoplay="" loop="" muted="" preload="auto">
+              <source src="./videos/dance-video2.mp4" type="video/mp4">
+            </video>
+            <img class="logo" src="./videos/logo.png" alt="Logo">
+            <p> Dance is fun! </p>
+            <a class="contact-link" href="#signup">Contact</a>
+          </li>
+
+          <li> <video id="" autoplay="" loop="" muted="" preload="auto">
+              <source src="./videos/dance-video3.mp4" type="video/mp4">
+            </video>
+            <img class="logo" src="./videos/logo.png" alt="Logo">
+            <p> Dance with us... </p>
+            <a class="contact-link" href="#signup">Contact</a>
+          </li>
+
+          <!-- <li> 
+           <img class="dance-image" src="./videos/dance-img.png" alt="image">
+          <p class="image-text" > Dance with us... </p>
+          <a class="contact-link" href="#">Contact</a>
+        </li> -->
+
+        </ul>
+
+        <div class="dots">
+          <div>
+            <label for="slides_1"></label>
+            <label for="slides_2"></label>
+            <label for="slides_3"></label>
+          </div>
+        </div>
+      </div>
     </div>
 
   </header>
@@ -53,7 +81,7 @@
 
   <!--------- SIGN-UP FORM -------->
 
-  <div class="sign-up">
+  <div id="signup" class="sign-up">
 
     <form action="http://httpbin.org/anything" method="POST">
       <fieldset>
@@ -62,13 +90,13 @@
         </legend>
 
         <label class="form-text" for="name">Name</label>
-        <input class="form-input" type="text" name="fName" id="fName" placeholder="Requred" required /> <br>
+        <input class="form-input" type="text" name="fName" id="fName" placeholder="Required" required /> <br>
         <label class="form-text" for="lName">Last name</label>
-        <input class="form-input" type="text" name="lName" id="lName" placeholder="Requred" required /> <br>
+        <input class="form-input" type="text" name="lName" id="lName" placeholder="Required" required /> <br>
         <label class="form-text" for="email">Email adress</label>
-        <input class="form-input" type="email" name="email" id="email" placeholder="Requred" required /> <br>
+        <input class="form-input" type="email" name="email" id="email" placeholder="Required" required /> <br>
         <label class="form-text" for="message">Your message</label>
-        <input class="form-input message" type="text" name="message" id="message" /> 
+        <input class="form-input message" type="text" name="message" id="message" />
         <!-- 
         <label for="age">Child`s age:</label>
         <select name="age" id="age">
@@ -76,9 +104,9 @@
           <option value="smallKid">3-6</option>
           <option value="olderKid">6-12</option>
         </select> <br> -->
-        
-          <p class="form-text">Childs`age:</p> 
-          <div class="radio-age">
+
+        <p class="form-text">Childs`age:</p>
+        <div class="radio-age">
           <input type="radio" id="age1" name="age" value="3-6">
           <label class="radio-button" for="age1">3-6</label><br>
           <input type="radio" id="age2" name="age" value="6-9">
@@ -135,7 +163,6 @@
       </div>
     </fieldset>
   </section>
-
 
 
 
