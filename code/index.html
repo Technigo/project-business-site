@@ -10,25 +10,23 @@
 </head>
 
 <body>
-
+<!-- the text on the image -->
     <section class="hero" id="sec-1">
         <h1 class="bigtext">Need a smooth shave?</h1>
 
-
+<!-- the scrool and linked it to section to which is the forms -->
         <a href="#sec-2">
             <div class="scroll-text-box">
-                <!-- Trying out text in hero -->
-                <!-- <p class="scroll-text">Try now!</p> -->
             </div>
             <div class="scroll-down"> </div>
         </a>
 
     </section>
-
+<!-- second section with the forms/radio-buttons/checkboxes/selector and subscribe button -->
     <section class="subscribe" id="sec-2">
         <div>
             <div class="bg">
-                <form class="forms">
+                <form action="http://httpbin.org/anything" method="post" class="forms">
                     <input class="formq" type="text" id="name" name="fullname" placeholder="Name">
                     <input class="formq" type="date" id="birthday" name="birthday">
                     <input class="formq" type="text" id="email" name="email" placeholder="Email">
@@ -37,24 +35,24 @@
                     <div class="radiodiv">
                         <div class="radiobg">
                     <label class="container">Red Package
-                        <input type="radio">
+                        <input type="radio" checked="checked" name="radio">
                         <span class="checkmark"></span>
                       </label>
                     </div>
                     <div class="radiobg">
                       <label class="container">Blue Package
-                        <input type="radio">
+                        <input type="radio" name="radio">
                         <span class="checkmark"></span>
                       </label>
                     </div>
                     <div class="radiobg">
                       <label class="container">Green Package
-                        <input type="radio" >
+                        <input type="radio" name="radio">
                         <span class="checkmark"></span>
                       </label>
                     </div>
                 </div>
-                <!-- add checkboxes -->
+                
                     <select name="gender ">
                       <option value="Choose ">Choose</option>
                       <option value="Male ">Male</option>
@@ -62,17 +60,30 @@
                       <option value="Intersex/non-binary ">Intersex/non-binary</option>
                       <option value="Prefer not to respond ">Prefer not to respond</option>
                    </select>
-                    <button class="sub-button ">Subscribe</button>
-            </div>
-            </form>
+                    
+                   <div class="terms">
+                       <input class="termscheck" type="checkbox" id="checkbox">
+                       <label for="checkbox">I agree to these <a href="#">Terms and Condition</a></label>
+                   </div>
+                   <button class="sub-button">Subscribe</button>
+                
+                </form>
+             </div>
+
+            <!-- second animation button that takes you to section 3 -->
         </div>
         <a href="#sec-3">
             <div class="scroll-down halfling " id="scroll-two "></div>
         </a>
     </section>
 
-
+<!-- the FAQ section -->
     <section class="accordion" id="sec-3">
+
+        <div class="faq">
+            <h1 class="faqtext">Frequently Asked Questions</h1>
+
+        </div>
         
         <button class="accordion-button">Question 1</button>
             <div class="panel">
@@ -108,7 +119,7 @@
     </section>
     
 
-    <!-- dont forget to link the javascript file here! -->
+    <!--The javascript link! -->
     <script src="./script.js"></script>
 </body>
 
