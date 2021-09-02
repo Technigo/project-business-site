@@ -62,6 +62,19 @@ for (let i=0; i<input.length; i++) {
 }
 
 
+const video = document.getElementById("video")
+const hero = document.getElementById("hero")
+
+  hero.onclick = player;
+  
+  function player() {
+  if (video.paused) {
+    video.play()
+  } else {
+    video.pause()
+  }
+  }
+
 // document.getElementById('form').addEventListener('submit', (event) => {
 // 	const name = document.getElementById('name').value;
 // 	// document.getElementById('greeting').innerHTML = `Hello ${name} !`
