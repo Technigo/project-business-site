@@ -6,6 +6,11 @@ body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
   background-color: white;
+  color: #333;
+}
+
+a {
+  color: #333;
 }
 
 .hero-wrapper-container {
@@ -135,7 +140,6 @@ body {
 .wrapper-container {
   flex: 1 1 50%;
   flex-direction: column;
-  /* border: 1px solid #e9ecef;*/
   margin: 20px 30px 50px 10px;
   padding: 20px;
   box-sizing: border-box;
@@ -149,14 +153,13 @@ body {
   }
 }
 
-/* form styling  */
+/* Form styling  */
 
 .child-form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .tip {
@@ -166,8 +169,7 @@ body {
   justify-content: center;
   flex-flow: wrap;
   box-sizing: border-box;
-  margin-top: 5px;
-  color: #333;
+  margin-top: 10px;
   font-size: 0.8rem;
   display: none;
 }
@@ -180,15 +182,118 @@ input {
   margin-top: 20px;
   max-width: 200px;
   height: 1.5rem;
+  cursor: url('cursor.png'), pointer;
 }
 
-.submit-button {
+.inputs-wrapper {
+  /* aligning the form */
+  margin-top: 10px;
+}
+
+.terms-message {
+  display: block;
+  font-size: 0.8rem;
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Custom checkbox */
+
+.checkbox {
+  margin-top: 38px;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  /* margin-bottom: 12px; */
+  cursor: url('cursor.png'), pointer;
+  font-size: 16px;
+  /* -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; */
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border: 1px solid rgba(51, 51, 51, 0.575);
+}
+
+.checkbox:hover input~.checkmark {
+  background-color: #f2f3f4;
+  border-color: teal;
+}
+
+/* glow on focus */
+
+input:focus~.checkmark {
+  border-color: teal;
+  box-shadow: 0px 0px 4px teal;
+}
+
+/* creation of indicator hidde when not checked */
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* showing the checkmark when checked */
+
+.checkbox input:checked~.checkmark:after {
+  display: block;
+}
+
+/* checkmark indicator */
+
+.checkbox .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: 1px solid teal;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.form-buttons-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-button {
   display: flex;
   align-self: center;
   color: #333;
   font-size: 0.9rem;
   max-width: 100px;
-  margin-top: 30px;
+  margin-top: 20px;
+  cursor: url('cursor.png'), pointer;
+}
+
+.submit {
+  margin-right: 10px;
+}
+
+.reset {
+  margin-right: 10px;
 }
 
 /* accordion styles */
@@ -202,7 +307,6 @@ input {
 .accordion-button-styling {
   border: none;
   background-color: rgba(255, 255, 255, 0.932);
-  color: #333;
   cursor: url('cursor.png'), pointer;
   padding: 18px 10px;
   text-align: left;
@@ -214,7 +318,6 @@ input {
   display: flex;
   align-self: center;
   justify-content: center;
-  color: #333;
   font-weight: 500;
 }
 

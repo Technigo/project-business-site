@@ -25,50 +25,58 @@
     <div class="title title-container">
       <h1>Lets shape the future together!</h1>
       <p>Become a volunteer today</p>
-      <button class="btn">Get started</button>
+      <button class="btn">Learn more</button>
     </div>
   </header>
 
   <!-- Signup form -->
   <div class="info-section-wrapper">
-    <form id="form" class="wrapper-container" action="http://httpbin.org/anything" method="POST">
+    <form id="form" class="wrapper-container" action="http://httpbin.org/anything" method="POST" autocomplete="off">
 
-      <label class="child-form-container" for="name">
-        <div class="child-form-container"><input class="input" id="тm" type="text" name="name" placeholder="Name"
-            value="" required>
+
+      <section class="inputs-wrapper">
+        <label class="child-form-container" for="name">
+          <input class="input" id="name" type="text" name="name" placeholder="Name" value="" autocomplete="off"
+            required>
           <div class="tip" id="tip">Some next will be placed here with details</div>
-        </div>
-      </label>
+        </label>
 
-      <label class="child-form-container" for="email">
-        <div class="child-form-container"><input class="input" id="inasaut" type="email" name="email"
-            placeholder="Email" value="" required>
-          <div class="tip" id="tip">Some next will be placed here with details</div>
-        </div>
-      </label>
+        <label class="child-form-container" for="email">
+          <input class="input" id="email" type="email" name="email" placeholder="Email" value="" autocomplete="none"
+            required>
+          <div class="tip" id="tip">Your contact email.</div>
+        </label>
 
-      <label class="child-form-container" for="phone">
-        <div class="child-form-container"> <input class="input" id="ingggut" type="tel" name="phone"
-            placeholder="Phone Number" value="" required>
+        <label class="child-form-container" for="phone">
+          <input class="input" id="phone" type="tel" name="phone" placeholder="Phone Number" value=""
+            autocomplete="none" required>
           <div class="tip" id="tip">Some next will be placed here with detailsill be placed here with details</div>
-        </div>
-      </label>
+        </label>
+      </section>
 
-      <label class="child-form-container" for="phonenumber">
-        <div class="child-form-container"> <input class="input" id="ingut" type="number" name="phonenumber"
-            placeholder="contact number" value="">
-          <div class="tip" id="tip">Some next will be placed here with details</div>
-        </div>
-      </label>
+      <section class="child-form-container">
+        <label class="checkbox-container" for="checkbox">
+          <div class="input checkbox"> <input id="checkbox" type="checkbox" name="checkbox" value="" autocomplete="none"
+              required checked> <span class="checkmark"></span></div>
+          <div class="terms-message"><a href="#">I argee to the Terms & Conditions.</a></div>
+        </label>
+      </section>
+      <!-- 
+      <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label> -->
 
-      <label class="child-form-container" for="phonenumber">
-        <div class="child-form-container"><input class="input" id="inlut" type="number" name="phonenumber"
-            placeholder="contact number" value="">
-          <div class="tip" id="tip">Some next will be placed here with details</div>
-        </div>
-      </label>
 
-      <div class="child-form-container"><button class="submit-button" type="submit">Submit</button></div>
+      <section class="child-form-container">
+        <div class="form-buttons-container">
+          <input class="form-button submit" type="submit" value="Submit">
+          <input class="form-button reset" type="reset">
+        </div>
+      </section>
+
 
     </form>
 
