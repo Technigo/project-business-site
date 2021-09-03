@@ -9,21 +9,39 @@ body {
 
 header {
   width: 100%;
-  height: 20rem;
+  height: 30rem;
   position: relative;
   margin-bottom: 2rem;
   text-transform: uppercase;
-  
 }
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  color: black;
+}
+
+a a:visited{
+  text-decoration: none;
+}
+
+a:hover {
+text-decoration: hotpink;
+}
+
 
 .hero-img {
   width: 100%;
-  height: 20rem;
+  height: 30rem;
+  /* background-image: url(https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=813&q=80); */
   background-image: url(https://images.unsplash.com/photo-1480970530467-74f67f39776e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=947&q=80);
   /* background-image: url(https://images.unsplash.com/photo-1590344018373-ebaf8d2210fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80); */
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
+  /* background-color: black; */
+  opacity: 0.8;
+  /* background-blend-mode: underlay; */
 }
 
 .overlay {
@@ -37,33 +55,39 @@ header {
   align-items: center;
 }
 
-.active + .answer {
-  /* some styling here */
-}
-
 form {
 display: grid;
-/* grid-template-rows: repeat(4) 1fr; */
+gap: 1rem;
 box-shadow: 1px 3px 19px -1px rgba(0,0,0,0.7);
 border-radius: 5px;
-padding: 0.5rem;
+padding: 1rem;
 margin: auto;
 width: 90%;
 margin-bottom: 2rem;
 }
 
 .text-input {
-  display: grid;
-  /* grid-row: span 2; */
+  display: flex;
   margin-bottom: 0.5rem;
+  text-align: left;
+  justify-content: left;
+  border-radius: 5px;
+  border-color: hotpink;
+  border-width: 1px;
 }
 
-.checkbox1, .checkbox2 {
-  /* grid-column: span 4; */
-}
+.checkbox1, .checkbox2{
+  display:inline-block
+} 
 
 button {
-  max-width: 20%;
+  max-width: 30%;
+  min-width: none;
+  background-color: rgb(147, 216, 170);
+  border-radius: 10px;
+  border-width: 1px;
+  box-shadow: 1px 3px 3px 1px rgba(77, 76, 76, 0.7);
+  margin: 1rem;
 }
 
 .accordion {
@@ -92,4 +116,19 @@ button {
 
 .question + .answer {
   display: none;
+}
+
+@media (min-width:668px){
+
+  form {
+    width: 40%;
+  }
+
+  .accordion {
+    width: 40%;
+  }
+}
+
+@media (min-width:1024px){
+
 }

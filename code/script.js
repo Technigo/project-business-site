@@ -1,5 +1,4 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
+// A function that adds and remove the class "question" on the section you click on.
 // console.log(this) to see how it works
 function toggle() {
   this.classList.toggle("question")
@@ -9,7 +8,3 @@ function toggle() {
 document.getElementById("section1").onclick = toggle 
 document.getElementById("section2").onclick = toggle 
 document.getElementById("section3").onclick = toggle 
-
-quest.onclick = () => {
-ans.style.display = "none"
-}
