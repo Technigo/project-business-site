@@ -19,6 +19,12 @@ body {
   justify-content: center;
   padding: 15px;
   font-size: 25px;
+  animation: fadeIn linear 3s;
+}
+
+@keyframes fadeIn {
+  from {opacity:0;}               /* from, is the same as 0% */
+  to {opacity:1;}                 /* to, is the same as 100% */
 }
 
 h1, h2 {
@@ -27,19 +33,19 @@ h1, h2 {
 }
 
 nav {
-  padding: 0 10px 0 10px;
-  margin: 5px 0 5px 0;
+  background-color: rgb(252, 252, 231);
+  padding: 4px 0;  
+  margin: 4px 0;    
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: white;
   position: sticky;               /* navbar that stays at the top of the page when scrolling down */
   top: 0;
   z-index: 1;
 }
 
-.nav-icon, .book-online-btn  {
+.nav-icon, .book-online-btn, .readmore-btn, audio  {
   border: 2px solid gray;
   border-radius: 10%;             /* rounded corners */
   padding: 5px;                   /* space between text and the border */
@@ -49,8 +55,19 @@ nav {
   align-items: center;            /* center the content, vertically */
   justify-content: center;   
   text-transform: uppercase;
-  font-family: 'Hina Mincho', serif;  /* the font dosen't apply here from the body beacuse the button tag default styles have been overwritten(?) */
+  font-family: 'Hina Mincho', serif;  /* the font dosen't apply here from the body, it has been overwritten by the button tag default styles */
   cursor: pointer;
+  margin: 0 auto;                 /* center the buttons */
+}
+
+.nav-icon:hover, .book-online-btn:hover, .readmore-btn:hover {
+  background-color: rgba(241, 106, 27, 0.703);
+  color: white;
+}
+
+audio {
+  border: 2px solid rgba(241, 106, 27, 0.703);
+  width: 10%;
 }
 
 /* The Modal (background) */
@@ -81,18 +98,17 @@ nav {
   background-image: url("./favicon_copy.png");
 }
 
-.modal-sign-up {
+.modal-book {
   grid-column: span 1;
   background-color: white;
   padding: 20px;
-
 }
 
-.modal-img {                  /* hide the img in mobile?? .modal-sign upp take span 2, and center the content? */
+.modal-img {                  /* hide the img in mobile?? .modal-book take span 2, and center the content? */
   grid-column: span 1;
   width: 100%;
                               /* object-fit: contain; doesn't need object-fit because of grid? */
-  transform: rotate(90deg);   /* rotate the img 90de g*/
+  transform: rotate(90deg);   /* rotate the img 90deg */
   align-self: center;         /* center the img */
 }
 
@@ -121,16 +137,16 @@ nav {
   cursor: pointer;
 }
 
-.check-mark {                              /* display chech-mark when input are valid */
+.check-mark {                              /* hidden check-mark before validation */
   visibility: hidden;
   color: green;
 }
 
-input:valid + .check-mark {               /* want to display check-mark when input are valid */
+input:valid + .check-mark {               /* display check-mark when input are valid */
   visibility: visible;
 }
 
-/* want a red border when validation say invalid when it is not a placeholder and on focus */
+/* want a red border when validation say invalid and when it is not a placeholder and on focus */
 input:not(:placeholder-shown):not(:focus):invalid {
   border: 0.5px solid red;
 }
@@ -168,4 +184,112 @@ input:not(:placeholder-shown):not(:focus):invalid {
 
 .active .arrow {                          /*when activating the function toggle, rotate the arrow 180deg */
   transform: rotate(180deg);
+}
+
+.main-content {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px; 
+  width: 90%;
+  margin: 20px auto;
+  padding: 50px;
+  background-color: #eaeaea; 
+}
+
+.content-text {
+  grid-column: span 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  /* position: relative;*/
+}
+
+.content-text a {
+  text-decoration: none;
+}
+
+.content-text img {
+  width: 70%;
+  height: 200px;
+  object-fit: cover;
+}
+
+footer {
+  background-color: rgb(252, 252, 231);
+  padding: 50px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer p {                          /*zero margin between the paragraphs in the footer*/
+  margin: 0;
+}
+
+.copyright {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.logo-technigo {
+  width: 100%;
+  max-height: 25px;
+  margin-top: 5px;                /*put some space betwwen the logo and the paragraph*/
+}
+
+@media (min-width: 768px) and (max-width: 991px) {        /*for tablet*/
+  .hero-video {
+    height: 200px;
+  }
+  .content-text {
+      grid-column: span 2;                      /*change it to one column*/
+  }
+
+  button, .header-title, footer, .copyright {
+    font-size: 80%;
+  }
+
+  .nav-icon, .book-online-btn, .readmore-btn {
+    width: 80px;
+    height: 40px;
+  }
+
+  .modal-content {                              /* want the form and FAQ-accordion to take almost all the screen size */
+    width: 60%;
+  }
+
+}
+
+@media (max-width: 767px) {                     /*for mobile*/
+  .hero-video {
+    height: 180px;
+  }
+  .content-text {
+      grid-column: span 2;                      /*change it to one column*/
+  }
+  button, .header-title, footer, .copyright {
+    font-size: 60%;
+  }
+  .nav-icon, .book-online-btn, .readmore-btn {
+    width: 60px;
+    height: 30px;
+  }
+
+  .modal-img {                                  /* make the img disappear so there's more space for the form */
+    display: none;
+  }         
+
+  .modal-book {
+    grid-column: span 2;
+  }
+
+  .modal-content {                              /* want the form and FAQ-accordion to take almost all the screen size */
+    width: 80%;
+    justify-items: center;                      
+  }
+  
 }

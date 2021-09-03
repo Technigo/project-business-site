@@ -11,12 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet"> 
   </head>
   <body>
- 
+
+
     <header>
       <video autoplay muted loop class="hero-video" id="heroVideo">
         <source src="./herovideo.mp4" type="video/mp4">
       </video>
-      <div class="header-title">
+      <div class="header-title" id="home">
         <h1>Yum Dumplings</h1>
         <h2>| Cooking Classes for people who Love
         <img src="./favicon.png" alt="icon of dumplings" width="50px" height="50px"/> 餃子 | </h2>
@@ -27,16 +28,20 @@
       <button class="nav-icon" id="homeBtn">home</button>
       <button class="nav-icon" id="contactBtn">contact</button>
       <button class="nav-icon" id="faqBtn">faq</button>
-      <button class="nav-icon" id="signupBtn">sign up</button>
+      <button class="nav-icon" id="bookBtn">book</button>
+      <audio controls autoplay loop>
+        <source src="./SLOWVERSION_2019-10-13_-_The_Biggest_Smile_-_David_Fesliyan.mp3" type="audio/mp3">
+        Your browser does not support the audio tag. 
+      </audio>
     </nav>
 
-    <!-- The Modal - Signup form! -->
+    <!-- The Modal - booking form -->
     <form action="https://httpbin.org/anything" id="modalForm" class="modal-form" method="POST">
       <!-- Modal content -->
       <div class="modal-content">
           <span class="close-btn" id=closeBtn >&times;</span>       <!-- &times - multiplication sign -->
-        <div class="modal-sign-up">
-          <h1>Sign up for class</h1> 
+        <div class="modal-book">
+          <h1>Online Booking</h1> 
           <p>Fill in this form to book a cooking lesson</p>
 
           <!-- <label for="name">Name</label>
@@ -164,7 +169,43 @@
       </div>
     </section>
 
+    <main class="main-content">
+      <div class="content-text">
+          <img src="./folding.jpg" alt="folding dumpling"/>         
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </div>
+      <div class="content-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <img src="./dumplings.jpg" alt="steamed dumplings"/>
+      </div>
+      <div class="content-text">
+          <img src="./sticky_pot.jpg" alt="sticky pot dumplings"/>
+      </div>
+      <div class="content-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <a href="https://en.wikipedia.org/wiki/Dumpling" target="blank">
+              <button class="readmore-btn" id="readmoreBtn">read more</button>
+          </a>
+      </div>
+    </main>
 
+    <footer id="contactInfo">
+      <div class="contact-info"> 
+          <p>Yum Dumplings</p>  
+          <p>Dumpling Street 123</p>
+          <p>123 45 City</p>
+          <p>yumdumplings.com</p>
+          <p>E-mail: support@yumdumplings.com</p>
+          <p>Phone: 123 456 789</p>
+      </div>
+      <div class="copyright"> 
+          <p>&#169 Yum Dumplings 2021</p>         <!--&#169 is the copyright symbol-->
+          <p>by Katie Wu | Team Foxes 🦊</p>  
+          <a href="https://www.technigo.io/" target="blank">
+              <p><img src="./logo.svg" class="logo-technigo" alt="logo of Technigo"></p>
+          </a>
+      </div> 
+  </footer>
 
     <!-- dont forget to link the javascript file here! -->
     <script src="./script.js"></script>
