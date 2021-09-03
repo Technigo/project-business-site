@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <title>Project 3</title>
   </head>
   <body>
@@ -21,60 +24,69 @@
           <form action="https://httpbin.org/anything" method="POST">
             <label for="fname">Fisrt Name</label>
             <input 
-                type="text" id="fname" name="fname" 
-                minlength="2" maxlength="30" required 
-                size="30">
+                  type="text" id="fname" name="fname" 
+                  minlength="2" maxlength="30" required 
+                  size="30">
+              <span></span>
             <label for="lastname">Last Name</label>
             <input 
-                type="text" id="lastname" name="lastname"
-                minlength="4" maxlength="30" required
-                size="30">
+                  type="text" id="lastname" name="lastname"
+                  minlength="4" maxlength="30" required
+                  size="30">
+              <span></span>    
             <label for="email">Enter your e-mail</label>
             <input type="email" id="email" name="email" placeholder="email@example.com">
+              <span></span>
             <label for="password">Enter your password</label>
             <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-              title="Must contain at least one number and one uppercase and lowercase letter, 
-              and at least 8 or more characters">
-              <input type="radio" class="text-text" id="age" required>
-              <label for="age" >I am over 18</label>
-              <label for="newsletter">
-              I agree to receive the weekly newsletter (optional)
-              </label>
-              <input type="checkbox" id="newsletter">
-              </div>   
-              <button type="submit">Sign Up</button>
+                  title="Must contain at least one number and one uppercase and lowercase letter, 
+                  and at least 8 or more characters" required>
+            <div class="container"> 
+              <input type="radio" id="age" name="age" required>
+              <label for="age">I am over 18</label>
+            </div>  
+            <div class="container"> 
+              <input type="checkbox" id="newsletter" name="newsletter">
+              <label for="newsletter">I agree to reveive the weekly newsletter (optional)</label>
+            </div>
+            <button type="submit">Sign Up</button>
           </form>
-      </div>
-    </div>
+        </div>
+      
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-      <div class="accordion-question">  
-        <div class="question" id="section1">What are FAQ?</div>
-        <div class="answer">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque lobortis suscipit. Sed faucibus felis vitae malesuada efficitur. Suspendisse ultrices libero nec augue luctus, ullamcorper ornare tellus egestas. Maecenas in dapibus mi. Sed gravida ligula eget lacus pellentesque vestibulum. Aenean eros nunc, aliquet ut massa quis, pharetra auctor ligula. In a euismod turpis, id sagittis magna. Morbi eget purus ac elit auctor accumsan a et nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
-          </p>
+        <!-- Accordion -->
+        <h1>FAQ</h1>
+        <div class="accordion-question">  
+          <div class="question" id="section1">What are FAQ?</div>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque lobortis suscipit. Sed faucibus felis vitae malesuada efficitur. Suspendisse ultrices libero nec augue luctus, ullamcorper ornare tellus egestas. Maecenas in dapibus mi. Sed gravida ligula eget lacus pellentesque vestibulum. Aenean eros nunc, aliquet ut massa quis, pharetra auctor ligula. 
+          </div>
         </div>
-      </div>
-      <div class="accordion-question">  
-        <div class="question" id="section2">What is FAQ full form?</div>
-        <div class="answer">
-          <p>Etiam risus purus, lacinia eu nisl ut, lacinia sodales augue. Nunc vel est sed arcu efficitur dapibus eu non dolor. Duis aliquam ac ante in finibus. Quisque nibh nisi, placerat a diam sit amet, vehicula consequat tortor. Mauris et dui ac diam efficitur euismod id nec ligula. </p>
+        <div class="accordion-question">  
+          <div class="question" id="section2">What is FAQ full form?</div>
+          <div class="answer">
+            <p>Etiam risus purus, lacinia eu nisl ut, lacinia sodales augue. Nunc vel est sed arcu efficitur dapibus eu non dolor. Duis aliquam ac ante in finibus. Quisque nibh nisi, placerat a diam sit amet, vehicula consequat tortor. Mauris et dui ac diam efficitur euismod id nec ligula. </p>
+          </div>
         </div>
-      </div>
-      <div class="accordion-question">
-        <div class="question" id="section3">What should be in a FAQ?</div>
-        <div class="answer">
-          <p>Etiam risus purus, lacinia eu nisl ut, lacinia sodales augue. Nunc vel est sed arcu efficitur dapibus eu non dolor. Duis aliquam ac ante in finibus. Quisque nibh nisi, placerat a diam sit amet, vehicula consequat tortor. Mauris et dui ac diam efficitur euismod id nec ligula. </p>
-        </div>  
-      </div>
-      <div class="accordion-question">
-        <div class="question" id="section4">What should be in a FAQ?</div>
-        <div class="answer">
-          <p>Etiam risus purus, lacinia eu nisl ut, lacinia sodales augue. Nunc vel est sed arcu efficitur dapibus eu non dolor. Duis aliquam ac ante in finibus. Quisque nibh nisi, placerat a diam sit amet, vehicula consequat tortor. Mauris et dui ac diam efficitur euismod id nec ligula. </p>
-        </div> 
-      </div>
+        <div class="accordion-question">
+          <div class="question" id="section3">What should be in a FAQ?</div>
+          <div class="answer">
+            <p>Etiam risus purus, lacinia eu nisl ut, lacinia sodales augue. Nunc vel est sed arcu efficitur dapibus eu non dolor. Duis aliquam ac ante in finibus. Quisque nibh nisi, placerat a diam sit amet, vehicula consequat tortor. Mauris et dui ac diam efficitur euismod id nec ligula. </p>
+          </div>  
+        </div>
+        <div class="accordion-question">
+          <div class="question" id="section4">What should be in a FAQ?</div>
+          <div class="answer">
+            <p>Etiam risus purus, lacinia eu nisl ut, lacinia sodales augue. Nunc vel est sed arcu efficitur dapibus eu non dolor. Duis aliquam ac ante in finibus. Quisque nibh nisi, placerat a diam sit amet, vehicula consequat tortor. Mauris et dui ac diam efficitur euismod id nec ligula. </p>
+          </div> 
+        </div>
     </section>
+
+  </div>
+
+  <footer>
+    &copy; All rights reserved. 2021
+  </footer>
   
     <!-- dont forget to link the javascript file here! -->
     <script src="./script.js"></script>
