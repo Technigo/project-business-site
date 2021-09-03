@@ -2,7 +2,7 @@
 
 Create a site for a company of your choice. You can come up with your own fantasy company or use an existing one. We want you to practice what we've gone through this week so the website should contain these three parts: hero image/video, signup form and accordion.
 
-My page t’s called Sprinkle. It’s a community where you as a developer can share your knowledge with students in a more intimate way. Sprinkle your knowledge!
+My page is called Sprinkle. It’s a community where you as a developer can share your knowledge with students in a more intimate way. Sprinkle your knowledge!
 
 ## How did I do it?
 I decided to use CSS Grids for the layout. The CSS grid is divided in 12 fraction so it’s easy to divide the page in columns.
