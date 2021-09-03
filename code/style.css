@@ -8,7 +8,18 @@
 body { 
   background-color: rgb(255, 255, 255);
   font-family: "Montserrat";
+
+}
+
+a {
   color: rgb(88, 88, 88);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00747c;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .header { 
@@ -53,7 +64,7 @@ h2 {
 }
 
 button {
-  padding:10px;
+  padding:15px;
   background-color: cadetblue;
   border:none;
   border-radius: 8px;
@@ -78,8 +89,6 @@ button:hover {
 /* FORM SECTION */
 
 /* fieldset and legend */ 
-
-
 fieldset {
   margin: 2rem 0 ; 
   padding: 1em 2em;
@@ -94,7 +103,6 @@ legend {
 }
 
 /*labels*/
-
 label {
   display: block; /* places all element in a row*/ 
   margin-top: 1em; /*adding space between elements in a form*/ 
@@ -121,13 +129,22 @@ input[type="email"], input[type="text"] {
 }
 
 /*radio buttons and checkboxes*/ 
+.options {
+  margin-bottom: 2em;
+  margin-left:1em;
+}
+
+.labels-radio {  
+  margin-bottom: 1em;
+}
 
 .checks {
   margin-bottom:2em;
+  margin-top:3em;
 }
 
 .checks p {
-  margin-bottom:0;
+  margin:1em 0;
 }
 
 input[type="checkbox"] + label, input[type="radio"] + label {
@@ -144,6 +161,8 @@ input[type="radio"] {
 input[type="radio"]:first-of-type {
   margin-left:0;
 }
+
+/*ACCORDION*/
 
 .acc-container {
   width: 400px;
@@ -171,23 +190,44 @@ input[type="radio"]:first-of-type {
   float: right;
 }
 
-.accordion:hover {
-  background: #00747c;
-  transition: 0.25s;
+.active, .accordion:hover {
+  background-color: rgb(155, 155, 155);
 }
 
-.accordion:after  {
-  content: "\2212"
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 10px;
+  color: transparent;  
+  text-shadow: 0 0 0 white;
+  float: right;
+  margin-left: 5px;
 }
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  color: transparent;  
+  text-shadow: 0 0 0 white;
+}
+
+.faq-section {
+  background-color: #00747c;
+  color:white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
 
 .panel {
   padding: 2px 18px;
+  color:rgb(70, 70, 70);
   background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-
 
 /* FOOTER STYLING */
 footer {
@@ -277,5 +317,9 @@ footer p {
 
     .footer-container {
       flex-direction: column;
+    }
+
+    a {
+      padding: 1rem 0;
     }
  }
