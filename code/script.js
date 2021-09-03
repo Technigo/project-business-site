@@ -12,3 +12,4 @@ document.querySelectorAll(".question").forEach(element => element.onclick = togg
 //getElementByClassName returns an HTMLCollection which do not have iterate methods
 //querySelectorAll return a nodeList that is possible to iterate with forEach
 //see: https://developer.mozilla.org/es/docs/Web/API/NodeList
+
