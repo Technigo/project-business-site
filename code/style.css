@@ -10,6 +10,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  
 
   background-image: url(./images/annie-spratt-vs6a4EHj_Ro-unsplash\ \(1\).jpg);
     background-size: cover;
@@ -40,14 +42,24 @@ h1 {
   text-shadow: rgba(0, 0, 0, 0.523);
 }
 
+
 h2 {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.523);
+}
+
+h3 {
   font-family: 'Major Mono Display', monospace;
   font-size: 30px;
   color: #232425;
+ 
 }
 
 header {
-  min-height: 300px;
+  min-height: 200px;
   margin-top: 10%;
   margin-bottom: 10%;
 
@@ -55,10 +67,15 @@ header {
 
 }
 
-img {
+
+
+
+
+
+/* img {
   object-position: fixed;
  
-}
+} */
 
 /* WORKING CODE FOR OLD HEADER
 img {
@@ -75,7 +92,7 @@ text-align: center;
 } */
 
 /* Using overlay to make the text show on the picture */
-.overlay {
+/* .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -86,7 +103,7 @@ text-align: center;
   justify-content: center;
   align-items: center;
 
-}
+} */
 
 .wrap-form {
   display: flex;
@@ -99,16 +116,14 @@ form {
   background-color: rgb(228, 218, 244);
   border: 1px solid;
   border-radius: 8px;
- 
   padding: 20px;
-  
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
 
 }
 label {
   display: block;
   font-size: 16px;
-  font-family: sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
   color: #232425;
 }
 
@@ -159,24 +174,37 @@ button {
 }
 
 .question {
-  font-weight: bold;
-  font-size: 18px;
-  padding-bottom: 10px;
+  /* font-weight: bold; */
+  font-size: 20px;
+  padding-bottom: 15px;
   cursor: pointer;
 
 }
 
 .question:hover {
-  background-color: white;
+  color: rgba(211, 4, 100, 0.8);
 
 }
+
+.question:after {
+  content: '\002B'; /* Unicode character for "plus" sign (+) */
+  font-size: 20px;
+  float: right;
+  color: #232425;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212"; /* Unicode character for "minus" sign (-) */
+}
+
 .answer {
   font-style: italic;
   display: none;
 }
 
 .active {
-  background-color: rgb(228, 218, 244);
+  background-color: rgb(255, 255, 255, 0.8);
 
 }
 
@@ -185,11 +213,51 @@ button {
 .active + .answer {
   display: block;
 
+
 }
 
 /* TABLET */
-@media (min-width: 768px)
+@media (min-width: 768px) {
+
+h1 {
+  font-size: 70px;
+  padding: 20px;
+}
+
+}
 
 
 /* SCREEN */
-@media (min-width: 1199px) {
+@media (min-width: 1080px) {
+
+  header {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  h1 {
+    font-size: 90px;
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+
+  body {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: top;
+  }
+
+  .wrap-accordion {
+    width: 500px;
+    margin: 10px;
+    margin-bottom: 100px;
+  }
+  
+  .wrap-form {
+    width: 500px;
+    margin: 10px;
+    margin-bottom: 100px;
+}  
