@@ -173,11 +173,15 @@ select{
   color: white;
   justify-content: center;
   align-content: flex-end;
-  position: absolute;
-  z-index: 3;
   margin: 20px;
   padding: 7px;
+  
 }
+a{
+  text-decoration: none;
+  color: white;
+}
+
 .button-wrapper{
   align-content: center;
   display: flex;
@@ -187,7 +191,7 @@ select{
   background-color: #4D7377;
   box-shadow: 2px 2px 3px white;
 }
-.accordion{
+  .accordion{
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -210,19 +214,29 @@ select{
     color: white;
     border-radius: 0px 0px 5px 5px;
     border-top: 1px solid white;
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
   }
+
   .answer{
     background-color:#6F6854;
     width: 100%;
     margin: auto;
-    display: none;
+    overflow: hidden;
     margin: 0;
+    /* border-top: 1px solid white; */
+    transition: 1s ease-out;
+    max-height: 0;
+
   }
 
   .active + .answer {
     display: block;
-  }
+    max-height: 200px;
 
+  }
+  
   .footer-wrapper{
   display: flex;
   text-align: center;
@@ -235,24 +249,18 @@ select{
   bottom:  0px;
 }
 
-
-.question:after {
-  content: '\02C7';
-  color: white;
+.icon{
+  filter: invert(100%);
+  width: 20px;
+  height: 20px;
+  transform: rotate(270deg);
   float: right;
-  padding-right: 20px;
-  vertical-align: top;
-  margin-top: 10px;
-  
+  margin-right: 20px;
 }
 
-
-.active:after {
-  content: "\02C6";
-  float: right;
-  padding-right: 20px;
-  vertical-align: top;
-  margin-top: 10px;
+.active .icon{
+  transform: rotate(90deg);
+  transition: 0.5s ;
 }
 
 
