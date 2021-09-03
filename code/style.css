@@ -13,27 +13,50 @@ body {
   background-color: rgb(210, 189, 228);
 }
 
+/* Hero */
 video {
   width: 100%;
 }
 .overlay-text {
   position: absolute;
-  top: 25vw;
-  margin-left: 20px;
+  top: 28vw;
+  margin-left: 40px;
   z-index: 1;
 }
 .top-text {
   color: white;
   font-size: 5vw;
+  animation: glow 2s ease-in-out infinite;
+  animation-direction: alternate-reverse;
+}
+.top-text-b {
+  color: white;
+  font-size: 2vw;
+  margin: 20px 0 0 50px;
+}
+/* Glow animation for top-text*/
+@keyframes glow {
+  from {
+    text-shadow: 0 0 40px #a968f8;
+  }
+  to {
+    text-shadow: 0 0 60px #f0e7ff, 0 0 20px #edb3ff;
+  }
 }
 
+/* Grid for Form+accordian */
+.grid {
+  display: grid;
+  justify-items: center;
+}
 /* Form */
 .form-container {
-  /* same as accordian-container, double code atm */
+  /* some same as .accordian, double code atm */
   background-color: rgb(237, 199, 255);
   width: 90%;
   max-width: 1000px;
   margin: 2rem auto;
+  border-radius: 10px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   text-align: center;
   padding-bottom: 2rem;
@@ -44,21 +67,44 @@ video {
   flex-direction: column;
   width: 100%;
   align-items: center;
+  margin-bottom: 20px;
+}
+.form-boxes input {
+  width: 300px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid blueviolet;
+}
+.radio-buttons,
+.check-boxes {
+  margin-bottom: 20px;
 }
 button {
-  display: block;
-  margin: 0 auto; /* Måste ändra det här på nåt sätt.. vill lägga till margin top! */
+  text-transform: uppercase;
+  color: white;
+  min-width: 200px;
+  min-height: 64px;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: rgb(191, 125, 245);
 }
 
+h2,
+h3,
+p {
+  color: blueviolet;
+}
 h2 {
   text-align: center;
-  padding-top: 2rem; /* la till för FAQ texten i lådan är konstig ;( */
+  padding-top: 2rem;
   margin: 2rem 0;
   font-size: 2rem;
 }
 
 p {
-  padding-top: 1.2rem;
+  color: rgb(74, 19, 126);
 }
 
 /* Accordion */
@@ -67,6 +113,7 @@ p {
   width: 90%;
   max-width: 1000px;
   margin: 2rem auto;
+  border-radius: 10px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 .question {
@@ -99,8 +146,7 @@ p {
   border-top: 2px solid rgb(210, 189, 228);
 }
 .active {
-  background-color: rgb(117, 94, 218);
-  content: "\25B2";
+  background-color: rgb(135, 114, 231);
 }
 .active + .answer {
   display: block;
@@ -109,14 +155,47 @@ p {
 /* Footer */
 footer {
   background-color: rgb(134, 83, 201);
+  font-size: 0.8rem;
+  color: rgb(237, 199, 255);
   width: 100%;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
 }
+.technigo-logo {
+  margin: 10px;
+  max-width: 50px;
+}
 
-/* @media (min-width: 768px) {
-  body {
-    display: grid;
+/* Media query for grid 2 columns for table+dekstop. And for video source change. */
+@media (max-width: 767px) {
+  .hero-video-small {
+    display: block;
+  }
+  .hero-video-medium,
+  .hero-video-large {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
     grid-template-columns: repeat(2, 1fr);
   }
-} */
+  .hero-video-medium {
+    display: block;
+  }
+  .hero-video-small,
+  .hero-video-large {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-video-large {
+    display: block;
+  }
+  .hero-video-small,
+  .hero-video-medium {
+    display: none;
+  }
+}

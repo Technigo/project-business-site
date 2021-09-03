@@ -10,73 +10,96 @@
   <body>
     <!-- video or image as a header is cool :) -->
     <header>
-      <video class="hero-video" autoplay loop muted playsinline>
+      <video class="hero-video-large" autoplay loop muted playsinline>
         <source src="./videos/pexels-ivan-khmelyuk-8642288-1080p.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+      <video class="hero-video-medium" autoplay loop muted playsinline>
+        <source src="./videos/pexels-ivan-khmelyuk-8642288-720p.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video class="hero-video-small" autoplay loop muted playsinline>
+        <source src="./videos/pexels-ivan-khmelyuk-8642288-480p.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
       <div class="overlay-text">
-        <h1 class="top-text">Business text over a video here</h1>
+        <h1 class="top-text">Visit our relaxing purple resort</h1>
+        <p class="top-text-b">How lavender can make you calm and relax</p>
       </div>
     </header>
 
-    <!-- Signup form -->
-    <section class="form-container">
-      <form action="http://httpbin.org/anything" method="POST">
-        <h2>Sign up!</h2>
-        <!-- Form boxes here -->
-        <div class="form-boxes">
-          <label for="name">Your name</label>
-            <input type="text" required id="name" name="name" placeholder="Write your name..."/>
-          <label for="email">Your email</label>
-            <input type="email" id="email" name="email" placeholder="Write your email..."/>
-          <label for="password">Your password</label>
-            <input type="password" id="password" name="password" placeholder="Write your password..."/>
+    <section class="grid">
+      <!-- Signup form -->
+      <section class="form-container">
+        <form action="http://httpbin.org/anything" method="POST"> <!-- Posts form to httpbin -->
+          <h2>Book today!</h2>
+          <!-- Form boxes here -->
+          <div class="form-boxes">
+            <label for="name">Your name</label>
+              <input type="text" required id="name" name="name" placeholder="Write your name..."/>
+            <label for="email">Your email</label>
+              <input type="email" id="email" name="email" placeholder="Write your email..."/>
+            <label for="password">Your password</label>
+              <input type="password" id="password" name="password" placeholder="Write your password..."/>
+          </div>
+          <!-- Radio buttons here -->
+          <h3>Select one</h3>
+          <div class="radio-buttons">
+          <input type="radio" class="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+          <input type="radio" class="radio" id="female" name="gender" value="female">  
+            <label for="female">Female</label>
+          <input type="radio" class="radio" id="other" name="gender" value="other">  
+            <label for="other">Other</label>
+          </div>
+          <!-- Checkboxes here -->
+          <h3>Select some</h3>
+          <div class="check-boxes">
+          <input type="checkbox" id="blue" name="blue" value="blue">
+            <label for="blue">Blue</label>
+          <input type="checkbox" id="pink" name="pink" value="pink">  
+            <label for="pink">Pink</label>
+          <input type="checkbox" id="violet" name="violet" value="violet">  
+            <label for="violet">Violet</label>
+          </div>
+          <!-- Submit form button -->
+          <button class="button" type="submit">Submit form</button>
+        </form>
+      </section>
+
+      <!-- Accordion -->
+      <section class="accordion">
+        <h2>FAQ</h2>
+        <div class="question" id="section1">What is lavender good for?</div>
+        <div class="answer">
+          <p>Lavender is commonly used for anxiety, stress, and insomnia. It is also used for depression, dementia, pain after surgery, and many other conditions. In foods and beverages, lavender is used as a flavor component.</p>
         </div>
-        <!-- Radio buttons here -->
-        <h3>Select one</h3>
-        <input type="radio" class="radio" id="male" name="gender" value="male">
-          <label for="male">Male</label>
-        <input type="radio" class="radio" id="female" name="gender" value="female">  
-          <label for="female">Female</label>
-        <input type="radio" class="radio" id="other" name="gender" value="other">  
-          <label for="other">Other</label>
-        <!-- Checkboxes here -->
-        <h3>Select some</h3>
-        <input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1">
-          <label for="checkbox1">Checkbox1</label>
-        <input type="checkbox" id="checkbox2" name="checkbox2" value="checkbox2">  
-          <label for="checkbox2">Checkbox2</label>
-        <input type="checkbox" id="checkbox3" name="checkbox3" value="checkbox3">  
-          <label for="checkbox3">Checkbox3</label>
-        <!-- Submit form button -->
-        <button class="button" type="submit">Submit form</button>
-      </form>
+        <div class="question" id="section2">The smell of lavender</div>
+        <div class="answer">
+          <p>
+            Aromatherapy. Lavender is most commonly used in aromatherapy. The fragrance from the oils of the lavender plant is believed to help promote calmness and wellness. It's also said to help reduce stress, anxiety, and possibly even mild pain.</p>
+        </div>
+        <div class="question" id="section3">Lavender oil</div>
+        <div class="answer">
+          <p>Lavender oil can benefit the skin in numerous ways. It has the ability to lessen acne, help lighten skin, and reduce wrinkles. It can even be used to treat other things, like improving hair health and digestion.</p>
+        </div>
+        <div class="question" id="section4">Lavender and the Nervous System</div>
+        <div class="answer">
+          <p>There is growing evidence suggesting that lavender oil may be an effective medicament in treatment of several neurological disorders. Several animal and human investigations suggest anxiolytic, mood stabilizer, sedative, analgesic, and anticonvulsive and neuroprotective properties for lavender. </p>
+        </div>
+      </section>
     </section>
-
-    <!-- Accordion -->
-    <section class="accordion">
-      <h2>FAQ</h2>
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum ffffff...</p>
-      </div>
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-      <div class="question" id="section3">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-
-    <!-- dont forget to link the javascript file here! -->
-    <script src="script.js"></script>
 
     <footer>
       <div>Project for Technigo</div>
-      <div>By Daniel Vestin</div>
+      <a href="https://www.technigo.io/" target="_blank">
+        <img class="technigo-logo" src="./logo.svg">
+      </a>
+      <div>By Daniel Vestin 2021 &#x1f98a;</div>
     </footer>
+
+    <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
     
   </body>
   
