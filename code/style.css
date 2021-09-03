@@ -108,8 +108,14 @@ header {
 .slider>.dots {
   position: absolute;
   bottom: 10px;
-  left: 50%;
   z-index: 10;
+
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  /* height: 100%;
+  top: 90%;
+  left: 0; */
 }
 
 .slider>.dots label {
@@ -118,7 +124,7 @@ header {
   cursor: pointer;
   border-radius: 50%;
   margin: 0 4px;
-  padding: 6px;
+  padding: 5px;
   background: white;
 }
 
@@ -131,10 +137,13 @@ header {
   margin-top: -6px;
   background: pink;
   border-radius: 50%;
-  padding: 6px;
+  padding: 5px;
   opacity: 0;
 }
 
+.slider > .dots label:hover:after {
+  opacity: 1;
+}
 
 
 /* ------SIGN-UP FORM STYLING ----- */
@@ -220,10 +229,12 @@ fieldset {
 
 .accordion {
   width: 100%;
-  /* max-width: 700px; */
   min-width: 280px;
   margin: auto;
   /* border: 1px solid white; */
+}
+.accordion fieldset {
+  margin:10px;
 }
 
 .question {
@@ -381,13 +392,13 @@ fieldset {
 
   .sign-up {
     width: 70%;
-    max-width: 600px;
+    max-width: 750px;
     min-width: 280px;
     margin: auto;
   }
   .accordion {
     width: 70%;
-    max-width: 600px;
+    max-width: 750px;
     min-width: 280px;
     margin: auto;
   }
@@ -401,7 +412,7 @@ fieldset {
   }
 
   fieldset {
-    height: 700px;
+    height: 750px;
   }
 
   .container {
