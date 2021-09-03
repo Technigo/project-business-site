@@ -18,21 +18,21 @@ document.getElementById("nav").onclick = toggle
 //   console.log(this)
 // }
 
-const video = $('#myvideo');
+// const video = document.getElementById('myvideo');
 
-const WindowWidth = $(window).width();
+// const WindowWidth = window.innerWidth;
 
-if (WindowWidth <= 768) {
-    //It is a small screen
-    video.append("<source src='videos/mobile-video.mp4' type='video/mp4'/>");
-} else if (WindowWidth <= 1300) {
-    // Medium screen
-    video.append("<source src='videos/tablet-video.mp4' type='video/mp4'/>")
-} else {
-    //It is a big screen or desktop
-    video.append("<source src='videos/desktop-video.mp4' type='video/mp4'/>");
-    video.append("<poster="photos/desktop-photo.jpg>");
-}
+// if (WindowWidth <= 768) {
+//     //It is a small screen
+//     video.append("<source src='videos/mobile-video.mp4' type='video/mp4'/>");
+// } else if (WindowWidth <= 1300) {
+//     // Medium screen
+//     video.append("<source src='videos/tablet-video.mp4' type='video/mp4'/>")
+// } else {
+//     //It is a big screen or desktop
+//     video.append("<source src='videos/desktop-video.mp4' type='video/mp4'/>");
+//     video.append("<poster='photos/desktop-photo.jpg'/>");
+// }
 
 
 
