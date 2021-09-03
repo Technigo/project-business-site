@@ -1,6 +1,5 @@
 
 // A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
 // console.log(this) to see how it works
 function toggle() {
   this.classList.toggle("active")
@@ -11,16 +10,3 @@ document.getElementById("section1").onclick = toggle
 document.getElementById("section2").onclick = toggle
 document.getElementById("section3").onclick = toggle
 document.getElementById("section4").onclick = toggle
-
-
-
-
-// My first attempt how to try it:
-// toggles faq 1
-// const faq1 = document.getElementById('section1')
-// faq1.onclick = toggleFaqAnswer1
-
-// function toggleFaqAnswer1() {
-//   console.log('Hello!') //This will show in the console log, just testing
-//   this.classList.toggle('active')
-// }
