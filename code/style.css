@@ -1,7 +1,252 @@
+* { 
+ margin: 0;
+ padding: 0;
+}
+ 
+  body {
+    background-color:antiquewhite;
+    max-width: 100%;
+  }
+  .img-container {
+    
+    background-image: url(heroimgyoga.jpeg);
+    height: 70%;
+    background-position: center;
+    background-repeat: no-repeat ;
+    background-size: cover;
+    position: relative;
+    border: solid antiquewhite;
+    
+  }
+  .inner-container
+  { text-align: center;
+    width: 100%;
+    color: antiquewhite;
+    height: auto;
+    margin-top: 200px;
+  }
+
+  h1{
+    font-size: 60px;
+    font-family: 'Hina Mincho', serif;
+  }
+  h2 {
+    font-family: 'Hina Mincho', serif;
+    font-size: 1.7em;
+    text-decoration: center;
+    font-weight: 400;
+
+  }
+
+  a {
+    margin-top: 15px;
+    font-size:1.3em;
+    font-family:'Hina Mincho', serif ;
+    margin: bottom 15px; 
+  }
+
+  .button {
+    display: inline-block;
+    width:200px;
+    font-weight: bold;
+    padding: 10px;
+    color:antiquewhite;
+    text-align:center;
+    outline: none;
+    text-decoration: none;
+    margin-bottom: 20px;
+    border-radius: 20px;
+  }
+
+  .button:hover, .button:active {
+    background-color: rgb(218, 124, 124);
+    color: #000;
+  
+}
+
+  h1{
+    font-size: 5em;
+  }
+
+  h2{
+    font: 1.4em;
+  }
+
+ .accordion-flex {
+  display: flex;
+  background-color: antiquewhite;
+  margin-bottom: 65px;
+}
+
+.signup {
+  width: 50%;
+  margin-left: 50px;
+  padding: 50px;
+  border: solid pink;
+  max-width: 1000px;
+  margin-top: 0 px;
+  background-color: #34495e;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px 1px lightblue;
+  }
+
+
+select {
+  font-size: 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color:antiquewhite;
+  font-family: 'Hina Mincho', serif ; ;
+  
+}
+
+button {
+  display: block;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+   
+  background-color: antiquewhite;
+  font-family: 'Hina Mincho', serif ;
+ 
+  
+}
+button:hover {
+  background-color: pink;
+}
+
+label {
+  margin-bottom:20px ;
+  color: antiquewhite;
+  font-size: 20px;
+}
+label.cb {
+  margin-right: 20px;
+}
+
+input {
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-family: 'Hina Mincho', serif ; 
+}
+
+input:valid {
+  background-color: pink;
+}
+
+input:invalid {
+  background-color: antiquewhite;
+}
+
+
+h3{
+  font-size: 35px;
+  font-family: 'Hina Mincho', serif;
+  color: antiquewhite;
+  margin-top: 30px;
+}
+
+
+.accordion {
+  width: 50%;
+  max-width: 1000px;
+  margin-right: 50px;
+  margin-top: 0 px;
+  border-radius: 15px;
+  background-color: #34495e;
+  border-inline: 5px;
+  padding: 50px;
+}
+
+.accordion-item {
+  background-color: bisque;
+  color: #111;
+  margin: 12px; 
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px lightblue;
+}
+
+.accordion-item-header {
+  padding: 10px;
+  min-height: 15px;
+  line-height: 5px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion-item-header::after {
+ content: "\002B";
+ font-size: 30px;
+ position: absolute;
+ right: 30px;
+}
+
+.accordion-item-header.active::after {
+ content: "\2212";
+}
+.accordion-item-body {
+  display: none;
+  padding: 16px;
+  line-height: 12px;
+  border-top: 3px solid #34495e;
+
+}
+.accordion-item-body-content{
+  margin-bottom: auto;
+}
+.accordion-item-header.active + .accordion-item-body {
+  display: block ;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: yellow;
+  padding: 20px;
+  color: #111;
+  text-align: center;;
+  border-radius: 10px;
+  
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .inner-container{
+    margin-top: 150px;
+  }
+  .signup{
+    flex-direction: column;
+    width: inherit;
+    margin-left: 0;
+  }
+  .accordion-flex{
+    flex-direction: column;
+  }
+  .accordion{
+    width: inherit;
+    margin-right: 0;
+  }
+  .form {
+    width: 100%;
+  }
+}
+
+
+
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+/* .active + .answer {m
   /* some styling here */
-}
+ 
