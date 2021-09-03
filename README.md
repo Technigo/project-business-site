@@ -1,12 +1,10 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to create a business page with a hero video or image. We also had to create a form with different types of input. And lastly we had to create an accordion that should scroll with help of JavaScript.
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The problem i had was first to understand why my JavaScript worked. I also had a problem with the styling of the page. I solved these problem with help of google and youtube. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Here's my deployed website:
+https://gifted-bose-8af71e.netlify.app/
