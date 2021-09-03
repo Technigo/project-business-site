@@ -14,7 +14,7 @@ body {
 .header { 
   display: flex;
   justify-content: center; 
-  height: 400px;
+  width: auto;
 
   /* border: 3px solid green; */
 }
@@ -22,7 +22,7 @@ body {
 video { /*  https://css-tricks.com/full-page-background-video-styles/ */
   object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 400px;
 }
 
 h1 { 
@@ -31,7 +31,6 @@ h1 {
   text-shadow:2px 2px #4e4e4e;
   font-size: 50px;
   text-transform: uppercase;
-  padding: 1rem;
 }
 
 h2 {
@@ -49,16 +48,8 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-}
-
-.overlay p {
-  text-align: center; 
-  color: rgb(235, 233, 233);
-  text-shadow:2px 2px #4e4e4e;
-  font-size: 50px;
-  text-transform: uppercase;
-  padding: 1rem;
+  width: auto;
+  /* border:2px solid green; */
 }
 
 button {
@@ -76,20 +67,18 @@ button:hover {
   transition: 0.25s;
 }
 
-
+/* MAIN SECTION*/
 .container {
   display: flex;
   justify-content: center;
-  width:auto;
-/* 
-  border:4px solid blue; */
+  width: auto;
+  /* border:4px solid violet; */
 }
 
 /* FORM SECTION */
 
-
-
 /* fieldset and legend */ 
+
 
 fieldset {
   margin: 2rem 0 ; 
@@ -110,12 +99,10 @@ label {
   display: block; /* places all element in a row*/ 
   margin-top: 1em; /*adding space between elements in a form*/ 
   color:rgb(75, 75, 75);
-
 }
 
 .checks label {
   margin-top: 0; 
-
 }
 
 label:first-of-type {
@@ -166,17 +153,17 @@ input[type="radio"]:first-of-type {
   margin-left: 2rem;
   /* border:2px solid red; */
 }
+
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   color: rgb(250, 250, 250);
   cursor: pointer;
   padding: 18px;
-  width: 100%;
+  width: auto;
   text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
-
 }
 
 .accordion::after {
@@ -207,14 +194,24 @@ footer {
   position: absolute;
   left: 0;
   bottom: 50;
-  width: 100%;
   background-color: rgb(238, 238, 238);
   color: rgb(122, 122, 122);
-  text-align:center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top:2rem;
 }
 
 img {
   width: 150px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 700px;
+  /* border:2px solid red; */
 }
 
 footer p {
@@ -224,78 +221,61 @@ footer p {
 }
 
 
-.social-icons {
-  width: 30px;
-  padding: 10px;
+/*** MEDIA QUERIES ***/
+
+/*tablet*/ 
+@media(min-width:768px) and (max-width:992px) {
+    .overlay{
+      top:7rem;
+      max-width: 600px;
+    }
 }
 
 
+ /*mobile*/
+ @media(max-width:768px) {
 
-/*** MEDIA QUERIES ***/ 
+    video {
+      width: 100%;
 
-@media(max-width:1027px) {
-    h1 {
-      font-size: 35px;
-    }
-
-    h2 {
-      font-size: 20px;
     }
 
     .overlay {
-      top: 7rem;
+      top:7rem;
+      min-width: 300px;
+      max-width: 600px;
+
     }
 
-    .container {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .accordion {
-      margin-bottom: 2rem;
-    }
- }
-
- @media(max-width:800px) {
     h1 {
-      font-size: 30px;
+      font-size: 35px
     }
 
     h2 {
-      font-size: 15px;
+      font-size: 16px;
     }
 
-    .accordion {
-      margin:0 0 2rem;
-    }
- }
-
- @media(max-width:500px) {
-    form {
+    .container {
+      align-items: center;
+      flex-direction: column;
       width: auto;
-      border:2px solid red;
     }
 
- }
+    form {
+      max-width: 400px;
+    }
 
- @media(max-width: 375px) {
-  h1 {
-    font-size: 25px;
-  }
+    .acc-container {
+      max-width: 400px;
+      width: auto;
+      margin-left: 0;
+    }
 
-  .overlay p {
-    font-size: 16px;
-  }
+    footer {
+      width: 100%;
+    }
 
-  .overlay {
-    top: 7rem;
-  }
-
-  .accordion {
-    width: auto;
-  }
-
-  button {
-    width: 20%;
-  }
+    .footer-container {
+      flex-direction: column;
+    }
  }
