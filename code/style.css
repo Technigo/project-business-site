@@ -64,8 +64,8 @@ video#myVideo {
 
 /* Add some content at the bottom of the video/page */
 .content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  justify-content: center;
   align-items: center;
   position: fixed;
   background: linear-gradient(rgba(117, 19, 93, 0.73),rgba(245, 246, 252, 0.52));
@@ -73,10 +73,13 @@ video#myVideo {
   width: 100%;
   height: 100%;
   font-family: 'Monoton', cursive;
-  font-size: 2rem;
-  font-weight: 400;
   text-align: center;
-  padding-top: 40%;
+}
+
+.content h1 {
+  font-size: 4rem;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 /* image header not used */
@@ -91,17 +94,17 @@ video#myVideo {
   overflow: hidden;
   text-align: center;
   color: #fff;
-}
+} */
 
-header h1 {
+/* header h1 {
   font-family: 'Monoton', cursive;
   font-size: 4rem;
   font-weight: 400;
-  padding-top: 15%;
+  padding-top: 0;
   padding-bottom: 0;
-}
+} */
 
-header p {
+/* header p {
   font-size: 1.5rem;
   font-weight: 600;
 } */
@@ -331,11 +334,8 @@ footer a:active {
   font-size: 2rem;
 } */
 
-.content {
-  font-size: 2.5rem;
-  padding-top: 20%;
-  padding-left: 0.5%;
-  padding-right: 0.5%;
+.content h1 {
+  font-size: 5rem;
 }
 
 .text-section {
@@ -350,23 +350,9 @@ footer a:active {
 
 @media only screen and (min-width: 992px) {
 
-/* .content {
-  font-size: 2.5rem;
-  padding-top: 20%;
-  padding-left: 0.5%;
-  padding-right: 0.5%;
-} */
-
-  header h1 {
-    font-size: 6rem;
-    padding-top: 15%;
-    padding-left: 10%;
-    padding-right: 10%;
-  } 
-
-  /* header p {
-    font-size: 3rem;
-  } */
+.content h1 {
+  font-size: 7rem;
+}
 
   .container h2 {
     text-align: left;
@@ -413,20 +399,24 @@ footer a:active {
     font-size: 3rem;
   } */
 
-.content {
-  padding-top: 5%;
+.content h1 {
+  font-size: 8rem;
 }
 
 }
 
 @media only screen and (min-width: 1920px) {
 
-  header h1 {
-    font-size: 9rem;
+  /* header h1 {
+    font-size: 14rem;
 
-  } 
+  }  */
 
   /* header p {
     font-size: 4.5rem;
   } */
+  .content h1 {
+    font-size: 10rem;
+  }
+
 }
