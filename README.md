@@ -1,12 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is a fake publishing house website created using HTML, CSS and a bit of JavaScript. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started to visualize(paper pototype) the final product and started bulding components for mobile and then for the other devices. I used flexbox to align the content on the page and JavaScript to get the accordion to work. The form uses HTTPBin to see the data collected. The form has validation as some fields are required and need to have a @ in them.  Going forward with this project I would like to look more into animations and JAvaScript to develop the look even more.
+
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://blissful-saha-f2f5ae.netlify.app
