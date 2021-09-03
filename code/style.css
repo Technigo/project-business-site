@@ -63,13 +63,6 @@ video {
 
 
 /* ----- FAQ och SIGN UP -----*/
-.middle-section {
-  padding: 20px 50px; 
-  display: grid;
-  Grid-template-rows: 1fr 1fr;
-  grid-gap: 10px;
-  
-}
 
 
 /* ----- FAQ -----*/
@@ -161,26 +154,37 @@ footer p {
 
 /* Mobil */ 
 @media (min-width: 0px) and (max-width: 767px) { 
-
-}
-
-/*Paddda*/
-@media (min-width: 768px) and (max-width: 991px) {
   .middle-section {
-  
+    padding: 20px 50px; 
+    display: grid;
+    Grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
   }
+
+  .accordion {
+    Grid-column: span 1;
+  }
+  
+  .sign-up {
+    Grid-column: span 1;
+  }
+
 }
 
 /*Liten Dator*/
 @media (min-width: 992px) and (max-width: 1199px){
   .middle-section {
     display: grid;
-    Grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     Grid-template-rows: none;
+    grid-gap: 10px;
+    padding: 20px 50px;
   }
-}
-
-/*Stor Dator*/
-@media (min-width: 1200px) {
-
+  .accordion {
+    Grid-column: span 1;
+  }
+  
+  .sign-up {
+    Grid-column: span 1;
+  }
 }
