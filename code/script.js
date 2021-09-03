@@ -5,16 +5,16 @@ function toggle() {
   this.classList.toggle("active");
 }
 
-/* var w = document.documentElement.clientWidth || window.innerWidth; */
+
 if (window.innerWidth > 1024) {
       document.getElementById('intro-anchor').addEventListener('click', (event) => {
         event.preventDefault()  
-                                                      /*  verhindert, dass der Link abspringt */
+                                                                 /*  prevents the link from it's default behaviour */  
           const openHeadline = document.getElementById('headline')
           openHeadline.style.display = 'none'
 
           const formSection = document.getElementById('form-section-id')
-          formSection.style.display = 'contents'            /*  	Makes the container disappear, making the child elements children of the element the next level up in the DOM */
+          formSection.style.display = 'contents'                  /*  	Makes the container disappear, making the child elements children of the element the next level up in the DOM */
           
           const introForm =document.getElementById('intro-form')
           introForm.style.position = 'absolute'
@@ -27,7 +27,7 @@ if (window.innerWidth > 1024) {
 
       document.getElementById('faq-anchor').addEventListener('click', (event) => {
         event.preventDefault()  
-                                                      /*  verhindert, dass der Link abspringt */
+                                                                /*  prevents the link from it's default behaviour */
           const openHeadline = document.getElementById('headline')
           openHeadline.style.display = 'none'
 
