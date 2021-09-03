@@ -14,7 +14,6 @@ document.querySelectorAll(".question").forEach((btn, i) => {
 function toggle() {
     document.querySelectorAll(".question").forEach((btn, i) => {
      
-        //= tilldela variabel == är värdet likadant === är typen och värdet likadant
         if (btn === this) 
             return;
         btn.classList.remove("active");
