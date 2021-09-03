@@ -2,7 +2,6 @@
 
 🔵  Blue Level (Minimum Requirements)**
 
-DONE
 - Style your page
 - Site should have a header with responsive image/video (video--> https://pixabay.com/videos/wonder-woman-wonder-woman-walking-37053/)
 - Site should have a signup form with at least three different input types
@@ -36,11 +35,53 @@ p {
   margin: 0;
 }
 
+/* video a header is cool :) */
+
 header {
   display: grid;
   grid-template-columns: 1fr;
+  height: 100vh;
+  min-height: 500px;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+video#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+  /* -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); */
+  background: url(https://source.unsplash.com/nXKNn2L4fDw/2400x1602) no-repeat;
+  background-size: cover;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  background: linear-gradient(rgba(117, 19, 93, 0.73),rgba(245, 246, 252, 0.52));
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  font-family: 'Monoton', cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 40%;
+}
+
+/* image header not used */
+/* header {
+  display: grid;
+  grid-template-columns: 1fr;
   background-image:  linear-gradient(rgba(117, 19, 93, 0.73),rgba(245, 246, 252, 0.52)), url(https://source.unsplash.com/NBfHoiEgTa4/1920x1281); 
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://source.unsplash.com/nXKNn2L4fDw/2400x1602); */
   background-size: cover;
   background-position: bottom center;
   height: 80vh;
@@ -54,13 +95,20 @@ header h1 {
   font-family: 'Monoton', cursive;
   font-size: 4rem;
   font-weight: 400;
-  padding-top: 20%;
+  padding-top: 15%;
   padding-bottom: 0;
 }
 
 header p {
   font-size: 1.5rem;
   font-weight: 600;
+} */
+
+article {
+  background: #f0f9fa;
+  font-size: 1.4rem;
+  position: relative;
+  z-index: 1;
 }
 
 main {
@@ -72,11 +120,6 @@ main {
   padding: var(--grid-outer-padding);
 }
 
-
-article {
-  background: #f0f9fa;
-  font-size: 1.6rem;
-}
 
 .text-section {
   text-align: center;
@@ -95,12 +138,12 @@ article {
   /* Center the content in the container */
   vertical-align: middle;
   margin: 4rem auto;
-  width: 80%;
+  width: 90%;
 }
 
 .container h2 {
   text-align: center;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
 }
 
 /* accordion */
@@ -166,7 +209,7 @@ form li + li {
 label {
   /* Uniform size & alignment */
   display: inline-block;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-align: left;
   padding-bottom: 4px;
 }
@@ -175,7 +218,7 @@ select,
 .text-input {
   /* To make sure that all text fields have the same font settings
      By default, textareas have a monospace font */
-  font: 1.4rem sans-serif;
+  font: 1.2rem sans-serif;
 
   /* Uniform text field size */
   width: 100%;
@@ -202,7 +245,7 @@ button {
   border-radius: 2em;
   padding: 12px 20px;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin: 2.5em auto;
 }
 
@@ -274,23 +317,24 @@ footer a:active {
 
 @media only screen and (min-width: 768px) {
 
-header {
-  height: 100vh;
-  min-height: 280px;
-}
-
-header h1 {
+/* header h1 {
   padding-top: 20%;
   padding-left: 3%;
   padding-right: 3%;
   padding-bottom: 0;
   font-size: 5rem;
-}
+} */
 
-header p {
+/* header p {
   font-size: 2rem;
-}
+} */
 
+.content {
+  font-size: 2.5rem;
+  padding-top: 20%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+}
 
 .text-section {
   max-width: 720px;
@@ -304,6 +348,13 @@ header p {
 
 @media only screen and (min-width: 992px) {
 
+/* .content {
+  font-size: 2.5rem;
+  padding-top: 20%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+} */
+
   header h1 {
     font-size: 6rem;
     padding-top: 15%;
@@ -311,9 +362,9 @@ header p {
     padding-right: 10%;
   } 
 
-  header p {
+  /* header p {
     font-size: 3rem;
-  }
+  } */
 
   .container h2 {
     text-align: left;
@@ -349,16 +400,20 @@ header p {
 
 @media only screen and (min-width: 1200px) {
 
-  header h1 {
+  /* header h1 {
     font-size: 7rem;
     padding-top: 15%;
     padding-left: 15%;
     padding-right: 15%;
-  } 
+  }  */
 
-  header p {
+  /* header p {
     font-size: 3rem;
-  }
+  } */
+
+.content {
+  padding-top: 5%;
+}
 
 }
 
@@ -369,7 +424,7 @@ header p {
 
   } 
 
-  header p {
+  /* header p {
     font-size: 4.5rem;
-  }
+  } */
 }
