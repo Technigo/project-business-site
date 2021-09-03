@@ -13,6 +13,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color:rgb(136, 177, 177);
 }
 header{
   width: 100%;
@@ -53,7 +54,7 @@ h4{
   padding-left: 25px;
   font-size: 17px;
   font-weight: 200;
-  text-align: left;
+  float: left;
   color: white;
 }
 p{
@@ -78,6 +79,9 @@ p{
   z-index: 1;
   top: 100px;
 }
+#section1, #section3{
+  background-color: #356B71;
+}
 
 form{
   max-width: 100%;
@@ -94,6 +98,7 @@ form{
   border-radius: 5px 5px 0px 0px;
   padding-bottom: 10px;
   background-color: #577e83;
+  border-bottom: 1px solid white;;
 }
 
 .form-wrapper{
@@ -123,7 +128,20 @@ input{
   border: none;
 
 }
+input:checked{
+  box-shadow: 3px 3px 3px #356B71;
+}
+input:focus{
+  background-color: honeydew;
+}
 
+select{
+  margin: 5px;
+  width: 95%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
 .text-field{
   justify-content: space-between;
   display: flex;
@@ -132,11 +150,10 @@ input{
 }
 
 .button{
-  width: 70%;
-  height: 30px;
+  width: 80%;
   border-radius: 5px;
-  border: none;
-  box-shadow: 2px 2px 3px #577e83;
+  border: 1px solid white;
+  box-shadow: 2px 2px 3px #49787e;
   font-size: 17px;
   font-weight:100;
   background-color: #3C767D;
@@ -144,14 +161,34 @@ input{
   justify-content: center;
   align-items: center;
   margin: 20px;
+  padding: 7px;
+}
+.header-button{
+  border-radius: 5px;
+  border: 1px solid white;
+  box-shadow: 2px 2px 3px #49787e;
+  font-size: 17px;
+  font-weight:100;
+  background-color: #3C767D;
+  color: white;
+  justify-content: center;
+  align-content: flex-end;
+  position: absolute;
+  z-index: 3;
+  margin: 20px;
+  padding: 7px;
 }
 .button-wrapper{
   align-content: center;
   display: flex;
   justify-content: center;
 }
-
+.button:hover{
+  background-color: #4D7377;
+  box-shadow: 2px 2px 3px white;
+}
 .accordion{
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -171,7 +208,8 @@ input{
     width: 100%;
     font-size: 17px;
     color: white;
-    border-radius: 5px;
+    border-radius: 0px 0px 5px 5px;
+    border-top: 1px solid white;
   }
   .answer{
     background-color:#6F6854;
@@ -184,7 +222,8 @@ input{
   .active + .answer {
     display: block;
   }
-.footer-wrapper{
+
+  .footer-wrapper{
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -193,8 +232,29 @@ input{
   padding: 30px 0px;
   align-items: center;
   justify-content: center;
+  bottom:  0px;
+}
+
+
+.question:after {
+  content: '\02C7';
+  color: white;
+  float: right;
+  padding-right: 20px;
+  vertical-align: top;
+  margin-top: 10px;
   
 }
+
+
+.active:after {
+  content: "\02C6";
+  float: right;
+  padding-right: 20px;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
 
 /*mobile*/
 @media (min-width:0px) and (max-width:767px){

@@ -8,19 +8,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap" rel="stylesheet">
-
+    
   </head>
   <body>
     <header>
-    <img src="https://images.unsplash.com/photo-1515125520141-3e3b67bc0a88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2102&q=80">
+    <img src="https://images.unsplash.com/photo-1515125520141-3e3b67bc0a88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2102&q=80" alt="books in a shelf">
     <div class="headline-text">
-      <h1>Rainy Night Publishing</h1>
+      <h1>Rainy Nights Publishing</h1>
       <h2>Where books come to life</h2>
+      <button type="button" class="header-button">Get started</button>
     </div>
   </header>
 
 
-  
+
 
     <!-- Signup form -->
     <section class="form-wrapper">
@@ -30,24 +31,24 @@
       </div>
     <form action="https://httpbin.org/anything" method="POST">
       <div class="text-field">
-        <label for="first-name">First Name</label>
+        <label for="first-name">First Name *</label>
         <input type="text" id="first-name" name="first-name" required>
         <br>
-        <label for="last-name">Last Name</label>
+        <label for="last-name">Last Name *</label>
         <input type="text" id="last-name" name="last-name" required>
         <br>
-        <label for="email">E-mail</label>
+        <label for="email">E-mail *</label>
         <input type="email" id="email" name="email" required>
       </div>
       <br>
       <br>
       <label for="published">I have been published before</label>
       <br>
-      <input type="radio" id="published" name="published-before" value="yes">
-      <label for="published">Yes</label>
+      <select id="published" name="published-before" value="yes">
+      <option value="Yes">Yes</option>
       <br>
-      <input type="radio" id="published" name="published-before" value="no">
-      <label for="published">No</label>
+      <option value="no">No</option>
+      </select>
       <br>
       <br>
       <label for="write">I write:</label>
@@ -68,7 +69,7 @@
       <label for="other">Other</label>
       <br>
       <div class="button-wrapper">
-      <input type="submit" value="Send" class="button">
+      <input type="submit" value="Submit" class="button">
     </div>
     </form>
   </section>
@@ -78,7 +79,7 @@
       <!-- Accordion -->
       <h3>This is Rainy Nights</h3>
 
-      <div class="question" id="section1"><h4>About Rainy Nights</h4></div>
+      <div class="question" id="section1"><h4>About Rainy Nights</h4> </div>
       <div class="answer">
         <p>Rainy Nights is an indipended publishing house based in New York. We sign publish both published and unpublished authors. As a house we mostly focus on works of fiction such as crime, romance and young adults novels but occationally we publish non fiction. </p>
       </div>
