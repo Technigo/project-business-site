@@ -18,18 +18,21 @@ Should contain three parts
 
 ## The problem
 problem has to be solved in three parts, which are all new to me so I have to study each part
+Overview:
+If I had more time I would maybe change the main content from grid to flexbox. I struggle the most with how it the webpage change when resizing. Mybe I use vh (viewport height) to much? But I need to find some "rules" for which heights and line spaces is needed in diffent quieres.
 
+1. I will make a hero-videdo. I wont be able to find different sizes, but I will prepare to but differnt sizes in, depending om @media queriy.
 
-1. I will start with a image and if there is time I will add a video somewhere else in page - pictures on unsplash
-Use media queries and display:none if wanted
+ My biggest problem were fixing the header in the center. When I had the parent as position relative I fixed to solve the problem.
 
-2. Sign up form - try from video
+2. Sign up form 
+I coded along with the video from Technigo. Try to style them a bit fanicer, but didnt have time to fix the default setting (where as the blue checkbox)
 
 3. Use CSS to show and hide content - and toogle function in Java
-"The JavaScript file is set up to add toggle an ".active" class on the title divs when you click the title (use the inspector to see this in action). Use an "adjacent" CSS selector to select the panel next to an ".active" element and set it to display: block; to make it visible. Read this to learn about the adjacent selector."
+JavaScript I also follwed wednsday lesson and talking with team. It is still a bit tricky, looking forward to practise it.
 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Here is a link to the project
+https://angry-edison-444621.netlify.app/
