@@ -150,14 +150,16 @@ body {
   font-size: 14px;
 }
 
-.question-text::after {
+.question::after {
   content: "\002B";
   position: absolute;
   right: 0px;
   margin-right: 20px;
 }
 
-/* Tried to add the "\2212" (-) when user clicks to open accordion but I couldn't get it to work.  */
+.active::after {
+  content: "\2212";
+}
 
 .answer {
   width: 100%;
@@ -261,7 +263,7 @@ body {
   }
 
   .answer-text {
-    font-size: 14px;
+    font-size: 16px;
   }
 
 }
