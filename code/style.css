@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: raleway;
   font-weight: 200;
+  margin-bottom: 96px;
 }
 
 h1 {
@@ -13,13 +14,19 @@ h1 {
   margin: 0;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
 .hero-image {
   background-image: url("unsplash_pic.jpg");
   background-position: center;
   /* background-repeat: no-repeat; */
   background-size: cover;
   position: relative;
-  height: 320px;
+  height: 360px;
 }
 
 .hero-text {
@@ -33,6 +40,7 @@ h1 {
   font-size: 2rem;
   margin: 0;
 }
+
 
 .hero-button {
   border-radius: 24px;
@@ -51,11 +59,24 @@ h1 {
   font-weight: 600;
 }
 
-.accordion {
+.preamble {
   display: flex;
+  /* align-items: center; */
   flex-direction: column;
-  justify-content: center
-  padding: 1rem;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.preamble p {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.accordion {
+  flex-direction: column;
+  justify-content: center;
+  /* padding: 1rem; */
   margin-left:  1rem;
   margin-right: 1rem;
   margin-top: 2rem;
@@ -99,6 +120,7 @@ h2 {
   position: relative;
   background-color: #222;
   display: none;
+  padding: 1rem;
 }
 
 
@@ -119,7 +141,7 @@ h2 {
 }
 
 .form {
-  /* width: 100%; */
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   margin-left: 1rem;
@@ -127,11 +149,20 @@ h2 {
   margin-top: 40px
 }
 
+input, textarea, select {
+  width : 150px;
+  padding: 1rem;
+  margin: 0;
+  /* box-sizing: border-box; */
+  font-size: 0.8rem;
+  font-family: inherit;
+}
+
+
 input {
-  font-size: 1rem;
+  box-sizing: border-box;
   display: block;
   width: 100%;
-  /* padding-left: 1rem; */
   height: 48px;
   margin-bottom: 1.5rem;
   margin-top: 0.5rem;
@@ -149,8 +180,46 @@ input {
 }
 
 
+/* .radiobutton-group {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+} */
+
+.radiobutton-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 1rem;
+}
+
+
+.custom-radio {
+  /* position: absolute; */
+  /* top: 0;
+  left: 0; */
+  /* height: 1.125rem; */
+  width: 1.125rem;
+  align-items: center;
+}
+
+/* .option {
+  display: block;
+  position: relative;
+  padding-left: 1rem; 
+  align-items: center;
+} */
+
+
 label {
   font-size: 1.125rem;
+  margin-left: 1rem;
 }
 
 
@@ -169,3 +238,78 @@ input:invalid {
 /* .radiobuttons {
  display: inline-block;
 } */
+
+
+.jes-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 3rem;
+}
+
+.jes-img {
+  border-radius: 50%;
+  width: 30%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  h1 {
+    font-size: 140px;
+  }
+
+  .hero-image {
+    height: 450px;
+  }
+  
+  .accordion {
+    padding: 0;
+  }
+
+
+}
+
+
+@media (min-width: 991px) {
+  
+  h1 {
+    font-size: 200px;
+  }
+
+  .hero-image {
+    height: 500px;
+  }
+  
+  /* .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 96px;
+  }
+   */
+  .hero-text p {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  .hero-button {
+    border-radius: 24px;
+    background-color: aqua;
+    font-family: raleway;
+    font-size: 1.125rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .accordion {
+    width: 50%;
+    padding: 0%;
+  }
+
+  .form {
+    width: 50%;
+  }
+}
