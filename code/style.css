@@ -8,30 +8,35 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
 }
 
 img {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   object-fit: cover;
 }
 
-.signup-section {
+/* Form */
+
+.form-section {
   width: 100vw;
   background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.form-container {
+.form {
   background-color: #4285f4;
-  margin: auto;
-  font-family: "Roboto", sans-serif;
-  padding: 15%;
-  color: #fff;
+  padding: 90px 80px;
+  width: 100vw;
 }
 
 h3 {
   font-size: 2rem;
-  margin-top: 5%;
+  margin-top: 0;
 }
 
 label,
@@ -68,22 +73,42 @@ label,
   margin-bottom: 5%;
 }
 
-.accordion {
-  background-color: chartreuse;
-}
-
 #newsletter {
   font-size: 50px;
 }
 
+/* Accordion */
+
+.faq-section {
+  background-color: darkblue;
+  margin-top: 0;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.answer {
+  display: none;
+}
+
+.active {
+  background-color: grey;
+}
+
+.active + .answer {
+  display: block;
+}
+
 /* @media (min-width: 0px) and (max-width: 500px) {
-  .form-container {
+  .form {
     padding: 15%;
   }
 } */
 
-/* @media (min-width: 500px) {
-  .form-container {
-    width: 300px;
+@media (min-width: 541px) {
+  .form {
+    width: 350px;
   }
-} */
+  .form-section {
+    min-height: 100vh;
+  }
+}
