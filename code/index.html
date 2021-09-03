@@ -34,7 +34,7 @@
 
       <nav class="nav-bar">
         <img class="img-logo" src="../favicon-16x16 (kopia).png" alt="">
-        <div>
+        <div class="nav-links">
           <ul></ul>
             <a href="">Stories</a>
             <a href="#footer">About us</a>
@@ -123,7 +123,7 @@
             I Agree on Terms and Conditions
         </label>
         <label>
-          <input type="checkbox"  name="News">
+          <input type="checkbox"  checked name="News">
             I want to recieve news from 
         </label>
         <label>
@@ -140,7 +140,7 @@
 
   <!-- Accordion FAQ -->
    <div class="faq-content">
-    <h1>FAQ</h1>
+    <h1>Questions we use to get</h1>
 
     <div  class="question" id="section1">Section 1</div>
     <!-- it is the class in the same div that will get the active class (if there is none class it will only get active)-->
@@ -165,10 +165,14 @@
      <div class ="img-faq">
       <img src="../blue.jpg" alt="">
     </div> 
-    <div id="footer"></div>
-    <footer>
-      Video av Marian Croitoru från Pexels
-    </footer>
+  </section>
+
+  <footer class="footer" id="footer">
+    <p><strong>POW 2021</strong></p>
+    <p> Östgötagatan 66</p>
+    <p> 116 64 Stockholm</p>
+    <p> Videocred to Marian Croitoru from Pexels</p>
+  </footer>
  
    <!------------------------ SCRIPT -------------------->
    <script src="script.js"></script>
@@ -179,12 +183,10 @@
       var section1Title = document.getElementById("section1")
       var section2Title = document.getElementById("section2")
       var section3Title = document.getElementById("section3")
-      // var answer1 = document.getElementById("answer1")
       
       
       
       section1Title.onclick = () => {
-        console.log(answer1)
         answer1.classList.toggle('active')
       
       }

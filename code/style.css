@@ -20,13 +20,9 @@ body {
   margin:0;
 }
 
+p {line-height: 1.6;}
 /* NAVBAR */
- a {
-   text-decoration: none;
-   color: #FFE9D6;; 
-   margin: 2vh;
- }
-
+ 
 .nav-bar{
   display: flex;
   align-items: flex-end;
@@ -35,9 +31,21 @@ body {
   top: 0;
   background: rgba(0, 0, 0, 0.2);
   width: 100%;
- 
-  
 }
+
+.nav-links{
+  position: absolute;
+  top: 0;
+  right: 2vw;
+}
+a{
+    text-decoration: none;
+    color: #FFE9D6;; 
+    margin: 2vh;
+    top: 50%;
+  }
+  
+
 
 .img-logo{
   height: 4vh;
@@ -75,7 +83,7 @@ body {
 .content-hero {
   box-sizing: border-box; /*makes padding stay inside box*/
   position: absolute; /* dont forget to have postion:relative on parent when using absolute*/
-  background: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   color: #FFE9D6;
   width: 60%;
 
@@ -87,12 +95,18 @@ body {
   grid-template-rows: auto auto auto auto;
   grid-gap: 10px;
   padding: 20px;
-  max-width: 5000px;
+  max-width: 150vh;
   margin: auto;
   box-sizing: border-box;
   font-size: 2vh;
 }
 
+h1 {                       
+  margin-top: 0;
+  text-align: center;
+  color: #FFE9D6;
+  font-size: 3.5vh;
+}
   /* Sign up  */
 
 .sign-up-content{
@@ -139,6 +153,7 @@ button {
 
 /* Img */
 img {
+   padding-top: 5vh;
     width: 100%;
     object-fit: contain;
     height: auto;
@@ -146,17 +161,12 @@ img {
 
  
 /* FAQ */
-h1 {                        /* Header FAQ */
-    margin-top: 0;
-    text-align: center;
-    color: #FFE9D6;
-    font-size: 5vh;
-  }
 
-
+.faq-content {
+padding-top: 10vh;;
+ }
 .question {                         /* question FAQ */
       background-color: #7B6079;
-      color: white;
       cursor: pointer;
       width: 100%;
       transition: 0.5s;
@@ -167,8 +177,7 @@ h1 {                        /* Header FAQ */
       text-align: center;
       font-size: 3vh;
       color:#FFE9D6;
-      
-      
+         
   }
 
   /* before clicking */ 
@@ -178,15 +187,28 @@ h1 {                        /* Header FAQ */
 
 /* after clicking */
 .active + .answer {                         
+  box-sizing: border-box;
   display: block;
-  background-color: azure;
+  background-color: #FFE9D6;
   margin:0;
-  height: 200px;
+  padding: 1vh 2vh;
+  height: 20vh;
 
 }
 
 .active{
   background-color: grey;
+}
+/* Footer */
+footer{
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: auto;
+  padding: 4vh;
+  color: #FFE9D6;
+
+
 }
   
   /* --------------------TABLET---------------------------------*/
@@ -271,6 +293,8 @@ h1 {                        /* Header FAQ */
     padding: 20px;
 
     }
+
+    
 
     .img {
       object-fit: contain;
