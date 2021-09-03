@@ -1,17 +1,18 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
 body {
- background-color: black;
+ background-color: rgb(0, 0, 0);
  font-family: 'Padauk', sans-serif;
  height: 100%;
+}
+
+header {
+  display: inline;
 }
 
 .heroimage {
   background-image: url(pictures/IMG_6257.JPG);
   background-position: center;
   background-size: cover;
+  height: 50vh;
   padding: 50px;
   color: white;
 }
@@ -25,7 +26,8 @@ body {
 
 h1 {
   font-size: 60px;
-
+  margin-top: 230px;
+  margin-bottom: 20px;;
 }
 
 /* the form styling */
@@ -33,37 +35,36 @@ h1 {
 .container {
   margin: 30px auto;
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
 }
 
 form {
-  width: fit-content;
+  width: 400px;
   padding: 10px;
-  background-color: rgba(134, 233, 240, 0.801);
+  background-color: rgb(204, 238, 244);
   border: solid white;
   border-radius: 5px;
   margin: 10px;
-  width: 300px;
 }
-
 
 .personalinfo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  padding: 0px 10px;
 }
 
 .styleselection {
   display: grid;
   color: black;
   margin: 10px 0;
+  padding: 10px;
 }
 
 input {
-  padding: 5px;
+  padding: 7px;
 }
 
 input:valid {
@@ -73,14 +74,8 @@ input:valid {
 label {
   display: block;
   margin: 5px;
+  cursor: pointer;
 }
-/* input:invalid {
-  background-color: red;
-} */
-
-/* .feminine, .masculine .genderneutral {
-  display: block;
-} */
 
 .joinbtn {
   width: fit-content;
@@ -99,26 +94,19 @@ label {
 }
 /* Acordion styling */
 
-
 .accordionParent {
-  background-color: rgba(134, 233, 240, 0.801);
   border: solid white;
   border-radius: 5px;
+  width: 400px;
 }
 
-h2 {
-  color: white;
-  padding-left: 18px;
-}
-.accordion {
+.question {
   display:grid;
-  background-color: #eee;
-  color: #444;
+  background-color: rgb(204, 238, 244);
   cursor: pointer;
   padding: 18px;
-  width: 300px;
   text-align: left;
-  border: none;
+  border-bottom: 1px solid white;
   outline: none;
   transition: 0.4s;
 }
@@ -129,54 +117,26 @@ button {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-  background-color: #ccc;
+.active, .question:hover {
+  background-color:rgb(162, 197, 203);
 }
 
 /* Style the accordion panel. Note: hidden by default */
-.panel {
-  padding: 0 18px;
-  background-color:rgb(250, 0, 208, 0.5);
-  width: 264px;
+.answer {
+  padding: 18px;
+  background-color:rgb(235, 100, 213);
   display: none;
-  overflow: hidden;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
   color: black;
-
-}
-/* .accordion {
-  background-color: rgb(177, 177, 231);
-  width: 300px;
-  padding: 10px;
-  margin: 10px;
-  border: solid gray;
-  line-height: 40px;
-  color: white;
 }
 
-.answer {
-  display: none;;
-}
-
-.active + .answer {
+.open + p {
   display: block;
-} */
-
-/*.pressme {
-  width: fit-content;
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-}*/
+}
 
 footer {
   margin-top: auto;
@@ -188,10 +148,6 @@ footer {
   width: 100%;
 }
 
-/* .active + .answer {
-  /* some styling here 
-}*/
-
 
 
 @media (min-width: 768px) {
@@ -200,6 +156,11 @@ footer {
     background-image: url(pictures/IMG_6288.JPG);
     background-size: cover;
     color: white;
+  }
+
+  .container {
+    flex-direction: row;
+    align-items: baseline;
   }
 
   h3 {

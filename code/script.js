@@ -1,26 +1,34 @@
 
-var acc = document.getElementsByClassName("accordion");
-var i;
+//var acc = document.getElementsByClassName("accordion");
+//var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+//for (i = 0; i < acc.length; i++) {
+  //acc[i].addEventListener("click", function() {
     /* Toggle between adding and removing the "active" class,
     to highlight the button that controls the panel */
-    this.classList.toggle("active");
+    //this.classList.toggle("active");
 
     /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
+    //var panel = this.nextElementSibling;
+    //if (panel.style.display === "block") {
+      //panel.style.display = "none";
+    //} else {
+      //panel.style.display = "block";
+    //}
+  //});
+//}
 
 const inputValue = document.getElementById('joinbtn').onclick
 alert('🥳 J´adore DIOR!')
 
+document.getElementById('button').onclick = toggleAnswer
+document.getElementById('button2').onclick = toggleAnswer
+document.getElementById('button3').onclick = toggleAnswer
+document.getElementById('button4').onclick = toggleAnswer
+
+function toggleAnswer() {
+  this.classList.toggle('open')
+}
 
 
 
@@ -36,8 +44,8 @@ alert('🥳 J´adore DIOR!')
 // We haven't really talked about ´this´ yet, but we will... ;)
 // console.log(this) to see how it works
 
-function toggle() {
-  section1.classList.toggle('active')
-}
+//function toggle() {
+  //section1.classList.toggle('active')
+//}
 
 
