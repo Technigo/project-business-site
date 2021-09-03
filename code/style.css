@@ -59,25 +59,23 @@ header > h1 {
   align-items: baseline;
 }
 
+/* Styling validation form */
+
 
 input {
   line-height: 1.5rem;
   background-color: #b3ffff;
-}
- /* Styling validation forms */
-
-input.valid + span::before {
-  content: "✓";
-  color: green;
+  border: 1px solid #005580;
 } 
 
-/* input:invalid {
-  background-color: red;
-} */
-
-input:invalid + span::before {
-  content: '✖';
-  color: red;
+input:required:focus:valid {
+  background: url(../check-mark-1292787__340.webp) no-repeat 95% 50% rgb(253, 253, 253);
+  background-size: 15px;
+  border: 2px solid #005580;
+}
+input:focus:invalid {
+  background: url(../white-exclamation-mark-symbol-red-circle-white-exclamation-mark-symbol-red-circle-caution-icon-isolated-white-background-186316726.jpeg) no-repeat 100% 50% rgb(236, 57, 44);
+  background-size: 1.5rem;
 }
 
 
