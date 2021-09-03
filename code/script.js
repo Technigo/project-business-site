@@ -1,16 +1,12 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-// function toggle() {
-//   this.classList.toggle("active")
-// }
+// A hidden message function and change of button color.
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
+const btn = document.getElementById("button")
 
-// document.getElementById("section1").onclick = toggle
-
-
-
+btn.onclick = () => {
+  alert('Hello you!👽')
+  btn.style.backgroundColor = 'black'
+  btn.style.color ="pink"
+}
 
 // FAQ calls function + when clicked. 
 //Row 20-23 sets the rule that only one FAQ item can be opened at once. 
@@ -37,4 +33,6 @@ accordionItemHeaders.forEach(accordionItemHeader => {
   }
  });
 });
+
+
 
