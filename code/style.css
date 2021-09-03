@@ -9,16 +9,18 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 body, html {
   height: 100%;
   margin: 0;
+  font-family: 'Oswald', sans-serif;
 }
 
 header {
-  height: 80%;
+height: 80%;
+width: auto;
 display:flex;
 align-items:center;
 justify-content: center;
 text-align: center;
 background-image:
-url("https://images.unsplash.com/photo-1543459176-4426b37223ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+url("https://images.unsplash.com/photo-1474440692490-2e83ae13ba29?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80");
 background-size:cover;
 background-repeat: no-repeat;
 background-position: center;
@@ -31,6 +33,14 @@ h1 {
 
 h2 {
   color: whitesmoke;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+font-size: 15px;
 }
 
 
@@ -79,6 +89,16 @@ input[type=text] {
   box-sizing: border-box;
 }
 
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 input[type=submit] {
   width: 100%;
   background-color: darkgreen;
@@ -94,19 +114,74 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.form{
-  /* border-radius: 5px;
-  background-color: peru;
-  padding: 20px; */
-  border: solid black;
-  border-radius: 25px;
-  height: auto;
-  width: 200px;
-  /* display: flex;
+input [type=radio]{
+  vertical-align: middle;
+}
+
+label {
+  
+}
+
+ .form-questions {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
   align-items: center;
-  justify-content: center; */
-  padding: 30px;
+  margin-top: 10px;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:burlywood;
+  border: solid goldenrod;
+  /* border-radius: 25px; */
+  height: 600px;
+  width: 80%;
+  margin-top: 20px;
+  margin left: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* .accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: cadetblue;
+  border: solid grey;
+  border-radius: 25px;
+  height: 500px;
+  width: 200px;
   margin: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+} */
+
+.question {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.answer {
+  display:none;
+  margin: 15px 0;
+  background-color: indianred;
+  padding: 5px;
+}
+
+.active + .answer {
+  display: block;
 }
 
 .main-content {
@@ -114,6 +189,8 @@ input[type=submit]:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: auto;
+  width: auto;
 }
 
 
@@ -121,8 +198,19 @@ input[type=submit]:hover {
 
 @media (min-width: 768px) {
   .main-content {
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction:row;
+    gap: 30px;
+    /* margin-left: 30px;
+    margin-right: 30px; */
+    margin: 30px;
   }
+
+  .content-box {
+
+  }
+
+@media (min-width: 992px) {
+
+}
 
 }
