@@ -21,7 +21,7 @@ body {
 .navigation a {
   position: relative;
   z-index: 20;
-  color: white;
+  color: orange;
   font-size: 1em;
   font-family: 'Oswald', sans-serif;
   text-decoration: none;
@@ -74,6 +74,7 @@ body {
   z-index: 13;
   text-align: center;
   color: white;
+  width: 90%
 }
 
 .caption h1 {
@@ -86,12 +87,21 @@ body {
   font-size: 1.5em;
 }
 
+.icons {
+  text-align: center;
+  color: orange;
+  font-size: 2em;
+}
+
 /* rain fun facts */ 
 .fun-facts{
+  width: 80%;
+  border-radius: 20px;
   margin: 15px auto;
-  background-color: #E7E0C9; 
+  color: #e7e0c9e3; 
   line-height: 1.5;
   text-align: center;
+  background-color: rgba(255, 255, 255, .15);  
 }
 
 .fun-facts p {
@@ -116,7 +126,7 @@ body {
 }
 
 .signup-box, .form {
-  color: white;
+  color: #e7e0c9;
   text-shadow: -1px 1px black;
   padding: 10px 5px;
 }
@@ -145,7 +155,7 @@ body {
 
 h3 {
   text-align: center;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #e7e0c9;
 }
 
 .signup-box {
@@ -153,10 +163,15 @@ h3 {
   border: 2px solid orange;
   border-radius: 20px;
   width: 80%;
+  background-color: rgba(255, 255, 255, .15);
 }
 
 .signup-box label {
   margin: 10px 0;
+}
+
+input, select, button {
+  background-color: #e7e0c9; 
 }
 
 input:focus {
@@ -182,46 +197,6 @@ input:focus {
   font-weight: bold;
 }
 
-/* försök att styla radioknapparna
-
-input[type="radio"] {
-  display: none;
-}
-
-.form-box-radio label {
-  position: relative;
-  cursor: pointer;
-  padding-right: 20px;
-}
-
-.form-box-radio label::before {
-  content: " ";
-  border: 2px solid orange;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  border-radius: 50%;
-}
-
-.form-box-radio label::after {
-  content: " ";
-  display: inline-block;
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: rgba(255, 166, 0, 0);
-  left: 4px;
-  top: 2px;
-  border-radius: 50%;
-}
-
-input[type="radio"]:checked + label::after {
-  background-color: rgba(255, 166, 0, 1);
-  vertical-align: ;
-} */
-
-
 .form-box, 
 .signup-button {
   display: flex;
@@ -246,7 +221,7 @@ button:focus {
 .greeting {
   width: 150px;
   height: 100px;
-  color: white;
+  color: #e7e0c9;
    text-align: center;
    font-family: 'Oswald' , sans-serif;
   margin: auto;
@@ -279,9 +254,9 @@ h4 {
   margin: 0 auto;
   padding: 10px;
   cursor: pointer;
-  color: white;
+  color: #e7e0c9;
   background-color: #548CA8;
-  border: 2px solid white;
+  border: 2px solid #e7e0c9;
   border-radius: 20px;
 }
 .label-dark {
@@ -374,6 +349,7 @@ footer a:hover {
     font-size: 1.5em;
   }
 
+  
   .container {
     display: grid;
     grid-template-columns: repeat(2, 50%);
