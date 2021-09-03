@@ -26,7 +26,7 @@ body {
   font-family: 'Oswald', sans-serif;
   text-decoration: none;
 }
-/* makes the underline animated */
+/* makes the underline animated on hover */
 .navigation a::after {
   content: " ";
   width: 0%;
@@ -98,10 +98,11 @@ body {
   width: 80%;
   border-radius: 20px;
   margin: 15px auto;
-  color: #e7e0c9e3; 
+  color: #e7e0c9; 
   line-height: 1.5;
   text-align: center;
-  background-color: rgba(255, 255, 255, .15);  
+  background-color: rgba(255, 255, 255, .15);
+  text-shadow: -1px 1px solid black;  
 }
 
 .fun-facts p {
@@ -111,25 +112,12 @@ body {
 .fun-facts ul  {
   list-style-type: none;
   padding-inline-start: 0;
-}
-
-.fun-facts li {
   padding: 10px;
   font-size: 1.2em;
 }
 
 /* FORMS */
-
-
-.container {
-  height: 100%;
-}
-
-.signup-box, .form {
-  color: #e7e0c9;
-  text-shadow: -1px 1px black;
-  padding: 10px 5px;
-}
+/* .form is in the "sign in page" */
 
 .form {
   text-align: center;
@@ -138,21 +126,22 @@ body {
   line-height: 1.6em;
   margin: 20px 20px;
   background-color: #22577A;
+  color: #e7e0c9;
+  text-shadow: -1px 1px black;
   border: 2px solid orange;
   border-radius: 20px;
+  padding: 10px 5px;
+  cursor: pointer;
 }
 
-.form-button {
-  padding-top: 10px;
-}
+/* Title in sign in window */
 .welcome p {
   font-family: 'Oswald', sans-serif;
   color: white;
   margin: 30px auto;
   text-align: center;
 }
-/* sign-up form */
-
+/* sign up title */
 h3 {
   text-align: center;
   border-bottom: 2px solid #e7e0c9;
@@ -163,15 +152,15 @@ h3 {
   border: 2px solid orange;
   border-radius: 20px;
   width: 80%;
+  padding: 10px 5px;
   background-color: rgba(255, 255, 255, .15);
-}
-
-.signup-box label {
-  margin: 10px 0;
+  color: #e7e0c9;
+  text-shadow: -1px 1px black;
 }
 
 input, select, button {
-  background-color: #e7e0c9; 
+  background-color: #e7e0c9;
+  cursor: pointer; 
 }
 
 input:focus {
@@ -191,6 +180,7 @@ input:focus {
 
 .gender-title p {
   margin-bottom: 10px;
+  font-size: 1.4em;
 }
 
 .radio-title, .checkbox-title, .bold {
@@ -329,17 +319,28 @@ footer a:hover {
       font-size: 0.9em;
   }
 
+  .welcome p {
+    color: #e7e0c9;
+    font-size: 1.5em;
+  }
+
   .fun-facts {
     width: 80%;
     border-radius: 20px;
     padding: 20px;
     text-align: center;
+    font-size: 1.3em;
+  }
+
+  .fun-facts ul {
+    padding: 10px 0;
   }
 }
 
 /* desktop */
 
 @media (min-width: 1023px) {
+  /* sign up window */
   p.checkbox-title, 
   .radio-title  {
       padding-top: 30px;
@@ -359,13 +360,9 @@ footer a:hover {
     font-size: 1.5em;
   }
 
-  h5 {
-    font-size: 20px;
-    line-height: 1;
-  }
 
   .fun-facts{
-    margin: 90px auto;
+    margin: 70px auto;
     line-height: 1.5;
     border-radius: 10rem;
     width: 90%;
@@ -374,7 +371,7 @@ footer a:hover {
   .fun-facts ul li{
     width: 80%;
     margin: auto;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
   }
 
