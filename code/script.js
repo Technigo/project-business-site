@@ -11,15 +11,11 @@ function yourName(e) {
 
 //ACCORDION//
 
-//const questionOne = document.getElementById('question1');
-//questionOne.addEventListener('click', show);
-
-document.getElementById('question1').onclick = show; //This code is shorter and is exactly the same as the code above //
+document.getElementById('question1').onclick = show; 
 document.getElementById('question2').onclick = show; 
 document.getElementById('question3').onclick = show; 
 document.getElementById('question4').onclick = show; 
 document.getElementById('question5').onclick = show; 
-
 
 function show() {
 this.classList.toggle('active');

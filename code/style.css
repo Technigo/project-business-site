@@ -27,7 +27,7 @@ div.header {
 
 p.logo-text {
   align-self: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-top: 1rem;
   color: rgb(235, 100, 100);
 }
@@ -49,30 +49,82 @@ nav {
   flex-direction: column;
   align-items: center;
   background-image: linear-gradient(black, rgb(197, 17, 17));
-  color: blanchedalmond;
+  background-color: black; /* For browsers that does not support gradients*/
+  color: rgb(255, 225, 148);
 }
 
 a {
   padding: 1rem;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 a:hover {
   transform: scale(1.2, 1.2);
 }
-/************* */
-div.space {
-  height: 150px;
-  background-color: black;
-  display: none;
-}
 
 /* FORM SECTION*/
 .form-section {
-  background-color: blanchedalmond;
-  border: 2px solid;
-  margin: 30px 20px;
-  width: 50%;
+  margin:20px 10px;
+  padding:40px;
+  background-color: rgb(255, 225, 148);
+  border-radius: 20% 10%;
 }
+
+h2 {
+  text-align: center;
+  color: rgb(255, 179, 25);
+  font-family: 'Merriweather', serif;
+  margin-bottom: 25px;
+}
+
+label {  
+  color: rgb(255, 179, 25);
+
+}
+.labels {
+  display:block;
+  padding-left: 10px;
+  margin: 10px 0px;
+}
+
+.inputs {
+  display: block;
+  color: rgb(255, 179, 25);
+  width: 100%;
+  height: 40px;
+  border:none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+/* Pseudo-class selector: select elements based on a certain state */
+.inputs:focus { 
+  outline: none; /* removes default outline of all inputs */
+}
+/* Pseudo-element selector: select and style a part of an element*/
+input::placeholder { 
+  padding-left: 15px;
+  opacity:0.5;
+}
+/* Attribute selectors: select elements based on an attribute or attribute value */
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.button {
+  display: block;
+  margin:20px auto;
+  width: 90%;
+  height: 50px;
+  background-color: rgb(255, 179, 25);
+  border:none;
+  border-radius: 20px;
+  color:#fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
 
 /* ACCORDION SECTION*/
 .accordion-section {
@@ -93,48 +145,37 @@ div.space {
   color: #fff;
   cursor: pointer;
 }
-.label:before {
-  content: '-';
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 1.3rem;
-  color: red;
-}
-
-.active::before {
+.label::before {
   content: '+';
   position: absolute;
   top: 10px;
   right: 20px;
   font-size: 1.3rem;
-  color: red;
+  color:white;
 }
-.active {background-color: darkviolet;}
-/* #question1,
-#question2,
-#question3,
-#question4,
-#question5 {
-  background-color: cornflowerblue;
-  border-bottom: 1px solid red;
-  padding: 10px;
-  margin-top: 10px;
-  color: #fff;
-  cursor: pointer;
-} */
 
-
-.active + div.answer {
-  /* Adjacent Sibling Selector (+) */
+.active::before {
+  content: '-';
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.3rem;
+  color:white;
+}
+ 
+.answer { 
   display: none;
+}
+
+.active + div.answer { /* Adjacent Sibling Selector (+) */
+  display: block;
 }
 
 /* MEDIA QUERIES */
 
-@media (min-width: 768px) {
+@media (min-width: 538px) {
   html {
-    font-size: 18px;
+    /* font-size: 18px; */
   }
 
   header {
