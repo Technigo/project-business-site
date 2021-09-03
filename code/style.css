@@ -91,7 +91,7 @@ audio {
   margin: 5% auto;                      /* 5% from the top and centered */
   padding: 50px;
   border: 2px solid;
-  width: 50%;                           /* Could be more or less, depending on screen size, almost 100% for mobile? */
+  width: 60%;                           /* Could be more or less, depending on screen size, almost 100% for mobile? */
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -259,8 +259,24 @@ footer p {                          /*zero margin between the paragraphs in the 
     height: 40px;
   }
 
-  .modal-content-form, .modal-content-accordion {         /* want the form and FAQ-accordion to take almost all the screen size */
+  .modal-content-form {         /* want the form and FAQ-accordion to take almost all the screen size */
     width: 80%;
+    justify-items: center;       /* centered the form */
+  }
+
+  .modal-content-accordion {
+    width: 80%;
+  }
+
+  .modal-book {
+    grid-column: span 2;         /* the online booking form to take up two columns */
+  }
+
+  .modal-img {             
+    grid-column: span 2;         /* for tablet, put the img under the form */
+    transform: rotate(180deg);   /* rotate the img 180deg */
+    width: 70%;
+    margin-top: 20px;
   }
 
 }
@@ -270,7 +286,7 @@ footer p {                          /*zero margin between the paragraphs in the 
     height: 180px;
   }
   .content-text {
-      grid-column: span 2;                      /*change it to one column*/
+      grid-column: span 2;                      /*changed it to one column*/
   }
   button, .header-title, footer, .copyright {
     font-size: 60%;
@@ -280,7 +296,7 @@ footer p {                          /*zero margin between the paragraphs in the 
     height: 30px;
   }
 
-  .modal-img {                                  /* make the img disappear so there's more space for the form */
+  .modal-img {                                  /* makes the img disappear so there's more space for the form */
     display: none;
   }         
 
