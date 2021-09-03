@@ -1,12 +1,12 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project was made on third week for Technigo bootcamp.
+The aim of this week was to create a responsive business site with a hero image/video, signup form that would post data to a HTTPBin service and an accordion (FAQ) that can collapse to show and hide text. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I am really proud of a hero video and how the website looks like with the first touches of Javascript. For this project I used Flexbox, CSS Entities information for accordion icon, made my own logo and found out more about ::after selector. 
+The biggest problem I had was the hero video and its responsiveness on mobile. I found out about playsinline property for the video tag to be able to start the video on mobile version.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://koffie-business-site.netlify.app 
