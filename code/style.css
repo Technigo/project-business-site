@@ -2,20 +2,21 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
+  position: absolute;
 }
 
 #hero {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   margin: 0;
 }
 
 #hero video {
   width: 100%;
-  height: 150%;
+  height: 100%;
   object-fit: cover;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
@@ -41,8 +42,9 @@ body {
 
 .navbar {
   width: 100vw;
-  margin: auto;
-  padding: 6%;
+  display: flex;
+  margin: 0 auto;
+  padding: 5%;
   margin-bottom: 20px;
   position: relative;
   z-index: 20;
@@ -50,9 +52,8 @@ body {
 }
 
 ul {
-  width: 80vw;
+  width: 100vw;
   margin: auto;
-  justify-content: center;
   list-style-type: none;
 }
 
@@ -65,7 +66,7 @@ li {
 
 li a {
   color: #FAF7B9;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -96,14 +97,25 @@ li a {
   border-radius: 5%;
 }
 
-label, input {
-  display: block;
-  margin: 2%;
+label {
+  margin-bottom: 3%;
+  margin-top: 3%;
 }
 
-selectBoxes {
-  display: inline;
-  padding-top: 10px;
+.blockLabel, .blockInput {
+  display: block;
+  
+}
+
+.radioGender {
+  display: inline-block;
+  padding: 1%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#termsConditions, #newsletter {
+  padding: 2%;
 }
 
 .submitButton {
@@ -135,7 +147,7 @@ selectBoxes {
 
 .question {
   background-color: #FAF7B9;
-  padding: 5%;
+  padding: 10%;
   border:solid;
   border-width: 1px;
   border-color: #9D98FA;
@@ -143,7 +155,7 @@ selectBoxes {
 }
 
 .answer {
-  line-height: 1.5;
+  line-height: 2;
   background-color: #FAF3EB;
   border:solid;
   border-width: 1px;
@@ -152,12 +164,12 @@ selectBoxes {
 }
 
 #question1, #question2, #question3, #question4 {
-  margin: 2%;
+  margin: 0;
   width: 200px;
 }
 
 
-/* JAVASCRIPT */
+/* JAVASCRIPT 
 
 .answer {
   display: none;
@@ -166,18 +178,19 @@ selectBoxes {
 .active + .answer {
   display: block;
 }
+*/
 
 /* FOOTER */
 
 .footer {
+  display: flex;
   font-family: Permanent Marker;
-  width: 80vw;
-  margin: auto;
-  padding: 10%;
-  margin-top: 20px;
-  font-size: 18px;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
   color: #FAF7B9;
-  background-color: #E0D4FE;
+  /* background-color: #E0D4FE; */
   position: relative;
   z-index: 20;
 }
@@ -203,6 +216,7 @@ selectBoxes {
     padding-top: 70px;
     padding-bottom: 30px;
   }
+
   
  /* NAVBAR */
 
@@ -254,7 +268,7 @@ li a {
     margin-right: 3%;
     margin-bottom: 5%;
     padding: 3%;
-    width: 60vw;
+    width: 90vw;
     height: 70wh;
   }
   
@@ -267,7 +281,7 @@ li a {
     margin-left: 3%;
     margin-bottom: 5%;
     padding: 3%;
-    width: 60vw;
+    width: 90vw;
     height: 70wh;
   }
   
@@ -330,11 +344,10 @@ li a {
       justify-content: center;
       align-items: center;
       margin-top: 5%;
-      margin-left: 10%;
       margin-right: 3%;
-      padding: 2%;
+      padding: 1%;
       width: 30vw;
-      height: 40wh;
+      height: 30wh;
     }
     
     .accordion {
@@ -343,10 +356,9 @@ li a {
       align-items: center;
       margin-top: 5%;
       margin-left: 3%;
-      margin-bottom: 5%;
       padding: 1%;
       width: 30vw;
-      height: 10wh;
+      height: 30wh;
     }
     
     /* FOOTER */
@@ -364,7 +376,13 @@ li a {
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-/*.active + .answer {
-  /* some styling here 
-}*/
 
+/* JAVASCRIPT */
+
+.answer {
+  display: none;
+}
+
+.active + .answer {
+  display: block;
+}

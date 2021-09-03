@@ -17,6 +17,7 @@
 
     <!-- CSS LINK -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize-css/normalize.css">
   </head>
 
   <body>
@@ -47,37 +48,59 @@
 
 
   <!-- MAIN CONTENT HERE -->
+
   <div class="flexParent">
 
   <section class="forms">
 
     <form action="http://httpbin.org/anything">
-      <h1>Become a Fashion Friend</h1>
+      <h2>Become a Fashion Friend</h2>
 
       <!--TEXT INPUTS-->
-    <div class="formInput">
-      <label class="userName" for="name">Username:</label>
-      <input type="text" id="name" name="username" placeholder="choose a username"required> 
+    
+      <label class="blockLabel" for="name">Username:</label>
+      <input class="blockInput" type="text" id="name" name="username" placeholder="choose a username"required> 
+
+      <label class="blockLabel" for="email">Email:</label>
+      <input class="blockInput" type="email" id="email" name="email" placeholder="your email"required> 
+
+      <label class="blockLabel" for="password">Password:</label>
+      <input class="blockInput" type="password" id="password" name="password" placeholder="choose a password" required>
+
+      <!-- radio buttons -->
+
+      <div class="radioButtons"> 
+
+      <div class="radioGender">
+        <label for="gender">Female</label>
+        <input type="radio" name="gender" value="Female" id="gender">
+      </div>
+
+      <div class="radioGender">
+        <label for="gender">Male</label>
+        <input type="radio" name="gender" value="Male" id="gender">
+      </div>
+
+      <div class="radioGender">
+        <label for="gender">Other</label>
+        <input type="radio" name="gender" value="Other" id="gender">
+      </div>
+
+      </div>
+
+      <!-- check boxes -->
+
+    <div class="checkBoxes"> 
+
+    <div id="termsConditions">
+      <input type="checkbox" name="terms-and-conditions" id="terms-and-conditions" required>
+      <label  for="terms-and-conditions">I agree with terms & conditions</label>
     </div>
 
-    <div class="formInput">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="your email"required> 
-    </div>
-
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" placeholder="choose a password" required>
-
-
-      <!-- terms and conditions + newsletter select boxes here!!-->
-
-    <div class="selectBoxes"> 
-
-      <label class="termsAndConditions" for="terms-and-conditions">I agree with terms & conditions</label>
-      <input type="checkbox" name="terms-and-conditions" id="terms-and-conditions">
-
-      <label for="newsletter">I want to recieve Friendly News</label>
+    <div id="newsletter">
       <input type="checkbox" name="newsletter" id="newsletter">
+      <label for="newsletter">I want to recieve Friendly News</label>
+    </div>
 
     </div>
 
@@ -92,7 +115,7 @@
 
   <section class="accordion">
      
-    <h1>Frequently Asked Questions</h1>
+    <h2>Frequently Asked Questions</h2>
 
   <div id="question1">
     <div class="question" id="section1">What is Friendly Fashion?</div>
