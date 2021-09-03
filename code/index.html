@@ -1,70 +1,81 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
-    <header>
-      <video class="video-header" autoplay loop muted playsinline> 
-        <source src="../Mountains in the fog.mp4"/>
-      </video>
 
-      <div class="overlay">
-        <h1>Headline</h1>
-      </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    </header>
-    <!-- Signup form -->
-    <div class="grid-container">
+<body>
+  <header>
+    <video class="video-header" autoplay loop muted playsinline>
+      <source src="../Mountains in the fog.mp4" />
+    </video>
 
-      <div class="div1"> 
-        <form action="http://httpbin.org/anything" method="POST">              
-          <!--Lable, input-->
-          <fieldset>
-            <legend>
-             <h2 class="sign-up-text"> Sign Up</h2>
-            </legend>
-            <label class="form-text" for="Name">Name</label>
-            <input type="form-input" type="text" name="fName" id="fName" placeholder="Required" required>
-            <br>
-            <label class="form-text" for="lName">Last Name</label>
-            <input type="form-input" type="text" name="lName" id="lName" placeholder="Required" required>
-            <br>
-            <label class="form-text" for="email">Email adress</label>
-            <input type="form-input" type="email" name="email" id="email" placeholder="Required" required>
-            <br>
-            <input class="checkbox" type="checkbox" name="newsletter" id="checkbox">
-            <label for="newsletter"> I want to recieve news</label>
-          </fieldset>
-        </form>
-
-      </div>
-
-      <div class="div2"> 
-        <!--picture, text-->
-      </div>
-
+    <div class="overlay">
+      <h1>Headline</h1>
     </div>
 
+  </header>
+  <!-- Signup form -->
+  <section class="grid-container">
+
+    <div id="signup" class="signup">
+      <form action="http://httpbin.org/anything" method="POST">
+        <!--Lable, input-->
+        <fieldset>
+          <legend>
+            <h2 class="sign-up-text"> Sign Up </h2>
+          </legend>
+          <label class="form-text" for="Name">First Name</label>
+          <input type="form-input" type="text" name="fName" id="fName" placeholder="Required" required>
+          <br><br>
+          <label class="form-text" for="lName">Last Name</label>
+          <input type="form-input" type="text" name="lName" id="lName" placeholder="Required" required>
+          <br><br>
+          <label class="form-text" for="email">Email adress</label>
+          <input type="form-input" type="email" name="email" id="email" placeholder="Required" required>
+          <br><br>
+          <input class="checkbox" type="checkbox" name="newsletter" id="checkbox">
+          <label for="newsletter"> I want to recieve news</label>
+          <br><br>
+          <input type="submit" type="submit" value="Send">
+        </fieldset>
+      </form>
+    </div>
+
+
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>Frequently Asked Questions</h1>
+      <!-- Frequently Asked Questions Accordion -->
+      <fieldset>
+        <legend>
+          <h2 class="faq-title"> Frequently Asked Questions </h2>
+        </legend>
+        <div class="accordion1" id="question1">
+          Question 1
+        
+          <p>Lorem ipsum...</p>
+        </div>
 
-      <div class="question" id="section1">Question 1</div>
-      <div class="answer">
-        <p>Answer question 1</p>
-      </div>
+        <div class="accordion1" id="question2">
+          Question 2
+        
+          <p>Lorem ipsum...</p>
+        </div>
 
-      <div class="question" id="section2">Question 2</div>
-      <div class="answer">
-        <p>Answer question 2</p>
-      </div>
+        <div class="accordion1" id="question3">
+          Question 3
+        
+          <p>Lorem ipsum...</p>
+        </div>
+      </fieldset>
     </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+
+    <footer> ... </footer>
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
 </html>

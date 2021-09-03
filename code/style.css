@@ -7,6 +7,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 body {
+  font-family: 'Open Sans Condensed', sans-serif;
   margin: 0;
 }
 
@@ -36,6 +37,13 @@ header {
   color: white;
 }
 
+fieldset {
+  display: block;
+  margin-inline-start: 1px;
+  margin-inline-end: 1px;
+  margin-top: 5em;
+}
+
 .grid-container {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
@@ -43,11 +51,27 @@ header {
    grid-column-gap: 0px;
    grid-row-gap: 0px;
   }
+
+  section {
+    display: block;
+  }
   
-  .div1 { 
+  .signup { 
     grid-area: 1 / 1 / 4 / 5; 
   }
 
-  .div2 { 
-    grid-area: 1 / 1 / 4 / 5; 
+  .accordion { 
+    grid-area: 4 / 1 / 4 / 5; 
+  }
+
+  .accordion {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 18px 0px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
   }
