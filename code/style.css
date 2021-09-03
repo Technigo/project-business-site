@@ -19,10 +19,12 @@ body {
 h1{
   color: white;
   font-family: 'Ubuntu';
-  font-size: 40px;
+  font-size: 45px;
   align-content: center;
-  letter-spacing: 5px;
-  
+  letter-spacing: 7px;
+  text-align: center;
+  margin: 53px 0 0 0;
+
   
 }
 
@@ -42,6 +44,7 @@ h4 {
   font-family: 'Nunito';
   text-align: center;
   color: black;
+  padding-bottom: 30px;
 
 }
 /*** Header ***/
@@ -50,36 +53,34 @@ h4 {
 header{
   display: flex;
   height: 200px;
-  /*align-items: center;*/
   background-image: url("./images/header-monstera.jpg");
   background-size: cover;
   width: 100%;
-  justify-content: space-around;
-}
-.Hero-text {
-  text-align: center;
-  margin-top: 55px;
   
 }
 
+
 nav {
-    
+
     font-family: 'Nunito';
-    margin: 0 5px;
+    margin: 0 10px;
     font-size: 16px;
     color: white;
-    align-items: flex-end;
     display: none;
+    
+    
+   
     
 }
 
 nav a {
   display: inline-block;
-  padding: 1px;
+  padding: 10px;
   text-decoration: none;
   border-radius: 5px;
   color: white;
-
+  
+    
 }
 .hamburger {
   display: flex;
@@ -87,7 +88,8 @@ nav a {
   width: 30px;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 65px;
+  margin: 65px 40px 0 0;
+  
   
 
 }
@@ -105,7 +107,7 @@ nav a {
 .formaccordion-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 20px;
   border-radius: 10px;
   width: 80%;
@@ -113,6 +115,8 @@ nav a {
   margin-left: auto;
   margin-right: auto;
   background-color: #60A9A6;
+  justify-content: center;
+  
 
 }
 
@@ -121,14 +125,12 @@ fieldset {
   border-radius: 10px;
   box-shadow: 10px 10px 15px 0 #3B5249;
   border: none;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 20px auto;
   /*padding: 20px;*/
   width: 60%;
-  margin-left: auto;
-  margin-right: auto;
   background-color: white;
   max-width: 400px;
+  min-width: 300px;
 }
 
 label {
@@ -143,8 +145,9 @@ label {
 
 }
 
-input{
- /*justify-content: space-evenly;*/
+input[type="text"],input[type="email"], 
+input[type="password"] {
+ 
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -153,15 +156,26 @@ input{
   font-size: 15px;
   background-color: #CAF2D7;
   margin: 10px;
-   
+  width: 90%; 
+}
+input[type="submit"]{
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Nunito';
+  font-weight: bold; 
+  font-size: 15px;
+  background-color: #FDDEDE;
+  margin: 10px;
+  width: 90%; 
 }
 
 .radio-row{
   display: flex;
   justify-content: space-around;
-  width: 60%;
   margin-left: auto;
   margin-right: auto;
+  max-width: 300px;
 }
 
 
@@ -186,21 +200,20 @@ input{
 
 /*** Accordion styling ***/
 
+
 .accordion {
   border-radius: 10px;
   box-shadow: 10px 10px 15px 0 #3B5249;
   border: none;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 50px auto;
+  padding-top: 50px; 
   width: 60%;
-  margin-left: auto;
-  margin-right: auto;
   background-color: white;
   max-width: 400px;
-  min-width: 200px;
+  min-width: 300px;
   cursor: pointer;
-  
 }
+
 
 .question {
   margin: 20px 0;
@@ -218,6 +231,7 @@ input{
   color:#A39161;
   background-color:#CAF2D7;
   margin-left: 5px;
+  width: 90%;
 }
 
 .answer {
@@ -226,8 +240,9 @@ input{
   font-family: 'Nunito';
   background-color: #FDDEDE;
   color: black;
-  padding: 10px;
+  padding: 40px 10px;
   font-size: 12px;
+  font-style: italic;
  
   
 }
@@ -238,4 +253,64 @@ input{
 }
 
   
+/*** Media Queries***/
 
+
+
+@media (min-width: 768px){
+
+  Header {
+    height: 300px;
+    justify-content: space-between;
+  }
+  .Hero-text{
+    margin-left: 40px;;
+  }
+  h1{
+   
+    font-size: 70px;
+  }
+  h2 {
+    
+    font-size: 25px;
+  }
+.hamburger {
+  display:none;
+}
+
+nav {
+  display:inline-block;
+ 
+}
+}
+
+@media (min-width: 992px) {
+
+  .Hero-text {
+    margin-left: 60px;
+    
+  }
+  h1 {
+    font-size: 80px;
+
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+ .accordion {
+  margin: 50px 0;
+  
+ }
+
+  .formaccordion-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin: 50px auto;
+   
+   
+  }
+
+}
