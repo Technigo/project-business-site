@@ -48,9 +48,9 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(black, rgb(197, 17, 17));
+  /* background-image: linear-gradient(black, rgb(197, 17, 17)); */
   background-color: black; /* For browsers that does not support gradients*/
-  color: rgb(255, 225, 148);
+  color: rgb(252, 240, 200);
 }
 
 a {
@@ -66,19 +66,21 @@ a:hover {
 .form-section {
   margin:20px 10px;
   padding:40px;
-  background-color: rgb(255, 225, 148);
-  border-radius: 20% 10%;
+background-color: rgb(60, 141, 173);
+border-radius: 20% 10%;
 }
 
-h2 {
+.register-heading {
   text-align: center;
-  color: rgb(255, 179, 25);
   font-family: 'Merriweather', serif;
   margin-bottom: 25px;
+  color: rgb(252, 240, 200);
+
+
 }
 
 label {  
-  color: rgb(255, 179, 25);
+  color: rgb(252, 240, 200);
 
 }
 .labels {
@@ -89,11 +91,9 @@ label {
 
 .inputs {
   display: block;
-  color: rgb(255, 179, 25);
   width: 100%;
   height: 40px;
   border:none;
-  border-radius: 20px;
   margin-bottom: 20px;
 }
 /* Pseudo-class selector: select elements based on a certain state */
@@ -115,10 +115,10 @@ input[type="checkbox"] {
   margin:20px auto;
   width: 90%;
   height: 50px;
-  background-color: rgb(255, 179, 25);
+  background-color: rgb(18, 93, 152);
   border:none;
   border-radius: 20px;
-  color:#fff;
+  color: rgb(252, 240, 200);
   font-size: 24px;
   cursor: pointer;
 }
@@ -128,30 +128,42 @@ input[type="checkbox"] {
 
 /* ACCORDION SECTION*/
 .accordion-section {
-  border: 2px solid;
-  margin: 20px;
-  width: 400px;
+  margin:20px 10px;
+  padding:40px;
+  background-color: rgb(145, 31, 39);
+  border-radius: 10% 20%;
+}
+.faq-heading {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  color: rgb(252, 240, 200);
+  margin-bottom: 20px;
+
 }
 .contentBox {
   position: relative;
-  width: 400px;
 }
 
-.label {
-  background-color: cornflowerblue;
-  border-bottom: 1px solid red;
+.question {
+  width: 100%;
   padding: 10px;
   margin-top: 10px;
-  color: #fff;
+  background-color: rgb(250, 206, 127);
+  /* background-color: rgb(252, 240, 200); */
+  background-color: rgb(252, 240, 200);
+  color:rgb(99, 10, 16);
   cursor: pointer;
+  border-radius: 20px;
+
 }
-.label::before {
+
+.question::before {
   content: '+';
   position: absolute;
   top: 10px;
   right: 20px;
   font-size: 1.3rem;
-  color:white;
+  color:rgb(99, 10, 16);
 }
 
 .active::before {
@@ -160,11 +172,13 @@ input[type="checkbox"] {
   top: 10px;
   right: 20px;
   font-size: 1.3rem;
-  color:white;
+  color:rgb(99, 10, 16);
 }
  
 .answer { 
   display: none;
+  color:rgb(250, 206, 127);
+  padding: 5px;
 }
 
 .active + div.answer { /* Adjacent Sibling Selector (+) */
