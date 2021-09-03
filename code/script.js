@@ -33,3 +33,29 @@ document.getElementById('form').addEventListener('submit', (event) => {
 	greetingContainer.style.display = 'inherit';
 	formContainer.style.display = 'none';
 });
+
+// code to rotate icon
+const body = document.body,
+	html = document.documentElement;
+const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+
+const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight) - vh;
+
+window.onscroll = function () {
+	scrollRotate();
+};
+
+function scrollRotate() {
+	const image = document.getElementById('scroll-icon');
+	const ancor = document.getElementById('scroll-ancor');
+	let yOffset = window.pageYOffset;
+	image.style.transform = `rotate(${yOffset / (height / 180)}deg)`;
+	if (yOffset > height / 2) {
+		image.src = './images/up-arrow.png';
+		ancor.href = '#top';
+		console.log(image.src);
+	} else {
+		image.src = './images/down-arrow.png';
+		ancor.href = '#flex-container';
+	}
+}
