@@ -63,7 +63,7 @@ body {
 }
 
 #menu-button ~ a {
-  display: none;
+  display: none; 
 }
 
 #menu-button.open ~ a {
@@ -96,16 +96,20 @@ body {
   padding: 5%;
 }
 
-
 .form {
   display: flex;
   flex-direction: column;
-  background-color:rgba(222, 223, 215, 0.924);
-  border: black solid 1px;
-  border-radius: 5px;
-  margin: 10px;
   padding: 10px;
   font-size: 20px;
+}
+
+.form, .accordion {
+  background-color:rgba(222, 223, 215, 0.924);
+  margin: 10px;
+  padding: 20px;
+  border: solid black 1px;
+  border-radius: 5px;
+  box-shadow: 3px 6px 5px 1px rgba(8, 8, 8, 0.2);
 }
 
 .form h1 {
@@ -162,6 +166,11 @@ input:invalid {
   margin-right: 30px;
 }
 
+.radio-buttons > label:hover {
+  color: white;
+  background-color: slategray;
+  border-radius: 5px;
+}
 
 .checkbox {
   display: inline;
@@ -176,6 +185,7 @@ input:invalid {
   width: 50%;
   margin: 20px auto;
   border-radius: 5px;
+  box-shadow: 1px 1px 3px slategray;
   height: 50px;
 }
 
@@ -186,14 +196,6 @@ input:invalid {
 
 #submit-confirmation {
   display: none;
-}
-
-.accordion {
-  background-color:rgba(222, 223, 215, 0.924);
-  border: solid black 1px;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px;
 }
 
 .accordion h1 {
