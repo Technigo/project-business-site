@@ -7,35 +7,74 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 body {
-  max-width: 1400px;
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+
+  background-image: url(./images/annie-spratt-vs6a4EHj_Ro-unsplash\ \(1\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    display: flex;
+    /* align-items: flex-start; */
+    flex-direction: column;
+    justify-content: center;
+    background-position: right;
+    /* z-index: 99; */
+    position: relative;
+   
   
 }
 
+/* .megawrapper {
+  display: flex;
+  flex-direction: column;
+
+} */
+
 h1 {
   font-family: 'Major Mono Display', monospace;
-  font-size: 50px;
+  font-size: 60px;
   color: white;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.523);
+}
+
+h2 {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 30px;
+  color: #232425;
+}
+
+header {
+  min-height: 300px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+
 
 
 }
 
-header {}
+img {
+  object-position: fixed;
+ 
+}
 
+/* WORKING CODE FOR OLD HEADER
 img {
   object-position: center;
   object-fit:fill;
-}
+} */
 
+/* remove?
 .pic_and_text { 
 
 position: relative;
 text-align: center;
 
-}
+} */
 
+/* Using overlay to make the text show on the picture */
 .overlay {
   position: absolute;
   top: 0;
@@ -49,48 +88,95 @@ text-align: center;
 
 }
 
+.wrap-form {
+  display: flex;
+  width: 400px;
+  margin: 30px auto;
+
+}
 
 form {
   background-color: rgb(228, 218, 244);
   border: 1px solid;
   border-radius: 8px;
-  margin: 30px auto;
-  padding: 10px;
-  width: 500px;
-
+ 
+  padding: 20px;
+  
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
 
 }
 label {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   font-family: sans-serif;
   color: #232425;
 }
 
- .radiobtn {
-   display: inline;
- }
+.radiolabel {
+  display: inline-block;
 
+}
+ 
 
 input {
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   padding: 5px;
 	margin-bottom: 20px;
+  border-radius: 5px;
 }
 
-.radiolabel {
-  display: inline;
+.radiobtn {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+button {
+  background-color: #fffff;
+  color: #232425;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.wrap-accordion {
+  display: flex;
+  width: 400px;
+  margin: 30px auto;
+}
+
+.accordion {
+  background-color: rgb(236, 197, 241);
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
 
 }
 
+.question {
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 10px;
+  cursor: pointer;
 
+}
+
+.question:hover {
+  background-color: white;
+
+}
 .answer {
-display: none;
+  font-style: italic;
+  display: none;
 }
 
 .active {
-  background-color: blueviolet;
+  background-color: rgb(228, 218, 244);
 
 }
 
