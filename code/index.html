@@ -5,15 +5,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Koffie business site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
   <!-- dont forget to add a css file and link it here! -->
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
   <!-- video or image as a header is cool :) -->
-  <header-container>>
+  <header-container>
     <header id="hero">
-      <video preload="auto" autoplay muted loop>
+      <video preload="auto" autoplay muted loop playsinline>
         <source src="./hero-seeds-video.mp4">
         <p>Your browser does not support the video tag.</p>
       </video>
@@ -27,8 +29,8 @@
       </nav>
       <div class="caption">
         <img class="myLogo" src="logo.png" alt="logo" />
-        <h1>Welcome to Koffie</h1>
-        <h2>Try our coffee tasting experience directly from Africa</h2>
+        <h1>Welcome to Koffie !</h1>
+        <h2>Our coffee tasting experience directly to you from Africa</h2>
         <button class="hero-button">Visit our shop</button>
       </div>
     </header>
@@ -71,6 +73,16 @@
               <label for="very-dark" class="label-roast">Very dark </label>
             </div>
           </div>
+          <div class="how-aboutus">
+            <label for="about-us">How did you find out about us?</label>
+            <select id="about-us" name="preffered-source" required>
+              <option value="" disabled selected>Please choose one</option>
+              <option value="Internet">Internet</option>
+              <option value="Friend">Friend recommendation</option>
+              <option value="Journal">Newspaper or journal</option>
+              <option value="Ads">Street advertising</option>
+            </select>
+          </div>
           <div class="form-checkbox">
             <input type="checkbox" name="accept" id="accept" required>
             <label for="accept">I accept the terms and conditions</label>
@@ -83,53 +95,55 @@
       <section class="accordion-container">
         <h3 class="header-accordion">Most common questions</h3>
         <div class="accordion-item">
-          <div class="accordion-item-header">
-            What is Lorem Ipsum?
+          <div class="accordion-item-header" id="question1">
+            Where does your coffee come from?
           </div>
           <div class="accordion-item-body">
             <div class="accordion-item-body-content">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Our coffee comes from Kenya where Arabica coffee grows on the rich volcanic soil that is found in the
+              highlands of the country. Many people list Kenyan coffee among the five best in the world.
             </div>
           </div>
         </div>
         <div class="accordion-item">
-          <div class="accordion-item-header">
-            Why do we use it?
+          <div class="accordion-item-header" id="question2">
+            What type of your coffee has the most caffeine?
           </div>
           <div class="accordion-item-body">
             <div class="accordion-item-body-content">
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout
+              Highly-caffeinated coffee (e.g. Death Wish Coffee, Biohazard Coffee, etc.)
             </div>
           </div>
         </div>
         <div class="accordion-item">
-          <div class="accordion-item-header">
-            What is Lorem Ipsum?
+          <div class="accordion-item-header" id="question3">
+            How much ground coffee should I use?
           </div>
           <div class="accordion-item-body">
             <div class="accordion-item-body-content">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              A general guideline is called the "Golden Ratio" - one to two tablespoons of ground coffee for every six
+              ounces of water.
             </div>
           </div>
         </div>
         <div class="accordion-item">
-          <div class="accordion-item-header">
-            What is Lorem Ipsum?
+          <div class="accordion-item-header" id="question4">
+            Why is coffee sometimes bitter?
           </div>
           <div class="accordion-item-body">
             <div class="accordion-item-body-content">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Good quality coffee will commonly have some bitter elements, but bitterness should not be an overwhelming
+              component.
             </div>
           </div>
         </div>
         <div class="accordion-item">
-          <div class="accordion-item-header">
-            What is Lorem Ipsum?
+          <div class="accordion-item-header" id="question5">
+            Is your coffee Fairtrade?
           </div>
           <div class="accordion-item-body">
             <div class="accordion-item-body-content">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Of course, choosing Fairtrade coffee makes a difference!
             </div>
           </div>
         </div>

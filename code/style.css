@@ -1,9 +1,11 @@
-
+/* styling for the whole page */
 * {margin:0;}
 
 body {
   background-color: #271916;
 }
+
+/* styling for the header */
 #hero {
   height: 1000px; 
   width: 100%;
@@ -11,10 +13,10 @@ body {
   align-items: center;
   justify-content: center;
 }
-.header-container {
+/* .header-container {
   width: 100%;
   height: 1500px;
-}
+} */
 
 #hero video {
   width: 100%;
@@ -36,10 +38,14 @@ body {
 #hero .caption h1 {
   text-transform: uppercase;
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif
+  font-family: 'Varela Round', sans-serif;
   margin-bottom: 20px;
 }
-
+#hero .caption h2 {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 30px;
+}
+/* navigation-bar for mobile version is hidden */
 .navigation-container {
   position: absolute;
   display: none;
@@ -53,10 +59,12 @@ body {
 .navigation-tabs {
   margin: 20px;
 }
+/* shopping cart is also hidden for mobile */
 .shopping-card {
   display: none;
 }
 
+/* visit our shop button */
 .hero-button {
   margin-top: 20px;
   padding: 17px;
@@ -68,13 +76,14 @@ body {
   border: 1px solid beige;
 }
 
+/* I made logo by myself this time */
 .myLogo {
   border-radius: 80px;
   width: 150px;
   margin-bottom: 25px;
 }
 
-
+/* MAIN PART */
 .big-content-container {
   display: flex; 
   justify-content: center;
@@ -82,14 +91,7 @@ body {
   margin: 0px 20px 20px 40px;
 }
 
-
-.header-accordion {
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  font-size: 17px;
-}
+/* FORM PART */
 
 .form-container {
   background-color: #ede7e4;
@@ -133,6 +135,27 @@ body {
 .type-coffee {
   margin-bottom: 5px;
 }
+.how-aboutus {
+  margin-left: 20px;
+}
+select {
+  background-color: #dacec9;
+  color: grey;
+  margin-left: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input:focus {
+  background: antiquewhite;
+}
+
+input[type="checkbox"] {
+  filter: invert(80%);
+}
+
+input[type="radio"] {
+  filter: invert(80%);
+}
 
 .form-checkbox {
   margin-top: 40px;
@@ -147,21 +170,23 @@ body {
 .order-button {
   background-color: black;
   color: white;
-  cursor: pointer;
+  cursor: wait;
   padding: 10px 30px 10px 30px;
   border-radius: 10px;
 }
+
+/* Accordion part */
 
 .header-accordion {
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 10px;
-  margin-top: 18px;
+  margin-top: 10px;
   text-transform: uppercase;
   font-size: 17px;
   text-align: center;
 }
-.accordion-container{
+.accordion-container {
   background-color: #ede7e4;
   border-radius: 30px;
   margin-right: 20px;
@@ -173,6 +198,7 @@ body {
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
+
 .accordion-item-header {
   padding: 10px 10px 20px 10px;
   min-height: 30px;
@@ -180,7 +206,7 @@ body {
   display:flex;
   align-items: center;
   position: relative;
-  cursor: pointer;
+  cursor: zoom-in;
 }
 
 .accordion-item-header::after {
@@ -189,7 +215,7 @@ body {
   color: antiquewhite;
   position: absolute;
   right: 16px;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .accordion-item-header.active::after {
@@ -204,10 +230,6 @@ body {
   border-top: 0.5px solid #a38e8a;
   border-radius: 5px ;
 }
-footer {
-  display: none;
-}
-
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
@@ -218,6 +240,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   display: block;
 }
 
+footer {
+  display: none;
+}
 
 /* TABLET view */
 @media (min-width: 768px) {
@@ -234,9 +259,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   .accordion-container {
     width: 80%;
   }
-  .form-container {;
+  .form-container {
     width: 80%;
   }
+
   #hero {
     height: 1000px; 
     width: 100%;
@@ -263,7 +289,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
       justify-content: center;
       align-items: flex-start;
       flex-direction: row;
-      margin:10px 20px 60px 20px;
+      margin:10px 20px 150px 20px;
     }
     /* .big-body-container {
       margin-bottom: 10px;
@@ -271,6 +297,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     /* #hero {
       height: 770px;
     } */
+
     .shopping-card {
       margin-top: 5px;
       width: 30px;
@@ -310,9 +337,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     
 
     footer {
-      /* position: fixed; */
-      /* left: 0;
-      bottom: 0; */
       width: 100%;
       height: 40px;
       background-color: #271916;
@@ -322,7 +346,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
       color: #a7a5a5;
     }
     .footer {
-      font-size: 15px;
-      color: white;
+      font-size: 20px;
+      color: #caa189;
+      font-family: 'Quicksand', sans-serif;
     }
 }
