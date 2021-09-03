@@ -3,15 +3,81 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <nav class="nav-bar">
     <title>Project 3</title>
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <!-- video or image as a header is cool :) -->
+    <nav>
+      <ul>
+        <li>Our destinations</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+
     <header>
-      <h1>Header</h1>
+      <div class="inner-container">
+        <div class="video-overlay">
+          <h1>
+            Hedvig's epic adventures!
+          </h1></div>
+        <video autoplay loop muted preloaded="autoplay">
+          <source src="../pexels-ibrahim-bennett.mp4" type="video/mp4">  
+        </video>
+      </div>  
     </header>
+
+    
+
+    <div class="middle-section">
+     <!-- Accordion -->
+     <section class="accordion">
+      <fieldset>
+        <legend>FAQ</legend>
+        <div class="FAQ">
+          <div class="question-accordion" id="section1">
+            What kind of equipment do you need to come along on the trip to Kebnekajse?
+            
+          </div>
+          <div class="answer" id="answer">
+            <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
+          </div>
+
+          <div class="question-accordion" id="section2">
+          I don't have a tent, but would like to try it out. Can a borrow one?
+          </div>
+          <div class="answer">
+          <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+          </div>
+
+          <div class="question-accordion" id="section3">
+            When do I need to sign up to get a place on the trip?
+            </div>
+            <div class="answer">
+            <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+            </div>
+
+            <div class="question-accordion" id="section4">
+              What will we eat during the trip?
+              </div>
+              <div class="answer">
+              <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+              </div>
+
+              <div class="question-accordion" id="section5">
+                How far will we walk each day?
+                </div>
+                <div class="answer">
+                <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+                </div>
+        </div>
+      </fieldset>
+    </section>
 
     <!-- Signup form -->
     <div class="sign-up">
@@ -20,7 +86,7 @@
           <form method="POST" action="http://httpbin.org/anything">
             <div class="questions">
               <div class="name">
-                <label for="name">Name</label>
+                <label for="name">Name:</label>
                 <input 
                 type="text" 
                 id="name" 
@@ -30,119 +96,68 @@
               </div>
   
               <div class="question2">
-                <label for="question2">question2</label>
+                <label for="question2">Email:</label>
                 <input 
                 type="text" 
                 id="question2" 
                 name="question2"
-                placeholder="xxxx"
+                placeholder="xxxxxxx@xxx.se"
                 >
               </div>
           
               <div class="question3">
-                <label for="question3">question3</label>
+                <label for="question3">Phone number:</label>
                 <input 
                 type="text" 
                 id="question3" 
                 name="question3"
-                placeholder="xxxxxx"
+                placeholder="xxx-xxxxxx"
                 >
               </div>
             </div>
             
 
-            <div class="cars">
-              <label for="cars">Choose a car:</label>
-              <select id="cars" name="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
+            <div class="trips">
+              <label for="cars">I would like to come along to the trip:</label>
+              <select id="trips" name="trips">
+                <option value="Kebnekajse">Kebnekajse</option>
+                <option value="hagadalen">Hågadalen</option>
+                <option value="jamtlandstriangeln">Jämtlandstriangeln</option>
+                <option value="Padjelanta">Padjelanta</option>
               </select>
             </div>
 
-            <div class="radio-button">
-              <p>Choose your favourite something:</p>
             
-                <input type="radio" id="something1" name="Something" value="HTML">
-                <label for="Something1">Something 1</label>
+              <div class="radio-button">
+                <p>How would you like to spend the nights?</p>
+                  <div class="radio" >
+                    <input type="radio" id="tent" name="tent" value="tent">
+                    <label for="Something1">In a tent</label><br>
 
-                <input type="radio" id="Something2" name="Something" value="Something2">
-                <label for="Something2">Something 2</label>
+                    <input type="radio" id="cabin" name="Something" value="cabin">
+                    <label for="Something2">In a cabin</label><br>
 
-                <input type="radio" id="Something3" name="Something" 
-                value="Something3">
-                <label for="javascript">Something 3</label>
-                
-            </div>
-          
-            <div class="checkbox">
-              <label for="scales">I accept something</label>
-              <input type="checkbox" placeholder>
-            </div>
-        
-            <button type="submit">Sign up!</button>
+                    <input type="radio" id="home" name="Something" 
+                    value="home">
+                    <label for="javascript">At home or a hotel</label><br>
+                  </div>
+              </div>
+            
+              <div class="checkbox-submit">
+                  <label for="scales">I woud like to recive the newsletter</label>
+                  <input type="checkbox">
+                <button type="submit">Sign up!</button>
+              </div>
+
 
           </form>
       </fieldset>
     </div>
 
 
-
-
-
-
-
-
-
- <!-- Accordion -->
-    <section class="accordion">
-      <fieldset>
-        <legend>FAQ</legend>
-        <div class="FAQ">
-          <div class="question-accordion" id="section1">
-            <p>Section 1</p>
-          </div>
-          <div class="answer" id="answer">
-            <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
-          </div>
-
-          <div class="question-accordion" id="section2">
-          <p>Section 2 </p>
-          </div>
-          <div class="answer">
-          <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-          </div>
-
-          <div class="question-accordion" id="section3">
-            <p>Section 3 </p>
-            </div>
-            <div class="answer">
-            <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-            </div>
-
-            <div class="question-accordion" id="section4">
-              <p>Section 4 </p>
-              </div>
-              <div class="answer">
-              <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-              </div>
-
-              <div class="question-accordion" id="section5">
-                <p>Section 5 </p>
-                </div>
-                <div class="answer">
-                <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-                </div>
-        </div>
-      </fieldset>
-    </section>
-
-   
-
     <!-- dont forget to link the javascript file here! -->
     <script src="script.js"></script>
-
+  </div>
   </body>
   <footer class="footer">
     <p>Footer</p>

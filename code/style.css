@@ -4,68 +4,183 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 
 body {
-  display: grid;
-  Grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
   margin: 0px;
 }
+/* ----- NavBar -----*/
+ul {
+  list-style: none;
+  text-align: right;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+li {
+  display: inline;
+  padding: 10px;
+}
+
+/* ----- HEADER -----*/
 
 header {
-  Grid-column: span 2;
+  
+  width: 100%;
+  height: 100%;
+}
+.inner-container {
+  border: 1px solid black;
+  display: inline-block;
+  position: relative;
+  
+}
+.video-overlay {
+  position: absolute;
+  left: 0px ;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Amatic SC';
+  font-size: 50px;
+  color: #FFF;
+  background-color: rgba(50, 50, 50, 0.3);
 }
 
-h1 {
-  font-size: 4em;
-  text-align: center;
-}
-
-.question-accordion p {
-  margin: 5px 0px;
-  text-align: center;
-}
-
-.answer p {
-  margin: 10px;
-}
-
-.sign-up {
-  Grid-column: span 1;
-}
-
-.questions, .cars, .radio-button, .checkbox, .sign-up, .accordion, footer, header, body {
-  border: 2px solid black;
+.video-overlay h1 {
+  font-family: 'Amatic SC';
 }
 
 
-.accordion {
-  Grid-column: span 1;
+video {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
+/* ----- Video av Ibrahim Bennett från Pexels  -----*/
+
+
+
+/* ----- FAQ och SIGN UP -----*/
+.middle-section {
+  padding: 20px 50px; 
+  display: grid;
+  Grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  
+}
+
+
+/* ----- FAQ -----*/
 
 .FAQ {
   border: 2px solid black;
+  background-color: white;
+  margin: 20px 50px;
 }
-
 .question-accordion {
   background-color: darkolivegreen;
   color: white;
-}
 
+  text-align: left;
+  margin: 0px;
+  border: 0.5px solid black;
+  padding: 10px 5px;
+
+}
+/* ----- 
+.question-accordion p {
+  text-align: center;
+  margin: 0px;
+  border: 0.5px solid black;
+  padding: 10px 5px;
+}
+ -----*/
 .answer {
   display: none;
+  margin: 10px;
+}
+
+.question-accordion:after {
+  content: '\002B';
+  border: none;
+  justify-content: right;
+  padding: 10px;
+  margin: 0px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+
+
+/* ----- SIGN UP -----*/
+
+form {
+  padding: 10px 30px;
+} 
+
+.questions, .trips, .radio-button, .checkbox-submit  {
+  padding: 10px;
+} 
+
+.radio-button  p {
+  margin:0px;
+} 
+
+.radio {
+  display: block;
+  cursor: pointer; 
 }
 
 .active + .answer {
   display:block;
 }
 
-
-
-
-
-
 footer {
   Grid-column: span 2;
   margin: 0px;
   font-size: 4em;
+
+  position: absolute bottom;
+  background-color: darkolivegreen;
+  color: white;
+  font-family: 'Amatic SC';
+}
+
+footer p {
+  margin: 0px;
   text-align: center;
+}
+
+/* ----- MOBILE FIRST -----*/
+
+
+
+/* Mobil */ 
+@media (min-width: 0px) and (max-width: 767px) { 
+
+}
+
+/*Paddda*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .middle-section {
+  
+  }
+}
+
+/*Liten Dator*/
+@media (min-width: 992px) and (max-width: 1199px){
+  .middle-section {
+    display: grid;
+    Grid-template-columns: 1fr 1fr;
+    Grid-template-rows: none;
+  }
+}
+
+/*Stor Dator*/
+@media (min-width: 1200px) {
+
 }
