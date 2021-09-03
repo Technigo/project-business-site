@@ -15,7 +15,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 body {
 background-color: blueviolet;
 font-family: Arial, Helvetica, sans-serif;
-/* color: cornflowerblue; */
+color: rgb(4, 41, 4);
 }
 
 .hero-img {
@@ -24,12 +24,13 @@ font-family: Arial, Helvetica, sans-serif;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-  text-align: center;
   font-size: 4.5rem;
-  padding-top: 200px; 
   color: rgb(235, 163, 241); 
 } 
 
@@ -37,33 +38,56 @@ h1 {
 h2 {
   text-align: center;
   margin: 2rem 0;
-  font-size: 2.5rem;
-  color: rgb(4, 41, 4);
+  font-size: 2rem;
+  color: cornflowerblue;
 }
 .bigbox {
   display: flex;
   flex-direction: row;
-  margin: 1rem auto;
-  align-items: center;
+  align-items: center; 
+  justify-content: center;
+}
+
+.signup {
+  width: 90%;
+  max-width: 1000px;
 }
 
 .newsletter {
+  display: flex;
   width: 90%;
   max-width: 1000px;
-  /* margin: 2rem auto; */
-  background-color: green;
-  color:#111;
-  margin: 1rem 0;
-  border-radius: 0.5rem;
+  margin: 2rem auto;
+  background-color: rgb(134, 194, 134);
+  border-radius: 0.5rem; 
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
-  /* padding: 0.5rem 3rem 0.5rem 1rem; */
-  padding: 5rem 3rem 5rem 3rem;
+  padding: 0.5rem 3rem 0.5rem 1rem;
   font-weight: bold;
-  display: flex;
-  /* align-items: center; */
-  /* position: relative; */
 }
 
+h3 {
+  margin: 15px;
+}
+
+label {
+  display: block;
+  margin: 15px;
+  text-align: left;
+}
+
+input {
+  padding: 5px;
+  background-color: cornflowerblue;
+  margin: 15px;
+  border-radius: 0.5rem;
+}
+
+button {
+  padding: 10px;
+  background-color: cornflowerblue;
+  margin: 15px;
+  border-radius: 0.5rem;
+}
 
 .accordion {
   width: 90%;
@@ -72,8 +96,8 @@ h2 {
 }
 
 .accordion-item {
-  background-color: green;
-  color:#111;
+  background-color: rgb(134, 194, 134);
+  color: rgb(4, 41, 4);
   margin: 1rem 0;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
@@ -120,10 +144,10 @@ h2 {
   border-image: linear-gradient(to right, #359286, #692d9b) 1;
 }
 
-/* Adding more accurate responsiv font size to FAQ box */
+/* Adding responsivness to mobile */
 @media (max-width:767px) {
   h1 {
-     font-size: 14px;
+     font-size: 24px;
   } 
 
   .bigbox {
@@ -133,6 +157,7 @@ h2 {
   body {
     font-size: 14px;
   }
+
 }
 
 
