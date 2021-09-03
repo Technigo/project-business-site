@@ -8,35 +8,86 @@
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
+
     <section class="hero-image">
       <div class="hero-text">
-        <h1 class="title">Plant-Based Cooking Course</h1>
-        <p class="smaller-text">bla bla bla bla</p>
+        <h1 class="title">Plants Are Cool</h1>
+        <p class="smaller-text">A Plant-Based Cooking Course</p>
       </div>
     </section>      
 
+    <div class="signup-accordion-container">
+
     <!-- Signup form -->
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+      <form class="signup-form" action="http://httpbin.org/anything" method="POST">
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <h2 class="h2-title">Sign up 🌱</h2>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+          <div class="label-input">
+            <label class="label" for="fname">First name:</label>
+            <input class="input"
+              type="text"
+              id="fname"
+              name="fname">
+          </div>
+          <div class="label-input">
+          <label class="label" for="lname">Last name:</label>
+            <input class="input"
+              type="text"
+              id="lname"
+              name="lname">
+          </div>
 
-      <div class="question" id="section3">Section 3</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
+          <div class="label-input">
+            <label class="label" for="email">Email:</label>
+              <input class="input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="xxx@email.com">
+          </div>
 
+          <input class="checkbox"
+            type="checkbox" 
+            id="checkbox" 
+            name="checkbox">
+              <label class="label" for="checkbox">I agree to the terms and conditions</label>
+
+          <input class="button"
+            type="submit"
+            value="Submit">      
+    
+      </form>
+
+    <!-- Accordion -->
+
+      <section class="accordion">
+        <h2 class="h2-title">FAQ 🌱</h2>
+
+        <div class="question" id="section1">
+          <p class="question-text">How much does it cost?</p>
+        </div>
+        <div class="answer">
+          <p class="answer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+        </div>
+
+        <div class="question" id="section2">
+          <p class="question-text">Can I get enough protein from plants?</p>
+        </div>
+        <div class="answer">
+          <p class="answer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="question" id="section3">
+          <p class="question-text">Do I need to take any supplements?</p>
+        </div>
+        <div class="answer">
+          <p class="answer-text">Diam sit amet nisl suscipit adipiscing bibendum est ultricies. Ut sem nulla pharetra diam sit amet.</p>
+        </div>
+      </section>
+
+    </div>
     <!-- dont forget to link the javascript file here! -->
     <script src="script.js"></script> 
   </body>

@@ -1,13 +1,18 @@
 body {
   margin: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  color: #f4f4ed;
 }
+
+/* Hero image */
 
 .hero-image {
   width: 100vw;
   height: 50vh;
   background-image: url(../hero-image-padlet.jpg);
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: right;
   background-size: cover;
   position: relative;
   display: flex;
@@ -21,21 +26,242 @@ body {
 }
 
 .title {
-  text-transform: uppercase;
-  font-size: 20px;
+  font-family: "Merriweather", serif;
+  font-size: 30px;
+  line-height: 1.3;
+  letter-spacing: 2px;
+  color: #2b9348;
+  background: #f4f4ed;
+  padding: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .smaller-text {
   text-align: center;
+  font-size: 20px;
+  color: #2b9348;
+  font-style: italic;
+  background: #f4f4ed;
+  padding: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
+.signup-accordion-container {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/* Sign-up form */
+
+.signup-form {
+  width: 95vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #f72585;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  align-items: center;
+}
+
+.h2-title {
+  font-size: 20px;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.input {
+  padding: 5px;
+  outline: none;
+}
+
+.input:focus {
+  border: 3px solid #353132;
+}
+
+.label {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.checkbox {
+  margin-top: 10px;
+}
+
+.button {
+  width: 30%;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #2b9348;
+  cursor: pointer; 
+  border: none;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  color: #f4f4ed;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 1;
+
+}
+
+.button:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  opacity: 0.75;
+}
+
+/* Accordion */
+
+.accordion {
+  width: 95vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f72585;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  margin-top: 20px;
+  transition: 0.4s;
+}
+
+.question {
+  width: 100%;
+  height: 50px;
+  background-color: #2b9348;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.question-text {
+  font-size: 14px;
+}
+
+.question-text::after {
+  content: "\002B";
+  position: absolute;
+  right: 0px;
+  margin-right: 20px;
+}
+
+/* Tried to add the "\2212" (-) when user clicks to open accordion but I couldn't get it to work.  */
+
+.answer {
+  width: 100%;
+  height: 80px;
+  background-color: #c0b7b1;
+  display: none;
+}
+
+.answer-text {
+  text-align: center;
+  color: #353132;
+  font-size: 12px;
+}
+
+.active, .question:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+}
 
 .active + .answer {
-  /* some styling here */
+  display: block;
 }
 
+
 @media (min-width: 768px) {
+
+  .body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image {
+    background-position: center;
+    justify-content: flex-start;
+    padding-left: 50px;
+    height: 60vh;
+  }
+
+  .title {
+    font-size: 50px;
+    background: none;
+    box-shadow: none;
+  }
+
+  .smaller-text {
+    font-size: 34px;
+    background: none;
+    box-shadow: none;
+  }
+
+  .signup-accordion-container {
+    flex-direction: row;
+    height: 70vh;
+    justify-content: space-evenly;
+    align-items: baseline;
+    margin-top: 0;
+
+  }
+
+  .signup-form {
+    width: 30vw;
+    height: auto;
+    margin-top: 30px;
+  }
+  
+  .h2-title {
+    font-size: 30px;
+  }
+
+  .input {
+    padding: 10px;
+  }
+  
+  .label {
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  .checkbox {
+    margin-top: 20px;
+  }
+  
+  .button {
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+  }
+
+  .accordion {
+    width: 30vw;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .question {
+    height: 80px;
+  }
+
+  .question-text {
+    font-size: 18px;
+  }
+
+  .answer-text {
+    font-size: 14px;
+  }
+
+}
