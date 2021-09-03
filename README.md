@@ -5,8 +5,6 @@ Create a site for a company of your choice. You can come up with your own fantas
 My page t’s called Sprinkle. It’s a community where you as a developer can share your knowledge with students in a more intimate way. Sprinkle your knowledge!
 
 ## How did I do it?
-
-How I built my site
 I decided to use CSS Grids for the layout. The CSS grid is divided in 12 fraction so it’s easy to divide the page in columns.
 
 What I learned:
