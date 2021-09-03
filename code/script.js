@@ -6,18 +6,11 @@ function toggle() {
 }
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
-document.getElementById("section2").onclick = toggle
-
-
-
-
-
-
-
-
-
-
+document.getElementById("FAQ1").onclick = toggle
+document.getElementById("FAQ2").onclick = toggle
+document.getElementById("FAQ3").onclick = toggle
+document.getElementById("FAQ4").onclick = toggle
+document.getElementById("FAQ5").onclick = toggle
 
 
 
@@ -46,23 +39,3 @@ document.getElementById("section2").onclick = toggle
 
 
 
-
-
-
-
-
-// HTML:
-
-{/* <section class="accordion">
-<h1>FAQ</h1>
-
-<div class="question" id="section1">Question 1</div>
-<div class="answer" id="answer1">
-  <p>Answer 1...</p>
-</div>
-
-<div class="question" id="section2">Question 2</div>
-<div class="answer" id="answer2">
-  <p>Answer 2...</p>
-</div>
-</section>*/}

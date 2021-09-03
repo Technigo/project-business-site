@@ -12,10 +12,50 @@ body {
   color: #fff;
 }
 
-img {
+.header-section {
   width: 100vw;
-  min-height: 100vh;
-  object-fit: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://images.unsplash.com/photo-1448375240586-882707db888b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3450&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-image-section {
+  margin: 0;
+}
+
+/* Paragraph and text  */
+
+h1 {
+  font-size: 6rem;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  font-size: 0.98rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+}
+
+hr {
+  margin: 35px 0;
 }
 
 /* Form */
@@ -32,11 +72,6 @@ img {
   background-color: #4285f4;
   padding: 90px 80px;
   width: 100vw;
-}
-
-h3 {
-  font-size: 2rem;
-  margin-top: 0;
 }
 
 label,
@@ -77,38 +112,63 @@ label,
   font-size: 50px;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 /* Accordion */
 
-.faq-section {
+.FAQ-section {
   background-color: darkblue;
   margin-top: 0;
   width: 100vw;
-  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.answer {
+.FAQ {
+  /* background-color: darkred; */
+  padding: 90px 60px;
+}
+
+.answers {
   display: none;
 }
 
-.active {
+/* .active {
   background-color: grey;
-}
+} */
 
-.active + .answer {
+.active + .answers {
   display: block;
 }
 
-/* @media (min-width: 0px) and (max-width: 500px) {
+.questions:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 0px) and (max-width: 500px) {
   .form {
-    padding: 15%;
+    padding: 18vw 13vw;
   }
-} */
+}
 
 @media (min-width: 541px) {
   .form {
     width: 350px;
   }
   .form-section {
+    min-height: 100vh;
+  }
+  .FAQ {
+    width: 60%;
+    padding: 20.4vh 0;
+  }
+  .FAQ-section {
+    background-color: darkblue;
+    margin-top: 0;
+    width: 100vw;
     min-height: 100vh;
   }
 }
