@@ -75,14 +75,17 @@ header,
 }
 .icon-textbox {
 	box-sizing: border-box;
-	background-color: #ffffff;
-	border-radius: 4px 0 0 4px;
+	/* position: absolute; */
+
+	/* left: 1px; */
+	/* background-color: #ffffff;
+	border-radius: 4px 0 0 4px; */
 	/* border: 1px solid #f9b44c; */
-	height: 1.8rem;
-	padding: 5px;
+	height: 1rem;
+	/* padding: 5px;
 	border-bottom: 1px solid #f9b44c;
 	border-top: 1px solid #f9b44c;
-	border-left: 1px solid #f9b44c;
+	border-left: 1px solid #f9b44c; */
 }
 
 .radio-container {
@@ -94,28 +97,39 @@ header,
 	flex-direction: column;
 	justify-content: flex-start;
 }
-.text-field,
-button[type='submit'] {
+
+button[type='submit'],
+.text-field-container {
 	box-sizing: border-box;
 	width: 95%;
-	border-radius: 0px 4px 4px 0px;
-	border-bottom: 1px solid #f9b44c;
-	border-top: 1px solid #f9b44c;
-	border-right: 1px solid #f9b44c;
-	border-left: 0px solid #f9b44c;
+	border-radius: 4px 4px 4px 4px;
+	border: 1px solid #f9b44c;
+	background-color: #e8f0fd;
+	height: 2rem;
+	padding: 1px 10px;
+	font-size: 0.9rem;
+}
+.text-field {
+	box-sizing: border-box;
+	width: 95%;
+	background: transparent;
+	border: 0px;
 	height: 1.8rem;
 	padding: 1px 10px;
 	font-size: 0.9rem;
 }
-/* input[type='text'] {
-	background: url(images/user.png) no-repeat scroll 7px 7px;
-	padding-left: 30px;
+/* input[type='text']:-internal-autofill-selected,
+input[type='text']:-internal-autofill-previewed {
+	-webkit-background-clip: initial;
+	-webkit-box-shadow: none;
 } */
-.text-field:focus,
-.text-field-container:focus-within > .icon-textbox {
-	outline-width: 0px;
+
+.text-field:focus {
+	outline-width: 0;
+}
+.text-field-container:focus-within {
 	box-sizing: border-box;
-	box-shadow: inset 0 0 4px #000000;
+	border: 1px solid #5c5c5c;
 }
 input[type='radio'] {
 	width: 10%;
@@ -132,7 +146,7 @@ input[type='radio'] {
 	margin-top: 3px;
 	padding: 5px 5px 5px 20px;
 	border-radius: 4px;
-	background-color: #e7e7e7;
+	background-color: #e8f0fd;
 	border: 1px solid #f9b44c;
 }
 .answer {
