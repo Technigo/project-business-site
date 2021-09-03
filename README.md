@@ -1,12 +1,23 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+This week’s project is to create a business website that contains an image/video header, a signup form, and an accordion. The focus is to practice what I've learned about image backgrounds, HTML forms, and how to modify the DOM with JavaScript.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I created a Dance Academy website.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+
+I started by drawing sketches on paper. After figuring out how to start with the first html structure, I progressed by adding CSS styles in the same breath.
+
+Adding a hero video, form, and a basic accordion wasn't difficult for me. To challenge myself, I wanted to go a little further and created a hero video slider. There are many ways to create a video slider with JS but for this stage I prefered to go with pure CSS.
+
+I always aim to try something new and go beyond the requirements so I'm satisfied with what I`ve accomplished this week.
+
+If I had more time I would probably try more JS functions. Because now it's just a small touch of Javascript.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://ballet-academy-pde.netlify.app/
+
+
+
