@@ -3,9 +3,9 @@
 🔵  Blue Level (Minimum Requirements)**
 
 - Style your page
-- Site should have a header with responsive image/video
 
 DONE
+- Site should have a header with responsive image/video
 - Site should have a signup form with at least three different input types
 - Site should have an FAQ accordion, built with JavaScript 
 
@@ -26,22 +26,144 @@ DONE
 
 */
 
-
-button {
-  border: none;
-  background: #DB398D;
-  border-radius: 2em;
-  padding: 5px 20px;
+body {
+  margin: 0;
 }
 
-form {
-  /* Center the form on the page */
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* background: url(https://source.unsplash.com/NBfHoiEgTa4/1920x1281);  */
+  background: url(https://source.unsplash.com/nXKNn2L4fDw/2400x1602);
+  background-position: bottom center;
+  height: 80vh;
+  max-width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.header-overlay {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #000;
+  background-blend-mode: overlay;
+  opacity: 0.4;
+}
+
+header h1 {
+  text-align: center;
+  color: #DB398D;
+  font-size: 3.5rem;
+  font-weight: 700;
+  padding: 150px 0 4px 0;
+  margin: 20px auto;
+}
+
+header p {
+  color: #fff;
+  text-align: center;
+  margin: 0px auto;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto;
+  align-items: flex-start;
+  max-width: 1440px;
   margin: 0 auto;
-  width: 50vh;
-  /* Form outline */
-  padding: 1em;
-  border: 1px solid #CCC;
+  padding: var(--grid-outer-padding);
+}
+
+
+article {
+  background: #f0f9fa;
+}
+
+.text-section {
+  text-align: center;
+  padding: 60px 60px 0 60px;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+.container {
+  /* Center the content in the container */
+  vertical-align: middle;
+  margin: 4rem auto;
+  width: 90%;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+
+/* accordion */
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 1.4em;
+  margin: 4px auto;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+  
+.active,
+.accordion:hover {
+  background-color: #ccc; 
+}
+  
+.accordion-item {
+  padding: 0 18px;
+  background-color: white;
+  overflow: hidden;
+  display: none;
+}
+
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+.active + .accordion-item {
+  display: block;
+}
+
+/* form */
+
+.form-container {
+  background-color: #00c2db;
+  padding: 0 2em;
+  border: 1px solid #ccc  ;
   border-radius: 1em;
+}
+
+.form-container h2 {
+  color: #fff;
+}
+
+label,
+::placeholder {
+  color: #fff;
+  padding: 0 0 4px;
+  font-size: 1rem;
+}
+
+/* ::placeholder {
+  color: #999;
+  font-size: 1rem;
+} */
+
+form {
+  /* Form outline */
+  width: 100%%;
 }
 
 ul {
@@ -68,53 +190,24 @@ textarea {
   font: 1em sans-serif;
 
   /* Uniform text field size */
-  width: 300px;
-  box-sizing: border-box;
+  width: 100%;
+  box-sizing: content-box;
 
   /* Match form field borders */
   border: 1px solid #999;
 }
 
-/* accordion */
-
-.accordion-container {
-    /* Center the form on the page */
-    margin: 0 auto;
-    width: 50vh;
-    padding: 1em;
+.btn-submit {
+  text-align: center;
 }
 
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  margin: 4px auto;
+button {
   border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
-
-.active, .accordion:hover {
-  background-color: #ccc; 
-}
-
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-  display: none;
-}
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .panel {
-  display: block;
+  background: #DB398D;
+  border-radius: 2em;
+  padding: 12px 20px;
+  color: #fff;
+  margin: 2.5em auto;
 }
 
 /* hover effect on links */
@@ -173,3 +266,45 @@ footer a:active {
 }
 
 /* styling for tablet and desktop */
+
+@media only screen and (min-width: 768px) {
+
+header {
+  /* background: url(https://source.unsplash.com/ZqqlOZyGG7g/5352x3573) no-repeat center; */
+  background: url(https://source.unsplash.com/nXKNn2L4fDw/5820x3885) no-repeat center;
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+  min-height: 280px;
+}
+
+header h1 {
+  padding: 225px 0 2px 0;
+  max-width: 650px;
+  font-size: 4.5rem;
+}
+
+header p {
+  max-width: 650px;
+  font-size: 2.5rem;
+  padding: 0 0 14em;
+}
+
+.text-section {
+  max-width: 720px;
+  padding: 60px 150px 40px;
+  margin: auto;
+  font-size: 1.4rem;
+}
+
+.block-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: top;
+  margin: 10px 20px 40px;
+}
+.container {
+  
+}
+
+}
