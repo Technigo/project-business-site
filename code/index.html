@@ -38,13 +38,14 @@
     <!-- Signup form -->
 
     <section class="signup-section">
-      <form class="form-container">
+      <form class="form-container" action="https://httpbin.org/anything" method="POST">
 
         <h3>Sign up</h3>
         <label class="uppercase" for="username">Username</label>
         <input
           type="text"
           id="username"
+          name="username"
           class="input-text-block"
           placeholder="Enter your name"
           required
@@ -54,6 +55,7 @@
         <input
           type="email"
           id="email"
+          name="email"
           class="input-text-block"
           placeholder="Enter your email"
           required
@@ -63,6 +65,7 @@
         <input
           type="password"
           id="password"
+          name="password"
           class="input-text-block"
           placeholder="Password"
           required
@@ -89,6 +92,7 @@
         <input
           type="checkbox"
           id="termsCond"
+          name="termsCond"
         />
         <label class="inline-label" for="termsCond">I accept the Terms & Conditions</label>
 
@@ -97,6 +101,7 @@
         <input
           type="checkbox"
           id="newsletter"
+          name="newsletter"
         />
         <label class="inline-label" for="newsletter">I want to receive newsletter</label>
 
