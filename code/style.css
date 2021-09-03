@@ -86,7 +86,30 @@ body {
   font-size: 1.5em;
 }
 
+/* rain fun facts */ 
+.fun-facts{
+  margin: 15px auto;
+  background-color: #E7E0C9; 
+  line-height: 1.5;
+  text-align: center;
+}
+
+.fun-facts p {
+    font-size: 1.5em;
+}
+
+.fun-facts ul  {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.fun-facts li {
+  padding: 10px;
+  font-size: 1.2em;
+}
+
 /* FORMS */
+
 
 .container {
   height: 100%;
@@ -112,6 +135,12 @@ body {
 .form-button {
   padding-top: 10px;
 }
+.welcome p {
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  margin: 30px auto;
+  text-align: center;
+}
 /* sign-up form */
 
 h3 {
@@ -132,7 +161,7 @@ h3 {
 
 input:focus {
   background-color: lightgray;
-  border: 2px solid orange;
+  outline: 2px solid orange;
 }
 
 .signup-box input, 
@@ -227,7 +256,6 @@ button:focus {
 
 /* accordion */
 
-
 .accordion {
   margin: 20px auto;
   text-align: center;
@@ -288,7 +316,6 @@ float: right;
   background-color: #E7E0C9;
 }
 
-
 footer {
   position: relative;
   bottom: 0;
@@ -309,17 +336,12 @@ footer a:hover {
   text-decoration: underline;
 }
 
-
-
 /* MEDIA QUERIES */
 /* tablet */
 @media (min-width: 767px) {
   .navigation a {
       font-size: 1.8em;
   }
-
-  
-
   .caption, 
   .form, 
   .signup-box, 
@@ -331,12 +353,18 @@ footer a:hover {
   form input, button{
       font-size: 0.9em;
   }
+
+  .fun-facts {
+    width: 80%;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+  }
 }
 
 /* desktop */
 
 @media (min-width: 1023px) {
-
   p.checkbox-title, 
   .radio-title  {
       padding-top: 30px;
@@ -348,23 +376,38 @@ footer a:hover {
 
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 40px;
-    height: 50%;
+    grid-template-columns: repeat(2, 50%);
   }
 
-  .form {
-    height: 60%;
-    margin-bottom: 20px;
+  .signup-box {
+    font-size: 1.5em;
   }
-  
 
-/* accordion */
-.accordion {
- position: relative;
- bottom: 300px;
- 
-  
-}
+  h5 {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .fun-facts{
+    margin: 90px auto;
+    line-height: 1.5;
+    border-radius: 10rem;
+    width: 90%;
+  }
+
+  .fun-facts ul li{
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .fun-facts:hover {
+    border: 2px solid orange;
+  }
+
+  .welcome p {
+    font-size: 2em;
+  }
 
 }

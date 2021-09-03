@@ -17,15 +17,15 @@
       <!--makes it possible to jump to the top-->
       <div id="top"></div>
         <nav class="navigation">
+            <a href="index.html">Home</a>
             <a href="#join"><i class="fas fa-tint"></i>Join us</a>
-            <!---Doesn't lead anywhere-->
-            <a href=""><i class="fas fa-sign-in-alt"></i>Sign in</a> 
+            <a href="user.html"><i class="fas fa-sign-in-alt"></i>Sign in</a> 
             <a href="#faq"><i class="far fa-question-circle">FAQ</i></a>
             <a href="#contact"><i class="fas fa-envelope-square">Contact us</i></a>   
         </nav>
         
         <div class="hero">
-            <video loop muted autoplay playsinline>
+            <video loop muted autoplay>
                 <source src="videos/production ID_5197762.mp4" type="video/mp4">
                 <source src="videos/production ID_5197762.ogg" type="video/mp4">
             </video>
@@ -36,116 +36,88 @@
         </div>
     </header>
 
+    <div class="fun-facts">
+      <ul>
+        <p class="fun-facts-title">Fun facts about rain</p>
+        <li>1. Raindrops are usually represented in the shape of a teardrop, but this is not true in reality.
+          When raindrops first form high up in the atmosphere, they take on a spherical shape as the water molecules bind together held by surface tension.
+          As they begin to fall their shape changes, while air resistance causes the bottom of the drop to flatten and curve resembling the shape of a jelly bean.</li>
+        <li>2. How long does it take a raindrop to reach the ground?
+          To provide the exact figure would be difficult. The height raindrops fall and size can differ. But following an average speed of 14mph and an average cloud height of 2,500 feet, it would take two minutes for a raindrop to hit the floor.
+          Very small raindrops can take as long as seven minutes to reach the ground; while larger droplets can fall at speeds of 20mph.</li>
+        <li>5. The wettest place in the world:
+          Mawsynram in the Maghalaya State of India takes the title for the wettest place in the world. Receiving an astonishing average of 11,971mm of rainfall every year - which compared to the UK’s 1,154mm average, is quite large.</li>
+        <li>6. The wettest day in Britain:
+          This was on December 5 2015 when Honister Pass in Cumbria was soaked by 341.4mm of rain in a day during Storm Desmond, which brought extensive heavy rain and strong gales to parts of northern England and Scotland.</li>
+        <li>6. Rain is money
+          In the African nation of Botswana, the currency is the Botswanan pula. The word “pula,” though, also means “rain,” and its use as the name of the primary currency demonstrates just how rare and precious rain is in this sub-Saharan country.</li>
+        <li>7. Raining fish
+          In the town of Yoro in Honduras it rains… fish! Small silver fish fall from the sky during large storms at least once a year. What is strange is that the fish are not even local to the area. Magic? Not really – there’s a scientific explanation for the “rain of fish” – supposedly, they are brought to Yoro by the sea tornadoes.</li>
+      </ul>
+    </div> 
     <section class="container">
-        <div class="form">
-          <form action="https://httpbin.org/anything" method="post">
-            <h3>Your perfect rainy saturday</h3>
-            <div class="form-box-radio">
-                <p class="radio-title">Early morning or sleep in?</p>
-                <input type="radio" id="early" name="wake-time"/>
-                <label for="fav-time">Early morning</label>
-                <input type="radio" id="late" name="wake-time">
-                <label for="fav-time">Sleep in</label>
-            </div>
-            <div class="form-box-radio">
-                <p class="radio-title">Stay inside or savour the rain?</p>
-                <input type="radio" id="inside" name="inorout">
-                <label for="inorout">Stay inside</label>
-                <input type="radio" id="outside" name="inorout">
-                <label for="inorout">Savour the rain</label>
-            </div>
-            <div class="form-box-checkbox">
-                <p class="checkbox-title">I like to spend my day like this..</p>
-                <input type="checkbox" id="alone" name="alone">
-                <label for="alone">Alone</label>
-                <input type="checkbox" id="friends">
-                <label for="friendsfam">With friends or family</label>
-                <input type="checkbox" id="checkbox" name="cleaning">
-                <label for="cleaning">Cleaning</label>
-                <input type="checkbox" id="relaxing" name="relaxing">
-                <label for="relaxing">Relaxing</label>
-                <input type="checkbox" id="tv" name="tv">
-                <label for="TV">Watching TV</label>
-                <input type="checkbox" id="books" name="books">
-                <label for="books">Reading books</label>
-                <input type="checkbox" id="cooking" name="cooking">
-                <label for="cooking">Cooking</label>
-                <input type="checkbox" id="order" name="order">
-                <label for="orderin">Order food</label> 
-            </div>
-            <div class="form-button" >
-              <button type="submit">Save</button>
-            </div>
-          </form>
+          <!--sign-up box-->
+          <div class="signup-box">
+            <!--makes it possible to scroll to here from "join us" link-->
+           <div id="join"></div>
+           <h3>Sign up here for personalized rain-mail</h3>
+           <form id="signup">
+           <div class="gender gender-title"><p><strong>Gender</strong></p>
+               <label for="fmale">Female</label>
+               <input type="radio" id="fmale" name="gender">
+               <label for="male">Male</label>
+               <input type="radio" id="male" name="gender">
+               <label for="other">Other</label>
+               <input type="radio" id="other" name="gender">
+               <label for="other">Prefer not to answer</label>
+               <input type="radio" id="noanswr" name="gender">
+           </div>
+           <div class="form-box">
+               <label for="fname">First name:</label>
+               <input type="text" id="fname" required name="fname" placeholder="First name">
+               <label for="lname">Last name:</label>
+               <input type="text" id="lname" required name="lname" placeholder="Last name">
+               <label for="Email">E-mail:</label>
+               <input type="email" required name="email" id="email" placeholder="example@hotmail.com">
+               <label for="password">Password</label>
+               <input type="password" id="password" placeholder="Password">
+               <label for="age">Age</label>
+               <select name="age" id="age" class="age">
+                 <option class="bold" value="15-20">15-20</option>
+                 <option value="20-30">20-30</option>
+                 <option class="bold" value="30-40">30-40</option>
+                 <option value="40-50">40-50</option>
+                 <option class="bold" value="50">50+</option>
+               </select>  
+           </div>
+           <div class="terms">
+               <label for="terms">*I agree to let you rain on my parade</label>
+               <input type="checkbox" required id="terms" name="terms" class="terms">
+           </div>
+           <div class="rain-mail">
+             <label for="terms">*Yes, send me personalized rain-mails</label>
+               <input type="checkbox" required id="rainMail" name="rain-mail" checked>
+           </div>
+           <div class="signup-button" >
+               <button type="submit">Sign up!</button>
+           </div>
+           </form>
+           <div class="greeting" id="greeting"></div>
+        </div>  
         </div>
-        
-
       
-       
-        <!--sign-up box-->
-      
-        <div class="signup-box">
-             <!--makes it possible to scroll to here from "join us" link-->
-            <div id="join"></div>
-            <h3>Sign up here for personalized rain-mail</h3>
-            <form id="signup">
-            <div class="gender gender-title"><p><strong>Gender</strong></p>
-                <label for="fmale">Female</label>
-                <input type="radio" id="fmale" name="gender">
-                <label for="male">Male</label>
-                <input type="radio" id="male" name="gender">
-                <label for="other">Other</label>
-                <input type="radio" id="other" name="gender">
-                <label for="other">Prefer not to answer</label>
-                <input type="radio" id="noanswr" name="gender">
-            </div>
-            <div class="form-box">
-                <label for="fname">First name:</label>
-                <input type="text" id="fname" required name="fname" placeholder="First name">
-                <label for="lname">Last name:</label>
-                <input type="text" id="lname" required name="lname" placeholder="Last name">
-                <label for="Email">E-mail:</label>
-                <input type="email" required name="email" id="email" placeholder="example@hotmail.com">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Password">
-                <label for="age">Age</label>
-                <select name="age" id="age" class="age">
-                  <option class="bold" value="15-20">15-20</option>
-                  <option value="20-30">20-30</option>
-                  <option class="bold" value="30-40">30-40</option>
-                  <option value="40-50">40-50</option>
-                  <option class="bold" value="50">50+</option>
-                </select>  
-            </div>
-            <div class="terms">
-                <label for="terms">*I agree to let you rain on my parade</label>
-                <input type="checkbox" required id="terms" name="terms" class="terms">
-            </div>
-            <div class="rain-mail">
-              <label for="terms">*Yes, send me personalized rain-mails</label>
-                <input type="checkbox" required id="rainMail" name="rain-mail" checked>
-            </div>
-            <div class="signup-button" >
-                <button type="submit">Sign up!</button>
-            </div>
-            </form>
-            <div class="greeting" id="greeting"></div>
-        </div>
-       
-        
-        
-      
-          <div class="accordion">
-              <h4>FAQ</h4>
-              <div class="content-box" id="section1">
-                  <div class="label"><p>What is a rain-mail? </p></div>
-                  <div class="content">
-                      <p>A rain-mail is a personalized email with tips on how you can spend your perfect rainy saturday (or any other day) based on your answers in our form.  </p>
+              
+            <div class="accordion">
+                <h4>FAQ</h4>
+                <div class="content-box" id="section1">
+                    <div class="label"><p>What is a rain-mail? </p></div>
+                    <div class="content">
+                        <p>A rain-mail is a personalized email with tips on how you can spend your perfect rainy saturday (or any other day) based on your answers in our form.  </p>
                     </div>
-              </div>
-              <div class="content-box" id="section2">
-                  <div class="label label-dark"><p>How often do you send out rain-mail?</p></div>
-                  <div class="content">
+                </div>
+                <div class="content-box" id="section2">
+                    <div class="label label-dark"><p>How often do you send out rain-mail?</p></div>
+                    <div class="content">
                         <p>Any time the forecast shows more than 50% chance of rain in your area, we create a collection of things you can do. Wether it's a nice brunch at a cafe or a new netflix show, we've got you covered. We even throw in some amazing cleaning hacks for those who loves to spend their rainy days tidying up at home.  </p>
                     </div>
                 </div>
@@ -160,19 +132,23 @@
                     <div class="content">
                         <p>Yes, you can cancel your subscription anytime by just following the link down at the footer of the page.</p>
                     </div>
-                </div>
-            </div>   
-          
+                </div> 
+            </div>    
     </section>
     
-    <footer>
-      <a href="#top"><i class="fas fa-umbrella"></i>To the top!</a>
-      <div id="contact"></div>    <!--link to jump from header to here-->
-        <p>By Sofia Wallerberg</p>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Unsubscribe from rain-mail here</a>
-    </footer>
+
+    
+   <footer>
+  <a href="#top"><i class="fas fa-umbrella"></i>To the top!</a>
+  <div id="contact"></div>    <!--link to jump from header to here-->
+    <p>By Sofia Wallerberg</p>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Unsubscribe from rain-mail here</a>
+  </footer>
+
 
 <script src="script.js"></script>
 </body>
+
+
 </html>
 
