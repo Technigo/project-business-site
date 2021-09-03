@@ -3,14 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
     <link rel="stylesheet" href="./style.css">
     <title>Project 3</title>
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
     <!-- hero header with video -->
+    <header>
 
+      <div class="hero-img"></div>
+      <div class="overlay">
+        <h1>belgrade</h1>
+      </div>
+    </header>
     <!-- Signup form -->
+
     <form action="http://httpbin.org/anything">
       <label>First name:
         <input class="text-input" type="text" name="firstName" required>
@@ -33,13 +41,13 @@
       </label>
 
       <label>
-        <input class="radio" type="radio" name="radio"> Alt 1
-        <input class="radio" type="radio" name="radio"> Alt 2
+        <input class="radio" type="radio" name="radioalt1"> Alt 1
+        <input class="radio" type="radio" name="radioalt2"> Alt 2
       </label>
 
       <label>
-        <input class="checkbox" type="checkbox" name="checkboxTermsConditions"> I agree to <a href="#">terms and conditions</a>
-        <input class="checkbox" type="checkbox" name="checkboxNewsletter"> I want information and newsletters
+        <input class="checkbox1" type="checkbox" name="checkboxTermsConditions"> I agree to <a href="#">terms and conditions</a>
+        <input class="checkbox2" type="checkbox" name="checkboxNewsletter"> I want information and newsletters
       </label>
 
       <button type="submit">Register</button>
@@ -49,22 +57,25 @@
       <!-- Accordion -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">What is the population of Serbia?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <!-- https://www.worldometers.info/world-population/serbia-population/ -->
+        <p>The population of Serbia is currently 8,696,483. Of whom a total of 1,273,651 live in Belgrade.</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">Is Serbia part of the EU?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <!-- https://ec.europa.eu/neighbourhood-enlargement/countries/detailed-country-information/serbia_en -->
+        <p>The short answer to that is no. However in March 2012 Serbia was granted EU cadidate status and in January 2014 the first Intergovernmental Conference was held, signaling the formal start of Serbia's accession negotiations.</p>
       </div>
 
-      <div class="question" id="section3">Section 3</div>
+      <div class="question" id="section3">What is the traditional food in Serbia?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <!-- https://en.wikipedia.org/wiki/Serbian_cuisine -->
+        <p>With Serbia being located on the crossroads between East and West, its cuisine has gathered elements from different cooking styles across the Middle East and Europe to develop its own hearty gastronomy with an intricate balance of rich meats, vegetables, breads, cheese, fresh pastries, and desserts. It has much in common with the cuisines of neighboring Balkan countries; its flavors are mild, fresh, and natural. Seasonings are usually salt, black pepper, and paprika, while ingredients are known for being fresh and high-quality. Seasonal food is an important element of Serbian cuisine, thus many dishes are strongly associated with a specific time of the year.</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+    <!-- link the javascript file -->
     <script src="script.js"></script>
   </body>
 </html>

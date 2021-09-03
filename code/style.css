@@ -3,8 +3,38 @@ in this case it is the div with the answer class next to the div with the active
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 body {
-  background-color:rgb(205, 245, 205);
+  background-color: rgb(247, 245, 244);
+  display: grid;
+}
+
+header {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  
+}
+
+.hero-img {
+  width: 100%;
+  height: 20rem;
+  background-image: url(https://images.unsplash.com/photo-1480970530467-74f67f39776e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=947&q=80);
+  /* background-image: url(https://images.unsplash.com/photo-1590344018373-ebaf8d2210fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80); */
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .active + .answer {
@@ -12,45 +42,54 @@ body {
 }
 
 form {
-display: block;
+display: grid;
+/* grid-template-rows: repeat(4) 1fr; */
 box-shadow: 1px 3px 19px -1px rgba(0,0,0,0.7);
 border-radius: 5px;
 padding: 0.5rem;
-margin: 5%;
-width: 50%;
+margin: auto;
+width: 90%;
+margin-bottom: 2rem;
 }
 
 .text-input {
   display: grid;
+  /* grid-row: span 2; */
   margin-bottom: 0.5rem;
 }
 
-/* .radio {
-  display: flex;
-  flex-direction: column;
-} */
+.checkbox1, .checkbox2 {
+  /* grid-column: span 4; */
+}
+
+button {
+  max-width: 20%;
+}
 
 .accordion {
   display: block;
   box-shadow: 1px 3px 19px -1px rgba(0,0,0,0.7);
   border-radius: 5px;
-  padding: 0.5rem;
-  margin: 5%;
-  width: 50%;
+  padding: 1rem;
+  margin: auto;
+  width: 90%;
   justify-content: right;
+  margin-bottom: 2rem;
+
 }
 
 .question {
   display: block;
-  /* border-top-color:darkkhaki;
-  border-top-style: solid;
-  border-width: 0.1rem; */
+  border-bottom-color: lightgrey;
+  border-bottom-style: solid;
+  border-width: 0.1rem;
 }
 
 .answer {
-  display: none;
+  display: block;
+  margin-bottom: 2rem;
 }
 
 .question + .answer {
-  display: block;
+  display: none;
 }
