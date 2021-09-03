@@ -9,6 +9,21 @@ body {
   
 }
 
+.navbar {
+  width: 100%;
+  font-size: 20px;
+  background-color: whitesmoke;
+  opacity: 0.4;
+  position: relative; 
+  z-index: 15;
+  display: flex; 
+  object-fit: cover;
+  overflow: hidden;
+  justify-content: space-evenly;
+  align-items: center;
+  float: right;
+  padding: 20px 0px 20px 0px;
+}
 
 .hero {
   height: 100vh;
@@ -62,7 +77,7 @@ video {
 .flex-container {
   display: flex; 
   flex-direction: column;
-   row-gap: 1em;
+  row-gap: 1em;
   justify-content: center;
   align-items: center;
   margin-top: 3em;
@@ -79,9 +94,13 @@ video {
   padding: 30px 0px 30px 0px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
+.sign-up-form h3 {
+  text-align: center;
+}
 
 .checkboxes {
   display: flex; 
@@ -132,15 +151,18 @@ button {
   background-color: lightsteelblue;
 }
 
+
 .accordion {
   border: 2px solid black;
   border-radius: 10px;
   background-color: #dcdcde;
-  width: 360px;
+  width: 100%;
   height: auto;
-  /* padding: 10px; */
   margin-bottom: 2em;
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .answer {
@@ -154,10 +176,14 @@ button {
 .question {
   border-radius: 5px;
   background-color: gray; 
-  width: 97%;
+  width: 90%;
   padding: 10px 0px 10px 10px;
   font-size: 20px;
   margin-bottom: 10px;
+}
+
+.small-image {
+  display: none;
 }
 
 
@@ -171,38 +197,68 @@ button {
 
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px and max-width: 991px) {
    .caption {
-       font-size: 10px;
-       width: 90%;
+       font-size: 25px;
+       /* width: 90%; */
    }
 
    .flex-container {
       max-width: auto;
       display: flex;
       flex-direction: column;
+      column-gap: 4em;
+      
   }
+
+  .sign-up-form {
+    width: 80vw; 
+    height: 500px;
+    padding: 30px 10px 20px 10px;
+    }
+
 }
 
-@media screen and (min-width: 992px) {
-  .caption {
-      font-size: 25px; 
-  }
+@media screen and (min-width: 1025px) {
 
   .flex-container {
       display: flex; 
       flex-direction: row;
-      column-gap: 4em;
+      column-gap: 2em;
+      flex-wrap: wrap;
+      overflow: hidden;
+      object-fit: cover;
   }
 
   .sign-up-form {
   width: 500px; 
   height: 500px;
   padding: 30px 10px 20px 10px;
+  margin: 40px 0px 40px 40px;
+
   }
 
+  .small-image {
+    display: block;
+    width: auto;
+    height: 550px;
+    border-radius: 10px;
+    
+  }
+
+
   .accordion {
-    width: 500px;
-    height: 500px; 
+    width: 100%;
+    height: auto;
+    margin: 0px 40px 40px 0px;
+  }
+
+  .question {
+    border-radius: 5px;
+    background-color: gray; 
+    width: 98%;
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 }
