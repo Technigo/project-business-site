@@ -54,10 +54,17 @@ header {
 
 .answer {
   display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease-out;
 }
 
 .active + .answer {
   display: block;
+}
+
+.active:hover {
+  cursor: auto;
 }
 
 /* hero-image info here: https://www.w3schools.com/howto/howto_css_hero_image.asp*/

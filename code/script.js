@@ -3,6 +3,12 @@
 // console.log(this) to see how it works
 function toggle() {
   this.classList.toggle("active")
+  var panel = this.nextElementSibling;
+  if (panel.style.maxHeight) {
+    panel.style.maxHeight = null;
+  } else {
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  };
 }
 
 // // Selects an HTML element, and calls a function which will be executed when the element is clicked.
@@ -14,10 +20,11 @@ let sections = document.getElementsByClassName("question")
 
 for (let i=0; i < sections.length; i++) {
   sections[i].onclick = toggle;
+
 }
 
 // source for code: https://stackoverflow.com/a/62460881/7478955
-var myVideo = document.getElementById("header-video");
+let myVideo = document.getElementById("header-video");
 
 myVideo.addEventListener('click', function(e){
    e.preventDefault();
