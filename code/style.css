@@ -1,7 +1,237 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
 
-.active + .answer {
-  /* some styling here */
+ * {
+   margin: 0px;
+   padding: 0px;
+   font-family: Overpass, san-serif;
+   box-sizing: border-box;
+ }
+
+body {
+  height: 100%;
+}
+
+header {
+  height: 60%;
+  min-height: 400px;
+  max-width: 1024px;
+  margin: auto;
+  background-image: url("https://images.pexels.com/photos/4321800/pexels-photo-4321800.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Nanum Brush Script', cursive;
+  color: cornsilk;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  color: teal;
+}
+
+h3 {
+  color: teal;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0px 0px 3px 0px;
+}
+
+button {
+  font-size: 16px;
+  background-color: teal;
+  color: cornsilk;
+  border: none;
+  margin-top: 10px;
+  padding: 6px 12px;
+  border-radius: 7px;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: rgb(250, 205, 187)
+}
+
+.logo {
+  width: 70%;
+  max-height: 250px;
+}
+
+.bottom-section {
+  max-width: 1024px;
+  min-height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  background-color: tan;
+  border-top: 5px white solid;
+}
+
+.signup {
+  width: 100%;
+}
+
+.signup-container {
+  width: 100%;
+  padding: 20px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.signup-information {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-information input {
+  width: 100%;
+  background-color: cornsilk;
+  color: teal;
+  border: none;
+  margin: 0px 0px 8px 0px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.signup-information input:hover {
+  background-color: rgb(250, 205, 187);
+}
+
+.previous-experience, .checkboxes {
+  font-size: 15px;
+  font-weight: 500;
+  color: teal;
+  margin: 10px 0px;
+}
+
+.input {
+  margin: 0px 15px 0px 5px;
+}
+
+.accordion-container {
+  width: 100%;
+  padding: 30px 20px 20px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.accordion {
+  width:100%;
+  margin: 0px auto;
+}
+
+.accordion-item {
+  background-color: cornsilk;
+  color: teal;
+  margin: 10px 0px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.accordion-item:hover {
+  background-color: rgb(250, 205, 187);;
+}
+
+.question {
+  padding: 12px 48px 12px 15px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.question::after {
+  content: "\25BC"; /*CSS Entity*/
+  font-size: 12px;
+  font-weight: normal;
+  color: tan;
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.question.active::after {
+  transform: rotate(180deg);
+}
+
+.answer-container {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.answer {
+  padding: 16px 28px 16px 15px;
+  background-color: white;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+
+@media (min-width: 668px) {
+
+  .bottom-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .signup-container {
+    width: 50%;
+    padding: 20px 15px 50px 40px;
+  }
+
+  .signup-information {
+    flex-direction: column;
+  }
+
+  .accordion-container {
+    width: 50%;
+    justify-content: flex-start;
+    padding: 47px 30px 0px 15px;
+  }
+}
+
+@media (min-width: 991px) {
+
+  .signup-container {
+    width: 60%;
+  }
+
+  .signup-information {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .input-container {
+    width: 49%;
+  }
+
+  .accordion-container {
+    width: 40%;
+    padding: 47px 48px 0px 20px;
+  }
 }
