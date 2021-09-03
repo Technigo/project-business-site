@@ -12,13 +12,12 @@ Main colors:
 Dark purple: #240747;
 Red: #eb2632; 
 
-Derivations: 
+Dust Palette: 
 
-#bc1c34
-#74143c
-#5b11b5
-#ff4989
-#000000
+Wine: #792A17;
+Grey: #7D7484;
+Light purple: #B1A8B9;
+Darkest purple: #FDE9FF;
 
 */
 
@@ -28,7 +27,7 @@ Derivations:
 
 body {
   background-color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Flamenco', serif;
   color: #fff;
 }
 
@@ -45,11 +44,12 @@ body {
 /* ----------------------------------------------- */
 
 .hero {
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 200px;
   text-align: center;
   overflow: hidden;
+  z-index: 300;
 }
 
 .hero .hero__overlay {
@@ -59,7 +59,7 @@ body {
   top: 0px;
   left: 0px;
   z-index: 2;
-  background: #240747;
+  background-color: #240747;
   opacity: 0.5;
 }
 
@@ -82,7 +82,9 @@ body {
 
 .hero__nav-container__nav-bar__nav-link {
   display: none;
-  padding: 15px 15px;
+  padding: 15px 25px;
+  font-size: 30px;
+  text-decoration: none;
   }
 
 .hero__contents {
@@ -91,23 +93,22 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-shadow: 0 1px 0 black;
 }
 
 .hero__contents__container__title {
-  font-size: 6vw;
+  font-size: 8vw;
 }
 
 .hero__contents__container__subtitle {
-  font-size: 4vw;
+  font-size: 6vw;
 }
 
 .hero__contents__container__cta-button {
   margin: 1vw 20vh; 
   padding: 1vw;
   width: 20%;
-  font-size: 3vw;
+  font-size: 4vw;
   border-radius: 60%;
   background-color: rgba(255,255,255,0.2);
   backdrop-filter: blur(15px);
@@ -121,28 +122,86 @@ body {
 
 
 /* ----------------------------------------------- */
-/*                    ACCORDEON                    */
+/*                    ACCORDION                    */
 /* ----------------------------------------------- */
 
-.accordion_question {
-  background-color: #c4c4c4;
-  color: #444;
+.accordion {
+  color: #000;
+  font-size: 18px;
+  margin: 20px;
+}
+
+.accordion__title {
+  background-color: #240747;
+  color: #fff;
+  padding: 8px;
+}
+
+.accordion__question {
+  background-color: #B1A8B9;
+  color: #240747;
   cursor: pointer;
-  padding-top: 100px;
   width: 100%;
+  padding: 10px;
   text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
 }
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
+.accordion__answer {
+  display: none;
+  padding: 10px;
 }
+
+.active + .accordion__answer {
+  display: block;
+}
+
+/* ----------------------------------------------- */
+/*                  SIGN-UP-FORM                   */
+/* ----------------------------------------------- */
+
+.sign-up-form {
+  background-color: #B1A8B9;
+  color: #240747;
+  font-size: 18px;
+  margin: 20px;
+}
+
+.sign-up-form__title {
+  background-color: #240747;
+  color: #fff;
+  padding: 8px;
+}
+
+.sign-up-form__fields {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.sign-up-form__choices{
+  display: block;
+  padding: 10px;
+}
+
+.sign-up-form__contents__list {
+  list-style: none;
+  padding-bottom: 8px;
+}
+
+.sign-up-form__contents__list li {
+  padding-top: 5px;
+}
+
+.sign-up-form__contents__button {
+  margin: 10px 0 20px 25%;
+  padding: 8px 60px;
+  background-color: #805BA3;
+  color: #fff;
+}
+
 
 
 /* ----------------------------------------------- */
@@ -171,7 +230,24 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     }
 
   .hero__contents {
-      top: 25%;
+      top: 55%;
+  }
+
+  .hero__contents__container__title {
+    font-size: 6vw;
+  }
+  
+  .hero__contents__container__subtitle {
+    font-size: 4vw;
+  }
+
+  .hero__contents__container__cta-button {
+    font-size: 3vw;
+  }
+
+  .accordion {
+    padding-top: 85vh;
+    font-size: 30px;
   }
 
 }
