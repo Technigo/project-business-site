@@ -13,10 +13,9 @@ header {
 
 .logo {
   position: fixed;
-  top: 6%;
-  left: 4%;
-  transform: translate(-50%, -50%);
-  width: 50px;
+  top: 3%; 
+  left: 2%;
+  width: 40px;
 }
 
 .hero-slide {
@@ -29,14 +28,14 @@ header {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 26px;
+  font-size: 16px;
   color: #ffffff;
   margin: 0px;
 }
 
 .contact-link {
   position: absolute;
-  display: inline;
+  /* display: inline; */
   top: 10px;
   right: 10px;
   font-size: 18px;
@@ -106,12 +105,6 @@ header {
   width: 100%;
 }
 
-.dance-image {
-  width: 100%;
-  height: auto;
-
-}
-
 .slider>.dots {
   position: absolute;
   bottom: 10px;
@@ -127,10 +120,6 @@ header {
   margin: 0 4px;
   padding: 6px;
   background: white;
-}
-
-.slider>.dots label:hover:after {
-  opacity: 1;
 }
 
 .slider>.dots label:after {
@@ -161,9 +150,8 @@ form {
   /* display: inline-block; */
   width: 85%;
   padding: 10px;
-  margin: 5px 20px 5px 20px;
+  margin: 5px 20px;
   font-size: 14px;
-  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .text-title {
@@ -183,11 +171,10 @@ form {
 }
 
 .sign-up {
-  width: 60%;
+  width: 100%;
   max-width: 700px;
-  min-width: 380px;
+  min-width: 280px;
   margin: auto;
-  padding: 20px;
 }
 
 .radio-button {
@@ -232,12 +219,11 @@ fieldset {
 /* ------FAQ SECTION STYLING ----- */
 
 .accordion {
-  width: 60%;
-  max-width: 700px;
-  min-width: 380px;
+  width: 100%;
+  /* max-width: 700px; */
+  min-width: 280px;
   margin: auto;
   /* border: 1px solid white; */
-  padding: 20px;
 }
 
 .question {
@@ -251,8 +237,7 @@ fieldset {
 }
 
 .question:after {
-  content: '\02795';
-  /* Unicode character for "plus" sign (+) */
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
   color: rgb(167, 163, 163);
   float: right;
@@ -266,8 +251,7 @@ fieldset {
 }
 
 .active:after {
-  content: "\2796";
-  /* Unicode character for "minus" sign (-) */
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 .answer {
@@ -287,9 +271,9 @@ fieldset {
   border: 0.8px solid rgb(46, 181, 51);
 }
 
-.form-input:invalid {
+/* .form-input:invalid {
   border: 0.6px solid red;
-}
+} */
 
 /* ------FOOTER SECTION STYLING ----- */
 
@@ -322,7 +306,6 @@ fieldset {
   color: black;
   margin: 0 0 30px 0;
 }
-
 .fa {
   padding: 5px;
   text-decoration: none;
@@ -383,20 +366,42 @@ fieldset {
 
 /* ------MEDIA QUERY STYLING ----- */
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+  
+  .hero-slide p {
+    font-family: 'Dancing Script', cursive;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+    color: #ffffff;
+    margin: 0px;
+  }
+
+  .sign-up {
+    width: 70%;
+    max-width: 600px;
+    min-width: 280px;
+    margin: auto;
+  }
+  .accordion {
+    width: 70%;
+    max-width: 600px;
+    min-width: 280px;
+    margin: auto;
+  }
+}
 
 @media (min-width: 1200px) {
 
   .logo {
     position: fixed;
-    top: 6%;
-    left: 4%;
-    transform: translate(-50%, -50%);
-    width: 80px;
+    width: 60px;
   }
 
   fieldset {
-    height: 800px;
+    height: 700px;
   }
 
   .container {
