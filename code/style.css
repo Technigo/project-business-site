@@ -1,11 +1,7 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
 body, html {
   min-height: 100vh;
   margin: 0;
-  background-color: rgba(138, 172, 182, 0.849);
+  background-color: rgba(211, 199, 199, 0.411);
 }
 
 .hero-image {
@@ -26,9 +22,51 @@ body, html {
   transform: translate(-50%, -50%);
   color: white;
   font-family: 'Righteous';
+  font-size: 24px;
 }
 
-.form-faq {
+.slogan {
+  font-size: 18px;
+}
+
+.menu-btn {
+  width: 95%;
+  font-family: 'Righteous';
+  font-size: 28px;
+  border: transparent;
+  font-weight: bold;
+  color: rgb(71, 131, 121);
+  background-color: transparent;
+  padding-top: 10px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-out;
+  width: 90%;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Righteous';
+  letter-spacing: 0.5mm;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(53, 51, 51);
+  padding-top: 10px;
+}
+
+.open+.navbar {
+  max-height: 200px;
+  width: 90%;
+}
+
+.form-faq, .topnav {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,7 +82,8 @@ body, html {
   margin-top: 10px;
   text-align: center;
   color: white;
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.411)
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.411);
+  font-family: 'Glory', sans-serif;
 }
 
 .form {
@@ -56,10 +95,18 @@ body, html {
 }
 
 h2 {
-  font-family: 'Righteous';
   font-size: 24px;
   letter-spacing: 0.5mm;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
+  font-family: 'Righteous';
+}
+
+hr {
+  width: 80%;
+  margin-bottom: 15px;
+  color: rgba(138, 172, 182, 0.849);
+  border-radius: 10px;
+  border: 2px solid;
 }
 
 input {
@@ -81,8 +128,8 @@ input:focus {
 
 .sub-button {
   transition-duration: 0.4s;
-  border: rgba(83, 135, 150, 0.945) solid;
-  background-color: rgb(71, 131, 121);
+  border: white solid 1px;
+  background-color: rgb(71, 160, 145);
   border-radius: 10px;
   padding: 15px;
   color: white;
@@ -104,13 +151,14 @@ label.name, .email, .phonenumber, .terms {
   color: white;
   cursor: pointer;
   padding: 18px;
-  width: 100%;
+  width: 95%;
   border: rgb(77, 106, 131);
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 18px;
   transition: 0.4s;
   border-radius: 10px;
+  font-family: 'Glory', sans-serif;
 }
 
 .question.one, .three {
@@ -141,15 +189,18 @@ label.name, .email, .phonenumber, .terms {
   background-color: rgb(71, 131, 121);
   max-height: 0;
   overflow: hidden;
-  transition: 0.5s ease-out;
-  padding-left: 5px;
+  transition: 1s ease-out;
   text-align: left;
+  width: 90%;
+  padding-left: 20px;
 }
 
 .active+.answer {
   text-align: left;
   display: block;
   max-height: 200px;
+  width: 90%;
+  padding-left: 20px;
 }
 
 footer {
@@ -169,8 +220,28 @@ footer {
     flex-direction: column;
     justify-content: space-between;
   }
-  .hero-image {
-    font-size: 28px;
+  .slogan {
+    font-size: 20px;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: visible;
+    padding: 1.3rem;
+  }
+  a {
+    border-bottom: black solid;
+    border-top: black solid;
+    padding-top: 0;
+  }
+  a:hover {
+    color: rgb(90, 111, 129);
+    border-bottom: solid;
+    border-top: solid;
   }
   .form-faq {
     display: flex;
@@ -182,8 +253,15 @@ footer {
     flex-basis: 40%;
     align-self: flex-start;
   }
+  .faq {
+    padding-bottom: 1.8rem;
+  }
   h2 {
     font-size: 20px;
+  }
+  footer {
+    margin-top: 0;
+    padding: 0;
   }
 }
 
@@ -191,8 +269,18 @@ footer {
   .hero-image {
     font-size: 30px;
   }
+  .slogan {
+    font-size: 28px;
+  }
+  .navbar {
+    padding: 1.4rem;
+  }
   .form-faq {
     width: 60%;
     align-self: center;
+  }
+  .faq {
+    padding-bottom: 3.3rem;
+    margin-bottom: 1px;
   }
 }

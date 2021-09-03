@@ -17,6 +17,10 @@ function toggleAnswer4() {
   this.classList.toggle("active")
 }
 
+function toggleNavbar() {
+  this.classList.toggle("open")
+}
+
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
 document.getElementById("section1").onclick = toggleAnswer1
 
@@ -25,3 +29,5 @@ document.getElementById("section2").onclick = toggleAnswer2
 document.getElementById("section3").onclick = toggleAnswer3
 
 document.getElementById("section4").onclick = toggleAnswer4
+
+document.getElementById("menu").onclick = toggleNavbar
