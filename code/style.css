@@ -91,6 +91,8 @@
    }
  }
 
+ /* Hero button */
+
  .btn {
    width: 200px;
    border: 3px solid white;
@@ -185,14 +187,25 @@
    height: 1.5rem;
    width: 200px;
    cursor: pointer;
-   /* border: 1px solid rgb(118, 118, 118);
-   border-radius: 4px; */
    border: 2px solid teal;
    border-radius: 4px;
  }
 
  .input:focus {
    outline: none;
+ }
+
+ .custom-input:focus {
+   background-color: rgba(167, 164, 164, 0.199);
+ }
+
+ .custom-input:focus:invalid {
+   background-color: rgba(218, 165, 32, 0.26);
+   border: 2px solid goldenrod;
+ }
+
+ .custom-input:valid {
+   background-color: rgba(0, 128, 128, 0.26);
  }
 
  .inputs-wrapper {
@@ -367,6 +380,11 @@
 
  /******* Form buttons *******/
 
+ .align-buttons {
+   display: flex;
+   flex-direction: row;
+ }
+
  .form-button {
    display: flex;
    align-self: center;
@@ -388,6 +406,14 @@
    margin-right: 20px;
  }
 
+ .clear-button {
+   margin-right: 20px;
+ }
+
+ .clear-button:hover {
+   border: 2px solid goldenrod;
+ }
+
  /****************** Accordion styles **************/
 
  .accordion-inner-wrapper {
@@ -399,11 +425,10 @@
  .accordion-button-styling {
    border: none;
    background-color: rgba(255, 255, 255, 0.932);
-   cursor: url('pointer.png'), pointer;
+   cursor: pointer;
    padding: 18px 10px;
    text-align: left;
    outline: none;
-   transition: 0.4s;
  }
 
  .accordion h1 {
@@ -415,6 +440,7 @@
 
  .active {
    background-color: teal !important;
+   color: #fff;
  }
 
  .question:hover {
@@ -453,6 +479,8 @@
    display: inline-block;
    animation: active 1s;
  }
+
+ /* animation on slide */
 
  @keyframes active {
    0% {

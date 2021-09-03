@@ -1,16 +1,25 @@
-# Business Site
+# Project Goal and Idea
 
-Replace this readme with your own information about your project. 
+The main goal of the assignment was to create a sign up page with a responsive Hero Video in the header background, ineractive FAQ accordion and sign-up form.
+This project is themed for nonprofit organization seeking to attract and sign up more volunteers for future events.
+I had created a responsive webpage with the use of Flexbox approach. This time I decided to keep the design part simple and clean without any overload. This design looks ligt and natural on any screen view (mobile/tablet/desktop). 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## Tech Stack: JavaScript, CSS and html
 
-## The problem
+## Cool Features
+To ensure friendly User Inerface and provide greater User Experience following features were implemented:
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+- Hero video is live on any screen view and can be paused/played onclick.
+- FAQ Accordion is ineractive and has a delicate slide down animation on it.
+- Sign up form has some validations applied on every input field.
+- Custom messages pops up if user types invalid details.
+- Custom helping tips are visible under each input type when user focus(click) on the input field.
+- Customized radio buttons and checkbox were created.
+- Form can be cleared by clicking the Reset button.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://gogreen-submition-form.netlify.app
 
 ## Resources 
-Icons and cursor pointer provided by Flaticon.com
-Video created by Mary Snopok
+Cursor pointer is provided by Flaticon.com.
+Video created/owned by Mary Snopok.

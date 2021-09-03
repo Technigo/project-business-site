@@ -31,26 +31,32 @@
 
   <!-- Signup form -->
   <div class="info-section-wrapper">
-    <form id="form" class="wrapper-container" action="http://httpbin.org/anything" method="POST">
+    <form id="form" class="wrapper-container" action="http://httpbin.org/anything" method="POST" autocomplete="on">
 
+      <!-- first three inputs -->
       <section class="inputs-wrapper">
         <label class="child-form-container" for="name">
-          <input class="input custom-input" id="name" type="text" name="name" placeholder="Name" value="" required>
+          <input class="input custom-input" id="name" type="text" name="name" placeholder="Name" value=""
+            pattern="[a-zA-Z ]{1-32}" oninvalid="setCustomValidity('Please enter alphabets only.')" required>
           <div class="tip" id="tip">&#128161 Example: Jane Ostin.</div>
         </label>
 
         <label class="child-form-container" for="email">
-          <input class="input custom-input" id="email" type="email" name="email" placeholder="Email" value="" required>
+          <input class="input custom-input" id="email" type="email" name="email" placeholder="Email" value=""
+            oninvalid="setCustomValidity('Please enter valid email.')" required>
           <div class="tip" id="tip">&#128161 Example: your_email@gmail.com</div>
         </label>
 
         <label class="child-form-container" for="phone">
-          <input class="input custom-input" id="phone" type="tel" name="phone" placeholder="Phone Number" value=""
+          <input class="input custom-input" id="phone" type="tel" minlength="10" maxlength="14" name="phone"
+            pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d{4}$"
+            oninvalid="setCustomValidity('Please enter valid mobile number.')" placeholder="Phone Number" value=""
             required>
           <div class="tip" id="tip">&#128161 Should contain at least 10 digit.</div>
         </label>
       </section>
 
+      <!-- radio buttons set -->
       <section class="child-form-container">
         <p>Please specify your location:</p>
         <div class="radio-wrapper">
@@ -67,25 +73,30 @@
             <span class="mark"></span></label>
 
           <label class="radio-style" for="other">
-            <input type="radio" id="other" name="radio" value="other">Other
+            <input type="radio" id="other" name="radio" value="other" checked>Other
             <span class="mark"></span></label>
         </div>
       </section>
 
+      <!-- checkbox -->
       <section class="child-form-container">
         <label class="checkbox-container" for="checkbox">
-          <div class="checkbox"> <input id="checkbox" type="checkbox" name="checkbox" value="" required checked> <span
-              class="checkmark"></span></div>
+          <div class="checkbox"> <input id="checkbox" type="checkbox" name="checkbox" value="on" required checked>
+            <span class="checkmark"></span>
+          </div>
           <div class="terms-message"><a href="#">I argee to the Terms & Conditions.</a></div>
         </label>
       </section>
 
-      <div class="child-form-container">
-        <button class="submit-button form-button">Submit</button>
-      </div>
-
-
+      <!-- from buttons -->
+      <section class="child-form-container">
+        <div class="align-buttons">
+          <button class="submit-button form-button">Submit</button>
+          <button class="clear-button form-button" id="clear">Reset</button>
+        </div>
+      </section>
     </form>
+
     <!-- Accordion -->
     <section class="accordion wrapper-container">
       <h1>FAQ</h1>
