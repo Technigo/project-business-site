@@ -5,8 +5,8 @@ function toggle() {
   this.classList.toggle("active");
 }
 
-var w = document.documentElement.clientWidth || window.innerWidth;
-if (w > 1024) {
+/* var w = document.documentElement.clientWidth || window.innerWidth; */
+if (window.innerWidth > 1024) {
       document.getElementById('intro-anchor').addEventListener('click', (event) => {
         event.preventDefault()  
                                                       /*  verhindert, dass der Link abspringt */

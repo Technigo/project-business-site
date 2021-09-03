@@ -11,11 +11,9 @@ I started with the mobile-site.
 
 On tablet-size the hero-image changes to a video
 
-On desktop-size the form and the accordion are hidden and get only displayed after clicking the links to introduction and FAQ in the header. This works by selecting the screensize with js and then display or hide different sections of the site.
+On desktop-size the form and the accordion are hidden at first, but get displayed on top of the hero video after clicking the links to introduction and FAQ in the header. This works by selecting the screensize with js and then display or hide different sections of the site.
 
-!!This feature only fully works after reloading the page once you scaled it up your down between mobile/tablet/screen-size!!
-
-I need to dig deeper in order to find out, how to prevent this and of course there could be more styling and features both on the form and the accordion. But I want to state, that I am still quite proud about what I achieved this week with using js first the first time. :)
+ I am quite proud about what I achieved this week with using js first the first time. :)
 
 ## View it live
 https://nehrwein-project-business-site.netlify.app
