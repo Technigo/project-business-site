@@ -5,22 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3 - Wedding flowershop</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/df7601e6e4.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
   </head>
   <body>
     <header>
@@ -57,7 +55,7 @@
     <hr />
     <section class="signup__form">
       <img src="images/form-flowers@2x.jpg" alt="Form image" />
-      <form>
+      <form action="https://httpbin.org/anything" method="POST">
         <h2>Order your flowers here</h2>
         <input
           type="text"
@@ -98,15 +96,18 @@
           Dreary
         </label>
         <br /><br />
-
-        <button type="submit" method="POST">Send</button>
+        <p id="warning"></p>
+        <button onClick="checkIfValid()" type="submit">Send</button>
       </form>
     </section>
     <hr />
     <section class="accordion">
       <h2>FAQ - most commonly asked questions</h2>
 
-      <div class="question" id="section1"><h3>How much is delivery?</h3><i class="fa fa-plus"></i></div>
+      <div class="question icon" id="section1">
+        <h3>How much is delivery?</h3>
+        <!-- <i class="icon fa fa-plus"></i>-->
+      </div>
       <div class="answer">
         <p>
           Hey, take a look at the earthlings. Goodbye! Is this my espresso
@@ -116,7 +117,10 @@
         </p>
       </div>
 
-      <div class="question" id="section2"><h3>What are my delivery options?</h3><i class="fa fa-plus"></i></div>
+      <div class="question icon" id="section2">
+        <h3>What are my delivery options?</h3>
+        <!-- <i class="icon fa fa-plus"></i>-->
+      </div>
       <div class="answer">
         <p>
           God help us, we're in the hands of engineers. My dad once told me,
@@ -126,7 +130,10 @@
           engineers.
         </p>
       </div>
-      <div class="question" id="section3"><h3>What if I change my mind?</h3><i class="fa fa-plus"></i></div>
+      <div class="question icon" id="section3">
+        <h3>What if I change my mind?</h3>
+        <!-- <i class="icon fa fa-plus"></i>-->
+      </div>
       <div class="answer">
         <p>
           Must go faster. Did he just throw my cat out of the window? God help
@@ -137,8 +144,9 @@
           screw up this planet enough, they won't want it anymore!
         </p>
       </div>
-      <div class="question" id="section4">
-        <h3>Can you deliver to multiple locals?</h3><i class="fa fa-plus"></i>
+      <div class="question icon" id="section4">
+        <h3>Can you deliver to multiple locals?</h3>
+        <!-- <i class="icon fa fa-plus"></i> -->
       </div>
       <div class="answer">
         <p>

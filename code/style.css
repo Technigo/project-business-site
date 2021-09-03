@@ -117,7 +117,7 @@ header nav {
 header nav a {
   color: white;
   text-decoration: none;
-  width: 33.333%;
+  width: 100%;
   padding: 5px 10px;
   text-align: center;
 }
@@ -270,10 +270,27 @@ form button:hover {
   padding: 10px 18px;
   background-color:#F0F0E5;
   display:none;
+  transition:height 1s ease-out !important;
 }
 
 .active {
   display:block;
+}
+
+.active::after {
+  content:"\f068"!important;
+  position:absolute;
+  right:0px;
+  margin:5px 20px;
+  font-family: FontAwesome; 
+}
+
+.question::after {
+  content:"\f067" ;
+  position:absolute;
+  right:0px;
+  margin:5px 20px;
+  font-family: FontAwesome; 
 }
 
 .question {
@@ -284,11 +301,6 @@ form button:hover {
   position:relative;
 }
 
-.question i {
-  position:absolute;
-  margin:5px 10px;
-  right:10px;
-}
 
 .question:hover {
   background:#BABD89;
@@ -297,8 +309,6 @@ form button:hover {
 
 .active + .answer {
   display:block;
-  height:auto;
-  transition:height 1s ease-out;
 }
 
 footer {
@@ -322,7 +332,16 @@ footer i:hover {
   cursor:pointer;
   transition: ease-in-out .2s;
 }
+
 @media only screen and (min-width: 599px) {
+
+  header nav a {
+    color: white;
+    text-decoration: none;
+    width: 33.333%;
+    padding: 5px 10px;
+    text-align: center;
+  }
   .gallery div img {
     transition: transform 0.5s;
   }

@@ -1,12 +1,12 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+I have created a wedding flower business. The website contains a hero image with a navigation, gallery, form and an accordion. It is responsive and has been coded with a mobile-first approach.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+For this project I used html, css and a tiny bit of JavaScript. I decided that I wanted to make a nice looking accordion so I wanted the icon switch and I also wanted to select my elements with class instead of id to get out of having to repeat myself. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+My project is deployed here: https://alisebrink-project02-business-site.netlify.app/
