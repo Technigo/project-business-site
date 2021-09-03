@@ -15,7 +15,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 body {
 background-color: blueviolet;
 font-family: Arial, Helvetica, sans-serif;
-color: cornflowerblue;
+/* color: cornflowerblue; */
 }
 
 .hero-img {
@@ -40,11 +40,17 @@ h2 {
   font-size: 2.5rem;
   color: rgb(4, 41, 4);
 }
+.bigbox {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem auto;
+  align-items: center;
+}
 
 .newsletter {
   width: 90%;
   max-width: 1000px;
-  margin: 2rem auto;
+  /* margin: 2rem auto; */
   background-color: green;
   color:#111;
   margin: 1rem 0;
@@ -54,9 +60,10 @@ h2 {
   padding: 5rem 3rem 5rem 3rem;
   font-weight: bold;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   /* position: relative; */
 }
+
 
 .accordion {
   width: 90%;
@@ -117,12 +124,16 @@ h2 {
 @media (max-width:767px) {
   h1 {
      font-size: 14px;
+  } 
+
+  .bigbox {
+    flex-direction: column;
+  }
+
+  body {
+    font-size: 14px;
   }
 }
 
-@media (max-width:767px) {
-  html {
-     font-size: 14px;
-   
-  }
-}
+
+
