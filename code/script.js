@@ -1,6 +1,3 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
 function toggle() {
   this.classList.toggle("active")
 }
@@ -11,6 +8,7 @@ document.getElementById("section2").onclick = toggle
 document.getElementById("section3").onclick = toggle
 document.getElementById("nav").onclick = toggle
 
+// another solution
 // const btn = document.getElementById('section1')
 // btn.onclick = toggleDrinkMenu
 
@@ -20,6 +18,21 @@ document.getElementById("nav").onclick = toggle
 //   console.log(this)
 // }
 
+const video = $('#myvideo');
+
+const WindowWidth = $(window).width();
+
+if (WindowWidth <= 768) {
+    //It is a small screen
+    video.append("<source src='videos/mobile-video.mp4' type='video/mp4'/>");
+} else if (WindowWidth <= 1300) {
+    // Medium screen
+    video.append("<source src='videos/tablet-video.mp4' type='video/mp4'/>")
+} else {
+    //It is a big screen or desktop
+    video.append("<source src='videos/desktop-video.mp4' type='video/mp4'/>");
+    video.append("<poster="photos/desktop-photo.jpg>");
+}
 
 
 
