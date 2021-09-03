@@ -11,16 +11,16 @@ body{
 
 /* ----------hero-header------------ */
 .hero{
-width: 100%;
-height: 660px;
-background-image: url("./images/hero-image.jpg");
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-object-fit: contain;
-position: relative;
-display: flex;
-justify-content: space-between;
+  width: 100%;
+  height: 660px;
+  background-image: url("./images/hero-image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: contain;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hero >h2 {
@@ -46,26 +46,43 @@ justify-content: space-between;
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgb(69, 11, 230);
+  width: 100%;
 }
 
 .hero-text > h3{
-  color: rgb(153, 18, 131);
+  color: rgb(31, 44, 233);
 }
-
 
 .hero-text > button {
   background-color: rgb(8, 116, 57);
   color: white;
-  border-radius: 15%;
+  border-radius: 5%;
   padding: 10px;
+  margin: 10px;
+}
+
+.hero-text > button:hover {
+ transform: scale(1.05);
+}
+
+/* animation to change color of text header */
+.hero-text >h1 {
+  margin: 10px 0px;
+  animation: heroText 5s infinite alternate-reverse;
+  width: 100%;
+}
+
+@keyframes heroText {
+   0%  {color: rgb(49, 84, 243);}
+  25%  {color: yellow;}
+  50%  {color: rgb(51, 255, 0);}
+  100% {color: rgb(41, 209, 195);}
 }
 
 .form_accordion{
   display: flex;
   flex-direction: column;
 }
-
 
 /* ------------form--------------- */
 .form {
@@ -129,6 +146,7 @@ justify-content: space-between;
   justify-content: center;
   margin: 10px 0px;
 }
+
 .submit-type button{
   border-radius: 10%;
   background-color: green;
@@ -140,12 +158,21 @@ label{
   font-size: 0.8rem;
 }
 
-input {
-  font-family: inherit;
-  font-size: 0.5rem;
+input:focus{
+  background:mistyrose
+}
+
+input [type="text"]{
   border: 1px solid rgb(109, 108, 108);
 }
 
+input[type="radio"]{
+ filter: hue-rotate(45deg);
+}
+
+input[type="checkbox"]{
+ filter: hue-rotate(45deg);
+}
 
 /* ------------accordion--------------- */
 .accordion {
@@ -168,7 +195,10 @@ input {
   padding: 10px;
   cursor: pointer;
   margin-top: 5px;
- 
+}
+
+.question:hover {
+  transform: scale(1.05);
 }
 
 /* to change colors to frist and third element of the accordion*/
@@ -210,7 +240,6 @@ input {
   font-size: 13px;
   float: right;
   margin-left: 5px;
-  
 }
 
 .active:after{
@@ -264,7 +293,6 @@ footer a{
 .hero >h2 {
   font-size: 1.7rem;
   margin: 20px;
-
 }
 
 }
