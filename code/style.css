@@ -46,9 +46,12 @@ body {
   background:white;
 }
 header {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0.13)), url(images/hero3.jpg);
+  /* I give my hero container a gradient to make the menu show better  */
+  /* And I also give it the background image  */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0.13)), url(images/hero3.jpg); 
   background-size: cover;
   background-position: center;
+  /* I want it big so I set it to height 80vh  */
   height: 80vh;
   width: 100%;
   display: flex;
@@ -74,6 +77,7 @@ hr {
   margin-top: 20px;
 }
 
+/* This is my desktop menu */
 .desktop {
   display: none;
 }
@@ -87,6 +91,7 @@ hr {
   cursor: pointer;
 }
 
+/* This is my mobile menu */
 .mobile i {
   position: absolute;
   display: block;
@@ -101,6 +106,8 @@ hr {
   height: 50px;
 }
 
+/* Positioning my header */
+/* Here I use display flex to easily be able to re-arrange the elements */
 header nav {
   display: flex;
   width: 100%;
@@ -122,6 +129,7 @@ header nav a {
   text-align: center;
 }
 
+/* Placing the div that contains my h2 tag */
 header div {
   order: 3;
   margin-top: 50px;
@@ -150,10 +158,13 @@ header div button:hover {
   transition: 0.5s;
 }
 
+/* Code for my gallery */
 .gallery {
   display: flex;
   flex-direction: column;
   text-align: center;
+  width:calc(100% - 20px);
+  margin:0 auto;
 }
 
 .gallery div {
@@ -174,8 +185,10 @@ header div button:hover {
   width: calc(50% - 5px);
 }
 
+/* Code starting for my form */
 .signup__form {
-  width: 100%;
+  width: calc(100% - 20px);
+  margin:0 auto;
 }
 
 .signup__form img {
@@ -217,7 +230,6 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-
 input {
   border: none;
   background: white;
@@ -253,8 +265,10 @@ form button:hover {
   cursor: pointer;
 }
 
+/* Code for my accordion */
 .accordion {
-  width:100%;
+  width:calc(100% - 20px);
+  margin:0 auto;
   cursor:pointer;
   padding-bottom:20px;
 }
@@ -264,10 +278,12 @@ form button:hover {
   color:white;
   padding:10px 20px;
   display:block;
+  font-size:14px;
 }
 
 .answer {
   padding: 10px 18px;
+  font-size:12px;
   background-color:#F0F0E5;
   display:none;
   transition:height 1s ease-out !important;
@@ -277,8 +293,9 @@ form button:hover {
   display:block;
 }
 
+/* this is what lets me change the icon on the accordion */
 .active::after {
-  content:"\f068"!important;
+  content:"\f068"!important; /* Here I have to use !important to force the change */
   position:absolute;
   right:0px;
   margin:5px 20px;
@@ -296,6 +313,7 @@ form button:hover {
 .question {
   padding:10px 20px;
   background:#CACCA4;
+  font-size:12px;
   color:white;
   display:flex;
   position:relative;
@@ -311,6 +329,7 @@ form button:hover {
   display:block;
 }
 
+/* Design for my footer */
 footer {
   background:#4D4E2C;
   color:white;
@@ -333,6 +352,8 @@ footer i:hover {
   transition: ease-in-out .2s;
 }
 
+
+/* this is my media queary for ipad sized screens */
 @media only screen and (min-width: 599px) {
 
   header nav a {
@@ -352,11 +373,13 @@ footer i:hover {
     cursor: pointer;
   }
 
+  /* I put max-width 1200px of the main content of my page and then I center it */
   .gallery,
   .signup__form,
   .accordion {
     max-width: 1200px;
     margin: 0 auto;
+    width:100%;
   }
 
   header div h2 {
@@ -410,12 +433,13 @@ footer i:hover {
     margin-top:150px;
   }
 
+  /* On desktop I want my form and the image next to it to be next to eachother so therefore I use display:flex; to place them */
   .signup__form {
     display: flex;
   }
 
-  .signup__form img {
-    width: 60%;
+  .signup__form img { 
+    width: 60%; /* I set the image to take bigger space than the form */
   }
   .signup__form form {
     width: 40%;
