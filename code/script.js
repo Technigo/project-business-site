@@ -27,7 +27,7 @@ const contactBtn = document.getElementById("contactBtn")
 const contactInfo = document.getElementById("contactInfo")
 
 
-bookBtn.onclick = () => {                 //pop up the form when clicking on Sign Up-btn
+bookBtn.onclick = () => {                   //pop up the form when clicking on Sign Up-btn
   modalForm.style.display="block"
   document.body.style.overflow="hidden"     //disable the scrolling on the main page
 }

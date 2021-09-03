@@ -19,7 +19,7 @@ body {
   justify-content: center;
   padding: 15px;
   font-size: 25px;
-  animation: fadeIn linear 3s;
+  animation: fadeIn linear 3s;   /* some fadeIn effect for the header-title */
 }
 
 @keyframes fadeIn {
@@ -55,9 +55,9 @@ nav {
   align-items: center;            /* center the content, vertically */
   justify-content: center;   
   text-transform: uppercase;
-  font-family: 'Hina Mincho', serif;  /* the font dosen't apply here from the body, it has been overwritten by the button tag default styles */
+  font-family: 'Hina Mincho', serif;  /* the font dosen't apply here from the body, it has been overwritten by the button tag default styles. So had to specify it again. */
   cursor: pointer;
-  margin: 0 auto;                 /* center the buttons */
+  margin: 0 auto;                 /* centered the buttons */
 }
 
 .nav-icon:hover, .book-online-btn:hover, .readmore-btn:hover {
@@ -72,57 +72,54 @@ audio {
 
 /* The Modal (background) */
 .modal-form, .modal-accordion {
-  display: none;                        /* Hidden by default */
-  position: fixed;                      /* Stay in place */
-  z-index: 1;                           /* Sit on top */
+  display: none;                        /* hidden by default */
+  position: fixed;                      /* stay in place */
+  z-index: 1;                           /* sit on top */
   left: 0;
   top: 0;
-  width: 100%;                          /* Full width */
-  height: 100%;                         /* Full height */
-  overflow: auto;                       /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.3);  /* Black with opacity 0.3*/
-  
+  width: 100%;                          /* full width */
+  height: 100%;                         /* full height */
+  overflow: auto;                       /* enable scroll if needed */
+  background-color: rgba(0,0,0,0.3);  /* Black with opacity 0.3 */
 }
 
-/* Modal Content/Pane for the form and accordion */
+/* Modal Content/Window for the form and accordion */
 .modal-content-form, .modal-content-accordion {
   box-sizing: border-box;               /* added box-sizing because the content went a bit overflow when the screen get smaller */
   background-color: white;
   margin: 5% auto;                      /* 5% from the top and centered */
   padding: 50px;
   border: 2px solid;
-  width: 60%;                           /* Could be more or less, depending on screen size, almost 100% for mobile? */
-  position: relative;
+  width: 60%;                           /* could be more or less, depending on screen size. Going to increase the width for smaller screens */
+  position: relative;                   /* using relative so we can put the close-btn in position absolute */
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   background-image: url("./favicon_copy.png");
 }
 
 .modal-book {
-  grid-column: span 1;
+  grid-column: span 1;        /* takes up one column, want the img to be beside the form */
   background-color: white;
   padding: 20px;
 }
 
-.modal-img {                  /* hide the img in mobile?? .modal-book take span 2, and center the content? */
+.modal-img {                  
   grid-column: span 1;
   width: 100%;
-                              /* object-fit: contain; doesn't need object-fit because of grid? */
   transform: rotate(90deg);   /* rotate the img 90deg */
   align-self: center;         /* center the img */
 }
 
 .inputs {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;    
 }
 
 .inputs label {
   margin-top: 15px;
 }
 
-/* The Close Button */
+/* the Close Button */
 .close-btn {
   color: rgba(241, 106, 27, 0.703);
   font-size: 32px;
@@ -132,7 +129,7 @@ audio {
   right: 25px;
 }
 
-.close-btn:hover, .close-btn:focus {       /* when hovering and focusing on the close button */
+.close-btn:hover, .close-btn:focus {       /* when hovering or focusing on the close button */
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -147,7 +144,7 @@ input:valid + .check-mark {               /* display check-mark when input are v
   visibility: visible;
 }
 
-/* want a red border when validation say invalid and when it is not a placeholder and on focus */
+/* want a Red border when validation say invalid and when it is not a placeholder and on focus */
 input:not(:placeholder-shown):not(:focus):invalid {
   border: 0.5px solid red;
 }
@@ -164,12 +161,11 @@ input:not(:placeholder-shown):not(:focus):invalid {
   justify-content: space-between;         /* want space between the question and the arrow */
   align-items: center;
   padding: 0 12px;
-  cursor: pointer;                        /* the whole question is clickable therefore added pointer-cursor */
+  cursor: pointer;                        /* the whole question is clickable therefore added a cursor */
 }
 
 .arrow {
   font-size: 24px;
-  cursor: pointer;
 }
 
 .answer {                               
@@ -203,10 +199,9 @@ input:not(:placeholder-shown):not(:focus):invalid {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  /* position: relative;*/
 }
 
-.content-text a {
+.content-text a {                /* do not want any decoration for a-tag (readmore-btn) */
   text-decoration: none;
 }
 
@@ -247,38 +242,31 @@ footer p {                          /*zero margin between the paragraphs in the 
     height: 200px;
   }
   .content-text {
-      grid-column: span 2;                      /*change it to one column*/
+      grid-column: span 2;                      /*changed it to one column*/
   }
-
   button, .header-title, footer, .copyright {
     font-size: 80%;
   }
-
   .nav-icon, .book-online-btn, .readmore-btn {
     width: 80px;
     height: 40px;
   }
-
-  .modal-content-form {         /* want the form and FAQ-accordion to take almost all the screen size */
+  .modal-content-form {          /* want the form to take almost all the screen size */
     width: 80%;
     justify-items: center;       /* centered the form */
   }
-
-  .modal-content-accordion {
+  .modal-content-accordion {     /* want the FAQ-accordion to take almost all the screen size */
     width: 80%;
   }
-
   .modal-book {
-    grid-column: span 2;         /* the online booking form to take up two columns */
+    grid-column: span 2;         /* the online booking form takes up two columns, the whole first row */
   }
-
   .modal-img {             
     grid-column: span 2;         /* for tablet, put the img under the form */
     transform: rotate(180deg);   /* rotate the img 180deg */
     width: 70%;
     margin-top: 20px;
   }
-
 }
 
 @media (max-width: 767px) {                     /*for mobile*/
@@ -295,22 +283,17 @@ footer p {                          /*zero margin between the paragraphs in the 
     width: 60px;
     height: 30px;
   }
-
   .modal-img {                                  /* makes the img disappear so there's more space for the form */
     display: none;
   }         
-
   .modal-book {
     grid-column: span 2;
   }
-
-  .modal-content-form {                              /* want the form and FAQ-accordion to take almost all the screen size */
+  .modal-content-form {                         /* want the form to take almost all the screen size */
     width: 90%;                                      
-    justify-items: center;                           /* took away the img, so centered the form */
+    justify-items: center;                      /* took away the img, so centered the form */
   }
-
-  .modal-content-accordion {
+  .modal-content-accordion {                    /* want the FAQ-accordion to take almost all the screen size */
     width: 90%;
   }
-  
 }

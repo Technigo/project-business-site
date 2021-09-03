@@ -12,10 +12,10 @@
   </head>
   <body>
 
-
     <header>
-      <video autoplay muted loop class="hero-video" id="heroVideo">
+      <video autoplay muted loop playsinline class="hero-video" id="heroVideo">
         <source src="./herovideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
       <div class="header-title" id="home">
         <h1>Yum Dumplings</h1>
@@ -37,94 +37,90 @@
 
     <!-- The Modal - booking form -->
     <form action="https://httpbin.org/anything" id="modalForm" class="modal-form" method="POST">
-      <!-- Modal content -->
+      <!-- Modal content - form -->
       <div class="modal-content-form">
           <span class="close-btn" id=closeBtn >&times;</span>       <!-- &times - multiplication sign -->
         <div class="modal-book">
           <h1>Online Booking</h1> 
           <p>Fill in this form to book a cooking lesson</p>
 
-          <!-- <label for="name">Name</label>
-          <input type="text" id="name" name="name" required placeholder="Jane Doe"> -->
           <div class="inputs">
             <label>
-                Name
-                <input 
-                type="text" 
-                name="name" 
-                required 
-                placeholder="Jane Doe"
-                /> 
-                <span class="check-mark">&#10003</span>
+              Name
+              <input 
+              type="text" 
+              name="name" 
+              required 
+              placeholder="Jane Doe"
+              /> 
+              <span class="check-mark">&#10003</span>
             </label>
                         
             <label>
-                Email
-                <input 
-                type="email" 
-                name="email" 
-                required 
-                placeholder="email@domain.com"
-                /> 
-                <span class="check-mark">&#10003</span>
+              Email
+              <input 
+              type="email" 
+              name="email" 
+              required 
+              placeholder="email@domain.com"
+              /> 
+              <span class="check-mark">&#10003</span>
             </label>
                 
             <label>
-                Phone
-                <select id="selectCountry" name="select-country" size="1">
-                    <option disabled selected value>select country</option>
-                    <option value="+46">🇸🇪 Sweden</option>
-                    <option value="+47">🇳🇴 Norway</option>
-                    <option value="+45">🇩🇰 Denmark</option>
-                    <option value="+358">🇫🇮 Finland</option>
-                </select>
+              Phone
+              <select id="selectCountry" name="select-country" size="1">
+                <option disabled selected value>select country</option>
+                <option value="+46">🇸🇪 Sweden</option>
+                <option value="+47">🇳🇴 Norway</option>
+                <option value="+45">🇩🇰 Denmark</option>
+                <option value="+358">🇫🇮 Finland</option>
+              </select>
               
                 <input 
-                type="tel" 
-                id="tel" 
-                name="tel" 
-                required 
-                minlength="8" 
-                maxlength="12" 
-                placeholder="xxxxxxxxx"
+                  type="tel" 
+                  id="tel" 
+                  name="tel" 
+                  required 
+                  minlength="8" 
+                  maxlength="12" 
+                  placeholder="xxxxxxxxx"
                 /> 
                 <span class="check-mark">&#10003</span>
             </label>
           </div>
 
           <label>
-              <p>Choose level:</p>
-              <p><input type="radio" value="beginner"  name="level"/> Beginner</p>
-              <p><input type="radio" value="intermediate" name="level"/> Intermediate</p>
-              <p><input type="radio" value="advanced" name="level"/> Advanced</p>
+            <p>Choose level:</p>
+            <p><input type="radio" value="beginner"  name="level"/> Beginner</p>
+            <p><input type="radio" value="intermediate" name="level"/> Intermediate</p>
+            <p><input type="radio" value="advanced" name="level"/> Advanced</p>
           </label>
 
           <label>
-              <input type="checkbox" name="terms-conditions" required style="margin:20px 0;"/> 
-              I agree to the <a href="#" target="blank" style="color:dodgerblue">
-              terms & conditions</a>
+            <input type="checkbox" name="terms-conditions" required style="margin:20px 0;"/> 
+            I agree to the <a href="#" target="blank" style="color:dodgerblue">
+            terms & conditions</a>
           </label>
 
           <!-- <input type="submit" class="submit" value="Verify"/> -->
           <label>
-              <button 
-              type="submit"
-              class="book-online-btn" 
-              id="bookOnlineBtn" 
-              style="margin-top:15px">
-              book online
-              </button>
-              <!-- onclick="alert('Thank you for your online booking') -->
+            <button 
+            type="submit"
+            class="book-online-btn" 
+            id="bookOnlineBtn" 
+            style="margin-top:15px">
+            book online
+            </button>
+            <!-- onclick="alert('Thank you for your online booking') -->
           </label>
         </div>
         <img class="modal-img" src="./dumplings_plate.jpg" alt="plate of dumplings">
-
       </div>
     </form>
 
-
     <section id="modalAccordion" class="modal-accordion">
-      <!-- Accordion -->
+      <!-- Modal content - accordion -->
       <div class="modal-content-accordion">
         <span class="close-btn" id=closeBtn2 >&times;</span> 
 
@@ -141,7 +137,6 @@
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         </div>
 
-
         <div class="question" id="question2">
           <h2>Should I wear special clothes?</h2>
           <span class="arrow">&#9660;</span>
@@ -150,7 +145,6 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         </div>
-        
 
         <div class="question" id="question3">
           <h2>What happens if I get sick?</h2>
@@ -169,47 +163,46 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         </div>
-
       </div>
     </section>
 
     <main class="main-content">
       <div class="content-text">
-          <img src="./folding.jpg" alt="folding dumpling"/>         
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <img src="./folding.jpg" alt="folding dumpling"/>         
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
       </div>
       <div class="content-text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <img src="./dumplings.jpg" alt="steamed dumplings"/>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <img src="./dumplings.jpg" alt="steamed dumplings"/>
       </div>
       <div class="content-text">
-          <img src="./sticky_pot.jpg" alt="sticky pot dumplings"/>
+        <img src="./sticky_pot.jpg" alt="sticky pot dumplings"/>
       </div>
       <div class="content-text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <a href="https://en.wikipedia.org/wiki/Dumpling" target="blank">
-              <button class="readmore-btn" id="readmoreBtn">read more</button>
-          </a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <a href="https://en.wikipedia.org/wiki/Dumpling" target="blank">
+            <button class="readmore-btn" id="readmoreBtn">read more</button>
+        </a>
       </div>
     </main>
 
     <footer id="contactInfo">
       <div class="contact-info"> 
-          <p>Yum Dumplings</p>  
-          <p>Dumpling Street 123</p>
-          <p>123 45 City</p>
-          <p>yumdumplings.com</p>
-          <p>E-mail: support@yumdumplings.com</p>
-          <p>Phone: 123 456 789</p>
+        <p>Yum Dumplings</p>  
+        <p>Dumpling Street 123</p>
+        <p>123 45 City</p>
+        <p>yumdumplings.com</p>
+        <p>E-mail: support@yumdumplings.com</p>
+        <p>Phone: 123 456 789</p>
       </div>
       <div class="copyright"> 
-          <p>&#169 Yum Dumplings 2021</p>         <!--&#169 is the copyright symbol-->
-          <p>by Katie Wu | Team Foxes 🦊</p>  
-          <a href="https://www.technigo.io/" target="blank">
-              <p><img src="./logo.svg" class="logo-technigo" alt="logo of Technigo"></p>
-          </a>
+        <p>&#169 Yum Dumplings 2021</p>         <!--&#169 is the copyright symbol-->
+        <p>by Katie Wu | Team Foxes 🦊</p>  
+        <a href="https://www.technigo.io/" target="blank">
+          <p><img src="./logo.svg" class="logo-technigo" alt="logo of Technigo"></p>
+        </a>
       </div> 
-  </footer>
+    </footer>
 
     <!-- dont forget to link the javascript file here! -->
     <script src="./script.js"></script>
