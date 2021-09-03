@@ -10,7 +10,7 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 -For the layout I used Grid and flexbox(the site is responsive). 
 
--I implemented a video(used position: relative and z-index) and a header(position: absolute for the ability  to adjust the text) to the hero-section. I allso imported a song with a audio-tag. I used the same attributes(muted, autoplay, loop) for the video and audio.
+-I implemented a video and a header to the hero-section and used position: fixed and z-index to make the elements stay in the background while the user scrolling up/down. I allso imported a song with a audio-tag. I used the same attributes(muted, autoplay, loop) for the video and audio.
 
 -To hand in information from customers I implemented inputs-forms(name, lastname, mailadress ect), radio-buttons(ticket information) and checkboxes(newsletter and age validation). I used to diffrent ways to style the radio-button(custom styling) and the checkboxes(change color on the default checkbox). 
 
