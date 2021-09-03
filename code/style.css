@@ -162,30 +162,42 @@ nav a {
 }
 
 
-
 .accordion h2 {
   color: #297F55;
   margin-left: 5px; 
   font-size: 40px;
 }
 
-.accordion div {
-  margin: 0;
-  padding: 5px;
+.grouped-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
   border: 1px solid #297F55;
   border-radius: 5px;
 }
 
-/* .question::after {          makes a plussign after the question, but I can't manage to change to minus on click later        
+.question p {
+  width: 90%;
+  margin: 0;
+  display: inline-block;
+}
+
+.question::after {          /* makes a plussign after the question, but I can't manage to change to minus on click later */        
   content: '+';
   font-size: 30px;
   font-weight: bold;
   float: right;
-} */
+}
+
+.question active {
+  border: none;
+}
 
 .answer {
   background-color: lightgray;
   display: none;
+  padding: 3px;
 }
 
 
@@ -196,6 +208,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .active + .answer {
   display: block;
 }
+
 
 
 /* FOOTER */
