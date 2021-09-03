@@ -4,11 +4,16 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Project 3</title>
-		<link rel="stylesheet" href="style.css"/>
-		<style>
-			@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap");
-		</style>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<meta name="viewport" content="width=device-width, initial-scale=1">  
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
 	</head>
+	<form action="https://httpbin.org/anything" method="post"></form>
 	<body>
 		<div class="hero-image">
 			<div class="hero-text">
@@ -17,87 +22,97 @@
 			</div>
 		</div>
 
-		<!-- Sign up form -->
-		<div class="form-wrapper">
-			<div class="form-container">
-				<div class="title-container">
-					<h2>Sign up for membership</h2>
-				</div>
-				<form action="post" method="post" class="form-example">
-					<div class="form-example">
-						<label for="email">Email: </label>
-						<input type="email" name="email" id="email" required />
-					</div>
-					<div class="form-example">
-						<label for="pass">Password (8 characters minimum):</label>
-						<input
-							type="password"
-							id="pass"
-							name="password"
-							minlength="8"
-							required/>
-					</div>
-					<div class="form-example">
-            <label for="phone">Phone number (123-456-7890):</label>
-						<input
-							type="tel"
-							id="phone"
-							name="phone"
-							pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-							required/>
-          </div>
-					<div class="form-example">
-							<div class="form-example">
-								<input
-									type="radio"
-									id="gender"
-									name="male"
-									value="male"
-									check="checked"/>
-								<label for="gender">Male</label>
-							</div>
-							<div class="form-example">
-								<input type="radio" id="gender" name="female" value="female" />
-								<label for="gender">Female</label>
-							</div>
-					</div>
-					<div class="form-example">
-						<input type="checkbox" id="agree" name="agree" required />
-						<label for="agree">I agree with terms and conditions</label>
-					</div>
-					<div class="form-example">
-						<input type="submit" value="Sign Up" />
-					</div>
-				</form>
-			</div>
-  
-      <!-- Accordion -->
-		<div class="accordion">
-			<h1>Frequently Asked Questions</h1>
+		<div class="navbar">
+			<li class="list"> <a class="link" href="#home">Home</a></li>
+			<li class="list"><a class="link" href="#news">News</a></li>
+			<li class="list"><a class="link" href="#contact">Contact</a></li>
+			<li class="list"><a class="link" href="#about">About</a></li>
+		  </div>
+
+		  <form action="https://httpbin.org/anything" method="POST">
+
 			
-      <button id="question1">
-        Does your site offer plus size costumes?
-      </button>
-			<div id="answer1" class="answer">
-				<p>Your dog, your choice. There is no shame in size number. You tell us the size, we make it happen!</p>
-      </div>
+<div class="form-wrapper">
+<div class= "sign-up-form">
+	<div class="sign-up-header">
+	  <h1>Sign Up</h1>
+	</div>
+	<div class="sign-up-body">
+	  <label for="name"><b>Name</b></label>
+      <input class="placeholder" type="text" placeholder="First and Last name" name="name" required>
 
-      <button id="question2">
-        Can I add customized decorations to an existing design?
-      </button>
-			<div id="answer2" class="answer">
-				<p>Of course! There is an option button when you have chosen a basic design. You can add a delightful set of angel wings, a santa hat, chiffon organza... dream big!</p>
-      </div>
+      <label for="email"><b>Email</b></label>
+      <input class="placeholder" type="text" placeholder="Enter Email" name="email" required>
 
-			<button id="question3">
-        Do I need to pay for size up?
-      </button>
-			<div id="answer3" class="answer">
-				<p>No you don't!</p>
-      </div>
+      <label for="psw"><b>Password</b></label>
+      <input class="placeholder" type="password" placeholder="Enter Password (8 characters minimum)" minlength="8" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input class="placeholder" type="password" placeholder="Repeat Password" minlength="8" name="psw-repeat" required>
       
+	  <div class= radio>
+		  <div>
+	  <label for="radio"><b>Male</b></label>
+	  <input type="radio" id="gender" name="gender" value="male" checked> 
+	    </div>
+		<div>
+	  <label for="radio"><b>Female</b></label>
+	  <input type="radio" id="gender" name="gender" value="female">
+	</div>
+      </div>
+
+	  <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+	  <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">I agree to the <a href="#" style="color:dodgerblue">Terms & Privacy</a>.
+      </label>
+
+	  <label>
+		  <input type="submit" value="Sign Up" />
+	  </label>
+	</div>
+	</div>
+</form>
+			<!-- Accordion -->
+			<div class="accordion">
+				<h1 class="accordion-header">Frequently Asked Questions</h1>
+				<button class="button" id="question1">Does your site offer plus size costumes?</button>
+				<div id="answer1" class="answer">
+					<p>
+						Your dog, your choice. There is no shame in size number. You tell us
+						the size, we make it happen!
+					</p>
+				</div>
+
+				<button class="button" id="question2">
+					Can I add customized decorations to an existing design?
+				</button>
+				<div id="answer2" class="answer">
+					<p>
+						Of course! There is an option button when you have chosen a basic
+						design. You can add a delightful set of angel wings, a santa hat,
+						chiffon organza... dream big!
+					</p>
+				</div>
+				<button class="button" id="question3">Do I need to pay for size up?</button>
+				<div id="answer3" class="answer">
+					<p>No you don't!</p>
+				</div>
+			
+			<button class="button" id="question4">What is the average delivery days?</button>
+			<div id="answer4" class="answer">
+				<p>If you live in EU, it usually takes about 5-6 business days to deliver. If you live in outside of EU, it might take from 7 business days up to 2 weeks. For more information, please contact the customer service.</p>
+			</div>
 		</div>
-    </div>
-    <script src="script.js"></script>
+			</div>
+		</div>
+		</div>
+		<script src="script.js"></script>
+
+		<footer class="footer">
+			<img src="/img/Haru Ahn.png" alt="Haru Ahn">
+		</footer>
 	</body>
 </html>
