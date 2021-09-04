@@ -5,84 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <header class="header">
-      <video class="hero-video" src="./peony-video.mp4"  controls autoplay loop>
-        Your browser does not support the video tag.
-      </video>
-      <!-- <img class="hero-image" src="./colourful-flowers.jpg" alt="Picture of baked items"> -->
+      <div class="hero-image">
+        
+      </div>
+      
       <nav class="navigation">
         <a href="#">Home</a>
         <a href="#">Order</a>
         <a href="#">Contact us</a>
       </nav>
+      
       <h1>TEXT ON VIDEO</h1>
     </header>
 
-  
-    <!-- Signup form -->
+    <section class="main-section">
+            <!-- Signup  and order form -->
 
-    <form>
-      <label for="fname">
-        First name:
+      <form action="http://httpbin.org/anything" method="POST">
+        <h2>
+          First time ordering? Use this form. 
+        </h2>
+        <p>
+          Already got an account? Press <a href="#">here</a>.
+        </p>
+        <label for="fname">
+          First name:
+          <input type="text" 
+            id="fname" 
+            name="fname" 
+            placeholder="John" 
+            required
+          />
+        </label>
+
+        <label>
+          Last name:
+          <input type="text" 
+            id="lname" 
+            name="lname" 
+            placeholder="Doe" 
+            required
+          />
+        </label>
+
+        <label>
+          E-mail
+          <input type="email" 
+            id="email" 
+            name="email" 
+            placeholder="example@email.com" 
+            required
+          />
+        </label>
+
+        <label for="password">
+          Password (must contain at least 8 symbols):
+          <input type="password" 
+            name="password" 
+            id="password"
+            placeholder="*******" 
+            minlength="8"
+            required
+          />
+        </label>
+
+        <label for="test">
+          Special occasion?
+          <select name="specialoccasion" 
+            id="">
+            <option value="no">
+              No
+            </option>
+            <option value="bday">
+              Birthday
+            </option>
+            <option value="avary">
+              Anniversary
+            </option>
+            <option value="ty">
+              Thank you-gift
+            </option>
+          </select>
+        </label>
+
+      <label for="tandc">
+        I have read the Terms and Conditions.
+        <input type="radio" 
+        name="tandc" 
+        id="tandc"
+        required>
       </label>
-      <br>
+      <div 
+      class="button-box">
+        <button id="button" 
+        class="btn">
+          Order items
+        </button>
+      </div>
 
-      <input type="text" 
-      id="fname" 
-      name="fname" 
-      value="John">
-      <br>
+      <!-- checkboxes
+            radioboxes -->
 
-      <label for="lname">
-        Last name:
-      </label>
-      <br>
-    
-      <input type="text" 
-      id="lname" 
-      name="lname" 
-      value="Doe">
-      <br>
-
-      <label for="email">
-        E-mail
-      </label>
-      <br>
-
-      <input type="email" 
-      id="email" 
-      name="email" 
-      value="example@email.com">
-      <br>
-
-      <label for="password">
-        Password (must contain at least 8 symbols):
-      </label>
-
-      <input type="password" 
-      name="password" 
-      id="password"
-      value="********">
-
+     
     </form>
 
+   
     <section class="accordion">
       <!-- Accordion -->
       <h2>FAQ</h2>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question"
+        id="question1">
+        Terms and Conditions
+      </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Payment first, creation next.</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+
+      <div class="question"
+      id="question2">
+      Terms and Conditions
+    </div>
+    <div class="answer">
+      <p>Payment first, creation next.</p>
+    </div>
+
+    <div class="question"
+    id="question3">
+    Terms and Conditions
+  </div>
+  <div class="answer">
+    <p>Payment first, creation next.</p>
+  </div>
+  
+  <div class="question"
+        id="question4">
+        Terms and Conditions
       </div>
+      <div class="answer">
+        <p>Payment first, creation next.</p>
+      </div>
+
+
+
     </section>
+
+
+
+
+
+
+
+  </section>
+
+
+
+   
     <!-- dont forget to link the javascript file here! -->
+
+    <script src="script.js"></script>
   </body>
 </html>
