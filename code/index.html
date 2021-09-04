@@ -11,9 +11,8 @@
   </head>
 
   <body>
-    <header class="header">
+    <header>
       <div class="hero-image">
-        
       </div>
       
       <nav class="navigation">
@@ -23,151 +22,224 @@
       </nav>
       
       <h1></h1>
-    </header>
+   </header>
 
-    <section class="main-section">
+
+      <section class="main-section">
             <!-- Signup  and order form -->
+        <div class="form">
+          <form 
+            action="http://httpbin.org/anything" 
+            method="POST"
+            id="form"
+            class="form1">
+            <h2>
+              First time ordering? Use this form to sign up. 
+            </h2>
+            <p>
+              Already got an account? Press <a href="#">here</a>.
+            </p>
 
-      <form action="http://httpbin.org/anything" method="POST">
-        <h2>
-          First time ordering? Use this form. 
-        </h2>
-        <p>
-          Already got an account? Press <a href="#">here</a>.
-        </p>
-        <label for="fname">
-          First name:
-          <input type="text" 
-            id="fname" 
-            name="fname" 
-            placeholder="John" 
-            required
-          />
-        </label>
+            <label for="fname">
+              First name:
+              <input type="text" 
+                id="fname" 
+                name="fname" 
+                placeholder="John" 
+                required
+              />
+            </label>
 
-        <label>
-          Last name:
-          <input type="text" 
-            id="lname" 
-            name="lname" 
-            placeholder="Doe" 
-            required
-          />
-        </label>
+            <label>
+              Last name:
+              <input type="text" 
+                id="lname" 
+                name="lname" 
+                placeholder="Doe" 
+                required
+              />
+            </label>
 
-        <label>
-          E-mail
-          <input type="email" 
-            id="email" 
-            name="email" 
-            placeholder="example@email.com" 
-            required
-          />
-        </label>
+            <label>
+              E-mail
+              <input type="email" 
+                id="email" 
+                name="email" 
+                placeholder="example@email.com" 
+                required
+              />
+            </label>
 
-        <label for="password">
-          Password (must contain at least 8 symbols):
-          <input type="password" 
-            name="password" 
-            id="password"
-            placeholder="*******" 
-            minlength="8"
-            required
-          />
-        </label>
+            <label for="password">
+              Password (must contain at least 8 symbols):
+              <input type="password" 
+                name="password" 
+                id="password"
+                placeholder="*******" 
+                minlength="8"
+                required
+              />
+            </label>
 
-        <label for="test">
-          Special occasion?
-          <select name="specialoccasion" 
-            id="">
-            <option value="no">
-              No
-            </option>
-            <option value="bday">
-              Birthday
-            </option>
-            <option value="avary">
-              Anniversary
-            </option>
-            <option value="ty">
-              Thank you-gift
-            </option>
-          </select>
-        </label>
+            <label for="specialoccasion">
+              Special occasion?
+              <select name="specialoccasion" 
+                id="specialoccasion">
+                <option value="no">
+                  No
+                </option>
+                <option value="bday">
+                  Birthday
+                </option>
+                <option value="avary">
+                  Anniversary
+                </option>
+                <option value="ty">
+                  Thank you-gift
+                </option>
+              </select>
+            </label>
 
-      <label for="tandc">
-        I have read the Terms and Conditions.
-        <input type="radio" 
-        name="tandc" 
-        id="tandc"
-        required>
-      </label>
-      <div 
-      class="button-box">
-        <button id="button" 
-        class="btn">
-          Order items
-        </button>
-      </div>
+            <hr>
 
-      <!-- checkboxes
-            radioboxes -->
+            <h3>
+              Select your choice below:
+            </h3>
+            <fieldset form="form1" class="flowers">        
+              <label for="tulips">
+                <img src="./tulips.jpg" 
+                  alt="Tulips"
+                  class="flower-image"
+                />
+                <input type="radio"
+                  name="floweroption"
+                  class="tulips"
+                  value="tulips"
+                />          
+              </label>
+
+              <label for="roses">
+                <img src="./roses.jpg" 
+                  alt="Roses"
+                  class="flower-image"
+                />
+                <input type="radio"
+                  name="floweroption"
+                  class="roses"
+                  value="roses"
+                />
+              </label>
+
+              <label for="peonies">
+                <img src="./peonies.jpg" 
+                  alt="Peonies"
+                  class="flower-image"
+                />
+                <input type="radio"
+                  name="floweroption"
+                  class="peonies"
+                  value="peonies"
+                />
+              </label>
+
+              <label for="mix-bouquet">
+                <img src="./mix-bouquet.jpg" 
+                  alt="Mix-bouquet"
+                  class="flower-image"
+                />
+                <input type="radio"
+                  name="floweroption"
+                  class="mix-bouquet"
+                  value="mix-bouquet"
+                />
+              </label>
+            </fieldset>
+        
+            <label for="chococoffee">
+              Add self-care package
+              <input type="checkbox" 
+                name="selfcare"
+                id="selfcare"
+              />
+            </label>
+
+            <label for="tandc">
+              I have read the Terms and Conditions.
+              <input type="radio" 
+                name="tandc" 
+                id="tandc"
+                required
+              />
+            </label>
+        
+            <div class="button-box">
+              <button id="button" 
+              class="btn">
+                Order items
+              </button>
+            </div>
+
 
      
-    </form>
+          </form>
+      
+        </div>
+
+
 
    
-    <section class="accordion">
-      <!-- Accordion -->
-      <h2>FAQ</h2>
+        <div class="accordion">
+          <!-- Accordion -->
+          <h2>
+            FAQ
+          </h2>
 
-      <div class="question"
-        id="question1">
-        Terms and Conditions
-      </div>
-      <div class="answer">
-        <p>Payment first, creation next.</p>
-      </div>
+          <div class="question"
+           id="question1">
+            Terms and Conditions
+          </div>
+          <div class="answer">
+            <p>
+              This is a boring text that you're probably not going to read anyway, so you might as well just check the box instead of reading this.
+            </p>
+          </div>
 
 
-      <div class="question"
-      id="question2">
-      Terms and Conditions
-    </div>
-    <div class="answer">
-      <p>Payment first, creation next.</p>
-    </div>
+          <div class="question"
+            id="question2">
+              I want a specfic colour on the flowers. 
+          </div>
+          <div class="answer">
+            <p>
+              Tough! You get what you're given.   
+            </p>
+          </div>
 
-    <div class="question"
-    id="question3">
-    Terms and Conditions
-  </div>
-  <div class="answer">
-    <p>Payment first, creation next.</p>
-  </div>
+          <div class="question"
+            id="question3">
+              What is included in the self-care package?
+          </div>
+          <div class="answer">
+            <p>
+              A box of homemade chocolates and a bag of roasted coffee beans enough for four cups of delicious coffee. 
+            </p>
+          </div>
   
-  <div class="question"
-        id="question4">
-        Terms and Conditions
-      </div>
-      <div class="answer">
-        <p>Payment first, creation next.</p>
-      </div>
+          <div class="question"
+            id="question4">
+              Terms and Conditions
+          </div>
+          <div class="answer">
+            <p>
+              Why are you desperatly trying to find the Terms and Conditions? Just check the box. We promise we're a legit company.
+            </p>
+          </div>
 
 
 
-    </section>
+      </section>
 
-
-
-
-
-
-
-  </section>
-
-
-
+   
    
     <!-- dont forget to link the javascript file here! -->
 

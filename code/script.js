@@ -10,6 +10,7 @@ document.getElementById('question3').onclick = toggle
 document.getElementById('question4').onclick = toggle
 
 function toggle() {
+  // alert 
   this.classList.toggle('active')
 }
 

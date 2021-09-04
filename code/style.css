@@ -2,9 +2,6 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-}
 
 
 
@@ -12,8 +9,6 @@ body {
   background-color: #cce0ff;
   margin: 0;
   font-family: 'Oswald', sans-serif;
-  /* background-image: url("./making-bouquet.jpg");
-  background-size: cover; */
 }
 
 /* Mobile first approach */
@@ -53,7 +48,8 @@ header {
 
 a {
   text-decoration: none;
-  color: ;
+  color: darkgreen;
+  font-weight: bold;
 }
 
 
@@ -65,21 +61,30 @@ h1 {
 }
 
 .main-section {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
+ 
+  
 }
 
+p {
+  padding: 5px;
+}
 
-form {
+.form {
   height: auto;
   width: 90%;
-  margin: 20px 5px 10px 5px;
+  margin: 10px auto;
   padding: 5px;
   border: 5px solid blanchedalmond;
   border-radius: 10px;
   font-family: sans-serif;
   color: whitesmoke;
+  background-color: lightgrey;
 }
 
 label {
@@ -97,8 +102,29 @@ input:valid {
   background-color: #ccffd1;
 }
 
+hr {
+  border: 2px solid black;
+  
+}
 
 
+.flowers {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  border: none;
+}
+
+.flower-image {
+  height: auto;
+  width: 90%;
+  object-fit: cover;
+}
+
+.self-care-image {
+  height: 200px;
+  width: auto;
+}
 
 .accordion {
   background-color: blanchedalmond;
@@ -106,29 +132,30 @@ input:valid {
   flex-direction: column;
   width: 90%;
   height: auto;
-  margin: auto 5px 10px 5px;
-  padding: 20px;
+  margin: 10px auto;
+  padding: 5px;
   border-radius: 10px;
+  border: 5px solid lightgrey;
+}
+
+h2 {
+  text-align: center;
 }
 
 .question {
   height: auto;
-  background-color: darkcyan;
+  text-align: center;
 }
 
-.question:hover {
-  background-color: lightsalmon;
-}
+
 
 
 .answer {
-  background-color: hotpink;
   display: none;
+  background-color: whitesmoke;
+  color: black;
 }
 
-.active {
-  background-color: indigo;
-}
 
 .active + .answer {
 display: block;
@@ -139,21 +166,54 @@ display: block;
 
 
 
-@media (min-width: 798px) {
-  .main-section {
-    flex-direction: row;
+@media (min-width: 768px) {
+  header {
+    height: 500px;
   }
+
+  .main-section {
+   grid-template-columns: 2fr 1fr;
+   /* align-items: */
+   /* flex-direction: row; */
+
+  }
+
+
+  .form {
+    /* display: flex;
+    flex-direction: column; */
+    /* width: 100%; */
+  }
+
+
+  hr {
+    width: 90%;
+  }
+
+  .flowers {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .flower-image {
+ 
+  }
+  .accordion {
+    /* width: 100%; */
+  } 
+
+
 }
 
 @media (min-width: 1200px) {
-  .header {
-    height: 700px;
+  header {
+    height: 550px;
     
   }
 
   a:hover {
     color:black;
   }
+
 
   input:invalid {
     /* background-color: #FEBEE0; */
