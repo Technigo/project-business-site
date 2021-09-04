@@ -18,11 +18,6 @@ header {
   position: relative;
 }
 
-/* .header-text {
-  color: peachpuff;
-  text-transform: uppercase;
-} */
-
 /* ---------Hero video styling---------- */
 
 #header-video {
@@ -50,9 +45,7 @@ header {
   display: flex;
   flex-direction: column;
   margin: 20px;
-  /* background-color: rgb(255, 235, 239); */
   justify-content: center;
-  /* border: rgb(255, 0, 0) 2px solid; */
 }
 
 /* ----------Form styling---------- */
@@ -65,18 +58,10 @@ header {
 
 /* ----------Accordion styling---------- */
 
-/* .accordion-img {
-  width: 400px;
-  height: 300px;
-  object-fit: cover;
-  display: none;
-} */
-
 .accordionParent {
-  width: 450px;
+  width: auto;
   margin-top: 10px;
   justify-content: center;
-  border: rgb(255, 255, 255) 2px solid;
 }
 
 .question {
@@ -126,24 +111,37 @@ a {
 
 footer {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
+  color: whitesmoke;
   background-color: rgb(177, 80, 120);
-  height: 100px;
-  padding: 5px 25px;
+  height: auto;
+  width: 100%;
 }
+
+.fab,
+.fas {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  padding: 5px;
+}
+
+/* ---------- Media quaries ---------- */
 
 @media screen and (min-width: 992px) {
   .content-container {
     display: flex;
     flex-direction: row;
     margin: 20px;
-    /* background-color: rgb(255, 235, 239); */
     justify-content: space-evenly;
-    /* border: rgb(255, 0, 0) 2px solid; */
   }
 
   .introduction {
     margin: 0 400px 50px;
+  }
+
+  footer {
+    padding: 5px 25px;
+    justify-content: space-between;
   }
 }
