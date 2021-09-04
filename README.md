@@ -1,12 +1,17 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to create a responsive buisness site with hero image and two sections with a form and an accordion.
 
 ## The problem
+My plan was to have two different designs. A full background image on the tablet and hero imaage on desktop and mobile.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I used flexbox and different sections in the heading to be able to hide them in different media queries.
+
+My main struggle was the tablet design and make the new heading appear over the backgroundimage.
+
+By help from others, validation tools and stack overflow I did get it quite right.
+
+However, I am still not satisfied with the outcome, I think I could have done more advanced functions but decided to scale down due to time schedule.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://llame-wool-project3.netlify.app/
