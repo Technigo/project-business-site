@@ -15,14 +15,14 @@ header {
   position: relative;
   margin-bottom: 2rem;
   text-transform: uppercase;
-  /* background-blend-mode: overlay;
-  background-color: black; */
 }
 
 nav {
   display: flex;
   justify-content: space-evenly;
   color: black;
+  text-align: center;
+  align-items: center;
 }
 
 .nav-link {
@@ -59,34 +59,31 @@ color: hotpink;
   left: 0;
   width: 100%;
   height: 100%;
-  /* display: flex; 
-  justify-content: center;
-  align-items: center; */
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  margin-top: 6rem;
+  justify-content: center;
+  align-items: center;
   font-family: 'Sedgwick Ave Display', cursive;
   font-size: 2rem;
 }
 
-.form-class {
-  display: grid;
-
-}
-
 form {
 display: grid;
+grid-template-columns: repeat(4 1fr);
 gap: 1rem;
 box-shadow: 1px 3px 19px -1px rgba(0,0,0,0.7);
 border-radius: 5px;
 padding: 1rem;
 margin: auto;
-width: 90%;
+width: 80%;
 margin-bottom: 2rem;
 }
 
 .text-input {
   display: flex;
+  width: 100%;
+  padding: 0.5rem;
   margin-bottom: 0.5rem;
   text-align: left;
   justify-content: left;
@@ -95,9 +92,11 @@ margin-bottom: 2rem;
   border-width: 1px;
 }
 
-.checkbox1, .checkbox2{
-  display:inline-block
-} 
+label {
+  display: block;
+  padding: 0.5rem;
+  width: 80%;
+}
 
 .terms-link {
   color: hotpink;
@@ -105,7 +104,6 @@ margin-bottom: 2rem;
 
 .terms-link:hover {
   text-decoration: none;
-  color: black; /*fungerar ej*/
 }
 
 .terms-link:visited {
@@ -115,11 +113,16 @@ margin-bottom: 2rem;
 button {
   max-width: 30%;
   min-width: none;
-  background-color: rgb(147, 216, 170);
+  background-color: rgb(236, 186, 211);
   border-radius: 10px;
   border-width: 1px;
   box-shadow: 1px 3px 3px 1px rgba(77, 76, 76, 0.7);
   margin: 1rem;
+  padding: 0.2rem;
+}
+
+button:focus {
+  box-shadow: none;
 }
 
 .accordion {
@@ -128,15 +131,14 @@ button {
   border-radius: 5px;
   padding: 1rem;
   margin: auto;
-  width: 90%;
+  width: 80%;
   justify-content: right;
   margin-bottom: 2rem;
-
 }
 
 .question {
   display: block;
-  border-bottom-color: lightgrey;
+  border-bottom-color: rgb(236, 186, 211);
   border-bottom-style: solid;
   border-width: 0.1rem;
   padding: 0.5rem;
@@ -154,24 +156,48 @@ button {
   display: none;
 }
 
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  color: black;
+  text-align: center;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: hotpink;
+}
+
+.footer-link:visited{
+  text-decoration: none;
+  color: hotpink;
+}
+
+.footer-link:hover {
+color: black;
+}
+
+ /* styling for tablet and desktop */
 @media (min-width:668px){
 
   .page {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    text-align: center;
   }
 
   form {
-    display: grid;
     grid-column: span 2;
-    width: 80%;
-    text-align: center;
+  }
+  
+  label {
+    width: 90%;
   }
 
   .accordion {
     grid-column: span 2;
-    width: 80%;
     text-align: center;
+    /* margin-top: 0; */
   }
 }
 

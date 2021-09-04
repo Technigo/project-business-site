@@ -28,34 +28,38 @@
     <section class="page" id="sign-up">
     <!-- Signup form -->
      <form action="http://httpbin.org/anything">
-      <h3>Sign up to unlock exclusive content about Belgrade</h3>
-      <label>First name:
+      <fieldset>
+        <legend><h3>Sign up to unlock exclusive content about Belgrade</h3></legend>
+      <label>First name
         <input class="text-input" type="text" name="firstName">
       </label>
 
-      <label>Last name:
+      <label>Last name
         <input class="text-input" type="text" name="lastName">
       </label>
 
-      <label>Email:
-        <input class="text-input" type="email" name="email" required>
+      <label>Email
+        <input class="text-input" type="email" name="email" placeholder="example@email.com" required>
       </label>
 
-      <label for="email">Password:
-        <input class="text-input" type="password" name="password" required>
+      <label>Password
+        <input class="text-input" type="password" name="password" placeholder="**********" required>
+      </label>
+
+      <label>I prefer info trough
+        <input class="radio" type="radio" name="radioalt1"> Emails
+        <input class="radio" type="radio" name="radioalt2"> Carrier pigeon
       </label>
 
       <label>
-        <input class="radio" type="radio" name="radioalt1"> Alt 1
-        <input class="radio" type="radio" name="radioalt2"> Alt 2
+        <input class="checkbox" type="checkbox" name="checkboxTermsConditions" required> I agree to <a class="terms-link" href="#">terms and conditions</a>
       </label>
-
       <label>
-        <input class="checkbox1" type="checkbox" name="checkboxTermsConditions" required> I agree to <a class="terms-link" href="#">terms and conditions</a>
-        <input class="checkbox2" type="checkbox" name="checkboxNewsletter"> I want information and newsletters
+        <input class="checkbox" type="checkbox" name="checkboxNewsletter"> I want information and newsletters
       </label>
 
       <button type="submit">Register</button>
+    </fieldset>
     </form>
 
     <section class="accordion">
@@ -81,6 +85,10 @@
       </div>
     </section>
   </section>
+
+  <footer>
+    <p><a class="footer-link" href="index.html">Beautiful Belgrade</a> | By Linnéa Wilhelmsson 🐘 </p>
+  </footer>
       <!-- link to the javascript file -->
     <script src="script.js"></script>
   </body>
