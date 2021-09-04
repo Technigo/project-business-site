@@ -6,21 +6,22 @@ const menuToggle = document.querySelector('.toggle')
         menuToggle.classList.toggle('active')
         showcase.classList.toggle('active')
       })
-//Accordion opens when clicking on a question
-var acc = document.getElementsByClassName("accordion");
-var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+// Accordion: when clicked = active styling which displays a max height of the accordion content. 
+//When not active, it goes for max height 0 which hides the content of the accordion.
+
+document.querySelectorAll('.accordion__button').forEach(button => {
+  button.addEventListener('click', () => {
+    const accordionContent = button.nextElementSibling;
+
+    button.classList.toggle('accordion__button--active');
+
+    if (button.classList.contains('accordion__button--active')) {
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+
     } else {
-      panel.style.display = "block";
+      accordionContent.style.maxHeight = 0;
     }
-  });
-}
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
+  });
+});

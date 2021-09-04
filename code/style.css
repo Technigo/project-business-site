@@ -268,48 +268,44 @@ input:focus {
   padding-bottom: 20px;
 }
 
-.accordion-container {
-  padding: 40px 0px 40px 0px;
-  margin: 0px;
-  background-color: #000120;
-  font-family: 'barlow';
-}
+/* accordion styling*/
 
-.accordion-title {
-  padding: 0px 0px 20px 40px;
-  text-align: center;
-}
-
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
+.accordion__button {
+  display: block;
   width: 100%;
+  padding: 15px;
   border: none;
-  text-align: left;
   outline: none;
-  font-size: 15px;
-  transition: 0.5s;
-  text-align: center;
-  font-family: 'barlow';
-  font-size: 20px;
+  cursor: pointer;
+  background: #333333;
+  color: #fff;
+  text-align: left;
+  transition: background 0.2s;
 }
 
-.panel p {
-  padding: 20px;
+.accordion__button::after {
+  content: '\25be'; /* triangle icon pointing down*/
+  float: right;
+  transform: scale(1.5);
 }
 
-.active, .accordion:hover {
-  background-color: #BD789A; 
+.accordion__button--active {
+  background: #555555;
 }
 
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
+.accordion__button--active::after {
+  content: '\25b4'; /* triangle icon pointing up*/
+}
+
+.accordion__content {
   overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s;
+  padding: 0 15px;
+  font-family: 'barlow';
+  background: #eeeeee;
 }
+
 
 /*tablet*/
 @media (min-width: 668px) and (max-width: 1024px) {
