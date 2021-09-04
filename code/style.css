@@ -25,18 +25,19 @@ div.header {
   display: flex;
 }
 
-p.logo-text {
-  align-self: center;
-  font-size: 1.3rem;
-  margin-top: 1rem;
-  color: rgb(235, 100, 100);
+.logo-text {
+justify-content: center;
+font-size: 1.3rem;
+margin-top: 15px;
+color: rgb(235, 100, 100);
 }
+
 span {
   color: rgb(238, 185, 194);
   font-weight: bold;
 }
 
-.logo {
+.logo-img {
   width: 50px;
   height: 50px;
   margin: 8px;
@@ -44,30 +45,34 @@ span {
   border: 1px solid rgb(235, 100, 100);
 }
 
-nav {
+.nav-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-image: linear-gradient(black, rgb(197, 17, 17)); */
   background-color: black; /* For browsers that does not support gradients*/
-  color: rgb(252, 240, 200);
+
 }
 
 a {
   padding: 1rem;
   font-size: 1.1rem;
   cursor: pointer;
+  color: rgb(238, 185, 194);
+  text-decoration: none;
+  font-weight: bold;
 }
+
 a:hover {
   transform: scale(1.2, 1.2);
 }
 
-/* FORM SECTION*/
+/* FORM SECTION */
+
 .form-section {
   margin:20px 10px;
   padding:40px;
-background-color: rgb(60, 141, 173);
-border-radius: 20% 10%;
+  background-color: rgb(60, 141, 173);
+  border-radius: 20% 10%;
 }
 
 .register-heading {
@@ -75,14 +80,15 @@ border-radius: 20% 10%;
   font-family: 'Merriweather', serif;
   margin-bottom: 25px;
   color: rgb(252, 240, 200);
-
-
+  text-transform: uppercase;
 }
 
 label {  
   color: rgb(252, 240, 200);
+  font-weight: bolder;
 
 }
+
 .labels {
   display:block;
   padding-left: 10px;
@@ -98,7 +104,7 @@ label {
 }
 /* Pseudo-class selector: select elements based on a certain state */
 .inputs:focus { 
-  outline: none; /* removes default outline of all inputs */
+   outline: none; /*removes default outline of all inputs */
 }
 /* Pseudo-element selector: select and style a part of an element*/
 input::placeholder { 
@@ -123,56 +129,50 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+.button:hover {
+  transform: scale(1.1, 1.1);
+}
 
+/* ACCORDION SECTION */
 
-
-/* ACCORDION SECTION*/
 .accordion-section {
   margin:20px 10px;
   padding:40px;
   background-color: rgb(145, 31, 39);
   border-radius: 10% 20%;
 }
+
 .faq-heading {
   font-family: 'Merriweather', serif;
   text-align: center;
   color: rgb(252, 240, 200);
   margin-bottom: 20px;
-
-}
-.contentBox {
-  position: relative;
 }
 
 .question {
   width: 100%;
-  padding: 10px;
   margin-top: 10px;
-  background-color: rgb(250, 206, 127);
-  /* background-color: rgb(252, 240, 200); */
   background-color: rgb(252, 240, 200);
   color:rgb(99, 10, 16);
   cursor: pointer;
   border-radius: 20px;
+  padding:10px 18px 30px 15px;
 
 }
 
-.question::before {
+.question:hover {
+  background-color:rgb(242, 187, 123);
+}
+
+.question::after {
   content: '+';
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color:rgb(99, 10, 16);
+  float: right;
 }
 
-.active::before {
+.active::after {
   content: '-';
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 1.3rem;
-  color:rgb(99, 10, 16);
 }
  
 .answer { 
@@ -185,20 +185,61 @@ input[type="checkbox"] {
   display: block;
 }
 
+/* FOOTER */
+.footer {
+  background-color: #000;
+  height: 200px;
+  text-align: center;
+}
+
+.logo-footer {
+  width: 50px;
+  height: 50px;
+  margin-top: 30px;
+  border-radius: 50%;
+  border: 1px solid rgb(235, 100, 100);
+}
+
+.fab { 
+  color:#fff;
+  padding:20px 10px;
+}
+
+
 /* MEDIA QUERIES */
 
 @media (min-width: 538px) {
   html {
-    /* font-size: 18px; */
+    font-size: 18px; 
   }
 
   header {
     height: 350px;
   }
 
-  nav {
+  .nav-header {
     flex-direction: row;
     justify-content: center;
     height: 100px;
+  }
+}
+
+@media (min-width: 760px) {
+  .form-section, .accordion-section {
+    width: 550px;
+    margin:25px auto;
+  }
+}
+@media (min-width: 1214px) {
+  main {
+    display: flex;
+    justify-content: center;
+    margin:0 auto;
+    width: 80%; 
+  }
+
+  .form-section, .accordion-section {
+    margin:25px;
+    width: 600px;
   }
 }

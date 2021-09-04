@@ -4,10 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Site</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css"
+      integrity="sha512-ZYg+hQvLlM0W9C3P6vTpes5LmJ66G2EsroxDNzwD6qiulckldb29eD9I672HL2X+LH5nRhY1sQqZLJGB+aUUPg=="
+      crossorigin="anonymous"
     />
     <link href="./style.css" rel="stylesheet" />
   </head>
@@ -15,60 +24,74 @@
     <!--HEADER-->
     <header>
       <div class="header">
-        <img src="./Images/logo.png" class="logo" />
+        <img src="./Images/logo.png" class="logo-img" alt="Gymnastic artistic athlete"/>
         <p class="logo-text">Gym<span>tasy</span> Club</p>
       </div>
     </header>
-    <nav>
-      <a>Home</a>
-      <a>About Us</a>
-      <a>Classes</a>
-      <a>Gallery</a>
+    <nav class="nav-header">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Classes</a>
+      <a href="#">Gallery</a>
     </nav>
     <!--FORM SECTION-->
-    <section class="form-section">
-      <h2 class="register-heading">Register with us!</h2>
-    <form action="htpp://htppbin.org/anything" method="POST" id="form">
-        <label for="fname" class="labels">First name:</label>
-        <input
-          type="text"
-          id="fname"
-          class="inputs"
-          name="fname"
-          placeholder="Name"
-          required/>
-      
-        
-        <label for="lname" class="labels">Last name:</label>
-        <input
-          type="text"
-          id="lname"
-          class="inputs"
-          name="lname"
-          placeholder="Last name"
-          required
-        />
-        <label for="email" class="labels">Enter your email:</label>
-        <input type="email" id="email" class="inputs" name="email" placeholder="Email" />
-        
-        <label for="pwd" class="labels">Create password:</label>
-        <input type="password" id="pwd" class="inputs" name="pwd" placeholder="***********" />
+    <main>
+      <section class="form-section">
+        <h2 class="register-heading">Register with us!</h2>
+        <form action="htpp://htppbin.org/anything" method="POST" id="form">
+          <label for="fname" class="labels">First name:</label>
+          <input
+            type="text"
+            id="fname"
+            class="inputs"
+            name="fname"
+            placeholder="Name"
+            required
+          />
 
-        <input type="checkbox" id="terms" name="terms" value="agree" />
-        <label for="terms">
-          I agree to the terms and conditions of Privacy Policy</label><br>
-        <input type="checkbox" id="age" name="age" value="agree"/>
-        <label for="age"> I am 18 or older</label><br/>
-        <button type="submit" class="button">Sign up</button>
-      </form>
-    </section>
+          <label for="lname" class="labels">Last name:</label>
+          <input
+            type="text"
+            id="lname"
+            class="inputs"
+            name="lname"
+            placeholder="Last name"
+            required
+          />
+          <label for="email" class="labels">Enter your email:</label>
+          <input
+            type="email"
+            id="email"
+            class="inputs"
+            name="email"
+            placeholder="Email"
+          />
 
-    <!--ACCORDION SECTION-->
-    <section class="accordion-section">
-      <h2 class="faq-heading">FAQ</h2>
+          <label for="pwd" class="labels">Create password:</label>
+          <input
+            type="password"
+            id="pwd"
+            class="inputs"
+            name="pwd"
+            placeholder="***********"
+          />
 
-      <div class="contentBox">
-        <div class="question" id="question1">What do I need to wear?</div>
+          <input type="checkbox" id="terms" name="terms" value="agree" />
+          <label for="terms">
+            I agree to the terms and conditions of Privacy Policy.</label
+          ><br />
+          <input type="checkbox" id="age" name="age" value="agree" />
+          <label for="age"> I am 18 or older.</label><br />
+          <button type="submit" class="button">Sign up</button>
+        </form>
+      </section>
+
+      <!--ACCORDION SECTION-->
+      <section class="accordion-section">
+        <h2 class="faq-heading">FAQ</h2>
+
+        <div class="question" id="question1">
+          What do I need to wear?</div>
         <div class="answer">
           <p>
             We would encourage all gymnasts to wear shorts and t-shirts or
@@ -79,12 +102,9 @@
             watches must be removed.
           </p>
         </div>
-      </div>
 
-      <div class="contentBox">
         <div class="question" id="question2">
-          How do I cancel my booking?
-        </div>
+          How do I cancel my booking?</div>
         <div class="answer">
           <p>
             You can cancel a class by clicking on the ‘My Schedule’ section of
@@ -92,21 +112,16 @@
             would like to cancel.
           </p>
         </div>
-      </div>
 
-      <div class="contentBox">
         <div class="question" id="question3">
-          Can I start gymnastics if I am an adult?
-        </div>
+          Can I start gymnastics if I am an adult?</div>
         <div class="answer">
           <p>
             Absolutely yes. We don’t believe in “you are too old to do
             gymnastics”.
           </p>
         </div>
-      </div>
 
-      <div class="contentBox">
         <div class="question" id="question4">
           Do you offer classes for complete beginners?
         </div>
@@ -118,9 +133,7 @@
             and Gymnastic Strength Class even if you don’t have any experience.
           </p>
         </div>
-      </div>
 
-      <div class="contentBox">
         <div class="question" id="question5">
           Do you accept cash to pay for the classes?
         </div>
@@ -132,8 +145,18 @@
             booking system.
           </p>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <img src="./Images/logo.png" class="logo-footer" alt="Gymnastic artistic athlete logo"/>
+      <p class="logo-text">Gym<span>tasy</span> Club</p>
+      <nav>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </nav>
+    </footer>
 
     <script src="./script.js"></script>
   </body>
