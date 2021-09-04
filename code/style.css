@@ -1,6 +1,9 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+* {
+  box-sizing: border-box;
+}
 
 body {
   height: 100%;
@@ -37,11 +40,19 @@ header {
 
 /* ----------Site content styling---------- */
 
+.top-section {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
 .content-container {
   display: flex;
-  margin: 150px;
-  background-color: rgb(255, 235, 239);
-  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 20px;
+  /* background-color: rgb(255, 235, 239); */
+  justify-content: center;
+  align-items: center;
   /* border: rgb(255, 0, 0) 2px solid; */
 }
 
@@ -63,7 +74,7 @@ header {
 } */
 
 .accordionParent {
-  width: 420px;
+  width: 450px;
   margin-top: 10px;
   /* border: rgb(255, 0, 0) 2px solid; */
 }
@@ -105,6 +116,21 @@ a {
 .open + .answer {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (min-width: 992px) {
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    /* background-color: rgb(255, 235, 239); */
+    justify-content: space-evenly;
+    /* border: rgb(255, 0, 0) 2px solid; */
+  }
+
+  .introduction {
+    margin: 0 400px 50px;
+  }
 }
 
 /* 
