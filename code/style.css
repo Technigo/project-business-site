@@ -18,7 +18,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("https://images.unsplash.com/photo-1448375240586-882707db888b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3450&q=80");
+  background-image: url("https://images.unsplash.com/photo-1481401908818-600b7a676c0d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80");
+  /* background-position: 0px -600px; */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -62,16 +63,17 @@ hr {
 
 .form-section {
   width: 100vw;
-  background-color: red;
+  background-image: linear-gradient(135deg, #52e5e7, #130cb7);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .form {
-  background-color: #4285f4;
+  background-color: transparent;
   padding: 90px 80px;
   width: 100vw;
+  box-shadow: 10px 5px 50px 10px rgba(0, 0, 0, 0.25);
 }
 
 label,
@@ -147,6 +149,23 @@ label,
 .questions:hover {
   cursor: pointer;
 }
+
+.plus {
+  position: absolute;
+  left: 78%;
+  text-align: right;
+}
+
+.plus2 {
+  display: block;
+  position: relative;
+  text-align: right;
+  bottom: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Media Query */
 
 @media (min-width: 0px) and (max-width: 500px) {
   .form {

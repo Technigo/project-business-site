@@ -15,7 +15,12 @@ document.getElementById("FAQ5").onclick = toggle
 
 
 
+// const plusToMinus = document.getElementById("plus")
 
+// const plusToMinus = document.getElementsByClassName("plus")
+
+
+// plusToMinus.innerText = "-"
 
 
 
