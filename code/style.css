@@ -163,16 +163,17 @@ h1 {
 
 /*body starts*/
 .grid-container {
-  display: flex;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   background-color: #000120;
   padding: 0px;
+  flex-wrap: wrap;
 }
 
 
 .information {
-  display: block;
+  span: 2;
+  display: grid;
   text-align: center;
   color: #fff;
   padding: 80px;
@@ -183,6 +184,17 @@ h1 {
 
 .information h1 {
   padding: 10px;
+}
+
+.gridright {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  flex-wrap: nowrap;
+  text-align: left;
+  padding: 3em;
+  border-style: solid;
+  border-color: chartreuse;
 }
 
 .apply-form {
@@ -202,17 +214,29 @@ label {
 }
 
 input {
-  display: block;
-  margin: 1px;
-  padding: 3px;
-  color: #000;
-  font-size: 20px;
-  font-family: 'barlow';
-  outline: none;
+  border: solid;
+  border-width: 1px;
+  font-size: 1em;
+  padding: 1em;
+  margin-bottom: 1em;
+  width: 90%;
 }
 
 input:focus {
   border: 3px solid #BD789A;
+}
+
+/* Removes up and down icon in number input field*/
+/*Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 
@@ -270,6 +294,7 @@ input:focus {
   display: grid;
   flex-direction: column;
   padding-bottom: 20px;
+  background: #000120;
 }
 
 /* accordion styling*/
@@ -411,10 +436,12 @@ iframe {
   
   label, input {
     display: block;
-    margin: 1px;
-    padding: 3px;
     color: #fff;
     font-size: 20px;
+  }
+
+  input {
+    margin-bottom: 10px;
   }
   
   .form-button {
@@ -505,16 +532,24 @@ iframe {
   .grid-container {
     display: grid;
     flex-wrap: wrap;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     background-color: #000120;
     padding: 20px 0px 20px 0px;
     
   }
 
   .information, .apply-form, .grid-item-img {
-    grid-column: span 2;
+    grid-column: span 1;
     display: grid;
     flex-direction: column;
+  }
+
+  .apply-form {
+    width: 100%;
+  }
+
+  .gridright {
+    span: 2;
   }
 
   .interview-container {
