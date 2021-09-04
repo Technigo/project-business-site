@@ -181,16 +181,12 @@ nav a {
   display: inline-block;
 }
 
-.question::after {          /* makes a plussign after the question, but I can't manage to change to minus on click later */        
+.question::after {          /* makes a plussign after the question */        
   content: '+';
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 25px;
   float: right;
 }
 
-.question active {
-  border: none;
-}
 
 .answer {
   background-color: lightyellow;
@@ -206,6 +202,12 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .active + .answer {
   display: block;
+}
+
+.question.active::after {     /* changes the plussign after the question to a minus. That was a tricky one. Needed some time to realize that this method only works, if I apply it on the container, that the ::after is actually positioned in */
+  content: '-';
+  font-size: 35px;
+  padding-right: 2px;
 }
 
 

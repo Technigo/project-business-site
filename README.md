@@ -7,7 +7,7 @@ This project is about building a responsive business website with a hero image o
 I started with the mobile-site. 
 - I used a hero-image in the background for the header in respect of data usage.
 - I build and styled a form with 4 different inputs (text, number, email, radio button) and a submit button
-- I build a FAQ-accordion with basic js
+- I build a FAQ-accordion with basic js (document.getElementbyID and then toggling to .active). The FAQ opens and closes by clicking it and is showing +/- if closed/open.
 
 On tablet-size the hero-image changes to a video
 
