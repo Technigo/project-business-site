@@ -57,21 +57,46 @@ fieldset {
   }
   
   .signup { 
-    grid-area: 1 / 1 / 4 / 5; 
+    grid-area: 1 / 1 / 4 / 5;
   }
 
   .accordion { 
-    grid-area: 4 / 1 / 4 / 5; 
+    grid-area: 4 / 1 / 4 / 5;
   }
 
-  .accordion {
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    padding: 18px 0px;
+  .accordion__button {
+    display: block;
     width: 100%;
-    text-align: left;
+    height: 100%;
+    padding: 15px;
     border: none;
     outline: none;
-    transition: 0.4s;
+    cursor: pointer;
+    background: #333333;
+    color: #ffffff;
+    text-align: left;
+    transition: background 0.2s;
+  }
+
+  .accordion__button::after {
+    content: '\25be';
+    float: right; 
+    transform: scale(1.5);
+  }
+
+  .accordion__button--active { 
+    background: #555555 
+  }
+
+  .accordion__button::after { 
+    content: '\25b4' 
+  }
+
+  .accordion__content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s;
+    padding: 0 15px;
+    font-family: sans-serif;
+    background: #eeeeee;
   }
