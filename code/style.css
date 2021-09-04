@@ -10,7 +10,7 @@ body {
 .hero-image {
   width: 100vw;
   height: 50vh;
-  background-image: url(../hero-image-padlet.jpg);
+  background-image: url(../hero-image.jpg);
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
@@ -57,7 +57,7 @@ body {
   margin-top: 20px;
 }
 
-/* Sign-up form */
+/* Signup form */
 
 .signup-form {
   width: 95vw;
@@ -80,6 +80,11 @@ body {
   width: 70%;
 }
 
+.label {
+  padding: 5px;
+  font-size: 14px;
+}
+
 .input {
   padding: 5px;
   outline: none;
@@ -87,11 +92,6 @@ body {
 
 .input:focus {
   border: 3px solid #353132;
-}
-
-.label {
-  padding: 5px;
-  font-size: 14px;
 }
 
 .checkbox {
@@ -113,6 +113,8 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   opacity: 1;
+  border: 0.5px solid #353132;
+  transition: 0.3s;
 }
 
 .button:hover {
@@ -144,12 +146,12 @@ body {
   justify-content: center;
   cursor: pointer;
   position: relative;
+  border-top: 0.5px solid #353132;
 }
 
 .question-text {
   font-size: 14px;
   font-weight: bold;
-}
 }
 
 .question::after {
@@ -157,10 +159,6 @@ body {
   position: absolute;
   right: 0px;
   margin-right: 20px;
-}
-
-.active::after {
-  content: "\2212";
 }
 
 .answer {
@@ -178,6 +176,10 @@ body {
 
 .active, .question:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+}
+
+.active::after {
+  content: "\2212";
 }
 
 .active + .answer {
@@ -230,14 +232,14 @@ body {
     font-size: 30px;
   }
 
-  .input {
-    padding: 10px;
-    background: #f4f4ed;
-  }
-  
   .label {
     padding: 10px;
     font-size: 18px;
+  }
+
+  .input {
+    padding: 10px;
+    background: #f4f4ed;
   }
   
   .checkbox {
