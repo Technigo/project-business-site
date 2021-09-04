@@ -5,6 +5,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 body {
   background-color: rgb(247, 245, 244);
   display: grid;
+  margin: 0;
+  font-family: 'Asap', sans-serif;
 }
 
 header {
@@ -13,6 +15,8 @@ header {
   position: relative;
   margin-bottom: 2rem;
   text-transform: uppercase;
+  /* background-blend-mode: overlay;
+  background-color: black; */
 }
 
 nav {
@@ -21,14 +25,20 @@ nav {
   color: black;
 }
 
-a a:visited{
+.nav-link {
   text-decoration: none;
+  color: black;
+  padding: 1rem;
 }
 
-a:hover {
-text-decoration: hotpink;
+.nav-link:visited{
+  text-decoration: none;
+  color: black;
 }
 
+.nav-link:hover {
+color: hotpink;
+}
 
 .hero-img {
   width: 100%;
@@ -36,12 +46,11 @@ text-decoration: hotpink;
   /* background-image: url(https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=813&q=80); */
   background-image: url(https://images.unsplash.com/photo-1480970530467-74f67f39776e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=947&q=80);
   /* background-image: url(https://images.unsplash.com/photo-1590344018373-ebaf8d2210fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80); */
+  /* background-image: url(https://images.unsplash.com/photo-1628430716372-6b2b4159f922?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80); */
   background-position: center;
   background-repeat: no-repeat;
-  object-fit: cover;
-  /* background-color: black; */
-  opacity: 0.8;
-  /* background-blend-mode: underlay; */
+  background-size: cover;
+  opacity: 0.7;
 }
 
 .overlay {
@@ -50,9 +59,19 @@ text-decoration: hotpink;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  /* display: flex; 
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  display: block;
+  text-align: center;
+  margin-top: 6rem;
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 2rem;
+}
+
+.form-class {
+  display: grid;
+
 }
 
 form {
@@ -79,6 +98,19 @@ margin-bottom: 2rem;
 .checkbox1, .checkbox2{
   display:inline-block
 } 
+
+.terms-link {
+  color: hotpink;
+}
+
+.terms-link:hover {
+  text-decoration: none;
+  color: black; /*fungerar ej*/
+}
+
+.terms-link:visited {
+  color: hotpink;
+}
 
 button {
   max-width: 30%;
@@ -107,11 +139,15 @@ button {
   border-bottom-color: lightgrey;
   border-bottom-style: solid;
   border-width: 0.1rem;
+  padding: 0.5rem;
 }
 
 .answer {
   display: block;
   margin-bottom: 2rem;
+  border-top-color: lightgrey;
+  border-top-style: solid;
+  border-width: 0.1rem;
 }
 
 .question + .answer {
@@ -120,12 +156,22 @@ button {
 
 @media (min-width:668px){
 
+  .page {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   form {
-    width: 40%;
+    display: grid;
+    grid-column: span 2;
+    width: 80%;
+    text-align: center;
   }
 
   .accordion {
-    width: 40%;
+    grid-column: span 2;
+    width: 80%;
+    text-align: center;
   }
 }
 
