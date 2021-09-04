@@ -15,9 +15,11 @@ I had unneccesary problems with the accorion. If I had read the brief more close
 
 I used the picture-tag for the header img, but switched in the end. It looked better with the background img, and was easier to style. I kept the picture-tag in the code for my own remembering. 
 
-If I had more time I want to try using a video instead, and I want to style the footer with grid containers. I would like to improve the + and - signs at the accordion, they dont look 100% to me. 
+I am proud of figuring out the accordion, and that I took the time to practice som grid in the footer. I am also pleased that I went with the background img, even though it felt like a simpler way to code. But hey - maybe thats good. 
 
-I also have a problem with the widht of the boxes in screen mode. Of course I woult want to fit it. The form-box isnt as wide as I would like. Ive played around with margins and flows, but settled for the version that looked best. 
+If I had more time I want to try using a video instead. I would like to improve the + and - signs at the accordion, they dont look 100% to me. 
+
+I also have a problem with the widht of the boxes in screen mode. The form-box isnt as wide as I would like. Ive played around with margins and flows, but will leave it like it is. It looks good to me. 
 
 
 ## View it live
