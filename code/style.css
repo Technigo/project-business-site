@@ -5,14 +5,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 body {
   height: 100%;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(255, 235, 239);
+  font-family: Karla, sans-serif;
+  background-color: rgb(255, 245, 247);
 }
-
-/* body {
-  max-width: 1300px;
-  margin: auto;
-} */
 
 header {
   width: 100%;
@@ -24,6 +19,8 @@ header {
   color: peachpuff;
   text-transform: uppercase;
 } */
+
+/* ---------Hero video styling---------- */
 
 #header-video {
   width: 100%;
@@ -38,11 +35,17 @@ header {
   transform: translate(-50%, -50%);
 }
 
+/* ----------Site content styling---------- */
+
 .content-container {
   display: flex;
-  margin: 30px;
-  justify-content: center;
+  margin: 150px;
+  background-color: rgb(255, 235, 239);
+  justify-content: space-evenly;
+  /* border: rgb(255, 0, 0) 2px solid; */
 }
+
+/* ----------Form styling---------- */
 
 .input-container {
   display: flex;
@@ -50,9 +53,79 @@ header {
   padding: 5px;
 }
 
-input:unvalid {
-  border: red solid 2px;
+/* ----------Accordion styling---------- */
+
+/* .accordion-img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  display: none;
+} */
+
+.accordionParent {
+  width: 420px;
+  margin-top: 10px;
+  /* border: rgb(255, 0, 0) 2px solid; */
 }
+
+.question {
+  display: grid;
+  background-color: rgb(170, 32, 59);
+  cursor: pointer;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid white;
+  outline: none;
+  transition: 0.4s;
+}
+
+.question:hover {
+  background-color: rgb(255, 235, 239);
+}
+
+.open {
+  background: rgb(255, 235, 239);
+}
+img {
+  padding: 5px;
+}
+
+.answer {
+  padding: 10px;
+  background-color: rgb(255, 235, 239);
+  display: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.open + .answer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 
+.answer {
+  padding: 18px;
+  background-color: rgb(235, 100, 213);
+  display: none;
+  margin: 0;
+}
+
+.active {
+  background: wheat;
+}
+
+.accordion-txt + .accordion-img {
+  display: none;
+}
+
+.active + .accordion-txt + .accordion-img {
+  display: block;
+} */
 
 /* 
 .question {
