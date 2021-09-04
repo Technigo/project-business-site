@@ -247,6 +247,10 @@ input:focus {
   font-family: 'barlow';
 }
 
+.more-information h1 {
+  padding-bottom: 20px;
+}
+
 .interview-container {
   display: grid;
   flex-wrap: wrap;
@@ -270,14 +274,23 @@ input:focus {
 
 /* accordion styling*/
 
+.accordion {
+  padding: 50px;
+}
+
+.accordion-title {
+  padding: 40px 0px 10px 0px;
+  font-family: 'barlow';
+}
+
 .accordion__button {
   display: block;
   width: 100%;
   padding: 15px;
-  border: none;
+  border: solid #000120 1px;
   outline: none;
   cursor: pointer;
-  background: #333333;
+  background: #BD789A;
   color: #fff;
   text-align: left;
   transition: background 0.2s;
@@ -300,12 +313,51 @@ input:focus {
 .accordion__content {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.2s;
-  padding: 0 15px;
+  transition: max-height 0.8s;
+  padding: 0px 15px;
   font-family: 'barlow';
   background: #eeeeee;
+  -moz-box-shadow:    inset 0 0 5px #504c4c;
+  -webkit-box-shadow: inset 0 0 5px #504c4c;
+  box-shadow:         inset 0 0 5px #504c4c;
 }
 
+.accordion__content p {
+  padding: 15px;
+}
+
+/*footer styling*/
+
+.footer-container {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #000120;
+  color: #fff;
+  margin-top: 10px;
+  font-family: 'barlow';
+}
+
+.footer-item {
+  padding: 15px;
+  grid-column: span 3;
+  display: grid;
+  flex-direction: column;
+}
+
+.footer-item h1 {
+  font-size: 15px;
+  padding-bottom: 1px;
+}
+
+.footer-item p {
+  font-size: 12px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
 
 /*tablet*/
 @media (min-width: 668px) and (max-width: 1024px) {
@@ -320,26 +372,7 @@ input:focus {
 
   .information, .apply-form, .grid-item-img {
     grid-column: span 2;
-    display: grid;
-    flex-direction: column;
-  }
-
-  .interview-container {
-    display: grid;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: #fff;
-    color: #000;
-    margin-top: 10px;
-  }
-
-  .interview p, h3 {
-    padding: 10px;
-  }
-
-  .interview {
-    grid-column: span 1;
-    display: grid;
+    display: inline-block;
     flex-direction: column;
   }
   
@@ -352,7 +385,12 @@ input:focus {
   }
   
   .information h1 {
-    padding: 0px;
+    padding: 15px;
+  }
+
+  .information p {
+    font-size: 20px;
+    line-height: 30px;
   }
   
    .grid-item-img {
@@ -386,9 +424,52 @@ input:focus {
     font-size: 15px;
   }
 
+  .interview-container {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #fff;
+    color: #000;
+    margin-top: 10px;
+  }
+
+  .interview p, h3 {
+    padding: 10px;
+  }
+
+  .interview {
+    grid-column: span 1;
+    display: grid;
+    flex-direction: column;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    background-color: #000120;
+    color: #fff;
+    margin-top: 10px;
+    font-family: 'barlow';
+  }
+  
+  .footer-item {
+    padding: 15px;
+    grid-column: span 1;
+    display: inline-block;
+    flex-direction: column;
+  }
+  
+  .footer-item h1 {
+    font-size: 15px;
+    
+  }
+  
+  .footer-item p {
+    font-size: 12px;
+  }
+
 }
-
-
 
 
 /*desktop*/
@@ -473,7 +554,19 @@ input:focus {
     flex-direction: column;
     margin: 0px;
     width: 100%;
+  }
+
+  .accordion {
+    padding: 100px
+  }
+
+  .footer-item h1 {
+    font-size: 20px;
     
+  }
+  
+  .footer-item p {
+    font-size: 16px;
   }
 
 }
