@@ -8,4 +8,5 @@ The most challenging part was to add the plus and the minimum symbols to the acc
 What I did was first to identify what the problem was, and then, I searched for another alternative, which was to set the symbol with a property float and this was the solution.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://nostalgic-mcclintock-8ff1c5.netlify.app
+
