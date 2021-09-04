@@ -2,37 +2,23 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-/* .active + .answer {
-  some styling here
-} */
-
 body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   
-
   background-image: url(./images/annie-spratt-vs6a4EHj_Ro-unsplash\ \(1\).jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* width: 100vw; */
-    display: flex;
-    /* align-items: flex-start; */
-    flex-direction: column;
-    justify-content: center;
-    background-position: right;
-    /* z-index: 99; */
-    position: relative;
-   
-  
-}
-
-/* .megawrapper {
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  background-position: right;
+  position: relative;
+   
+}
 
-} */
 
 h1 {
   font-family: 'Major Mono Display', monospace;
@@ -42,7 +28,6 @@ h1 {
   text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);;
   margin-bottom: 0;
 }
-
 
 h2 {
   font-family: 'Major Mono Display', monospace;
@@ -59,17 +44,17 @@ h3 {
  
 }
 
+
 header {
   min-height: 200px;
   margin-top: 10%;
   margin-bottom: 10%;
 
-
 }
+
 .headertext {
   color: #ffff;
   font-size: 20px;
-  /* font-style: italic; */
   text-align: center;
   text-shadow: 2px 2px 7px rgb(0, 0, 0);
   margin-left: 30px;
@@ -78,44 +63,7 @@ header {
 }
 
 
-
-
-
-
-
-
-/* img {
-  object-position: fixed;
- 
-} */
-
-/* WORKING CODE FOR OLD HEADER
-img {
-  object-position: center;
-  object-fit:fill;
-} */
-
-/* remove?
-.pic_and_text { 
-
-position: relative;
-text-align: center;
-
-} */
-
-/* Using overlay to make the text show on the picture */
-/* .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width 100%;
-  height 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-} */
+/* Form styling starts here */
 
 .wrap-form {
   display: flex;
@@ -132,11 +80,13 @@ form {
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
 
 }
+
 label {
   display: block;
   font-size: 16px;
   /* font-family: 'Open Sans', sans-serif; */
   color: #232425;
+
 }
 
 .radiolabel {
@@ -151,12 +101,14 @@ input {
   padding: 5px;
 	margin-bottom: 20px;
   border-radius: 5px;
+
 }
 
 .radiobtn {
   display: inline-block;
   margin-bottom: 10px;
   font-size: 30px;
+
 }
 
 button {
@@ -169,12 +121,17 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 18px;
+
 }
+
+
+/* Accordion styling starts here */
 
 .wrap-accordion {
   display: flex;
   width: 400px;
   margin: 30px auto;
+
 }
 
 .accordion {
@@ -187,7 +144,6 @@ button {
 }
 
 .question {
-  /* font-weight: bold; */
   font-size: 20px;
   padding-bottom: 15px;
   cursor: pointer;
@@ -199,21 +155,26 @@ button {
 
 }
 
+/* The plus and minus signs on the accordion */
+
 .question:after {
   content: '\002B'; /* Unicode character for "plus" sign (+) */
   font-size: 20px;
   float: right;
   color: #232425;
   margin-left: 5px;
+
 }
 
 .active:after {
   content: "\2212"; /* Unicode character for "minus" sign (-) */
+
 }
 
 .answer {
   font-style: italic;
   display: none;
+
 }
 
 .active {
@@ -221,22 +182,24 @@ button {
 
 }
 
-/* när den har den ena klassen ska den cokså ha andra klassen. Tex open + ul display blco - då syns den dolda klassen! */
+/* When one class is active, the other class is applied as well */
 
 .active + .answer {
   display: block;
 
-
 }
+
+
+/* Footer styling starts here */
 
 footer{
   background-color: rgba(0, 0, 0, 0.3);
-  position:relative;
-  /* left:0;
-  bottom:0; */
-  width:100%;
-  text-align:center;
+  position: relative;
+  width: 100%;
+  text-align: center;
+
 }
+
 
 
 
@@ -252,6 +215,7 @@ footer{
     font-size: 30px;
 
   }
+
   .wrap-form {
     width: 310px;
     margin: 2px auto;
@@ -262,25 +226,25 @@ footer{
     width: 310px;
     margin: 2px auto;
     margin-bottom: 30px;
+
   }
   
-  }
+}
+
 
 
 /* TABLET */
 @media (min-width: 768px) {
 
-h1 {
-  font-size: 70px;
-  padding: 20px;
-}
+  h1 {
+    font-size: 70px;
+    padding: 20px;
+  }
 
-.headertext {
-  font-size: 30px;
+  .headertext {
+    font-size: 30px;
 
-}
-
-
+  }
 }
 
 
@@ -312,16 +276,17 @@ h1 {
     align-items: top;
   }
 
-  .wrap-accordion {
-    width: 500px;
-    margin: 10px;
-    margin-bottom: 100px;
-  }
-  
   .wrap-form {
     width: 500px;
     margin: 10px;
     margin-bottom: 100px;
 
   }
+
+  .wrap-accordion {
+    width: 500px;
+    margin: 10px;
+    margin-bottom: 100px;
+  }  
+  
 } 
