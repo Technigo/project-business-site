@@ -159,6 +159,14 @@ body {
 }
 
 /* ----------------------------------------------- */
+/*                  ILLUSTRATION                   */
+/* ----------------------------------------------- */
+
+.content-block__filler__illustration {
+  display: none;
+}
+
+/* ----------------------------------------------- */
 /*                  SIGN-UP-FORM                   */
 /* ----------------------------------------------- */
 
@@ -167,6 +175,10 @@ body {
   color: #240747;
   font-size: 18px;
   margin: 20px;
+}
+
+.sign-up-form__contents {
+  margin-bottom: 40px;
 }
 
 .sign-up-form__title {
@@ -208,13 +220,22 @@ body {
 /*                  MEDIA QUERIES                  */
 /* ----------------------------------------------- */
 
+/* Big Desktop */
+
+@media only screen and (min-width: 2560px) {
+  .hero {
+    height: 1000px;
+  } 
+}
+
 /* Desktop */
 
 @media only screen and (min-width: 1366px) {
 
   .hero {
-    height: 80vh;
+    height: 800px;
   }
+
 
   .hero__nav-container {
     display: flex;
@@ -246,8 +267,97 @@ body {
   }
 
   .accordion {
-    padding-top: 85vh;
     font-size: 30px;
   }
 
+/*---CONTENT BLOCK: FAQ + SIGN-UP FORM---*/
+
+.content-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  align-items: stretch;
+  margin: 60px;
+}
+
+.accordion {
+  font-size: 1.5vw;
+}
+
+.content-block__inner-block {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.content-block__filler__illustration {
+  display: inline-block;
+  margin: 30%;
+  width: 30vw;
+  height: auto;
+}
+
+.sign-up-form {
+  font-size: 1.5vw;
+  width: 40vw;
+}
+
+.sign-up-form__title {
+  font-size: 45px;
+  padding: 12px;
+}
+
+.sign-up-form__fields, 
+.sign-up-form__choices {
+  padding: 25px 80px;
+}
+
+.sign-up-form__contents__button {
+  padding: 25px 100px;
+  margin-left: 9%;
+}
+
+.sign-up-form__contents__input {
+  padding: 20px;
+  font-size: 1.2vw;
+}
+}
+
+/* Big iPad (iPad Pro) */
+
+@media only screen and (max-width: 1024px) {
+  .hero {
+    height: 500px;
+  }
+}
+
+/* iPad */
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+}
+
+/* Surface Duo */
+
+@media only screen and (max-width: 768px) { 
+  .hero {
+    height: 300px;
+  }
+}
+
+/* Cellphones */
+
+@media only screen and (max-width: 425px) {
+  .hero {
+    height: 200px;
+  }
+} 
+
+/* Small Cellphones (iPhone 5, Galaxy Fold) */
+
+@media only screen and (max-width: 320px) {
+  .hero {
+    height: 150px;
+  }
 }
