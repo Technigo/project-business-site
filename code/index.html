@@ -3,28 +3,134 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/59fae56e7e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Guldfabriken</title>
   </head>
+
+  <!-- video hero img and logo -->
+
   <body>
-    <!-- video or image as a header is cool :) -->
+    <header>
+      <video loop muted autoplay playsinline id="header-video">
+        <source
+          src="videos/Darin - Can't Stay Away (Official Music Video).mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="header-content">
+        <img src="GF_LOGGA_VIT.svg" alt="Guldfabriken Logo" />
+        <!-- <p class="header-text">What are they building in there?</p> -->
+      </div>
+    </header>
 
     <!-- Signup form -->
 
-    <section class="accordion">
+    <section class="content-container">
+      <div class="signup-form">
+        <h3>Interested in studio rental?</h3>
+        <form action="http://httpbin.org/anything" method="POST">
+
+          <div class="input-container">
+            <label for="name">Your first name:</label>
+            <input
+              class="text-input"
+              type="text"
+              required
+              id="name"
+              name="name"
+              placeholder="Bob"
+            />
+          </div>
+
+          <div class="input-container">
+            <label for="name">Your last name:</label>
+            <input
+              class="text-input"
+              type="text"
+              required
+              id="name"
+              name="name"
+              placeholder="Bobson"
+            />
+          </div>
+
+          <div class="input-container">
+            <label for="email">Your email:</label>
+            <input
+              class="text-input"
+              type="email"
+              required
+              id="email"
+              name="email"
+              placeholder="bob@bobson.com"
+            />
+          </div>
+
+          <h3>What is your purpose?</h3>
+          
+            <input type="radio" id="photo" name="purpose" value="photo" />
+            <label for="photo">Photo Shoot</label>
+            <input type="radio" id="film" name="purpose" value="film" />
+            <label for="film">Film Set</label>
+            <input type="radio" id="other" name="purpose" value="other" />
+            <label for="other">Other</label>
+          </form>
+
+          <h3>Additional information:</h3>
+
+          <textarea
+            name="add-info"
+            placeholder="Briefly describe your inquiries here..."
+            rows="8"
+            cols="40"
+          ></textarea
+          ><br />
+
+          <input type="checkbox" name="terms" id="terms" />
+          I Agree to Terms & Conditions 
+            <button type="submit" name="submit" id="submit">Send</button>
+        </form>
+      </div>
+
       <!-- Accordion -->
-      <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+      <!-- <section class="accordion">
+        <h2>FAQ</h2>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <div class="question" id="section1">Section 1</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <div class="question" id="section2">Section 2</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <div class="question" id="section3">Section 3</div>
+        <div class="answer">
+          <p>
+            LLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </section> -->
+
+      <!-- action="https://httpbin.org/anything" method="post" -->
     </section>
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
   </body>
 </html>
