@@ -9,4 +9,4 @@ Thankfully it went pretty smoothly compared to the previous project. I had troub
 For this project I decided to start with the structure instead of starting from the styling like on the previous project and it worked muchmuch better. I'm going to continue working like that.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://corticovox.netlify.app/
