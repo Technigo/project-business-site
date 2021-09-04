@@ -5,8 +5,16 @@
 - Style your page
 - Site should have a header with responsive image/video
     images:
-    url(https://source.unsplash.com/1FI2QAYPa-Y/1920x1280)
-    url(https://source.unsplash.com/1FI2QAYPa-Y/6000x4000)
+    https://source.unsplash.com/1FI2QAYPa-Y/1920x1280
+    https://source.unsplash.com/1FI2QAYPa-Y/6000x4000
+    
+    https://source.unsplash.com/ZqqlOZyGG7g/1920x1281
+    https://source.unsplash.com/ZqqlOZyGG7g/5325x3673
+
+    https://source.unsplash.com/nXKNn2L4fDw/1920x1281
+    https://source.unsplash.com/nXKNn2L4fDw/5820x3885
+
+    https://source.unsplash.com/PzRuJU9v-oc/3840x2160
 
     video--> https://pixabay.com/videos/wonder-woman-wonder-woman-walking-37053/)
 - Site should have a signup form with at least three different input types
@@ -45,6 +53,18 @@ p {
 /* video a header is cool :) */
 
 header {
+  /* display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0; */
+  /* background-image: url(./photo-1518331483807-f6adb0e1ad23-mobile.jpeg);
+  background-position: center bottom;
+  overflow: hidden; */
+}
+
+header {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -52,6 +72,9 @@ header {
   height: 100vh;
   overflow-x: hidden;
   margin: 0;
+  background-image: url(./photo-1518331483807-f6adb0e1ad23-mobile.jpeg);
+  background-position: center bottom;
+  overflow: hidden;
 }
 
 
@@ -60,10 +83,9 @@ video#myVideo {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
   object-fit: cover;
-  background-position: bottom center;
-  background-image: url(https://source.unsplash.com/1FI2QAYPa-Y/1920x1280);
+  /* background-image: url(./photo-1518331483807-f6adb0e1ad23-mobile.jpeg);
+  overflow: hidden; */
   /* -ms-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -88,6 +110,7 @@ video#myVideo {
   height: 100%;
   font-family: 'Monoton', cursive;
   text-align: center;
+  z-index: 1;
 }
 
 .content h1 {
@@ -311,18 +334,17 @@ a:hover:before {
 
 footer {
   background: #999;
-  display: flex;
-  flex-direction: column;
   text-align: center; 
   color: #fff;
   width: 100%;
   border-top: 1px solid #e0dfdf;
   font-size: 0.8rem;
   text-transform: uppercase;
-  position: flex;
+  position: relative;
   bottom: 0;
   padding-top: 25px;
   padding-bottom: 25px;
+  z-index: 2;
 }
 
 footer a:link {
@@ -341,18 +363,6 @@ footer a:active {
 
 @media only screen and (min-width: 768px) {
 
-/* header h1 {
-  padding-top: 20%;
-  padding-left: 3%;
-  padding-right: 3%;
-  padding-bottom: 0;
-  font-size: 5rem;
-} */
-
-/* header p {
-  font-size: 2rem;
-} */
-
 .content h1 {
   font-size: 6rem;
 }
@@ -367,7 +377,11 @@ footer a:active {
 
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 900px) {
+
+  header {
+    background-image: url(./photo-1518331483807-f6adb0e1ad23-tablet.jpeg)
+  }
 
 .content h1 {
   font-size: 7rem;
@@ -418,13 +432,17 @@ footer a:active {
     font-size: 3rem;
   } */
 
+  header {
+    background-image: url(./photo-1518331483807-f6adb0e1ad23-small-desktop.jpeg)
+  }
+
 .content h1 {
   font-size: 9rem;
 }
 
 }
 
-@media only screen and (min-width: 2400) {
+@media only screen and (min-width: 2400px) {
 
   /* header h1 {
     font-size: 14rem;
@@ -434,11 +452,31 @@ footer a:active {
   /* header p {
     font-size: 4.5rem;
   } */
+
+  header {
+    background-image: url(https://source.unsplash.com/PzRuJU9v-oc/3840x2160);
+    height: 30vh;
+  }
+  
+  video#myVideo {
+    display: none;
+  }
+
+  .content {
+    display: grid;
+    align-content: baseline;
+    padding-top: 5%;
+  }
   .content h1 {
     font-size: 12rem;
   }
 
-  video#myVideo {
-    background-image: url(https://source.unsplash.com/1FI2QAYPa-Y/6000x4000);
-}
+  article {
+    height: 100vh;
+    align-items: flex-start;
+  }
+
+  footer {
+    position: sticky;
+  }
 }
