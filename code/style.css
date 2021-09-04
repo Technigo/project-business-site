@@ -22,7 +22,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: 350px;
-  
 }
 
 #hero {
@@ -256,11 +255,16 @@ input:invalid {
 }
 
 .answer {
-  display:none;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: ease-out 10s;
 }
 
 .active + .answer {
-  display: block;
+  overflow: visible;
+  max-height:fit-content;
+  opacity: 1;
 }
 
 /* .right-aside {
