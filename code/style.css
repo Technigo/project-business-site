@@ -9,7 +9,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgb(210, 189, 228);
 }
 
@@ -19,30 +19,30 @@ video {
 }
 .overlay-text {
   position: absolute;
-  top: 28vw;
+  top: 25vw;
   margin-left: 40px;
   z-index: 1;
 }
 .top-text {
   color: white;
-  font-size: 5vw;
+  font-size: 6vw;
   animation: glow 2s ease-in-out infinite;
   animation-direction: alternate-reverse;
 }
 .top-text-b {
   color: white;
-  font-size: 2vw;
+  font-size: 3vw;
   margin: 20px 0 0 50px;
 }
 /* Glow animation for top-text*/
-@keyframes glow {
+/* @keyframes glow {
   from {
     text-shadow: 0 0 40px #a968f8;
   }
   to {
     text-shadow: 0 0 60px #f0e7ff, 0 0 20px #edb3ff;
   }
-}
+} */
 
 /* Grid for Form+accordian */
 .grid {
@@ -91,9 +91,13 @@ button {
   background-color: rgb(191, 125, 245);
 }
 
+h1,
 h2,
-h3,
-p {
+h3 {
+  font-family: "Kaushan Script", cursive;
+}
+h2,
+h3 {
   color: blueviolet;
 }
 h2 {
@@ -171,8 +175,7 @@ footer {
   .hero-video-small {
     display: block;
   }
-  .hero-video-medium,
-  .hero-video-large {
+  .hero-video-medium {
     display: none;
   }
 }
@@ -184,18 +187,7 @@ footer {
   .hero-video-medium {
     display: block;
   }
-  .hero-video-small,
-  .hero-video-large {
-    display: none;
-  }
-}
-
-@media (min-width: 992px) {
-  .hero-video-large {
-    display: block;
-  }
-  .hero-video-small,
-  .hero-video-medium {
+  .hero-video-small {
     display: none;
   }
 }
