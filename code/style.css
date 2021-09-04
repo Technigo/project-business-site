@@ -5,3 +5,268 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .active + .answer {
   /* some styling here */
 }
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  font-size: 60px;
+  margin: 40px;
+  text-shadow: 1px 1px 10px #000000, 0 0 1em black;
+  text-align: center;
+  font-family: 'Poppins';
+  text-transform: uppercase;
+}
+
+h2 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+/*------------Header----------*/
+
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+    url(./forest-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+}
+
+.menu-item {
+  text-transform: uppercase;
+  padding: 0 15px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 10px #000000, 0 0 1em black;
+}
+
+/*headline*/
+.headline {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 70px;
+}
+
+.headline p {
+  color: white;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+  display: inline;
+  padding: 5px;
+  text-shadow: 1px 1px 10px #000000, 0 0 1em black;
+  font-family: 'Josefin Slab', serif;
+}
+
+/* navhamburger */
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-hamburger {
+  display: flex;
+  height: 25px;
+  width: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem;
+  position: absolute;
+  right: 100px;
+}
+
+.nav-hamburger div {
+  width: 30px;
+  height: 5px;
+  background: white;
+}
+
+.menubar {
+  display: none;
+}
+
+.menu-item {
+  display: inline-block;
+  list-style: none;
+  color: white;
+}
+
+/*--------Main section---------*/
+
+body {
+  background-color: #f0e5cf;
+}
+
+.main-section {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/*--------Form---------*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.signup-form {
+  height: 480px;
+  width: 80%;
+  background-color: #7fa998;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border: #fff 2px;
+}
+
+input {
+  font-size: 16px;
+  background-color: white;
+  padding: 5px;
+  border: 2px solid #085f63;
+}
+
+.text-input {
+  background-color: white;
+  color: #ccc;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.button-sign {
+  border-radius: 15px;
+  background-color: #f1f1b0;
+}
+
+/*--------Accordion---------*/
+
+.accordion {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #7fa998;
+  height: auto;
+  width: 80%;
+  padding: 15px 20px;
+  border-radius: 15px;
+  border: #fff solid 2px;
+}
+
+.button {
+  width: 100%;
+  color: #f1f1b0;
+  margin: 5px 10px;
+  padding: 0 15px;
+  border: solid #f1f1b0;
+  border-radius: 10px;
+}
+
+.answer {
+  display: none;
+}
+
+p {
+  line-height: 40px;
+  margin: 0;
+  font-family: 'Poppins';
+}
+
+.open {
+  color: white;
+}
+
+.open + .answer {
+  display: block;
+  padding: 0 15px;
+}
+
+.button:hover {
+  background-color: #df8543;
+}
+
+/*--------Footer---------*/
+.footer {
+  background-color: #4b6587;
+  width: 100%;
+  height: 100px;
+  color: white;
+  text-align: center;
+  justify-content: space-evenly;
+  border: black solid 2px;
+}
+
+.footer a {
+  display: inline-block;
+  text-align: center;
+  color: #f0e5cf;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+/*--------Media Queries---------*/
+
+/* Tablet view */
+@media (min-width: 768px) {
+  .nav-hamburger {
+    display: none;
+  }
+
+  .menubar {
+    display: inline-block;
+  }
+  .navigation a {
+    display: inline-block;
+    flex-grow: 4;
+  }
+}
+
+/* Desk-topview */
+@media (min-width: 992px) {
+  .main-section {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+  }
+}
