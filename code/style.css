@@ -16,7 +16,7 @@ body {
   background-image: url(./images/annie-spratt-vs6a4EHj_Ro-unsplash\ \(1\).jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100vw;
+    /* width: 100vw; */
     display: flex;
     /* align-items: flex-start; */
     flex-direction: column;
@@ -40,6 +40,7 @@ h1 {
   color: white;
   text-align: center;
   text-shadow: rgba(0, 0, 0, 0.523);
+  margin-bottom: 0;
 }
 
 
@@ -64,8 +65,19 @@ header {
   margin-bottom: 10%;
 
 
+}
+.headertext {
+  color: #ffff;
+  font-size: 20px;
+  /* font-style: italic; */
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.523);
+  margin-left: 30px;
+  margin-right: 30px;
 
 }
+
+
 
 
 
@@ -113,7 +125,7 @@ text-align: center;
 }
 
 form {
-  background-color: rgb(228, 218, 244);
+  background-color: rgba(228, 218, 244, 0.85);
   border: 1px solid;
   border-radius: 8px;
   padding: 20px;
@@ -142,12 +154,13 @@ input {
 }
 
 .radiobtn {
-  margin-bottom: 10px;
   display: inline-block;
+  margin-bottom: 10px;
+  font-size: 30px;
 }
 
 button {
-  background-color: #fffff;
+  background-color: #ffff;
   color: #232425;
   padding: 10px 20px;
   margin-bottom: 20px;
@@ -165,7 +178,7 @@ button {
 }
 
 .accordion {
-  background-color: rgb(236, 197, 241);
+  background-color: rgb(236, 197, 241, 0.85);
   border: 1px solid;
   border-radius: 8px;
   padding: 20px;
@@ -216,6 +229,44 @@ button {
 
 }
 
+footer{
+  background-color: rgba(0, 0, 0, 0.3);
+  position:relative;
+  /* left:0;
+  bottom:0; */
+  width:100%;
+  text-align:center;
+}
+
+
+
+
+/* SMALL MOBILE */
+@media (max-width: 400px) {
+
+  body {
+    background-position: center;
+  }
+  
+  h2 {
+    font-size: 30px;
+
+  }
+  .wrap-form {
+    width: 310px;
+    margin: 2px auto;
+  
+  }
+
+  .wrap-accordion {
+    width: 310px;
+    margin: 2px auto;
+    margin-bottom: 30px;
+  }
+  
+  }
+
+
 /* TABLET */
 @media (min-width: 768px) {
 
@@ -223,6 +274,12 @@ h1 {
   font-size: 70px;
   padding: 20px;
 }
+
+.headertext {
+  font-size: 30px;
+
+}
+
 
 }
 
@@ -243,6 +300,11 @@ h1 {
     font-size: 60px;
   }
 
+  .headertext {
+    font-size: 30px;
+  
+  }
+
   body {
     flex-direction: row;
     justify-content: center;
@@ -260,4 +322,6 @@ h1 {
     width: 500px;
     margin: 10px;
     margin-bottom: 100px;
-}  
+
+  }
+} 
