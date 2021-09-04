@@ -17,6 +17,9 @@ I used the picture-tag for the header img, but switched in the end. It looked be
 
 If I had more time I want to try using a video instead, and I want to style the footer with grid containers. I would like to improve the + and - signs at the accordion, they dont look 100% to me. 
 
+I also have a problem with the widht of the boxes in screen mode. Of course I woult want to fit it. The form-box isnt as wide as I would like. Ive played around with margins and flows, but settled for the version that looked best. 
+
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://pensive-hugle-f55c00.netlify.app
