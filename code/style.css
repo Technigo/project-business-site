@@ -67,8 +67,6 @@ nav {
     font-size: 16px;
     color: white;
     display: none;
-    
-    
    
     
 }
@@ -79,9 +77,12 @@ nav a {
   text-decoration: none;
   border-radius: 5px;
   color: white;
-  
-    
 }
+ 
+nav a:hover {
+  transform:scale(1.2,1.2);
+}
+  
 .hamburger {
   display: flex;
   height: 30px;
@@ -158,6 +159,7 @@ input[type="password"] {
   margin: 10px;
   width: 90%; 
 }
+
 input[type="submit"]{
   border: none;
   border-radius: 5px;
@@ -169,6 +171,19 @@ input[type="submit"]{
   margin: 10px;
   width: 90%; 
 }
+.button-submit:hover {
+  transform:scale(1.2,1.2);
+  cursor: pointer;
+}
+
+.button-submit{ 
+  background-color: #FDDEDE;
+  width: 100%;
+}
+input:valid {
+
+}
+/*** radiobuttons styling ***/
 
 .radio-row{
   display: flex;
@@ -178,24 +193,66 @@ input[type="submit"]{
   max-width: 300px;
 }
 
-
+/*** checkbox styling ***/
 .checkbox-row {
   
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  
 }
 .checkbox-container {
   
   font-size: 12px;
   font-family: 'Nunito';
   font-weight: bold; 
+  padding: 5px 10px;
+  margin: 5px 30px;
+
   }
 
+.checkbox-container input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
 
-.button-submit{ 
+.custom-checkbox {
+  position: absolute;
+  top: 10;
+  left: 20px;
+  height: 15px;
+  width: 15px;
+  background-color: #CAF2D7;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+.checkbox-container:hover input ~ .custom-checkbox {
   background-color: #FDDEDE;
-  width: 100%;
+}
+.checkbox-container input:checked ~ .custom-checkbox {
+  background-color: #FDDEDE
+}
+
+.custom-checkbox:after {
+content: "";
+position: absolute;
+width: 3px;
+height: 6px;
+border: solid black;
+border-width: 0 3px 3px 0;
+top: 3px;
+left: 5px;
+transform: rotate(45deg);
+display: none;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox:after {
+  display:block;
 }
 
 /*** Accordion styling ***/
@@ -312,5 +369,10 @@ nav {
    
    
   }
-
+  nav {
+    font-size: 20px;
+  }
+  nav a{
+    padding: 15px;
+  }
 }

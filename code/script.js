@@ -1,5 +1,14 @@
 
 
+document.getElementById('form').addEventListener('submit',(event) => {
+  event.preventDefault()
+
+
+  const inputValue = document.getElementById('name').value
+
+  alert (`Hello ${inputValue}! So nice that you would like to register with us`)
+})
+
 function toggle() {
   
   this.classList.toggle("active")
