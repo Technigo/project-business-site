@@ -22,53 +22,63 @@ body {
   z-index: 10;
 }
 
-#hero .headerText {
+#hero .headerText, .navbar {
   position: relative;
   z-index: 20;
 }
 
+.flexParentHeader {
+  display: flex;
+  flex-direction: column;
+}
+
 .headerText {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  width: 100%;
   margin: auto;
-  font-family: permanent marker;
-  font-size: 36px;
-  margin-top: 20px;
-  color: #FAF7B9;
+  margin-top: 30px;
+  justify-content: center;
+  font-family: "permanent marker";
+  font-size: 34px;
+  color: #FFF7AE;
+  text-shadow: 2px 2px #9D98FA;
 }
 
 /* NAVBAR */
 
 .navbar {
-  width: 100vw;
   display: flex;
-  margin: 0 auto;
-  padding: 5%;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 20;
-  
+  flex-direction: row;
+  width: 100vw;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 ul {
   width: 100vw;
-  margin: auto;
+  display: flex;
   list-style-type: none;
+  justify-content: center;
+  padding-inline-start: 0;
 }
 
 li {
-  display: inline-block;
-  margin: auto;
-  padding: 2%;
-  font-style: none;
+  padding: 3%;
+  justify-content: center;
 }
 
 li a {
-  color: #FAF7B9;
+  color: #FFF7AE;
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
+}
+
+h2 {
+  font-size: 16px;
+  margin-bottom: 8%;
 }
 
 
@@ -82,24 +92,27 @@ li a {
 
 /* FORMS CONTAINER */
 
+
+
 .forms {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: auto;
-  margin-bottom: 8%;
-  padding: 5%;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 30px;
   width: 70vw;
   font-size: 12px;
   background-color: #E0D4FE;
   opacity: 0.95;
   position: relative;
   z-index: 20;
-  border-radius: 5%;
+  border-radius: 2%;
 }
 
 label {
-  margin-bottom: 3%;
-  margin-top: 3%;
+  margin-bottom: 2%;
+  margin-top: 5%;
 }
 
 .blockLabel, .blockInput {
@@ -109,8 +122,8 @@ label {
 
 .radioGender {
   display: inline-block;
-  padding: 1%;
-  margin-top: 2%;
+  padding: 2%;
+  margin-top: 4%;
   margin-bottom: 2%;
 }
 
@@ -119,11 +132,13 @@ label {
 }
 
 .submitButton {
-  background-color: #FAF7B9;
-  padding: 3%;
+  background-color: #FFF7AE;
+  padding: 5%;
   margin-top: 5%;
+  margin-bottom: 5%;
   border: solid;
   border-width: 1px;
+  border-radius: 8%;
   border-color: #9D98FA;
   
 }
@@ -134,19 +149,20 @@ label {
   display: flex;
   flex-direction: column;
   margin: auto;
+  justify-content: center;
   font-size: 12px;
-  margin-bottom: 8%;
-  padding: 5%;
+  margin-bottom: 10px;
+  padding: 10px 10px 20px 20px;
   width: 70vw;
   background-color: #E0D4FE;
   opacity: 0.95;
   position: relative;
   z-index: 20;
-  border-radius: 5%;
+  border-radius: 2%;
 }
 
 .question {
-  background-color: #FAF7B9;
+  background-color: #FFF7AE;
   padding: 10%;
   border:solid;
   border-width: 1px;
@@ -155,8 +171,8 @@ label {
 }
 
 .answer {
-  line-height: 2;
-  background-color: #FAF3EB;
+  line-height: 1.5;
+  background-color: #fffbdb;
   border:solid;
   border-width: 1px;
   border-color: #9D98FA;
@@ -169,33 +185,34 @@ label {
 }
 
 
-/* JAVASCRIPT 
-
-.answer {
-  display: none;
-}
-
-.active + .answer {
-  display: block;
-}
-*/
-
 /* FOOTER */
 
 .footer {
   display: flex;
-  font-family: Permanent Marker;
-  width: 100vw;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  font-size: 14px;
-  color: #FAF7B9;
-  /* background-color: #E0D4FE; */
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 5%;
   position: relative;
   z-index: 20;
 }
 
+.footerText {
+  display: flex;
+  font-family: "Permanent Marker";
+  font-size: 14px;
+  color: #FFF7AE;
+  margin-bottom: 8%;
+}
 
+.footerCred {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  margin: 2px;
+  color: #FFF7AE;
+}
 
 
 /* --------!!! MEDIA QUERIES !!!-------------- */
@@ -204,48 +221,21 @@ label {
 
 @media (min-width: 667px) and (max-width: 1024px)  {
 
-  
 
   .headerText {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: auto;
-    font-family: permanent marker;
-    font-size: 60px;
-    padding-top: 70px;
-    padding-bottom: 30px;
+    font-size: 80px;
+    margin-top: 8%;
   }
 
   
  /* NAVBAR */
 
-.navbar {
-  background-color: none;
-  margin: auto;
-  padding: 3%;
-  position: relative;
-  z-index: 20;
-  
-}
-
-ul {
-  width: 100vw;
-  margin: auto;
-  margin-left: 16%;
-}
-
 li {
-  display: inline-block;
-  margin: auto;
-  padding: 2%;
-  font-style: none;
+  padding: 5%;
 }
 
 li a {
   font-size: 26px;
-  font-weight: 600;
-  text-decoration: none;
 }
 
   
@@ -256,41 +246,47 @@ li a {
     flex-direction: row;
     width: 80vw;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 2%;
   }
   
   .forms {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10%;
+    font-size: 12px;
+    margin-top: 3%;
     margin-right: 3%;
-    margin-bottom: 5%;
-    padding: 3%;
-    width: 90vw;
-    height: 70wh;
+    padding: 5px 10px 10px 30px;
+    width: 70vw;
+    height: 40vh;
   }
   
   .accordion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10%;
+    font-size: 12px;
+    margin-top: 3%;
     margin-left: 3%;
-    margin-bottom: 5%;
-    padding: 3%;
-    width: 90vw;
-    height: 70wh;
+    padding: 5px 10px 10px 30px;
+    width: 70vw;
   }
+
+  #question1, #question2, #question3, #question4 {
+    margin: 0;
+    width: 220px;
+  }
+
   
   /* FOOTER */
   
   .footer {
-    padding-top: 8%;
-    margin-top: 5%;
+    margin-top: 2%;
     font-size: 24px;
+  }
+
+  .footerText {
+    font-size: 28px;
+    margin-bottom: 3%;
+  }
+  
+  .footerCred {
+    font-size: 14px;
+    margin: 2px;
   }
 
 }
@@ -300,73 +296,70 @@ li a {
 
 @media (min-width: 1024px) {
 
+  .headerText {
+    font-size: 100px;
+    margin-top: 10%;
+  }
 
-    .headerText {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin: auto;
-      font-family: permanent marker;
-      font-size: 80px;
-      margin-top: 50px;
-      margin-bottom: 10px;
-    }
-    
-   /* NAVBAR */
-  
-  .navbar {
-    padding: 1%;
-  }
-  
-  ul {
-    margin-left: 25%;
-  }
-  
-  li {
-    padding: 2%;
-  }
+  /* NAVBAR */
   
   li a {
     font-size: 32px;
   }
+
+  h2 {
+    font-size: 20px;
+  }
   
     
-    /* MAIN CONTENT */
-  
-    .flexParent {
+     /* MAIN CONTENT */
+
+
+     .flexParent {
+      display: flex;
       flex-direction: row;
-      width: 90vw;
+      width: 80vw;
       margin: auto;
-      padding-top: 5%;
+      margin-top: 2%;
     }
     
     .forms {
-      justify-content: center;
-      align-items: center;
-      margin-top: 5%;
+      font-size: 14px;
+      margin-top: 3%;
       margin-right: 3%;
-      padding: 1%;
-      width: 30vw;
-      height: 30wh;
+      padding: 5px 10px 10px 60px;
+      width: 70vw;
+      height: 40vh;
     }
     
     .accordion {
-
-      justify-content: center;
-      align-items: center;
-      margin-top: 5%;
+      font-size: 14px;
+      margin-top: 3%;
       margin-left: 3%;
-      padding: 1%;
-      width: 30vw;
-      height: 30wh;
+      padding: 5px 10px 10px 60px;
+      width: 70vw;
     }
+  
+    #question1, #question2, #question3, #question4 {
+      margin: 0;
+      width: 220px;
+    }
+  
+
+
     
     /* FOOTER */
     
-    .footer {
+  .footer {
       padding-top: 10%;
       font-size: 32px;
     }
+
+    .footerText {
+      font-size: 32px;
+      margin-bottom: 4%;
+    }
+
   
   }
 
