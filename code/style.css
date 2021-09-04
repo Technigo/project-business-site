@@ -26,6 +26,28 @@ body{
   font-size: 30px;
 }
 
+.blink {
+  animation: blink-animation 3s steps(3, start) infinite;
+  -webkit-animation: blink-animation 3s steps(3, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
+@media (prefers-reduced-motion) {
+  .animation {
+    animation-name: dissolve;
+  }
+}
+
 .upper-nav {
   display: none;
 }
@@ -339,7 +361,7 @@ footer {
 }
 
 .accordion {
-  height: 700px;;
+  height: 720px;;
 }
 }
 
@@ -391,7 +413,7 @@ footer {
  }
 
  .accordion {
-  height: 550px;
+  height: 570px;
 
  }
 
