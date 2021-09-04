@@ -1,30 +1,164 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8" />
+  <!-- for responsivness :) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- for font :) -->
+  link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+  <!-- Linking css file  -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- title  -->
+  <title>LinetoSketch</title>
+</head>
+
+<body>
+  <header class="header">
     <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <div class="hero">
+      <nav class="nav-bar">
+        <h1 class="title">LinetoSketch</h1> <!-- title  -->
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Blog</a>
+          </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <!-- navigation menu for mobile version  -->
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+      <div class="overlay">
+        <h1 class="tagline">
+          A place to be creative!
+        </h1>
+        <h3 class="subtext">
+          -from putting dots to creating stories...
+        </h3>
+        <a href="#form-title" class="connect">
+          <span class="connect-label"> Lets learn together! </span>
+        </a>
       </div>
+  </header>
+<!-- page main content  -->
+  <Section class="main">
+    <!-- Signup form -->
+    <section class="contact-frm">
+      <form action="https://httpbin.org/anything" class="form" id="form" target="_blank" method="POST">
+        <h1 class="form-title" id="form-title">Connect with us!</h1>
+        <!-- contained input fields in div to make them center  -->
+        <div class="input-field">
+          <input type="text" class="name" id="name" name="name" placeholder="Name" autocomplete="off" required />
+          <input type="email" class="email" id="email" name="email" placeholder="Email" autocomplete="off" required />
+          <input type="number" class="phone-number" id="phone-number" name="phone-number" placeholder="Phone number"
+            autocomplete="off" />
+        </div>
+        <!-- radio button  -->
+        <div class="cont-participation">
+          <p class="paticipated">Participated before?</p>
+          <div>
+            <label class= "radio-container" for="yes"> 
+            <input type="radio" class="participated-yes" id="participated-yes" name="participated-before" value="yes" />
+            Yes
+            </label>
+          </div>
+          <div>
+            <label class= "radio-container" for="no"> 
+            <input type="radio" class="participated-no" id="participated-no" name="participated-before" value="no" />
+            No
+          </label>
+          </div>
+        </div>
+        <!-- check box -->
+        <div class="terms-container">
+          <input type="checkbox" class="terms" id="terms" name="termsandconditions" required />
+          <label for="termsandconditions">Accept the <a href="#"> terms and conditions</a></label>
+        </div>
+        <!-- submit button- contained in div for centered alignment  -->
+        <div class="subt-container">
+          <button class="submit" type="submit" id="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
+ <!-- Accordion -->
+    <section class="accordion">
+      <!-- Accordion container -->
+      <div class="acc-container">
+        <h1 class="learn-more">Learn more here!</h1>
+        <!-- questions and answers -->
+        <div class="question" id="section1">Section 1</div>
+        <div class="answer">
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
+            sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+          </p>
+        </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+        <div class="question" id="section2">Section 2</div>
+        <div class="answer">
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
+            sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+          </p>
+        </div>
+
+        <div class="question" id="section3">Section 3</div>
+        <div class="answer">
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
+            sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+          </p>
+        </div>
+
+        <div class="question" id="section4">Section 4</div>
+        <div class="answer">
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
+            sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+          </p>
+        </div>
+
+        <div class="question" id="section5">Section 5</div>
+        <div class="answer">
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
+            sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+          </p>
+        </div>
+
+        <div class="question" id="section6">Section 6</div>
+        <div class="answer">
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
+            sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+          </p>
+        </div>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+  </Section>
+  <!-- footer -->
+  <footer class="footer">
+    <p class="acknowledgmet">
+      Photo by Joanna Kosinska on Unsplash
+    </p>
+  </footer>
+  <!-- javascript file ! -->
+  <script src="./script.js"></script>
+</body>
 </html>

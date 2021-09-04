@@ -1,7 +1,331 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-.active + .answer {
-  /* some styling here */
+body{
+   font-family: 'Roboto', sans-serif;
+}
+/* header styling*/
+.header{
+  display: flex; 
+  flex-direction: column;
+  height: 100vh;
+}
+/*navigation bar*/
+.nav-bar {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  position:fixed;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  top:0;
+  right:0;
+  left:0;
+  background: #333;
+  color:#fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  z-index: 2;
+}
+.hamburger {
+  display: block;
+  cursor:pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.nav-item {
+  list-style: none;
+  margin: 2.5rem 0;
+}
+.nav-link{
+  color: #475569;
+  text-decoration: none;
+}
+.nav-link:hover{
+    color:#EAB300;
+}
+/* hero image*/
+.hero{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-image: url("./bg-image.jpeg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: -100px;
+}
+.overlay{
+  display:flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.connect{
+  display: block;
+  cursor: pointer;
+  width: 170px;
+  height:42px;
+  background: #333;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  line-height: 19px;
+  padding-top:  10px;
+  margin-top: 20px;
+}
+/* navigation menu for mobile version*/
+.nav-menu {
+  position: fixed;
+  left: -100%;
+  top: 5rem;
+  flex-direction: column;
+  background-color:#9FA5B3;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow:
+  0 10px 27px rgba(0, 0, 0, 0.05);
+}
+.nav-menu.active {
+  left: 0;
+}
+/* toggling the menu icon for mobile version*/
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/*site main content styling*/
+    
+.main{
+ display:flex;
+ flex-direction: column;
+ background-color:#9FA5B3;
+}
+/* form styling*/
+
+.contact-frm{
+  display: flex;  
+  width:100%;
+  height:fit-content;
+  align-content: center;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin:50px;
+  gap: 30px;
+  color: #333;
+  padding:50px 20px 20px 20px;
+  box-shadow: 0 2px 5px #EAB300;
+  background: white;
+  border-radius: 8px;
+  text-align:center;
+}
+
+.name, .email, .phone-number {
+  width: 350px;
+  height:50px;
+  border: 0;
+  border-bottom: 2px solid grey;
+  
+}
+.cont-participation{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.submit{
+  background-color:#333;
+  color: white;
+  font-size: medium;
+  width: 150px;
+  height:35px;
+  border:0;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.6);
+  border-radius: 45px;
+  cursor:pointer;
+}
+.submit:hover{
+  background-color:#EAB300;
+  color: #333;
+}
+.subt-container{
+  text-align: center;
+}
+
+/*accordion styling*/
+.accordion{
+  width: 100%;
+  display: block;
+  justify-content: center;
+}
+.acc-container{
+  box-shadow: 0 2px 5px #EAB300;
+  background: white;
+  border-radius: 8px;
+  margin: 0 50px 50px 50px;
+  padding: 20px;
+  width: 400px
+}
+.learn-more{
+  margin-bottom: 40px;
+  text-align: center;
+}
+ 
+.question{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #fff;
+  padding: 8px 12px;
+  margin: 4px 0;
+  border-radius: 4px;
+  transition: 0.3s;
+  font-size: large;
+  background-color: #333;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
+  height: 40px;
+}
+.question:hover {
+  background-color: #ccc;
+}
+.question.active{
+  background-color: #EAB300;
+  color: #000;
+  border-radius: 4px 4px 0 0;
+  margin: 4px 0 0;
+}
+/* for icon*/
+.question::after{
+  content: "\002B";
+  color: #fff;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.question.active::after{
+  content: "\2212";
+  color: #333;
+}
+.answer{
+  opacity: 0;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  background-color: #ccc;
+  color: #fff;
+  max-height: 0;
+  transition: 0.3s;
+  padding: 0 12px;
+  margin: 0;
+  width:100%;
+}
+.answer.show{
+  opacity: 1;
+  max-height: 500px;
+  padding: 8px 12px;
+  margin: 2px 0 4px;
+}
+
+/* footer styling*/
+.footer{
+ width: 100%;
+ height: 50px;
+ background-color:#333;
+ color: white;
+ padding: 15px;
+ position: relative; 
+ text-align: center;
+ z-index: 1;
+}
+
+/*media query*/
+
+@media  (min-width:992px){
+
+.hero{
+  background-position:unset;
+}
+.hamburger {
+  display: none;    
+}
+   
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link{
+  color: #fff;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  position:unset;
+  left:unset;
+  top:unset;
+  flex-direction: row;
+  background-color:unset;
+  width:unset;
+  border-radius: none;
+  text-align:unset;
+  transition: none;
+  box-shadow:none;
+  text-decoration: none;
+}
+.overlay{
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); 
+}
+.main{
+  flex-direction: row;
+  height: 100vh;
+}
+.contact-frm{
+  width:50%;
+}
+.form{
+  width:80%;
+}
+
+.accordion{
+  width:50%;
+}
+.acc-container{
+  width:80%;
+  margin: 50px;
+}
+.question{
+  padding: 8px 12px;
+  margin: 4px 0;
+}
+
+.footer{
+  margin-top: -50px;
+}
 }
