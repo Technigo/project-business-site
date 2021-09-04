@@ -1,13 +1,9 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
 .active + .answer {
   display: block;
   font-style: italic;
   font-size: 21px;
   animation: active 1s;
-  /* some styling here */
+
 }
 .active {
  font-weight: bold;
@@ -71,21 +67,6 @@ body {
     opacity: 50%;
     padding: em;
 }
-
-/* .menu-links{
-  font-style: italic;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 1.5em;
-  margin: 3em; 
-  padding-bottom: 0.5em; 
-  text-decoration: none;
-  color: white;
-}
-
-.menu-links:hover {
-  opacity: 100%;
-  color:lightseagreen;
-} */
 
   video#bgvideo {
     position:fixed;
@@ -249,18 +230,18 @@ input:invalid{
 
   }
   *,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-:root {
-  --clr-primary: #ee6352;
-  --clr-dark: #333;
-  --clr-neutral: #ddd;
-  --clr-light: #fff;
-}
-
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --clr-primary: #ee6352;
+    --clr-dark: #333;
+    --clr-neutral: #ddd;
+    --clr-light: #fff;
+  }
+  a { color: var(--clr-primary); }
   .nav {
     background: var(--clr-light);
     position: absolute;
@@ -296,53 +277,79 @@ input:invalid{
   
   .nav__toggle {
     position: absolute;
-    top: 2em;
+    bottom: 2em;
     left: 0;
     transform: translateX(-100%);
     background: var(--clr-light);
     padding: 1em .5em;
     border: 0;
     border-radius: .25em 0 0 .25em;
-    outline: none;
+    cursor: pointer;
+    box-shadow: -2px 2px 5px 0px rgba(148,148,148,0.7);
   }
   
   .hamburger {
     display: block;
     position: relative;
-  }
-  
-  .hamburger,
-  .hamburger::before,
-  .hamburger::after {
-    width: 2em;
+    width: 1.3em;
     height: 3px;
     background: var(--clr-dark);
-    
-    transition: transform 350ms ease-in-out, opacity 200ms linear;
+    transition: 300ms, transform 400ms ease-in-out, background 300ms linear;
   }
   
-  .hamburger::before,
-  .hamburger::after {
+  .hamburger::before{
     content: '';
     position: absolute;
-    left: 0;
+    right: 0;
+    width: 1em;
+    height: 3px;
+    background: var(--clr-dark);
+    transition: transform 500ms ease-in-out;
+  }
+  
+  .hamburger::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 3px;
+    //transform: translateX(50%);
+    background: var(--clr-dark);
+    transition: transform 500ms ease-in-out;
   }
   
   .hamburger::before { bottom: 6px; }
   .hamburger::after { top: 6px;}
   
-  .nav-open .hamburger {
-    transform: rotate(45deg);
+  
+  /* Navigation open styles */
+  
+  .nav-open .nav {
+    transform: translateX(0);
+  }
+  
+  /* Change this stuff below */
+  .nav__toggle:hover{
+    .hamburger{
+      opacity: 0.7;
+    }
+  }
+  
+  .nav-open .nav__toggle:hover{
+    .hamburger{
+      right: -2px;
+    }
   }
   
   .nav-open .hamburger::before {
-    transform: rotate(90deg) translate(6px);
+    transform: rotate(45deg) translateX(4px) translateY(-1px);
+    width: 0.8em;
   }
   
   .nav-open .hamburger::after {
-    transform: rotate(90deg) translate(-6px);
+    transform: rotate(-45deg) translateX(4px) translateY(1px);
+    width: 0.8em;
   }
-
 
   @media screen and (max-device-width: 560px) {
     /* #hero {
