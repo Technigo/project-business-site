@@ -193,6 +193,65 @@ input:valid {
   max-width: 300px;
 }
 
+.radiobutton-container {
+  display: block;
+  position: relative;
+  user-select: none;
+  padding: 0 10px;
+  margin: 10px 5px;
+  
+}
+.radiobutton-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 1;
+  left: 1.5;
+  height: 15px;
+  width: 15px;
+  background-color: #CAF2D7;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 50%;
+
+}
+
+.radiobutton-container:hover input ~ .custom-radio {
+  background-color: #FDDEDE;
+
+}
+ 
+
+
+.custom-radio:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  height: 8px;
+  width: 8px;
+  background-color:#A39161;
+  border-radius: 50%;
+  display: none;
+}
+
+.radiobutton-container input:checked ~ .custom-radio:after {
+  display: block;
+  
+}
+
+.radiobutton-container input:checked ~ .custom-radio{
+  background-color: #FDDEDE;
+
+}
+
+
 /*** checkbox styling ***/
 .checkbox-row {
   
@@ -235,7 +294,7 @@ input:valid {
   background-color: #FDDEDE;
 }
 .checkbox-container input:checked ~ .custom-checkbox {
-  background-color: #FDDEDE
+  background-color: #FDDEDE;
 }
 
 .custom-checkbox:after {
