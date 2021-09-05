@@ -10,118 +10,117 @@
     <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
   </head>
   <body>
-    <!-- image header not used -->
-    <!-- <header>
-      <div class="header-overlay">
-        <div class="hero-text">
-          <h1 class="header">Dream. Build. Play.</h1>
-          <p class="header">Join the brick community!</p>
+    <!-- video a header is cool :) -->
+    <header>
+      <div class="hero">
+          <video playsinline autoplay muted loop id="myVideo" width="1920" height="1080">
+          <source src="./videos/wonder-woman-small.mp4" type="video/mp4" media="screen and (max-device-width:767px)">
+          <source src="./videos/wonder-woman-medium.mp4" type="video/mp4" media="screen and (min-device-width:768px)">
+          <source src="./videos/wonder-woman-large.mp4" type="video/mp4" media="screen and (min-device-width:1200px)">
+          </video>
       </div>
+      <div class="content">
+          <h1>Dream. Build.</h1>
+          <h1>Play.</h1>
       </div>
-    </header> -->
-            <!-- video a header is cool :) -->
-        <header>
-          <div class="hero">
-              <video playsinline autoplay muted loop id="myVideo" width="1920" height="1080">
-              <source src="./videos/wonder-woman-small.mp4" type="video/mp4" media="screen and (max-device-width:767px)">
-              <source src="./videos/wonder-woman-medium.mp4" type="video/mp4" media="screen and (min-device-width:768px)">
-              <source src="./videos/wonder-woman-large.mp4" type="video/mp4" media="screen and (min-device-width:1200px)">
-              </video>
-          </div>
-          <div class="content">
-              <h1>Dream. Build.</h1>
-              <h1>Play.</h1>
-            </div>
-      </header>
+    </header>
     <article>
-    <main> 
-      <section class="text-section">
+      <div class="text-section">
         <p>When you want learning to stick, you make it fun. Attend our workshop and discover the benefits of LEGO® play.</p>
-      </section>
-      <section class="block-section">
-        <div class="container">
-          <!-- Accordion -->
+      </div>
+      <div class="block-section">
+        <!-- Accordion -->
+        <div class="accordion">
           <h2>Benefits of LEGO® play</h2>
-
-          <div class="accordion" id="accordion-item1">🎈 Free your mind</div>
           <div class="accordion-item">
+            <a class>
+              🎈 Free your mind
+            </a>
+            <div class="accordion-content">
             <p>Discover the powerful moments where your mind is free of
               all other distractions.</p>
+            </div>  
           </div>
-
-          <div class="accordion" id="accordion-item2">💡 Get creative every day</div>
           <div class="accordion-item">
-            <p>Be as adventurous as you want, experiment, test out and
-              build new ideas.</p>
-          </div>
-
-          <div class="accordion" id="accordion-item3">🔥 Improve self-discipline</div>
-          <div class="accordion-item">
-            <p>Prove yourself and accomplish the goals you set. </p>
-          </div>
-
-          <div class="accordion" id="accordion-item4">🚀  Increase spatial awareness</div>
-          <div class="accordion-item">
-            <p>Help keep your critical thinking skills sharp.</p>
-          </div>
-          </div>
-        <!-- Signup form -->
-        <div class="container">
-          <div class="form-container">
-            <form action="http://httpbin.org/anything" method="POST" id="form">
-              <h2>Register for a workshop</h2>
-              <ul>
-                <li>
-                  <label for "first-name">First name:</label>
-                  <input
-                    class="text-input"
-                    type="text"
-                    id="first-name"
-                    name="first-name"
-                    placeholder="Enter first name"
-                  />
-                </li>
-                <li>
-                  <label for "last-name">Last name:</label>
-                  <input
-                    class="text-input"
-                    type="text"
-                    id="last-name"
-                    name="last-name"
-                    placeholder="Enter last name"
-                  />
-                </li>
-                <li>
-                  <label for "email"><sup>*</sup>Email:</label>
-                  <input
-                    class="text-input"
-                    type="email" required
-                    id="email"
-                    name="email"
-                    placeholder="Enter email address"
-                  />
-                </li>
-                <li>
-                  <label for "level">Select level:</label>
-                  <select name="role">
-                      <option value="Beginner">Beginner</option>
-                      <option value="Intermediary">Intermediary</option>
-                      <option value="Expert">Expert</option>
-                  </select>
-                </li>
-              </ul
-            </form>
-            <div class="btn-submit">
-              <button type="submit">
-              Register now!
-              </button>
+            <a class>
+              💡 Get creative every day
+            </a>
+            <div class="accordion-content">
+              <p>Be as adventurous as you want, experiment, test out and
+                build new ideas.</p>
             </div>
+          </div>
+          <div class="accordion-item">
+            <a class>
+              🔥 Improve self-discipline
+            </a>
+            <div class="accordion-content">
+              <p>Prove yourself and accomplish the goals you set.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <a class>
+              🚀 Increase spatial awareness
+            </a>
+            <div class="accordion-content">
+              <p>Help keep your critical thinking skills sharp.</p>
+            </div>
+          </div>
         </div>
-      </section>
-    </main>
-  </article>
+        <!-- Signup form -->
+        <div class="form-container">
+          <form action="http://httpbin.org/anything" method="POST" id="form">
+            <h2>Register for a workshop</h2>
+            <ul>
+              <li>
+                <label for "first-name">First name:</label>
+                <input
+                  class="text-input"
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  placeholder="Enter first name"
+                />
+              </li>
+              <li>
+                <label for "last-name">Last name:</label>
+                <input
+                  class="text-input"
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  placeholder="Enter last name"
+                />
+              </li>
+              <li>
+                <label for "email"><sup>*</sup>Email:</label>
+                <input
+                  class="text-input"
+                  type="email" required
+                  id="email"
+                  name="email"
+                  placeholder="Enter email address"
+                />
+              </li>
+              <li>
+                <label for "level">Select level:</label>
+                <select name="role">
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediary">Intermediary</option>
+                    <option value="Expert">Expert</option>
+                </select>
+              </li>
+            </ul
+          </form>
+          <div class="btn-submit">
+            <button type="submit">
+            Register now!
+            </button>
+          </div>
+      </div>
+    </article>
     <footer>
-      <p>Made by <a href="https://www.linkedin.com/in/molbimien/en">Maria Sjögren</a> during <a href="https://www.technigo.io/program">Technigo Boot Camp </a></p>
+      <p>Made by <a href="https://www.linkedin.com/in/molbimien/en" class="footer-anchor">Maria Sjögren</a> during <a href="https://www.technigo.io/program" class="footer-anchor">Technigo Boot Camp </a></p>
         <!-- <div class="social-links">
         LinkedIn
         Github -->
