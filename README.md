@@ -1,12 +1,13 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
+I wanted to create a business for selling plants. I thought this would be easy to obtain nice free images and should ne workable. The site should have a sign-up form, a Hero image and an accordion styled with JS.
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I approached the problem using a mobile-first methodology and flex box. The idea was for the content of the accordion and sign-up form to not vary, only their positions on the website. I used JS to make the accordion interactive AND also the form interactive as well. I custome styled the sign-up checkboxes and radio buttons. I did want to add an icon to the accordion, but I didn't have time.
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://musing-elion-dfefd6.netlify.app
+
