@@ -10,13 +10,14 @@ The site was made to practice forms, basic DOM manipulation with JavaScript, acc
 * Header with background video and overlay
 * Sign-up form with DOM manipulation 
 * FAQ with accordion 
-* Brand image (logo, name, color theme) designed by the website's author
-* Copy written by the author
+* BEM Methodolody 
 
 ## Future implementations
 
-Accessibility requirements
-Possibly animations
+Hover effects
+Further input types or form elements
+Form validation
 
 ## View it live
 
+salsamigos.netlify.app
