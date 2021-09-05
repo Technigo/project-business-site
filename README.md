@@ -6,4 +6,4 @@ My main problem was with the accordion. It was the first time trying out Javascr
 However, this problem took a long time to fix so I didn't have much time to work on the design or adding more features - like a responsive navbar etc. That's what I would like to be working on next if I had more time.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://epic-einstein-e6649a.netlify.app/
