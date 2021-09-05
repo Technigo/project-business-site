@@ -6,20 +6,209 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   /* some styling here */
 }
 
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+html{
+
+  background-color: rgb(255, 237, 218);
+}
+
+
+.header {
+  width: 100%;
+  height: 300px;
+  background-image: url('woman-chat.jpg');
+  background-size: cover;
+  border: 1px solid rgb(255, 192, 116);
+  background-repeat: no-repeat;
+}
+
+ 
 input{
-font-size: 20px; ;
+font-size: 20px; 
+font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.choice{
+  font-size: 15px; 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
 input:valid{
-  background-color: green;
+  border-color: green;
 }
 
-input:invalid{
-  background-color: red;
+  input:invalid{
+  border-color: crimson;
+}
+
+.inputlevel{
+  margin-bottom: 5px;
+}
+
+.labels {
+margin-top: 10px;
+display:flex;
+align-items: flex-start;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.infopart {
+margin-bottom: 10px;
+}
+
+h2{
+  color:rgb(255, 192, 116);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
 h1{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: blue;
+  font-size: 40px;
+  color:rgb(255, 192, 116);
+  display: flex;
+  float: left;
+  align-items: center;
+  padding: 10px 40px;
 }
+
+.main {
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 20px 0px;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+}
+
+/* Box for form */
+.signupbox {
+  border-color:rgb(255, 192, 116);
+  border-width: 10px;
+  padding-bottom: 40px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding-right: 10px;
+  padding-top: 10px;
+  background-color:rgb(182, 200, 103);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form {
+  padding: 5px 5px 10 px 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.button{
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.inputWrapper label{
+  display:block;
+}
+
+.inputWrapper div{
+  margin-top: 100px;
+}
+
+.accordion {
+  border-color:rgb(255, 192, 116);
+  border-width: 8px;
+  border-radius: 8px;
+  background-color:rgb(1, 147, 124);
+  padding:20px;
+}
+
+.questionOneClass {
+cursor: pointer;
+padding: 0px;
+}
+
+.questionTwoClass {
+  cursor: pointer;
+  padding: 0px;
+}
+
+.questionThreeClass {
+  cursor: pointer;
+  padding: 0px;
+}
+
+.answer {
+  display: none;
+}
+
+.answerTwo {
+  display: none;
+}
+
+.answerThree {
+  display: none;
+}
+
+.answerShow {
+  display: block;
+}
+
+.answerShowTwo {
+  display: block;
+}
+
+.answerShowThree {
+  display: block;
+}
+
+@media (min-width: 768px) {
+
+  .header {
+  
+    background-image: url('apple red.jpg');
+    height: 350px;
+    width:auto;
+  }
+
+
+  .main {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0px;
+    width: 768px;
+    margin: auto;
+  }
+
+  .signupbox {
+    margin-right: 20px;
+     width: 45%;
+     padding-bottom: 0px;
+     margin-bottom: 0px; 
+     background-color:rgb(182, 200, 103);
+     height: auto;
+     display: flex;
+     flex-direction: column;
+    }
+
+
+  .accordion {
+   width: 45%;
+  height: auto;
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+  .header {
+  
+    background-image: url('cloud-services.jpg');
+    height: 400px;
+    width:auto;
+  }
+
+    
+
+    }

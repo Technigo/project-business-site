@@ -4,90 +4,95 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
+
     <!-- dont forget to add a css file and link it here! -->
-   
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
+    
+<section class="header" id="main-header" >
+    <h1>The Online Education Company</h1>
+</section>
     <!-- video or image as a header is cool :) -->
 
     <!-- Signup form -->
 
-<H1>Contact us</H1>
-
-<h2>Find us</h2>
-
-<p>The head office is located in Smallcity. We are at Little Street 50, 2nd floor in The Butterfly Galleria; just a stone’s throw from the central train station. Finding us is easy and there are many ways of communication. Welcome!
-</p>
-
-
-<h2>Contact us</h2>
-
-<p>
-Are you interested in us and what we can offer? We are happy to show you our products and services and how you can improve your company with our products.
-</p>
-
-<h2>Fill in the form below and we will get back to you.</h2>
-
-<p>The fields marked with “*” are mandatory.</p>
-
-
-<form action="http://httbin.org/anything" method="POST">
-
-
-<p>Pick a level:
-<select name="Level">
-  <option value="b"> Beginner</option>
-  <option value="i">Intermediate</option>
-  <option value="a">Advanced</option>
-</select>
-</p>
-
-<p>Name:
-  <input type="name" name="name" required>
-  *
-</p>
-
-<p>Phone number:
-  <input type="phone" name="phone">
-  *
-</p>
-
-<p> e-mail:
-  <input type="email" name="email" required>
-  *
-</p>
-
-<p>Message:
-  <input type="text" name="message">
-</p>
-
-<button type="submit">Order</button>
-
-</form>
+<section class="main">
 
 
 
 
+<section class="signupbox">
+  <h2 class="h2"> Contact form</h2>
 
+  <section class="formbox">
+  
+   <form class="form" action="https://httpbin.org/anything" method="POST">
 
+    <div class="inputWrapper">
+      <label for="input" class="labels">Pick a level:</label>
+        <select name="Level">
+          <option value="b" class="choice"> Beginner</option>
+          <option value="i" class="choice">Intermediate</option>
+          <option value="a" class="choice">Advanced</option>
+        </select>
+      </label>
+    </div>
 
+    <div class="inputWrapper">
+      <label for="name" class="labels">Name:</label>
+      <input type="name" id="name" />
+    </div>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+    <div class="inputWrapper">
+      <label for="email" class="labels">Email address:</label>
+      <input type="email" id="email" />
+    </div>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <div class="inputWrapper">
+      <label for="phone" class="labels">Phone:</label>
+      <input type="phone" id="phone" />
+    </div>
+
+      <div class="button">
+        <button type="submit">Send</button>
       </div>
+    </form>
+  </section>
+  </section>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
+
+<!-- Accordion -->
+<section class="accordion">
+  <h2>FAQ</h2>
+  <h3 id="questionOne" class="questionOneClass"> What will I learn from your classes?</h3>
+  <p id="answerOne" class="answer"> We can teach anything of interest to you and your company.</p>
+            
+  <h3 id="questionTwo" class="questionTwoClass"> Where are you situated?</h3>
+  <p id="answerTwo" class="answerTwo"> The head office is located in Smallcity. We are at Little Street 50, 2nd floor in The Butterfly Galleria; 2 minutes walk from the central train station. Finding us is easy! Welcome!.</p>
+
+  <h3 id="questionThree" class="questionThreeClass"> Do you have any references? </h3>
+  <p id="answerThree" class="answerThree"> We have been helping companies like ABC and Company 123. Reach out to us for more information</p>
+</section>
+
+</section> <!-- END MAIN -->
+
+
+    
+
+
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script> 
+
+
+
+
+
+
+  </section>
+
+    
   </body>
 </html>
 
