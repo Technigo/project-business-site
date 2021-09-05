@@ -12,6 +12,6 @@ document.getElementById("section3").onclick = toggle
 document.getElementById("section4").onclick = toggle
 document.getElementById("section5").onclick = toggle
 document.getElementById("order").onclick = toggle
-document.getElementById("mailing-list").onclick = toggle
+
 
 
