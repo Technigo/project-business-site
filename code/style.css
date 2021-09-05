@@ -1,88 +1,83 @@
 body { 
-  margin: 0.1em;
+  margin: 0.1px;
   }
 
 header{
     display: flex;
     flex-direction: column;
     justify-content:start;
-    padding-bottom: 25em;
+    padding-bottom: 20em;
     text-align: center;
-    border-style: none;
-    border-color: white;
   }
 
-  .hero-title{
+.hero-title{
     font-family: 'Forum', cursive;
     letter-spacing: 10px;
     text-align: center;
-    padding-bottom: 10em;
+    margin-bottom: 10em;
     color: white;
 
   }
+  /* This is the text box ontop of the header video */
 
+.hero-text-box {
+  width: 90%;
+  margin-left: 4em;
+  max-width: 800px;
+}
 .h2 {
   color: whitesmoke;
   font-family: 'Work Sans', sans-serif;
   text-align: left;
   font-size: 40px;
-  width: 50%;
+  width: 60%;
   padding-left: 1.75em;
-}
-
-.hero-text {
-  width: 50%;
-  /* width: 0 auto; */
-  border-color: white;
-  border-style: solid;
-  margin-left: 4em;
-  padding-left: 2em;
+  letter-spacing: 0.10em;
 }
 
 .header-text{
   color: whitesmoke;
   font-family: 'Work Sans', sans-serif;
   text-align: left;
-  width: 50%;
+  width: 60%;
+  line-height: 1.5em;
   padding-left: 3em;
   font-size: 20px;
 }
 
+video#bgvideo {
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  /* background: url(placeholder.jpg) no-repeat; */
+  background-size: cover;
+}
 
-  video#bgvideo {
-    position:fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(placeholder.jpg) no-repeat;
-    background-size: cover;
-    }
-
+/* This is to create space before the forms and help with the free-flow feeling */
 .none{
-    padding: 1em;
-    background-color: transparent;
+  padding: 2em;
+  background-color: transparent;
   }
 
-
+/* Section underneath the form and the accordion   */
 .two{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: nowrap; 
-    gap: 5em;
-    padding: 0 7em 7em 7em;
-    background-color: transparent;
-    opacity: 95%;
-  }
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: nowrap; 
+  gap: 3em;
+  padding: 1em 7em 10em 7em;
+  background-color: transparent;
+}
 
 .form{
   border-style: none;
@@ -91,15 +86,18 @@ header{
   background-color: #B8CABF;
   border-radius: 0.5em;
   font-family: 'Work Sans', sans-serif;
+  opacity: 80%;
+}
+.form:hover{
+  opacity: 100%;
 }
 
 input{
-    border: solid;
-    border-width: 1px;
-    /* border-bottom: 1px solid #000000; */
-    font-size: 1em;
-    padding: 1em;
-    margin-bottom: 1em;   
+  border: solid;
+  border-width: 1px;
+  font-size: 1em;
+  padding: 1em;
+  margin-bottom: 1em;   
 }
 
 .textblock{
@@ -107,11 +105,11 @@ input{
 }
 
 input:valid{
-
+  box-shadow:0.25em 0.25em 0.25em rgb(76, 205, 76);
 }
 
 input:invalid{
-
+  box-shadow: 0.2em 0.2em 0.2em rgb(232, 89, 89);
 }
 
 .label {
@@ -125,6 +123,7 @@ input:invalid{
 }
 
 .button{
+  margin: 1em;
   padding: 1em;
   border-radius: 1em;
   background-color: #F5D081;
@@ -138,6 +137,11 @@ input:invalid{
   font-size: 25px;
   background-color: #B8CABF;
   border-radius: 0.5em;
+  opacity: 80%;
+}
+
+.accordion:hover{
+  opacity: 100%;
 }
 
 .active + .answer {
@@ -167,9 +171,9 @@ input:invalid{
   /* Unicode character for "minus" sign (-) */
   content: "\2212";
   color: #19294C;
+}
 
-  }
-
+/* This is the third section where a row of images appear */
 .img-container {
     display: grid;
     flex-wrap: wrap;
@@ -189,38 +193,34 @@ footer{
     flex-wrap: wrap;
     align-items: center;
     background-color: #6A8187 ;
-    padding: 2em;
+    padding: 5em;
     color: white;
     font-size: 20px;
   }
   
 @media screen and (max-device-width: 640px) {
-    /* #hero {
-    background: url(./videos/placeholder.jpg) no-repeat;
-    background-size: cover;
-  
-    }
-    #bgvideo {
-    display: none;
-    } */
 
 header{
   padding-bottom: 2em;
 }
+
+.hero-text-box {
+  width: 90%;
+  margin-left: 2em;
+}
+
 .hero-title{
+  margin-bottom: 9em;
   font-size: 32px;
 }
 
 .h2{
-  width: 200px;
-  width: 0 auto;
+  margin-left: 0.5em;
   font-size: 20px;
 }
 
 .header-text{
-  width: 200px;
-  width: 0 auto;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .one{
@@ -232,8 +232,8 @@ header{
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap; 
-    gap: 2em;
-    padding: 0 7em 7em 7em;
+    gap: 1em;
+    padding: 0.1em 3em 5em 3em;
     background-color: transparent;
     opacity: 95%;
   }
@@ -244,10 +244,12 @@ header{
   flex-wrap: wrap;
   justify-content: center;
   border-style: none;
-  padding: 1em;
+  padding: 2em;
   margin: 1em;
-  width: 90%;
+  width: 100%;
   text-align: center;
+  opacity: 100%;
+
 }
   
 input {
@@ -267,7 +269,7 @@ input:invalid{
   }
   
 .label {
-    padding: 1em;
+    padding: 10px;
     text-align: center;
   }
 
@@ -280,16 +282,39 @@ input:invalid{
     border-radius: 1em;
   }
 
-.two{
-  padding: 0.1em;
-  
-}
-
 .accordion{
   font-size: 15px;
-  padding: 1em;
-  width: 90%;
+  padding: 2em;
+  width: 100%;
   margin-bottom: 2em;
+  opacity: 100%;
 }
 
+h4{
+  text-align: center;
+}
+
+.img-container {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(1, 1fr);
+}
+  
+.grid-item-img {
+  grid-column: span 1;
+  display: grid;
+  flex-direction: column;
+}
+
+footer{
+    display: flex;
+    font-family: 'Work Sans', sans-serif;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #6A8187 ;
+    padding: 2em;
+    color: white;
+    font-size: 15px;
+}
 }
