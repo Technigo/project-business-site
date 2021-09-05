@@ -3,28 +3,111 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Jost' rel="stylesheet">
+    <title>naechste Generation</title>
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+    <!-- Defines the navigationbar as well as the hero image -->
+  <header class="hero-image">
+  <div class="hero-image">
+      <img class="logo" src="Logos_gelb.png" alt="naechste Generation logo">
+  <nav>
+      <a href="#">Buy Company</a>
+      <a href="#">Sell Company</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+  </nav>
 
+    <div class="hero-text">
+      <h1>naechste Generation</h1>
+      <p>Selling and buying your combany - as simple as it is</p>
+      <button class="button">Learn more!</button>
+    </div>
+  </div>
+</header>
+
+<div class="mainbody">
+  <!-- input of the form is posted to httpbin-->
+  <!-- form is to subcribe for a newsletter; asks for name and e-mail -->
+<form action="http://httpbin.org/anything" method="POST">
+  <label for="name" >Your name:
+   <input 
+          class="text-input" 
+          type="text" required
+          id="name" 
+          name="name" 
+          placeholder="Max Muster"/>
+  </label>
+  
+  <label for="email">Your email:
+   <input 
+          class="text-input"  
+          type="email" required
+          id="email" 
+          name="email"          
+          placeholder="max.muster@muster.com"/>
+  </label>
+  
+  <label for="email">Confirm email:
+   <input 
+          class="text-input"  
+          type="email" required
+          id="email" 
+          name="email" 
+          placeholder="max.muster@muster.com"/>
+  </label>
+<!-- to see what a client would be interest in -->
+  <div class="radiobutton-row">
+  <label class="radionbutton-container">Buy a company
+    <input type="radio" name="interest">
+    <span class="radiobtn>" ></span>
+  </label>
+
+  <label class="radionbutton-container">Sell a company
+    <input type="radio" name="interest">
+    <span class="radiobtn>" ></span>
+  </label>
+</div>
+
+<div>
+  <label class="checkbox-container">I agree to the terms and coditions
+    <input type="checkbox">
+    <span class="custom-check"></span>
+  </label>
+</div>
+
+  <button class="button" type="submit">Get newsletter!</button>
+</form>
+
+<!-- accordion to give more information on the company -->
     <section class="accordion">
-      <!-- Accordion -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <button class="question" id="section1">What is naechste Generation?</button>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum.</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <button class="question" id="section2">Why should you use naechste Generation?</button>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      <button class="question" id="section1">What can I do on the platform?</button>
+      <div class="answer">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      <button class="question" id="section2">How much does naechste Generation cost?</button>
+      <div class="answer">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+  </div>
+
+  <!-- links to the java script file -->
+  <script src="script.js"></script> 
   </body>
 </html>
