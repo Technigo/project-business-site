@@ -50,6 +50,9 @@ h4 {
   font-size: 1.5rem;
 
 }
+p {
+  padding: 0 5px;
+}
 /*** Header ***/
 
 
@@ -233,7 +236,6 @@ input:valid {
 }
  
 
-
 .custom-radio:after {
   content: "";
   position: absolute;
@@ -341,7 +343,7 @@ display: none;
   padding: 10px 5px;
   align-items: center;
   font-family: 'Nunito';
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: bold;
 }
 .question:hover{
@@ -368,6 +370,17 @@ display: none;
   display: block;
 }
 
+.question::after {
+  content: "\002B";
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-right: 5px;
+}
+.question.active::after {
+  content: "\2212";
+  color: black;
+}
  footer{
    width: 100%;
    background-color: #3B5249;
