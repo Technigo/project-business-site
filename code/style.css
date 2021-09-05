@@ -6,12 +6,37 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   /* some styling here */
 }
 
-.hero {
+/* HEADER */
+.header {
   height: 100vh;
   width: 100%;
   background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.header::after {
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background:rgba(0,0,0,0.75)
+}
+
+.texture {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  background:url(texture.png);
+
+}
 .hero video {
   width: 100%;
   height: 100%;
@@ -21,3 +46,92 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   z-index: 5;
   object-fit: cover;
 }
+
+.header-caption {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  color:#ffffff;
+}
+
+/* ACCORDION */
+
+.accordion-div {
+  background-color: rgba(255, 255, 255, 0.39);
+  grid-area: accordion;
+  color: rgb(232, 241, 240);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion-form {
+  backdrop-filter: blur(10px);
+  background-color: rgba(219, 235, 231, 0.671);
+  display: block;
+  overflow: hidden;
+  margin: 1vw 10vw;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+}
+
+.top-according {
+  background-color: #ffffff31;
+  border-bottom: 0.5px solid rgba(11, 37, 33, 0.657);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: rgb(24, 63, 56);
+}
+
+.accordion {
+  color: rgb(24, 63, 56);
+  line-height: 170%;
+  background-color: #ffffff44;
+  position: relative;
+  border-bottom: 0.5px solid rgba(11, 37, 33, 0.418);
+  cursor: cell;
+  padding: 2%;
+}
+
+.accordion:after {
+  content: "\002B";
+  color: rgb(36, 83, 76);
+  font-weight: bold;
+  float: right;
+  padding: 0 1%;
+}
+
+.accordion.active:after {
+  content: "\2212";
+}
+
+.accordion.active {
+  border-radius: 4px 4px 0 0;
+  cursor: zoom-out;
+}
+
+.answer {
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0;
+  backdrop-filter: blur(20px);
+  transition: 0.2s ease-out;
+}
+
+.answer.show {
+  opacity: 1;
+  max-height: 500px;
+  color: rgb(7, 20, 18);
+  line-height: 170%;
+  border-bottom: 0.5px solid rgba(11, 37, 33, 0.418);
+  cursor: pointer;
+  backdrop-filter: blur(20px);
+  background-color: rgba(98, 143, 135, 0.137);
+  padding: 2%;
+  transition: 0.3s ease-in-out;
+}
+
+
