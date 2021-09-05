@@ -5,9 +5,14 @@
   padding: 0;
   
 }
+html {
+  height: 100%;
+  font-size: 18px;
+}
 
 /*** Body ***/
 body {
+  height: 100%;
   box-sizing: border-box;
 }
 
@@ -15,7 +20,7 @@ body {
 h1{
   color: white;
   font-family: 'Ubuntu';
-  font-size: 35px;
+  font-size: 2rem;
   align-content: center;
   letter-spacing: 2px;
   text-align: center;
@@ -27,7 +32,7 @@ h1{
 h2 {
   color: white;
   font-family: 'Nunito';
-  font-size: 15px;
+  font-size: 1rem;
  
 }
 
@@ -35,12 +40,14 @@ h3{
   font-family: 'Nunito';
   text-align: center;
   color: white;
+  font-size: 1.5rem;
 }
 h4 {
   font-family: 'Nunito';
   text-align: center;
   color: black;
   padding-bottom: 30px;
+  font-size: 1.5rem;
 
 }
 /*** Header ***/
@@ -108,7 +115,7 @@ nav a:hover {
   justify-content: space-evenly;
   padding: 20px;
   border-radius: 10px;
-  width: 80%;
+  width: 70%;
   margin: 50px auto;
   background-color: #60A9A6;
   justify-content: center;
@@ -122,10 +129,13 @@ fieldset {
   box-shadow: 10px 10px 15px 0 #3B5249;
   border: none;
   margin: 20px auto;
-  width: 60%;
+  width: 100%;
   background-color: white;
-  max-width: 400px;
+  /*max-width: 400px;*/
   
+}
+form {
+  width:100%;
 }
 
 label {
@@ -135,7 +145,7 @@ label {
   align-items: center;
   font-family: 'Nunito';
   display: flex;
-  font-size: 10px;
+  font-size: 1rem;
   
 
 }
@@ -148,10 +158,10 @@ input[type="password"] {
   padding: 10px;
   font-family: 'Nunito';
   font-weight: bold; 
-  font-size: 15px;
+  font-size: 1rem;
   background-color: #CAF2D7;
   margin: 10px;
-  width: 90%; 
+  width: 80%; 
 }
 
 input[type="submit"]{
@@ -160,10 +170,10 @@ input[type="submit"]{
   padding: 10px;
   font-family: 'Nunito';
   font-weight: bold; 
-  font-size: 15px;
+  font-size: 1rem;
   background-color: #FDDEDE;
   margin: 10px;
-  width: 90%; 
+  width: 80%; 
 }
 .button-submit:hover {
   transform:scale(1.1,1.1);
@@ -257,7 +267,7 @@ input:valid {
 }
 .checkbox-container {
   
-  font-size: 12px;
+  font-size: 1rem;
   font-family: 'Nunito';
   font-weight: bold; 
   padding: 5px 10px;
@@ -317,9 +327,9 @@ display: none;
   border: none;
   margin: 50px auto;
   padding-top: 50px; 
-  width: 60%;
+  width: 100%;
   background-color: white;
-  max-width: 400px;
+  max-width: 600px;
   /*min-width: 250px;*/
   cursor: pointer;
 }
@@ -330,7 +340,7 @@ display: none;
   padding: 10px 5px;
   align-items: center;
   font-family: 'Nunito';
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: bold;
 }
 .question:hover{
@@ -420,7 +430,7 @@ footer{
 }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
 
   .Hero-text {
     margin-left: 60px;
@@ -434,16 +444,18 @@ footer{
   h2 {
     font-size: 30px;
   }
-
+.formaccordion-container {
+  width: 90%;
+}
  .accordion {
-  margin: 50px 0;
-  height: 480px;
+  width: 50%;
   
  }
-
- fieldset{
-   width: 350px;
+ form{
+  width: 50%
  }
+
+
   .formaccordion-container {
     display: flex;
     flex-direction: row;
@@ -453,7 +465,7 @@ footer{
    
   }
   nav {
-    font-size: 20px;
+    font-size: 1.5rem;
   }
   nav a{
     padding: 15px;
