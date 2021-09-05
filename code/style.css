@@ -16,15 +16,17 @@ body {
   text-align: center;
 }
 
-.video-container {
+/* The container displays a background image on mobile and the video (.hero) is hidden. Media quries hide the background img for larger screens and display the video instead. */
+
+.video-img-container {
   background-image: url(./pictures/Screenshot\ 2021-09-04\ at\ 12.20.07.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 350px;
+  height: 500px;
 }
 
-#hero {
+.hero {
   display: none;
   position: relative;
   width: 100%;
@@ -68,7 +70,7 @@ body {
 }
 
 #menu-button ~ a {
-  display: none; 
+  display: none;
 }
 
 #menu-button.open ~ a {
@@ -197,11 +199,6 @@ input:invalid {
   height: 50px;
 }
 
-#submit-button:hover {
-  color: white;
-  background-color: slategray;
-}
-
 #submit-confirmation {
   display: none;
 }
@@ -221,7 +218,7 @@ input:invalid {
   border: black solid 1px;
 }
 
-.question:hover {
+.question:hover, #submit-button:hover {
   color: white;
   background-color: rgb(66, 39, 7);
   cursor: url(./pictures/icons8-french-press-48.png), auto;
@@ -258,12 +255,11 @@ input:invalid {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  transition: ease-out 10s;
+  transition: 1.3s ease-in;
 }
 
 .active + .answer {
-  overflow: visible;
-  max-height:fit-content;
+  max-height:200px;
   opacity: 1;
 }
 
@@ -309,7 +305,7 @@ input:invalid {
     height: 500px;
   }
 
-  #hero {
+  .hero {
     display: block;
   }
 
