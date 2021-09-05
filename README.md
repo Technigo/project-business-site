@@ -1,12 +1,13 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project aimed to design a business site that contained a hero video or image, a sign up form with different input-types and checkboxes and an accordion of FAQ. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I planned pretty fast with a rough drawing of my idea but I mainly focused on getting the rough layout up first.
+This project was quite smooth, I did however had small issues with the accordion and to make the javascript to work, but after some closer inspection and help from people I discovered that I had written wrong source-code to the script. I also struggled a bit with the responsiveness trying to make it look nice in all views. I reached out to the team for help which was very useful and valueable. I decided to use flexbox for this project since i worked more with grid last time. 
+ what would be next would be to make some animation.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://themovement.netlify.app/
