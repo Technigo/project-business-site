@@ -1,35 +1,20 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-
-
-
 body {
   background-color: #cce0ff;
   margin: 0;
   font-family: 'Oswald', sans-serif;
 }
 
+
 /* Mobile first approach */
+/* Header */
 header {
   height: 300px;
   width: 100%;
   margin: 0 0 20px 0;
   display: flex;
   align-items: center; 
- 
 }
 
-
-
-.hero-image {
-  width: 100%;
-  height: 100%;
-  background-image: url('./making-bouquet.jpg');
-  background-position: center;
-  background-size: cover;
-}
 
 .navigation {
   width: 100%;
@@ -46,6 +31,7 @@ header {
   opacity: 0.5;
 }
 
+
 a {
   text-decoration: none;
   color: darkgreen;
@@ -53,33 +39,44 @@ a {
 }
 
 
+.hero-image {
+  width: 100%;
+  height: 100%;
+  background-image: url('./making-bouquet.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-text {
+  position: absolute;
+  padding: 20px;  
+  margin: 20px auto;
+}
+
 
 h1 {
-  position: absolute;
-  width: 100%; 
-  text-align: center; 
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
 }
 
+
+/* Main section */
 .main-section {
-  /* display: flex;
-  flex-direction: column; */
-  
   display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
- 
-  
+  grid-template-columns: 1fr;  
 }
 
-p {
-  padding: 5px;
+/* Sign up form */
+h2 {
+  text-align: center;
 }
+
 
 .form {
   height: auto;
   width: 90%;
   margin: 10px auto;
-  padding: 5px;
+  padding: 10px;
   border: 5px solid blanchedalmond;
   border-radius: 10px;
   font-family: sans-serif;
@@ -87,26 +84,28 @@ p {
   background-color: lightgrey;
 }
 
+
 label {
   display: block;
   padding: 5px;
-  
 }
+
 
 input {
   display: block;
   border: none;
 }
 
+
 input:valid {
   background-color: #ccffd1;
 }
 
-hr {
-  border: 2px solid black;
-  
-}
 
+/* Order form */
+h3 {
+  text-align: center;
+}
 
 .flowers {
   display: grid;
@@ -115,16 +114,34 @@ hr {
   border: none;
 }
 
+
 .flower-image {
   height: auto;
   width: 90%;
   object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
-.self-care-image {
-  height: 200px;
-  width: auto;
+
+
+/* Video and accordion */
+.video-faq {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
+
+
+.video {
+  object-fit: cover;
+  height: auto;
+  width: 95%;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
 
 .accordion {
   background-color: blanchedalmond;
@@ -136,11 +153,9 @@ hr {
   padding: 5px;
   border-radius: 10px;
   border: 5px solid lightgrey;
+  cursor: pointer;
 }
 
-h2 {
-  text-align: center;
-}
 
 .question {
   height: auto;
@@ -148,57 +163,64 @@ h2 {
 }
 
 
+.question::after {
+  font-family: "Font Awesome 5 Free";
+  content: '\f078';
+  font-weight: bold;
+}
 
 
 .answer {
   display: none;
   background-color: whitesmoke;
-  color: black;
+  color: black;  
+}
+
+
+p {
+  padding: 5px;
 }
 
 
 .active + .answer {
-display: block;
+  display: block; 
+}
 
+.active::after {
+  content: '\f077';
 }
 
 
-
-
-
+/* Media queries */
 @media (min-width: 768px) {
   header {
     height: 500px;
   }
 
+
+  h1 {
+    font-size: 60px;
+  }
+
+
   .main-section {
    grid-template-columns: 2fr 1fr;
-   /* align-items: */
-   /* flex-direction: row; */
-
   }
 
 
   .form {
-    /* display: flex;
-    flex-direction: column; */
-    /* width: 100%; */
+    width: 75%;
   }
-
-
-  hr {
-    width: 90%;
-  }
+ 
 
   .flowers {
     grid-template-columns: 1fr 1fr;
   }
 
-  .flower-image {
- 
-  }
+  
   .accordion {
-    /* width: 100%; */
+    height: fit-content;
+    padding: 10px;
   } 
 
 
@@ -207,8 +229,13 @@ display: block;
 @media (min-width: 1200px) {
   header {
     height: 550px;
-    
   }
+
+
+  h1 {
+    font-size: 100px;
+  }
+
 
   a:hover {
     color:black;
@@ -216,10 +243,18 @@ display: block;
 
 
   input:invalid {
-    /* background-color: #FEBEE0; */
     border: 2px solid crimson;
   }
 
+
+  .flower-image {
+    transition: .2s;
+  }
+
+
+  .flower-image:hover {
+    transform: scale(1.5);
+  }
   
 
 }
