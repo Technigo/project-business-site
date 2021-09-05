@@ -163,17 +163,16 @@ h1 {
 
 /*body starts*/
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
   background-color: #000120;
   padding: 0px;
-  flex-wrap: wrap;
 }
 
 
 .information {
-  span: 2;
-  display: grid;
+  display: block;
   text-align: center;
   color: #fff;
   padding: 80px;
@@ -186,15 +185,9 @@ h1 {
   padding: 10px;
 }
 
-.gridright {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  flex-wrap: nowrap;
-  text-align: left;
-  padding: 3em;
-  border-style: solid;
-  border-color: chartreuse;
+.form-item {
+  padding-right: 40px;
+  margin: 20px;
 }
 
 .apply-form {
@@ -214,29 +207,17 @@ label {
 }
 
 input {
-  border: solid;
-  border-width: 1px;
-  font-size: 1em;
-  padding: 1em;
-  margin-bottom: 1em;
-  width: 90%;
+  display: block;
+  margin: 1px;
+  padding: 3px;
+  color: #000;
+  font-size: 20px;
+  font-family: 'barlow';
+  outline: none;
 }
 
 input:focus {
   border: 3px solid #BD789A;
-}
-
-/* Removes up and down icon in number input field*/
-/*Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
 }
 
 
@@ -252,11 +233,11 @@ input[type=number] {
 .img-container {
   display: grid;
   flex-wrap: wrap;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.grid-item-img {
-  grid-column: span 2;
+  .grid-item-img {
+  grid-column: span 1;
   display: grid;
   flex-direction: column;
 }
@@ -269,10 +250,6 @@ input[type=number] {
   font-size: 35px;
   line-height: 50px;
   font-family: 'barlow';
-}
-
-.more-information h1 {
-  padding-bottom: 20px;
 }
 
 .interview-container {
@@ -294,7 +271,6 @@ input[type=number] {
   display: grid;
   flex-direction: column;
   padding-bottom: 20px;
-  background: #000120;
 }
 
 /* accordion styling*/
@@ -304,8 +280,13 @@ input[type=number] {
 }
 
 .accordion-title {
-  padding: 40px 0px 10px 0px;
+  padding: 40px 0px 15px 0px;
   font-family: 'barlow';
+  font-size: 30px;
+}
+
+.accordion__content p {
+  padding: 15px;
 }
 
 .accordion__button {
@@ -319,6 +300,7 @@ input[type=number] {
   color: #fff;
   text-align: left;
   transition: background 0.2s;
+  font-size: 20px;
 }
 
 .accordion__button::after {
@@ -347,10 +329,6 @@ input[type=number] {
   box-shadow:         inset 0 0 5px #504c4c;
 }
 
-.accordion__content p {
-  padding: 15px;
-}
-
 /*footer styling*/
 
 .footer-container {
@@ -361,6 +339,7 @@ input[type=number] {
   color: #fff;
   margin-top: 10px;
   font-family: 'barlow';
+  padding-left: 10px;
 }
 
 .footer-item {
@@ -371,12 +350,11 @@ input[type=number] {
 }
 
 .footer-item h1 {
-  font-size: 15px;
-  padding-bottom: 1px;
+  font-size: 20px;
 }
 
 .footer-item p {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 iframe {
@@ -384,71 +362,60 @@ iframe {
   height: 100%;
 }
 
+.signature {
+  background: #048492;
+  width: auto;
+  font-family: 'barlow';
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.signature h3 {
+  font-family: 'Nothing You Could Do';
+}
+
+.signature p {
+  font-size: 12px;
+}
+
+
 /*tablet*/
 @media (min-width: 668px) and (max-width: 1024px) {
 
   .grid-container {
     display: grid;
     flex-wrap: wrap;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     background-color: #000120;
-    
   }
 
-  .information, .apply-form, .grid-item-img {
-    grid-column: span 2;
-    display: inline-block;
-    flex-direction: column;
-  }
-  
   .information {
+    grid-column: span 1;
+    display: grid;
+    flex-direction: column;
     text-align: center;
     color: #fff;
     padding: 25px 80px 25px 80px;
-    font-size: 20px;
-    line-height: 30px;
-  }
-  
-  .information h1 {
-    padding: 15px;
+    font-size: 30px;
+    line-height: 35px;
   }
 
-  .information p {
-    font-size: 20px;
-    line-height: 30px;
-  }
-  
-   .grid-item-img {
-    grid-column: span 2;
-    display: flex;
+    .apply-form {
+    grid-column: span 1;
+    display: grid;
     flex-direction: column;
-    margin: 0px;
-    width: 100%;
-    
   }
-  
-  .apply-form {
+
+  .form-item {
     padding: 40px;
     margin: 5px;
     display: block;
     justify-content: center;
   }
-  
-  label, input {
-    display: block;
-    color: #fff;
-    font-size: 20px;
-  }
 
-  input {
-    margin-bottom: 10px;
-  }
-  
-  .form-button {
-    padding: 10px;
-    margin-top: 10px;
-    width: 90px;
-    font-size: 15px;
+  .information h1 {
+    padding: 0px;
   }
 
   .interview-container {
@@ -469,38 +436,21 @@ iframe {
     display: grid;
     flex-direction: column;
   }
-
-  .footer-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    background-color: #000120;
-    color: #fff;
-    margin-top: 10px;
-    font-family: 'barlow';
-  }
   
-  .footer-item {
+    .footer-item {
     padding: 15px;
     grid-column: span 1;
-    display: inline-block;
+    display: grid;
     flex-direction: column;
-  }
-  
-  .footer-item h1 {
-    font-size: 15px;
-    
-  }
-  
-  .footer-item p {
-    font-size: 12px;
   }
 
 }
 
 
+
+
 /*desktop*/
-@media (min-width: 1025px) and (max-width: 1900px)  {
+@media (min-width: 1025px)  {
 
   .showcase, .showcase header {
     padding: 100px;
@@ -534,24 +484,26 @@ iframe {
     flex-wrap: wrap;
     grid-template-columns: repeat(2, 1fr);
     background-color: #000120;
-    padding: 20px 0px 20px 0px;
     
   }
 
-  .information, .apply-form, .grid-item-img {
+  .information {
     grid-column: span 1;
     display: grid;
     flex-direction: column;
   }
 
-  .apply-form {
-    width: 100%;
+    .apply-form {
+    grid-column: span 1;
+    display: grid;
+    flex-direction: column;
   }
 
-  .gridright {
-    span: 2;
+  
+  .information h1 {
+    padding: 10px;
   }
-
+   
   .interview-container {
     display: grid;
     flex-wrap: wrap;
@@ -571,37 +523,11 @@ iframe {
     flex-direction: column;
   }
   
-  .information {
-    text-align: center;
-    color: #fff;
-    padding: 25px 80px 25px 80px;
-    font-size: 40px;
-    line-height: 50px;
-  }
-  
-  .information h1 {
-    padding: 10px;
-  }
-  
-   .grid-item-img {
-    grid-column: span 2;
-    display: flex;
+  .footer-item {
+    padding: 15px;
+    grid-column: span 1;
+    display: grid;
     flex-direction: column;
-    margin: 0px;
-    width: 100%;
-  }
-
-  .accordion {
-    padding: 100px
-  }
-
-  .footer-item h1 {
-    font-size: 20px;
-    
-  }
-  
-  .footer-item p {
-    font-size: 16px;
   }
 
 }
