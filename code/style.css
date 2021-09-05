@@ -67,7 +67,6 @@ fieldset {
   .accordion__button {
     display: block;
     width: 100%;
-    height: 100%;
     padding: 15px;
     border: none;
     outline: none;
@@ -79,23 +78,23 @@ fieldset {
   }
 
   .accordion__button::after {
-    content: '\25be';
+    content: '\002B';
     float: right; 
     transform: scale(1.5);
   }
 
   .accordion__button--active { 
-    background: #555555 
+    background: #555555;
   }
 
-  .accordion__button::after { 
-    content: '\25b4' 
+  .accordion__button--active::after { 
+    content: '\2212';
   }
 
   .accordion__content {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.2s;
+    transition: max-height 0.5s;
     padding: 0 15px;
     font-family: sans-serif;
     background: #eeeeee;
