@@ -32,30 +32,35 @@ body, html {
   color: rgb(0, 0, 0);
 }
 
-
+.grid {
+  display: grid;
+}
 .form {
   background-color: rgb(163, 219, 219);
   display: flex;
   align-items: center;
-  max-width: 18em;
+  max-width: 60%;
   flex-direction: column;
   border-style: none;
-  padding: 1em
+  padding: 1em;
+  margin: 0 auto;
+
 }
 
 .accordion {
   background-color: rgb(219, 163, 212);
   display: flex;
   align-items: center;
-  max-width: 18em;
+  max-width: 60%;
   flex-direction: column;
   border-style: none;
-  padding: 1em
+  padding: 1em;
+  margin: 0 auto;
 }
 
 .question {
   background-color: #eee;
-  color: #444;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -102,4 +107,10 @@ label {
   border: none;
   outline: none;
   transition: 0.4s;
+}
+
+@media (min-width: 768px){
+  .grid {
+    grid-template-columns: repeat(2,1fr);
+  }
 }
