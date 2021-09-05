@@ -1,26 +1,14 @@
 /* 
+Project requirements
 
-[DONE] 🔵  Blue Level (Minimum Requirements)**
+🔵  Blue Level (Minimum Requirements)
 
 - Style your page
 - Site should have a header with responsive image/video
-    images:
-    https://unsplash.com/photos/kn-UmDZQDjM (downloaded)
-    https://source.unsplash.com/PzRuJU9v-oc/3840x2160
-
-    https://source.unsplash.com/1FI2QAYPa-Y/1920x1280
-    https://source.unsplash.com/1FI2QAYPa-Y/6000x4000
-
-    https://source.unsplash.com/nXKNn2L4fDw/1920x1281
-    https://source.unsplash.com/nXKNn2L4fDw/5820x3885
-
-    video
-    https://pixabay.com/videos/wonder-woman-wonder-woman-walking-37053/)
-
 - Site should have a signup form with at least three different input types
 - Site should have an FAQ accordion, built with JavaScript 
 
-[Done] 🔴  Red Level (Intermediary Goals)**
+🔴  Red Level (Intermediary Goals)
 
 - Try out some other form elements or input types. [Here](https://www.w3schools.com/html/html_form_elements.asp), you can read about what other form elements there are
 - Add an icon before the title in the accordion indicates whether the section is expanded or collapsed. It should update when the section expands or collapses.
@@ -28,13 +16,12 @@
 - Use CSS selectors to make every other row in the accordion have another background color, or add a focus effect on the input tags. [Here](https://www.w3schools.com/cssref/css_selectors.asp) you can check what selectors to use.
 - On hover, change the mouse cursor to something other than the default with help from 👉 [MDN Web docs: cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
 
-⚫  Black Level (Advanced Goals)**
+⚫  Black Level (Advanced Goals)
 
 - Add some animations to your project. For example, a slide-down effect when the accordion expands and collapses.
 - One of the harder things to do in CSS is to style checkboxes and radio buttons. Try to create custom [checkboxes](https://www.notion.so/Create-and-style-checkboxes-77dfbec5fa8346978f02db9934f447e8) and [radio buttons](https://www.notion.so/Create-and-style-radio-buttons-0739d9f6b7824c748f78f20e231bdb14).
 - Add a header and/or a button on top of your video, just like Confetti, by using `position: absolute;` and `z-index` to get everything in the right place.
 - Read up on the [BEM](http://getbem.com/introduction/) methodology and use it for the project
-
 */
 
 body,
@@ -51,17 +38,25 @@ p {
   margin-inline-start: 5px;
 }
 
-a {
+/* general link styling */
+
+/* unvisited link */
+a:link {
   color: #fff;
 }
 
+/* visited link */
+a:visited {
+  color: #444;
+}
+
+/* mouse over and selected link */
 a:hover,
 a:focus {
   color: #DB398D;
 }
 
-/* a video header is cool :) */
-
+/* style the header */
 
 header {
   display: grid;
@@ -71,11 +66,11 @@ header {
   height: 100vh;
   max-height: 1080px;
   overflow-x: hidden;
-  /* margin: 0; */
+  /* overflow-x can be used to decide what to do with content that overflows at the left and right edges */
 }
 
-/* Add some content on top of the video hero */
-.content {
+/* add a heading on top of the video in the header */
+.header-content {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
@@ -91,12 +86,12 @@ header {
   text-align: center;
 }
 
-.content h1 {
+.header-content h1 {
   font-size: 4.2rem;
   font-weight: 400;
 }
 
-/* Style the video: 100% width and height to cover the entire window */
+/* style the video and include a fallback image if the video does not load */
 video#headerVideo {
   position: fixed;
   top: 0;
@@ -106,6 +101,7 @@ video#headerVideo {
   background-image: url(./xavi-cabrera-kn-UmDZQDjM-unsplash-mobile.jpg);
 }
 
+/* style the page content */
 
 article {
   display: grid;
@@ -115,7 +111,6 @@ article {
   width: 100vw;
   font-size: 1.4rem;
   position: relative;
-  z-index: 1;
   margin: 0;
 }
 
@@ -139,10 +134,9 @@ article {
   font-size: 1.8rem;
 }
 
-
 /* accordion */
 
-/* Code By Webdevtrick ( https://webdevtrick.com ) */
+/* Code adapted from Webdevtrick ( https://webdevtrick.com ) */
 
 .accordion {
   padding-top: 40px;
@@ -163,7 +157,6 @@ article {
 
 .accordion a:hover,
 .accordion a:hover::after {
-  cursor: pointer;
   background-color: #ccc; 
 }
 
@@ -189,8 +182,6 @@ article {
 .accordion a.active::after {
   font-family: 'Ionicons';
   content: '\f209';
-  /* color: #ff5353;
-  border: 1px solid #ff5353; */
 }
 
 .accordion .accordion-content {
@@ -259,20 +250,25 @@ select,
 
 select,
 ::placeholder {
+  /* Uniform box appearance */
   color: grey;
   padding: 2px 2px 2px 6px;
 }
 
 label.label-checkbox {
+  /* styling for the checkbox */
   display: flex;
   align-items: center;
   font-size: 0.9rem;
 }
 
 .checkbox {
+  /* size of checkbox */
   height: 20px;
   width: 20px;
 }
+
+/* call to action-button styling */
 
 .btn-submit {
   text-align: center;
@@ -313,6 +309,20 @@ footer {
   z-index: 2;
 }
 
+/* general link styling for footer links */
+
+footer a:link {
+  color: cyan;
+}
+
+footer a:visited {
+  color: black;
+}
+
+footer a:active {
+  background-color: cyan;
+}
+
 /* hover effect on footer links */
 
 .footer-anchor, .footer-anchor > span {
@@ -340,125 +350,116 @@ footer {
   transform: scaleX(1);
 }
 
-footer a:link {
-  color: cyan;
-}
-
-footer a:visited {
-  color: black;
-}
-
-footer a:active {
-  background-color: cyan;
-}
-
 /* styling for tablet and desktop */
 
 @media only screen and (max-width: 450px) {
 
-.accordion a::after {
-  display: none;
-}
+  .accordion a::after {
+    /* hide the + icon for the accordion in small screens */
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 768px) {
 
-.content h1 {
-  font-size: 6rem;
-}
+  .header-content h1 {
+    font-size: 6rem;
+  }
 
-.text-section {
-  background: #f0f9fa;
-  padding: 60px 150px 40px;
-  font-size: 2.2rem;
-  padding-block-end: 1em;
-  /* margin-block-end: 1em; */
-}
+  .text-section {
+    background: #f0f9fa;
+    padding: 60px 150px 40px;
+    font-size: 2.2rem;
+    padding-block-end: 1em;
+  }
 
-.block-section {
-  margin: 0 3rem 0 3rem;;
-}
-label.label-checkbox {
-  font-size: 1.2rem;
-}
+  .block-section {
+    margin: 0 3rem 0 3rem;;
+  }
 
+  label.label-checkbox {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
 
-header {
-  background-image: url(./xavi-cabrera-kn-UmDZQDjM-unsplash-small-desktop.jpg)
-}
+  header {
+    background-image: url(./xavi-cabrera-kn-UmDZQDjM-unsplash-small-desktop.jpg)
+  }
 
-.content h1 {
-  font-size: 7rem;
-}
+  .header-content h1 {
+    font-size: 7rem;
+  }
 
-  
-footer {
-  font-size: 1rem;
-  padding-top: 30px;
-  padding-bottom: 30px;
-} 
+    
+  footer {
+    font-size: 1rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  } 
 }
 
 @media only screen and (min-width: 1200px) {
 
-header {
-  background-image: url(./xavi-cabrera-kn-UmDZQDjM-unsplash-desktop.jpg)
-}
+  header {
+    background-image: url(./xavi-cabrera-kn-UmDZQDjM-unsplash-desktop.jpg)
+  }
 
-.content h1 {
-  font-size: 9rem;
-}
+  .header-content h1 {
+    font-size: 9rem;
+  }
 
-.block-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  align-items: baseline;
-  gap: 40px;
-}
-}
+  .block-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: baseline;
+    gap: 40px;
+  }
 
-@media only screen and (min-width: 1500px){
+  .btn-submit {
+    text-align: right;
+  }
+  }
 
+  @media only screen and (min-width: 1500px){
 
   .text-section p {
-    font-size: 2.5rem;
-}
+      font-size: 2.5rem;
+  }
 
-.block-section {
-  padding-left: 10%;
-  padding-right: 10%;
-}
+  .block-section {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
 
   header {
-    background-image: url(xavi-cabrera-kn-UmDZQDjM-unsplash.jpg);
+    /* display image instead of video on 4k screens*/
+    background-image: url(./xavi-cabrera-kn-UmDZQDjM-unsplash-desktop.jpg);
     max-height: 498px;
   }
 
-  .content {
+  .header-content {
     display: grid;
     align-content: baseline;
     height: fit-content;
   }
   
   video#headerVideo {
+    /* remove header video from 4k screens */
     display: none;
   }
 
-  .content h1 {
+  .header-content h1 {
     font-size: 10rem;
   }
 
   .block-section {
     padding-left: 20%;
     padding-right: 20%;
-  }
-
-  
+  }  
 }

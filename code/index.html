@@ -4,17 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Site - Technigo Project Week 3</title>
+    <!-- added the og:image property for nice look when sharing the link to my site - learn more on https://ogp.me/ -->
     <meta property="og:image" content="https://molbimien-business-site.netlify.app/xavi-cabrera-kn-UmDZQDjM-unsplash-desktop.jpg" />
-    <!-- dont forget to add a css file and link it here! -->
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-    <link rel="icon" 
-      type="image/png" 
-      href="./xavi-cabrera-kn-UmDZQDjM-unsplash-favicon.png">
+    <link rel="icon" type="image/png" href="./xavi-cabrera-kn-UmDZQDjM-unsplash-favicon.png">
   </head>
   <body>
-    <!-- video a header is cool :) -->
+    <!-- video in a header is cool :) -->
     <header>
       <div class="hero">
           <video playsinline autoplay muted loop id="headerVideo" width="1920" height="1080">
@@ -23,7 +21,7 @@
           <source src="./videos/lego-ken-burns-1080p.mp4" type="video/mp4" media="screen and (min-device-width:1200px)">
           </video>
       </div>
-      <div class="content">
+      <div class="header-content">
           <h1>Dream. Build.</h1>
           <h1>Play.</h1>
       </div>
@@ -73,7 +71,7 @@
         </div>
         <!-- Signup form -->
         <div class="form-container">
-          <form action="http://httpbin.org/anything" method="POST" id="form">
+          <form action="http://httpbin.org/anything" method="POST" id="signupform">
             <h2>Register for a workshop</h2>
             <ul>
               <li>
@@ -109,7 +107,8 @@
               </li>
               <li>
                 <label for "level">Select level:</label>
-                <select name="role">
+                <select name="role" form="signupform">
+                  <!-- I need to specify what form the drop-down list belongs to - see https://www.w3schools.com/tags/att_select_form.asp   -->
                     <option value="Beginner">Beginner</option>
                     <option value="Intermediary">Intermediary</option>
                     <option value="Expert">Expert</option>
@@ -124,7 +123,7 @@
                     id="checkbox"
                     name="checkbox"
                   />
-                  <p>I agree to <a href="#"target="_blank">terms and conditions</a></p>
+                  <p>I agree to <a href="#"target="_blank">terms and conditions</a><sup>*</sup></p>
                 </label>
               </li>
             </li>
@@ -139,11 +138,7 @@
     </article>
     <footer>
       <p>Made by <a href="https://www.linkedin.com/in/molbimien/en" class="footer-anchor">Maria Sjögren</a> during <a href="https://www.technigo.io/program" class="footer-anchor">Technigo Boot Camp </a></p>
-        <!-- <div class="social-links">
-        LinkedIn
-        Github -->
     </footer>
-    <!-- dont forget to link the javascript file here! -->
     <script src="./script.js"></script>
   </body>
 </html>
