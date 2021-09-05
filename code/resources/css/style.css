@@ -32,14 +32,6 @@ body {
 }
 
 /* ----------------------------------------------- */
-/*                REUSABLE COMPONENTS              */
-/* ----------------------------------------------- */
-
-/* ----------------------------------------------- */
-/*                    HEADINGS                     */
-/* ----------------------------------------------- */
-
-/* ----------------------------------------------- */
 /*                    HEADER                       */
 /* ----------------------------------------------- */
 
@@ -68,6 +60,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   z-index: -1;
   object-position: center;
   object-fit: cover;
@@ -82,8 +75,8 @@ body {
 
 .hero__nav-container__nav-bar__nav-link {
   display: none;
-  padding: 15px 25px;
-  font-size: 30px;
+  padding: 15px 20px;
+  font-size: 20px;
   text-decoration: none;
   }
 
@@ -97,11 +90,13 @@ body {
 }
 
 .hero__contents__container__title {
-  font-size: 8vw;
+  /* font-size: 8vw; */
+  font-size: 8pw;
 }
 
 .hero__contents__container__subtitle {
-  font-size: 6vw;
+  /* font-size: 6vw; */
+  font-size: 3pw;
 }
 
 .hero__contents__container__cta-button {
@@ -193,6 +188,19 @@ body {
   padding: 10px;
 }
 
+.sign-up-form__contents__label {
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.sign-up-form__contents__input {
+  padding: 20px;
+}
+
+.sign-up-form__contents__input::placeholder {
+  font-size: 16px;
+}
+
 .sign-up-form__choices{
   display: block;
   padding: 10px;
@@ -220,30 +228,24 @@ body {
 
 .sponsors {
   color: #000;
-  width: 80%;
-  margin-left: 15%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  width: 50%;
+  margin: 0 auto;
 }
 
-.sponsors__title {
-  font-size: 3.5rem;
-  padding-bottom: 5%;
-  margin-left: 6%;
-}
-/* 
 .sponsors ul {
-  margin-left: 1%;
-} */
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .sponsors li {
   list-style: none;
-  display: inline-flex;
-  justify-content: space-between;
+  width: auto;
 }
 
 .sponsors__logo {
-  width: 15rem;
+  width: 10rem;
   height: auto;
 }
 
@@ -251,34 +253,33 @@ body {
 /*                   FOOTER                        */
 /* ----------------------------------------------- */
 
-.footer-container {
+.footer__container {
   background-color: #7D7484;
   color: rgb(184, 178, 178);
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 30px;
-
   }
   
-.logo-transparent {
-  height: 10vw;
+.footer__logo__transparent {
+  height: 25vw;
   width: auto;
   float: left;
   }
 
-  .footer-list {
+  .footer__list {
   list-style: none; 
   }
   
-  .footer-list-item {
+  .footer__list__item {
   margin: 20px;
-  text-align: end;
+  text-align: center;
   }
   
-  .social-icon {
+  .footer__social-icon {
   font-size: 40px;
   margin: 0 6px;
   color: rgb(184, 178, 178);
@@ -294,22 +295,150 @@ body {
 /*                  MEDIA QUERIES                  */
 /* ----------------------------------------------- */
 
-/* Big Desktop */
+/* iPad */
 
-@media only screen and (min-width: 2560px) {
+@media only screen and (min-width: 768px) {
+  
+  body {
+    font-size: 30px;
+  }
+
+  /*--- HEADER ---*/
+ 
   .hero {
-    height: 1000px;
+    height: 400px;
   } 
+
+  .hero__contents {
+      top: 55%;
+  }
+
+  .hero__contents__container__title {
+    font-size: 6vw;
+  }
+  
+  .hero__contents__container__subtitle {
+    font-size: 4vw;
+  }
+
+  .hero__contents__container__cta-button {
+    font-size: 3vw;
+  }
+
+  /*--- FORM ---*/
+
+ .sign-up-form__title {
+  font-size: 30px;
+  padding: 12px;
+ }
+
+ .sign-up-form__fields, 
+ .sign-up-form__choices {
+  padding: 25px 80px;
+ }
+
+ .sign-up-form__contents__input {
+  padding: 20px;
+  font-size: 1.2vw;
+ }
+
+ .sign-up-form__contents__input::placeholder {
+  font-size: 16px;
+ }
+
+ .sign-up-form__contents__button {
+  padding: 25px 100px;
+  margin-top: 25px;
+  margin-left: auto;
+ }
+
+ /*--- SPONSORS ---*/
+
+ .sponsors {
+   width: 70%;
+   margin-bottom: 5%;
+ }
+
+ .sponsors ul {
+  list-style: none;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-left: 0;
+ }
+
+ .sponsors li {
+  padding-right: 25px;
+ }
+
+ .sign-up-form__contents__button {
+  font-size: 3vw;
+ }
+
+
+/*--- FOOTER ---*/ 
+
+  .footer__container {
+  justify-content: space-between;
+  padding: 10px;
+  }
+
+ .footer__social-icon {
+  font-size: 30px;
+  margin: 0;
+  }
+
+ .footer__logo__transparent {
+  height: 20vw;
+  }
+
+ .footer__list__item {
+  font-size: 2vw;
+  text-align: end;
+  }
+  
 }
+
+/* Big iPad (iPad Pro) */
+
+@media only screen and (min-width: 1024px) {
+  .hero {
+    height: 500px;
+  }
+  .footer__logo__transparent {
+    height: 15vw;
+  }
+
+  /*--- SPONSORS ---*/
+
+ .sponsors ul {
+  margin-left: 10%;
+ }
+
+ .sponsors li {
+  padding-right: 50px;
+ }
+
+ .sign-up-form__contents__button {
+  font-size: 3vw;
+ }
+
+  .footer__list__item {
+    font-size: 1.5vw;
+    text-align: end;
+    }  
+}
+
 
 /* Desktop */
 
 @media only screen and (min-width: 1366px) {
 
-  .hero {
-    height: 800px;
-  }
+  /*--- HEADER ---*/
 
+  .hero {
+    height: 100vh;
+  } 
 
   .hero__nav-container {
     display: flex;
@@ -317,7 +446,6 @@ body {
     justify-content: space-between;
     align-items: center;
   }
-  
   .hero__nav-container__nav-bar__nav-link {
     display: inline-block;
     color: #fff;
@@ -338,92 +466,56 @@ body {
 
   .hero__contents__container__cta-button {
     font-size: 3vw;
+    cursor: pointer;
   }
+
+ /*---*/ 
 
   .accordion {
     font-size: 30px;
+  } 
+
+  .content-block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    align-items: stretch;
+    margin: 60px;
   }
 
-/*---CONTENT BLOCK: FAQ + SIGN-UP FORM---*/
-
-.content-block {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 30px;
-  align-items: stretch;
-  margin: 60px;
-}
-
-.accordion {
-  font-size: 1.5vw;
-}
-
-.content-block__inner-block {
-  display: inline-flex;
-  justify-content: space-between;
-}
-
-.content-block__filler__illustration {
-  display: inline-block;
-  margin: 50% 30%;
-  width: 30vw;
-  height: auto;
-}
-
-.sign-up-form {
-  font-size: 1.5vw;
-  width: 40vw;
-}
-
-.sign-up-form__title {
-  font-size: 45px;
-  padding: 12px;
-}
-
-.sign-up-form__fields, 
-.sign-up-form__choices {
-  padding: 25px 80px;
-}
-
-.sign-up-form__contents__button {
-  padding: 25px 100px;
-  margin-left: 9%;
-}
-
-.sign-up-form__contents__input {
-  padding: 20px;
-  font-size: 1.2vw;
-}
-}
-
-/* Big iPad (iPad Pro) */
-
-@media only screen and (max-width: 1024px) {
-  .hero {
-    height: 500px;
+  .sign-up-form {
+    font-size: 1.5vw;
   }
+
+  .sign-up-form__title {
+    font-size: 45px;
+    padding: 12px;
+  }
+  
+  .sign-up-form__fields, 
+  .sign-up-form__choices {
+    padding: 25px 80px;
+  }
+
+  .sign-up-form__contents__input::placeholder {
+    font-size: 18px;
+  }
+  
+  .sign-up-form__contents__button {
+    padding: 15px 100px;
+    font-size: 1.5vw;
+  }
+  
+  .sign-up-form__contents__input {
+    padding: 20px;
+    font-size: 1.5vw;
+  } 
+
+  .sponsors {
+    color: #000;
+    width: auto;
+    margin: auto;
+  }
+  
 }
 
-/* iPad */
-
-@media only screen and (max-width: 834px) {
-  .hero {
-    height: 400px;
-  }
-}
-
-/* Cellphones */
-
-@media only screen and (max-width: 425px) {
-  .hero {
-    height: 200px;
-  }
-} 
-
-/* Small Cellphones (iPhone 5, Galaxy Fold) */
-
-@media only screen and (max-width: 320px) {
-  .hero {
-    height: 150px;
-  }
-}

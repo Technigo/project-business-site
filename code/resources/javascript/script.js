@@ -9,3 +9,5 @@ function toggle() {
 document.getElementById("accordion__section1").onclick = toggle
 document.getElementById("accordion__section2").onclick = toggle
 document.getElementById("accordion__section3").onclick = toggle
+document.getElementById("accordion__section4").onclick = toggle
+document.getElementById("accordion__section5").onclick = toggle
