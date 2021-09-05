@@ -8,7 +8,7 @@
   </head>
   <body>
 
-    <!-- video or image as a header is cool :) -->
+  <!-- video or image as a header is cool :) -->
      <div class="hero-image">
       <div class="hero-text">
         <h1>Business</h1>
@@ -16,31 +16,61 @@
       </div>
     </div>
 
-    <!-- Signup form (Glöm inte att ta bort tillfälliga br)-->
-
-    <form action="http://httpbin.org/anything" method="POST">
+ <!-- Signup form 
+    Text and password fields -->
+   <form class="form" action="http://httpbin.org/anything" method="POST">
     <div><label>
-        Name:
-        <input type="text" name="message" required>
+      Name:
+      <input type="text" id="name" name="message" required>
       </label>
-      
-      <label>
-        Email: 
-        <input type="email" name="email" required>
+
+    <label>
+      Email: 
+      <input 
+        type="email" id="email" name="email" placeholder="example@email.com" required>
       </label>
     </div>
+
+    <label>
+      Password: 
+      <input type="password" id="password" name="password" required>
+      </label>
+    </div>
+  
+    <!--Radio -->
+    <div>
+    </div><label>
+      Teacher
+      <input type="radio" name="radio">
+    </label>
+
+    <label>
+      Student
+      <input type="radio" name="radio">
+    </label>
+    </div>
     
+    <!--Checkboxes -->
+  <div>
+      <label>
+        I approve
+      <input type="checkbox">
+    </label>
 
-      <!--<input type="radio" id="1" name="whos business" value="Your business">
-      <input type="radio" name="whos businesso" value="My business">
-      <input type="radio" name="whos business" value="Silly business"> <br> -->
+    <label>
+      Send me newsletter
+    <input type="checkbox">
+  </label>
+  </div>
 
-
+    <!--Submit button -->
       <button type="submit">Send in</button>
     </form>
+    
+
+<!-- Accordion -->
 
     <section class="accordion">
-      <!-- Accordion -->
       <h1>FAQ</h1>
 
       <div class="question" id="section1">Section 1</div>
@@ -52,8 +82,28 @@
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+    </section> 
 
+
+    <!-- <div class="wholeAccordion">
+    <h1>FAQ</h1>
+    <button class="accordion">Section 1</button>
+    <div class="answer">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+    
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+    </div> -->
+
+    <!-- dont forget to link the javascript file here! -->                           
+    <script src="script.js"></script>
   </body>
 </html>

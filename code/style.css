@@ -3,6 +3,7 @@ in this case it is the div with the answer class next to the div with the active
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
+display: block;
   /* some styling here */
 }
 
@@ -31,6 +32,33 @@ body, html {
   color: white;
 }
 
+.form {
+  background-color: rgb(163, 219, 219);
+  display: flex;
+  align-items: center;
+  max-width: 18em;
+  flex-direction: column;
+  border-style: none;
+  padding: 1em
+}
+
+
+
+.accordion {
+  background-color: rgb(219, 163, 212);
+  display: flex;
+  align-items: center;
+  max-width: 18em;
+  flex-direction: column;
+  border-style: none;
+  padding: 1em
+}
+
+.answer {
+  display: none;
+
+
+}
 input {
   font-size: 20px;
   color: blueviolet;
@@ -45,4 +73,16 @@ input:valid {
 label {
   display: block;
   margin-bottom: 20px;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
 }
