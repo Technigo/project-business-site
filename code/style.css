@@ -5,7 +5,7 @@ body {
   background-color: white;
   color: #005580;
 }
-
+/* Styling header */
 header {
   background-image: url("./08-business_1233587863.jpg");
   background-repeat: no-repeat;
@@ -23,6 +23,7 @@ header > h1 {
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
+ /* Added an animation to the header */
 
 @keyframes header {
   0%   {color: white; font-size: 2.5vw;}
@@ -30,6 +31,7 @@ header > h1 {
   50%  {color: #9eebeb; font-size: 3.2vw;}
   100% {color: white; font-size: 2.5vw;}
 }
+
 
 .main-content {
   display: flex;
@@ -52,6 +54,8 @@ header > h1 {
   margin-top: 20px; 
 } 
 
+/* Used to align the text next to the radio button
+and checkbox */
 
 .container {
   display: flex;
@@ -68,11 +72,15 @@ input {
   border: 1px solid #005580;
 } 
 
+ /* Added a checkmark as a background image when input is valid which
+ is placed at the far right */
 input:required:focus:valid {
   background: url(./check-mark.webp) no-repeat 95% 50% rgb(253, 253, 253);
   background-size: 15px;
   border: 2px solid #005580;
 }
+
+/* With an invalid input an exclamation mark is displayed */
 input:focus:invalid {
   background: url(./exclamation-mark.jpeg) no-repeat 100% 50% rgb(236, 57, 44);
   background-size: 1.5rem;
@@ -111,6 +119,7 @@ button {
   border: 1px solid #005580; 
 }
 
+
 .accordion-question:hover {
   transform: scale(1.1);
   margin-bottom: 2rem;
@@ -126,6 +135,9 @@ button {
   padding: 0.3rem;
   font-family: 'Abel', sans-serif;;
 }
+ 
+/* Added an icon indicating content is
+ visible or not */
 
 .question::after {
   content: "\25BC";
@@ -137,6 +149,10 @@ button {
 .question.active::after {
   content: "\25B2";
 }
+
+/* Styling the answer div*/
+
+
  .answer {
   display: none; 
   line-height: 1.3rem;
