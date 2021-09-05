@@ -1,12 +1,11 @@
 # Business Site
-
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+My business site is a site where you can buy custommade knitted sweaters. 
 
 ## The problem
+I used flexbox to arrange, which is something I've found difficult earlier. But hopefully it worked fine. I new what things I wanted to have but I started with the image and went from there when choosing the colorscheme. 
+What helped me a lot was google as always, but also friends from class. I looked at their code if I didn't understand something and tried to understand how things worked. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+If I had more time I'd try to make the accordion a little bit bigger, and maybe not use buttons. I'd also like to learn how to make input fields responsive and how to align them better. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+

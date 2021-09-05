@@ -1,30 +1,120 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
+  
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 3</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/dbefd9566c.js" crossorigin="anonymous"></script>
+</head>
+  
+<body>
+ 
+  <section class="wrapper">
+   
+    <!--Navbar-->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="index.html">Contact</a></li>
+      </ul>
+    </nav>    
 
-    <!-- Signup form -->
+    <!--heroimage, pagetitle and button-->
+    <div id="hero-image"> 
+      <h1 class="hero-text">KNIT HAPPENS</h1>
+      <a href="index.html"><button >Join our mailing-list here</button></a>
+    </div>
+  
+    <div class="parent">
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+      <!--different inputs-->      
+      <section class="forms">
+        <form action="http://httpbin.org/anything" method="POST">
+          <h2>Order a handmade knitted sweater</h2>
+          <label> Name:<br>
+          <input type="text" name="yourName"required placeholder="Jessica Day">
+          </label>
+          
+          <label>
+          E-mail:<br>
+          <input type="email" name="yourEmail" required placeholder="example@hotmail.com">
+          </label>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+          <label>
+          Color:<br>
+          <select name="sweaterColor">
+          <option value="Blue">Blue</option>
+          <option value="Green">Green</option>
+          <option value="Lavender">Lavender</option>
+          <option value="Dusty pink">Dusty pink</option>
+          </select>
+          </label>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+          <label>
+          Size:<br>
+          <select name="sweaterSize">
+          <option value="s">Small</option>
+          <option value="m">Medium</option>
+          <option value="l">Large</option>
+          <option value="xl">Extra Large</option>
+          </select>
+          </label>
+        
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Remeber my information
+          </label>        
+        
+          <button id="order" type="submit">Order </button>
+        </form> 
+      </section>
+    
+      <!--Accordion-->      
+      <section class="accordion">
+        <h1>FAQ</h1>
+        <button id="section1">About us</button>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <button id="section2">Delivery</button>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+      
+        <button id="section3">Returns</button>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <button id="section4">Material</button>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+    
+        <button id="section5">Terms & conditions</button>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+      </section>
+    </div>
+ 
+  </section> 
+
+  <!--Socialmedia logos at the bottom, script source under head-->
+  <div class="socialmedia">
+      <a href="index.html"><i class="fab fa-instagram">
+      </i></a>
+      <a href="index.html"><i class="fab fa-twitter">
+      </i></a>
+      <a href="index.html"><i class="fab fa-youtube">
+      </i></a>
+      <a href="index.html"><i class="fab fa-tiktok">
+      </i></a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>

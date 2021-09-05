@@ -1,7 +1,183 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body {
+  height: 100%;
+  background-color: blanchedalmond;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:rgb(53, 48, 48);
+  margin: auto;
+  padding: 5%;
+}
+
+.wrapper {
+  position: relative; 
+}
+
+ul {
+  list-style: none;
+  text-align: right;
+  padding: 20px;
+  background-color: darkseagreen;
+  color: white;
+  margin: 0;
+}
+
+li {
+  display: inline;
+  padding: 10px;
+}
+
+li a{
+  font-size: large;
+  color: blanchedalmond;
+}
+
+#hero-image {
+  height: 500px;
+  background-image: url("pexels-surene-palvie-2062061.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+  flex-direction: column;
+}
+ 
+.hero-text {
+  font-size: xx-large;
+  color: white;
+  border-style:double;
+}
+
+.parent {
+  display: flex;
+  text-align: center;
+  width: 80vw;
+  margin: auto;
+  margin-top: 5%;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+#order {
+  outline: 0;
+  display: flex;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 40% 0 40%;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 10%;
+  padding: 5%;
+  width: 75vw;
+  font-size: 12px;
+  background-color:darkseagreen;
+  opacity: 1;
+  position: relative;
+  border-radius: 5%;
+}
+
+label {
+  display: flex;
+  margin-bottom: 15vm;
+  align-items: center;
+}
+
+input {
+  display: inline;
+  margin: 5px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 10%;
+  padding: 5%;
+  width: 75vw;
+  font-size: 12px;
+  background-color:darkseagreen;
+  opacity: 1;
+  position: relative;
+  border-radius: 5%; 
+  overflow: auto;
+}
+
+.answer {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
 
 .active + .answer {
-  /* some styling here */
+  display: block;
 }
+
+/* every button in the accordion had a + after but it disappeared. I had: (name of section):after {
+  content: '\002B';
+} */
+
+
+.active:after {
+  content: "\2212";
+}
+
+.socialmedia a {
+font-size: large;
+display: inline-block;
+color: darkseagreen;
+text-align: space-between;
+}
+
+@media (max-width: 315px) {
+  li {
+    display: block;
+  }
+  .hero-text{
+    font-size: large;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-text{
+    font-size: xxx-large;
+  }
+
+  .parent {
+    flex-direction: row;
+  }
+  .accordion {
+    margin-left: 10%;
+    width: 500px;
+    height: 300px;
+    
+  }
+  .forms {
+    margin-right: 10%;
+    width: 500px;
+    height: 300px;
+  }
+
+  i {
+    font-size: xxx-large;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .hero-text {
+    font-size: xxxx-large;
+  }
+}
+
