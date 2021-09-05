@@ -1,12 +1,15 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+Business site with a responsive video header, form with validation and different inputs as well as an accordion and navbar made with css and javascript.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
 Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I had some issues with getting text and icons displayed on top of my video header but after looking at some videos I tried to use position: relative and z-index which made it work.
+When looking at accordion solutions I saw that there were a lot of different approaches and I did not go after the one from our live session but instead found some material to read
+that I thought was easier to get a grip of. Wanted to understand what my code does and not just copy paste a solution.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://carling-business-sitew3.netlify.app/
