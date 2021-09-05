@@ -4,27 +4,200 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+     </style>
   </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
+ 
+<body>
+   
+    
+    <!-- Navbar-->
+   
+    <nav>
+        <div class="nav-content">
+        <div class="nav-logo"><img src="images/whiteicon.png"></div>
+        
+        <div class="nav-links">
+          <a href="#" class="nav-link">About</a>
+          <a href="#" class="nav-link">Coach</a>
+          <a href="#" class="nav-link">Log in</a>
+          <a href="#" class="nav-link">Member</a>
+          <a href="#" class="nav-link">Blog</a>
+        </div>
+    </nav>
 
-    <!-- Signup form -->
+    <!-- Video Header -->
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+    <header>  
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <section class="header-content">
+        <img src="images/whiteicon.png" class="logo">
+        <p>Are you our new coach?</p>
+
+          <section class="header-content">
+          <button class="button-header"><p>Scroll Down</p></button>
+          </section>
+
+      </section>
+
+      <div class="video-container">
+          <video id= "videoBG" poster="images/poster.png" autoplay muted loop>
+            <source src="videos/freemovr.mp4" type="video/mp4"/>
+          </video>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    </header>
+
+
+             <!-- Signup form -->
+    <main>
+
+        <section class="placementcard">
+        <h2 class="orangetext">Sign up NOW</h2>
+        <div class="card">
+
+
+        <form class="form" action="http://httpbin.org/anything" method="POST">
+          
+              <label for="fullName" class="formquestion">Full name</label>
+              <input type="text" name="Full Name" id="fullName" required>
+
+              <label for="email" class="formquestion">E-mail</label>
+              <input type="email" name="E-mail" id="email" required>
+          
+            <div class="form-checkcontainer">
+              <label for="reason"><p class="formquestion">Why do you want to become a Freemovr Coach?</p></label>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason1" name="Reasons" value="I Love Freemovr!">
+              <label for="reason1"> <span class="p-check">I Love Freemovr!</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason2" name="Reasons" value="I´m the best coach you can have.">
+              <label for="reason2"> <span class="p-check">I´m the best coach you can have.</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason3" name="Reasons" value="I Love Movmt.">
+              <label for="reason3"> <span class="p-check">I Love Movmt.</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason4" name="Reasons" value="I Love FMS.">
+              <label for="reason4"> <span class="p-check">I Love FMS.</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason5" name="Reasons" value="I Love the community.">
+              <label for="reason5"> <span class="p-check">I Love the community.</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason6" name="Reasons" value="I Love to jump.">
+              <label for="reason5"> <span class="p-check">I Love to jump.</span></label><br>
+            </div>
+
+            <div class="checkgroup">
+              <input type="checkbox" class="checkbox" id="reason7" name="Reasons" value="All of the above.">
+              <label for="reason10"> <span class="p-check">All of the above.</span></label><br>
+            </div>
+
+
+             <button class="button-primary" type="submit"><p>Sign me up!</p></button>
+        
+            </form>
+            </div>
+            </section>
+ 
+
+             <!-- Accordion Starts-->
+
+
+      <section class="placementcard">
+        <h2 class="faq">FAQ</h2>
+
+        <div class="card-accordion accordion-item">
+          <div class="accordion-item-header">
+            <p>What is Free Movmt Sports?</p>
+          </div>
+          <div class="accordion-item-body">
+            <p class="accordion-item-body-content"> It´s our foundation in practising movmt techniques.</p>
+          </div>
+        </div>
+
+        <div class="card-accordion accordion-item">
+          <div class="accordion-item-header"> 
+            <p> Who is the founder?</p>
+          </div>
+          <div class="accordion-item-body">
+            <p class="accordion-item-body-content">Maria Thomasson</p>
+          </div>
+        </div>
+
+        <div class="card-accordion accordion-item">
+          <div class="accordion-item-header">
+            <p> Do you need previous experience?</p>
+          </div>
+          <div class="accordion-item-body">
+            <p class="accordion-item-body-content">No, you can be a beginner.</p>
+          </div>
+        </div>
+
+        <div class="card-accordion accordion-item">
+          <div class="accordion-item-header">
+            <p> What does it cost?</p>
+          </div>
+          <div class="accordion-item-body">
+            <p class="accordion-item-body-content">It´s free!</p> 
+          </div>
+        </div>
+
+        <div class="card-accordion accordion-item">
+          <div class="accordion-item-header">
+            <p> How much time must I spend on this?</p>
+          </div>
+          <div class="accordion-item-body">
+            <p class="accordion-item-body-content">A few hours ;)</p>
+        </div>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+        <div class="card-accordion accordion-item">
+          <div class="accordion-item-header">
+            <p> Free? This sounds too good to be true.</p>
+          </div>
+        <div class="accordion-item-body">
+            <p class="accordion-item-body-content">Well yes it is.</p>
+           </div>
+        </div>
+      <div class="card-accordion accordion-item">
+          <div class="accordion-item-header">
+            <p> Is Maria really the founder?</p>
+          </div>
+          <div class="accordion-item-body">
+            <p class="accordion-item-body-content">No ;)</p>
+        </div>
+      </div>
+      </section>
+
+           <!-- Accordion Ends -->
+
+
+    </main>
+
+    
+  
+    <footer>
+      <div class="credit">
+      <h5>by Maria Thomasson @ Technigo BootCamp 2021</h5>
+      </div>
+    </footer>
+  
+    
+    
+
+    <script src="script.js" defer></script>
+
   </body>
 </html>

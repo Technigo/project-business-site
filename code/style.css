@@ -2,6 +2,335 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+/**inspiration for form and FAQ: https://freefrontend.com/css-contact-forms/**/
+
+
+
+body {
+  margin: 0 0 120px 0px;
+  background-color: #2e2f30;
+  color: #fafafa;
+  width: 100%;
 }
+
+nav {
+  background-color: #252525;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-logo img {
+  height: 30px;
+}
+
+.nav-content {
+  height: 100%;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  font-family: 'Bebas Neue';
+  text-decoration: none;
+  color: #e7e3e3;
+  font-size: 16px;
+  margin-left: 24px;
+}
+a:hover {
+  color: #f36127;
+}
+
+header {
+  max-width: 100%;
+  height: 420px;
+}
+
+.video-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  top: -39%;
+  filter: sepia(30%);
+  opacity: 0.3;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 35%;
+  left: 0%;
+}
+
+.header-content img {
+  max-width: 40px;
+}
+
+.button-header {
+  background: #f36127;
+  border: none;
+  color: #2b2d2e;
+  border-radius: 100px;
+  padding: 12px 32px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+button > p {
+  margin: 0;
+}
+
+.button-primary {
+  margin-top: 20px;
+  background: #f36127;
+  border-radius: 100px;
+  padding: 12px 32px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 55px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 16px;
+}
+
+
+.placementcard > h2  {
+  margin: 0 auto 16px 16px;
+}
+
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+p {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  
+}
+
+label {
+  margin: 0 0 8px 16px;
+}
+
+.orangetext {
+  color: #f36127;
+
+}
+.formquestion {
+  font-family: 'Bebas Neue';
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.p-check {
+  font-family: 'Bebas Neue';
+  font-size: 14px;
+}
+
+input[type=text], input[type=email] {
+  border-radius: 24px;
+  border: 1px solid rgba(0,0,0,0.20);
+  padding: 10px 24px;
+  font-family: 'Arial'; 
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+  border: 0,5px solid #f36127;
+  outline-width: 0;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0px 2px #f36127;
+}
+
+.form-checkcontainer, .form-checkcontainer {
+  width: 100%;
+  padding: 0 16px 0 16px;
+  margin-bottom: 24px;
+}
+
+.checkgroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.checkbox {
+  appearance: none;
+  border: 1px solid rgba(0,0,0,0.3);
+  width: 18px;
+  height: 18px;
+  margin: 0px;
+  border-radius: 4px;
+  outline-width: 0;
+}
+
+.checkbox:checked {
+  background: #f58822;
+  border: 1px solid #f36127; 
+  box-shadow: inset 0px 0px 0px 2px #FFF;
+  outline-width: 0;
+}
+
+.placementcard {
+margin: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  display: grid;
+  align-items: start;
+  grid-gap: 40px 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  background: #FFFFFF;
+  box-shadow: 0px 24px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  color: rgba(0,0,0,0.87);
+  padding: 24px;
+  height: 500px;
+  width: 100%;
+  height: auto;
+}
+
+/** Accordion code here **/ /**https://www.w3schools.com/howto/howto_js_accordion.asp**/
+
+.card-accordion {
+  background: #FFFFFF;
+  box-shadow: 0px 24px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+/** Mellanrum i frågeformuläret**/
+
+.accordion-item {
+  background-color: white;
+  color: #111;
+  margin: 1rem 0;
+}
+
+.accordion-item-header {
+  padding: 8px 40px 8px 24px;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;    /**https://developer.mozilla.org/en-US/docs/Web/CSS/cursor**/
+}
+
+.accordion-item-header::after {
+  content: "\002B"; /** code for a plus sign **/
+  font-size: 24px;
+  position: absolute;
+  right: 24px;
+  color: rgba(0,0,0,0.87);
+}
+
+.accordion-item-header.active::after {
+  content: "\2212";  /** code for a minus sign **/
+}
+
+.accordion-item-body {
+  display: none;
+  padding: 8px 24px 8px 24px;
+  line-height: 1.5rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.05);
+}
+
+.accordion-item-header.active  + .accordion-item-body {
+  display: flex;
+}
+
+footer {
+  margin: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h5 {
+  font-family: 'Bebas Neue';
+  font-size: 16px;
+}
+/** Media Queries: **/
+
+@media (max-width: 767px) {   /**https://redstapler.co/responsive-css-video-background/**/
+  video {
+    display: none;
+  }
+  .video-container {
+    background: url('images/poster.png');
+    background-size:cover
+  }
+
+  main {
+    display: inline;
+    margin: 30px;
+    padding: 40px;
+    grid-gap: 40px 20px;
+  }
+  
+  .nav-content {
+    justify-content: center;
+  }
+
+  footer .credit .h5 {
+    justify-content: center;
+  }
+}
+
+
+
