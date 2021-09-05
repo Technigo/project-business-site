@@ -2,6 +2,120 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+body {
+  display: flex;
+}
+
+header {
+  display:flex;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color:rgba(40, 233, 207, 0.753);
+  color:white;
+  position:fixed;
+}
+
+h1 {
+  width: 100%;
+  text-align:center;
+  color:rgb(127, 224, 211);
+  position: absolute;
+  }
+
+h2 {
+  color:rgb(70, 127, 129);
+}
+
+img {
+  width: 100%;
+  height: 300px;
+}
+
+input {
+  font-size: 20px;
+  padding: 3px;
+  background-color: rgb(196, 237, 238);
+  border: darkcyan;
+}
+
+input:valid {
+  background-color: rgb(252, 252, 205);
+}
+
+.first {
+  display: flex;
+  text-align: center;
+  
+}
+
+button {
+  margin-top: 400px;
+  display: float;
+  padding: 2px;
+}
+
+label {
+  margin-top: 10px 10px;
+  padding: 2px;
+}
+
+
+
+.signUp {
+  display:flex;
+  /* background-color: cadetblue;
+  color: #444; */
+}
+ /* Style the buttons that are used to open and close the accordion panel */
+ .accordion {
+  background-color: rgb(123, 199, 199);
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto; 
+  padding: 30px 30px;
+}
+/* Height auto makes the flexbox possible to get bigger */
+.question {
+  height: auto;
+  background-color: aquamarine;
+}
+
 .active + .answer {
   /* some styling here */
+  display:block;
 }
+
+.answer{
+  display: none;
+}
+
+@media (min-width: 768px) {
+header {
+  height: 500px;
+  display: float-left;
+}
+
+img {
+  height: 450px;
+}
+
+
+}
+
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* .active, .accordion:hover {
+  background-color: #ccc;
+} */
+
+/* Style the accordion panel. Note: hidden by default */
+/* .panel {
+  padding: 30 30px;
+  background-color: white;
+  display: none;
+  overflow: hidden;}
+/* 
