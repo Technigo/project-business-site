@@ -1,12 +1,12 @@
-# Business Site
+# Business Site -  Technigo week 3 - Forms, Requests and a Touch of JavaScript
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
+This project is part of Technigo Remote Frontend Boot Camp, and the project is to create a business one pager website that should contain an image or video header, a signup form, and an accordion using HTML,CSS and some JavaScript.
 ## The problem
+To be abel to bulid this site practised in code pen: 
+Video as header: https://codepen.io/MamiteA/pen/OJgRGjz?editors=1100
+Accordion: https://www.youtube.com/watch?v=dr8Emho-kYo&t=45s
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+And read alot on accorions.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+The site can be viwe @ 
