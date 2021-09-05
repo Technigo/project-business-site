@@ -3,26 +3,21 @@
  } 
 body {
   
-  font-family: sans-serif;
-  
- 
+  font-family: sans-serif; 
 }
 
-
-header img{
- height: 100px;
- margin: 0%;
+.logo{
+  display: none;
 }
-header{
-display: flex;
-  background: rgba(232, 233, 227, 0.7);
-  justify-content: space-between;
+.navigation{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
   align-items: center;
 }
-
 .navigation-link{
-  color: rgb(3, 49, 49);
-  
+  color: rgb(197, 102, 39);
+ 
 }
 .hero {
   /* Sizing */
@@ -39,7 +34,7 @@ display: flex;
  text-align: center;
 }
 
-/*.hero::after{
+.hero::after{
   width: 100%;
   height: 100%;
   content: '';
@@ -47,7 +42,7 @@ display: flex;
   top: 0;
   left: 0;
   background: rgba(23, 24, 18, 0.3);
-}*/
+}
 
   /* Background styles */
   video {
@@ -71,41 +66,32 @@ display: flex;
         margin-bottom: 0.5em;
     }
 
+   
+      
+     
+   
     .signupForm{
       display: flex;
       justify-content: center;
-      align-items: center;
+      text-align: center;
       margin: 5%;
-      
-      
     }
   
-    .grid-container{
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: auto auto;
-      column-gap: 10px;
-      row-gap: 15px;
-      justify-items: center;
-    }
-    
-    .grid-item{
-      background-color: burlywood;
-    }
+  
 
     form{
-      background-color: #4CAF50;
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
+      background-color: #ede7e4;
+      /* box-sizing: border-box; */
+      padding: 20px;
+      color: black;
+      margin-bottom: 30px;
+      margin-right: 20px;
+      border-radius: 30px;
+      
     }
 
-.main-content{
-  background-color: aliceblue;
+  .main-content{
+    background-color: aliceblue;
 }
 
 input {
@@ -113,11 +99,11 @@ input {
 }
 
 input:valid{
-  background-color: rgba(107, 223, 117, 0.3);
+  background-color: rgb(53, 126, 59);
 }
 
 input:invalid{
-/*   background-color: red; */
+  background-color: rgb(246, 97, 97); 
 }
 
 label{
@@ -128,11 +114,11 @@ label{
 
 
 
-
+/* styling of the tablet and desktop!*/
 @media (min-width:768px) {
-  .grid-container{
-    grid-template-columns: auto auto;
-grid-template-rows: auto auto;
+ 
+  .logo{
+    display: flex;
   }
 }
 
@@ -142,24 +128,21 @@ grid-template-rows: auto auto;
     display: inline;
 }
 
-    .grid-container{
-      grid-template-columns: auto auto auto auto;
-grid-template-rows: auto auto;
-    }
+
+/*this section is for  my FAQ accordion. :D */
+  
 .grid-item{
   size: inherit;
     }
-
-
-      .img{
-width: 100%;
-align-items: center;
+.img{
+      width: 100%;
+      align-items: center;
       }
 }
 .container {
   margin: 0 auto;
   padding: 4rem;
-  width: 48rem;
+ 
 }
 h3 {
   font-size: 1.75rem;
@@ -168,30 +151,19 @@ h3 {
   margin: 0;
 }
 .accordion a {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  position: relative;  
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
   padding: 1rem 3rem 1rem 1rem;
   color: #7288a2;
   font-size: 1.15rem;
-  font-weight: 400;
   border-bottom: 1px solid #e5e5e5;
 }
 .accordion a:hover,
 .accordion a:hover::after {
   cursor: pointer;
   color: #ff5353;
-}
-.accordion a:hover::after {
-  border: 1px solid #ff5353;
 }
 .accordion a.active {
   color: #ff5353;
@@ -201,18 +173,16 @@ h3 {
   font-family: 'Ionicons';
   content: '\f218';
   position: absolute;
-  float: right;
   right: 1rem;
   font-size: 1rem;
   color: #7288a2;
   padding: 5px;
   width: 30px;
   height: 30px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   text-align: center;
 }
+/*so the f209 is an icon. you can find them here: https://www.shanidkv.com/blog/font-awesome-icons-css-content-values And the font family is corresponding with the icon */
 .accordion a.active::after {
   font-family: 'Ionicons';
   content: '\f209';
@@ -225,9 +195,7 @@ h3 {
   max-height: 0;
   border-bottom: 1px solid #e5e5e5;
   overflow: hidden;
-  clear: both;
-  -webkit-transition: all 0.2s ease 0.15s;
-  -o-transition: all 0.2s ease 0.15s;
+  clear: both; 
   transition: all 0.2s ease 0.15s;
 }
 .accordion .content p {
@@ -238,7 +206,5 @@ h3 {
   opacity: 1;
   padding: 1rem;
   max-height: 100%;
-  -webkit-transition: all 0.35s ease 0.15s;
-  -o-transition: all 0.35s ease 0.15s;
   transition: all 0.35s ease 0.15s;
 }

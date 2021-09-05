@@ -1,12 +1,16 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This weeks project was to create a business site which had a hero image/video, a signup form of some sort and a faq accordion. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+
+
+I started earlier this week with starting this project and i tried to read a code as the days went by. I tried to make realistic goals for myself with not just sying "i will be done today" but adding "i will try to make the hero image a hero video today". I looked at others work on websites and tried to break it. I also did some practice in the website itself but decided to delete it to focus on the things that was assigned. 
+
+I would take it more easy in the beginning. and style it afterwards. I would like more time tho and Need to work on time management more. I still feel quite lost so i would love to have time re-making the previous assignments 😀
+
+
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.

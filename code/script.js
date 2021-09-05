@@ -7,4 +7,4 @@ function toggleAccordion(){
  
 items.forEach(item => item.addEventListener('click', toggleAccordion));
 
-// https://webdevtrick.com/html-css-faq-design/ //
+// I looked at this code for my FAQ section but changed quie some stuff in it  https://webdevtrick.com/html-css-faq-design/ //
