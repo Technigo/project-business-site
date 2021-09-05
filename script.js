@@ -18,6 +18,13 @@ document.getElementById('question4').onclick = toggleMagic
 
 document.getElementById('question5').onclick = toggleMagic
 
+
+document.getElementById('question6').onclick = toggleMagic
+
+document.getElementById('question7').onclick = toggleMagic
+
+
+
 function toggleMagic(){
   this.classList.toggle('open')
 }
