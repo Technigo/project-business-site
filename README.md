@@ -1,12 +1,14 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This weeks assignment was to create a business site with an accordion and a sign up form! It should also contain a hero image or video.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+With last weeks assignment fresh in mind I used the same technique for building the initial structure. After that - I actually googled A LOT this time.
+One issue I've had is that my video file is too large. I tried to install lfs plugin but it fucked up the connection to github in some way. So I had to uninstall it and just go with the large video file for this time.
+
+If I had more time I'd put a nav-bar on top of the hero video and also worked more with styling of the radio buttons.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://guldfabriken.netlify.app/

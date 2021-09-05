@@ -1,6 +1,7 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
 * {
   box-sizing: border-box;
 }
@@ -9,12 +10,12 @@ body {
   height: 100%;
   margin: 0;
   font-family: Karla, sans-serif;
-  background-color: lightgoldenrodyellow;
+  background-image: url(build-set.jpeg);
 }
 
 header {
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   position: relative;
 }
 
@@ -22,7 +23,7 @@ header {
 
 #header-video {
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   object-fit: cover;
 }
 
@@ -37,11 +38,10 @@ header {
 
 .text-section {
   display: flex;
-  /* background-color: rgb(255, 235, 239); */
   flex-direction: column;
+  background-color: rgb(255, 235, 239);
   margin: 0;
-  /* border-bottom: turquoise 2px solid; */
-  border-bottom: rgb(221, 149, 90) 3px solid;
+  border-bottom: goldenrod 3px solid;
 }
 
 .introduction {
@@ -53,6 +53,7 @@ header {
   flex-direction: column;
   margin: 20px;
   justify-content: center;
+  align-items: inherit;
 }
 
 h3 {
@@ -64,7 +65,10 @@ h3 {
 .signup-form {
   margin-bottom: 20px;
   padding: 20px;
-  background-color: wheat;
+  background-color: rgb(252, 203, 210);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 
 .input-container {
@@ -73,29 +77,53 @@ h3 {
   padding: 5px;
 }
 
+fieldset {
+  padding: 10px;
+  border: goldenrod 2px solid;
+}
+
+legend {
+  font-size: 18px;
+  text-align: center;
+}
+
+.custom-radio {
+  background-color: goldenrod;
+}
+
 /* ----------Accordion styling---------- */
 
 .accordionParent {
   margin-top: 10px;
-  padding: 20px;
-  /* background-color: wheat; */
-  /* background-color: rgb(255, 235, 239); */
+  padding: 10px;
   justify-content: center;
-  width: 320px;
+  background-color: rgb(252, 203, 210);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
 }
 
 .question {
-  /* background-color: rgb(194, 129, 156); */
-  background-color: lightyellow;
-  cursor: pointer;
-  padding: 15px;
+  padding: 10px;
   text-align: left;
-  /* border-bottom: 2px solid peachpuff; */
   transition: 0.4s;
+  text-transform: uppercase;
+}
+
+.question:nth-of-type(8) {
+  background: goldenrod;
 }
 
 .question:hover {
-  background-color: rgb(221, 149, 90);
+  background-color: palevioletred;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .question:after {
@@ -111,7 +139,7 @@ h3 {
 }
 
 .open {
-  background: wheat;
+  background-color: rgb(252, 203, 210);
 }
 img {
   padding: 5px;
@@ -119,7 +147,7 @@ img {
 
 .answer {
   padding: 10px;
-  background-color: wheat;
+  background-color: rgb(252, 203, 210);
   display: none;
   margin: 0;
 }
@@ -145,9 +173,9 @@ footer {
   justify-content: space-between;
   align-items: center;
   color: whitesmoke;
-  /* background-color: rgb(204, 101, 121); */
-  background-color: rgb(221, 149, 90);
-  /* background-color: peru; */
+  background-color: palevioletred;
+  border-top: goldenrod 3px solid;
+
   height: auto;
   width: 100%;
 }
@@ -161,20 +189,29 @@ footer {
 
 /* ---------- Media quaries ---------- */
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 855px) {
   .content-container {
     display: flex;
     flex-direction: row;
-    margin: 20px;
+    margin: 10px;
     justify-content: space-evenly;
+  }
+  .introduction {
+    margin: 0 100px 20px;
+  }
+  .accordionParent {
+    margin-top: 0;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .content-container {
+    margin: 20px;
   }
 
   .introduction {
     margin: 0 400px 50px;
-  }
-
-  .accordionParent {
-    width: 450px;
   }
 
   footer {

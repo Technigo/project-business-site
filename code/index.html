@@ -14,26 +14,25 @@
       src="https://kit.fontawesome.com/59fae56e7e.js"
       crossorigin="anonymous"
     ></script>
-    <title>Guldfabriken</title>
+    <title>Guldfabriken Studios</title>
   </head>
 
-  <!-- video hero img and logo -->
+  <!-- ----------Video hero and img logo---------- -->
 
   <body>
     <header>
       <video loop muted autoplay playsinline id="header-video">
         <source
-          src="videos/Darin - Can't Stay Away (Official Music Video).mp4"
+          src="videos/Darin%20-%20Can't%20Stay%20Away%20(Official Music Video).mp4"
           type="video/mp4"
         />
       </video>
       <div class="header-content">
         <img src="GF_LOGGA_VIT.svg" alt="Guldfabriken Logo" />
-        <!-- <p class="header-text">What are they building in there?</p> -->
       </div>
     </header>
 
-    <!-- Main content -->
+    <!-- ----------Main content starts here---------- -->
 
     <section class="text-section">
       <div class="introduction">
@@ -51,72 +50,80 @@
         </p>
       </div>
     </section>
-    <!-- Signup form -->
+
+    <!-- ----------Sign up form starts here---------- -->
 
     <section class="content-container">
       <div class="signup-form">
-        <h3>Interested in studio rental?</h3>
         <form action="http://httpbin.org/anything" method="POST">
-          <div class="input-container">
-            <label for="fname">Your first name:</label>
-            <input
-              type="text"
+          <fieldset>
+            <legend>Interested in studio rental?</legend>
+            <div class="input-container">
+              <label for="fname">Your first name:</label>
+              <input
+                type="text"
+                required
+                id="fname"
+                name="fname"
+                placeholder="Bob"
+              />
+            </div>
+
+            <div class="input-container">
+              <label for="lname">Your last name:</label>
+              <input
+                type="text"
+                required
+                id="lname"
+                name="lname"
+                placeholder="Bobson"
+              />
+            </div>
+
+            <div class="input-container">
+              <label for="email">Your email:</label>
+              <input
+                type="email"
+                required
+                id="email"
+                name="email"
+                placeholder="bob@bobbobson.com"
+              />
+            </div>
+
+            <h3>What is your purpose?</h3>
+
+            <label class="radio-btn" for="photo">Photo Shoot</label>
+            <input type="radio" id="photo" name="purpose" value="photo" />
+            <label class="radio-btn" for="film">Film Set</label>
+            <input type="radio" id="film" name="purpose" value="film" />
+            <label class="radio-btn" for="other">Other</label>
+            <input type="radio" id="other" name="purpose" value="other" />
+
+            <h3>Additional information:</h3>
+
+            <textarea
+              name="add-info"
+              placeholder="Briefly describe your inquiries here..."
               required
-              id="fname"
-              name="fname"
-              placeholder="Bob"
-            />
-          </div>
+              rows="8"
+              cols="38"
+            ></textarea
+            ><br />
 
-          <div class="input-container">
-            <label for="name">Your last name:</label>
-            <input
-              type="text"
-              required
-              id="lname"
-              name="lname"
-              placeholder="Bobson"
-            />
-          </div>
-
-          <div class="input-container">
-            <label for="email">Your email:</label>
-            <input
-              type="email"
-              required
-              id="email"
-              name="email"
-              placeholder="bob@bobbobson.com"
-            />
-          </div>
-
-          <h3>What is your purpose?</h3>
-
-          <input type="radio" id="photo" name="purpose" value="photo" />
-          <label for="photo">Photo Shoot</label>
-          <input type="radio" id="film" name="purpose" value="film" />
-          <label for="film">Film Set</label>
-          <input type="radio" id="other" name="purpose" value="other" />
-          <label for="other">Other</label>
-
-          <h3>Additional information:</h3>
-
-          <textarea
-            name="add-info"
-            placeholder="Briefly describe your inquiries here..."
-            required
-            rows="8"
-            cols="40"
-          ></textarea
-          ><br />
-
-          <input type="checkbox" name="terms" id="terms" required />
-          I Agree to Terms & Conditions
-          <button name="submit" id="submit" type="submit">Send</button>
+            <input type="checkbox" name="terms" id="terms" required />
+            I Agree to <a href="#">Terms & Conditions</a>
+            <button name="submit" id="submit" type="submit">Send</button>
+          </fieldset>
         </form>
       </div>
 
+      <!-- ----------Accordion starts here---------- -->
+
       <div class="accordionParent">
+        <div class="accordion-header">
+          <h2>Learn more about us!</h2>
+        </div>
         <div id="button1" class="question">Currently building:</div>
         <div class="answer">
           <h3>THE AIRSTREAM</h3>
@@ -130,83 +137,7 @@
           <img src="airstream4.jfif" alt="Cleo outside Airstream" />
         </div>
 
-        <div id="button2" class="question">Portfolio</div>
-        <div class="answer">
-          <h3>David Hasselhoff - True Survivor (Music video)</h3>
-          <p>
-            Set decoration and building. Produced by Lampray and Lazer Unicorns.
-            Director David Sandberg.
-          </p>
-          <img src="hasselhoff.png" alt="Hasselhoff music video" />
-          <h3>Darin - Can't Stay Away (Music video)</h3>
-          <p>
-            Set design, set dressing and building. Produced by Peter
-            Henningsson. Director James Velasquez
-          </p>
-          <img src="darin-video-img.jpeg" alt="Darin music video" />
-          <h3>Eagle Eye Sherry - I Like It (Music video)</h3>
-          <p>
-            Set design, decoration and building. Produced by Peter Henningsson.
-            Director James Velasquez
-          </p>
-          <img
-            src="eagle-eye-video-img.jpeg"
-            alt="Eagle Eye Sherry music video"
-          />
-          <h3>Kung Fury (Short film)</h3>
-          <p>
-            Set decoration and building. Produced by Lampray and Lazer Unicorns.
-            Director David Sandberg.
-          </p>
-          <img src="kung-fury.png" alt="Kung Fury" />
-          <h3>The Circuswagon</h3>
-          <p>
-            Finished in 2019 this wagon functioned as a rolling art gallery for
-            a few weeks before it got shipped to Finland.
-          </p>
-          <img src="circus-wagon.jpg" alt="Circus wagon" />
-          <img src="circus-wagon2.jpg" alt="Circus wagon" />
-          <img src="circus-wagon3.jpg" alt="Circus wagon" />
-          <h3>NORRMEJERIER (Advertisement)</h3>
-          <p>
-            Produced by SNÖBY. Director Jakob Arevärn. Set design by
-            Guldfabriken.
-          </p>
-          <img src="norrmejerier.png" alt="Norrmejerier commercial" />
-          <h3>Lassemajas detektivbyrå</h3>
-          <p>Sausage booth for Lassemajas detektivbyrå 2020.</p>
-
-          <img
-            src="lassemajas.jpg"
-            alt="Decoration for Lassemajas detektivbyrå"
-          />
-          <h3>Boxing Night</h3>
-          <p>Building and decoration for a pop up event in swizerland.</p>
-          <img src="boxing-night.jfif" alt="Decoration for Boxing Night" />
-
-          <h3>SAUNA TRUCK</h3>
-          <p>
-            Building a sauna from recycled material and renovating an old
-            campervan to fit the sauna on its loading dock.
-          </p>
-          <img src="sauna-truck.jpeg" alt="Sauna truck " />
-          <h3>VI SKOGEN</h3>
-          <p>
-            Produced by SNÖBY. Director Mattias Andersson. set design by
-            GULDFABRIKEN.
-          </p>
-
-          <img src="vi-skogen.png" alt="Plantera träd" />
-
-          <h3>SMÅ SMÅ BITAR (SHORT FOR BRIS)</h3>
-          <p>
-            Produced by Bautafilm. Director Victor Lindgren. Set design by
-            Guldfabriken.
-          </p>
-          <img src="bris.png" alt="Commercial for BRIS" />
-        </div>
-
-        <div id="button3" class="question">Wanna rent our studio?</div>
+        <div id="button2" class="question">Want to rent?</div>
         <div class="answer">
           <p>
             The white cyclorama wall measures 5x8 meters and have a shooting
@@ -219,7 +150,6 @@
           <img src="studio1.jpg" alt="Studio" />
 
           <p>To rent:</p>
-
           <ul>
             <li>4 dress horses</li>
 
@@ -248,6 +178,83 @@
           requst form to the left.
         </div>
 
+        <div id="button3" class="question">Portfolio</div>
+        <div class="answer">
+          <img src="hasselhoff.png" alt="Hasselhoff music video" />
+          <h3>David Hasselhoff - True Survivor (Music video)</h3>
+          <p>
+            Set decoration and building. Produced by Lampray and Lazer Unicorns.
+            Director David Sandberg.
+          </p>
+
+          <img src="darin-video-img.jpeg" alt="Darin music video" />
+          <h3>Darin - Can't Stay Away (Music video)</h3>
+          <p>
+            Set design, set dressing and building. Produced by Peter
+            Henningsson. Director James Velasquez
+          </p>
+          <img
+            src="eagle-eye-video-img.jpeg"
+            alt="Eagle Eye Sherry music video"
+          />
+          <h3>Eagle Eye Sherry - I Like It (Music video)</h3>
+          <p>
+            Set design, decoration and building. Produced by Peter Henningsson.
+            Director James Velasquez
+          </p>
+          <img src="kung-fury.png" alt="Kung Fury" />
+          <h3>Kung Fury (Short film)</h3>
+          <p>
+            Set decoration and building. Produced by Lampray and Lazer Unicorns.
+            Director David Sandberg.
+          </p>
+          <img src="circus-wagon.jpg" alt="Circus wagon" />
+          <img src="circus-wagon2.jpg" alt="Circus wagon" />
+          <img src="circus-wagon3.jpg" alt="Circus wagon" />
+          <h3>The Circuswagon</h3>
+          <p>
+            Finished in 2019 this wagon functioned as a rolling art gallery for
+            a few weeks before it got shipped to Finland.
+          </p>
+          <img src="norrmejerier.png" alt="Norrmejerier commercial" />
+          <h3>NORRMEJERIER (Advertisement)</h3>
+          <p>
+            Produced by SNÖBY. Director Jakob Arevärn. Set design by
+            Guldfabriken.
+          </p>
+          <img
+            src="lassemajas.jpg"
+            alt="Decoration for Lassemajas detektivbyrå"
+          />
+          <h3>Lassemajas detektivbyrå</h3>
+          <p>Sausage booth for Lassemajas detektivbyrå 2020.</p>
+
+          <img src="boxing-night.jfif" alt="Decoration for Boxing Night" />
+
+          <h3>Boxing Night</h3>
+          <p>Building and decoration for a pop up event in swizerland.</p>
+          <img src="sauna-truck.jpeg" alt="Sauna truck " />
+          <h3>SAUNA TRUCK</h3>
+          <p>
+            Building a sauna from recycled material and renovating an old
+            campervan to fit the sauna on its loading dock.
+          </p>
+
+          <img src="vi-skogen.png" alt="Plantera träd" />
+          <h3>VI SKOGEN</h3>
+          <p>
+            Produced by SNÖBY. Director Mattias Andersson. set design by
+            GULDFABRIKEN.
+          </p>
+          <img src="bris.png" alt="Commercial for BRIS" />
+
+          <h3>SMÅ SMÅ BITAR (SHORT FOR BRIS)</h3>
+          <p>
+            Produced by Bautafilm. Director Victor Lindgren. Set design by
+            Guldfabriken.
+          </p>
+        </div>
+
         <div id="button4" class="question">Who are we?</div>
         <div class="answer">
           <img src="gf-bros.jpg" alt="Guldfabriken's creators" />
@@ -267,6 +274,8 @@
         </div>
       </div>
     </section>
+
+    <!-- ----------Footer starts here---------- -->
 
     <footer>
       <img class="footer-logo" src="logo_transparent.png" alt="Inte Hon Logo" />
