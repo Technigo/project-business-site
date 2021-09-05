@@ -1,6 +1,6 @@
 # Business Site
 
-Second individuell project for the Technigo boot camp. The assignment was to create a responsive business website with a form, an accordion and a hero image/video. This was our first assignment with Javascript.
+Second individual project for the Technigo boot camp. The assignment was to create a responsive business website with a form, an accordion and a hero image/video. This was our first assignment with Javascript.
 
 ## The problem
 
