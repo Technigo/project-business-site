@@ -7,12 +7,14 @@
   <title>Project 3</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- video as a header  -->
+  <!-- video as a header (I followed this code https://codepen.io/MamiteA/pen/OJgRGjz?editors=1100)  -->
   <header class="outer-container">
     <div class="video-container">
       <video src="/code/Ink - 67358.mp4" autoplay loop muted>
@@ -24,52 +26,71 @@
       <a href="" class="button">Find out!</a>
     </div>
   </header>
-
-  <!-- Signup form -->
-
-  <section class="accordion">
-    <!-- Accordion FAQ -->
-    <h1>FAQ</h1>
-    <div class="accordion">
-      <div class="accordion-item">
-        <div class="accordion-item-header">
-          What time is it?</div>
-        <div class="accordion-item-body">
-          <div class="accordion-item-body-content">
-            It depends on what time zone it is
-          </div>
+  <div class="main-content">
+    <!-- Signup form -->
+    <div class="sign-up">
+      <h2>Sign up</h2>
+      <form action="https://httpbin.org/anything" method="POST">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" minlength="2" maxlength="30" required size="30">
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" minlength="4" maxlength="30" required size="30">
+        <label for="email">Enter your e-mail</label>
+        <input type="email" id="email" name="email" placeholder="email@example.com">
+        <label for="password">Enter your password</label>
+        <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, 
+                  and at least 8 or more characters" required>
+        <div class="container">
+          <input type="radio" id="age" name="age" required>
+          <label for="age">I am over 18</label>
         </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-item-header">
-          How to solve a rubix cube</div>
-        <div class="accordion-item-body">
-          <div class="accordion-item-body-content">
-            It depends on when
-          </div>
+        <div class="container">
+          <input type="checkbox" id="newsletter" name="newsletter">
+          <label for="newsletter">I agree to receive the weekly newsletter (optional)</label>
         </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-item-header">
-          Where are you now?</div>
-        <div class="accordion-item-body">
-          <div class="accordion-item-body-content">
-            It depends on your location
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-item-header">
-          What song is this?</div>
-        <div class="accordion-item-body">
-          <div class="accordion-item-body-content">
-            It is Formation by the artist Beyoncé.
-          </div>
-        </div>
-      </div>
+        <button type="submit">Sign Up</button>
+      </form>
     </div>
-  </section>
-  <script src="script.js" defer></script>
+
+    <section class="accordion">
+      <!-- Accordion (get inspired by this tutorial https://codepen.io/MamiteA/pen/abwmPPN) -->
+      <h1>FAQ</h1>
+      <div class="accordion-question">
+        <div class="question" id="section1">What Time Is It?</div>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..
+        </div>
+      </div>
+      <div class="accordion-question">
+        <div class="question" id="section2">What Song Is This?</div>
+        <div class="answer">
+          <p>Etiam risus purus, lacinia eu nisl ut, lacinia sodales augue. </p>
+        </div>
+      </div>
+      <div class="accordion-question">
+        <div class="question" id="section3">Where Are You?</div>
+        <div class="answer">
+          <p>Etiam risus purus, lacinia eu nisl ut, lacinia sodales augue. Nunc vel est sed arcu efficitur dapibus eu
+            non
+            dolor. </p>
+        </div>
+      </div>
+      <div class="accordion-question">
+        <div class="question" id="section4">What Will Be Next?</div>
+        <div class="answer">
+          <p>Etiam risus purus, lacinia eu nisl ut, lacinia sodales augue. Nunc vel est sed arcu efficitur dapibus eu
+            non
+            dolor. Duis aliquam ac ante in finibus. </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    Made By Mamite
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>

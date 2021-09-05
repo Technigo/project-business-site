@@ -1,7 +1,228 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.main-content 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Oswald', sans-serif;
+  background-color: pink;
+}
+header
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* to hide the scroll bar at the bottom of video*/
+  overflow: hidden;
+}
+.text 
+{
+  position:absolute ;
+  color: white;
+  line-height: 1.5;
+  text-align: center;
+}
+.overlay 
+{
+  position: absolute;
+  height: 1000vh;
+  width: 100vw;
+  background-color: blueviolet;
+  opacity: 0.7;
+}
+.button{
+  background:white;
+  border-radius: 20px;  
+  color: blueviolet;
+  font-size: 1.5em;
+  padding: .7em 1.2em;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+p {font-size: 1.5em;
+  margin-bottom: 1em;
+  }
+
+.sign-up {
+  border: 1.5px solid palevioletred;
+  width: 300px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: plum;
+  color: white;
+}
+
+ label, button {
+  display: block;
+  padding: 5px; 
+  margin-top: 20px; 
+  color: white;
+} 
+
+/* Used to align the text next to the radio button
+and checkbox */
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+/* Styling validation form */
+
+
+input {
+  line-height: 1.5rem;
+  background-color: #9dcae0;
+  border: 1px solid palevioletred;
+} 
+
+ /* Added a checkmark as a background image when input is valid which
+ is placed at the far right */
+input:required:focus:valid {
+  background: url(./check-mark.webp) no-repeat 95% 50% rgb(253, 253, 253);
+  background-size: 15px;
+  border: 2px solid #9dcae0;
+}
+
+/* With an invalid input an exclamation mark is displayed */
+input:focus:invalid {
+  background: url(./exclamation-mark.jpeg) no-repeat 100% 50% blueviolet(236, 57, 44);
+  background-size: 1.5rem;
+}
+button {
+  background:#9dcae0;
+  border-radius: 4px;  
+  color: blueviolet;
+  font-size: 1em;
+  padding: .7em 1.2em;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+ 
+/* Here starts styling of the accordion */
+
+.accordion {
+  border: 1.5px solid palevioletred;
+  border-radius: 10%;
+  width: 300px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: plum;
+  color: white;
+}
+
+.accordion > h1 {
+  margin-bottom: 1.5rem;
+  margin-left: 2rem; 
+  font-family: 'Oswald', sans-serif;
+}
+
+.accordion-question {
+  margin: 1rem 2rem;
+  box-shadow: 0.5px 1.5px 2px #9dcae0;
+  padding: 0.2rem;
+  border: 1px solid #9dcae0; 
+}
+
+
+.accordion-question:hover {
+  transform: scale(1.1);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  transition: ease-in-out 0.8s;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  padding: 0.3rem;
+  font-family: 'Oswald', sans-serif;
+}
+ 
+/* Added an icon indicating content is
+ visible or not */
+
+.question::after {
+  content: "\25BC";
+  position: absolute;
+  right: 0.4rem;
+  font-size: 0.7rem;
+}
+
+.question.active::after {
+  content: "\25B2";
+}
+
+/* Styling the answer div*/
+
+
+ .answer {
+  display: none; 
+  line-height: 1.3rem;
+  border-top: 2px solid;
+  border-image: linear-gradient(to right, #005580, transparent) 1;
+  padding: 0.5rem;
+}
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
-  /* some styling here */
+  color: black;
+  display: block;
 }
+
+footer {
+  font-size: 1.5rem;
+  height: 100px;
+  text-align: center;
+  margin-top: 0px;
+  color: white;
+  background-color: #9dcae0;
+}
+
+@media (min-width: 668px) {
+  
+  header {
+    height: 500px;
+  }
+
+  .main-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  .accordion {
+    width: 350px;
+    margin-left: 2rem;
+  }
+}
+
+  
+
+@media (min-width: 992px) {
+
+  header {
+    height: 650px;
+  }
+
+  .accordion {
+    width: 450px;
+  }
+}
+
+  
