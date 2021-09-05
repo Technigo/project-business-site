@@ -1,12 +1,16 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Second individuell project for the Technigo boot camp. The assignment was to create a responsive business website with a form, an accordion and a hero image/video. This was our first assignment with Javascript.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This was my first time using Javascript and I had a hard time grasping it at first, trying to do things that I hadn't learnt yet. 
+
+I started by using Jamboard to make a sketch of what I wanted the site to look like. I used flexbox and grid to create the layout of the project. 
+
+I'm relatively happy with the end result, however I'm not pleased with the header. I spent a lot of time on trying to get the h1-element centered, which should have worked with the code I added. In the end I ran out of time and had to delete what I added. If I had more time I would have focused on centering the h1-element and also tried to style the checkboxes and radio buttons. 
+
+While doing this project I learned the importance of having a clean and easy to read code from the beginning of the project. I spent four hours trying to figure out why my project wasn't acting like I expected it to, only to find a section closing tag in the middle of the code. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://britishswede-project-business-site.netlify.app/
