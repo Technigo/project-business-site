@@ -1,12 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week’s project was to create a site for a company, the website was meant to contain three parts: Hero image/video, Signup form and an accordion. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This week I have been struggling with time and has really been forced to foccus on only the essential. I´m not quite done yet, but this is what I have so far. Considering the lack of time, I´m really proud to have something to turn in!
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+see what it's all about:
+https://youthful-hodgkin-92dc2b.netlify.app
