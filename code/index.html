@@ -1,30 +1,109 @@
+<!-- Author Jenny Quach -->
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Project-business-site</title>
+    
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+  <header>
 
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <nav class="nav">
+        <ul>
+          <li><a class="nav-item" href="#">About Us</a></li>
+          <li><a class="nav-item" href="#">Online classes</a></li>
+          <li><a class="nav-item" href="#">FAQ</a></li>
+          <li><a class="nav-item" href="#">Sign in</a></li>
+          <!-- <li><a class="nav-item" href="#">Free Trial</a></li> -->
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+   
+  </header>
+  <section class=hero>
+    <div class="hero-content">
+      <h1 class="hero-title">Virtual Online Yoga</h1><br>
+      <h2 class="subtitle">Bring your practice Home</2>
+    </div>
+  </section>
+
+  <section class="wrapper">
     <!-- Signup form -->
+    <div class="form">
+      <form action="http://httpbin.org/anything" id="form" class="form-content" method="POST">
+        <h1>SIGN UP</h1>
 
-    <section class="accordion">
-      <!-- Accordion -->
+        <label>First name
+          <input class="text-input" type="text" name="fName" placeholder="First Name" required>
+        </label>
+  
+        <label>Last name
+          <input class="text-input" type="text" name="lName" placeholder="Last Name" required>
+        </label>
+  
+        <label>Email
+          <input class="text-input" type="email" name="email" placeholder="example@email.com" required>
+        </label>
+  
+        <label>Password
+          <input class="text-input" type="password" name="password" placeholder="********" required>
+        </label>
+
+        <div class="radio-wrapper">
+          <label>
+            <input class="radio" type="radio" name="info"> Beginners Level
+          </label>
+
+          <label> 
+            <input class="radio" type="radio" name="info"> Intermediate Level
+          </label>
+
+          <label> 
+            <input class="radio" type="radio" name="info"> Advanced Level
+          </label>
+        </div>  
+  
+        <label>
+          <input class="checkbox" type="checkbox" name="termsconditions" required>I accept the Terms of Use and Privacy policy
+        </label>
+        <label>
+          <input class="checkbox" type="checkbox" name="checkboxNewsletter">I agree to receive newsletters on  teacher trainings and workshops
+        </label>        
+        <p> Already a member? <a href="Login">Log in</a></p>
+        <button>SIGN UP</button>
+      </form>
+    </div>
+    <!-- Accordion -->
+    <div class="accordion">
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">Will I be seen as I am practicing?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+      <p>Yes, that’s a key part of being in a live class.  The teacher will see and respond to how you are practicing—like we always do.</p>
+      </div> 
+
+      <div class="question" id="section2">Can I change the view so that I only see the teacher?</div>
+      <div class="answer">
+        <p>You can click “Speaker” view to follow only the teacher.  “Gallery” view will show other students in the class.  We recommend “Gallery” view as it’s nice to see and connect with other students.</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section3">Can I ask questions during class?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+          <p>The live-streaming classroom is like the in-studio classroom.  Teachers are available afterward to answer brief questions.  We cannot take questions during class.</p>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+
+      <div class="question" id="section4">What is the best browser to use for Live-Streaming classes?</div>
+      <div class="answer">
+         <p>ZOOM works best with the Chrome web browser if you are using the desktop app or laptop.</p>
+      </div> 
+    </div>
+  </section>
+  <script src="script.js"></script>
   </body>
 </html>

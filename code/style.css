@@ -1,7 +1,383 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/* 
+This CSS file is created with mobile first in mind.
+Desktop and Tablet is added at the bottom under media sections.
+Author Jenny Quach
+*/
 
-.active + .answer {
-  /* some styling here */
+header {
+  text-align: center;
+  position: absolute; /* fixed position of header */
+  width: 100%;
+  height: 8vh;
+  z-index: 999; /* always visible */
+}
+
+/* Navigation bar */
+
+nav {
+  position: absolute; /* fixed position to the right */
+  left: 0;
+  text-align: start;
+  transform: scale(1,0); /* full width zero height */
+  transform-origin: top;
+  transition: transform 400ms ease-in-out; /* transition takes 400ms and the menu opens from top to bottom */
+}
+
+nav ul {
+  margin-top: 55px;
+  padding: 0;
+  list-style: none; /* to remove the bullets */ 
+}
+
+nav li{
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  opacity: 0;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: rgb(81, 151, 241);
+}
+
+/* Hamburger menu */
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1); /* full width full height */
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1; /* makes links visible */
+  transition: opacity 200ms ease-in-out 200ms; /* transition time and delay time */ 
+}
+
+.nav-toggle {
+  display: none; /* hide checkbox */
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-right: 1em;
+  height: 100%;
+  display: flex; 
+  align-items: center; /* to center align vertically */
+}
+
+.nav-toggle-label span,
+.nav-toggle-label::before,
+.nav-toggle-label::after {
+  display: block;
+  background: black;
+  height: 1px;
+  width: 1.5em;
+  border-radius: 5px;
+  position: relative;
+}
+
+.nav-toggle-label::before, 
+.nav-toggle-label::after {
+  content: ""; /* setting content to nothing for pseudoclasses */
+  position: absolute; 
+}
+
+.nav-toggle-label::before {
+  bottom: 30px;
+}
+
+.nav-toggle-label::after {
+  top: 30px;
+}
+
+/* Hero */
+
+.hero {
+  background-image: linear-gradient(rgba(240, 145, 22, 0.5), rgba(0, 0, 0, 0.5)), url(./lotus.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  z-index: 999; /* always visible */
+  object-fit: cover;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  background: url(lotus.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(60%);
+}
+
+.hero-content {
+  margin: 10px 40px 10px 10px;
+}
+
+.hero h1, h2{
+  font-size: 40px;
+  color: rgb(245, 221, 195);
+}
+
+.hero h1 {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.hero h2 {
+  margin-top: 0;
+}
+
+/* Form */
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(4 1fr);
+  padding: 1rem;
+  width: 80%;
+  background-color:rgb(241, 207, 169);
+  color: #444;
+  transition: 0.4s;
+  border-radius: 2em 2em;
+  border: 2px solid black;
+  margin: 20px auto;
+}
+
+.form h1 {
+  color: rgb(145, 202, 202);
+}
+
+.form p {
+  padding-left: 13px;
+}
+
+.text-input {
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 6px;
+  width: 100%;
+  border-radius: 1em 1em 1em 1em;
+}
+
+.text-input:valid {
+  background-color:rgb(226, 215, 203)
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  padding: 0.5rem;
+  width: 80%;
+}
+
+.radio-wrapper {
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-top: -0.5rem;
+}
+
+button {
+  max-width: 60%;
+  min-width: 40%;
+  background-color: rgb(229, 241, 241);
+  border-radius: 10px;
+  border-width: 1px;
+  box-shadow: 1px 3px 3px 1px rgba(77, 76, 76, 0.7);
+  margin: 1rem;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+/* Accordion */
+
+.accordion {
+  display: block;
+  padding: 1rem;
+  width: 80%;
+  background-color: rgb(229, 241, 241);
+  color: #444;
+  transition: 0.4s;
+  border-radius: 2em 2em;
+  border: 2px solid black;
+  margin: 20px auto;
+}
+
+h1 {
+  color:rgb(243, 185, 118);
+  font-size: 1.8rem;
+}
+
+.question {
+  background-color: white;
+  cursor: pointer;
+  padding: 5px 5px 5px 5px;
+  margin-top: 10px;
+  border-radius: 1em 1em 1em 1em;
+  font-size: 22px;
+  transition: 0.4s;
+}
+
+.answer {
+  margin: 0;
+  padding: 0 10px;
+  background-color: white;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  display: none;
+  border-radius: 1em 1em 1em 1em;
+  font-size: 18px;
+}
+
+.open {
+  background-color: rgb(229, 241, 241);
+}
+
+.open + .answer {
+  display: block;
+}
+
+.open + p {
+  display: block;
+}
+
+/* media query for desktop */
+
+@media screen and (min-width: 901px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: .5fr auto minmax(600px, 1fr);
+  }
+
+  nav {
+    color: black;
+    all:unset;
+    grid-column: 3/4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-right: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    font-weight: 500;
+  }
+
+  .hero {
+    align-items: center;
+    justify-content: flex-end; 
+    flex-wrap: wrap;
+  }
+  .hero-content {
+    margin: 50px 80px 10px 10px;
+  }
+  
+  .hero h1, h2{
+    font-size: 40px;
+    color: rgb(245, 221, 195);
+  }
+  
+  .hero h1 {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
+  .hero h2 {
+    margin-top: 0;
+  }
+
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: transparent;
+  }
+
+  .form {
+    grid-column: span 2;
+  }
+
+  .accordion {
+    grid-column: span 2;
+  }
+
+/* media query for tablet */
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+    .nav-toggle-label {
+      display: none;
+    }
+  
+    header {
+      display: grid;
+      grid-template-columns: .5fr auto minmax(600px, 1fr);
+    }
+  
+    nav {
+      color: black;
+      all:unset;
+      grid-column: 3/4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    nav ul {
+      display: flex;
+    }
+    nav li {
+      margin-right: 3em;
+      margin-bottom: 0;
+    }
+  
+    nav a {
+      opacity: 1;
+      font-weight: 500;
+    }
+  
+    .hero {
+      align-items: flex-end;
+      justify-content: flex-end; 
+      flex-wrap: wrap;
+    }
+    .hero-content {
+      margin: 10px 80px 10px 10px;
+    }
+    
+    .hero h1, h2{
+      font-size: 40px;
+      color: rgb(245, 221, 195);
+    }
+    
+    .hero h1 {
+      margin-bottom: 0;
+      text-align: center;
+    }
+    
+    .hero h2 {
+      margin-top: 0;
+    }
+  }
 }
