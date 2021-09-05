@@ -11,7 +11,7 @@ body {
 
 header {
   width: 100%;
-  height: 30rem;
+  height: 40rem;
   position: relative;
   margin-bottom: 2rem;
   text-transform: uppercase;
@@ -19,30 +19,35 @@ header {
 
 nav {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
-  color: black;
   text-align: center;
   align-items: center;
+  position:absolute;
+  z-index: 1;
+  width: 100%;
+  background-color: rgb(241, 179, 210);
+  opacity: 0.7;
 }
 
 .nav-link {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: black;
   padding: 1rem;
 }
 
 .nav-link:visited{
-  text-decoration: none;
   color: black;
 }
 
 .nav-link:hover {
-color: hotpink;
+  text-decoration: none;
+  color: rgb(245, 50, 147);
 }
 
 .hero-img {
   width: 100%;
-  height: 30rem;
+  height: 100%;
   /* background-image: url(https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=813&q=80); */
   background-image: url(https://images.unsplash.com/photo-1480970530467-74f67f39776e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=947&q=80);
   /* background-image: url(https://images.unsplash.com/photo-1590344018373-ebaf8d2210fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80); */
@@ -53,6 +58,7 @@ color: hotpink;
   opacity: 0.7;
 }
 
+/* styling for text displayed over hero-img */
 .overlay {
   position: absolute;
   top: 0;
@@ -68,6 +74,7 @@ color: hotpink;
   font-size: 2rem;
 }
 
+/* styling form */
 form {
 display: grid;
 grid-template-columns: repeat(4 1fr);
@@ -98,6 +105,20 @@ label {
   width: 80%;
 }
 
+input:hover{
+  background-color: rgb(245, 214, 219);
+}
+
+input:valid {
+  border-color: rgb(175, 243, 107);
+}
+
+.radio-column {
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-top: -0.5rem;
+}
+
 .terms-link {
   color: hotpink;
 }
@@ -119,12 +140,14 @@ button {
   box-shadow: 1px 3px 3px 1px rgba(77, 76, 76, 0.7);
   margin: 1rem;
   padding: 0.3rem;
+  cursor: pointer;
 }
 
 button:focus {
   box-shadow: none;
 }
 
+/* styling accordion */
 .accordion {
   display: block;
   box-shadow: 1px 3px 19px -1px rgba(0,0,0,0.7);
@@ -133,6 +156,7 @@ button:focus {
   margin: auto;
   width: 80%;
   justify-content: right;
+  cursor: default;
 }
 
 .question {
@@ -144,6 +168,10 @@ button:focus {
   margin-bottom: 1rem;
 }
 
+/* fun ?-cursor to open the question */
+.question:hover {
+  cursor: help;
+}
 
 .answer {
   display: block;
@@ -153,25 +181,31 @@ button:focus {
   border-width: 0.1rem;
 }
 
+/* default only showing the question in FAQ */
 .question + .answer {
   display: none;
 }
 
+/* styling the footer to match the nav */
 footer {
   display: flex;
   justify-content:space-around;
   color: black;
   text-align: center;
+  background-color: rgb(241, 179, 210);
+  opacity: 0.7;
+  position: sticky;
+  margin-bottom: 0;
 }
 
 .footer-link {
   text-decoration: none;
-  color: hotpink;
+  color: rgb(245, 50, 147);
 }
 
 .footer-link:visited{
   text-decoration: none;
-  color: hotpink;
+  color: rgb(245, 50, 147);
 }
 
 .footer-link:hover {
@@ -195,13 +229,16 @@ color: black;
     width: 90%;
   }
 
+  .radio-column {
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: column;
+    margin-bottom: 0.5rem;
+    margin-top: -0.5rem;
+  }
+
   .accordion {
     grid-column: span 2;
     text-align: center;
-    /* margin-top: 0; */
   }
-}
-
-@media (min-width:1024px){
-
 }

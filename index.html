@@ -6,15 +6,15 @@
     <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Asap&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Beautiful Belgrade - Business Page week 3</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇷🇸</text></svg>">
   </head>
   <body>
     <!-- hero header with video -->
     <nav>
       <a class="nav-link" href="#sign-up">Sign up for exclusive content</a>
       <a class="nav-link" href="https://belgrade.tips/index.php/2021/01/14/secrets-of-belgrade-bridges/">Brigdes of Belgrade</a>
-      <a class="nav-link" href="#">About</a>
+      <a class="nav-link" href="http://www.aboutbelgrade.com/en/history-of-belgrade.html">History of Belgrade</a>
       <a class="nav-link" href="https://theculturetrip.com/europe/serbia/articles/the-10-best-restaurants-in-belgrade-serbia/">10 restaurants worth visiting in Belgrade</a>
     </nav>
     <header>
@@ -31,11 +31,11 @@
       <fieldset>
         <legend><h3>Sign up to unlock exclusive content about Belgrade</h3></legend>
       <label>First name
-        <input class="text-input" type="text" name="firstName">
+        <input class="text-input" type="text" name="firstName" required>
       </label>
 
       <label>Last name
-        <input class="text-input" type="text" name="lastName">
+        <input class="text-input" type="text" name="lastName" required>
       </label>
 
       <label>Email
@@ -46,16 +46,21 @@
         <input class="text-input" type="password" name="password" placeholder="**********" required>
       </label>
 
-      <label>I prefer info trough
-        <input class="radio" type="radio" name="radioalt1"> Emails
-        <input class="radio" type="radio" name="radioalt2"> Carrier pigeon
-      </label>
+        <p>I prefer info trough</p>
+        <div class="radio-column">
+        <label>
+            <input class="radio" type="radio" name="info"> Emails
+          </label>
+          <label> 
+            <input class="radio" type="radio" name="info"> Carrier pigeon
+          </label>
+        </div>  
 
       <label>
         <input class="checkbox" type="checkbox" name="checkboxTermsConditions" required> I agree to <a class="terms-link" href="#">terms and conditions</a>
       </label>
       <label>
-        <input class="checkbox" type="checkbox" name="checkboxNewsletter"> I want information and newsletters
+        <input class="checkbox" type="checkbox" name="checkboxNewsletter"> My carrier pigeon is better than yours
       </label>
 
       <button type="submit">Register</button>
@@ -69,7 +74,7 @@
       <div class="question" id="section1">How many live in Belgrade?</div>
       <div class="answer">
     <!-- https://www.worldometers.info/world-population/serbia-population/ -->
-      <p>The population of Belgrade is currently 1,273,651.</p>
+      <p>The population of Belgrade is currently 1,273,651. However Serbias total population is 8,696,280.</p>
       </div>
 
       <div class="question" id="section2">Is Serbia part of the EU?</div>
