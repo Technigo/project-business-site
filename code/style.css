@@ -1,3 +1,8 @@
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -8,7 +13,6 @@ body {
   margin: 0;
   font-family: raleway;
   font-weight: 200;
-  /* margin-bottom: 96px; */
 }
 
 p {
@@ -16,7 +20,6 @@ p {
   font-size: 1.5rem;
   line-height: 2rem;
   text-align: center;
-  /* margin-top: 0; */
 }
 
 h1 {
@@ -25,6 +28,8 @@ h1 {
   font-weight: 100;
   margin: 0;
 }
+
+/* CODE FOR ANIMATION ON BREATHE */
 
 .pulse {
 	transform: scale(1);
@@ -45,6 +50,8 @@ h1 {
 	}
 }
 
+/* -------- */
+
 
 h2 {
   font-size: 1.125rem;
@@ -59,7 +66,6 @@ h3 {
   font-family: raleway;
   font-weight: 200;
 }
-
 
 /* NAV & HERO */
 
@@ -116,7 +122,6 @@ h3 {
 }
 
 
-
 /*INFO */
 
 .sectionHeading {
@@ -141,6 +146,7 @@ h3 {
   line-height: 1.8rem;
   margin-top: 0;
 }
+
 
 .jes-info {
   display: flex;
@@ -179,6 +185,40 @@ h3 {
   margin-bottom: 0;
   font-size: 14px
 }
+
+.bolder {
+  font-weight: 600;
+}
+
+/* QUOTE  */
+
+.natthiko {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  align-items: center;
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  /* opacity: 50%; */
+  background-color: #fff;
+  color: #333;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.writer {
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+  padding: 0.5rem;
+}
+
+/* -------- */
 
 .accordion {
   flex-direction: column;
@@ -227,14 +267,12 @@ h3 {
     /* transition-duration: 4s; */
 }
 
-
 .answer p {
   text-align: left;
   line-height: 1.5rem;
   max-width: 90%;
   font-size: 1rem;
 }
-
 
 .active {
   background-color: #111;
@@ -271,7 +309,6 @@ input {
   margin-top: 0.5rem;
   border-radius: 8px;
   border: none;
-  opacity: 70%;
 }
 
 .dropdown {
@@ -282,7 +319,12 @@ input {
   margin-top: 0.5rem;
   border-radius: 8px;
   border: none;
-  opacity: 70%;
+
+  
+}
+
+select .dropdown {
+
 }
 
 
@@ -385,10 +427,11 @@ input:valid {
 
 
 .footer p {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
   margin-right: 0.5rem;
   font-size: 14px;
   color: #fff;
+  margin-bottom: 0;
 }
 
 .footer a {
@@ -455,7 +498,6 @@ input:valid {
 }
 
 
-
 @media (min-width: 991px) {
   
   h1 {
@@ -507,8 +549,32 @@ input:valid {
     text-align: left;
   }
 
+  /* .natthiko {
+    margin-top: 2rem;
+  } */
+
+  .quote {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: #fff;
+    color: #333;
+    padding: 0.5rem;
+
+  }
+  
+  .writer {
+    font-size: 1.125rem;
+    background-color: #fff;
+    color: #333;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .accordion {
-    width: 50%;
+    /* width: 50%; */
     padding: 0%;
   }
 
@@ -517,7 +583,6 @@ input:valid {
   }
 
   .jes-info {
-    /* flex-direction: row; */
     justify-content: center;
     align-items: center;
     width: 50%;
@@ -540,16 +605,10 @@ input:valid {
    float: left;
   }
 
-  .preamble:after {
+  /* .preamble:after {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  /* .jes-img {
-    border-radius: 50%;
-    width: 20%;
-    object-fit: cover;
   } */
 
   .sectionHeading {
@@ -564,6 +623,12 @@ input:valid {
     margin-bottom: 3rem;
   }
 
+  .left {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 50%;
+  }
   .form { 
     margin-top: 2rem;
   }
@@ -572,10 +637,9 @@ input:valid {
     justify-content: left;
   }
 
-  github-logo {
+  .github-logo {
     width: 48px;
     height: 48px;
   }
-
 
 }
