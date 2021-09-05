@@ -10,17 +10,17 @@ display: block;
 body, html {
   height: 100%;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(202, 202, 202);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: burlywood;
 }
 
 .hero-image {
-  background-image:url("assets/test-hero-hair.jpg");
+  background-image:url("assets/braxton-apana.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: 60%;
+  height: 80%;
 }
 
 .hero-text {
@@ -29,8 +29,9 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: rgb(0, 0, 0);
 }
+
 
 .form {
   background-color: rgb(163, 219, 219);
@@ -42,8 +43,6 @@ body, html {
   padding: 1em
 }
 
-
-
 .accordion {
   background-color: rgb(219, 163, 212);
   display: flex;
@@ -54,9 +53,27 @@ body, html {
   padding: 1em
 }
 
-.answer {
-  display: none;
+.question {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
 
+.active, .question:hover {
+  background-color: #ccc;
+}
+
+.answer {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
 
 }
 input {
@@ -67,7 +84,7 @@ input {
 /* Får inte vara några mellanslag i input:valid 
 Fungerar endast när man skriver in texten, inte när man väljer ett aöternativ*/
 input:valid {
-  background-color: rgb(10, 117, 19);
+  background-color: rgb(193, 241, 197);
 }
 
 label {
