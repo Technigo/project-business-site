@@ -48,6 +48,15 @@ p {
   margin: 0;
   margin-block-start: 0;
   margin-block-end: 0;
+  margin-inline-start: 5px;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover, a:focus {
+  color: #DB398D;
 }
 
 /* a video header is cool :) */
@@ -122,7 +131,7 @@ article {
   display: grid;
   grid-template-rows: 1fr 1fr;
   background: #fff;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 80px 20px;
 }
 
 .block-section h2 {
@@ -224,6 +233,7 @@ form li + li {
   margin-top: 1em;
 }
 
+
 label {
   /* Uniform size & alignment */
   display: inline-block;
@@ -253,6 +263,19 @@ select,
   padding: 2px 2px 2px 6px;
 }
 
+.checkbox {
+  height: 20px;
+  width: 20px;
+}
+
+label,
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+
 .btn-submit {
   text-align: center;
 }
@@ -277,15 +300,15 @@ button:hover, button:focus {
 /* footer */
 
 footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
   background: #999;
   text-align: center; 
   color: #fff;
-  width: 100%;
   border-top: 1px solid #e0dfdf;
   font-size: 0.8rem;
   text-transform: uppercase;
-  position: relative;
-  bottom: 0;
   padding-top: 25px;
   padding-bottom: 25px;
   z-index: 2;
@@ -403,9 +426,8 @@ header {
 }
 
 .block-section {
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-bottom: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 }
 
@@ -430,9 +452,10 @@ header {
     font-size: 10rem;
   }
 
-/* footer {
-  position: absolute;
-  bottom: 0;
-} */
+  .block-section {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
 
+  
 }
