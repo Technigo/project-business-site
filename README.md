@@ -1,6 +1,6 @@
 # Business Site
 
-Created a business stie "The Online Education Company" with CSS and some Javacsript.Produces a business site with a hero iamges that change depending on the size of the screen.
+Created a business stie "The Online Education Company" with CSS and some Javacsript.Produces a business site with hero images that change depending on the size of the screen.
 
 ## The problem
 
