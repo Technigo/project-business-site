@@ -7,8 +7,10 @@ body {
   margin: 0;
   background: #E1D2CB;
   font-family: 'Montserrat', sans-serif;
-  
 }
+
+
+/* -------------------NAVIGATIONBAR--------------------------- */
 
 .navbar {
   width: 100%;
@@ -26,6 +28,9 @@ body {
   float: right;
   padding: 20px 0px 20px 0px;
 }
+
+
+/* ---------------------HERO VIDEO AND CAPTION----------------- */
 
 .hero {
   height: 100vh;
@@ -60,6 +65,15 @@ body {
   border-radius: 5px;
 }
 
+
+.hero-button {
+  background-color:whitesmoke; 
+  opacity: 0.5;
+  border: 1px solid whitesmoke;
+  width:180px;
+  padding: 10px;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -67,15 +81,7 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-
-.hero-button {
-  background-color:whitesmoke; 
-  opacity: 0.5;
-  border: 1px solid whitesmoke;
-  width:180px;
-  padding: 10px
+  font-size: 20px;
 }
 
 
@@ -89,6 +95,9 @@ video {
   object-fit: cover;
   overflow: hidden;
 }
+
+
+/* -------------------SIGN-UP-FORM----------------------- */
 
 .flex-container {
   display: flex; 
@@ -167,6 +176,7 @@ button:hover {
   background-color: #DECDB4;
 }
 
+/* -------------ACCORDION------------------ */
 
 .accordion {
   border: 2px solid #DECDB4;
@@ -174,14 +184,19 @@ button:hover {
   background-color: #DECDB4;
   width: 100%;
   height: auto;
-  margin-bottom: 2em;
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 30px;
 }
 
 .answer {
+  border: 1px solid #F3E9E0;
+  width: 85%;
+  margin: 10px;
+  padding: 0px 20px 0px 20px;
+  text-align: justify;
   display: none;
 }
 
@@ -196,21 +211,41 @@ button:hover {
   padding: 10px 0px 10px 10px;
   font-size: 20px;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
+
+/* This image below is only displayed in deskptop version that is why it displays none in this mobile first design */
 
 .small-image {
   display: none;
 }
 
+/* --------------footer--------------- */
 
-/* .footer {
+footer {
+  background-color: #DECDB4;
     position: relative;
+    font-size: 30px;
     width: 100%;
-    height: 40px;
+    padding-bottom: 20px;
+    height: 50px;
     color: white; 
     text-align: center;
-} */
+    object-fit: cover;
+    overflow: hidden;
+}
 
+
+.fa:hover {
+  color: #F3E9E0;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+
+
+
+/* ------------TABLET MEDIA QUERIES-------------- */
 
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -241,6 +276,9 @@ button:hover {
 
 }
 
+/* -------------DESKTOP MEDIA QUERIES-------------- */
+
+
 @media screen and (min-width: 1025px) {
 
   .flex-container {
@@ -259,8 +297,8 @@ button:hover {
   height: 500px;
   padding: 30px 10px 20px 10px;
   margin: 40px 0px 40px 40px;
-
   }
+
 
   .small-image {
     border: 1px solid #DECDB4;
@@ -268,8 +306,8 @@ button:hover {
     width: auto;
     height: 550px;
     border-radius: 10px;
-    
   }
+
 
 
   .accordion {
@@ -290,5 +328,12 @@ button:hover {
   border: 1px solid #F3E9E0;
   width: 90%;
   margin: 10px;
+  }
+
+
+
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
   }
 }
