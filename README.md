@@ -8,4 +8,4 @@ What helped me a lot was google as always, but also friends from class. I looked
 If I had more time I'd try to make the accordion a little bit bigger, and maybe not use buttons. I'd also like to learn how to make input fields responsive and how to align them better. 
 
 ## View it live
-
+knithappens.netlify.app
