@@ -76,6 +76,10 @@ li a {
   text-decoration: none;
 }
 
+li a:hover {
+  text-decoration: underline;
+}
+
 h2 {
   font-size: 16px;
   margin-bottom: 8%;
@@ -92,16 +96,17 @@ h2 {
 
 /* FORMS CONTAINER */
 
-
-
-.forms {
+.formWrapper {
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: auto;
-  margin-bottom: 20px;
-  padding: 10px 10px 10px 30px;
-  width: 70vw;
+}
+
+#form {
+  margin-bottom: 30px;
+  padding: 10px 40px 10px 40px;
   font-size: 12px;
   background-color: #E0D4FE;
   opacity: 0.95;
@@ -145,28 +150,31 @@ label {
 
 /* ACCORDION CONTAINER */
 
-.accordion {
+.accordionWrapper {
+  width: 80%;
   display: flex;
   flex-direction: column;
   margin: auto;
   justify-content: center;
+}
+
+#accordion {
   font-size: 12px;
   margin-bottom: 10px;
-  padding: 10px 10px 20px 20px;
-  width: 70vw;
+  padding: 10px 40px 30px 40px;
   background-color: #E0D4FE;
   opacity: 0.95;
   position: relative;
   z-index: 20;
-  border-radius: 2%;
+  border-radius: 5px;
 }
 
 .question {
   background-color: #FFF7AE;
-  padding: 10%;
+  padding: 8%;
   border:solid;
   border-width: 1px;
-  border-color: #9D98FA;
+  border-color: #fcf08b;
   font-weight: 600;
 }
 
@@ -175,13 +183,13 @@ label {
   background-color: #fffbdb;
   border:solid;
   border-width: 1px;
-  border-color: #9D98FA;
-  padding: 5%;
+  border-color: #fcf08b;
+  padding: 8%;
 }
 
 #question1, #question2, #question3, #question4 {
   margin: 0;
-  width: 200px;
+  min-width: 100%;
 }
 
 
@@ -248,22 +256,21 @@ li a {
     margin: auto;
     margin-top: 2%;
   }
-  
-  .forms {
-    font-size: 12px;
+
+  .formWrapper {
+    width: 70vw;
     margin-top: 3%;
     margin-right: 3%;
-    padding: 5px 10px 10px 30px;
-    width: 70vw;
-    height: 40vh;
   }
   
-  .accordion {
-    font-size: 12px;
+  .accordionWrapper {
+    width: 70vw;
     margin-top: 3%;
     margin-left: 3%;
-    padding: 5px 10px 10px 30px;
-    width: 70vw;
+  }
+
+  .question, .answer {
+    padding: 10%;
   }
 
   #question1, #question2, #question3, #question4 {
@@ -298,7 +305,7 @@ li a {
 
   .headerText {
     font-size: 100px;
-    margin-top: 10%;
+    margin-top: 5%;
   }
 
   /* NAVBAR */
@@ -322,27 +329,66 @@ li a {
       margin: auto;
       margin-top: 2%;
     }
-    
-    .forms {
-      font-size: 14px;
+
+    .formWrapper {
       margin-top: 3%;
-      margin-right: 3%;
-      padding: 5px 10px 10px 60px;
-      width: 70vw;
-      height: 40vh;
+      margin-right: 2%;
+      width: 30%;
     }
     
-    .accordion {
+    #form {
       font-size: 14px;
+      margin: auto;
+      min-width: 70%;
+    }
+
+    label {
+      margin-bottom: 3%;
       margin-top: 3%;
-      margin-left: 3%;
-      padding: 5px 10px 10px 60px;
-      width: 70vw;
+    }
+    
+   
+    .radioGender {
+      display: inline-block;
+      padding: 1%;
+      margin-top: 3%;
+      margin-bottom: 3%;
+    }
+    
+    #termsConditions, #newsletter {
+      padding: 1%;
+    }
+    
+    .submitButton {
+      background-color: #FFF7AE;
+      padding: 3%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      border: solid;
+      border-width: 1px;
+      border-radius: 6px;
+      border-color: #9D98FA;
+    }
+
+    .accordionWrapper {
+      margin-top: 3%;
+      margin-left: 2%;
+      width: 30%;
+    }
+    
+    #accordion {
+      font-size: 14px;
+      min-width: 80%;
+      margin: auto;
+    }
+
+    .question, .answer {
+      padding: 7%;
     }
   
     #question1, #question2, #question3, #question4 {
       margin: 0;
-      width: 220px;
+      min-width: 50%;
     }
   
 
@@ -358,6 +404,10 @@ li a {
     .footerText {
       font-size: 32px;
       margin-bottom: 4%;
+    }
+
+    .footerCred {
+      font-size: 12px;
     }
 
   
