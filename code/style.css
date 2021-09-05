@@ -18,10 +18,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("https://images.unsplash.com/photo-1481401908818-600b7a676c0d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80");
-  /* background-position: 0px -600px; */
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .hero-image-section {
@@ -31,8 +35,9 @@ body {
 /* Paragraph and text  */
 
 h1 {
-  font-size: 6rem;
-  width: 50%;
+  font-size: 3rem;
+  font-weight: 700;
+  width: 280px;
   text-align: center;
   margin-bottom: 150px;
 }
@@ -95,11 +100,27 @@ label,
   font-weight: 500;
 }
 
+button {
+  border: solid 3px #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 15px 45px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #fff;
+  color: rgb(88, 88, 88);
+  font-weight: 600;
+}
+
 .inline-label {
   display: inline;
   font-size: 0.85rem;
   font-weight: 400;
   line-height: 25px;
+  margin-right: 15px;
 }
 
 .sign-up-btn {
@@ -118,7 +139,7 @@ label,
 /* Accordion */
 
 .FAQ-section {
-  background-color: darkblue;
+  background-color: #110f41;
   margin-top: 0;
   display: flex;
   align-items: center;
@@ -172,6 +193,10 @@ label,
   .form-section {
     padding: 10vw 0;
   }
+  h1 {
+    font-size: 5.6rem;
+    width: 500px;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -189,5 +214,9 @@ label,
   .FAQ-section {
     margin-top: 0;
     min-height: 100vh;
+  }
+  h1 {
+    font-size: 7rem;
+    width: 800px;
   }
 }
