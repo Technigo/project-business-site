@@ -14,9 +14,9 @@ The site was made to practice forms, basic DOM manipulation with JavaScript, acc
 
 ## Future implementations
 
-Hover effects
-Further input types or form elements
-Form validation
+* Hover effects
+* Further input types or form elements
+* Form validation
 
 ## View it live
 
