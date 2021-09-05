@@ -13,19 +13,30 @@ html, body {
   background-color: cornsilk;
 }
 
-header {
-  height: 60%;
-  min-height: 400px;
-  max-width: 1024px;
-  margin: auto;
-  background-image: url("https://images.pexels.com/photos/4321800/pexels-photo-4321800.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
+.header {
+  height: 400px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
+  z-index: -1;
+}
+
+.overlay {
+  width: 100%;
+  height: 400px;
+  opacity: 0.7;
+  background: linear-gradient(to bottom,lightsalmon,darkturquoise);
+  position: absolute;
+  z-index: 1;
+}
+
+video {
+  height: 400px;
+  max-width: 100%;
+  position: absolute;
+  object-fit: cover;
 }
 
 h1 {
@@ -78,11 +89,11 @@ footer {
 .logo {
   width: 70%;
   max-height: 250px;
+  z-index: 2;
 }
 
 .bottom-section {
   max-width: 1024px;
-  min-height: 40%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -91,6 +102,7 @@ footer {
   margin: auto;
   background-color: tan;
   border-top: 3px cornsilk solid;
+  z-index: 2;
 }
 
 .signup {
@@ -206,7 +218,18 @@ footer {
 }
 
 
-@media (min-width: 668px) {
+@media (min-width: 550px) {
+
+  video {
+    height: 526px;
+    width: 1024px;
+  }
+
+  .header, .overlay {
+    width: 100%;
+    max-width: 1024px;
+    height: 526px;
+  }
 
   .bottom-section {
     flex-direction: row;
@@ -214,8 +237,8 @@ footer {
   }
 
   .signup-container {
-    width: 50%;
-    padding: 20px 15px 50px 40px;
+    width: 55%;
+    padding: 20px 10px 40px 30px;
   }
 
   .signup-information {
@@ -223,7 +246,7 @@ footer {
   }
 
   .accordion-container {
-    width: 50%;
+    width: 45%;
     justify-content: flex-start;
     padding: 47px 30px 0px 15px;
   }
