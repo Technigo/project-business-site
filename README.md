@@ -9,4 +9,4 @@ Accordion: https://www.youtube.com/watch?v=dr8Emho-kYo&t=45s
 And read alot on accorions.
 
 ## View it live
-The site can be viwe @ 
+Look at the site @ 
