@@ -12,8 +12,7 @@ Used the included JS script with the project for the accordion.
 Connected it to httpbin.org with method="POST", for some feedback on the signup forms. Made some inputs required.
 Did a glow animation for top text, but it seems a bit 'slow'.
 
-If I had more time I would've like to style it more. Make some things smoother here and there. Was a bit pressed for time this week. Probably could clean up the code better as well.
-Tried to make the hero video responsive In diffrent ways for loading diffrent quality for certains widths, but don't know if it got to work as intended.
+If I had more time I would've like to style it more, especially radio/checkboxes. Make some things smoother here and there, like the accordion. Was a bit pressed for time this week. Probably could clean up the code better as well.
 
 ## View it live
 
