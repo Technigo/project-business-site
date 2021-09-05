@@ -1,12 +1,17 @@
 # Business Site
+Assignment is to build a business site with a hero, form and accordion. 
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I created a site for virtual online yoga classes. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+- Put too much time on a footer that I in the end removed. 
+- Started to style with mobile first but kept looking at desktop screen and mixed up the mobile and desktop styling. 
+- Too much focus on the details.
+- Could not decide wether to use grid or flex for the Form and Accordion and spent too much time on that. But good thing is that I learnt a lot of how to use both now. 
+
+If I had more time I would want to ad some animation to the site. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Netlify: https://jennysyoga.netlify.app/
+
