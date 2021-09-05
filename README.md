@@ -13,4 +13,4 @@ I would take it more easy in the beginning. and style it afterwards. I would lik
 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://goofy-lewin-76b692.netlify.app/
