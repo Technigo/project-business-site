@@ -14,10 +14,10 @@ body {
 }
 
 /* Hero */
-video {
+.hero-video {
   width: 100%;
+  height: 100vh;
   object-fit: cover;
-  overflow: hidden;
 }
 .overlay-text {
   position: absolute;
@@ -35,6 +35,8 @@ video {
   color: white;
   font-size: 3vw;
   margin: 2vw 0 0 50px;
+  animation: glow 2s ease-in-out infinite;
+  animation-direction: alternate-reverse;
 }
 /* Glow animation for top-text*/
 @keyframes glow {
@@ -184,24 +186,9 @@ footer {
   max-width: 40px;
 }
 
-/* Media query for grid 2 columns for table+dekstop. And for video source change. */
-@media (max-width: 767px) {
-  .hero-video-small {
-    display: block;
-  }
-  .hero-video-medium {
-    display: none;
-  }
-}
-
+/* Media query for grid 2 columns for table+dekstop */
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .hero-video-medium {
-    display: block;
-  }
-  .hero-video-small {
-    display: none;
   }
 }
