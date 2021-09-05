@@ -1,6 +1,4 @@
 // A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
 function toggle() {
   this.classList.toggle("active")
 }
@@ -13,34 +11,24 @@ document.getElementById("FAQ4").onclick = toggle
 document.getElementById("FAQ5").onclick = toggle
 
 
+// A function that adds and remove the class "minus" on the section you click on.
 
+document.getElementById("question1").onclick = () => {
+  question1.classList.toggle("minus")
+}
 
-// const plusToMinus = document.getElementById("plus")
+document.getElementById("question2").onclick = () => {
+  question2.classList.toggle("minus")
+}
 
-// const plusToMinus = document.getElementsByClassName("plus")
+document.getElementById("question3").onclick = () => {
+  question3.classList.toggle("minus")
+}
 
+document.getElementById("question4").onclick = () => {
+  question4.classList.toggle("minus")
+}
 
-// plusToMinus.innerText = "-"
-
-
-
-
-// My code:
-
-
-// const answer1 = document.getElementById("answer1")
-// const section1 = document.getElementById("section1")
-
-
-
-// section1.onclick = () => {
-//   alert("Hello you")
-// }
-
-
-// answer1.textContent = "Hey"
-
-// answer1.innerText = "Hey"
-
-
-
+document.getElementById("question5").onclick = () => {
+  question5.classList.toggle("minus")
+}

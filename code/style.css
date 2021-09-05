@@ -43,7 +43,7 @@ h3 {
   margin-top: 0;
 }
 
-h4 {
+.questions {
   font-size: 1.25rem;
   font-weight: 400;
   margin: 0;
@@ -73,7 +73,6 @@ hr {
   background-color: transparent;
   padding: 90px 80px;
   width: 100vw;
-  box-shadow: 10px 5px 50px 10px rgba(0, 0, 0, 0.25);
 }
 
 label,
@@ -123,46 +122,38 @@ label,
 .FAQ-section {
   background-color: darkblue;
   margin-top: 0;
-  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .FAQ {
-  /* background-color: darkred; */
-  padding: 90px 60px;
+  padding: 16vw 13vw;
+  width: 100vw;
 }
 
 .answers {
   display: none;
 }
 
-/* .active {
-  background-color: grey;
-} */
-
 .active + .answers {
   display: block;
 }
 
-.questions:hover {
+.accordion-item-header:hover {
   cursor: pointer;
 }
 
-.plus {
-  position: absolute;
-  left: 78%;
-  text-align: right;
+.questions::after {
+  content: "\002B"; /* Unicode character for "plus" sign (+) */
+  float: right;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.4rem;
 }
 
-.plus2 {
-  display: block;
-  position: relative;
-  text-align: right;
-  bottom: 1.5rem;
-  margin: 0;
-  padding: 0;
+.minus::after {
+  content: "\2212"; /* Unicode character for "minus" sign (-) */
 }
 
 /* Media Query */
@@ -173,21 +164,35 @@ label,
   }
 }
 
-@media (min-width: 541px) {
+@media (min-width: 541px) and (max-width: 1025px) {
   .form {
     width: 350px;
+    box-shadow: 10px 5px 50px 10px rgba(0, 0, 0, 0.25);
   }
   .form-section {
     min-height: 100vh;
   }
+}
+
+/* Change this */
+
+@media (min-width: 1025px) {
+  .form {
+    width: 350px;
+    box-shadow: 10px 5px 50px 10px rgba(0, 0, 0, 0.25);
+  }
+  .form-section {
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 1025px) {
   .FAQ {
-    width: 60%;
-    padding: 20.4vh 0;
+    width: 60vw;
+    padding: 20.5vh 0;
   }
   .FAQ-section {
-    background-color: darkblue;
     margin-top: 0;
-    width: 100vw;
     min-height: 100vh;
   }
 }
