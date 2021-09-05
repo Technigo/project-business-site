@@ -2,24 +2,6 @@ body {
   margin: 0.1em;
   }
 
-.active + .answer {
-  /* overflow: visible; */
-  max-height: 5em;
-  font-style: italic;
-  font-size: 18px;
-}
-
-.active {
- font-weight: bold;
-}
-
-.answer{
-  overflow: hidden;
-  max-height: 0;
-  transition: 1s ease-in-out;
-
-}
-
 header{
     display: flex;
     flex-direction: column;
@@ -30,7 +12,7 @@ header{
     border-color: white;
   }
 
-.hero-title{
+  .hero-title{
     font-family: 'Forum', cursive;
     letter-spacing: 10px;
     text-align: center;
@@ -39,25 +21,29 @@ header{
 
   }
 
-  .h2 {
-    color: whitesmoke;
-    font-family: 'Work Sans', sans-serif;
-    text-align: left;
-    font-size: 40px;
-    padding-left: 1.75em;
-  }
+.h2 {
+  color: whitesmoke;
+  font-family: 'Work Sans', sans-serif;
+  text-align: left;
+  font-size: 40px;
+  width: 50%;
+  padding-left: 1.75em;
+}
 
 .hero-text {
-  width: 700px;
-  width: 0 auto;
+  width: 50%;
+  /* width: 0 auto; */
   border-color: white;
-  padding-left: 3em;
+  border-style: solid;
+  margin-left: 4em;
+  padding-left: 2em;
 }
 
 .header-text{
   color: whitesmoke;
   font-family: 'Work Sans', sans-serif;
   text-align: left;
+  width: 50%;
   padding-left: 3em;
   font-size: 20px;
 }
@@ -85,48 +71,27 @@ header{
     background-color: transparent;
   }
 
-.one{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    padding: 8em;
-    background-color: #e6e6e6;
-  }
 
-.one > * {
-    flex-basis: 33%;
-  }
-  
 .two{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    flex-wrap: wrap; 
-    padding: 7em;
+    flex-wrap: nowrap; 
+    gap: 5em;
+    padding: 0 7em 7em 7em;
     background-color: transparent;
     opacity: 95%;
   }
 
-  /* .two :nth-child(1){
-    flex-basis: 0 1 40%;
-  }
-  .two :nth-child(2){
-    flex-basis: 0 1 60%;
-  } */
 
-  .form{
-    /* display: flex; */
-    /* flex-direction: row;
-    flex-wrap: wrap; */
-    /* justify-content: center; */
-    border-style: none;
-    padding: 3em;
-    text-align: left;
-    background-color: #B8CABF;
-    border-radius: 1em;
-    font-family: 'Work Sans', sans-serif;
-  }
+.form{
+  border-style: none;
+  padding: 2em;
+  text-align: left;
+  background-color: #B8CABF;
+  border-radius: 0.5em;
+  font-family: 'Work Sans', sans-serif;
+}
 
 input{
     border: solid;
@@ -141,13 +106,13 @@ input{
   width: 90%;
 }
 
-/* input:valid{
+input:valid{
 
 }
 
 input:invalid{
 
-} */
+}
 
 .label {
   display: block;
@@ -166,40 +131,55 @@ input:invalid{
 }
 
 .accordion{
-    border-style: solid;
-    padding: 1em;
-    margin: 1em;
-    width: 500px;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 25px;
-    background-color: #B8CABF;
-    border-radius: 0.5em;
-  }
+  border-style: solid;
+  padding: 2em;
+  width: 40%;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 25px;
+  background-color: #B8CABF;
+  border-radius: 0.5em;
+}
+
+.active + .answer {
+  max-height: 5em;
+  font-style: italic;
+  font-size: 18px;
+}
+  
+.active {
+   font-weight: bold;
+}
+  
+.answer{
+   overflow: hidden;
+   max-height: 0;
+   transition: 1s ease-in-out;
+  }  
 
 .question:after {
-      content: '\002B';
-      /* Unicode character for "plus" sign (+) */
-      color: #19294C;
-      float: right;
-    }
+    /* Unicode character for "plus" sign (+) */
+    content: '\002B';
+    color: #19294C;
+    float: right;
+  }
 
 .active:after {
-      content: "\2212";
-      color: #19294C;
-      /* Unicode character for "minus" sign (-) */
-    }
-  
-.col{
-    max-width: 15em;
-    padding: 2em;
-    margin: 1em;
-    border-style: solid;
-    border-width: 0.01em;
-    transition: transform .2s;
+  /* Unicode character for "minus" sign (-) */
+  content: "\2212";
+  color: #19294C;
+
   }
-  
-.col:hover{
-    transform: scale(1.2);
+
+.img-container {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+  }
+    
+.grid-item-img {
+    grid-column: span 1;
+    display: grid;
+    flex-direction: column;
   }
   
 footer{
@@ -209,14 +189,12 @@ footer{
     flex-wrap: wrap;
     align-items: center;
     background-color: #6A8187 ;
-    padding: 12em;
+    padding: 2em;
     color: white;
     font-size: 20px;
   }
   
-  /* .contact{} */
-  
-  @media screen and (max-device-width: 760px) {
+@media screen and (max-device-width: 640px) {
     /* #hero {
     background: url(./videos/placeholder.jpg) no-repeat;
     background-size: cover;
@@ -226,56 +204,66 @@ footer{
     display: none;
     } */
 
-    .hero-title{
-      font-size: 44px;
-    }
-
-    .h2{
-      width: 360px;
-      width: 0 auto;
-      font-size: 28px;
-      padding-left: 0.20em;
-    }
-    .header-text{
-      width: 360px;
-      width: 0 auto;
-      font-size: 18px;
-      padding-left: 0.20em;
-    }
-
-    .one{
-      display: none;
-    }
-
 header{
   padding-bottom: 2em;
 }
+.hero-title{
+  font-size: 32px;
+}
 
-  .form{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      border-style: solid;
-      padding: 1em;
-      margin: 1em;
-      width: 340px;
-      text-align: center;
-    }
-  
-input{
-      font-size: 1em;
+.h2{
+  width: 200px;
+  width: 0 auto;
+  font-size: 20px;
+}
+
+.header-text{
+  width: 200px;
+  width: 0 auto;
+  font-size: 18px;
+}
+
+.one{
+  display: none;
   }
+
+.two{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+    gap: 2em;
+    padding: 0 7em 7em 7em;
+    background-color: transparent;
+    opacity: 95%;
+  }
+
+.form{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-style: none;
+  padding: 1em;
+  margin: 1em;
+  width: 90%;
+  text-align: center;
+}
+  
+input {
+  border: solid;
+  border-width: 1px;
+  font-size: 1em;
+  padding: 1em;
+  margin-bottom: 1em;   
+}
   
 input:valid{
-      border-color: green;
-      border-radius: 1em;
+      background-color: rgb(76, 205, 76);
   }
   
 input:invalid{
-      border-style: dotted;
-      border-color: red;
-      border-radius: 1em;
+      background-color: rgb(232, 89, 89);
   }
   
 .label {
@@ -284,9 +272,8 @@ input:invalid{
   }
 
 .name{
-    text-align: center;
-    font-size: 1em;
-  }
+    border-style: solid;
+    text-align: left;}
   
 .button{
     padding: 1em;
@@ -299,9 +286,10 @@ input:invalid{
 }
 
 .accordion{
-  font-size: 20px;
+  font-size: 15px;
+  padding: 1em;
+  width: 90%;
+  margin-bottom: 2em;
 }
 
-
 }
-    
