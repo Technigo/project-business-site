@@ -26,28 +26,25 @@
 
     <section class ="container">
    
-    <form> <!--action="http://httpbin.org/anything" method="">-->
+    <form action="http://httpbin.org/anything" method="POST">
       
       <div class="personalinfo">
         <h2>To get access to this blog please fill in the form:</h2>
-        <label 
-          for="name">Your name:
+        <label for="name">Your name:
         <input 
           type="text" 
           id="name" 
+          name="name"
           placeholder="Name Nameson" required/>
-        </label>
+      </label>
 
-      
-        <lable
-          for="email"
-          style="margin: 5px;">Your email:
-         <input 
-          type="email"
-          id="email"
-          placeholder="email@email.com" required/>
-        </lable>
-
+      <label for="email">Your email:
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="email@email.com" required/> 
+      </label>
       </div>
 
       <div class="styleselection">
@@ -78,6 +75,7 @@
         value="Join!"/>
     
     </form>
+    
 
      <!-- Accordion -->
      
