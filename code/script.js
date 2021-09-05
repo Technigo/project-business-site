@@ -1,16 +1,25 @@
 
+// this function is responsible for displaying the answer
 function toggle() {
-  this.classList.toggle("active")
+  this.classList.toggle("active");
+  
+}
+// this function changes the arrow button which is <span> element in html.
+function changeArrow(){
+  if (this.lastChild.innerHTML=="+") {
+    this.lastChild.innerHTML= "-";
+  }
+  else{
+    this.lastChild.innerHTML="+";
+  }
 }
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-// document.getElementById("section1").onclick = toggle;
-
-//A looping function adds listeners to all the FAQ sessions.
+//A looping function adds two listeners to all the FAQ sessions.
 function loopThroughQuestions(){
   let numberOfAnswers= document.querySelectorAll('#faq-container .answer').length;
   for(let i=1; i<=numberOfAnswers; i++){
     document.getElementById(`section${i}`).addEventListener("click", toggle);
+    document.getElementById(`section${i}`).addEventListener("click", changeArrow);
   }
 }
 //The looping function runs when page loads.
