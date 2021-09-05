@@ -16,6 +16,8 @@ body {
 /* Hero */
 video {
   width: 100%;
+  object-fit: cover;
+  overflow: hidden;
 }
 .overlay-text {
   position: absolute;
@@ -32,7 +34,7 @@ video {
 .top-text-b {
   color: white;
   font-size: 3vw;
-  margin: 20px 0 0 50px;
+  margin: 2vw 0 0 50px;
 }
 /* Glow animation for top-text*/
 @keyframes glow {
@@ -71,12 +73,22 @@ video {
 .form-boxes input {
   width: 300px;
   height: 30px;
+  text-align: center;
   border-radius: 8px;
-  border: 1px solid blueviolet;
+  border: none;
+}
+::placeholder {
+  /* Changes placeholder text */
+  color: rgb(213, 175, 216);
 }
 .radio-buttons,
 .check-boxes {
   margin-bottom: 20px;
+}
+.form-boxes,
+.check-boxes,
+.radio-buttons label {
+  color: rgb(159, 76, 197);
 }
 button {
   text-transform: uppercase;
@@ -112,11 +124,6 @@ h2 {
 p {
   color: rgb(74, 19, 126);
 }
-.form-boxes,
-.check-boxes,
-.radio-buttons label {
-  color: rgb(76, 24, 136);
-}
 
 /* Accordion */
 .accordion {
@@ -137,7 +144,7 @@ p {
   position: relative;
   cursor: pointer; /* Changes cursor over accordion question */
   background-color: rgb(173, 135, 222);
-  color: #111;
+  color: rgb(103, 45, 156);
   margin: 1rem 0;
 }
 .question::after {
@@ -152,9 +159,9 @@ p {
 .answer {
   display: none;
   padding: 1rem;
+  font-size: 0.8rem;
   line-height: 1.5rem;
   background-color: rgb(238, 217, 250);
-  border-top: 2px solid rgb(210, 189, 228);
 }
 .active {
   background-color: rgb(135, 114, 231);
@@ -169,7 +176,7 @@ footer {
   font-size: 0.7rem;
   color: rgb(237, 199, 255);
   width: 100%;
-  padding: 10px;
+  padding: 20px 0 10px 0;
   text-align: center;
 }
 .technigo-logo {
