@@ -1,40 +1,62 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
 body {
   font-family: 'Open Sans Condensed', sans-serif;
   margin: 0;
+  width: 100%;
 }
 
 header {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 1000;
   background-image: url(../Mountains\ in\ the\ fog.mp4);
   width: 100%; 
   height: 100vh;
   object-fit: cover;
-}
-
-.video-header {
-  position: relative;
-  display: flex;
-  min-width: 100%; 
-  min-height: 100%;
-}
-
-.overlay {                      /*My text as overlay on header video*/
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; 
-  display: flex; 
   justify-content: center;
   align-items: center;
-  color: white;
+  overflow: hidden;
+}
+
+.text {
+  position: absolute;
+  color: #ffffff;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.menu-button {
+  background: none;
+  border: solid #ffffff;
+  color: #ffffff;
+  border-radius: 40px;
+  font-size: 15px;
+  padding: 15px;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background: #ffffff; 
+  color: #333333;
+  font-weight: bold;
+}
+
+.text h1 {
+  font-size: 60px;
+}
+
+.text p {
+  font-size: 16px;
+  margin-bottom: 20px; 
+  padding: 10px;
 }
 
 fieldset {
@@ -46,18 +68,52 @@ fieldset {
 
 .grid-container {
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   grid-template-rows: repeat(3, 1fr);
+   grid-template-columns: repeat (2, 1fr);
+   grid-template-rows: repeat (3, 1fr);
    grid-column-gap: 0px;
    grid-row-gap: 0px;
+   padding: 20px; 
   }
 
-  section {
-    display: block;
+  input[type=text], [type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(73, 167, 120);
+    border-radius: 4px;
+    box-sizing: border-box;
   }
-  
+
+  .form-button {
+    background: none;
+    border: 1px solid rgb(73, 167, 120);
+    color: rgb(73, 167, 120);
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 5px;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 70px;
+  }
+
+  .form-button:hover {
+    background:rgb(73, 167, 120);
+    color: #ffffff;
+    font-weight: bold;
+  }
+
   .signup { 
     grid-area: 1 / 1 / 4 / 5;
+  }
+
+  .signup fieldset {
+    padding: 30px 60px;
+  }
+
+  legend {
+    color: rgb(73, 167, 120);
   }
 
   .accordion { 
@@ -71,10 +127,11 @@ fieldset {
     border: none;
     outline: none;
     cursor: pointer;
-    background: #333333;
+    background: #555454;
     color: #ffffff;
     text-align: left;
     transition: background 0.2s;
+    font-size: 17px;
   }
 
   .accordion__button::after {
@@ -96,6 +153,95 @@ fieldset {
     max-height: 0;
     transition: max-height 0.5s;
     padding: 0 15px;
-    font-family: sans-serif;
     background: #eeeeee;
+    font-size: 14px;
   }
+
+  .accordion__content p {
+    padding: 20px;
+  }
+
+  footer {
+    width: 100%; 
+  }
+
+  .footer-signature {
+    padding: 30px;
+    text-align: center;
+    color:rgb(73, 167, 120);
+  }
+
+/*Tablet*/
+@media (min-width: 668px) and (max-width: 1024px) {
+  .text {
+    position: absolute;
+    color: #ffffff;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .menu-button {
+    background: none;
+    border: solid #ffffff;
+    color: #ffffff;
+    border-radius: 40px;
+    font-size: 15px;
+    padding: 20px;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .menu-button:hover {
+    background: #ffffff; 
+    color: #333333;
+    font-weight: bold;
+  }
+  
+  .text h1 {
+    font-size: 80px;
+  }
+  
+  .text p {
+    font-size: 18px;
+    padding: 20px;
+    margin-bottom: 40px; 
+  }
+}
+
+/*Destop*/
+@media (min-width: 1025px) {
+  .text {
+    position: absolute;
+    color: #ffffff;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .menu-button {
+    background: none;
+    border: solid #ffffff;
+    color: #ffffff;
+    border-radius: 40px;
+    font-size: 15px;
+    padding: 20px;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .menu-button:hover {
+    background: #ffffff; 
+    color: #333333;
+    font-weight: bold;
+  }
+  
+  .text h1 {
+    font-size: 100px;
+  }
+  
+  .text p {
+    font-size: 20px;
+    margin-bottom: 40px; 
+  }
+}
