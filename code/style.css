@@ -2,21 +2,19 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+body{
+  font-family: 'Roboto', sans-serif;
 }
 
-body {
+header, main {
+  width: 100%;
   max-width: 1300px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 header {
-  width: 100%;
   height: 35vh;
-  position:relative
+  position: relative;
 }
 
 #header-video {
@@ -30,14 +28,35 @@ header {
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header-content h1 {
+  font-family: 'Satisfy', cursive;
+  font-size: 50px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.accordion {
+  min-width: 200px;
+  max-width: 400px;
 }
 
 .question {
-  background-color: burlywood;
+  background-color: rgb(187, 135, 222);
 }
 
 .accordion div:nth-child(4n){
-  background-color: aqua;
+  background-color: rgb(107, 168, 168);
 }
 
 .question:after {
@@ -67,21 +86,16 @@ header {
   cursor: auto;
 }
 
-/* hero-image info here: https://www.w3schools.com/howto/howto_css_hero_image.asp*/
-/* .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/happy-dog-small.jpg");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
+@media(min-width:800px) {
+  main {
+    flex-direction: row;
+  }
 
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-} */
+  form, .accordion {
+    margin: 0 auto;
+  }
+
+  .accordion {
+    width: 400px;
+  }
+}

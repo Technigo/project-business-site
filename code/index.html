@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" 
     href="./style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Satisfy&display=swap" rel="stylesheet">
     <title>Doggo-daycare</title>
   </head>
   <body>
@@ -25,158 +26,157 @@
     </header>
 
     <!-- Signup form -->
+    <main>
+      <!--  -->
+      <form class="form" id="form" action="https://httpbin.org/anything" method="post">
+        <h2>Sign up today and see available daycares</h2>
+        
+        <!-- for hör ihop med id -->
+        <div class="input-container">
+          <label for="dogname">Enter your dogs name: </label> 
+          <input class= "text-input" 
+            type="text"required
+            id="dogname" 
+            name="dogname" 
+            placeholder="Enter dogs name"
+          />
+        </div>
 
-    <h2>Sign up today and see available daycares</h2>
+        <div class="input-container">
+          <label for="username">Enter a username: </label> 
+          <input class= "text-input" 
+            type="text" required
+            id="username" 
+            name="username" 
+            placeholder="Enter username"
+          />
+        </div>
 
-    <!-- action="https://httpbin.org/anything" method="post" -->
-    <form class="form" id="form" >
-      <!-- for hör ihop med id -->
-      <div class="input-container">
-        <label for="dogname">Enter your dogs name: </label> 
-        <input class= "text-input" 
-          type="text"required
-          id="dogname" 
-          name="dogname" 
-          placeholder="Enter dogs name"
-        />
-      </div>
+        <div class="input-container">
+          <label for="email">Enter your e-mail: </label> 
+          <input class= "text-input" 
+            type="email"
+            id="email" 
+            name="email" 
+            placeholder="happydog@email.io"
+          />
+        </div>
 
-      <div class="input-container">
-        <label for="username">Enter a username: </label> 
-        <input class= "text-input" 
-          type="text" required
-          id="username" 
-          name="username" 
-          placeholder="Enter username"
-        />
-      </div>
+        <div class="input-container">
+          <label for="password">Enter a password: </label> 
+          <input class= "text-input" 
+            type="password" required
+            id="password" 
+            name="password" 
+            placeholder="Enter password"
+          />
+        </div>
 
-      <div class="input-container">
-        <label for="email">Enter your e-mail: </label> 
-        <input class= "text-input" 
-          type="email"
-          id="email" 
-          name="email" 
-          placeholder="happydog@email.io"
-        />
-      </div>
+        <label for="city"> 
+          <h3>Which city do you live in?</h3>
+        </label>
 
-      <div class="input-container">
-        <label for="password">Enter a password: </label> 
-        <input class= "text-input" 
-          type="password" required
-          id="password" 
-          name="password" 
-          placeholder="Enter password"
-        />
-      </div>
-
-      <label for="city"> 
-        <h3>Which city do you live in?</h3>
-      </label>
-
-      <select id="city" name="city" multiple>
-        <option value="stockholm"> Stockholm</option>
-        <option value="uppsala"> Uppsala</option>
-        <option value="västerås"> Västerås</option>
-      </select>
+        <select id="city" name="city" multiple>
+          <option value="stockholm"> Stockholm</option>
+          <option value="uppsala"> Uppsala</option>
+          <option value="västerås"> Västerås</option>
+        </select>
       
-      <h3>Choose your dogs gender:</h3>
+        <h3>Choose your dogs gender:</h3>
 
-      <input type="radio" 
-             id="female" 
-             name="gender" 
-             value="female">
-      <label for="female">female</label><br>
+        <input type="radio" 
+              id="female" 
+              name="gender" 
+              value="female">
+        <label for="female">female</label><br>
 
-      <input type="radio" 
-             id="male" 
-             name="gender" 
-             value="male">
-      <label for="male">male</label><br>
+        <input type="radio" 
+              id="male" 
+              name="gender" 
+              value="male">
+        <label for="male">male</label><br>
 
-      <input type="radio" 
-             id="nfemale" 
-             name="gender" 
-             value="neutered female">
-      <label for="nfemale">neutered female</label><br>
+        <input type="radio" 
+              id="nfemale" 
+              name="gender" 
+              value="neutered female">
+        <label for="nfemale">neutered female</label><br>
 
-      <input type="radio" 
-             id="nmale" 
-             name="gender" 
-             value="neutered male">
-      <label for="nmale">neutered male</label><br>
+        <input type="radio" 
+              id="nmale" 
+              name="gender" 
+              value="neutered male">
+        <label for="nmale">neutered male</label><br>
 
-      <h3>Describe your dog</h3>
+        <h3>Describe your dog</h3>
 
-      <textarea name="dogdescription" 
-          placeholder="describe your wonderfull doggo here! What does he/she like to do? Does he/she like other dogs to play with?" 
-          rows="6" 
-          cols="70"></textarea>
-      
-      <h3>Which toys does your dog prefer?</h3>
+        <textarea name="dogdescription" 
+            placeholder="describe your wonderfull doggo here! What does he/she like to do? Does he/she like other dogs to play with?" 
+            rows="6" 
+            cols="40"></textarea>
+        
+        <h3>Which toys does your dog prefer?</h3>
 
-      <input type="checkbox" 
-             id="toy1" 
-             name="toy1" 
-             value="Ball">
-      <label for="toy1"> Ball</label><br>
+        <input type="checkbox" 
+              id="toy1" 
+              name="toy1" 
+              value="Ball">
+        <label for="toy1"> Ball</label><br>
 
-      <input type="checkbox" 
-             id="toy2" 
-             name="toy2" 
-             value="Tugg-rope">
-      <label for="toy2">Tugg-rope</label><br>
+        <input type="checkbox" 
+              id="toy2" 
+              name="toy2" 
+              value="Tugg-rope">
+        <label for="toy2">Tugg-rope</label><br>
 
-      <input type="checkbox" 
-             id="toy3" 
-             name="toy3" 
-             value="Frisbee">
-      <label for="toy3">Frisbee</label><br>
+        <input type="checkbox" 
+              id="toy3" 
+              name="toy3" 
+              value="Frisbee">
+        <label for="toy3">Frisbee</label><br>
 
-      <input type="checkbox" 
-             id="toy4" 
-             name="toy4" 
-             value="Squeeky">
-      <label for="toy4">Squeeky</label><br>
+        <input type="checkbox" 
+              id="toy4" 
+              name="toy4" 
+              value="Squeeky">
+        <label for="toy4">Squeeky</label><br>
 
-      <input type="checkbox" 
-             id="toy5" 
-             name="toy5" 
-             value="Plush">
-      <label for="toy5">Plush</label><br>
+        <input type="checkbox" 
+              id="toy5" 
+              name="toy5" 
+              value="Plush">
+        <label for="toy5">Plush</label><br>
 
-      <!-- <input type="checkbox" id="check4" name="toy4" value="No toys!">
-      <label for="toy4"> No toys!</label><br> -->
+        <button type="submit">
+          Sign up
+        </button>
+      </form>
 
-      <button type="submit">
-        Sign up
-      </button>
+      <!-- Accordion -->
+      <section class="accordion">
 
-    </form>
+        <h2>FAQ</h2>  
 
-    <!-- Accordion -->
-    <section class="accordion">
+        <div class="question" id="section1">Section 1</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
 
-      <h2>FAQ</h2>
+        <div class="question" id="section2">Section 2</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <div class="question" id="section3">Section 3</div>
+        <div class="answer">
+          <p>LLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+      </section>
 
-      <div class="question" id="section3">Section 3</div>
-      <div class="answer">
-        <p>LLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-    </section>
+    </main>
     <!-- dont forget to link the javascript file here! -->
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 
   </body>
 </html>
