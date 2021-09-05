@@ -26,23 +26,26 @@
 
     <section class ="container">
    
-    <form action="http://httpbin.org/anything" method="POST">
+    <form> <!--action="http://httpbin.org/anything" method="">-->
       
       <div class="personalinfo">
         <h2>To get access to this blog please fill in the form:</h2>
-        <label>Your name:
+        <label 
+          for="name">Your name:
         <input 
           type="text" 
           id="name" 
-          placeholder="Name Nameson" required>
+          placeholder="Name Nameson" required/>
         </label>
 
-      <!-- Here I had to add margin in the HTML since it didn't respond to the CSS styling for input...-->
-        <lable style="margin: 5px;">Your email:
-          <input 
+      
+        <lable
+          for="email"
+          style="margin: 5px;">Your email:
+         <input 
           type="email"
           id="email"
-          placeholder="email@email.com" required>
+          placeholder="email@email.com" required/>
         </lable>
 
       </div>
@@ -50,26 +53,29 @@
       <div class="styleselection">
         <p>How would you describe your style?</p>
 
-        <label>
+        <label for="feminin">
           <input class="feminine"
           type="checkbox" 
-          name="feminine">feminine
+          name="feminine"/>feminine
         </label>
         
-         <label>
+         <label for="masculine">
           <input class="masculine"
           type="checkbox" 
-          name="masculine">masculine
+          name="masculine"/>masculine
         </label>
         
-        <label>
+        <label for="genderneutral">
           <input class="genderneutral"
           type="checkbox" 
-          name="genderneutral">gender neutral
+          name="genderneutral"/>gender neutral
         </label>
       </div>
 
-      <button class="joinbtn" id="joinbtn" type="submit">Join</button>
+      <input type="submit"
+        class="joinbtn" 
+        id="joinbtn"
+        value="Join!"/>
     
     </form>
 
@@ -82,7 +88,7 @@
     
     
     <div id="button2" class="question">
-      What'e the new "it"-color?</div>
+      What's the new "it" color?</div>
     <p class="answer">Olive and purple.</p>
     
     
