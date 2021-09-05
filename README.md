@@ -1,12 +1,10 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to create a business site with a hero header / hero image, a form with at least 3 different input types and a accordion using JavaScript.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I used both css grid and flexbox for the assignment, I started with adding HTML and added the hero image, styling in css and ofcourse to get the accordion to work as it should using JavaScript. This assignment I worked more with the developer/inspector tool which was very helpful! If I had more time I would add an icon in the accordion next to the question that changed when the question was toggled. I would also add animation to the page if I had the time.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://linneawilhelmsson-week3-business-site.netlify.app/
