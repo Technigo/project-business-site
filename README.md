@@ -11,4 +11,4 @@ If I had to re-do the project I would have planned the design better and more in
 ## View it live
 
 The project is deployed at:
-https://jovial-curie-844a23.netlify.app/?fbclid=IwAR2hVK6qhI0A3yqpV1KHNJajFjfekBi8Pncbd6QlGChBo4mNy35_Qm0X_bE
+https://forestbathtours.netlify.app/
