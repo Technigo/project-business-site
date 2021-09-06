@@ -1,12 +1,10 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week's project was to create a business website that contains and image/video header, a signup form and an accordian. Focus was to apply what we have learned about backgrounds, HTML forms and how to modify the DOM with JavaScript. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Again in this second week i had problems with html form and css. Less then the week before but still struggling with that. If i had more time would like to add more elements in HTML and play more with styling. Especially styling the form and buttons. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://loving-kepler-0cbeaa.netlify.app
