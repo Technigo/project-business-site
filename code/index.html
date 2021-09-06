@@ -13,76 +13,114 @@
 <body>
 
     <main id="main-content">
+
         <section class="hero">
-            <article id="section-1">
+            <article id="splash">
                 <h1>
                     Make a choice.
                 </h1>
                 <p>
                     To perish into smoldering ash, or to persevere on the brink of ruin.
                 </p>
-                <a href="#sign-up" alt="Click here to sign up"><button id="sign-up-btn">Persevere!</button></a>
+                <a href="#sign-up" alt="Click here to sign up"><button class="btn" id="sign-up-btn">Persevere!</button></a>
             </article>
         </section>
 
-        <section class="sign-up">
-            <article id="section-2">
-                <h1>
-                    Sign up.
-                </h1>
+        <section class="bridge">
+            <article id="ingress">
                 <p>
-                    We just need a few deets.
+                    The best time to plant a tree was twenty years ago, the second best time is today.
                 </p>
             </article>
         </section>
 
-        <section class="faq">
-            <article id="section-3">
+        <section class="boxes">
+            <article id="sign-up">
+                <h1>
+                    Sign up - we just need a few deets:
+                </h1>
+                <form action="https://httpbin.org/anything" method="POST">
+                    <ul>
+                        <li>
+                            <input type="text" name="user-name" placeholder="What you go by" required>
+                        </li>
+                        <li>
+                            <input type="email" name="user-email" placeholder="E-communique" required>
+                        </li>
+                        <li><p>And what are you?</p>
+                            <input type="radio" name="being" id="human-bean" value="Human bean" required>
+                            <label for="human-bean">
+                                Human bean
+                            </label><br>
+                            <input type="radio" name="being" id="ethereal-spirit" value="Ethereal spirit" required>
+                            <label for="ethereal-spirit">
+                                Ethereal spirit
+                            </label><br>
+                            <input type="radio" name="being" id="doggo" value="Doggo" required>
+                            <label for="doggo">
+                                Doggo
+                            </label><br>
+                            <input type="radio" name="being" id="mycelium" valie="Mycelium" required>
+                            <label for="an-ai">
+                                Mycelium
+                            </label><br>
+                            <input type="radio" name="being" id="an-ai" value="An AI" required>
+                            <label for="human-bean">
+                                An AI
+                            </label>
+                        </li>
+                        <li><br>
+                            <input type="checkbox" name="tos" required>
+                            I hereby agree to smash the button and send my provided information across the intertubes.
+                        </li>
+                        <li><br>
+                            <button class="btn" id="submit-btn" type="submit">
+                                Hulk smash!
+                            </button>
+                        </li>
+                    </ul>
+                </form>
+            </article>
+
+            <article id="faq">
                 <h1>
                     Frequently Asked Questions
                 </h1>
-                <div class="questions" id="question1">
-                    <h2>
+                <button class="questions">
                         What is?
-                    </h2>
-                </div>
-                <div class="answers" id="answer1">
+                </button>
+                <div class="answers">
                     <p>
                         That is.
                     </p>
                 </div>
-                <div class="questions" id="question2">
-                    <h2>
-                        Why is?
-                    </h2>
+                <button class="questions">
+                    Why is?
+                </button>
+                <div class="answers">
+                <p>
+                    Because.
+                </p>
                 </div>
-                <div class="answers" id="answer2">
-                    <p>
-                        Because.
-                    </p>
+                <button class="questions">
+                    Who is?
+                </button>
+                <div class="answers">
+                <p>
+                    They are.
+                </p>
                 </div>
-                <div class="questions" id="question3">
-                    <h2>
-                        Who is?
-                    </h2>
-                </div>
-                <div class="answers" id="answer3">
-                    <p>
-                        They are.
-                    </p>
-                </div>
-                <div class="questions" id="question4">
-                    <h2>
-                        When is?
-                    </h2>
-                </div>
-                <div class="answers" id="answer4">
-                    <p>
-                        Then is.
-                    </p>
+                <button class="questions">
+                    When is?
+                </button>
+                <div class="answers">
+                <p>
+                    Then is.
+                </p>
                 </div>
             </article>
         </section>
+
     </main>
 
     <footer>
@@ -90,6 +128,8 @@
             &copy <a href="https://github.com/vrill">vrill</a>. Class of Technigo F/W 2021.
         </p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

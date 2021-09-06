@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito');
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 body {
@@ -17,6 +13,203 @@ html {
   scroll-behavior: smooth;
 }
 
-.hero > article {
-  background: url('')
+h1 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+  /* parallax effect on the background */
+.hero {
+  background-image: url('./img/bg.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero > * {
+  color: white;
+}
+
+  /* making the text slightly easier to read by background opacity
+  defining a minimum height to make it look equal on devices
+  put it all in a grid */
+.hero > #splash {
+  background-color: rgba(0,0,0,0.15);
+  padding: 1rem;
+  min-height: 85vh;
+  width: 100vw;
+  display: inline-grid;
+  grid-template-rows: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.hero > #splash > h1 {
+  font-size: 2rem;
+}
+
+.hero > #splash > p {
+  font-size: 1.4rem;
+}
+
+.btn, #sign-up-btn {
+  background-color: rgb(130, 60, 60);;
+  border: none;
+  border-radius: 0.2rem;
+  color: white;
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#sign-up-btn {
+  border: 0.15rem solid silver;
+}
+  /* change to a pointed upon hover and
+  slight transition effect */
+.btn:hover, #sign-up-btn:hover {
+  cursor: pointer;
+  transition: 0.1s;
+  background-color: rgb(140, 140, 140);
+}
+
+  /* the remaining height in order to cover all of the screen */
+.bridge > #ingress {
+  min-height: 15vh;
+  background-color: rgb(130, 60, 60);
+  padding: 3rem;
+  color: white;
+  text-align: center;
+}
+
+  /* between mobile and desktop */
+@media screen and (min-width: 480px) {
+  .hero > #splash {
+    padding: 2rem;
+    grid-template-rows: 3fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero > #splash > a {
+    grid-column: 1 / 3;
+  }
+  .hero > #splash > h1 {
+    font-size: 3rem;
+  }
+}
+  /* on desktop and up */
+@media screen and (min-width: 960px) {
+  .hero > #splash {
+    padding: 3rem;
+  }
+  .hero > #splash > h1 {
+    font-size: 4rem;
+  }
+  .hero > #splash > p {
+    font-size: 2.2rem;
+  }
+}
+
+  /* using flexbox for the sign-up and faq boxes
+  wraps automatically depending on screen width */
+.boxes {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  gap: 2rem 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.boxes > #sign-up, #faq {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #f2f2f2;
+  max-width: 33vw;
+  min-width: 320px;
+  border-radius: 0.2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+  /* styling for the input boxes */
+input[type=text], input[type=email] {
+  width: 100%;
+  margin-bottom: 0.6rem;
+  padding: 0.6rem;
+  border-radius: 0.2rem;
+  border-color: gray;
+}
+
+  /* faq question buttons styling */
+.questions {
+  background-color: rgb(130, 60, 60);
+  color: white;
+  cursor: pointer;
+  padding: 0.8rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  transition: 0.1s;
+  font-family: inherit;
+  font-size: 1.2rem;
+  text-align: start;
+  margin-top: 1rem;
+  border-radius: 0.2rem;
+}
+
+  /* remove the bottom edge roundings upon selecting the question */
+.active {
+  border-radius: 0.2rem 0.2rem 0 0;
+}
+  /* hover effect like the other buttons */
+.active, .questions:hover {
+  background-color: rgb(140, 140, 140);
+}
+
+  /* transition the answer coming out upon selecting the question */
+.answers {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-radius: 0 0 0.2rem 0.2rem;
+}
+
+#faq > .answers > p {
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+}
+
+ /* inserts the plus sign */
+.questions:after {
+  content: '\02795';
+  color: white;
+  float: right;
+  margin-left: 0.3rem;
+}
+
+ /* and changes it to a minus sign */
+.active:after {
+  content: '\2796';
+}
+
+footer {
+  color: white;
+  background-color: rgb(130, 60, 60);
+  padding: 1rem;
+  text-align: center;
+}
+
+footer > p > a {
+  color: white;
+  text-decoration: none;
 }
