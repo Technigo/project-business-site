@@ -13,62 +13,125 @@ Make sure you've committed and pushed a version of your project before starting 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
+    <!--Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing-->
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./style.css">
-   
   </head>
   <body>
     <header class="header">
+      <!--Texture added a grainy filter to the hero video-->
       <div class="texture"></div>
       <div class="hero">
-        <video autoplay loop muted preload="auto" alt="Video from pexels showing two girls training jiu jitsu">
+        <video autoplay loop muted preload="auto" alt="Video from pexels.com showing two girls training jiu jitsu">
         <source src="video.mp4" type="video/mp4"> Your browser does not support the video tag
         </video>
       </div>
       <div class="header-caption">
         <h1>ANIMA</h1>
-        <h1>Brasilian jiu jitsu - changing the world one student at a time</h1>
+        <h2>Brasilian jiu jitsu - changing the world one student at a time</h2>
     </div>
     </header>
 
     <!--Accordion-->
     <section class="accordion-div">
-      
       <div class="accordion-form">
       <div class="top-according">
-      <h1>FAQ</h1>
+      <h1>Benefits of Brasilian Jiu Jitsu</h1>
     </div>
-      <div class="accordion">Full festival ticket</div>
+      <div class="accordion">Why should your child train BJJ?</div>
       <div class="answer">
-        <p>Ticket for the entire festival. The days with full music schedules 
-          are the last four days of the festival, from 30 June till 3 July..</p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
       </div>
-
-      <div class="accordion">One-day ticket</div>
+      <div class="accordion">Question 2</div>
       <div class="answer">
-        <p>You have the opportunity to buy One-Day tickets to the following days; 
-          Friday 2 July and Saturday 3 July. Every One-Day ticket/wristband is valid 
-          from 8am until 10am the next day.</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
       </div>
-      <div class="accordion">Name on the ticket?</div>
+      <div class="accordion">Question 3</div>
       <div class="answer">
-        <p>The name on the ticket does not restrict the ticket to that person. 
-          So don't worry if a friend bought your ticket or you received it as a present. 
-          You can still use it.</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        </p>
       </div>
-      <div class="accordion">Buying tickets at the entrance</div>
+      <div class="accordion">Question 4</div>
       <div class="answer">
-        <p>If tickets aren’t sold out before the festival begins, 
-          you can buy them at the entrance at a slightly higher price.</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
       </div>
-    
     </section>
 
     <!-- Signup form -->
+     <div class="form-container">
+      <form action="http://httpbin.org/anything" method="POST" id="signupform">
+        <h2 class="h2form">Sign Up</h2>
+        <ul>
+          <li>
+            <label for "first-name">First name:</label>
+            <input
+              class="text-input"
+              type="text"
+              id="first-name"
+              name="first-name"
+              placeholder="Enter first name"
+            />
+          </li>
+          <li>
+            <label for "last-name">Last name:</label>
+            <input
+              class="text-input"
+              type="text"
+              id="last-name"
+              name="last-name"
+              placeholder="Enter last name"
+            />
+          </li>
+          <li>
+            <label for "email"><sup>*</sup>Email:</label>
+            <input
+              required
+              class="text-input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter email address"
+            />
+          </li>
+          <li>
+            <label for "age">Age:</label>
+            <select name="role" form="signupform">
+                <option value="3-6">3-6</option>
+                <option value="7-9">7-9</option>
+                <option value="10-14">10-14</option>
+            </select>
+          </li>
+          <li>
+            <label class="label-checkbox" flex for "checkbox">
+              <input
+                required
+                class="checkbox"
+                type="checkbox" 
+                id="checkbox"
+                name="checkbox"
+              />
+              <p>I agree to <a href="#"target="_blank">terms and conditions</a><sup>*</sup></p>
+            </label>
+          </li>
+        </li>
+        </ul
+      </form>
+      <div class="btn-submit">
+        <button type="submit">
+        Register now!
+        </button>
+      </div>
+  </div>
+</article>
 
   
 
     <!-- dont forget to link the javascript file here! -->
+    <!--Footer inspired by Maria Sjögren-->
+    <footer>
+      <p>Made by <a href="https://www.linkedin.com/in/emelie-cruz-p-6a09a987/" class="footer-anchor">Emelie Cruz</a> during <a href="https://www.technigo.io/program" class="footer-anchor">Technigo Boot Camp </a></p>
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>

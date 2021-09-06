@@ -35,7 +35,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   left: 0;
   z-index: 15;
   background:url(texture.png);
-
 }
 .hero video {
   width: 100%;
@@ -54,12 +53,12 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   color:#ffffff;
 }
 
-/* ACCORDION */
+/* ACCORDION inspired by Jessica-Jsfrulle*/
 
 .accordion-div {
-  background-color: rgba(255, 255, 255, 0.39);
+  background-color: rgba(146, 108, 190, 0.39);
   grid-area: accordion;
-  color: rgb(232, 241, 240);
+  color: rgb(230, 223, 238);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -69,17 +68,15 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .accordion-form {
   backdrop-filter: blur(10px);
-  background-color: rgba(219, 235, 231, 0.671);
+  background-color: rgba(255, 255, 255, 0.6);
   display: block;
   overflow: hidden;
-  margin: 1vw 10vw;
   font-weight: bold;
   font-family: "Lato", sans-serif;
 }
 
 .top-according {
   background-color: #ffffff31;
-  border-bottom: 0.5px solid rgba(11, 37, 33, 0.657);
   position: relative;
   display: flex;
   justify-content: center;
@@ -96,6 +93,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   padding: 2%;
 }
 
+/* This styles the + */
 .accordion:after {
   content: "\002B";
   color: rgb(36, 83, 76);
@@ -134,4 +132,138 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   transition: 0.3s ease-in-out;
 }
 
+/* SIGN UP FORM */
 
+.form-container {
+  background-color: rgba(230, 230, 230, 0.6);
+  padding: 0 2em;
+  border: 1px solid #ccc  ;
+  color: #fff;
+}
+
+form {
+  /* Form outline */
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+.h2form {
+  color:rgba(0,0,0,0.75)
+}
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  font-size: 1.4rem;
+  text-align: left;
+  padding-bottom: 4px;
+  color:rgb(0, 0, 0)
+}
+
+select,
+.text-input {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1.2rem sans-serif;
+
+  /* Uniform text field size */
+  width: 100%;
+  height: 40px;
+  box-sizing: content-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+select,
+::placeholder {
+  /* Uniform box appearance */
+  color: grey;
+  padding: 2px 2px 2px 6px;
+}
+
+label.label-checkbox {
+  /* styling for the checkbox */
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.checkbox {
+  /* size of checkbox */
+  height: 20px;
+  width: 20px;
+}
+
+/* call to action-button styling */
+
+.btn-submit {
+  text-align: center;
+}
+
+button {
+  border: none;
+  background: #c5a3e0;
+  border-radius: 2em;
+  padding: 12px 20px;
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 2.5em auto;
+}
+
+button:hover,
+button:focus {
+  color: #DB398D;
+  background: rgb(243, 237, 237);
+  outline: 0;
+  font-weight: bold;
+}
+
+
+/* general link styling for footer links */
+
+footer a:link {
+  color: cyan;
+}
+
+footer a:visited {
+  color: black;
+}
+
+footer a:active {
+  background-color: cyan;
+}
+
+/* hover effect on footer links */
+
+.footer-anchor, .footer-anchor > span {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-anchor:before, .footer-anchor:after, .footer-anchor > span:before, .footer-anchor > span:after {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+
+.footer-anchor:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #9c2bf8;
+  transform: scaleX(0);
+}
+
+.footer-anchor:hover:before {
+  transform: scaleX(1);
