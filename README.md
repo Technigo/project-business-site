@@ -7,4 +7,4 @@ Created a business stie "The Online Education Company" with CSS and some Javacsr
 Had som problems with placing the boxes right, but managed somehow.
 
 ## View it live
-
+https://peaceful-mccarthy-bb4d83.netlify.app/
