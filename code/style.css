@@ -5,11 +5,9 @@ Author Jenny Quach
 */
 
 header {
-  text-align: center;
   position: absolute; /* fixed position of header */
   width: 100%;
   height: 8vh;
-  z-index: 999; /* always visible */
 }
 
 /* Navigation bar */
@@ -109,16 +107,6 @@ nav a:hover {
   justify-content: center; 
   z-index: 999; /* always visible */
   object-fit: cover;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  background: url(lotus.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  filter: brightness(60%);
 }
 
 .hero-content {
@@ -259,11 +247,6 @@ h1 {
     display: none;
   }
 
-  header {
-    display: grid;
-    grid-template-columns: .5fr auto minmax(600px, 1fr);
-  }
-
   nav {
     color: black;
     all:unset;
@@ -313,7 +296,6 @@ h1 {
   .wrapper{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background-color: transparent;
   }
 
   .form {
@@ -327,57 +309,9 @@ h1 {
 /* media query for tablet */
 
 @media screen and (max-width: 900px) and (min-width: 600px) {
-    .nav-toggle-label {
-      display: none;
-    }
-  
-    header {
-      display: grid;
-      grid-template-columns: .5fr auto minmax(600px, 1fr);
-    }
-  
-    nav {
-      color: black;
-      all:unset;
-      grid-column: 3/4;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-    nav ul {
-      display: flex;
-    }
-    nav li {
-      margin-right: 3em;
-      margin-bottom: 0;
-    }
-  
-    nav a {
-      opacity: 1;
-      font-weight: 500;
-    }
-  
+ 
     .hero {
       align-items: flex-end;
-      justify-content: flex-end; 
-      flex-wrap: wrap;
-    }
-    .hero-content {
-      margin: 10px 80px 10px 10px;
-    }
-    
-    .hero h1, h2{
-      font-size: 40px;
-      color: rgb(245, 221, 195);
-    }
-    
-    .hero h1 {
-      margin-bottom: 0;
-      text-align: center;
-    }
-    
-    .hero h2 {
-      margin-top: 0;
     }
   }
 }
