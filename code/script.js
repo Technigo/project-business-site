@@ -1,4 +1,4 @@
-//Makes hamburger navbar open and close. When active a new navbar icon is shown. See CCS row 64
+//Makes hamburger navbar open and close. When active a new navbar icon is shown.
 const menuToggle = document.querySelector('.toggle')
       const showcase = document.querySelector('.showcase')
 
@@ -8,7 +8,7 @@ const menuToggle = document.querySelector('.toggle')
       })
 
 // Accordion: when clicked = active styling which displays a max height of the accordion content. 
-//When not active, it goes for max height 0 which hides the content of the accordion.
+//When not active, it goes from max height to 0 which hides the content of the accordion.
 
 document.querySelectorAll('.accordion__button').forEach(button => {
   button.addEventListener('click', () => {
