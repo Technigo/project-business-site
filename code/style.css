@@ -1,7 +1,194 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+* {box-sizing: border-box}
+
+
+body, html {
+  height: 100%;
+  background-color: black; 
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bakery.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transition: 0.4s;
+}
+
+.hero-image:hover {
+  opacity: 0.1;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Lucida Sans';
+  font-size: 40px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 100px;
+}
+
+.middle-text {
+  color: black;
+  background-color: white;
+}
+
+p {
+  text-align: center;
+  font-family: 'Lucida Sans';
+}
+
+.muffin1 img {
+float: right;
+width: 100px;
+height: 100px;
+margin-top: 10%;
+}
+
+.muffin2 img {
+  float:left;
+  width: 100px;
+  height: 100px;
+  margin-top: 10%;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Lucida Sans';
+  font-size: 70px;
+  margin-top: 0.5px;
+  
+}
+
+
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+
+.accordion {
+  background-color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 45%;
+  border: 1px solid #888;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  
+}
+
+.accordion-body {
+  margin-top: 25%;
+}
+
+.active, .accordion:hover {
+  background-color: rgb(44, 44, 44); 
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+
+}
+
+.accordion:after {
+  content: '\02795';
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796";
+}
+
+.container3 img {
+  width: 45%;
+  height: 300px;
+  margin-top: 2%;
+  filter: grayscale(50%); 
+}
+
+
+
+h1 {
+  text-align: center;
+}
+
+.modal {
+  background-color: white;
+  border: 1px solid #888;
+  width: 40%;
+  float:right;
+  margin-top: 5px;
+  
+}
+
+.container {
+  padding: 16px; 
+
+}
+
+.space {
+  height: 0.10%;
+}
+
+.radio {
+  display: flex;
+
+}
+
+.active, .modal:hover {
+  background-color:rgb(44, 44, 44); ; 
+  transition: 0.4s;
+}
+
+label {
+  display: block;
+}
+
+input[type=text], input[type=password] {
+  width: 50%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  background: white;
+}
+
+
+footer {
+  background-color: black;
+
 }
