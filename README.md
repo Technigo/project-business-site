@@ -1,12 +1,10 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment this time has been to build a business site with an accordion and a sign-up form.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I encountered issues with aligning the sign-up for and accordion like I wanted them to be, as well as some issues regarding an image. I mostly worked on it in the weekend, but next time I want to make a sure to get most of the things done during the week when there is more help to get, if possible.
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
