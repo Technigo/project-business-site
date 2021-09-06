@@ -20,7 +20,7 @@ document.querySelectorAll('.question').forEach((item) => {
 
 // code for on submit event
 document.getElementById('form').addEventListener('submit', (event) => {
-	event.preventDefault();
+	// event.preventDefault();
 
 	// defining constants
 	const name = document.getElementById('name').value;
@@ -28,7 +28,7 @@ document.getElementById('form').addEventListener('submit', (event) => {
 	const greetingContainer = document.getElementById('greeting-container');
 	const formContainer = document.getElementById('form-container');
 
-	// changeing the DOM
+	// changing the DOM adding a greeting
 	greetingMessage.innerHTML = `<h1>See you there,</h1><h1>${name}</h1>`;
 	greetingContainer.style.display = 'inherit';
 	formContainer.style.display = 'none';
