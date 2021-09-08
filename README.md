@@ -1,12 +1,10 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+This is a result of not having time to complete the task. I' tried to focus on the most important things to have in the website, such as an accordion etc. 
+I am determand to catch-up!
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project was about making a business-site. I wanted to make a simple and easy approach. So I desited to make a site, where you can order your own rabbit.
 
-## The problem
+I am having a hard time with the header and the following content. Thee following content was "under" the header and I spent alot oof time to figure out how to get it lower than the header. I googled and searched on Stachoverflow, yet I couldn't find any solution that was 100%, in the timelimit for the project.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://elastic-poitras-37a4c8.netlify.app/
