@@ -9,6 +9,7 @@ body {
   margin: 0 auto;
 }
 
+  /* make the viewport scrolling smooth */
 html {
   scroll-behavior: smooth;
 }
@@ -30,8 +31,22 @@ h2 {
   background-size: cover;
 }
 
-.hero > * {
+  /* following four a few 'gobal' values to reduce lines
+  aka fewer repetitions */
+.hero > *, .btn, footer, a, #ingress, .questions, .questions:after {
   color: white;
+}
+
+.btn, footer > p > a {
+  text-decoration: none;
+}
+
+#splash, #ingress, footer {
+  text-align: center;
+}
+
+.btn, #ingress, .questions, footer {
+  background-color: rgb(130, 60, 60);
 }
 
   /* making the text slightly easier to read by background opacity
@@ -45,7 +60,6 @@ h2 {
   display: inline-grid;
   grid-template-rows: auto;
   align-items: center;
-  text-align: center;
 }
 
 .hero > #splash > h1 {
@@ -56,36 +70,29 @@ h2 {
   font-size: 1.4rem;
 }
 
-.btn, #sign-up-btn {
-  background-color: rgb(130, 60, 60);;
+.btn {
   border: none;
   border-radius: 0.2rem;
-  color: white;
   padding: 1rem 1rem;
   font-size: 1.2rem;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
 }
 
 #sign-up-btn {
   border: 0.15rem solid silver;
 }
+
   /* change to a pointed upon hover and
   slight transition effect */
-.btn:hover, #sign-up-btn:hover {
+.btn:hover {
   cursor: pointer;
   transition: 0.1s;
-  background-color: rgb(140, 140, 140);
 }
 
   /* the remaining height in order to cover all of the screen */
 .bridge > #ingress {
   min-height: 15vh;
-  background-color: rgb(130, 60, 60);
   padding: 3rem;
-  color: white;
-  text-align: center;
 }
 
   /* between mobile and desktop */
@@ -95,13 +102,14 @@ h2 {
     grid-template-rows: 3fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
-  .hero > #splash > a {
+  .hero > #splash > #splash-btn {
     grid-column: 1 / 3;
   }
   .hero > #splash > h1 {
     font-size: 3rem;
   }
 }
+
   /* on desktop and up */
 @media screen and (min-width: 960px) {
   .hero > #splash {
@@ -116,7 +124,8 @@ h2 {
 }
 
   /* using flexbox for the sign-up and faq boxes
-  wraps automatically depending on screen width */
+  wraps automatically depending on screen width
+  and a little shadow effect to 'offset' the content from footer */
 .boxes {
   width: 100%;
   display: inline-flex;
@@ -124,6 +133,7 @@ h2 {
   gap: 2rem 4rem;
   flex-wrap: wrap;
   justify-content: center;
+  box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
 .boxes > #sign-up, #faq {
@@ -152,8 +162,6 @@ input[type=text], input[type=email] {
 
   /* faq question buttons styling */
 .questions {
-  background-color: rgb(130, 60, 60);
-  color: white;
   cursor: pointer;
   padding: 0.8rem;
   width: 100%;
@@ -171,8 +179,9 @@ input[type=text], input[type=email] {
 .active {
   border-radius: 0.2rem 0.2rem 0 0;
 }
-  /* hover effect like the other buttons */
-.active, .questions:hover {
+
+  /* hover effect */
+.active, .questions:hover, .btn:hover {
   background-color: rgb(140, 140, 140);
 }
 
@@ -192,7 +201,6 @@ input[type=text], input[type=email] {
  /* inserts the plus sign */
 .questions:after {
   content: '\02795';
-  color: white;
   float: right;
   margin-left: 0.3rem;
 }
@@ -203,13 +211,5 @@ input[type=text], input[type=email] {
 }
 
 footer {
-  color: white;
-  background-color: rgb(130, 60, 60);
   padding: 1rem;
-  text-align: center;
-}
-
-footer > p > a {
-  color: white;
-  text-decoration: none;
 }
