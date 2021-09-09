@@ -9,4 +9,4 @@ Accordion: https://www.youtube.com/watch?v=dr8Emho-kYo&t=45s
 And read a lot on accorions to undertand how to build, especially the JavaScript part. 
 
 ## View it live
-Look at the site @ 
+Look at the site @ https://mamitebusinesssite.netlify.app/
