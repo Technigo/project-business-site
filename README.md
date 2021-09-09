@@ -6,7 +6,7 @@ To be abel to bulid this site practised in code pen:
 Video as header: https://codepen.io/MamiteA/pen/OJgRGjz?editors=1100
 Accordion: https://www.youtube.com/watch?v=dr8Emho-kYo&t=45s
 
-And read alot on accorions.
+And read a lot on accorions to undertand how to build, especially the JavaScript part. 
 
 ## View it live
-Look at the site @ 
+Look at the site @ https://mamitebusinesssite.netlify.app/
