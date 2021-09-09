@@ -1,5 +1,6 @@
 function toggle() {
   this.classList.toggle("question")
+  this.classList.toggle("active")
 }
 
 document.getElementById("section1").onclick = toggle
