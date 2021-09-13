@@ -1,5 +1,5 @@
 function toggle() {
-  this.classList.toggle("question")
+  this.classList.toggle("button-accordion")
   this.classList.toggle("active")
 }
 
