@@ -52,15 +52,58 @@ p {
   margin-top: 25px;
 }
 
-div {
-  color: #444944;
-  padding-bottom: 15px;
-  display: block;
-}
 
 div:hover {
-  cursor: pointer;
   color: whitesmoke;
+}
+
+.button-accordion {
+  display: flex;
+  width: 50%;
+  background-color: black;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-weight: bold;
+  color: #444944;
+  font-size: medium;
+  border: none;
+  margin-left: 25%;
+}
+
+.button-accordion:hover {
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.active {
+  display: flex;
+  width: 50%;
+  background-color: black;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-weight: bold;
+  color: #444944;
+  font-size: medium;
+  border: none;
+  margin-left: 25%;
+}
+
+.active + .answer {
+  display: block;
+  margin-left: auto;
+}
+
+.button-accordion:after {
+  content: '\02795';
+  margin-left: 50px;
+  
+}
+
+.active::after {
+  content: "\2796";
+  margin-left: 50px;
 }
 
 .answer {
@@ -69,10 +112,6 @@ div:hover {
   padding: 0px 40px 15px 40px;
   text-align: left;
   margin-left: 40px;
-}
-
-.active + .answer {
-  display: block;
 }
 
 form {
