@@ -1,203 +1,213 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 3</title>
+    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- dont forget to link the javascript file here! -->
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project 3</title>
-  <!-- dont forget to add a css file and link it here! -->
-  <link rel="stylesheet" href="./style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
-
-  <!-- dont forget to link the javascript file here! -->
-</head>
-
-<body>
-  <header class="header">
-  <div class="container">
-    <div class="navbar">
-
-      <div class="nav-hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="navbar">
+          <nav class="nav-hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </nav>
+          <nav class="menubar">
+            <ul>
+              <li class="menu-item"><a href="">Pricing</a></li>
+              <li class="menu-item"><a href="">Forest</a></li>
+              <li class="menu-item"><a href="">Tours</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="headline">
+          <h1 class="intro-text">Into the Woods</h1>
+          <p>- Bathe yourself in green -</p>
+        </div>
       </div>
-      <nav class="menubar">
-        <ul>
-          <a href=""><li class="menu-item">Pricing</li></a>
-          <a href=""><li class="menu-item">Forest</li></a>
-          <a href=""><li class="menu-item">Tours</li></a>
-        </ul>
-      </nav>
-    </div>
-    <div class="headline">
-      <h1>Into the Woods</h1>
-      <p>- Bathe yourself in green -</p>
-    </div>
-    
-    </div>
-</header>
+    </header>
 
-  <!-- video or image as a header is cool :) -->
-  <section class="main-section">
-  <div class="container">
-  <!-- Signup form -->
+    <!-- video or image as a header is cool :) -->
+    <section class="main-section">
+      <div class="container">
+        <!-- Signup form -->
 
-<h2>Sign up for forest bathing tour</h2>
-    <div class="signup-form">
-      <form action= "https://httpbin.org/anything" method="POST">
-        
-    
-          <label for="name">
-            <input 
-            class="text-input"
-            type="text"
-            id="name" 
-            placeholder="name"
-            name="name"
-            autocomplete="off"
-            required/> 
-          </label>
-          
-          <label for="email">
-            <input 
-            name="email"
-            autocomplete="off"
-            class="text-input"
-            type="email" 
-            id="email" 
-            placeholder="example@email.com" 
-            required/>
-          </label>
-         
-
-          <label for="number">
-            <input 
-            name="number"
-            autocomplete="off"
-            class="text-input"
-            type="tel" 
-            id="number" 
-            placeholder="number" 
-            required/>
-          </label>
-
-          
-          <p>Have you forest bathed before?</p>
-          <div class="radio-container">
-          
-         
-          <label for="yes">
-          Yes
-            <input 
-            type="radio"
-            value="yes"
-            name="forestbath"
-            checked/>
-          </label>  
-        
-
-        <div for="no">
-          <label>
-            No
-            <Input
-            type="radio"
-            value="no"
-            name="forestbath"
-            />
-          </label>
-        </div>
-        </div>
-         
-          <label>
-            <input 
-            class="text-input"
-            type="checkbox" 
-            id="terms" 
-            name="termsandcondition">
-            I accept the <u><a href="#">Terms and Conditions</a></u>
-          </label>
-
-          <label> 
+        <h2 class="title-box">Sign up for forest bathing tour</h2>
+        <div class="signup-form">
+          <form action="https://httpbin.org/anything" method="POST">
+            <label for="name">Name</label>
             <input
-            type="checkbox" 
-            id="newsletter" 
-            name="newsletter"
+              id="name"
+              class="text-input"
+              type="text"
+              placeholder="name"
+              name="name"
+              autocomplete="off"
+              required
             />
-            I want to have the newsletter
-          </label>
-  
-          <input 
-          class="button-sign"
-          type="submit" 
-          value="Submit"
-          />
-        
-        </form>
+
+            <label for="email"> Email</label>
+            <input
+              id="email"
+              name="email"
+              autocomplete="off"
+              class="text-input"
+              type="email"
+              placeholder="example@email.com"
+              required
+            />
+
+            <label for="number">Number</label>
+            <input
+              id="number"
+              name="number"
+              autocomplete="off"
+              class="text-input"
+              type="tel"
+              placeholder="number"
+              required
+            />
+
+            <p>Have you forest bathed before?</p>
+            <div class="radio-container">
+              <label for="yes">
+                Yes
+                <input type="radio" value="yes" name="forestbath" checked />
+              </label>
+
+              <div for="no">
+                <label>
+                  No
+                  <input type="radio" value="no" name="forestbath" />
+                </label>
+              </div>
+            </div>
+
+            <label>
+              <input
+                class="text-input"
+                type="checkbox"
+                id="terms"
+                name="termsandcondition"
+              />
+              I accept the <u><a href="#">Terms and Conditions</a></u>
+            </label>
+
+            <label>
+              <input type="checkbox" id="newsletter" name="newsletter" />
+              I want to have the newsletter
+            </label>
+
+            <input class="button-sign" type="submit" value="Submit" />
+          </form>
+        </div>
       </div>
-</div>
-    
 
+      <main class="container">
+        <h2 class="title-box">Frequently Asked Questions</h2>
 
-<div class="container">
-<h2>Frequently Asked Questions</h2>
- 
-<div class="accordion">
+        <div class="accordion">
+          <div class="button" id="question1">
+            <p>What is forest bathing?</p>
+          </div>
+          <div class="answer">
+            <p>
+              Forest bathing and forest therapy (or shinrin-yoku) broadly means
+              taking in, in all of one's senses, the forest atmosphere. Not
+              simply a walk in the woods, it is the conscious and contemplative
+              practice of being immersed in the sights, sounds and smells of the
+              forest.
+            </p>
+          </div>
 
-  <div class="button" id="question1">
-    <p>What is forest bathing?</p></div>
-  <div class="answer">      
-    <p>Forest bathing and forest therapy (or shinrin-yoku) broadly means taking in, in all of one's senses, the forest atmosphere. Not simply a walk in the woods, it is the conscious and contemplative practice of being immersed in the sights, sounds and smells of the forest.</p>
-  </div>
+          <div class="button" id="question2">
+            <p>What are the effects of forest bathing?</p>
+          </div>
+          <div class="answer">
+            <p>
+              Studies have found that “forest bathing” (Shinrin-yoku) has
+              positive physiological effects, such as blood pressure reduction,
+              improvement of autonomic and immune functions, as well as
+              psychological effects of alleviating depression and improving
+              mental health.
+            </p>
+          </div>
 
-  <div class="button" id="question2">
-    <p>What are the effects of forest bathing?</p></div>
-  <div class="answer">      
-    <p>Studies have found that “forest bathing” (Shinrin-yoku) has positive physiological effects, such as blood pressure reduction, improvement of autonomic and immune functions, as well as psychological effects of alleviating depression and improving mental health.</p>
-  </div>
-  
-  <div class="button" id="question3">
-    <p>Why is it called forest bathing?</p></div>
-  <div class="answer">      
-    <p>The term emerged in Japan in the 1980s as a physiological and psychological exercise called shinrin-yoku (“forest bathing” or “taking in the forest atmosphere”). The purpose was twofold: to offer an eco-antidote to tech-boom burnout and to inspire residents to reconnect with and protect the country's forests.</p>
-  </div>
-  
-  <div class="button" id="question4">
-    <p>Who invented forest bathing?</p></div>
-  <div class="answer">      
-    <p>Shinrin-yoku or forest bathing has ancient roots in Japan and Asia. The term “forest bathing” was coined in Japan, where nature therapy has ancient roots. The idea of “park prescriptions” in urban areas first started in Asia and caught on worldwide.</p>
-  </div>
-  <div class="button" id="question5">
-    <p>Does forest bathing have to be in a forest?</p></div>
-  <div class="answer">      
-    <p>You don't even need a forest. Once you have learned how to do it, you can do shinrin-yoku anywhere – in a nearby park or in your garden. Look for a place where there are trees, and off you go!</p>
-  </div>
+          <div class="button" id="question3">
+            <p>Why is it called forest bathing?</p>
+          </div>
+          <div class="answer">
+            <p>
+              The term emerged in Japan in the 1980s as a physiological and
+              psychological exercise called shinrin-yoku (“forest bathing” or
+              “taking in the forest atmosphere”). The purpose was twofold: to
+              offer an eco-antidote to tech-boom burnout and to inspire
+              residents to reconnect with and protect the country's forests.
+            </p>
+          </div>
 
-  <div class="button" id="question6">
-    <p>Where is forest bathing popular?
-    </p></div>
-  <div class="answer">      
-    <p>
-      The practice, long-popular in Japan, is gaining traction in the U.S. as a way of harnessing the health benefits of being outdoors.</p>
-  </div>
+          <div class="button" id="question4">
+            <p>Who invented forest bathing?</p>
+          </div>
+          <div class="answer">
+            <p>
+              Shinrin-yoku or forest bathing has ancient roots in Japan and
+              Asia. The term “forest bathing” was coined in Japan, where nature
+              therapy has ancient roots. The idea of “park prescriptions” in
+              urban areas first started in Asia and caught on worldwide.
+            </p>
+          </div>
+          <div class="button" id="question5">
+            <p>Does forest bathing have to be in a forest?</p>
+          </div>
+          <div class="answer">
+            <p>
+              You don't even need a forest. Once you have learned how to do it,
+              you can do shinrin-yoku anywhere – in a nearby park or in your
+              garden. Look for a place where there are trees, and off you go!
+            </p>
+          </div>
 
-  <div class="button" id="question7">
-    <p>How often should I forest bathe?
-    </p></div>
-  <div class="answer">      
-    <p>When possible, bring a buddy or let someone know where you're going and for how long. A good rule of thumb is to practice forest bathing for at least 20 minutes every day. If you don't have that much time to spare, that's OK. Any amount of time you can spend outdoors enjoying fresh air and sunshine is good.</p>
-  </div>
-  <script src="script.js"></script> 
-  </div>
-    </div>
-</section>
-<footer class="footer">
-<a href="#">Contact us</a>
-<a href="#">About us</a>
-<a href="#">FAQ</a>
-  
-</footer>
+          <div class="button" id="question6">
+            <p>Where is forest bathing popular?</p>
+          </div>
+          <div class="answer">
+            <p>
+              The practice, long-popular in Japan, is gaining traction in the
+              U.S. as a way of harnessing the health benefits of being outdoors.
+            </p>
+          </div>
 
-</body>
-
+          <div class="button" id="question7">
+            <p>How often should I forest bathe?</p>
+          </div>
+          <div class="answer">
+            <p>
+              When possible, bring a buddy or let someone know where you're
+              going and for how long. A good rule of thumb is to practice forest
+              bathing for at least 20 minutes every day. If you don't have that
+              much time to spare, that's OK. Any amount of time you can spend
+              outdoors enjoying fresh air and sunshine is good.
+            </p>
+          </div>
+          <script src="script.js"></script>
+        </div>
+      </main>
+    </section>
+    <footer class="footer">
+      <a href="#">Contact us</a>
+      <a href="#">About us</a>
+      <a href="#">FAQ</a>
+    </footer>
+  </body>
 </html>
