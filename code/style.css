@@ -1,10 +1,10 @@
 body {
-  font-family: 'Hina Mincho', serif;
+  font-family: "Hina Mincho", serif;
   margin: 0;
 }
 
 .hero-video {
-  position: absolute;             /* stays as a background when header-title has position relative and higher z-index */
+  position: absolute; /* stays as a background when header-title has position relative and higher z-index */
   object-fit: cover;
   width: 100%;
   height: 300px;
@@ -12,55 +12,65 @@ body {
 
 .header-title {
   position: relative;
-  z-index: 1;                     /* the header title stays one layer on top of the video */
+  z-index: 1; /* the header title stays one layer on top of the video */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   padding: 15px;
   font-size: 25px;
-  animation: fadeIn linear 3s;   /* some fadeIn effect for the header-title */
+  animation: fadeIn linear 3s; /* some fadeIn effect for the header-title */
 }
 
 @keyframes fadeIn {
-  from {opacity:0;}               /* from, is the same as 0% */
-  to {opacity:1;}                 /* to, is the same as 100% */
+  from {
+    opacity: 0;
+  } /* from, is the same as 0% */
+  to {
+    opacity: 1;
+  } /* to, is the same as 100% */
 }
 
-h1, h2 {
+h1,
+h2 {
   background-color: white;
   padding: 5px;
 }
 
 nav {
   background-color: rgb(252, 252, 231);
-  padding: 4px 0;  
-  margin: 4px 0;    
+  padding: 4px 0;
+  margin: 4px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  position: sticky;               /* navbar that stays at the top of the page when scrolling down */
+  position: sticky; /* navbar that stays at the top of the page when scrolling down */
   top: 0;
   z-index: 1;
 }
 
-.nav-icon, .book-online-btn, .readmore-btn, audio  {
+.nav-icon,
+.book-online-btn,
+.readmore-btn,
+audio {
   border: 2px solid gray;
-  border-radius: 10%;             /* rounded corners */
-  padding: 5px;                   /* space between text and the border */
+  border-radius: 10%; /* rounded corners */
+  padding: 5px; /* space between text and the border */
   height: 50px;
   width: 100px;
   display: flex;
-  align-items: center;            /* center the content, vertically */
-  justify-content: center;   
+  align-items: center; /* center the content, vertically */
+  justify-content: center;
   text-transform: uppercase;
-  font-family: 'Hina Mincho', serif;  /* the font dosen't apply here from the body, it has been overwritten by the button tag default styles. So had to specify it again. */
+  font-family: "Hina Mincho", serif; /* the font dosen't apply here from the body, it has been overwritten by the button tag default styles. So had to specify it again. */
   cursor: pointer;
-  margin: 0 auto;                 /* centered the buttons */
+  margin: 0 auto; /* centered the buttons */
 }
 
-.nav-icon:hover, .book-online-btn:hover, .readmore-btn:hover {
+.nav-icon:hover,
+.book-online-btn:hover,
+.readmore-btn:hover {
   background-color: rgba(241, 106, 27, 0.703);
   color: white;
 }
@@ -71,48 +81,50 @@ audio {
 }
 
 /* The Modal (background) */
-.modal-form, .modal-accordion {
-  display: none;                        /* hidden by default */
-  position: fixed;                      /* stay in place */
-  z-index: 1;                           /* sit on top */
+.modal-form,
+.modal-accordion {
+  display: none; /* hidden by default */
+  position: fixed; /* stay in place */
+  z-index: 1; /* sit on top */
   left: 0;
   top: 0;
-  width: 100%;                          /* full width */
-  height: 100%;                         /* full height */
-  overflow: auto;                       /* enable scroll if needed */
-  background-color: rgba(0,0,0,0.3);  /* Black with opacity 0.3 */
+  width: 100%; /* full width */
+  height: 100%; /* full height */
+  overflow: auto; /* enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.3); /* Black with opacity 0.3 */
 }
 
 /* Modal Content/Window for the form and accordion */
-.modal-content-form, .modal-content-accordion {
-  box-sizing: border-box;               /* added box-sizing because the content went a bit overflow when the screen get smaller */
+.modal-content-form,
+.modal-content-accordion {
+  box-sizing: border-box; /* added box-sizing because the content went a bit overflow when the screen get smaller */
   background-color: white;
-  margin: 5% auto;                      /* 5% from the top and centered */
+  margin: 5% auto; /* 5% from the top and centered */
   padding: 50px;
   border: 2px solid;
-  width: 60%;                           /* could be more or less, depending on screen size. Going to increase the width for smaller screens */
-  position: relative;                   /* using relative so we can put the close-btn in position absolute */
+  width: 60%; /* could be more or less, depending on screen size. Going to increase the width for smaller screens */
+  position: relative; /* using relative so we can put the close-btn in position absolute */
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-image: url("./favicon_copy.png");
 }
 
 .modal-book {
-  grid-column: span 1;        /* takes up one column, want the img to be beside the form */
+  grid-column: span 1; /* takes up one column, want the img to be beside the form */
   background-color: white;
   padding: 20px;
 }
 
-.modal-img {                  
+.modal-img {
   grid-column: span 1;
   width: 100%;
-  transform: rotate(90deg);   /* rotate the img 90deg */
-  align-self: center;         /* center the img */
+  transform: rotate(90deg); /* rotate the img 90deg */
+  align-self: center; /* center the img */
 }
 
 .inputs {
   display: flex;
-  flex-direction: column;    
+  flex-direction: column;
 }
 
 .inputs label {
@@ -129,19 +141,23 @@ audio {
   right: 25px;
 }
 
-.close-btn:hover, .close-btn:focus {       /* when hovering or focusing on the close button */
+.close-btn:hover,
+.close-btn:focus {
+  /* when hovering or focusing on the close button */
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
-.check-mark {                              /* hidden check-mark before validation */
+.check-mark {
+  /* hidden check-mark before validation */
   visibility: hidden;
   color: green;
 }
 
-input:valid + .check-mark {               /* display check-mark when input are valid */
-  visibility: visible;                    /* this dosen't quite work for my input type="tel", put a question on Stack Overflow, but haven't got a solution yet */
+input:valid + .check-mark {
+  /* display check-mark when input are valid */
+  visibility: visible; /* this dosen't quite work for my input type="tel", put a question on Stack Overflow, but haven't got a solution yet */
 }
 
 /* want a Red border when validation say invalid and when it is not a placeholder and on focus */
@@ -158,28 +174,30 @@ input:not(:placeholder-shown):not(:focus):invalid {
   background: white;
   grid-column: span 2;
   display: flex;
-  justify-content: space-between;         /* want space between the question and the arrow */
+  justify-content: space-between; /* want space between the question and the arrow */
   align-items: center;
   padding: 0 12px;
-  cursor: pointer;                        /* the whole question is clickable therefore added a cursor */
+  cursor: pointer; /* the whole question is clickable therefore added a cursor */
 }
 
 .arrow {
   font-size: 24px;
 }
 
-.answer {                               
-  display: none;                          /* the answers are hidden by default */
+.answer {
+  display: none; /* the answers are hidden by default */
   background-color: rgb(252, 252, 231);
   grid-column: span 2;
   padding: 0 18px;
 }
 
-.active + .answer {                        /*when clicking/activating the function toggle -> display the answer*/
+.active + .answer {
+  /*when clicking/activating the function toggle -> display the answer*/
   display: block;
 }
 
-.active .arrow {                          /*when activating the function toggle, rotate the arrow 180deg */
+.active .arrow {
+  /*when activating the function toggle, rotate the arrow 180deg */
   transform: rotate(180deg);
 }
 
@@ -187,11 +205,11 @@ input:not(:placeholder-shown):not(:focus):invalid {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 50px; 
+  grid-gap: 50px;
   width: 90%;
   margin: 20px auto;
   padding: 50px;
-  background-color: #eaeaea; 
+  background-color: #eaeaea;
 }
 
 .content-text {
@@ -201,7 +219,8 @@ input:not(:placeholder-shown):not(:focus):invalid {
   justify-content: center;
 }
 
-.content-text a {                /* do not want any decoration for a-tag (readmore-btn) */
+.content-text a {
+  /* do not want any decoration for a-tag (readmore-btn) */
   text-decoration: none;
 }
 
@@ -220,7 +239,8 @@ footer {
   justify-content: space-between;
 }
 
-footer p {                          /*zero margin between the paragraphs in the footer*/
+footer p {
+  /*zero margin between the paragraphs in the footer*/
   margin: 0;
 }
 
@@ -234,66 +254,83 @@ footer p {                          /*zero margin between the paragraphs in the 
 .logo-technigo {
   width: 100%;
   max-height: 25px;
-  margin-top: 5px;                /*put some space betwwen the logo and the paragraph*/
+  margin-top: 5px; /*put some space betwwen the logo and the paragraph*/
 }
 
-@media (min-width: 768px) and (max-width: 991px) {        /*for tablet*/
+@media (min-width: 768px) and (max-width: 991px) {
+  /*for tablet*/
   .hero-video {
     height: 200px;
   }
   .content-text {
-      grid-column: span 2;                      /*changed it to one column*/
+    grid-column: span 2; /*changed it to one column*/
   }
-  button, .header-title, footer, .copyright {
+  button,
+  .header-title,
+  footer,
+  .copyright {
     font-size: 80%;
   }
-  .nav-icon, .book-online-btn, .readmore-btn {
+  .nav-icon,
+  .book-online-btn,
+  .readmore-btn {
     width: 80px;
     height: 40px;
   }
-  .modal-content-form {          /* want the form to take almost all the screen size */
+  .modal-content-form {
+    /* want the form to take almost all the screen size */
     width: 80%;
-    justify-items: center;       /* centered the form */
+    justify-items: center; /* centered the form */
   }
-  .modal-content-accordion {     /* want the FAQ-accordion to take almost all the screen size */
+  .modal-content-accordion {
+    /* want the FAQ-accordion to take almost all the screen size */
     width: 80%;
   }
   .modal-book {
-    grid-column: span 2;         /* the online booking form takes up two columns, the whole first row */
+    grid-column: span 2; /* the online booking form takes up two columns, the whole first row */
   }
-  .modal-img {             
-    grid-column: span 2;         /* for tablet, put the img under the form */
-    transform: rotate(180deg);   /* rotate the img 180deg */
+  .modal-img {
+    grid-column: span 2; /* for tablet, put the img under the form */
+    transform: rotate(180deg); /* rotate the img 180deg */
     width: 70%;
     margin-top: 20px;
   }
 }
 
-@media (max-width: 767px) {                     /*for mobile*/
+@media (max-width: 767px) {
+  /*for mobile*/
   .hero-video {
     height: 180px;
   }
   .content-text {
-      grid-column: span 2;                      /*changed it to one column*/
+    grid-column: span 2; /*changed it to one column*/
   }
-  button, .header-title, footer, .copyright {
+  button,
+  .header-title,
+  footer,
+  .copyright {
     font-size: 60%;
   }
-  .nav-icon, .book-online-btn, .readmore-btn {
+  .nav-icon,
+  .book-online-btn,
+  .readmore-btn {
     width: 60px;
     height: 30px;
   }
-  .modal-img {                                  /* makes the img disappear so there's more space for the form */
+  .modal-img {
+    /* makes the img disappear so there's more space for the form */
     display: none;
-  }         
+  }
   .modal-book {
     grid-column: span 2;
   }
-  .modal-content-form {                         /* want the form to take almost all the screen size */
-    width: 90%;                                      
-    justify-items: center;                      /* took away the img, so centered the form */
+  .modal-content-form {
+    /* want the form to take almost all the screen size */
+    width: 90%;
+    justify-items: center; /* took away the img, so centered the form */
   }
-  .modal-content-accordion {                    /* want the FAQ-accordion to take almost all the screen size */
+  .modal-content-accordion {
+    /* want the FAQ-accordion to take almost all the screen size */
     width: 90%;
   }
 }
