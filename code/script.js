@@ -21,7 +21,9 @@ function myFunction() {
     navbar.classList.add("sticky")
   } 
   else {
-    navbar.classList.remove("sticky");
+    navbar.innerHTML += `
+  display: none;
+  `
   }
 }
 
