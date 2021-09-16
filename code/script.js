@@ -11,20 +11,17 @@ document.getElementById('section4').onclick = toggleAccordion
 
 // Navbar sticky
 window.onscroll = function() {myFunction()};
-
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
-
 // Sticky navbar while scrolling
 function myFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
+
   } 
   else {
-    navbar.innerHTML += `
-  display: none;
-  `
-  }
+    navbar.classList.remove("sticky");
+    }
 }
 
 
