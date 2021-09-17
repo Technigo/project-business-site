@@ -1,12 +1,9 @@
 # Business Site
-
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This business site shows basic features of any online website mainpage. It contains a hero image which is very trendy as a header these days. Also there is a sign up form for users, a frequently asked questions in an accordion form.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Touching java script for the first time was quite challenging for me as I have never experienced any type of interactive code program before. Understanding the basic notion of eventListener and how to trigger it takes a lot of time, but I managed to look through all the essential and optional reading material and it helped me a lot.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://relaxed-leavitt-42b273.netlify.app
