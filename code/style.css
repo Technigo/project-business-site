@@ -1,5 +1,7 @@
 /* ---MOBILE FIRST--- */
-
+body {
+  background-color: #f2e9e9;
+}
 /* ---NAV BAR--- */
 nav {
   display: flex;
@@ -10,16 +12,16 @@ nav {
 
 nav a {
   font-size: smaller;
-  color:#646464;
+  color: #646464;
   opacity: 0.5;
-} 
+}
 
 nav a:hover {
   cursor: pointer;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
 }
 
@@ -37,7 +39,7 @@ header {
   justify-content: start;
   align-items: center;
   padding-bottom: 8%;
-  background-image:url('./images/llama.jpg');
+  background-image: url("./images/llama.jpg");
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
@@ -55,13 +57,13 @@ header {
 
 h1 {
   font-size: 3em;
-  color: #FFFCFC;
+  color: #fffcfc;
   margin-bottom: 0;
   margin-top: 15%;
 }
 
 h2 {
-  color: #FFFCFC;
+  color: #fffcfc;
   margin-top: 0;
 }
 
@@ -78,7 +80,7 @@ main {
 .main-boxes {
   display: flex;
   align-items: center;
-  background-color: rgba(198, 193, 193, 0.8);;
+  background-color: rgba(198, 193, 193, 0.4);
   margin: 20%;
   padding: 10%;
 }
@@ -91,9 +93,9 @@ label {
 }
 
 .checkbox {
-  display:flex;
+  display: flex;
   align-items: flex-end;
-  font-size:smaller;
+  font-size: smaller;
   margin-bottom: 15px;
 }
 
@@ -111,7 +113,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: #FFFCFC
+  background-color: #fffcfc;
 }
 /* ---ACCORDION---- */
 /* Display the accordion when its active */
@@ -127,7 +129,7 @@ button:hover {
 .menu {
   border: 1px solid black;
   padding: 10px;
-  background-color: #FFFCFC;
+  background-color: #fffcfc;
 }
 
 .menu:hover {
@@ -137,7 +139,6 @@ button:hover {
 /* ---STYLING FOR TABLETS---*/
 /* hiding mobile header and adding backgound image in body */
 @media (min-width: 668px) and (max-width: 1024px) {
-  
   section.hero-parent-mobile-desktop {
     display: none;
   }
@@ -154,7 +155,7 @@ button:hover {
     background-position: right;
     z-index: 99;
     position: relative;
-}
+  }
   header {
     max-height: 350px;
     width: 100%;
@@ -163,7 +164,6 @@ button:hover {
   h1 {
     font-size: 4em;
     margin-top: 100px;
-
   }
   section.hero-parent-tablet {
     width: 100%;
@@ -176,23 +176,23 @@ button:hover {
   .main-boxes {
     background-color: rgba(198, 193, 193, 0.4);
     margin: 0 0 10%;
+    width: 300px;
   }
 }
 
 /*---STYLING FOR DESKTOP---*/
- @media (min-width: 1025px){
-
+@media (min-width: 1025px) {
   nav a {
-    font-size: x-large;
+    font-size: large;
   }
   header {
     max-height: 60vh;
   }
- /* Adding a new larger image as hero img */
+  /* Adding a new larger image as hero img */
   section.hero-parent-mobile-desktop {
     height: 60vh;
     padding: 0;
-    background-image:url('./images/llama.jpg');
+    background-image: url("./images/llama.jpg");
     background-position: bottom;
     background-size: cover;
   }
@@ -205,29 +205,32 @@ button:hover {
     font-size: 6em;
   }
 
-  h2 {
+  /* h2 {
     font-size: 2em;
-  }
+  } */
 
   main {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
   .main-boxes {
     justify-content: space-around;
     align-items: baseline;
     width: 100%;
-    margin: 2%;    
+    max-width: 200px;
+    margin: 5%;
+    border-radius: 2%;
+    padding: 5%;
   }
 
-  form{
-    width:100%;
+  form {
+    width: 100%;
   }
 
   .accordion {
-    width: 100%
+    width: 100%;
   }
 }
