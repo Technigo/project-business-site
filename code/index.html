@@ -13,6 +13,7 @@
     <header class="header"> 
       <video playsinline autoplay muted loop >
         <source src="./videos/video.mp4" type="video/mp4">
+        <source src="./videos/video.webm" type="video/mp4">
       </video>
       <div class="overlay">
         <h1>
@@ -28,7 +29,7 @@
   <main class="container">
     <section>
     <!--FORM-->
-      <form action="http://httpbin.org/anything" method="POST">
+      <form action="https://httpbin.org/anything" method="POST">
           <fieldset>
               <legend>Book now</legend>
   
@@ -46,31 +47,31 @@
 
               <label>Choose your destination:
                 <select class="options" name="country">
-                    <option value="1">Creta</option>
-                    <option value="2">Malaga</option>
-                    <option value="3">Rhodos</option>
-                    <option value="4">Gran Canaria</option>
+                    <option value="Creta">Creta</option>
+                    <option value="Malaga">Malaga</option>
+                    <option value="Rhodos">Rhodos</option>
+                    <option value="Gran Canaria">Gran Canaria</option>
                 </select>
               </label>
 
               <div>
                   <p class="labels-radio">Choose one booking option:</p>
-                  <input type="radio" name="radio">
-                  <label for="">Hotel</label>
+                  <input type="radio" name="radio" required>
+                  <label for="hotel">Hotel</label>
 
-                  <input type="radio"name="radio">
-                  <label for="">Hotel/Flight</label>
+                  <input type="radio"name="radio" required>
+                  <label for="hotel&flight">Hotel/Flight</label>
 
-                  <input type="radio" name="radio">
-                  <label for="">All inclusive</label>
+                  <input type="radio" name="radio" required>
+                  <label for="allInclusive">All inclusive</label>
               </div>
 
               <div class="checks">
-                <input type="checkbox">
+                <input type="checkbox" required>
                 <label for="terms">I agree to our Terms & Privacy.</label>
               </div>
   
-              <button type="submit">Send</button>
+              <button type="submit" href="#top">Send</button>
           </fieldset>
       </form>
     </section>
