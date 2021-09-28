@@ -10,9 +10,8 @@ this.classList.toggle("active")
 }
 
 // Selects an HTML element, and calls here the toggle function. It will be executed when the element is clicked.
-
-var question1 = document.getElementById('section1').onclick = toggle
-var question2 = document.getElementById('section2').onclick = toggle
-var question3 = document.getElementById('section3').onclick = toggle
+document.getElementById('section1').onclick = toggle
+document.getElementById('section2').onclick = toggle
+document.getElementById('section3').onclick = toggle
 
 
