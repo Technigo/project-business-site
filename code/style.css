@@ -18,9 +18,11 @@ body {
   font-family: raleway;
   font-size: 2.5vh;
   margin:0;
+  box-sizing: border-box;
+  
 }
 
-p {line-height: 1.6;}
+
 /* NAVBAR */
  
 .nav-bar{
@@ -66,6 +68,10 @@ a:hover{
  
 }
 
+.header-container p {
+  margin-left: 20pt
+}
+
 .hero-video-phone {
   position: relative; 
   right: 0;
@@ -89,7 +95,7 @@ a:hover{
   position: absolute; /* dont forget to have postion:relative on parent when using absolute*/
   background-color: rgba(0, 0, 0, 0.2);
   color: #FFE9D6;
-  width: 70%;
+  width: 85%;
 
 }
 /* MAIN */
@@ -114,14 +120,25 @@ h1 {
   font-weight: 500;
 }
 
+h2 {                       
+  margin-top: 0; 
+  text-align: center;
+  color: #FFE9D6;
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 500;
+}
+
+
 p {
-  font-weight: 350;
+  font-weight: 400;
+  line-height: 1.6;
   
 }
   /* Sign up  */
 
 .sign-up-content{
-  padding: 2vh;
+  padding: 5vh;
 }
 
 label {
@@ -154,38 +171,44 @@ input[type="checkbox"]{
 
 }
 
+
+
+
 button {
     padding: 2vh;
     border-radius: 10pt;
     background-color: #7B6079;
     color: #FFE9D6;;
-    font-size: 2vh;
+    font-size: 14pt;
     width: 100%;
-    
     border: none;
   }
 
 /* Img */
 img {
-   padding-top: 5vh;
+    margin-top: 5vh;
     width: 100%;
     object-fit: contain;
     height: auto;
   }
 
+
  
 /* FAQ */
 
 .faq-content {
-padding-top: 10vh;
+padding: 5vh;
 min-height: 200px;
+display: flex;
+flex-direction: column-reverse;
+
  }
 .question {                         /* question FAQ */
       background-color: #7B6079;
       cursor: pointer;
       width: 100%;
       transition: 0.5s;
-      height: 15vh;
+      height: 13vh;
       margin:10px 0 0 0;
       box-sizing: border-box;
       padding: 2vh;
@@ -193,8 +216,7 @@ min-height: 200px;
       font-size: 3vh;
       color:#FFE9D6;
       border-radius: 10pt;
-
-         
+      font-size: 14pt;   
   }
 
   /* before clicking */ 
@@ -245,38 +267,34 @@ footer{
   .main-content-about{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto;
   grid-gap: 10px;
   padding: 20px;
   max-width: 150vh;
   margin: auto;
   box-sizing: border-box;
   font-size: 2vh;
+}
+.img-contact{
+  height: 80vh;
 }
 
 
 
 .contact-info{
-  background-color: bisque;
+  background-color: #7B6079;
   border-radius: 10pt;
+  margin: 20pt;
+  padding-top: 20pt;
 }
 
 .contact-info p {
-  margin-left: 30px;
+  margin: 0 0 0 30px;
 }
 
-/* .main-content-sign-up{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto;
-  grid-gap: 10px;
-  padding: 20px;
-  max-width: 150vh;
-  margin: auto;
-  box-sizing: border-box;
-  font-size: 2vh;
-  
-} */
+.about-content{
+  padding: 0 20pt 20pt 20pt;
+}
+
   /* --------------------TABLET---------------------------------*/
 
 @media (min-width: 720px){
@@ -302,30 +320,31 @@ footer{
   .main-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto ;
     grid-gap: 20px;
     padding: 20px;
     
   }
 
   .sign-up-content{
-    grid-row: 1 / 3;
-    grid-column: 1;
-    padding: 5vh;
-  }
+   padding: 2vh}
 
   .faq-content {
-   grid-row: 2 / 4;
    grid-column: 2;
+   flex-direction: column;
+   padding: 2vh;
   }
 
-  .img-sign-up {
-    grid-row: 3;
+  .faq{
+    margin-top: 5vh;
   }
 
-  .img-faq {
-    grid-row: 1;
-    grid-column: 2;
+  img {
+    margin-top: 0;
+  }
+
+  .img-sign-up{
+    margin-top: 5vh;
   }
 
   h1{
@@ -334,7 +353,30 @@ footer{
   font-weight: 500;
   }
 
+  h2{
+    font-size: 44px;
+    line-height: 52px;
+    font-weight: 500;
+    }
+  
+    .question {                         /* question FAQ */
+      font-size: 20pt;   
   }
+
+  button {
+   
+    font-size: 20pt;
+    
+  }
+
+  .main-content-about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+ }
+ 
+
+  
   
 
   /* --------------------Desktop---------------------------------*/
@@ -357,18 +399,7 @@ footer{
     object-fit: cover;
   }
 
-  .main-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    padding: 20px;
-
-    }
-
-    
-
-    .img {
-      object-fit: contain;
-    }
+  .img {
+    object-fit: contain;
+  }
 }

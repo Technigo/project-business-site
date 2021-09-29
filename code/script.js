@@ -1,4 +1,4 @@
-const signUp = document.getElementById('sign-up')
+
 
 // A function that adds and remove the class "active" on the section you click on.
 
