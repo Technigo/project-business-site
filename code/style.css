@@ -14,11 +14,12 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 } */
 
 body {
-  background-color: #DE8971;
+  /* background-color: #DE8971; */
   font-family: raleway;
-  font-size: 2.5vh;
   margin:0;
   box-sizing: border-box;
+  background: linear-gradient(to bottom right, #DE8971, #dea071);
+
   
 }
 
@@ -44,12 +45,15 @@ body {
 a{
     text-decoration: none;
     color: #FFE9D6;; 
-    margin: 2vh;
+    margin: 1vh;
     top: 50%;
+    font-size: 14pt;
+    padding: 0.5vh;
   }
   
 a:hover{
-  background-color: grey;
+  background-color: #7B6079;
+  
 }
 
 .img-logo{
@@ -69,7 +73,7 @@ a:hover{
 }
 
 .header-container p {
-  margin-left: 20pt
+  margin: 0 10pt
 }
 
 .hero-video-phone {
@@ -104,11 +108,11 @@ a:hover{
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto;
   grid-gap: 10px;
-  padding: 20px;
+  padding: 3vh;
   max-width: 150vh;
   margin: auto;
   box-sizing: border-box;
-  font-size: 2vh;
+  
 }
 
 h1 {                       
@@ -118,6 +122,7 @@ h1 {
   font-size: 34px;
   line-height: 40px;
   font-weight: 500;
+  margin-block-end:0.4em;
 }
 
 h2 {                       
@@ -133,12 +138,12 @@ h2 {
 p {
   font-weight: 400;
   line-height: 1.6;
-  
+  font-size: 12pt;
 }
   /* Sign up  */
 
 .sign-up-content{
-  padding: 5vh;
+  /* padding: 5vh; */
 }
 
 label {
@@ -197,7 +202,7 @@ img {
 /* FAQ */
 
 .faq-content {
-padding: 5vh;
+
 min-height: 200px;
 display: flex;
 flex-direction: column-reverse;
@@ -252,6 +257,21 @@ footer{
 .footer-icon {
   width: 15vh;
 }
+
+footer h2 {
+  text-align: left;
+  font-size: 12pt;
+  margin-top: 20pt;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.footer p {
+  margin-block-start: 0;
+  margin-block-end: 0.1em;
+  font-weight: 300;
+  font-size: 10pt;
+}
   /* --------------------ABOUT US---------------------------------*/
 .nav-bar-other{
   display: flex;
@@ -263,8 +283,10 @@ footer{
   width: 100%;
 }
   
-  
-  .main-content-about{
+.contact-header{
+  margin-top: 30pt;
+}
+.main-content-about{
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 10px;
@@ -276,15 +298,12 @@ footer{
 }
 .img-contact{
   height: 80vh;
-  
 }
-
-
 
 .contact-info{
   background-color: #7B6079;
   border-radius: 10pt;
-  margin: 20pt;
+  margin-bottom: 20pt;
   padding-top: 20pt;
 }
 
@@ -296,28 +315,19 @@ footer{
   padding: 0 20pt 20pt 20pt;
 }
 
+
+
   /* --------------------TABLET---------------------------------*/
 
 @media (min-width: 720px){
 
-  .hero-video-phone {
-    display: none;
-  }
-  
-  .hero-video-tablet {
-    position: relative; 
-    right: 0;
-    width: 100%; 
-    height: 75vh;
-    display: block;
-    object-fit: cover;
-    
-  }
-  .hero-video-desktop {
-    display: none;
-  }
 
 
+  a{
+    margin: 1vh;
+    font-size: 20pt;
+    padding: 1vh;
+  }
   .main-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -354,13 +364,16 @@ footer{
   font-weight: 500;
   }
 
-  h2{
+  h2 {
     font-size: 44px;
     line-height: 52px;
     font-weight: 500;
-    }
+  }
+  p {
+    font-size: 16pt;
+  }
   
-    .question {                         /* question FAQ */
+  .question {                         /* question FAQ */
       font-size: 20pt;   
   }
 
@@ -384,21 +397,7 @@ footer{
 
 @media (min-width: 1280px){
  
-  .hero-video-phone {
-    display: none;
-  }
-  
-  .hero-video-tablet {
-    display: none;
-  }
-  .hero-video-desktop {
-    position: relative; 
-    right: 0;
-    width: 100%; 
-    height: 75vh; 
-    display: block;
-    object-fit: cover;
-  }
+
 
   .img {
     object-fit: contain;
