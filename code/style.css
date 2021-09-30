@@ -86,13 +86,7 @@ a:hover{
 
 }
 
-.hero-video-tablet {
-  display: none;
-}
 
-.hero-video-desktop {
-  display: none;
-}
 
 .content-hero {
   box-sizing: border-box; /*makes padding stay inside box*/
@@ -114,6 +108,15 @@ a:hover{
   margin: auto;
   box-sizing: border-box;
   
+}
+.image-container{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.image-container img {
+  margin: 20pt 0;
 }
 
 h1 {                       
@@ -201,7 +204,7 @@ img {
 
 .faq-content {
 
-min-height: 200px;
+
 display: flex;
 flex-direction: column-reverse;
 
@@ -254,6 +257,7 @@ footer{
 
 .footer-icon {
   width: 15vh;
+  margin-top: 0;
 }
 
 footer h2 {
@@ -283,6 +287,7 @@ footer h2 {
   
 .contact-header{
   margin-top: 30pt;
+  padding: 20px;
 }
 .main-content-about{
   display: flex;
@@ -295,8 +300,18 @@ footer h2 {
   box-sizing: border-box;
   font-size: 2vh;
 }
+ .main-content-about img {
+  margin-top: 0;
+  justify-content: start;
+  object-fit: cover;
+  padding: 0;
+  
+  
+}
+
 .img-contact{
-  height: 30vh;
+  /* height: 300px; */
+  width: 100%
 }
 
 .contact-info{
@@ -342,13 +357,13 @@ footer h2 {
     margin-top: 5vh;
   }
 
-  img {
+  /* img {
     margin-top: 0;
   }
 
   .img-sign-up{
     margin-top: 5vh;
-  }
+  } */
 
   h1{
   font-size: 60px;
@@ -385,7 +400,13 @@ footer h2 {
   }
  }
  
+ footer h2 {
+  font-size: 20pt;
+}
 
+.footer p {
+  font-size: 16pt;
+}
   
   
 
@@ -400,7 +421,7 @@ footer h2 {
   }
 
   .main-content{
-    margin: 5vh 25vh;
+    margin: 5vh 20vh;
   }
 
   h1{
@@ -418,9 +439,42 @@ footer h2 {
       font-size: 24pt;
     }
 
+    .image-container{
+      flex-direction: row;
+      justify-content: space-between;
+      
+    }
     
+    .image-container img {
+      margin: 20pt 0;
+    }
 
-  .img {
+  img {
     object-fit: contain;
+    width: 98%;
+    padding: 5pt;
+    
   }
+  
+ /* .main-content-about  img  {
+    margin-top: 0;
+  } */
+
+  .question {                         /* question FAQ */
+    font-size: 26pt;   
+}
+
+button {
+   
+  font-size: 26pt;
+  
+}
+
+footer h2 {
+  font-size: 26pt;
+}
+
+.footer p {
+  font-size: 20pt;
+}
 }
