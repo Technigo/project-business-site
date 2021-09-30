@@ -13,14 +13,21 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   border: 1px solid red;
 } */
 
+:root{
+  --purple: #7B6079;
+  --orange:#DE8971;
+  --beige: #FFE9D6;
+  --transparent-light:rgba(0, 0, 0, 0.2);
+  --transparent-dark: rgba(0, 0, 0, 0.5);
+
+}
+
+
 body {
-  /* background-color: #DE8971; */
   font-family: raleway;
   margin:0;
   box-sizing: border-box;
-  background: linear-gradient(to bottom right, #DE8971, #dea071);
-
-  
+  background: linear-gradient(to bottom right, var(--orange), #d0753c);  
 }
 
 
@@ -32,7 +39,7 @@ body {
   justify-content: space-between;
   position: absolute;
   top: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--transparent-light);
   width: 100%;
 }
 
@@ -44,7 +51,7 @@ body {
 }
 a{
     text-decoration: none;
-    color: #FFE9D6;; 
+    color: var(--beige); 
     margin: 1vh;
     top: 50%;
     font-size: 14pt;
@@ -65,7 +72,7 @@ a:hover{
 
 /* HEADER */
 .header-container {
-  background-color: #7B6079;
+  background-color: var(--purple);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,6 +88,7 @@ a:hover{
   right: 0;
   min-width: 100%; 
   min-height: 75vh;
+  max-height: 80vh;;
   display: block;
   object-fit: cover;
 
@@ -92,7 +100,7 @@ a:hover{
   box-sizing: border-box; /*makes padding stay inside box*/
   position: absolute; /* dont forget to have postion:relative on parent when using absolute*/
   background-color: rgba(0, 0, 0, 0.2);
-  color: #FFE9D6;
+  color: var(--beige);
   width: 85%;
   max-width: 150vh;
 
@@ -109,6 +117,15 @@ a:hover{
   box-sizing: border-box;
   
 }
+
+.welcome-content{
+  margin: 2vh 0;
+}
+
+.your-skill{
+  margin: 2vh 0;
+}
+
 .image-container{
   display: flex;
   flex-direction: column;
@@ -122,7 +139,7 @@ a:hover{
 h1 {                       
   margin-top: 0; 
   text-align: center;
-  color: #FFE9D6;
+  color: var(--beige);
   font-size: 34px;
   line-height: 40px;
   font-weight: 500;
@@ -132,9 +149,16 @@ h1 {
 h2 {                       
   margin-top: 0; 
   text-align: center;
-  color: #FFE9D6;
+  color: var(--beige);
   font-size: 34px;
   line-height: 40px;
+  font-weight: 500;
+}
+
+h2:hover{
+  transition: 0.8s;
+  font-size: 70px;
+  line-height: 80px;
   font-weight: 500;
 }
 
@@ -159,13 +183,13 @@ input {
     display: block;
     padding: 10px 20px;
     font-size: 2vh;
-    background-color: #FFE9D6;
+    background-color: var(--beige);
     border-radius: 12px;
     
   }
 
   .input-box:active {
-    background-color: #FFE9D6;
+    background-color: var(--beige);
     border: black;
   }
 
@@ -173,21 +197,25 @@ input {
 input[type="checkbox"]{
   height: 2vh;
   width: 2vh;
-  background-color: #FFE9D6;
+  background-color: var(--beige);
 
 }
-
-
-
 
 button {
     padding: 2vh;
     border-radius: 10pt;
-    background-color: #7B6079;
-    color: #FFE9D6;;
+    background-color: var(--purple);
+    color: var(--beige);;
     font-size: 14pt;
     width: 100%;
     border: none;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  button:hover{
+    color: var(--orange);
+    background-color: blueviolet;
   }
 
 /* Img */
@@ -210,7 +238,7 @@ flex-direction: column-reverse;
 
  }
 .question {                         /* question FAQ */
-      background-color: #7B6079;
+      background-color: var(--purple);
       cursor: pointer;
       width: 100%;
       transition: 0.5s;
@@ -220,9 +248,14 @@ flex-direction: column-reverse;
       padding: 2vh;
       text-align: center;
       font-size: 3vh;
-      color:#FFE9D6;
+      color:var(--beige);
       border-radius: 10pt;
       font-size: 14pt;   
+  }
+
+  .question:hover{
+    color: var(--orange);
+    background-color: blueviolet;
   }
 
   /* before clicking */ 
@@ -234,7 +267,7 @@ flex-direction: column-reverse;
 .active + .answer {                         
   box-sizing: border-box;
   display: block;
-  background-color: #FFE9D6;
+  background-color: var(--beige);
   margin:0;
   padding: 1vh 2vh;
   height: 20vh;
@@ -252,7 +285,7 @@ footer{
   background-color: rgba(0, 0, 0, 0.2);
   height: auto;
   padding: 4vh;
-  color: #FFE9D6;
+  color: var(--beige);
 }
 
 .footer-icon {
@@ -260,7 +293,7 @@ footer{
   margin-top: 0;
 }
 
-footer h2 {
+.footer h2 {
   text-align: left;
   font-size: 12pt;
   margin-top: 20pt;
@@ -287,21 +320,25 @@ footer h2 {
   
 .contact-header{
   margin-top: 30pt;
-  padding: 20px;
+  padding: 5vh 5vh 0 5vh;
 }
+
 .main-content-about{
   display: flex;
   flex-direction: column;
-
   grid-gap: 10px;
-  padding: 20px;
+  
   max-width: 150vh;
   margin: auto;
   box-sizing: border-box;
   font-size: 2vh;
 }
+
+.main-content-about{
+  margin: 5vh;
+}
  .main-content-about img {
-  margin-top: 0;
+  margin: 0 ;
   justify-content: start;
   object-fit: cover;
   padding: 0;
@@ -315,7 +352,7 @@ footer h2 {
 }
 
 .contact-info{
-  background-color: #7B6079;
+  background-color: var(--purple);
   border-radius: 10pt;
   margin-bottom: 20pt;
   padding-top: 20pt;
@@ -398,7 +435,7 @@ footer h2 {
   .img-contact{
     height: 60vh;
   }
- }
+
  
  footer h2 {
   font-size: 20pt;
@@ -408,7 +445,7 @@ footer h2 {
   font-size: 16pt;
 }
   
-  
+}
 
   /* --------------------Desktop---------------------------------*/
 
