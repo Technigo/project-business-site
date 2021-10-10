@@ -18,7 +18,7 @@ To ensure friendly User Inerface and provide greater User Experience following f
 - Form can be cleared by clicking the Reset button.
 
 ## View it live
-https://gogreen-submition-form.netlify.app
+https://marysnopok-gogreen-submition-form.netlify.app
 
 ## Resources 
 Cursor pointer is provided by Flaticon.com.
