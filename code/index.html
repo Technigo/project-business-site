@@ -1,114 +1,181 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Harvest the Sun</title>
-		<link rel="stylesheet" href="style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,800;1,300;1,400;1,800&display=swap" rel="stylesheet" />
-	</head>
-	<body>
-		<header>
-			<video class="hero-video" playsinline autoplay muted loop style="pointer-events: none">
-				<source src="./videos/dronevideo.mp4" type="video/mp4" />
-			</video>
-			<h1 class="header-text-center">Harvest the Sun</h1>
-			<a class="scroll-down-icon" href="#flex-container" id="scroll-ancor"><img class="scroll-down-icon" src="./images/down-arrow.png" alt="scroll down to content" id="scroll-icon" /></a>
-		</header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harvest the Sun</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,800;1,300;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <video class="hero-video" playsinline autoplay muted loop style="pointer-events: none">
+        <source src="./videos/dronevideo.mp4" type="video/mp4" />
+      </video>
+      <h1 class="header-text-center">Harvest the Sun</h1>
+      <a class="scroll-down-icon" href="#flex-container" id="scroll-ancor">
+        <img
+          class="scroll-down-icon"
+          src="./images/down-arrow.png"
+          alt="scroll down to content"
+          id="scroll-icon"
+        />
+      </a>
+    </header>
 
-		<main class="flex-container" id="flex-container">
-			<!-- Signup form -->
+    <main class="flex-container" id="flex-container">
+      <!-- Signup form -->
 
-			<section class="form-container" id="form-container">
-				<form class="form" id="form" action="https://httpbin.org/anything">
-					<h2>Join the webinar!</h2>
-					<label class="text-field-container" for="name">
-						Your name *<label class="validation-text" for="name">Write your name</label>
-						<input class="text-field" type="text" name="name" placeholder="Name" id="name" required />
-					</label>
-					<label class="text-field-container" for="email">
-						Your email *<label class="validation-text" for="name">Are you missing an @</label>
-						<input class="text-field" type="email" name="email" placeholder="Email" id="email" required />
-					</label>
-					<label class="text-field-container" for="password">
-						Password *<label class="validation-text" for="name">Must have min 8 characters</label>
-						<input class="text-field" type="password" name="password" placeholder="Secret password" id="password" required />
-					</label>
-					<div class="radio-container">
-						<label class="radio" for="radio1">
-							<input type="radio" name="radio" />
-							Property owner
-						</label>
-						<label class="radio">
-							<input type="radio" name="radio" />
-							Landowner
-						</label>
-						<label class="radio">
-							<input type="radio" name="radio" />
-							Installer
-						</label>
-						<label class="radio">
-							<input type="radio" name="radio" />
-							EPC
-						</label>
-					</div>
-					<div class="checkbox-container">
-						<label class="checkbox">
-							<input type="checkbox" name="newsletter" />
-							I want the awesome Newsletter!
-						</label>
-						<label class="checkbox">
-							<input type="checkbox" name="terms" required />
-							I accept the <a href="" target="_blank">Terms & Conditions</a> *
-						</label>
-					</div>
-					<button type="submit">Sign up</button>
-				</form>
-			</section>
-			<section class="greeting-container" id="greeting-container">
-				<div class="greeting" id="greeting"></div>
-			</section>
+      <section class="form-container" id="form-container">
+        <form class="form" id="form" action="https://httpbin.org/anything">
+          <h2>Join the webinar!</h2>
+          <label class="text-field-container" for="name">
+            Your name *
+            <label class="validation-text" for="name">Write your name</label>
+            <input
+              class="text-field"
+              type="text"
+              name="name"
+              placeholder="Name"
+              id="name"
+              required
+            />
+          </label>
+          <label class="text-field-container" for="email">
+            Your email *
+            <label class="validation-text" for="name">Are you missing an @</label>
+            <input
+              class="text-field"
+              type="email"
+              name="email"
+              placeholder="Email"
+              id="email"
+              required
+            />
+          </label>
+          <label class="text-field-container" for="password">
+            Password *
+            <label class="validation-text" for="name">Must have min 8 characters</label>
+            <input
+              class="text-field"
+              type="password"
+              name="password"
+              placeholder="Secret password"
+              id="password"
+              required
+            />
+          </label>
+          <div class="radio-container">
+            <label class="radio" for="radio1">
+              <input type="radio" name="radio" />
+              Property owner
+            </label>
+            <label class="radio">
+              <input type="radio" name="radio" />
+              Landowner
+            </label>
+            <label class="radio">
+              <input type="radio" name="radio" />
+              Installer
+            </label>
+            <label class="radio">
+              <input type="radio" name="radio" />
+              EPC
+            </label>
+          </div>
+          <div class="checkbox-container">
+            <label class="checkbox">
+              <input type="checkbox" name="newsletter" />
+              I want the awesome Newsletter!
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="terms" required />
+              I accept the
+              <a href="" target="_blank">Terms & Conditions</a>
+              *
+            </label>
+          </div>
+          <button type="submit">Sign up</button>
+        </form>
+      </section>
+      <section class="greeting-container" id="greeting-container">
+        <div class="greeting" id="greeting"></div>
+      </section>
 
-			<!-- FAQ -->
-			<section class="accordion-container">
-				<!-- Accordion -->
-				<div class="accordion">
-					<h1>Solar FAQ</h1>
+      <!-- FAQ -->
+      <section class="accordion-container">
+        <!-- Accordion -->
+        <div class="accordion">
+          <h1>Solar FAQ</h1>
 
-					<div class="question" id="section1">
-						<img class="icon-arrow-right" src="./images/arrow-right.png" />
-						How big is a solar module?
-					</div>
-					<div class="answer">
-						<p>One solar module is usually 1,7 - 2m high and 1m wide, it usually weigh 20-25kg.</p>
-					</div>
-					<div class="question" id="section2"><img class="icon-arrow-right" src="./images/arrow-right.png" />How much of the sun can be used?</div>
-					<div class="answer">
-						<p>The most efficient solarmodules can usually harness 20% of the energy from the sun, however there is also some losses in the system to convert the electricity.</p>
-					</div>
-					<div class="question" id="section3"><img class="icon-arrow-right" src="./images/arrow-right.png" />How much of the electricity in Sweden comes from solar?</div>
-					<div class="answer">
-						<p>According to data 0,4% of the electricity in 2019 was generated by solar (<a href="https://www.scb.se/hitta-statistik/sverige-i-siffror/miljo/elektricitet-i-sverige/">source</a>).</p>
-					</div>
-					<div class="question" id="section4"><img class="icon-arrow-right" src="./images/arrow-right.png" />How much solar power is installed in Sweden?</div>
-					<div class="answer">
-						<p>
-							As of march 2021 the accumlated installed power is above 1GW, in comparison, one of the three nuclear reactors at Forsmark, Sweden, has acapacity of approx. 1GW (<a
-								href="https://www.energimyndigheten.se/nyhetsarkiv/2021/22-000-nya-natanslutna-solcellsanlaggningar-under-2020/"
-								>source</a
-							>).
-						</p>
-					</div>
-					<div class="question" id="section5"><img class="icon-arrow-right" src="./images/arrow-right.png" />How much of the worlds electricity comes from solar?</div>
-					<div class="answer">
-						<p>In 2019 almost 3% of the electricity generation came from solar (<a href="https://www.iea.org/reports/solar-pv">source</a>).</p>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer id="footer"></footer>
-		<script src="./script.js"></script>
-	</body>
+          <div class="question" id="section1">
+            <img class="icon-arrow-right" src="./images/arrow-right.png" />
+            How big is a solar module?
+          </div>
+          <div class="answer">
+            <p>One solar module is usually 1,7 - 2m high and 1m wide, it usually weigh 20-25kg.</p>
+          </div>
+          <div class="question" id="section2">
+            <img class="icon-arrow-right" src="./images/arrow-right.png" />
+            How much of the sun can be used?
+          </div>
+          <div class="answer">
+            <p>
+              The most efficient solarmodules can usually harness 20% of the energy from the sun,
+              however there is also some losses in the system to convert the electricity.
+            </p>
+          </div>
+          <div class="question" id="section3">
+            <img class="icon-arrow-right" src="./images/arrow-right.png" />
+            How much of the electricity in Sweden comes from solar?
+          </div>
+          <div class="answer">
+            <p>
+              According to data 0,4% of the electricity in 2019 was generated by solar (
+              <a
+                href="https://www.scb.se/hitta-statistik/sverige-i-siffror/miljo/elektricitet-i-sverige/"
+              >
+                source
+              </a>
+              ).
+            </p>
+          </div>
+          <div class="question" id="section4">
+            <img class="icon-arrow-right" src="./images/arrow-right.png" />
+            How much solar power is installed in Sweden?
+          </div>
+          <div class="answer">
+            <p>
+              As of march 2021 the accumlated installed power is above 1GW, in comparison, one of
+              the three nuclear reactors at Forsmark, Sweden, has acapacity of approx. 1GW (
+              <a
+                href="https://www.energimyndigheten.se/nyhetsarkiv/2021/22-000-nya-natanslutna-solcellsanlaggningar-under-2020/"
+              >
+                source
+              </a>
+              ).
+            </p>
+          </div>
+          <div class="question" id="section5">
+            <img class="icon-arrow-right" src="./images/arrow-right.png" />
+            How much of the worlds electricity comes from solar?
+          </div>
+          <div class="answer">
+            <p>
+              In 2019 almost 3% of the electricity generation came from solar (
+              <a href="https://www.iea.org/reports/solar-pv">source</a>
+              ).
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+    <script src="./script.js"></script>
+  </body>
 </html>
