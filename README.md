@@ -5,7 +5,7 @@ A responsive site with a little touch of JavaScript. This site is built with com
 # What I learned
 
 - How to create HTML forms 
-- How to create a video header and make it responsive 
+- How to manipulate with video tag in HTML 
 - How to create an accordion section using JavaScipt 
 - For this project, I started with desktop screen styling and learned how to use media queries. 
 
