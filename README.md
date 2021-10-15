@@ -1,18 +1,14 @@
 # Business Site
 
-The mission was to do a responsive business-site with a hero-header, a form and a accordion. I did a new website for my own company Escape House.
+The mission was to do a responsive business-site with a hero-header, a form and a accordion. I did the website with some content from my own company.
 
 ## The problem
 
-I started with a more thourough planning stage then I had in my last project. I had an idea that I would only use grid in this project but realised that I probably need to think of grid and flex as complements to eachother and not exclusive.
+In this project I decided to use only grid but ended up thinking that grid and flexbox complement eachother more then being exclusive.
 
-The hardest part for me was to get the grid to work on the accordion. When i realised that I needed to think of the "answers" as a part of the grid everything sorted itself, but it took some hours.
+I had some issues with the grid on the accordion since I didnt take into consideration that the answers also is a part of the grid.
 
-Since I choose to getelementsbyclass I got a list and then I remembered from a past JS course that I could do a for loop to do the work for me. The hardest part within JS was setting up the chevron arrow to change directions. Took a little time before realising what the active + meant in the css=D
-
-Loved the BEM -method and will use it for my upcomeing projects.
-
-If i would have had more time I would try to make another solution for the flex-containers. I didnt think of the fact that the background color was different for the each sections of the code which made it a bit annoying to work with since I in "desktop view" didnt want the content to take up the full width (on big screens).
+I tried to use the BEM-method to name the classes.
 
 ## View it live
 
