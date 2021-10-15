@@ -1,11 +1,13 @@
 # Business Site
 
-Second project was to create a sign-up form and
-an accordion with FAQ.
+Second project was to create a site about our own fantasy company.
 
 ## The problem
 
-I used different types of html form elements. In order to expand and hide the answers in the accordion, I used a simple javascript function.
+The site has a hero image with some animations. There is a sign up form composed of various form elements.
+Some of the form elements have some basic validation tools based on the input types and attributes.
+The accordion for the FAQ is build with Javascript. The site is responsive to different media queries using
+flexbox layout.
 
 ## View it live
 My link in netlify https://suspicious-liskov-8cf058.netlify.app
