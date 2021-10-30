@@ -1,166 +1,120 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Project 3</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Business Site</title>
 
-    <!-- Google Fonts – Roboto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<!-- Google Fonts – Roboto -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
 
-    <!-- Link to the CSS file -->
-    <link rel="stylesheet" href="./style.css">
+		<!-- Link to the CSS file -->
+		<link rel="stylesheet" href="./style.css" />
 
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+		<!-- Fontawesome -->
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	</head>
 
-  </head>
+	<body>
+		<!-- Header with video-background -->
+		<header>
+			<section class="header-section">
+				<h1>Quis mauris amet delios faucibus</h1>
+				<video src="./videos/video_1_balett_4096x2160.mp4" muted loop autoplay playsinline></video>
+			</section>
+		</header>
 
-  <body>
-    <!-- Header with video-background -->
-    <header>
-      <section class="header-section">
-        <h1>Quis mauris amet delios faucibus</h1>
-        <video src="./videos/video_1_balett_4096x2160.mp4" muted loop autoplay playsinline></video>
-      </section>
-    </header>
+		<!-- Signup form -->
+		<section class="form-section">
+			<form class="form" action="https://httpbin.org/anything" method="POST">
+				<h3>Sign up</h3>
+				<label class="uppercase" for="username">Username</label>
+				<input type="text" id="username" name="username" class="input-text-block" placeholder="Enter your name" required />
 
-    <!-- Signup form -->
-    <section class="form-section">
-      <form class="form" action="https://httpbin.org/anything" method="POST">
+				<label class="uppercase" for="email">Email</label>
+				<input type="email" id="email" name="email" class="input-text-block" placeholder="Enter your email" required />
 
-        <h3>Sign up</h3>
-        <label class="uppercase" for="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          class="input-text-block"
-          placeholder="Enter your name"
-          required
-        />
+				<label class="uppercase" for="password">Password</label>
+				<input type="password" id="password" name="password" class="input-text-block" placeholder="Password" required />
 
-        <label class="uppercase" for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          class="input-text-block"
-          placeholder="Enter your email"
-          required
-        />
+				<h4 class="form-headline uppercase">What describes you?</h4>
+				<input type="radio" id="teacher" name="teacherOrStudent" class="pointer" />
+				<label class="inline-label pointer" for="teacher">Teacher</label>
 
-        <label class="uppercase" for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          class="input-text-block"
-          placeholder="Password"
-          required
-        />
+				<input type="radio" id="student" name="teacherOrStudent" class="pointer" />
+				<label class="inline-label pointer" for="student">Student</label>
 
-        <h4 class="form-headline uppercase">What describes you?</h4>
-        <input
-          type="radio"
-          id="teacher"
-          name="teacherOrStudent"
-          class="pointer"
-        />
-        <label class="inline-label pointer" for="teacher">Teacher</label>
+				<h4 class="form-headline uppercase">Terms and conditions</h4>
+				<input type="checkbox" id="termsCond" name="termsCond" class="pointer" required />
+				<label class="inline-label pointer" for="termsCond">I accept the Terms & Conditions</label>
 
-        <input
-          type="radio"
-          id="student"
-          name="teacherOrStudent"
-          class="pointer"
-        />
-        <label class="inline-label pointer" for="student">Student</label>
+				<br />
 
-        <h4 class="form-headline uppercase">Terms and conditions</h4>
-        <input
-          type="checkbox"
-          id="termsCond"
-          name="termsCond"
-          class="pointer"
-          required
-        />
-        <label class="inline-label pointer" for="termsCond">I accept the Terms & Conditions</label>
+				<input type="checkbox" id="newsletter" name="newsletter" class="pointer" />
+				<label class="inline-label pointer" for="newsletter">I want to receive newsletter</label>
 
-        <br>
+				<br />
 
-        <input
-          type="checkbox"
-          id="newsletter"
-          name="newsletter"
-          class="pointer"
-        />
-        <label class="inline-label pointer" for="newsletter">I want to receive newsletter</label>
+				<button class="sign-up-btn pointer uppercase" type="submit">Sign up</button>
+			</form>
+		</section>
 
-        <br>
-
-        <button class="sign-up-btn pointer uppercase" type="submit">
-          Sign up
-        </button>
-
-      </form>
-
-    </section>
-
-    <!-- Accordion -->
-    <section class="FAQ-section">
-      <div class="FAQ">
-        <h3 class="FAQ-headline">FAQ</h3>
-        <div class="accordion-item-header" id="FAQ1">
-          <h4 class="questions" id="question1">Lobortis feugiat solirum vivamus at augue?</h4>
-        </div>
-        <div class="answers" id="answer1">
-          <p>
-            Sollicitudin ac orci phasellus egestas. Sagittis nisl rhoncus mattis rhoncus urna. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Rutrum quisque non tellus orci ac auctor augue mauris. Facilisis volutpat est velit egestas dui id ornare arcu odio. Neque aliquam vestibulum morbi blandit cursus. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Proin nibh nisl condimentum id venenatis a condimentum. Dis parturient montes nascetur ridiculus mus mauris vitae. Enim neque volutpat ac tincidunt. Ultrices dui sapien eget mi proin sed. Elit scelerisque mauris pellentesque pulvinar pellentesque. Urna duis convallis convallis tellus id. Amet luctus venenatis lectus magna fringilla. Etiam non quam lacus suspendisse. Ut faucibus pulvinar elementum integer enim neque volutpat ac. Mauris cursus mattis molestie a iaculis at. Urna et pharetra pharetra massa massa. Sit amet dictum sit amet justo donec. Diam ut venenatis tellus in metus vulputate.
-          </p>
-        </div>
-        <hr>
-        <div class="accordion-item-header" id="FAQ2">
-          <h4 class="questions" id="question2">Posuere urna nec tincidunt praesent?</h4>
-        </div>
-        <div class="answers" id="answer2">
-          <p>
-            Mauris rhoncus aenean vel elit scelerisque. Lacus viverra vitae congue eu consequat ac felis. Purus non enim praesent elementum facilisis leo vel fringilla. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Nunc sed id semper risus in. Vitae nunc sed velit dignissim sodales. Morbi tristique senectus et netus et malesuada. Eget duis at tellus at urna. A arcu cursus vitae congue. In hac habitasse platea dictumst vestibulum. Neque egestas congue quisque egestas diam. Magna eget est lorem ipsum dolor sit. Pharetra sit amet aliquam id diam maecenas. A diam sollicitudin tempor id eu nisl nunc mi. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et. Tempor commodo ullamcorper a lacus vestibulum.
-          </p>
-        </div>
-        <hr>
-        <div class="accordion-item-header" id="FAQ3">
-          <h4 class="questions" id="question3">Egestas integer eget aliquet praesent tristique?</h4>
-        </div>
-        <div class="answers" id="answer3">
-          <p>
-            In egestas erat imperdiet sed euismod nisi porta lorem mollis. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Id semper risus in hendrerit. Augue mauris augue neque gravida in fermentum. Nisl pretium fusce id velit ut tortor pretium. Euismod quis viverra nibh cras pulvinar mattis nunc. Ut pharetra sit amet aliquam id diam. Hendrerit gravida rutrum quisque non tellus. Tortor id aliquet lectus proin nibh nisl condimentum id venenatis. Lorem donec massa sapien faucibus et. Quis risus sed vulputate odio ut enim blandit volutpat maecenas. Elit scelerisque mauris pellentesque pulvinar. Sed turpis tincidunt id aliquet. Aliquet nec ullamcorper sit amet. Dictum sit amet justo donec enim. Orci nulla pellentesque dignissim enim sit. Augue eget arcu dictum varius duis at.
-          </p>
-        </div>
-        <hr>
-        <div class="accordion-item-header" id="FAQ4">
-          <h4 class="questions" id="question4">Lacus laoreet non curabitur bravida?</h4>
-        </div>
-        <div class="answers" id="answer4">
-          <p>
-            Amet aliquam id diam maecenas. Iaculis at erat pellentesque adipiscing commodo elit at. Tortor id aliquet lectus proin nibh. Feugiat sed lectus vestibulum mattis ullamcorper velit. Morbi tincidunt augue interdum velit euismod in pellentesque. Iaculis urna id volutpat lacus. Eget velit aliquet sagittis id consectetur purus ut. Sed nisi lacus sed viverra tellus in hac. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Vel pharetra vel turpis nunc. Ridiculus mus mauris vitae ultricies leo integer.
-          </p>
-        </div>
-        <hr>
-        <div class="accordion-item-header" id="FAQ5">
-          <h4 class="questions" id="question5">Curabitur vitae nunc velit dignissim sodales?</h4>
-        </div>
-        <div class="answers" id="answer5">
-          <p>
-            Viverra adipiscing at in tellus. Purus viverra accumsan in nisl. Integer malesuada nunc vel risus commodo viverra. Fames ac turpis egestas integer eget aliquet nibh. Ut diam quam nulla porttitor. Odio pellentesque diam volutpat commodo sed egestas egestas fringilla. Ultrices neque ornare aenean euismod elementum nisi quis eleifend. Libero id faucibus nisl tincidunt eget nullam. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Pulvinar mattis nunc sed blandit libero volutpat. Ipsum suspendisse ultrices gravida dictum fusce ut. In eu mi bibendum neque egestas congue quisque egestas. Et leo duis ut diam quam. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Imperdiet massa tincidunt nunc pulvinar sapien et. Egestas dui id ornare arcu.
-          </p>
-        </div>
-        <hr>
-      </div>
-    </section>
-    <!-- Link to the Javascript file -->
-    <script src="./script.js"></script>
-  </body>
+		<!-- Accordion -->
+		<section class="FAQ-section">
+			<div class="FAQ">
+				<h3 class="FAQ-headline">FAQ</h3>
+				<div class="accordion-item-header" id="FAQ1">
+					<h4 class="questions" id="question1">Lobortis feugiat solirum vivamus at augue?</h4>
+				</div>
+				<div class="answers" id="answer1">
+					<p>
+						Sollicitudin ac orci phasellus egestas. Sagittis nisl rhoncus mattis rhoncus urna. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Rutrum quisque non tellus orci ac auctor augue mauris. Facilisis volutpat est velit egestas dui id ornare arcu odio. Neque aliquam vestibulum morbi blandit cursus. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Proin nibh nisl condimentum id venenatis a condimentum. Dis parturient montes nascetur ridiculus mus mauris vitae. Enim neque volutpat ac tincidunt. Ultrices dui sapien eget mi proin sed. Elit scelerisque mauris
+						pellentesque pulvinar pellentesque. Urna duis convallis convallis tellus id. Amet luctus venenatis lectus magna fringilla. Etiam non quam lacus suspendisse. Ut faucibus pulvinar elementum integer enim neque volutpat ac. Mauris cursus mattis molestie a iaculis at. Urna et pharetra pharetra massa massa. Sit amet dictum sit amet justo donec. Diam ut venenatis tellus in metus vulputate.
+					</p>
+				</div>
+				<hr />
+				<div class="accordion-item-header" id="FAQ2">
+					<h4 class="questions" id="question2">Posuere urna nec tincidunt praesent?</h4>
+				</div>
+				<div class="answers" id="answer2">
+					<p>
+						Mauris rhoncus aenean vel elit scelerisque. Lacus viverra vitae congue eu consequat ac felis. Purus non enim praesent elementum facilisis leo vel fringilla. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Nunc sed id semper risus in. Vitae nunc sed velit dignissim sodales. Morbi tristique senectus et netus et malesuada. Eget duis at tellus at urna. A arcu cursus vitae congue. In hac habitasse platea dictumst vestibulum. Neque egestas congue quisque egestas diam. Magna eget est lorem ipsum dolor sit. Pharetra sit amet aliquam id diam maecenas. A diam
+						sollicitudin tempor id eu nisl nunc mi. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et. Tempor commodo ullamcorper a lacus vestibulum.
+					</p>
+				</div>
+				<hr />
+				<div class="accordion-item-header" id="FAQ3">
+					<h4 class="questions" id="question3">Egestas integer eget aliquet praesent tristique?</h4>
+				</div>
+				<div class="answers" id="answer3">
+					<p>
+						In egestas erat imperdiet sed euismod nisi porta lorem mollis. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Id semper risus in hendrerit. Augue mauris augue neque gravida in fermentum. Nisl pretium fusce id velit ut tortor pretium. Euismod quis viverra nibh cras pulvinar mattis nunc. Ut pharetra sit amet aliquam id diam. Hendrerit gravida rutrum quisque non tellus. Tortor id aliquet lectus proin nibh nisl condimentum id venenatis. Lorem donec massa sapien faucibus et. Quis risus sed vulputate odio ut enim blandit volutpat maecenas. Elit scelerisque mauris
+						pellentesque pulvinar. Sed turpis tincidunt id aliquet. Aliquet nec ullamcorper sit amet. Dictum sit amet justo donec enim. Orci nulla pellentesque dignissim enim sit. Augue eget arcu dictum varius duis at.
+					</p>
+				</div>
+				<hr />
+				<div class="accordion-item-header" id="FAQ4">
+					<h4 class="questions" id="question4">Lacus laoreet non curabitur bravida?</h4>
+				</div>
+				<div class="answers" id="answer4">
+					<p>Amet aliquam id diam maecenas. Iaculis at erat pellentesque adipiscing commodo elit at. Tortor id aliquet lectus proin nibh. Feugiat sed lectus vestibulum mattis ullamcorper velit. Morbi tincidunt augue interdum velit euismod in pellentesque. Iaculis urna id volutpat lacus. Eget velit aliquet sagittis id consectetur purus ut. Sed nisi lacus sed viverra tellus in hac. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Vel pharetra vel turpis nunc. Ridiculus mus mauris vitae ultricies leo integer.</p>
+				</div>
+				<hr />
+				<div class="accordion-item-header" id="FAQ5">
+					<h4 class="questions" id="question5">Curabitur vitae nunc velit dignissim sodales?</h4>
+				</div>
+				<div class="answers" id="answer5">
+					<p>
+						Viverra adipiscing at in tellus. Purus viverra accumsan in nisl. Integer malesuada nunc vel risus commodo viverra. Fames ac turpis egestas integer eget aliquet nibh. Ut diam quam nulla porttitor. Odio pellentesque diam volutpat commodo sed egestas egestas fringilla. Ultrices neque ornare aenean euismod elementum nisi quis eleifend. Libero id faucibus nisl tincidunt eget nullam. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Pulvinar mattis nunc sed blandit libero volutpat. Ipsum suspendisse ultrices gravida dictum fusce ut. In eu mi bibendum neque egestas congue quisque
+						egestas. Et leo duis ut diam quam. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Imperdiet massa tincidunt nunc pulvinar sapien et. Egestas dui id ornare arcu.
+					</p>
+				</div>
+				<hr />
+			</div>
+		</section>
+		<!-- Link to the Javascript file -->
+		<script src="./script.js"></script>
+	</body>
 </html>
