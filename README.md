@@ -10,4 +10,4 @@ For the future I will try to stress less, practice on doing simple sketches on p
 
 ## View it live
 
-https://reverent-wright-8cd8a8.netlify.app/
+https://the-business-site.netlify.app/
