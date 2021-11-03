@@ -7,4 +7,4 @@ Week 3 of Technigo - the assigment of the week is to create a business site. The
 The video in the header did not display in Netlify. Instead of using a link, I switched to a file. It worked when I compressed the size of the video. 
 
 ## View it live
-https://sofiawillebrand-week3-business-site.netlify.app/
+https://doggy-daycare-sofia-willebrand.netlify.app/
