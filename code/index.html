@@ -1,120 +1,192 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Project 3</title>
-		<link rel="stylesheet" href="style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<meta name="viewport" content="width=device-width, initial-scale=1">  
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
-	</head>
-	
-	<form action="https://httpbin.org/anything" method="post"></form>
-	
-	<body>
-		<div class="hero-image">
-			<div class="hero-text">
-				<h1>Your Dog's Closet</h1>
-				<p>Let's double your dog's fabulousness</p>
-			</div>
-		</div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Site</title>
 
-		<div class="navbar">
-			<li class="list"> <a class="link" href="#home">Home</a></li>
-			<li class="list"><a class="link" href="#news">News</a></li>
-			<li class="list"><a class="link" href="#contact">Contact</a></li>
-			<li class="list"><a class="link" href="#about">About</a></li>
-		  </div>
+    <!-- Google Fonts – Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-		  <form action="https://httpbin.org/anything" method="POST">
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="./style.css" />
 
-			
-<div class="form-wrapper">
-<div class= "sign-up-form">
-	<div class="sign-up-header">
-	  <h1>Sign Up</h1>
-	</div>
-	<div class="sign-up-body">
-	  <label for="name"><b>Name</b></label>
-      <input class="placeholder" type="text" placeholder="First and Last name" name="name" required>
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
 
-      <label for="email"><b>Email</b></label>
-      <input class="placeholder" type="text" placeholder="Enter Email" name="email" required>
+  <body>
+    <!-- Header with video-background -->
+    <header>
+      <section class="header-section">
+        <h1>A good planet is hard to find.</h1>
+        <video
+          src="./asset/hero_video.mp4"
+          muted
+          loop
+          autoplay
+          playsinline
+        ></video>
+      </section>
+    </header>
 
-      <label for="psw"><b>Password</b></label>
-      <input class="placeholder" type="password" placeholder="Enter Password (8 characters minimum)" minlength="8" name="psw" required>
+    <!-- Signup form -->
+    <section class="form-section">
+      <form class="form" action="https://httpbin.org/anything" method="POST">
+        <h3>Sign up</h3>
+        <label class="uppercase" for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="input-text-block"
+          placeholder="Enter your name"
+          required
+        />
 
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input class="placeholder" type="password" placeholder="Repeat Password" minlength="8" name="psw-repeat" required>
-      
-	  <div class= radio>
-		  <div>
-	  <label for="radio"><b>Male</b></label>
-	  <input type="radio" id="gender" name="gender" value="male" checked> 
-	    </div>
-		<div>
-	  <label for="radio"><b>Female</b></label>
-	  <input type="radio" id="gender" name="gender" value="female">
-	</div>
+        <label class="uppercase" for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="input-text-block"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label class="uppercase" for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="input-text-block"
+          placeholder="Password"
+          required
+        />
+
+        <h4 class="form-headline uppercase">
+          How do you want to receive our news-letter?
+        </h4>
+        <input type="radio" id="email" name="emailorsms" class="pointer" />
+        <label class="inline-label pointer" for="email">E-mail</label>
+
+        <input type="radio" id="sms" name="emailorsms" class="pointer" />
+        <label class="inline-label pointer" for="sms">SMS</label>
+
+        <h4 class="form-headline uppercase">Terms and conditions</h4>
+        <input
+          type="checkbox"
+          id="termsCond"
+          name="termsCond"
+          class="pointer"
+          required
+        />
+        <label class="inline-label pointer" for="termsCond"
+          >I accept the Terms & Conditions</label
+        >
+
+        <br />
+
+        <input
+          type="checkbox"
+          id="newsletter"
+          name="newsletter"
+          class="pointer"
+        />
+        <label class="inline-label pointer" for="newsletter"
+          >I want to receive newsletter</label
+        >
+
+        <br />
+
+        <button class="sign-up-btn pointer uppercase" type="submit">
+          Sign up
+        </button>
+      </form>
+    </section>
+
+    <!-- Accordion -->
+    <section class="FAQ-section">
+      <div class="FAQ">
+        <h3 class="FAQ-headline">FAQ</h3>
+        <div class="accordion-item-header" id="FAQ1">
+          <h4 class="questions" id="question1">
+            Who runs the Environment Show?
+          </h4>
+        </div>
+        <div class="answers" id="answer1">
+          <p>At the moment just me, Haru Ahn.</p>
+        </div>
+        <hr />
+        <div class="accordion-item-header" id="FAQ2">
+          <h4 class="questions" id="question2">Why are you doing this?</h4>
+        </div>
+        <div class="answers" id="answer2">
+          <p>
+            All the Earth’s systems are under stress from humans right now.
+            (It’s not just climate change we need to worry about.) The solutions
+            are at hand. My goal is to help take sustainability from the fringes
+            to the mainstream. We owe it to the next generation.
+          </p>
+        </div>
+        <hr />
+        <div class="accordion-item-header" id="FAQ3">
+          <h4 class="questions" id="question3">Can I work with you?</h4>
+        </div>
+        <div class="answers" id="answer3">
+          <p>
+            Possibly yes. We are looking for talented, committed folk to work
+            with us. To find out how you can do it, please check out our
+            ‘Contribute’ page.
+          </p>
+        </div>
+        <hr />
+        <div class="accordion-item-header" id="FAQ4">
+          <h4 class="questions" id="question4">
+            How can I meet like-minded green people?
+          </h4>
+        </div>
+        <div class="answers" id="answer4">
+          <p>
+            We recommend Green Drinks for live meetups in cities around the
+            world. There are all sorts of green groups online as well. You’re
+            welcome to join The Environment Show social group on Facebook. If
+            you’re working in the communications industry, you can join a
+            professional community of green-thinking media people online at
+            Green Communicators. It’s really worthwhile to hook up with your
+            tribe. There are smart, environmentally minded people in many
+            corners of society. You are not alone!
+          </p>
+        </div>
+        <hr />
+        <div class="accordion-item-header" id="FAQ5">
+          <h4 class="questions" id="question5">How can I contact you?</h4>
+        </div>
+        <div class="answers" id="answer5">
+          <p>
+            Still haven’t found what you’re looking for? You can get in touch
+            with me via the Contact page. Whilst I do my best to answer every
+            email, sometimes I don’t get to all of them – as I’m juggling a
+            number of projects. Sometimes the answer is already in the FAQs and
+            info here on the website. (So best to have a look first before
+            sending a message.) All that said, I’ll do my best to help if I can!
+            Cheers, Haru
+          </p>
+        </div>
+        <hr />
       </div>
-
-	  <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-      </label>
-
-	  <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">I agree to the <a href="#" style="color:dodgerblue">Terms & Privacy</a>.
-      </label>
-
-	  <label>
-		  <input type="submit" value="Sign Up" />
-	  </label>
-	</div>
-	</div>
-</form>
-			<!-- Accordion -->
-			<div class="accordion">
-				<h1 class="accordion-header">Frequently Asked Questions</h1>
-				<button class="button" id="question1">Does your site offer plus size costumes?</button>
-				<div id="answer1" class="answer">
-					<p>
-						Your dog, your choice. There is no shame in size number. You tell us
-						the size, we make it happen!
-					</p>
-				</div>
-
-				<button class="button" id="question2">
-					Can I add customized decorations to an existing design?
-				</button>
-				<div id="answer2" class="answer">
-					<p>
-						Of course! There is an option button when you have chosen a basic
-						design. You can add a delightful set of angel wings, a santa hat,
-						chiffon organza... dream big!
-					</p>
-				</div>
-				<button class="button" id="question3">Do I need to pay for size up?</button>
-				<div id="answer3" class="answer">
-					<p>No you don't!</p>
-				</div>
-			
-			<button class="button" id="question4">What is the average delivery days?</button>
-			<div id="answer4" class="answer">
-				<p>If you live in EU, it usually takes about 5-6 business days to deliver. If you live in outside of EU, it might take from 7 business days up to 2 weeks. For more information, please contact the customer service.</p>
-			</div>
-		</div>
-			</div>
-		</div>
-		</div>
-		<script src="script.js"></script>
-
-		<footer class="footer">
-			<img src="img/Haru Ahn.png" alt="Haru Ahn">
-		</footer>
-	</body>
+    </section>
+    <!-- Link to the Javascript file -->
+    <script src="./script.js"></script>
+  </body>
 </html>
