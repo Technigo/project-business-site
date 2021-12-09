@@ -11,27 +11,23 @@ body {
   font-family: "Montserrat";
 }
 
-header {  
-  height: 300px; 
-  background-position: center; 
-  background-size: cover;
-} 
-
 .header {
-  display:flex;
   width: 100%;
-  height: auto;
-  background-image:url('../photo-1632903626005-309626fcd127(1).jpg');
-  text-align: center;
+  height: 500px;
+  background-image:url('https://images.unsplash.com/photo-1632903626005-309626fcd127?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80');
+  background-position: center; 
+  background-repeat: no-repeat;
+  object-fit: cover;
+  text-align: left;
   background-color:rgba(40, 233, 207, 0.753);
-  position:fixed;
+  position: absolute;
 }
 
 h1 {
   width: 100%;
   text-align:center;
   color:rgb(40, 59, 57);
-  position: absolute;
+
   }
 
 h2 {
@@ -39,18 +35,18 @@ h2 {
 }
 
 main {
-margin-top: 300px;
+display: flex;
+margin-top: 500px;
 width: 100%;
-display: grid;
-grid-template-columns: 1fr;
 justify-content: center;
-gap: 10px;
+
 }
 
 input {
-  font-size: 20px;
-  padding: 3px;
+  font-size: 15px;
+  padding: 10px;
   background-color: rgb(196, 237, 238);
+  border-radius: 5px;
   border: darkcyan;
 }
 
@@ -67,9 +63,9 @@ input[type="checkbox"] + label {
 
  /* Style the buttons that are used to open and close the accordion panel */
 button {
-  display: block;
+  display: inline-block;
   margin:20px auto;
-  width: 90%;
+  width: 50%;
   height: 50px;
   background-color: rgb(62, 247, 216);
   border:none;
@@ -81,6 +77,7 @@ button {
 }
 button:hover {
   background: #e8fa49;
+  color: rgb(40, 59, 57);
   transition: 0.25s;
 }
 
@@ -96,23 +93,27 @@ a:hover {
 .favoriteColor {
   display: flex;
   flex-direction: column;
+  border: 5px solid red;
   box-shadow: 2px 2px 3px 1px rgb(145, 145, 145);
   border: 2px solid;
 }
 
 .sign-up {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 650px;
   height: auto; 
-  padding: 10px 10px;
+  padding: 20px 20px;
   border: 2px solid black;
   background-color: rgb(112, 112, 112);
   color: #444;
 }
 
 form {
-  display: column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -122,8 +123,9 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 650px;
   height: auto; 
-  padding: 10px 10px;
+  padding: 20px 20px;
   border: 2px solid black;
   border-radius: 5px solid;
   background-color: rgb(112, 112, 112);
@@ -131,9 +133,15 @@ form {
   }
 /* Height auto makes the flexbox possible to get bigger */
 .question {
-  height: auto;
-  background-color: rgb(212, 212, 212);
-  margin-bottom: 50px;
+  height: 50px;
+  font-size: 18px;
+  word-wrap: break-word;
+  background-color: rgb(196, 237, 238);
+  margin: 10px;
+}
+p {
+  font-size: 15px;
+  
 }
 
 .active + .answer {
@@ -146,11 +154,11 @@ form {
   display: none;
 }
 
-.active, .accordion:hover {
-  background-color: rgb(187, 255, 238);
+.active, .accordion:hover, .sign-up:hover{
+  background-color: rgb(94, 136, 126);
 }
 
-footer {
+/* footer {
   display: flex;
   flex-direction: row;
   margin: 0;
@@ -159,7 +167,7 @@ footer {
   height: 50px;
   background-color: black;
   color: wheat;
-}
+} */
 nav {
     flex-direction: row;
     justify-content: center;
@@ -168,16 +176,18 @@ nav {
 }
 
 /* MEDIA QUERIES */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   html {
-    font-size: 18px;
+    font-size: 15px;
   }
-  header {
-    display: none;
+  main {
+    display: flex;
+    flex-direction: column;
+    
   }
 }
 
-@media (min-width: 920px) {
+@media (max-width: 920px) {
   header {
     height:auto;
   }

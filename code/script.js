@@ -8,4 +8,10 @@ function toggle() {
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
 document.getElementById("section1").onclick = toggle
 document.getElementById("section2").onclick = toggle 
-console.log(toggle)
+
+document.getElementById('form').addEventListener('submit', (event) => {
+  event.preventDefault()
+
+  const inputValue = document.getElementById('firstname').value
+  alert(`Kul att du är med oss ${inputValue}!`)
+})
