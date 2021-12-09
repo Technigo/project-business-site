@@ -5,43 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Balance</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap"
+      rel="stylesheet"
+    />
     <script src="main.js" defer></script>
     <!-- js and css file and link it here! defer to put js in head instead of body -->
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
-    <header class="header-box">
-      <h1>Are you looking for balance in your life?</h1>
-    </header>
+    <main class="inner-container">
+      <!-- video or image as a header is cool :) -->
+      <header class="header-container">
+        <nav>
+          <button class="cta">
+            <span><a href="#sign-up"></a>Order</span>
+            <svg width="15px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+          </button>
+        </nav>
+        <h1 class="header-text">Looking <br />for <br />balance?</h1>
+      </header>
 
-    <!-- Signup form -->
-    <section class="sign-up">
-      <form action="http://httpbin.org/anything" method="post">
-        <label for="name">
-          Name
-          <input type="text" name="message" required />
-        </label>
-        <label for="e-mail">
-          E-mail
-          <input type="email" name="email" required />
-        </label>
-        <label for="balance-indicator">
-          How bad do you need it?
-          <select name="balanceIndicator">
-            <option value="a">A lot</option>
-            <option value="b">All I need</option>
-            <option value="c">Like crazy!</option>
-          </select>
-        </label>
-        <button type="submit">Order Balance</button>
-      </form>
-    </section>
+      <!-- Signup form -->
+      <section class="sign-up-container">
+        <form action="http://httpbin.org/anything" method="post">
+          <label for="name">
+            <h2 id="sign-up">Name</h2>
+            <input type="text" name="message" required />
+          </label>
+          <label for="e-mail">
+            E-mail
+            <input type="email" name="email" required />
+          </label>
+          <label for="balance-indicator">
+            How bad do you need it?
+            <select name="balanceIndicator">
+              <option value="a">A lot</option>
+              <option value="b">All I need</option>
+              <option value="c">Like crazy!</option>
+            </select>
+          </label>
+          <!-- <button type="submit">Order Balance</button> -->
+          <button type="submit" class="cta">
+            <span><a href="#sign-up"></a>Order</span>
+            <svg width="15px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+          </button>
+        </form>
+      </section>
 
-    <section class="accordion">
       <!-- Accordion -->
-      <h2>FAQ</h2>
-      <!-- possibly take out h3 and p and style directly -->
-      <div class="accordion">
+      <section class="accordion-container">
+        <h2>FAQ</h2>
         <div class="accordion-item">
           <div class="accordion-item-header" id="faq-1">
             <h3>What is web dev?</h3>
@@ -92,22 +113,9 @@
             </div>
           </div>
         </div>
-      </div>
-<!-- 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section> -->
-
-
-
-    <!-- dont forget to link the javascript file here! -->
+      </section>
+    </main>
+    <!-- link the javascript file -->
     <script src="script.js"></script>
   </body>
 </html>

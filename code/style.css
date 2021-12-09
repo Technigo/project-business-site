@@ -1,3 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Readex Pro', sans-serif;
+  background-color: rgb(191, 196, 198);
+  color: #234567;
+}
+
+.inner-container {
+  border: solid 2px royalblue;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  border: solid 2px whitesmoke;
+  background-image: url(./photos/House-large.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-position: -50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  z-index: -1;
+}
+
+.header-text {
+  text-align: center;
+  margin-bottom: 16rem;
+  font-size: 2.5rem;
+  /* text-shadow: 1px 1px 3px rgb(198, 198, 198); */
+  background-color: whitesmoke;
+  border-radius: 50%;
+  padding: 30px;
+}
+/* Copied from XXX */
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+}
+
+.cta:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b1dae7;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+/* .cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+} */
+
+.sign-up-container {
+  border: solid 2px red;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+label {
+  display: block;
+  justify-content: space-evenly;
+}
+
+.accordion-container {
+  border: solid 2px rgb(21, 206, 163);
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
@@ -11,33 +126,4 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .active + .accordion-item-body {
   display: block;
-}
-@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* body {
-  font-family: 'Allison', sans-serif;
-  background-color: darksalmon;
-  color: oldlace;
-} */
-h1 {
-  text-align: center;
-  /* margin: 2rem 0; */
-  font-size: 2.5rem;
-  text-shadow: 2px 2px #addbe3;
-  color: gray;
-}
-
-.header-box {
-  background-image: url(./photos/House-small.jpg);
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  background-size: cover;
-  background-position: right bottom;
-  padding: 100px 0 100px 0;
 }
