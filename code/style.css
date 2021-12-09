@@ -1,39 +1,45 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 body {
   display: flex;
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+  font-family: "Montserrat";
 }
 
-header {
+header {  
+  height: 300px; 
+  background-position: center; 
+  background-size: cover;
+} 
+
+.header {
   display:flex;
   width: 100%;
   height: auto;
+  background-image:url('../photo-1632903626005-309626fcd127(1).jpg');
   text-align: center;
   background-color:rgba(40, 233, 207, 0.753);
-  color:white;
   position:fixed;
 }
 
 h1 {
   width: 100%;
   text-align:center;
-  color:rgb(127, 224, 211);
+  color:rgb(40, 59, 57);
   position: absolute;
   }
 
 h2 {
-  color:rgb(70, 127, 129);
-}
-
-img {
-  width: 100%;
-  height: 300px;
+  color:rgb(43, 66, 66);
 }
 
 main {
-margin-top: 400px;
+margin-top: 300px;
 width: 100%;
 display: grid;
 grid-template-columns: 1fr;
@@ -49,19 +55,33 @@ input {
 }
 
 input:valid {
-  background-color: rgb(86, 122, 79);
+  background-color: rgb(199, 255, 194);
 }
 
-.first {
-  display: flex;
-  text-align: center;
-  
+input[type="checkbox"] + label {
+  display: inline-block;
+  padding-top:0;
+  margin-top: 0;
+  cursor: pointer;
 }
 
+ /* Style the buttons that are used to open and close the accordion panel */
 button {
-  /* margin-top: 400px; */
-  display: float;
-  padding: 2px;
+  display: block;
+  margin:20px auto;
+  width: 90%;
+  height: 50px;
+  background-color: rgb(62, 247, 216);
+  border:none;
+  border-radius: 20px;
+  color:rgb(240, 252, 135);
+  font-family: "Montserrat";
+  font-size: 24px;
+  cursor: pointer;
+}
+button:hover {
+  background: #e8fa49;
+  transition: 0.25s;
 }
 
 label {
@@ -69,72 +89,98 @@ label {
   padding: 2px;
 }
 
-.coloroption {
+a:hover {
+  transform:scale(1.2,1.2);
+}
+
+.favoriteColor {
   display: flex;
   flex-direction: column;
   box-shadow: 2px 2px 3px 1px rgb(145, 145, 145);
   border: 2px solid;
 }
 
-.signUp {
-  display:flex;
+.sign-up {
   flex-direction: column;
-  box-shadow: 2px 2px 3px 1px lightgray;
-  border: 2px solid;
-  /* background-color: cadetblue;
-  color: #444; */
-}
- /* Style the buttons that are used to open and close the accordion panel */
- .accordion {
-  background-color: rgb(123, 199, 199);
+  align-items: center;
+  justify-content: center;
+  height: auto; 
+  padding: 10px 10px;
+  border: 2px solid black;
+  background-color: rgb(112, 112, 112);
   color: #444;
+}
+
+form {
+  display: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: auto; 
-  padding: 30px 30px;
-  border: 2px solid;
-}
+  padding: 10px 10px;
+  border: 2px solid black;
+  border-radius: 5px solid;
+  background-color: rgb(112, 112, 112);
+  color: #444;
+  }
 /* Height auto makes the flexbox possible to get bigger */
 .question {
   height: auto;
-  background-color: aquamarine;
+  background-color: rgb(212, 212, 212);
   margin-bottom: 50px;
 }
 
 .active + .answer {
   /* some styling here */
   display:block;
+  background-color: rgb(199, 255, 194); 
 }
 
 .answer{
   display: none;
 }
 
+.active, .accordion:hover {
+  background-color: rgb(187, 255, 238);
+}
+ 
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: wheat;
+}
+/* MEDIA QUERIES */
 @media (min-width: 768px) {
-header {
-  height: 500px;
-  display: float-left;
-  margin: 0;
+  html {
+    font-size: 18px;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100px;
+  }
 }
 
-img {
-  height: 450px;
+@media (min-width: 920px) {
+  header {
+    height:450px ;
+  }
+
 }
-
-
-}
-
-
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-/* .active, .accordion:hover {
-  background-color: #ccc;
+/* 
 } */
 
 /* Style the accordion panel. Note: hidden by default */
-/* .panel {
-  padding: 30 30px;
-  background-color: white;
-  display: none;
-  overflow: hidden;}
-/* 

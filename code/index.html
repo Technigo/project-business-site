@@ -5,86 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
     <link rel="stylesheet" href="style.css">
-    <!-- dont forget to add a css file and link it here! -->
+    <!-- don't forget to add a css file and link it here! -->
   </head>
+
   <body>
-      <header>
-        <!-- Video for header, without sound --> 
-        <img src="victor-larracuente-8-9hqGiqgR4-unsplash.jpg"/>
-        <h1>Rabbitfarm</h1>
-      </header>
-   
-      <main>         
+    <header>
+      <div class="header">
+        <h1>Living in Åre!</h1>          
+      </div>
+    </header>
+      <main>  
+<!--------- Accordion ------------>       
         <section class="accordion">
           <h2>Have you ever asked yourself this?</h2>
-          <!-- Accordion -->
-          <div class="question" 
-            id="section1">
-              Are you interested of having a white, fluffy rabbit?</div>
+          <div class="question" id="section1">
+            <p>I wonder how it would be to live and work in Åre</p>
+          </div>
           <div class="answer">
-         <p>Lorem ipsum...</p>
-         </div>          
-         <div class="question" 
-          id="section2">
-            Want more?</div>
-         <div class="answer">
-         <p>Lorem ipsum...</p>
-         </div>  
-        <section class="first">    
-          <!-- This is a button  -->
-          <button type="submit" alt="button"> 
-            I want a white, big rabbit!
-          </button>
-        </section>
+            <p>Well...yes!</p>
+          </div>          
+          <div class="question" id="section2">
+            You are more than welcome to try it out, you decide your own future!
+          </div>
+          <div class="answer">
+            <p>Wow, that's right! </p>
+          </div>  
 
         <div class="coloroption">
           <form action="http://httpbin.org/anything" method="POST">
-            <input type="text" name="message" required>
-              <select name="rabbitColors" id="">
-                <option value="w">White</option>
-                <option value="b">Black</option>
-                <option value="br">Brown</option>
-              <input type="email" name="email" required>
-              </select>
+            <label>
+              In Åre, there are several popular activities. What do you prefer to do?
+              <input 
+                type="text" 
+                name="activity" required />
+                  <select name="favoriteColor" id="">
+                    <option value="w">Ski</option>
+                    <option value="b">Hike</option>
+                    <option value="br">Bike</option>
+                  </select>
+            </label>
+            <label>
+              <input 
+                type="email" 
+                name="email" required>
+            </label>  
           </form>
         </div>
+      </section>
 
-
-        <section class="signUp">
-          <label for="name">Your first name:</label>
-            <input
-              class="text-input" 
-              type="text" required
-              id="name" 
-              name="name"/>
-           </label>
-          <label for="name">Your last name:</label>
-            <input
-            class="text-input" 
+<!---------- FORM ----------->      
+      <section class="sign-up">
+        <form action="http://httpbin.org/anything" method="POST" id="form">
+        <label for="name"class="labels">Your first name:</label>
+          <input
+            class="input" 
             type="text" required
             id="name" 
-            name="name"/>
-          <label for="name">I agree to the terms and conditions</label>
-            <input
-              class="text-input" 
-              type="text" required
-              id="name" 
-              name="name"/>
-              <select name="rabbit" id=""></select>              
+            name="firstname"/>
+        </label>
 
-          </label>              
-          <button type="submit">
-                To order a new furry friend, click here!
-              </button>
-         </form>
-         </section>
+        <label for="name" class="labels">Your last name:</label>
+          <input
+          class="input" 
+          type="text" required
+          id="name" 
+          name="lastname"/>
 
-        </section>
+        <label for="name" class="labels">I agree to the terms and conditions</label>
+          <input
+            class="input" 
+            type="checkbox" 
+            value="privacy" 
+            name="privacy"/>
+          <select name="rabbit" id=""></select>              
+        </label>  
+        
+        <label for="email" class="labels">Type your email:</label>
+            <input 
+              type="email" required
+              id="email" 
+              class="input" 
+              name="email" 
+              placeholder="Email" />
 
-        <!-- this is the link to the javascript file -->
-        <script src="./script.js"></script>  
-      </main>
-    </section>
+        <label for="pwd" class="labels">Choose password:</label>
+            <input 
+              type="password" required
+              id="pwd" 
+              class="input" 
+              name="pwd" 
+              placeholder="*********" />
+        </form>
+<!---------- Button  ------------>  
+        <button type="submit">Send!</button>
+      </section>
+      <footer>
+        <div>
+          <nav>
+            <a>Home</a>
+            <a>About Us</a>
+            <a>Gallery</a>
+          </nav>
+        </div>
+      </footer>
+<!-- this is the link to the javascript file -->
+      <script src="./script.js"></script>  
+    </main>
   </body>
 </html>
 
