@@ -8,6 +8,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin:0;
+  background-color: black;
   font-family: "Montserrat";
 }
 
@@ -19,18 +20,22 @@ body {
   background-repeat: no-repeat;
   object-fit: cover;
   text-align: left;
-  background-color:rgba(40, 233, 207, 0.753);
+  background-color:black;
   position: absolute;
+  
 }
 
 h1 {
   width: 100%;
+  margin-top: 100px;
   text-align:center;
+  font-size: 50px;
   color:rgb(40, 59, 57);
-
   }
 
 h2 {
+  margin: 35px;
+  text-align:center;
   color:rgb(43, 66, 66);
 }
 
@@ -39,7 +44,7 @@ display: flex;
 margin-top: 500px;
 width: 100%;
 justify-content: center;
-
+background-color: black;;
 }
 
 input {
@@ -68,9 +73,9 @@ button {
   width: 50%;
   height: 50px;
   background-color: rgb(62, 247, 216);
+  color: #444;
   border:none;
   border-radius: 20px;
-  color:rgb(240, 252, 135);
   font-family: "Montserrat";
   font-size: 24px;
   cursor: pointer;
@@ -82,20 +87,22 @@ button:hover {
 }
 
 label {
-  margin-top: 10px 10px;
+  margin: 10px;
   padding: 2px;
+  align-items: center;
 }
 
-a:hover {
+label:hover {
   transform:scale(1.2,1.2);
 }
 
 .favoriteColor {
   display: flex;
   flex-direction: column;
-  border: 5px solid red;
-  box-shadow: 2px 2px 3px 1px rgb(145, 145, 145);
-  border: 2px solid;
+  width: 50%;
+  background-color: rgb(62, 247, 216);
+  font-weight: 200;
+  box-shadow: 2px 2px 3px 1px rgb(255, 255, 255);
 }
 
 .sign-up {
@@ -103,12 +110,15 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 650px;
+  width: 500px;
   height: auto; 
   padding: 20px 20px;
+  margin: 35px;
   border: 2px solid black;
+  border-radius: 15px;
   background-color: rgb(112, 112, 112);
   color: #444;
+  box-shadow: 2px 2px 3px 1px rgb(255, 255, 255);
 }
 
 form {
@@ -121,53 +131,56 @@ form {
 .accordion {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 650px;
+  width: 500px;
   height: auto; 
   padding: 20px 20px;
+  margin: 35px;
   border: 2px solid black;
-  border-radius: 5px solid;
+  border-radius: 15px;
   background-color: rgb(112, 112, 112);
   color: #444;
+  box-shadow: 2px 2px 3px 1px rgb(255, 255, 255);
   }
 /* Height auto makes the flexbox possible to get bigger */
 .question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 50px;
   font-size: 18px;
   word-wrap: break-word;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 1px rgb(255, 255, 255);
   background-color: rgb(196, 237, 238);
   margin: 10px;
 }
 p {
   font-size: 15px;
   
+  
+  
 }
 
 .active + .answer {
   /* some styling here */
   display:block;
-  background-color: rgb(199, 255, 194); 
-}
+  background-color: rgb(255, 210, 125);
+  color: darkolivegreen;
+  opacity: 0.7;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 1px rgb(255, 255, 255);
+  margin: 10px;
+  }
 
 .answer{
   display: none;
 }
 
 .active, .accordion:hover, .sign-up:hover{
-  background-color: rgb(94, 136, 126);
+  background-image:url('https://images.unsplash.com/photo-1632903626005-309626fcd127?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80');
 }
 
-/* footer {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  padding: 20px;
-  width: 100%;
-  height: 50px;
-  background-color: black;
-  color: wheat;
-} */
 nav {
     flex-direction: row;
     justify-content: center;
@@ -176,20 +189,66 @@ nav {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 768px) {
+@media (max-width: 465px) {
   html {
     font-size: 15px;
+  }
+  h1{
+  display: none;
+  }
+  main {
+    background-color: transparent;
+  }
+
+  .header {
+    width: 1176px;
+    height: 779px;
+    background-image: url(https://images.unsplash.com/photo-1632903626005-309626fcd127?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80);
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-color: black;
+    position: fixed;
   }
   main {
     display: flex;
     flex-direction: column;
-    
+    width: 500px;
+    margin: auto;
+    z-index: 2;
+  }
+  .accordion{
+    width: 350px;
+    margin: auto;
+    background-color: transparent;
+  }
+  .sign-up{
+    width: 350px;
+    margin: auto;
+    background-color: transparent;
   }
 }
 
-@media (max-width: 920px) {
-  header {
-    height:auto;
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+  }  
+  h1{
+    font-size: 30px;
+    }
+  .accordion{
+    width: 400px;
+    margin: auto;
+    background-color: transparent;
+    box-shadow: 2px 2px 3px 1px rgb(145, 145, 145);
+  }
+  .sign-up{
+    width: 400px;
+    margin: auto;
+    background-color: transparent;
+    box-shadow: 2px 2px 3px 1px rgb(145, 145, 145);
   }
 
 }
