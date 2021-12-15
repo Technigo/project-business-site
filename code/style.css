@@ -9,13 +9,23 @@ body {
   background-color: rgb(191, 196, 198);
   color: #234567;
 }
+h3 {
+  font-size: 18px;
+}
 
+h2 {
+  padding-bottom: 10px;
+}
 .inner-container {
   /* border: solid 2px royalblue; */
   display: flex;
   flex-direction: column;
 }
 
+nav {
+  display: flex;
+  margin-left: 15px;
+}
 .header-container {
   /* border: solid 2px whitesmoke; */
   background-image: url(./photos/House-large.jpg);
@@ -98,34 +108,118 @@ body {
 } */
 
 .sign-up-container {
-  /* border: solid 2px red; */
   display: flex;
   align-items: center;
-  justify-content: space-around;
   flex-direction: row;
-  padding: 50px;
-}
-label {
-  display: block;
+  padding: 30px;
   justify-content: space-evenly;
 }
 
+.sign-up-card {
+  background-color: white;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5%;
+  padding: 30px;
+  min-height: 50vh;
+}
+
+label {
+  display: block;
+  justify-content: space-evenly;
+  padding: 5px;
+  font-size: 20px;
+}
+
 .accordion-container {
-  padding: 50px;
-  /* border: solid 2px rgb(21, 206, 163); */
+  padding: 30px;
+}
+.accordion-inner-container {
+  background-color: white;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5%;
+  padding: 30px;
+  min-height: 50vh;
+}
+
+input[type='text'],
+[type='email'],
+select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #234567;
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 14px;
+}
+
+.checkbox-box {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+.submit-button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.accordion-item {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
 }
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+.accordion-item:hover {
+  background-color: #ccc;
 }
+
+.accordion-item-body-content {
+  padding-top: 15px;
+}
+
 .accordion-item-body {
   display: none;
 }
 
 .active + .accordion-item-body {
   display: block;
+}
+
+.accordion-item-header:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: '\2796'; /* Unicode character for "minus" sign (-) */
+}
+
+@media (min-width: 768px) {
+  .signup-accordion-container {
+    display: flex;
+    flex-direction: row;
+  }
+  nav {
+    display: none;
+  }
 }
