@@ -19,8 +19,12 @@
       <!-- On click does not work.. -->
       <header class="header-container">
         <nav>
-          <button type="button" class="cta" onclick="window.location.href='#sign-up-container';">
-            <span></a>Order</span>
+          <button
+            type="button"
+            class="cta"
+            onclick="window.location.href='#signup-container-id';"
+          >
+            <span>Order</span>
             <svg width="15px" height="10px" viewBox="0 0 13 10">
               <path d="M1,5 L11,5"></path>
               <polyline points="8 1 12 5 8 9"></polyline>
@@ -29,125 +33,122 @@
         </nav>
         <h1 class="header-text">Looking <br />for <br />balance?</h1>
       </header>
-<div class="signup-accordion-container">
       <!-- Signup form -->
-      <section class="sign-up-container" id="sign-up-container">
-        <form
-          action="http://httpbin.org/anything"
-          method="post"
-          class="sign-up-card"
-        >
-          <label for="name">
-            Name
-            <input type="text" name="message" required />
-          </label>
-          <label for="e-mail">
-            E-mail
-            <input type="email" name="email" required />
-          </label>
-          <label for="balance-indicator">
-            How bad do you need it?
-            <select name="balanceIndicator">
-              <option value="a">A lot</option>
-              <option value="b">All I need</option>
-              <option value="c">Like crazy!</option>
-            </select>
-          </label>
-          <form action="">
-            <label class="form-control">
-              <p>When do you need it?</p>
-              <input type="radio" name="radio" />
-              Today
-              <!-- </label>
-            <label class="form-control"> -->
-              <input type="radio" name="radio" checked />
-              Tomorrow
-            </label>
-            <div class="checkbox-box">
-              <label for="sure">
-                <span style="font-size: 16px"
-                  >Are you really sure? Confirm here
-                </span>
-                <input type="checkbox" name="sure" />
+      <div class="signup-accordion-container">
+        <section class="signup-container" id="signup-container-id">
+          <div class="signup-inner-container">
+            <form action="http://httpbin.org/anything" method="post">
+              <label for="name">
+                Name
+                <input type="text" name="message" required />
               </label>
+              <label for="e-mail">
+                E-mail
+                <input type="email" name="email" required />
+              </label>
+              <label for="balance-indicator">
+                How bad do you need it?
+                <select name="balanceIndicator">
+                  <option value="a">A lot</option>
+                  <option value="b">All I need</option>
+                  <option value="c">Like crazy!</option>
+                </select>
+              </label>
+              <form action="">
+                <label class="form-control">
+                  <p>When do you need it?</p>
+                  <input type="radio" name="radio" />
+                  Today
+                  <!-- </label>
+            <label class="form-control"> -->
+                  <input type="radio" name="radio" checked />
+                  Tomorrow
+                </label>
+                <div class="checkbox-box">
+                  <label for="sure">
+                    <span style="font-size: 16px"
+                      >Are you really sure? Confirm here
+                    </span>
+                    <input type="checkbox" name="sure" />
+                  </label>
+                </div>
+                <!-- <button type="submit">Order Balance</button> -->
+                <div class="submit-button">
+                  <button type="submit" class="cta">
+                    <span>Order</span>
+                    <svg width="15px" height="10px" viewBox="0 0 13 10">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </form>
+          </div>
+        </section>
+        <!-- FAQ accordion -->
+        <section class="accordion-container">
+          <div class="accordion-inner-container">
+            <h2>FAQ</h2>
+            <div class="accordion-item">
+              <div class="accordion-item-header" id="faq-1">
+                <h3>
+                  Did you hear about the guy that joined ‘Mindfulness
+                  Anonymous’?
+                </h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>
+                    He said ‘My name is Michael, and I’ve been stuck in the
+                    present moment for 6 months straight.’
+                  </p>
+                </div>
+              </div>
             </div>
-            <!-- <button type="submit">Order Balance</button> -->
-            <div class="submit-button">
-              <button type="submit" class="cta">
-                <span>Order</span>
-                <svg width="15px" height="10px" viewBox="0 0 13 10">
-                  <path d="M1,5 L11,5"></path>
-                  <polyline points="8 1 12 5 8 9"></polyline>
-                </svg>
-              </button>
+            <div class="accordion-item">
+              <div class="accordion-item-header" id="faq-2">
+                <h3>What do they say to start the meditation Olympics?</h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>Ready…..Steady……Stop!</p>
+                </div>
+              </div>
             </div>
-          </form>
-        </form>
-      </section>
-
-      <!-- Accordion -->
-      <section class="accordion-container">
-        <div class="accordion-inner-container">
-          <h2>FAQ</h2>
-          <div class="accordion-item">
-            <div class="accordion-item-header" id="faq-1">
-              <h3>
-                Did you hear about the guy that joined ‘Mindfulness Anonymous’?
-              </h3>
+            <div class="accordion-item">
+              <div class="accordion-item-header" id="faq-3">
+                <h3>Why do mindful meditators love birthdays?</h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>They love all the ‘Presents’.</p>
+                </div>
+              </div>
             </div>
-            <div class="accordion-item-body">
-              <div class="accordion-item-body-content">
-                <p>
-                  He said ‘My name is Michael, and I’ve been stuck in the
-                  present moment for 6 months straight.’
-                </p>
+            <div class="accordion-item">
+              <div class="accordion-item-header" id="faq-4">
+                <h3>Why do mindfulness students love going to airports?</h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>Because they always get a free body scan!</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-item-header" id="faq-5">
+                <h3>Try Meditation.</h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>Because some answers can only be found on the Inner net</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <div class="accordion-item-header" id="faq-2">
-              <h3>What do they say to start the meditation Olympics?</h3>
-            </div>
-            <div class="accordion-item-body">
-              <div class="accordion-item-body-content">
-                <p>Ready…..Steady……Stop!</p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <div class="accordion-item-header" id="faq-3">
-              <h3>Why do mindful meditators love birthdays?</h3>
-            </div>
-            <div class="accordion-item-body">
-              <div class="accordion-item-body-content">
-                <p>They love all the ‘Presents’.</p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <div class="accordion-item-header" id="faq-4">
-              <h3>Why do mindfulness students love going to airports?</h3>
-            </div>
-            <div class="accordion-item-body">
-              <div class="accordion-item-body-content">
-                <p>Because they always get a free body scan!</p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <div class="accordion-item-header" id="faq-5">
-              <h3>Try Meditation.</h3>
-            </div>
-            <div class="accordion-item-body">
-              <div class="accordion-item-body-content">
-                <p>Because some answers can only be found on the Inner net</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-      </section>
-    </div>
+        </section>
+      </div>
     </main>
     <!-- link the javascript file -->
     <script src="script.js"></script>

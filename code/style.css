@@ -9,16 +9,28 @@ body {
   background-color: rgb(191, 196, 198);
   color: #234567;
 }
-h3 {
-  font-size: 18px;
-}
 
 h2 {
   padding-bottom: 10px;
 }
+
+h3 {
+  font-size: 18px;
+}
+
 .inner-container {
-  /* border: solid 2px royalblue; */
   display: flex;
+  flex-direction: column;
+}
+/* Hero */
+.header-container {
+  background-image: url(./photos/House-large.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -26,30 +38,17 @@ nav {
   display: flex;
   margin-left: 15px;
 }
-.header-container {
-  /* border: solid 2px whitesmoke; */
-  background-image: url(./photos/House-large.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  background-position: -50px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  z-index: -1;
-}
 
 .header-text {
   text-align: center;
   margin-bottom: 16rem;
   font-size: 2.5rem;
-  /* text-shadow: 1px 1px 3px rgb(198, 198, 198); */
   background-color: whitesmoke;
   border-radius: 50%;
   padding: 30px;
 }
-/* Copied from XXX */
+
+/* The button is insired by https://codepen.io/konvivial/pen/ywjxYQ */
 .cta {
   position: relative;
   margin: auto;
@@ -94,7 +93,7 @@ nav {
   transition: all 0.3s ease;
 }
 
-/* .cta:hover:before {
+.cta:hover:before {
   width: 100%;
   background: #b1dae7;
 }
@@ -103,24 +102,26 @@ nav {
   transform: translateX(0);
 }
 
-.cta:active {
+/* .cta:active {
   transform: scale(0.95);
 } */
 
-.sign-up-container {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  padding: 30px;
-  justify-content: space-evenly;
+.signup-accordion-container {
+  justify-content: space-around;
 }
 
-.sign-up-card {
+/* Signup form  */
+.signup-container {
+  padding: 30px;
+}
+
+.accordion-inner-container,
+.signup-inner-container {
   background-color: white;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5%;
   padding: 30px;
-  min-height: 50vh;
+  height: 100%;
 }
 
 label {
@@ -128,17 +129,6 @@ label {
   justify-content: space-evenly;
   padding: 5px;
   font-size: 20px;
-}
-
-.accordion-container {
-  padding: 30px;
-}
-.accordion-inner-container {
-  background-color: white;
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5%;
-  padding: 30px;
-  min-height: 50vh;
 }
 
 input[type='text'],
@@ -166,6 +156,12 @@ select {
   align-items: center;
   padding: 10px;
 }
+
+/* FAQ accordion */
+.accordion-container {
+  padding: 30px;
+}
+
 .accordion-item {
   background-color: #eee;
   color: #444;
@@ -219,7 +215,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     display: flex;
     flex-direction: row;
   }
-  nav {
-    display: none;
+}
+@media (max-width: 767px) {
+  .header-container {
+    background-position: -50px;
   }
 }
