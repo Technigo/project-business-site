@@ -4,8 +4,8 @@
     https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_animate */
 
     /* define a variable that looks for the questions class */
-var faq = document.getElementsByClassName("questions");
-var i;
+const faq = document.getElementsByClassName("questions");
+let i;
 
 for (i = 0; i < faq.length; i++) {
   faq[i].addEventListener("click", function() {
@@ -13,7 +13,7 @@ for (i = 0; i < faq.length; i++) {
     adds and removes (toggles) the active class when clicked */
     this.classList.toggle("active");
     /* the part that hides or shows the class */
-    var answers = this.nextElementSibling;
+    const answers = this.nextElementSibling;
     if (answers.style.maxHeight) {
       answers.style.maxHeight = null;
     } else {
