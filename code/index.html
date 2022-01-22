@@ -13,23 +13,59 @@
   <body>
     <header><!-- video or image as a header is cool :) -->
       <h1>Weekly flowers</h1>
+      
+      <div class="info-modal">
+        <p>Love the smell of fresh flowers?</p>
+        <div class="sign-in">
+          <a href="#signup"><div class="modal-btn">sign up!</div></a>
+          <div class="login-details">
+            <p class="small-text">Login</p>
+            <p class="small-text password">Forgot password?</p>
+          </div>
+          <a href="#accordion"><div class="modal-btn">FAQ! Have questions?</div></a>
+        </div>
+      </div>
+    
     </header>    
     <main>
       <!-- Signup form -->
-      <section class="signup-from">
-        <form action="https://httpbin.org/anything" method="post">
-          <fieldset>
-          <input type="text" name="firstname" id="firstname">
-            <legend>name: </legend>
-          </fieldset>
-          <input type="radio" name="timeInterval" id="timeinterval">
+      <section class="signup" id="signup">
+        <h2>Sign up!</h2>
+        <form class="signup-form" action="https://httpbin.org/anything" method="post">
+          <label class="label-top" for="firstname">name: </label>
+          <input type="text" name="firstname" id="firstname"  required>
+          
+          <label class="label-top" for="lastname">lastname: </label>
+          <input type="text" name="lastname" id="lastname"  required>
+        
+          
+          <!--- add minlength and maxlength also look at "wrap" to make the column width set hard break?  --->
+          <label class="label-top" for="adress">adress:</label> 
+          <textarea name="adress" id="adress" rows="4" cols="19" minlength="20" required></textarea>
+          
+          
+          <label class="label-top" for="email">email:</label>
+          <input type="email" name="email" id="email" required>
+
+          <div class="signup-form--frequency">
+            <p>How often do you want flowers delivered?<p>
+            <input type="radio" id="weekly" name="delivery-frequency" required>
+            <label class="label-radio" for="weekly">Weekly</label>
+
+            <input type="radio" id="biweekly" name="delivery-frequency">
+            <label class="label-radio" for="biweekly">Biweekly</label>
+
+            <input type="radio" id="monthly" name="delivery-frequency">
+            <label class="label-radio" for="monthly">Monthly</label>
+          </div>
+          <button class="btn-gradient" type="submit" value="submit">Click to purchase</button>
         </form>
  
       </section>
 
-      <section class="accordion">
+      <section class="accordion" id="accordion">
         <!-- Accordion -->
-        <h1>FAQ</h1>
+        <h2>FAQ</h2>
 
         <div class="question" id="section1">Section 1</div>
         <div class="answer">
@@ -43,7 +79,13 @@
       </section>
 
       <section class="gallery">
-
+        <h2>Gallery</h2>
+        <div class="gallery-img">
+          <img src="./images/flower-1.jpg" alt="tulips">
+          <img src="./images/flower-2.jpg" alt="peonies">
+          <img src="./images/flower-3.jpg" alt="roses">
+          <img src="./images/flower-4.jpg" alt="bouquet">
+        </div>
       </section>
     </main>
 
