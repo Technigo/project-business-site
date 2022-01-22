@@ -1,4 +1,4 @@
-# Business Site
+# Week 3: business site
 
 Replace this readme with your own information about your project. 
 
