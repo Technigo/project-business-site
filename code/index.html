@@ -18,7 +18,7 @@
         <p>Love the smell of fresh flowers?</p>
         <div class="sign-in">
           <a href="#signup">
-            <div class="modal-btn">sign up!</div>
+            <div class="modal-btn btn-gradient">sign up!</div>
           </a>
 
           <div class="login-details">
@@ -27,10 +27,9 @@
           </div>
           
           <a href="#accordion">
-            <div class="modal-btn">FAQ! Have questions?</div>
+            <div class="modal-btn btn-gradient">FAQ! Have questions?</div>
           </a>
-        
-          </div>
+        </div>
       </div>
     
     </header>    
@@ -42,15 +41,15 @@
           class="signup-form" 
           action="https://httpbin.org/anything" 
           method="post">
-          
-          <label class="label-top" for="firstname">name:</label>
+
+          <label class="label-top" for="firstname">First name:</label>
           <input 
             name="firstname" 
             id="firstname" 
             required
           />
           
-          <label class="label-top" for="lastname">lastname:</label>
+          <label class="label-top" for="lastname">Last name:</label>
           <input 
             name="lastname" 
             id="lastname" 
@@ -58,7 +57,7 @@
           />
           
           <!--- add minlength and maxlength also look at "wrap" to make the column width set hard break?  --->
-          <label class="label-top" for="adress">adress:</label> 
+          <label class="label-top" for="adress">Adress:</label> 
           <textarea 
             name="adress" 
             id="adress" 
@@ -69,35 +68,45 @@
           </textarea>
           
           
-          <label class="label-top" for="email">email:</label>
+          <label class="label-top" for="email">Email:</label>
           <input 
             type="email" 
             name="email" 
             id="email" 
             required>
 
-          <div class="signup-form--frequency">
-            <p>How often do you want flowers delivered?<p>
+            <label class="label-top" for="email">Phone number:</label>
             <input 
-              type="radio" 
-              id="weekly" 
-              name="delivery-frequency" 
+              type="tel" 
+              name="phone" 
+              id="phone" 
+              pattern="[0-9]{10}"
               required>
-            <label class="label-radio" for="weekly">Weekly</label>
+            <br>
 
-            <input 
-              type="radio" 
-              id="biweekly" 
-              name="delivery-frequency">
-            <label class="label-radio" for="biweekly">Biweekly</label>
+          <fieldset class="signup-form--frequency">
+            <legend>How often do you want flowers delivered?</legend>
+            <div class="signup-form--radio">
+              <input 
+                type="radio" 
+                id="weekly" 
+                name="delivery-frequency" 
+                required>
+              <label class="label-radio" for="weekly">Weekly</label>
 
-            <input 
-              type="radio" 
-              id="monthly" 
-              name="delivery-frequency">
-            <label class="label-radio" for="monthly">Monthly</label>
-          </div>
+              <input 
+                type="radio" 
+                id="biweekly" 
+                name="delivery-frequency">
+              <label class="label-radio" for="biweekly">Biweekly</label>
 
+              <input 
+                type="radio" 
+                id="monthly" 
+                name="delivery-frequency">
+              <label class="label-radio" for="monthly">Monthly</label>
+            </div>
+            </fieldset><br>
           <button 
             class="btn-gradient" 
             type="submit" 
@@ -109,21 +118,32 @@
       <section class="accordion" id="accordion">
         <!-- Accordion -->
         <h2>FAQ</h2>
+        <div class="accordion-container">
+          <div class="question" id="section1"><h3>When are the flowers delivered?</h3></div>
+          <div class="answer">
+            <p>Thursday or Friday depending on where you live. We will notice you in beforehand.</p>
+          </div>
 
-        <div class="question" id="section1">Section 1</div>
-        <div class="answer">
-          <p>Lorem ipsum...</p>
-        </div>
+          <div class="question" id="section2"><h3>Can I choose the flowers myself?</h3></div>
+          <div class="answer">
+            <p>At the moment we offer one bouquete depending on season and what flowers are in season.</p>
+          </div>
 
-        <div class="question" id="section2">Section 2</div>
-        <div class="answer">
-          <p>Lorem ipsum...</p>
-        </div>
+          <div class="question" id="section2"><h3>Do I have to be at home during delivery?</h3></div>
+          <div class="answer">
+            <p>No, if you are not at home the driver will place the flowers outside the door and send you a text message.</p>
+          </div>
+
+          <div class="question" id="section2"><h3>Can I cancel a delivery if i´m not at home?</h3></div>
+          <div class="answer">
+            <p>Lorem ipsum...</p>
+          </div>
+        </div>    
       </section>
 
       <section class="gallery">
         <h2>Gallery</h2>
-        <div class="gallery-img">
+        <div class="gallery-images">
           <img src="./images/flower-1.jpg" alt="image of tulips">
           <img src="./images/flower-2.jpg" alt="image of peonies">
           <img src="./images/flower-3.jpg" alt="image of roses">
