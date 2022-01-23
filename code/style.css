@@ -33,6 +33,11 @@ h3 {
   letter-spacing: 1.7px;
 }
 
+.accordion h3,
+.accordion p {
+  color: #222222;
+}
+
 /*BUTTONS AND LINKS*/
 
 a, 
@@ -218,15 +223,29 @@ textarea {
 .accordion {
   background: #929292;
   padding-bottom: 2em;
+  padding: 1em 1.5em 3.5em;
 }
 
 .accordion-container {
-  border: 1px solid #222222;
+  border: 0.125em solid #222222;
+  max-width: 25em;
 }
 
 .question {
-  border: 1px solid #222222;
+  background: #A8A8A8;
   padding: 1em;
+}
+
+.answer {
+  background: #E2E2E2; 
+}
+
+.answer:not(:last-child) {
+  border-bottom: 0.125em solid #222222;
+}
+
+.answer p {
+  padding-left: 2em;
 }
 /* GALLERY */
 
@@ -239,13 +258,13 @@ textarea {
   display: -ms-grid;
   justify-items: center;
   grid-gap: 0.825em;
-  grid-template-columns: repeat(auto-fit, minmax(26em, 1fr));
-  -ms-grid-columns: repeat(auto-fit, minmax(26em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  -ms-grid-columns: repeat(auto-fit, minmax(20em, 1fr));
 }
 
 img {
-  height: 26em;
-  width: 26em;
+  height: 20em;
+  width: 20em;
   object-fit: cover;
   opacity: 0.5;
 } 
