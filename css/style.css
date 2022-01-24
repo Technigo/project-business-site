@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  font: 22px/150% "Roboto", Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+.logo img {
+  border-radius: 50%;
+}
+/* Hide the checkbox */
+input[type="checkbox"] {
+  position: fixed;
+  visibility: hidden;
+}
+/* start toggle */
+.nav-alter {
+  display: block;
+  position: fixed;
+  top: 10px;
+  right: 0px;
+  height: 32px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 99;
+  margin-right: 10px;
+  transition: margin 0.3s;
+}
+.nav-alter span {
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 30px;
+  background: #000;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+.nav-alter span:nth-child(2) {
+  top: 12px;
+}
+.nav-alter span:nth-child(3) {
+  top: 24px;
+}
+/*moving toggle */
+input[type="checkbox"]:checked ~ .nav-alter {
+  margin-right: 0;
+}
+input[type="checkbox"]:checked ~ .nav-alter span:nth-child(1) {
+  top: 15px;
+  transform: scale(0.5) rotate(-45deg);
+}
+input[type="checkbox"]:checked ~ .nav-alter span:nth-child(2) {
+  display: none;
+}
+input[type="checkbox"]:checked ~ .nav-alter span:nth-child(3) {
+  top: 13px;
+  transform: scale(0.5) rotate(45deg);
+}
+/*end toggle */
+.container {
+  position: fixed;
+  width: 100%;
+  overflow: auto;
+  height: 100%;
+  margin-left: 0;
+  background-color: #5c2828;
+  transition: margin 0.3s;
+  left: 0;
+}
+header {
+  position: absolute;
+  z-index: 1;
+  margin: 10px;
+}
+.menu {
+  width: inherit;
+  position: fixed;
+  top: 0;
+  background-repeat: no-repeat;
+  margin-left: -100%;
+  background: #222;
+  padding: 10px;
+  transition: margin 0.3s;
+  font-size: 15px;
+}
+/*menu moving*/
+input[type="checkbox"]:checked ~ .container .menu {
+  margin-left: 0;
+  height: 50%;
+  z-index: 1;
+}
+/*section moving*/
+input[type="checkbox"]:checked ~ .container section {
+  margin-left: 0;
+}
+
+/* The menu */
+ul {
+  list-style: none;
+  margin-top: 15px;
+}
+nav.menu ul ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+}
+nav.menu ul li:hover > ul {
+  max-height: 600px;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  display: block;
+  color: #ffffff;
+}
+
+/*start hero image*/
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/business-web.png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+/*end hero image*/
+
+
+
+/*for tablet*/
+@media only screen and (min-width: 768px) {
+  .nav-alter {
+    display: none;
+  }
+
+  .container {
+    top: 0;
+    background-color: #212;
+    background-size: cover;
+    line-height: 20px;
+    color: #000;
+    word-wrap: break-word !important;
+    z-index: 10;
+  }
+  nav.menu {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: right;
+    background: none;
+    margin-left: 0;
+    padding: 0;
+    height: auto;
+  }
+  nav.menu ul {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style: none;
+  }
+  nav.menu ul li {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: auto;
+    position: relative;
+    margin-left: -5px;
+  }
+  nav.menu a {
+    display: block;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 60px;
+    text-decoration: none;
+  }
+  nav.menu a:hover {
+    background-color: #000000;
+  }
+  /* keeps the dropdown invisible and assign style to list*/
+  nav.menu ul ul {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    top: 60px;
+    margin-left: -80px;
+  }
+  /* show dropdown 1st 2nd level on hover */
+  nav.menu ul li:hover > ul {
+    display: inherit;
+  }
+  /* 1st level */
+  nav.menu ul ul li {
+    display: list-item;
+    float: none;
+    position: relative;
+  }
+  input[type="checkbox"]:checked ~ .container section {
+    margin-left: 0;
+  }
+}
