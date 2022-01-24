@@ -229,3 +229,77 @@ a {
     margin-left: 0;
   }
 }
+
+
+/*for tablet*/
+@media only screen and (min-width: 992px) {
+  .nav-alter {
+    display: none;
+  }
+
+  .container {
+    top: 0;
+    background-color: #212;
+    background-size: cover;
+    line-height: 20px;
+    color: #000;
+    word-wrap: break-word !important;
+    z-index: 10;
+  }
+  nav.menu {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: right;
+    background: none;
+    margin-left: 0;
+    padding: 0;
+    height: auto;
+  }
+  nav.menu ul {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style: none;
+  }
+  nav.menu ul li {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: auto;
+    position: relative;
+    margin-left: -5px;
+  }
+  nav.menu a {
+    display: block;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 60px;
+    text-decoration: none;
+  }
+  nav.menu a:hover {
+    background-color: #000000;
+  }
+  /* keeps the dropdown invisible and assign style to list*/
+  nav.menu ul ul {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    top: 60px;
+    margin-left: -80px;
+  }
+  /* show dropdown 1st 2nd level on hover */
+  nav.menu ul li:hover > ul {
+    display: inherit;
+  }
+  /* 1st level */
+  nav.menu ul ul li {
+    display: list-item;
+    float: none;
+    position: relative;
+  }
+  input[type="checkbox"]:checked ~ .container section {
+    margin-left: 0;
+  }
+}
