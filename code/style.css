@@ -2,24 +2,60 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .active + .answer {
   /* some styling here */
 }
 
-/* Styling hero and video */
+/* STYLING HERO AND VIDEO */
 #hero {
-  width: 100vh;
-  height: 100vh;
+  height: 60vh;
   overflow-x: hidden;
   margin: 0;
+  position: relative;
 }
 
 #hero video {
-  width: 100%;
-  height: 100%;
+  height: 70vw;
   object-fit: contain;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.logotype {
+  z-index: 1;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.first-heading {
+  font-family: Lobster, cursive;
+  color: #a36666;
+  font-size: 28px;
+}
+
+/* MEDIA QUERIES */
+
+/* TABLET SIZE */
+@media (min-width: 667px) and (max-width: 1024px) {
+}
+
+/* DESKTOP SIZE */
+@media (min-width: 1024px) {
+  .first-heading {
+    font-family: Lobster, cursive;
+    color: #a36666;
+    font-size: 48px;
+  }
 }
