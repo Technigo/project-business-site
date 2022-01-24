@@ -10,13 +10,11 @@ document.getElementById("section1").onclick = toggle
 
 
 
-// Changing the speed of the video //
+// Changing speed of video //
 const videoSpeed = document.getElementById("heroVideo");
 
 function myVideoRate() {
-  alert(v.playbackRate);
+videoSpeed.playbackRate = 0.8;
 }
 
-function setVideoRate() {
-  alert(v.playbackRate);
-}
+myVideoRate()
