@@ -2,25 +2,94 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <!-- RESPONSIVE TAG -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+
+    <title class="title">Project Business Site</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css">  
   </head>
+
   <body>
     <!-- video or image as a header is cool :) -->
+    <!-- HERO BACKGROUND PARENT -->
+    <div id="hero">
+      <video>
+        <source src="" media="screen and (max-width 799px)">
+        <source src="" media="screen and (mmin-width 800px)">
+        Your browser does not support the video tag.
+      </video>
+    
 
-    <!-- Signup form -->
+      <!-- flex parent for the header texts -->
+      <div class="flexParentHeader">
+
+        <div class="headerText">
+          Pepped Web Agency
+        </div>
+
+        <nav class="navbar">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Our services</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT HERE -->
+    <div class="flexMain">
+
+      <div class="formWrapper">
+
+        <section id="form">
+
+          <!-- CONTACT FORM -->
+          <form method="POST" action="http://hhtpbin.org/anything">
+            <h2>Become pepped! Hire us!</h2>
+
+            <!-- TEXT INPUTS -->
+            <label class="blockLabel" for="name">Name</label>
+            <input class="blockInput" type="text" id="name" name="name" placeholder="Your name..."required/>
+
+            <label class="blockLabel" for="email">Email</label>
+            <input class="blockInput" type="email" id="email" name="email" placeholder="Your email..."/>
+
+            <label class="blockLabel" for="number">Number</label>
+            <input class="blockInput" type="number" id="number" name="number" placeholder="Your number...">
+            
+            <label for="services">Services needed</label>
+              <select name="services" id="services">
+                <option>Web Development</option>
+                <option>Content Creation</option>
+                <option>Pepped Coaching Program</option>
+              </select>
+
+            <label for="message">Message</label>
+            <textarea name="message" id="message">Tell us your story!</textarea> <!-- cols="30" rows="10" -->
+
+            <button id="button" type="submit">Send</button>
+
+          </form>
+        </section>
+      </div>
+    </div>
+    
 
     <section class="accordion">
-      <!-- Accordion -->
+      <!-- ACCORDION -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">Tricks of the trade</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">Stuff you should know</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
