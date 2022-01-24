@@ -7,3 +7,16 @@ function toggle() {
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
 document.getElementById("section1").onclick = toggle
+
+
+
+// Changing the speed of the video //
+const videoSpeed = document.getElementById("heroVideo");
+
+function myVideoRate() {
+  alert(v.playbackRate);
+}
+
+function setVideoRate() {
+  alert(v.playbackRate);
+}
