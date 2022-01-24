@@ -9,6 +9,10 @@
   </head>
   <body>
     <!-- video or image header -->
+
+    <!-- Mer om hero image finns här: 
+      https://www.w3schools.com/howto/howto_css_hero_image.asp -->
+
     <div class="hero-container">
       <div class="hero-text-container">
         <h1>Vancouver</h1>
@@ -18,27 +22,69 @@
       
     </div>
 
-    <!-- Signup form -->
-    <section class="signup-form-section">
+    <main class="signup-accordion-section">
 
-    </section>
+      <!-- Signup form -->
+      <section class="signup-form-section">
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-      
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <form action="https://httpbin.org/anything" method="post">
+          <h2>Sign up</h2>
+          <label>
+            First name:
+            <input type="text" name="fname" />
+          </label>
+          <label>
+            Last name:
+            <input type="text" name="lname" />
+          </label>
+          <label>
+            Email:
+            <input type="email" name="email">
+          </label>
+          
+          <label>
+            City:
+            <select name="city">
+              <option value="Stockholm">Stockholm</option>
+              <option value="Uppsala">Uppsala</option>
+              <option value="Sigtuna">Stockholm</option>
+              <option value="Other city">Other city</option>
+            </select>
+          </label>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+          <div class="radio">
+            <span>Your preferred language</span>
+            <input type="radio" name="language" id="danska" value="danska">
+            <label for="danska">Danska</label>
+            <input type="radio" name="language" id="engelska" value="engelska">
+            <label for="engelska">Engelska</label>
+            <input type="radio" name="language" id="tyska" value="tyska">
+            <label for="tyska">Tyska</label>
+          </div>
 
-    </section>
+          <input class="submitbutton" type="submit" value="submit">
+         
+
+        </form>
+      </section>
+
+      <section class="accordion">
+        <!-- Accordion -->
+        <h1>FAQ</h1>
+        
+        <div class="question" id="section1">Section 1</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <div class="question" id="section2">Section 2</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+
+      </section>
+
+    </main>
     <!-- dont forget to link the javascript file here! -->
   </body>
 </html>
-xx
