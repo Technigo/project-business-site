@@ -14,10 +14,17 @@
       https://www.w3schools.com/howto/howto_css_hero_image.asp -->
 
     <div class="hero-container">
+      <nav>
+        <ul>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+      </nav>
       <div class="hero-text-container">
         <h1>Vancouver</h1>
         <h4>En vacker stad</h4>
-        <a class="hero-button" href="#">Subscribe</a>
+        <a class="hero-button" href="#">Köp din resa nu</a>
       </div>
       
     </div>
@@ -27,15 +34,15 @@
       <!-- Signup form -->
       <section class="signup-form-section">
 
-        <form action="https://httpbin.org/anything" method="post">
+        <form class="signup-form" action="https://httpbin.org/anything" method="post">
           <h2>Sign up</h2>
           <label>
             First name:
-            <input type="text" name="fname" />
+            <input type="text" name="fname" maxlength="20"required />
           </label>
           <label>
             Last name:
-            <input type="text" name="lname" />
+            <input type="text" name="lname" placeholder="last name" required/>
           </label>
           <label>
             Email:
@@ -56,8 +63,10 @@
             <span>Your preferred language</span>
             <input type="radio" name="language" id="danska" value="danska">
             <label for="danska">Danska</label>
+            <br>
             <input type="radio" name="language" id="engelska" value="engelska">
             <label for="engelska">Engelska</label>
+            <br>
             <input type="radio" name="language" id="tyska" value="tyska">
             <label for="tyska">Tyska</label>
           </div>
@@ -74,17 +83,31 @@
         
         <div class="question" id="section1">Section 1</div>
         <div class="answer">
-          <p>Lorem ipsum...</p>
+          <p>Svar 1</p>
         </div>
 
         <div class="question" id="section2">Section 2</div>
         <div class="answer">
-          <p>Lorem ipsum...</p>
+          <p>Svar 2</p>
+        </div>
+
+        <div class="question" id="section3">Section 3</div>
+        <div class="answer">
+          <p>Svar 3</p>
+        </div>
+
+        <div class="question" id="section4">Section 4</div>
+        <div class="answer">
+          <p>Svar 4</p>
         </div>
 
       </section>
 
     </main>
+    <footer class="footer">
+      <p>Copyright</p>
+    </footer>
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
   </body>
 </html>
