@@ -23,23 +23,19 @@
   </head>
 
   <body>
-    <div class="hero">
-    <!-- VIDEO AND LAYER-->
+       <!-- VIDEO AND LAYER-->
     <video id="heroVideo" loop muted autoplay preload playsinline="auto">
       <source src="lefleur-video.mp4" media="screen and (min-width:800px)">
       <source src="lefleur-video.mp4" media="screen and (max-width:700px)">
 
       Your browser does not support the video tag.
     </video>
-  </div>
 
     <!-- LOGO -->
   <img class="logotype" src="./lefleur-logo.png" />
 
 
   <div class="main-content">
-
-  
       <div class="extra-big-header">
       Fresh flowers this weekend.
       </div>
@@ -55,10 +51,22 @@
 
     <!-- SIGNUP FORM -->
     <div class="order-here">
-    <form action="">
-      <div class="big-header">Tell us more</div>
-      <label><input type="text" id="fname" name="fname" placeholder="First name"></label>
+    <form action="https://httpbin.org/anything">
+
+      <div class="big-header">Lets order</div>
+
+      <label>Name <input type="text" id="fname" name="fname" placeholder="First name"> <br />
+
+      <label>Email
+        <input type="email" placeholder="email" required>
+      </label>
+     <br />
+      <button type="submit">Submit</button></label>
+
     </form>
+    
+
+    </div>
 
     <!-- ACCORDION -->
     <section class="accordion">
@@ -73,7 +81,7 @@
         <p>Lorem ipsum...</p>
       </div>
     </section>
-  </div>
+
   
     <script src="script.js"></script>
   </body>
