@@ -9,7 +9,15 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-boz-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
 }
+
+
 
 .back-video {
   overflow: hidden;
@@ -24,17 +32,73 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   zoom: -1;
 }
 
-body {
-  display: flex;
-  justify-content: space-around;
+header h1 {
+  color: white;
+  font-size: 100px;
+  text-align: start;
+  margin: 10px 0 0 200px;
+
 }
+
+header h2 {
+  color: white;
+  text-align: start;
+  margin-left: 220px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
 
 form {
   background-color: rgba(255, 255, 255, 0.473);
   padding: 10px;
-  margin: 200px 200px;
-  width: 200px;
-  height: 300px;
+  margin: 200px;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 40px;
+  border-radius: 20px;
+  grid-column-start: 2;
+}
+
+input{
+  margin: 10px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  display: block;
+}
+
+button {
+  margin: 20px;
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+
+
+select {
+  width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+option {
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .accordion {
@@ -44,7 +108,8 @@ form {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  margin: 300px 200px;
-  width: 200px;
+  margin: 200px;
+  width: 60%;
+  border-radius: 20px;
+  grid-column-start: 3;
 }
-
