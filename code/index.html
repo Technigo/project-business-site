@@ -1,30 +1,128 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="kk-logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>Kajsa Katt</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
-
+    <h1>KAJSA KATT</h1>
+    <div class="hero">
+      <video loop width="800px" autoplay>
+        <source src="hero-vid.mp4" type="video/mp4">
+      </video>
+    </div>
+    <img src="register-paw.svg" alt="">
     <!-- Signup form -->
+    <section class="register-form">
 
+      <form action="http://httpbin.org/anything">
+        <label for="full-name"></label>
+        <input id="full-name" type="text" placeholder="Full name" name="fullname" >
+
+      <p>
+        <label for="email"></label>
+        <input type="email" id="email" placeholder="Email">
+      </p>
+      <p>
+        <label for="phone"></label>
+        <input type="text" id="phone" placeholder="Telephone">
+      </p>
+
+        <form action="http://httpbin.org/anything">
+        <p class="arrival-date">
+          <label for="arrival-date">Arrival date
+           <input type="date" id="arrival-date" name="arrival-date">
+         </label>
+        </p>
+        <p class="departure-date">
+           <label for="depature-date">Departure date
+          <input type="date" id="departure-date" name="depature-date">
+        </label></p>
+        </form>
+      <p>
+        <form action="http://httpbin.org/anything">
+          <label for="roomtype">Room type</label>
+          <select name="" id="">
+          <option value="3sqm"> Normal (2 sqm.) </option>
+          <option value="5sqm"> Big (4 sqm.) </option>
+        </select>
+        </form>
+      </p>
+      </form> 
+      <form action="http://httpbin.org/anything">
+        <input type="radio" name="foodandsand" id="ownfoodandsand-yes" value="ownfoodandsand-yes">
+        <label for="foodandsand"> I'll bring my own food and sand.</label>
+        <p><input type="radio" name="foodandsand" id="ownfoodandsand-no" value="ownfoodandsand-no">
+        <label for="foodandsand"> I'll use Kajsa Katt's food and sand.</label></p>
+        <!-- They share the same name attribute so that only one option can be selected. -->
+  <p>
+    <form action="http://httpbin.org/anything"> 
+        <input type="checkbox" name="agree-tos" id="agree">
+        <label for="agree"> I agree to Kajsa Katt's <span>terms of service</span></label>
+        <p><button type="submit"> Submit </button></p> 
+    </form>
+        </p>
+    </section>
     <section class="accordion">
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      <h2>FAQ</h2>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">What's your price?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p> 
+
+          We have windows in all rooms :)
+
+            3sqm 
+            1 cat 1 room : 150kr per night
+            2 cats in 1 room (same room): 250kr per night
+            3 cats in 1 room (same room): 300kr per night
+
+            5% off if you bring your own food or sand.
+            10% if you bring both your own food and sand.
+
+            For a bigger room (5sqm), we charge SEK more per room/night (regardless of how many cats)
+            Longer stay rates
+            weekly rate: 10% off
+            monthly rate: 15% off
+            Being away for longer period of time? Send us an email!
+        </p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">Do you play with the cats?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Yes! That's part of our job. We do what we love and we love what we do.
+          We visit the cats 3 times a day, every 4 hours (to check on them, change their sand and fill up their food and water). 
+          We spend about 30 minutes playing with them or even more when we have time!
+        </p>
       </div>
+
+      <div class="question" id="section3">What's the longest period our cats can be there?</div>
+      <div class="answer">
+        <p> It happends that you have landed a dream job but that job is in another country. You may want to try out and be away for at least 
+          half a year. Send us an email and we will discuss this with you and figure out a solution together. 
+          The longest period that we a cat stayed with us so far is 6 months!
+        </p>
+      </div>
+
+      <div class="question" id="section4">What brand of food and sand do you use?</div>
+      <div class="answer">
+        <p> We use a local Swedish brand! 
+          It's understandable if you want to bring what your cat is used to.
+          5% off if you bring your own food or sand.
+          10% if you bring both your own food and sand.
+        </p>
+      </div>
+
     </section>
-    <!-- dont forget to link the javascript file here! -->
+    
+    <script src="script.js"></script>
   </body>
 </html>
