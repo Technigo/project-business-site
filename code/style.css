@@ -8,12 +8,15 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 * {
   padding: 0;
-  margin: 0;
+  /* margin: 0; */
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-boz-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+ 
+  
+
 
 }
 
@@ -21,15 +24,17 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .back-video {
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  top: 0;
+  /* min-width: 100%;
+  min-height: 100%; */
+  width: 100%;
   height: auto;
-  width: 10px;
-  z-index: -100;
-  zoom: -1;
+  z-index: -1;
+  
+  
 }
 
 header h1 {
@@ -49,19 +54,23 @@ header h2 {
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
+ 
+ 
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
+  margin: 20px;
+  z-index: 1;
 }
 
 
 form {
   background-color: rgba(255, 255, 255, 0.473);
   padding: 10px;
-  margin: 200px;
+  /* margin: 200px 0; */
   width: auto;
   height: auto;
   display: flex;
@@ -107,9 +116,102 @@ option {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  margin: 200px;
-  width: 60%;
+  /* margin: 200px; */
+  width: 50%;
   border-radius: 20px;
   grid-column-start: 3;
 }
+
+/* DESKTOP */
+@media (min-width:1025) {
+
+  .back-video {
+   width: 100%;
+   height: 20vh;
+  }
+}
+
+/* TABLET */
+@media (min-width:668px) and (max-width:1024px) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+
+    header h1, header h2 {
+      text-align: center;
+      margin: 0;
+    }
+
+    .container {
+      margin-top: 100px;
+      display: flex;
+    }
+
+    form {
+      margin: 0 20px;
+    }
+
+  
+
+  }
+
+/* MOBILE */
+@media (max-width:667px) {
+  * {
+    margin: 0;
+    height: auto;
+  }  
+
+  body {
+    background: #000;
+  }
+  
+  .back-video {
+      display: none;
+    }
+
+    header {
+      background: url(./videos/poster2.png);
+      background-size: cover;
+      padding: 70px;
+      
+    }
+
+    header h1, header h2 {
+      margin: 0;
+      line-height: 70px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 40px;
+  
+    }
+
+    header h2 {
+      font-size: 20px;
+    }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10px;
+    background-color: rgba(255, 255, 255, 0.473);
+    margin-top: 320px;
+    border-radius: 10px;
+  }
