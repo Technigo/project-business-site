@@ -2,6 +2,297 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+/* .active + .answer {
+  some styling here
+} */
+
+
+/* Remove Existing Styling (Stolen from Karin) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-decoration: none;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+/* Blocks */
+
+.brand {
+
+}
+
+.logo {
+
+}
+
+.button {
+
+}
+
+.title {
+
+}
+
+.text {
+
+}
+
+/* Header Block */
+.header {
+  height: 75vh;
+  background: url(images/joanna-kosinska-uGcDWKN91Fs-unsplash_2.jpg);
+  background-size: 1024px;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+
+
+/* Menu */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0;
+  color: #0b0b0b;
+}
+
+.menu__logo--hidden {
+  display: none;
+}
+
+.menu__brand {
+  display: none;
+}
+
+.menu__link {
+  font-family: 'Roboto', sans-serif;
+  color: #0b0b0b;
+}
+
+.menu__logo {
+  height: 45px;
+  width: 45px;
+}
+
+/* Brand Container */
+.brand-container {
+  width: 285px;
+  padding-left: 25px;
+  padding-top: 25px;
+}
+
+.brand-container__brand {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 94px;
+  text-align: left;
+  color: #0b0b0b;
+}
+
+.brand-container__tagline {
+  display: none;
+}
+
+
+/* Page */
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 25px 25px;
+  gap: 25px;
+}
+
+.title {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.block-container {
+  border-radius: 5px;
+  padding: 15px 25px;
+  grid-column: span 1;
+}
+
+/* Introduction */
+.intro {
+
+}
+
+.intro__text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #2D2E2F;
+}
+
+/* FAQ Section */
+.faq {
+  background-color: #DCD8DC;
+  color: #2D2E2F;
+}
+
+.faq__title {
+  /* text-align: center; */
+}
+
+.faq__question {
+  text-align: left;
+}
+
+.faq__answer {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+/* Sign-up Form */
+.signup {
+  background-color: #2D2E2F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup__form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sign-up Form Title */
+.signup__image {
+  height: 60px;
+  width: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signup__title {
+  color: white;
+  padding: 10px 0;
+}
+
+/* Sign-up Form Input Fields */
+::placeholder {
+  color: #2D2E2F;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+input[type=text], input[type=tel], input[type=email] {
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+input[type=text]:focus {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Options Text */
+.signup__options {
+  color: #dcd8dc;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* Radio Buttons */
+/* Remove Styling from Radio Buttons */
+
+.signup__radio {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* cursor: pointer; */
+  display: block;
+  position: relative;
+}
+
+.signup__radio input {
+  position: absolute;
+  opacity: 0;
+  /* cursor: pointer; */
+}
+
+/* Stops radio button from overlapping with label */
+.signup__radio .signup__options {
+  margin-left: 25px;
+}
+
+/* Custom Radio Button */
+.radio--custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+/* On mouse-oer, add background-color */
+
+
+
+/* INDICATOR */
+
+/* Categories */
+.signup__subtitle {
+  text-align: center;
+  color: white;
+}
+
+
+/* Submit Button */
+.btn {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 20px;
+  background: transparent;
+  width: 190px;
+  height: 43px;
+  align-self: center;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+
+/* Footer */
+.footer {
+  text-align: center;
+}
+
+.footer__text {
+
 }
