@@ -1,12 +1,9 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
 /* .active + .answer {
   some styling here
 } */
-
-
 /* Remove Existing Styling (Stolen from Karin) */
 * {
   margin: 0;
@@ -24,26 +21,15 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Blocks */
+.brand {}
 
-.brand {
+.logo {}
 
-}
+.button {}
 
-.logo {
+.title {}
 
-}
-
-.button {
-
-}
-
-.title {
-
-}
-
-.text {
-
-}
+.text {}
 
 /* Header Block */
 .header {
@@ -53,8 +39,6 @@ input:focus, textarea:focus, select:focus {
   background-position-x: center;
   background-position-y: center;
 }
-
-
 
 /* Menu */
 .menu {
@@ -102,7 +86,6 @@ input:focus, textarea:focus, select:focus {
   display: none;
 }
 
-
 /* Page */
 .page {
   display: grid;
@@ -131,9 +114,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Introduction */
-.intro {
-
-}
+.intro {}
 
 .intro__text {
   font-family: 'Montserrat', sans-serif;
@@ -143,18 +124,14 @@ input:focus, textarea:focus, select:focus {
   color: #2D2E2F;
 }
 
-/* FAQ Section */
+/* FAQ Accordion Section */
 .faq {
   background-color: #DCD8DC;
   color: #2D2E2F;
 }
 
 .faq__title {
-  /* text-align: center; */
-}
-
-.faq__question {
-  text-align: left;
+  padding: 15px 0 20px;
 }
 
 .faq__answer {
@@ -163,6 +140,21 @@ input:focus, textarea:focus, select:focus {
   font-weight: 400;
   line-height: 1.25;
 }
+
+/* Styling the Accordion */
+  .faq__question {
+    text-align: left;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    padding: 10px 25px;
+  }
+
+  .faq__answer {
+    display: none;
+    padding: 0 25px;
+  }
 
 /* Sign-up Form */
 .signup {
@@ -224,35 +216,27 @@ input[type=text]:focus {
   font-size: 16px;
 }
 
+
 /* Radio Buttons */
 /* Remove Styling from Radio Buttons */
-
-.signup__radio {
+.radio--remove {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  /* cursor: pointer; */
   display: block;
   position: relative;
 }
 
-.signup__radio input {
+.radio--remove input {
   position: absolute;
   opacity: 0;
-  /* cursor: pointer; */
-}
-
-/* Stops radio button from overlapping with label */
-.signup__radio .signup__options {
-  margin-left: 25px;
 }
 
 /* Custom Radio Button */
 .radio--custom {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 1px;
   height: 17px;
   width: 17px;
   background-color: transparent;
@@ -260,18 +244,148 @@ input[type=text]:focus {
   border-radius: 50%;
 }
 
-/* On mouse-oer, add background-color */
+/* On radio button hover, add background-color */
+.radio--remove:hover input~.radio--custom {
+  background-color: #dcd8dc;
+}
 
+/* On radio button select, add background-color */
+.radio--remove input:checked~.radio--custom {
+  background-color: #bdabae;
+}
 
-
-/* INDICATOR */
-
-/* Categories */
+/* Categories Subtitle */
 .signup__subtitle {
   text-align: center;
   color: white;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
+/* Checkbox Container */
+.checkbox-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+}
+
+/* Categories - Custom Checkboxes */
+/* Removing styling from checkboxes */
+.checkbox--remove {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: block;
+  position: relative;
+  /* margin-bottom: 5px; !!think i can delete!!*/
+}
+
+.checkbox--remove input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+/* Custom checkbox */
+.checkbox--custom {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+/* On checkbox hover, add background-color */
+.checkbox--remove:hover input~.checkbox--custom {
+  background-color: #dcd8dc;
+}
+
+/* On checkbox select, add background-color */
+.checkbox--remove input:checked~.checkbox--custom {
+  background-color: #bdabae;
+}
+
+/* Large Checkbox for Term Agreement */
+.checkbox--custom--lg {
+  position: absolute;
+  height: 27px;
+  width: 27px;
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+/* On large checkbox hover, add background-color */
+.checkbox--remove:hover input~.checkbox--custom--lg {
+  background-color: #dcd8dc;
+}
+
+/* On large checkbox select, add background-color */
+.checkbox--remove input:checked~.checkbox--custom--lg {
+  background-color: #bdabae;
+}
+
+/* Create checkmark for large checkbox (hidden while unchecked) */
+.checkbox--custom--lg:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show large checkmark when checked */
+.checkbox--remove input:checked~.checkbox--custom--lg:after {
+  display: block;
+}
+
+.checkbox--remove .checkbox--custom--lg:after {
+  content: "⨯";
+  width: 25px;
+  height: 25px;
+  color: white;
+  position: absolute;
+  left: -5%;
+  top: -130%;
+  font-size: 50px;
+}
+
+/* Select Radio/Check Container (to stop text and checkbox from overlapping) */
+.select-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.select-container__object {
+  height: 19px;
+  width: 19px;
+  padding-right: 10px;
+}
+
+.select-container__text {
+  margin: 0 5px;
+}
+
+/* Accept Terms Container (to stop text and checkbox from overlapping) */
+.accept-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.accept-container__checkbox {
+  height: 28px;
+  width: 28px;
+  padding-right: 10px;
+}
+
+.accept-container__text {
+  margin: 0 10px;
+}
 
 /* Submit Button */
 .btn {
@@ -285,14 +399,13 @@ input[type=text]:focus {
   align-self: center;
   border: 3px solid white;
   border-radius: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 3px;
 }
-
 
 /* Footer */
 .footer {
   text-align: center;
 }
 
-.footer__text {
-
-}
+.footer__text {}
