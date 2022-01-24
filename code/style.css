@@ -13,41 +13,155 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     padding: 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    
+   
   }
 
-header{
-  position: relative;
-   display: grid;
-   place-items: center;
-   height: 70vh;
-   width: 70vw;
-   margin: 0 auto;
-   background: #ccc;
+  .hero{
+    height:60vh;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    color: rgba(245, 245, 220, 0.774);
+    font-style: italic;
+  }
+
+  .hero .hero-content{ 
+    position: relative;
+     z-index: 3;
+   
+  }
+
+  .hero .fullscreen{
+    width:100%;
+    height:60vh;
+        position: absolute;
+    top: 20;
+    left:0;
+    z-index: -1;
+    object-fit: cover;
+   
+    
+  }
   
+
+  h1{
+    font-size: 40px;
+    padding:  20px;
+    font-family: 'Neonderthaw's;
+    opacity: 90%;
+    letter-spacing: 2px;
+    background-color: rgba(15, 2, 2, 0.767);
+    padding: 165px 20px;
+    letter-spacing: 2px;
+    justify-content: space-around;
+    }
+
+    .h1-sub{
+      padding: 0 30px;
+      }
+      
+   .navbar{
+     float: right;
+     font-size: 40px;
+     padding: 20px;
+     color: rgba(245, 245, 220, 0.897);
+   } 
+
+  .text{
+    background-color: #6b4f4f8c;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+   .main-text{
+     display: flex;
+     font-size: 40px;
+    text-align: center;
+    justify-content: center;
+    padding : 30px 150px;
+   text-align: left;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.801);
+
+   }
+   .signup h2 {
+    text-align: center;
+   }
+   .signup{
+    flex:1;
+    padding: 20px;
+     margin: 30px;
+     font-size:20px;
+     border: 2px solid black;
+     border-radius: 20px;
+     box-shadow: 10px 5px 5px 5px rgba(22, 19, 19, 0.404);
+    ;
+
+   }
+.accordion{
+  flex:1;
+  padding: 50px;
+     margin: 30px;
+     border: 2px solid black;
+     border-radius: 20px;
+     box-shadow: 10px 5px 5px 5px rgba(22, 19, 19, 0.404);
 }
-
-
-video.fullscreen {
-  position: absolute;
-  z-index: 0;
-  object-fit: cover;
-  width:100%;
-  height:100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+   
+#submit{
+  padding:10px;
+  font-size: 20px;
+   background-color: rgba(0, 0, 0, 0.178);
+   border-radius: 10px;
+   color:rgba(255, 255, 255, 0.822);
 }
-
-
-.hero-content{
-  z-index: 1;
-}
-
 @media (min-width:1024px){
 
-}
+  .hero{
+    height: 100vh;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+
+  }
+  .hero .fullscreen{
+    width:100%;
+    height:100vh;
+   
+  }
+  h1{
+    font-size: 60px;
+    font-family: 'Neonderthaw';
+    padding: 280px 20px;
+
+    letter-spacing: 3px;
+    justify-content: space-around;
+   
+  }
+  .h1-sub{
+    
+    padding: 0 100px;
+    }
+    
+    .navbar{
+      float: right;
+      font-size: 40px;
+      padding: 20px;
+     
+    } 
+    .text{
+      background-color: #6b4f4f8c;
+      display:flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+
+
+
+
+
