@@ -10,39 +10,40 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+  font-family: 'Montserrat Alternates', sans-serif;
 
-body {
-  width: 100vw;
-  height: auto;
 }
 
 html {
-  background-color: rgb(129, 197, 186);
+  background-color: #F5DC5A;
 }
 
 header {
   display: flex;
   color: blue;
   margin: 0;
-  font-family: 'Montserrat Alternates', sans-serif;
+  justify-content: center;
+  align-items: center;
   font-weight: bolder;
   overflow: hidden;
 }
 
-
-.video-head {
-  /* width: 100%; */
- 
+nav {
+  display: none;
 }
 
+video {
+  width: 100% !important;
+  height: auto !important;
+}
+
+
 .hero-text {
-  /* border: 2px solid red; */
   width: fit-content;
   position: absolute;
   font-size: 40px;
   text-align: center;
-  top:  5%;
+  top: 5%;
 }
 
 .site-info {
@@ -50,16 +51,14 @@ header {
   flex-direction: column;
   height: 12rem;
   padding: 0 30px 30px 30px;
-  font-family: 'Montserrat Alternates', sans-serif;
   font-size: 92%;
   background-color: #F5DC5A;
-  border: 5px solid black;
   border-radius: 0 0 5% 5%;
 
 }
 
 .hello-text {
-  font-size: 90%;
+  font-size: 100%;
 }
 
 .remember {
@@ -67,22 +66,65 @@ header {
   color: rgb(180, 7, 128);
 }
 
-form {
-  width: 100vw;
-  height: 400px;
+.forms-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-bottom: 60px;
+  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 500px;
   margin: 20px 0 20px 0;
-  padding: 20px;
+  padding: 10px 20px 20px 20px;
   background-color: #489268;
   border: 5px solid black;
   border-radius: 5%;
-  font-family: 'Montserrat Alternates', sans-serif;
+  filter: drop-shadow(5px 5px rgb(6, 40, 59));
+
 }
 
+.accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 500px;
+  margin: 20px 0 20px 0;
+  padding: 10px 20px 20px 20px;
+  background-color: #CFB3D3;
+  border: 5px solid black;
+  border-radius: 5%;
+  filter: drop-shadow(5px 5px rgb(6, 40, 59));
+}
 
+.sign-up {
+  font-family: 'Monofett', cursive;
+  font-size: 40px;
+  margin: 0 0 20px 0;
+  text-align: center;
+  color: #8413a0;
+}
 
+.say-what {
+  color: #489268;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  background-color: #8413a0;
+  align-self: center;
+  border: 2px solid black;
+  border-radius: 1em;
+  filter: drop-shadow(5px 5px rgb(29, 106, 150));
+  
+}
 
 .hello-kids {
   text-transform: uppercase;
@@ -90,80 +132,104 @@ form {
   margin: 20px 0 20px 0;
 }
 
-.hello-text {
-
+input { 
+  border-radius: 0.5em;
 }
 
-.accordion {
+select {
+  border-radius: 0.5em;
+}
+
+ul {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
-  padding: 20px;
-  margin: 20px 0 20px 0;
-  background-color: #CFB3D3;
-  height: 400px;
-  border: 5px solid black;
-  border-radius: 5%;
+  color: brown;
+  margin: 0 0 50px 0;
+  list-style-type: none;
+  /* border: 2px solid black; */
 }
 
+/* .input.checkbox-size {
+  width:10px;
+  height: 10px;
+} */
 
 
 
 
-.accordion {
-  font-family: 'Montserrat Alternates', sans-serif;
-}
+/* -------tablet sizing --------- */
+
 
 @media (min-width: 669px) and (max-width: 1024px) {
 
-html {
-  background-color: #F5DC5A;
-  
-}
+
 
 header {
-  color: red;
+  color: #710080;
   height: 25rem;
 }
 
-.video-head {
-  height: max-content;
+.hero-text {
+  top: 10%;
+  left: 5%;
+  font-size: 70px;
 }
 
-.form-faq {
-  display: flex;
-  justify-content: space-around;
+.site-info {
+  font-size: 150%;
+}
+
+.forms-container {
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 20px 70px 20px;
 
 }
 
 form {
-  justify-content: space-evenly;
-  background-color: #489268;
-  padding: 40px;
-  margin: 20px 0 0 20px;
-  width: 300px;
-  height: 500px;
- 
   border-radius: 15%;
+  margin: 10px;
 }
 
 .accordion {
-  justify-content: space-evenly;
-  background-color: #CFB3D3;
-  width: 300px;
-  height: 500px;
-  padding: 40px;
-  margin: 20px 0 020px;
-  border: 5px solid black;
   border-radius: 15%;
+  margin: 10px;
+}
+
+ul {
+  font-size: 22px;
+  padding-top: 20px;
 }
 }
+
+/* -----desktop sizing------ */
 
 
 @media (min-width: 1025px) {
 
   header {
-    color: yellow;
+    color: #F5DC5A;
+  }
+
+  nav {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: center;
+    bottom: 20%;
+  }
+  ol {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    color: rgb(0, 62, 155);
+  }
+  
+  .list-items {
+    font-size: 28px;
+    padding: 40px;
   }
 
   .video-head {
@@ -173,14 +239,21 @@ form {
 
   .hero-text {
     font-size: 700%;
-    padding: 20px;
+    left: 8%;
     text-align: center;
   }
 
-  .form-faq {
+  .site-info {
+    font-size: 40px;
+    
+    
+  }
+
+  .forms-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 100px 0 20px 0;
   }
 
   form {

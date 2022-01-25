@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Monofett&family=Montserrat+Alternates:wght@400;600&family=Prata&family=Righteous&family=Sigmar+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat+Alternates:wght@400;600&family=Prata&family=Righteous&family=Sigmar+One&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
@@ -14,27 +17,39 @@
     
     <header>
       <span class="hero-text">Want space? You're in it!</span>
-      <video class="video-head" width="auto" height="400px"controls loop>
-        <source src="./videos/MilkyWay.mp4" type="video/mp4">
-        <!-- <source src="./videos/MilkyWay.mp4" type="video/webm"> -->
+
+      <nav>
+        <ol>
+          <li class="list-items">Home</li>
+          <li class="list-items">Contact</li>
+          <li class="list-items">Nasa Live</li>
+        </ol>
+      </nav>
+
+      <video class="video-head" width="auto" height="400px" muted loop autoplay controls playsinline> 
+        <source src="./videos/earthSun.mp4" type="video/mp4">
+        <p>Your browser does not support the video tag.</p>
+
         
-      Your browser does not support the video tag.
+        
+        
       </video>
       
     </header>
     <!-- video or image as a header is cool :) -->
     
     <section class="site-info">
-      <span class="hello-kids">Hello kids of the universe, 
-        this is your space!</span>
-      <span class="hello-text">To get updates on what is going on out there, simply sign up to our community. It’s free and it’s fun. </span><br>
-        <span class="remember"><em>Remember to claim your space.</em></span>
+      <span class="hello-kids">Hello kids of the universe, this is your space!</span>
+         <span class="hello-text">To get updates on what is going on out there, simply sign up to our community. It’s free and it’s fun. </span><br>
+           <span class="remember"><em>Remember to claim your space.</em></span>
 
     </section>
 
 
-<section class="form-faq">
+<div class="forms-container">
     <form>
+
+      <span class="sign-up">sign up!</span>
       
       <label for="firstname">First name
       <input type="text">
@@ -62,14 +77,16 @@
           </label>
 
         <label for="parentsagreed">Parent's have agreed
-          <input type=checkbox>
+          <input class="checkbox-size" type=checkbox>
         </label>
 
         <label for="termsconditions">I agree to the terms and conditions
           <input type=checkbox>
         </label>
 
+        <button type="submit">Sign me up!</button>
 
+      
     </form>
     <!-- Signup form -->
     
@@ -77,21 +94,34 @@
     
     <section class="accordion">
       <!-- Accordion -->
+      <span class="sign-up say-what">say what!?</span>
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">What is this?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>This is a free community for the new generations to get to know more about the place we live in</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">Does it cost me anything?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Not a single penny. We want you to be able to find fun and interesting facts in one place and at the same time talk to kids that share your interest for the world and the universe we live in.</p>
       </div>
     </section>
     
-    </section>
+  </div>
+
+  
+    <footer>
+      <ul>
+      <li>email</li>
+      <li>facebook</li>
+      <li>instagram</li>
+    </ul>
+    </footer>
+  
 
     <!-- dont forget to link the javascript file here! -->
+
+    <script src="script.js"></script>
   </body>
 </html>
