@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Project 3</title>
   <!--CSS style linking-->
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
   <!--Social icon linking-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <!--Responsive design-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/favicon.png" />
 </head>
 
 <body>
   <div class="wrapper">
     <!--start hamburger bar-->
-    <input type="checkbox" id="nav-toggle">
+    <input type="checkbox" id="nav-toggle" />
     <label class="nav-alter" for="nav-toggle">
       <span></span>
       <span></span>
@@ -22,53 +23,79 @@
     </label>
     <!--end hamburger bar-->
     <div class="container">
-      <header class="logo">
-        <a href="#"><img src="img/logo.jpg" alt="logo" width="70" height="70"></a>
-      </header>
       <!--start navigation bar-->
       <nav class="menu">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#contact">Sign up</a></li>
         </ul>
       </nav>
       <!--end navigation bar-->
-      
+
       <!--start hero-->
       <div class="hero-image">
         <div class="hero-text">
-          <h1>I am John Doe</h1>
-          <p>And I'm a Photographer</p>
-          <button>Hire me</button>
+          <h1>Join bootcamp!</h1>
+          <button>Sign up</button>
         </div>
       </div>
       <!--end hero-->
 
-
-      <!-- video or image as a header is cool :) -->
-
       <!-- Signup form -->
+      <section class="signupForm">
+        <h1>Signup</h1>
+        <form class="signupForm-info" action="https://httpbin.org/anything" method="post">
+          <label for="fname">First name:</label><br />
+          <input type="text" id="fname" name="fname" /><br />
+          <br>
+          <label for="lname">Last name:</label><br />
+          <input type="text" id="lname" name="lname" /><br>
+          <br>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="html">Male</label><br>
 
-      <section class="accordion">
-        <!-- Accordion -->
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label><br>
+          <br>
+          <label for="pwd">Password:</label>
+          <input type="password" id="pwd" name="pwd"><br>
+          <br>
+          <input type="checkbox" id="term" name="term" value="Term&condition">
+          <label class="term" for="term"> <i>Agree term and condition</i></label><br>
 
+          <br>
+          <input type="submit" value="Submit">
+        </form>
+      </section>
+      
+      <!-- Accordion -->
+      <section class="accordionSection">
         <h1>FAQ</h1>
 
-        <div class="question" id="section1">Section 1</div>
-        <div class="answer">
-          <p>Lorem ipsum...</p>
+        <button class="accordion">Question 1</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-
-        <div class="question" id="section2">Section 2</div>
-        <div class="answer">
-          <p>Lorem ipsum...</p>
+        
+        <button class="accordion">Question 2</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        
+        <button class="accordion">Question 3</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
       </section>
+
     </div>
   </div>
-    <!-- dont forget to link the javascript file here! -->
+  
+  <!--JavaScript file-->
+  <script type="text/javascript" src="js/accordion.js"></script>
+
 </body>
 
 </html>

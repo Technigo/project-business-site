@@ -9,9 +9,7 @@
   font: 22px/150% "Roboto", Helvetica, sans-serif;
   overflow-x: hidden;
 }
-.logo img {
-  border-radius: 50%;
-}
+
 /* Hide the checkbox */
 input[type="checkbox"] {
   position: fixed;
@@ -61,21 +59,18 @@ input[type="checkbox"]:checked ~ .nav-alter span:nth-child(3) {
   transform: scale(0.5) rotate(45deg);
 }
 /*end toggle */
+
 .container {
   position: fixed;
   width: 100%;
   overflow: auto;
   height: 100%;
   margin-left: 0;
-  background-color: #5c2828;
+  background-color: #b8c2a6;
   transition: margin 0.3s;
   left: 0;
 }
-header {
-  position: absolute;
-  z-index: 1;
-  margin: 10px;
-}
+
 .menu {
   width: inherit;
   position: fixed;
@@ -87,21 +82,25 @@ header {
   transition: margin 0.3s;
   font-size: 15px;
 }
+
 /*menu moving*/
 input[type="checkbox"]:checked ~ .container .menu {
   margin-left: 0;
   height: 50%;
   z-index: 1;
+  text-align: center;
 }
+
 /*section moving*/
+/*
 input[type="checkbox"]:checked ~ .container section {
   margin-left: 0;
-}
+}*/
 
 /* The menu */
 ul {
   list-style: none;
-  margin-top: 15px;
+  margin-top: 45px;
 }
 nav.menu ul ul {
   max-height: 0;
@@ -120,7 +119,7 @@ a {
 
 /*start hero image*/
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/business-web.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cooding.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -134,9 +133,9 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #ffffff;
+  line-height: initial;
 }
-
 .hero-text button {
   border: none;
   outline: 0;
@@ -146,14 +145,100 @@ a {
   background-color: #ddd;
   text-align: center;
   cursor: pointer;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .hero-text button:hover {
   background-color: #555;
   color: white;
 }
-
 /*end hero image*/
+
+/*start Signup form*/
+.signupForm{
+  margin: 30px;
+  background-image: url("../img/business-web.png");
+  border-radius: 15px;
+}
+h1{
+  text-align: center;
+  margin: inherit;
+  padding: 10%;
+}
+
+input[type="text"], input[type="password"], 
+input[type="submit"]{
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+}
+
+input[type="submit"]{
+ width: 50%;
+ margin-left: 25%;
+}
+
+input[type="radio"]{
+  width: 20px;
+  height: 20px;
+ }
+.term {
+  font-size: 14px;
+}
+#term {
+  visibility: visible;
+  position: inherit;
+}
+.signupForm-info{
+  padding: 10px;
+  margin: 20px;
+}
+/*end Signup form*/
+
+/*start accordion*/
+.accordionSection{
+  margin: 30px;
+  background-image: url("../img/business-web.png");
+  border-radius: 15px;
+}
+
+.accordion {
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2212";
+}
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+/*end Accordion*/
+
+
+
 
 
 
@@ -162,10 +247,9 @@ a {
   .nav-alter {
     display: none;
   }
-
   .container {
     top: 0;
-    background-color: #212;
+    background-color: #b8c2a6;
     background-size: cover;
     line-height: 20px;
     color: #000;
@@ -191,7 +275,6 @@ a {
   }
   nav.menu ul li {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.4);
     width: auto;
     position: relative;
     margin-left: -5px;
@@ -230,76 +313,8 @@ a {
   }
 }
 
+/*for desktop*/
+@media only screen and (min-width: 1024px) {
+  
 
-/*for tablet*/
-@media only screen and (min-width: 992px) {
-  .nav-alter {
-    display: none;
-  }
-
-  .container {
-    top: 0;
-    background-color: #212;
-    background-size: cover;
-    line-height: 20px;
-    color: #000;
-    word-wrap: break-word !important;
-    z-index: 10;
-  }
-  nav.menu {
-    z-index: 99;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    text-align: right;
-    background: none;
-    margin-left: 0;
-    padding: 0;
-    height: auto;
-  }
-  nav.menu ul {
-    padding: 0;
-    margin: 0;
-    position: relative;
-    list-style: none;
-  }
-  nav.menu ul li {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.4);
-    width: auto;
-    position: relative;
-    margin-left: -5px;
-  }
-  nav.menu a {
-    display: block;
-    padding: 0 10px;
-    color: #fff;
-    font-size: 16px;
-    line-height: 60px;
-    text-decoration: none;
-  }
-  nav.menu a:hover {
-    background-color: #000000;
-  }
-  /* keeps the dropdown invisible and assign style to list*/
-  nav.menu ul ul {
-    display: none;
-    position: absolute;
-    overflow: visible;
-    top: 60px;
-    margin-left: -80px;
-  }
-  /* show dropdown 1st 2nd level on hover */
-  nav.menu ul li:hover > ul {
-    display: inherit;
-  }
-  /* 1st level */
-  nav.menu ul ul li {
-    display: list-item;
-    float: none;
-    position: relative;
-  }
-  input[type="checkbox"]:checked ~ .container section {
-    margin-left: 0;
-  }
 }
