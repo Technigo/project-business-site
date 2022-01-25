@@ -8,6 +8,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 
   @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+ 
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+ 
+ 
   * {
     margin: 0;
     padding: 0;
@@ -15,11 +19,13 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     -webkit-box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    font-family: 'Neonderthaw'  'sans-serif';
+    font-family: 'sans-serif';
+
   }
 
   .header{
     display: flex;
+    
   }
 
   .hero{
@@ -28,7 +34,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     align-items: center;
     justify-content: center;
     color: rgba(245, 245, 220, 0.774);
-    font-style: italic;
     background-color: rgba(15, 2, 2, 0.61);
   }
 
@@ -49,43 +54,47 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   
 
   h1{
-    font-size: 40px;
+    font-size: 70px;
     padding:  20px;
-    font-family: 'Neonderthaw';
     opacity: 90%;
     letter-spacing: 2px;
     padding: 20px 20px;
     letter-spacing: 2px;
-    }
+    color: black;
+    font-family: 'Dancing Script'
+      }
 
     .h1-sub{
+      font-family: 'Dancing Script';
       padding: 0 30px;
+      color: black;
       }
-      
+
+      .fa-bars{
+        color:black;
+        font-size: 30px;
+      }
    .navbar{
+    color: #c3cbcc;
      float: right;
      font-size: 40px;
      padding: 20px;
-     color: rgba(245, 245, 220, 0.897);
    } 
 
-   button{
+   .button{
     font-family: 'Neonderthaw' ;
     display: inline-block;
-    padding: 1rem .75rem;
+    padding: 20px;
     border-radius: 10rem;
     text-transform: uppercase;
     font-size: 1rem;
-    letter-spacing: .15rem;
+    letter-spacing: 2px;
     transition: all .3s;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    color: black;
-    font-weight: bolder;
-    font-style: italic;  
-    box-shadow: 5px 2px 2px 2px rgba(22, 19, 19, 0.404);
-    opacity: 100%;
+    z-index: -1;
+    box-shadow: 3px 2px 2px 2px rgba(22, 19, 19, 0.404);
+    margin-top: 30px;
+    background-color:  #d4cac3;
+    font-family:  'sans-serif';
   }
 
   button:hover{
@@ -99,29 +108,27 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     background-size: 50%;
     flex-wrap: wrap;
     color: black;
-    background-color: rgb(233, 227, 227);
+    background-color: #c9baa9;
   }
 
-  input[type=submit] {
-    box-shadow: 4px 2px 2px 2px rgba(22, 19, 19, 0.404);
-    border:0 none;
-    cursor:pointer;
-    font-family: Neonderthaw;
-}
+  
 
    .main-text {
-    font-size: 50px;
-    padding: 30px;
-    text-align: left;
-    font-style: italic;
-    z-index: 20;
+    font-size: 20px;
+    margin: 50px;
+    text-align: center;
+    z-index: 2;
     justify-content: safe;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bolder;
    }
+
    .signup h2 {
     text-align: center;
    }
 
-   .signup{
+   .signup{  
     flex:1;
     padding: 20px;
      margin: 30px;
@@ -130,6 +137,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
      border-radius: 20px;
      box-shadow: 5px 5px 5px 5px rgba(22, 19, 19, 0.404);
      justify-content: safe;
+     background-color: #ccc5b9;
+     
      }
 
      .img{
@@ -152,36 +161,42 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
    border-radius: 20px;
    box-shadow: 5px 5px 5px 5px rgba(22, 19, 19, 0.404);
    justify-content: safe;
+     background-color: #ccc5b9;
+
+  
   }
    
 #submit{
   padding:10px;
   font-size: 20px;
-   background-color: rgba(0, 0, 0, 0.178);
+   background-color: #d4cac3;
    border-radius: 10px;
    color:rgba(12, 12, 12, 0.76);
    font-weight: bold;
-
-
+   box-shadow: 4px 2px 2px 2px rgba(22, 19, 19, 0.404);
+   font-family: 'Neonderthaw'  'sans-serif';
+}
+hr{
+  height: 1px;
+  background-color: rgb(20, 18, 18);
+  border: none;
 }
 footer{
-  background-color: black;
-  color: white;
+  background-color:#342a218e;
   letter-spacing: 1px;
   display: flex; 
+  text-align: center;
+  justify-content: center;
+  
 }
 .navbar-footer{
-  flex: 1;
-  font-size: 8px;
+  margin: 10px;
+  font-size: 10px;
 letter-spacing: 1px;
 }
 
-.text-footer{
-  font-size: 8px;
-  flex :1;
-  justify-content: safe; 
-}
-
+  
+  
 h3{
   padding:0 2px;
 }
@@ -208,25 +223,18 @@ padding: 2px;
   flex-direction: column;
   flex-wrap: wrap;
 }
+.signup{
+   text-align: center;
+   }
 
 
-footer{
-  background-color: black;
-  color: white;  
-}
+
 
 .navbar-footer{
   font-size: 15px;
 letter-spacing: 1px;
 flex :1;
 }
-
-.text-footer{
-  font-size: 15px;
-  flex :1;
-  justify-content: safe; 
-}
-
 }
 
  
@@ -237,7 +245,7 @@ flex :1;
     width:100%;
     align-items: center;
     justify-content: center;
-    font-style: italic;
+    
   }
 
   .hero .fullscreen{
@@ -246,8 +254,7 @@ flex :1;
   }
 
   h1{
-    font-size: 60px;
-    font-family: 'Neonderthaw';
+    font-size: 120px;
     padding: 200px 20px;
     position: relative;
     letter-spacing: 3px;
@@ -266,9 +273,9 @@ flex :1;
 
       button{
         font-weight: bolder;
-        margin-left: 25rem;
-        font-size: 2rem;
-        margin-top: 30px;
+        margin-left: 5rem;
+        font-size: 1.5rem;
+       
         
       }
     
@@ -281,8 +288,7 @@ flex :1;
 
     footer{
       display: flex;
-      background-color: black;
-      color: white;
+      color: black;
       font-size: 20px;
       letter-spacing: 1px;
       padding: 20px 0;
@@ -299,7 +305,7 @@ flex :1;
       cursor: pointer;
       opacity: 70%;
     }
-
+     
     .fa-instagram:hover{
       transform: scale(0.8);
       cursor: pointer;
@@ -307,17 +313,13 @@ flex :1;
     }
 
     .navbar-footer{
-     flex: 2;
+     flex: 1;
       font-size: 20px;
     letter-spacing: 1px;
     }
 
-    .text-footer{ 
-     padding: 0 200px
-      flex 1;
-      font-size: 20px;
-      }
-}
+    
+ }
 
  
     
