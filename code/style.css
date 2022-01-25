@@ -42,7 +42,7 @@ h3 {
   font-weight: 500;
 }
 
-button,
+button, /*can I remove this?*/
 .btn-gradient,
 .modal-btn {
   font-family: 'Bebas Neue', cursive;
@@ -53,7 +53,7 @@ button,
 }
 
 .infotext p {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Bebas Neue', cursive;
   font-size: 1.125em;
   text-align: center;
   line-height: 1.6em;
@@ -193,7 +193,7 @@ header {
 
 /* ----------- SIGN-UP SECTION ----------- */
 .signup-form {
-  max-width: 25em;
+  max-width: 95%;
   display: flex;
   flex-direction: column;
 }
@@ -220,8 +220,13 @@ textarea {
   resize: none;
 }
 
-.label-radio {
-  margin-inline: 0.5em;
+.label-radio { 
+  margin: 0.25em;
+  padding-block: 0.25em;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline;
+  justify-content: start;
 }
 
 .label-top {
@@ -236,7 +241,7 @@ textarea {
 }
 
 .signup button {
-  margin-inline: 3em;
+  margin-inline: 2em;
   cursor: pointer;
 }
 
@@ -251,14 +256,14 @@ textarea {
 }
 
 
-/* ----------- FAQ SECTION ----------- */
+/* ----------- ACCORDION/FAQ SECTION ----------- */
 
 .accordion {
   background: #929292;
 }
 
 .accordion-container {
-  max-width: 25em;
+  min-width: clamp(18em, 0.5vw, 75em);
   border-inline: 0.125em solid #222222;
   border-bottom: 0.125em solid #222222;
 }
@@ -312,7 +317,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .gallery {
   background: #333333;
-  padding-top: 2.5em;
+  padding-block: 2.5em;
 }
 
 .gallery-images {
@@ -336,9 +341,9 @@ img:hover {
 } 
 
 
-/* ----------- GALLERY SECTION ----------- */
+/* ----------- MEDIA QUERIES ----------- */
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   html {
     font-size: 1.5rem;
   }
