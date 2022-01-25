@@ -13,10 +13,12 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     padding: 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-   
+    font-family: 'Neonderthaw'  'sans-serif';
+  }
+  .header{
+    display: flex;
   }
 
   .hero{
@@ -26,7 +28,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     justify-content: center;
     color: rgba(245, 245, 220, 0.774);
     font-style: italic;
-    background-color: rgba(15, 2, 2, 0.753);
+    background-color: rgba(15, 2, 2, 0.61);
+   
   }
 
   .hero .hero-content{ 
@@ -56,7 +59,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     letter-spacing: 2px;
     padding: 20px 20px;
     letter-spacing: 2px;
-    justify-content: space-around;
+    
     }
 
     .h1-sub{
@@ -69,45 +72,97 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
      padding: 20px;
      color: rgba(245, 245, 220, 0.897);
    } 
+   button{
+    font-family: 'Neonderthaw' ;
+    display: inline-block;
+    padding: 1rem .75rem;
+    border-radius: 10rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: black;
+    font-weight: bolder;
+    font-style: italic;  
+    box-shadow: 5px 2px 2px 2px rgba(22, 19, 19, 0.404);
+    opacity: 100%;
+  }
+
+  button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
 
   .text{
-    background-color: #705c5c83;
+  
     display:flex;
-    flex-direction: column;
+    background-size: 50%;
     flex-wrap: wrap;
-    color: rgba(0, 0, 0, 0.747);
+    color: black;
+
+ background-color: rgb(233, 227, 227);
+ 
   }
-   .main-text{
-     
+
+  input[type=submit] {
+    box-shadow: 4px 2px 2px 2px rgba(22, 19, 19, 0.404);
+    border:0 none;
+    cursor:pointer;
+    font-family: Neonderthaw, sans-serif;
+}
+
+   .main-text {
+    
      font-size: 50px;
-    padding : 30px;
+    padding: 30px;
    text-align: left;
     font-style: italic;
-    
+    z-index: 20;
+    justify-content: safe;
    }
    .signup h2 {
+     
     text-align: center;
    }
    .signup{
+    
     flex:1;
     padding: 20px;
      margin: 30px;
      font-size:15px;
      border: 2px solid black;
      border-radius: 20px;
-     box-shadow: 10px 5px 5px 5px rgba(22, 19, 19, 0.404);
-    ;
+     box-shadow: 5px 5px 5px 5px rgba(22, 19, 19, 0.404);
+   
+     justify-content: safe;
+     }
 
-   }
+     .img{
+       position: absolute ;
+       width:100%;
+       height:300vh;
+       width:100%;
+    height:100vh;
+        position: absolute;
+   
+    z-index: -1;
+    object-fit: cover;
+     }
+
 .accordion{
-  flex:2;
+  flex:1;
   padding: 20px;
    margin: 30px;
    font-size:15px;
    border: 2px solid black;
    border-radius: 20px;
-   box-shadow: 10px 5px 5px 5px rgba(22, 19, 19, 0.404);
-}
+   box-shadow: 5px 5px 5px 5px rgba(22, 19, 19, 0.404);
+   justify-content: safe;
+  }
    
 #submit{
   padding:10px;
@@ -119,59 +174,88 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 
 }
-
+footer{
+  background-color: black;
+  color: white;
+ 
+  letter-spacing: 1px;
+  display: flex; 
+}
 .navbar-footer{
-  display: flex;
-  font-size: 10px;
-background-color: black;
-color: white;
+  flex: 1;
+  font-size: 8px;
+letter-spacing: 1px;
 
+}
+
+.text-footer{
+  font-size: 8px;
+  flex :1;
+  justify-content: safe; 
 }
 
 h3{
-  padding:0 5px;
+  padding:0 2px;
 }
 
 .fa-facebook-square{
- 
+  padding: 2px;
   cursor: pointer;
-  padding: 5px;
+  
 }
 .fa-envelope{
   cursor: pointer;
-  padding: 5px;
+padding: 2px;
 }
 .fa-instagram{
   cursor: pointer;
-  padding: 5px;
+  padding: 2px;
 }
 
 
 
-@media (min-width:768px){ .text{
+@media (min-width:768px){ 
+  .text{
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+}
 
-}}
+
+footer{
+  background-color: black;
+  color: white;
+  
+}
+.navbar-footer{
+  font-size: 15px;
+letter-spacing: 1px;
+flex :1;
+}
+.text-footer{
+  font-size: 15px;
+  flex :1;
+  justify-content: safe; 
+}
+
+}
 
  
 
 @media (min-width:1024px){
-
   .hero{
     height: 110vh;
     width:100%;
     align-items: center;
     justify-content: center;
     font-style: italic;
-
   }
+
   .hero .fullscreen{
     width:100%;
     height:110vh;
-   
   }
+
   h1{
     font-size: 60px;
     font-family: 'Neonderthaw';
@@ -179,10 +263,9 @@ h3{
     position: relative;
     letter-spacing: 3px;
     justify-content: space-around;
-   
   }
+
   .h1-sub{
-    
     padding: 0 100px;
     }
     
@@ -190,43 +273,63 @@ h3{
       float: right;
       font-size: 40px;
       padding: 20px;
-     
-    } 
+    }
+
+      button{
+        font-weight: bolder;
+        margin-left: 25rem;
+        font-size: 2rem;
+        margin-top: 30px;
+        
+      }
+    
+    
     .text{
-      background-color: #6b4f4f8c;
+      
       display:flex;
       flex-direction: row;
       flex-wrap: wrap;
     }
-    .navbar-footer{
+    footer{
       display: flex;
+      background-color: black;
+      color: white;
       font-size: 20px;
-    background-color: black;
-    color: white;
+      letter-spacing: 1px;
+      padding: 20px 0;
+    }
+
+    .fa-facebook-square:hover{
+      transform: scale(0.8);
+      cursor: pointer;
+      opacity: 70%;
+    }
+    .fa-envelope:hover{
+      transform: scale(0.8);
+      cursor: pointer;
+      opacity: 70%;
+    }
+    .fa-instagram:hover{
+      transform: scale(0.8);
+      cursor: pointer;
+      opacity: 70%;
+    }
+    .navbar-footer{
+     flex: 2;
+      font-size: 20px;
+    letter-spacing: 1px;
     
-    }
-    .fa-facebook-square{
- 
-      cursor: pointer;
-      padding: 10px;
-    }
-    .fa-envelope{
-      cursor: pointer;
-      padding: 10px;
-    }
-    .fa-instagram{
-      cursor: pointer;
-      padding: 10px;
     }
     .text-footer{ 
-      margin-right:600px;
-    
-    justify-content: center;
-    text-align: center;
-    
-    }
-  }
+    padding: 0 200px
+      flex 1;
+      font-size: 20px;
+      }
+}
 
+ 
+    
+  
 
 
 
