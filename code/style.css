@@ -114,7 +114,9 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Introduction */
-.intro {}
+.intro {
+  padding: 0 15px;
+}
 
 .intro__text {
   font-family: 'Montserrat', sans-serif;
@@ -126,22 +128,31 @@ input:focus, textarea:focus, select:focus {
 
 /* FAQ Accordion Section */
 .faq {
-  background-color: #DCD8DC;
-  color: #2D2E2F;
+  background-color: #2D2E2F;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 500px;
 }
 
 .faq__title {
   padding: 15px 0 20px;
+  /* color: #DCD8DC; */
+  color: white;
 }
 
-.faq__answer {
+.faq__text {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 1.25;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 10px 0;
 }
 
-/* Styling the Accordion */
+.faq__text--center {
+  text-align: center;
+}
+
+/* Styling the Accordion Button for Closing/Opening */
   .faq__question {
     text-align: left;
     width: 100%;
@@ -149,12 +160,51 @@ input:focus, textarea:focus, select:focus {
     outline: none;
     transition: 0.4s;
     padding: 10px 25px;
+    color: #2d2e2f;
+    background-color: #DCD8DC;
   }
 
+/* Adding background color to button when clicked on and when moused over */
+/* Add .active in JS */
+  .faq__question--active, .faq__question:hover {
+    background-color: #726a6a;
+    color: #DCD8DC;
+    cursor: pointer;
+  }
+
+/* Styling the accordion panel / answer (hidden by default */
   .faq__answer {
     display: none;
     padding: 0 25px;
+    color: #2d2e2f;
+    background-color: #bfb8b9;
   }
+
+/* Adding + / - symbols to the FAQ question */
+
+/* Plus / Minus Option */
+/* .faq__question:after {
+  content: "\271A";
+  float: right;
+}
+
+.active:after {
+  content: "\2212";
+  color: #DCD8DC;
+} */
+
+/* Emoji Option */
+.faq__question:after {
+  content: "\1F607";
+  float: right;
+}
+
+.faq__question--active:after {
+  content: "\1F608";
+  color: #DCD8DC;
+}
+
+
 
 /* Sign-up Form */
 .signup {
@@ -162,6 +212,8 @@ input:focus, textarea:focus, select:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 500px;
+  max-height: 600px;
 }
 
 .signup__form {
@@ -183,6 +235,8 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Sign-up Form Input Fields */
+
+/* Placeholder Text Styling */
 ::placeholder {
   color: #2D2E2F;
   font-family: 'Montserrat', sans-serif;
@@ -190,6 +244,7 @@ input:focus, textarea:focus, select:focus {
   font-size: 14px;
 }
 
+/* Input Fields Styling */
 input[type=text], input[type=tel], input[type=email] {
   width: 100%;
   height: 40px;
@@ -202,11 +257,12 @@ input[type=text], input[type=tel], input[type=email] {
   font-size: 16px;
 }
 
-input[type=text]:focus {
+/* Maybe delete? Doesn't seem to change anything */
+/* input[type=text]:focus {
   color: black;
   font-size: 16px;
   font-weight: 500;
-}
+} */
 
 /* Options Text */
 .signup__options {
@@ -242,6 +298,7 @@ input[type=text]:focus {
   background-color: transparent;
   border: 2px solid white;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 /* On radio button hover, add background-color */
@@ -298,6 +355,7 @@ input[type=text]:focus {
   background-color: transparent;
   border: 2px solid white;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 /* On checkbox hover, add background-color */
@@ -318,6 +376,7 @@ input[type=text]:focus {
   background-color: transparent;
   border: 3px solid white;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 /* On large checkbox hover, add background-color */
@@ -384,7 +443,7 @@ input[type=text]:focus {
 }
 
 .accept-container__text {
-  margin: 0 10px;
+  margin-left: 20px;
 }
 
 /* Submit Button */
@@ -403,9 +462,100 @@ input[type=text]:focus {
   padding-bottom: 3px;
 }
 
+.btn:hover {
+  background-color: white;
+  color: #2D2E2F;
+  cursor: pointer;
+}
+
 /* Footer */
 .footer {
   text-align: center;
+  background-color: #DCD8DC;
+  padding: 10px 0;
+  line-height: 1.25;
 }
 
-.footer__text {}
+.footer__text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #0b0b0b;
+}
+
+.footer__link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #0b0b0b;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* Media Query Tablet */
+@media (min-width: 668px) and (max-width: 1024px) {
+
+  /* .brand-container__brand {
+    font-size: 180px;
+  } */
+}
+
+/* Media Query Tablet */
+
+@media (min-width: 1025px) {
+
+  /* Header Section */
+  .header {
+    height: 100vh;
+    background-size: 2600px;
+  }
+
+  .brand-container {
+    padding-top: 0px;
+    padding-left: 75px;
+  }
+
+  .brand-container__brand {
+    font-size: 180px;
+  }
+
+  /* Page */
+  .page {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    padding: 50px 25px;
+  }
+
+  /* Centering and Positioning Grid Items */
+  .intro {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+  }
+
+  .intro__text {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .faq {
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 1 / span 1;
+  }
+
+  .signup {
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+  }
+  
+}
