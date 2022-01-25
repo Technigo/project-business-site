@@ -14,6 +14,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   -moz-box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  color: black;
 }
 
 /* Hero section START */
@@ -55,9 +56,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .hero ul {
   list-style-type: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: column;
-  padding: 0 2rem;
 }
 
 /* list on top */
@@ -72,9 +72,14 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 /* list on right side */
 .hero ul li {
-  border: solid 2px black;
   width: fit-content;
   align-self: flex-end;
+  padding: 1rem;
+}
+
+.hero ul li a {
+  text-decoration: none;
+  font-family: 'MuseoModerno', cursive;
 }
   /* remove border eventually */
 
@@ -88,32 +93,53 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   align-items: left;
   justify-content: top;
   flex-direction: column;
+  font-family: 'MuseoModerno', cursive;
 }
 /* Hero section END */
 
+
+main {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
 /* FORM section START */
-input {
+.signup {
+  border: solid 2px black;
+  padding: 1rem;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-field {
+  padding: 0.5rem;
+}
+
+.test-styling {
+
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
   font-size: 20px;
-}
-
-input:valid {
-  /* border-color: green; */
-}
-
-input:invalid {
-  /* background-color: red; */
 }
 
 label {
   display: block;
   margin-bottom: 20px;
 }
-
-.btn {
-  background-color: bisque;
-}
-
-.btn-dark {
-  background-color: blue;
-}
 /* FORM section END */
+
+
+/* FAQ section START */
+.accordion {
+  border: solid 2px black;
+  padding: 1rem;
+  width: 50vw;
+}
+
+
+/* FAQ section END */
