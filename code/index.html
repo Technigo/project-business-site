@@ -12,12 +12,57 @@
   <!-- video or image as a header is cool :) -->
   <section class="hero">
     <video autoplay loop muted src="./videos/avocados.mp4" type="video/mp4" poster="./images/avocado-image.jpg"></video>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Signup</a>
+        </li>
+        <li>
+          <a href="#">FAQ</a>
+        </li>
+      </ul>
+    </nav>
     <div class="hero-text">
       <h1>Find happiness</h1>
       <h2>eat your vegetables</h2>
     </div>
   </section>
-  <!-- Signup form -->
+
+  <section class="signup">
+    <form action="http://httpbin.org/anything" method="post">
+      <label>Message
+        <input type="text" name="message" autofocus>
+      </label>
+
+      <label>Email
+        <input type="email" name="email" autocomplete="on" size="50">
+      </label>
+
+      <!-- <label>Password
+          <input type="password" name="password">
+      </label> -->
+
+      <label>Size
+        <select name="tshirtSize">
+          <option value="s">Small</option>
+          <option value="m">Medium</option>
+          <option value="m">Medium</option>
+          <option value="l">Large</option>
+          <option value="m">Medium</option>
+          <option value="l">Large</option>
+
+          <option value="l">Large</option>
+        </select>
+      </label>
+
+
+      <button id="button" type="submit" class="btn">Order</button>
+      <button type="reset" id="button" class="btn">Reset</button>
+    </form>
+  </section>
 
   <section class="accordion">
     <!-- Accordion -->
@@ -33,7 +78,9 @@
       <p>Lorem ipsum...</p>
     </div>
   </section>
-  <!-- dont forget to link the javascript file here! -->
+
+  <script src="./script.js"></script>
+
 </body>
 
 </html>

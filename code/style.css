@@ -6,7 +6,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   /* some styling here */
 }
 
-* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,6 +16,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   text-rendering: optimizeLegibility;
 }
 
+/* Hero section START */
 .hero {
   position: relative;
 }
@@ -30,21 +31,89 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   opacity: 0.5;
 }
 
-.hero-text {
+.hero-text, .hero ul {
   position: absolute;
   width: 100vw;
   height: 50vh;
-  color: black;
-  padding: 5vh 5vh;
   z-index: 1;
   /* not sure what top, left bottom and right values do... bottom and right seem useless if text is aligned left and top... */
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
+}
+
+/* list on top */
+/* .hero ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+} */
+
+/* list on right side */
+.hero ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+/* list on top */
+/* .hero ul li {
+  border: solid 2px black;
+  width: 10rem;
+  height: fit-content;
+  text-align: center;
+} */
+  /* remove border eventually */
+
+
+/* list on right side */
+.hero ul li {
+  border: solid 2px black;
+  width: fit-content;
+  align-self: flex-end;
+}
+  /* remove border eventually */
+
+
+
+.hero-text {
+  color: black;
+  padding: 5vh 5vh;
   font-size: 2rem;
   display: flex;
   align-items: left;
   justify-content: top;
   flex-direction: column;
 }
+/* Hero section END */
+
+/* FORM section START */
+input {
+  font-size: 20px;
+}
+
+input:valid {
+  /* border-color: green; */
+}
+
+input:invalid {
+  /* background-color: red; */
+}
+
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: bisque;
+}
+
+.btn-dark {
+  background-color: blue;
+}
+/* FORM section END */
