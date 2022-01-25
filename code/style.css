@@ -4,6 +4,45 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .active + .answer {
   /* some styling here */
+  display: block;
+  border-top: hidden;
+
+  
+}
+
+
+
+.answer {
+  display: none;
+  
+}
+
+
+
+.question {
+  cursor: pointer;
+  padding: 20px;
+  font-weight: 500;
+  border-top: 1px solid black;
+}
+
+.accordion {
+  text-align: center;
+}
+
+ header span {
+
+  filter: invert(44%) sepia(95%) saturate(1177%) hue-rotate(202deg) brightness(101%) contrast(102%) ;
+  
+}
+
+header h1 {
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .3));
+}
+
+header img {
+  filter: invert(58%) sepia(20%) saturate(1077%) hue-rotate(196deg) brightness(102%) contrast(104%) drop-shadow( 3px 3px 2px rgba(0, 0, 0, .1));
+  margin-bottom: -10px;
 }
 
 * {
@@ -42,7 +81,6 @@ header h1 {
   font-size: 100px;
   text-align: start;
   margin: 10px 0 0 200px;
-
 }
 
 header h2 {
@@ -68,7 +106,7 @@ body {
 
 
 form {
-  background-color: rgba(255, 255, 255, 0.473);
+  background-color: rgba(255, 255, 255, .9);
   padding: 10px;
   /* margin: 200px 0; */
   width: auto;
@@ -82,6 +120,7 @@ form {
   padding-top: 40px;
   border-radius: 20px;
   grid-column-start: 2;
+  
 }
 
 input{
@@ -89,12 +128,39 @@ input{
   padding: 10px 30px;
   border-radius: 20px;
   display: block;
+  box-shadow: 
+  /* logo shadow */
+  0px 0px 2px #5f5f5f,
+  /* offset */
+  0px 0px 0px 5px #ecf0f3,
+  /*bottom right */
+  8px 8px 15px #a7aaaf,
+  /* top left */
+  -8px -8px 15px #ffffff;
+  border: none;
+  color: #555;
+  outline:none;
+  background: none;
+   font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #ffffff;
 }
 
 button {
   margin: 20px;
   padding: 10px 30px;
   border-radius: 20px;
+  background-color: #8D9AFF;
+  border: none;
+  
+}
+
+.question {
+  display: flex;
+  gap: 40px;
 }
 
 
@@ -112,12 +178,12 @@ option {
 
 .accordion {
   background-color: rgba(255, 255, 255, 0.473);
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   /* margin: 200px; */
-  width: 50%;
+  width: 60%;
   border-radius: 20px;
   grid-column-start: 3;
 }
@@ -189,6 +255,11 @@ option {
   
     }
 
+    header img {
+      width: 50px; 
+      height: auto;
+    }
+
     header h2 {
       font-size: 20px;
     }
@@ -215,3 +286,4 @@ form {
     margin-top: 320px;
     border-radius: 10px;
   }
+
