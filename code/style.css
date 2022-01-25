@@ -2,6 +2,82 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+
+.question {
+  height: fit-content;
+  background-color: aqua;
+}
+
+.answer {
+  display: none;
+}  
+/* '.answer display: none;' gör att svaren döljs när sidan visas. De visas senare när section (.question) aktiveras. 
+
+.active + .answer {
+  /* some styling here - note! Answer is the only thing that will be styled. 
+}*/
+
+.question + .answer {
+  height: fit-content;
+  background-color: yellow;
+}
+
+
+section {
+padding: 2rem 1.5rem;
+}
+
+.hero {
+  width: 100vw;
+  height: 75vh;
+  background:  red ;
+  /*background: url("./");
+  background-size: contain;*/
+}
+
+/* Mobil layout -- Signup form*/
+
+/*.form-image-wrapper {
+
+} */
+
+form {
+  display: flex; 
+  flex-direction: column;
+  
+
+}
+
+form label { /* This target every label inside the form*/
+  display: flex;
+  flex-direction: column;
+   
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+/* Mobil layout -- Accordion/
+
+
+/*------DESKTOP STYLING-----*/ 
+/*@media (min-width: 1024px) {
+  h1{
+
+  }
+
+  .hero {
+    height: 100vh;
+  
+  }
+}
+
+*/
