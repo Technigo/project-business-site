@@ -1,7 +1,239 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+:root {
+  /* color */
+  --color-background: #f0f0f0;
+  --color-main: #f5f3e5;
+  --color-secondary: #ece9e5;
+  --color-black: #0d0f1d;
+  --color-indiePink: #e8a5a9;
+  --color-grey: #c4c4c4;
+
+  /* font-weight */
+  --fontweight-lato-light: 300;
+  --fontweight-lato-regular: 400;
+  --fontweight-montserrat-semibold: 500;
+
+  /* font-size */
+  --fontsize-small: 0.8rem;
+  --fontsize-regular: 1rem;
+  --fontsize-medium: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-color: var(--color-background);
+}
+
+a {
+  text-decoration: none;
+  color: inhert;
+  cursor: pointer;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+/* h3 is reserved for card title */
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+h4 {
+  margin: 0.25rem 0;
+}
+p {
+  margin: 0;
+}
+
+/* header */
+.header {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: var(--color-black);
+  position: relative;
+}
+
+.hero-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+}
+
+.nav-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1em;
+}
+.branding {
+  height: 1.25rem;
+  object-fit: contain;
+}
+
+.menu-container {
+  display: flex;
+  z-index: 2;
+}
+.menu-link {
+  text-transform: uppercase;
+  color: var(--color-main);
+  font-weight: var(--fontweight-lato-regular);
+}
+.menu {
+  padding: 0.5em;
+  margin: 0.15rem;
+}
+
+.menu-link {
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid transparent;
+}
+
+.menu-link:hover {
+  border-bottom: 1px solid var(--color-main);
+}
+
+.hero-branding {
+  z-index: 1;
+  width: 50vw;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* main */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1024px;
+  margin: 2rem auto;
+}
+
+.accordion,
+.form {
+  flex: 1;
+  min-width: 27rem;
+  padding: 1em;
+}
+
+/* form */
+
+.form {
+  background-color: var(--color-secondary);
+  margin-right: 1.5rem;
+}
+
+.input-container {
+  display: flex;
+  margin: 0.5rem 0;
+}
+.space-divider {
+  height: 1rem;
+}
+.input-container.checkbox {
+  margin: 0.15rem 0;
+}
+.input-invalid {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+}
+.input-invalid.checkbox {
+  flex-direction: row;
+}
+
+.input-invalid.invalid {
+  background-color: pink;
+}
+.label {
+  margin-bottom: 0.25rem;
+}
+
+.input {
+  padding: 0.25em;
+  max-width: 27ch;
+}
+.label.radio {
+  margin-bottom: 0.5rem;
+}
+.radio-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.radio-container {
+  display: flex;
+  align-items: center;
+  margin: 0.25rem;
+}
+
+.radio-container .input {
+  margin-right: 0.5rem;
+}
+
+.checkbox .input {
+  margin-right: 0.5rem;
+}
+
+.submit-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+.submit {
+  width: 60%;
+  padding: 0.5em;
+}
+
+/* accordion */
+.accordion {
+  background-color: var(--color-secondary);
+}
+.question {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-indiePink);
+  padding: 0.25em;
+  margin-bottom: 0.25rem;
+}
+.icon-container {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.25em;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: flex;
+  margin-right: 0.5rem;
+}
+.icon {
+  flex: 1;
+}
+.answer {
+  display: none;
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 1em;
+  cursor: default;
+  background-color: var(--color-grey);
+}
 
 .active + .answer {
-  /* some styling here */
+  display: block;
 }

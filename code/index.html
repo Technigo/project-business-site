@@ -1,30 +1,234 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>KRAFTY</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style css-->
+    <link rel="stylesheet" href="style.css" />
+    <!-- script js -->
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
+    <header class="header">
+      <video class="hero-video" muted loop autoplay>
+        <source src="./assets/kraft-promo-ss.mp4" type="video/mp4" />
+        <source src="./assets/krafty-promo-default.jpg" type="image/jpeg" />
+        This browser does not support the HTML5 video element.
+      </video>
+      <div class="nav-container">
+        <nav class="nav">
+          <img
+            src="./assets/krafty-logo-black.png"
+            alt="branding"
+            class="branding"
+          />
+          <ul class="menu-container">
+            <li class="menu"><a class="menu-link" href="">Popular</a></li>
+            <li class="menu"><a class="menu-link" href="">Featured</a></li>
+            <li class="menu"><a class="menu-link" href="">Sign in</a></li>
+          </ul>
+        </nav>
+      </div>
+      <img
+        src="./assets/krafty-logo-white.png"
+        alt="main branding logo"
+        class="hero-branding"
+      />
+    </header>
+    <main class="main">
+      <!-- Signup form -->
+      <form action="http://httpbin.org/anything" method="POST" class="form">
+        <h3 class="form-title">Create Account</h3>
+        <!-- username -->
+        <div class="input-container">
+          <div class="input-invalid">
+            <label class="label" for="uname">Username </label>
+            <input type="text" name="uname" id="uname" class="input" required />
+          </div>
+        </div>
 
-    <!-- Signup form -->
+        <!-- input dummy -->
+        <div class="input-container">
+          <div class="input-invalid">
+            <label class="label" for="temp">Temp </label>
+            <input type="text" name="temp" id="temp" class="input" />
+          </div>
+        </div>
+        <!-- email -->
+        <div class="input-container">
+          <div class="input-invalid">
+            <label class="label" for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="input"
+              required
+            />
+          </div>
+        </div>
+        <!-- password -->
+        <div class="input-container">
+          <div class="input-invalid">
+            <label for="pass" class="label"
+              >Password (8 characters minimum):</label
+            >
+            <input
+              type="password"
+              id="pass"
+              name="password"
+              minlength="8"
+              class="input"
+              required
+            />
+          </div>
+        </div>
+        <!-- interest : radio-->
+        <div class="input-container">
+          <div class="input-invalid">
+            <p class="label radio">Select your interest:</p>
+            <!-- radio item container -->
+            <div class="radio-flexbox">
+              <!-- radio item -->
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="cooking"
+                  name="interest"
+                  value="cooking"
+                  class="input"
+                />
+                <label for="cooking">Cooking</label>
+              </div>
+              <!-- radio item -->
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="pottery"
+                  name="interest"
+                  value="pottery"
+                  class="input"
+                />
+                <label for="pottery">Pottery</label>
+              </div>
+              <!-- radio item -->
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="dance"
+                  name="interest"
+                  value="dance"
+                  class="input"
+                />
+                <label for="dance">Dance</label>
+              </div>
+              <!-- radio item -->
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="none"
+                  name="interest"
+                  value="none"
+                  class="input"
+                  checked
+                />
+                <label for="none">None</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-divider"></div>
+        <!-- terms and service : checkbox -->
+        <div class="input-container checkbox">
+          <div class="input-invalid checkbox">
+            <input
+              type="checkbox"
+              id="agreed"
+              name="contract"
+              value="agreed"
+              class="input"
+              required
+            />
+            <label for="contract"
+              >I agree to
+              <a class="terms-and-service" href="#">Terms and Conditions</a
+              >.</label
+            >
+          </div>
+        </div>
+        <!-- newsletter : checkbox -->
+        <div class="input-container checkbox">
+          <div class="input-invalid checkbox">
+            <input
+              type="checkbox"
+              id="newsletter"
+              name="newsletter"
+              value="newsletter"
+              class="input"
+            />
+            <label for="newsletter"
+              >Sign up for newsletter to receive the latest updates</label
+            >
+          </div>
+        </div>
+        <!-- submit button -->
+        <div class="submit-container">
+          <button id="submit" class="submit" type="submit">Submit</button>
+        </div>
+      </form>
 
-    <section class="accordion">
       <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+      <section class="accordion">
+        <h3>FAQ</h3>
+        <!-- question 1 -->
+        <div class="question" id="section1">
+          <div class="icon-container">
+            <img
+              class="icon"
+              src="./assets/icons/plus-solid.svg"
+              alt="plus icon"
+            />
+          </div>
+          <h4>Section 1</h4>
+        </div>
+        <article class="answer">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta cum
+            aliquam labore eius molestias vero nisi aut consequuntur sequi sunt.
+            Reiciendis sint eveniet accusamus impedit necessitatibus, corporis
+            ipsa dolor fugit.
+          </p>
+        </article>
+        <!-- question 2 -->
+        <div class="question" id="section2">
+          <div class="icon-container">
+            <img
+              class="icon"
+              src="./assets/icons/plus-solid.svg"
+              alt="plus icon"
+            />
+          </div>
+          <h4>Section 2</h4>
+        </div>
+        <article class="answer">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta cum
+            aliquam labore eius molestias vero nisi aut consequuntur sequi sunt.
+            Reiciendis sint eveniet accusamus impedit necessitatibus, corporis
+            ipsa dolor fugit.
+          </p>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
