@@ -52,7 +52,8 @@
           <form 
             class="signup-form" 
             action="https://httpbin.org/anything" 
-            method="post">
+            method="post"
+            >
 
             <label class="label-top" for="firstname">First name:</label>
             <input 
@@ -88,7 +89,8 @@
 
               <label class="label-top" for="email">Phone:</label>
               <input 
-                type="tel" 
+                type="tel"
+                pattern="[0-9]{10-12}" 
                 name="phone" 
                 id="phone" 
                 required>
@@ -101,6 +103,7 @@
                 <label class="label-radio" for="weekly">Weekly
                 <input 
                   type="radio" 
+                  value="weekly"
                   id="weekly" 
                   name="delivery-frequency" 
                   required>
@@ -109,6 +112,7 @@
                 <label class="label-radio" for="biweekly">Biweekly
                 <input 
                   type="radio" 
+                  value="biweekly"
                   id="biweekly" 
                   name="delivery-frequency">
                 </label>
@@ -116,6 +120,7 @@
                 <label class="label-radio" for="monthly">Monthly
                 <input 
                   type="radio" 
+                  value="monthly"
                   id="monthly" 
                   name="delivery-frequency">
                 </label>
