@@ -2,6 +2,49 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+.active+.answer {
   /* some styling here */
+}
+
+* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero video {
+  position: relative;
+  height: 50vh;
+  width: 100vw;
+  object-fit: cover;
+  overflow: hidden;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.hero-text {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  color: black;
+  padding: 5vh 5vh;
+  z-index: 1;
+  /* not sure what top, left bottom and right values do... bottom and right seem useless if text is aligned left and top... */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 2rem;
+  display: flex;
+  align-items: left;
+  justify-content: top;
+  flex-direction: column;
 }
