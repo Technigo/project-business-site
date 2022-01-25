@@ -2,6 +2,110 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+
+/* standard settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.hero {
+width: 100vw;
+height: 100vh;
+background: url("./images/hero-image-mobile.jpg");
+background-size: cover;
+}
+
+/* This is the flex-parent */
+.container {
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  position: absolute;
+  background-color: rgba(255,255,255,0.25); /* creates opacity for the whole navbar excluding links */
+}
+
+/*This is the flex-child?? - Hidden in mobile */
+.navbar {
+ 
+}
+
+/* Also flex-children */
+.nav-links a {
+  float: right;
+  text-align: center;
+  padding: 1rem;
+  font-size: 17px;
+}
+
+.hamburger {
+  height: 2rem;
+  width: 2rem;
+}
+
+.close-menu {
+  height: 2rem;
+  width: 2rem;
+}
+
+/* .active + .answer {
+  /* some styling here */
+/* } */ 
+
+
+
+
+
+
+/* TABLET */
+
+@media screen and (min-width: 667px) and (max-width: 1024px) {
+
+  .hero {
+    background: url("./images/hero-image.jpg");
+    background-size: cover;
+  }
+
+  .container {
+    background-color: rgba(255,255,255,0.4);
+  }
+}
+
+
+
+
+
+
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+
+  .hero {
+    background: url("./images/hero-image.jpg");
+    background-size: cover;
+  }
+
+  .container {
+    background-color: rgba(255,255,255,0.4);
+  }
+} 
