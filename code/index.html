@@ -16,12 +16,19 @@
   <body>
     <!-- video or image as a header is cool :) -->
     <!-- HERO BACKGROUND PARENT -->
-    <div id="hero">
-      <video>
-        <source src="" media="screen and (max-width 799px)">
-        <source src="" media="screen and (mmin-width 800px)">
-        Your browser does not support the video tag.
-      </video>
+    <header>
+      <div id="hero">
+        <video>
+          <source 
+            src="" 
+            media="screen and (max-width 799px)">
+          <source 
+            src="" 
+            media="screen and (mmin-width 800px)">
+            Your browser does not support the video tag.
+        </video>
+      </div>
+    </header>
     
 
       <!-- flex parent for the header texts -->
@@ -62,15 +69,15 @@
             <label class="blockLabel" for="number">Number</label>
             <input class="blockInput" type="number" id="number" name="number" placeholder="Your number...">
             
-            <label for="services">Services needed</label>
-              <select name="services" id="services">
+            <label class="blockLabel" for="services">Services needed</label>
+              <select class="blockInput" name="services" id="services">
                 <option>Web Development</option>
                 <option>Content Creation</option>
                 <option>Pepped Coaching Program</option>
               </select>
 
-            <label for="message">Message</label>
-            <textarea name="message" id="message">Tell us your story!</textarea> <!-- cols="30" rows="10" -->
+            <label class="blockLabel" for="message">Message</label>
+            <textarea class="blockInput" name="message" id="message" cols="30" rows="10">Tell us your story!</textarea> 
 
             <button id="button" type="submit">Send</button>
 
@@ -79,21 +86,44 @@
       </div>
     </div>
     
+    <!-- ACCORDION CONTAINER -->
+    <div class="accordionWrapper">
+      <section class="accordion" id="accordion">
 
-    <section class="accordion">
-      <!-- ACCORDION -->
-      <h1>FAQ</h1>
+        <h1>FAQ</h1>
 
-      <div class="question" id="section1">Tricks of the trade</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <div id="question">  
+          <div class="question" id="section1">Why should I hire Pepped?</div>
+          <div class="answer">
+           <p>First of all, by the sound of our name - we garantee that you will get more pepp in your life.</p>
+          </div>
+       </div>
 
-      <div class="question" id="section2">Stuff you should know</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+        <div id="question">
+          <div class="question" id="section2">What's your process?</div>
+          <div class="answer">
+          <p>It's 3 simple steps.</p>
+          </div>
+        </div>
+
+        <div id="question">
+          <div class="question" id="section3">How much does it cost?</div>
+          <div class="answer">
+            <p>It depends!</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p class="footerText">Designed and developed by Joanna Lodell</p>
+      <p class="footerCred">Video by XX</p>
+    </div>
+
+
+    <!-- JAVASCRIPT LINK -->
+    <script src="script.js"></script>
+
   </body>
 </html>
