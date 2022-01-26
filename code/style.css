@@ -65,7 +65,7 @@ button,
   color: #222222;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   html {
     font-size: 1.75rem;
   }
@@ -90,10 +90,17 @@ button,
   }
 }
 
+@media (min-width: 1850px) {
+  html {
+    font-size: 2.5rem;
+  }
+}
+
+
 
 /* ----------- BUTTONS AND LINKS ----------- */
 
-a, 
+.btn, 
 button {
   display: block;
   position: relative;
@@ -107,7 +114,8 @@ button {
 }
 
 button,
-.modal-btn {
+.modal-btn,
+a {
   background-image: linear-gradient(to right, #2C2A2A 0%, #312f30 51%, #555253 100%);
   background-size: 200% auto;
   margin-top: 10px;
@@ -129,7 +137,7 @@ button,
     font-size: 1.2em;
   } 
   
-  a::after,
+  .btn::after,
   button::after {
     content: "";
     position: absolute;
@@ -147,14 +155,14 @@ button,
     width: 70%;
     left: 2.2em;
   }
-
-  a::after {
+  
+  .btn::after {
     bottom: 0.6em;
     left: 1.45em;
   }
-
-  a:hover::after,
-  a:focus::after,
+  
+  .btn:hover::after,
+  .btn:focus::after,
   button:hover::after {
     transform: translate3d(0, 0, 0);
   }
@@ -176,7 +184,44 @@ header {
   align-items: center;
 }
 
+/* ----------- NAVBAR ----------- */
 
+nav {
+  display: none;
+}
+
+
+@media (min-width:992px) {
+  
+  
+  nav {
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed; 
+    right: 0;
+    top: 2em;
+    width: 6em;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0.5em 0;
+    list-style: none;
+    }
+    
+  nav ul li a {
+    padding-right: 0.25em;
+    text-decoration: none;
+    }
+  } 
+ 
+  nav ul li a:hover,
+  nav ul li a:focus {
+    transition: all 500 cubic-bezier(0.19, 1, 0.22, 1);
+    transform: scale(1.2);
+  } 
+
+  
 /* ----------- MODAL ----------- */
 
 .info-modal {
@@ -227,10 +272,16 @@ header {
 
 
 /* ----------- SIGN-UP SECTION ----------- */
+.submit-message {
+  display: none;
+  z-index: 2;
+}
+
 .signup-form {
   max-width: 95%;
   display: flex;
   flex-direction: column;
+  visibility: visible;
 }
 
 label,
@@ -341,7 +392,6 @@ select:-webkit-autofill:focus {
   height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: all 500ms ease-out;
 }
 
 .answer p {
@@ -369,9 +419,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 .active + .answer {
-  /* some styling here */
-  transition: 300ms ease-out;
-  height: max-content;
+  transition: height 500ms ease-out;
+  height: 6em;
   opacity: 1;
   border-top: none;
 } 

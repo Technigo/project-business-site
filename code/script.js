@@ -3,8 +3,7 @@
 // console.log(this) to see how it works
 
 const question = document.getElementsByClassName("question") 
-//const form = document.getElementById("form")
-//const inputName = document.getElementsById("firstname").value
+const form = document.getElementById("form")
 
 for (let i = 0; i < question.length; i++) {
   question[i].addEventListener("click", function() {
@@ -13,19 +12,16 @@ for (let i = 0; i < question.length; i++) {
 }
 
 
-//form.onsubmit = e => {
-//  e.preventDefault()
-//}
-//document.getElementsById("greeting") = inputName
+form.onsubmit = e => {
+  e.preventDefault()
+   
+}
+
+
 
 /*function toggle() {
   this.classList.toggle("active")
 }*/
 
-//(‘Hello $ {inputValue}!’) 
+//(‘Hello $ {inputName}!’) 
 
-
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-/* document.getElementById("section1").onclick = toggle */
-
-/*insead of "click* use "onsubmit"*/
