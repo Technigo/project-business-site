@@ -1,7 +1,346 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&display=swap');
 
-.active + .answer {
-  /* some styling here */
+:root {
+  --white: #f2f2f2;
+  --black: #04080f; 
+  --bg_blue: #091426;
+  --gold: #dca451;
+  --test_blue: #051734;
 }
+
+html {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+html::-webkit-scrollbar { 
+  display: none;  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+  font-size: 62.5%;
+}
+
+header {
+  z-index: 900;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  transition: 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.brand {
+  color: var(--white);
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+video {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65vh;
+  object-fit: cover;
+}
+
+section {
+  padding: 5rem 2rem;
+  background: var(--black);
+}
+
+.home:before {
+  z-index: 700;
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 65vh;
+  top: 0;
+  left: 0;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content {
+  z-index: 888;
+  color: var(--white);
+  width: 100%;
+  height: 100vh;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10rem; /* to make up for the header visually*/
+}
+
+.content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+} 
+
+.content p {
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+  font-size: 1.75rem;
+  color: var(--white);
+} 
+
+.content a {
+  background: var(--gold);
+  color: var(--white);
+  padding: .8rem 2.5rem;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  border-radius: 5rem;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.content a:hover {
+  background: var(--black);
+  transition: 0.5s ease;
+}
+
+ /* ===== FORM ===== */
+
+ .section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ }
+
+ .form_container {
+  position: relative;
+  max-width: 40rem;
+  width: 100%;
+  background: var(--bg_blue);
+  padding: 4rem;
+  border-radius: 3px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  -webkit-appearance:none;
+  margin-bottom: 5rem;
+}
+
+.form_container h2, p, label {
+  color: var(--white);
+  font-weight: 400;
+}
+
+.form_container h2 {
+  position: relative;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form_container p {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.form_container form {
+  margin-top: 3rem;
+}
+
+.form_container label {
+  font-size: 1.25rem;
+}
+
+.form_container form .input-box {
+  width: 100%;
+  height: 4rem;
+  padding: 0 2rem;
+  margin: 1rem 0;
+  background-color: var(--bg_blue);
+  color: var(--white);
+  border-radius: 4px;
+  border: 1px solid var(--white);
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+} 
+
+.form_container form .input-box:hover,
+.form_container form .input-box:valid,
+.form_container form .input-box:focus {
+  border: 1px solid var(--gold);
+  transition: .7s;
+}
+
+.form_container .radio-btn {
+  display: flex;
+  height: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.form_container .radio-label {
+  margin: 1rem;
+  font-size: 1.25rem;
+}
+
+.form_container .check-btn {
+  margin: 1.25rem 0 1rem 0;
+}
+
+.form_container .policy {
+  padding: 0 1rem;
+  font-size: 1.25rem;
+}
+
+.sub-button {
+  color: var(--black);
+  width: 100%;
+  height: 5rem;
+  letter-spacing: 1px;
+  background-color: var(--white);
+  cursor: pointer; 
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  margin-top: 1rem; 
+}
+
+.sub-button:hover{
+  background: var(--gold);
+  transition: .5s ease-in;
+}
+
+/* ===== FAQ ===== */
+
+.accordion, 
+.accordion_name {
+  background-color: var(--bg_blue);
+  color: var(--white);
+  padding: 2rem;
+  max-width: 45rem;
+  width: 100%;
+}
+
+.accordion {
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+
+.accordion_name {
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.active, .accordion:hover {
+  background-color: var(--black);
+}
+
+.accordion:after {
+  content: '\002B';
+  color: var(--gold);
+  font-weight: bold;
+  float: right;
+  margin-left: .5rem;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.accordion_panel {
+  padding: 0 1rem;
+  font-size: 2rem;
+  background-color: var(--test_blue);
+  max-height: 0;
+  max-width: 40rem;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion_panel p {
+  font-size: 1.5rem;
+  margin: 1rem;
+  line-height: 20px;
+}
+
+footer {
+  padding: 3rem;
+  background-color: var(--bg_blue);
+  text-align: center;
+}
+
+footer p {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 610px) {
+  .content h1 {
+    font-size: 4.5rem;
+  } 
+  
+  .content p {
+    font-size: 2.5rem;
+  } 
+  
+  .content a {
+
+    font-size: 1.75rem;
+  }
+} 
+
+@media only screen and (min-width: 1010px) {
+  .content h1 {
+    font-size: 5.5rem;
+    margin-bottom: 1.5rem;
+  } 
+  
+  .content p {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+  } 
+  
+  .content a {
+    font-size: 2rem;
+  }
+
+  .section {
+    flex-direction: row;
+   }
+
+   .accordion_container {
+    margin-left: 4.5rem;
+   }
+
+   .form_container {
+     margin-right: 4.5rem;
+     margin-bottom: 0;
+   }
+} 

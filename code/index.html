@@ -1,30 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FyraPunkter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+    <header> <!-- simple header no logo -->
+      <a href="#" class="brand">FyraPunkter</a>
+    </header>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <section class="home"> <!-- video -->
+      <video class="video" src="Vid/pexels-henry-5396816-2.mp4" autoplay muted loop></video>
+      <div class="content">
+        <h1> Hong Kong Nightlife</h1>
+        <p>Like you've never seen before</p>
+        <a href="#">Subscribe</a>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <section class="section"> <!-- form and faq -->   
+      <div class="form_container">
+        <h2>Subscribe</h2>       
+        <form action="http://httpbin.org/anything" method="POST">
+          <label for="name">Name
+            <input class="input-box" name="name" id="name" type="text" placeholder="Enter your name" required>
+          </label>
+          <label for="email">Email
+            <input class="input-box" name="email" id="email" type="email" placeholder="Enter your email" required>
+          </label>
+          <label for="tel">Phone
+            <input class="input-box" name="tel" id="tel" type="number" placeholder="Enter your phonenumber" required>
+          </label>
+          <label for="password">Password
+            <input class="input-box" name="password" id="password" type="password" placeholder="Choose a password" required>
+          </label>   
+
+          <p class="radio-txt">Budget</p>
+
+          <div class="radio-btn">
+            <input class="radio" type="radio" id="low" name="budget" value="low"/>
+            <label for="low" class=radio-label>Low</label> 
+            <input class="radio" type="radio" id="normal" name="budget" value="normal">
+            <label for="normal" class=radio-label>Normal</label>         
+            <input class="radio" type="radio" id="high" name="budget" value="high">
+            <label for="high" class=radio-label>High</label>  
+          </div>
+
+          <div class="check-btn">
+            <input type="checkbox" id="policy1" name="check1" value="check">
+            <label class="policy" for=policy1> I accept all terms & conditions.</label><br>
+
+            <input type="checkbox" id="policy2" name="check1" value="check">
+            <label class="policy" for=policy2> Yes, collect my data.</label><br>
+
+          </div>
+
+          <button class="sub-button" type="submit">Subscribe</button>
+
+        </form>
+      </div>
+      <div class="accordion_container"> 
+        <h1 class="accordion_name">F.A.Q</h1>
+        <button class="accordion">What type of events do you have?</button>
+        <div class="accordion_panel">
+          <p>We cater to the masses, everything between heaven and earth. 
+             We use to say that we have an event for anyone</p>
+        </div>
+
+        <button class="accordion">Why do you ask for my budget?</button>
+        <div class="accordion_panel">
+          <p>To ensure that we can match you up with a relevant event.
+             We do not share this information with anybody. 
+          </p>
+        </div>
+
+        <button class="accordion">How often will you contact me?</button>
+        <div class="accordion_panel">
+          <p>As often as we find an event for you.
+          </p>
+        </div>
+
+        <button class="accordion">How much do you charge?</button>
+        <div class="accordion_panel">
+          <p>20% of the price of bought event, if you dont buy we dont get paid.
+          </p>
+        </div>
+
+        <button class="accordion">Why do you save my data?</button>
+        <div class="accordion_panel">
+          <p>To be able to pair you up with other similar events in the area.
+          </p>
+        </div>
+
+        <button class="accordion">Do you offer refunds?</button>
+        <div class="accordion_panel">
+          <p>No. We are not the event organizers thus we do not offer refunds.
+          </p>
+        </div>        
+      </div>
+    </div>
+    </section>
+
+    <footer> <!-- Footer -->
+      <p>&#169; All rights reserved to Maurii and FyraPunkter AB</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
