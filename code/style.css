@@ -36,14 +36,6 @@ body {
   right: 10px;
 }
 
-.filter {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #e0d4d4dc;
-  z-index: -1;
-}
-
 .main-content {
   margin: 1.5rem;
 }
@@ -139,19 +131,65 @@ select {
 @media (min-width: 667px) and (max-width: 1024px) {
 }
 
-.boxes {
+.extra-big-header {
+  font-family: Lobster, cursive;
+  color: #a36666;
+  font-size: 60px;
+  margin: 40px 0 40px 0;
+  text-align: center;
+}
+
+.big-header {
+  font-family: Lobster, cursive;
+  color: #a36666;
+  font-size: 30px;
+}
+
+.box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1rem;
   text-align: start;
-  margin-top: 5rem;
 }
 
 /* DESKTOP SIZE */
 @media (min-width: 1024px) {
-  .first-heading {
+  #hero video {
+    height: 50vw;
+    position: ;
+    width: 100%;
+    z-index: 5;
+    position: relative;
+    object-fit: cover;
+  }
+
+  .extra-big-header {
     font-family: Lobster, cursive;
     color: #a36666;
-    font-size: 48px;
+    font-size: 58px;
+    margin: 40px 0 40px 0;
+    text-align: center;
+  }
+
+  .medium-size-header {
+    font-family: Lobster, cursive;
+    color: #a36666;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 10px;
+  }
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #a36666;
+    border-radius: 15px;
+    padding: 15px;
   }
 }
