@@ -2,11 +2,6 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .project-content {
-  display: flex;
-  flex-direction: row;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@400;600&display=swap');
 
 /* CSS below is to reset default values such as margin, padding and box-sizing
@@ -122,13 +117,18 @@ h4{
   padding-bottom: 1rem;
 }
 
+.active + .project-content {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 1rem 0 2rem 0;
+}
 
 .all-projects:first-child {
   border-top: 1px solid red;
 }
 
 .project-image {
-  width: 200px;
+  width: 150px;
 }
 
 .project-title {
@@ -151,6 +151,11 @@ h4{
 .content-text {
   display: flex;
   flex-direction: column;
+}
+
+.content-text p{
+  width: 75%;
+  margin-bottom: 1rem;
 }
 
 .project-content {
@@ -242,6 +247,17 @@ ul a {
     margin: 12rem 10rem;
     padding: 50px;
     font-size: 2.5vw;
+  }
+
+  .active + .project-content {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0 2rem 0;
+  }
+
+  .project-image {
+    width: 300px;
+    margin-right: 1rem;
   }
 
   .form-image-wrapper{
