@@ -2,10 +2,6 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-}
-
 body {
   box-sizing: border-box;
   margin: 0;
@@ -25,10 +21,25 @@ body {
   
 }
 
- .dumbbell {
-   padding: 20px;
-   width: fit-content;
- }
+.dumbbell {
+  padding: 20px;
+  width: fit-content;
+  color: white;
+  font-size: 20px;
+}
+
+
+.open {
+ color: white;
+ list-style: none;
+ display: none;
+ padding-left: 20px;
+ font-size: 25px;
+}
+
+.active + .open {
+ display: block;
+}
  
 .big-title {
   display: flex;
@@ -55,6 +66,10 @@ input {
   color: white;
 }
 
+input:valid {
+  background-color: pink;
+}
+
 select {
   background-color: black;
   color: white;
@@ -65,19 +80,20 @@ select {
  flex-direction: column;
  width: auto;
  height: auto;
- border: 2px solid white;
  background-color: black;
  padding: 30px 30px 30px 30px;
  margin: 20px 10px;
  color: white;
  font-size: 20px;
+ box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+ border: 0.5px solid white;
   }
 
 
 .first-row {
   display: flex;
   flex-direction: row;
-  align-self: center;
+  align-self: flex-start;
   margin-top: 20px;
   text-align: ;
 } 
@@ -105,6 +121,31 @@ select {
 .monthly-label {
   margin-right: 30px;
 }
+  
+ /* display: block;
+  position: relative;
+  user-select: none;
+
+ 
+.monthly-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  background-color: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+}*/
+
 
 .button {
   width: fit-content;
@@ -122,13 +163,14 @@ select {
 
 .accordion {
   color: white;
-  border: 2px solid white;
   display: flex;
   flex-direction: column;
   width: auto;
   height: auto;
   margin: 20px 10px;
   background-color: black;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+ border: 0.5px solid white;
 }
 
 .faq {
@@ -159,6 +201,7 @@ select {
 
 .active:after {
   content: "\2212";
+  
 }
 
 .active, .question:hover {
@@ -171,7 +214,6 @@ select {
   color: white;
   font-size: 20px;
   display: none;
-  overflow: hidden;
 }
 
 .active + .answer {
@@ -213,7 +255,6 @@ footer {
     flex-direction: column;
     width: auto;
     height: 100%;
-    border: 2px solid white;
     background-color: black;
     padding: 30px 30px 30px 30px;
     margin: 20px 10px;
@@ -224,7 +265,6 @@ footer {
   .city-label {
     margin-left: 13px;
   }   
-
 
   h1 {
     margin: 0;
@@ -239,6 +279,7 @@ footer {
   .big-title-lower {
     margin: 0, 0, 0, 5px;
     font-size: 20px;
+    padding-top: 35px;
   }
 
   .button {
@@ -247,13 +288,48 @@ footer {
 
 }
 
-@media (min-width: 601px) and (max-width:992px) {
+@media (min-width: 700px) and (max-width:992px) {
  
   .media-bigger {
    display: flex;
-   flex-direction: row;
-   
+   flex-direction: row; 
  }
 
+ h1 {
+   margin 0;
+ }
 
+ .big-title {
+   font-size: 30px;
+   margin-top: 50px;
+ }
+
+ .big-title-lower {
+  margin-top: 0;
+  font-size: 15px;
+}
+
+ .form {
+  width: auto;
+  height: 50%;
+  }
+
+
+  .accordion {
+   width: auto;
+   height: auto;
+ } 
+
+ .question {
+   font-size: 20px;
+
+ }
+
+ .answer {
+   font-size: 15px;
+ }
+
+ .faq {
+   font-size: 25px;
+ }
 }
