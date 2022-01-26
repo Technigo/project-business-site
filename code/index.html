@@ -13,7 +13,7 @@
 
 <body>
   <!-- video or image as a header is cool :) -->
-  <section class="hero">
+  <header class="hero">
     <video autoplay loop muted src="./videos/avocados.mp4" type="video/mp4" poster="./images/avocado-image.jpg"></video>
     <nav>
       <ul>
@@ -28,17 +28,19 @@
         </li>
       </ul>
     </nav>
-    <div class="hero-text">
+    <div class="hero-title">
       <h1>Find happiness</h1>
       <h2>eat your vegetables</h2>
     </div>
-  </section>
+    <div class="hero-gradient">
+    </div>
+  </header>
 
   <main>
     <section class="signup">
       <form action="http://httpbin.org/anything" method="post">
 
-        <div class="signup-field test-styling">
+        <div class="signup-field">
           <label>First name
             <input type="text" name="firstName" autofocus>
           </label>
@@ -61,7 +63,7 @@
         </div>
 
         <div class="signup-field">
-          <label>Select the age range of your youngest child
+          <label>Select the age range of your child
             <select name="age">
               <option value="age1">0-2 years old</option>
               <option value="age2">3-5 years old</option>
@@ -82,12 +84,12 @@
         </div>
 
         <div class="signup-field">
-          <p>Leave us a message if you like</p>
+          <p>Leave us a message if you like:</p>
           <textarea name="message" rows="5" cols="30">
           </textarea>
         </div>
 
-        <div class="signup-field">Please check at least one vegetable that your child like:
+        <div class="signup-field">Check all vegetables that your child like:
           <label>Cucumber
             <input type="checkbox" name="veggie">
           </label>
@@ -100,23 +102,10 @@
           <label>Celery
             <input type="checkbox" name="veggie">
           </label>
-          <label>Green bell pepper
-            <input type="checkbox" name="veggie">
-          </label>
-          <label>Asparagus
-            <input type="checkbox" name="veggie">
-          </label>
-          <label>Zucchini
-            <input type="checkbox" name="veggie">
-          </label>
-          <label>Green bean
-            <input type="checkbox" name="veggie">
-          </label>
-
         </div>
 
         <div class="signup-field">
-          <button type="submit" id="button" class="btn">Order</button>
+          <button type="submit" id="button" class="btn">Send</button>
           <button type="reset" id="button" class="btn">Reset</button>
         </div>
       </form>

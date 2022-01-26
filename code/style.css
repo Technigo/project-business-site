@@ -14,8 +14,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   -moz-box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  color: black;
 }
+
+
 
 /* Hero section START */
 .hero {
@@ -29,30 +30,23 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   object-fit: cover;
   overflow: hidden;
   z-index: 0;
-  opacity: 0.5;
+  min-height: 200px;
+
 }
 
-.hero-text, .hero ul {
+.hero-title, .hero ul, .hero-gradient {
   position: absolute;
   width: 100vw;
   height: 50vh;
-  z-index: 1;
+  z-index: 2;
   /* not sure what top, left bottom and right values do... bottom and right seem useless if text is aligned left and top... */
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
+  min-height: 200px;
 }
 
-/* list on top */
-/* .hero ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 5rem;
-} */
-
-/* list on right side */
 .hero ul {
   list-style-type: none;
   display: flex;
@@ -60,17 +54,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   flex-direction: column;
 }
 
-/* list on top */
-/* .hero ul li {
-  border: solid 2px black;
-  width: 10rem;
-  height: fit-content;
-  text-align: center;
-} */
-  /* remove border eventually */
-
-
-/* list on right side */
 .hero ul li {
   width: fit-content;
   align-self: flex-end;
@@ -80,28 +63,37 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .hero ul li a {
   text-decoration: none;
   font-family: 'MuseoModerno', cursive;
-}
-  /* remove border eventually */
-
-
-
-.hero-text {
+  font-weight: bold;
   color: black;
+}
+
+.hero-title {
+  color: white;
   padding: 5vh 5vh;
   font-size: 2rem;
   display: flex;
-  align-items: left;
-  justify-content: top;
+  /* align-items: left;
+  justify-content: top; --- These two properties change nothing, need to check (et display:flex, est-ce nécessaire?) */
   flex-direction: column;
   font-family: 'MuseoModerno', cursive;
 }
+
+.hero-gradient {
+  background-color: none;
+  /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
+  z-index: 1;
+}
+
 /* Hero section END */
+
 
 
 main {
   display: flex;
   font-family: 'Open Sans', sans-serif;
 }
+
 
 
 /* FORM section START */
@@ -117,21 +109,100 @@ main {
   padding: 0.5rem;
 }
 
-.test-styling {
-
-}
-
 button, input, select, textarea {
   font-family: inherit;
   font-size: 100%;
-  font-size: 20px;
 }
+
+
+/* changing the appearance of checkboxes START */
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: 1px solid gray;
+  border-radius: 25%;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
+}
+
+input[type="checkbox"]::before {
+  content: "🥦";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1px;
+  top: -0.3em;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+  border-color: black;
+  background: #ddd;
+  color: gray;
+}
+
+/* changing the appearance of checkboxes END */
+
+
+
+/* changing the appearance of radio buttons START */
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  outline: none;
+}
+
+input[type="radio"]::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: green;
+  font-size: 1.2em;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+}
+
+input[type="radio"]:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+/* changing the appearance of radio buttons END */
+
+
 
 label {
   display: block;
   margin-bottom: 20px;
 }
+
 /* FORM section END */
+
 
 
 /* FAQ section START */
