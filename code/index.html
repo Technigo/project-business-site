@@ -15,10 +15,10 @@
 
   <body>
     <!-- video or image as a header is cool :) -->
-    <!-- HERO BACKGROUND PARENT -->
+    <!-- HERO BACKGROUND -->
     <header>
       <div id="hero">
-        <video loop muted autoplay preload playsinline="autoplay">
+        <!-- <video loop muted autoplay preload playsinline="autoplay">
           <source 
             src="./videos/SampleVideo_360x240_1mb.webm" 
             media="screen and (max-width 667px)"/>
@@ -29,7 +29,7 @@
             src="./videos/SampleVideo_1280x720_1mb.mp4" 
             media="screen and (mmin-width 1024px)"/>
             Your browser does not support the video tag.
-        </video>
+        </video> -->
       </div>
     
 
@@ -52,73 +52,77 @@
     </header>
 
     <!-- MAIN CONTENT HERE -->
-    <div class="mainWrapper">
-      <div class="flexMain">
+      <main>
+        <div class="mainWrapper">
 
-        <div class="formWrapper">
+          <!-- CONTACT FORM -->
+          <div class="flexMain">
+            <div class="formWrapper">
+              <section id="form">
+                <form method="POST" action="http://hhtpbin.org/anything">
+                  <div class="formTitle">
+                    <h2>Become pepped! Hire us!</h2>
+                  </div>
 
-          <section id="form">
+                  <!-- TEXT INPUTS -->
+                  <label class="blockLabel" for="name">Name</label>
+                  <input class="blockInput" type="text" id="name" name="name" placeholder="Your name..."required/>
 
-            <!-- CONTACT FORM -->
-            <form method="POST" action="http://hhtpbin.org/anything">
-              <h2>Become pepped! Hire us!</h2>
+                  <label class="blockLabel" for="email">Email</label>
+                  <input class="blockInput" type="email" id="email" name="email" placeholder="Your email..."/>
 
-              <!-- TEXT INPUTS -->
-              <label class="blockLabel" for="name">Name</label>
-              <input class="blockInput" type="text" id="name" name="name" placeholder="Your name..."required/>
+                  <label class="blockLabel" for="number">Number</label>
+                  <input class="blockInput" type="number" id="number" name="number" placeholder="Your number..."/>
+                  
+                  <label class="blockLabel" for="services">Services needed</label>
+                    <select class="blockInput" name="services" id="services">
+                      <option>Web Development</option>
+                      <option>Content Creation</option>
+                      <option>Pepped Coaching Program</option>
+                    </select>
 
-              <label class="blockLabel" for="email">Email</label>
-              <input class="blockInput" type="email" id="email" name="email" placeholder="Your email..."/>
+                  <label class="blockLabel" for="message">Message</label>
+                  <textarea class="blockInput" name="message" id="message" cols="20" rows="10">Tell us your story!</textarea> 
 
-              <label class="blockLabel" for="number">Number</label>
-              <input class="blockInput" type="number" id="number" name="number" placeholder="Your number...">
-              
-              <label class="blockLabel" for="services">Services needed</label>
-                <select class="blockInput" name="services" id="services">
-                  <option>Web Development</option>
-                  <option>Content Creation</option>
-                  <option>Pepped Coaching Program</option>
-                </select>
+                  <button id="button" type="submit">Send</button>
 
-              <label class="blockLabel" for="message">Message</label>
-              <textarea class="blockInput" name="message" id="message" cols="20" rows="10">Tell us your story!</textarea> 
-
-              <button id="button" type="submit">Send</button>
-
-            </form>
-          </section>
-        </div>
-      </div>
+                </form>
+              </section>
+            </div>
+          </div>
       
-      <!-- ACCORDION CONTAINER -->
-      <div class="accordionWrapper">
-        <section class="accordion" id="accordion">
+      
+          <!-- ACCORDION CONTAINER -->
+          <div class="accordionWrapper">
+            <section class="accordion" id="accordion">
 
-          <h1>FAQ</h1>
+              <h1>FAQ</h1>
 
-          <div id="question">  
-            <div class="question" id="section1">Why should I hire Pepped?</div>
-            <div class="answer">
-            <p>First of all, by the sound of our name - we garantee that you will get more pepp in your life.</p>
-            </div>
+              <div id="questionBox">  
+                <div class="question" id="question1">Why should I hire Pepped?</div>
+                <div class="answer" id="answer">
+                <p>First of all, by the sound of our name - we garantee that you will get more pepp in your life.</p>
+                </div>
+              </div>
+
+              <div id="questionBox">
+                <div class="question" id="question2">What's your process?</div>
+                <div class="answer" id="answer">
+                <p>It's 3 simple steps.</p>
+                </div>
+              </div>
+
+              <div id="questionBox">
+                <div class="question" id="question3">How much does it cost?</div>
+                <div class="answer" id="answer">
+                  <p>It depends!</p>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
-
-          <div id="question">
-            <div class="question" id="section2">What's your process?</div>
-            <div class="answer">
-            <p>It's 3 simple steps.</p>
-            </div>
-          </div>
-
-          <div id="question">
-            <div class="question" id="section3">How much does it cost?</div>
-            <div class="answer">
-              <p>It depends!</p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
+      </main>
+      
     <!-- FOOTER -->
     <div class="footer">
       <p class="footerText">Designed and developed by Joanna Lodell</p>
