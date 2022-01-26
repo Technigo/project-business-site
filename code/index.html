@@ -24,7 +24,7 @@
 
     <body>
     
-    <!-- VIDEO AND LAYER-->
+    <!-- HEADER VIDEO AND LOGO-->
     <header>
     <video id="heroVideo" loop muted autoplay preload playsinline="auto">
       <source src="lefleur-video.mp4" media="screen and (min-width:800px)">
@@ -32,11 +32,11 @@
 
       Your browser does not support the video tag.
     </video>
-
-    <!-- LOGO -->
     <img class="logotype" src="./lefleur-logo.png" />
     </header>
 
+
+    <!-- MAIN CONTENT-->
     <div class="main-content">
       <div class="extra-big-header">
       Fresh flowers this weekend.
@@ -49,29 +49,59 @@
         Lorem ipsum lorem ipsum lorem ipsum.
       </p>
 
-
-
-    <!-- SIGNUP FORM -->
-    <div class="order-here">
+    <!-- ORDER FORM -->
+    <div class="order-form">
     <form action="https://httpbin.org/anything">
 
       <div class="big-header">Lets order</div>
 
-      <label>Name <input type="text" id="fname" name="fname" placeholder="First name"> <br />
-      <br />
+      <label>Name 
+        <input type="text" id="name" name="name" placeholder="Your name">
+      </label> 
+     <br />
       <label>Email
-        <input type="email" placeholder="email" required>
+        <input type="email" placeholder="Email address" required>
       </label>
      <br />
-     <br />
-      <button type="submit">Submit</button></label>
+      <h3>Choose the size of the boquet
+        <br />
+        <select id="size-boquet" name="size-boquet" required>
+          <option value="small">Small boquet, 200 SEK</option>
+          <option value="medium">Medium size boquet, 300 SEK</option>
+          <option value="large">Large boquet, 450 SEK</option>
+        </select>
+      </h3> 
+      <br />
+      <h3>What kind of style do you like?</h3>
+        <br />
+      
+        <input type="radio" id="romantic" name="style" value="romantic">
+        <label for="romantic">Romantic</label>
+        
+        <br />
+
+        <input type="radio" id="classic" name="style" value="classic">
+        <label for="style">Classic</label>   
+        
+        <br />
+
+        <input type="radio" id="botanical" name="style" value="botanical">
+        <label for="style">Botanical</label>
+
+        <br />
+
+      <label>Send
+        <button type="submit">Submit</button></label> 
+
+
+
 
     </form>
     
 
     </div>
 
-    <!-- ACCORDION -->
+    <!-- ACCORDION FAQ -->
     <section class="accordion">
     
       <div class="question" id="section1">Section 1</div>
