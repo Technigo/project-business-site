@@ -16,7 +16,7 @@
         <h2>Gardenplanning and bouquet binding</h2>
         <button type="button">Get newsletter</button>
          </div> 
-      </div>
+      
         <video src="videos\Woman - 58142.mp4" class="hero-video"muted loop autoplay playsinline>
 
         </video>
@@ -28,45 +28,58 @@
     <main class="wrapper">
     <section class="form">
     
-      <form>
+      <form action="https://httpbin.org/anything" method="post">
       <label for ="fname">First name:</label>
-      <input type="text" id="fname" name="fname">
+      <input required id="fname" name="fname">
       <label for="lname">Last name:</label>
-      <input type="text" id="lname" name="lname">
+      <input required id="lname" name="lname">
       <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email">
+      <input required type="email" id="email" name="email">
       <label for="message">Write your message here:</label>
-      <input type="text" id="message" name="message" value="" max-length="50">
+      <input required id="message" name="message" value="" max-length="50">
       <p>What are you interested in?</p>
+      <div>
       <input type="checkbox" id="binding" name="binding" value="binding">
-      <label for="binding">Bouquet binding </label>
+      <label for="binding">Bouquet binding</label>
+    </div>
       <input type="checkbox" id="garden" name="garden" value="garden">
       <label for="garden">Garden planning</label>
       <button type="submit">Send</button>
     </form>
   </section>
-  <section class="faq">
-  <h1>Blablabla</h1>
-</section>
-</main>
 
 
 
-    <section class="accordion">
+
+    <section class="faq-section">
+      <div class="faq-text">
       <!-- Accordion -->
       <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">
+        <h3>Where are you located?</h3>
+      </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>We are located in Sigtuna. A small town between Stockholm and Uppsala.</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">
+       <h3>Where do you get your flowers from?</h3> 
+      </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>We always buy our flowers from local producers. We love flowers but taking care of the environment is always number one.</p> 
+      </div>
+
+      <div class="question" id="section3">
+        <h3>Do you do arrangements for weddings and funerals?</h3> 
+       </div>
+       <div class="answer">
+         <p>Yes, we do. Please write us a message in the form and we will contact you.</p>
+       </div>
+
       </div>
     </section>
+  </main>
   
-    <!-- dont forget to link the javascript file here! -->
+  <script src="./script.js"></script>
   </body>
 </html>

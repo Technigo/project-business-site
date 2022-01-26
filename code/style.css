@@ -5,18 +5,22 @@ body, html {
   margin:0px;
   font-family: 'Cormorant', serif;
   color: black;
+  
 }
 
 .header-section {
-  width: 100vw;
-  height: 80vh;
+  position:relative;
+  width: 100%;
+  height: 70vh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   text-align: center;
-  margin:0;
-  padding:0;
-  border:0px;
+  object-fit: cover;
+  overflow:hidden;
+  margin:0px;
+  padding:0px;
+  
 }
 
 .text-header{
@@ -24,32 +28,36 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content:center;
-  margin-top: 200px;
+  margin-top: 75px;
   border:0px;
 }
 
 .hero-video {
   position: absolute;
   width: 100%;
-  height: 80%;
+  height: 100%;
   object-fit: cover;
-  z-index: -1;
-  
-
-  
+  z-index: -1; 
+  margin:0px;
 }
 
 h1{
  
-  font-size: 50px;
-  text-align: center;
-  
+  font-size: 30px;
+  text-align: center; 
 }
 
 h2{
   
-  font-size: 30px;
- 
+  font-size: 20px;
+}
+
+h3{
+ font-size: 22px; 
+}
+
+p{
+  font-size: 25px;
 }
 
   button {
@@ -67,7 +75,6 @@ h2{
   font-size: 25px;
   margin: 4px 2px;
   cursor: pointer;
- 
 }
 
 button:hover {
@@ -82,23 +89,22 @@ button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(225, 225, 225);
-  margin:0px;
-}
-
-.form{
-  margin:0px 30px 30px 30px;
-  padding:20px;
-  background-color:rgb(255,225,255,0.8);
-  font-size: 25px;
-  border-radius: 25px;
+  height:100%;
+  width:100%;
+  background-color: rgb(227,227,227);
+  
   
 }
 
-.faq{
-  display: block;
-  background-color:rgb(255,225,255);
+.form{
+  margin:50px 30px 30px 30px;
+  padding:20px;
+  font-size: 30px;
+  font-weight: bold;
   border-radius: 25px;
+  width:80%;
+  height:510px;
+
 }
 
  input{
@@ -112,48 +118,106 @@ input[type=checkbox] {
  
 }
 
+.faq-section{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width:80%;  
+  border-radius: 25px;
+}
 
-.checkbox{
-  display:inline-block;
+.question{
+  position: relative;
+  background-color: rgb(255, 208, 254,0.9);
+  cursor: pointer;
+  padding: 1px;
+  margin: 20px 20px 20px 5px;
+  width: auto;
+  text-align: left;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+}
+
+
+.faq-text{
+  margin:0px 30px 0px 10px;
+  width:100%;
+}
+
+.answer{
+  display:none;
 }
 
 .active + .answer {
-  /* some styling here */
+display: block;
 }
 
-@media (min-width: 668px){
+.question::after {
+  content: "\002B";
+  position: absolute;
+ 
+  right: 20px;
+  top: 10px;
+  font-size: 4vh; 
+}
+.question.active::after {
+  content: "\2212";
+  font-size: 4vh;
+}
+
+
+
+
+
+ @media (min-width: 668px) and (max-width:1024px){
 
   .wrapper{
     flex-direction: row;
   }
   
-  h1{
- 
-    font-size: 50px;
+  .text-header{
+    margin-top:250px;
   }
 
 
-h2{
+  h1{
+    font-size: 50px;
+  }
+
+  h2{
   font-size: 30px;
 }
+
+  h3{
+    font-size: 30px;
+  }
+
+  p{
+    font-size: 25px;
+  }
 }
 
 @media (min-width: 1025px) {
 
   .wrapper{
     flex-direction: row;
-    
+  }
+
+  .text-header{
+    margin-top: 180px;
   }
 
   .form{
-    margin:200px;
+    width:40%;
   }
 
   .faq{
     margin:200px;
   }
 
-
+  .faq-section{
+    width: 40%;
+  }
 
   h1{
  
@@ -163,5 +227,17 @@ h2{
 h2{
   
   font-size: 30px;
+}
+
+h3{
+  font-size: 30px;
+}
+
+p{
+  font-size: 25px;
+}
+
+.faq-section{
+  flex-direction:row;
 }
 }
