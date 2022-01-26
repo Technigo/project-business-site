@@ -127,7 +127,7 @@ select {
   padding: 15px;
 }
 
-/* MEDIA QUERIES */
+/*!!! MEDIA QUERIES !!!*/
 
 /* TABLET SIZE 481PX - 768PX */
 @media screen and (min-width: 481px) and (max-width: 758px) {
@@ -162,8 +162,17 @@ select {
     font-weight: 100;
   }
 
+  .box {
+    display: inline-block;
+    margin: 15px 0 15px 0;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
   .responsive {
     margin: 20px 0 30px 0;
+    justify-content: center;
   }
 }
 
@@ -201,8 +210,7 @@ select {
   }
 
   .box {
-    display: flex;
-    grid-gap: 1rem;
+    display: inline-block;
     align-items: baseline;
   }
 
@@ -248,6 +256,10 @@ select {
     text-align: center;
   }
 
+  .selling-copy {
+    text-align: center;
+  }
+
   h3 {
     font-family: Lobster, cursive;
     color: #a36666;
@@ -256,7 +268,7 @@ select {
   }
 
   .box {
-    display: flex;
+    display: inline-block;
     flex-direction: row;
     align-content: center;
     gap: 10px;
