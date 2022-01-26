@@ -3,20 +3,64 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  background-color: #2a9d8f;
 }
 
-video {
-  /*object-fit: contain;
-  height: 60vh;*/
-
+.video-header {
+  height: 50vh;
   width: 100vw;
-  height: 60vh;
-  object-fit: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
 }
+
+.video-header video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  position: absolute;
+  color: #264653;
+  text-shadow: 3px 3px 6px white;
+}
+
+h2 {
+  color: #264653;
+}
+
+form {
+  background-color: #e9c46a;
+  height: 30vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 50vw;
+  margin-top: 2vh;
+}
+
+.checkbox {
+  width: 10vw;
+}
+
+button {
+  width: 20vw;
+  margin-top: 1vh;
+}
+
+
 
 
 

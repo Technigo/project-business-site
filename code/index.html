@@ -6,41 +6,52 @@
     <link rel="stylesheet" href="./style.css"/>
     <title>Business site "TRAV-AILABLE"</title>
   </head>
+
   <body>
     <!-- hero video or image as header -->
-    <header id="hero">
-      <video autoplay muted loop id="heroVideo">
+    <header class="video-header" id="videoHeader">
+      <video autoplay muted loop poster="">
         <source src="./videos/Video Footage Of People Climbing A Mountain.mp4" type="video/mp4">
         <source src="./videos/Video Footage Of People Climbing A Mountain.webm" type="video/webm">
+        Your browser doesn't support this video format.
       </video>
-      <div class="hero-text">
-        <h1>WHERE CAN YOU AFFORD TO TRAVEL?</h1>
-      </div>
+        <h1>HOW MANY MOUNTAINS DO YOU HAVE IN THE BANK?</h1>
     </header>
 
+    <main>
     <!-- Signup form -->
-    <form>
-      <input type="email" id="email" name="email" required />
-      <input type="password" id="password" name="password" required />
-      <button type="submit" id="login" class="login">Login</button>
-      <input type="checkbox" id="checkbox" name="checkbox" />
-      <input type="checkbox" id="checkbox" name="checkbox" />
-    </form>
+      <form id="form" action="https://httpbin.org/anything" method="post">
+        <label for="email">
+          <input type="email" id="email" name="email" placeholder="Email" required />
+        </label>
+        <label for="password">
+          <input type="password" id="password" name="password" placeholder="Password" required />
+        </label>
+        <label for="terms">I agree with the terms and conditions
+          <input type="checkbox" id="checkbox" class="checkbox" name="terms" required />
+        </label>
+        <label for="newsletter">Sign up to our newsletter
+        <input type="checkbox" id="checkbox" class="checkbox" name="newsletter" />
+        </label>
+        <button type="submit" id="logIn" >Log in</button>
+        <button type="submit" id="signUp" >Sign up</button>
+      </form>
 
-    <section class="accordion">
+      <section class="accordion">
       <!-- Accordion -->
-      <h1>FAQ</h1>
+        <h2>FAQ</h2>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <div class="question" id="section1">Section 1</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
+        <div class="question" id="section2">Section 2</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+     </section>
+    </main>
     
     <script src="script.js"></script>
   </body>
