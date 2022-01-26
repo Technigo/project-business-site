@@ -5,3 +5,41 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .active + .answer {
   /* some styling here */
 }
+
+.accordion-button {
+  display: block;
+  width:100%;
+  padding: 15px;
+  outline: none;
+  cursor: pointer;
+  background-color: rgb(10, 88, 88);
+  color: white;
+  text-align: left;
+  transition: background-color 1s;
+ 
+}
+/* Unicode for arrow down 25BC*/
+.accordion-button::after {
+content:'\25bc';
+float: right;
+
+}
+.accordion-button--active + .accordion-content { display: block}
+.accordion-button--active {background:violet }
+.accordion-button--active::after {content: '\25b2' }
+
+.accordion-content {
+
+  /* this makes it animated but not responsive?
+  
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s;*/
+  padding: 0 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #eeee;
+  /*this is for the nonanimated, responsive*/
+  display: none;
+  overflow: auto;
+  
+}
