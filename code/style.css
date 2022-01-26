@@ -28,19 +28,25 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
-.hero {
+.header-image {
 width: 100vw;
 height: 100vh;
+position: relative;
+background-position: center;
+background-repeat: no-repeat;
 background: url("./images/hero-image-mobile.jpg");
+z-index: -1;
 background-size: cover;
+overflow: hidden;
+
 }
 
 /* This is the flex-parent */
 .container {
   width: 100vw;
   height: 15vh;
-  display: flex;
   position: absolute;
+  display: flex;
   background-color: rgba(255,255,255,0.25); /* creates opacity for the whole navbar excluding links */
 }
 
@@ -71,6 +77,53 @@ background-size: cover;
   /* some styling here */
 /* } */ 
 
+input {
+  font-size: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 1em;
+}
+
+button {
+  padding: 0.5em;
+  margin-bottom: 3em;
+}
+
+.sign-up-form {
+  padding: 1em;
+  margin-top: 2em;
+}
+
+.accordion {
+  margin: 0 0 2em 2em;
+  cursor: pointer;
+}
+
+.answer1, .answer2 {
+  opacity: 0;
+  width: 160px;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.active + .answer1 {
+  opacity: 100%;
+  transition: 1s;
+}
+
+.active + .answer2 {
+  opacity: 100%;
+  transition: 1s;
+}
+
+.question1, .answer1, .question2, .answer2 {
+  padding: 0.5em;
+}
+
 
 
 
@@ -80,7 +133,7 @@ background-size: cover;
 
 @media screen and (min-width: 667px) and (max-width: 1024px) {
 
-  .hero {
+  .header-image {
     background: url("./images/hero-image.jpg");
     background-size: cover;
   }
@@ -100,7 +153,7 @@ background-size: cover;
 
 @media (min-width: 1024px) {
 
-  .hero {
+  .header-image {
     background: url("./images/hero-image.jpg");
     background-size: cover;
   }

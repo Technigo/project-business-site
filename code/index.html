@@ -14,7 +14,6 @@
 
     <header>
 
-      
       <section class="navbar">
         <div class="container">
           <img id="hamburger" class="hamburger" src="images/hamburger.png" alt="open navigation"> 
@@ -32,28 +31,110 @@
           </nav>
         </div>
       </section>
-      
-      <section class="hero">
+
+      <section class="header-image">
         <!-- I don't really know what to put here.. -->
       </section>
+      
     </header>
 
-    <!-- Signup form -->
+    <main>
+      <!-- Signup form -->
+      <section class="sign-up-form">
+        <form
+        id="form"
+        action="http://httpbin.org/anything"
+        method="post">
+        
+        <ul>
+          <li>
+            <label>
+              Name
+              <input id="nameInput" required name="name"/>
+            </label>
+          </li>
+          
+          <li>
+            <label>
+              Phone number
+              <input type="tel" name="phone-number"/>
+            </label>
+          </li>
+          
+          <li>
+            <label>
+              Email
+              <input type="email" required name="email"/>
+            </label>
+          </li>
+          
+          <li>
+            <label>
+              I agree with the <a href="#">Terms and Conditions</a>
+              <input required
+              type="checkbox"
+              name="terms"
+              value="terms"
+              />
+            </label>
+          </li>
+          
+          <li>
+            <label>
+              Sign up for Newsletter
+              <input
+              type="checkbox"
+              name="newsletter"
+              value="newsletter"
+              />
+            </label>
+          </li>
+            
+          <li>
+            <button type="submit">Submit</button>
+          </li>
 
-    <section class="accordion">
+          <li>
+            <h3 id="thankYou"></h3>
+          </li>
+
+        </ul>
+        </form>
+      </section>
+      
+      <!-- End of sign-up-form -->
+      
+      
+      
       <!-- Accordion -->
-      <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+      <section class="accordion">
+        <h1>FAQ</h1>
+        <ul>
+          <li id="Question1" class="question1">
+            <div id="section1">Section 1</div>
+          </li>
+          <li id="Answer1" class="answer1">
+            <div>
+              <p>Lorem ipsum...</p>
+            </div>
+          </li>
+          <li id="Question2" class="question2">
+            <div id="section2">Section 2</div>
+          </li>
+          <li id="Answer2" class="answer2">
+            <div>
+              <p>Lorem ipsum...</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- dont forget to link the javascript file here! -->
+  </main>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+  <footer>
+
+  </footer>
+  <script src="script.js"></script>
   </body>
 </html>
