@@ -14,7 +14,7 @@ document.getElementById("section1").onclick = toggle
 const videoSpeed = document.getElementById("heroVideo");
 
 function myVideoRate() {
-videoSpeed.playbackRate = 0.8;
+videoSpeed.playbackRate = 0.6;
 }
 
 myVideoRate()
