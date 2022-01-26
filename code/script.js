@@ -1,30 +1,47 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-
-// function toggle() {
-//   this.classList.toggle("active")
-// }
-
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-
-// document.getElementById("section1").onclick = toggle
-
-
-
 // Accordion toggling for adding/removing "active" class
-var acc = document.getElementsByClassName("faq__question");
-var i;
+let acc = document.getElementsByClassName("faq__question");
+let i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("faq__question--active");
 
-    var faq__answer = this.nextElementSibling;
+    let faq__answer = this.nextElementSibling;
     if (faq__answer.style.display === "block") {
       faq__answer.style.display = "none";
     } else {
       faq__answer.style.display = "block";
     }
   });
+}
+
+
+// Action toggling for pressing Submit button and displaying black screen of death
+
+document.getElementById('form').onsubmit = (event) => {
+  event.preventDefault();
+  const blackScreen = document.querySelector('.black-screen');
+  const blackScreenIcon = document.querySelector('.black-screen__icon')
+  const blackScreenText = document.querySelector('.black-screen__text')
+  const blackScreenButton = document.querySelector('.black-screen__button')
+  const str = document.getElementById('name').value;
+  const victimName = str.split(" ")[0];
+  console.log(victimName);
+  let blackDeathText = document.getElementById('restInPeace');
+  blackDeathText.textContent = ("Rest In Peace \r\n");
+  blackDeathText.textContent += (victimName);
+
+  blackScreen.style.visibility = "visible";
+  blackScreen.style.opacity = "100%";
+  blackScreenIcon.style.visibility = "visible";
+  blackScreenIcon.style.opacity = "100%";
+  blackScreenText.style.visibility = "visible";
+  blackScreenText.style.opacity = "100%";
+  blackScreenButton.style.visibility = "visible";
+  blackScreenButton.style.opacity = "100";
+
+
+
+
+  console.log("Hello world");
 }

@@ -27,8 +27,6 @@ input:focus, textarea:focus, select:focus {
 
 .button {}
 
-.title {}
-
 .text {}
 
 /* Header Block */
@@ -101,6 +99,10 @@ input:focus, textarea:focus, select:focus {
   text-align: center;
 }
 
+.title--large {
+  font-size: 40px;
+}
+
 .subtitle {
   font-family: 'Roboto Mono', monospace;
   font-size: 19px;
@@ -109,13 +111,16 @@ input:focus, textarea:focus, select:focus {
 
 .block-container {
   border-radius: 5px;
-  padding: 15px 25px;
+  padding: 25px 25px 15px;
   grid-column: span 1;
 }
 
 /* Introduction */
 .intro {
   padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
 }
 
 .intro__text {
@@ -132,6 +137,8 @@ input:focus, textarea:focus, select:focus {
   border-radius: 5px;
   overflow: hidden;
   max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .faq__title {
@@ -213,7 +220,9 @@ input:focus, textarea:focus, select:focus {
   flex-direction: column;
   justify-content: center;
   max-width: 500px;
-  max-height: 600px;
+  /* max-height: 600px; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .signup__form {
@@ -468,6 +477,10 @@ input[type=text], input[type=tel], input[type=email] {
   cursor: pointer;
 }
 
+.btn:active {
+  transform: translateY(4px);
+}
+
 /* Footer */
 .footer {
   text-align: center;
@@ -494,17 +507,140 @@ input[type=text], input[type=tel], input[type=email] {
   text-decoration: underline;
 }
 
+/* Black Screen of Death (hidden by default) */
+.black-screen {
+  /* background-color: #2D2E2F; */
+  background-color: #0b0b0b;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  opacity: 0%;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 2s;
+  transition-delay: 0.5s;
+}
+
+.black-screen__container {
+  display: grid;
+  margin: 25px;
+}
+
+.black-screen__icon {
+  max-width: 350px;
+  max-height: 350px;
+  grid-row: 1;
+  justify-self: center;
+  transition-delay: 4s;
+  opacity: 0%;
+  transition-duration: 4s;
+  visibility: hidden;
+}
+
+.black-screen__text {
+  grid-row: 2;
+  margin-top: -50px;
+  white-space: pre-line;
+  transition-delay: 5s;
+  opacity: 0%;
+  transition-duration: 4s;
+  visibility: hidden;
+}
+
+.black-screen__button {
+  grid-row: 3;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 20px;
+  background: transparent;
+  width: 190px;
+  height: 43px;
+  align-self: center;
+  border: 3px solid white;
+  border-radius: 10px;
+  margin: 15px 0;
+  padding-bottom: 3px;
+  justify-self: center;
+  opacity: 0%;
+  visibility: hidden;
+  transition-duration: 4s;
+  transition-delay: 6s;
+}
+
+.black-screen__button:hover {
+  background-color: white;
+  color: #2D2E2F;
+  cursor: pointer;
+}
+
+.black-screen__button:active {
+  transform: translateY(4px);
+}
+
 /* Media Queries */
 
 /* Media Query Tablet */
 @media (min-width: 668px) and (max-width: 1024px) {
 
-  /* .brand-container__brand {
-    font-size: 180px;
-  } */
+    /* Header Section */
+    .header {
+      height: 75vh;
+      background-size: 1050px;
+    }
+  
+    .brand-container {
+      padding-top: 0px;
+      padding-left: 30px;
+    }
+  
+    .brand-container__brand {
+      font-size: 120px;
+    }
+  
+    /* Page */
+    .page {
+      grid-template-columns: 1fr 1fr;
+      padding: 30px 25px;
+    }
+  
+    /* Centering and Positioning Grid Items */
+    .intro {
+      display: table;
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 2;
+      max-width: 700px;
+    }
+  
+    .intro__text {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 18px;
+    }
+  
+    .faq {
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+    }
+  
+    .signup {
+      margin-left: auto;
+      margin-right: auto;
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1;
+      max-height: 700px;
+    }
+
 }
 
-/* Media Query Tablet */
+/* Media Query Desktop */
 
 @media (min-width: 1025px) {
 
@@ -520,21 +656,17 @@ input[type=text], input[type=tel], input[type=email] {
   }
 
   .brand-container__brand {
-    font-size: 180px;
+    font-size: 170px;
   }
 
   /* Page */
   .page {
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
     padding: 50px 25px;
   }
 
   /* Centering and Positioning Grid Items */
   .intro {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
     display: table;
   }
 
@@ -546,8 +678,6 @@ input[type=text], input[type=tel], input[type=email] {
   }
 
   .faq {
-    margin-left: auto;
-    margin-right: auto;
     grid-column: 1 / span 1;
   }
 
@@ -556,6 +686,12 @@ input[type=text], input[type=tel], input[type=email] {
     margin-right: auto;
     grid-column: 2 / span 1;
     grid-row: 1 / span 2;
+    max-height: 600px;
+  }
+
+  .black-screen__icon {
+    max-width: 450px;
+    max-height: 450px;
   }
   
 }
