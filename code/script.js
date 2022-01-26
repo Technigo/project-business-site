@@ -22,6 +22,15 @@ function toggle() {
   this.classList.rotate('down')
 }
 
+document.getElementById('form').onsubmit = event => {
+  event.preventDefault()
+
+  console.log('Form submitted')
+  // document.getElementById('greeting').innerText = ´Thank you for signing up Linnea´
+}
+
+
+
 
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
