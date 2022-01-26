@@ -18,14 +18,18 @@ body {
   font-family: "Heebo", sans-serif;
   background-color: #dedcdc;
 }
-header {
-  height: 900px;
+.video-header {
+  height: 90vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  overflow: hidden;
 }
-video {
+.video-header video {
   width: 100%;
-  height: 900px;
-  object-fit: cover;
+  height: 100%;
   position: absolute;
+  object-fit: cover;
   top: 0;
   left: 0;
 }
@@ -33,26 +37,41 @@ video {
   color: white;
   font-size: 60px;
   font-family: "Abril Fatface";
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  z-index: 1;
   padding: 10px 30px;
 }
-.membership {
+.main {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-.sign-up-form {
+.faq {
   display: block;
 }
 form {
   display: grid;
   justify-content: center;
 }
-.dress {
-  background-color: white;
+.faq-image,
+.newsletter-picture {
+  background-color: #f1ecec;
 }
-.dress img {
+.faq-image img {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  display: block;
+  padding: 50px;
+  opacity: 0.7;
+}
+.newsletter {
+  align-items: center;
+  margin: auto;
+}
+.newsletter-picture img {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
   width: 90%;
   height: auto;
   margin: auto;
