@@ -9,7 +9,7 @@
   -moz-box-sizing: border-box;
   }
 
-  .hero {
+.hero {
   width: 100vw;
   height: 70vh;
   background: url("./images/coffee.jpg");
@@ -60,18 +60,23 @@ h1 {
   background-color: rgb(143, 118, 104);
 }
 
-.form,
-.accordion-body {
+.form-wrapper,
+.accordion-wrapper {
   width: 50%;
-}
-
-.accordion-body {
   padding: 50px 30px;
 }
 
-.accordion__header{
+.form {
+  color: black;
+  background-color: rgb(100, 71, 54);
+  padding: 30px 30px;
+  border-radius: 20px;
+}
+
+.accordion__header {
   font-size: 2rem;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .accordion {
@@ -79,6 +84,7 @@ h1 {
   background-color: white;
   padding: 30px 30px;
   font-family: 'rubik', sans-serif;
+  border-radius: 20px;
 }
 
 .input {
@@ -86,12 +92,20 @@ h1 {
   margin: 10px 10px;
 }
 
-.input__label {
+.input__header {
   position: relative;
   padding: 10px 0;
   font-size: 1.25rem;
   color: black;
   cursor: pointer;
+}
+
+.input__paragraph {
+  display: none;
+}
+
+.active + .input__paragraph {
+  display: block;
 }
 
 @media (min-width: 667px) {
