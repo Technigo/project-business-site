@@ -10,78 +10,114 @@
 </head>
 
 <body>
- <header>
-   
-  <section class="hero">
-    <h3 class="hero-text1">Justbean to</h3>
-    <h1 class="hero-text2">Craving Coffee</h1>
-             </section>
+  <header>
+
+    <section class="hero">
+      <img class="logo" src="./Images/logowhite.png" />
+      <a class="header-link" href="#">Read more about us!</a></div>
+      <h3 class="hero-text1">Justbean to</h3>
+      <h1 class="hero-text2">Craving Coffee</h1>
+    </section>
   </header>
 
+    <label 
   <!-- Here is a small text-section -->
-  
+
   <div class="textbox">
     <img class="needle" src="./Images/needle1.svg" />
-     
-        <h2>For the love of </h2><br>
-      <h2>the brew</h2><br>
-      <h5>Welcome to JustBean</h5><br>
-      <p class="coffeetext">JustBean is a site dedicated to drinking quality coffee, join Ben and Becky as they travel to their favourite
+
+    <h2>For the love of </h2><br>
+    <h2>the brew</h2><br>
+    <h5>Welcome to JustBean</h5><br>
+    <p class="coffeetext">JustBean is a site dedicated to drinking quality coffee, join Ben and Becky as they travel to
+      their favourite
       coffee spots.</p>
-     
+
   </div>
-  
+
   <!-- Signup form -->
   <section class="form-image-wrapper">
     <div class="form-wrapper">
       <div class="title">Login</div>
-      <form action="https://httpbin.org/antything">
-    <form>
 
-      <label for="name">Name</label>
-      <input type="text" id="fname" placeholder="Enter your Name">
-      
-      <label for="email">Email</label>
-      <input type="text" id="email" placeholder="Enter your Email">
+      <form id="form" action="https://httpbin.org/anything" method="post"> 
 
-    <label for="pwd">Password </label> 
-      <input type="password" id="pwd" placeholder="Enter your Password">
-   
-    
-    <div class="text"><a href="#">Forgot your password?</a></div>
-      <label for="purpose">  </label>
+      <form>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" required placeholder="Enter your Name">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" required placeholder="Enter your Email">
+
+        <label for="pwd">Password </label>
+        <input type="password" id="pwd" required placeholder="Enter your Password">
+
+
+        <div class="text"><a href="#">Forgot your password?</a></div>
+        <label for="purpose"> </label>
         <input type="radio" name="purpose" value="guest">Guest
         <input type="radio" name="purpose" value="staff">Staff
-    
 
-      <label for="terms">  </label>
-        <input type="checkbox" name="terms" value="terms">I accept the <a href="#">Terms & Conditions</a> 
-    
+
+        <label for="terms"> </label>
+        <input type="checkbox" name="terms" value="terms">I accept the <a href="#">Terms & Conditions</a>
+
 
         <label for="newsletter"></label>
         <input type="checkbox" name="newsletter" value="newsletter">I want to have the Newsletter
-           
+
         <input type="submit" value="Submit">
       </form>
     </div>
-  </section>
+ 
 
 
-  <section class="accordion">
-    <!-- Accordion -->
-    <!-- <h1>FAQ</h1> -->
 
-    <!-- <div class="question" id="section1">Section 1</div> -->
-    <div class="answer">
-      <!-- <p>Lorem ipsum...</p> -->
+  <!-- Accordion -->
+  
+
+  <div class="accordion">
+    <div class="contentBx">
+      <h1 class="accordion-name">FAQ</h1>
+      <div class="label">Where is JustBean located?</div>
+      <div class="content">
+        <p>The address is 8400 Highway 100, Nashville, TN 37221, a short scenic drive from downtown Nashville. Check out
+          our map & directions page for more information</p>
+      </div>
     </div>
 
-    <!-- <div class="question" id="section2">Section 2</div> -->
-    <div class="answer">
-      <!-- <p>Lorem ipsum...</p> -->
+    <div class="contentBx">
+      <div class="label">Are there healthy options on your menu?</div>
+      <div class="content">
+        <p>We do have some healthier alternatives on our menu. Breakfast options include fresh fruit and egg whites. For
+          supper, try any of our salads, grilled catfish, smoked turkey, pork loin or some of our leaner side dishes.
+        </p>
+      </div>
     </div>
-  </section>
-  <!-- dont forget to link the javascript file here! -->
+
+    <div class="contentBx">
+      <div class="label">Do you have parking? Will I have to pay to park?</div>
+      <div class="content">
+        <p>We have ample off-street parking in our lot, and it’s all free!</p>
+      </div>
+    </div>
+
+    <div class="contentBx">
+      <div class="label">How can I stay connected with the Loveless Cafe?</div>
+      <div class="content">
+        <p>Sign up for our emails, follow us on Facebook, Instagram, Twitter, and Pinterest, and show us your Loveless
+          Cafe memories with #MyLoveless or send us an email.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+  <script src="script.js"></script>
+
+  <footer>Welcome to JustBean</footer>
+  
 </body>
 
 </html>
