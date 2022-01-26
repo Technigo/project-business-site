@@ -15,14 +15,6 @@ body {
   /* some styling here */
 }
 
-/* video {
-  height: 80vw;
-  width: 100%;
-  z-index: 1;
-  position: relative;
-  object-fit: cover;
-} */
-
 /* STYLING VIDEO */
 #hero video {
   height: 80vw;
@@ -60,11 +52,6 @@ body {
   margin-bottom: 50px;
 }
 
-.order-form {
-  margin-top: 15px;
-  padding: 20px 0 10px 0;
-}
-
 .input {
   border-radius: 10px;
 }
@@ -76,6 +63,7 @@ form {
   border: solid 1px #a36666;
   border-radius: 15px;
   padding: 15px;
+  margin-top: 20px;
 }
 
 button {
@@ -124,14 +112,39 @@ h3 {
   width: 12rem;
 }
 
+.box {
+  display: inline-block;
+  margin: 15px 0 15px 0;
+  max-width: 90%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
 select {
   display: inline;
+}
+
+.accordion {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #a36666;
+  border-radius: 15px;
+  padding: 15px;
 }
 
 /* MEDIA QUERIES */
 
 /* TABLET SIZE */
 @media (min-width: 667px) and (max-width: 1024px) {
+}
+
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  text-align: start;
+  margin-top: 5rem;
 }
 
 /* DESKTOP SIZE */
