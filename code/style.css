@@ -2,6 +2,171 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+html, body {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Nova Mono', monospace;
+  /*background-color: #020305;*/  
+  background-color: #32323A;
+}
+
+/*Extra small devices, 320px and up*/
+@media only screen and (min-width: 320px) {...} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+
+/*Hero image, navbar*/
+.heroimage {
+  background-image: url("../heroimage.jpeg");
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} 
+
+.heroimage-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+nav ul, li, a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  margin: 5px;
+}
+
+/*About section*/
+.about-section {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+}
+
+/*Signup form*/
+.signup-form {
+  background-image: url("../signupform-background.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.signup-form form {
+  background-color: white;
+  padding: 0px 100px 0px 100px;
+  border-radius: 15px;
+}
+
+.signup-form form div {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  margin: 10px;
+}
+
+.signup-form input, textarea {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 3px;
+  width: 150px;
+}
+
+.signup-form textarea {
+  width: 250px;
+  height: 100px;
+}
+
+.submit-button-container {
+  align-items: center;
+}
+
+.submit-button {
+  border: 1px solid lightgrey;
+  width: 100px;
+  border-radius: 15px;
+  font-size: 20px;
+  
+}
+
+.submit-button:hover {
+  background-color: grey;
+}
+
+
+/*Accordion FAQ*/
+.accordion {
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10vh 30vw 10vh 30vw;
+  padding: 50px;
+  border-radius: 15px;
+
+}
+
+.accordion-question div {
+  background-color: #32323A;
+  width: 20vw;
+  padding: 10px;
+  /*change this below in mobile version, otherwise not looking good, can add width:100% otherwise in mobile v*/
+  text-align: center;
+}
+
+.accordion-question .active {
+  background-color: green;
+}
+
+.accordion-question .question {
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+
+
+/*Toggle style alternatives to show answers*/
+/*1. Default style is to hide answer*/
+.answer {
+  display: none;
+  color: white;
+}
+
+/*2. When toggle in JS to add .active as class, change child element immediately following parent class .active*/
+/*This is adjacent sibling combinator/adjacent selector syntax*/
 .active + .answer {
-  /* some styling here */
+  display: block;
+  overflow: hidden;
+}
+
+/*Footer*/
+footer {
+  background-color: black;
+  min-height: 10vh;
+  overflow: hidden;
+  color: white;
+  margin-top: 30px;
+}
+
+footer section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

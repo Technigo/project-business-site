@@ -3,28 +3,118 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Project 3 - Business site - R Bank</title>
+    <meta name="description" content="Technigo week 3 project">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <main>
+    <header class="heroimage">
+      <nav class="heroimage-nav">
+        <h1>R BANK</h1>
+        <ul>
+          <li><a href="">Signup</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="about-section">
+      <article>
+        <h1>Who are we?</h1>
+      </article>
+    </section>
 
     <!-- Signup form -->
+    <section class="signup-form">
+      <form action="https://httpbin.org/anything" method="post">
+        <div>
+          <h1>Contact us for more details</h1>
+        </div>
+        <div>
+          <p>Personal information</p>
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" name="user_fname" required>
+
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" name="user_lname" required>
+        </div>
+
+        <div>
+          <p>Contact information</p>
+          <label for="mail">E-mail:</label>
+          <input type="email" id="mail" name="user_email" placeholder="example@examplemail.com" required>
+        </div>
+
+        <div>
+          <p>Select who you are</p>
+          <input type="radio" id="identityChoice2" name="identity" value="private"
+          checked>
+          <label for="identityChoice2">Private</label>
+
+          <input type="radio" id="identityChoice1" name="identity" value="company"
+          checked>
+          <label for="identityChoice1">Company</label>
+        </div>
+        
+        <div>
+          <label for="msg">Message:</label>
+          <textarea id="msg" name="user_message" maxlength="250" placeholder="Optional, max 250 words"></textarea>
+        </div>
+        <div>
+          <input type="checkbox" id="accept" name="acceptedTermsandConditions" required>
+          <label for="accept">I accept the terms and conditions for R Bank privacy policy</label>
+      
+          <input type="checkbox" id="subscribe" name="subscribedToNewsletters">
+          <label for="subscribe">Send me newsletters</label>
+        </div>
+
+        <div class="submit-button-container">
+          <button class="submit-button" type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
 
     <section class="accordion">
       <!-- Accordion -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <article class="accordion-question">
+      <div class="question" id="section1">Can I switch to R Bank as a non-EU citizen?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Yes. We provide you with solutions for integrating you account in our bank. Sign up in the form and we will contact you within 24 hours.</p>
       </div>
+      </article>
 
-      <div class="question" id="section2">Section 2</div>
+      <article class="accordion-question">
+      <div class="question" id="section2">Where is R Bank located?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>We are a cyberbank, implying there are no physical offices.</p>
       </div>
+      </article>
+
+      <article class="accordion-question">
+      <div class="question" id="section3">What is the yearly price?</div>
+      <div class="answer">
+        <p>We follow set prices according to the current Bitcoin valuation, thus the price can range from year to year. However, it will nonetheless be lower than all currently exisiting banks in the market. Sign up for more information.</p>
+      </div>
+      </article>
+
     </section>
+
+    <footer>
+      <section>
+        <p>R Bank</p>
+        <p>&copy;<script>document.write(new Date().getFullYear())</script></p>
+      </section>
+    </footer>
+    </main>
+
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
   </body>
 </html>
