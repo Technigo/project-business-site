@@ -2,6 +2,8 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+/* STYLING FOR MOBILE DEVICES 320PX - 480PX*/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -74,8 +76,11 @@ label {
 }
 
 h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: Lobster, cursive;
   color: #a36666;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 100;
 }
 
 .extra-big-header {
@@ -90,13 +95,6 @@ h3 {
   font-family: Lobster, cursive;
   color: #a36666;
   font-size: 34px;
-  margin-bottom: 10px;
-}
-
-.medium-size-header {
-  font-family: Lobster, cursive;
-  color: #a36666;
-  font-size: 18px;
   margin-bottom: 10px;
 }
 
@@ -127,35 +125,10 @@ select {
 
 /* MEDIA QUERIES */
 
-/* TABLET SIZE */
-@media (min-width: 667px) and (max-width: 1024px) {
-}
-
-.extra-big-header {
-  font-family: Lobster, cursive;
-  color: #a36666;
-  font-size: 60px;
-  margin: 40px 0 40px 0;
-  text-align: center;
-}
-
-.big-header {
-  font-family: Lobster, cursive;
-  color: #a36666;
-  font-size: 30px;
-}
-
-.box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 1rem;
-  text-align: start;
-}
-
-/* DESKTOP SIZE */
-@media (min-width: 1024px) {
+/* TABLET SIZE 481PX - 768PX */
+@media screen and (min-width: 481px) and (max-width: 758px) {
   #hero video {
-    height: 50vw;
+    height: 55vw;
     position: ;
     width: 100%;
     z-index: 5;
@@ -166,12 +139,71 @@ select {
   .extra-big-header {
     font-family: Lobster, cursive;
     color: #a36666;
+    font-size: 60px;
+    margin: 40px 0 40px 0;
+    text-align: start;
+  }
+
+  .big-header {
+    font-family: Lobster, cursive;
+    color: #a36666;
+    font-size: 30px;
+  }
+
+  h3 {
+    font-family: Lobster, cursive;
+    color: #a36666;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 100;
+  }
+
+  .box {
+    display: flex;
+    grid-gap: 1rem;
+    align-items: baseline;
+  }
+}
+
+/* SMALL SCREENS, LAPTOPS SIZE 769PX-1024PX */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* DESKTOP SIZE, LARGE SCREENS */
+@media (min-width: 1025px) and (max-width: 1600px) {
+  #hero video {
+    height: 50vw;
+    position: ;
+    width: 100%;
+    z-index: 5;
+    position: relative;
+    object-fit: cover;
+  }
+
+  .responsive {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+  }
+
+  form {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #a36666;
+    border-radius: 15px;
+  }
+
+  .extra-big-header {
+    font-family: Lobster, cursive;
+    color: #a36666;
     font-size: 58px;
     margin: 40px 0 40px 0;
     text-align: center;
   }
 
-  .medium-size-header {
+  h3 {
     font-family: Lobster, cursive;
     color: #a36666;
     font-size: 18px;
