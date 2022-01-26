@@ -110,6 +110,7 @@ input {
   background: none;
   font-size: 18px;
   color: #555;
+  cursor: pointer;
   /* margin-bottom: 30px;
   border-radius: 25px; */
  
@@ -218,6 +219,7 @@ select {
   border-radius: 30px;
   border: none;
   outline: none;
+  cursor: pointer;
   box-shadow: 
     0px 0px 2px #5f5f5f,
     0px 0px 0px 5px #ecf0f3,
@@ -232,10 +234,7 @@ select:focus, select:active, select::after {
   outline: 2px solid #8D9AFF; 
 }
 
-option  {
-  border-radius: 10px;
-  padding: 20px;
-}
+
 
 /* ACCORDION */
 
@@ -256,7 +255,7 @@ option  {
   /* some styling here */
   display: block;
   border-top: hidden;
-
+ 
   
 }
 
@@ -264,6 +263,10 @@ option  {
 
 .answer {
   display: none;
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
   padding: 20px;
  
   border-radius: 20px;
