@@ -5,6 +5,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #2a9d8f;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .video-header {
@@ -27,39 +28,104 @@ body {
   width: 100%;
 }
 
-h1 {
+nav {
   position: absolute;
-  color: #264653;
-  text-shadow: 3px 3px 6px white;
+  top:0;
+  text-shadow: 3px 3px 6px black;
 }
 
-h2 {
-  color: #264653;
+a {
+  text-decoration: none;
+  color: #e9c46a;
+  margin: 1vh 2vw 0 2vw;
+}
+
+h1 {
+  position: absolute;
+  color: #e9c46a;
+  text-shadow: 3px 3px 6px black;
 }
 
 form {
   background-color: #e9c46a;
   height: 30vh;
-  width: 100vw;
+  width: 90vw;
+  max-width: 350px;
+  margin: 5vh auto;
+  padding: 5vh 0;
+  border-radius: 10px;
+  box-shadow: 10px 10px 21px 1px rgba(0,0,0,0.49);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 input {
-  width: 50vw;
+  width: 80%;
   margin-top: 2vh;
+  border-radius: 5px;
+  background-color: rgba(199, 198, 198, 0.63);
+  border: 2px solid #264653;
+}
+
+label {
+  font-weight: bold;
 }
 
 .checkbox {
-  width: 10vw;
+  width: 5vw;
 }
 
-button {
-  width: 20vw;
-  margin-top: 1vh;
+.button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #264653;
+  border-radius: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  line-height: normal;
+  margin: 5px 0;
+  min-height: 10px;
+  min-width: 90px;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  transition: all 2s cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 30%;
+  will-change: transform;
 }
 
+.button:disabled {
+  pointer-events: none;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: #264653;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+h2 {
+  background-color: #264653;
+  color: #e9c46a;
+}
+
+footer {
+  background-color: #264653;
+  height: 15vh;
+}
 
 
 
@@ -82,3 +148,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 @media (min-width:1025px) {
 
 }
+
+
+
