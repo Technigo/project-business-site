@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Project 3</title>
   <!--CSS style linking-->
@@ -28,8 +27,8 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#contact">Sign up</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#signup">Sign up</a></li>
         </ul>
       </nav>
       <!--end navigation bar-->
@@ -42,57 +41,89 @@
         </div>
       </div>
       <!--end hero-->
-
+      <div class="mainSection">
       <!-- Signup form -->
       <section class="signupForm">
-        <h1>Signup</h1>
-        <form class="signupForm-info" action="https://httpbin.org/anything" method="post">
+            <h1>Signup</h1>
+        <form class="signupForm-info" 
+              action="https://httpbin.org/anything" 
+              method="post">
+              
           <label for="fname">First name:</label><br />
-          <input type="text" id="fname" name="fname" /><br />
+          <input  type="text" 
+                  id="fname" 
+                  name="fname" required 
+                  minlength="4" 
+                  maxlength="15"/><br />
           <br>
-          <label for="lname">Last name:</label><br />
-          <input type="text" id="lname" name="lname" /><br>
+          <label for="lname">Last name:</label><br>
+          <input  type="text" 
+                  id="lname" 
+                  name="lname" required 
+                  minlength="4" 
+                  maxlength="15"/><br>
           <br>
-          <input type="radio" id="male" name="gender" value="male" />
+          <fieldset>
+            <legend>Gender</legend>
+          <input  type="radio" 
+                  id="male" 
+                  name="gender" 
+                  value="male" />
           <label for="html">Male</label><br>
 
-          <input type="radio" id="female" name="gender" value="female" />
-          <label for="female">Female</label><br>
+          <input  type="radio" 
+                  id="female" 
+                  name="gender" 
+                  value="female" />
+          <label for="female">Female</label>
+          </fieldset><br>
           <br>
-          <label for="pwd">Password:</label>
-          <input type="password" id="pwd" name="pwd"><br>
+          <label for="email">Email:</label><br>
+          <input  type="email" 
+                  id="email" 
+                  name="email" required><br>
           <br>
-          <input type="checkbox" id="term" name="term" value="Term&condition">
-          <label class="term" for="term"> <i>Agree term and condition</i></label><br>
-
+          <input  type="checkbox" 
+                  id="term" 
+                  name="term" 
+                  value="Term&condition">
+          <label class="term" for="term"> 
+            <i>Agreed term and conditions</i>
+          </label><br>
           <br>
           <input type="submit" value="Submit">
         </form>
       </section>
-      
+
       <!-- Accordion -->
       <section class="accordionSection">
         <h1>FAQ</h1>
 
         <button class="accordion">Question 1</button>
         <div class="panel">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
         </div>
-        
+
         <button class="accordion">Question 2</button>
         <div class="panel">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
         </div>
-        
+
         <button class="accordion">Question 3</button>
         <div class="panel">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
         </div>
       </section>
-
+    </div>
     </div>
   </div>
-  
+
   <!--JavaScript file-->
   <script type="text/javascript" src="js/accordion.js"></script>
 
