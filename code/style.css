@@ -7,12 +7,6 @@ body {
   min-height: 100vh;
 }
 
-
-.active + .answer {
-  /* some styling here */
-  color: blue;
-}
-
 header {
   background: url("./umbrellas.jpg");
   background-size: cover;
@@ -26,55 +20,100 @@ header {
   font-size: max(3rem, 6vw);
 }
 
-form {
-  background-color: #CEC0CB;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  max-width: 400px;
-  margin: 2em;
-  letter-spacing: 1.2px;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+
+.active + .answer {
+  /* some styling here */
+  display: block;
 }
 
-.form-header {
+.green-background {
+  background-color: #95B86A;
+}
+
+/*Same size, shadow, and margin for the accordion and form*/
+/* .height-width-400 {
+  min-height: 400px;
+  max-width: 400px;
+  margin: 2em;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+} */
+
+.form-header,
+.accordion-header {
   text-align: center;
   color: white;
   font-family: "Montserrat";
-  font-size: max(1.5rem, 1.6vw);
+  font-size: max(1.6rem, 1.6vw);
 }
 
-.form-item {
-  margin: 1rem 2rem;
+/* The accordion header needs padding to look like the form header*/
+/* .padding-top-1-5 {
+  padding-top: 1.5rem;
+} */
+
+.pink-background { 
+  background-color: #CEC0CB;;
 }
+
+form,
+.accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  letter-spacing: 1.2px;
+  padding: 2rem;
+  
+  min-height: 400px;
+  min-width: min(400px, calc(90vw - 8rem));
+  margin: 2em;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+}
+
+.margin-zero {
+  margin: 0;
+}
+/* 
+.margin-left-right-2rem {
+  margin: 0 2rem;
+} */
+
+.answer {
+  display: none;
+}
+
+/* .form-item {
+  margin: 1rem 2rem;
+} */
 
 label {
-  margin: 1em;
+  /* margin: 1em; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.input {
+/* .input {
   margin-top: 5px;
-}
+} */
 
 .form-item.checkbox {
   display: flex;
   flex-direction: row-reverse;
 }
-
+/* 
 .checkbox-box {
   margin: 1rem 1rem 1rem 0;
-}
-
+} */
 
 .send-button {
   align-self: center;
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  margin: 1em;
-
+  /* margin: 1em; */
 }
 
+@media (min-width: 668px) {
+  .content {
+    display: flex;
+  }
+}
