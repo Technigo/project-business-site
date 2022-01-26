@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project 3</title>
+  <title>Professional Barista Course</title>
   <link rel="stylesheet" href="./assets/style.css">
 </head>
 
@@ -24,7 +24,22 @@
   </section>
   <div class="wrapper">
     <div class="form-wrapper">
-      <form class="form"></form>
+      <form class="form" id="form" action="https://httpbin.org/anything" target="__blank" method="post">
+        <h2 class="form__header">COURSE SIGNUP</h2>
+        <input id="nameInput" class="form__input" type="text" name="name" placeholder="Full name*"/>
+        <input id="emailInput" class="form__input" type="email" name="email" placeholder="Email*"/>
+        <input type="tel" id="telInput" class="form__input" name="telephone" placeholder="Phone (123-456-7890)">
+        <select id="courseInput" class="form__input" name="course">
+          <option class="whiteText" value="level">Course Level</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+        <label for="policyInput">
+        <input type="checkbox" id="policyInput" class="form__input form__input--small" name="policy"/>
+        I Agree to <span>Privacy Policy</span></label>
+        <input class="form__input" type="submit">
+      </form>
     </div>
 
     <section class="accordion-wrapper">
@@ -32,15 +47,21 @@
         <h2 class="accordion__header">Frequently Asked Questions</h2>
         <hr>
         <section class="input">
-          <h3 class="input__header">What does the course include?</h3>
-          <p class="input__paragraph">Espresso preparation, milk steaming, latte art training,
-           equipment maintenance, coffee origin experience, and roasting fundamentals
+          <h3 class="input__header">Who can take the course?</h3>
+          <p class="input__paragraph">Anyone 18 years or older can take the course!</p>
+        </section>
+        <hr>
+        <section class="input">
+          <h3 class="input__header">How many courses do you offer?</h3>
+          <p class="input__paragraph">A beginners, intermediate, and advanced course. 
           </p>
         </section>
         <hr>
-        <section class="input" >
-          <h3 class="input__header">Who can take the course?</h3>
-          <p class="input__paragraph">Anyone 18 years or older can take the course!</p>
+        <section class="input">
+          <h3 class="input__header">What does the course include?</h3>
+          <p class="input__paragraph">Espresso preparation, milk steaming, latte art training,
+            equipment maintenance, coffee origin experience, and roasting fundamentals.
+          </p>
         </section>
         <hr>
         <section class="input">
@@ -50,7 +71,8 @@
         <hr>
         <section class="input">
           <h3 class="input__header">Will I get a certicate after the course?</h3>
-          <p class="input__paragraph">Yes, you will receive an official barista certificate after completing the course.</p>
+          <p class="input__paragraph">After completing the course you will receive an official barista certificate.
+          </p>
         </section>
         <hr>
       </div>

@@ -7,7 +7,11 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  }
+}
+
+body {
+  background-color: #f3e8dd;
+}
 
 .hero {
   width: 100vw;
@@ -24,8 +28,8 @@ h1 {
 }
 
 .hero__text {
-  text-align: center;
   position: absolute;
+  text-align: center;
   top: 30%;
   width: 100%;
   left: 50%;
@@ -57,7 +61,10 @@ h1 {
 
 .wrapper {
   display: flex;
-  background-color: rgb(143, 118, 104);
+  background-color: #3C2F2F;
+  color: #3c2f2f;
+  /* background-color: #201109; */
+  font-family: 'rubik', sans-serif;
 }
 
 .form-wrapper,
@@ -67,24 +74,54 @@ h1 {
 }
 
 .form {
-  color: black;
-  background-color: rgb(100, 71, 54);
-  padding: 30px 30px;
+  background-color: #8a715a;
+  padding: 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.form__header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.form__input {
+  margin-bottom: 30px;
+  padding: 15px 20px;
+  background-color: #fafafa;
+  border: none;
+  border-radius: 5px;
+  width: 350px;
+  color: #3C2F2F;
+}
+
+.form__input--small {
+  width: 20px;
+}
+
+.form__input::placeholder {
+  color:  #3C2F2F;
+}
+
+hr {
+  color: #3c2f2f;
+}
+
+.accordion {
+  background-color: #fafafa;
+  padding: 30px;
   border-radius: 20px;
 }
 
 .accordion__header {
-  font-size: 2rem;
   text-align: center;
+  font-size: 2rem;
   margin-bottom: 20px;
-}
-
-.accordion {
-  color: black;
-  background-color: white;
-  padding: 30px 30px;
-  font-family: 'rubik', sans-serif;
-  border-radius: 20px;
 }
 
 .input {
@@ -96,7 +133,6 @@ h1 {
   position: relative;
   padding: 10px 0;
   font-size: 1.25rem;
-  color: black;
   cursor: pointer;
 }
 
