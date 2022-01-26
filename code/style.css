@@ -19,7 +19,8 @@ body {
 
 /* STYLING VIDEO */
 #hero video {
-  height: 80vw;
+  height: 55vw;
+  position: ;
   width: 100%;
   z-index: 5;
   position: relative;
@@ -57,7 +58,6 @@ form {
   border: solid 1px #a36666;
   border-radius: 15px;
   padding: 15px;
-  margin-top: 20px;
 }
 
 button {
@@ -110,6 +110,10 @@ h3 {
   object-fit: cover;
 }
 
+.responsive {
+  margin: 20px 0 30px 0;
+}
+
 select {
   display: inline;
 }
@@ -158,10 +162,8 @@ select {
     font-weight: 100;
   }
 
-  .box {
-    display: flex;
-    grid-gap: 1rem;
-    align-items: baseline;
+  .responsive {
+    margin: 20px 0 30px 0;
   }
 }
 
@@ -203,10 +205,17 @@ select {
     grid-gap: 1rem;
     align-items: baseline;
   }
+
+  .responsive {
+    margin: 20px 0 30px 0;
+    display: flex;
+    border-radius: 15px;
+    gap: 20px;
+  }
 }
 
 /* DESKTOP SIZE, LARGE SCREENS */
-@media (min-width: 1025px) and (max-width: 1600px) {
+@media (min-width: 1025px) and (max-width: 1900px) {
   #hero video {
     height: 50vw;
     position: ;
@@ -217,9 +226,10 @@ select {
   }
 
   .responsive {
-    margin-bottom: 50px;
+    margin: 20px 0 30px 0;
     display: flex;
     border-radius: 15px;
+    gap: 20px;
   }
 
   form {
