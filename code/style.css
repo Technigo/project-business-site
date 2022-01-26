@@ -54,7 +54,7 @@ button,
 
 .infotext p {
   font-family: 'Bebas Neue', cursive;
-  font-size: 1.125em;
+  font-size: clamp(1.125em, 1.5vw, 1.4em);
   text-align: center;
   line-height: 1.6em;
   letter-spacing: 1.5px;
@@ -72,6 +72,7 @@ button,
   
   h1 {
     font-size: 5rem;
+    padding-bottom: 0.5em;
   }
   
   .small-text {
@@ -83,8 +84,9 @@ button,
     transform: scale(1.1);
   }
   
-  form input {
-    font-size: 1rem;
+  form input,
+  form textarea {
+    font-size: 0.875rem;
   }
 }
 
@@ -184,7 +186,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 70vw;
+  min-width: 50vw;
 }
 
 .info-modal p {
@@ -336,8 +338,10 @@ select:-webkit-autofill:focus {
 
 .answer {
   background: #E2E2E2; 
-  display: none;
+  height: 0;
+  opacity: 0;
   overflow: hidden;
+  transition: all 500ms ease-out;
 }
 
 .answer p {
@@ -358,18 +362,20 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   background: #4e4d4e;
 }
 
+.active * .fas {
+  transform: rotate(0.25turn);
+  transition: 200ms ease-in-out;
+  margin-right: 0.25em;
+}
 
 .active + .answer {
   /* some styling here */
-  display: block;
+  transition: 300ms ease-out;
+  height: max-content;
+  opacity: 1;
   border-top: none;
 } 
 
-.active * .fas {
-  transform: rotate(0.25turn);
-  transition: 200ms ease-out;
-  margin-right: 0.25em;
-}
 
 
 /* ----------- GALLERY SECTION ----------- */
