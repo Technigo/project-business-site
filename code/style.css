@@ -123,22 +123,21 @@ p {
 .main {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   max-width: 1024px;
   margin: 2rem auto;
 }
 
 .accordion,
 .form {
-  flex: 1;
-  min-width: 27rem;
+  width: 25rem;
   padding: 1em;
+  margin: 0.25rem;
 }
 
 /* form */
-
 .form {
   background-color: var(--color-secondary);
-  margin-right: 1.5rem;
 }
 
 .input-container {
@@ -223,9 +222,11 @@ p {
   margin-right: 0.5rem;
 }
 .icon {
-  flex: 1;
+  width: 100%;
+  height: 100%;
 }
 .answer {
+  width: 100%;
   display: none;
   margin: 0;
   margin-bottom: 1rem;
@@ -236,4 +237,15 @@ p {
 
 .active + .answer {
   display: block;
+}
+
+/* desktop first */
+@media screen and (max-width: 767px) {
+  .branding {
+    display: none;
+  }
+  .accordion,
+  .form {
+    width: 100vw;
+  }
 }
