@@ -30,16 +30,44 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 
-section {
-padding: 2rem 1.5rem;
+.hero-image {
+  width: 100vw;
+  height: 40vh;
+  background-image: url(./images/hero-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 0 30% 70%; /* utan denna rad finns två grid item, ett för <nav> och det andra för <h1>. Då kan <h1> ej centreras.*/
+  justify-content: space-evenly;
 }
 
-.hero {
-  width: 100vw;
-  height: 75vh;
-  background:  red ;
-  /*background: url("./");
-  background-size: contain;*/
+.logo-mobil {
+  align-self: center;
+  padding-top: 50px;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:white;
+
+}
+
+.hero-image h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 3vh;
+    text-align: center;
+  }
+  
+
+.navbar {
+  display: none;
+  }
+
+.navbar ul li {
+  list-style: none;
 }
 
 /* Mobil layout -- Signup form*/
@@ -61,23 +89,159 @@ form label { /* This target every label inside the form*/
    
 }
 
-h1, h2 {
-  text-transform: uppercase;
-}
 
 /* Mobil layout -- Accordion/
 
+/*------TABLET STYLING------*/
 
-/*------DESKTOP STYLING-----*/ 
-/*@media (min-width: 1024px) {
-  h1{
-
-  }
-
-  .hero {
-    height: 100vh;
+@media (min-width: 667px) and (max-width: 1024px) {
   
-  }
+  .hero-image {
+    width: 100vw;
+    height: 70vh;
+    background-size: cover;
+    background-position: bottom;
+    display: grid;
+    grid-template-rows: 10vh;
+  
+    }
+
+    .inner-hero-header { /*detta är ett grid-item till header som är parent container*/
+      width: 100vw;
+      height: 10vh;
+      background-color: gray;
+      color: #fff;
+      opacity: .7;
+      margin-top: 0;
+      
+      }
+    
+    .logo-mobil {
+      display: none;
+    }
+
+    .hero-image h1 {
+      align-self: center;
+      justify-self: center;
+      padding: 10px;
+      background-color: gray;
+      opacity: .85;
+      font-size: 3vw;
+       
+    }
+
+      .navbar {  /* <nav> taggen är placerad i ett grid-item som i det här fallet är 'inner-hero-header'. Flexbox aktiveras i detta element och inte i 'inner-hero-header'*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      } 
+
+      .nav-menu {  /* Flexbox skapar utrymmer mellan länkarna */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+      }
+
+      .nav-item {
+        margin-left: 20px;
+    
+      }
+    
+      .nav-link {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+      }
+      .nav-link:hover {
+        color: #dabf94;
+      
+      }
+    
+      .logo {
+        font-size: 30px;
+        font-weight: 600;
+        color:white;
+        font-family: 'Montserrat', sans-serif;
+        text-decoration: none;
+      }
+    
+
 }
 
-*/
+
+/*------DESKTOP STYLING-----*/ 
+@media (min-width: 1024px) {
+
+.hero-image {
+  width: 100vw;
+  height: 70vh;
+  background-size: cover;
+  background-position: bottom;
+  display: grid;
+  grid-template-rows: 10vh;
+
+  }
+.inner-hero-header { /*detta är ett grid-item till header som är parent container*/
+  width: 100vw;
+  height: 10vh;
+  background-color: gray;
+  color: #fff;
+  opacity: .7;
+  margin-top: 0;
+  }
+
+.logo-mobil {
+  display: none;
+}
+
+.hero-image h1 {
+ align-self: center;
+ justify-self: center;
+ padding: 10px;
+ background-color: gray;
+ opacity: .85;
+ font-size: 3vw;
+
+}
+
+  .navbar {  /* <nav> taggen är placerad i ett grid-item som i det här fallet är 'inner-hero-header'. Flexbox aktiveras i detta element och inte i 'inner-hero-header'*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  } 
+
+  .nav-menu {  /* Flexbox skapar utrymmer mellan länkarna */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .nav-item {
+    margin-left: 20px;
+
+  }
+
+  .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+  }
+  .nav-link:hover {
+    color: #dabf94;
+  
+  }
+
+  .logo {
+    font-size: 30px;
+    font-weight: 600;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+  }
+}
