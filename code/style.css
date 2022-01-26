@@ -3,5 +3,180 @@ in this case it is the div with the answer class next to the div with the active
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
-  /* some styling here */
+  display: block;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@400;600&display=swap');
+
+/* CSS below is to reset default values such as margin, padding and box-sizing
+    and increase the resolution of the text */
+    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  }
+
+.logo {
+  font-family: 'Playfair Display';
+  font-size: 1rem;
+  color:white;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-line {
+  width: 1.5rem;
+  height: 1px;
+  margin-bottom: 0.5rem;
+  fill: white;
+  background-color: white;
+}
+
+.desktop-menu {
+  display: none;
+  text-transform: uppercase;
+}
+
+.desktop-menu a {
+  margin-left: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: 'poppins'; 
+  font-size: 1rem;
+}
+
+.hero {
+  height: 75vh;
+  background: url(/code/images/mike-walter-Zb_flICEe0w-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #f5f3f2;
+  }
+
+.hero-title {
+  font-size: 8vw;
+}
+
+body {
+  background-color: #EED2D5;
+  margin: 0;
+  border: solid #212121 34px;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1, h2 {
+  color: black;
+  font-family: 'Playfair Display';
+  font-size: 3vw;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 12rem;
+}
+
+h3 {
+  color: black;
+  font-family: 'Poppins';
+  font-size: 3vw;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.project-image {
+  width: 200px;
+}
+
+.project-title {
+  background-color: #f5f3f2;
+  cursor: pointer;
+}
+
+.answer {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  border:none;
+  font-family: 'poppins';
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+}
+
+input, select, option, textarea {
+  border: none;
+  background-color: #f5f3f2;
+}
+
+footer {
+  padding: 5rem 1.5rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  align-items: center;
+}
+
+ul a {
+  color: #212121;
+}
+/* On screens that are 768px or more (tablet) */
+
+@media screen and (min-width: 768px) {
+  
+  body {
+    border: solid #212121 34px;
+  }
+  
+  .hero {
+    height: 75vh;
+  } 
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: flex;
+  }
+
+}
+
+/* On screens that are 992px or more (desktop) */
+@media screen and (min-width: 992px) {
+ 
+
 }

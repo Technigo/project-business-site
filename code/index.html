@@ -2,29 +2,162 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <!-- video or image as a header is cool :) -->
+    <!-- Here goes the header -->
+    <header class="hero">
+      <nav>
+        <a href="link to homepage"><p class="logo">Å.SIEURIN</p></a>
+        
+        <!-- This is the menu for mobile -->
 
-    <!-- Signup form -->
+        <div class="hamburger-menu">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </div>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+          <!-- This is the menu for tablet and desktop -->
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+          <div class="desktop-menu">
+            <a href="link to about page">about</a>
+            <a href="link to article page">exhibitions</a>
+            <a href="link to journal page">contact</a>
+          </div>
+      </nav>
+      <h1 class= "hero-title">SIEURIN GALLERY</h1>
+    </header>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+    <!-- Here goes the main content -->
+    <main>
+
+      <!-- Here we have a small text-section -->
+      <section class="text-wrapper">
+        <h2>
+          “What started from humble beginnings has now evolved into a global platform, actively pushing artist collaboration through a variety of publications and events, becoming a great source for original art, limited edition prints and other special projects.”
+        </h2>
+      </section>
+
+      <!-- Accordion section -->
+      <h3>PROJECTS</h3>
+
+      <section class="accordion">
+        <div class="project-title" id="section1">Now Showing Exhibition</div>
+        <div class="answer">
+          <img class="project-image" src="./images/sergey-vinogradov-s6pwJEecDUI-unsplash.jpg" alt="">
+          <h3>Introduction</h3>
+          <p>A clever approach to fashion, intellectual questions about the right
+            topics and always opens up a dialogue. Hajinsky brings in a new light
+            to this sometimes absurd industry.</p>
+        </div>
+
+      </section>
+
+      <section class="accordion">
+        <div class="project-title" id="section1">Now Showing Exhibition</div>
+        <div class="answer">
+          <img class="project-image" src="./images/francesco-bianco-TVsgRyKJDc0-unsplash.jpg" alt="">
+          <h3>Introduction</h3>
+          <p>A clever approach to fashion, intellectual questions about the right
+            topics and always opens up a dialogue. Hajinsky brings in a new light
+            to this sometimes absurd industry.</p>
+        </div>
+
+      </section>
+
+      <section class="accordion">
+        <div class="project-title" id="section1">Now Showing Exhibition</div>
+        <div class="answer">
+          <img class="project-image" src="./images/sergey-vinogradov-s6pwJEecDUI-unsplash.jpg" alt="">
+          <h3>Introduction</h3>
+          <p>A clever approach to fashion, intellectual questions about the right
+            topics and always opens up a dialogue. Hajinsky brings in a new light
+            to this sometimes absurd industry.</p>
+        </div>
+
+      </section>
+
+      <section class="accordion">
+        <div class="project-title" id="section1">Now Showing Exhibition</div>
+        <div class="answer">
+          <img class="project-image" src="./images/sergey-vinogradov-s6pwJEecDUI-unsplash.jpg" alt="">
+          <h3>Introduction</h3>
+          <p>A clever approach to fashion, intellectual questions about the right
+            topics and always opens up a dialogue. Hajinsky brings in a new light
+            to this sometimes absurd industry.</p>
+        </div>
+
+      </section>
+
+      <!-- Here we have a small text-section -->
+      <section class="text-wrapper">
+        <h2>
+          “Our ongoing focus is to continually commission and collaborate with some of the the worlds leading creatives; hand picking both recognised and emerging talent to create exhibitions and exclusive editions for an audience that seeks original and contemporary art.”
+        </h2>
+      </section>
+
+      <!-- Section for the form -->
+      <section class="form-image-wrapper">
+        <div class="form-wrapper">
+          <h3>CONTACT US</h3>
+          <form id= "form" action="https://httpbin.org/anything" method="post">
+            <label for="first-name"
+              >first name
+              <input required type="text" id="first-name" name="first name" />
+            </label>
+
+            <label for="last-name"
+              >last name
+              <input required type="text" id="last-name" name="last name" />
+            </label>
+
+            <label required for="email"
+              >email
+              <input type="email" id="email" name="email" />
+            </label>
+
+            <label for="phone-number"
+              >phone number
+              <input type="email" id="phone-number" name="phone number" />
+            </label>
+
+            <label for="items of interest"
+              >ITEMS OF INTEREST
+              <select id="items-of-interest" name="items of interest">
+                <option></option>
+                <option>painting 1</option>
+                <option>painting 2</option>
+              </select>
+            </label>
+
+            <label for="message"
+              >message
+              <textarea id="message" placeholder="" name="message"></textarea>
+            </label>
+
+            <label for="newsletter"
+              >Loveletter?
+              <input type="checkbox" name="newsletter" />
+
+            <button type="submit">SEND</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- This is the footer section -->
+    <footer>
+      <ul>
+        <a href="www.facebook.com"><li>facebook</li></a>
+        <a href="www.instagram"><li>instagram</li></a>
+        <a href="länktillkontaktsida"><li>contact</li></a>
+      </ul>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
