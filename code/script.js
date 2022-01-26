@@ -7,3 +7,11 @@ function toggle() {
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
 document.getElementById("section1").onclick = toggle
+
+
+var burgerMenu = document.getElementById('burger-menu');
+var overlay = document.getElementById('menu');
+burgerMenu.addEventListener('click',function(){
+  this.classList.toggle("close");
+  overlay.classList.toggle("overlay");
+});
