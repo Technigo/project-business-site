@@ -1,8 +1,4 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp *
-
-.active + .answer {
+ 
   /* some styling here */
 
 
@@ -25,50 +21,48 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
   .header{
     display: flex;
-    
   }
 
   .hero{
-    height:60vh;
+    height:30vh;
     width:100%;
     align-items: center;
     justify-content: center;
     color: rgba(245, 245, 220, 0.774);
-    background-color: rgba(15, 2, 2, 0.61);
+   
   }
 
-  .hero .hero-content{ 
-    position: relative;
-     z-index: 3;
-  }
+  
 
   .hero .fullscreen{
-    width:100%;
-    height:60vh;
-    position: absolute;
-    top: 20;
-    left:0;
-    z-index: -1;
+    width:100vw;
+    height:150vh;
+    position: fixed;
+    z-index: -5;
     object-fit: cover;  
+    top: 0;
+  left: 0;
+  overflow: hidden;
   }
   
 
   h1{
-    font-size: 70px;
+    font-size: 50px;
     padding:  20px;
     opacity: 90%;
     letter-spacing: 2px;
     padding: 20px 20px;
     letter-spacing: 2px;
-    color: black;
+    color: white;
     font-family: 'Dancing Script';
     opacity: 50%;
+    background-color: rgba(39, 36, 36, 0.61);
       }
 
     .h1-sub{
       font-family: 'Dancing Script';
       padding: 0 30px;
-      color: black;
+      color: white;
       }
 
       .fa-bars{
@@ -82,6 +76,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
      float: right;
      font-size: 40px;
      padding: 20px;
+     
    } 
 
    .button{
@@ -92,11 +87,9 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 2px;
-    transition: all .3s;
-    z-index: -1;
     box-shadow: 3px 2px 2px 2px rgba(22, 19, 19, 0.404);
     margin-top: 30px;
-    background-color:  #d4cac3;
+    background-color:  #d9ddd0;
     font-family:  'sans-serif';
   }
 
@@ -108,24 +101,21 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
   .text{
     display:flex;
-    background-size: 50%;
     flex-wrap: wrap;
-    color: rgb(22, 32, 22);
-    background-color: #c9baa9;
-    
+    color: rgb(3, 34, 3);
+    padding:20px; 
   }
 
   
 
    .main-text {
-    font-size: 20px;
-    margin: 50px;
-    text-align: center;
+    font-size: 20px; 
     z-index: 2;
     justify-content: safe;
     text-align: start;
     font-size: 40px;
     opacity: 70%;
+    font-style: italic;
    }
 
    .signup h2 {
@@ -135,14 +125,14 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
    .signup{  
     flex:1;
     padding: 20px;
-     margin: 30px;
+     margin: 20px;
      font-size:15px;
      border: 2px solid black;
-     border-radius: 20px;
+     border-radius: 5px;
      box-shadow: 5px 5px 5px 5px rgba(22, 19, 19, 0.404);
      justify-content: safe;
-     background-color: #ccc5b9;
-     
+     background-color: rgba(94, 94, 94, 0.61);
+     color: rgb(16, 17, 16);
      }
 
      .img{
@@ -152,54 +142,58 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
        width:100%;
        height:100vh;
        position: absolute;
-       z-index: -1;
        object-fit: cover;
      }
 
-.accordion{
-  flex:1;
-  padding: 10px;
-   margin: 20px;
-   border: 2px solid black;
-   border-radius: 20px;
-   box-shadow: 5px 5px 5px 5px rgba(22, 19, 19, 0.404);
-   justify-content: safe;
-   background-color: #ccc5b9;
-   align-items: flex-start;
+    .accordion{
+      flex:1;
+    padding: 25px;
+     margin: 30px;
+     font-size:15px;
+     border: 2px solid black;
+     border-radius: 5px;
+     box-shadow: 5px 5px 5px 5px rgba(22, 19, 19, 0.404);
+     justify-content: safe;
+     background-color:  #d9ddd0;
+     color: rgb(3, 34, 3);
+     background-color: rgba(94, 94, 94, 0.61);
+     color: rgb(16, 17, 16);
   }
    
 #submit{
   padding:10px;
-  font-size: 20px;
-   background-color: #d4cac3;
+  font-size: 12px;
+   background-color: #ffff;
+   color: rgb(3, 34, 3);
    border-radius: 10px;
    color:rgba(12, 12, 12, 0.76);
    font-weight: bold;
-   box-shadow: 4px 2px 2px 2px rgba(22, 19, 19, 0.404);
    font-family: 'Neonderthaw'  'sans-serif';
 }
+#submit:hover{
+  background-color: rgb(106, 116, 106);
+}
 .question{
-    padding: .5rem .5rem .5rem .5rem;
-    border-radius: 10px;
+  padding: .5rem .5rem;
+    
     font-size: 15px;
     letter-spacing: 1px;
     transition: all .3s;
-    margin-top: 20px;
-    background-color: #d4cac3;
+    background-color: #ffff;
     font-family:  'sans-serif';
-    text-align: justify;
-    margin:10px  0px;
+    width:100%;
+    text-align: left;  
+    border-bottom: black;
 }
-.answer{
-  padding: 5px 20px;
-}
+
 hr{
   height: 1px;
-  background-color: rgb(20, 18, 18);
+  background-color: rgb(88, 88, 88);
   border: none;
 }
 footer{
-  background-color:#342a218e;
+  color: rgba(13, 14, 13, 0.959);
+  background-color: rgba(94, 94, 94, 0.945);
   letter-spacing: 1px;
   display: flex; 
   text-align: center;
@@ -210,6 +204,7 @@ footer{
   margin: 10px;
   font-size: 10px;
 letter-spacing: 1px;
+font-weight: bolder;
 }
 
   
@@ -231,6 +226,36 @@ padding: 2px;
   cursor: pointer;
   padding: 2px;
 }
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+
+.answer{
+  display: none;
+  overflow: auto;
+  color: rgb(3, 34, 3);
+  background-color: antiquewhite;
+  padding: .5rem .5rem;  
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: all .3s;
+    background-color: rgb(219, 219, 219);
+    font-family:  'sans-serif';
+    margin:10px 0 0 0  0px;
+    width:100%;
+    text-align: left; 
+}
+
+.dropdown{
+  display: none;
+  overflow: auto;
+}
+
+
+
+
+
 
 
 
@@ -239,13 +264,8 @@ padding: 2px;
   display:flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding:40px; 
 }
-.signup{
-   text-align: center;
-   }
-
-
-
 
 .navbar-footer{
   font-size: 15px;
@@ -262,7 +282,7 @@ flex :1;
     width:100%;
     align-items: center;
     justify-content: center;
-    
+    position: relative;
   }
 
   .hero .fullscreen{
@@ -272,15 +292,12 @@ flex :1;
 
   h1{
     font-size: 120px;
-    padding: 200px 20px;
-    position: relative;
+    padding: 220px 20px;
     letter-spacing: 3px;
     justify-content: space-around;
   }
 
-  .h1-sub{
-    padding: 0 100px;
-    }
+  
     
     .navbar{
       float: right;
@@ -288,24 +305,27 @@ flex :1;
       padding: 20px;
     }
 
-      button{
-        font-weight: bolder;
-        margin-left: 5rem;
-        font-size: 1.5rem;
-       
-        
-      }
-    
+    .button{
+      font-size: 1rem;
+      font-family: 'Neonderthaw' ;
+      display: inline-block;
+      padding: 20px;
+      margin:15px 10px;
+    }
+    .main-text {
+      margin:10px 30px;
+     }
     
     .text{ 
       display:flex;
       flex-direction: row;
       flex-wrap: wrap;
+      padding:10px 50px;
+      
     }
 
     footer{
       display: flex;
-      color: black;
       font-size: 20px;
       letter-spacing: 1px;
       padding: 20px 0;
@@ -334,8 +354,7 @@ flex :1;
       font-size: 20px;
     letter-spacing: 1px;
     }
-
-    
+   
  }
 
  

@@ -1,9 +1,16 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-function toggle() {
-  this.classList.toggle("active")
-}
+var que = document.getElementsByClassName("question");
+var i;
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
+for (i = 0; i < que.length; i++) {
+  
+  
+  que[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var answers = this.nextElementSibling;
+    if (answers.style.display === "block") {
+      answers.style.display = "none";
+    } else {
+      answers.style.display = "block";
+    }
+  });
+}
