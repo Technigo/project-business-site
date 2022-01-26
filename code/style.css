@@ -2,8 +2,9 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  display: block;
+.active + .project-content {
+  display: flex;
+  flex-direction: row;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@400;600&display=swap');
@@ -21,17 +22,29 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   text-rendering: optimizeLegibility;
 }
 
+body {
+  background-color: #EED2D5;
+  margin: 0;
+  border: solid #212121 34px;
+}
+
+main {
+  padding: 1rem;
+}
+
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem;
+  height: 10%;
   }
 
 .logo {
-  font-family: 'Playfair Display';
-  font-size: 1rem;
-  color:white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color:white;
 }
 
 .hamburger-menu {
@@ -70,20 +83,18 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   color: #f5f3f2;
+  align-items: center;
   }
+
+.hero-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+}
 
 .hero-title {
   font-size: 8vw;
-}
-
-body {
-  background-color: #EED2D5;
-  margin: 0;
-  border: solid #212121 34px;
-}
-
-main {
-  padding: 1rem;
 }
 
 h1, h2 {
@@ -93,8 +104,6 @@ h1, h2 {
   font-style: normal;
   font-weight: normal;
   text-align: center;
-  margin-left: 10%;
-  margin-right: 12rem;
 }
 
 h3 {
@@ -105,23 +114,61 @@ h3 {
   font-weight: normal;
 }
 
+h4{
+  text-align: center;
+  font-size: 2vw;
+  font-family: 'poppins';
+  font-weight: normal;
+}
+
+.text-wrapper {
+  padding-left: 0 10%;
+}
+
+.all-projects:first-child {
+  border-top: 1px solid red;
+}
+
 .project-image {
   width: 200px;
 }
 
 .project-title {
-  background-color: #f5f3f2;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
 }
 
-.answer {
+.project-title h3 {
+  width: 200px;
+}
+
+.accordion {
+  border-bottom: 1px solid black;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content {
   display: none;
 }
 
-form {
+.form-image-wrapper{
+  width: 100%;
+}
+
+.form {
+  border: 1px solid black;
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
-  border:none;
+  flex-direction: row;
+  flex-wrap: wrap;
   font-family: 'poppins';
   font-size: 1rem;
   text-transform: uppercase;
@@ -130,11 +177,31 @@ form {
 form label {
   display: flex;
   flex-direction: column;
+  width: calc(50% - 2rem);
+  margin: 1rem;
 }
 
-input, select, option, textarea {
+input, select, option {
   border: none;
-  background-color: #f5f3f2;
+  background-color: transparent;
+  border-bottom: 1px solid black;
+}
+
+.items-of-interest {
+  width: 100%;
+}
+
+.text-area {
+  width: 100%;
+  margin: 0 15%;
+  text-align: center;
+}
+
+textarea {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 100px;
 }
 
 footer {

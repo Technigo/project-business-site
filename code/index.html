@@ -9,10 +9,11 @@
   </head>
 
   <body>
+
     <!-- Here goes the header -->
     <header class="hero">
       <nav>
-        <a href="link to homepage"><p class="logo">Å.SIEURIN</p></a>
+        <a href="link to homepage"><div class="logo"></div></a>
         
         <!-- This is the menu for mobile -->
 
@@ -30,7 +31,9 @@
             <a href="link to journal page">contact</a>
           </div>
       </nav>
-      <h1 class= "hero-title">SIEURIN GALLERY</h1>
+      <div class="hero-title-wrapper">
+        <h1 class="hero-title">SIEURIN GALLERY</h1> 
+      </div>
     </header>
 
     <!-- Here goes the main content -->
@@ -44,54 +47,42 @@
       </section>
 
       <!-- Accordion section -->
-      <h3>PROJECTS</h3>
+      <h4>PROJECTS</h4>
 
-      <section class="accordion">
-        <div class="project-title" id="section1">Now Showing Exhibition</div>
-        <div class="answer">
-          <img class="project-image" src="./images/sergey-vinogradov-s6pwJEecDUI-unsplash.jpg" alt="">
-          <h3>Introduction</h3>
-          <p>A clever approach to fashion, intellectual questions about the right
-            topics and always opens up a dialogue. Hajinsky brings in a new light
-            to this sometimes absurd industry.</p>
+      <section class="all-projects">
+        <div class="accordion">
+          <div class="project-title" id="section1">
+            <p>2022 prj. 04b</p>
+            <h3>Now Showing Exhibition</h3>
+            <p>17.09.2022 - 17.10.2022</p>
+            <p>Cosh Gallery, Stockholm</p>
+          </div>
+          <div class="project-content">
+            <img class="project-image" src="./images/josep-martins-nAsdr5DC2Ss-unsplash.jpg" alt="" />
+            <div class="content-text">
+              <h3>Introduction</h3>
+              <p>A clever approach to fashion, intellectual questions about the right
+                topics and always opens up a dialogue. Hajinsky brings in a new light
+                to this sometimes absurd industry.</p>
+            </div>
+          </div>
         </div>
-
-      </section>
-
-      <section class="accordion">
-        <div class="project-title" id="section1">Now Showing Exhibition</div>
-        <div class="answer">
-          <img class="project-image" src="./images/francesco-bianco-TVsgRyKJDc0-unsplash.jpg" alt="">
-          <h3>Introduction</h3>
-          <p>A clever approach to fashion, intellectual questions about the right
-            topics and always opens up a dialogue. Hajinsky brings in a new light
-            to this sometimes absurd industry.</p>
+    
+        <div class="accordion">
+          <div class="project-title" id="section2">
+            <p>2022 prj. 04b</p>
+            <h3>Now Showing Exhibition</h3>
+            <p>17.09.2022 - 17.10.2022</p>
+            <p>Cosh Gallery, Stockholm</p>
+          </div>
+          <div class="project-content">
+            <img class="project-image" src="./images/josep-martins-nAsdr5DC2Ss-unsplash.jpg" alt="" />
+            <h3>Introduction</h3>
+            <p>A clever approach to fashion, intellectual questions about the right
+              topics and always opens up a dialogue. Hajinsky brings in a new light
+              to this sometimes absurd industry.</p>
+          </div>
         </div>
-
-      </section>
-
-      <section class="accordion">
-        <div class="project-title" id="section1">Now Showing Exhibition</div>
-        <div class="answer">
-          <img class="project-image" src="./images/sergey-vinogradov-s6pwJEecDUI-unsplash.jpg" alt="">
-          <h3>Introduction</h3>
-          <p>A clever approach to fashion, intellectual questions about the right
-            topics and always opens up a dialogue. Hajinsky brings in a new light
-            to this sometimes absurd industry.</p>
-        </div>
-
-      </section>
-
-      <section class="accordion">
-        <div class="project-title" id="section1">Now Showing Exhibition</div>
-        <div class="answer">
-          <img class="project-image" src="./images/sergey-vinogradov-s6pwJEecDUI-unsplash.jpg" alt="">
-          <h3>Introduction</h3>
-          <p>A clever approach to fashion, intellectual questions about the right
-            topics and always opens up a dialogue. Hajinsky brings in a new light
-            to this sometimes absurd industry.</p>
-        </div>
-
       </section>
 
       <!-- Here we have a small text-section -->
@@ -103,9 +94,9 @@
 
       <!-- Section for the form -->
       <section class="form-image-wrapper">
+        <h4>CONTACT US</h4>
         <div class="form-wrapper">
-          <h3>CONTACT US</h3>
-          <form id= "form" action="https://httpbin.org/anything" method="post">
+          <form class="form" id= "form" action="https://httpbin.org/anything" method="post">
             <label for="first-name"
               >first name
               <input required type="text" id="first-name" name="first name" />
@@ -126,7 +117,7 @@
               <input type="email" id="phone-number" name="phone number" />
             </label>
 
-            <label for="items of interest"
+            <label class="items-of-interest" for="items of interest"
               >ITEMS OF INTEREST
               <select id="items-of-interest" name="items of interest">
                 <option></option>
@@ -135,7 +126,7 @@
               </select>
             </label>
 
-            <label for="message"
+            <label class="text-area" for="message"
               >message
               <textarea id="message" placeholder="" name="message"></textarea>
             </label>
