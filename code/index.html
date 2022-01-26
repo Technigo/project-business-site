@@ -13,23 +13,22 @@
     <!-- Mer om hero image finns här: 
       https://www.w3schools.com/howto/howto_css_hero_image.asp -->
 
-    <div class="hero-container">
-      <nav>
+    <header class="hero-container">
+      <!-- Inget krav med nav - kommenterar ut den så länge -->
+      <!-- <nav>
         <ul>
           <li><a href="#">Link</a></li>
           <li><a href="#">Link</a></li>
           <li><a href="#">Link</a></li>
         </ul>
-      </nav>
-      <div class="hero-text-container">
+      </nav> -->
         <h1>Vancouver</h1>
         <h4>En vacker stad</h4>
         <a class="hero-button" href="#">Köp din resa nu</a>
-      </div>
       
-    </div>
+    </header>
 
-    <main class="signup-accordion-section">
+    <main class="main">
 
       <!-- Signup form -->
       <section class="signup-form-section">
@@ -38,15 +37,27 @@
           <h2>Sign up</h2>
           <label>
             First name:
-            <input type="text" name="fname" maxlength="20"required />
+            <input 
+              type="text" 
+              name="fname" 
+              placeholder="type your first name here" 
+              maxlength="20"
+              required />
           </label>
           <label>
             Last name:
-            <input type="text" name="lname" placeholder="last name" required/>
+            <input 
+              type="text" 
+              name="lname" 
+              placeholder="type your last name here" 
+              maxlength="30" 
+              required/>
           </label>
           <label>
             Email:
-            <input type="email" name="email">
+            <input 
+              type="email" 
+              name="email">
           </label>
           
           <label>
@@ -54,7 +65,7 @@
             <select name="city">
               <option value="Stockholm">Stockholm</option>
               <option value="Uppsala">Uppsala</option>
-              <option value="Sigtuna">Stockholm</option>
+              <option value="Sigtuna">Sigtuna</option>
               <option value="Other city">Other city</option>
             </select>
           </label>
@@ -71,13 +82,15 @@
             <label for="tyska">Tyska</label>
           </div>
 
-          <input class="submitbutton" type="submit" value="submit">
-         
+          <input 
+            class="submitbutton" 
+            type="submit" 
+            value="submit">
 
         </form>
       </section>
 
-      <section class="accordion">
+      <section class="accordion-section">
         <!-- Accordion -->
         <h1>FAQ</h1>
         

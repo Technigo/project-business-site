@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-rendering: optimizeLegibility;
 }
 
 html {
@@ -9,19 +10,28 @@ html {
   font-size: 16px;
 }
 
-.hero-container {
-  width: 100vw;
-  height: 75vh;
-  background: url("./images/vancouver-sunset.jpg");
-  background-size: cover;
-  /* background-repeat: none; Vad gör denna?*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+body {
+  width: 100%;
+  margin: 0 auto;
 }
 
-.hero-container nav {
+.hero-container {
+  width: 100vw;
+  height: 50vh;
+  background-image: url("./images/vancouver-sunset-edited-for-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/* .hero-container nav {
   position: absolute;
   top: 0;
   background-color: orange;
@@ -37,17 +47,18 @@ html {
 .hero-container a {
   color: white;
   text-decoration: none;
-}
+} */
 
-.hero-text-container h1 {
-  font-size: 5rem;
+.hero-container h1 {
+  font-size: 3rem;
   color: white;
 }
 
-.hero-text-container h4 {
+.hero-container h4 {
   font-size: 2rem;
   color: white;
 }
+/* Även h4 skulle behöva MQs */
 
 .hero-button {
   color: white;
@@ -61,60 +72,68 @@ html {
 }
 
 /* Lite osäker på om jag ska ha grid eller flex på denna */
-.signup-accordion-section {
-  width: 50vw;
-  margin: 2rem auto;
+.main {
+  width: 100vw;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
-
 /* Kanske göra gemensam klass för signup-form-section och accordion? */
 
 .signup-form-section {
-  border: 1px solid lightblue;
-  padding: 2rem 0;
+  border: 1px green solid;
+  flex: 50%;
 }
 
 .signup-form {
-  margin-left: 1rem;
+  border: 1px dotted black;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  width: 90%;
+  /* max-width: 600px; */
+  margin: 2rem auto;
+  display: grid;
+  gap: 1rem;
 }
 
-.accordion {
-  border: 1px solid lightblue;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.accordion h1 {
-  margin-bottom: 1rem;
-}
-
-.question {
-  width: 100%;
-  padding: 1rem;
-  background-color: orange;
-  color: white;
-  border: 1px solid white;
-}
-
-.answer {
-  display: none;
-  background-color: wheat;
-}
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-/* Lite osäker på om detta är rätt men testar lite */
-.active + .answer {
+input, label, select {
+  padding: 0.5rem 0;
   display: block;
 }
 
+select {
+  width: 50%;
+}
 
+input[type='text'] {
+  color: grey;
+  padding-left: 10px;
+  border-radius: 5%;
+}
 
-/* Lägger in detta lite tillfälligt för att glesa ut */
+/* label {
+  width: 80%;
+  border: 1px solid salmon;
+} */
+
+input:valid {
+  border-color: green;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+label input {
+  width: 50%;
+}
+
+.radio span {
+  display: block;
+}
+
+/* Lägger in detta lite tillfälligt för att glesa ut 
 input, select {
   display: block;
   margin-bottom: 1rem;
@@ -128,9 +147,8 @@ input:required {
   display: inline;
 }
 
-.radio span {
-  display: block;
-}
+
+*/
 
 .submitbutton {
   background-color: orange;
@@ -138,11 +156,86 @@ input:required {
   padding: 0.5rem;
   border: 1px solid orange;
   border-radius: 6px;
+  width: 50%;
+  
 }
+
+.accordion-section {
+  border: 1px solid blue;
+  text-align: center;
+  flex: 50%;
+  
+  
+}
+
+.accordion-section h1 {
+  margin: 2rem 0;
+}
+
+.question {
+  width: 100%;
+  padding: 1rem;
+  background-color: orange;
+  color: white;
+  border: 1px solid white;
+}
+
+.answer {
+  display: none;
+  background-color: wheat;
+  padding: 1rem;
+}
+
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+/* Lite osäker på om detta är rätt men testar lite */
+.active + .answer {
+  display: block;
+}
+
+
+
+
 
 .footer {
   background-color: orange;
   color: white;
   text-align: center;
   padding: 2rem;
+  margin-top: 2rem;
 }
+
+
+@media screen and (min-width: 768px) {
+  .hero-container {
+    background-image: url("./images/vancouver-sunset-edited-for-tablet.jpg");
+  }
+  .hero-container h1 {
+    font-size: 4rem;
+    color: green; /*to be removed*/
+  }
+  .main {
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem auto;
+    width: 80vw;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+  .hero-container {
+    background-image: url("./images/vancouver-sunset-edited-for-desktop.jpg");
+  }
+  .hero-container h1 {
+    font-size: 5rem;
+    color: brown; /*to be removed*/
+  }
+  .main {
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem auto;
+    width: 80vw;
+  }
+}
+
