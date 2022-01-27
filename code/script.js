@@ -50,4 +50,16 @@ if (mediaQuery.matches) {
   const height = window.outerHeight;
   const headerHeight = document.querySelector('.header');
   headerHeight.style.height = height + "px";
+} else {
+  headerHeight.style.height = "100vh";
 }
+
+
+// Testing outerHeight for tablet (easier)
+// const mediaQuery = window.matchMedia('(min-width: 668px) and (max-width: 1024px)');
+// if (mediaQuery.matches) {
+//   const height = window.outerHeight;
+//   const headerHeight = document.querySelector('.header');
+//   headerHeight.style.height = height + "px";
+//   console.log(height);
+// }
