@@ -40,8 +40,14 @@ document.getElementById('form').onsubmit = (event) => {
   blackScreenButton.style.visibility = "visible";
   blackScreenButton.style.opacity = "100";
 
-
-
-
   console.log("Hello world");
+}
+
+
+// Check innerwidth and apply for landscape mode
+const mediaQuery = window.matchMedia('(max-device-width: 930px) and (orientation: landscape)');
+if (mediaQuery.matches) {
+  let height = innerHeight;
+  const headerHeight = document.querySelector('.header');
+  headerHeight.style.height = height
 }
