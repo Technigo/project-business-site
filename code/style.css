@@ -1,7 +1,278 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* make use of how the fony should be rendered */
+  text-rendering: optimizeLegibility;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Oswald', sans-serif;
+  /* max-width: 1350px; */
+  
+}
+
+body{
+  width: 100%;
+  min-height: 100%;
+  background-color: rgb(180, 180, 180);
+}
+
+
+.header{
+ 
+
+  width: 100%;
+
+  } 
+
+
+
+.hero-img{
+  height: 50vh;
+  min-height: 50vh;
+  width: 100%;
+  object-fit: cover; /*54-56 this three make it fixed to the top*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;  
+  z-index: -1;
+  
+
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 40px;
+  text-align: center;
+  position: relative;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center; 
+  /* display: grid;   lägg in för meny
+  gap: 1rem;
+  justify-items: center;
+  align-items: center; */
+
+  }
+  
+  .logo{
+    position: absolute; /*måste vara angivet annars syns de inte på videon/bilden*/
+    color: black;
+    margin: 60px 100px; 
+    text-transform: uppercase;
+    /* font-size: 18px; */
+    z-index: 1;
+    text-align: center;
+  }
+
+/* .dropdown-content{
+  position: absolute;
+  width: 100vw;  
+  height: 100px;
+  } */
+
+
+nav ul li a {
+  color: black;
+  font-size: 12px;
+  padding: 14px 13px;
+  text-transform: uppercase;
+  border-radius: 13px;
+  text-decoration: none;
+  
+  }
+
+ a:hover{
+    color: coral;
+  }
+
+
+h2{
+  text-align: center;
+  padding: 40px 0px 0px 0px;
+  
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(8, 91, 94);
+  color: white;
+  margin: 40px; 
+  padding: 20px;  
+  border-radius: 5px;
+}
+
+ form label {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start; 
+}
+
+input{
+  font-size: 12px;
+  padding: 5px;  
+  margin: 10px 0px; 
+}
+
+
+textarea {
+  height: 140px;
+  padding: 10px;
+  margin: 10px 0px 0px 0px;
+}
+
+.check-boxes{
+  margin: 10px 0px 0px 0px;
+}
+
+
+
+form button {
+  width: 100px;
+  border-radius: 2rem;
+  border: none;
+  background-color: rgb(216, 139, 88);
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+}
+
+/* textarea:invalid {
+  border: 2px dashed red;
+} */
+
+
+.accordion-wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  padding: 20px; 
+  line-height: 1.5;
+}
+
+#accordion {
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px 40px 30px 40px;
+  background-color: rgb(8, 91, 94);
+  position: relative;
+  /* z-index: 20px; */
+  border-radius: 5px;
+}
+
+.title-faq{
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.question{
+  background-color: rgb(216, 139, 88);
+  min-width: 100%;
+  width: 80%;
+  height: 40%;
+  /* text-align: center; */
+  padding: 20px;
+  margin: 10px 0px;
+  border-radius: 5px;
+
+
+}
+
+.answer{
+  display: none;
+  background-color: rgb(241, 208, 166);
+  padding: 20px;
+  color: black;
+}
+
+
+
+.accordion-wrapper a{
+text-decoration: none;
+  color: rgb(133, 56, 5);
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+
+
+/* .open + #dropDown {
+  display: block;
+  /* some styling here 
+} */
+
 .active + .answer {
+  display: block;
   /* some styling here */
+}
+
+footer { 
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+  background-color: rgb(163, 158, 149);
+  color: white;
+  text-align: center;
+
+}
+
+footer p{
+  font-size: 12px;
+}
+
+footer img{
+  width: 4%;
+  height: auto;
+  color: white;
+  
+}
+
+  /* ---------- TABLET STYLING ---------- */
+  
+
+
+
+
+  /* ---------- DESKTOP STYLING ---------- */
+  @media (min-width: 1024px) {
+
+    .logo{
+      position: absolute; /*måste vara angivet annars syns de inte på videon/bilden*/
+      color: black;
+      margin: 20px 600px; 
+      padding: 30px;
+      text-transform: uppercase;
+      font-size: 30px;
+      align-self: center;
+      
+      z-index: 1;
+    
+    }
+
+    .content{
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+      grid-template-rows: repeat(2, 30vw);
+    }
+  
+    footer p{
+      font-size: 15px;
+    }
+
+    footer img{
+      width: 2%;
+      height: auto;
+      margin: 10px 5px;
+    }
+
 }

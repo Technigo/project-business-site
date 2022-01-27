@@ -4,27 +4,110 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
+    
+    <header class="header-image">
+      <div class="logo">Photographer Ida Halling</div>
+      <img class="hero-img" src="./images/Hero picture.jpg" />
+        <nav class="dropdown">
+          <button><img class="menu-button" src="./icons/bars-solid.svg" alt="menu"> </button>
+          <div class="dropdown-content" id="dropDown">
+            <ul class="dropdown-list">
+              <li><a href="https://www.idahalling.com/all-7bmz">PORTFOLIO</a></li>
+              <li><a href="https://www.idahalling.com/contact2-homa">CONTACT</a></li>
+            </ul>
+        
+        </nav>
+      </header>
 
-    <!-- Signup form -->
+      <h2>Get in contact!</h2>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+  <section class="content">
+    <!-- In here we place the form -->
+    <section class="form-image-wrapper">
+        <div class="form-wrapper">
+          
+          <form action="https://httpbin.org/anything" method="post">
+            <!-- Signup form -->
+            <label>
+              <p>Your name:</p>
+            <input class="text-input" type="text" name="name" />
+          </label>
+          <p>Your email:</p>
+            <input class="text-input" type="email" name="email" />
+            </label>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+            <label>
+              <p>Message:</p>
+              <textarea id="message" name="message" type="textare" placeholder="What can I do for you?"></textarea>
+            </label>
+        
+            <div class="check-boxes">
+              <div id="termsConditions">
+                <label>
+                  <p>I agree with terms terms and conditions</p>
+                  <input type="checkbox" name="terms-and-conditions" id="terms-and-conditions" required>
+                </label>
+              </div>
+
+            </div>
+
+              <!-- <div class="button">
+                <input class="submittButton" type="submitt" value="send">
+              </div> -->
+              <button type="submitt" value="send">send</button>
+
+            
+          </form> 
+
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+
+    <div class="accordion-wrapper">
+      <section id="accordion">
+        <!-- Accordion -->
+        <h1 class="title-faq">FAQ</h1>
+
+        <div class="question" id="question1">Where are you located?</div>
+        <div class="answer">
+          <p>At Studio Dunder&Brak at <a href="https://goo.gl/maps/WHwEk4f4zLdhDJR97">Gästrikegatan 9 in Stockholm</a> </p>
+        </div>
+
+        <div class="question" id="question2">Do you work outside of your studio?</div>
+        <div class="answer">
+          <p>Yes, I love to shoot on location!</p>
+        </div>
+
+        <div class="question" id="question3">What is your price?</div>
+        <div class="answer">
+        <p>Every project has it's unique requriements so tell me what you need 
+        and I'll give you an offer you can't refuse!</p> 
+       <p> Start with filling in the form and I will get in contact. </p>
+        <!-- <p>As a member of Svenska Fotografers Förbund I base my price from our <a href="https://www.sfoto.se/radgivning-och-juridik/prisguiden/">pricelist</a>. 
+        </p>  -->
+        </div>
+
+        <div class="question" id="question4">Do you shoot humans?</div>
+        <div class="answer">
+          <p>Yep!</p>
+        </div>
+      </section>
+    </div>
+
+  </section>
+
+    <script src="script.js"></script>
+
+    <footer>
+      <p>© Ida Halling 2022</p>
+      <a href="https://www.instagram.com/idahallingphotography/"><img src="./icons/instagram-brands.svg" alt="instagram" ></a>
+      <a href="https://www.linkedin.com/in/ida-halling//"><img src="./icons/linkedin-brands.svg" alt="instagram" ></a>
+    </footer>
   </body>
 </html>
