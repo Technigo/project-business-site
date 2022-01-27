@@ -1,7 +1,6 @@
  
-  /* some styling here */
-
-
+ 
+/* Fonts used is imported */
 
   @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
  
@@ -16,24 +15,22 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-family: 'sans-serif';
-
   }
 
-  .header{
+.header{
     display: flex;
+    background-color: rgba(126, 125, 125, 0.61); 
   }
 
-  .hero{
-    height:30vh;
+.hero{ 
+    height:45vh;
     width:100%;
     align-items: center;
     justify-content: center;
-    color: rgba(245, 245, 220, 0.774);
-   
-  }
-
+    color: rgba(245, 245, 220, 0.774);  
+}
   
-
+/* hero video vw-viewwidth */
   .hero .fullscreen{
     width:100vw;
     height:150vh;
@@ -42,42 +39,80 @@
     object-fit: cover;  
     top: 0;
   left: 0;
-  overflow: hidden;
   }
   
 
   h1{
-    font-size: 50px;
+    font-size: 55px;
     padding:  20px;
     opacity: 90%;
     letter-spacing: 2px;
-    padding: 20px 20px;
+    padding: 20px 30px;
     letter-spacing: 2px;
-    color: white;
+    color: rgb(58, 32, 32);
     font-family: 'Dancing Script';
     opacity: 50%;
-    background-color: rgba(39, 36, 36, 0.61);
-      }
+    margin: .5rem 6rem;
+    justify-content: safe;
+     }
 
     .h1-sub{
       font-family: 'Dancing Script';
       padding: 0 30px;
-      color: white;
-      }
+      color: rgb(58, 32, 32);
+      } 
+
+      .navbar{
+        position: absolute;
+        overflow: auto;
+        background-color: rgba(126, 125, 125, 0.61); 
+    
+        border-radius: 5px;
+    }
 
       .fa-bars{
-        color:black;
-        font-size: 30px;
-        opacity: 50%;
+        color: rgb(77, 43, 43);
+        margin:10px;
+        position: relative;
+      }
+     /* display is hidden for li items */
+      .navbar #nav-contents{
+        display: none;
       }
 
-   .navbar{
-    color: #c3cbcc;
-     float: right;
-     font-size: 40px;
-     padding: 20px;
-     
-   } 
+      .navbar a.icon {
+         opacity: 90%;
+        
+      }
+
+      .navbar a:hover {
+        opacity: 80%;
+       cursor: pointer;
+       transform: scale(0.9);
+      background-color:  rgb(214, 214, 214);
+      }
+
+      .nav-li{
+        color: rgb(65, 54, 54);;
+        padding: 10px 10px;
+        text-decoration: none;
+        font-size: 10px;
+        display: block;
+        list-style-type: none;
+        font-weight: bolder;
+        margin:  5px 20px;
+       font-style: italic;
+       border-radius:10px 10px 0 10px ;
+       text-align: center;
+       
+      }
+
+
+  .navbar li:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    opacity: 60%;
+      }
 
    .button{
     font-family: 'Neonderthaw' ;
@@ -90,12 +125,12 @@
     box-shadow: 3px 2px 2px 2px rgba(22, 19, 19, 0.404);
     margin-top: 30px;
     background-color:  #d9ddd0;
-    font-family:  'sans-serif';
   }
 
   .button:hover{
-    transform: scale(1.2);
+    transform: scale(0.9);
     cursor: pointer;
+    background-color: rgb(106, 116, 106);
   }
   
 
@@ -116,6 +151,7 @@
     font-size: 40px;
     opacity: 70%;
     font-style: italic;
+    margin: 20px;
    }
 
    .signup h2 {
@@ -124,66 +160,66 @@
 
    .signup{  
     flex:1;
-    padding: 20px;
-     margin: 20px;
-     font-size:15px;
-     border: 2px solid black;
-     border-radius: 5px;
-     box-shadow: 5px 5px 5px 5px rgba(22, 19, 19, 0.404);
-     justify-content: safe;
-     background-color: rgba(94, 94, 94, 0.61);
-     color: rgb(16, 17, 16);
+    padding: 25px;
+    margin: 20px 10px;
+    font-size:15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(22, 19, 19, 0.404);
+    justify-content: safe;
+    background-color: rgba(94, 94, 94, 0.61);
+    color: rgb(3, 34, 3);
      }
-
-     .img{
-       position: absolute ;
-       width:100%;
-       height:300vh;
-       width:100%;
-       height:100vh;
-       position: absolute;
-       object-fit: cover;
-     }
+    /* The CSS justify-content property defines how the browser distributes space between and around content items along the main-axis of a flex container, and the inline axis of a grid container*/
 
     .accordion{
       flex:1;
-    padding: 25px;
-     margin: 30px;
+     padding: 25px;
+     margin: 20px 10px;
      font-size:15px;
      border: 2px solid black;
      border-radius: 5px;
      box-shadow: 5px 5px 5px 5px rgba(22, 19, 19, 0.404);
      justify-content: safe;
-     background-color:  #d9ddd0;
-     color: rgb(3, 34, 3);
      background-color: rgba(94, 94, 94, 0.61);
-     color: rgb(16, 17, 16);
+     color: rgb(3, 34, 3);
   }
-   
-#submit{
-  padding:10px;
-  font-size: 12px;
-   background-color: #ffff;
-   color: rgb(3, 34, 3);
-   border-radius: 10px;
-   color:rgba(12, 12, 12, 0.76);
-   font-weight: bold;
-   font-family: 'Neonderthaw'  'sans-serif';
+  
+     #submit{
+       padding:10px;
+       font-size: 12px;
+       background-color: #ffff;
+       color: rgb(3, 34, 3);
+       border-radius: 10px;
+       color:rgba(12, 12, 12, 0.76);
+        font-weight: bold;
+        font-family: 'Neonderthaw'  'sans-serif';
+   }
+
+     #submit:hover{
+         background-color: rgb(106, 116, 106);
+         cursor: pointer;
+        transform: scale(0.9);
 }
-#submit:hover{
+
+  .question{
+    padding: .5rem .5rem; 
+     font-size: 15px;
+     letter-spacing: 1px;
+     transition: all .3s;
+     background-color: #ffff;
+     font-family:  'sans-serif';
+     width:100%;
+     text-align: left;  
+     border-bottom: black;
+}
+
+.question:hover{
+  transform: scale(0.95);
+  cursor: pointer;
   background-color: rgb(106, 116, 106);
-}
-.question{
-  padding: .5rem .5rem;
-    
-    font-size: 15px;
-    letter-spacing: 1px;
-    transition: all .3s;
-    background-color: #ffff;
-    font-family:  'sans-serif';
-    width:100%;
-    text-align: left;  
-    border-bottom: black;
+  transition: all 1 ease;
+  color: whitesmoke;
 }
 
 hr{
@@ -200,14 +236,13 @@ footer{
   justify-content: center;
   
 }
-.navbar-footer{
+.footer{
   margin: 10px;
   font-size: 10px;
 letter-spacing: 1px;
 font-weight: bolder;
 }
 
-  
   
 h3{
   padding:0 2px;
@@ -226,109 +261,89 @@ padding: 2px;
   cursor: pointer;
   padding: 2px;
 }
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 
 .answer{
   display: none;
   overflow: auto;
   color: rgb(3, 34, 3);
-  background-color: antiquewhite;
-  padding: .5rem .5rem;  
-    font-size: 15px;
-    letter-spacing: 1px;
-    transition: all .3s;
-    background-color: rgb(219, 219, 219);
-    font-family:  'sans-serif';
-    margin:10px 0 0 0  0px;
-    width:100%;
-    text-align: left; 
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: all .3s;
+  font-family:  'sans-serif';
+  width:100%;
+  text-align: center; 
+  background-color: rgb(173, 173, 173);
 }
-
-.dropdown{
-  display: none;
-  overflow: auto;
-}
-
-
-
-
-
-
-
-
+/* Responsive for Tablets*/
 @media (min-width:768px){ 
   .text{
   display:flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  padding:40px; 
+  flex-wrap: wrap; 
 }
 
-.navbar-footer{
+.main-text {
+  margin:10px 30px;
+ }
+
+.footer{
   font-size: 15px;
 letter-spacing: 1px;
 flex :1;
 }
-}
 
- 
-
-@media (min-width:1024px){
-  .hero{
-    height: 110vh;
-    width:100%;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  .hero .fullscreen{
-    width:100%;
-    height:110vh;
-  }
-
-  h1{
-    font-size: 120px;
-    padding: 220px 20px;
-    letter-spacing: 3px;
-    justify-content: space-around;
-  }
+h1{
+   font-size: 70px;
+   margin: .5rem 15rem;
+   }
 
   
-    
-    .navbar{
-      float: right;
-      font-size: 40px;
-      padding: 20px;
-    }
+ .navbar{
+ float: right;
+ font-size: 30px;
+padding: 20px;
+  }
 
-    .button{
+  .navbar li{
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+}
+
+ /* Responsive for laptop*/
+
+@media  (min-width:1024px){
+  
+h1{
+  margin: .5rem 40rem;
+  font-size: 80px;
+}
+    
+.navbar li{
+  padding:10px 20px;
+  font-size: 20px;
+  margin: 5px;
+}
+
+ .button{
       font-size: 1rem;
       font-family: 'Neonderthaw' ;
       display: inline-block;
-      padding: 20px;
-      margin:15px 10px;
-    }
-    .main-text {
-      margin:10px 30px;
-     }
-    
-    .text{ 
-      display:flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding:10px 50px;
-      
+      padding: 10px;
+      margin: 10px;
     }
 
-    footer{
-      display: flex;
-      font-size: 20px;
-      letter-spacing: 1px;
-      padding: 20px 0;
+ .main-text {
+  margin:40px 30px 10px 10px;
+      padding:20px;
+     }
+    
+    
+ .text{ 
+      display:flex;
+      flex-direction: row;
+      flex-wrap: wrap;   
     }
 
     .fa-facebook-square:hover{
@@ -349,9 +364,10 @@ flex :1;
       opacity: 70%;
     }
 
-    .navbar-footer{
+    .footer{
+      padding: 20px 0;
      flex: 1;
-      font-size: 20px;
+      font-size: 13px;
     letter-spacing: 1px;
     }
    

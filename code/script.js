@@ -14,3 +14,13 @@ for (i = 0; i < que.length; i++) {
     }
   });
 }
+
+
+function myFunction() {
+  var x = document.getElementById("nav-contents");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  };
+}
