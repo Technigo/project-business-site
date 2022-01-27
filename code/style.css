@@ -1,19 +1,194 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Mitr', sans-serif;
+  font-weight: 300;
+  background-color: rgb(236, 184, 232);
+  /* background: hsl(44.5,82.5%,84.3%); */
+}
+a {
+  color: hsl(268.1,74.6%,50.6%);
+  text-decoration: none;
+}
 /* Mobile first development */
-.hero {
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+video {
+  position: relative;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+h1{
+  font-family: 'Monoton', cursive;
+  color: hsl(0,0%,0%);
+  font-size: 12vw;
+  margin-top: 0.5vw;
+}
+
+h2 {
+  font-size: 30px;
+  color: hsl(0,0%,5.5%);
+  margin: 0;
+  position: relative;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+/* FAQ */
+
+h3 {
+  background: #a872e6;
+  border-bottom: 2px solid hsl(267.9,69.9%,67.5%);
+  text-align: center;
+  color: hsl(0,0%,100%);
+  padding: 10px;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 30px;
+  margin: 0;
+  border: 1px solid hsl(0,0%,39.2%);
+}
+
+
+.form-wrapper {
+  margin: 40px 40px;
+  padding: 20px 30px 20px 20px;
+  line-height: 1.5;
+  border: 2px solid hsl(312,2.6%,37.1%);
+  border-radius: 10px;
+  background:hsl(48.9,86.4%,65.5%);
+}
+
+*:focus {
+  outline: none;
+}
+
+input[type="text"],[type="email"] {
+  width: 100%;
+  height: 30px;
+}
+input, select { 
+  border: 2px solid hsl(0, 2%, 25%);
+}
+
+input:focus {
+  border: 2px solid hsl(267.9,69.9%,67.5%);
+  background: rgb(177, 218, 177);
+}
+
+input[name="foodandsand"],[name="agree-tos"] {
+  accent-color: hsl(267.9,69.9%,67.5%);
+}
+
+button {
+  padding: .8em 1.3em;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-family: 'Luckiest Guy', cursive;
+  color: hsl(0,53.8%,97.5%);
+  background-color: hsl(267.9,69.9%,67.5%);
+  border: 2px solid hsl(0,0%,39.2%);
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(252, 245, 245, 0.1);
+  transition: all 0.3s ease 0s;
+ }
+ .btn {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+ }
+
+
+ 
+ button:hover {
+  cursor: url(black-paw.svg), auto
+ }
+
+.accordion {
+  margin: auto;
+  width: 90vw;
+  background: rgb(215, 238, 220);
+  overflow: hidden;
+  border: 1px solid hsl(0,0%,39.2%);
+}
+
+.panel-questions {
+  cursor: pointer;
+  background: rgb(91, 243, 172);
+  color: hsl(0,1.2%,31.8%);
+  font-size: 1em;
+  position: relative;
+  padding: 10px 10px;
+  border: 1px solid hsl(0,1%,39.6%);
+}
+
+.panel-questions::before,
+.panel-questions::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 3px;
+  position: absolute;
+  background: rgb(109, 108, 108);
+  right: 15px;
+  top: 20px;
+  transform: rotate(0deg);
+  transition: transform 300ms ease;
+}
+.panel-questions::after {
+  transform: rotate(90deg);
+}
+
+.panel-answers p {
+  margin: 20px;
+  font-size: .8em;
+  color: hsl(0,0%,39.2%);
+  line-height: 1.5;
+}
+
+.boldedtext {
+  font-weight: 600;
+}
+
+.panel-questions.active::after {
+  transform: rotate(180deg);
+}
+
+.panel-answers {
   display: none;
 }
-h1 {
-  font-family: 'Luckiest Guy', cursive;
-  color: #ff41aa;
+
+.panel-questions.active + .panel-answers {
+  display: block;
 }
 
 
 
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
+@media (min-width: 668px) {
+  main {
+   flex-direction: row-reverse;
+  }
+  .accordion {
+    width: 40vw;
+  }
+  .register-form {
+    width: 50vw;
+  }
 }
