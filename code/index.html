@@ -28,27 +28,94 @@
 
     <!-- Signup form -->
       <section class="form-container">
+        <form id="form" action="https://httpbin.org/anything" method="post" >
 
+          <h1 class="title">Sign up for our workshops</h1>
 
+          <div class="input-container">
+            <input type="text" class="input" name="first-name" placeholder="a">
+            <label>First name:</label>
+          </div>
+
+          <div class="input-container">
+            <input type="text" class="input" name="last-name" placeholder="a">
+            <label>Last name:</label>
+          </div>
+
+          <div class="input-container">
+            <input type="email" class="input" name="email" placeholder="a" required>
+            <label>E-mail:</label>
+          </div>
+
+          <div class="input-container">
+            <label>Select a course:</label>
+            <select name="select-course" class="input" name="select-course" >
+              <option value="" disabled selected hidden></option>
+               <option value="flower-arrangements">Flower arrangements 101</option>
+              <option value="flower-wreath">Create your own flower wreath</option>
+              <option value="dry-flowers">Create your dry flower arrangement</option>
+            </select>
+          </div>
+
+          <div class="input-container">
+            <label>Join our mailing list:</label>
+            <input type="checkbox" class="input checkbox" name="mailing-list" >
+          </div>
+
+          <div class="input-container">
+            <input type="submit" class="input submit-button" onclick="alert('Thank you for joining!')" value="Submit">
+          </div>
+
+        </form>
       </section>
 
        <!-- Accordion -->
       <section class="accordion-container">
        
-        <h1>FAQ</h1>
+        <h1>FAQ about the workshop</h1>
 
-        <div class="question" id="section1">Section 1</div>
-        <div class="answer">
-          <p>Lorem ipsum...</p>
+        <div class="accordion-segment">
+          <div class="question" id="section1">How can I book a course?</div>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, quis ipsum corporis ad tempora harum, minima quos quisquam animi similique ea beatae molestiae sed minus nostrum maiores consequatur dolorem quia.</p>
+          </div>
         </div>
 
-        <div class="question" id="section2">Section 2</div>
-        <div class="answer">
-          <p>Lorem ipsum...</p>
+        <div class="accordion-segment">
+          <div class="question" id="section2">What do I need for the course?</div>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non mollitia beatae obcaecati nihil voluptatem eos officia perferendis blanditiis deleniti culpa rem ipsa at, unde voluptatum labore! Suscipit quas perferendis natus?</p>
+          </div>
         </div>
+
+        <div class="accordion-segment">
+          <div class="question" id="section3">What if I miss a class? How can I catch up?</div>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, sint voluptatibus. Exercitationem tenetur id aspernatur iure sed, assumenda, voluptatum laboriosam quod fugiat unde, voluptate a illum facilis ipsa ipsam placeat.</p>
+          </div>
+        </div>
+
+        <div class="accordion-segment">
+          <div class="question" id="section4">How do I pay for the course?</div>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aliquid fugiat quae possimus cupiditate mollitia! Quo ipsum, quia ducimus facilis non mollitia repellendus commodi, velit aliquam eos excepturi, officia voluptatum!</p>
+          </div>
+        </div>
+
+        <div class="accordion-segment">
+          <div class="question" id="section5">What is your cancellation policy?</div>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis placeat illo, nostrum quo quaerat illum possimus, odio molestias saepe soluta eos, perspiciatis accusantium distinctio odit dolores beatae magnam aliquid itaque.</p>
+          </div>
+        </div>
+
       </section>
-      
+
     </div>
+
+    <footer>
+
+    </footer>
 
     <script src="script.js"></script> <!-- dont forget to link the javascript file here! -->
   </body>
