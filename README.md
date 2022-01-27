@@ -1,5 +1,5 @@
 # Business Site
-Week 3 project of Hero image, Form (Sign up), Accordion (FAQ) with responsive for Tablet and Desktop
+Week 3 project of Hero image/video, Form (Sign up) with validation, Accordion (FAQ) with responsive for Tablet and Desktop.
 
 ## The problem
 
