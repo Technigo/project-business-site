@@ -11,6 +11,7 @@ document.getElementById("section2").onclick = toggle
 document.getElementById("section3").onclick = toggle
 document.getElementById("section4").onclick = toggle
 
-//Den här funktionen gör att min accordian inte fungerar? Men vår lärare sa att vi skulle ha den för att "behålla" informationen från formuläret?
-//document.getElementById('form').onsubmit = event => {
+// Prevent the information from disappearing.
+document.getElementById('form').onsubmit = event => {
   //event.preventDefault()
+}
