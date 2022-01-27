@@ -42,96 +42,6 @@ body {
   padding: 10px 30px;
 }
 
-#burger-menu {
-  height: 27px;
-  width: 27px;
-  margin: 50px;
-  overflow: visible;
-  position: absolute;
-  z-index:240;
-}
-#burger-menu span,
-#burger-menu span:before,
-#burger-menu span:after {
-  background: #fff;
-  display: block;
-  height: 4px;
-  opacity: 1;
-  position: absolute;
-  transition: 0.3s ease-in-out;
-}
-#burger-menu span:before,
-#burger-menu span:after {
-  content: "";
-}
-#burger-menu span {
-  right: 0px;
-  top: 13px;
-  width: 27px;
-}
-#burger-menu span:before {
-  left: 0px;
-  top: -10px;
-  width: 16px;
-}
-#burger-menu span:after {
-  left: 0px;
-  top: 10px;
-  width: 20px;
-}
-
-#burger-menu.close span {
-  transform: rotate(-45deg);
-  top: 13px;
-  width: 27px;
-}
-#burger-menu.close span:before {
-  top: 0px;
-  transform: rotate(90deg);
-  width: 27px;
-}
-#burger-menu.close span:after {
-  top: 0px;
-  left:0;
-  transform: rotate(90deg);
-  opacity:0;
-  width:0;
-}
-
-#menu{
-  z-index:1;
-  min-width:100%;
-  min-height:100%;
-  position: fixed;
-  top:0;
-  height:0;
-  visibility: hidden;
-  opacity: 0;
-  text-align:center;
-  padding-top:20px;
-  transition: all 0.3s ease-in-out;
-  
-}
-
-#menu.overlay{
-  visibility: visible;
-  opacity: 1;
-  padding-top:100px;
-  background:rgba(0,0,0,0.5);
-}
-
-#menu li{
-  list-style:none;
-}
-#menu a{
-  color:#fff;
-  display:block;
-  font-size: 32px;
-  margin-bottom:30px;
-  text-decoration:none;
-}
-
-
 .tagline {
   width: 700px;
   position: absolute;
@@ -141,7 +51,7 @@ body {
   color: white;
 }
 .tagline h3 {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-style: italic;
   font-size: 43px;
   margin-bottom: 10px;
@@ -151,131 +61,163 @@ body {
   font-size: 18px;
 }
 .tagline button {
-  padding:0.5em 3em;
-  border:0.16em solid #FFFFFF;
-  margin:0 0.3em 0.3em 0;
+  padding: 0.5em 3em;
+  border: 0.16em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
   text-decoration: none;
   text-transform: uppercase;
-  color:#FFFFFF;
-  text-align:center;
+  color: #ffffff;
+  text-align: center;
   transition: all 0.15s;
-  background-color: rgba(78, 71, 121, 0.151);
+  background-color: rgba(96, 87, 155, 0.205);
   border-radius: 15px;
-
 }
-.tagline button:hover{
-  color:#c1b3cc;
-  border-color:#9f94a8;
+.tagline button:hover {
+  color: #c1b3cc;
+  border-color: #9f94a8;
 }
-.tagline button:active{
-  color:#BBBBBB;
-  border-color:#BBBBBB;
-}
-@media all and (max-width:30em){
-  a.button2{
-  display:block;
-  margin:0.4em auto;
-}
+.tagline button:active {
+  color: #bbbbbb;
+  border-color: #bbbbbb;
 }
 .main {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-.faq {
-  display: block;
+.faq,
+.newsletter {
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  width: 80%;
+  max-height: 80%;
+  overflow: scroll;
+  box-shadow: 2px 2px 4px #525f4d;
 }
-form {
-  display: grid;
-  justify-content: center;
+.faq h2 {
+  font-size: 30px;
+  color: #3e3f4b;
+  padding-bottom: 10px;
+}
+button.accordion {
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 16px;
+  color: #333;
+  transition: background-color 0.2s linear;
+  margin-bottom: 10px;
+}
+
+button.accordion:after {
+  content: "\f150";
+  font-size: 18px;
+  float: right;
+}
+
+button.accordion.is-open:after {
+  content: "\f151";
+}
+
+button.accordion:hover,
+button.accordion.is-open {
+  background-color: rgb(217, 211, 224);
+}
+
+.accordion-content {
+  background-color: rgb(233, 229, 240);
+  width: 100%;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
 }
 .faq-image,
 .newsletter-picture {
   background-color: #f1ecec;
 }
 .faq-image img {
-  width: 90%;
-  height: auto;
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
   margin: auto;
   display: block;
   padding: 50px;
   opacity: 0.7;
 }
-.newsletter {
-  align-items: center;
-  margin: auto;
+.quote {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #889189ad;
+  display: block;
+  align-content: center;
+  padding: 10vh;
+}
+.quote h3 {
+  font-size: 40px;
+  color: #f1ecec;
+  font-style: italic;
+  text-align: center;
+  font-family: "Abril Fatface";
+  font-weight: 100;
+}
+.quote h2 {
+  text-align: center;
+  color: rgb(216, 206, 233);
+  text-transform: uppercase;
+  font-size: 16px;
 }
 .newsletter-picture img {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  width: 90%;
+  width: 80%;
   height: auto;
   margin: auto;
   display: block;
   padding: 50px;
   opacity: 0.7;
 }
-
-/*.menu {
-  display: block;
+form h3 {
+  font-size: 30px;
+  color: #3e3f4b;
+  padding-bottom: 10px;
 }
-.toggle {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background: url(menu-icon.webp);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: center;
-  z-index: 3;
+form {
+  display: grid;
+  justify-content: center;
+  padding: 5vw;
 }
-.menu-link {
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 250px;
+  background-color: #3e3f4b;
+}
+.footer-left {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0 10px 20px;
+  color: #9f94a8;
+}
+.logo-2 {
+  color: rgba(255, 255, 255, 0.226);
+  font-size: 120px;
+  font-family: "Abril Fatface";
+  padding-left: 30px;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-right: 15%;
+}
+.footer-links a {
   text-decoration: none;
+  color: #dedcdc;
+  text-align: center;
 }
-.menu-wrap {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1;
-}
-.menu-wrap .toggler {
-  position: absolute
-  top: 0;
-  right: 0;
-  z-index: 2;
-  width: 50px;
-  height: 50x;
-  opacity: 0;
-}
-.menu-wrap .hamburger {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 60px;
-  height: 60px;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-/* Hamburger line 
-.menu-wrap .hamburger > div {
-  position:relative;
-  width: 100%;
-  height: 4px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.menu-wrap .hamburger > div:before, .menu-wrap .hamburger > div:after {
-  content: '';
-  position: absolute;
-  color: white;
-  z-index: 1;
-  top: -10px;
-  width: 100%;
-  height: 4px;
-  }
-*/
