@@ -9,10 +9,10 @@
 </head>
 
 <body>
-  <header class="hero">
-    <div class="hero__text">
-      <h1>Professional Barista Course</h1>
-      <p>Ready Set Brew</p>
+  <header class="header">
+    <div class="hero">
+      <h1 class="hero__header">Professional Barista Course</h1>
+      <p class="hero__paragraph">Ready Set Brew</p>
     </div>
   </header>
 
@@ -24,19 +24,23 @@
   </section>
   <div class="wrapper">
     <div class="form-wrapper">
-      <form class="form" id="form" action="https://httpbin.org/anything" target="__blank" method="post">
+      <form class="form" id="form" action="https://httpbin.org/anything" target="__blank" method="post" autocomplete="off">
         <h2 class="form__header">COURSE SIGNUP</h2>
-        <input id="nameInput" class="form__input" type="text" name="name" placeholder="Full name*"/>
-        <input id="emailInput" class="form__input" type="email" name="email" placeholder="Email*"/>
-        <input type="tel" id="telInput" class="form__input" name="telephone" placeholder="Phone (123-456-7890)">
+        <input id="nameInput" class="form__input name-input" type="text" name="name" placeholder="Full name" minlength="1" maxlength="20" 
+         oninvalid="this.setCustomValidity('Please enter your name')" oninput="this.setCustomValidity('')" required/>
+        <input id="emailInput" class="form__input email-input" type="text" name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Email" 
+        oninvalid="this.setCustomValidity('Please enter your email address')" oninput="this.setCustomValidity('')" required/>
+        <input type="tel" id="telInput" class="form__input phone-input" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone (123-456-7890)" 
+        oninvalid="this.setCustomValidity('Please enter your phone number')" oninput="this.setCustomValidity('')" required>
         <select id="courseInput" class="form__input" name="course">
-          <option class="whiteText" value="level">Course Level</option>
+          <option class="tan-background" value="level">Course Level</option>
           <option value="beginner">Beginner</option>
           <option value="intermediate">Intermediate</option>
           <option value="advanced">Advanced</option>
         </select>
         <label for="policyInput">
-        <input type="checkbox" id="policyInput" class="form__input form__input--small" name="policy"/>
+        <input type="checkbox" id="policyInput" class="form__input form__input--checkbox" name="policy"
+          oninvalid="this.setCustomValidity('Please agree to the privacy policy')" oninput="this.setCustomValidity('')"  required/>
         I Agree to <span>Privacy Policy</span></label>
         <input class="form__input" type="submit">
       </form>
