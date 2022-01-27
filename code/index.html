@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <header class="image-header">
-      <div class="header-text">
-      <h1>Read More</h1>
-      <h3>Get your books of choice</h3>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="image-header">
+    <div class="header-text">
+      <h1>Read it Again</h1>
+      <p>Don't let a good story go wasted</p>
     </div>
-    </header>
-  
-<main>
-    <form action="https://httpbin.org/anything" method="post" >
+  </header>
+
+  <main class="container">
+   <div class="form-container">
+     <h3>Sign up to buy or sell books</h3>
+     <section class="form">
+    <form action="https://httpbin.org/anything" method="post">
       <label>
         Name
         <input id="nameInput" class="text-input" type="text" name="name" />
@@ -25,29 +29,38 @@
         Email
         <input id="email" type="email" name="email" />
       </label>
+      <label class="radio">
+        I would like to
+        <input type="radio" name="type" value="sell"> Sell
+        <input type="radio" name="type" value="buy"> Buy
+        <input type="radio" name="type" value="both"> Both
+      </label>
       <label>
         Yes, I would like book tips
         <input id="bookTips" type="checkbox" name="booktips" />
       </label>
-      <button type="submit">Let's start reading</button>
+      <button type="submit">Sign me up</button>
     </form>
+  </section>
+  </div>
 
     <!--<section class="accordion">
       Accordion -->
-      <h1>FAQ</h1>
+    <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+    <div class="question" id="section1">Section 1</div>
+    <div class="answer">
+      <p>Lorem ipsum...</p>
+    </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section> 
+    <div class="question" id="section2">Section 2</div>
+    <div class="answer">
+      <p>Lorem ipsum...</p>
+    </div>
+    </section>
   </main>
-    
-    <script src="script.js"></script>
-  </body>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
