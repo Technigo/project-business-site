@@ -2,14 +2,15 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
+/* .active + .answer {
   /* some styling here */
-}
+/*}*/
 
 .accordion-button {
   display: block;
   width:100%;
   padding: 15px;
+  border: none;
   outline: none;
   cursor: pointer;
   background-color: rgb(10, 88, 88);
@@ -24,7 +25,7 @@ content:'\25bc';
 float: right;
 
 }
-.accordion-button--active + .accordion-content { display: block}
+/*.accordion-button--active + .accordion-content { display: block}*/
 .accordion-button--active {background:violet }
 .accordion-button--active::after {content: '\25b2' }
 
@@ -38,8 +39,20 @@ float: right;
   padding: 0 15px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: #eeee;
-  /*this is for the nonanimated, responsive*/
+  /*this is for the nonanimated, responsive, sturdy version of accordion*/
   display: none;
   overflow: auto;
   
+}
+.active{
+  display: block;
+}
+
+.faq-container {
+  background-color: blue;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
