@@ -35,12 +35,13 @@ nav {
   position: absolute;
   display: flex;
   flex-direction: column;
-  left: 5%;
+  left: 15%;
   top: 5%;
-  width: 90vw;
+  width: 70vw;
   height: 180px;
   padding: 20px;
-  background-color: rgba(99, 109, 163, 0.911);
+  background-color: rgba(139, 99, 163, 0.911);
+  box-shadow: 0 0 10px rgb(184, 120, 197), 0 0 20px #fff, 0 0 30px #8c78c4, 0 0 40px #7f38cf, 0 0 70px #e600e6, 0 0 60px #b800e6, 0 0 70px #00e60c;
   border-radius: 0.5rem;
 }
 
@@ -61,7 +62,7 @@ nav {
 
 .navbar-links li a {
   display: block;
-  color: gold;
+  color: #f5db5ade;
   padding: 1rem;
 }
 
@@ -79,19 +80,20 @@ nav {
   justify-content: space-between;
   width: 40px;
   height: 20px;
-
 }
 
 .toggle-btn .bar {
   height: 4px;
-  width: 100%;
-  background-color: gold;
+  width: 80%;
+  background-color: #2528b9a4;
+  box-shadow: 0 0 10px rgb(184, 120, 197), 0 0 20px #fff, 0 0 30px #8c78c4, 0 0 40px #7f38cf, 0 0 70px #e600e6, 0 0 60px #b800e6, 0 0 70px #00e60c;
   border-radius: 10px;
 }
 
 
-a:hover {
+.navbar-links li a:hover {
   color: burlywood;
+  text-shadow: 0 0 10px rgb(197, 179, 120), 0 0 20px #fff, 0 0 30px #e2a600, 0 0 40px #38b8cf, 0 0 70px #e600e6, 0 0 60px #b800e6, 0 0 70px #00e60c;
 }
 
 a:link {
@@ -115,9 +117,8 @@ video {
   align-items: center;
   font-size: 2.5rem;
   text-align: center;
-  /* text-align: center; */
   top: 20%;
-  animation: 1s ease-in-out infinite alternate; 
+  /* animation: 1s ease-in-out infinite alternate;  */
   text-shadow: 0 0 10px rgb(197, 179, 120), 0 0 20px #fff, 0 0 30px #e2a600, 0 0 40px #38b8cf, 0 0 70px #e600e6, 0 0 60px #b800e6, 0 0 70px #00e60c;
 }
 
@@ -137,10 +138,15 @@ video {
   height: auto;
   margin: 25px;
   padding: 0 30px 0 30px;
-  /* font-size: 92%; */
   background-color: #f0f1a3fd;
   border-radius: 1em;
+}
 
+img {
+  filter:opacity(90%);
+  width: 10em;
+  align-self: center;
+  margin: 20px 0 5px 0;
 }
 
 .hello-kids {
@@ -166,12 +172,6 @@ h2 {
   
 }
 
-/* .greeting {
-  background-color: #438d6d;
-  border: 1px solid black;
-  filter: drop-shadow(5px 5px #2b4137);
-  border-radius: 0.5rem;
-} */
 
 .forms-container {
   display: flex;
@@ -273,7 +273,6 @@ button {
 }
 
 button:hover {
-  
   box-shadow: 5px 5px  #F5DC5A,
   -0px -0px  #ffffff;
   filter: none;
@@ -293,15 +292,14 @@ select {
   flex-direction: row;
   justify-content: space-evenly;
   color: brown;
-  margin: 0 0 50px 0;
+  margin: 20px 0 50px 0;
+  padding-top: 20px;
   list-style-type: none;
-  /* border: 2px solid black; */
 }
 
-/* .input.checkbox-size {
-  width:10px;
-  height: 10px;
-} */
+.footer-list li a {
+  color: #8413a0c0;
+}
 
 
 
@@ -313,38 +311,42 @@ select {
 
 
 .hero-text {
-  font-size: 7em;
+  font-size: 8em;
 }
 
 nav {
   position: absolute;
   display: flex;
-  padding: 20px;
-  bottom: 5%;
- 
+  background-color: transparent;
+  align-items: center;
+  top: 82%;
+  box-shadow: none;
 }
 
 .navbar-links {
   display: flex;
-  
 }
 
 .navbar-links ul {
-  display: flex;
+  flex-direction: row;
   text-decoration: none;
 }
 
 .navbar-links li {
+  /* border: 2px solid red; */
   list-style-type: none;
   text-decoration: none;
-  font-size: 2em;
-  padding: 0 80px 0 50px;
+  font-size: 1.5em;
+  padding: 0 40px 0 40px;
 }
 
-.toggle-button {
+.navbar-links li a {
+  color: #8413a0c0;
+}
+
+.toggle-btn {
   display: none;
 }
-
 
 .site-info {
   font-size: 150%;
@@ -388,24 +390,31 @@ form {
     position: absolute;
     display: flex;
     padding: 20px;
-    top: 60%;
+    top: 82%;
+    box-shadow: none;
    
   }
 
   .navbar-links {
-    display: flex;
+    display: flex; 
     
 }
   
   .navbar-links ul {
     text-decoration: none;
+    flex-direction: row;
+    justify-content: center;
   }
   
   .navbar-links li {
     list-style-type: none;
     text-decoration: none;
-    font-size: 2.5em;
-    padding: 0 80px 0 50px;
+    font-size: 2em;
+    padding: 0 80px 0 80px;
+    }
+
+    .navbar-links li a {
+      color: #8413a0c0;
     }
 
   .toggle-btn {
@@ -413,9 +422,11 @@ form {
     }
 
   .hero-text {
-    font-size: 700%;
-   top:10%;
+    font-size: 15em;
+    top:10%;
+    /* left: 2%; */
   }
+
   .site-info {
     font-size: 40px;
   }
