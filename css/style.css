@@ -89,8 +89,8 @@ input[type="checkbox"]:checked ~ .container .menu {
   height: 50%;
   z-index: 1;
   text-align: center;
+  line-height: 2em;
 }
-/*section moving*/
 
 /* The menu */
 ul {
@@ -106,16 +106,21 @@ nav.menu ul li:hover > ul {
   max-height: 600px;
   height: auto;
 }
-a {
+nav.menu ul li:hover {
+  background-color: #269ccf;
+  border-radius: 30%;
+}
+a{
   text-decoration: none;
   display: block;
   color: #ffffff;
 }
 
 /*start hero image*/
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/cooding.jpg");
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
+                  rgba(0, 0, 0, 0.5)),
+                    url("../img/cooding.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -123,7 +128,7 @@ a {
   position: relative;
 }
 
-.hero-text {
+.hero__text {
   text-align: center;
   position: absolute;
   top: 50%;
@@ -132,20 +137,20 @@ a {
   color: #ffffff;
   line-height: initial;
 }
-.hero-text button {
+.hero__text button {
   border: none;
   outline: 0;
   display: inline-block;
   padding: 10px 25px;
   color: black;
-  background-color: #ddd;
+  background-color: #ffa500;
   text-align: center;
   cursor: pointer;
   margin-top: 10px;
   border-radius: 10px;
 }
 
-.hero-text button:hover {
+.hero__text button:hover {
   background-color: #269ccf;
   color: #000000;
 }
@@ -186,8 +191,6 @@ input[type="radio"] {
   height: 20px;
 }
 
-
-
 fieldset {
   width: 80%;
   padding: 10px;
@@ -203,7 +206,7 @@ fieldset {
   position: inherit;
 }
 
-.signupForm-info {
+.signupForm__info {
   padding: 10px;
   margin-left: 18%;
 }
@@ -216,7 +219,7 @@ fieldset {
   border-radius: 15px;
 }
 
-.accordion {
+.accordionSection__button {
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -229,11 +232,11 @@ fieldset {
 }
 
 .active,
-.accordion:hover {
+.accordionSection__button:hover {
   background-color: #ccc;
   cursor: help;
 }
-.accordion:after {
+.accordionSection__button:after {
   content: "\002B";
   color: #777;
   font-weight: bold;
@@ -243,7 +246,7 @@ fieldset {
 .active:after {
   content: "\2212";
 }
-.panel {
+.accordionSection__text {
   padding: 0 18px;
   background-color: white;
   max-height: 0;
@@ -298,7 +301,8 @@ fieldset {
     text-decoration: none;
   }
   nav.menu a:hover {
-    background-color: #000000;
+    background-color: #269ccf;
+    border-radius: 50%;
   }
   /* keeps the dropdown invisible and assign style to list*/
   nav.menu ul ul {
@@ -331,7 +335,7 @@ fieldset {
   input#fname,
   input#lname,
   input#female,
-  input#pwd {
+  input#email {
     margin-top: 10px;
   }
 }

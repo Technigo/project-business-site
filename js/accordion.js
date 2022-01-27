@@ -16,7 +16,7 @@ acc.onclick = accordion
 
 /*dont forget to link the javascript file here! */
  
-    let acc = document.getElementsByClassName("accordion");
+    let acc = document.getElementsByClassName("accordionSection__button");
     let i;
     
     for (i = 0; i < acc.length; i++) {

@@ -34,8 +34,8 @@
       <!--end navigation bar-->
 
       <!--start hero-->
-      <div class="hero-image">
-        <div class="hero-text">
+      <div class="hero">
+        <div class="hero__text">
           <h1>Join bootcamp!</h1>
           <button>Sign up</button>
         </div>
@@ -45,23 +45,23 @@
       <!-- Signup form -->
       <section class="signupForm">
             <h1>Signup</h1>
-        <form class="signupForm-info" 
+        <form class="signupForm__info" 
               action="https://httpbin.org/anything" 
               method="post">
               
-          <label for="fname">First name:</label><br />
           <input  type="text" 
                   id="fname" 
                   name="fname" required 
                   minlength="4" 
-                  maxlength="15"/><br />
-          <br>
-          <label for="lname">Last name:</label><br>
+                  maxlength="15"
+                  placeholder="First name"
+                  autofocus="autofocus"/><br><br>
           <input  type="text" 
                   id="lname" 
                   name="lname" required 
                   minlength="4" 
-                  maxlength="15"/><br>
+                  maxlength="15"
+                  placeholder="Last name"/><br>
           <br>
           <fieldset>
             <legend>Gender</legend>
@@ -69,7 +69,7 @@
                   id="male" 
                   name="gender" 
                   value="male" />
-          <label for="html">Male</label><br>
+          <label for="male">Male</label><br>
 
           <input  type="radio" 
                   id="female" 
@@ -78,10 +78,10 @@
           <label for="female">Female</label>
           </fieldset><br>
           <br>
-          <label for="email">Email:</label><br>
           <input  type="email" 
                   id="email" 
-                  name="email" required><br>
+                  name="email" required
+                  placeholder="Email"><br>
           <br>
           <input  type="checkbox" 
                   id="term" 
@@ -98,23 +98,22 @@
       <!-- Accordion -->
       <section class="accordionSection">
         <h1>FAQ</h1>
-
-        <button class="accordion">Question 1</button>
-        <div class="panel">
+        <button class="accordionSection__button">Question 1</button>
+        <div class="accordionSection__text">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat.</p>
         </div>
 
-        <button class="accordion">Question 2</button>
-        <div class="panel">
+        <button class="accordionSection__button">Question 2</button>
+        <div class="accordionSection__text">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat.</p>
         </div>
 
-        <button class="accordion">Question 3</button>
-        <div class="panel">
+        <button class="accordionSection__button">Question 3</button>
+        <div class="accordionSection__text">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat.</p>
