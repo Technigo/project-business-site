@@ -46,8 +46,8 @@ document.getElementById('form').onsubmit = (event) => {
 
 // Check innerheight and apply for landscape mode
 const landscapeMode = window.matchMedia('(max-device-width: 930px) and (orientation: landscape)');
-const headerHeight = document.querySelector('.header');
 if (landscapeMode.matches) {
+  const headerHeight = document.querySelector('.header');
   let height = window.outerHeight;
   headerHeight.style.height = height + "px";
 }
