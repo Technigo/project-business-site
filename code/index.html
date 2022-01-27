@@ -19,29 +19,32 @@
   <h2> > A NEW MUSIC EXPERIENCE</h2>
 </header>
 
+
+
 <section class="container">
     <!-- Signup form -->
   <form id="form" action="http://httpbin.org/anything" method="post">
-    <h1>Sign Up</h1>
     
+    <h1 id="greeting">Sign Up</h1>
+    <h2></h2>
 
     <!-- The class backdrop is used later in CSS where I styled it. Id didn't seemed to work with just the input attibute -->
-    <h3 id="greeting"></h3>
-
+    
+    
     <label for="input-name">First and Last name:
-      <div class="backdrop"><input type="text" id="input-name" name="name">
+      <div class="backdrop"><input type="text" id="input-name" name="name" required>
       </div></label>
 
     <label for="input-email">Email:
-      <div class="backdrop"><input type="email" id="input-email" name="email">
+      <div class="backdrop"><input type="email" id="input-email" name="email" required>
       </div></label>
 
     <label for="inputPassword">Choose password:
-      <div class="backdrop"><input type="password" id="input-password" name="password">
+      <div class="backdrop"><input type="password" id="input-password" name="password" required>
       </div></label>
     
     <label for="selectMembership">Choose Mebership:
-      <select name="membership" id="selectMembership">
+      <select name="membership" id="selectMembership" required>
         <option value="freeTrial">Start free Trial</option>
         <option value="monthly">Monthly membership</option>
         <option value="year">Year membership</option>
@@ -58,8 +61,10 @@
         <input type="checkbox" id="input-newsletter" name="newsletter" value="No" >Maybe later
          <span class="checkmark"></span></label>
     </fieldset>
+  
     
     <button class="btn" type="submit">JOIN</button>
+  
   </form>
 
     <section class="accordion">
