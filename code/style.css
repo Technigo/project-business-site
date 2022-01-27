@@ -17,17 +17,31 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 .answer {
   display: none;
-}  
-/* '.answer display: none;' gör att svaren döljs när sidan visas. De visas senare när section (.question) aktiveras. 
-
-.active + .answer {
-  /* some styling here - note! Answer is the only thing that will be styled. 
-}*/
-
-.question + .answer {
-  height: fit-content;
-  background-color: yellow;
 }
+
+/* '.answer display: none;' gör att svaren döljs när sidan visas. De visas senare när section (.question) aktiveras.*/ 
+.active + .answer {
+  display: block;
+  background-color: brown;
+  color: blue;
+  
+}
+/* some styling here - note! Answer is the only thing that will be styled. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .hero-image {
@@ -94,6 +108,9 @@ form label { /* This target every label inside the form*/
 
 /* Mobil layout -- Accordion/
 
+
+
+
 /*------TABLET STYLING------*/
 
 @media (min-width: 667px) and (max-width: 1024px) {
@@ -105,73 +122,68 @@ form label { /* This target every label inside the form*/
     background-position: bottom;
     display: grid;
     grid-template-rows: 10vh;
-  
     }
 
-    .inner-hero-header { /*detta är ett grid-item till header som är parent container*/
-      width: 100vw;
-      height: 10vh;
-      background-color: gray;
-      color: #fff;
-      opacity: .7;
-      margin-top: 0;
-      
-      }
-    
-    .logo-place {
-      display: none;
-
+  .inner-hero-header { /*detta är ett grid-item till header som är parent container*/
+    width: 100vw;
+    height: 10vh;
+    background-color: gray;
+    color: #fff;
+    opacity: .7;
+    margin-top: 0;
     }
-    .logo-mobil {
-      display: none;
+    
+  .logo-place {
+    display: none;
     }
 
-    .hero-image h1 {
-      align-self: center;
-      justify-self: center;
-      padding: 10px;
-      opacity: .85;
-      font-size: 5vh;
-       
+  .logo-mobil {
+    display: none;
     }
 
-      .navbar {  /* <nav> taggen är placerad i ett grid-item som i det här fallet är 'inner-hero-header'. Flexbox aktiveras i detta element och inte i 'inner-hero-header'*/
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-      } 
+  .hero-image h1 {
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    opacity: .85;
+    font-size: 5vh;   
+    }
 
-      .nav-menu {  /* Flexbox skapar utrymmer mellan länkarna */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    
-      }
+  .navbar {  /* <nav> taggen är placerad i ett grid-item som i det här fallet är 'inner-hero-header'. Flexbox aktiveras i detta element och inte i 'inner-hero-header'*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    } 
 
-      .nav-item {
-        margin-left: 20px;
+  .nav-menu {  /* Flexbox skapar utrymmer mellan länkarna */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+  .nav-item {
+    margin-left: 20px;
+    }
     
-      }
+  .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    }
+
+  .nav-link:hover {
+    color: #dabf94;
+    }
     
-      .nav-link {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 20px;
-        color: white;
-        text-decoration: none;
-      }
-      .nav-link:hover {
-        color: #dabf94;
-      
-      }
-    
-      .logo {
-        font-size: 30px;
-        font-weight: 600;
-        color:white;
-        font-family: 'Montserrat', sans-serif;
-        text-decoration: none;
-      }
+  .logo {
+    font-size: 30px;
+    font-weight: 600;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    }
     
 
 }
@@ -180,40 +192,39 @@ form label { /* This target every label inside the form*/
 /*------DESKTOP STYLING-----*/ 
 @media (min-width: 1024px) {
 
-.hero-image {
-  width: 100vw;
-  height: 70vh;
-  background-size: cover;
-  background-position: bottom;
-  display: grid;
-  grid-template-rows: 10vh;
+  .hero-image {
+    width: 100vw;
+    height: 70vh;
+    background-size: cover;
+    background-position: bottom;
+    display: grid;
+    grid-template-rows: 10vh;
+    }
+  
+  .inner-hero-header { /*detta är ett grid-item till header som är parent container*/
+    width: 100vw;
+    height: 10vh;
+    background-color: gray;
+    color: #fff;
+    opacity: .7;
+    margin-top: 0;
+    }
 
+  .logo-place{
+    display: none;
+    }
+
+  .logo-mobil {
+    display: none;
+    }
+
+  .hero-image h1 {
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    opacity: .85;
+    font-size: 5vw;
   }
-.inner-hero-header { /*detta är ett grid-item till header som är parent container*/
-  width: 100vw;
-  height: 10vh;
-  background-color: gray;
-  color: #fff;
-  opacity: .7;
-  margin-top: 0;
-  }
-
-.logo-place{
-  display: none;
-}
-
-.logo-mobil {
-  display: none;
-}
-
-.hero-image h1 {
- align-self: center;
- justify-self: center;
- padding: 10px;
- opacity: .85;
- font-size: 5vw;
-
-}
 
   .navbar {  /* <nav> taggen är placerad i ett grid-item som i det här fallet är 'inner-hero-header'. Flexbox aktiveras i detta element och inte i 'inner-hero-header'*/
     display: flex;
