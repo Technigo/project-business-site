@@ -17,7 +17,6 @@ for (i = 0; i < acc.length; i++) {
 
 
 // Action toggling for pressing Submit button and displaying black screen of death
-
 document.getElementById('form').onsubmit = (event) => {
   event.preventDefault();
   const blackScreen = document.querySelector('.black-screen');
@@ -54,40 +53,10 @@ if (landscapeMode.matches) {
   headerHeight.style.height = height + "px";
 }
 
-// landscapeMode.addListener(function(m) {
-//   if(m.matches) {
-//     headerHeight.style.height = height + "px";
-//   } else {
-//     headerHeight.style.height = "75vh";
-//   }
-// });
-
-
-
-
-// portraitMode.addListener(function(g) {
-//   if(g.matches) {
-//     headerHeight.style.height = "75vh";
-//   } else {
-//     headerHeight.style.height = height + "px";   
-//   }
-// });
-
-
-// Trying a function for flipping screen orientation and changing height
-
-// screen.orientation.onchange = function(flipScreen) {
-//   const mobileLandscape = window.matchMedia('(max-device-width: 930px) and (orientation: landscape)');
-//   
-//   const headerHeight = document.querySelector('.header');
-//   if (mobileLandscape.matches) {
-//     let height = window.outerHeight;
-//     headerHeight.style.height = height + "px";
-//   } else {
-//     mobilePortrait.matches = true;
-//     headerHeight.style.height = "75vh";
-//   }
-// } 
-
-// Testing a screen flipping function to see if this works at all... 
-// Apparently screen.orientation.onchange is not supported by safari ios...
+landscapeMode.addListener(function(m) {
+  if(m.matches) {
+    headerHeight.style.height = height + "px";
+  } else {
+    headerHeight.style.height = "75vh";
+  }
+});

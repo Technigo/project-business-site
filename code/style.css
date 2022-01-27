@@ -688,10 +688,21 @@ input[type=text], input[type=tel], input[type=email] {
   /* Header height should be resolved by mediaQuery in JS */
   .header {
     max-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 
   .menu {
-    padding: 5px 0;
+    padding: 0 30px 0 0;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    flex-direction: column;
+    /* align-content: center; */
+    margin-left: auto;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+
   }
 
   /* Env safe area inset left and right for safari ios when viewport-fit=cover */
@@ -699,10 +710,14 @@ input[type=text], input[type=tel], input[type=email] {
     padding: 0 0 0 30px;
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    margin-top: auto;
+    margin-bottom: auto;
     }
 
   .brand-container__brand {
-    font-size: 65px;
+    font-size: 75px;
   }
 
   /* Page */
