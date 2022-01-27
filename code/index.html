@@ -16,24 +16,31 @@
   <body>
     
     <header>
-      <span class="hero-text">Want space? You're in it!</span>
 
-      <nav>
-        <ol>
-          <li class="list-items">Home</li>
-          <li class="list-items">Contact</li>
-          <li class="list-items">Nasa Live</li>
-        </ol>
-      </nav>
+     
+        <span class="hero-text">Want space? You're in it!</span>
 
-      <video class="video-head" width="auto" height="400px" muted loop autoplay controls playsinline> 
-        <source src="./videos/earthSun.mp4" type="video/mp4">
-        <p>Your browser does not support the video tag.</p>
+        <a href="#" class="toggle-btn" id="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+
+          <nav class="navbar-links" id="navbar-links">
+             <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="https://www.nasa.gov/nasalive" target="_blank">Nasa Live</a></li>
+             </ul>
+          </nav>
+
+          <video class="video-head" width="auto" height="400px" muted loop autoplay controls playsinline> 
+            <source src="./videos/earthSun.mp4" type="video/mp4">
+              <p>Your browser does not support the video tag. boho :,(</p>
+          </video>
 
         
-        
-        
-      </video>
+     
       
     </header>
     <!-- video or image as a header is cool :) -->
@@ -43,45 +50,48 @@
          <span class="hello-text">To get updates on what is going on out there, simply sign up to our community. It’s free and it’s fun. </span><br>
            <span class="remember"><em>Remember to claim your space.</em></span>
 
+           <h2 id="greeting"></h2>
+
     </section>
 
 
+
 <div class="forms-container">
-    <form>
+    <form id=form action="https://httpbin.org/anything">
 
       <span class="sign-up">sign up!</span>
       
-      <label for="firstname">First name
-      <input type="text">
-      </label>
-
-      <label for="surname"> Surname
-        <input type="text">
+        <label>First name:<br>
+          <input required type="text" id="firstName" for="firstname" name="name">
         </label>
 
-        <label for="dateofbirth">Date of Birth
-          <input type="date">
-          </label>
+        <label> Surname:<br>
+          <input type="text" for="surname" name="surname">
+        </label>
 
-          <label for="email"> E-mail
-            <input type="email">
-            </label>
+        <label>Date of Birth:<br>
+              <input type="date" for="dob" name="dob" min="2006-01-01">
+        </label>
 
-          <label for="gender">Gender
-            <select id="gender">
-              <option>Non-binary</option>
-              <option>Girl</option>
-              <option>Boy</option>
-              <option>Don't care</option>
-              </select>
-          </label>
+        <label> E-mail:<br>
+                <input type="email" for="email" name="email">
+        </label>
+
+        <label id="gender">Gender:<br>
+          <select id="gender">
+                <option>Non-binary</option>
+                <option>Girl</option>
+                <option>Boy</option>
+                <option>Don't care</option>
+                </select>
+        </label>
 
         <label for="parentsagreed">Parent's have agreed
-          <input class="checkbox-size" type=checkbox>
+           <input class="checkbox-size" type=checkbox>
         </label>
 
         <label for="termsconditions">I agree to the terms and conditions
-          <input type=checkbox>
+           <input type=checkbox>
         </label>
 
         <button type="submit">Sign me up!</button>
@@ -94,29 +104,46 @@
     
     <section class="accordion">
       <!-- Accordion -->
-      <span class="sign-up say-what">say what!?</span>
-      <h1>FAQ</h1>
+        <span class="sign-up say-what">say what!?</span>
 
-      <div class="question" id="section1">What is this?</div>
-      <div class="answer">
-        <p>This is a free community for the new generations to get to know more about the place we live in</p>
-      </div>
+          <h1>FAQ</h1>
 
-      <div class="question" id="section2">Does it cost me anything?</div>
-      <div class="answer">
-        <p>Not a single penny. We want you to be able to find fun and interesting facts in one place and at the same time talk to kids that share your interest for the world and the universe we live in.</p>
-      </div>
-    </section>
+          <div class="answer-open">
+            <h3 id="button"> What is this?</h3>
+              <p>This is a free community for the new generations to get to know more about the place we live in</p>
+         </div>
+
+         <div class="answer-open">
+           <h3 id="button">Does it cost?</h3>
+              <p>Not a single penny. We want you to be able to find fun and interesting facts in one place and at the same time meet friends who shares your interest for the world and the universe we live in.</p>
+         </div>
+         
+         <div class="answer-open">
+           <h3 id="button">How old do you need to be?</h3>
+              <p>Our target group is from born - 15 years old</p>
+         </div>
+
+         <div class="answer-open">
+           <h3 id="button">Why do my parents have to agree?</h3>
+              <p>Because they care about you.</p>
+         </div>
+
+         <div class="answer-open">
+           <h3 id="button">Can I cancel at anytime?</h3>
+              <p>Yep, of course! Just click link "unsubscribe" that comes with every newsletter.</p>
+         </div>
+
+      </section>
     
-  </div>
+    </div>
 
   
     <footer>
-      <ul>
-      <li>email</li>
-      <li>facebook</li>
-      <li>instagram</li>
-    </ul>
+       <ul class="footer-list">
+          <li><a href="#"></a>email</a></li>
+          <li><a href="#"></a>facebook</a></li>
+          <li><a href="#"></a>instagram</a></li>
+       </ul>
     </footer>
   
 
