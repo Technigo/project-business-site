@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #B0A084;
+  background-color: #C2B8B2;
 }
 /*    Styling of the header    */
 .image-header {
@@ -22,11 +22,13 @@ body {
 }
 
 .header-text {
-  color: white;
+  /*color: #6D2E46;*/
+  color: #370926;
 }
 
 h1 {
   font-size: 3rem;
+  
 }
 
 h1 + p {
@@ -91,7 +93,7 @@ button {
   padding: 1rem;
   margin: 1rem;
   text-transform: uppercase;
-  box-shadow: 3px 5px black;
+  box-shadow: 2px 3px 5px black;
   cursor: pointer;
 }
 
@@ -99,7 +101,47 @@ button {
    box-shadow: none;
  }
 
+ .accordion {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   width: 80%;
+   background-color:#DDD0C7;
+   margin-bottom: 1rem;
+ }
 
+ .accordion h1{
+   color: #370926;
+   font-size: 3rem;
+   margin-top: 1rem;
+ }
+
+ .accordion-element {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 1rem;
+   width: 80%;
+   gap: 0.5rem;
+ }
+
+ .question {
+   width: 100%;
+   color:#CEBEBE;
+   background-color: #884B58;
+   padding: 1rem;
+   text-align: center;
+   border: 3px solid #6D2E46;
+ }
+
+ .answer {
+   display: none;
+   width: 100%;
+   padding: 1.5rem;
+   background-color: #CEBEBE;
+   text-align: center;
+ }
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
