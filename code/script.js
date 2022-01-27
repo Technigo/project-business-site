@@ -54,14 +54,6 @@ if (landscapeMode.matches) {
   headerHeight.style.height = height + "px";
 }
 
-portraitMode.addListener(function(g) {
-  if(g.matches) {
-    headerHeight.style.height = "75vh";
-  } else {
-    headerHeight.style.height = height + "px";   
-  }
-});
-
 landscapeMode.addListener(function(m) {
   if(m.matches) {
     headerHeight.style.height = height + "px";
@@ -70,7 +62,13 @@ landscapeMode.addListener(function(m) {
   }
 });
 
-
+// portraitMode.addListener(function(g) {
+//   if(g.matches) {
+//     headerHeight.style.height = "75vh";
+//   } else {
+//     headerHeight.style.height = height + "px";   
+//   }
+// });
 
 
 // Trying a function for flipping screen orientation and changing height
