@@ -1,31 +1,186 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body{
+  font-family: 'montserrat', 'helvetica Neue', 'sans-serif';
+}
+
+
+/* Header/Hero section with video and text */
+
+.hero{
+  height: 50vh;
+  width: 100vw;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero video{
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-h1{
+  position: absolute;
+  color: white;
+  text-shadow: -1px -1px 2px black;
+  font-size: 400%;
+}
+
+
+/* text section */
+
+
+
+
+/* signup form */
+.content-wrapper{
+/* border: solid; */
+padding: 10px;
+display: flex;
+justify-content: center;
+}
+
+.form-wrapper{
+  /* border: solid; */
+  height: 50vh;
+  min-height: 50vh;
+  width: 100vw;
+  background-image: url(./img/jeremy-bezanger-QJ7gHF6V4no-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+form{
+  background-color: white;
+  border: 1px solid;
+  border-radius: 2rem;
+  padding: 2rem;
+  width: 50%;
+  max-width: 600px;
+  height: 80%;
+  margin: 3rem auto;
+  gap: 1rem;
+  display: grid;
+}
+
+h1{
+  color: #ffc5c4;
+}
+
+button{
+  width: 100px;
+  border-radius: 2rem;
+  border: none;
+  background-color: #ffc5c4;
+  padding: 0.5rem;
+  margin: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  
+}
+
+/* section for styling of accordion */
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
-  /* some styling here */
+  display: block;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  /* webkit-font-smoothing: antialiased; */
-  text-rendering: optimizeLegibility;
+.accordion-wrapper{
+/* border: solid; */
+margin: 1rem;
+display: grid;
+justify-items: center;
+background-color: #fbb98a;
+width: 50vw;  
 }
 
-/* body{ */
-  /* font-family: 'montserrat', 'helvetica Neue', 'sans-serif'; */
-/* } */
+.faq{
+  color: black;
+  align-self: flex-end;
+}
+
+.accordion{
+  /* border: solid; */
+  
+}
+.question{
+  border: 1px solid;
+  width: 30vw;
+  height: 5vw;
+  border-radius: 1rem;
+  background: white;
+  text-align: center;
+  margin: 1rem;
+}
+
+.answer{
+  background-color: #ffc5c4;
+  display: none;
+  width: 30vw;
+  height: 5vw;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid;
+  /* margin: 0rem 1rem 1rem 1rem; */
+}
+
+
+
+/* footer */
+footer{
+  background-image: url(./img/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg);
+  height: 10vh;
+  min-height: 10vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.footer-text{
+  color: white;
+  font-size: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------DESKTOP STYLING--------*/
-
-
-/* Header styling */
-
-header{
- background-image: url(./img/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg);
-   
-}

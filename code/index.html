@@ -10,112 +10,93 @@
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
-
-
-    <!-- header with navbar -->
-<header>
-  <h1><span> Hello!</span> I code and i create</h1>
-  <nav>
-    <img class="hamburger" src="" alt="">
-  </nav>
+    
+<header class="hero">
+    <video autoplay loop muted poster="./img/sandy-millar-qRB6rdYQ_8Q-unsplash.jpg">
+      <!-- <source src="./videos/SampleVideo_360x240_1mb.mp4" type="video/mp4"> -->
+      <!-- <source src="./videos/SampleVideo_360x240_1mb.webm" type="video/webm"> -->
+      <!-- <source src="./videos/SampleVideo_720x480_1mb.mp4" type="video/mp4"> -->
+      <!-- <source src="./videos/SampleVideo_720x480_1mb.webm" type="video/webm"> -->
+      <!-- <source src="./videos/SampleVideo_1280x720_1mb.mp4" type="video/mp4"> -->
+      <!-- <source src="./videos/SampleVideo_1280x720_1mb.webm" type="webm"> -->
+      <p>This browser dosen't support</p>
+    </video>
+    <h1 class="hero-h1">GOOD MORNING!</h1>
 </header>
-
-
-<!-- Hero-section -->
-<section class="hero">
-  <video controls autoplay loop>
-    <source src="./videos/SampleVideo_360x240_1mb.mp4" type="video/mp4">
-    <source src="./videos/SampleVideo_360x240_1mb.webm" type="video/webm">
-    <source src="./videos/SampleVideo_720x480_1mb.mp4" type="video/mp4">
-    <source src="./videos/SampleVideo_720x480_1mb.webm" type="video/webm">
-    <source src="./videos/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
-    <source src="./videos/SampleVideo_1280x720_1mb.webm" type="webm">
-    <p>This browser dosen't support</p>
-  </video>
-</section>
+<!-- </header> -->
 
 
 <!-- Text-section -->
 <section class="text-wrapper">
   <p>som text about stuff</p>
-
 </section>
 
 
 
 
     <!-- Signup form -->
-<section class="form-img-wrapper">    
-  <Div class="form-wrapper">
-    <form action="https://httpbin.org/anything" method="post">
-      <fieldset>
-        <legend>Signup now!</legend> 
+    <section class="content-wrapper">    
+      <Div class="form-wrapper">
+        <form action="https://httpbin.org/anything" method="post">
+          <h1>Sign up now</h1> 
           <label>
-            Name
-            <input type="text" name="name" id="name" placeholder="Type in your full name">
+            <input type="text" name="name" id="name" placeholder="Name">
           </label>
 
           <label>
-            e-mail
-            <input type="email" name="email" id="email" placeholder="youremail@mail.com">
+            <input type="email" name="email" id="email" placeholder="Email">
           </label>
-
+          
           <label>
-            Password:
             <input type="password" name="pwd" id="pwd" placeholder="Password">
           </label>
-
+          
           <label">
-            Student
-            <input type="radio" name="radio" id="ocupation">
-          </label>
-
-          <label>
-            Teacher
-            <input type="radio" name="radio" id="ocupation">
-          </label>
-      
-          <label>
-            Accept terms and conditions
+          <input type="radio" name="radio" id="ocupation">
+          Coffe is life
+        </label><br>
+        
+        <label>
+          <input type="radio" name="radio" id="ocupation">
+          Not without my Tea
+        </label><br>
+        
+        <label>
           <input type="checkbox" name="accept" id="checkbox">
-          </label>
-
-          <label>
-            I want to recieve newsletter
-            <input type="checkbox" name="newsletter" id="checkbox">
-          </label>
-
+          Accept terms and conditions
+        </label><br>
+        
         <button type="submit">Sign up</button>
-      </fieldset>
-    </form>
-  </Div>
+      </form>
+    </Div>
+    
+    <!-- Accordion -->
 
-  <div class="img-wrapper">
-    <img src="./img/jeremy-bezanger-QJ7gHF6V4no-unsplash.jpg" 
-    alt="carrots">
-  </div>
-</section>
-
-
-
-
-
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
+    <section class="accordion-wrapper">
+      <h1 class="faq">FAQ</h1>
+    <div class="accordion"> 
+      <div class="question" id="section">Section 1</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
-
-      <div class="question" id="section2">Section 2</div>
+      
+      <div class="question" id="section">Section 2</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
+      
+      <div class="question" id="section">Section 3</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+    </div> 
     </section>
-    <!-- dont forget to link the javascript file here! -->
+  </section>
+
+  <footer>
+    <p class="footer-text">The morning club</p>
+  </footer>
+  <script src="./script.js"></script>
   </body>
 </html>
 
