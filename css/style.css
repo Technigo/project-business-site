@@ -61,7 +61,6 @@ input[type="checkbox"]:checked ~ .nav-alter span:nth-child(3) {
 /*end toggle */
 
 .container {
-  position: fixed;
   width: 100%;
   overflow: auto;
   height: 100%;
@@ -160,6 +159,10 @@ a{
   transform: translate(-50%, -50%);
   color: #ffffff;
   line-height: initial;
+
+  
+animation-duration: 3s;
+animation-name: slidein;
 }
 .hero__text button {
   border: none;
@@ -178,13 +181,25 @@ a{
   background-color: #269ccf;
   color: #000000;
 }
+
+@keyframes slidein {
+from {
+  margin-left: 100%;
+  width: 300%;
+}
+
+to {
+  margin-left: 0%;
+  width: 100%;
+}
+}
 /*end hero image*/
 
 
 /*start Signup form*/
 .signupForm {
   margin: 30px;
-  background-image: url("../img/business-web.png");
+  background-image: url("../img/background.png");
   border-radius: 15px;
 }
 h1 {
@@ -240,7 +255,7 @@ fieldset {
 /*start accordion*/
 .accordionSection {
   margin: 30px;
-  background-image: url("../img/business-web.png");
+  background-image: url("../img/background.png");
   border-radius: 15px;
 }
 
@@ -279,6 +294,16 @@ fieldset {
   transition: max-height 0.2s ease-out;
 }
 /*end Accordion*/
+footer{
+  padding: 20px;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+}
+
+
+
 
 /*for tablet*/
 @media only screen and (min-width: 768px) {
@@ -381,5 +406,5 @@ fieldset {
   .signupForm,
   .accordionSection {
     margin: 10%;
-  }
+}
 }
