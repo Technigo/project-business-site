@@ -25,15 +25,51 @@
   <!--Grid with info, signup form and images-->
 <section class="box-1">
     
-  <div class="info-box">
+ <div class="info-box">
     <h3>Welcome text...</h3>
   </div>
 
 
   <!-- Signup form -->
+  <div class="signup form"></div>
+  <h2>Sign up</h2>
+  <form action="http://httpbin.org/anything" method="post">
+    <label for="name">Name</label>
+    <input id="name" type="text" required/>
+    
+    <label for="last-name">Last name</label>
+    <input id="lastName" type="text" required/>
+
+    <label for="email">Email</label>
+    <input id="email" type="email" required/>
+
+    <label for="month">Date</label>
+    <input id="month" type="date" required/>
+
+    <label for="time">Choose a time span</label>
+     <select name="time" id="time" required>      <!-- <how to make select/option required -->
+      <option value="09:30-11:00">09:30-11:00</option>
+      <option value="11:30-13:00">11:30-13:00</option>
+      <option value="13:30-15:00">13:30-15:00</option>
+      <option value="15:30-17:00">15:30-17:00</option>
+    </select>
+
+    <label for="Number of people">How many in the company</label>
+    <select name="Number of people" id="numberOfPeople">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+
+    <button class="sub-button" type="submit" value="Submit">Submit
+    </button>
+</form>
+
+
   <div>
     <img class="cat-img 1" src="/code/images/yerlin-matu-GtwiBmtJvaU-unsplash.jpg"  alt="cat-img">
-    <img class="cat-img 2" src="/code/images/amber-kipp-75715CVEJhI-unsplash.jpg" alt="cat-img">
+    <!-- <img class="cat-img 2" src="/code/images/amber-kipp-75715CVEJhI-unsplash.jpg" alt="cat-img"> -->
     <img class="cat-img 3" src="/code/images/pexels-cats-coming-1787414.jpg" alt="cat-img">
   </div>
 
@@ -47,14 +83,36 @@
 <section class="box-2">
     
  <!-- Accordion -->
-   <div class="accordion"></div>
+<div >
+
+</div id="accordionContainer">
+  <h2 id="accordionName">FAQ</h2>
+  <button id="accordionActive">
+    "Where are the cats from"
+  </button>
+  <div id="accordionPanel"> 
+    <p>text text text</p>
+  </div>
+ <!-- <h2>FAQ</h2>
+ <div id="button">
+   <h4>question 1</h4>
+ </div>
+  <p>anser here</p> -->
+    
+
+
+
   
 <div>
   <img class="cat-img 4" src="/code/images/pexels-anna-shvets-3846049.jpg" alt="cat-img">
-  <img class="cat-img 5" src="/code/images/susan-q-yin-iLl5aKIkGic-unsplash.jpg" alt="cat-img">
 </div>     
+
+<footer>
+  <img class="cat-img5" src="/code/images/susan-q-yin-iLl5aKIkGic-unsplash.jpg" alt="cat-img">
+</footer>
 
 </section>
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
   </body>
 </html>
