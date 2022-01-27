@@ -45,19 +45,25 @@ document.getElementById('form').onsubmit = (event) => {
 
 
 // Check innerheight and apply for landscape mode
-const mediaQuery = window.matchMedia('(max-device-width: 930px) and (orientation: landscape)');
-if (mediaQuery.matches) {
-  let height = window.outerHeight;
-  const headerHeight = document.querySelector('.header');
-  headerHeight.style.height = height + "px";
-}
-
-
-// Testing outerHeight for tablet (easier)
-// const mediaQuery = window.matchMedia('(min-width: 668px) and (max-width: 1024px)');
+// const mediaQuery = window.matchMedia('(max-device-width: 930px) and (orientation: landscape)');
 // if (mediaQuery.matches) {
-//   const height = window.outerHeight;
+//   let height = window.outerHeight;
 //   const headerHeight = document.querySelector('.header');
 //   headerHeight.style.height = height + "px";
-//   console.log(height);
 // }
+
+// Trying a function for flipping screen orientation and changing height
+
+screen.orientation.onchange = function(flipScreen) {
+  const mobileLandscape = window.matchMedia('(max-device-width: 930px) and (orientation: landscape)');
+  const mobilePortrait = window.matchMedia('(max-device-width: 669px) and (orientation:portrait)');
+  let height = window.outerHeight;
+  if (mobileLandscape.matches) {
+    const headerHeight = document.querySelector('.header');
+    headerHeight.style.height = height + "px";
+  } else {
+    mobilePortrait.matches = true;
+    headerHeight.style.height = "75vh";
+  }
+} 
+
