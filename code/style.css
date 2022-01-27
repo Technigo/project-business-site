@@ -21,10 +21,12 @@ body {
   background-color: #EED2D5;
   margin: 0;
   border: solid #212121 15px;
+  width: 100%;
 }
 
 main {
   padding: 0 1rem;
+  overflow:hidden;
 }
 
 nav {
@@ -121,7 +123,7 @@ p{
 
 @keyframes scroll {
   from { left: 100%; }
-  to { left: -70%; }
+  to { left: -80%; }
 }
 
 h2 {
@@ -243,12 +245,18 @@ input, select, option {
   background-image: none;
 }
 
-input:focus{
-  border: none;
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #BE9499;
 }
 
 .items-of-interest {
   width: 100%;
+}
+
+select:focus {
+  outline: none;
+  border: 1px solid black;
 }
 
 .text-area {
@@ -265,30 +273,20 @@ textarea {
   margin: 1rem 0;
 }
 
-select:focus {
-  outline: none;
-  border: 1px solid black;
-}
-
-input:focus {
-  outline: none;
-  border-bottom: 1px solid #BE9499;
-}
-
 textarea:focus {
   outline: none;
   border: 1px solid #BE9499;
 }
 
 .newsletter {
-  display: flex;
+  display: inline-flex;
   align-items:center;
   width: 100%;
 }
 
-.check-box {
+.newsletter-input {
   background-color: transparent;
-  border: 1px solid black;
+  outline: none;
 }
 
 button{
@@ -298,6 +296,8 @@ button{
   padding: 7px 17px;
   display: block;
   margin-top: 20px;
+  display: inline-flex;
+  align-self: center;
 }
 
 button:hover {
@@ -312,12 +312,6 @@ footer {
   margin-top: 4rem;
 }
 
-li:hover{
-  background-color: black;
-  color: #EED2D5;
-  transition: all 1.5s ease;  
-}
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -329,6 +323,12 @@ ul {
 
 ul a {
   color: #212121;
+}
+
+li:hover{
+  background-color: black;
+  color: #EED2D5;
+  transition: all 1.5s ease;  
 }
 
 .footer-text {
@@ -345,7 +345,6 @@ ul a {
   
   body {
     border: solid #212121 34px;
-
   }
 
   .hero {
@@ -374,6 +373,15 @@ ul a {
 
   h4 {
     font-size: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  h5 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1rem;
   }
 
   .active + .project-content {
@@ -383,7 +391,7 @@ ul a {
   }
 
   .project-title {
-    height: 100px;
+    height: 140px;
     font-size: 20px;
   }
 
@@ -406,6 +414,11 @@ ul a {
 
   footer {
     margin-top: 12rem;
+  }
+
+  li{
+    font-size: 1.5rem;
+    margin:0.5rem;
   }
 
 }
