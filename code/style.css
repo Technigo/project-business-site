@@ -58,6 +58,8 @@ h1 + p {
 .form-container h3 {
   font-size: 1.5rem;
   padding-top: 2rem;
+  text-align: center;
+  color: #370926;
 }
 
 .form {
@@ -112,7 +114,7 @@ button {
 
  .accordion h1{
    color: #370926;
-   font-size: 3rem;
+   font-size: 1.8rem;
    margin-top: 1rem;
  }
 
@@ -122,11 +124,12 @@ button {
    justify-content: center;
    align-items: center;
    padding: 1rem;
-   width: 80%;
    gap: 0.5rem;
  }
 
  .question {
+   margin-left: 0;
+   margin-right: 0;
    width: 100%;
    color:#CEBEBE;
    background-color: #884B58;
@@ -138,11 +141,19 @@ button {
  .answer {
    display: none;
    width: 100%;
+   color: #370926;
    padding: 1.5rem;
-   background-color: #CEBEBE;
    text-align: center;
  }
 
+ .active {
+   background-color:#884B58;
+   filter: opacity(80%);
+ }
+
+ .active + .answer {
+   display:block;
+ }
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
@@ -150,3 +161,22 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 /*.active + .answer {
   /* some styling here 
 } */
+
+
+/* Media queries for tablet */
+@media screen and (min-width:668px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .accordion {
+    margin-top: 2rem;
+    margin-right: 3rem;
+    
+  }
+
+  .accordion-element {
+    margin-bottom: 3rem;
+  }
+}
