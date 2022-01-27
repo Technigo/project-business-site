@@ -3,12 +3,11 @@
 // console.log(this) to see how it works
 
 
-
-let x = document.getElementById("section1")
-let y = document.getElementById("section2")
-let z = document.getElementById("section3")
-let a = document.getElementById("section4")
-let b = document.getElementById("section5")
+let x = document.getElementById("section1");
+let y = document.getElementById("section2");
+let z = document.getElementById("section3");
+let a = document.getElementById("section4");
+let b = document.getElementById("section5");
 
 x.onclick = toggle
 y.onclick = toggle
@@ -16,11 +15,11 @@ z.onclick = toggle
 a.onclick = toggle
 b.onclick = toggle
 
-function toggle() {
-  this.classList.toggle('active')
-  this.classList.rotate('down')
-}
 
+function toggle() {
+  this.classList.toggle('active');
+
+}
 
 
 
