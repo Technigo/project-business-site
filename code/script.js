@@ -18,7 +18,7 @@ form.addEventListener("submit", e => {
   let ourFormData = new FormData(e.target)
   let deliverFrequency = ourFormData.get("delivery-frequency")
 
-  delivery.innerText = `Thank you for your ${deliverFrequency} order of flowers`
+  delivery.innerText = `Thank you for your ${deliverFrequency} order of flowers!`
 
 }) 
 
