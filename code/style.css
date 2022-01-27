@@ -1,7 +1,50 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp
+/*linear-gradient(rgba(243, 240, 232, 0.253), rgba(37, 36, 35, 0.925))*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+}
 
 .active + .answer {
   /* some styling here */
 }
+
+
+.image-header {
+  height: 70vh;
+  min-height: 50vh;  /*Why it can be good to use min height */
+  width: 100vw;
+
+  background-image: linear-gradient(rgba(245, 245, 220, 0.521), rgba(255, 255, 255, 0.171)),url('/images-3/img/header-flowers.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.title-container h1 {
+  color: white;
+  font-size: 3rem;
+  text-shadow: -2px -2px 5px 5px rgb(32, 31, 31);
+  padding: 1rem;
+}
+
+/*.title-container {
+  background-color: rgba(221, 213, 203, 0.712);
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px 8px rgba(0,0,0,.1);
+}
+
+
