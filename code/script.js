@@ -45,25 +45,32 @@ document.getElementById('form').onsubmit = (event) => {
 
 
 // Check innerheight and apply for landscape mode
-// const mediaQuery = window.matchMedia('(max-device-width: 930px) and (orientation: landscape)');
-// if (mediaQuery.matches) {
-//   let height = window.outerHeight;
-//   const headerHeight = document.querySelector('.header');
-//   headerHeight.style.height = height + "px";
-// }
+const mediaQuery = window.matchMedia('(max-device-width: 930px) and (orientation: landscape)');
+if (mediaQuery.matches) {
+  let height = window.outerHeight;
+  const headerHeight = document.querySelector('.header');
+  headerHeight.style.height = height + "px";
+}
 
 // Trying a function for flipping screen orientation and changing height
 
-screen.orientation.onchange = function(flipScreen) {
-  const mobileLandscape = window.matchMedia('(max-device-width: 930px) and (orientation: landscape)');
-  const mobilePortrait = window.matchMedia('(max-device-width: 669px) and (orientation:portrait)');
-  const headerHeight = document.querySelector('.header');
-  if (mobileLandscape.matches) {
-    let height = window.outerHeight;
-    headerHeight.style.height = height + "px";
-  } else {
-    mobilePortrait.matches = true;
-    headerHeight.style.height = "75vh";
-  }
-} 
+// screen.orientation.onchange = function(flipScreen) {
+//   const mobileLandscape = window.matchMedia('(max-device-width: 930px) and (orientation: landscape)');
+//   const mobilePortrait = window.matchMedia('(max-device-width: 669px) and (orientation: portrait)');
+//   const headerHeight = document.querySelector('.header');
+//   if (mobileLandscape.matches) {
+//     let height = window.outerHeight;
+//     headerHeight.style.height = height + "px";
+//   } else {
+//     mobilePortrait.matches = true;
+//     headerHeight.style.height = "75vh";
+//   }
+// } 
 
+// Testing a screen flipping function to see if this works at all... 
+// Apparently screen.orientation.onchange is not supported by safari ios...
+
+screen.orientation.onchange = (flipScreen) {
+  const fontSize = document.querySelector('.brand-container__brand');
+  fontSize.style.font-size = "300px";
+}
