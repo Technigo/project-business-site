@@ -23,7 +23,7 @@ form.addEventListener("submit", e => {
 }) 
 
 
-/* toggle accordion*/ 
+// toggle accordion 
 question.forEach(item => {
   item.addEventListener("click", e => {
     e.currentTarget.classList.toggle("active");
