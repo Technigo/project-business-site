@@ -3,28 +3,78 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Project 3 - Business Site</title>
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
+    <header>
+      <video playsinline muted loop autoplay>
+      <source src="videos/spa.mp4" type="video/mp4">
+      </video>
+
+      <section class="hero">
+        <h1>West coast night spa</h1>
+        <p>Book your experience now</p>
+      </section>
+    </header>
 
     <!-- Signup form -->
+    <section class="content">
+      <section class="form">
+      <h2>Request your booking here</h2>
+        <form action="http://httpbin.org/anything" method="post">
+          <label for="name">Name
+            <input class="input-box" name="name" id="name" type="text" placeholder="Enter your name" required>
+          </label>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+          <label for="email">E-mail
+            <input class="input-box" name="email" id="email" type="email" placeholder="Enter your e-mail">
+          </label>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+          <label for="date">Select date
+            <input class="input-box" type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}">
+            <span class="validity"></span>
+          </label>
+          
+          <div class="checkbox">
+            <input type="checkbox" id="check" name="check" value="check">
+            <label class="policy" for=check> I accept the <a href="#">terms</a> & <a href="#">conditions</a>
+            </label>
+          </div>
+          
+          <button class="send-btn" type="submit">Request booking</button>
+        </form>
+      </section>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+      <section class="accordion">
+        <!-- Accordion -->
+        <h2>FAQ</h2>
+
+        <div class="question" id="section1">Where are you located?</div>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quos explicabo. 
+            Excepturi debitis officia saepe, nisi at voluptates unde maiores.</p>
+        </div>
+
+        <div class="question" id="section2">What are the opening hours?</div>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quos explicabo.</p>
+        </div>
+        <div class="question" id="section3">What treatments do you offer?</div>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quos explicabo. 
+            Excepturi debitis officia saepe, nisi at voluptates unde maiores.</p>
+        </div>
+        <div class="question" id="section4">I have a special request</div>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum alias voluptatum eveniet similique necessitatibus illum quia quasi vel dolorum culpa minima, officiis pariatur, iste blanditiis nemo delectus laboriosam id? Eligendi!</p>
+        </div>
+      </section>
     </section>
+
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
   </body>
 </html>

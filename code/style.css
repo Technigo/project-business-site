@@ -1,7 +1,162 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:wght@300;400&display=swap');
 .active + .answer {
   /* some styling here */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+
+/* Header with video hero */
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 75vh;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero {
+  text-align: center;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 1px 1px 2px #716459;
+}
+
+.hero h1 {
+  font-family: "DM Serif Display", serif;
+  font-style: italic;
+  font-size: 72px;
+}
+
+.hero p {
+  font-size: 32px;
+  /*max-width: 45vw;*/
+  font-weight: 400;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+  padding: 5rem;
+  background: #fff7ee;
+  width: 100vw;
+  font-size: 18px;
+}
+
+.form {
+  background: #716459;
+  max-width: 30rem;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+  color: #fff;
+}
+
+.form form .input-box {
+  width: 100%;
+  height: 2rem;
+  padding: 0 0.5rem;
+  margin: 0.5rem 0 1rem;
+  border: 1px solid black;
+}
+
+.form h2 {
+  margin: 0 0 2rem;
+  text-align: center;
+}
+
+a:link, a:visited {
+  color: #fff7ee;
+}
+
+a:hover, a:active {
+  color: #ebe2d7;
+}
+
+.send-btn {
+  height: 3rem;
+  padding: 0 1rem;
+  margin: 1rem 0 0 0;
+  float: right;
+  font-size: 18px;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.send-btn:hover {
+  background: #ebe2d7;
+  transition: .2s ease-in 
+}
+
+.accordion {
+  background: #716459;
+  max-width: 30rem;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+}
+
+.accordion h2 {
+  margin: 0 0 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.question {
+  background-color: #fff7ee;
+  color: #262523;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .question:hover {
+  background-color: #ebe2d7;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.answer {
+  padding: 0 18px;
+  background-color: #fff;
+  display: none;
+  overflow: hidden;
+  
+}
+
+.answer p {
+  padding: 1rem 0;
+}
+
+.question:after {
+  content: '\25B8'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  transform: rotate(90deg);
 }
