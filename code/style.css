@@ -65,34 +65,6 @@ button,
   color: #222222;
 }
 
-@media (min-width: 1200px) {
-  html {
-    font-size: 1.25rem;
-  }
-  
-  h1 {
-    font-size: 5rem;
-    padding-bottom: 0.5em;
-  }
-  
-  .small-text {
-    font-size: 0.625rem;
-  }
-
-  .small-text:hover,
-  .small-text:focus {
-    transform: scale(1.1);
-  }
-  
-  form input,
-  form textarea {
-    font-size: 0.875rem;
-  }
-}
-
-
-
-
 /* ----------- BUTTONS AND LINKS ----------- */
 
 .btn, 
@@ -105,21 +77,20 @@ button {
   text-decoration: none;
   overflow: hidden;
   width: 15em;
-  align-self: center;
 }
 
-button,
-.modal-btn,
+
+.btn-gradient,
 a {
   background-image: linear-gradient(to right, #2C2A2A 0%, #312f30 51%, #555253 100%);
   background-size: 200% auto;
-  margin-top: 10px;
   padding: 12px 32px;
   transition: 0.5s;
   color: #e9e9e9;
   border: none;
   border-radius: 5px;
   display: block;
+  overflow: hidden;
 }
 
 .btn-gradient:hover {
@@ -128,7 +99,7 @@ a {
 
 @media (min-width:992px) {
   button,
-  .modal-btn {
+  .btn {
     font-size: 1.2em;
   } 
   
@@ -207,6 +178,7 @@ nav {
   nav ul li a {
     padding-right: 0.25em;
     text-decoration: none;
+    margin-top: 0.5em;
     }
   } 
  
@@ -257,7 +229,6 @@ nav {
   padding: 2em;
 }
 
-
 /* ----------- INTRO SECTION ----------- */
 
 .infotext {
@@ -268,19 +239,20 @@ nav {
 
 /* ----------- SIGN-UP SECTION ----------- */
 
-#signup {
- display: block;
-}
+
 
 #submit-message {
   display: none;
-  padding-top: 5em;
+  padding-top: 4em;
   text-align: center;
 }
 
-.submit-message h2,
+.submit-message h2 {
+padding-top: 2em;
+}
+
 .submit-message h3 {
-  padding-block: 2em;
+  padding-bottom: 2em;
 }
 
 .submit-message p {
@@ -349,6 +321,7 @@ input[type="radio"]:checked {
 .signup button {
   margin-inline: 2em;
   cursor: pointer;
+  align-self: center;
 }
 
 
@@ -387,7 +360,7 @@ select:-webkit-autofill:focus {
   border-inline: 0.125em solid #222222;
   border-bottom: 0.125em solid #222222;
   width: 90%;
-  max-width: 22em;
+  max-width: 20em;
 }
 
 .question {
@@ -410,10 +383,6 @@ select:-webkit-autofill:focus {
 }
 
 /*after qlick submit, show a pink border or something*/
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 /* ---------- CODE FOR ACCORDION FUNCTIONALITY ---------- */
 
@@ -444,6 +413,13 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   padding-block: 2.5em;
 }
 
+img {
+  height: 10em;
+  width: 10em;
+  object-fit: cover;
+  opacity: 0.5;
+} 
+
 .gallery-images {
   display: grid;
   display: -ms-grid;
@@ -453,12 +429,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   -ms-grid-columns: repeat(auto-fit, minmax(10em, 1fr));
 }
 
-img {
-  height: 10em;
-  width: 10em;
-  object-fit: cover;
-  opacity: 0.5;
-} 
 
 
 /* ----------- MEDIA QUERIES ----------- */
@@ -483,26 +453,23 @@ img:hover {
 
   .signup,
   .accordion {
-    max-height: 100vh;
+
     justify-content: flex-start;
+    align-items: center;
   }
 
-  .signup {
-    min-width: 45vw;
-  }
 
   .accordion h2 {
     padding-bottom: 1.525em;
   }
 
   .gallery-images {
-    grid-gap: 0.75em;
-    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-    -ms-grid-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    -ms-grid-columns: repeat(auto-fit, minmax(14em, 1fr));
   }
 
   img {
-    height: 20em;
-    width: 20em;
+    height: 14em;
+    width: 14em;
   }
 }
