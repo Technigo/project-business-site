@@ -44,10 +44,10 @@ document.getElementById('form').onsubmit = (event) => {
 }
 
 
-// Check innerwidth and apply for landscape mode
+// Check innerheight and apply for landscape mode
 const mediaQuery = window.matchMedia('(max-device-width: 930px) and (orientation: landscape)');
 if (mediaQuery.matches) {
-  let height = innerHeight;
+  const height = window.innerHeight;
   const headerHeight = document.querySelector('.header');
-  headerHeight.style.height = height
+  headerHeight.style.height = height + "px";
 }
