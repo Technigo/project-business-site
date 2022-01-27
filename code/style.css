@@ -2,8 +2,9 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+* {
+  margin: 0;
+  padding: 0;
 }
 
 form {
@@ -11,7 +12,36 @@ form {
   padding: 2rem;
   max-width: 600px;
   /* min-width: 350px; */
-  /* margin: 3rem auto; */
+  margin: 1rem auto;
   display: grid;
   gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.accordion {
+  border: 2px solid;
+  padding: 2rem;
+  max-width: 600px;
+  display: grid;
+  /* gap: 1rem; */
+  margin: 1rem auto;
+}
+.question {
+  font-weight: bolder;
+  color: white;
+  background-color: tomato;
+}
+
+.answer {
+  display: none;
+}
+
+.answer p {
+  background-color: rgb(255, 99, 71, 0.5);
+  padding: 1rem;
+  margin: 0;
+}
+
+.open + .answer {
+  display: inline;
 }

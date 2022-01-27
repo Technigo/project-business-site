@@ -14,40 +14,48 @@
     <main>
       <!-- Signup form -->
       <form id="form" action="https://httpbin.org/anything" method="post">
+        <h1 class="form-header">Sign me up</h1>
         <label>Name
-          <input type="text" required>
+          <input type="text" required> *
         </label>
         <label>Email
           <!-- tested using pattern=".+com" to control entered email -->
-          <input type="email" required>
+          <input type="email" required> *
         </label>
         <label>Car-free
-          <input type="radio" name="ownership">
+          <input type="radio" name="ownership" checked>
         </label>
         <label>Car-owner
           <input type="radio" name="ownership">
         </label>
         <label>
           <input type="checkbox">
-          Sign up for news
+          Sign me up for news
         </label>
         <label>
-          <input type="checkbox">
-          Agree to terms
+          <input type="checkbox" required>
+          Yes, I agree to the terms and conditions *
         </label>
-          <button type="submit">Let's go button </button>
+          <button type="submit">Let's go</button>
           <button type="reset">Reset </button>
       </form>
 
         <!-- Accordion -->
       <section class="accordion">
-        <h1>FAQ</h1>
-        <div class="question" id="section1">Section 1</div>
+        <h1 class="accordion-header">FAQ</h1>
+        <div class="question" id="section1">What is this about?</div>
         <div class="answer">
           <p>Lorem ipsum...</p>
         </div>
-
-        <div class="question" id="section2">Section 2</div>
+        <div class="question" id="section1">How much does it cost?</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+        <div class="question" id="section1">What if I change my mind?</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+        <div class="question" id="section2">Neat! Tell me more</div>
         <div class="answer">
           <p>Lorem ipsum...</p>
         </div>
