@@ -53,7 +53,7 @@ let height = window.outerHeight;
 //   headerHeight.style.height = height + "px";
 // }
 
-landscapeMode.addListener(function(m)) {
+landscapeMode.addListener(function(m) {
   if(m.matches) {
     headerHeight.style.height = height + "px";
   } else {
