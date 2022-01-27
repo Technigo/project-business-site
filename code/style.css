@@ -22,14 +22,9 @@ body {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-section {
-  margin: 48px;
-}
-
 .image-header {
-  height: 50vh;
-  /* min-height: 75vh; */
   width: 100vw;
+  height: 75vh;
   background-image: url('/images/hero.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -50,22 +45,24 @@ section {
 }
 
 .header-text {
-  font-size: 16px;
+  font-size: 18px;
   color:mediumvioletred;
   transition: transform .6s;
   cursor: pointer;
 }
 
 .header-text:hover {
+  color:yellow;
   transform: scale(1.2);
 }
 
+/* --- Styling of the Form --- */
 .form-container {
-  max-width: 300px;
+  max-width: 480px;
   height: auto;
-  border: 2px solid;
-  /* margin: 8px; */
+  margin-top: 24px;
   padding: 24px;
+  border: 2px solid;
   box-shadow: 1px 1px 4px 4px black;
   background:lavenderblush;
   border-radius: 4px;
@@ -108,9 +105,16 @@ textarea {
   border-radius: 4px;
 }
 
+.experience-options {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 12px;
+}
+
+/* --- Styling of the Accordion --- */
 .accordion {
-  max-width: 300px;
-  height: 500px;
+  max-width: 480px;
+  height: auto;
+  margin-top: 24px;
   padding: 8px;
   border: 2px solid;
   border-radius: 4px;
@@ -131,6 +135,10 @@ textarea {
 .accordion .contentBx {
   position: relative;
   margin: 10px 20px;
+}
+
+.accordion .contentBx a {
+  color:mediumpurple;
 }
 
 .accordion .contentBx .label {
@@ -172,11 +180,22 @@ textarea {
 }
 
 .accordion .contentBx.active .content {
-  height: 150px;
+  height: 60px;
   padding: 10px;
 }
 
 .content p {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12px;
+}
+
+/* --- Credit to giphy.com! --- */
+.giphy-embed {
+  max-width: 600px;
+  margin-top: 24px;
+  padding: 8px;
+  border: 2px solid;
+  border-radius: 4px;
+  background:lavenderblush;
+  box-shadow: 1px 1px 4px 4px black;
 }
