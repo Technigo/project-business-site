@@ -13,9 +13,6 @@ document.getElementById("Question2").onclick = toggle
 
 
 
-
-
-
 // sign up form javascript below
 
 document.getElementById('form').onsubmit = (event) => {
@@ -25,3 +22,18 @@ document.getElementById('form').onsubmit = (event) => {
 
  document.getElementById('thankYou').innerText = `Thank you ${inputValue}` 
 }
+
+
+// open and close mobile nav below //
+
+const mobileBtn = document.getElementById('hamburger')
+            nav = document.querySelector('nav')
+            mobileBtnExit = document.getElementById('close-menu')
+
+mobileBtn.addEventListener('click', () => {
+        nav.classList.add('nav-links');
+      })
+
+      mobileBtnExit.addEventListener('click', () => {
+          nav.classList.remove('nav-links');
+      })

@@ -13,6 +13,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   text-rendering: optimizeLegibility;
 }
 
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -24,8 +28,67 @@ ul {
   padding: 0;
 }
 
-body {
-  font-family: 'PT Sans', sans-serif;
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar {
+  width: 100vw;
+  height: 15vh;
+  position: absolute;
+  background-color: rgba(255,255,255,0.25); /* creates opacity for the whole navbar excluding links */
+  padding: 2em;
+}
+
+.logo {
+font-weight: bold;
+font-size: 25px;
+margin-left: .5em;
+color: black;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 40vw;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  padding: 1em;
+  background: rgb(134, 127, 127);
+  display: none;
+}
+
+ul.nav-links-OK {
+  margin-top: 6em;
+}
+
+li.nav-link a {
+  color: white;
+  display: block;
+  padding: 1em;
+  font-size: 20px;
+  text-align: right;
+}
+
+.nav-links {
+  display: block;
+}
+
+.close-menu {
+  height: 2em;
+  width: 2em;
+  float: right;
+  margin: 1em;
+  cursor: pointer;
+}
+
+.hamburger {
+  height: 2.5em;
+  width: 2.5em;
+  cursor: pointer;
+  float: right;
 }
 
 .header-image {
@@ -38,44 +101,57 @@ background: url("./images/hero-image-mobile.jpg");
 z-index: -1;
 background-size: cover;
 overflow: hidden;
-
 }
 
-/* This is the flex-parent */
-.container {
-  width: 100vw;
-  height: 15vh;
-  position: absolute;
+/* styling the FAQ/Accordion */
+
+.accordion {
   display: flex;
-  background-color: rgba(255,255,255,0.25); /* creates opacity for the whole navbar excluding links */
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-/*This is the flex-child?? - Hidden in mobile */
-/* .navbar {
- 
-} */
+.accordion-header {
+  font-size: 35px;
+  margin: 1.5em 0 1em 0;
+}
 
-/* Also flex-children */
-.nav-links a {
-  float: right;
+.answer1, .answer2 {
+  opacity: 0;
+  width: 60vw;
+  height: 20px;
+  
+}
+
+.active {
+  font-weight: bold;
+}
+
+.active + .answer1 {
+  opacity: 100%;
+  transition: 1s;
+  padding: 1.5em 0 4.5em 0;
+  z-index: 999;
+}
+
+.active + .answer2 {
+  opacity: 100%;
+  transition: 1s;
+  padding: 2em 0;
+}
+
+.question1, .answer1, .question2, .answer2 {
+  /* padding: 0.5em; */
   text-align: center;
-  padding: 1rem;
-  font-size: 17px;
 }
 
-.hamburger {
-  height: 2rem;
-  width: 2rem;
+.question1, .question2 {
+  z-index: 999;
 }
 
-.close-menu {
-  height: 2rem;
-  width: 2rem;
-}
-
-/* .active + .answer {
-  /* some styling here */
-/* } */ 
+/* styling the sign up form */
 
 input {
   font-size: 20px;
@@ -95,35 +171,6 @@ button {
   padding: 1em;
   margin-top: 2em;
 }
-
-.accordion {
-  margin: 0 0 2em 2em;
-  cursor: pointer;
-}
-
-.answer1, .answer2 {
-  opacity: 0;
-  width: 160px;
-}
-
-.active {
-  font-weight: bold;
-}
-
-.active + .answer1 {
-  opacity: 100%;
-  transition: 1s;
-}
-
-.active + .answer2 {
-  opacity: 100%;
-  transition: 1s;
-}
-
-.question1, .answer1, .question2, .answer2 {
-  padding: 0.5em;
-}
-
 
 
 
