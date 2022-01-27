@@ -28,22 +28,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 /* some styling here - note! Answer is the only thing that will be styled. */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .hero-image {
   width: 100vw;
   height: 40vh;
@@ -53,34 +37,32 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   background-repeat: no-repeat;
   background-position: center;
   display: grid;
-  grid-template-rows: 0 30% 70%; /* utan denna rad finns två grid item, ett för <nav> och det andra för <h1>. Då kan <h1> ej centreras.*/
+  grid-template-rows: 0 1rem 0; /* utan denna rad finns två grid item, ett för <nav> och det andra för <h1>. Då kan <h1> ej centreras.*/
   justify-content: space-evenly;
 }
 
 .logo-place {
-  padding-top: 30%;
+  padding-top: 5%;
 }
-.logo-mobil {
 
+.logo-mobil {
   font-size: 35px;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
   color:white;
-
 }
 
 .hero-image h1 {
     font-family: 'Montserrat', sans-serif;
-    color: whitesmoke;
+    color: white;
     text-transform: uppercase;
     font-size: 3vh;
-    padding-top: 15%;
+    padding-top: 13%;
   }
   
-
 .navbar {
   display: none;
-  }
+}
 
 .navbar ul li {
   list-style: none;
@@ -92,23 +74,23 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 } */
 
-form {
-  display: flex; 
-  flex-direction: column;
-  
 
+
+.form-wrapper {
+  display: grid; 
+  flex-direction: column;
+  grid-template-columns: 1fr;
+  display: inline;
 }
 
 form label { /* This target every label inside the form*/
   display: flex;
   flex-direction: column;
-   
+  display: inline;
+  grid-template-columns: 1fr 1fr;
 }
 
-
 /* Mobil layout -- Accordion/
-
-
 
 
 /*------TABLET STYLING------*/
@@ -122,7 +104,7 @@ form label { /* This target every label inside the form*/
     background-position: bottom;
     display: grid;
     grid-template-rows: 10vh;
-    }
+  }
 
   .inner-hero-header { /*detta är ett grid-item till header som är parent container*/
     width: 100vw;
@@ -131,51 +113,51 @@ form label { /* This target every label inside the form*/
     color: #fff;
     opacity: .7;
     margin-top: 0;
-    }
+  }
     
   .logo-place {
     display: none;
-    }
+  }
 
   .logo-mobil {
     display: none;
-    }
+  }
 
   .hero-image h1 {
-    align-self: center;
     justify-self: center;
-    padding: 10px;
+    padding: 30px;
     opacity: .85;
-    font-size: 5vh;   
-    }
+    font-size: 5vh;
+    text-shadow: 1vh 1vh 2vh gray;
+  }
 
   .navbar {  /* <nav> taggen är placerad i ett grid-item som i det här fallet är 'inner-hero-header'. Flexbox aktiveras i detta element och inte i 'inner-hero-header'*/
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    } 
+  } 
 
   .nav-menu {  /* Flexbox skapar utrymmer mellan länkarna */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    }
+  }
 
   .nav-item {
     margin-left: 20px;
-    }
+  }
     
   .nav-link {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     color: white;
     text-decoration: none;
-    }
+  }
 
   .nav-link:hover {
     color: #dabf94;
-    }
+  }
     
   .logo {
     font-size: 30px;
@@ -183,7 +165,7 @@ form label { /* This target every label inside the form*/
     color:white;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
-    }
+  }
     
 
 }
@@ -194,7 +176,7 @@ form label { /* This target every label inside the form*/
 
   .hero-image {
     width: 100vw;
-    height: 70vh;
+    height: 100vh;
     background-size: cover;
     background-position: bottom;
     display: grid;
@@ -219,11 +201,10 @@ form label { /* This target every label inside the form*/
     }
 
   .hero-image h1 {
-    align-self: center;
     justify-self: center;
-    padding: 10px;
-    opacity: .85;
+    padding: 30px;
     font-size: 5vw;
+    text-shadow: 1vh 1vh 2vh gray;
   }
 
   .navbar {  /* <nav> taggen är placerad i ett grid-item som i det här fallet är 'inner-hero-header'. Flexbox aktiveras i detta element och inte i 'inner-hero-header'*/

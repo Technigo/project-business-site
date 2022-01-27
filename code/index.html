@@ -28,7 +28,7 @@
             </li>
             
             <li class="nav-item">
-              <a href="#" class="nav-link">Gallery</a>
+              <a href="#" class="nav-link">Blog</a>
             </li>
             
             <li class="nav-item">
@@ -47,118 +47,87 @@
     </header> 
 
   <!-- Signup form -->
-  <section id="formImageWrapper" class="form-image-wrapper">
   
-    <div class="form-wrapper">
-        <h2>This is our form</h2> 
-        <form id="form" class="" action="https://httpbin.org/anything"> <!--in the form-tag here you can add flexlayout-->
-          <label for="fname">First name
-          <input id="fname" type="text" name="fname"/>
-          </label>
+  <section class="form-wrapper">
+    <h2>Sign up for some life-coaching advices</h2> 
+    <form id="form" class="" action="https://httpbin.org/anything"> <!--in the form-tag here you can add flexlayout-->
+      
+      <div>
+        <label for="fname">First name</label>
+        <input id="fname" type="text" name="fname"/>
+      </div>
 
-          <label for="lname">Last name
-          <input id="lname" class="" type="text" name="lname" />
-          </label>
+      <div>
+        <label for="lname">Last name</label>
+        <input id="lname" class="" type="text" name="lname" />
+      </div>
 
-    <!--<input id="password"  type="password" name="password"/>
+      <div>
+        <label for="password">Password</label>
+        <input id="password" class="" type="password" name="password"/>
+      </div>
+      
+      <div> 
+        <input id="prof" type="radio" name="occupation" value="prof"/>
+        <label for="prof">Professional</label>
+     
+        <input id="student" type="radio" name="occupation" value="student"/>
+        <label for="student">Student</label>
+      </div>
+       
+      <div>
+        <input id="agreement" type="checkbox" name="agreement"/>
+        <label for="agreement">Agree to the terms and conditions.</label>
+        <br>
+        <input id="newsletter" type="checkbox" name="news"/>
+        <label for="newsletter">Subscribe to the newsletter.</label>
+      </div>
 
-    <input id="" type="radio" name=""/>
-
-    <input id="" type="checkbox" name=""/>
-
-    <input id="" type="submit" name="submit"/> -->
-      <label for="subject">Subject Category
-      <select id="subject" name="subject">  
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-      </select>
-      </label> 
-      <button type="submit">Send</button>
+      <div>
+        <button id="submit" type="submit" name="submit"/>Signup</button>
+      </div>
     </form>
-  </div>
-</section> 
-
-
-
+  </section> 
 
 
   <!-- Accordion -->
 
-
-
-
-
-
-
-
-
   <section class="accordion">
+    
+    <h1>FAQ</h1>
 
-    <h1>Get zen everyday</h1>
-      <button type="button" class="accordion-button">How can you improve yourself?</button> 
-      <div class="accordion-content">
-          <p> 1. Remove all that bad energy within yourself by shouting out loud whatever you feel like saying.
-              Swear if you want to. <br>
-              
-              2. Start by saying three good things you have done recently. 
-              Try holding on to that positive feeling for 5 seconds and then repeat the process one more time. <br>
-              
-              3. Look yourself in the mirror and tell yourself; "I am beautiful no matter what they say. Words can't bring me down".<br>
-              4. Go shopping using your partner's credit card. Tell him or her it's for grocery shopping. 
-          </p>
-
-      </div>
-
-  </div>
-  <div class="accordion">
-      <button type="button" class="accordion-button"> How do I achieve a good home-feeling? </button> 
-      <div class="accordion-content">
-          <p> You should get rid of things that don't spark joy to your home. This could be a Playstation 5, your partner or even some old clothes.
-          </p>
-
-      </div>
-
-  </div>
-  <div class="accordion">
-      <button type="button" class="accordion-button"> How do I live in the moment? </button> 
-      <div class="accordion-content">
-          <p> Firstly, put away your phone and stop scrolling your Instagram. Secondly use your time wisely and take a walk (or run if you want to challenge yourself a bit) and
-              appreciate the beautiful nature that surrounds you. The fresh air will give you a break from things that might be overwhelming for you.
+    <div class="question" id="section1">How can you improve yourself?</div>
+    <div class="answer">
+      <p> 1. Remove all that bad energy within yourself by shouting out loud whatever you feel like saying.
+          Swear if you want to. <br>
           
-                
+          2. Start by saying three good things you have done recently. 
+          Try holding on to that positive feeling for 5 seconds and then repeat the process one more time. <br>
+          
+          3. Look yourself in the mirror and tell yourself; "I am beautiful no matter what they say. Words can't bring me down".<br>
+          4. Go shopping using your partner's credit card. Tell him or her it's for grocery shopping.
+      </p>
+    </div>
 
-          </p>
+    <div class="question" id="section2">How do I achieve a good home-feeling?</div>
+    <div class="answer">
+      <p> You should get rid of things that don't spark joy to your home. This could be a Playstation 5, your partner or even some old clothes.
+      </p>
+    </div>
 
-      </div>
+    <div class="question" id="section3">How do I live in the moment?</div>
+    <div class="answer">
+      <p> Firstly, put away your phone and stop scrolling your Instagram. Secondly use your time wisely and take a walk (or run if you want to challenge yourself a bit) and
+          appreciate the beautiful nature that surrounds you. The fresh air will give you a break from things that might be overwhelming for you.
+      </p>
+    </div>
+  </section>
 
-    </section>
-
-
-
-
-
-
-    <section class="accordion">
     
-      <h1>FAQ</h1>
+  <!-- dont forget to link the javascript file here! -->
+  <script src="script.js">
 
-      <div class="question" id="section1">FRÅGA 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">FRÅGA 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    
-    
-    <!-- dont forget to link the javascript file here! -->
-    <script src="script.js">
-
-    </script>
+  </script>
 
   </body>
 </html>
