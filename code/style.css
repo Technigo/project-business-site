@@ -6,6 +6,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   /* some styling here */
 }
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +18,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   text-rendering: optimizeLegibility;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 
 /* Hero section START */
@@ -88,21 +94,23 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 /* Hero section END */
 
 
-
 main {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   font-family: 'Open Sans', sans-serif;
 }
 
 
-
 /* FORM section START */
-.signup {
-  border: solid 2px black;
-  padding: 1rem;
-  width: 50vw;
-  display: flex;
-  flex-direction: column;
+.signup-wrapper, .accordion-wrapper {
+  position: relative;
+  max-width: 40rem;
+  width: 100%;
+  background: #F8E379;
+  padding: 4rem;
+  margin-bottom: 5rem;
 }
 
 .signup-field {
@@ -159,37 +167,49 @@ input[type="checkbox"]:disabled {
 
 /* changing the appearance of radio buttons START */
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 input[type="radio"] {
   -webkit-appearance: none;
   appearance: none;
-}
-
-input[type="radio"] {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  border: 2px solid gray;
-  /* Adjusts the position of the checkboxes on the text baseline */
-  vertical-align: -2px;
-  outline: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  /* display: grid;
+  place-content: center; */
 }
 
 input[type="radio"]::before {
-  display: block;
-  content: " ";
-  width: 10px;
-  height: 10px;
-  border-radius: 6px;
-  background-color: green;
-  font-size: 1.2em;
-  transform: translate(3px, 3px) scale(0);
-  transform-origin: center;
-  transition: all 0.3s ease-in;
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em blue;
 }
 
 input[type="radio"]:checked::before {
-  transform: translate(3px, 3px) scale(1);
-  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+  transform: scale(1);
+}
+
+input[type="radio"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+label:focus-within {
+  color: red;
 }
 
 /* changing the appearance of radio buttons END */
@@ -204,13 +224,122 @@ label {
 /* FORM section END */
 
 
-
 /* FAQ section START */
-.accordion {
-  border: solid 2px black;
-  padding: 1rem;
-  width: 50vw;
+
+.accordion-question, .accordion-title {
+  background-color: #F8E379;
+  color: black;
+  padding: 2rem;
+  max-width: 45rem;
+  width: 100%;
+}
+
+.accordion-question {
+  border: none;
+  text-align: left;
+  cursor: s-resize;
+  outline: none;
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+
+.accordion-title {
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.active {
+  cursor: n-resize;
+}
+
+.active, .accordion-question:hover {
+  background-color: #87A93A;
+}
+
+.accordion-question:after {
+  content: '\01F37D';
+  font-weight: bold;
+  float: right;
+  margin-left: .5rem;
+}
+
+.active:after {
+  content: "\01F957";
+}
+
+.accordion-answer {
+  padding: 0 1rem;
+  font-size: 2rem;
+  background-color: #87A93A;
+  max-height: 0;
+  max-width: 45rem;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-answer p {
+  font-size: 1.5rem;
+  margin: 1rem;
+  line-height: 30px;
+}
+
+/* FAQ section END */
+
+
+@media (min-width: 1025px) {
+
+  main {
+    flex-direction: row;
+   }
+   
+  .form-wrapper {
+    margin-right: 5rem;
+    margin-bottom: 0;
+  }
+
+  .accordion-wrapper {
+    margin-left: 5rem;
+  }
 }
 
 
-/* FAQ section END */
+/* START Footer */
+/* Bigger padding right and left for the footer than header and main so there is enough space to be able to touch all icons */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #87A93A;
+  padding: 1.5rem;
+  font-size: 1.25rem;
+  color: white;
+  font-family: 'MuseoModerno', cursive;
+}
+
+.copyright, .socials {
+  display: flex;
+  align-items: flex-end;
+  -moz-column-gap: 0.5rem;
+  column-gap: 0.5rem;
+}
+
+.fab {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 1025px) {
+  footer {
+    padding: 0.5rem 6rem;
+    font-size: 1.5rem;
+  }
+
+  .fab {
+    font-size: 1.5rem;
+  }
+  
+}
+/* END Footer */
