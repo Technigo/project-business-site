@@ -46,9 +46,10 @@ document.getElementById('form').onsubmit = (event) => {
 
 // Check innerheight and apply for landscape mode
 const landscapeMode = window.matchMedia('(max-device-width: 930px) and (orientation: landscape)');
+const portraitMode = window.matchMedia('(max-device-width: 669px) and (orientation: portrait)');
+const headerHeight = document.querySelector('.header');
+let height = window.outerHeight;
 if (landscapeMode.matches) {
-  const headerHeight = document.querySelector('.header');
-  let height = window.outerHeight;
   headerHeight.style.height = height + "px";
 }
 
@@ -56,7 +57,7 @@ if (landscapeMode.matches) {
 
 // screen.orientation.onchange = function(flipScreen) {
 //   const mobileLandscape = window.matchMedia('(max-device-width: 930px) and (orientation: landscape)');
-//   const mobilePortrait = window.matchMedia('(max-device-width: 669px) and (orientation: portrait)');
+//   
 //   const headerHeight = document.querySelector('.header');
 //   if (mobileLandscape.matches) {
 //     let height = window.outerHeight;
