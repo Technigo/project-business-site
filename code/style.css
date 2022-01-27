@@ -113,13 +113,13 @@ button.accordion {
 }
 
 button.accordion:after {
-  content: "\f150";
+  content: "+";
   font-size: 18px;
   float: right;
 }
 
 button.accordion.is-open:after {
-  content: "\f151";
+  content: "-";
 }
 
 button.accordion:hover,
@@ -190,6 +190,7 @@ form {
   justify-content: center;
   padding: 5vw;
 }
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -214,10 +215,12 @@ footer {
   display: flex;
   flex-direction: column;
   align-self: center;
-  padding-right: 15%;
+  border-left: 3px solid white;
 }
 .footer-links a {
   text-decoration: none;
   color: #dedcdc;
-  text-align: center;
+}
+.footer-links a:first-of-type {
+  color: rgb(224, 252, 230);
 }
