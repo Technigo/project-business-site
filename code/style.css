@@ -301,11 +301,14 @@ input[type="radio"] {
   margin-right: 0.8em;
   display: flex;
   justify-content: flex-start;
-  -webkit-appearance: radio;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 input[type="radio"]:checked {
   box-shadow: inset 0 0 0 8px #b88495;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 .label-top {
@@ -357,11 +360,10 @@ select:-webkit-autofill:focus {
 }
 
 .accordion-container {
-/*  min-width: clamp(20em, 1.5vw, 80em);*/
   border-inline: 0.125em solid #222222;
   border-bottom: 0.125em solid #222222;
   width: 90%;
-  max-width: 20em;
+  max-width: 22em;
 }
 
 .question {
@@ -383,7 +385,6 @@ select:-webkit-autofill:focus {
   max-width: 40ch;
 }
 
-/*after qlick submit, show a pink border or something*/
 
 /* ---------- CODE FOR ACCORDION FUNCTIONALITY ---------- */
 
@@ -455,18 +456,31 @@ footer .fab { /*this is styling for the icon I used inside a button*/
   cursor: pointer;
 }
 
+footer a {
+  background-image: none;
+}
+
 
 /* ----------- MEDIA QUERIES ----------- */
 
 @media (min-width: 992px) {
+  h1 {
+    font-size: 5rem;
+  }
+  
   .infotext-container:hover {
     transform: scale(1.1);
   }
-}
+  
+  img:hover {
+    opacity: 1.0;
+  }
 
-img:hover {
-  opacity: 1.0;
+  .accordion-container {
+    max-width: 28em;
+  }
 } 
+
 
 @media (min-width: 1100px) {
     
