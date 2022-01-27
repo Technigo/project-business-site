@@ -5,6 +5,7 @@ body, html {
   margin:0px;
   font-family: 'Cormorant', serif;
   color: black;
+  box-sizing: border-box;
   
 }
 
@@ -20,7 +21,7 @@ body, html {
   overflow:hidden;
   margin:0px;
   padding:0px;
-  border-bottom: 2px solid white; ;
+  
   
 }
 
@@ -58,7 +59,7 @@ h3{
 }
 
 p{
-  font-size: 25px;
+  font-size: 20px;
 }
 
   button {
@@ -80,6 +81,37 @@ p{
 
 
 
+
+.flextext{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin:50px;
+
+}
+
+.button-one {
+  background-color: lightgrey;
+  opacity:0.7;
+  border-color: 10px black;
+  border-radius: 10px;
+  color: black;
+  width:250px;
+  font-family: 'Cormorant', serif; 
+  font-size: 20px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  font-size: 25px;
+  margin-bottom:30px;
+  cursor: pointer;
+
+}
+
+
 .wrapper{
   display:flex;
   flex-wrap: wrap;
@@ -88,15 +120,15 @@ p{
   justify-content: center;
   height:100%;
   width:100%;
-  background-color: rgb(227,227,227);
+  
   
   
 }
 
 .form{
-  margin:50px 30px 30px 30px;
-  padding:20px;
-  font-size: 30px;
+  margin-top:50px;
+  padding:10px;
+  font-size: 20px;
   font-weight: bold;
   border-radius: 25px;
   width:80vw;
@@ -117,58 +149,64 @@ input[type=checkbox] {
  
 }
 
-.faq-section{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width:80vw;  
-  border-radius: 25px;
+.accordion{
+  padding: 10px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  width: 80vw;
+  margin-top: 20px;
+  border: 2px solid white;
+
+}
+
+.content{
+  text-align: center;
+}
+
+.accordion .content {
+  position: relative;
+}
+
+.accordion .content .question {
+  position: relative;
+  cursor: pointer;
 }
 
 .question{
-  position: relative;
-  background-color: rgb(255, 208, 254,0.9);
-  cursor: pointer;
-  padding: 1px;
-  margin: 20px 20px 20px 5px;
-  width: auto;
-  text-align: left;
+  padding:1px 0px 1px 0px;
+  margin:5px;
   outline: none;
-  border-radius: 20px;
-  border: 2px solid white;
-  transition: all 0.4s ease-in-out;
-}
+  background-color: pink;
+  text-align: center;
+  transition: 0.3s ease;
+  }
 
+  .accordion .content .question::before{
+    content: "+";
+    position: absolute;
+    right: 4px;
+  }
 
-.faq-text{
-  margin:0px 30px 0px 10px;
-  width:100%;
-}
+  .accordion .content.active .question::before{
+    content: "-";
+  }
 
-.answer{
-  display: none;
-}
+  .accordion .content .answer {
+    position: relative;
+    background: white;
+    height: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: 0.3s ease;
+  }
 
-.active + .answer {
-display: block;
-}
-
-.active, .question:hover {
-  background-color: lightgrey;
-}
-
-.question::after {
-  content: "\002B";
-  position: absolute;
- 
-  right: 20px;
-  top: 10px;
-  font-size: 4vh; 
-}
-.question.active::after {
-  content: "\2212";
-  font-size: 4vh;
-}
+  .accordion .content.active .answer {
+    height:120px;
+    padding: 2px;
+    background-color: white;
+    font-size: 14px;
+    text-align: center;
+  }
 
 footer{
   display: flex;
@@ -211,6 +249,18 @@ footer{
     margin-top:250px;
   }
 
+  .form{
+    font-size: 30px;
+    width:60vw;
+  }
+
+  .accordion{
+    width:60vw;
+  }
+  .accordion .content.active .answer {
+    height:fit-content;
+    
+  }
 
   h1{
     font-size: 50px;
@@ -221,11 +271,11 @@ footer{
 }
 
   h3{
-    font-size: 30px;
+    font-size: 25px;
   }
 
   p{
-    font-size: 25px;
+    font-size: 20px;
   }
 
 }
@@ -234,6 +284,7 @@ footer{
 
   .wrapper{
     flex-direction: row;
+
   }
 
   .text-header{
@@ -246,8 +297,18 @@ footer{
     opacity:1.0;
   }
 
+  .flextext{
+    margin:50px 500px 50px 500px;
+  }
+
   .form{
-    width:40%;
+    width:20%;
+    margin:30px 30px 30px 30px;
+    font-size: 25px;
+  }
+
+  .accordion{
+    width:20%;
   }
 
   .faq{
@@ -260,7 +321,7 @@ footer{
 
   h1{
  
-    font-size: 50px;
+    font-size: 60px;
   }
 
 h2{
@@ -269,11 +330,11 @@ h2{
 }
 
 h3{
-  font-size: 30px;
+  font-size: 25px;
 }
 
 p{
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .faq-section{
@@ -284,5 +345,9 @@ p{
   background:white;
   color: black;
   opacity:0.4;
+}
+
+.active, .question:hover {
+  background-color: lightgrey;
 }
 }
