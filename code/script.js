@@ -49,9 +49,18 @@ const landscapeMode = window.matchMedia('(max-device-width: 930px) and (orientat
 const portraitMode = window.matchMedia('(max-device-width: 669px) and (orientation: portrait)');
 const headerHeight = document.querySelector('.header');
 let height = window.outerHeight;
-if (landscapeMode.matches) {
-  headerHeight.style.height = height + "px";
-}
+// if (landscapeMode.matches) {
+//   headerHeight.style.height = height + "px";
+// }
+
+landscapeMode.addListener(function(m)) {
+  if(m.matches) {
+    headerHeight.style.height = height + "px";
+  } else {
+    headerHeight.style.height = "75vh";
+  }
+});
+
 
 // Trying a function for flipping screen orientation and changing height
 
