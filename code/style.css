@@ -35,6 +35,12 @@ nav {
   height: 10%;
   }
 
+nav a:hover {
+  color: black;
+  text-decoration: underline white;
+  transition: all 1s ease;
+}
+
 .logo {
   width: 30px;
   height: 30px;
@@ -95,11 +101,27 @@ p{
 }
 
 .hero-title {
-  font-size: 8vw;
-  color: white;
+  font-size: 7vw;
+  color: black;
   font-family: 'Playfair Display';
   font-style: normal;
   font-weight: normal;
+}
+
+.coming-soon {
+  color: black;
+  font-size: 1rem;
+  margin-top:1rem;
+  animation-name: scroll;
+  animation-duration: 10s;
+  position: relative;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes scroll {
+  from { left: 100%; }
+  to { left: -70%; }
 }
 
 h2 {
@@ -285,7 +307,7 @@ button:hover {
 }
 
 footer {
-  padding: 3rem;
+  padding: 3rem 0 1rem 0;
   border-top: 1px solid black;
   margin-top: 4rem;
 }
@@ -309,12 +331,21 @@ ul a {
   color: #212121;
 }
 
+.footer-text {
+  font-size: 12px;
+  font-family: 'poppins';
+  font-weight: normal;
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
+
 /* On screens that are 768px or more (tablet) */
 
 @media screen and (min-width: 768px) {
   
   body {
     border: solid #212121 34px;
+
   }
 
   .hero {
@@ -327,6 +358,12 @@ ul a {
 
   .desktop-menu {
     display: flex;
+  }
+
+  .coming-soon {
+    font-size: 2.75rem;
+    margin-top:1.5rem;
+    font-weight: normal;
   }
 
   h2{
@@ -367,7 +404,7 @@ ul a {
     width:50%;
   }
 
-  .footer {
+  footer {
     margin-top: 12rem;
   }
 
@@ -376,5 +413,6 @@ ul a {
 /* On screens that are 992px or more (desktop) */
 
 @media screen and (min-width: 992px) {  
-
+  .coming-soon {
+    font-size: 4rem;
 }
