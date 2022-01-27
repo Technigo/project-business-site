@@ -14,11 +14,29 @@
     <main>
       <!-- Signup form -->
       <form id="form" action="https://httpbin.org/anything" method="post">
-        <input type="text">
-        <input type="text">
-        <input type="checkbox">Agree to terms and conditions
-        <input type="checkbox">Sign me up for news
-        <button type="submit">Let's go</button>
+        <label>Name
+          <input type="text" required>
+        </label>
+        <label>Email
+          <!-- tested using pattern=".+com" to control entered email -->
+          <input type="email" required>
+        </label>
+        <label>Car-free
+          <input type="radio" name="ownership">
+        </label>
+        <label>Car-owner
+          <input type="radio" name="ownership">
+        </label>
+        <label>
+          <input type="checkbox">
+          Sign up for news
+        </label>
+        <label>
+          <input type="checkbox">
+          Agree to terms
+        </label>
+          <button type="submit">Let's go button </button>
+          <button type="reset">Reset </button>
       </form>
 
         <!-- Accordion -->
