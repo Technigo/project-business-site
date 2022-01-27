@@ -69,8 +69,3 @@ if (mediaQuery.matches) {
 
 // Testing a screen flipping function to see if this works at all... 
 // Apparently screen.orientation.onchange is not supported by safari ios...
-
-screen.orientation.onchange = (flipScreen) {
-  const fontSize = document.querySelector('.brand-container__brand');
-  fontSize.style.font-size = "300px";
-}
