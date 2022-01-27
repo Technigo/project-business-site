@@ -2,6 +2,95 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  background: white;
+}
+
+.video-header {
+  height: 50vh;
+  width: 100vw;
+  border: 3px solid black;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-header video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  position: absolute;
+  color: darkgrey;
+  text-shadow: -2px -2px 3px black;
+}
+
+.main {
+  display: grid;
+}
+
+form {
+  border: 1px solid;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  width: 50%;
+  max-width: 600px;
+  margin: 3rem auto;
+  display: grid;
+  gap: 1rem;
+}
+
+form button {
+  width: 100px;
+  border-radius: 2rem;
+  border: none;
+  background-color: #ca5f5d;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 .active + .answer {
-  /* some styling here */
+  background: grey;
+}
+
+.accordion {
+  background-color: grey;
+  color: beige;
+  cursor: pointer;
+  padding: 1.1rem;
+  width: 50%;
+  text-align: center;
+  border: black;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: crimson;
+}
+
+.panel {
+  padding: 0 2rem;
+  background-color: whitesmoke;
+  max-height: 0;
+  display: none;
+  overflow: hidden;
 }
