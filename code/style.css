@@ -28,13 +28,14 @@ body {
   width: 100%;
 }
 
+
 nav {
   position: absolute;
   top:0;
   text-shadow: 3px 3px 6px black;
 }
 
-a {
+.nav-list {
   text-decoration: none;
   color: #e9c46a;
   margin: 1vh 2vw 0 2vw;
@@ -48,16 +49,30 @@ h1 {
 
 form {
   background-color: #e9c46a;
-  height: 30vh;
+  height: 40vh;
   width: 90vw;
   max-width: 350px;
   margin: 5vh auto;
-  padding: 5vh 0;
+  padding: 1vh 0 2vh 0;
   border-radius: 10px;
   box-shadow: 10px 10px 21px 1px rgba(0,0,0,0.49);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+p1 {
+display: inline;
+margin: 0;
+width:80%;
+font-size: 15px;
+font-weight: bold;
+text-decoration:black underline double;
+}
+
+.terms {
+  color:black;
+  font-weight: bold;
 }
 
 input {
@@ -69,7 +84,7 @@ input {
 }
 
 label {
-  font-weight: bold;
+  font-size: smaller;
 }
 
 .checkbox {
@@ -87,7 +102,7 @@ label {
   display: inline-block;
   font-weight: bold;
   line-height: normal;
-  margin: 5px 0;
+  margin: 2vh 0;
   min-height: 10px;
   min-width: 90px;
   outline: none;
@@ -100,6 +115,7 @@ label {
   width: 30%;
   will-change: transform;
 }
+
 
 .button:disabled {
   pointer-events: none;
@@ -117,19 +133,19 @@ label {
   transform: translateY(0);
 }
 
-h2 {
-  background-color: #264653;
-  color: #e9c46a;
-  border-radius: 10px;
-  padding: 0.5vh 30vw;
-}
-
 .accordion {
-  height: 30vh;
+  min-height: 30vh;
   width: 90vw;
   max-width: 350px;
   margin: 5vh auto;
 
+}
+
+h2 {
+  background-color: #264653;
+  color: #e9c46a;
+  border-radius: 10px;
+  padding: 0 30vw;
 }
 
 .question {
@@ -137,6 +153,8 @@ h2 {
   margin: 2vh 0;
   border: solid 1px #264653;
   border-radius: 10px;
+  font-size:14px;
+  font-weight:bold;
   appearance: none;
   background-color: transparent;
   touch-action: manipulation;
@@ -154,14 +172,13 @@ h2 {
 }
 
 .question:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 10px;
+  content: '\002B'; /* Unicode character for "plus" sign (+) */
+  font-size: 20px;
   float: right;
-  margin-left: 5px;
 }
 
 .active:after {
-  transform: rotate(40deg);
+  transform: rotate(45deg);
 }
 
 .answer {
@@ -178,9 +195,16 @@ h2 {
   display: block;
 }
 
-/*footer {
+p {
+  font-size: small;
+}
+
+footer {
   background-color: #264653;
-}*/
+  padding: 2vh 10vw;
+  font-size: small;
+  width: 100vw;
+}
 
 
 

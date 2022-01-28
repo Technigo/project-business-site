@@ -5,40 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <title>Business site</title>
   </head>
 
   <body>
-    <!-- hero video or image as header -->
+    <!-- hero video as header -->
     <header class="video-header" id="videoHeader">
       <video autoplay muted loop poster="">
         <source src="./videos/Video Footage Of People Climbing A Mountain.mp4" type="video/mp4">
         <source src="./videos/Video Footage Of People Climbing A Mountain.webm" type="video/webm">
         Your browser doesn't support this video format.
       </video>
-        <nav>
-          <a href="#">About</a>
-          <a href="#">Community</a>
-        </nav>
-        <h1>HOW MANY MOUNTAINS DO YOU HAVE IN THE BANK?</h1>
+        
+      <nav>
+        <a href="#" class="nav-list">About</a>
+        <a href="#" class="nav-list">Community</a>
+      </nav> 
+        
+      <h1>HOW MANY MOUNTAINS DO YOU HAVE IN THE BANK?</h1>
     </header>
 
     <main>
     <!-- Signup form -->
       <form id="form" action="https://httpbin.org/anything" method="POST">
+        
+        <div>
+          <p1>Track your climbs with our community of climbers</p1>
+        </div>
+
         <label for="email">
-          <input type="email" id="email" name="email" placeholder="Email" required />
+          <input type="email" id="email" name="email" placeholder="Type your email" required />
         </label>
+
         <label for="password">
-          <input type="password" id="password" name="password" placeholder="Password" required />
+          <input type="password" id="password" name="password" placeholder="Enter password" required />
         </label>
-        <label for="terms">I agree with the terms and conditions
+
+        <label for="terms">I agree with the <a href="#" class="terms">terms and conditions</a>
           <input type="checkbox" id="checkbox1" class="checkbox" name="terms" required />
         </label>
+
         <label for="newsletter">Sign up to our newsletter
         <input type="checkbox" id="checkbox2" class="checkbox" name="newsletter" />
         </label>
+
         <button type="submit" id="logIn" class="button">Log in</button>
+        
         <button type="submit" id="signUp" class="button">Sign up</button>
       </form>
 
@@ -46,25 +59,31 @@
       <section class="accordion">
         <h2>FAQ</h2>
 
-        <div class="question" id="section1">Section 1</div>
+        <div class="question" id="section1">Can I track my climbs in an indoor facility?</div>
         <div class="answer" >
-          <p>Lorem ipsum...</p>
+          <p>Yes! You can use the beginner part of the app to track your indoor climbs.
+            When you get outside make sure to switch to advanced mode.
+          </p>
         </div>
 
-        <div class="question" id="section2">Section 2</div>
+        <div class="question" id="section2">Can I manually log my climbs?</div>
         <div class="answer">
-          <p>Lorem ipsum...</p>
+          <p>Of course, we know you can´t bring a phone or fitness tracker everywhere. </p>
         </div>
 
-        <div class="question" id="section3">Section 3</div>
+        <div class="question" id="section3">How do I get started?</div>
         <div class="answer">
-          <p>Lorem ipsum...</p>
+          <p>Start with signing up!</p>
         </div>
      </section>
 
     </main>
+    
+    <footer>
+      Made by Ida Näslund in Technigo Bootcamp spring 2022
+    </footer>
 
-    <footer></footer>
+    
     
     <script src="script.js"></script>
   </body>
