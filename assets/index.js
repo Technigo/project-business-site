@@ -1,4 +1,4 @@
-const inputLabels = document.querySelectorAll(".input__header");
+const inputLabels = document.querySelectorAll(".accordion__header");
 const nameInput = document.querySelector(".name-input");
 const emailInput = document.querySelector(".email-input");
 const phoneInput = document.querySelector(".phone-input");

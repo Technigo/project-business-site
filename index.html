@@ -16,74 +16,80 @@
       <p class="hero__paragraph">Ready Set Brew</p>
     </div>
   </header>
-
   <main>
-  <section class="main-section">
-    <p class="main-section__paragraph main-section__paragraph--bold">COFFEEOLOGY:</p>
-    <p class="main-section__paragraph">stay grounded</p>
-    <p class="main-section__paragraph">expresso yourself</p>
-    <p class="main-section__paragraph">better latte than never</p>
-  </section>
-  <div class="wrapper">
-    <div class="form-wrapper">
-      <form class="form" id="form" action="https://httpbin.org/anything" target="__blank" method="post" autocomplete="off">
-        <h2 class="form__header">COURSE SIGNUP</h2>
-        <input id="nameInput" class="form__input name-input" type="text" name="name" placeholder="Full name" minlength="1" maxlength="20" 
-         oninvalid="this.setCustomValidity('Please enter your name')" oninput="this.setCustomValidity('')" required/>
-        <input id="emailInput" class="form__input email-input" type="text" name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Email" 
-        oninvalid="this.setCustomValidity('Please enter your email address')" oninput="this.setCustomValidity('')" required/>
-        <input type="tel" id="telInput" class="form__input phone-input" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone (123-456-7890)" 
-        oninvalid="this.setCustomValidity('Please enter your phone number')" oninput="this.setCustomValidity('')" required>
-        <select id="courseInput" class="form__input" name="course">
-          <option class="tan-background" value="level">Course Level</option>
-          <option value="beginner">Beginner</option>
-          <option value="intermediate">Intermediate</option>
-          <option value="advanced">Advanced</option>
-        </select>
-        <label for="policyInput">
-        <input type="checkbox" id="policyInput" class="form__input form__input--green" name="policy"
-          oninvalid="this.setCustomValidity('Please agree to the privacy policy')" oninput="this.setCustomValidity('')"  required/>
-        I Agree to <span class="underline">Privacy Policy</span></label>
-        <input class="form__input submit-input" type="submit">
-      </form>
-    </div>
-
-    <section class="accordion-wrapper">
-      <div class="accordion">
-        <h2 class="accordion__header">Frequently Asked Questions</h2>
-        <hr>
-        <section class="input">
-          <h3 class="input__header">Who can take the course?</h3>
-          <p class="input__paragraph">Anyone 18 years or older can take the course!</p>
-        </section>
-        <hr>
-        <section class="input">
-          <h3 class="input__header">How many courses do you offer?</h3>
-          <p class="input__paragraph">A beginners, intermediate, and advanced course. 
-          </p>
-        </section>
-        <hr>
-        <section class="input">
-          <h3 class="input__header">What does the course include?</h3>
-          <p class="input__paragraph">Espresso preparation, milk steaming, latte art training,
-            equipment maintenance, coffee origin experience, and roasting fundamentals.
-          </p>
-        </section>
-        <hr>
-        <section class="input">
-          <h3 class="input__header">Can I pay in installments?</h3>
-          <p class="input__paragraph">Yes, you can pay for the course in 3 installments.</p>
-        </section>
-        <hr>
-        <section class="input">
-          <h3 class="input__header">Will I get a certicate after the course?</h3>
-          <p class="input__paragraph">After completing the course you will receive an official barista certificate.
-          </p>
-        </section>
-        <hr class="last">
-      </div>
+    <section class="main-section">
+      <p class="main-section__paragraph main-section__paragraph--bold">COFFEEOLOGY:</p>
+      <p class="main-section__paragraph">stay grounded</p>
+      <p class="main-section__paragraph">expresso yourself</p>
+      <p class="main-section__paragraph">better latte than never</p>
     </section>
-  </div>
+    <div class="wrapper">
+      <div class="form-wrapper">
+        <form class="form" id="form" action="https://httpbin.org/anything" target="__blank" method="post"
+          autocomplete="off">
+          <h2 class="form__header">COURSE SIGNUP</h2>
+          <input id="nameInput" class="form__input name-input vald" type="text" name="name" placeholder="Full name"
+            minlength="1" maxlength="20" oninvalid="this.setCustomValidity('Please enter your name')"
+            oninput="this.setCustomValidity('')" required />
+          <input id="emailInput" class="form__input email-input vald" type="text" name="email"
+            pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Email"
+            oninvalid="this.setCustomValidity('Please enter your email address')" oninput="this.setCustomValidity('')"
+            required />
+          <input type="tel" id="telInput" class="form__input phone-input vald" name="telephone"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone (123-456-7890)"
+            oninvalid="this.setCustomValidity('Please enter your phone number')" oninput="this.setCustomValidity('')"
+            required>
+          <select id="courseInput" class="form__input" name="course">
+            <option class="tan-background" value="level">Course Level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+          <label for="policyInput">
+            <input type="checkbox" id="policyInput" class="form__input form__input--green" name="policy"
+              oninvalid="this.setCustomValidity('Please agree to the privacy policy')"
+              oninput="this.setCustomValidity('')" required />
+            I Agree to <span class="underline">Privacy Policy</span></label>
+          <input class="form__input submit-input" type="submit">
+        </form>
+      </div>
+      <section class="accordion-section">
+        <div class="accordion-wrapper">
+          <h2 class="accordion-header">Frequently Asked Questions</h2>
+          <hr>
+          <section class="accordion">
+            <h3 class="accordion__header">Who can take the course?</h3>
+            <p class="accordion__paragraph">Anyone 18 years or older can take the course!</p>
+          </section>
+          <hr>
+          <section class="accordion">
+            <h3 class="accordion__header">How many courses do you offer?</h3>
+            <p class="accordion__paragraph">A beginners, intermediate, and advanced course.
+            </p>
+          </section>
+          <hr>
+          <section class="accordion">
+            <h3 class="accordion__header">What does the course include?</h3>
+            <p class="accordion__paragraph">Espresso preparation, milk steaming, latte art training,
+              equipment maintenance, coffee origin experience, and roasting fundamentals.
+            </p>
+          </section>
+          <hr>
+          <section class="accordion">
+            <h3 class="accordion__header">Can I pay in installments?</h3>
+            <p class="accordion__paragraph">Yes, you can pay for the course in 3 installments.</p>
+          </section>
+          <hr>
+          <section class="accordion">
+            <h3 class="accordion__header">Will I get a certicate after the course?</h3>
+            <p class="accordion__paragraph">After completing the course you will receive an official barista
+              certificate.
+            </p>
+          </section>
+          <hr class="horizontal-rule">
+        </div>
+      </section>
+    </div>
   </main>
   <script src="./assets/index.js"></script>
 </body>
