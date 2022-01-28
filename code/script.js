@@ -2,17 +2,51 @@
 // We haven't really talked about ´this´ yet, but we will... ;)
 // console.log(this) to see how it works
 
-console.log('hello')
+const sectionOne =
+document.getElementById("section1")
 
-
-const button = 
-document.getElementById("button").onclick = toggleAccordion
-
-button.onclick = toggleAccordion
-
-function toggleAccordion() {
-  this.classlist.toggleAccordion ("active")
+sectionOne.onclick = () => {
+  sectionOne.classList.toggle("active")
 }
+
+
+const sectionTwo =
+document.getElementById("section2")
+
+sectionTwo.onclick = () => {
+  sectionTwo.classList.toggle("active")
+}
+
+
+const sectionThree =
+document.getElementById("section3")
+
+sectionThree.onclick = () => {
+  sectionThree.classList.toggle("active")
+}
+
+
+const sectionFour =
+document.getElementById("section4")
+
+sectionFour.onclick = () => {
+  sectionFour.classList.toggle("active")
+}
+
+
+
+
+
+
+
+// const button = 
+// document.getElementById("button").onclick = toggleAccordion
+
+// button.onclick = toggleAccordion
+
+// function toggleAccordion() {
+//   this.classlist.toggleAccordion ("active")
+// }
 
 
 // function toggle() {
