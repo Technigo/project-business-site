@@ -21,3 +21,5 @@ sectionOne.onclick = () => {
       dumbbell.onclick = () => {
         dumbbell.classList.toggle("press")
         } 
+
+  
