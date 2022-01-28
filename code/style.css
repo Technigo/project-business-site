@@ -1,7 +1,203 @@
+
+/*Got advice by team mate to add the google fonts link in html file due to faster upload
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap'); */
+
+ * {
+   margin: 0;
+   padding: 0;
+   color: #044A42;
+   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+ }
+
+/* header */
+ header {
+   display: flex;
+ }
+
+ header >video {
+   width: 100%;
+   height: 100%;
+ }
+
+ .hero-text {
+   position: absolute;
+   display: flex;
+   width: 100%;
+   min-height: 100vh;
+   padding: 3vw 0 0 1vw;
+   font-family: 'Tangerine', serif;
+   font-weight: 700;
+ }
+
+ h1 {
+   font-size: 8vw;
+ }
+ h2 {
+   font-size: 3vw;
+ }
+
+ /*Text about the business*/
+ .about-text {
+   display: flex;
+   justify-content: center;
+   margin: 2vw 20vw 2vw 20vw;
+ }
+
+ .about-text p {
+  font-size: 3vw;
+  padding-bottom: 2vw;
+  font-family: 'Tangerine', serif;
+  font-weight: 700;
+ }
+
+ main {
+  background-image: url('background_grass.jpg');
+  padding-bottom: 9vw;
+ }
+
+ /* Signup form*/
+ .signup-wrapper {
+   padding: 9vw 0 9vw 0;
+   width: 100%;
+   display: grid;
+   justify-content: center;
+ }
+
+ .form {
+  border: 1px solid;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem;
+  display: grid;
+  background-color: #D7E9F7;
+  font-size: 3vw;
+  padding: 2vw 6vw 2vw 6vw;
+  font-family: 'Tangerine', serif;
+  font-weight: 700;
+ }
+ .form-items {
+   padding-top: 2vw; 
+ }
+ li {
+   display: grid;
+   justify-content: center;
+   list-style-type: none;
+ }
+ .input-field {
+  background-color: #D7E9F7;
+  border: 2px solid white;
+  outline: none;
+  margin-left: 2vw;
+  height: 3vh;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #044A42;
+  font-weight: 200;
+}
+ label {
+   padding: 1vw 0vw 1vw 0;
+ }
+
+ .radio-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2vw;
+ }
+ .radio-btn {
+  cursor: pointer;
+  margin: 0vw 0 0 1vw;
+ }
+ .checkbox-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 1vw 0 2vw 0;
+ }
+ 
+ .submit-wrapper {
+   display: flex;
+   justify-content: center;
+   cursor: pointer;
+   margin-left: 0;
+ }
+
+ /* Accordion */
+ .accordion-wrapper {
+  display: grid;
+}
+ .accordion {
+  border: 1px solid;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #D7E9F7;
+  font-size: 3vw;
+  padding: 2vw 0vw 3vw 0vw;
+  margin: 0 10vw 0 10vw;
+  font-family: 'Tangerine', serif;
+  font-weight: 700;
+ }
+ 
+ .accordion-item {
+  border: 4px solid white;
+  cursor: pointer;
+  padding: 1vw 2vw 1vw 1vw;
+  margin-top: 2vw;
+ }
+
+ .answer { 
+   padding: 1vw 2vw 1vw 1vw;
+   display: none;
+   font-family: 'merriweather', serif;
+   font-weight: 400;
+   font-size: 1vw;
+   max-width: fit-content;
+ }
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 .active + .answer {
-  /* some styling here */
+  background-color: white;
+  display: block;
 }
+
+/*footer*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2vw;
+  font-size: 2vw;
+ }
+ footer p {
+   padding-top: 1vw;
+ }
+
+ /*media queries*/
+ @media screen and (min-width: 1025px) {
+  .input-field {
+    border: 3px solid white;
+  }
+  footer {
+    height: 3vw;
+  }
+  footer p {
+    font-size: 1vw;
+  }
+  main {
+    padding-bottom: 2vw;
+  }
+
+}
+
+

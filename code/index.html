@@ -3,28 +3,135 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@200;400;700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <title>Farmers Academy</title>
   </head>
+
   <body>
-    <!-- video or image as a header is cool :) -->
+    <header>
+      <video controls autoplay loop muted>
+          <source src="videos/hero_video_cow.mp4" type="video/mp4">
+          <source src="videos/hero_video_cow.webm" type="video/webm">
+          Sorry, your browser doesn't support this video
+        </video>
+      <div class="hero-text">
+        <h1>Farmers Academy</h1>
+        <h2>Be one with nature</h2>
+      </div>
+    </header>
+    
+      <!--Text about the business-->
+      <div class="about-text">
+        <p>
+          Be one with the nature and come visit a farm for one day. You will get an insight into how everyday life works on a farm. Maybe you are curious to start your own or just want to get away from the city for a while.
+        </p>
+      </div>
 
-    <!-- Signup form -->
+      <main>
+      <!-- Signup form -->
+       <section class="signup-wrapper">
+        <form  class="form" action="https://httpbin.org/anything" method="post">
+          Sign up for more information:
+          <ul class="form-items">
+            <li>
+              <label>First name:
+                <input class="input-field" type="text" required placeholder="FIRST NAME" name="firstname" />
+              </label>
+            </li>
+            <li>
+              <label>
+                Last name:
+                <input class="input-field" type="text" required placeholder="LAST NAME" name="lastname" />
+              </label>
+            </li>
+            <li>
+              <label>
+                Email adress:
+                <input class="input-field" type="email" required placeholder="EMAIL" name="email" />
+              </label>
+            </li>
+          </ul>
 
-    <section class="accordion">
+            <div class="radio-wrapper">
+              <label>Sweden
+                <input class="radio-btn" type="radio" name="sweden" />
+              </label>
+              <label>Norway
+                <input class="radio-btn" type="radio" name="norway" />
+              </label>
+              <label>Denmark
+                <input class="radio-btn" type="radio" name="denmark" />
+              </label>
+              </div>
+
+            <div class="checkbox-wrapper">
+              <label>
+                <input type="checkbox" required name="terms" />
+                I accept <a href="#"> Terms & Conditions</a>
+              </label>
+            </div>
+
+            <div class="submit-wrapper">
+            <label>
+              <button class ="input-field">SUBMIT</button>
+            </label>
+            <div>
+        </form>
+      </section>
+
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      <section class="accordion-wrapper">
+        <div class="accordion">
+          F.A.Q
+        <div class="accordion-item" id="section1">Any equipment needed to bring?</div>
+        <div class="answer">
+          <p>
+            No, just comfortable clothes.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <div class="accordion-item" id="section2">Whats the minimum age for participate?</div>
+        <div class="answer">
+          <p>
+            Minimum 18 year
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+        <div class="accordion-item" id="section3">Do you need any experience of farming?</div>
+        <div class="answer">
+          <p>
+            No earlier experience needed
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+       
+        <div class="accordion-item" id="section4">Are meals included?</div>
+        <div class="answer">
+          <p>
+            Yes - lunch, coffe and dinner will be included
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+       </div>
+     </section>
+    </main>
+    <footer>
+      <p>© Copyright Josefin Eliasson & Farmers Academy 2022</p> 
+   </footer>
+
+   <script src="script.js"></script>
+ </body>
 </html>
