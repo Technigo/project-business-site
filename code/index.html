@@ -16,47 +16,53 @@
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
-    <header class="hero-img"><h2 class="hero-title">Are you covered?</h2></header>
+    <header class="hero-img">
+      <h2 class="hero-title">Are you covered?</h2>
+      <a href="#content" class="find-out-button">Find out!</a>
+    </header>
     <!-- Signup form -->
 
-    <main class="content">
+    <main id="content" class="content">
       <section class="accordion height-width-400 green-background">
         <!-- Accordion -->
-        <h2 class="accordion-header margin-zero">FAQ</h2>
+        <h2 class="accordion-header">FAQ</h2>
+        <section class="q-and-a">
+          <div class="question dark-green-background margin-left-right-2rem" id="section1">How much does it cost?</div>
+          <div class="answer margin-left-right-2rem visibility">
+            <p class="margin-zero">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>  
+            </div>
 
-        <div class="question margin-left-right-2rem" id="section1">Section 1</div>
-        <div class="answer pink-background margin-left-right-2rem">
-          <p class="margin-zero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+          <div class="question dark-green-background margin-left-right-2rem" id="section2">Are pets included in the home insurance?</div>
+          <div class="answer margin-left-right-2rem visibility">
+            <p class="margin-zero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
 
-        <div class="question margin-left-right-2rem" id="section2">Section 2</div>
-        <div class="answer pink-background margin-left-right-2rem">
-          <p class="margin-zero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        </div>
+          <div class="question dark-green-background margin-left-right-2rem" id="section3">Can my work pay for my insurance?</div>
+          <div class="answer margin-left-right-2rem visibility">
+            <p class="margin-zero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
 
-        <div class="question margin-left-right-2rem" id="section3">Section 3</div>
-        <div class="answer pink-background margin-left-right-2rem">
-          <p class="margin-zero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-
-        <div class="question margin-left-right-2rem" id="section4">Section 4</div>
-        <div class="answer pink-background margin-left-right-2rem">
-          <p class="margin-zero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-        </div>
+          <div class="question dark-green-background margin-left-right-2rem" id="section4">Where can I sign up?</div>
+          <div class="answer margin-left-right-2rem visibility">
+            <p class="margin-zero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+          </div>
+          </section>
       </section>
       
-      <form class="form height-width-400 pink-background" action="https://httpbin.org/anything" method="post">
+      <form id="form" class="form height-width-400 pink-background flex-space-evenly" action="https://httpbin.org/anything" method="post">
         <h3 class="form-header">Have us contact you?</h3>
         <label for="first-name" class="form-item">First name:
-          <input type="text" id="first-name" name="first-name" placeholder="First name" class="input">
+          <input type="text" id="first-name" name="first-name" placeholder="First name" class="input" required>
         </label>
 
         <label for="last-name" class="form-item">Last name:
-          <input type="text" id="last-name" name="last-name" placeholder="Last name" class="input">
+          <input type="text" id="last-name" name="last-name" placeholder="Last name" class="input" required>
         </label>
 
         <label for="email-add" class="form-item">Email address:
-          <input type="email" id="name" name="email-add" placeholder="Email address" class="input">
+          <input type="email" id="email" name="email-add" placeholder="Email address" class="input" required>
         </label>
 
         <label for="tel-nr" class="form-item">Telephone number:
@@ -74,6 +80,54 @@
         <button class="send-button">Send!</button>
       </form>
     </main>
+
+    <footer class="green-background">
+      <section class="footer-list list1-container">
+        <ul>
+          <li><h4>I want to...</h4></li>
+          <li><a href="#">Find business insurance</a></li>
+          <li><a href="#">Get an insurance quote</a></li>
+          <li><a href="#">Report a claim</a></li>
+          <li><a href="#">Contact customer service</a></li>
+          <li><a href="#">Login to My Pages</a></li>
+        </ul>
+      </section>
+      <section class="footer-list list2-container">
+        
+        <ul>
+          <li><h4>Insurances</h4></li>
+          <li><a href="#">Business insurance</a></li>
+          <li><a href="#">Liabilty insurance</a></li>
+          <li><a href="#">Vehicle insurance</a></li>
+          <li><a href="#">Person insurance</a></li>
+          <li><a href="#">Property insurance</a></li>
+          <li><a href="#">Real estate insurance</a></li>
+        </ul>
+      </section>
+      <section class="footer-list list2-container">
+        <ul>
+          <li><h4>Customer service for business</h4></li>
+          <li><a href="#">+46 771-56 00 00</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </section>
+    </footer>
+      
+
+      
+      
+      
+      
+      
+      
+  
+  
+    
+    
+    
+    
+
+
     <!-- dont forget to link the javascript file here! -->
     <script src="script.js"></script>
   </body>

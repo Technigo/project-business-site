@@ -10,33 +10,36 @@ body {
 header {
   background: url("./umbrellas.jpg");
   background-size: cover;
-  width: 100vw;
-  height: 80vh;
+  width: 100%;
+  height: 90vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
   color: white;
   font-size: max(3rem, 6vw);
 }
 
+.find-out-button {
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+}
+
+.find-out-button:hover {
+  transition: 800ms;
+  transform: scale(1.5);
+}
 
 .active + .answer {
   /* some styling here */
-  display: block;
+  max-height: 700px;
 }
 
 .green-background {
   background-color: #95B86A;
 }
-
-/*Same size, shadow, and margin for the accordion and form*/
-/* .height-width-400 {
-  min-height: 400px;
-  max-width: 400px;
-  margin: 2em;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
-} */
 
 .form-header,
 .accordion-header {
@@ -44,76 +47,156 @@ header {
   color: white;
   font-family: "Montserrat";
   font-size: max(1.6rem, 1.6vw);
+  margin: 1rem;
 }
-
-/* The accordion header needs padding to look like the form header*/
-/* .padding-top-1-5 {
-  padding-top: 1.5rem;
-} */
 
 .pink-background { 
   background-color: #CEC0CB;;
+}
+
+.dark-green-background {
+  background-color: #687a51;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 form,
 .accordion {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   letter-spacing: 1.2px;
-  padding: 2rem;
-  
+  padding: max(1rem, 2vw);
   min-height: 400px;
-  min-width: min(400px, calc(90vw - 8rem));
+  height: fit-content;
+  width: min(350px, calc(100vw - 8em));
   margin: 2em;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
 }
 
+.q-and-a {
+  background-color: #879b6f;
+  color: #20221d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.question {
+  text-align: center;
+  font-size: min(1rem, 5vw) ;
+  font-weight: 500;
+  width: calc(100% - 10px);
+  padding: 5px;
+  transition: background 0.2s;
+}
+
+.question:hover {
+  cursor: pointer;
+}
+
+.question::after {
+  content: '\25be';
+  float: right;
+  transform: scale(1.5);
+}
+
+.active {background: #535f45; color: white;}
+.active::after {content: '\25b4'}
+
 .margin-zero {
   margin: 0;
+  padding: 1rem 0.5rem;
 }
-/* 
-.margin-left-right-2rem {
-  margin: 0 2rem;
-} */
 
 .answer {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s;
+  padding: 0 1rem;
 }
 
-/* .form-item {
+.form-item {
   margin: 1rem 2rem;
-} */
+}
 
 label {
-  /* margin: 1em; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* .input {
-  margin-top: 5px;
-} */
+.input {
+  border: 1px solid #ddd;
+  outline: none;
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: red;
+}
 
 .form-item.checkbox {
   display: flex;
   flex-direction: row-reverse;
 }
-/* 
+
 .checkbox-box {
   margin: 1rem 1rem 1rem 0;
-} */
+}
 
 .send-button {
   align-self: center;
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  /* margin: 1em; */
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  min-height: 300px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4) inset;
+  padding: 2rem;
+  letter-spacing: 1.2px;
+}
+
+li {
+  list-style: none;
+  margin: 0.5rem 0;
+}
+
+li a {
+  color: black;
+  text-decoration: none;
 }
 
 @media (min-width: 668px) {
   .content {
     display: flex;
+    justify-content: center;
+    gap: 4vw;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 2rem 5vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem 12rem;
   }
 }
