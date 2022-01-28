@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <!-- video or image header -->
@@ -22,47 +22,47 @@
           <li><a href="#">Link</a></li>
         </ul>
       </nav> -->
-        <h1>Vancouver</h1>
-        <h4>En vacker stad</h4>
-        <a class="hero-button" href="#">Köp din resa nu</a>
-      
+      <h1>Vancouver</h1>
+      <h4>En vacker stad</h4>
+      <a class="hero-button" href="#">Köp din resa nu</a>
     </header>
 
     <main class="main">
-
       <!-- Signup form -->
       <section class="signup-form-section">
-
-        <form class="signup-form" action="https://httpbin.org/anything" method="post">
+        
+        <form
+          class="signup-form"
+          action="https://httpbin.org/anything"
+          method="post"
+        >
           <h2>Sign up</h2>
-          <label>
-            First name:
-            <input 
-              type="text" 
-              name="fname" 
-              placeholder="type your first name here" 
-              maxlength="20"
-              required />
-          </label>
-          <label>
-            Last name:
-            <input 
-              type="text" 
-              name="lname" 
-              placeholder="type your last name here" 
-              maxlength="30" 
-              required/>
-          </label>
-          <label>
-            Email:
-            <input 
-              type="email" 
-              name="email">
-          </label>
-          
-          <label>
-            City:
-            <select name="city">
+
+          <label for="fname">First name:</label>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            placeholder="first name"
+            maxlength="20"
+            required
+          />
+
+          <label for="lname">Last name:</label>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            placeholder="last name"
+            maxlength="30"
+            required
+          />
+
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required />
+
+          <label for="city">City:</label>
+            <select name="city" id="city">
               <option value="Stockholm">Stockholm</option>
               <option value="Uppsala">Uppsala</option>
               <option value="Sigtuna">Sigtuna</option>
@@ -71,29 +71,41 @@
           </label>
 
           <div class="radio">
-            <span>Your preferred language</span>
-            <input type="radio" name="language" id="danska" value="danska">
+            <p>Your preferred language</p>
+
+            <input 
+              type="radio" 
+              name="language" 
+              id="danska" 
+              value="danska" />
             <label for="danska">Danska</label>
-            <br>
-            <input type="radio" name="language" id="engelska" value="engelska">
+
+            <input
+              type="radio"
+              name="language"
+              id="engelska"
+              value="engelska"
+            />
             <label for="engelska">Engelska</label>
-            <br>
-            <input type="radio" name="language" id="tyska" value="tyska">
+
+            <input 
+              type="radio" 
+              name="language" 
+              id="tyska" 
+              value="tyska" 
+            />
             <label for="tyska">Tyska</label>
+
           </div>
 
-          <input 
-            class="submitbutton" 
-            type="submit" 
-            value="submit">
-
+          <input class="submitbutton" type="submit" value="submit" />
         </form>
       </section>
 
       <section class="accordion-section">
         <!-- Accordion -->
-        <h1>FAQ</h1>
-        
+        <h2>FAQ</h2>
+
         <div class="question" id="section1">Section 1</div>
         <div class="answer">
           <p>Svar 1</p>
@@ -113,14 +125,12 @@
         <div class="answer">
           <p>Svar 4</p>
         </div>
-
       </section>
-
     </main>
     <footer class="footer">
       <p>Copyright</p>
     </footer>
-    <!-- dont forget to link the javascript file here! -->
+    
     <script src="script.js"></script>
   </body>
 </html>

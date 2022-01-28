@@ -6,7 +6,8 @@
 }
 
 html {
-  font-family: Tahoma, Verdana, sans-serif;
+  /* font-family: Tahoma, Verdana, sans-serif; */
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
 }
 
@@ -26,10 +27,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 0.6;
 }
-
-
-
 
 /* .hero-container nav {
   position: absolute;
@@ -71,7 +70,14 @@ body {
   border-radius: 6px;
 }
 
-/* Lite osäker på om jag ska ha grid eller flex på denna */
+/* Kanske göra någon annan hovereffekt än denna just */
+.hero-button:hover {
+  background-color: yellowgreen;
+  position: relative;
+  left: 1px;
+  bottom: 1px;
+}
+
 .main {
   width: 100vw;
   margin: 0 auto;
@@ -79,81 +85,90 @@ body {
   grid-template-columns: 1fr;
   gap: 2rem;
 }
-/* Kanske göra gemensam klass för signup-form-section och accordion? */
 
-.signup-form-section {
-  border: 1px green solid;
+/* Styles that the form and the accordion have in common go here */
+.main section {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   flex: 50%;
 }
 
-.signup-form {
-  border: 1px dotted black;
-  border-radius: 0.5rem;
-  padding: 2rem;
-  width: 90%;
-  /* max-width: 600px; */
-  margin: 2rem auto;
-  display: grid;
-  gap: 1rem;
+.main h2 {
+  margin: 2rem auto 1rem auto;
 }
 
-input, label, select {
-  padding: 0.5rem 0;
+.signup-form {
+  padding: 0 1rem;
+  width: 90%;
+  margin: 1rem auto;
+  font-size: 0.8rem;
+}
+
+label {
   display: block;
+  margin-top: 1rem;
+}
+
+label:first-of-type {
+  margin-top: 0.5rem;
+}
+
+input[type="text"], input[type="email"] {
+  padding: 0.2rem;
+  border: 1px solid grey;
+  width: 80%;
 }
 
 select {
-  width: 50%;
+  width: 40%;
+  padding: 0.1rem;
+}
+
+.radio {
+  font-size: 0.7rem;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.radio p {
+  margin: 1rem 0 0.2rem 0;
+}
+
+.radio label {
+  display: inline;
+  margin-right: 1rem;
+}
+
+.radio label:last-of-type {
+  margin-right: 0;
+}
+
+/* input, label, select {
+  padding: 0.5rem 0;
+  display: block;
 }
 
 input[type='text'] {
   color: grey;
   padding-left: 10px;
+  border: 1px solid grey;
   border-radius: 5%;
 }
 
-/* label {
-  width: 80%;
-  border: 1px solid salmon;
+/* input:valid {
+  border-color: green;
 } */
 
-input:valid {
-  border-color: green;
-}
-
-input:invalid {
+/* input:invalid {
   border-color: red;
-}
+} */
 
-label input {
-  width: 50%;
-}
-
-.radio span {
-  display: block;
-}
-
-/* Lägger in detta lite tillfälligt för att glesa ut 
-input, select {
-  display: block;
-  margin-bottom: 1rem;
-}
-
-input:required {
-  background-color: lightgray; 
-}
-
-.radio input {
-  display: inline;
-}
-
-
-*/
 
 .submitbutton {
   background-color: orange;
   color: white;
   padding: 0.5rem;
+  margin-top: 1rem;
   border: 1px solid orange;
   border-radius: 6px;
   width: 50%;
@@ -161,14 +176,13 @@ input:required {
 }
 
 .accordion-section {
-  border: 1px solid blue;
   text-align: center;
-  flex: 50%;
-  
-  
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
-.accordion-section h1 {
+.accordion-section h2 {
   margin: 2rem 0;
 }
 
@@ -190,52 +204,74 @@ input:required {
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-/* Lite osäker på om detta är rätt men testar lite */
+.active {
+  opacity: 0.7;
+}
+
 .active + .answer {
   display: block;
 }
-
-
-
-
 
 .footer {
   background-color: orange;
   color: white;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   margin-top: 2rem;
+  font-size: 0.8rem;
 }
 
+/* Tablet media queries*/
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .hero-container {
     background-image: url("./images/vancouver-sunset-edited-for-tablet.jpg");
   }
+
   .hero-container h1 {
     font-size: 4rem;
     color: green; /*to be removed*/
   }
+
   .main {
     grid-template-columns: 1fr 1fr;
+    gap: 5rem;
     margin: 2rem auto;
     width: 80vw;
   }
 
+  .main section {
+    min-width: 200px;
+    border-radius: 4%;
+  }
+
+  .footer {
+    padding: 1.5rem;
+  }
+
 }
+
+/* Desktop media queries */
 
 @media screen and (min-width: 992px) {
   .hero-container {
     background-image: url("./images/vancouver-sunset-edited-for-desktop.jpg");
   }
+
   .hero-container h1 {
     font-size: 5rem;
     color: brown; /*to be removed*/
   }
+
   .main {
     grid-template-columns: 1fr 1fr;
     margin: 2rem auto;
-    width: 80vw;
+    width: 50vw;
+  }
+
+  .main section {
+    min-width: 300px;
+    border-radius: 4%;
   }
 }
 
