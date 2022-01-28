@@ -1,12 +1,10 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Week 3 project at the Technigo bootcamp - to make a business site. It should contain a header with a video/image, a form and an accordion. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+It took me some time to get the accordion right and to acctually try to understand it. If I would have had more time I would probably have worked more on the styling but with the time I had I'm pleased with the result. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://eager-archimedes-201e6c.netlify.app/
