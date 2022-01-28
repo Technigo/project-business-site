@@ -27,23 +27,27 @@
     <section class="inquiry-form">
       <div class="inquiry">
         <img src="pawpointer.svg" alt="inquiry here">
-        <h2>Send an inquiry</h2>
+        <h2>Booking request</h2>
       </div>
       <div class="form-wrapper">
       <p class="boldedtext">Your contact info</p>
        <form action="http://httpbin.org/anything" method="POST">
         <label for="full-name"></label>
-        <input id="full-name" type="text" placeholder="Full name" name="fullname" >
+        <input id="full-name" type="text" placeholder="Full name" name="name" >
       <p>
         <label for="email"></label>
         <input type="email" id="email" placeholder="Email" name="email">
       </p>
       <p>
         <label for="phone"></label>
-        <input type="text" id="phone" placeholder="Telephone" name="email">
+        <input type="text" id="phone" placeholder="Telephone" name="phone">
       </p>
-      <p class="boldedtext">How long would your cat(s) stay with us?</p>
-
+        <label for="range"> <p class="boldedtext"> How many cats? 
+          <input type="range" name="amountcats" min="0" max="10" onchange="updateTextInput(this.value);">
+          <input name="val-amountcats" type="text" id="textInput" value="">
+        </label>
+      </p>
+      <p class="boldedtext">For how long?</p>
         <p class="arrival-date">
           <label for="arrival-date">Arrival date
            <input type="date" id="arrival-date" name="arrival-date">

@@ -11,3 +11,7 @@ questions.forEach((question) => {
 function onPlayerReady(event) {
   event.target.playVideo();
 }
+
+function updateTextInput(val) {
+  document.getElementById('textInput').value=val; 
+}
