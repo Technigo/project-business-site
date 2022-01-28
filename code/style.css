@@ -1,7 +1,140 @@
+* {
+  box-sizing: border-box; text-rendering:optimizeLegibility;font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{margin:0}
+header{
+  width: 100%;
+  height: 60vh;
+  min-height: 200px;
+  position:relative;
+  /*text-align: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;*/
+  z-index:-1;
+}
+
+.backgroundvideo{
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%; 
+  height:100%;
+  object-fit:cover;
+  z-index:0; 
+  
+}
+
+h1{
+   position: absolute;
+   color:whitesmoke; 
+   font-size: 12vh; 
+   text-shadow: 
+   2px 2px black; 
+   border: 5px solid thistle;
+   z-index:1;
+   left:0;
+   top:30%;
+   margin:0;
+   max-width: 100%;
+    }
+
+
+
+.maincontent{
+  display:flex; 
+  justify-content: space-evenly; 
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 20px; 
+  background-color: whitesmoke;
+}
+
+.signup {
+  width:30%; 
+  background-color: rgb(230, 213, 230); 
+  border-radius: 2%; 
+  margin: 30px;
+}
+.signup:hover{
+  background-color:thistle;
+}
+
+form{display:flex; flex-direction: column; padding:0 30px 30px 30px; align-items:flex-start;}
+
+
+.textfields{display:flex; flex-direction:column; width:100%;}
+#name, #email, #password {background-color: whitesmoke; width:100%; border-radius: 10px; border:0; padding:10px; margin:10px; box-shadow: 2px 2px 15px 4px thistle;}
+
+.checkbox{display:flex; flex-direction:column;}
+
+.button{align-self: center;}
+
+button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(121, 45, 121);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+button:hover {background-color: lightpink}
+
+button:active {
+  background-color: lightpink;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+label{padding:5px;}
+.terms{padding:20px;}
+
+h2{
+  text-align: center;
+}
+
+.accordion{
+  width: 30%; 
+  border: 2px solid thistle;
+  border-radius: 2%; 
+  margin: 30px; 
+  background-color: rgb(230, 213, 230);}
+
+.accordion:hover{
+  background-color:thistle;
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+.answer{display: none; background-color:plum;}
 
 .active + .answer {
-  /* some styling here */
+  display:block;
+  ;
 }
+
+.question{background-color: whitesmoke; box-shadow: 2px 2px 15px 4px thistle; padding: 20px; margin-bottom: 20px; cursor:pointer;}
+
+@media only screen and (max-width: 600px) {
+  h1{font-size: 5vh;}
+  .maincontent{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 10px; 
+  }
+
+  .signup {width:80%}
+  .accordion{width:80%}
+
+}
+

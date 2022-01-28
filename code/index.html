@@ -4,27 +4,69 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
+<header>
+  
+  
+<video class="backgroundvideo" autoplay="autoplay" muted loop>
+  <source src="./videos/pexels-rostislav-uzunov-8252781.mp4" type="video/mp4">
+  
+</video>
+<h1>Le Belle Buisness</h1>
+</header>
 
+
+
+
+<div class= "maincontent">
+    <section class="signup">
+      <h2>Sign up fow our newsletter!</h2>
+        <form action="https://httpbin.org/anything" method="post">
+          <div class="textfields">
+            <label for="name">Your name</label> <input id="name" name="name" type="text" placeholder="Tell us your name!" required> <label for="email">Your email</label> <input id="email" name="email" type="email" required> <label for="password">Password:</label> <input id="password" name="password" type="password">
+          </div>
+          <div class="checkbox">
+            <p>What can we do for you?</p>
+            <div>
+              <input id="marketing" name="service" type="radio" value="marketing"><label for="marketing">Marketing</label>
+            </div>
+            <div>
+              <input id="webdev" name="service" type="radio" value="webdevelopement"><label for="webdev">Web development</label>
+            </div>
+            <div>
+              <input id="both" name="service" type="radio" value="both"><label for="both">Both</label>
+            </div>
+          </div>
+          <div class="terms">
+            <input id="terms" name="terms" type="checkbox"> <label for="terms">I agree to terms and conditions</label>
+          </div>
+          <div class="button"><button type="submit"> Sign up!</button>
+        </form>
+      </body>
+      </html>
+
+    </section>
     <!-- Signup form -->
 
     <section class="accordion">
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      <h2>FAQ</h2>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">What do you do?</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">How can we reach you?</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
     </section>
+  </div>
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
   </body>
 </html>
