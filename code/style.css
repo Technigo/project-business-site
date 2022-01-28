@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family:'Playfair Display', serif;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 .image-header {
   height: 60vh;
   max-width: 100%;
-  background-image: url('img/hero-image.jpg');
+  background-image: url('img/bookshelf.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,41 +23,43 @@ body {
 }
 
 .header-text {
-  /*color: #6D2E46;*/
-  color: #370926;
+  margin: 1rem;
+  text-align: center;
 }
 
-h1 {
+.header-text h1 {
+  color: #FDFFFC;
   font-size: 3rem;
-  
+  font-family: 'Lora', serif;
+  text-shadow: 4px 4px 8px #FF0000;
 }
 
-h1 + p {
-  font-size: 1rem;
-  padding-left: 1.8rem;
+.header-text p {
+  color: #FDFFFC;
+  font-size: 1.5rem;
+  text-shadow: 5px 5px 10px #FF0000;
 } 
 
 /*      Main     */
-.container {
+
+.main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100%
 }
 
 /*     Styling of the form     */
+
 .form-container {
-  display:flex;
-  align-items: center;
-  flex-direction: column;
   width: 80%;
-  margin: 4rem;
+  margin: 1.5rem;
   background-color: #DDD0C7;
+  align-self: center;
+  justify-self: center;
 }
 
 .form-container h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding-top: 2rem;
   text-align: center;
   color: #370926;
@@ -68,27 +71,18 @@ h1 + p {
 
 label {
   font-size: 1rem;
-  margin: 1.2rem;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
 }
 
-input {
-  height: 5vh; 
-}
-
-.radio {
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.radio input {
-  margin: 0.5rem;
+.personal-input {
+  max-width: 250px;
 }
 
 button {
-  width: 12rem;
+  width: 8rem;
+  height: 3rem;
   border-radius: 50px;
   color:#CEBEBE;
   background-color: #6D2E46;
@@ -97,6 +91,7 @@ button {
   text-transform: uppercase;
   box-shadow: 2px 3px 5px black;
   cursor: pointer;
+  align-self: center;
 }
 
  button:hover {
@@ -128,9 +123,10 @@ button {
  }
 
  .question {
-   margin-left: 0;
-   margin-right: 0;
+   /*margin-left: 0;
+   margin-right: 0;*/
    width: 100%;
+   height: auto;
    color:#CEBEBE;
    background-color: #884B58;
    padding: 1rem;
@@ -148,7 +144,7 @@ button {
 
  .active {
    background-color:#884B58;
-   filter: opacity(80%);
+   filter: opacity(90%);
  }
 
  .active + .answer {
@@ -165,7 +161,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 /* Media queries for tablet */
 @media screen and (min-width:668px) {
-  .container {
+  .main-content {
     display: flex;
     flex-direction: row;
   }
