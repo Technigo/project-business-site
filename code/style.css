@@ -105,7 +105,7 @@ h1 {
 
 .main-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
   gap: 2rem;
 }
@@ -189,7 +189,7 @@ h2 {
   border: 2px solid rgba(141, 173, 155, 0.678);
 }
 
-.radio {
+.checkbox {
   width: 20px;
   position: absolute;
   top: 10px;
@@ -202,14 +202,14 @@ h2 {
   z-index: 10;
   font-size: 1rem;
   font-weight: 600;
-}*/
-
-select:invalid {
-  color: white:
 }
 
 select {
   color: #808d8e;
+}
+
+.hiding-select label::after {
+  display: none;
 }
 
 .submit-button {
@@ -324,10 +324,6 @@ select {
     font-size: 4rem;
   }
   .main-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-content: center;
-    gap: 2rem;
     padding: 2rem;
   }
   h2 {
