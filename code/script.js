@@ -6,7 +6,7 @@ questions.forEach((question) => {
   })
 })
  
-// Force the video to always autoplay
+// Force the video to always autoplay (it doesn't always play despite the autoplay attribut in the video tag, the video size is around 1MB)
 function onPlayerReady(event) {
   event.target.playVideo();
 }
