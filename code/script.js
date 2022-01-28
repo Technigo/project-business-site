@@ -1,7 +1,8 @@
-// A function that 
-function toggle() {
-  this.nextElementSibling.classList.toggle('faq--answer-active');
-}
+const questions = document.getElementsByClassName('faq--question');
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById('openQuestion').onclick = toggle;
+for (i=0; i<questions.length; i++) {
+  questions[i].addEventListener('click', function() {
+    this.nextElementSibling.classList.toggle('faq--answer-active');
+    
+  })
+}
