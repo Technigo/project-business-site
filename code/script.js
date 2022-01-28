@@ -19,7 +19,6 @@ b.onclick = toggle
 
 function toggle() {
   this.classList.toggle('active');
-
 }
 
 
