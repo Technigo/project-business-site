@@ -2,9 +2,7 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-}
+
 
 body {
   margin: 0;
@@ -25,7 +23,7 @@ body {
 }
 
 .title {
-  margin-top: 80px;
+  margin-top: 150px;
   display: flex;
   justify-content: center;
 }
@@ -54,20 +52,62 @@ h1 {
 
 /* FORMS */
 
-.accordion {
+.form-section {
   display: flex;
-  flex-direction: column;
-  justify-items: center;
+  justify-content: center;
 }
 
-h2 { 
-  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+h2 {
+  font-size: Montserrat;
   font-size: 20px;
-  color: #7d79c8;;
-  margin: 10px;
+  color: #7d79c8;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 .form-box {
-
+  display: flex;
+  flex-direction: column;
   width: 80%;
+  max-width: 300px;
+  margin: 20px;
+  background: lightpink;
+}
+
+.form-text {
+  font-size: 10px;
+}
+
+.text-input {
+  width: 70%;
+  max-width: 100px;
+}
+
+/* ACCORDION */
+
+.form-section {
+  display: flex;
+  justify-content: center;
+}
+
+.accordion {
+  display: flex;
+  justify-content: center;
+}
+
+.accordion-box {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 300px;
+  margin: 20px;
+  background: lightblue;
+}
+
+.answer {
+  display: none;
+}
+
+.active + .answer {
+  display: block;
 }
