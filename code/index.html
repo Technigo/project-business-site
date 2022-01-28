@@ -1,30 +1,117 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&display=swap" rel="stylesheet">  
+
+
+    <title>Fresh veggies home deliver</title>
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
+    <!-- Tried to use BEM but I always think it's hard with naming and this makes it even harder but it's good to try I guess -->
+    
+    <!-- Header with big background image -->
+    <header>
+      <h1>We deliver fresh veggies straight to your door</h1>
+    </header>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+    <!-- First section with short info text -->
+    <section class="widget info-section">
+      <!--<div class="column">-->
+        <h2 class="widget--heading">
+          We are your local vegetable farmer. We offer three different subscription alternatives for you. Sign up with the form below.
+        </p>
+      <!--</div>-->
+      <!--<div class="column">
+        <img src="../images/veggies-delivered.jpg" class="widget--img" />
+      </div>-->
+    </section>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <!-- Second section with two parts: A form and a FAQ accordion. Used Flexbox here to divide them and make it responsive. -->
+    <section class="widget row">
+
+      <!-- Form -->
+      <div class="widget--form column">
+        <h2 class="widget--heading">
+          Sign up and get fresh veggies all summer!
+        </h2>
+        <p class="widget--text">Where do you want your veggies delivered?</p>
+        <form action="https://httpbin.org/anything" method="post">
+
+          <!-- MER BEM HÄR -->
+          <input type="text" name="fullname" placeholder="Full name">
+          <input type="text" name="address" placeholder="Delivery address">
+          <input type="text" name="telephone" placeholder="Telephone">
+          <input type="text" name="email" placeholder="Email">
+
+
+          <p class="widget--text widget--text-form">Please choose your subscription plan</p>
+
+          <div class="widget--form-group">
+            <label for="weekly">Weekly</label>
+            <input type="radio" id="weekly" class="widget--form-radios" name="subscription_plan" value="Weekly">
+          
+            <label for="monthly">Monthly</label>
+            <input type="radio" id="monthly" class="widget--form-radios" name="subscription_plan" value="Monthly">
+          </div>
+
+          <div class="widget--form-group">
+            <input type="checkbox" id="accept" class="widget--form-checkbox" name="accept"> 
+            <p class="widget--text widget--text-form widget--form-text-checkbox">I accept that Fresh Veggies saves my personal details</p>
+          </div>
+          <input type="submit" value="Submit" class="widget--form-submit">
+        </form>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <!-- FAQ -->
+      <div class="widget--faq column">
+        <h2 class="widget--heading">
+          These are some of the most common questions we get. If you have other questions please contact us.
+        </p>
+
+
+        <div class="faq-container">
+          <h3 class="widget--heading faq--question" id="openQuestion">
+            What veggies will you offer?
+          </h3>
+          <p class="widget--text faq--answer">
+            It depends a little on the time of the year. But we use to offer different kind of kale, tomatoes, broccoli, cauliflower and garlic.
+          </p>
+        </div>
+        <div class="faq-container">
+          <h3 class="widget--heading faq--question" id="openQuestion">What veggies will you offer?</h3>
+          <p class="widget--text faq--answer">It depends a little on the time of the year. But we use to offer different kind of kale, tomatoes, broccoli, cauliflower and garlic.</p>
+        </div>
+        <div class="faq-container">
+          <h3 class="widget--heading faq--question" id="openQuestion">What veggies will you offer?</h3>
+          <p class="widget--text faq--answer">It depends a little on the time of the year. But we use to offer different kind of kale, tomatoes, broccoli, cauliflower and garlic.</p>
+        </div>
+        <div class="faq-container">
+          <h3 class="widget--heading faq--question" id="openQuestion">What veggies will you offer?</h3>
+          <p class="widget--text faq--answer">It depends a little on the time of the year. But we use to offer different kind of kale, tomatoes, broccoli, cauliflower and garlic.</p>
+        </div>
+
       </div>
     </section>
+
+    <footer>
+      <p class="widget--text">Contact</p>
+      <p class="widget--text">About us</p>
+      <p class="widget--text">Photo by Marisol Benitez and Leonie Wise on Unsplash</p>
+    </footer>
+
     <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
   </body>
 </html>
