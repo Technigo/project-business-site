@@ -13,7 +13,7 @@ document.getElementById("section4").onclick = toggle
 
 
 
-const btn = document.getElementByClassName("question")
+// const btn = document.getElementByClassName("question")
 
 document.getElementById("question").onclick = toggleButton
 
