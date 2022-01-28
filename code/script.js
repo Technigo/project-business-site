@@ -29,3 +29,4 @@ const openSection5 = document.getElementById('section5')
 openSection5.onclick= () => {
   openSection5.classList.toggle('active')
 };
+
