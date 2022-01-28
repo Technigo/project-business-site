@@ -4,11 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:wght@300;400&display=swap" rel="stylesheet">
     <title>Project 3 - Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+
+    <!-- Video hero header -->
     <header>
       <video playsinline muted loop autoplay>
       <source src="videos/spa.mp4" type="video/mp4">
@@ -30,26 +33,26 @@
           </label>
 
           <label for="email">E-mail
-            <input class="input-box" name="email" id="email" type="email" placeholder="Enter your e-mail">
+            <input class="input-box" name="email" id="email" type="email" placeholder="Enter your e-mail" required>
           </label>
 
           <label for="date">Select date
-            <input class="input-box" type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}">
+            <input class="input-box" type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}" required>
             <span class="validity"></span>
           </label>
           
           <div class="checkbox">
-            <input type="checkbox" id="check" name="check" value="check">
+            <input type="checkbox" id="check" name="check" value="check" required>
             <label class="policy" for=check> I accept the <a href="#">terms</a> & <a href="#">conditions</a>
             </label>
           </div>
           
-          <button class="send-btn" type="submit">Request booking</button>
+          <button class="submit-btn" type="submit">Request booking</button>
         </form>
       </section>
 
+      <!-- Accordion -->
       <section class="accordion">
-        <!-- Accordion -->
         <h2>FAQ</h2>
 
         <div class="question" id="section1">Where are you located?</div>
@@ -62,11 +65,13 @@
         <div class="answer">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quos explicabo.</p>
         </div>
+
         <div class="question" id="section3">What treatments do you offer?</div>
         <div class="answer">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quos explicabo. 
             Excepturi debitis officia saepe, nisi at voluptates unde maiores.</p>
         </div>
+
         <div class="question" id="section4">I have a special request</div>
         <div class="answer">
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum alias voluptatum eveniet similique necessitatibus illum quia quasi vel dolorum culpa minima, officiis pariatur, iste blanditiis nemo delectus laboriosam id? Eligendi!</p>
@@ -74,7 +79,11 @@
       </section>
     </section>
 
-    <!-- dont forget to link the javascript file here! -->
+    <!-- Footer -->
+    <footer>
+      <p>Lisen Lundgren - project-business-site</p>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
