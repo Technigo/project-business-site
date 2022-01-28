@@ -18,16 +18,17 @@
   }
 
 .header{
-    display: flex;
+  display: flex;
     background-color: rgba(126, 125, 125, 0.61); 
   }
 
 .hero{ 
-    height:45vh;
+    height:30vh;
     width:100%;
     align-items: center;
     justify-content: center;
     color: rgba(245, 245, 220, 0.774);  
+
 }
   
 /* hero video vw-viewwidth */
@@ -39,27 +40,29 @@
     object-fit: cover;  
     top: 0;
   left: 0;
-  }
   
+  }
+
 
   h1{
-    font-size: 55px;
-    padding:  20px;
-    opacity: 90%;
-    letter-spacing: 2px;
+   
+    font-size: 50px;
     padding: 20px 30px;
-    letter-spacing: 2px;
     color: rgb(58, 32, 32);
     font-family: 'Dancing Script';
-    opacity: 50%;
-    margin: .5rem 6rem;
+    margin: .5rem 7rem;
     justify-content: safe;
+    flex-wrap: wrap;
+    flex-direction: column;
+    opacity: 80%;
      }
 
+      
     .h1-sub{
       font-family: 'Dancing Script';
       padding: 0 30px;
       color: rgb(58, 32, 32);
+      margin: 2rem;
       } 
 
       .navbar{
@@ -93,7 +96,7 @@
       }
 
       .nav-li{
-        color: rgb(65, 54, 54);;
+        color: rgb(65, 54, 54);
         padding: 10px 10px;
         text-decoration: none;
         font-size: 10px;
@@ -104,9 +107,8 @@
        font-style: italic;
        border-radius:10px 10px 0 10px ;
        text-align: center;
-       
+       background-color: rgb(187, 180, 180);
       }
-
 
   .navbar li:hover{
     cursor: pointer;
@@ -167,7 +169,7 @@
     border-radius: 5px;
     box-shadow: 5px 5px 5px 5px rgba(22, 19, 19, 0.404);
     justify-content: safe;
-    background-color: rgba(94, 94, 94, 0.61);
+    background-color: rgba(94, 94, 94,  0.4);
     color: rgb(3, 34, 3);
      }
     /* The CSS justify-content property defines how the browser distributes space between and around content items along the main-axis of a flex container, and the inline axis of a grid container*/
@@ -181,7 +183,7 @@
      border-radius: 5px;
      box-shadow: 5px 5px 5px 5px rgba(22, 19, 19, 0.404);
      justify-content: safe;
-     background-color: rgba(94, 94, 94, 0.61);
+     background-color: rgba(94, 94, 94,  0.4);
      color: rgb(3, 34, 3);
   }
   
@@ -213,13 +215,31 @@
      text-align: left;  
      border-bottom: black;
 }
+.question::after{
+  content: '\002B';
+  float: right;
+  transform: scale(1.5);
+  background-color: black;
+   padding:0 2px;
+  border-radius: 50%;
+  color: #ffff;
+  font-weight: bolder;
+}
 
-.question:hover{
-  transform: scale(0.95);
+
+
+.active, .question:hover {
+  transform: scale(1.02);
   cursor: pointer;
   background-color: rgb(106, 116, 106);
   transition: all 1 ease;
   color: whitesmoke;
+  background-color: rgb(106, 116, 106);
+  transition: background-color 1s ease;
+}
+ 
+.active::after{
+  content: '\2212'; 
 }
 
 hr{
@@ -261,7 +281,9 @@ padding: 2px;
   cursor: pointer;
   padding: 2px;
 }
-
+.hero-svg{
+  margin-left: 10rem;
+}
 
 .answer{
   display: none;
@@ -282,6 +304,9 @@ padding: 2px;
   flex-direction: column;
   flex-wrap: wrap; 
 }
+.hero{ 
+  height:45vh;
+}
 
 .main-text {
   margin:10px 30px;
@@ -298,7 +323,9 @@ h1{
    margin: .5rem 15rem;
    }
 
-  
+  .h1-sub{
+    margin: 0 5rem;
+  }
  .navbar{
  float: right;
  font-size: 30px;
@@ -315,11 +342,15 @@ padding: 20px;
 
 @media  (min-width:1024px){
   
-h1{
-  margin: .5rem 40rem;
-  font-size: 80px;
-}
-    
+  h1{
+    font-size: 90px;
+    margin: .5rem 20rem;
+    }
+ 
+   .h1-sub{
+     margin: 0 5rem;
+   }
+   
 .navbar li{
   padding:10px 20px;
   font-size: 20px;

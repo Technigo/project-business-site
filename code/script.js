@@ -1,3 +1,6 @@
+
+//For accordion//
+
 var que = document.getElementsByClassName("question");
 var i;
 
@@ -15,7 +18,7 @@ for (i = 0; i < que.length; i++) {
   });
 }
 
-
+//For menu bar//
 function myFunction() {
   var x = document.getElementById("nav-contents");
   if (x.style.display === "block") {
