@@ -19,55 +19,52 @@
 
 .header{
   display: flex;
-    background-color: rgba(126, 125, 125, 0.61); 
+   
   }
 
 .hero{ 
-    height:30vh;
+    height:40vh;
     width:100%;
     align-items: center;
     justify-content: center;
     color: rgba(245, 245, 220, 0.774);  
+   
 }
   
 /* hero video vw-viewwidth */
   .hero .fullscreen{
     width:100vw;
-    height:150vh;
-    position: fixed;
+    height:40vh;
+    position: absolute;
     z-index: -5;
     object-fit: cover;  
     top: 0;
-   left: 0;
+   left: 0; 
+   opacity: 60%;
   }
 
   h1{
     font-size: 50px;
-    padding: 20px 30px;
-    color: rgb(58, 32, 32);
+    padding: 20px;
+    color: rgb(77, 43, 43);
     font-family: 'Dancing Script';
-    margin: .5rem 7rem;
+    margin: .5rem 5rem;
     justify-content: safe;
     flex-wrap: wrap;
     flex-direction: column;
     opacity: 80%;
     position: absolute;
     z-index: 5;
+    letter-spacing: 2px;
      }
 
       
-    .h1-sub{
-      font-family: 'Dancing Script';
-      padding: 0 30px;
-      color: rgb(58, 32, 32);
-      margin: 2rem;
-      } 
+     
 
       .navbar{
         position: absolute;
         overflow: auto;
         background-color: rgba(126, 125, 125, 0.61); 
-    
         border-radius: 5px;
     }
 
@@ -118,14 +115,15 @@
    .button{
     font-family: 'Neonderthaw' ;
     display:block;
-    padding: 20px;
+    padding: 5px;
     border-radius: 10rem;
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 2px;
     box-shadow: 3px 2px 2px 2px rgba(22, 19, 19, 0.404);
-    margin-top: 30px;
+    margin-top: 10px;
     background-color:  #d9ddd0;
+
   }
 
   .button:hover{
@@ -141,7 +139,6 @@
     flex-wrap: wrap;
     color: rgb(3, 34, 3);
     padding:20px; 
-
   }
 
   
@@ -151,7 +148,6 @@
     z-index: 2;
     justify-content: safe;
     text-align: start;
-    font-size: 40px;
     opacity: 70%;
     font-style: italic;
     margin: 20px;
@@ -173,6 +169,34 @@
     background-color: rgba(94, 94, 94,  0.4);
     color: rgb(3, 34, 3);
      }
+
+     #fname {
+       margin:10px 0px;
+       border-radius: 5px;
+       height:25px;
+     }
+     #lname {
+      margin:10px 0px;
+      border-radius: 5px;
+      height:25px;
+    }
+
+    #email{
+      margin:10px 0px;
+      border-radius: 5px;
+      height:25px;
+    }
+
+    #message{
+      margin:10px 0px;
+       border-radius: 6px;
+    }
+
+    #phone{
+      margin:10px 0px;
+      border-radius: 5px;
+      height:25px;
+    }
     /* The CSS justify-content property defines how the browser distributes space between and around content items along the main-axis of a flex container, and the inline axis of a grid container*/
 
     .accordion{
@@ -233,11 +257,10 @@
   float: right;
   transform: scale(1.5);
   background-color: black;
-   padding:0 2px;
+  padding:0 3px;
   border-radius: 50%;
   color: #ffff;
   font-weight: bolder;
- 
 }
 
 
@@ -303,20 +326,29 @@ padding: 2px;
 
 
 /* Responsive for Tablets*/
-@media (min-width:768px){ 
-  .text{
-  display:flex;
-  flex-direction: column;
-  flex-wrap: wrap; 
- 
+@media (min-width:768px){
+  
+  .header{
+    background-color: rgba(94, 94, 94,  0.4);
+  }
+  
+.hero .fullscreen{
+  height:100vh;
+  position: fixed;
 }
 .hero{ 
   height:45vh;
 }
 
 .main-text {
-  margin:10px 30px;
+  font-size:30px;
+  margin:0px 30px;
  }
+ .text{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap; 
+}
 
 .footer{
   font-size: 15px;
@@ -326,12 +358,9 @@ flex :1;
 
 h1{
    font-size: 70px;
-   margin: .5rem 15rem;
+   margin: 2rem 10rem;
    }
 
-  .h1-sub{
-    margin: 0 5rem;
-  }
  .navbar{
  float: right;
  font-size: 30px;
@@ -347,12 +376,19 @@ padding: 20px;
  /* Responsive for laptop*/
 
 @media  (min-width:1024px){
+
+  .hero .fullscreen{
+    height:105vh;
+    position: fixed;
+  }
   
   h1{
     font-size: 90px;
-    margin: .5rem 20rem;
+    margin: 4rem 2rem 2rem 20rem;
+    
     }
- 
+    
+    
    .h1-sub{
      margin: 0 5rem;
    }
@@ -372,6 +408,7 @@ padding: 20px;
     }
 
  .main-text {
+   font-size: 40px;
   margin:40px 30px 10px 10px;
       padding:20px;
      }
