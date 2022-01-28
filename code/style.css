@@ -23,6 +23,34 @@ a {
   color: inherit;
 }
 
+::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #adcb67;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-moz-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #adcb67;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #adcb67;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #adcb67;
+  opacity: 1;
+  /* Firefox */
+}
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #adcb67;
@@ -49,6 +77,7 @@ a {
   position: relative;
   height: 50vh;
   width: 100vw;
+  -o-object-fit: cover;
   object-fit: cover;
   overflow: hidden;
   z-index: 0;
@@ -80,6 +109,8 @@ a {
 }
 
 .hero ul li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   align-self: flex-end;
   padding: 1rem;
@@ -94,7 +125,11 @@ a {
 .hero-title {
   color: white;
   padding: 2vh 2vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   font-size: 1.25rem;
   display: flex;
@@ -124,13 +159,22 @@ main {
   width: 100%;
   background: #F8E379;
   padding: 3rem;
-  margin-top: 3rem;
-  ;
-  margin-bottom: 7rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.accordion-wrapper {
+  margin-bottom: 6rem;
+}
+
+@media (min-width: 1025px) {
+  .signup-wrapper, .accordion-wrapper {
+    margin-top: 3rem;
+    margin-bottom: 8rem;
+  }
 }
 
 .signup-item {
@@ -209,6 +253,7 @@ input:not(:focus):not(:placeholder-shown):invalid {
 /* changing the appearance of checkboxes START */
 input[type="checkbox"] {
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
@@ -247,6 +292,7 @@ input[type="checkbox"]:checked::before {
 
 input[type="radio"] {
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
@@ -380,42 +426,43 @@ label {
 
 
 /* START Footer */
-/* Bigger padding right and left for the footer than header and main so there is enough space to be able to touch all icons */
+/* STILL TRUE??? Bigger padding right and left for the footer than header and main so there is enough space to be able to touch all icons */
+
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 6rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  -moz-column-gap: 0.75rem;
-  column-gap: 0.75rem;
-  background-color: #F8E379;
+  height: 5rem;
   font-size: 1.25rem;
-  color: white;
   font-family: 'MuseoModerno', cursive;
-}
-
-.footer-top {
-  display: block;
-  width: 100%;
-  border: none;
-  background-color: #87A93A;
-  color: white;
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  cursor: pointer;
   text-align: center;
 }
 
-footer .btn {
-  font-family: 'MuseoModerno', cursive;
+footer .footer1 {
   background-color: #87A93A;
-  padding: 0.25rem 0.5rem;
-  width: 30%;
+  height: 50%;
+  color: white;
+}
+
+footer .footer2 {
+  background-color: #F8E379;
+  height: 50%;
+  color: #3d4c1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+  column-gap: 0.5rem;
+}
+
+footer .footer2 .fab {
+  font-size: 1.5rem;
+}
+
+footer .footer1 .btn2 {
+  background-color: #87A93A;
+  padding: 0.25rem;
   color: white;
   border: none;
   cursor: pointer;
@@ -424,24 +471,16 @@ footer .btn {
   outline: none;
 }
 
-footer .btn:hover {
+footer .footer1 .btn2:hover {
   background-color: #3d4c1a;
   box-shadow: 5px 5px #d6e5b3;
 
 }
 
-footer .btn:active {
+footer .footer1 .btn2:active {
   background-color: #3d4c1a;
   box-shadow: 3px 3px #adcb67;
   transform: translateY(2px);
-}
 
-footer .copyright {
-  color: #3d4c1a;
+  /* END Footer */
 }
-
-.fab {
-  font-size: 1.5rem;
-}
-
-/* END Footer */
