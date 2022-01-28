@@ -6,11 +6,56 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   /* some styling here */
 }
 
+body{
+  color:white;
+  background-color:blue;
+
+
+}
+
+h1 h3{
+  font-size: 20px;
+  font-size:10vw;
+}
 
 *{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+}
+
+header{ 
+   z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3rem;
+  transition: 0.5s ease;
+  background-color: rgba(255, 255, 255,);
+}
+
+.neontext{
+  font-size:10vw;
+text-transform: uppercase;
+ align-items: center;
+ font-size: 40px;
+ color:#9050cc;
+ text-shadow:
+     0 0 10px rgb(198, 64, 213),
+     0 0 21px rgb(231, 78, 236),
+     0 0 42px rgb(233, 87, 226),
+     0 0 82px rgb(253, 123, 236),
+     0 0 92px rgb(235, 47, 210),
+     0 0 102px rgb(250, 54, 207),
+     0 0 151px rgb(255, 0, 242);
+     opacity: 1;
+     
+
+}
+header > a{
+  text-decoration: none;
+    color:white;
 }
 
 #hero {
@@ -22,70 +67,219 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 
-
-#hero::after {
-  width:100%;
-  height:100%;
-  content: '';
-  position:absolute;
-  z-index:10;
-  top:0;
-  left:0;
-  background:rgba(0,0,0,0.1)
-}
-
-
 #hero video {
   width:100%;
-  height:100%;
+  height:100vh;
   position:absolute;
   top:0;
   left:0;
-  z-index:5;
+  z-index:1;
   object-fit:cover;
-  font-family:'object-fit: cover';
-}
-#hero .overlay-Text a{
-	text-decoration: none;
+
 }
 
 #hero .overlay-Text {
-
-  position:relative;
-  z-index:20;
-  text-align:center;
-  
-
-}
-#hero .overlay-Text h1 {
-
+  padding-top:250px;
+  justify-content:center;
   text-transform: uppercase;
-  font-size:2em;
   font-family: 'Mochiy Pop P One', sans-serif;
-  margin-bottom:0.5rem;
+  z-index:2;
+  text-align:center;
+    color:#8B0AFA;
+    text-shadow: 1px 1px white;
 
+}
+  button {
+   
+    text-transform: uppercase;
+    font-style: bold;
+    background-color: none;
+    border: none;
+    color: white;
+    padding:40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    color:#8B0AFA;
+ text-shadow:
+     0 0 10px rgb(198, 64, 213),
+     0 0 21px rgb(231, 78, 236),
+     0 0 42px rgb(233, 87, 226),
+     0 0 82px rgb(253, 123, 236),
+     0 0 92px rgb(235, 47, 210),
+     0 0 102px rgb(250, 54, 207),
+     0 0 151px rgb(255, 0, 242);
+     opacity: 1;
+     animation: flicker 1.5s infinite alternate;
+  }
+
+
+#hero .overlay-Text a {
+
+  font-size: 40px;
+  text-decoration: none;
+color:white;
   
+}
+button{
+  background-color: Transparent;
+background-repeat:no-repeat;
+border: none;
+}
 
+.flexbox-container{
+  display: flex;
+  padding:30px;
+  gap:30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.child-text{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  text-align: center;
+  gap:40px;
 }
 
 
- .overlay-Text h2 {
-  font-size:1.5rem;
-  margin:0;
-  font-family: 'Mochiy Pop P One', sans-serif;
+#child-form{
+  background-image:url("drinks.jpeg") ;
+  border-radius: 20px; 
+  width: 600px;
+  height: 600px;
+  padding-top:40px;
+  background-size: cover;
+ 
+}
+#child-accordion > h2{
+ text-align: center;
+  padding:30px;
+  color:#8B0AFA;
+  text-shadow:
+      0 0 10px rgb(198, 64, 213),
+      0 0 21px rgb(231, 78, 236),
+      0 0 42px rgb(233, 87, 226),
+      0 0 82px rgb(253, 123, 236),
+      0 0 92px rgb(235, 47, 210),
+      0 0 102px rgb(250, 54, 207),
+      0 0 151px rgb(255, 0, 242);
+
 }
 
-/* TABLET */
+#child-accordion {
+  background-color: black;
+  max-width: 600px;
+  height: 600px;
+  margin: 2rem;
+  border-radius: 20px;
+}
+.accordion-item {
+  background-color: #fff;
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  margin: 15px;
+ 
+}
+.accordion-item-header  {
+
+ justify-content: center;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+
+}
+.accordion-item-header::after {
+  content: "\002B";  /* the \002B makes a + sign */
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+ transition: transform 0.2s ease-in-out;
+}
+/* when active class is added the pseudo element will turn the plus sign 454 deg
+and when the active class removs it will change back på plus sign back  */
+
+.accordion-item-header.active::after {
+
+transform: rotate(45deg);
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+ 
+}
+
+	/* Footer */
+footer{
+	text-align: center;
+  color:white;
+  padding: 15px;
+}
+
+/*
+
 @media (min-width:668px){
 	
-
+  .flexbox-container{
+    display: flex;  
+    flex-direction: column;
+    text-align: center;
+   
+  }
 	 
 	}
-	
-	
-	/* DESKTOP */
-	
+
+	*/
 	@media (min-width:1024px){
 	
-	
+    .flexbox-container{
+      display: flex;
+      flex-direction: row;
+      justify-content:space-around;
+      justify-content: center;
+      gap:1rem;
+    }
+    
 	}
+
+
+  /* Animation */
+
+  @keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+      color:#8B0AFA;
+      text-shadow:
+          0 0 7px #AB36E6,
+          0 0 7px #AB36E9,
+          0 0 10px rgb(198, 64, 213),
+          0 0 21px rgb(231, 78, 236),
+          0 0 42px rgb(233, 87, 226),
+          0 0 82px rgb(253, 123, 236),
+          0 0 92px rgb(235, 47, 210),
+          0 0 102px rgb(250, 54, 207),
+          0 0 151px rgb(241, 22, 231);
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }

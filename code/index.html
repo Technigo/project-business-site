@@ -4,50 +4,121 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="normalize.css" rel="stylesheet">
+    <!--<link href="normalize.css" rel="stylesheet">-->
     <link href="style.css" type="text/css" rel="stylesheet" />
   <!-- Link to my Font! -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
-
-    <title>The Beer Bible</title>
+    <title>Cocktails & Dreams</title>
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body> 
-    
     <header>
+        <a class="neontext" href="https://www.youtube.com/watch?v=VcFNDidszi0">Cocktails & Dreams</a>
+    </header>
+    <main id="main">
     <div id="hero">
+      <!--The video is on -->
       <video     loop      muted      autoplay      preload="auto">
-            <source src="video.mp4" type="video/mp4">
+            <source src="video1.mp4" type="video/mp4">
             Your browser does not support the video tag.  
       </video>
+
       <div class="overlay-Text">
-            <h1><a href="#">Join the draft room</a></h1>
-            <h2><a href="#">The restaurant</a></h2>
+          <h1>join the startender coumnity</h1>
+          <h3>submit your reseme here</h3>
+          <button>sign up</button>
+    </div>
+    </div>
+  <!-- Signup form & faq -->
+  <div class="flexbox-container">
+    <div id="child-form">
+         <form action="https://httpbin.org/anything" method="post">
+           <div class="child-text">
+              <h2>Register</h2>
+               <label for="name">
+                <input type="text" name="name" id="name" required placeholder="Enter your name">
+               </label>
+                <label for="email">
+                 <input type="text"  name="email" id="email" required placeholder="Enter your email"></label>
+                 <label for="phone">
+                 <input type="tel" id="phone" name="phone" placeholder="123-45-678" required></label>       
+          
+              </div>
+            </form>
+          </div>
+            <!--Accordion-->
+            <div id="child-accordion"> 
+          <h2>F A Q</h2>
+  <div class="accordion-item" > 
+    <div class="accordion-item-header">
+      Why Join us?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        By joining Cocktails & Dreams network you can apply for jobs all over the world, perfect if you are on the road or traveling. </br>
+      Restaurant and bar can also contact you if you keep the profil updated where every you are.
       </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      What is HTML?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        HTML, aka HyperText Markup Language, is the dominant markup language for creating websites and anything that can be viewed in a web browser.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      What are some basic technical skills of a Front-End developer?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        <ul style="padding-left: 1rem;">
+          <li>HTML, CSS, JavaScript</li>
+          <li>Frameworks (CSS and JavaScript frameworks)</li>
+          <li>Responsive Design</li>
+          <li>Version Control/Git</li>
+          <li>Testing/Debugging</li>
+          <li>Browser Developer Tools</li>
+          <li>Web Performance</li>
+          <li>SEO (Search Engine Optimization)</li>
+          <!-- <li>CSS Preprocessing</li> -->
+          <li>Command Line</li>
+          <li>CMS (Content Management System)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      What is HTTP?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        HTTP, aka HyperText Transfer Protocol, is the underlying protocol used by the World Wide Web and this protocol defines how messages are formatted and transmitted, and what actions Web servers and browsers should take in response to various commands.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+      What is CORS?
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        CORS, aka Cross-Origin Resource Sharing, is a mechanism that enables many resources (e.g. images, stylesheets, scripts, fonts) on a web page to be requested from another domain outside the domain from which the resource originated.
+      </div>
+    </div>
+  </div>
 </div>
-</header>
+  </div>  
+  <footer>
+    <p>© Copyright 2021 Simon Andersson Student @ Technigo - All Rights Reserved</p>
+  </footer>
 
-
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
+</main>
     <!-- dont forget to link the javascript file here! -->
     <script src="object-fit-video.js"></script>
     <script src="script.js"></script>
