@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project W2 Business</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,104 +18,159 @@
   </head>
   <body>
     <header class="video-header">
-        <video muted autoplay loop>
-          <source src="./ambry-background-video.mp4" type="video/mp4" />
-          <source src="./big_buck_bunny.webm" type="video/webm" />
-          <p>This browser doesn't support video...</p>
-        </video>
-        <div class="logo">Ambry</div>
-         <div class="tagline">
+      <video muted autoplay loop>
+        <source src="./ambry-background-video.mp4" type="video/mp4" />
+        <source src="./big_buck_bunny.webm" type="video/webm" />
+        <p>This browser doesn't support video...</p>
+      </video>
+      <div class="logo">Ambry</div>
+      <div class="tagline">
         <h3>lovingly upcycled garments for rent</h3>
-        <p>Looking for a more suistainable alternative to shopping? Sign up to our newsletter to get inspired by our high quality, carefully maintained dresses, and more!</p>
-        <button onclick="#form">Sign up</button>
+        <p>
+          Looking for a more suistainable alternative to shopping? Sign up to
+          our newsletter to get inspired by our high quality, carefully
+          maintained dresses, and more!
+        </p>
+        <button>Sign up</button>
       </div>
     </header>
     <section class="main">
+      <!--Accordion menu FAQ-->
       <div class="faq">
         <h2 class="accordion-name">F.A.Q</h2>
         <button class="accordion">How is Ambry clothing suistainable?</button>
         <div class="accordion-content">
-          <p>Upcycled clothing uses significantly fewer raw materials, reducing the harmful impacts of fashion production, and avoiding contributing to landfill.</p>
+          <p>
+            Upcycled clothing uses significantly fewer raw materials, reducing
+            the harmful impacts of fashion production, and avoiding contributing
+            to landfill.
+          </p>
         </div>
         <button class="accordion">Where is Ambry clothing produced?</button>
         <div class="accordion-content">
-          <p>We source our garments from European second-hand wholesellers and upcycle them on location, in Stockholm. Any items not used get sent back to our suppliers.
+          <p>
+            We source our garments from European second-hand wholesellers and
+            upcycle them on location, in Stockholm. Any items not used get sent
+            back to our suppliers.
           </p>
         </div>
         <button class="accordion">Can you shop online?</button>
         <div class="accordion-content">
-          <p>We don't currently run an online store, you are very welcome to visit us at one of our three shops in Stockholm.
+          <p>
+            We don't currently run an online store, you are very welcome to
+            visit us at one of our three shops in Stockholm.
           </p>
         </div>
         <button class="accordion">How are items priced?</button>
         <div class="accordion-content">
-          <p>We charge a daily reservation fee. Each item is priced individually based on its value.
+          <p>
+            We charge a daily reservation fee. Each item is priced individually
+            based on its value.
           </p>
         </div>
-
-      
       </div>
+      <!--Accompanying image-->
       <div class="faq-image">
-        <img src="dress-5.jpeg" alt="upcycled-vintage-dress">
+        <img src="faq-image.jpeg" alt="upcycled-vintage-dress" />
       </div>
-
+      <!--Big quote grid section-->
       <div class="quote">
-        <h3>“Sustainability is no longer about doing less harm. It’s about doing more good.”</h3><h2>— Jochen Zeitz</h2></div>
-
-
-      <div class="newsletter-picture">
-       <img src="newsletter-image.jpg" alt="upcycled-vintage-dress">
+        <h3>
+          “Sustainability is no longer about doing less harm. It’s about doing
+          more good.”
+        </h3>
+        <h2>— Jochen Zeitz</h2>
       </div>
+      <!--Accompanying image-->
+      <div class="newsletter-image">
+        <img src="newsletter-image.jpg" alt="upcycled-vintage-dress" />
+      </div>
+      <!--Newsletter signup section-->
       <div class="newsletter">
-       <form action="https://httpbin.org/anything" method="post" id="form">
-         <h3>Stay updated!</h3>
-         <label>
-           First name 
-           <input type="text" name="first name" />
-          </label>
-         <label>
-           Last name
-           <input type="text" name="last name" />
-         </label>
-         <label>
-           Email
-           <input type="email" name="email" />
-         </label>
-         <label>
-            Password
-            <input type="password" name="password" />
-         </label>
-         <div class="radio">
+        <form
+          action="https://httpbin.org/anything"
+          method="post"
+          id="form"
+          class="signup-form"
+        >
+          <h3>Stay updated!</h3>
+          <input
+            type="text"
+            name="first name"
+            placeholder="First Name"
+            required
+          />
+          <input
+            type="text"
+            name="last name"
+            placeholder="Last Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <div class="radio">
             <p>How often would you like to hear from us?</p>
-            <input type="radio" id="weekly" name="frequency-choice" value="Weekly">
+            <input
+              type="radio"
+              id="weekly"
+              name="frequency-choice"
+              value="Weekly"
+            />
             <label for="weekly">Weekly</label>
-            <input type="radio" id="monthly" name="frequency-choice" value="Monthly">
+            <input
+              type="radio"
+              id="monthly"
+              name="frequency-choice"
+              value="Monthly"
+            />
             <label for="monthly">Monthly</label>
-            <input type="radio" id="quaterly" name="frequency-choice" value="Quaterly">
+            <input
+              type="radio"
+              id="quaterly"
+              name="frequency-choice"
+              value="Quaterly"
+            />
             <label for="quarterly">Quarterly</label>
           </div>
-          <input id="checkbox" type="checkbox"/>
-          <label for="checkbox"> I want to receive the Newsletter</label>
-          <input id="checkbox" type="checkbox"/>
-          <label for="checkbox"> I agree to <a href="#">Terms of Use</a></label>
-          <input id="submit" type="submit" value="Submit">
- 
-    </form>
-  </div>
-</div>
-  </section>
+          <div class="consent">
+            <input id="checkbox" type="checkbox" required />
+            <label for="checkbox"> I want to receive the Newsletter</label>
+          </div>
+          <div class="consent">
+            <input id="checkbox" type="checkbox" required />
+            <label for="checkbox">
+              I agree to <a href="#">Terms of Use</a></label
+            >
+          </div>
+          <input class="submit" id="submit" type="submit" value="Submit" />
+        </form>
+      </div>
+    </section>
     <footer>
-     <div class="footer-left">
-       <div class="logo-2">Ambry</div>
-       <div class="copyrights">© 2022 Justine Zwiazek for Ambry. Stockholm, Sweden. All Rights Reserved.
-       </div>
-    </div>
-    <div class="footer-links">
-   <a href="#">Store Locator</a>
-    <a href="#">Contact Us</a>
-    <a href="#">Press</a>
-    <a href="#">Terms & Conditions</a></div>
-</footer>
-<script src="script.js"></script>
+      <div class="footer-left">
+        <div class="logo-2">Ambry</div>
+        <div class="copyrights">
+          © 2022 Justine Zwiazek for Technigo Boot Camp. Stockholm, Sweden. All
+          Rights Reserved.
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#">Store Locator</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Press</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
