@@ -1,10 +1,3 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-/* .active + .answer {
-  /* some styling here */
-
 * {
   margin: 0;
   padding: 0;
@@ -18,31 +11,16 @@ body {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-/* main {
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
-
-.parent {
-  border:4px solid;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
+/* --- HEADER STYLING  --- */
 .image-header {
   width: 100vw;
-  height: 75vh;
+  height: 50vh;
   background-image: url('/images/hero.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   flex-direction: column;
-  
   font-family: 'Sedgwick Ave', cursive;
 }
 
@@ -76,6 +54,14 @@ body {
 .header-text:hover {
   color:yellow;
   transform: scale(1.2);
+}
+
+/* --- PARENT TO FORM-CONTAINER and ACCORDION --- */
+.parent {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* --- STYLING OF THE FORM --- */
@@ -130,7 +116,7 @@ textarea {
   font-size: 12px;
 }
 
-/* --- Styling of the Accordion --- */
+/* --- STYLING OF THE ACCORDION --- */
 .accordion {
   width: 300px;
   height: auto;
@@ -209,20 +195,9 @@ textarea {
   font-size: 12px;
 }
 
-/* --- Credit to giphy.com! --- */
-/* .giphy-embed {
-  max-width: 600px;
-  margin-top: 24px;
-  padding: 8px;
-  border: 2px solid;
-  border-radius: 4px;
-  background:lavenderblush;
-  box-shadow: 1px 1px 4px 4px black;
-} */
-
+/* --- FOOTER STYLING --- */
 .footer {
   margin-top: 60px;
-  border-top: 2px solid snow;
 }
 
 .footer > div {
@@ -237,4 +212,63 @@ textarea {
 
 .image-credit a {
   color:tan;
+}
+
+/* --- TABLET SIZE --- */
+@media (min-width: 667px) and (max-width: 1024px) {
+  .image-header {
+    width: 100vw;
+    height: 25vh;
+  }
+
+.header-title {
+  font-size: 24px;
+  display: none;
+}
+
+.header-text {
+  font-size: 18px;
+  color:#694E4E;
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-container {
+  box-shadow: none;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  margin-left: 48px;
+  box-shadow: none;
+}
+}
+
+@media (min-width: 1025px) {
+  .image-header {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .header-title {
+    font-size: 96px;
+  }
+  
+  .header-text {
+    font-size: 18px;
+    color:#694E4E;
+  }
+  
+  .parent {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .accordion {
+    margin-left: 48px;
+  }
 }
