@@ -8,11 +8,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 body{
   color:white;
-  background-color:blue;
-
-
+background:white;
 }
-
 h1 h3{
   font-size: 20px;
   font-size:10vw;
@@ -31,8 +28,7 @@ header{
   left: 0;
   width: 100%;
   padding: 3rem;
-  transition: 0.5s ease;
-  background-color: rgba(255, 255, 255,);
+
 }
 
 .neontext{
@@ -89,8 +85,8 @@ header > a{
     text-shadow: 1px 1px white;
 
 }
-  button {
-   
+#hero button {
+  background-color: Transparent;
     text-transform: uppercase;
     font-style: bold;
     background-color: none;
@@ -121,15 +117,9 @@ header > a{
 
   font-size: 40px;
   text-decoration: none;
-color:white;
-  
+  color:white;
+ 
 }
-button{
-  background-color: Transparent;
-background-repeat:no-repeat;
-border: none;
-}
-
 .flexbox-container{
   display: flex;
   padding:30px;
@@ -139,24 +129,118 @@ border: none;
   align-items: center;
   
 }
-.child-text{
+.child-sign-up{
+  width: 100%;
+  height: 50vh;
   display: flex;
   flex-direction:column;
   justify-content: center;
   text-align: center;
-  gap:40px;
+  gap:13px;
+  text-transform: uppercase;
+}
+.child-sign-in{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 13px;
+  text-transform: uppercase;
+}
+input{
+  border-radius: 5px;
+  min-height: min-content;
+ text-align: center;
+ padding: 10px;
+ width: 50vh;
+ 
 }
 
+.child-sign-up > button{
+  color:white;
+  background-color: Transparent;
+  border: none;
+  cursor: pointer;
+} 
+.radio-button{
+  display:flex;
+  flex-direction:column;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.radio-button input {
+  position: absolute;
+  cursor: pointer;
+}
+.radio{
+  position: absolute;
+  left: 0;
+  margin: 6px;
+  height: 15px;
+  border-radius: 50%;
+}
 
-#child-form{
+.radio-button input:checked ~ .radio {
+  background-color: #2196F3;
+}
+.radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.radio-button input:checked ~ .radio:after {
+  display: block;
+}
+.radio-button .radio:after {
+  top: 9px;
+ left: 9px;
+ width: 8px;
+ height: 8px;
+ border-radius: 50%;
+ background: white;
+}
+#name #email{
+  color:white;
+}
+  #child-form{
   background-image:url("drinks.jpeg") ;
   border-radius: 20px; 
   width: 600px;
-  height: 600px;
-  padding-top:40px;
+  height: 100vh;
+  padding:30px;
   background-size: cover;
- 
 }
+
+input{
+  position: relative;
+  cursor: pointer;
+}
+
+#name #email{
+  color:white;
+}
+  #child-form{
+  background-image:url("drinks.jpeg") ;
+  border-radius: 20px; 
+  width: 600px;
+  height: 100vh;
+  padding:30px;
+  background-size: cover;
+}
+
+input{
+  position: relative;
+  cursor: pointer;
+}
+
+
 #child-accordion > h2{
  text-align: center;
   padding:30px;
@@ -174,18 +258,20 @@ border: none;
 
 #child-accordion {
   background-color: black;
-  max-width: 600px;
-  height: 600px;
-  margin: 2rem;
+  width: 600px;
+  min-height: 721px;
+  height: 100%;
   border-radius: 20px;
+  overflow: auto;
 }
 .accordion-item {
   background-color: #fff;
   color: #111;
-  margin: 1rem 0;
-  border-radius: 0.5rem;
+  margin: 15px 0;
+  border-radius: 10px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
   margin: 15px;
+  min-height: min-content;
  
 }
 .accordion-item-header  {
@@ -198,6 +284,7 @@ border: none;
   align-items: center;
   position: relative;
   cursor: pointer;
+  text-transform: uppercase;
 
 }
 .accordion-item-header::after {
@@ -215,6 +302,7 @@ and when the active class removs it will change back på plus sign back  */
 transform: rotate(45deg);
 }
 .accordion-item-body {
+
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -223,19 +311,20 @@ transform: rotate(45deg);
   padding: 1rem;
   line-height: 1.5rem;
   border-top: 1px solid;
+  
  
 }
 
 	/* Footer */
 footer{
 	text-align: center;
-  color:white;
-  padding: 15px;
+  color:black;
+ padding:20px;
 }
 
 /*
 
-@media (min-width:668px){
+@media (min-width:768px){
 	
   .flexbox-container{
     display: flex;  
