@@ -1,13 +1,3 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-    /* some styling here */
-    display: block;
-    background-color: seashell;
-
-}
 
 * {
 
@@ -16,61 +6,58 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   box-sizing: border-box;
 
 }
-button {
-
-  color: blue;
-}
-
-button:active {
-
-  color: red;
-}
-
-.selected + button {
-
-  color: darkolivegreen;
-
-}
-
-button .selected {
-
-  color: darkolivegreen;
-}
-
-
-
-
-html {
-  font-family: 'Kumbh Sans', sans-serif;
-  font-weight: 300;
-}
 
 body {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
 
-}
+} 
 
 section {
 
+  flex: 1;
+  width: 100%
+
 }
 
-label {
+/* HEADER */
 
-  color: brown;
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: black;
+  color: snow;
+  position: fixed; 
+  font-family: 'Kumbh Sans', sans-serif;
+  z-index: 1;
+ 
 }
+
+nav a {
+  padding: 1rem;
+  color:lightsalmon;
+}
+
+nav > * {
+
+} */
 
 
 .header-section {
 
+  flex: 1;
+  align-self: center;
   width: 100%;
   height: 60%;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
+  align-self: center;
+  justify-content: center;
   overflow: hidden;
 
 
@@ -81,16 +68,89 @@ label {
   background-size: contain;
   background-repeat: no-repeat;
   width: 100vw;
+  z-index: 0;
 }
 
-.heading-text {
 
+
+/* FAQ */
+
+article {
+  margin: 0.3rem;
+}
+
+
+.accordion {
+  flex: 1;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(102, 12, 62);
+  padding: 5rem;
+
+}
+
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+.active + .answer {
+    /* some styling here */
+    display: block;
+    /* background-color: seashell; */
+
+}
+
+.question {
+
+  font-family: 'Kumbh Sans', sans-serif;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #c23bce;
+}
+
+
+.answer {
+  padding: 2rem;
+  color: #fd99d7;
+  display: none;
+  font-family: 'Kumbh Sans', sans-serif;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+button:active {
+
+  color: red;
+}
+
+
+
+
+/* TEXT STYLING */
+
+.heading-text {
+  padding-top: 15%;
   position: absolute;
+  z-index: 2;
   
 }
 
 h1 {
-  margin: auto;
+font-family: 'Kumbh Sans', sans-serif;
+margin: auto;
 width: 80%;  
 text-align: center;
 font-size: 3.5rem;
@@ -106,76 +166,93 @@ h2 {
   width: 80%;
   font-family: 'Kumbh Sans', sans-serif;
   text-align: center;
-  font-weight: 500;
+  font-weight: 300;
   color: snow;
   /* position: absolute; */
   flex-grow: 1;
 
 }
 
-.h2black {
-
-  color: black;
+h3 {
+  font-family: 'Kumbh Sans', sans-serif;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+  color: rgb(252, 208, 252);
+  padding-bottom: 1.5rem;
+}
+.p-footer {
+  font-family: 'Kumbh Sans', sans-serif;
+  text-align: end;
+  padding-right: 3rem;
+  color: rgb(68, 117, 117);
+  padding-top: 2rem;
 }
 
+/* FORM */
+
 .form-section {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
   width: 100%;
-  height: 500px;
+  height: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-image: url("./images/guitar-rainbow.jpg");
   background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 5rem;
+  color: #fd99d7;
 
 }
 
 .form-box {
   padding: 3rem;
-  background-color: rgba(255, 255, 255, 0.41);
-  
-}
-
-.accordion {
-  width: 100%;
+  width: 80%;
+  background-color: rgba(27, 28, 77, 0.666);
   display: flex;
-  flex-direction: column;
-  background-color: rgb(255, 251, 0);
-  padding: 5rem;
+  flex-wrap: wrap;
+  gap: 2.5rem;
 
 }
+.signup {
+
+  flex: 1;
+  min-width: 100%;
+}
+.right {
+
+  flex: 1;
+
+}
+.left {
+  flex: 1;
+
+}
+
+label {
+
+  padding: 0.5rem;
+}
+
+/* FOOTER */
+
 
 footer {
+  width: 100%;
+  left: 0;
+  bottom: 0;
   width: 100%;
   height: 150px;
   background-color: black;
 }
 
-.p-footer {
-  text-align: end;
-  padding-right: 3rem;
-  color: azure;
-}
-
-article {
-  margin: 0.3rem;
-  color: black;
-}
-
-.question {
-
-  font-family: 'Kumbh Sans', sans-serif;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.4rem;
-}
 
 
-.answer {
-  color: #cbcbcb;
-  display: none;
-}
+
 
 
 /* 
