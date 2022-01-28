@@ -2,8 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box; */
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -12,11 +10,9 @@ body{
   font-family: 'montserrat', 'helvetica Neue', 'sans-serif';
 }
 
-
 /* Header/Hero section with video and text */
-
 .hero{
-  height: 50vh;
+  height: 25vh;
   width: 100vw;
   position: relative;
   text-align: center;
@@ -42,25 +38,49 @@ body{
   font-size: 400%;
 }
 
-
 /* text section */
-
-
-
-
-/* signup form */
-.content-wrapper{
-/* border: solid; */
-padding: 10px;
-display: flex;
-justify-content: center;
+.text-wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  font-size: 10px;
 }
 
+h2{
+  margin: 0.5rem;
+  color: #a96e52;
+}
+
+/* signup form and accordion section*/
+
+@media (max-width: 767px;){
+  .content-wrapper{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .form-wrapper{
+    height: 10vh;
+    min-height: 50vh;
+    width: 100vw;
+    margin: 0.5rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+} 
+
 .form-wrapper{
-  /* border: solid; */
   height: 50vh;
   min-height: 50vh;
   width: 100vw;
+  margin: 0.5rem;
   background-image: url(./img/jeremy-bezanger-QJ7gHF6V4no-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -69,24 +89,24 @@ justify-content: center;
   justify-items: center;
   align-items: center;
 }
-
+  
 form{
   background-color: white;
-  border: 1px solid;
+  color: #a16454;
   border-radius: 2rem;
   padding: 2rem;
-  width: 50%;
-  max-width: 600px;
-  height: 80%;
-  margin: 3rem auto;
-  gap: 1rem;
+  height: 70%;
   display: grid;
 }
-
+  
 h1{
   color: #ffc5c4;
 }
-
+  
+.accept{
+  font-size: 12px;
+}
+  
 button{
   width: 100px;
   border-radius: 2rem;
@@ -96,8 +116,57 @@ button{
   margin: 1rem;
   font-size: 1rem;
   cursor: pointer;
-  
 }
+
+button:hover{
+  color: palevioletred;
+}
+
+.accordion-wrapper{
+  margin: 0.5rem;
+  display: grid;
+  justify-items: center;
+  background-color: #fbb98a;
+  width: 100vw;
+  height: 50vh;  
+}
+  
+.faq{
+  color: #a16454;
+  align-self: flex-end;
+  font-size: 9rem;
+}
+    
+.question{
+  width: 50vw;
+  height: 10vw;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: white;
+  font-size: 12px;
+  margin-top: 1rem;
+  color: #a16454;
+}
+
+.question:hover{
+  color: #ffc5c4 ;
+}
+
+.answer{
+  background-color: #ffc5c4;
+  color: #a96e52;
+  display: none;
+  width: 30vw;
+  height: 10vw;
+  border-radius: 0.5rem;
+  text-align: center;
+  border: 5px black;
+  font-size: 12px;
+}
+  
 
 /* section for styling of accordion */
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
@@ -107,46 +176,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 .active + .answer {
   display: block;
 }
-
-.accordion-wrapper{
-/* border: solid; */
-margin: 1rem;
-display: grid;
-justify-items: center;
-background-color: #fbb98a;
-width: 50vw;  
-}
-
-.faq{
-  color: black;
-  align-self: flex-end;
-}
-
-.accordion{
-  /* border: solid; */
-  
-}
-.question{
-  border: 1px solid;
-  width: 30vw;
-  height: 5vw;
-  border-radius: 1rem;
-  background: white;
-  text-align: center;
-  margin: 1rem;
-}
-
-.answer{
-  background-color: #ffc5c4;
-  display: none;
-  width: 30vw;
-  height: 5vw;
-  border-radius: 1rem;
-  text-align: center;
-  border: 1px solid;
-  /* margin: 0rem 1rem 1rem 1rem; */
-}
-
 
 
 /* footer */
@@ -169,18 +198,32 @@ footer{
   font-size: 100%;
 }
 
+/* For tablet and desktop */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ------DESKTOP STYLING--------*/
+@media (min-width:768px){
+  .hero video{
+    /* height: 90vh; */
+    object-fit: cover;
+    object-position: 50% 40%;
+  }
+  
+  .content-wrapper{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .text-wrapper{
+    font-size: 20px;
+  }
+  .question{
+    font-size:15px;
+    width: 30vw;
+    height: 10vw;
+  }
+  .answer{
+    font-size: 15px;
+    width: 30vw;
+    height: 10vw;
+  }
+}
