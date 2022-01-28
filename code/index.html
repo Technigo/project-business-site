@@ -30,8 +30,8 @@
         <h2>Send an inquiry</h2>
       </div>
       <div class="form-wrapper">
-     <p class="boldedtext">Your contact info</p>
-       <form action="http://httpbin.org/anything">
+      <p class="boldedtext">Your contact info</p>
+       <form action="http://httpbin.org/anything" method="POST">
         <label for="full-name"></label>
         <input id="full-name" type="text" placeholder="Full name" name="fullname" >
       <p>
@@ -60,14 +60,17 @@
         </select></p>
       </p>
         <p class="boldedtext"> Will you bring the cat's food and sand?</p>
-        <label for="foodandsand">Yes</label>
-        <input type="radio" name="foodandsand" id="ownfoodandsand-yes" value="ownfoodandsand-yes">
-        <label for="foodandsand" >No </label>
-        <input type="radio" name="foodandsand" id="ownfoodandsand-no" value="ownfoodandsand-no">
+        <label for="foodandsand">Yes
+          <input type="radio" name="foodandsand" id="ownfoodandsand-yes" value="ownfoodandsand-yes">
+        </label>
+        <label for="foodandsand">No
+          <input type="radio" name="foodandsand" id="ownfoodandsand-no" value="ownfoodandsand-no">
+        </label>
         <p><input type="checkbox" name="agree-tos" id="agree" required>
-        <label for="agree"> I agree to Kajsa Katt's <a href="#">terms of service</a> </label></p>
-    <div class="btn"><button type="submit" class="submit"> Submit </button></div> 
-  </form>
+          <label for="agree"> I agree to Kajsa Katt's <a href="#">terms of service</a></p>
+          </label>
+      <div class="btn"><button type="submit" class="submit"> Submit </button></div> 
+   </form>
   </div>
 </section>
 

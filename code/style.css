@@ -5,7 +5,6 @@ body {
   font-family: 'Mitr', sans-serif;
   font-weight: 400;
   background-color: rgb(236, 184, 232);
-  /* background: hsl(44.5,82.5%,84.3%); */
 }
 a {
   color: hsl(268.1,74.6%,50.6%);
@@ -113,9 +112,58 @@ input:focus {
   background: rgb(231, 202, 243);
 }
 
-input[name="foodandsand"],[name="agree-tos"] {
+input[name="foodandsand"] {
   accent-color: hsl(267.9,69.9%,67.5%);
+  width: 18px;
+  height: 18px;
 }
+input[name="agree-tos"] {
+  accent-color: hsl(267.9,69.9%,67.5%);
+  width: 20px;
+  height: 20px; 
+  vertical-align: top;
+  border-radius:  5px;
+}
+
+.container {
+  display: block;
+  position: relative;
+  border-radius: 50%;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checked {
+  position: absolute;
+  top: 0;
+  left: 1;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(235, 231, 231);
+  border-radius: 50%;
+}
+
+.container input:checked ~ .checked {
+  background-color: #2196F3;
+}
+
+.checkmark {
+  position: absolute;
+  top: 1;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  background-color: rgb(235, 231, 231);
+  border-radius: 25%;
+}
+
+
+
 
 button {
   padding: .8em 1.3em;
@@ -170,7 +218,7 @@ button {
   right: 15px;
   top: 20px;
   transform: rotate(0deg);
-  transition: transform 300ms ease;
+  transition: transform 300ms;
 }
 .panel-questions::after {
   transform: rotate(90deg);
@@ -195,6 +243,7 @@ button {
   display: none;
 }
 
+
 .panel-questions.active + .panel-answers {
   display: block;
 }
@@ -208,9 +257,8 @@ button {
 @media (min-width: 668px) {
   main {
    flex-direction: row-reverse;
-
-
   }
+
   .accordion {
     width: 40vw;
   }
