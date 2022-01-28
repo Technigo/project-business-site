@@ -1,12 +1,3 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
-}
-
-
 * {
   box-sizing: border-box;
 }
@@ -41,12 +32,21 @@ p {
   font-size: 0.8rem;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .info-section {
   text-align: center;
   margin: 2rem 0;
 }
 
-.info-section .widget--heading {
+.info-section .block-heading {
   display: inline-block;
   max-width: 75%;
 }
@@ -65,84 +65,59 @@ p {
   background-color: rgb(207 241 198);
 }
 
-.widget {
-  /*padding: 2rem;*/
-  /*background-color:rgb(207 241 198);*/
-}
-
-.widget--heading {
+.block-heading {
   font-size: 1.2rem;
   font-weight: 300;
 }
 
-.widget--text {
+.block-text {
   font-size: 1rem;
   margin: 1rem 0 0.4rem;
-}
-
-.widget--text-form {
-  margin: 1rem 0 0.4rem;
-
-}
-
-.widget--img {
-  max-width: 100%;
 }
 
 .info-section {
   background-color: #FFF;
 }
 
-
-
-
 /* Form styling */
-
-.widget--form-group {
+.form-group {
   margin-bottom: 1rem;
 }
 
-
-input[type="text"] {
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
   width: 100%;
   margin-bottom: 1rem;
   height: 3rem;
-  outline-color: black;
+  outline: none;
   padding: 0.5rem;
   font-size: 1rem;
   color: #000;
   border: none;
 }
 
-input[type="text"]:nth-child(4) {
+input[type="email"] {
   margin-bottom: 0;
 }
-
-/*input[type=text]:nth-child(2) */
 
 input[type="radio"] {
   margin-right: 2rem;
 }
 
-.widget--form-radios {
+.form-radios {
   display: inline-block;
-  border: none;
-  outline-color: black;
-
 }
 
-.widget--form-checkbox {
+.form-checkbox {
   border: 1px solid #FFF;
-  outline-color: black;
-  background-color: #FFF;
-
 }
 
-.widget--form-text-checkbox {
+.form-text-checkbox {
   display: inline;
 }
 
-.widget--form-submit {
+.form-submit {
   padding: 0.5rem;
   font-size: 1rem;
   color: #FFF;
@@ -151,42 +126,38 @@ input[type="radio"] {
   width: 25%;
 }
 
-.widget--form-submit:hover {
+.form-submit:hover {
   background-color: #FFF;
   color: #000;
 }
 
-/* FAQ */
+/* FAQ accordion */
 .faq-container {
   border-bottom: 1px solid #FFF;
+  padding: 1rem 0;
 }
 
-.faq--question {
+.faq-question {
   cursor: pointer;
+  margin: 0;
 }
 
-.faq--answer {
+.faq-answer {
   display: none;
 }
 
-.faq--answer-active {
+.faq-answer-active {
   display: block;
 }
-
-
-
 
 footer {
   padding: 1rem 1.3rem;
 }
 
-
 /* Big mobile */
 @media (min-width: 576px) and (max-width: 767px) {
 
-
   h1 {
-    color: coral;
     font-size: 3.5rem;
   }
 
@@ -194,18 +165,13 @@ footer {
     height: 65vh;
     padding: 2rem;
   }
-
 }
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991px) { 
   
-
-
   h1 {
     font-size: 4.5rem;
-    color: grey;
-
   }
 
   header {
@@ -216,18 +182,13 @@ footer {
   .row {
     flex-flow: row nowrap;
   }
-
-
 }
 
 /* Desktop */
 @media (min-width: 992px) {
 
-/*and (max-width: 1199px) { */
-
   h1 {
     font-size: 5.5rem;
-    color: turquoise;
     max-width: 85%;
   }
 
@@ -240,25 +201,20 @@ footer {
     flex-flow: row nowrap;
   }
 
-  .info-section .widget--heading {
+  .info-section .block-heading {
     max-width: 50%;
   }
 
-  
-
-}
-
-/* Big desktop */
-/*@media (min-width: 1200px) {
-  h1 {
-    font-size: 6rem;
-    color: rgb(19, 94, 86);
-
+  .form-submit {
+    cursor: pointer;
   }
 
-  header {
-    height: 100vh;
+  footer {
     padding: 2rem 3rem;
   }
 
-}*/
+  footer .block-text {
+    margin: 0 1.5rem 0 0;
+    display: inline-block;
+  }
+}

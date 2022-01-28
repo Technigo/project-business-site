@@ -11,94 +11,86 @@
     <title>Fresh veggies home deliver</title>
   </head>
   <body>
-
-    <!-- Tried to use BEM but I always think it's hard with naming and this makes it even harder but it's good to try I guess -->
-    
+    <!-- Tried to use BEM naming http://getbem.com/naming/ -->
     <!-- Header with big hero background image -->
     <header>
       <h1>We deliver fresh veggies straight to your door</h1>
     </header>
-
     <!-- First section with short info text -->
-    <section class="widget info-section">
-      <h2 class="widget--heading">
+    <section class="info-section">
+      <h2 class="block-heading">
         We are your local vegetable farmer. We offer two different subscription alternatives for you. Sign up with the form below.
       </p>
     </section>
-
     <!-- Second section with two parts: A form and a FAQ accordion. Used Flexbox here to divide them and make it responsive. -->
-    <section class="widget row">
-
+    <section class="row">
       <!-- Form -->
-      <div class="widget--form column">
-        <h2 class="widget--heading">
+      <div class="form column">
+        <h2 class="block-heading">
           Sign up and get fresh vegetables all summer!
         </h2>
-        <p class="widget--text">Where do you want your vegetables delivered?</p>
+        <p class="block-text">Where do you want your vegetables delivered?</p>
         <form action="https://httpbin.org/anything" method="post">
-          <input type="text" name="fullname" placeholder="Full name">
-          <input type="text" name="address" placeholder="Delivery address">
-          <input type="text" name="telephone" placeholder="Telephone">
-          <input type="text" name="email" placeholder="Email">
-          <p class="widget--text widget--text-form">Please choose your subscription plan</p>
-          <div class="widget--form-group">
+          <input type="text" required name="fullname" placeholder="Full name">
+          <input type="text" required name="address" placeholder="Delivery address">
+          <input type="tel" required name="telephone" placeholder="Telephone">
+          <input type="email" required name="email" placeholder="Email">
+          <p class="block-text form-text">Please choose your subscription plan</p>
+          <div class="form-group">
             <label for="weekly">Weekly</label>
-            <input type="radio" id="weekly" class="widget--form-radios" name="subscription_plan" value="Weekly">
+            <input type="radio" id="weekly" class="form-radios" name="subscription_plan" value="Weekly">
             <label for="monthly">Monthly</label>
-            <input type="radio" id="monthly" class="widget--form-radios" name="subscription_plan" value="Monthly">
+            <input type="radio" id="monthly" class="form-radios" name="subscription_plan" value="Monthly">
           </div>
-          <div class="widget--form-group">
-            <input type="checkbox" id="accept" class="widget--form-checkbox" name="accept"> 
-            <p class="widget--text widget--text-form widget--form-text-checkbox">I accept that Fresh Veggies saves my personal details</p>
+          <div class="form-group">
+            <input type="checkbox" required id="accept" class="widget-form-checkbox" name="accept"> 
+            <p class="block-text form-text form-text-checkbox">I accept that Fresh Veggies saves my personal details</p>
           </div>
-          <input type="submit" value="Submit" class="widget--form-submit">
+          <input type="submit" value="Submit" class="form-submit">
         </form>
       </div>
-
-      <!-- FAQ -->
-      <div class="widget--faq column">
-        <h2 class="widget--heading">
+      <!-- FAQ accordion -->
+      <div class="faq column">
+        <h2 class="block-heading">
           These are some of the most common questions we get. If you have other questions please contact us.
         </p>
         <div class="faq-container">
-          <h3 class="widget--heading faq--question">
+          <h3 class="block-heading faq-question">
             What veggies will you offer?
           </h3>
-          <p class="widget--text faq--answer">
+          <p class="block-text faq-answer">
             It depends a little on the time of the year. But we use to offer different kind of kale, tomatoes, broccoli, cauliflower and garlic.
           </p>
         </div>
         <div class="faq-container">
-          <h3 class="widget--heading faq--question">
+          <h3 class="block-heading faq-question">
             What does it cost?
           </h3>
-          <p class="widget--text faq--answer">
+          <p class="block-text faq-answer">
             A weekly subscription cost 200kr and a monthly cost 130kr.
           </p>
         </div>
         <div class="faq-container">
-          <h3 class="widget--heading faq--question">
-            What happens if I'm not a home?</h3>
-          <p class="widget--text faq--answer">
+          <h3 class="block-heading faq-question">
+            What happens if I'm not at home?</h3>
+          <p class="block-text faq-answer">
             We will leave your vegetables outside your door.
           </p>
         </div>
         <div class="faq-container">
-          <h3 class="widget--heading faq--question">
+          <h3 class="block-heading faq-question">
             How long is a season?
           </h3>
-          <p class="widget--text faq--answer">
+          <p class="block-text faq-answer">
             From June to November.
           </p>
         </div>
       </div>
     </section>
-
     <footer>
-      <p class="widget--text"><a href="">Contact</a></p>
-      <p class="widget--text"><a href="">About us</a></p>
+      <p class="block-text"><a href="">Contact</a></p>
+      <p class="block-text"><a href="">About us</a></p>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>
