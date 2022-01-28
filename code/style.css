@@ -1,159 +1,148 @@
 *{
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family:sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-
 body{
   height: 100vh;
+  margin: 0;
+}
+
+/*styling of hero video container*/
+.video-header {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  text-align: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/*styling of hero video*/
+.video-header video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/*styling of hero text*/
+h1 {
+  position: absolute;
+  color: white;
+}
+
+/*styling of main container with card container */
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   background: linear-gradient(135deg, #dd3939, #b69d59);
 }
 
-/* MAIN (WHITE) SECTION WITH CONTENT */
-.section2{
-  max-width: 700px;
+/*size of card containers, registration and FAQ*/
+.card-container {
+  justify-self: center;
+  background:white;
+  padding: 3rem;
+  border-radius: 3px;
   width: 100%;
-  background-color: white;
-  padding: 25px 30px;
-  border-radius: 5px;
+  max-width: 500px;
+  height: 36em;
+  margin: 2rem;
 }
 
-/* REGISTRATION FONT */
-.section2 .title{
-  font-size: 25px;
-  font-weight: 500;
-  position: relative;
-}
-
-/* MAIN "CONTAINER" OF TITLES + INPUT BOX */
-.section2 form .user-details{
+/*styling of forms*/
+h2{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0 12px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-/* "CONTAINER" OF TITLE + INPUT BOX */
-form .user-details .input-box{
-  margin-bottom: 15px;
-  width: calc(100% / 2 - 20px);
-}
-
-/* TITLE ABOVE BOX */
-form .input-box span.details{
-  font-weight: 500;
-}
-
-/* INPUT BOX */
-.user-details .input-box input{
-  height: 45px;
+/*size of the form */
+form {
   width: 100%;
-  outline: none;
-  font-size: 16px;
+}
+
+/*styling of full name, email, phone number password title*/
+label {
+  color: black;
+  margin-top: 10px;
+}
+
+/*styling input box*/
+input {
+  height: 30px;
+  font-size: 13px;
   border-radius: 5px;
-  padding-left: 4px;
-  border: 1px solid rgb(155, 4, 4);
+  border: 1px solid black;
+  width: 100%;
 }
 
-/* GENDER FONT */
- form .gender-details .gender-title{
-  font-size: 20px;
+/*size of "register" the button*/
+form .button{
+  height: 45px;
+  margin: 35px 0 
+}
+/*styling of the button*/
+form .button input{
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
   font-weight: 500;
- }
-
- /* "CONTAINER" OF RADIO BUTTONS */
- form .category{
-   display: flex;
-   width: 80%;
-   margin: 14px 0 ;
-   justify-content: space-between;
- }
-
- /* TITLE & RADIO BUTTON */
- form .category label{
-   display: flex;
-   align-items: center;
-   cursor: pointer;
- }
-
- /* RADIO BUTTON BOX */
- form .category label .dot{
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  margin-right: 10px;
-  background: #d9d9d9;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #dd3939, #b69d59);
 }
 
-/* test */
- #dot-1:checked ~ .category label .one,
- #dot-2:checked ~ .category label .two,
- #dot-3:checked ~ .category label .three{
-   background: linear-gradient(135deg, #dd3939, #b69d59);
- }
-
- /* REAL RADIO BUTTON TURNED OFF */
- form input[type="radio"]{
-   display:none;
- }
- 
-/* REGISTER BUTTON BOX */
- form .button{
-   height: 45px;
-   margin: 35px 0;   
- }
-
- /* RADIO BUTTON */
- form .button input{
-   height: 100%;
-   width: 100%;
-   border-radius: 5px;
-   border: none;
-   color: #fff;
-   font-size: 18px;
-   font-weight: 500;
-   letter-spacing: 1px;
-   cursor: pointer;
-   background: linear-gradient(135deg, #dd3939, #b69d59);
- }
- 
- /* MOBILE VERSION */
- @media(max-width: 584px){
- .section2{
-  max-width: 100%;
+/*styling of accordion container*/
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
 }
 
-/* "CONTAINER" OF TITLE + INPUT BOX */
-form .user-details .input-box{
-    margin-bottom: 15px;
-    width: 100%;
-  }
+/*hover effect on accordion*/
+.active, .accordion:hover {
+  background: linear-gradient(135deg, #dd3939, #b69d59);
+}
 
-  /* "CONTAINER" OF RADIO BUTTONS */
-  form .category{
-    width: 100%;
-  }
+/*styling of accordion button once open*/
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
 
-  /* SCROLL WHEN TEXT IS OVERFLOW */
-  .content form .user-details{
-    max-height: 300px;
-    overflow-y: scroll;
-  }
+/*styling of the small text in FAQ>how much does it cost*/
+h5{
+  font-size: 10px;
+}
 
-  /* SCROLL WHEEL */
-  .user-details::-webkit-scrollbar{
-    width: 5px;
-  }
-
-  /* GENDER RADIO BUTTON ON EVEN SMALLER SCREEN */
-  @media(max-width: 459px){
-  .section2 .content .category{
-    flex-direction: column;
-  }
+/*what happens when the px is above 668*/
+@media (min-width: 668px) {
+  .container {
+      grid-template-columns: 1fr 1fr;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+ }
 }
