@@ -18,7 +18,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 body {
-  background-color: #EED2D5;
+  background-color: #f4d1d5;
   margin: 0;
   border: solid #212121 15px;
   width: 100%;
@@ -34,7 +34,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem;
-  height: 10%;
+  /*height: 10%;*/
   }
 
 nav a:hover {
@@ -79,43 +79,62 @@ a {
   font-size: 1rem;
 }
 
-p{
-  font-family: 'poppins';
-  font-size: 20px;
-  font-weight: normal;
+.video-bg {
+  position:absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
 
-.hero {
+.header {
   height: 75vh;
-  background: url(/code/images/adrianna-geo-1rBg5YSi00c-unsplash.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  /*background: url(/code/images/adrianna-geo-1rBg5YSi00c-unsplash.jpg);*/
+  /*background-size: cover;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
   color: #f5f3f2;
   align-items: center;
+  position: relative;
+  overflow: hidden;
   }
 
 .hero-title-wrapper {
-  display: flex;
+  /*display: flex;
   align-items: center;
   justify-content: center;
-  height: 90%;
+  height: 90%;*/
+  color: black;
+  margin-top: 150px;
+  position: relative;
 }
 
 .hero-title {
-  font-size: 7vw;
-  color: black;
+  font-size: 5vw;
+
   font-family: 'Playfair Display';
   font-style: normal;
+  font-weight: normal;
+  text-align: center;
+}
+
+.hero-title-wrapper p {
+  text-align: center;
+}
+
+p{
+  font-family: 'poppins';
+  font-size: 1rem;
   font-weight: normal;
 }
 
 .coming-soon {
   color: black;
-  font-size: 1rem;
+  font-size: 13px;
   margin-top:1rem;
   animation-name: scroll;
-  animation-duration: 10s;
+  animation-duration: 9s;
   position: relative;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -193,7 +212,7 @@ h5 {
 .project-title:hover {
   background-color: black;
   color: #EED2D5;
-  transition: all 1s ease;
+  transition: all 1.5s ease;
 }
 
 .accordion {
@@ -214,7 +233,7 @@ h5 {
   display: none;
 }
 
-.form-image-wrapper{
+.form-wrapper{
   width: 90%;
   margin:auto;
 }
@@ -273,6 +292,13 @@ textarea {
   margin: 1rem 0;
 }
 
+.text-area-text { 
+  font-family: 'poppins';
+  font-size: 10px;   
+  color: black;
+  padding: 5px 0 0 5px;
+}
+
 textarea:focus {
   outline: none;
   border: 1px solid #BE9499;
@@ -281,12 +307,13 @@ textarea:focus {
 .newsletter {
   display: inline-flex;
   align-items:center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
   width: 100%;
 }
-
-.newsletter-input {
-  background-color: transparent;
-  outline: none;
+  .newsletter-input::after {
+    background-color: green;
 }
 
 button{
@@ -294,10 +321,10 @@ button{
   border: 1px solid black;
   border-radius: 5px;
   padding: 7px 17px;
-  display: block;
-  margin-top: 20px;
-  display: inline-flex;
-  align-self: center;
+  margin: auto;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 button:hover {
@@ -310,6 +337,10 @@ footer {
   padding: 3rem 0 1rem 0;
   border-top: 1px solid black;
   margin-top: 4rem;
+  background-image: url(./images/toa-heftiba-tSFW0Hv8wYE-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 ul {
@@ -322,13 +353,15 @@ ul {
 }
 
 ul a {
-  color: #212121;
+  color: black;
 }
 
 li:hover{
   background-color: black;
   color: #EED2D5;
   transition: all 1.5s ease;  
+  padding: 7px 7px;
+  border-radius: 5px;
 }
 
 .footer-text {
@@ -337,6 +370,7 @@ li:hover{
   font-weight: normal;
   text-align: center;
   margin: 2rem 0 1rem 0;
+  color: white;
 }
 
 /* On screens that are 768px or more (tablet) */
@@ -347,9 +381,9 @@ li:hover{
     border: solid #212121 34px;
   }
 
-  .hero {
-    height: 75vh;
-  } 
+  .hero-title-wrapper {
+    margin-top: 120px;
+  }
 
   .hamburger-menu {
     display: none;
@@ -360,9 +394,10 @@ li:hover{
   }
 
   .coming-soon {
-    font-size: 2.75rem;
-    margin-top:1.5rem;
+    font-size: 1.5rem;
+    margin-top:2rem;
     font-weight: normal;
+    animation-duration: 10s;
   }
 
   h2{
@@ -408,8 +443,13 @@ li:hover{
     margin-top: 1rem;
   }
 
-  .form-image-wrapper{
-    width:50%;
+  .form-wrapper {
+    width: 50%;
+  }
+
+  button {
+   margin-top: 2rem;
+   margin-bottom: 2rem;
   }
 
   footer {
@@ -427,5 +467,5 @@ li:hover{
 
 @media screen and (min-width: 992px) {  
   .coming-soon {
-    font-size: 4rem;
+    font-size: 2rem;
 }
