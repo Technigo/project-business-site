@@ -120,12 +120,67 @@ label {
 h2 {
   background-color: #264653;
   color: #e9c46a;
+  border-radius: 10px;
+  padding: 0.5vh 30vw;
 }
 
-footer {
-  background-color: #264653;
-  height: 15vh;
+.accordion {
+  height: 30vh;
+  width: 90vw;
+  max-width: 350px;
+  margin: 5vh auto;
+
 }
+
+.question {
+  padding: 0.5vh 1vw;
+  margin: 2vh 0;
+  border: solid 1px #264653;
+  border-radius: 10px;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.question:hover {
+  background-color:#264653;
+  transform: translateY(-5px);
+  box-shadow:black 0 8px 15px;
+}
+
+.question:active {
+  transform: translateY(0);
+}
+
+.question:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 10px;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  transform: rotate(40deg);
+}
+
+.answer {
+  background-color: #94d2bd;
+  border-radius: 10px;
+  padding: 0.5vh 1vw;
+  display: none;
+} 
+
+.active + .answer {
+  background-color: #94d2bd;
+  border-radius: 10px;
+  padding: 0.5vh 1vw;
+  display: block;
+}
+
+/*footer {
+  background-color: #264653;
+}*/
 
 
 
@@ -134,9 +189,7 @@ footer {
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-}
+
 
 /*tablet size*/
 @media (min-width:668px) and (max-width: 1024px) {
