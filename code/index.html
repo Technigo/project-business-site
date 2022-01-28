@@ -41,19 +41,22 @@
 
         <div class="signup-item">
           <label for="childName" class="">Your child's name</label>
-          <input class="input-field" type="text" name="childName" placeholder="Mini You">
+          <input class="input-field" type="text" name="childName" placeholder="Mini You" required>
         </div>
 
         <div class="signup-item">
           <label for="email">Your email address</label>
-          <input class="input-field" type="email" name="email" placeholder="email@address.com" autocomplete="on">
+          <input class="input-field" type="email" name="email" placeholder="email@address.com" autocomplete="on" required>
         </div>
 
         <div class="signup-item">
           <label for="phone">Your mobile number</label>
           <input class="input-field" type="tel" name="phone" placeholder="07X-XXX XX XX" autocomplete="on"
-            pattern="07[0-9]-[0-9]{3} [0-9]{2} [0-9]{2}">
+            pattern="07[0-9]-[0-9]{3} [0-9]{2} [0-9]{2}" required>
         </div>
+
+        <p class="signup-item signup-instruction">Please answer the following questions so we may send you information tailored to your child in the best way.
+        </p>
 
         <div class="signup-item">How do you prefer to be contacted?
           <div class="input-field">
@@ -64,18 +67,15 @@
           </div>
           <div></div>
             <label>
-              <input type="radio" name="contact">via mobile
+              <input type="radio" name="contact">via SMS
             </label>
           </div>
           </div>
         </div>
 
-        <p class="signup-item signup-instruction">Please answer the following so we may send you information tailored to your child.
-        </p>
-
         <div class="signup-item">
-          <label for="age">Select the age range of your child</label>
-          <select class="input-field" name="age">
+          <label for="age">Select the age range of your child:</label>
+          <select class="input-field age" name="age">
             <option value="age1">0-2 years old</option>
             <option value="age2">3-5 years old</option>
             <option value="age3">6-9 years old</option>
@@ -113,13 +113,12 @@
         </div>
 
         <div class="signup-item">
-          <button type="submit" id="button" class="btn">Send</button>
+          <button type="submit" id="button" class="btn">Please register my child!</button>
         </div>
       </form>
     </section>
 
     <section class="accordion-wrapper" id="accordion-wrapper">
-      <!-- Accordion -->
       <h1 class="accordion-title">FAQ</h1>
       <button class="accordion-question">Question1?</button>
       <div class="accordion-answer">

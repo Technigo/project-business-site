@@ -71,8 +71,8 @@ a {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  /* I had to put a higher z-index so the viito can click the links */
-  z-index: 3;
+  /* I had to put a higher z-index so the visitor can click the links -- not necessary anymore? */
+  /* z-index: 3; */
 }
 
 .hero ul li {
@@ -89,7 +89,9 @@ a {
 
 .hero-title {
   color: white;
-  padding: 3vh 3vw;
+  padding: 2vh 2vw;
+  height: fit-content;
+  width: fit-content;
   font-size: 1.25rem;
   display: flex;
   /* align-items: left;
@@ -103,7 +105,7 @@ a {
 
 main {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   font-family: 'Open Sans', sans-serif;
@@ -148,17 +150,31 @@ main {
   background-color: #fefae7;
   border-radius: 5px;
   border: 2px solid #87A93A;
-  outline-color: #5b7227;
   color: #3d4c1a;
+}
+
+option {
+  text-align: center;
+}
+
+.input-field:focus {
+  outline-color: #5b7227;
   outline-width: 1px;
   outline-offset: 4px;
-  /* transition: all 0.3s ease; qu'est-ce que ca fait?*/
+  transition: all 0.3s ease;
 }
 
 button, input, select {
   font-family: inherit;
   font-size: 100%;
 }
+
+/* Input validation styling : show invalid red ring only while not focused */
+input:not(:focus):not(:placeholder-shown):invalid {
+	border-color: red;
+}
+
+
 
 .signup-item .btn {
   font-family: 'MuseoModerno', cursive;
@@ -183,6 +199,7 @@ button, input, select {
   box-shadow: 3px 3px #adcb67;
   transform: translateY(2px);
 }
+
 
 /* changing the appearance of checkboxes START */
 input[type="checkbox"] {
@@ -318,7 +335,7 @@ label {
 .accordion-answer {
   padding: 0 1rem;
   font-size: 1.25rem;
-  /* a quoi cette ce font-size ...?) */
+  /* a quoi sert ce font-size ...?) */
   background-color: #87A93A;
   max-height: 0;
   /* max-width: 45rem; semble ne servir a rien*/
@@ -340,6 +357,7 @@ label {
 
   main {
     flex-direction: row;
+    align-items: flex-start;
   }
 
   .signup-wrapper {
