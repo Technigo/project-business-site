@@ -1,7 +1,139 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active + .answer {
-  /* some styling here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+
+.image-header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 55vw;
+  width: 100vw;
+  background-image: url('hero.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;  
+  text-align: center;
+}
+
+.video-header video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+header nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  top: 0px;
+  }
+
+ .logo img {
+  width: 4vw;
+  margin: 5px 20px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: fit-content;
+  color: black;
+}
+
+li {
+  list-style: none;
+  background: lightgoldenrodyellow;
+  padding: 5px;
+  border-radius: 25%;
+}
+
+.title {
+  position: absolute; 
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+h1 {
+  color: black;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup {
+  width: 60vw;
+  padding: 15px;
+  margin: 25px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+form {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+button {
+  width: fit-content;
+  align-self: center;
+}
+
+.accordion {
+  width: 60vw;
+  padding: 15px;
+  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.answer {
+  display: none;
+}
+
+.open + .answer{
+  display: inline-flex;
+}
+
+.textbox {
+  width: 60vw;
+  display: flex;
+  margin: 25px 0;
+}
+
+footer {
+  background: lightgoldenrodyellow;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+  @media (min-width: 667px) {
+    .accordion, .signup {
+      width: 35vw;
+    }
+
+    .textbox {
+      width: 70vw;
+    }
+  
+  }

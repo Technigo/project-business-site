@@ -3,28 +3,116 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Time Frame</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+  
+  <!-- video or image hero -->
+  <header class="image-header">
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="logo">
       </div>
+      <ul>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Sign up to newsletter</li>
+      </ul>
+    </nav>
+    <div class=title>
+      <h1>Time Frame</h1>
+      <h2>One window, four acts, one evening</h2>
+    </div>
+  </header>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+  <main>
+
+  <!-- Accordion -->
+  <section class="accordion">
+    <h2>A WINDOW IN TIME and A DOING EXHIBITION</h2>
+
+    <div class="button" id="button">Location</div>
+    <div class="answer">
+      <p>The exhibition takes places in a display window on Kungstensgatan 27, Stockholm. 
+        'Kungstensgatan 27' is a nonprofit exhibition space showing site-specific installations 
+        in direct contact with the public streetscape. It is run by Eva Johansson, Einar Rodhe 
+        and Tim Gustafsson.
+        </p>
+    </div>
+
+    <div class="button" id="button">When</div>
+    <div class="answer">
+      <p>The exhibition will take place during the evening of May 7th, 17.00-20.00.</p>
+    </div>
+
+    <div class="button" id="button">Artworks</div>
+    <div class="answer">
+      <p>'Helrenoverad' (2018), KONRAD LIDÉN <br>
+        'Parser Building' (2019) PHILIP ULLMAN <br>
+        'The Gaze' (2018), SALAD HILOWLE <br>
+        A new performance by FATIMA MOALLIM <br>
+        Interim ACT by IGOR BLOMBERG TRANÆUS
+        </p>
+    </div>
+  </section>
+  
+  <!-- Signup form -->
+  <section class="signup">
+    <form action="https://httpbin.org/anything" method="POST">
+    <label>
+      Name
+      <input type="text" name="name" id="name" required minlength="4">
+    </label>
+
+    <label>
+      E-mail
+      <input type="text" name="email" id="email" required>
+    </label>
+
+    <label>
+      Invitation code
+      <input type="password" name="rsvpCode" id="rsvpCode" required>
+    </label>
+
+    <label>
+      <input type="radio" name="1" id="1">
+      I will come!
+    </label>
+
+    <label>
+      <input type="radio" name="+1" id="+1">
+      I will come and bring a +1!
+    </label>
+
+    <label>
+      <input type="checkbox" name="agree" id="agree" required>
+      I agree to the terms and conditions
+    </label>
+
+      <button type="submit" id="submit">RSVP</button>
+    </form>
+    <h3 id="welcome">Welcome!</h3>
+  </section>
+
+  <div class=textbox>
+    <h2>
+      The exhibition will unravel during the evening as 
+      the artworks alternates in the window.
+      'Time Frame' deals with how to frame exhibition 
+      performativity and asks; what temporal forms are there to experience art? 
+      </h2>
+  </div>
+
+  </main>
+
+    <footer>
+        <p>Created by Sofia Ringstedt</p>
+        <div class="logo">
+          <img src="logo.png" alt="logo">
+        </div>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
