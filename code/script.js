@@ -6,3 +6,7 @@ questions.forEach((question) => {
   })
 })
  
+// Force the video to always autoplay
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
