@@ -17,34 +17,39 @@ body {
 .hero-image {
   width: 100vw;
   height: 40vh;
-  background-image: url(./images/hero-image.jpg);
+  background-image: url(./images/motivation.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: grid;
-  grid-template-rows: 0 1rem 0;
+  grid-template-rows: 1rem 0;
   justify-content: space-evenly;
 }
 
+.inner-hero-header {
+  width: 100vw;
+  height: 7vh;
+  background-color: gray;
+  color: #fff;
+  opacity: .7;
+  margin-top: 0;
+}
+  
+
 .logo-place {
-  padding-top: 5%;
+  padding-top: 5px;
   padding-left: 10px;
+  z-index: 1;
+  color: whitesmoke;
+
 }
 
 .logo-mobil {
-  font-size: 35px;
+  font-size: 25px;
   font-weight: 600;
   color:white;
 }
 
-.hero-image h1 {
-    color: white;
-    text-transform: uppercase;
-    font-size: 3vh;
-    padding-top: 13%;
-    padding-left: 10px;
-  }
-  
 .navbar {
   display: none;
 }
@@ -62,7 +67,7 @@ body {
   height: fit-content;
   border-radius: 15px;
   background-color: #E2E5DE;
-  padding: 30px;
+  padding: 25px;
   margin-top: 10px;
   margin-left: 5px;
   margin-right: 5px;
@@ -128,7 +133,7 @@ body {
   height: auto;
   border-radius: 15px;
   background-color: #E2E5DE;
-  padding: 30px;
+  padding: 20px;
   margin-top: 10px;
   margin-left: 5px;
   margin-right: 5px;
@@ -136,7 +141,7 @@ body {
 }
 
 .accordion-container h1 {
-  padding-bottom: 3px;
+  padding-bottom: 5px;
   text-transform: uppercase;
   font-size: 1rem; 
 }
@@ -166,7 +171,7 @@ body {
   background-color: #F5F5F5;
   color: black;
   padding: 3px 8px;
-  border-radius: 10px;
+  border-radius: 5px;
   
 }
 
@@ -178,23 +183,24 @@ body {
     display:grid;
     grid-template-columns: 49% 49%;
     grid-template-rows: 100%;
-    grid-gap: 2%;
-    padding: 2%;
-    background-color: #F9F9F3 ;
+    gap: 20px;
+    background-color: #F9F9F3;
+    margin-left: 90px;
+    margin-right: 90px;
   }
 
   .hero-image {
     width: 100vw;
-    height: 70vh;
+    height: 100vh;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     display: grid;
     grid-template-rows: 10vh;
   }
 
-  .inner-hero-header { /*detta är ett grid-item till header som är parent container*/
+  .inner-hero-header { 
     width: 100vw;
-    height: 10vh;
+    height: 8vh;
     background-color: gray;
     color: #fff;
     opacity: .7;
@@ -209,22 +215,14 @@ body {
     display: none;
   }
 
-  .hero-image h1 {
-    justify-self: center;
-    padding: 30px;
-    opacity: .85;
-    font-size: 5vh;
-    text-shadow: 1vh 1vh 2vh gray;
-  }
-
-  .navbar {  /* <nav> taggen är placerad i ett grid-item som i det här fallet är 'inner-hero-header'. Flexbox aktiveras i detta element och inte i 'inner-hero-header'*/
+  .navbar { 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
   } 
 
-  .nav-menu {  /* Flexbox skapar utrymmer mellan länkarna */
+  .nav-menu { 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -252,6 +250,16 @@ body {
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
   }
+
+  .question {
+    font-size: 15px;
+  }
+
+  .active + .answer {
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 15px;
+  }
   
 }
 
@@ -264,13 +272,16 @@ body {
     grid-template-rows: 100%;
     grid-gap: 2%;
     padding: 2%;
+    margin-left: 100px;
+    margin-right: 100px;
   }
 
   .hero-image {
     width: 100vw;
     height: 100vh;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
+    background-position: fixed;
     display: grid;
     grid-template-rows: 10vh;
     }
@@ -292,13 +303,6 @@ body {
     display: none;
     }
 
-  .hero-image h1 {
-    justify-self: center;
-    padding: 30px;
-    font-size: 5vw;
-    text-shadow: 1vh 1vh 2vh gray;
-  }
-
   .navbar {  
     display: flex;
     justify-content: space-between;
@@ -310,12 +314,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 
   .nav-item {
     margin-left: 20px;
-
   }
 
   .nav-link {
@@ -328,12 +330,12 @@ body {
     color: #dabf94;
   
   }
-
   .logo {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 600;
-    color:white;
+    color: white;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
   }
+
 }
