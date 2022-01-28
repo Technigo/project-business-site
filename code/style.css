@@ -9,7 +9,7 @@
   -moz-box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   font-family: 'Oswald', sans-serif;
-  /* max-width: 1350px; */
+  /* max-width: 1350px;*/
   
 }
 
@@ -19,59 +19,62 @@ body{
   background-color: rgb(180, 180, 180);
 }
 
-
-.header{
- 
-
-  width: 100%;
-
-  } 
-
-
-
-.hero-img{
+header{
+  width: 100%;  
+  display: flex;
+  justify-content: center;
+  background-image: url(./images/Hero\ picture.jpg);
   height: 50vh;
   min-height: 50vh;
   width: 100%;
-  object-fit: cover; /*54-56 this three make it fixed to the top*/
+  object-fit: cover; /*34-36 this three make it fixed to the top*/
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;  
   z-index: -1;
   
 
-
+  /* left-overs from code with jennie, don't really get it but want to keep it for labs
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 40px;
   text-align: center;
   position: relative;
-  gap: 1rem;
-  justify-items: center;
-  align-items: center; 
+  gap: 1rem; */
+  /* justify-items: center;
+  align-items: center;  */
   /* display: grid;   lägg in för meny
   gap: 1rem;
   justify-items: center;
   align-items: center; */
-
   }
   
   .logo{
-    position: absolute; /*måste vara angivet annars syns de inte på videon/bilden*/
+    position: absolute; /*måste vara angivet annars syns de inte på videon/bilden */
     color: black;
-    margin: 60px 100px; 
+    margin: 50px 0px; 
+    font-size: 18px;
     text-transform: uppercase;
-    /* font-size: 18px; */
     z-index: 1;
     text-align: center;
+    justify-content: center;
   }
 
-/* .dropdown-content{
+ /*so confused over why I ican't place y navbar links in a row*/ 
+.nav-bar{
+  margin: 80px; 
+  text-align: center;
+  flex-direction: row; /*this does nothing*/
   position: absolute;
-  width: 100vw;  
-  height: 100px;
-  } */
+  text-decoration: none;
+  list-style-type: none; 
+}
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 nav ul li a {
   color: black;
@@ -80,13 +83,12 @@ nav ul li a {
   text-transform: uppercase;
   border-radius: 13px;
   text-decoration: none;
-  
-  }
+  list-style-type: none;
+  }  
 
  a:hover{
     color: coral;
   }
-
 
 h2{
   text-align: center;
@@ -94,13 +96,12 @@ h2{
   
 }
 
-
 form {
   display: flex;
   flex-direction: column;
   background-color: rgb(8, 91, 94);
   color: white;
-  margin: 40px; 
+  margin: 21px;  
   padding: 20px;  
   border-radius: 5px;
 }
@@ -117,7 +118,6 @@ input{
   margin: 10px 0px; 
 }
 
-
 textarea {
   height: 140px;
   padding: 10px;
@@ -127,8 +127,6 @@ textarea {
 .check-boxes{
   margin: 10px 0px 0px 0px;
 }
-
-
 
 form button {
   width: 100px;
@@ -142,16 +140,11 @@ form button {
   color: white;
 }
 
-/* textarea:invalid {
-  border: 2px dashed red;
-} */
-
-
 .accordion-wrapper {
   width: 90%;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: auto;  /*this is confusing when I have it on it looks good and the orange boxes align, but when I try to alter it with my own specs it looks like shit */
   justify-content: center;
   padding: 20px; 
   line-height: 1.5;
@@ -163,7 +156,6 @@ form button {
   padding: 10px 40px 30px 40px;
   background-color: rgb(8, 91, 94);
   position: relative;
-  /* z-index: 20px; */
   border-radius: 5px;
 }
 
@@ -177,12 +169,9 @@ form button {
   min-width: 100%;
   width: 80%;
   height: 40%;
-  /* text-align: center; */
   padding: 20px;
   margin: 10px 0px;
   border-radius: 5px;
-
-
 }
 
 .answer{
@@ -191,7 +180,6 @@ form button {
   padding: 20px;
   color: black;
 }
-
 
 
 .accordion-wrapper a{
@@ -203,12 +191,6 @@ text-decoration: none;
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-
-
-/* .open + #dropDown {
-  display: block;
-  /* some styling here 
-} */
 
 .active + .answer {
   display: block;
@@ -238,31 +220,49 @@ footer img{
 }
 
   /* ---------- TABLET STYLING ---------- */
-  
+  @media (min-width: 667px) and (max-width: 1024px){
+  .content{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(2, 30vw);
+    padding: 30px;
+  }
 
+  .accordion-wrapper{
+    margin: auto;
+  }
 
+  footer p{
+    font-size: 15px;
+  }
 
+  footer img{
+    width: 3%;
+    height: auto;
+    margin: 10px 5px;
+  }
 
+  }
   /* ---------- DESKTOP STYLING ---------- */
   @media (min-width: 1024px) {
 
     .logo{
-      position: absolute; /*måste vara angivet annars syns de inte på videon/bilden*/
-      color: black;
-      margin: 20px 600px; 
-      padding: 30px;
+      position: absolute; 
+      margin: 10px;
+      padding: 15px;
       text-transform: uppercase;
       font-size: 30px;
-      align-self: center;
-      
-      z-index: 1;
-    
+    }
+
+    .nav-bar{
+      margin: 80px;
     }
 
     .content{
       display: grid;
       grid-template-columns: repeat(2, 2fr);
-      grid-template-rows: repeat(2, 30vw);
+      grid-template-rows: repeat(1, 30vw);
+      padding: 40px 40px 120px 40px;
     }
   
     footer p{

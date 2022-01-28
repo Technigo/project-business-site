@@ -16,4 +16,3 @@ document.getElementById("question3").onclick = toggle
 
 document.getElementById("question4").onclick = toggle
 
-
