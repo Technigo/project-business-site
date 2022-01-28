@@ -43,7 +43,7 @@ document.getElementById('form').onsubmit = (event) => {
 }
 
 
-// Check innerheight and apply for landscape mode
+// Check innerheight and apply hero height for landscape mode on mobile
 const landscapeMode = window.matchMedia('(max-device-width: 930px) and (orientation: landscape)');
 const portraitMode = window.matchMedia('(max-device-width: 669px) and (orientation: portrait)');
 const headerHeight = document.querySelector('.header');
