@@ -9,7 +9,25 @@ function toggle() {
 document.getElementById("section1").onclick = toggle
 document.getElementById("section2").onclick = toggle
 document.getElementById("section3").onclick = toggle
-document.getElementById("section1").onclick = toggle
+document.getElementById("section4").onclick = toggle
+
+
+
+const btn = document.getElementByClassName("question")
+
+document.getElementById("question").onclick = toggleButton
+
+function toggleButton() {
+btn.classList.toggle('selected');
+}
+
+
+
+// $('button').on('click', function(){
+//   $('button').removeClass('selected');
+//   $(this).addClass('selected');
+// });
+
 
 
 // document.getElementsByClassName('answer').onclick = toggle ;
