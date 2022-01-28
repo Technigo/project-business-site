@@ -18,5 +18,7 @@ At the end, I discovered while testing that there was a problem when flipping be
 
 If I had more time - I would learn how to make a an evil bot, that actually would sign people up to all these newsletters >:D
 
+No actually - if I had more time, I would have made the hero image in different resolutions and used those in the media queries. The file size means it takes a while to load, which is kind of annoying.
+
 ## View it live
 https://deathbyspam-week3.netlify.app/
