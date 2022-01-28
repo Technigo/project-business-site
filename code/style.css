@@ -11,7 +11,6 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 body {
   font-family: "Lato", sans-serif;
-  background-color: #e1dcdc;
 }
 
 /*
@@ -36,7 +35,7 @@ body {
   height: 100vh;
   min-height: 50vh;
   width: 100vw;
-  border: 3px solid rgba(54, 92, 69, 0.678);
+  border: 3px solid #808d8e;
   position: relative;
   text-align: center;
   display: flex;
@@ -100,23 +99,24 @@ h1 {
   padding: 1rem;
 }
 
+.container-background-color {
+  background-color: #e1dcdc;
+}
+
 .main-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   justify-content: center;
   gap: 2rem;
-  padding: 1rem 4rem;
-  width: 100%;
-  margin: 0;
-  background-color: whitesmoke;
 }
 
 /* Sign-up form -> */
 
 .form-container {
-  border: 2px solid rgba(141, 173, 155, 0.678);
+  /*border: 2px solid rgba(141, 173, 155, 0.678);*/
   border-radius: 8px;
   box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
+  background-color: whitesmoke;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,7 +170,6 @@ h2 {
   top: 15px;
   left: 15px;
   padding: 0 4px;
-  background-color: white;
   color: #808d8e;
   font-size: 1.5rem;
   transition: 0.5s;
@@ -190,12 +189,11 @@ h2 {
   border: 2px solid rgba(141, 173, 155, 0.678);
 }
 
-.checkbox {
+.radio {
   width: 20px;
   position: absolute;
-  /*trying to move the checkbox
-  bottom: ;
-  left: ;*/
+  top: 10px;
+  right: 15px;
 }
 
 .input:not(:placeholder-shown)+ label {
@@ -208,6 +206,10 @@ h2 {
 
 select:invalid {
   color: white:
+}
+
+select {
+  color: #808d8e;
 }
 
 .submit-button {
@@ -230,9 +232,10 @@ select:invalid {
 /* Accordion -> */
 
 .accordion-container {
-  border: 2px solid rgba(141, 173, 155, 0.678);
+  /*border: 2px solid rgba(141, 173, 155, 0.678);*/
   border-radius: 8px;
   box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
+  background-color: whitesmoke;
   min-height: 50vh;
   overflow-y: scroll;
 }
@@ -287,11 +290,14 @@ select:invalid {
   display: block;
 }
 
+/* Footer -> */
+
 .image-footer {
   background-image: url('/images-3/footer-2.jpg');
   filter: opacity(60%);
   box-shadow: 4px 4px 3px 3px rgba(0,0,0,.2);
   height: 50vh;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -305,7 +311,7 @@ select:invalid {
   padding-top: 2.5rem;
 }
 
-.fa-facebook-square, .fa-instagram {
+.fa-facebook-square, .fa-instagram, .fa-envelope {
   color: #546061;
   text-align: center;
 }
