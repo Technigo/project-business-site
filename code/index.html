@@ -5,24 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
     <link rel="stylesheet" href="style.css"> <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap">
+    
   </head>
   
-  <body>
-    <!-- video or image as a header is cool :) -->
+  <body> <!-- video or image as a header is cool :) -->
 
-     <header class="image-header">
+     <!--<header class="image-header">
        <div class="title-container">
         <h1>Flower workshop</h1>
       </div>
+    </header>-->
+
+   <header class="video-header">
+      <video autoplay loop muted poster="/images-3/main-flowers.jpg">
+        <source src="/videos/lilac-flowers.mp4" type="video/mp4" />
+        Oh no, you can't see me, too bad, cause I'm awesome. Kind regards, your video-header
+      </video>
+      <h1>Happy Petals</h1>
     </header>
 
-   <!---- <header class="video-header">
-      <video autoplay loop muted poster="/assets/lollie.jpg">
-        <source src="/assets/blue.mp4" type="video/mp4" />
-        Your browser doesn't support the video tag. The sadness :( 
-      </video>
-      <h1>I'm blue da ba dee da ba die</h1>
-    </header> -->
+    <div class="presentation-text-container">
+      <h2 class="welcome-text-title">Welcome to Happy Petals</h2>
+      <div class="welcome-text">
+        <p>
+          Unique Blooms That Are Always Hand Delivered And Always Local</p>
+        <p>
+          We create bouquets for joy and sorrow, or just to brighten up your day.
+        </p>
+        <p>
+          We also offer flower and wreath binding and flower arrangement classes for our clients.
+          Workshop evenings are memorable events for bridal showers, business occasions and gathering with friends.
+        </p>
+      </div>
+    </div>
 
     <div class="main-container">
 
@@ -30,15 +47,15 @@
       <section class="form-container">
         <form id="form" action="https://httpbin.org/anything" method="post" >
 
-          <h1 class="title">Sign up for our workshops</h1>
+          <h2 class="form-title">Sign up for our workshops</h2>
 
           <div class="input-container">
-            <input type="text" class="input" name="first-name" placeholder="a">
+            <input type="text" class="input" name="first-name" placeholder="a" required>
             <label>First name:</label>
           </div>
 
           <div class="input-container">
-            <input type="text" class="input" name="last-name" placeholder="a">
+            <input type="text" class="input" name="last-name" placeholder="a" required>
             <label>Last name:</label>
           </div>
 
@@ -48,8 +65,8 @@
           </div>
 
           <div class="input-container">
-            <label>Select a course:</label>
-            <select name="select-course" class="input" name="select-course" >
+            <label>Select a course:</label> <!--try to fix the selection option, label hidden when option chosen-->
+            <select name="select-course" class="input" required>
               <option value="" disabled selected hidden></option>
                <option value="flower-arrangements">Flower arrangements 101</option>
               <option value="flower-wreath">Create your own flower wreath</option>
@@ -58,7 +75,7 @@
           </div>
 
           <div class="input-container">
-            <label>Join our mailing list:</label>
+            <label>Stay in the loop:</label>
             <input type="checkbox" class="input checkbox" name="mailing-list" >
           </div>
 
@@ -71,41 +88,51 @@
 
        <!-- Accordion -->
       <section class="accordion-container">
-       
-        <h1>FAQ about the workshop</h1>
+
+        <h2 class="accordion-title">FAQ about the workshop</h2>
 
         <div class="accordion-segment">
           <div class="question" id="section1">How can I book a course?</div>
           <div class="answer">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, quis ipsum corporis ad tempora harum, minima quos quisquam animi similique ea beatae molestiae sed minus nostrum maiores consequatur dolorem quia.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus,
+              quis ipsum corporis ad tempora harum, minima quos quisquam animi similique.
+            </p>
           </div>
         </div>
 
         <div class="accordion-segment">
           <div class="question" id="section2">What do I need for the course?</div>
           <div class="answer">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non mollitia beatae obcaecati nihil voluptatem eos officia perferendis blanditiis deleniti culpa rem ipsa at, unde voluptatum labore! Suscipit quas perferendis natus?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non mollitia beatae
+              obcaecati nihil voluptatem eos officia perferendis blanditiis deleniti culpa rem.
+            </p>
           </div>
         </div>
 
         <div class="accordion-segment">
           <div class="question" id="section3">What if I miss a class? How can I catch up?</div>
           <div class="answer">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, sint voluptatibus. Exercitationem tenetur id aspernatur iure sed, assumenda, voluptatum laboriosam quod fugiat unde, voluptate a illum facilis ipsa ipsam placeat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, sint voluptatibus.
+              Exercitationem tenetur id aspernatur iure sed, assumenda, voluptatum laboriosam quod fugiat.
+            </p>
           </div>
         </div>
 
         <div class="accordion-segment">
           <div class="question" id="section4">How do I pay for the course?</div>
           <div class="answer">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aliquid fugiat quae possimus cupiditate mollitia! Quo ipsum, quia ducimus facilis non mollitia repellendus commodi, velit aliquam eos excepturi, officia voluptatum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aliquid fugiat
+              quae possimus cupiditate mollitia! Quo ipsum, quia ducimus facilis non mollitia repellendus commodi.
+            </p>
           </div>
         </div>
 
         <div class="accordion-segment">
           <div class="question" id="section5">What is your cancellation policy?</div>
           <div class="answer">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis placeat illo, nostrum quo quaerat illum possimus, odio molestias saepe soluta eos, perspiciatis accusantium distinctio odit dolores beatae magnam aliquid itaque.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis placeat illo, nostrum quo quaerat illum possimus,
+              odio molestias saepe soluta eos, perspiciatis accusantium distinctio odit dolores beatae magnam aliquid itaque.
+            </p>
           </div>
         </div>
 
@@ -113,8 +140,19 @@
 
     </div>
 
-    <footer>
+    <footer class="image-footer">
+      <div class="footer-text-container">
 
+        <div class="social-media-icons">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+
+        <p>&copy; Tiina Liukkonen</p>
+
+        <p>Images and videos: Unsplash & Pexels</p>
+
+      </div>
     </footer>
 
     <script src="script.js"></script> <!-- dont forget to link the javascript file here! -->

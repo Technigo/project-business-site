@@ -39,14 +39,3 @@ const openSection5 = document.getElementById('section5')
 openSection5.onclick= () => {
   openSection5.classList.toggle('active')
 };
-
-/*
-document.getElementById('section1').onclick = toggle
-
-document.getElementById('section2').onclick = toggle
-
-document.getElementById('section3').onclick = toggle
-
-document.getElementById('section4').onclick = toggle
-
-document.getElementById('section5').onclick = toggle*/

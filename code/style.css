@@ -1,7 +1,7 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp
-/*linear-gradient(rgba(243, 240, 232, 0.253), rgba(37, 36, 35, 0.925))*/
+)*/
 
 * {
   margin: 0;
@@ -10,16 +10,17 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 body {
-  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  font-family: "Lato", sans-serif;
+  background-color: #e1dcdc;
 }
 
-
+/*
 .image-header {
   height: 100vh;
-  min-height: 50vh;  /*Why it can be good to use min height */
+  min-height: 50vh;
   width: 100vw;
 
-  background-image: linear-gradient(rgba(245, 245, 220, 0.521), rgba(255, 255, 255, 0.171)),url('/images-3/header-flowers.jpg');
+  background-image: url('/images-3/header-flowers.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -28,13 +29,38 @@ body {
   gap: 1rem;
   justify-items: center;
   align-items: center;
+}*/
+
+
+.video-header {
+  height: 100vh;
+  min-height: 50vh;
+  width: 100vw;
+  border: 3px solid rgba(54, 92, 69, 0.678);
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.title-container h1 {
-  color:rgba(54, 92, 69, 0.678);
-  font-size: 3rem;
+.video-header video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  position: absolute;
+  top: 1.5rem;
+  left: 10px;
+  color: #546061;
+  font-size: 2.5rem;
   text-shadow: -2px -2px 5px 5px rgb(32, 31, 31);
-  padding: 1rem;
 }
 
 /*.title-container {
@@ -43,35 +69,74 @@ body {
   box-shadow: 5px 5px 15px 8px rgba(0,0,0,.1);
 }*/
 
+/* Presentation text */
+
+.presentation-text-container {
+  /*border: 2px solid rgba(54, 92, 69, 0.678);*/
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+}
+
+.welcome-text-title {
+  color: #546061;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.welcome-text {
+  color: #546061;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.welcome-text p {
+  padding: 1rem;
+}
+
 .main-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  /*grid-template-rows: 2, 1fr;*/
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   justify-content: center;
   gap: 2rem;
-  padding: 4rem;
+  padding: 1rem 4rem;
+  width: 100%;
+  margin: 0;
+  background-color: whitesmoke;
 }
+
+/* Sign-up form -> */
 
 .form-container {
   border: 2px solid rgba(141, 173, 155, 0.678);
+  border-radius: 8px;
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  min-height: 50vh;
 }
 
 .form {
   background-color: white;
-  height: 80%;
+  height: 70%;
   border-radius: 10px;
-  padding: 1.5rem 2.5rem;
+  padding: 2.5rem 2.5rem;
   box-shadow: 0 10px 25px rgba(92,99,105,.2);
 }
 
-.title {
-  color: rgba(54, 92, 69, 0.678);
+h2 {
+  color: #546061;
   font-size: 2rem;
-  margin-bottom: 3rem;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .input-container {
@@ -102,12 +167,11 @@ body {
 }
 
 .input-container label {
-  position: absolute;
   top: 15px;
   left: 15px;
   padding: 0 4px;
   background-color: white;
-  color:rgba(54, 92, 69, 0.678);
+  color: #808d8e;
   font-size: 1.5rem;
   transition: 0.5s;
   z-index: 0;
@@ -127,9 +191,11 @@ body {
 }
 
 .checkbox {
-  width: 15px;
+  width: 20px;
   position: absolute;
-  right: 0;
+  /*trying to move the checkbox
+  bottom: ;
+  left: ;*/
 }
 
 .input:not(:placeholder-shown)+ label {
@@ -147,14 +213,13 @@ select:invalid {
 .submit-button {
   display: block;
   margin-left: auto;
-  padding: 1.5rem 2rem;
   border: none;
-  background-color: rgba(141, 173, 155, 0.678);
+  background-color: #808d8e;
   color: white;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1rem;
-  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .submit-button:hover {
@@ -162,17 +227,20 @@ select:invalid {
   transform: translateY(-2px);
 }
 
+/* Accordion -> */
+
 .accordion-container {
   border: 2px solid rgba(141, 173, 155, 0.678);
-  height: 80vh;
-  padding: 3rem 5rem;
-  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
+  min-height: 50vh;
+  overflow-y: scroll;
 }
 
-.accordion-container h1 {
-  color:rgba(54, 92, 69, 0.678);
-  font-size: 2rem;
-  margin-bottom: 3rem;
+.accordion-container h2 {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .accordion-segment {
@@ -183,13 +251,14 @@ select:invalid {
 .question {
   position: relative;
   font-size: 1.5rem;
-  color: rgba(54, 92, 69, 0.678);
-  border-bottom: 2px solid rgba(54, 92, 69, 0.678);
+  color: #546061;
+  border-bottom: 2px solid rgba(54, 92, 69, 0.315);
   padding: 5px;
   margin-top: 5px;
   cursor: pointer;
 }
 
+/*
 .question::before {
   content: '+';
   color:rgba(54, 92, 69, 0.678);
@@ -200,16 +269,14 @@ select:invalid {
   transform: translateY(-50%);
 }
 
-/*FIXXX!!
 .question.active .question::before {
   content: '-';
   font-size:
 }*/
 
 .answer {
-  color:rgba(54, 92, 69, 0.678);
+  color: #546061;
   font-size: 1.5rem;
-  overflow: hidden;
 }
 
 .answer {
@@ -218,6 +285,77 @@ select:invalid {
 
 .active + .answer {
   display: block;
+}
 
-  /* some styling here */
+.image-footer {
+  background-image: url('/images-3/footer-2.jpg');
+  filter: opacity(60%);
+  box-shadow: 4px 4px 3px 3px rgba(0,0,0,.2);
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-text-container {
+  color: #546061;
+  text-align: center;
+  padding-top: 2.5rem;
+}
+
+.fa-facebook-square, .fa-instagram {
+  color: #546061;
+  text-align: center;
+}
+
+
+@media (min-width: 768px) {
+  h1 {
+    top: 5rem;
+    left: 3rem;
+    font-size: 4rem;
+  }
+  .main-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .accordion-container h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    top: 6rem;
+    left: 4rem;
+  }
+  .main-container {
+    margin: 0 4rem;
+    padding: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    padding: 0 2rem;
+  }
+  .accordion-container h2 {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+  .accordion-container {
+    padding: 0 3rem;
+  }
 }
