@@ -5,6 +5,7 @@ Users should be able to:
 - View header video
 - View the site in different devices and screen sites
 - Submit the form
+- See answers in the accordion (when an answer is expanded, the plus sign becomes minus)
 - See the animated paw above "send inquiry here"
 - See a black-paw cursor and change in button's stylign when hovering over the submit button
 
