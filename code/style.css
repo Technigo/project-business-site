@@ -22,6 +22,11 @@ a {
   color: black;
 }
 
+.navbar a:hover {
+  font-weight: bold;
+  transform: scale(1.10); 
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -37,7 +42,7 @@ ul {
   width: 100vw;
   height: 15vh;
   position: absolute;
-  background-color: rgba(255,255,255,0.25); /* creates opacity for the whole navbar excluding links */
+  background-color: rgba(255, 239, 239, 0.411); /* creates opacity for the whole navbar excluding links */
   padding: 2em;
 }
 
@@ -106,77 +111,89 @@ margin-bottom: 1em;
 
 /* styling the FAQ/Accordion */
 
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1em 4em 1em;
+  background-color: rgb(182, 136, 136);
+  border-radius: 1em;
+  margin: 3em;
+  border: solid rgb(150, 106, 106);
+}
+
 .accordion-header {
-  font-size: 35px;
+  font-size: 40px;
   margin-bottom: 1em;
-}
-
-.accordion {
-  background-color: rgb(167, 131, 131);
-  color: rgb(252, 252, 252);
-  cursor: pointer;
-  padding: 1em;
-  width: 70vw;
-  text-align: center;
-  border: none;
-  outline: none;
-  transition: 1s;
-  font-size: 20px;
-  border-radius: .5em;
-}
-
-.accordion1, .accordion3 {
-  background-color: rgb(131, 90, 90);
-  color: rgb(247, 244, 244);
-  cursor: pointer;
-  padding: 1em;
-  width: 70vw;
-  text-align: center;
-  border: none;
-  outline: none;
-  transition: 1s;
-  font-size: 20px;
-  border-radius: .5em;
+  color: white;
 }
 
 .panel {
   width: 70vw;
   max-height: 0;
-  padding: 0em 2em;
-  background-color: rgb(250, 249, 248);
+  /* padding: 0em 2em; */
+  background-color: rgb(182, 136, 136);
+  color: white;
   overflow: hidden;
   text-align: center;
   transition: max-heigth 1s ease-out;
   font-size: 17px;
 }
 
+.accordion {
+  background-color: rgb(173, 113, 113);
+  color: rgb(252, 252, 252);
+  cursor: pointer;
+  padding: .75em;
+  width: 70vw;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 1s;
+  font-size: 20px;
+  border-radius: .5em;
+  /* border: solid rgb(150, 106, 106); */
+}
+
+.accordion1, .accordion3 {
+  background-color: rgb(173, 113, 113);
+  color: rgb(247, 244, 244);
+  cursor: pointer;
+  padding: .75em;
+  width: 70vw;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 1s;
+  font-size: 20px;
+  /* border: solid rgb(150, 106, 106); */
+  margin: .2em;
+  border-radius: .5em;
+}
+
+
 .active, .accordion:hover {
-  background-color: rgb(185, 148, 148);
+  background-color: rgb(182, 136, 136);
   font-weight: bold;
 }
 
 .active, .accordion1:hover {
-  background-color: rgb(150, 106, 106);
+  background-color: rgb(182, 136, 136);
   font-weight: bold;
 }
 
 .active, .accordion3:hover {
-  background-color: rgb(150, 106, 106);
+  background-color: rgb(182, 136, 136);
   font-weight: bold;
 }
 
 .active + .panel {
   display: block;
   transition: 1s;
+  margin: 1em 0;
 }
 
-.accordion-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1em;
-}
 
 /* .active + .answer2 {
   opacity: 100%;
@@ -258,5 +275,41 @@ label {
 
   .container {
     background-color: rgba(255,255,255,0.4);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav {
+    background: none;
+    width: 100vw;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  /* .navbar {
+    flex-direction: row;
+    justify-content: center;
+  } */
+  
+  .nav-links-OK ul {
+    display: flex;
+    margin-top: 0;
+   } 
+  
+  .nav-links li a{
+    padding: 2.5rem;
+    display: block;
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .close-menu {
+    display: none;
   }
 } 
