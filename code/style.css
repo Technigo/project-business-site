@@ -28,7 +28,6 @@
     align-items: center;
     justify-content: center;
     color: rgba(245, 245, 220, 0.774);  
-
 }
   
 /* hero video vw-viewwidth */
@@ -39,13 +38,10 @@
     z-index: -5;
     object-fit: cover;  
     top: 0;
-  left: 0;
-  
+   left: 0;
   }
 
-
   h1{
-   
     font-size: 50px;
     padding: 20px 30px;
     color: rgb(58, 32, 32);
@@ -55,6 +51,8 @@
     flex-wrap: wrap;
     flex-direction: column;
     opacity: 80%;
+    position: absolute;
+    z-index: 5;
      }
 
       
@@ -78,22 +76,23 @@
         margin:10px;
         position: relative;
       }
+
+      
      /* display is hidden for li items */
       .navbar #nav-contents{
         display: none;
       }
 
       .navbar a.icon {
-         opacity: 90%;
-        
+         opacity: 90%; 
       }
 
-      .navbar a:hover {
+     .navbar  a:hover {
         opacity: 80%;
        cursor: pointer;
        transform: scale(0.9);
-      background-color:  rgb(214, 214, 214);
       }
+        
 
       .nav-li{
         color: rgb(65, 54, 54);
@@ -118,7 +117,7 @@
 
    .button{
     font-family: 'Neonderthaw' ;
-    display: inline-block;
+    display:block;
     padding: 20px;
     border-radius: 10rem;
     text-transform: uppercase;
@@ -144,7 +143,7 @@
   }
 
   
-
+ 
    .main-text {
     font-size: 20px; 
     z-index: 2;
@@ -214,7 +213,19 @@
      width:100%;
      text-align: left;  
      border-bottom: black;
-}
+    }
+  .answer{
+    display: none;
+    overflow: hidden;
+    color: rgb(3, 34, 3);
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family:  'sans-serif';
+    width:100%;
+    text-align: center; 
+    background-color: rgb(173, 173, 173);
+    }
+
 .question::after{
   content: '\002B';
   float: right;
@@ -224,6 +235,7 @@
   border-radius: 50%;
   color: #ffff;
   font-weight: bolder;
+ 
 }
 
 
@@ -236,10 +248,12 @@
   color: whitesmoke;
   background-color: rgb(106, 116, 106);
   transition: background-color 1s ease;
+  
 }
  
 .active::after{
   content: '\2212'; 
+ 
 }
 
 hr{
@@ -285,18 +299,7 @@ padding: 2px;
   margin-left: 10rem;
 }
 
-.answer{
-  display: none;
-  overflow: auto;
-  color: rgb(3, 34, 3);
-  font-size: 15px;
-  letter-spacing: 1px;
-  transition: all .3s;
-  font-family:  'sans-serif';
-  width:100%;
-  text-align: center; 
-  background-color: rgb(173, 173, 173);
-}
+
 /* Responsive for Tablets*/
 @media (min-width:768px){ 
   .text{
