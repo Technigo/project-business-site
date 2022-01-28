@@ -13,7 +13,6 @@
 </head>
 
 <body>
-  <!-- video or image as a header is cool :) -->
   <header class="hero">
     <video autoplay loop muted src="./videos/avocados.mp4" type="video/mp4" poster="./images/avocado-image.jpg"></video>
     <nav>
@@ -22,10 +21,10 @@
           <a href="#">Home</a>
         </li>
         <li>
-          <a href="#">Signup</a>
+          <a href="#signup-wrapper">Signup</a>
         </li>
         <li>
-          <a href="#">FAQ</a>
+          <a href="#accordion-wrapper">FAQ</a>
         </li>
       </ul>
     </nav>
@@ -33,99 +32,104 @@
       <h1>Find happiness</h1>
       <h2>with vegetables</h2>
     </div>
-    <div class="hero-gradient">
-    </div>
   </header>
 
   <main>
-    <section class="signup-wrapper">
-      <form action="http://httpbin.org/anything" method="post">
+    <section class="signup-wrapper" id="signup-wrapper">
+      <h1 class="signup-title">Signup</h1>
+      <form action="http://httpbin.org/anything" method="post" target="_blank">
 
-        <div class="signup-field">
-          <label>First name
-            <input type="text" name="firstName" autofocus>
-          </label>
-
-          <label>Last name
-            <input type="text" name="lastName">
-          </label>
+        <div class="signup-item">
+          <label for="email">Your email address</label>
+          <input class="input-field" type="email" name="email" placeholder="email@address.com" autocomplete="on">
         </div>
 
-        <div class="signup-field">
-          <label>Email address
-            <input type="email" name="email" autocomplete="on">
-          </label>
+        <div class="signup-item">
+          <label for="phone">Your mobile number</label>
+          <input class="input-field" type="tel" name="phone" placeholder="07X-XXX XX XX" autocomplete="on"
+            pattern="07[0-9]-[0-9]{3} [0-9]{2} [0-9]{2}">
         </div>
 
-        <div class="signup-field">
-          <label>Mobile number
-            <input type="tel" name="phone" autocomplete="on" pattern="[0-9]{3}-[0-9]{3} [0-9]{2} [0-9]{2}">
-          </label>
+        <div class="signup-item">How do you prefer to be contacted?
+          <div class="input-field">
+            <label>
+              <input type="radio" name="contact">via mobile
+            </label>
+            <label>
+              <input type="radio" name="contact">via email
+            </label>
+          </div>
         </div>
 
-        <div class="signup-field">
-          <label>Select the age range of your child
-            <select name="age">
-              <option value="age1">0-2 years old</option>
-              <option value="age2">3-5 years old</option>
-              <option value="age3">6-9 years old</option>
-              <option value="age4">10-13 years old</option>
-              <option value="age4">14-17 years old</option>
-            </select>
-          </label>
+        <div class="signup-item">
+          <label for="childName" class="">Your child's name</label>
+          <input class="input-field" type="text" name="childName" placeholder="Mini You">
         </div>
 
-        <div class="signup-field">How do you prefer to be contacted?
-          <label>via mobile
-            <input type="radio" name="contact">
-          </label>
-          <label>via email
-            <input type="radio" name="contact">
-          </label>
+        <div class="signup-item signup-instruction">Please answer the following so we may send you information tailored to your child.
         </div>
 
-        <div class="signup-field">
-          <p>Leave us a message if you like:</p>
-          <textarea name="message" rows="5" cols="30">
-          </textarea>
+        <div class="signup-item">
+          <label for="age">Select the age range of your child</label>
+          <select class="input-field" name="age">
+            <option value="age1">0-2 years old</option>
+            <option value="age2">3-5 years old</option>
+            <option value="age3">6-9 years old</option>
+            <option value="age4">10-13 years old</option>
+            <option value="age4">14-17 years old</option>
+            <option value="age5">I don't want to answer</option>
+          </select>
         </div>
 
-        <div class="signup-field">Check all vegetables that your child like:
-          <label>Cucumber
-            <input type="checkbox" name="veggie">
-          </label>
-          <label>Broccoli
-            <input type="checkbox" name="veggie">
-          </label>
-          <label>Avocado
-            <input type="checkbox" name="veggie">
-          </label>
-          <label>Celery
-            <input type="checkbox" name="veggie">
-          </label>
+        <div class="signup-item">Check all vegetables that your child like:
+          <div class="input-field">
+            <label>
+              <input type="checkbox" name="veggie">Cucumber
+            </label>
+            <label>
+              <input type="checkbox" name="veggie">Broccoli
+            </label>
+            <label>
+              <input type="checkbox" name="veggie">Avocado
+            </label>
+            <label>
+              <input type="checkbox" name="veggie">Celery
+            </label>
+            <label>
+              <input class type="checkbox" name="veggie">Cucumber
+            </label>
+            <label>
+              <input type="checkbox" name="veggie">Broccoli
+            </label>
+            <label>
+              <input type="checkbox" name="veggie">Avocado
+            </label>
+            <label>
+              <input type="checkbox" name="veggie">Celery
+            </label>
+          </div>
         </div>
 
-        <div class="signup-field">
+        <div class="signup-item">
           <button type="submit" id="button" class="btn">Send</button>
-          <button type="reset" id="button" class="btn">Reset</button>
         </div>
       </form>
     </section>
 
-    <section class="accordion-wrapper">
+    <section class="accordion-wrapper" id="accordion-wrapper">
       <!-- Accordion -->
       <h1 class="accordion-title">FAQ</h1>
-      <button class="accordion-question" id="section1">Question1?</button>
+      <button class="accordion-question">Question1?</button>
       <div class="accordion-answer">
         <p>Answer 1</p>
       </div>
 
-      <button class="accordion-question" id="section2">Question2?</button>
+      <button class="accordion-question">Question2?</button>
       <div class="accordion-answer">
         <p>Answer 1</p>
       </div>
 
-      <button class="accordion-question" id="section2">Question3?</button>
+      <button class="accordion-question">Question3?</button>
       <div class="accordion-answer">
         <p>Answer 1 cnlanl knclkankllkj j knclkankllkj knclkankllkj knclkankllkj j j jjjjnbkjbkkjkjjkjkk knclkankllkj
           knclkankllkj jkjjkjkjk</p>
@@ -134,22 +138,22 @@
   </main>
 
   <footer>
-    <div class="copyright">
+    <span class="copyright">
       Created by Nadia Lefebvre
-    </div>
-    <div class="socials">
-      <a target="_blank" title="Linkedin Nadia Lefebvre" href="https://www.linkedin.com/in/nadiainsweden/" <i
-        class="fab fa-linkedin">
-        </i>
-      </a>
-      <a target="_blank" title="GitHub Nadia Lefebvre" href="https://github.com/nadialefebvre" <i class="fab fa-github">
-        </i>
-      </a>
-      <a target="_blank" title="Stack Overflow Nadia Lefebvre"
-        href="https://stackoverflow.com/users/17550223/nadia-lefebvre" <i class="fab fa-stack-overflow">
-        </i>
-      </a>
-    </div>
+    </span>
+    <!-- <div class="socials"> -->
+    <a target="_blank" title="Linkedin Nadia Lefebvre" href="https://www.linkedin.com/in/nadiainsweden/" <i
+      class="fab fa-linkedin">
+      </i>
+    </a>
+    <a target="_blank" title="GitHub Nadia Lefebvre" href="https://github.com/nadialefebvre" <i class="fab fa-github">
+      </i>
+    </a>
+    <a target="_blank" title="Stack Overflow Nadia Lefebvre"
+      href="https://stackoverflow.com/users/17550223/nadia-lefebvre" <i class="fab fa-stack-overflow">
+      </i>
+    </a>
+    <!-- </div> -->
   </footer>
   <script src="./script.js"></script>
 
