@@ -123,7 +123,7 @@ p {
 .main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 1024px;
   margin: 2rem auto;
 }
@@ -132,17 +132,15 @@ p {
 .form {
   width: 25rem;
   padding: 1em;
-  margin: 0.25rem;
+  margin: 0.5rem;
+  min-height: 30rem;
 }
 
 /* form */
 .form {
   background-color: var(--color-secondary);
-}
-
-.input-container {
   display: flex;
-  margin: 0.5rem 0;
+  flex-direction: column;
 }
 .space-divider {
   height: 1rem;
@@ -150,54 +148,59 @@ p {
 .input-container.checkbox {
   margin: 0.15rem 0;
 }
-.input-invalid {
-  display: flex;
-  flex-direction: column;
+.input-container {
+  display: inline-block;
+  margin: 0.25rem 0;
   padding: 0.5em;
+  width: 27ch;
 }
-.input-invalid.checkbox {
-  flex-direction: row;
-}
-
-.input-invalid.invalid {
+.checkbox-container.invalid,
+.input-container.invalid {
   background-color: pink;
 }
 .label {
+  display: block;
   margin-bottom: 0.25rem;
 }
 
 .input {
   padding: 0.25em;
-  max-width: 27ch;
+  width: 100%;
+  margin-bottom: 0.25rem;
 }
-.label.radio {
-  margin-bottom: 0.5rem;
+
+.radio-title {
+  padding-left: 0.5em;
+  margin-bottom: 0.25rem;
 }
-.radio-flexbox {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 .radio-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   margin: 0.25rem;
+  margin-left: 0;
 }
 
-.radio-container .input {
-  margin-right: 0.5rem;
+.radio {
+  margin-right: 0.25rem;
 }
-
-.checkbox .input {
+.checkbox-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+  padding: 0.5em;
+}
+.checkbox {
   margin-right: 0.5rem;
 }
 
 .submit-container {
-  margin-top: 2rem;
-  text-align: center;
+  margin: 1.5rem auto;
 }
 .submit {
-  width: 60%;
-  padding: 0.5em;
+  display: inline-block;
+  padding: 0.5em 2.5em;
 }
 
 /* accordion */
@@ -243,9 +246,5 @@ p {
 @media screen and (max-width: 767px) {
   .branding {
     display: none;
-  }
-  .accordion,
-  .form {
-    width: 100vw;
   }
 }
