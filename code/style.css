@@ -3,13 +3,21 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: 'Mitr', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   background-color: rgb(236, 184, 232);
   /* background: hsl(44.5,82.5%,84.3%); */
 }
 a {
   color: hsl(268.1,74.6%,50.6%);
   text-decoration: none;
+}
+
+footer {
+  text-align: center;
+}
+
+footer a {
+  color: white;
 }
 /* Mobile first development */
 
@@ -40,7 +48,7 @@ main {
 h1{
   font-family: 'Monoton', cursive;
   color: hsl(0,0%,0%);
-  font-size: 12vw;
+  font-size: 15vw;
   margin-top: 0.5vw;
 }
 
@@ -55,7 +63,7 @@ h2 {
 /* FAQ */
 
 h3 {
-  background: #a872e6;
+  background: #e619a8;
   border-bottom: 2px solid hsl(267.9,69.9%,67.5%);
   text-align: center;
   color: hsl(0,0%,100%);
@@ -66,6 +74,10 @@ h3 {
   border: 1px solid hsl(0,0%,39.2%);
 }
 
+.inquiry img {
+  animation: movingPaw 1s infinite;
+  transform-origin: top left;
+  }
 
 .form-wrapper {
   margin: 40px 40px;
@@ -102,6 +114,7 @@ button {
   font-size: 17px;
   text-transform: uppercase;
   font-family: 'Luckiest Guy', cursive;
+  text-shadow: 2px 5px 10px #626464;
   color: hsl(0,53.8%,97.5%);
   background-color: hsl(267.9,69.9%,67.5%);
   border: 2px solid hsl(0,0%,39.2%);
@@ -115,10 +128,9 @@ button {
    justify-content: center;
  }
 
-
- 
  button:hover {
-  cursor: url(black-paw.svg), auto
+  cursor: url(black-paw.svg), auto;
+  box-shadow: 0 0 5px #ae00ff, 0 0 10px #0b82b9, 0 0 20px #ae00ff;
  }
 
 .accordion {
@@ -179,16 +191,23 @@ button {
   display: block;
 }
 
-
+  @keyframes movingPaw {
+    to {
+      transform: skewX(5deg);
+    }
+  }
 
 @media (min-width: 668px) {
   main {
    flex-direction: row-reverse;
+
+
   }
   .accordion {
     width: 40vw;
   }
-  .register-form {
+  .inquiry-form {
     width: 50vw;
   }
+
 }

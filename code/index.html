@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
 
   <header>
       <video width="100%" autoplay loop>
@@ -24,28 +23,26 @@
   </header>
     <!-- Signup form -->
   <main>
-    <section class="register-form">
+    <section class="inquiry-form">
       <div class="inquiry">
-        <img src="pawpointer.svg" alt="register here">
+        <img src="pawpointer.svg" alt="inquiry here">
         <h2>Send an inquiry</h2>
       </div>
       <div class="form-wrapper">
-     <p class="boldedtext">Personal info</p>
+     <p class="boldedtext">Your contact info</p>
        <form action="http://httpbin.org/anything">
         <label for="full-name"></label>
         <input id="full-name" type="text" placeholder="Full name" name="fullname" >
-
       <p>
         <label for="email"></label>
-        <input type="email" id="email" placeholder="Email">
+        <input type="email" id="email" placeholder="Email" name="email">
       </p>
       <p>
         <label for="phone"></label>
-        <input type="text" id="phone" placeholder="Telephone">
+        <input type="text" id="phone" placeholder="Telephone" name="email">
       </p>
-      <p class="boldedtext">When would you like to come?</p>
+      <p class="boldedtext">How long would your cat(s) stay with us?</p>
 
-        <form action="http://httpbin.org/anything">
         <p class="arrival-date">
           <label for="arrival-date">Arrival date
            <input type="date" id="arrival-date" name="arrival-date">
@@ -55,33 +52,23 @@
            <label for="depature-date">Departure date
           <input type="date" id="departure-date" name="depature-date">
         </label>
-        </form>
-  
-        <form action="http://httpbin.org/anything">
           <p class="boldedtext"><label for="roomtype">Room type</label>
           <select name="roomtype" id="roomtype">
           <option value="3sqm"> Normal (2 sqm.) </option>
           <option value="5sqm"> Big (4 sqm.) </option>
         </select></p>
-        </form>
       </p>
-      </form> 
-      <form action="http://httpbin.org/anything">
         <p class="boldedtext"> Will you bring the cat's food and sand?</p>
         <label for="foodandsand">Yes</label>
         <input type="radio" name="foodandsand" id="ownfoodandsand-yes" value="ownfoodandsand-yes">
         <label for="foodandsand" >No </label>
         <input type="radio" name="foodandsand" id="ownfoodandsand-no" value="ownfoodandsand-no">
-        <!-- They share the same name attribute so that only one option can be selected. -->
-    <form action="http://httpbin.org/anything"> 
         <p><input type="checkbox" name="agree-tos" id="agree" required>
         <label for="agree"> I agree to Kajsa Katt's <a href="#">terms of service</a> </label></p>
-    </form>
     <div class="btn"><button type="submit" class="submit"> Submit </button></div> 
+  </form>
   </div>
-
-
-    </section>
+</section>
 
       <!-- Accordion -->
     <section class="accordion">
@@ -108,7 +95,7 @@
             <p>Being away for longer period of time? Send us an email!</p>
         </div>
 
-        <div class="panel-questions" id="panel-questions"> <p> Do you play with the cats?</p></div>
+        <div class="panel-questions" id="panel-questions"> <p>Do you play with them?</p></div>
         <div class="panel-answers" id="answers">
           <p>Yes! That's part of our job. We do what we love and we love what we do.
             We visit the cats 3 times a day, every 4 hours (to check on them, change their sand and fill up their food and water). 
@@ -132,13 +119,12 @@
             10% if you bring both your own food and sand.
           </p>
     </section>
-    
-    <script src="script.js"></script>
   </main>
 
     <footer>
-      <p>Designed and coded by <a href="">Rawisara Saman</a></p>
+      <p>Designed and coded by <a href="https://github.com/rawisou">Rawisara Saman</a></p>
     </footer>
    </div>
+   <script src="script.js"></script>
   </body>
 </html>
