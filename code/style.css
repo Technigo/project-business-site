@@ -1,29 +1,47 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/*Extra small devices, 300px and up + small devices (portrait tablets and large phones, 600px and up)*/
+@media only screen and (min-width: 300px) and (max-width: 768px){
+  nav ul, li, a {
+    margin: 2px;
+    font-size: 12px;
+  }
 
+  .about-section {
+    font-size: 20px;
+  }
+
+  .accordion {
+    margin: 10vh 5vw 10vh 5vw;
+    padding: 50px;
+  }
+
+  .accordion-question div {
+    width: 50vw;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .about-section {
+    font-size: 50px;
+  }
+
+  .accordion {
+    margin: 10vh 30vw 10vh 30vw;
+    padding: 50px;
+  }
+
+  .accordion-question div {
+    width: 20vw;
+  }
+}
+
+/*Generic styles*/
 html, body {
   margin: 0;
   text-transform: uppercase;
   font-family: 'Nova Mono', monospace;
-  /*background-color: #020305;*/  
   background-color: #32323A;
 }
-
-/*Extra small devices, 320px and up*/
-@media only screen and (min-width: 320px) {...} 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {...} 
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
 
 /*Hero image, navbar*/
 .heroimage {
@@ -55,7 +73,6 @@ nav ul, li, a {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  font-size: 50px;
 }
 
 /*Signup form*/
@@ -104,7 +121,6 @@ nav ul, li, a {
   width: 100px;
   border-radius: 15px;
   font-size: 20px;
-  
 }
 
 .submit-button:hover {
@@ -118,22 +134,13 @@ nav ul, li, a {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 10vh 30vw 10vh 30vw;
-  padding: 50px;
   border-radius: 15px;
-
 }
 
 .accordion-question div {
   background-color: #32323A;
-  width: 20vw;
   padding: 10px;
-  /*change this below in mobile version, otherwise not looking good, can add width:100% otherwise in mobile v*/
   text-align: center;
-}
-
-.accordion-question .active {
-  background-color: green;
 }
 
 .accordion-question .question {
