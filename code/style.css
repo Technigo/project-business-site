@@ -3,16 +3,6 @@ in this case it is the div with the answer class next to the div with the active
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp
 )*/
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-}
-
 /*
 .image-header {
   height: 100vh;
@@ -30,6 +20,17 @@ body {
   align-items: center;
 }*/
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Header -> */
 
 .video-header {
   height: 100vh;
@@ -56,17 +57,18 @@ body {
 h1 {
   position: absolute;
   top: 1.5rem;
-  left: 10px;
+  left: 1rem;
   color: #546061;
   font-size: 2.5rem;
-  text-shadow: -2px -2px 5px 5px rgb(32, 31, 31);
 }
 
-/*.title-container {
-  background-color: rgba(221, 213, 203, 0.712);
-  border-radius: 8px;
-  box-shadow: 5px 5px 15px 8px rgba(0,0,0,.1);
-}*/
+h4 {
+  position: absolute;
+  top: 4.5rem;
+  left: 3rem;
+  color: #546061;
+  font-size: 1.5rem;
+}
 
 /* Presentation text */
 
@@ -86,6 +88,7 @@ h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .welcome-text {
@@ -98,6 +101,8 @@ h1 {
 .welcome-text p {
   padding: 1rem;
 }
+
+/* Containers for the form and accordion */
 
 .container-background-color {
   background-color: #e1dcdc;
@@ -114,7 +119,7 @@ h1 {
 
 .form-container {
   /*border: 2px solid rgba(141, 173, 155, 0.678);*/
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
   background-color: whitesmoke;
   display: flex;
@@ -131,9 +136,9 @@ h1 {
   box-shadow: 0 10px 25px rgba(92,99,105,.2);
 }
 
-h2 {
+.form-title {
   color: #546061;
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding-top: 2rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -154,7 +159,7 @@ h2 {
   height: 100%;
   width: 100%;
   border: 2px solid rgba(192, 181, 171, 0.329);
-  border-radius: 7px;
+  border-radius: 10px;
   font-size: 1.5rem;
   padding: 0 1.5rem;
   outline: none;
@@ -177,8 +182,8 @@ h2 {
 }
 
 .input:focus + label {
-  top: -7px;
-  left: 3px;
+  top: -10px;
+  left: 2px;
   z-index: 10;
   font-size: 1rem;
   font-weight: 600;
@@ -197,8 +202,8 @@ h2 {
 }
 
 .input:not(:placeholder-shown)+ label {
-  top: -7px;
-  left: 3px;
+  top: -10px;
+  left: 5px;
   z-index: 10;
   font-size: 1rem;
   font-weight: 600;
@@ -208,24 +213,20 @@ select {
   color: #808d8e;
 }
 
-.hiding-select label::after {
-  display: none;
-}
-
 .submit-button {
   display: block;
   margin-left: auto;
   border: none;
-  background-color: #808d8e;
+  background-color: #808d8ecc;
   color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1.5rem;
   text-align: center;
 }
 
 .submit-button:hover {
-  background-color:rgba(54, 92, 69, 0.678);
+  background-color: rgba(141, 173, 155, 0.678);
   transform: translateY(-2px);
 }
 
@@ -233,14 +234,16 @@ select {
 
 .accordion-container {
   /*border: 2px solid rgba(141, 173, 155, 0.678);*/
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
   background-color: whitesmoke;
   min-height: 50vh;
   overflow-y: scroll;
 }
 
-.accordion-container h2 {
+.accordion-title {
+  color: #546061;
+  font-size: 2.5rem;
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -255,27 +258,33 @@ select {
   position: relative;
   font-size: 1.5rem;
   color: #546061;
-  border-bottom: 2px solid rgba(54, 92, 69, 0.315);
+  border: 2px solid rgba(192, 181, 171, 0.329);
+  border-radius: 10px;
   padding: 5px;
   margin-top: 5px;
   cursor: pointer;
 }
 
-/*
-.question::before {
+.question:hover {
+  background-color: rgba(141, 173, 155, 0.678);
+  transform: translateY(-2px);
+  color: white;
+}
+
+.question::after {
   content: '+';
-  color:rgba(54, 92, 69, 0.678);
   position: absolute;
+  color:rgba(54, 92, 69, 0.678);
   top: 50%;
-  right: -5px;
-  font-size: 1.5rem;
+  right: 10px;
+  font-size: 1rem;
   transform: translateY(-50%);
 }
 
 .question.active .question::before {
   content: '-';
   font-size:
-}*/
+}
 
 .answer {
   color: #546061;
@@ -283,7 +292,7 @@ select {
 }
 
 .answer {
-  display: none;
+display: none;
 }
 
 .active + .answer {
@@ -319,21 +328,27 @@ select {
 
 @media (min-width: 768px) {
   h1 {
-    top: 5rem;
-    left: 3rem;
+    top: 3rem;
+    left: 2.5rem;
     font-size: 4rem;
+  }
+  h4 {
+    top: 8.5rem;
+    left: 3.5rem;
+    font-size: 2rem;
   }
   .main-container {
     padding: 2rem;
   }
-  h2 {
+  .form-title {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
   }
-  .accordion-container h2 {
+  .accordion-title {
     font-size: 2.5rem;
     text-align: center;
+    padding: 0 2rem;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
   }
@@ -341,23 +356,42 @@ select {
 
 @media (min-width: 1024px) {
   h1 {
-    top: 6rem;
-    left: 4rem;
+    top: 4rem;
+    left: 3.5rem;
+    font-size: 4.5rem;
+  }
+  h4 {
+    top: 9.5rem;
+    left: 4.5rem;
+    font-size: 2.5rem;
   }
   .main-container {
     margin: 0 4rem;
     padding: 4rem;
   }
-  h2 {
+  .form-title {
     font-size: 3rem;
     margin-top: 1rem;
     padding: 0 2rem;
   }
-  .accordion-container h2 {
+  .accordion-title {
     font-size: 3rem;
     margin-top: 1rem;
   }
   .accordion-container {
     padding: 0 3rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  h1 {
+    top: 5rem;
+    left: 4rem;
+    font-size: 6.5rem;
+  }
+  h4 {
+    top: 13rem;
+    left: 5rem;
+    font-size: 3.5rem;
   }
 }
