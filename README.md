@@ -1,12 +1,16 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+Created a business landing page that includes a hero image, a signup form, and a FAQ accordion, built with javascript. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## The project
 
-## The problem
+This project are built with html, css (BEM naming convention) and vanilla javascript. The form includes four different input types: text, telephone, checkbox, and submit. Added icons on the accordion title to indicate whether the section 
+is expanded or collapsed. The thing I am most proud of in the project are the form validations which were implemented 
+with css and javascript. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The biggest challenge in this project was to style the checkbox input. If I had more time I would create a custom
+checkbox. 
 
-## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+## Demo
+
+Demo Project: https://nifty-liskov-f8424e.netlify.app/
