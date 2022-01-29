@@ -13,10 +13,6 @@ body {
   background-color: #faf2e7e5;
 }
 
-.active + .answer {
-  /* some styling here */
-}
-
 /* STYLING VIDEO */
 #hero video {
   height: 55vw;
@@ -137,24 +133,36 @@ select {
 }
 
 .accordion {
-  margin-bottom: 50px;
   display: flex;
+  margin-bottom: 50px;
   flex-direction: column;
   border: solid 1px #a36666;
   border-radius: 15px;
   padding: 15px;
 }
 
+.active + .answer {
+  /* some styling here */
+  display: block;
+  border-top: hidden;
+}
+
 .question {
-  padding: 0;
-  margin-bottom: 10px;
   font-family: Lobster, cursive;
+  font-size: 18px;
   color: #a36666;
+  padding: 0;
+  margin-bottom: 18px;
+  cursor: pointer;
+  display: flex;
 }
 
 .answer {
-  padding: 0;
+  display: none;
+  overflow: hidden;
   font-family: Lobster, cursive;
+  padding: 0;
+  background: #8d545427;
 }
 
 footer {
