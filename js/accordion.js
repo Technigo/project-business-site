@@ -32,5 +32,6 @@
     function disableToable(){
         submit.removeAttribute("disabled");
         submit.style.background = "#ffa500";
+        submit.style.cursor = "pointer";
    
     }
