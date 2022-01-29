@@ -94,6 +94,15 @@ article {
 
 }
 
+.questions-box {
+
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  align-self: center;
+
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
@@ -116,7 +125,8 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 
 .answer {
-  padding: 2rem;
+  align-self: center;
+  padding: 2rem 5rem 2rem 5rem;
   color: #fd99d7;
   display: none;
   font-family: 'Kumbh Sans', sans-serif;
@@ -253,10 +263,12 @@ label {
   height: 50px;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+  border-radius: 5rem;
+
 }
 
 textarea {
-
+  border-radius: 0.4rem;
   padding-top: 2rem;
 }
 
@@ -267,6 +279,7 @@ input[type="submit"] {
   font-size: 1.2rem;
 	background-color: #fd99d794;
 	border: none;
+  border-radius: 0.4rem;
 	padding: 1rem;
 	font: inherit;
 	cursor: pointer;
@@ -300,26 +313,173 @@ footer {
   background-color: black;
 }
 
-@media all and (min-width: 570px) and (max-width: 840px) {
+/* MEDIA QUERIES */
+
+    /* MOBILE */
+
+    @media all and (max-width: 569px) {
+
+      #header-section {
+
+        min-height: 350px;
+      }
+
+      video {
+
+        height: 100%;
+
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-top: 5rem;
+        padding-right: 2rem;;
+        padding-left: 2rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+        margin-top: 5rem;
+      }
+
+      h3 {
+
+        margin-top: 2rem;
+      }
+
+      #accordion {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+        padding-left: 0;
+        padding-right: 0;
+
+      }
+
+      article {
+
+        margin: 0;
+      }
+      
+      .questions-box {
+
+        display: flex;
+        flex-direction: column;
+        min-Width: 90%;
+        align-self: center;
+      }
+
+      .question {
+
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      .answer {
+
+        padding: 0;
+      }
+
+      #form-section {
+        font-size: 1rem;
+        padding: 0;
+      }
+
+      .form-box {
+
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        width: 95%;
+        gap: 1rem;
+      }
+
+      .signup {
+
+        margin-top: 1rem;
+      }
+        
+      .right {
+
+        flex: 1;
+        max-width: 100%;
+        min-width: 90%;
+      }
+
+      .left {
+        flex: 1;
+        max-width: 100%;
+
+      }
+
+      .right input {
+        margin-top: 2;
+        margin-bottom: 1rem;
+
+      }
+
+      .left input {
+        width: 100%;
+        height: 50px;
+        margin-top: 1;
+        margin-bottom: 1;
+      }
+
+      textarea {
+        width: 100%;
+        padding-top: 2rem;
+      }
+
+      input[type="submit"] {
+        padding: 0;
+        height: 70px;
+      }
+
+    }
+
+        /* SMALL FORMAT */
+
+        @media all and (min-width: 570px) and (max-width: 1240px) {
 
 
-  h1 {
+          h1 {
 
-    font-size: 2.5rem;
-    margin-top: 7rem;
-    padding-right: 2rem;;
-    padding-left: 2rem;
-  }
+            font-size: 3.3rem;
+            margin-top: 8rem;
+            padding-right: 2rem;;
+            padding-left: 2rem;
+          }
 
-  h2 {
+          h2 {
 
-    font-size: 1rem;
-    margin-top: 8rem;
-  }
+            font-size: 1.5rem;
+            margin-top: 10rem;
+          }
 
-  .form-box {
 
-    width: 100%;
-  }
-  
-}
+          .questions-box {
+
+            display: flex;
+            flex-direction: column;
+            min-Width: 90%;
+            align-self: center;
+          }
+    
+          .question {
+    
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+          }
+    
+          .answer {
+    
+            padding: 0;
+          }
+
+          .form-box {
+
+            width: 100%;
+          }
+
+
+          
+        }
