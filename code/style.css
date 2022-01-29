@@ -127,6 +127,16 @@ nav ul, li, a {
   background-color: grey;
 }
 
+.signup-form input:valid {
+  border: 1px solid green;
+}
+
+
+.signup-form input:focus {
+  background-color: lightgrey;
+}
+
+
 
 /*Accordion FAQ*/
 .accordion {
@@ -146,6 +156,19 @@ nav ul, li, a {
 .accordion-question .question {
   background-color: white;
   border-bottom: 1px solid black;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion-icon {
+  background-image: url("../expand-icon.png");
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
 }
 
 
@@ -156,11 +179,22 @@ nav ul, li, a {
   color: white;
 }
 
-/*2. When toggle in JS to add .active as class, change child element immediately following parent class .active*/
-/*This is adjacent sibling combinator/adjacent selector syntax*/
+/*2. When JS file toggles .active class to exist in the html, this .answer class styles will also change with it*/
+/*This is adjacent sibling combinator selectors, selects the next sibling of the same parent element*/
 .active + .answer {
   display: block;
   overflow: hidden;
+}
+
+/*Changes icon when expanding answer/toggle*/
+/*This is Child combinator selector, selects direct children of elements matched by the first class*/
+.active > .accordion-icon {
+  background-image: url("../minimize-icon.png");
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
 }
 
 /*Footer*/
