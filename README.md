@@ -6,5 +6,5 @@ I have probably struggled the most with the layout this week, epecially regardin
 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://wizardly-montalcini-def29e.netlify.app/
 
