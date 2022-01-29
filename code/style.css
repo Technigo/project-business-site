@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   background-image: url('/img/skiingpicture.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,8 +14,8 @@ body {
 }
 
 .video-header {
-  height: 65vh;
-  width: 98.8vw;
+  height: 60vh;
+  width: 100vw;
   position: relative;
   text-align: center;
   display: flex;
@@ -82,10 +82,11 @@ form {
   background: #c1c1c1;
   border: solid black 3px;
   border-radius: 0.5rem;
-  padding: 2rem;
-  width: 70%;
+  padding: 1.5rem;
+  width: 100%;
   max-width: 600px;
   margin: 3rem auto;
+  text-align: center;
 }
 
 form button {
@@ -99,12 +100,19 @@ form button {
   cursor: pointer;
 }
 
+form h1 {
+  font-weight: normal;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+
 .accordion {
   display: flex;
   flex-direction: column;
   background: #c1c1c1;
   border: black solid 3px;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   box-sizing: border-box;
   padding: 10px;
   width: 100%;
@@ -120,6 +128,7 @@ form button {
   width: 100%;
   justify-content: center;
   font-weight: normal;
+  padding: 1rem;
 }
 
 .accordion .contentBx {
@@ -132,9 +141,7 @@ form button {
 }
 
 .label {
-  padding-top: 3rem;
-  padding: bottom 3rem;
-  padding-right: 3rem;
+  padding: 2rem;
   text-align: left;
   outline: none;
   transition: 0.4s;
@@ -164,11 +171,18 @@ form button {
 .accordion .contentBx.active .content {
   height: 110px;
   padding: 10px;
-  background-color: #ed410a;
+  background-color: #fff;
   font-size: 14px;
   text-align: center;
 }
 
+.active, .label:hover {
+  background-color: #ed410a;
+}
+
+.footer {
+  text-align: center;
+}
 
 @media screen and (min-width: 668px) {
    .wrapper {
