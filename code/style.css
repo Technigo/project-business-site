@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Raleway:wght@100&family=Roboto:wght@100&display=swap');
+
 * {
-  box-sizing: border-box; text-rendering:optimizeLegibility;font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box; 
+  text-rendering:optimizeLegibility;
+  font-family:'Oswald', sans-serif;;
 }
-body{margin:0}
+
+body{
+  margin:0
+}
+
 header{
   width: 100%;
   height: 60vh;
@@ -22,8 +30,7 @@ header{
   width:100%; 
   height:100%;
   object-fit:cover;
-  z-index:0; 
-  
+  z-index:0;   
 }
 
 h1{
@@ -38,9 +45,7 @@ h1{
    top:30%;
    margin:0;
    max-width: 100%;
-    }
-
-
+}
 
 .maincontent{
   display:flex; 
@@ -52,60 +57,100 @@ h1{
 
 .signup {
   width:30%; 
-  background-color: rgb(230, 213, 230); 
+  background-color: rgb(235, 220, 235); 
   border-radius: 2%; 
   margin: 30px;
+  padding:20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
 .signup:hover{
   background-color:thistle;
 }
 
-form{display:flex; flex-direction: column; padding:0 30px 30px 30px; align-items:flex-start;}
+form{
+  display:flex; 
+  flex-direction: column; 
+  padding:0 30px 30px 30px; 
+  align-items:flex-start;
+}
 
 
-.textfields{display:flex; flex-direction:column; width:100%;}
-#name, #email, #password {background-color: whitesmoke; width:100%; border-radius: 10px; border:0; padding:10px; margin:10px; box-shadow: 2px 2px 15px 4px thistle;}
+.textfields{
+  display:flex; 
+  flex-direction:
+  column; width:100%;
+}
 
-.checkbox{display:flex; flex-direction:column;}
+#name, #email {
+  background-color: whitesmoke; 
+  width:100%; 
+  border-radius: 10px; 
+  border:0; 
+  padding:10px; 
+  margin:10px; 
+  box-shadow: 2px 2px 15px 4px thistle;
+}
 
-.button{align-self: center;}
+.checkbox{
+  display:flex; 
+  flex-direction:column;
+}
+
+
+
+.button{
+  align-self: center;
+}
 
 button {
   display: inline-block;
   padding: 15px 25px;
-  font-size: 24px;
+  font-size: 15px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: rgb(121, 45, 121);
+  background-color: rgb(148, 97, 148);
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 
-button:hover {background-color: lightpink}
+button:hover {
+  background-color: lightyellow; 
+  color:rgb(121, 45, 121);
+}
 
 button:active {
-  background-color: lightpink;
+  background-color: rgb(206, 138, 149);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-label{padding:5px;}
-.terms{padding:20px;}
+label{
+  padding:5px;
+}
+
+.terms{
+  padding:20px;
+}
 
 h2{
-  text-align: center;
+  text-align: center; margin:5px;
 }
 
 .accordion{
-  width: 30%; 
+  width: 30%;
+  padding:20px;
   border: 2px solid thistle;
   border-radius: 2%; 
   margin: 30px; 
-  background-color: rgb(230, 213, 230);}
+  background-color: rgb(235, 220, 235);}
 
 .accordion:hover{
   background-color:thistle;
@@ -114,27 +159,86 @@ h2{
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-.answer{display: none; background-color:plum;}
-
-.active + .answer {
-  display:block;
-  ;
+.answer{
+  /*display: none;*/
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  background-color: rgb(235, 220, 235); 
+  padding: 10px;
 }
 
-.question{background-color: whitesmoke; box-shadow: 2px 2px 15px 4px thistle; padding: 20px; margin-bottom: 20px; cursor:pointer;}
+
+.active + .answer {
+  /*display:block;*/
+  opacity: 1;
+  height: 80px; 
+  margin:0;
+
+}
+
+
+.question{
+  background-color: whitesmoke; 
+  box-shadow: 2px 2px 15px 4px thistle; 
+  padding: 20px; margin-bottom:0; 
+  cursor:pointer;
+}
+
+.question:after {
+  content: '\25C0'; /* Unicode character for "plus" sign (+) */
+  font-size: 15px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+.active::after{ content: "\25BC";  
+}
+.answer:nth-child(odd) {
+  background: red;
+}
 
 @media only screen and (max-width: 600px) {
-  h1{font-size: 5vh;}
+  
+   h1
+   {font-size: 7vh;
+  }
+
   .maincontent{
     display:flex;
     flex-direction: column;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif; 
-    font-size: 10px; 
+    font-size: 14px; 
   }
 
-  .signup {width:80%}
-  .accordion{width:80%}
-
+  .signup {
+    width:80%
+  }
+  
+  .accordion{
+    width:80%
+  }
+  
+  h2{
+    font-size: 20px;
+  }
 }
 
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px){
+
+.signup{
+  width:40%
+}
+
+.accordion{
+  width:40%
+}
+
+h1 {
+  font-size: 10vh;
+}
+
+
+}
