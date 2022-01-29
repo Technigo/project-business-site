@@ -1,48 +1,57 @@
 * {
   margin: 0;
   padding: 0;
+  /* box-sizing: border-box;
+  width: 100%; */
   font-family: 'Poppins', sans-serif;
 }
+
+/* main {
+  display: block;
+} */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* ----------- HEADER ----------- */
 
 header {
   display: flex;
   justify-content: center;
-  background-image: url(./images/bikewheel.jpeg);
+  background-image: url(./images/plate.jpeg);
   background-size: cover;
   background-position: center;
   width: 100%;
   object-fit: cover;
-  /* height: 40vh; */
-  min-height: 40vh;
+  min-height: 50vh;
 }
 
 .header-title {
-  color: white;
+  color: rgb(0,51,51, 0.75);
+  border-top: 10px rgb(0,51,51, 0.75) solid;
+  border-bottom: 10px rgb(0,51,51, 0.75) solid;
+  padding: 1rem 0rem;
   font-size: 70px;
   align-self: center;
-  text-underline-offset: 1rem;
-  text-decoration: overline underline;
-  text-decoration-color: white;
+  text-transform: uppercase;
 }
 
-/* main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  column-gap: 1rem;
-  padding: 1rem;
-} */
+/* ----------- SIGN-UP SECTION ----------- */
 
 form {
-  padding: 1rem 2rem;
+  padding: 1rem;
   min-width: 250px;
   max-width: 500px;
   display: grid;
   justify-content: center;
   gap: 1rem;
   margin: 2rem;
-  background-color: tomato;
-  border: 5px tomato solid;
-  border-radius: 10px;
+  background-color: rgb(0,51,51);
+  border: 5px solid rgb(0,51,51);
 }
 
 .form-header {
@@ -66,29 +75,29 @@ form button {
   justify-self: center;
 }
 
+/* ----------- ACCORDION/FAQ SECTION ----------- */
+
 .accordion {
-  border: 5px solid tomato;
-  border-radius: 10px;  
+  padding: 1rem;
+  border: 5px solid rgb(0,51,51);
   min-width: 250px;
   max-width: 500px;
-  display: grid;
-  /* gap: 1rem; */
-  padding: 0rem 2rem 1rem 2rem;
+  display: block;
   margin: 2rem;
 }
 
 .accordion-header {
   color: white;
-  background-color: tomato;
-  margin: 0rem -2rem;
-  /* padding: 0rem;; */
+  background-color: rgb(0,51,51);
   display: flex;
   justify-content: center;
+  padding: 1rem;
 }
 
 .question {
   font-weight: bolder;
   padding-top: 1rem;
+  padding-left: 1rem;
 }
 
 .answer {
@@ -96,16 +105,21 @@ form button {
 }
 
 .answer p {
-  background-color: rgb(255, 99, 71, 0.5);
-  border-radius: 5px;
+  background-color: rgb(0,51,51,0.25);
   padding: 1rem;
-  margin: 0;
+  margin: 0rem 1rem;
   font-weight: lighter;
 }
 
 .open + .answer {
+  height: 6em;
+  opacity: 1;
+  border-top: none;
+  /* transition: height 500ms ease-out; */
   display: inline;
 }
+
+/* ----------- FOOTER -----------*/
 
 footer {
   display: flex;
@@ -127,4 +141,32 @@ footer {
 
 .footer-linkedin:hover{
   text-decoration: underline;
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+
+/* Desktop elements that should behave differently */
+@media (min-width: 992px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+  }
+}
+
+/* Tablet elements that should behave differently */
+@media (min-width: 768px) and (max-width: 991px){
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    padding: 1rem;
+  }
+}
+
+/* Mobile elements that should behave differently */
+@media (max-width: 767px){
+  .header-title {
+    font-size: 60px;
+  }
 }
