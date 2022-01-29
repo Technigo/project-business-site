@@ -40,7 +40,7 @@ header {
   border-top: 10px rgb(0,51,51, 0.75) solid;
   border-bottom: 10px rgb(0,51,51, 0.75) solid;
   padding: 1rem 0rem;
-  font-size: 70px;
+  font-size: 50px;
   text-align: center;
   align-self: center;
   text-transform: uppercase;
@@ -67,6 +67,29 @@ form {
 
 label {
   color: white;
+}
+
+input {
+  margin: 0.25rem 0rem;
+  padding: 0;
+}
+
+input[type="text"] {
+  width: 95%;
+  padding: 0.5rem 0.25rem;
+  /* margin-bottom: 0.5rem; */
+}
+
+input[type="email"] {
+  width: 95%;
+  padding: 0.5rem 0.25rem;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-around;
+  font-size: 85%;
+  padding: 0.5rem;
 }
 
 form button {
@@ -157,21 +180,18 @@ footer {
     grid-template-columns: 1fr 1fr;
     /* padding: 1rem; */
   }
+  .header-title {
+    font-size: 70px;
+  }
 }
 
 /* Tablet elements that should behave differently */
 @media (min-width: 768px) and (max-width: 991px){
-  .container {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    /* padding: 1rem; */
+  .header-title {
+    font-size: 70px;
   }
 }
 
 /* Mobile elements that should behave differently */
-@media (max-width: 767px){
-  .header-title {
-    font-size: 50px;
-  }
-}
+/* @media (max-width: 767px){
+} */

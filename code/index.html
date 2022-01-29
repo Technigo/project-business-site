@@ -19,27 +19,29 @@
         <!-- Signup form -->
         <form id="form" action="https://httpbin.org/anything" method="post">
           <h1 class="form-header">GET STARTED</h1>
-          <label>Name
-            <input type="text" for="name" required> *
+          <label for="full-name">
+            <input type="text" name="full-name" placeholder="Full name" required> *
           </label>
-          <label>Email
-            <input type="email" placeholder="example@domain.com" size="30" required> *
+          <label for="email">
+            <input type="email" name="email" placeholder="example@domain.com" required> *
           </label>
-          <label>Car-free
-            <input type="radio" name="ownership" checked>
-          </label>
-          <label>Car-owner
-            <input type="radio" name="ownership">
-          </label>
+          <div class="radio-group">
+            <label>Willing to host
+              <input type="radio" name="host" checked>
+            </label>
+            <label>Just here to eat
+              <input type="radio" name="host">
+            </label>
+          </div>
           <label>
-            <input type="checkbox">
-            Sign me up for news
+            <input type="checkbox" name="news">
+            Sign me up for extra bites
           </label>
-          <label>
-            <input type="checkbox" required>
-            I agree to the terms *
+          <label name="terms">
+            <input type="checkbox" name="terms" required>
+            I agree to the terms and conditions*
           </label>
-            <button type="submit">SIGN UP</button>
+            <button type="submit" name="signup">SIGN UP</button>
         </form>
 
         <!-- Accordion -->
@@ -53,11 +55,11 @@
           <div class="answer">
             <p>Lorem ipsum...</p>
           </div>
-          <div class="question" id="section1">What if I change my mind?</div>
+          <div class="question" id="section1">I suck at cooking, can I still join?</div>
           <div class="answer">
             <p>Lorem ipsum...</p>
           </div>
-          <div class="question" id="section2">Neat! Tell me more</div>
+          <div class="question" id="section2">What about drinks?</div>
           <div class="answer">
             <p>Lorem ipsum...</p>
           </div>
