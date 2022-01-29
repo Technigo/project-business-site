@@ -40,7 +40,6 @@ myButton.addEventListener('click', function () {
 });
 
 
-
 // To toggle in adult mode
 
 const adult = document.getElementById('buttonAdult');
@@ -60,10 +59,23 @@ adult.addEventListener('click', function () {
 document.addEventListener('DOMContentLoaded', displayChild);
 
 function displayChild() {
-  document.getElementById('accordion-wrapper').style.display = 'block';
   document.getElementById('name').innerText = 'Your child\'s name';
+  document.getElementById('instruction').innerText = 'your child';
+  document.getElementById('subtitle').innerText = 'vegetables';
+  document.getElementById('selectChild').style.display = 'block';
+  document.getElementById('selectAdult').style.display = 'none';
+  document.getElementById('check').innerText = 'vegetables that your child like';
+  document.getElementById('check1').innerText = 'Leafy greens';
+  document.getElementById('check2').innerText = 'Root';
+  document.getElementById('check3').innerText = 'Squashes';
+  document.getElementById('check4').innerText = 'Beans';
+  document.getElementById('check5').innerText = 'Fruits';
+  document.getElementById('check6').innerText = 'Cruciferous';
+
+  document.getElementById('register').innerText = 'my child';
+
   document.getElementById('buttonAdult').innerText = 'Interested in our 18+ services?';
-  const greenMedium = document.querySelectorAll('.signup-item .btn, .active, .accordion-answer, footer .footer1, footer .footer1 .btn2, #myBtn');
+  const greenMedium = document.querySelectorAll('.signup-item .btn, footer .footer1, footer .footer1 .btn2, #myBtn');
   for (let i = 0; i < greenMedium.length; i++) {
     greenMedium[i].style.backgroundColor = "#87A93A";
   }
@@ -72,18 +84,59 @@ function displayChild() {
     greenDark[i].style.color = "#3d4c1a";
   }
 
+  const buttonHover = document.querySelectorAll('#buttonSubmit, #buttonAdult, #myBtn');
+
+  for (let i = 0; i < buttonHover.length; i++) {
+    buttonHover[i].addEventListener('mouseover', function (eventB) {
+      eventB.target.style.backgroundColor = "#3d4c1a";
+    }, false);
+  }
+
+  for (let i = 0; i < buttonHover.length; i++) {
+    buttonHover[i].addEventListener('mouseout', function (eventB) {
+      eventB.target.style.backgroundColor = "#87A93A";
+    }, false);
+  }
+
 }
 
 function displayAdult() {
-  document.getElementById('accordion-wrapper').style.display = 'none';
   document.getElementById('name').innerText = 'Your name';
-  document.getElementById('buttonAdult').innerText = 'Back';
-  const redMedium = document.querySelectorAll('.signup-item .btn, .active, .accordion-answer, footer .footer1, footer .footer1 .btn2, #myBtn');
+  document.getElementById('instruction').innerText = 'you';
+  document.getElementById('subtitle').innerText = 'fruits';
+  document.getElementById('selectChild').style.display = 'none';
+  document.getElementById('selectAdult').style.display = 'block';
+  document.getElementById('check').innerText = 'fruits that interest you';
+  document.getElementById('check1').innerText = 'Banana';
+  document.getElementById('check2').innerText = 'Cherry';
+  document.getElementById('check3').innerText = 'Strawberry';
+  document.getElementById('check4').innerText = 'Pomegranate';
+  document.getElementById('check5').innerText = 'Peach';
+  document.getElementById('check6').innerText = 'Papaya';
+
+  document.getElementById('register').innerText = 'me';
+
+  document.getElementById('buttonAdult').innerText = 'Back to our child services';
+  const redMedium = document.querySelectorAll('.signup-item .btn, footer .footer1, footer .footer1 .btn2, #myBtn');
   for (let i = 0; i < redMedium.length; i++) {
     redMedium[i].style.backgroundColor = "#EA5E5A";
   }
   const darkRed = document.querySelectorAll('html');
   for (let i = 0; i < darkRed.length; i++) {
     darkRed[i].style.color = "#71120f";
+  }
+
+  const buttonHover = document.querySelectorAll('#buttonSubmit, #buttonAdult, #myBtn');
+
+  for (let i = 0; i < buttonHover.length; i++) {
+    buttonHover[i].addEventListener('mouseover', function (eventB) {
+      eventB.target.style.backgroundColor = "#71120f";
+    }, false);
+  }
+
+  for (let i = 0; i < buttonHover.length; i++) {
+    buttonHover[i].addEventListener('mouseout', function (eventB) {
+      eventB.target.style.backgroundColor = "#EA5E5A";
+    }, false);
   }
 }

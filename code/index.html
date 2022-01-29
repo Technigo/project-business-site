@@ -32,7 +32,7 @@
     </nav>
     <div class="hero-title">
       <h1>Find happiness</h1>
-      <h2>with vegetables</h2>
+      <h2>through <span id="subtitle"></span></h2>
     </div>
   </header>
 
@@ -57,7 +57,7 @@
             pattern="07[0-9]-[0-9]{3} [0-9]{2} [0-9]{2}" required>
         </div>
 
-        <p class="signup-item signup-instruction">Please answer the following questions so we may send you information tailored to your child in the best way.
+        <p class="signup-item signup-instruction">Please answer the following questions so we may send you information tailored to <span id="instruction"></span> in the best way.
         </p>
 
         <div class="signup-item">How do you prefer to be contacted?
@@ -75,47 +75,59 @@
           </div>
         </div>
 
-        <div class="signup-item">
+        <div id="selectChild" class="signup-item">
           <label for="age">Select the age range of your child:</label>
           <select class="input-field age" name="age">
-            <option value="age1">0-2 years old</option>
-            <option value="age2">3-5 years old</option>
-            <option value="age3">6-9 years old</option>
-            <option value="age4">10-13 years old</option>
-            <option value="age4">14-17 years old</option>
-            <option value="age5">I don't want to answer</option>
+            <option value="option1">0-2 years old</option>
+            <option value="option2">3-5 years old</option>
+            <option value="option3">6-9 years old</option>
+            <option value="option4">10-13 years old</option>
+            <option value="option5">14-17 years old</option>
+            <option value="option6">I don't want to answer</option>
           </select>
         </div>
 
-        <div class="signup-item">Check all types of vegetables that your child like:
+        <div id="selectAdult" class="signup-item">
+          <label for="age">Select your age range:</label>
+          <select class="input-field age" name="age">
+            <option value="option1">18-30 years old</option>
+            <option value="option2">31-40 years old</option>
+            <option value="option3">41-50 years old</option>
+            <option value="option4">51-60 years old</option>
+            <option value="option5">61+ years old</option>
+            <option value="option6">I don't want to answer</option>
+          </select>
+        </div>
+
+        <div class="signup-item">Check all types of <span id="check"></span>:
           <div class="input-field">
             <div>
               <label>
-                <input type="checkbox" name="veggie">Leafy greens
+                <input type="checkbox" name="veggie"><span id="check1"></span>
               </label>
               <label>
-                <input type="checkbox" name="veggie">Root
+                <input type="checkbox" name="veggie"><span id="check2"></span>
               </label>
               <label>
-                <input type="checkbox" name="veggie">Squashes
+                <input type="checkbox" name="veggie"><span id="check3"></span>
               </label>  
             </div>
             <div>
               <label>
-                <input type="checkbox" name="veggie">Beans
+                <input type="checkbox" name="veggie"><span id="check4"></span>
               </label>
               <label>
-                <input type="checkbox" name="veggie">Fruits
+                <input type="checkbox" name="veggie"><span id="check5"></span>
               </label>
               <label>
-                <input type="checkbox" name="veggie">Cruciferous
+                <input type="checkbox" name="veggie"><span id="check6"></span>
               </label>  
             </div>
           </div>
         </div>
 
         <div class="signup-item">
-          <button type="submit" id="button" class="btn">Please register my child!</button>
+          <button type="submit" id="buttonSubmit" class="btn">Please register <span id="register"></span>!</button>
         </div>
       </form>
     </section>
