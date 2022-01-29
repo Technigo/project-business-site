@@ -24,73 +24,12 @@
 
   <!--Grid with info, signup form and images-->
 <main>
-
-
- <section class="info-box">
-    <h3>Java Whiskers is a café where at most 9 cats live. 
-      It is for everyone that wants to spend a moment in their company 
-      and with the opportunity to adopt a cat, 
-      or just enjoy the cozy and relaxing environment. 
-    </h3>
- </section>
-
-
-  <!-- Signup form -->
-  <section>
-  <div class="signup form"></div>
-  <h2>Sign up</h2>
-  <form action="http://httpbin.org/anything" method="post">
-    <label for="name">Name</label>
-    <input id="name" type="text" required/>
-    
-    <label for="last-name">Last name</label>
-    <input id="lastName" type="text" required/>
-
-    <label for="email">Email</label>
-    <input id="email" type="email" required/>
-
-    <label for="month">Date</label>
-    <input id="month" type="date" required/>
-
-    <label for="time">Select a time frame</label>
-     <select name="time" id="time" required>      <!-- <how to make select/option required -->
-      <option value="10:00-11:30">10:00-11:30</option>
-      <option value="12:00-13:30">12:00-13:30</option>
-      <option value="14:00-15:30">14:00-15:30</option>
-      <option value="16:00-17:30">16:00-17:30</option>
-    </select>
-
-    <label for="Number of people">How many in the company</label>
-    <select name="Number of people" id="numberOfPeople">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-
-      <p>You will get a confirmation by email when we have seen
-        and approved your visit.
-      </p>
-    </select>
-
-    <button class="sub-button" type="submit" value="Submit">Submit
-    </button>
-  </section>
-
-
-  <div>
-    <img class="cat-img 1" src="/code/images/yerlin-matu-GtwiBmtJvaU-unsplash.jpg"  alt="cat-img">
-    <!-- <img class="cat-img 2" src="/code/images/amber-kipp-75715CVEJhI-unsplash.jpg" alt="cat-img"> -->
-    <img class="cat-img 3" src="/code/images/pexels-cats-coming-1787414.jpg" alt="cat-img">
-  </div>
-
-  <div class="info-box">
-    <h3>“Time spent with cats is never wasted.” – Sigmund Freud</h3>
-  </div>
+ 
   
 
-
  <!-- Accordion -->
-<section class="accordion-container">
+ <section>
+<div class="accordion-container">
   <div>
     <img class="cat-img4" src="/code/images/pexels-anna-shvets-3846049.jpg" alt="cat-img">
    </div> 
@@ -99,10 +38,15 @@
  <div class="accordion">
   <h2 class="faq">FAQ</h2>
 
-  <div class="question" id="section1">Do you serve fika at Java Whiskers?</div>
+  <div class="question" id="section1">What is Java Whiskers?</div>
   <div class="answer">
-    <p> Yes, this is lika a traditional café where you can take a fika
-      plus speend time with cats! 
+    <p> Java Whiskers is a café where at most 9 cats live. 
+      It is for everyone that wants to spend a moment in their company 
+      and with the opportunity to adopt a cat, 
+      or just enjoy the cozy and relaxing environment. 
+      <br>
+      <br>
+      And yes, you can take a fika!
     </p>
   </div>
 
@@ -121,17 +65,73 @@
   </div>
 
   <div class="question" id="section4">Are the cats always avalible?</div>
-  <div class="answer">
+   <div class="answer">
     <p> The cats can at any time retreat to their room where they have resting places, 
       food and everything else they need. Their contact with our guests is therefore completely voluntary.
     </p>
+  </div> 
+ </div>
+
+  <!-- Signup form -->
+    <div class="signup-container">
+    <div class="signup-form"></div>
+    <h2>Sign up</h2>
+    <form class="form-list-item" action="http://httpbin.org/anything" method="post">
+     <label for="first-name" class="form-label">First Name</label>
+     <input id="first-name" type="text" required placeholder="First Name" class="form-input"
+     />
+     
+     <label for="last-name" class="form-label">Last name</label>
+     <input id="lastName" type="text" required placeholder="Last Name" class="form-input"/>
+ 
+     <label for="email" class="form-label">Email Adress</label>
+     <input id="email" type="email" required placeholder="Email Adress" class="form-input"/>
+ 
+     <label for="month" class="form-label">Date</label>
+     <input id="month" type="date" required placeholder="Date" class="form-input"/>
+ 
+     <label for="time" class="form-label">Select a time frame</label>
+      <select name="time" id="time" required class="form-input">      <!-- <how to make select/option required -->
+       <option value="10:00-11:30">10:00-11:30</option>
+       <option value="12:00-13:30">12:00-13:30</option>
+       <option value="14:00-15:30">14:00-15:30</option>
+       <option value="16:00-17:30">16:00-17:30</option>
+     </select>
+ 
+     <label for="Number of people" class="form-label">How many in the company</label>
+     <select name="Number of people" id="numberOfPeople" class="form-input">
+       <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+       <option value="4">4</option>
+     </select>
+ 
+     <p class="form-label">You will get a confirmation by email when we have seen
+       and approved your visit.
+     </p>
+ 
+      <footer class="form-footer">
+        <button class="sub-button" type="submit" value="Submit">Submit
+        </button>
+     </footer>
+   </div>
+
+   <div>
+    <img class="cat-img 1" src="/code/images/yerlin-matu-GtwiBmtJvaU-unsplash.jpg"  alt="cat-img">
+    <!-- <img class="cat-img 2" src="/code/images/amber-kipp-75715CVEJhI-unsplash.jpg" alt="cat-img"> -->
+    <img class="cat-img 3" src="/code/images/pexels-cats-coming-1787414.jpg" alt="cat-img">
   </div>
- </div> 
-</section> 
+</section>
+
+
+<div class="info-box">
+  <h3>“Time spent with cats is never wasted.” – Sigmund Freud</h3>
+</div>
+
 </main>
 
 
-<footer>
+<footer class="main-footer">
   <img class="cat-img5" src="/code/images/susan-q-yin-iLl5aKIkGic-unsplash.jpg" alt="cat-img">
 </footer>
 

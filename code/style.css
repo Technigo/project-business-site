@@ -26,6 +26,7 @@ video {
   object-fit: cover;
   height: 100%;
   width: 100%;
+  border-radius: 4px;
 }
 
 
@@ -45,6 +46,7 @@ h2 {
 h3 {
   color: white;
   padding: 10px;
+  font-size: 00.90rem;
 }
 
 
@@ -54,27 +56,27 @@ h3 {
 
 main {
   display: grid;
-  gap: 10px; /*change later*/
+  justify-items: center;
+  gap: 10px; 
+}
+
+section {
+  margin: 1rem;
+  width: 100vw;
 }
 
 
 .info-box {
   background:#001356;
   margin: 10px;
-  height: 120px;
-}
-
-
-.cat-img {
-  width: 300px;
-  margin: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgb(0 0 0 / 30%);
 }
 
 
 /*Accordion*/
 .accordion-container {
   margin: 10px;
-  padding: 15px;
   display: flex;
   justify-content: center;
   background: center;
@@ -85,8 +87,8 @@ main {
 .accordion {
   background: #D3DFE3;
   height: 480px;
- min-width: 505px;
- border: #001356;
+  min-width: 450px;
+  border: #001356;
 }
 
 
@@ -98,7 +100,7 @@ main {
 
 
 .answer {
-  background: #001356;
+  background: white;
   color: #D3DFE3;
   padding: 1em;
   display: none;
@@ -107,7 +109,8 @@ main {
 
 .answer p {
   padding: 1em 1em 1em;
-  max-width: 30ch;
+  max-width: 23ch;
+  color: black;
 }
 
 
@@ -116,7 +119,80 @@ main {
 }
 
 
-footer {
+/*Sign up form*/
+.signup-container {
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  width: 35vw;
+  background: #D3DFE3;
+}
+
+
+.form-list-item {
+  position: relative;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.form-input {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.90rem 1rem;
+  font-family: Georgia, 'Times New Roman', Times, serif; /*tillfälling*/
+}
+
+.form-label {
+  font-size: .75rem;
+  padding: 5px;
+  color: white;
+}
+
+
+.form-footer {
+  border-top: 1px dashed #ddd;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sub-button {
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all .3s;
+  box-shadow: 6px 6px 12px #c5c5c5,
+              -6px -6px 12px #ffffff;
+ }
+ 
+ .sub-button:hover {
+  border: 1px solid white;
+ }
+ 
+ .sub-button:active {
+  box-shadow: 4px 4px 12px #c5c5c5,
+              -4px -4px 12px #ffffff;
+ }
+
+
+.cat-img {
+  width: 300px;
+  margin: 2rem;
+  border-radius: 4px;
+}
+
+
+
+
+
+.main-footer {
   margin: 100px 0 0 0;
   display: flex;
   justify-content: center;
