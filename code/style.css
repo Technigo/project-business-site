@@ -1,7 +1,257 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.active + .answer {
-  /* some styling here */
+body{
+  font-family: "Space Mono", monospace;
+}
+
+header{
+  display: flex;
+  background-color: aqua;
+  align-items: center;
+}
+
+/* navbar hidden for mobiles */
+nav{
+  display: none;
+}
+/* navbar visible for tablets and desktops */
+@media(min-width:768px){
+  nav{
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+/* menu icon to the right side of the page */
+.menuIcon{
+  margin-left: auto;
+}
+/* menu icon hidden for tablets and desktops */
+@media(min-width:768px){
+  .menuIcon{
+    display: none;
+  }
+}
+
+a{
+  padding: 1rem;
+  text-decoration-line: none;
+  color: white;
+}
+
+.hero{
+  width: 100vw;
+  height: 95vh;
+  background:url('./images/hero.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* hero section height for tablets and desktops */
+@media(min-width:768px){
+  .hero{
+    height: 75vh;
+  }
+}
+
+h1{
+  color: white;
+}
+
+.glampingText{
+  text-align: center;
+  width: 100vw;
+  height: auto;
+  margin: 2rem 0;
+}
+
+.menuSection{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.menuImage{
+  width:100%;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  opacity: 0.8; 
+}
+
+@media(min-width:768px) and (max-width:991px){
+  .menuSection{
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .menuImage{
+    width:45%;
+  }
+}
+
+@media(min-width:992px){
+  .menuSection{
+    width: 100vw -3rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .menuImage{
+    width:20%;
+  }
+}
+
+
+input, select{
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.08);
+  border:0;
+  border-radius: 5px;
+  margin-left: 5px;
+  outline:none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+  
+input:hover, select:hover {
+  box-shadow: 0 0 15px 4px #65b0c2;
+  transition: 1s;
+}
+
+
+
+/* styles for section of form and accordion */
+.formAndAccordion{
+  display: flex;
+  flex-direction: column;
+}
+@media(min-width:768px){
+  .formAndAccordion{
+    flex-direction: row;
+  }
+}
+
+.formContainer{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 2rem;
+  background-color: #c7bfb5;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.labelTextAbove{
+  display: flex;
+  flex-direction: column;
+  padding: 0 8rem;
+}
+
+.alignSelf{
+  align-self: center;
+  flex-direction: column;
+  height: auto;
+}
+
+.submitMessage{
+  flex: 1;
+  display: none;
+  flex-direction: column;
+  height: auto;
+}
+
+.accordionContainer{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 2rem;
+  background-color:#4c535c;
+}
+
+.accordionButton{
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  position: relative;
+  padding: 1rem;
+  margin:0.5rem 0;
+}
+
+.accordionButton:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  position: absolute;
+  right: 1rem;
+}
+
+.active, .accordionButton:hover {
+  background-color: #ccc;
+}
+
+.active:after{
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color:white;
+  max-height: 0;
+  overflow: hidden;
+  z-index: 1000;transition: max-height 0.5s ease-out;
+}
+
+/*makes every other row have different background color*/
+.panel:nth-of-type(odd){
+  background-color:pink;
+}
+
+
+
+
+
+
+
+button, .submitButton {
+  width: fit-content;
+  border-radius: 2rem;
+  border: none;
+  background-color: #65b0c2;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "Space Mono", monospace;
+  align-self: center;
+}
+
+footer{
+  background-color:turquoise;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  width: 100vw;
 }

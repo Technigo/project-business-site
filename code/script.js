@@ -1,9 +1,24 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-function toggle() {
-  this.classList.toggle("active")
+
+//opening FAQ answers in accordion
+let acc = document.getElementsByClassName("accordionButton");
+let i;
+
+for(i=0; i<acc.length;i++){
+  acc[i].addEventListener("click", function(){
+    this.classList.toggle("active");
+    let panel = this.nextElementSibling;
+    if(panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    }
+    else{
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  })
 }
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
+//opening message after submitting form
+document.getElementById('form').onsubmit = event => {
+  event.preventDefault()
+  document.getElementById("formContainer").style.display = "none"
+  document.getElementById("submitMessage").style.display = "flex"
+}

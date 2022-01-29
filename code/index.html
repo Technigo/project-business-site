@@ -4,27 +4,131 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <header>
+        <p>Logo</p>
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">Glamping</a>
+            <a href="#">Tents</a>
+            <a href="#">Prices</a>
+            <a href="#">Activities</a>
+            <a href="#">Contact</a>
+          </nav>
+       <ion-icon class="menuIcon" name="menu-outline"></ion-icon>
+    </header>
 
-    <!-- Signup form -->
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+    <section class="hero">
+      <h1>Glamping</h1>
+      <p>Enjoy nature without</p>
+      <p>compromising on comfort</p>
+      <button>Book your tent</button>
+    </section>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <section class="glampingText">
+      <p class="glampingTitle">Glamping</p>
+      <p>is a luxury type of camping that includes</p> 
+      <p>facilities and accommodation considered far</p>
+      <p>more comfortable than traditional camping. </p>
+      <p>It allows you to enjoy the freedom and </p>
+      <p>closeness to nature that camping affords,</p>
+      <p> without the uncomfortable aspects.</p>
+    </section>
+
+    <section class="menuSection">
+      <img class="menuImage"src="./images/tent.jpeg"/>
+      <img class="menuImage"src="./images/dining.jpeg"/>
+      <img class="menuImage"src="./images/activities.jpeg"/>
+      <img class="menuImage"src="./images/event.jpeg"/>
+    </section>
+
+      
+    <section class="formAndAccordion">
+      <div class="formContainer" id="formContainer">
+        <form id="form" action="https://httpbin.org/anything" method="post">
+          <p class="alignSelf">Book your glamping</p>
+          <label class="labelTextAbove"for="name">Name:
+            <input id="name" type="text" name="name" required/>
+          </label>
+          <label class="labelTextAbove"for="email">Email:
+           <input id="email" type="email" name="email" required/>
+          </label>
+          <label class="labelTextAbove"for="phoneNumber">Phone number:
+            <input id="phoneNumber" type="text" name="phoneNumber" required/>
+          </label>
+          <label class="labelTextAbove"for="tentType">Tent:
+            <select id="tentType" type="select" name="tentType" required>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+              <option>Option 4</option>
+            </select>
+          </label>
+          <label class="labelTextAbove" for="checkIn">Check in:
+            <input id="checkIn" type="date" name="checkIn" required/>
+          </label>
+          <label class="labelTextAbove" for='checkOut'>Check Out:
+            <input id="checkOut" type="date" name="checkOut" required/>
+          </label>
+          <label class="alignSelf" for="terms">
+            <input id="terms" type="checkbox" name="terms" required/>
+            I accept Terms & Conditions.
+          </label>
+          <label class="alignSelf"for="newsletter">
+            <input id="newsletter" type="checkbox" name="newsletter"/>
+            I want to have a newsletter.
+          </label>
+          <button class="submitButton" type="submit">Book</button>
+        </form>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <div id="submitMessage"class="submitMessage">
+        <p>Your booking is ready!</p>
+      </div>
+
+      <div class="accordionContainer">
+        <p class="alignSelf">FAQ</p>
+        <button class="accordionButton">Question1</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <button class="accordionButton">Question2</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <button class="accordionButton">Question3</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <button class="accordionButton">Question4</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+    <footer>
+      <p>Kristiina</p>
+    </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
