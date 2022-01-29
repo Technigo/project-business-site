@@ -16,6 +16,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   -moz-box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -157,7 +158,7 @@ main {
   position: relative;
   max-width: 40rem;
   width: 100%;
-  background: #F8E379;
+  background-color: #F8E379;
   padding: 3rem;
   margin-top: 1rem;
   display: flex;
@@ -466,21 +467,47 @@ footer .footer1 .btn2 {
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   text-align: center;
   outline: none;
 }
 
 footer .footer1 .btn2:hover {
   background-color: #3d4c1a;
-  box-shadow: 5px 5px #d6e5b3;
-
+  /* box-shadow: 5px 5px #d6e5b3; */
 }
 
 footer .footer1 .btn2:active {
   background-color: #3d4c1a;
-  box-shadow: 3px 3px #adcb67;
-  transform: translateY(2px);
+  /* box-shadow: 3px 3px #adcb67; */
+  /* transform: translateY(2px); */
 
   /* END Footer */
+}
+/* button back to top */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 5rem;
+  right: 0;
+  z-index: 99;
+  font-family: 'MuseoModerno', cursive;
+  font-size: 1.25rem;
+  border: none;
+  outline: none;
+  background-color: #87A93A;
+  color: white;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+@media (min-width: 1025px) {
+  #myBtn {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+#myBtn:hover {
+  background-color: #3d4c1a;
 }
