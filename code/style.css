@@ -125,7 +125,7 @@ h4 {
   /*border-radius: 10px;
   box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);*/
   background-color: whitesmoke; 
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 }
 
 .form {
@@ -138,7 +138,7 @@ h4 {
 .form-title {
   color: #546061;
   font-size: 2.5rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -233,25 +233,24 @@ select {
 
 .accordion-container {
   /*border: 2px solid rgba(141, 173, 155, 0.678);*/
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   min-height: 50vh;
-  overflow-y: scroll;
-  /*border-radius: 10px;
-  /*box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);*/
+  text-align: center;
   background-color: #e1dcdc;
-  padding: 1.5rem;
+  padding: 3rem;
 }
 
 .accordion-title {
   color: #546061;
   font-size: 2.5rem;
   text-align: center;
-  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
 .accordion-segment {
-  position: relative;
-  margin: 10px;
+  margin: 0 3px;
 }
 
 .question {
@@ -340,31 +339,33 @@ display: none;
   }
   .main-container {
     gap: 2rem;
-    padding: 3rem;
+    padding: 3rem 2rem;
   }
   .form-container {
     border-radius: 10px;
     box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
+    padding-top: 0;
   }
   .form-title {
     font-size: 2.5rem;
     text-align: center;
+    padding: 0;
     margin-bottom: 3rem;
   }
   .accordion-container {
+    overflow-y: scroll;
     border-radius: 10px;
     box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
     background-color: whitesmoke;
+    padding: 2.5rem;
   }
   .accordion-title {
     font-size: 2.5rem;
-    text-align: center;
-    padding: 0 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
   }
   .question {
-    padding: 13px;
+    padding: 8px;
     border: 2px solid #e1dcdc;
   }
 }
@@ -385,19 +386,21 @@ display: none;
   }
   .form-title {
     font-size: 3rem;
-    margin-top: 1rem;
-    padding: 0 2rem;
+    margin: 2rem;
+    padding:0;
+  }
+  .accordion-container {
+    padding: 0 3rem;
   }
   .accordion-title {
     font-size: 3rem;
-    margin-top: 1rem;
-  }
-  .accordion-container {
-    /*padding: 0 2.5rem;*/
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 2rem;
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1280px) {
   h1 {
     top: 5rem;
     left: 4rem;
@@ -410,5 +413,12 @@ display: none;
   }
   .main-container {
     padding: 5rem 2rem;
+  }
+  .accordion-container {
+    justify-content: normal;
+    padding: 2rem 5rem;
+  }
+  .accordion-title {
+    padding-top: 1rem;
   }
 }
