@@ -35,12 +35,13 @@ h1 {
 
 
 h2 {
-  margin: 0;
-  height: 50px;
-  width: 130px;
+  color: white;
+  margin: 10px;
+  text-align: center;
 } 
 
 
+/*sign up form & FAQ*/
 h3 {
   color: white;
   padding: 10px;
@@ -71,9 +72,27 @@ main {
 
 
 /*Accordion*/
+.accordion-container {
+  margin: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  background: center;
+}
+
+
+
+.accordion {
+  background: #D3DFE3;
+  height: 480px;
+ min-width: 505px;
+ border: #001356;
+}
+
+
 .question {
   background: #D3DFE3;
-  color: #001356;
+  color: white;
   padding: 1em;
 }
 
@@ -86,12 +105,19 @@ main {
 }
 
 
+.answer p {
+  padding: 1em 1em 1em;
+  max-width: 30ch;
+}
+
+
 .active + .answer {
   display: block;
 }
 
 
 footer {
+  margin: 100px 0 0 0;
   display: flex;
   justify-content: center;
   background: black;
@@ -103,10 +129,24 @@ footer {
 }
 
 
+
+/* media qieries for mobile*/
+@media (max-width: 667px){
+.cat-img4 {
+  display: none;
+  }
+}  
+
 /* media qieries for tablet & desktop*/
 @media (min-width: 1024) {
   .video-header {
     width: 50vw;
+  }
+}
+
+@media (min-width: 668px) {
+  .cat-img4 {
+    width: 20rem;
   }
 }
 
