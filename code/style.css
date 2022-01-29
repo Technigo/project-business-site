@@ -17,22 +17,37 @@ font-family: 'roboto', sans-serif;
 }
 
 .video-header {
-object-fit: cover;  
+height: 75vh; 
+width: 100vw;
+position: relative; 
+overflow: hidden;
+
+display: flex;
+justify-content: center;
+}
+
+.video header video {
+position: absolute;
+left: 0;
+right: 0;
+object-fit: cover;
+height: 100%;
+width: 100%;
 }
 
 .header-text {
 color: whitesmoke;  
 font-size: 25px;
 position: absolute;
-top: 50%;
-left: 25%;
+bottom: 10%;
+left: 10%;
 }
 
-@media (min-width : 688px) {
+/*@media (min-width : 688px) {
 .video-header{
 object-fit: cover;  
 }
-}
+}*/
 
 .form-wrapper {
 margin: 25px; 
@@ -42,6 +57,8 @@ padding: 25px;
 border-radius: 5%;
 font-family: 'Courier New', Courier, monospace;
 font-size: 20px;
+display: grid;
+
 }
 
 form {
