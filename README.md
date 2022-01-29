@@ -1,12 +1,13 @@
 # Business Site
-
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Assignment to create an heroimage/video and using img as background.
+Create a form connected to https bin and accordion with js script. 
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Google around, look into SO and slack channels. 
+Asked a team mate concerning the video tag as it wasn't uploading in iphone or ipad.
+Had another bug once trying the form and accordion in smaller devices, which I solved by using the inspector tool. 
+If I had more time I would have played around more with the JS script.
+The finishing fixfor smaller devices after the netlify publishing,  did take more time than expected
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://loving-ardinghelli-bb0c2b.netlify.app
