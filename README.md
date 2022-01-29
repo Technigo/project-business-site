@@ -1,12 +1,9 @@
-# Business Site
+<b>About</b>
+Creating a business site with an interactive signup form and accordion, with input field validation using CSS styles and default browser validation. Using JS to toggle between classes and hide/show answers.
 
-Replace this readme with your own information about your project. 
+<b>Problem approach</b>
+Requirements was to create a mobile responsive site with a signup form and accordion. Used JS and CSS selectors (adjacent sibling combinator and child combinator) to toggle between classes and styles to show/hide answers in the accordion and to change its corresponding toggle icon. Signup form is made using form validation by interactive style elements using CSS (e.g. :valid for validation and :focus for interaction). A confirmation message is sent after submit by redirecting the user to the landing page within 5s, made by incorporating setTimeout() in an addEventListener which fires when the form is submitted.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Possible to improve interactive elements in the sign up form by adding interactive styles for invalid input field values, however JS is needed to add invalid styles in user mode (while writing in the current input field) and not at initial page load.
 
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+<b>Live demo:</b>
