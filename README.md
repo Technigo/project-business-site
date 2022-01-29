@@ -1,4 +1,4 @@
-# Business Site
+# Guitar lessons - Business Site
 
 The assignment was to create a business site containing a video header, javascript accordion and form.
 
