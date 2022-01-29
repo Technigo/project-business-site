@@ -1,12 +1,13 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to create a business site containing a video header, javascript accordion and form.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I made a fairly basic solution starting off with the mobile first version. 
+The page is still not behaving exactly like I want it to on mobile devices, but I've placed a fallback image incase the video doesn't load.
+
+If I had more time I would've added arrows to the accordion that animates when opening/closing the sections.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://guitar-site-business.netlify.app/
