@@ -22,3 +22,15 @@
 
     }
    
+/* enable submit button*/
+    let term      = document.getElementById("term");
+    let checkmark = document.getElementById("checkmark");
+    let submit    = document.getElementById("submit");
+
+    term.addEventListener("click",disableToable);
+
+    function disableToable(){
+        submit.removeAttribute("disabled");
+        submit.style.background = "#ffa500";
+   
+    }
