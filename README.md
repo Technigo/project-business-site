@@ -9,5 +9,5 @@ with forms and accordion.
 Problems with understanding the Javascript, it is too complicated for me for now but will do my best before the upcoming project. 
 
 ## View it live
-
+https://amazing-shirley-a3f51f.netlify.app/
 
