@@ -96,15 +96,19 @@ button {
 
  button:hover {
    box-shadow: none;
+   background-color: #CEBEBE;
+   color: #6D2E46;
+   padding: 1rem;
  }
 
  .accordion {
    display: flex;
-   align-items: center;
    flex-direction: column;
+   align-items: center;
    width: 80%;
    background-color:#DDD0C7;
    margin-bottom: 1rem;
+   cursor: pointer;
  }
 
  .accordion h1{
@@ -123,15 +127,23 @@ button {
  }
 
  .question {
-   /*margin-left: 0;
-   margin-right: 0;*/
    width: 100%;
-   height: auto;
    color:#CEBEBE;
    background-color: #884B58;
    padding: 1rem;
    text-align: center;
    border: 3px solid #6D2E46;
+   position: relative;
+ }
+
+ .question::before{
+   content:"+";
+   position: absolute;
+   right: 10px;
+ }
+
+ .question .answer.active::before{
+   content:"-";
  }
 
  .answer {
@@ -148,8 +160,9 @@ button {
  }
 
  .active + .answer {
-   display:block;
+   display: block;
  }
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
