@@ -1,12 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+For this weeks project I created a business site that contains a big image of header, a signup form and an accordion.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Started with a design, proceeded to build HTML and styling. I then spent some time learning to build a form. I created the accordion as a last step. If i had more time i would focus more on the design in Figma. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://awesome-heyrovsky-c1a604.netlify.app/
