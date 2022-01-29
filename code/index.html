@@ -4,27 +4,83 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Dongle:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
   </head>
+
   <body>
-    <!-- video or image as a header is cool :) -->
+    <header class="video-header">
+      <video autoplay loop muted poster="pic-bread.jpg">
+        <source src="video-bread.mp4" type="video/mp4" />
+        Your browser dosen't support the vido tag.
+      </video> 
+      <h1>Bagare Bengtssons bakbonanza!</h1>
+    </header>
 
-    <!-- Signup form -->
+  <main>
+    <section class="grid-container">
+    <div class="grid-form">
+      <h2>Här anmäler du dig till årets roligaste bakkurs!</h2>
+      <form action="http://httpbin.org/anything" method="post">
+        
+      <label> Välj storlek på förkläde; <br>
+        <select name="size-apron">
+          <option value="s">Small</option> 
+          <option value="m">Medium</option>
+          <option value="l">Large</option>
+        </select> 
+      </label>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+      <label class="labelmargin"> 
+        <br>
+        <input type="text" name="förOchEfternamn" placeholder=" För- och efternamn" required />
+      </label>
+      <label> 
+        <br>
+        <input type="email" name="email" placeholder=" E-mailadress" required />
+      </label>
+      <label> 
+        <br>
+        <input type="tel" name="telefonnummer" placeholder=" Telefonnummer" required />
+      </label>
+      <label class="labelmargin"> Något vi bör veta? 
+        <br>
+        <textarea></textarea>
+      </label>
+      <label class="labelmargin"> <a href="/link/"> Jag har läst och godkänner vilkoren</a> 
+        <input type="checkbox" name="termsAndConditions" required/>
+      </label>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <button type="submit" class="labelmargin">Klar!</button>
+        
+      </form>
+    </div>
+      
+    <div class="grid-accordion">
+        <h2>Frågor och Svar</h2>
+        <button class="accordion" id="question1"> Vad kostar kursen?</button>
+      <div id="answer" class="answer">
+        <p>Kursen kostar 1450kr ink. moms.</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <button class="accordion" id="question2">Vad ingår i kursen?</button>
+      <div id="answer" class="answer">
+        <p>En heldag (9.00-16.30) tillsammans med den erkände bagaren Bengt Begtsson. Han lär dig alla tips och trix för att få till det där riktigt fluffiga härliga brödet. Du blir kung vid bakbordet efter bara en dag!</p>
       </div>
+
+      <button class="accordion" id="question3">Vad händer om jag inte kan delta?</button>
+      <div id="answer" class="answer">
+        <p>Om du inte har möjlighet att delta vid ett annat kurstillfälle får du 80% av kursavgiften tillbaka vid uppvisat sjukintyg.</p>
+      </div>
+    </div>  
+
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <script src="script.js"></script>
+  </main>
+
+  <footer>
+    <p>Lovisa Brorson - januari 2022</p>
+  </footer>
   </body>
 </html>

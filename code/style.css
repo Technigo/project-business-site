@@ -1,7 +1,211 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: rgb(243, 215, 178);
+}
+
+
+.grid-form {
+  display: flex;
+  flex-flow: column;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 15px 10px 15px 10px;
+  background: white;
+  margin: 25px;
+}
+
+.grid-accordion {
+  display: flex;
+  flex-flow: column;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 15px 10px 15px 10px;
+  background: white;
+  margin: 25px;
+}
+
+/*------ HEADER ------*/
+
+.video-header {
+  height: 50vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-header video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+h1, header {
+  position: absolute;
+  color:rgb(223, 178, 120);
+  text-shadow: -2px -2px 3px black;
+  text-align: center;
+  font-size: 27px;
+}
+
+
+/*------ TABLET HEADER -------*/
+
+@media (min-width: 667px) and (max-width: 1024px) {
+
+h1, header {
+  font-size: 40px;
+}
+
+}
+
+/*------ LAPTOP HEADER ------*/
+@media (min-width: 1025px) {
+
+h1, header {
+    font-size: 60px;
+}
+
+}
+
+/*------ MOBIL MAIN ------*/
+/* ------ The form ------*/
+
+input {
+  font-size: 18px;
+}
+
+select {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  width: 350px;
+}
+
+.labelmargin {
+margin-top: 10px;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+  
+a:hover {
+  color: blue;
+}
+  
+button {
+    padding: 5px 15px 5px 15px;
+}
+
+/*------ The accordian ------*/
+
+h2 {
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 20px;
+  color: black;
+  margin-left: 10px;
+}
+
+.accordion {
+  color: black;
+  cursor: pointer;
+  transition: backgorund 0.2s;
+  font-size: 18px;
+}
+
+.accordion::after {
+  content: '\25be';
+  float: right;
+  transform: scale(1.5);
+}
+
+.accordion--activ {
+  background-color: gray;
+}
+
+
+.accordion--activ::after {
+  content: '\`25b4';
+}
+
+.answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s;
+  font-size: 14px;
+  padding: 0 15px;
+  margin: 5px;
+}
+
+.show-answer {
+  max-height: 500px;
+}
+
+/*--- TABLET MAIN ---*/
+
+@media (min-width: 667px) and (max-width: 1024px) {
+
+.grid-container {
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  width: 350px;
+}
+
+}
+
+/*--- LAPTOP MAIN ---*/
+
+@media (min-width: 1025px) {
+
+.grid-container {
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  width: 350px;
+}
+
+}
+
+footer {
+  background: whitesmoke;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
 }
