@@ -54,11 +54,6 @@ body {
   width: 100%;
 }
 
-/* trying to remove video controls
-.video-header video::-webkit-media-controls {
-  display: none;
-}*/
-
 h1 {
   position: absolute;
   top: 1.5rem;
@@ -117,27 +112,26 @@ h4 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
-  gap: 2rem;
 }
 
 /* Sign-up form -> */
 
 .form-container {
   /*border: 2px solid rgba(141, 173, 155, 0.678);*/
-  border-radius: 10px;
-  box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
-  background-color: whitesmoke;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 50vh;
+  /*border-radius: 10px;
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);*/
+  background-color: whitesmoke; 
+  padding: 1.5rem 0;
 }
 
 .form {
   background-color: white;
   height: 70%;
   border-radius: 10px;
-  padding: 2.5rem 2.5rem;
   box-shadow: 0 10px 25px rgba(92,99,105,.2);
 }
 
@@ -239,20 +233,19 @@ select {
 
 .accordion-container {
   /*border: 2px solid rgba(141, 173, 155, 0.678);*/
-  border-radius: 10px;
-  box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
-  background-color: whitesmoke;
   min-height: 50vh;
   overflow-y: scroll;
-  padding: 0 2rem;
-  margin-bottom: 2rem;
+  /*border-radius: 10px;
+  /*box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);*/
+  background-color: #e1dcdc;
+  padding: 1.5rem;
 }
 
 .accordion-title {
   color: #546061;
   font-size: 2.5rem;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -265,9 +258,9 @@ select {
   position: relative;
   font-size: 1.5rem;
   color: #546061;
-  border: 2px solid rgba(192, 181, 171, 0.329);
+  border: 2px solid #95a0a17a;
   border-radius: 10px;
-  padding: 5px;
+  padding: 15px;
   margin-top: 5px;
   cursor: pointer;
 }
@@ -279,23 +272,24 @@ select {
 }
 
 .question::after {
-  content: '+';
+  content: '\2193';
   position: absolute;
   color:rgba(54, 92, 69, 0.678);
   top: 50%;
   right: 10px;
   font-size: 1rem;
-  transform: translateY(-50%);
+  /*transform: translateY(-30%);*/
 }
 
-.question.active .question::before {
-  content: '-';
-  font-size:
+.active::after {
+  content: "\2191";
+  font-size: 1rem;
 }
 
 .answer {
-  color: #546061;
+  color: #425052;
   font-size: 1.5rem;
+  padding: 1rem;
 }
 
 .answer {
@@ -345,12 +339,22 @@ display: none;
     font-size: 2rem;
   }
   .main-container {
-    padding: 2rem;
+    gap: 2rem;
+    padding: 3rem;
+  }
+  .form-container {
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
   }
   .form-title {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
+  }
+  .accordion-container {
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
+    background-color: whitesmoke;
   }
   .accordion-title {
     font-size: 2.5rem;
@@ -358,6 +362,9 @@ display: none;
     padding: 0 2rem;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
+  }
+  .question {
+    border: 2px solid #e1dcdc;
   }
 }
 
@@ -373,8 +380,7 @@ display: none;
     font-size: 2.5rem;
   }
   .main-container {
-    margin: 0 4rem;
-    padding: 4rem;
+    padding: 3rem;
   }
   .form-title {
     font-size: 3rem;
@@ -386,11 +392,11 @@ display: none;
     margin-top: 1rem;
   }
   .accordion-container {
-    padding: 0 3rem;
+    /*padding: 0 2.5rem;*/
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1400px) {
   h1 {
     top: 5rem;
     left: 4rem;
@@ -400,5 +406,8 @@ display: none;
     top: 13rem;
     left: 5rem;
     font-size: 3.5rem;
+  }
+  .main-container {
+    padding: 5rem 2rem;
   }
 }
