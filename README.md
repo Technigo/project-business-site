@@ -2,9 +2,9 @@
 
 Business website sample focusing on :
 
-1. play video in header
+1. play a video in header
 2. Make a 'create account' form
-3. Text expandable menu
+3. Make an accordian menu
 
 ## The problem
 
