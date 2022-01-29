@@ -12,7 +12,8 @@
 
   <body>
     <header>
-      <video controls autoplay loop playsinline muted>
+      <!--withouth playsinline in videotag it did not play in iphone or ipad-->
+      <video controls autoplay loop playsinline muted poster="img_farmerposter.png">
           <source src="videos/hero_video_cow.mp4" type="video/mp4">
           <source src="videos/hero_video_cow.webm" type="video/webm">
         </video>
@@ -25,7 +26,7 @@
       <!--Text about the business-->
       <div class="about-text">
         <p>
-          Be one with the nature and come visit a farm for one day. You will get an insight into how everyday life works on a farm. Maybe you are curious to start your own or just want to get away from the city for a while.
+          Be one with the nature and come visit a farm for one day. You will get an insight into how everyday life works on a farm. Maybe you are curious to start your own or just want to get away from the city for a while. Welcome!
         </p>
       </div>
 
@@ -36,8 +37,10 @@
           Sign up for more information:
           <ul class="form-items">
             <li>
-              <label for="firstname">First name:</label>
-                <input id="input-field" type="text" required placeholder="FIRST NAME" />
+              <label>
+                First name:
+                <input class="input-field" type="text" required placeholder="FIRST NAME" name="firstname" />
+              </label>
             </li>
             <li>
               <label>
@@ -89,18 +92,12 @@
           <p>
             No, just comfortable clothes.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
         </div>
 
         <div class="accordion-item" id="section2">Whats the minimum age for participate?</div>
         <div class="answer">
           <p>
             Minimum 18 year
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
 
@@ -109,18 +106,12 @@
           <p>
             No earlier experience needed
           </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
         </div>
        
         <div class="accordion-item" id="section4">Are meals included?</div>
         <div class="answer">
           <p>
-            Yes - lunch, coffe and dinner will be included
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Yes - lunch, coffe and dinner
           </p>
         </div>
        </div>

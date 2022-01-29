@@ -33,10 +33,10 @@
  }
 
  h1 {
-   font-size: 8vw;
+   font-size: 10vw;
  }
  h2 {
-   font-size: 3vw;
+   font-size: 5vw;
  }
 
  /*Text about the business*/
@@ -47,7 +47,7 @@
  }
 
  .about-text p {
-  font-size: 3vw;
+  font-size: 5vw;
   padding-bottom: 2vw;
   font-family: 'Tangerine', serif;
   font-weight: 700;
@@ -72,7 +72,7 @@
   box-shadow: 0 0 0.5rem;
   display: grid;
   background-color: #D7E9F7;
-  font-size: 3vw;
+  font-size: 5vw;
   padding: 2vw 6vw 2vw 6vw;
   font-family: 'Tangerine', serif;
   font-weight: 700;
@@ -91,7 +91,8 @@
   outline: none;
   margin-left: 2vw;
   height: 3vh;
-  /* cursor: pointer; */
+  cursor: pointer;
+  font-size: 3vw;
 }
 
 ::placeholder {
@@ -99,14 +100,14 @@
   font-weight: 200;
 }
  label {
-   padding: 1vw 0vw 1vw 0;
+  padding: 1vw 0vw 1vw 0;
  }
 
  .radio-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 2vw;
+  font-size: 5vw;
  }
  .radio-btn {
   cursor: pointer;
@@ -129,7 +130,9 @@
  /* Accordion */
  .accordion-wrapper {
   display: grid;
+  justify-content: center;
 }
+
  .accordion {
   border: 1px solid;
   border-radius: 0.5rem;
@@ -138,8 +141,9 @@
   justify-content: center;
   align-items: center;
   background-color: #D7E9F7;
-  font-size: 3vw;
-  padding: 2vw 0vw 3vw 0vw;
+  font-size: 5vw;
+  /* padding: 2vw 0vw 3vw 0vw; */
+  padding: 2vw 8vw 3vw 8vw;
   margin: 0 10vw 0 10vw;
   font-family: 'Tangerine', serif;
   font-weight: 700;
@@ -147,7 +151,7 @@
  
  .accordion-item {
   border: 4px solid white;
-  /* cursor: pointer; */
+  cursor: pointer;
   padding: 1vw 2vw 1vw 1vw;
   margin-top: 2vw;
  }
@@ -157,9 +161,12 @@
    display: none;
    font-family: 'merriweather', serif;
    font-weight: 400;
-   font-size: 1vw;
-   max-width: fit-content;
+   font-size: 3vw;
+   /* max-width: fit-content;
+   did not work in Safari, Firefox or smaller devices
+   only in */
  }
+
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
@@ -183,14 +190,19 @@ footer {
  }
 
  /*media queries*/
- @media screen and (min-width: 1025px) {
+ @media screen and (min-width: 668px) {
+
+  .about-text p, .form, .radio-wrapper, .accordion {
+    font-size: 3vw;
+  }
   .input-field {
     border: 3px solid white;
+    font-size: 1.5vw;
   }
   footer {
     height: 3vw;
   }
-  footer p {
+  footer p, .answer{
     font-size: 1vw;
   }
   main {
