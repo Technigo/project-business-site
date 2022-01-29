@@ -63,22 +63,27 @@ function displayChild() {
   document.getElementById('accordion-wrapper').style.display = 'block';
   document.getElementById('name').innerText = 'Your child\'s name';
   document.getElementById('buttonAdult').innerText = 'Interested in our 18+ services?';
-  // const w = document.getElementsByClassName("signup-wrapper");
-  // for (let i = 0; i < w.length; i++) {
-  //   w[i].style.backgroundColor = "orange";
-  // }
-  const y = document.querySelectorAll('.accordion-wrapper, .signup-wrapper, h1');
-  for (let i = 0; i < y.length; i++) {
-    y[i].style.backgroundColor = "pink";
+  const greenMedium = document.querySelectorAll('.signup-item .btn, .active, .accordion-answer, footer .footer1, footer .footer1 .btn2, #myBtn');
+  for (let i = 0; i < greenMedium.length; i++) {
+    greenMedium[i].style.backgroundColor = "#87A93A";
   }
+  const greenDark = document.querySelectorAll('html');
+  for (let i = 0; i < greenDark.length; i++) {
+    greenDark[i].style.color = "#3d4c1a";
+  }
+
 }
 
 function displayAdult() {
   document.getElementById('accordion-wrapper').style.display = 'none';
   document.getElementById('name').innerText = 'Your name';
   document.getElementById('buttonAdult').innerText = 'Back';
-  const x = document.querySelectorAll('.accordion-wrapper, .signup-wrapper, h1');
-  for (let i = 0; i < x.length; i++) {
-    x[i].style.backgroundColor = "orange";
+  const redMedium = document.querySelectorAll('.signup-item .btn, .active, .accordion-answer, footer .footer1, footer .footer1 .btn2, #myBtn');
+  for (let i = 0; i < redMedium.length; i++) {
+    redMedium[i].style.backgroundColor = "#EA5E5A";
+  }
+  const darkRed = document.querySelectorAll('html');
+  for (let i = 0; i < darkRed.length; i++) {
+    darkRed[i].style.color = "#71120f";
   }
 }
