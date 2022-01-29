@@ -16,58 +16,25 @@ body {
   position: absolute;
   background-image: url(./pictures/background-pattern-3.jpg);
   color: #1c1c1c;
+  background-repeat: no-repeat;
 }
 
 /* HEADER - HERO CONTENT */
-
-#hero {
-  height: 10vh;
-  overflow-x: hidden;
-  margin: 0;
-}
-
-/* .image-header {
-  height: 50vh;
-  min-height: 50vh;
-  width: 100vw;
-
-  background-image: url('./pictures/background-pattern-2.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  display: grid;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* #hero video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-} */
-
 .headerText, .navbar {
   position: relative;
-  z-index: 20;
 }
 
 .flexParentHeader {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15%;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
 }
 
 .headerText {
   display: flex;
   width: 100%;
   margin: auto;
-  margin-top: 30px;
   justify-content: center;
   font-size: 8vw;
   font-weight: 700;
@@ -84,7 +51,7 @@ body {
   margin: auto;
   justify-content: center;
   align-items: center;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
 ul {
@@ -112,35 +79,26 @@ li a {
 /* MAIN CONTENT */
 
 /* FORMS CONTAINER */
-.flexMain {
-  display: flex;
-  flex-direction: column;
-}
-
 .formWrapper {
   display: flex;
   flex-direction: column;
   width: 80%;
   justify-content: center;
+  align-items: center;
   margin: auto;
 }
 
 #form {
   margin-bottom: 30px;
   padding: 10px 40px;
+  /* height: 60vh;
+  max-height: 60vh; */
+  width: 100%;
   font-size: 12px;
   background-color: #fafafa;
   opacity: 0.90;
-  position: relative;
-  z-index: 20;
+  /* position: relative; */
   border-radius: 5%;
-}
-
-.formTitle {
-  display: block;
-  margin: 3%;
-  padding-top: 3%;
-  padding-bottom: 1%;
 }
 
 h2 {
@@ -149,6 +107,7 @@ h2 {
   color: #13233d;
   text-transform: uppercase;
   text-align: start;
+  padding-top: 1vh;
 }
 
 label {
@@ -194,13 +153,13 @@ textarea {
 }
 
 /* ACCORDION CONTAINER */
-
 .accordionWrapper {
   width: 80%;
   display: flex;
   flex-direction: column;
   margin: auto;
   justify-content: center;
+  align-items: center;
 }
 
 #accordion {
@@ -210,8 +169,8 @@ textarea {
   background-color: #fafafa;
   opacity: 0.95;
   position: relative;
-  z-index: 20;
   border-radius: 5%;
+  width: 100%;
 }
 
 .question {
@@ -250,11 +209,9 @@ textarea {
   margin-bottom: 20px;
   padding: 5%;
   position: relative;
-  z-index: 20;
 }
 
 .footerText {
-  /* font-family: ; */
   font-size: 14px;
   font-weight: 600;
   color: #fafafa;
@@ -263,7 +220,6 @@ textarea {
 }
 
 .footerCred {
-  /* font-family: ; */
   font-size: 10px;
   margin: 2px;
   color: #fafafa;
@@ -277,7 +233,7 @@ textarea {
 
 
 /* MEDIA QUERY TABLET */
-@media (min-width: 667px) and (max-width: 1024px) {
+@media (min-width: 667px) and (max-width: 1023px) {
 
   /* HEADER - HERO CONTENT */
   .flexParentHeader {
@@ -308,18 +264,14 @@ textarea {
   }
 
   /* CONTACT FORM */
-   .flexMain {
-    display: flex;
-    flex-direction: row;
-    width: 80vw;
-    margin: auto;
-    margin-top: 2%;
-  }
-
   .formWrapper {
     width: 100%;
     margin-top: 3%;
     margin-right: 3%;
+  }
+
+  h2 {
+    font-size: 4vw;
   }
 
   /* ACCORDION CONTAINER */
@@ -327,6 +279,10 @@ textarea {
     width: 70%;
     margin-top: 3%;
     margin-left: 3%;
+  }
+
+  .accordion h2 {
+    margin-bottom: 2vh;
   }
 
   /* FOOTER */
@@ -350,18 +306,12 @@ textarea {
 
 /* MEDIA QUERY DESKTOP */
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
 /* HEADER - HERO CONTENT */
 
-.flexParentHeader {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0%;
-}
-
 .headerText {
-  /* margin: 4%; */
-  margin-top: 3%;
+  font-size: 6vw;
+  margin-top: 0;
 }
 
 /* NAVBAR */
@@ -370,12 +320,11 @@ li a {
 }
 
 li a:hover {
-  font-size: 40px;
   text-decoration: underline;
 }
 
 h2 {
-  font-size: 6vw;
+  font-size: 4vw;
   margin-top: 2%;
 }
 
@@ -389,23 +338,18 @@ h2 {
 }
 
 /* CONTACT FORM */
- .flexMain {
-  display: flex;
-  flex-direction: row;
-  width: 80vw;
-  margin-top: 2%;
-}
-
 .formWrapper {
   width: 100%;
-  margin-top: 3%;
-  margin-right: 0%;
-}
+  /* margin-top: 3%; */
+  /* margin-right: 3%; */
+  flex: 1;
+  margin-top: 0;
+} 
 
 #form {
   font-size: 14px;
-  margin: 3%;
-  min-width: 70%;
+  margin: 0%;
+  max-width: 80%;
 }
 
 .blockLabel {
@@ -425,15 +369,19 @@ h2 {
 
 /* ACCORDION CONTAINER */
 .accordionWrapper {
-  margin-top: 3%;
-  margin-left: 3%;
+  margin-top: 0%;
+  /* margin-left: 3%; */
   width: 70%;
+  flex: 1;
 }
 
 #accordion {
   font-size: 14px;
-  min-width: 80%;
-  margin: 1%;
+  max-width: 80%;
+}
+
+.accordion h2 {
+  margin-bottom: 2vh;
 }
 
 .question, .answer {
@@ -465,11 +413,6 @@ a:hover {
 }
 
 }
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
 
 /* JAVASCRIPT */
 
