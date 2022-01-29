@@ -1,12 +1,15 @@
 # Business Site
+This week’s project is to create a business one pager website that should contain an image or video header, a signup form, and an accordion. The focus is for you to practice what you've learned about image backgrounds, HTML forms, and how to modify the DOM with JavaScript. You can come up with your own fantasy company or use an existing one.
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Requirements:
+  •	Style your page
+	•	Site should have a header with responsive image/video
+	•	Site should have a signup form with at least three different input types
+	•	Site should have an FAQ accordion, built with JavaScript
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I tackled the parts of the assignment I was familiar with first. Started with a design, proceeded to build HTML and styling. I then spent some time learning to build a form. I created the accordion as a last step as I had no previous knowledge of JavaScript.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://justines-business-site.netlify.app/
