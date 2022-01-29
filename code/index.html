@@ -18,7 +18,7 @@
         <nav>
           <a href="x">ABOUT</a>
           <a href="x">DETAILS</a>
-          <a href="x">FAQ</a>
+          <a href="#faq">FAQ</a>
         </nav>
      </div>
     </header>
@@ -33,39 +33,45 @@
         <h2>Sign up for guest list</h2>
 
           <form action="https://httpbin.org/anything" method="post">
-            <label class="form-text">First name
-              <input id="nameInput" class="text-input" type="text" name="name" />
-            </label>
-          </form>
-          <form action="https://httpbin.org/anything" method="post">
-            <label class="form-text">Last name
-              <input id="nameInput" class="text-input" type="text" name="name" />
-            </label>
+            <label class="form-text" for="fname">First name</label>
+              <input class="text-input" id="fname" type="text" name="fname"/>
           </form>
 
           <form action="https://httpbin.org/anything" method="post">
-            <label class="form-text">Email
-              <input id="nameInput" class="text-input" type="text" name="name" />
-            </label>
+            <label class="form-text" for="lname">Last name</label>
+              <input class="text-input" id="lname" type="text" name="lname"/>
           </form>
 
           <form action="https://httpbin.org/anything" method="post">
-            <label class="form-text">Phone number
-              <input id="nameInput" class="text-input" type="text" name="name" />
-            </label>
+            <label class="form-text" for="email">Email</label>
+              <input class="text-input" id="email" type="email" name="email"/>
           </form>
 
           <form action="https://httpbin.org/anything" method="post">
-            <label class="form-text">How did you hear about this event?
-              <select id="rumer" name="dropdown" type="picklist">
+            <label class="form-text" for="phone">Phone number</label>
+              <input class="text-input" id="phone" type="tel" name="phone"/>
+          </form>
+
+          <form action="https://httpbin.org/anything" method="post">
+            <label class="form-text" for="phone">Which day(s) will you be attending?</label>
+              <input class="checkbox" id="checkbox1" type="checkbox" name="checkbox1" value="thur"/><!-- FORTSÄTT HÄR -->
+              <label class="checkbox-text" for="checkbox1">Thursday</label><br>
+              <input class="checkbox" id="checkbox2" type="checkbox" name="checkbox2" value="fri"/>
+              <label class="checkbox-text" for="checkbox1">Friday</label>
+
+          </form>
+
+          <form action="https://httpbin.org/anything" method="post">
+            <label class="form-text" for="discover">How did you hear about this event?</label>
+              <select id="discover" name="discover">
                 <option value="au">Facebook</option>
                 <option value="ca">Email</option>
                 <option value="usa">From a friend</option>
+                <option value="usa">Other</option>
               </select>
-            </label>
           </form>
 
-          <button type="submit">join</button>
+          <button id="button" type="submit" value="register">Register</button>
       </div>
 
     </section>
@@ -74,23 +80,23 @@
 
     <section class="accordion">
         <div class="accordion-box">
-          <h2>FAQ</h2>
-                  <div class="questions">
-                    <label class="question" id="section1">Section 1</label>
+          <h2 id="faq">FAQ</h2>
+                  <div class="questions1">
+                    <label class="question" id="section1">What is this event about?</label>
                               <div class="answer" id="answer">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>If you have to ask, this event isn't for you. If you know - you know.</p>
                               </div>
                   </div>
-                  <div class="questions">
-                     <label class="question" id="section2">Section 2</label>
+                  <div class="questions2">
+                     <label class="question" id="section2">Will there be food?</label>
                               <div class="answer" id="answer">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>Yes, food and drinks will be served.</p>
                               </div>
                   </div>
-                  <div class="questions"></div>
-                      <label class="question" id="section3">Section 3</label>
+                  <div class="questions3">
+                      <label class="question" id="section3">What does it cost?</label>
                               <div class="answer" id="answer">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>Nothing, but there is a no show fee at 500 kr.</p>
                               </div>
                   </div>
           </div>
