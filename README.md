@@ -1,12 +1,13 @@
-# Business Site
+# Business site
 
-Replace this readme with your own information about your project. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project is part of Technigo Web Development Bootcamp, sprint 1 week 3, where we are supposed to build a responsive website
+with forms and accordion. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Problems with understanding the Javascript, it is too complicated for me for now but will do my best before the upcoming project. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+
