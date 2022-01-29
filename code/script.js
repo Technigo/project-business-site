@@ -72,7 +72,7 @@ function displayChild() {
   document.getElementById('check5').innerText = 'Fruits';
   document.getElementById('check6').innerText = 'Cruciferous';
 
-  document.getElementById('register').innerText = 'my child';
+  document.getElementById('buttonSubmit').innerText = 'Please register my child!';
 
   document.getElementById('buttonAdult').innerText = 'Interested in our 18+ services?';
   const greenMedium = document.querySelectorAll('.signup-item .btn, footer .footer1, footer .footer1 .btn2, #myBtn');
@@ -114,7 +114,7 @@ function displayAdult() {
   document.getElementById('check5').innerText = 'Peach';
   document.getElementById('check6').innerText = 'Papaya';
 
-  document.getElementById('register').innerText = 'me';
+  document.getElementById('buttonSubmit').innerText = 'Please register me!';
 
   document.getElementById('buttonAdult').innerText = 'Back to our child services';
   const redMedium = document.querySelectorAll('.signup-item .btn, footer .footer1, footer .footer1 .btn2, #myBtn');
