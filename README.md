@@ -1,12 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is my third project for the Technigo boot camp where I designed a business site that has a signup form and an accordion.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The problems I had was mostlu with the validation where i wanted the input to show a red border when it's invalid, but the red border shows up when you refresh the page, since I guess that the inputs are invalid from the start. I didn't like the look of it and desided to not do som CSS design with the validation. I also had problems with my videobackground who wasn't fully taking up the whole page, but I solved with help from the townhall meeting and by changing the height to 100vw!
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://determined-murdock-c0b71e.netlify.app/
