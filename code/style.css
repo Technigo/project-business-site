@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #C2B8B2;
+  background-color: #F2EFE9; /*#C2B8B2;*/
 }
 /*    Styling of the header    */
 .image-header {
@@ -16,7 +16,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,21 +47,25 @@ body {
   align-items: center;
 }
 
-/*     Styling of the form     */
+/*Styling of the form */
 
 .form-container {
-  width: 80%;
+  max-width: 25rem;
+  padding: 10px;
   margin: 1.5rem;
-  background-color: #DDD0C7;
+  background-color: #C2B8B2;
   align-self: center;
   justify-self: center;
+  box-shadow: 3px 5px 5px #3A435E;
+  border-radius: 5px;
 }
 
 .form-container h3 {
   font-size: 1.2rem;
-  padding-top: 2rem;
+  padding: 2rem 0.5rem 0 0.5rem;
   text-align: center;
   color: #370926;
+  text-shadow: 2px 2px 3px whitesmoke;
 }
 
 .form {
@@ -80,11 +83,29 @@ label {
   max-width: 250px;
 }
 
+input{
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+input[type=radio]{
+  margin-top: 10px;
+}
+
+input:focus{
+  background-color: #f8e8c1;
+}
+
+input:valid{
+  border: 2px solid #0B5D1E;
+}
+
 button {
   width: 8rem;
   height: 3rem;
   border-radius: 50px;
-  color:#CEBEBE;
+  color:#FFFFFF;
   background-color: #6D2E46;
   padding: 1rem;
   margin: 1rem;
@@ -96,25 +117,28 @@ button {
 
  button:hover {
    box-shadow: none;
-   background-color: #CEBEBE;
-   color: #6D2E46;
-   padding: 1rem;
  }
+
+ /*Styling of accordion*/
 
  .accordion {
    display: flex;
    flex-direction: column;
    align-items: center;
-   width: 80%;
-   background-color:#DDD0C7;
-   margin-bottom: 1rem;
+   max-width: 25rem;
+   background-color: #C2B8B2;
+   margin-bottom: 1.5rem;
+   margin-top: 1rem;
    cursor: pointer;
+   box-shadow: 3px 5px 5px #3A435E;
+   border-radius: 5px;
  }
 
  .accordion h1{
    color: #370926;
    font-size: 1.8rem;
    margin-top: 1rem;
+   text-shadow: 3px 3px 5px whitesmoke;
  }
 
  .accordion-element {
@@ -126,31 +150,38 @@ button {
    gap: 0.5rem;
  }
 
+ .accordion .accordion-element .question{
+  position: relative;
+}
+
  .question {
-   width: 100%;
-   color:#CEBEBE;
+   width: 300px;
+   color: #FFFFFF;
    background-color: #884B58;
-   padding: 1rem;
-   text-align: center;
+   padding: 0.6rem;
+   font-size: 15px;
+   text-align:left;
    border: 3px solid #6D2E46;
-   position: relative;
  }
 
- .question::before{
+ .accordion .accordion-element .question::before{
    content:"+";
    position: absolute;
-   right: 10px;
+   right: 4px;
+   padding-bottom: 15px;
+   padding-right: 5px;
  }
 
- .question .answer.active::before{
-   content:"-";
- }
+ .accordion .accordion-element .question.active::before{
+  content: "-";
+}
 
  .answer {
    display: none;
-   width: 100%;
    color: #370926;
-   padding: 1.5rem;
+   font-size: 14px;
+   height: 70px;
+   padding: 10px;
    text-align: center;
  }
 
@@ -161,7 +192,10 @@ button {
 
  .active + .answer {
    display: block;
+   height: auto;
  }
+
+
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
@@ -177,15 +211,45 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   .main-content {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-content: center;
   }
 
-  .accordion {
-    margin-top: 2rem;
-    margin-right: 3rem;
-    
+  .header-text h1{
+    font-size: 3.5rem;
+  }
+
+  .header-text p{
+    font-size: 2rem;
+  }
+
+  .form-container h3{
+    font-size: 1.4rem;
+  }
+
+  .accordion h1{
+    font-size: 2rem;
   }
 
   .accordion-element {
     margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width:1024px){
+  .header-text h1{
+    font-size: 5rem;
+  }
+
+  .header-text p{
+    font-size: 3rem;
+  }
+
+  .form-container h3{
+    font-size: 1.8rem;
+  }
+  
+  .accordion h1{
+    font-size: 2.3rem;
   }
 }
