@@ -28,18 +28,18 @@
         <form class="form" id="form" action="https://httpbin.org/anything" target="__blank" method="post"
           autocomplete="off">
           <h2 class="form__header">COURSE SIGNUP</h2>
-          <input id="nameInput" class="form__input name-input vald" type="text" name="name" placeholder="Full name"
+          <input id="nameInput" type="text" name="name" class="form__input" placeholder="Full name"
             minlength="1" maxlength="20" oninvalid="this.setCustomValidity('Please enter your name')"
             oninput="this.setCustomValidity('')" required />
-          <input id="emailInput" class="form__input email-input vald" type="text" name="email"
+          <input id="emailInput" type="text" class="form__input" name="email"
             pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Email"
             oninvalid="this.setCustomValidity('Please enter your email address')" oninput="this.setCustomValidity('')"
             required />
-          <input type="tel" id="telInput" class="form__input phone-input vald" name="telephone"
+          <input type="tel" id="phoneInput" class="form__input" name="telephone"
             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone (123-456-7890)"
             oninvalid="this.setCustomValidity('Please enter your phone number')" oninput="this.setCustomValidity('')"
             required>
-          <select id="courseInput" class="form__input" name="course">
+          <select id="courseInput" class="form__input"  name="course">
             <option class="tan-background" value="level">Course Level</option>
             <option value="beginner">Beginner</option>
             <option value="intermediate">Intermediate</option>

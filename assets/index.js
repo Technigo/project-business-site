@@ -1,7 +1,9 @@
 const inputLabels = document.querySelectorAll(".accordion__header");
-const nameInput = document.querySelector(".name-input");
-const emailInput = document.querySelector(".email-input");
-const phoneInput = document.querySelector(".phone-input");
+const nameInput = document.querySelector("#nameInput");
+const emailInput = document.querySelector("#emailInput");
+const phoneInput = document.querySelector("#phoneInput");
+const validForm = "form__input--valid";
+const invalidForm = "form__input--invalid";
 
 inputLabels.forEach(label => {
   label.addEventListener("click", () => {
@@ -11,31 +13,25 @@ inputLabels.forEach(label => {
 
 nameInput.addEventListener("change", () => {
   if (nameInput.value.match("[a-zA-Z]")) {
-    nameInput.classList.add('form__input--valid');
-    nameInput.classList.remove('form__input--invalid');
+    nameInput.className = validForm
   } else {
-    nameInput.classList.add('form__input--invalid');
-    nameInput.classList.remove('form__input--valid');
+    nameInput.className = invalidForm
   }
 });
 
 emailInput.addEventListener("change", () => {
   if (emailInput.value.match(/^\S+@\S+\.\S+$/)) {
-    emailInput.classList.add('form__input--valid');
-    emailInput.classList.remove('form__input--invalid');
+    emailInput.className = validForm
   } else {
-    emailInput.classList.add('form__input--invalid');
-    emailInput.classList.remove('form__input--valid');
+    emailInput.className = invalidForm
   }
 });
 
 phoneInput.addEventListener("change", () => {
   if (phoneInput.value.match(/^[1-9]\d{2}-\d{3}-\d{4}/)) {
-    phoneInput.classList.add('form__input--valid');
-    phoneInput.classList.remove('form__input--invalid');
+    phoneInput.className = validForm
   } else {
-    phoneInput.classList.add('form__input--invalid');
-    phoneInput.classList.remove('form__input--valid');
+    phoneInput.className = invalidForm
   }
 });
 
