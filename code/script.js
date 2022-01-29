@@ -1,7 +1,6 @@
-const questions = document.getElementsByClassName('faq-question');
-
-for (i=0; i<questions.length; i++) {
-  questions[i].addEventListener('click', function() {
-    this.nextElementSibling.classList.toggle('faq-answer-active');
-  })
-}
+document.querySelectorAll('.faq-question').forEach(el => {
+  el.addEventListener('click', e => {
+    let accordion = e.target;
+    accordion.nextElementSibling.classList.toggle('faq-answer-active');
+  });
+});
