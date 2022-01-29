@@ -161,12 +161,14 @@ p {
 
 /* Animated text */
 
-.rolling-brand-text {
-  color: black;
-  font-size: 12px;
-  margin-top:1rem;
+.rolling-text-header {
+  font-family: 'Playfair Display';
+  font-size: 4vw;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 1rem;
   animation-name: scroll;
-  animation-duration: 9s;
+  animation-duration: 10s;
   position: relative;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -377,13 +379,32 @@ button:hover {
   transition: all 1.5s ease;
 }
 
+/* Rolling text */
+
+.rolling-text-bottom {
+  font-family: 'Playfair Display';
+  font-size: 6vw;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 4rem;
+  animation-name: scroll;
+  animation-duration: 10s;
+  position: relative;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes scroll {
+  from { left: 100%; }
+  to { left: -80%; }
+}
+
 /* Styling of footer*/
 
 footer {
   padding: 3rem 0 1rem 0;
-  border-top: 1px solid black;
-  margin-top: 4rem;
-  background-image: url(./images/toa-heftiba-tSFW0Hv8wYE-unsplash.jpg);
+  border-top: 15px solid #212121;
+  margin-top: 1rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -406,7 +427,7 @@ li:hover {
   background-color: black;
   color: #EED2D5;
   transition: all 1.5s ease;  
-  padding: 7px 7px;
+  padding: 4px 4px;
   border-radius: 5px;
 }
 
@@ -416,7 +437,7 @@ li:hover {
   font-weight: normal;
   text-align: center;
   margin: 2rem 0 1rem 0;
-  color: white;
+  color: black;
 }
 
 /* On screens that are 768px or more (tablet) */
@@ -503,7 +524,8 @@ li:hover {
   }
 
   footer {
-    margin-top: 12rem;
+    margin-top: 3rem;
+    border-top: 34px solid #212121;
   }
 
   li{
@@ -516,6 +538,5 @@ li:hover {
 /* On screens that are 992px or more (desktop) */
 
 @media screen and (min-width: 992px) {  
-  .rolling-brand-text {
-    font-size: 2rem;
+ 
 }
