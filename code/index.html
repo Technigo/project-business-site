@@ -2,29 +2,114 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Project 3</title>
+    <link rel="stylesheet" href="./style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+   <header class= "img-header">
+      <h1>Your Fake Moustache</h1>
+      <h2>When you are the last babyface in the group</h2>
+   </header> <!-- video or image as a header is cool :) -->
+    
 
-    <!-- Signup form -->
+   <div class="cards">
+    
+      <form id="form" action="https://httpbin.org/anything" method="POST">
+           <div class="form">
+           <p>Sign up here</p>
+            <label>
+             <input type="text" name="message"
+             placeholder="Name" required>
+             </label>
+      
+      <label> 
+        <input type="text" name="message"
+        placeholder="Surname" required>
+      </label>
+      
+    <label>
+      <input type="email" name="email"
+      placeholder="E-mail" required>
+    </label>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <p>Choose your facial hair:</p>
+    <div class="types">
+    <div>
+        <input type="checkbox" id="handlebar" name="handelbar"
+          checked>
+       <label for="handlebar">Handlebar</label>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <div>
+    <input type="checkbox" id="goatee" name="goatee">
+    <label for="goatee">Goatee</label>
+    </div>
+
+    <div>
+    <input type="checkbox" id="soulpatch" name="soulpatch">
+    <label for="soulpatch">Soulpatch</label>
+    </div>
+
+    <div>
+    <input type="checkbox" id="anchor" name="anchor">
+    <label for="anchor">Anchor</label>
+    </div>
+
+    <div>
+    <input type="checkbox" id="gandlaf" name="gandlaf">
+    <label for="gandald">Gandalf</label>
+    </div> </div>
+
+    <p>I agree to the terms and conditions:</p>
+
+    <div>
+      <input type="radio" id="terms" name="drone" value="terms" required>
+      <label for="terms">Yes</label>
+    </div>
+
+    <div>
+      <input type="radio" id="terms" name="drone" value="terms" >
+      <label for="terms">No</label>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+      </div>
+
+    <button type="submit" class="button"><p>Give me my glorious facial hair</p></button>
+    
+  
+  </form>
+  <!-- Accordion -->
+  <section class="accordion">
+
+        
+    <div class="accordion"></div>
+    <h1>FAQ</h1>
+
+    <div class="question" id="section1">What is it made of?</div>
+    <div class="answer">
+      <p>All our products are made from 100% natural hair, carefully selected by our experts</p>
+    </div>
+
+    <div class="question" id="section2">Is glue included in the package?</div>
+    <div class="answer">
+     
+        <p>Yes! All products come with a glue that is strong and reliable on all skin-types. </p>
+    
+    </div>
+
+    <div class="question" id="section3"> Is it possible to return goods?</div>
+    <div class="answer">
+      <p>Ofcourse! As long as the package is unopened you are free to return your product. We will refund your purchase when we have recieved the returned product</p>
+    </div>
+    </div> 
+</section>
+     
+</div>
+    
+    <script src="script.js"></script> <!-- dont forget to link the javascript file here! -->
   </body>
 </html>
