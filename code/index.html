@@ -16,10 +16,29 @@
 <body>
 
   <header class="hero">
-    <video class="hero-video" id="videoChild" poster="./images/poster-child.jpg" src="./videos/child.mp4"
-      type="video/mp4" autoplay loop muted playsinline></video>
-    <video class="hero-video" id="videoAdult" poster="./images/poster-adult.jpg" src="./videos/adult.mp4"
-      type="video/mp4" autoplay loop muted playsinline></video>
+
+    <video 
+      class="hero-video" 
+      id="videoChild" 
+      poster="./images/poster-child.jpg" 
+      src="./videos/child.mp4"
+      type="video/mp4" 
+      autoplay 
+      loop 
+      muted 
+      playsinline>
+    </video>
+    <video 
+      class="hero-video" 
+      id="videoAdult" 
+      poster="./images/poster-adult.jpg" 
+      src="./videos/adult.mp4"
+      type="video/mp4" 
+      autoplay 
+      loop 
+      muted 
+      playsinline>
+    </video>
     <nav>
       <ul>
         <li>
@@ -34,32 +53,66 @@
       <h1>Find happiness</h1>
       <h2>through <span id="heroSubtitle"></span></h2>
     </div>
+
   </header>
 
   <main>
-    <section class="signup-wrapper" id="signupWrapper">
+
+    <section 
+      class="signup-wrapper" 
+      id="signupWrapper">
+
       <h1 class="signup-title">Signup</h1>
-      <form id="formSignup" action="http://httpbin.org/anything" method="post" target="_blank">
+
+      <form 
+        id="formSignup" 
+        action="http://httpbin.org/anything" 
+        method="post">
 
         <div class="signup-item">
-          <label id="name" for="name"></label>
-          <input class="input-field" name="name" placeholder="Firstname Lastname" type="text" required>
+          <label 
+            id="nameField" 
+            for="name">
+          </label>
+          <input 
+            class="input-field" 
+            id="name" 
+            name="name" 
+            placeholder="Firstname Lastname" 
+            type="text" 
+            required
+          >
         </div>
 
         <div class="signup-item">
           <label for="email">Your email address</label>
-          <input class="input-field" autocomplete="on" name="email-address" placeholder="email@address.com" type="email"
-            required>
+          <input 
+            class="input-field" 
+            id="email" 
+            autocomplete="on" 
+            name="email-address" 
+            placeholder="email@address.com" 
+            type="email"
+            required
+          >
         </div>
 
         <div class="signup-item">
           <label for="phone">Your mobile number</label>
-          <input class="input-field" autocomplete="on" name="mobile-number"
-            pattern="07[0-9]-[0-9]{3} [0-9]{2} [0-9]{2}|07[0-9]{8}" placeholder="07X-XXX XX XX or 070XXXXXXX" type="tel"
-            required>
+          <input 
+            class="input-field" 
+            id="phone" 
+            autocomplete="on" 
+            name="mobile-number"
+            pattern="07[0-9]-[0-9]{3} [0-9]{2} [0-9]{2}|07[0-9]{8}" 
+            placeholder="07X-XXX XX XX or 070XXXXXXX" 
+            type="tel"
+            required
+          >
         </div>
 
-        <p class="signup-item signup-instruction">Please answer the following questions so we may send you information
+        <p class="signup-item signup-instruction">
+          Please answer the following questions so we may send you information
           tailored to <span id="instruction"></span> in the best way.
         </p>
 
@@ -67,27 +120,37 @@
           <div class="input-field">
             <div>
               <label>
-                <input name="contact" type="radio" value="email"> via email
+                <input 
+                  name="contact" 
+                  type="radio" 
+                  value="email"
+                > via email
               </label>
             </div>
             <div>
             <label>
-              <input name="contact" type="radio" value="SMS"> via SMS
+              <input 
+                name="contact" 
+                type="radio" 
+                value="SMS"
+              > via SMS
             </label>
           </div>
         </div>
         </div>
 
         <div class="signup-item">
-          <label for="age">Select your <span id="selectChild"></span>age range:</label>
+          <label for="age">
+            Select your <span id="selectChild"></span>age range:
+          </label>
           <select class="input-field" id="age" name="age">
-            <option value="nochoice">(choose an option)</option>
-            <option id="select1" value="option1"></option>
-            <option id="select2" value="option2"></option>
-            <option id="select3" value="option3"></option>
-            <option id="select4" value="option4"></option>
-            <option id="select5" value="option5"></option>
-            <option value="decline">I don't want to answer</option>
+              <option value="nochoice">(choose an option)</option>
+              <option id="select1" value="option1"></option>
+              <option id="select2" value="option2"></option>
+              <option id="select3" value="option3"></option>
+              <option id="select4" value="option4"></option>
+              <option id="select5" value="option5"></option>
+              <option value="decline">I don't want to answer</option>
           </select>
         </div>
 
@@ -95,41 +158,66 @@
           <div class="input-field">
             <div>
               <label>
-                <input name="veggie1" type="checkbox"><span id="check1"></span>
+                <input 
+                  name="veggie1" 
+                  type="checkbox">
+                  <span id="check1"></span>
               </label>
               <label>
-                <input name="veggie2" type="checkbox"><span id="check2"></span>
+                <input 
+                  name="veggie2" 
+                  type="checkbox">
+                  <span id="check2"></span>
               </label>
               <label>
-                <input name="veggie3" type="checkbox"><span id="check3"></span>
+                <input 
+                  name="veggie3" 
+                  type="checkbox">
+                  <span id="check3"></span>
               </label>
             </div>
             <div>
               <label>
-                <input name="veggie4" type="checkbox"><span id="check4"></span>
+                <input 
+                  name="veggie4" 
+                  type="checkbox">
+                  <span id="check4"></span>
               </label>
               <label>
-                <input name="veggie5" type="checkbox"><span id="check5"></span>
+                <input 
+                  name="veggie5" 
+                  type="checkbox">
+                  <span id="check5"></span>
               </label>
               <label>
-                <input name="veggie6" type="checkbox"><span id="check6"></span>
+                <input 
+                  name="veggie6" 
+                  type="checkbox">
+                  <span id="check6"></span>
               </label>
             </div>
           </div>
         </div>
 
         <div class="signup-item">
-          <button class="button-submit" id="buttonSubmit" type="submit">Please register <span
-              id="register"></span>!</button>
+          <button 
+            class="button-submit" 
+            id="buttonSubmit" 
+            type="submit">Please register <span
+              id="register"></span>!
+          </button>
         </div>
-        <div class="signup-item">
-          <p><span id="thankYou"><strong>Thank you for registering!</strong></span></p>
-        </div>
+
       </form>
+
     </section>
 
-    <section class="accordion-wrapper" id="accordionWrapper">
+    <section 
+      class="accordion-wrapper" 
+      id="accordionWrapper">
+
       <h1 class="accordion-title">FAQ</h1>
+
       <button class="accordion-question">It seems incredible, what are your services?</button>
       <div class="accordion-answer">
         <p>After registration, we will send you all the information about our services and we are pretty confident that
@@ -171,32 +259,49 @@
 
     </section>
 
-    <button class="button-top" id="buttonTop" title="Back to top" type="button">Top</button>
+    <button 
+      class="button-top" 
+      id="buttonTop" 
+      title="Back to top" 
+      type="button">Top
+    </button>
 
   </main>
-
 
   <footer>
 
     <div class="footer-button">
-      <button class="button-toggle" id="buttonToggle" type="reset">Interested in our 18+ services?</button>
+      <button 
+        class="button-toggle" 
+        id="buttonToggle" 
+        type="reset">Interested in our 18+ services?
+      </button>
     </div>
+
     <div class="footer-copyright">
       <span>Created by Nadia Lefebvre</span>
-      <a href="https://www.linkedin.com/in/nadiainsweden/" target="_blank" title="Linkedin Nadia Lefebvre" <i
-        class="fab fa-linkedin">
-        </i>
+      <a 
+        href="https://www.linkedin.com/in/nadiainsweden/" 
+        target="_blank" 
+        title="Linkedin Nadia Lefebvre" 
+        <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://github.com/nadialefebvre" target="_blank" title="GitHub Nadia Lefebvre" <i class="fab fa-github">
-        </i>
+      <a 
+        href="https://github.com/nadialefebvre" 
+        target="_blank" 
+        title="GitHub Nadia Lefebvre" 
+        <i class="fab fa-github"></i>
       </a>
-      <a href="https://stackoverflow.com/users/17550223/nadia-lefebvre" target="_blank"
-        title="Stack Overflow Nadia Lefebvre" <i class="fab fa-stack-overflow">
-        </i>
+      <a 
+        href="https://stackoverflow.com/users/17550223/nadia-lefebvre" 
+        target="_blank"
+        title="Stack Overflow Nadia Lefebvre" 
+        <i class="fab fa-stack-overflow"></i>
       </a>
     </div>
 
   </footer>
+
   <script src="./script.js"></script>
 
 </body>

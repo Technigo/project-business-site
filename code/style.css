@@ -10,7 +10,7 @@
 
 html {
   background-color: #fefae7;
-  /* CSS property for smooth scrolling doesn't work on Safari (need some more Googling to find a solution) */
+  /* this CSS property for smooth scrolling doesn't work on Safari, need some more Googling to find a solution */
   scroll-behavior: smooth;
   color: #3d4c1a;
 }
@@ -42,7 +42,6 @@ a {
   width: 100vw;
   height: 65vh;
   z-index: 2;
-  /* not sure what top, left bottom and right values do... bottom and right seem useless if text is aligned left and top... */
   top: 0;
   left: 0;
   bottom: 0;
@@ -61,8 +60,6 @@ a {
   width: fit-content;
   font-size: 1.25rem;
   display: flex;
-  /* align-items: left;
-  justify-content: top; --- These two properties change nothing, need to check (et display:flex, est-ce nécessaire?) */
   flex-direction: column;
   font-family: 'MuseoModerno', cursive;
 }
@@ -71,8 +68,6 @@ a {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  /* I had to put a higher z-index so the visitor can click the links -- not necessary anymore? */
-  z-index: 3;
 }
 
 .hero ul li {
@@ -111,10 +106,6 @@ main {
   flex-direction: column;
 }
 
-.signup-wrapper {
-  padding: 3rem 3rem 2rem 3rem;
-}
-
 .accordion-wrapper {
   margin-bottom: 8rem;
 }
@@ -146,7 +137,7 @@ button, input, select {
   font-size: 100%;
 }
 
-/* Input validation styling, show invalid red ring only while not focused */
+/* input validation styling, show invalid red border only while not focused */
 input:not(:focus):not(:placeholder-shown):invalid {
   border-color: red;
 }
@@ -155,7 +146,7 @@ option {
   text-align: center;
 }
 
-/* Many properties so the placeholder styling can work */
+/* many properties so the placeholder styling can work... */
 ::-webkit-input-placeholder {
   color: #f6db55;
   opacity: 1;
@@ -254,7 +245,7 @@ input[type="checkbox"]::before {
 }
 
 input[type="checkbox"]:checked::before {
-  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  /* use `visibility` instead of `display` to avoid recalculating layout */
   visibility: visible;
 }
 
@@ -292,8 +283,9 @@ input[type="radio"]:checked::before {
   transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
 }
 
-.signup-item p span {
+.signup-item p {
   visibility: hidden;
+  text-align: center;
 }
 
 .accordion-question, .accordion-title {
@@ -312,7 +304,7 @@ input[type="radio"]:checked::before {
   font-size: 1.25rem;
   transition: 0.4s;
 }
-/* I didn't have the time to solve the minus staying there even if the question is closed */
+/* I didn't have the time to solve the minus symbol staying there even if the question is closed */
 .accordion-question:after {
   content: "\002B";
   font-weight: bold;
@@ -348,7 +340,7 @@ input[type="radio"]:checked::before {
   text-align: justify;
 }
 
-/* Button to bring the visitor back to top */
+/* button to bring the visitor back to top */
 .button-top {
   display: none;
   position: fixed;
@@ -442,7 +434,7 @@ footer .footer-copyright .fab {
 
   .signup-wrapper, .accordion-wrapper {
     margin-top: 3rem;
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
   }
 
   .signup-wrapper {
