@@ -8,5 +8,5 @@ buttons .forEach (button => {
   button.classList.toggle('accordion--active');
   accordionContent.classList.toggle('show-answer');
 })
-})
+});
 
