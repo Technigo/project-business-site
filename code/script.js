@@ -120,16 +120,14 @@ function displayAdult() {
   document.getElementById('check4').innerText = 'Pomegranate';
   document.getElementById('check5').innerText = 'Peach';
   document.getElementById('check6').innerText = 'Papaya';
-
   document.getElementById('buttonSubmit').innerText = 'Please register me!';
   document.getElementById('questionBusiness').innerText = 'sex shop';
   document.getElementById('answerWho').innerText = 'yourself alone';
   document.getElementById('answerType').innerText = 'fruits';
   document.getElementById('questionType').innerText = 'fruits';
   document.getElementById('relatedType').innerText = 'fruit';
-
-
   document.getElementById('buttonAdult').innerText = 'Back to our child services';
+  
   const redMedium = document.querySelectorAll('.signup-item .btn, .accordion-answer, footer .footer1, footer .footer1 .btn2, #myBtn');
   for (let i = 0; i < redMedium.length; i++) {
     redMedium[i].style.backgroundColor = '#EA5E5A';
