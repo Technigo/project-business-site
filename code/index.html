@@ -6,29 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 3</title>
     <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:700|Fira+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sintony|Source+Sans+Pro:900" rel="stylesheet">
   </head>
   <body>
-    <!-- video or image header -->
 
-    <!-- Mer om hero image finns här: 
-      https://www.w3schools.com/howto/howto_css_hero_image.asp -->
+    <!-- Header -->
 
-    <header class="hero-container">
-      <!-- Inget krav med nav - kommenterar ut den så länge -->
-      <!-- <nav>
+    <header class="image-header">
+
+      <!-- Nav -->
+
+      <nav>
         <ul>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
+          <li><a href="#">Prices</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact us</a></li>
         </ul>
-      </nav> -->
-      <h1>Vancouver</h1>
-      <h4>En vacker stad</h4>
-      <a class="hero-button" href="#">Köp din resa nu</a>
+      </nav>
+      <h1>Vancouver running tours</h1>
+      <p>A unique sightseeing experience</p>
+      <a class="header-button" href="#">Book now</a>
     </header>
 
+    <!-- Main -->
+
     <main class="main">
+      
       <!-- Signup form -->
+
       <section class="signup-form-section">
         
         <form
@@ -36,14 +42,14 @@
           action="https://httpbin.org/anything"
           method="post"
         >
-          <h2>Sign up</h2>
+          <h2>Sign up for our newsletter</h2>
 
           <label for="fname">First name:</label>
           <input
             type="text"
             name="fname"
             id="fname"
-            placeholder="first name"
+            placeholder="Your first name"
             maxlength="20"
             required
           />
@@ -53,7 +59,7 @@
             type="text"
             name="lname"
             id="lname"
-            placeholder="last name"
+            placeholder="Your last name"
             maxlength="30"
             required
           />
@@ -61,72 +67,81 @@
           <label for="email">Email:</label>
           <input type="email" name="email" id="email" required />
 
-          <label for="city">City:</label>
-            <select name="city" id="city">
-              <option value="Stockholm">Stockholm</option>
-              <option value="Uppsala">Uppsala</option>
-              <option value="Sigtuna">Sigtuna</option>
-              <option value="Other city">Other city</option>
+          <label for="age">Age:</label>
+          <input type="number" name="age" id="age" min="15" max="110" step="1" />
+
+          <label for="experience">Running experience:</label>
+            <select name="experience" id="experience">
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
             </select>
           </label>
 
           <div class="radio">
-            <p>Your preferred language</p>
+            <p>Your preferred distance</p>
 
             <input 
               type="radio" 
-              name="language" 
-              id="danska" 
-              value="danska" />
-            <label for="danska">Danska</label>
+              name="distance" 
+              id="5k" 
+              value="5k" 
+              checked 
+            />
+            <label for="5k">5K</label>
 
             <input
               type="radio"
-              name="language"
-              id="engelska"
-              value="engelska"
+              name="distance"
+              id="10K"
+              value="10K"
             />
-            <label for="engelska">Engelska</label>
+            <label for="10K">10K</label>
 
             <input 
               type="radio" 
-              name="language" 
-              id="tyska" 
-              value="tyska" 
+              name="distance" 
+              id="marathon" 
+              value="marathon" 
             />
-            <label for="tyska">Tyska</label>
+            <label for="marathon">Marathon</label>
 
           </div>
 
-          <input class="submitbutton" type="submit" value="submit" />
+          <input class="submitbutton" type="submit" value="Sign up" />
         </form>
       </section>
 
       <section class="accordion-section">
+
         <!-- Accordion -->
-        <h2>FAQ</h2>
 
-        <div class="question" id="section1">Section 1</div>
+        <h2>Frequently asked questions</h2>
+
+        <div class="question" id="section1">How fast will we run?</div>
         <div class="answer">
-          <p>Svar 1</p>
+          <p>We always go at the pace of the slowest person in the group.</p>
         </div>
 
-        <div class="question" id="section2">Section 2</div>
+        <div class="question" id="section2">Is there an age limit?</div>
         <div class="answer">
-          <p>Svar 2</p>
+          <p>Yes, you must be at least 15 years old to participate in our tours.</p>
         </div>
 
-        <div class="question" id="section3">Section 3</div>
+        <div class="question" id="section3">Where do we run?</div>
         <div class="answer">
-          <p>Svar 3</p>
+          <p>In Stanley Park, West End and Kitsilano.</p>
         </div>
 
-        <div class="question" id="section4">Section 4</div>
+        <div class="question" id="section4">Will there be Swedish coffee along the route?</div>
         <div class="answer">
-          <p>Svar 4</p>
+          <p>Yes, there are coffee shops on every corner where you can find Swedish coffee.</p>
         </div>
       </section>
     </main>
+
+    <!-- Footer -->
+
     <footer class="footer">
       <p>Copyright</p>
     </footer>

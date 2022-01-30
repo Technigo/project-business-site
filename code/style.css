@@ -6,17 +6,22 @@
 }
 
 html {
-  /* font-family: Tahoma, Verdana, sans-serif; */
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Sintony', Tahoma, sans-serif;
   font-size: 16px;
 }
 
 body {
   width: 100%;
   margin: 0 auto;
+  color: #4b535c;
 }
 
-.hero-container {
+h1, h2 {
+  text-transform: uppercase;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.image-header {
   width: 100vw;
   height: 50vh;
   background-image: url("./images/vancouver-sunset-edited-for-mobile.jpg");
@@ -27,60 +32,72 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0.6;
+  text-align: center;
 }
 
-/* .hero-container nav {
+.image-header nav {
   position: absolute;
   top: 0;
   background-color: orange;
   width: 100%;
-  height: 2rem;
+  height: auto;
+  font-size: 0.8rem;
 }
 
-.hero-container li {
+.image-header ul {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.image-header li {
   display: inline-block;
   margin: 0.5rem 3rem;
 }
 
-.hero-container a {
+.image-header nav a {
   color: white;
   text-decoration: none;
-} */
-
-.hero-container h1 {
-  font-size: 3rem;
-  color: white;
 }
 
-.hero-container h4 {
+.image-header nav a:hover {
+  text-decoration: underline;
+}
+
+.image-header h1 {
   font-size: 2rem;
   color: white;
 }
-/* Även h4 skulle behöva MQs */
 
-.hero-button {
+.image-header p {
+  font-size: 1.4rem;
+  color: white;
+  font-weight: 500;
+}
+
+.header-button {
   color: white;
   text-decoration: none;
   background-color: orange;
-  padding: 1rem;
+  padding: 0.8rem;
   display: inline-block;
   margin-top: 2rem;
   border: 1px solid orange;
   border-radius: 6px;
 }
 
-/* Kanske göra någon annan hovereffekt än denna just */
-.hero-button:hover {
-  background-color: yellowgreen;
+.header-button:hover {
+  background-color: white;
+  color: orange;
   position: relative;
   left: 1px;
   bottom: 1px;
+  text-decoration: none;
 }
 
 .main {
   width: 100vw;
-  margin: 0 auto;
+  margin: 4rem auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -93,8 +110,9 @@ body {
   flex: 50%;
 }
 
-.main h2 {
+.signup-form-section h2 {
   margin: 2rem auto 1rem auto;
+  font-size: 1.3rem;
 }
 
 .signup-form {
@@ -110,18 +128,29 @@ label {
 }
 
 label:first-of-type {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 input[type="text"], input[type="email"] {
-  padding: 0.2rem;
-  border: 1px solid grey;
+  padding: 0.4rem;
+  border: none;
   width: 80%;
+  background-color: #f1f1f1;
+}
+
+input[type="number"] {
+  padding: 0.4rem;
+  border: none;
+  width: 20%;
+  background-color: #f1f1f1;
 }
 
 select {
   width: 40%;
-  padding: 0.1rem;
+  padding: 0.3rem;
+  border: none;
+  width: 40%;
+  background-color: #f1f1f1;
 }
 
 .radio {
@@ -136,43 +165,32 @@ select {
 
 .radio label {
   display: inline;
-  margin-right: 1rem;
+  margin-right: 0.8rem;
 }
 
 .radio label:last-of-type {
   margin-right: 0;
 }
 
-/* input, label, select {
-  padding: 0.5rem 0;
-  display: block;
-}
-
-input[type='text'] {
-  color: grey;
-  padding-left: 10px;
-  border: 1px solid grey;
-  border-radius: 5%;
-}
-
-/* input:valid {
-  border-color: green;
-} */
-
-/* input:invalid {
-  border-color: red;
-} */
-
-
 .submitbutton {
   background-color: orange;
   color: white;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
   padding: 0.5rem;
-  margin-top: 1rem;
   border: 1px solid orange;
   border-radius: 6px;
-  width: 50%;
-  
+}
+
+.submitbutton:hover {
+  background-color: white;
+  color: orange;
+  position: relative;
+  left: 1px;
+  bottom: 1px;
+  text-decoration: none;
+  font-weight: 800;
 }
 
 .accordion-section {
@@ -183,12 +201,13 @@ input[type='text'] {
 }
 
 .accordion-section h2 {
-  margin: 2rem 0;
+  margin: 2rem 0.5rem;
+  font-size: 1.3rem;
 }
 
 .question {
   width: 100%;
-  padding: 1rem;
+  padding: 0.8rem;
   background-color: orange;
   color: white;
   border: 1px solid white;
@@ -196,17 +215,19 @@ input[type='text'] {
 
 .answer {
   display: none;
-  background-color: wheat;
+  background-color: white;
+  color: #4b535c;
+  font-size: 0.75rem;
   padding: 1rem;
+}
+
+.active {
+  background-color: rgb(255, 123, 0);
 }
 
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-.active {
-  opacity: 0.7;
-}
 
 .active + .answer {
   display: block;
@@ -216,21 +237,21 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   background-color: orange;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 0.8rem;
   margin-top: 2rem;
   font-size: 0.8rem;
+  width: 100%;
 }
 
 /* Tablet media queries*/
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .hero-container {
+  .image-header {
     background-image: url("./images/vancouver-sunset-edited-for-tablet.jpg");
   }
 
-  .hero-container h1 {
-    font-size: 4rem;
-    color: green; /*to be removed*/
+  .image-header h1 {
+    font-size: 3rem;
   }
 
   .main {
@@ -251,16 +272,24 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 }
 
+/* Tablet media queries - landscape orientation  */
+
+@media screen and (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+  .image-header {
+    height: 65vw;
+  }
+}
+
+
 /* Desktop media queries */
 
 @media screen and (min-width: 992px) {
-  .hero-container {
+  .image-header {
     background-image: url("./images/vancouver-sunset-edited-for-desktop.jpg");
   }
 
-  .hero-container h1 {
-    font-size: 5rem;
-    color: brown; /*to be removed*/
+  .image-header h1 {
+    font-size: 4rem;
   }
 
   .main {
@@ -272,6 +301,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   .main section {
     min-width: 300px;
     border-radius: 4%;
+  }
+
+  .submitbutton {
+    margin: 1rem 0;
   }
 }
 
