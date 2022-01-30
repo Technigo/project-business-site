@@ -32,6 +32,7 @@ body {
 
 h1 {
   display: flex;
+  justify-content: center;
   position: top;
   align-items: center;
   text-align: center;
@@ -44,6 +45,7 @@ h1 {
 
 h2 {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   position: middle;
   text-align: center;
@@ -113,6 +115,8 @@ form button {
   margin: 1rem;
   display: none;
   border-radius: 25px;
+  width: 200px;
+  height: 150px;
 }
 
 .active + .answer {
@@ -131,6 +135,11 @@ footer {
   display: flex;
   }
  
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
 
 /* This is the media querie for mobile*/
 @media screen {
