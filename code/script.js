@@ -61,6 +61,9 @@ document.addEventListener("DOMContentLoaded", displayChild);
 
 function displayChild() {
   document.getElementById("heroSubtitle").innerText = "vegetables";
+  document.getElementById('videoChild').style.display = 'block';
+  document.getElementById('videoAdult').style.display = 'none';
+
   document.getElementById("name").innerText = "Your child's name";
   document.getElementById("instruction").innerText = "your child";
 
@@ -133,9 +136,10 @@ function displayChild() {
 
 function displayAdult() {
   document.getElementById("heroSubtitle").innerText = "fruits";
+  document.getElementById('videoChild').style.display = 'none';
+  document.getElementById('videoAdult').style.display = 'block';
   document.getElementById("name").innerText = "Your name";
   document.getElementById("instruction").innerText = "you";
-
   document.getElementById('selectChild').innerText = '';
   document.getElementById("select1").innerText = "18-30 years old";
   document.getElementById("select2").innerText = "31-40 years old";
