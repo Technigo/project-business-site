@@ -1,12 +1,9 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is my project hand-in for week three. This week the goal was to create a form, an accordion as well as an image header. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The trickiest part of this week's hand-in was to start using, and understandnig, javascript. My personal goal was to simply understand the very basics of javascript. A great thing was that we had such good collaboration in our team. If I would have had more time I would have liked to make a hamburger meny as well as icons in the accordion. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.

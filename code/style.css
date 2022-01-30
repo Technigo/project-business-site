@@ -1,3 +1,5 @@
+/* styling for all of website*/
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +10,8 @@
   font-family: 'Cormorant Garamond', serif;
   font-family: 'Spectral', serif;
 }
+
+/* styling for image-header and it's content*/
 
 .image-header {
   display: flex;
@@ -60,7 +64,6 @@ li {
   font-weight: bolder;
 }
 
-
 .title {
   position: absolute; 
   display: flex;
@@ -68,6 +71,8 @@ li {
   align-self: center;
   color: white;
 }
+
+/* Styling for the main, starting under the image header*/
 
 main {
   display: flex;
@@ -77,13 +82,20 @@ main {
   background: seashell;
 }
 
+/* Styling for the form*/
+
 .signup {
   width: 60vw;
   padding: 15px;
   margin: 25px 0;
-  border: 1px black solid;
+  border: 15px rgba(255, 211, 234, 0.42) solid;
   border-radius: 10px;
-  background: white;
+}
+
+form {
+  background:  rgba(222, 255, 186, 0.42);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 label {
@@ -91,10 +103,7 @@ label {
   margin-bottom: 20px;
 }
 
-button {
-  width: fit-content;
-  align-self: center;
-}
+/* Styling for the accordion*/
 
 .accordion {
   display: flex;
@@ -115,9 +124,13 @@ h2 {
 }
 
 .answer {
+  display: none;
   padding: 3%;
   }
 
+.open + .answer{
+    display: inline-flex;
+  }
 
 .button {
   padding: 5%;
@@ -126,13 +139,7 @@ h2 {
   border-radius: 10px;
 }
 
-.answer {
-  display: none;
-}
-
-.open + .answer{
-  display: inline-flex;
-}
+/* Styling for the informationtext*/
 
 .textbox {
   width: 60vw;
@@ -145,7 +152,10 @@ h2 {
 
 .textbox p {
   margin: 10px;
+  text-align: center;
 }
+
+/* Styling for the footer*/
 
 footer {
   height: fit-content;
@@ -157,6 +167,8 @@ footer {
 footer li {
   color: hotpink;
 }
+
+/* Mediaqueries*/
 
 
 @media (max-width: 667px) {
