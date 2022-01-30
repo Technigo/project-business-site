@@ -35,8 +35,3 @@ phoneInput.addEventListener("change", () => {
   }
 });
 
-
-
-
-
-
