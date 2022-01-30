@@ -8,4 +8,4 @@ I had some problems with the video background at the beginning, but eventually I
 
 ## View it live
 
-Nelify link here
+https://business-site-fresh-flowers.netlify.app/
