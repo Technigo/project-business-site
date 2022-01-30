@@ -18,75 +18,107 @@
   <div class="hero-image">
     <div class="hero-text">
       <h1>Art Gallery XYZ</h1>
-      <p>Book your private viewing</p>
-      <button class="hero-button">Book</button>
     </div>
   </div>
   <!-- Signup form -->
   <div class="flexbox-2-column">
     <div class="signup-form">
-      <form action="http://httpbin.org/anything" method="post">
-        <div>
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="fname">
+      <h2>RESERVE YOUR SPOT</h2>
+      <form action="http://httpbin.org/anything" method="post" id="form">
+        <div class="text-field">
+          <label for="name">First Name
+            <input type="text" id="name" name="name" required>
+          </label>
+        </div>
+        <div class="text-field">
+          <label for="email">Email
+            <input type="email" id="email" name="email" required>
+          </label>
+        </div>
+        <div class="text-field">
+          <label for="pass">Password
+            <input type="password" id="pass" name="password" minlength="8" required>
+          </label>
+        </div>
+        <div class="radio-buttons">
+          <label for="option-1">Early Bird
+            <input type="radio" id="option-1" name="options" value="1" checked>
+          </label>
+          <label for="option-2">VIP
+            <input type="radio" id="option-2" name="options" value="2">
+          </label>
         </div>
         <div>
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lname">
+          <label for="terms-1">
+            <input type="checkbox" id="terms-1" name="check1" value="check" required>
+            I accept the terms and conditions
+          </label>
         </div>
-        <div>
-          <label for="pass">Password</label>
-          <input type="password" id="pass" name="password" minlength="8" required>
-        </div>
-        <div>
-          <input type="radio" id="option-1" name="options" value="1" checked>
-          <label for="option-1">Option 1 Text</label>
-        </div>
-        <div>
-          <input type="radio" id="option-2" name="options" value="2">
-          <label for="option-1">Option 2 Text</label>
-        </div>
-        <div>
-          <input type="radio" id="option-3" name="options" value="3">
-          <label for="option-1">Option 3 Text</label>
-        </div>
-        <div>
-          <input type="radio" id="option-4" name="options" value="4">
-          <label for="option-1">Option 4 Text</label>
-        </div>
-        <button type="submit">SUBMIT</button>
+
+        <button type="submit" id="submitButton">SUBMIT</button>
       </form>
     </div>
-  <div class="accordion">
-    <!-- Accordion -->
-    <h1>FAQ</h1>
 
-    <div class="question" id="section1">Question 1</div>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
+
+    <div class="accordion">
+      <!-- Accordion -->
+      <h2>FAQ</h2>
+      <div class="accordion-item">
+        <div class="question-flex" id="section1">
+          <div class="question">Question 1</div>
+          <div class="icon-plus" id="icon-plus">+</div>
+          <div class="icon-minus " id="icon-minus">-</div>
+        </div>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="question-flex" id="section2">
+          <div class="question">Question 2</div>
+          <div class="icon-plus" id="icon-plus">+</div>
+          <div class="icon-minus " id="icon-minus">-</div>
+        </div>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="question-flex" id="section3">
+          <div class="question">Question 3</div>
+          <div class="icon-plus" id="icon-plus">+</div>
+          <div class="icon-minus " id="icon-minus">-</div>
+        </div>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+      </div>
     </div>
 
-    <div class="question" id="section2">Section 2</div>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
-
-    <div class="question" id="section3">Section 3</div>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
-
-    <div class="question" id="section4">Section 4</div>
-    <div class="answer">
-      <p>Lorem ipsum...</p>
-    </div>
   </div>
-
+  <!-- Footer section with responsive flexbox -->
+  <div class="footer">
+    <div class="footer-left">
+      <p>
+        Made with ♡ in GR and SE
+      </p>
+    </div>
+    <div class="footer-center">
+      <p>
+        Week 3 Project for <a href="https://www.technigo.io/program">Technigo</a> Spring '22 | Fay Pistikozoglou
+      </p>
+    </div>
+    <div class="footer-right">
+      <p>
+        © Photos from <a href="https://www.unsplash.com">Unsplash</a>
+      </p>
+    </div>
   </div>
 
   <!-- dont forget to link the javascript file here! -->
   <script src="script.js"></script>
-</div>
+  </div>
 </body>
 
 </html>

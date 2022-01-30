@@ -1,4 +1,4 @@
-// A function that adds and remove the class "active" on the section you click on.
+// A function that adds and remove the class "open" on the section you click on.
 // We haven't really talked about ´this´ yet, but we will... ;)
 // console.log(this) to see how it works
 function toggleAccordion() {
@@ -18,5 +18,6 @@ const section3 = document.getElementById("section3")
 section3.onclick = toggleAccordion
 
 
-const section4 = document.getElementById("section4")
-section4.onclick = toggleAccordion
+document.getElementById("submitButton").addEventListener("click", function(){
+	document.getElementById("form").className="submitted";
+});
