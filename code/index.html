@@ -3,28 +3,86 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>QSailing</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!--This is the font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
     <!-- video or image as a header is cool :) -->
+    <header class="video-header">
+      <h1>Q Sailing</h1>
+    </header>
+      <video autoplay loop muted poster="C:\Users\maria\desktop\Technigoprojects\Sprint1\Week3\project-business-site\code\videos\pexels-rostislav-uzunov-7385122.mp4">
+        <source src="pexels-rostislav-uzunov-7385122.mp4" type="video/mp4" />
+        Argh! Your browser does not support pirates :(
+      </video>
+      <h2>Join us on the High Seas</h2>
+    </header>
+
 
     <!-- Signup form -->
+    <main>
+      <form id="form"action="https://httpbin.org/anything" method="post">
+        <label
+          >First name:
+          <input id="nameInput" class="text-input" type="text" name="First name" />
+        </label>
+        <label
+        >Last name:
+        <input id="nameInput" class="text-input" type="text" name="Last name" />
+      </label>
+        <label
+        >E-mail:
+        <input id="nameInput" class="text-input" type="text" name="e-mail" />
+      </label>
+        <label
+          >Join our mailing list
+          <input type="checkbox" name="newsletter" />
+        </label>
+        <button type="submit">join</button>
+      </form>
+    </main>
+    
+<!--NOT SURE ABOUT THIS FROM YOUTUBE BORDE VARA I CSS?
+<style>
+  .accordion__button  {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: darkblue;
+    text-align: left;
+    transition: 0.2s;
+  }-->
 
+</style>
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+      <h3>What we do</h3>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">Destinations</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>West indies</p>
+        <p>Pacific</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">Vessels</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Multi hulls</p>
+        <p>Mono hulls</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <!-- This is the footer -->
+    <footer>
+      <p>&copy; Marianne Ardin </p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

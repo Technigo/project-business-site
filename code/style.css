@@ -2,6 +2,135 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
+
+
 .active + .answer {
   /* some styling here */
+}
+/* CSS below is to reset default values such as margin, padding and box-sizing and increase the resolution of the text (From Karins codealong) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/*This is the styling for the font*/
+body {
+  font-family:'Permanent Marker', cursive;
+  color: black;
+  background-color: aqua;
+}
+
+/*
+.image-header {
+  height: 50vh;
+  width: 100vw;
+  background: url(".videos C:\Users\maria\desktop\Technigoprojects\Sprint1\Week3\project-business-site\code\videos\pexels-rostislav-uzunov-7385122.mp4");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+*/
+
+.video-header {
+  /*background: url(".videos C:\Users\maria\desktop\Technigoprojects\Sprint1\Week3\project-business-site\code\videos\pexels-rostislav-uzunov-7385122.mp4");
+  background-size: cover;
+  background-repeat: none;*/
+  height: 50vh;
+  width: 100vw;
+  border: 3px solid black;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-header video {
+position: absolute;
+left: 0;
+top: 0;
+object-fit: cover;
+height: 100%;
+width: 100%;
+}
+
+h1 {
+  position: absolute;
+  color: black;
+  font-size: 100px;
+  text-shadow: -2px -2px 3px black;
+}
+
+h2 {
+  position: top;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  color: black;
+  font-size: 50px;
+}
+
+h3 {
+  position: top;
+  padding: 1rem;
+  margin: 1rem;
+  color: black;
+  font-size: 20px;
+}
+
+form {
+  border: 1px solid;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 3rem auto;
+  display: grid;
+  gap: 1rem;
+}
+
+input:focus {
+  background-color: yellow;
+}
+
+form button {
+  width: 100px;
+  border-radius: 2rem;
+  border: none;
+  background-color: rgb(55, 0, 255);
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* This is styling for the footer */
+footer {
+  text-align: right;
+}
+
+/* This is the media querie for computer*/
+@media (min-width: 1025px) {
+  .other-news {
+   display: flex;
+     }
+  .hero {
+      height: 50vh;
+      width: 75vw;
+
+}
+
+/* This is the media querie for mobile*/
+@media screen {
+  
 }
