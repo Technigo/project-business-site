@@ -6,6 +6,59 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   /* some styling here */
 /*}*/
 
+
+
+/*  Remove Existing Styling (Stolen from Karin) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+/*.header{
+
+}*/
+
+.header-image{
+    height: 50vh;
+    /* width: 100vh; */
+    width: 100%;
+
+    background-image: url(./images/schnauzer-pexels-sebastian-coman.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    /*display: grid;
+    grid-template-columns: 1fr;
+    padding: 25px 25px;
+    gap: 25px;*/
+
+  }
+
+  /*.signup */
+
+.faq-container {
+  grid-template-columns: 1fr;
+  background-color: lightgray;
+  border: 2px solid darkgray;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .accordion-button {
   display: block;
   width:100%;
@@ -48,11 +101,27 @@ float: right;
   display: block;
 }
 
-.faq-container {
-  background-color: blue;
-  border-radius: 10px;
-  overflow: hidden;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+
+
+/*MEDIA QUIERIES FOR TABLET*/
+@media (min-width: 668px) and (max-width:1024px) {
+.page { 
+grid-column: 1fr 1fr;
 }
+.header {
+grid-column: span 2;
+  }
+
+.signup, .faq-container {
+  grid-column: span 1;
+}
+}
+
+
+/*MEDIA QUIERIES FOR DESKTOP*/
+@media (min-width: 1024px) 
+.header {
+  grid-columns: span 2;
+  }
+
+
