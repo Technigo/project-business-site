@@ -36,11 +36,5 @@ faqs.forEach(faq => {
 })
 
 
-const input = document.querySelector(".password-input");
-// When an input is checked, or whatever...
-if (input.getAttribute("type") === "password") {
-  input.setAttribute("type", "text");
-} else {
-  input.setAttribute("type", "password");
-}
+
 
