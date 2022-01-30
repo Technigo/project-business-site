@@ -73,8 +73,6 @@ function displayChild() {
   document.getElementById("select3").innerText = "6-9 years old";
   document.getElementById("select4").innerText = "10-13 years old";
   document.getElementById("select5").innerText = "14-17 years old";
-
-
   document.getElementById("checkTitle").innerText =
     "types of vegetables that your child like";
   document.getElementById("check1").innerText = " Leafy";
@@ -83,7 +81,6 @@ function displayChild() {
   document.getElementById("check4").innerText = " Squashes";
   document.getElementById("check5").innerText = " Fruits";
   document.getElementById("check6").innerText = " Cruciferous";
-
   document.getElementById("buttonSubmit").innerText =
     "Please register my child!";
   document.getElementById("questionBusiness").innerText =
@@ -99,7 +96,7 @@ function displayChild() {
     "Interested in our 18+ services?";
 
   const greenMedium = document.querySelectorAll(
-    ".signup-item .button-submit, .accordion-answer, footer .footer-button, #bouton-toggle, #buttonTop"
+    ".signup-item .button-submit, .accordion-answer, footer .footer-button, #boutonToggle, #buttonTop"
   );
   for (let i = 0; i < greenMedium.length; i++) {
     greenMedium[i].style.backgroundColor = "#87A93A";
@@ -165,7 +162,7 @@ function displayAdult() {
     "Back to our child services";
 
   const redMedium = document.querySelectorAll(
-    ".signup-item .button-submit, .accordion-answer, footer .footer-button, #bouton-toggle, #buttonTop"
+    ".signup-item .button-submit, .accordion-answer, footer .footer-button, #boutonToggle, #buttonTop"
   );
   for (let i = 0; i < redMedium.length; i++) {
     redMedium[i].style.backgroundColor = "#EA5E5A";
