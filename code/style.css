@@ -12,14 +12,9 @@ body{
 
 header{
   width: 100%;
-  height: 60vh;
+  height: 80vh;
   min-height: 200px;
   position:relative;
-  /*text-align: center;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;*/
   z-index:-1;
 }
 
@@ -100,8 +95,6 @@ form{
   flex-direction:column;
 }
 
-
-
 .button{
   align-self: center;
 }
@@ -156,9 +149,6 @@ h2{
   background-color:thistle;
 }
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 .answer{
   /*display: none;*/
   height: 0px;
@@ -169,15 +159,12 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   padding: 10px;
 }
 
-
 .active + .answer {
   /*display:block;*/
   opacity: 1;
   height: 80px; 
   margin:0;
-
 }
-
 
 .question{
   background-color: whitesmoke; 
@@ -195,14 +182,15 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 .active::after{ content: "\25BC";  
 }
-.answer:nth-child(odd) {
-  background: red;
-}
 
 @media only screen and (max-width: 600px) {
   
-   h1
-   {font-size: 7vh;
+  header{
+    height:60vh;
+  }
+  
+   h1{
+     font-size: 7vh;
   }
 
   .maincontent{
@@ -228,17 +216,15 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 @media only screen and (min-device-width: 600px) and (max-device-width: 1024px){
 
-.signup{
+  .signup{
   width:40%
-}
+  }
 
-.accordion{
+  .accordion{
   width:40%
-}
+  }
 
-h1 {
+  h1 {
   font-size: 10vh;
-}
-
-
+  }
 }
