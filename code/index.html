@@ -20,10 +20,10 @@
         <form id="form" action="https://httpbin.org/anything" method="post">
           <h1 class="form-header">GET STARTED</h1>
           <label for="full-name">
-            <input type="text" name="full-name" placeholder="Full name" required> *
+            <input type="text" name="full-name" placeholder="Full name*" required>
           </label>
           <label for="email">
-            <input type="email" name="email" placeholder="example@domain.com" required> *
+            <input type="email" name="email" placeholder="example@domain.com*" required>
           </label>
           <div class="radio-group">
             <label>Willing to host
@@ -33,11 +33,20 @@
               <input type="radio" name="host">
             </label>
           </div>
-          <label>
+          <div class="food-preference">
+            <label for="preference" class="preference">Dietery preference</label>
+            <select id="preference" class="preference-option" name="preference">
+              <option value="meat">Eat everything</option>
+              <option value="fish">Pescatarian</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="vegan">Vegan</option>
+            </select>
+            </div>
+          <label for="news" class="checkbox-label">
             <input type="checkbox" name="news">
             Sign me up for extra bites
           </label>
-          <label name="terms">
+          <label for="terms" class="checkbox-label">
             <input type="checkbox" name="terms" required>
             I agree to the terms and conditions*
           </label>
@@ -48,7 +57,7 @@
         <div class="submit-form" id="submit-form">
           <p>Welcome to our community of foodies.</p>
           <p>We look forward to dining with you!</p>
-          <p>🥂</p>
+          <p>🍽️</p>
         </div>
 
         <!-- Accordion -->
