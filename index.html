@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,400;1,500&display=swap');
+    </style>
+  </head>
+  <body>
+
+
+
+<section class="full-page">
+      
+<!------- Navbar & background video --------->
+  
+  <header>
+        <video autoplay loop class="back-video" muted plays-inline>
+            <source src="videos/Video1.mp4" type="video/mp4">
+        </video>
+
+          <nav>
+              <img src="Images/Earth.png" class="logo">
+              
+              <ul class="nav-links">
+                <a href="#accordion" class="button-faq">FAQs</a>
+              </ul>
+          </nav>
+      </header>
+
+
+<!------- Content over video --------->
+  <div class="content">
+    <h1>Alternative Sports</h1>
+    <p>Want to register a new sport? <br> Create an account and start the journey.</p>
+    <a href="#" class="button" id="button">Login</a>
+    
+
+  </div>
+
+
+
+<!------- Popup window for Login and register forms --------->
+
+  <div class="popup">
+    <div class="popup-content">
+      <img src="Images/close.png" alt="Close" class="close">
+
+<!------- Toggle button - Login/Register --------->
+      
+      <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" class="toggle-btn" onclick="login()">Login</button>
+        <button type="button" class="toggle-btn" onclick="register()">Register</button>
+        </div>
+
+<!------- Login form --------->
+
+        <form id="login" class="input-group">
+          <input type="text" class="input-field" placeholder="User ID" required>
+          <input type="password" class="input-field" placeholder="Enter password" required>
+          <input type="checkbox" namne="checkbox" class="check-box">
+          <label for="checkbox">Remember password</label>
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+
+<!------- Register form --------->
+
+        <form id="register" class="input-group">
+          <input type="text" class="input-field" placeholder="User ID" required>
+          <input type="email" class="input-field" placeholder="Email ID" required>
+          <input type="password" class="input-field" placeholder="Enter password" required>
+          <input type="checkbox" namne="checkbox" class="check-box">
+          <label for="checkbox">I agree with the Terms and Conditions</table></label>
+          <button type="submit" class="submit-btn">Register</button>
+        </form>
+      </div>
+    
+    </div>
+  </div>
+
+
+</section>
+
+<!------- Accordion with FAQs --------->
+
+    <section class="accordion" id="accordion">
+      <h2 class="title">FAQ</h2>
+
+      <div class="faq">
+        <div class="question">
+          <h3>What is Chess Boxing?</h3>
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="answer">
+          <p>
+            The object of chess boxing is to either beat your opponent in alternate rounds of chess 
+            or boxing. Matches can be won from either discipline with the chess coming down to check 
+            mate or forfeit and the boxing in either a stoppage or points decision.
+
+            Chess boxing began in Berlin in 2003 and has since spread around the world.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <h3>What is Extreme ironing?</h3>
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="answer">
+          <p>
+            The official explanation of Extreme Ironing via the Extreme Ironing Bureau is that 
+            it's "the latest danger sport that combines the thrills of an extreme outdoor activity 
+            with the satisfaction of a well pressed shirt." 
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <h3>What is Cheese rolling?</h3>
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="answer">
+          <p>
+            The Cooper’s Hill Cheese-Rolling and Wake in England is flat out ridiculous. 
+            Even in the realm of strange sports, this is an absurd contest. 
+            People come from all over the world to compete, chasing a wheel of cheese and trying to catch it.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+
+  </body>
+</html>
