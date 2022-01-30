@@ -14,4 +14,4 @@ Stretch goals that I reached include:
 Description soon.
 
 ## View it live
-Here is a link to my project on Netlify: (coming soon)
+Here is a link to my project on Netlify: https://supper-society.netlify.app/
