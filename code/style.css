@@ -1,127 +1,205 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-/* .active + .answer {
-  /* some styling here */
-/*}*/
-
-
-
-/*  Remove Existing Styling (Stolen from Karin) */
+/*  Remove Existing Styling */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  text-decoration: none;
-  font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.main {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 25px;
-}
-/*.header{
-
-}*/
-
-.header-image{
+.header-image {
     height: 50vh;
-    /* width: 100vh; */
-    width: 100%;
-
+    width: 100vw;
     background-image: url(./images/schnauzer-pexels-sebastian-coman.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center ;
-    /*display: grid;
+    background-position: center;
+}
+
+.header-text {
+    position: absolute;
+    right: 0.3rem;
+    top: 11rem;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+}
+
+h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.main {
+    display: grid;
     grid-template-columns: 1fr;
-    padding: 25px 25px;
-    gap: 25px;*/
+    grid-gap: 1rem;
+    padding: 0.75rem;
+}
 
-  }
+.signup {
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid darkgray;
+    border-radius: 10px;
+    overflow: hidden;
+}
 
-  /*.signup */
+.preference-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.checkbox {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+}
+
+    .checkbox > span {
+        color: black;
+        padding: 0.5rem 0.25rem;
+    }
+
+    .checkbox > input {
+        height: 25px;
+        width: 25px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 1px solid #34495E;
+        border-radius: 4px;
+        outline: none;
+        transition-duration: 0.3s;
+        background-color: white;
+        cursor: pointer;
+    }
+
+        .checkbox > input:checked {
+            border: 1px solid rgb(10, 88, 88);
+            background-color: lightgray;
+        }
+
+            .checkbox > input:checked + span::before {
+                content: '\2713';
+                display: block;
+                text-align: center;
+                color: rgb(10, 88, 88);
+                position: absolute;
+                left: 0.7rem;
+                top: 0.2rem;
+            }
+
+        .checkbox > input:active {
+            border: 2px solid #34495E;
+        }
+
+.form-field {
+    display: block;
+    margin: 0.5rem 0;
+}
 
 .faq-container {
-  grid-template-columns: 1fr;
-  background-color: lightgray;
-  border: 2px solid darkgray;
-  border-radius: 10px;
-  overflow: hidden;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+    width: 100%;
+    background-color: lightgray;
+    padding: 0.5rem;
+    border: 2px solid darkgray;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.submit-button {
+    width: 10rem;
+    height: 2rem;
+    background-color: rgb(10, 88, 88);
+    color: white;
 }
 
 .accordion-button {
-  display: block;
-  width:100%;
-  padding: 15px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: rgb(10, 88, 88);
-  color: white;
-  text-align: left;
-  transition: background-color 1s;
- 
+    display: block;
+    width: 100%;
+    min-height: 4rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(10, 88, 88);
+    color: white;
+    text-align: left;
+    transition: background-color 1s;
+    margin-bottom: 0.5rem;
 }
-/* Unicode for arrow down 25BC*/
-.accordion-button::after {
-content:'\25bc';
-float: right;
+    /* Unicode for arrow down 25BC*/
+    .accordion-button::after {
+        content: '\25bc';
+        float: right;
+    }
 
+.accordion-button--active {
+    background: rgb(157, 206, 66)
 }
-/*.accordion-button--active + .accordion-content { display: block}*/
-.accordion-button--active {background:violet }
-.accordion-button--active::after {content: '\25b2' }
+
+    .accordion-button--active::after {
+        content: '\25b2'
+    }
 
 .accordion-content {
-
-  /* this makes it animated but not responsive?
-  
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.2s;*/
-  padding: 0 15px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background: #eeee;
-  /*this is for the nonanimated, responsive, sturdy version of accordion*/
-  display: none;
-  overflow: auto;
-  
+    padding: 0 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #eeee;
+    display: none;
+    overflow: auto;
+    margin-bottom: 0.5rem;
 }
-.active{
-  display: block;
+
+.active {
+    display: block;
 }
 
 
 
 /*MEDIA QUIERIES FOR TABLET*/
 @media (min-width: 668px) and (max-width:1024px) {
-.page { 
-grid-column: 1fr 1fr;
-}
-.header {
-grid-column: span 2;
-  }
+    .main {
+        grid-template-columns: 1fr 1fr;
+    }
 
-.signup, .faq-container {
-  grid-column: span 1;
-}
+    .header-text {
+        font-size: 2rem;
+    }
+
+    option {
+        font-size: 0.7rem;
+    }
 }
 
 
 /*MEDIA QUIERIES FOR DESKTOP*/
-@media (min-width: 1024px) 
-.header {
-  grid-columns: span 2;
-  }
+@media (min-width: 1024px) {
+    .main {
+        grid-template-columns: 1fr 1fr;
+    }
 
-
+    .header-text {
+        font-size: 2.5rem;
+    }
+}
