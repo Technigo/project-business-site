@@ -1,7 +1,914 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-.active + .answer {
-  /* some styling here */
+/*************** General styling ***************/
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+}
+
+body {
+  color: #333;
+  font-family: "Lato", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+/*************** Beginning Animation ***************/
+
+.slide-top,
+.slide-bottom {
+  display: block;
+  background: #111;
+  width: 100vw;
+  height: 52vh;
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+}
+.slide-top {
+  transform: translateY(0);
+  animation: moveup 6s ease 1 ;
+}
+
+.slide-bottom {
+  transform: translateY(100%);
+  animation: movedown 6s ease 1 ;
+}
+
+.flight {
+  position: absolute;
+  width:  12.4rem;
+  opacity: 0;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%,-50%);
+  animation: flight 2s ease-in-out 2;
+}
+
+@keyframes flight {
+   0% {
+       transform: translate(-50%,-50%) rotate(-10deg);
+       opacity: 1;
+       position: fixed;
+   }
+   50% {
+      transform: translate(-50%,-20%) rotate(5deg);
+   }
+   
+   100% {
+      transform: translate(-50%,-50%) rotate(-10deg);
+      opacity: 0.75;
+      position: fixed;
+   }
+}
+
+@keyframes moveup {
+   0% {
+  transform: translateY(0);
+  opacity: 1;
+  position: fixed;
+  }
+  70% {
+  transform: translateY(0);
+  }
+  100% {
+  transform: translateY(-100%);
+  opacity: 1;
+  position: fixed;
+  }
+}
+
+@keyframes movedown {
+  0% {
+      transform: translateY(100%);
+      opacity: 1; 
+      position: fixed;
+  }
+  70% {
+      transform: translateY(100%);
+      }
+  100% {
+      transform: translateY(200%);
+      opacity: 1;
+      position: fixed;
+      }
+}
+
+
+
+
+.container {
+  padding: 4.8rem;
+}
+
+
+/***** Styling Text *****/
+.center-text {
+  text-align: center;
+}
+
+.heading-secondary {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.sub-heading {
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/***** Line Break *****/
+.break-line {
+  display: block;
+  padding-top: 0.5rem;
+}
+
+
+/***** Display Flex *****/
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/****** Styling CTA button *****/
+.cta-btn:link,
+.cta-btn:visited {
+  text-decoration: none;
+  color: #eee;
+  background: #F5511D;
+  font-size: 1.4rem;
+  padding: 1.4rem 3.2rem;
+  border-radius: 8px;
+}
+
+.cta-btn:hover,
+.cta-btn:active {
+  animation: button 1s ease-in-out 2;
+  cursor: pointer;
+}
+
+@keyframes button {
+  0%{
+      transform: scale(100%);
+  }
+  50%{
+      transform: scale(90%);
+      opacity: 0.75;
+      font-size: 1.2rem;
+      color: #fcc7b7;
+  }
+  100% {
+      transform: scale(100%);
+      opacity: 1;
+      font-size: 1.4rem;
+      color: #fff;
+  }
+}
+
+/***** Styling next/back icon, accordion + icon *****/
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 1.4rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 100px;
+  border: 2px solid #eee;
+  color: #F5511D;
+  transition: all 0.4s ease-in;
+}
+
+/*************** Header Styling ***************/
+.header {
+  background-image: linear-gradient(rgba(128, 112, 112, 0.337), rgba(17, 8, 8, 0.885) ),
+  url("./img/hero-img.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 75vh;
+  position: relative;
+}
+
+/***** Styling Logo *****/
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #fff;
+  padding-left: 1.2rem;
+}
+
+
+.nav-bar {
+justify-content: space-between;
+align-items: center;
+padding: 2.4rem;
+
+}
+
+
+/***** Styling Navbar Link  *****/
+.link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #333;
+  position: relative;
+}
+
+.link::after {
+  content: " ";
+  background: #F5511D;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transition: all 0.5s ease;
+}
+
+.link:hover::after {
+  transform: scaleX(100%);
+}
+
+
+/***** Styling hamburger btn (Mobile vers) *****/
+.hamburger-btn {
+  border: none;
+  background: transparent;
+}
+
+.open-icon,
+.close-icon {
+  font-size: 3.2rem;
+  transition: all 0.6s ease;
+  cursor: pointer;
+  --ionicon-stroke-width: 4.0rem;
+  border-radius: 50px;
+}
+
+.open-icon {
+  color: #fff;
+}
+
+.close-icon {
+  float: right;
+  margin: 1.2rem;
+  cursor: pointer;
+  color: #F5511D;
+}
+
+
+/***** Adding hover effect for hamburger btn *****/
+.open-icon:hover,
+.close-icon:hover {
+  transform: rotate(180deg);
+}
+
+.open-icon:hover {
+  color: #F5511D;
+}
+
+.close-icon:hover {
+  color: #ff8762;
+  transform: rotate(180deg);
+}
+
+/***** Remove animation in nav CTA-btn *****/
+.nav-btn:hover,
+.nav-btn:active{
+   animation: none;
+   background: rgb(252, 238, 226);
+   transition: all 0.4s ease;
+   color: #333;
+}
+
+/***** Styling Mobile's Side Navbar *****/
+.header-nav{
+  position: absolute;
+  width: 40vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: #f7f7f7;
+  overflow: hidden;
+  transition: all 0.4s ease-in;
+  transform: translateX(-100%);
+  opacity: 0.6 ;
+ 
+}
+
+/***** Active Mobile NavBar *****/
+.header-nav-active {
+  transform: translateX(0);
+  width: 50vw;
+  opacity: 1;
+  z-index: 1;
+}
+
+.nav-list {
+  margin-top: 4.8rem;
+  list-style: none;
+  gap:  4.8rem; 
+  align-items: center;
+  padding: 3.2rem 2.4rem;
+} 
+
+
+
+/*************** Hero Section Styling ***************/
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7.2rem 3.2rem 4.8rem 3.2rem;
+}
+
+.heading {
+  font-family:"Playfair Display", serif;
+  font-weight: 900;
+  font-size: 3.2rem;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.stroke-text {
+  -webkit-text-stroke-width: 0.75px;
+  -webkit-text-stroke-color: #fff;
+  color: transparent;
+}
+
+/***** Feature *****/
+.feature-container {
+  display: grid;
+  grid-gap: 4.8rem;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  margin: 4.8rem 0;
+}
+
+.feature {
+  background: rgba(250, 250, 250, 0.15); 
+  padding: 2.4rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  backdrop-filter: blur(4px);
+
+}
+
+.feature-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/***** Hide Feature Text On Mobile *****/
+.feature-text {
+  display: none;
+}
+
+
+/*************** Booking Section ***************/
+
+/***** Adding gap in flexbox *****/
+.destination-section,
+.destination-container {
+ gap: 3.2rem;
+}
+
+.destination-section {
+  padding: 4.8rem;
+}
+
+.destination, 
+.rating {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+.destination-name{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.rating > p{
+  font-size: 1.6rem;
+  color: #555;
+}
+
+.rating-icon {
+  stroke:0;
+  color: #E8A909;
+  font-size: 2.4rem;
+}
+
+.destination-img{
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+}
+
+.swiping-btn{
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+  padding-top: 2.4rem;
+}
+
+.next:hover,
+.back:hover {
+  background: #F5511D;
+  border: 2px solid #F5511D;
+  color: #fff;
+}
+
+
+
+/*************** Form styling ***************/
+
+form {
+  padding: 3.2rem; 
+  gap: 2.4rem;    
+}
+
+.newsletter-section {
+  background: rgb(252, 238, 226);
+  padding: 4.8rem;
+}
+
+/***** Remove default input styling *****/
+.remove-input-style {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/***** Hide form img on mobile *****/
+.form-img {
+     display: none;
+}
+
+/***** Styling input + label container *****/
+.style-form {
+  width: 100%;
+  height: 6.2rem;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  border: solid 2px transparent;
+  border-radius: 10px;
+  background: #fff;
+
+}
+
+.style-form:hover,
+.style-form:active {
+  border:solid 2px #ff8762;
+  transition: all 0.4s ease;
+}
+
+/***** Styling input only ****/
+.style-input {
+  margin: 1rem 0;
+  outline: none;
+  background-color: transparent;
+  border:none;
+}
+
+select:invalid,
+input::placeholder {
+color: #888;
+}
+
+
+/***** Styling label only ****/
+.style-label {
+  font-size: 1.4rem ;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+/***** Checkbox - Adding Flight & Hotel *****/
+
+input[type="checkbox"] 
+{
+  background: #eee;
+  position: relative;
+  width: 4.8rem;
+  height: 2.4rem;
+  border-radius: 100px;
+  outline: none;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1),
+   1px 1px 5px rgba(65, 65, 65, 0.08);
+  transition: all 0.5s ease;
+  padding: 5px;
+}
+
+input:checked[type="checkbox"] 
+{
+  background: #F5511D;
+}
+
+input[type="checkbox"]::before 
+{
+  content:" ";
+  position: absolute;
+  background: #Fff;
+  height: 80%;
+  width: 40%;
+  top: 10%;
+  border-radius: 100px;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+}
+
+input:checked[type="checkbox"]::before 
+{
+  content:" ";
+  transform: translateX(100%);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/**** Form Button ****/
+.form-btn {
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #Fff;
+  position: relative;
+  height: 4rem;
+  border-radius: 8px;
+  background-color: #F5511D;
+  color: #eee;
+  border: none;
+  font-size: 1.4rem;
+}
+
+.form-btn:hover{
+  animation: button 1s ease-in-out 2;
+  cursor: pointer;
+}
+
+
+/*************** Alert Box Styling ***************/
+.popup-img {
+  width: 30%;
+  min-width: 24rem;
+}
+
+.modal {
+  align-items: center;
+  gap: 1.6rem;
+  margin: 1.2rem 1.6rem 3.6rem 1.6rem;
+}
+
+.popup-text {
+  font-size: 1.6rem;
+  color: #666;
+  letter-spacing: 0.6px;
+  line-height: 2.4rem;
+}
+
+.modal-container {
+  background: rgb(252, 252, 252);
+  margin: 3.2rem;
+  box-shadow: 5px 5px 5px #eee;
+  border-radius: 10px;
+  position: relative;
+  padding: 1.2rem;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background:linear-gradient(#f2f2f2ad,#f5ded1c1);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top:0;
+  left: 0;
+  transition: all 0.4s ease-in;
+  display: none;
+  transform: scale(50%);
+  opacity: 0;
+}
+.show {
+  display: inline-block;
+  opacity: 1;
+  transform: scale(100%);
+}
+
+.popup-icon {
+ align-self: flex-end;
+}
+
+
+/*************** FAQ Section ***************/
+.FAQ-container {
+  align-items: center;
+  gap: 2.4rem;
+  margin: 3.2rem 0 1.2rem 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.FAQ {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);    
+  padding: 2.4rem;
+  border-radius: 10px;
+  background: rgb(252, 251, 251);
+}
+
+.faq-question-container{
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.faq-question{
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.faq-answer {
+   font-size: 1.4rem;
+   color: #666;
+}
+
+
+/***** Styling Acoordion Button *****/
+.plus-icon, 
+.minus-icon {
+  --ionicon-stroke-width: 5.2rem;
+  opacity: 1;
+}
+
+.plus-icon:hover {
+  transform: rotate(180deg);
+  opacity: 0.5;
+}
+
+.minus-icon {
+  display: none;
+}
+
+
+/**** Active accordian -- The answer box is openned ****/
+.show-text .faq-answer-container {
+  max-height: 100rem;
+  padding: 1.2rem 0;
+}
+
+.show-text .minus-icon {
+  display: inline-block;
+}
+
+.show-text .plus-icon {
+  display: none;
+}
+
+
+
+/*************** Partner Section Styling ***************/
+
+.partner-section {
+  background-color: #eee;
+  overflow: hidden;
+}
+.partner-img-container{
+align-items: center;
+gap: 4.8rem;
+animation: slide 10s linear infinite;
+filter: grayscale(100%);
+padding-top: 3.2rem;
+}
+
+.partner-img {
+  height: 5.2rem;
+  width: auto;
+}
+
+/**** Display animation ****/
+@keyframes slide {
+  0% {
+      transform: translateX(100%);
+  }
+  
+  50% {
+      transform: translateX(0%);
+      opacity: 1;
+  }
+
+  100% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+}
+
+
+
+/*************** Footer Styling ***************/
+.footer {
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #333;
+  color: #eee;
+}
+
+.footer-logo {
+  padding-left: 0;
+} 
+
+.footer-text {
+  margin-top: 1.2rem;
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+}
+
+.footer-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #eee;
+}
+
+.social-media {
+  margin: 3.2rem 0 4.8rem 0;
+  gap: 2.4rem;
+}
+
+
+
+/*************** Media Queries ***************/
+/******  Tablet  *****/
+@media (min-width:667px) {
+  
+  .logo {
+      font-size: 3.2rem;
+  }
+
+  .heading{
+      font-size: 7.2rem;
+      letter-spacing: 2.4px;
+  }
+  
+  .hero-section {
+      padding: 5.2rem 3.2rem 4.8rem 3.2rem;
+  }
+
+  .header-nav{
+      position: absolute;
+      background: none;
+      overflow: none;
+      transform: translateX(0);
+      opacity: 1 ;
+      position: static;
+      height: 100%;
+      width: 70%;
+  }
+
+  .nav-list {
+      flex-direction: row;
+      margin:0;
+      justify-content: center;
+  }
+  /* Hide mobile nav */
+  .open-icon,
+  .close-icon {
+      display: none;
+  }
+  
+  .nav-bar {
+     justify-content: space-between;
+     align-items: center;
+  }
+  
+  .link {
+      color: #FFf;
+      font-weight: 500;
+      letter-spacing: 1.2px;
+      position: relative;
+  }
+
+
+  /* Show feature text */
+  .feature {
+      text-align: left;
+  }
+
+  .feature-title, 
+  .faq-question{
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+  }
+
+  .faq-answer {
+      font-size: 1.6rem;
+  }
+
+  .feature-text{
+      display: inline-block;
+      font-size: 1.4rem;
+      letter-spacing: 1.2px;
+      color: #edebeb;
+      font-weight: 400;
+  }
+  .destination-container {
+      flex-direction: row;
+      gap: 2.4rem;
+  }
+ 
+  .destination-section {
+      padding: 12.4rem 10.4rem ;
+  }
+
+  /************** Form **************/
+  .form-img {
+      display: inline-block;
+      width: 100%;
+  }
+  .newsletter-section {
+      display: grid;
+      grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+      padding:0 0 0 6.4rem;
+      align-items: center;
+      background: #eee;
+      column-gap: 6.4rem;
+  }
+
+
+  /*.FAQ-container {
+      padding: 0 14rem;
+  }*/
+  .FAQ {
+      width: 60%;
+  }
+  }
+
+
+/******  Desktop  *****/
+@media (min-width:1025px) {
+ .container {
+     padding: 12.4rem 4.8rem;
+ }
+
+  .hero-section {
+      padding: 7.2rem 7.2rem 4.8rem 7.2rem;
+  }
+
+  .heading{
+      font-size: 12.4rem;
+  }
+
+  .heading-secondary {
+      font-size: 3.2rem;
+  }
+  
+  .sub-heading
+   {
+      font-size: 2rem;
+  }
+
+  .feature-container {
+      padding: 0 3.2rem;
+  }
+
+  
 }

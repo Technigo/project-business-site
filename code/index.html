@@ -1,30 +1,315 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <!-- video or image as a header is cool :) -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK. Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!--------------------------  ANIMATION  ---------------------------->
+   <div>
+        <span class="slide-top"></span>
+       <img class="flight" src="img/flight.png" alt="flight"/>
+        <span class="slide-bottom"></span>
+    </div>
 
-    <!-- Signup form -->
+    <!--------------------------  NAV BAR  ---------------------------->
+    <header class="header">
+        <div class="nav-bar flex-row">
+            <!--  Logo and hambergur icon -->
+            <div class="mobile-nav flex-row">
+                <button type="button" class="hamburger-btn">
+                    <ion-icon class="open-icon" name="reorder-two-outline"></ion-icon>
+                </button>
+                <p class="logo">SK.</p>
+            </div>
+            <!--  Main nav bar -->
+            <nav class="header-nav">
+                <ion-icon class="close-icon" name="close-circle-outline"></ion-icon>
+                <ul class="nav-list flex-column">
+                    <li> <a class="nav-link link" href="#">Home</a> </li>
+                    <li> <a class="nav-link link" href="#booking">Booking</a> </li> 
+                    <li> <a class="nav-link link" href="#">Category</a> </li>
+                    <li> <a class="nav-link link" href="#about-us">About us</a></li>
+                </ul>
+            </nav>
+            <!--  CTA button on desktop/tablet navbar -->
+            <div class="desktop-nav">
+                <a href="#form" class="cta-btn nav-btn">Book Tour</a>
+            </div>
+        </div>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+    <!--------------------------  HERO SECTION  ---------------------------->
+        <div class="hero-section">
+            <h1 class="heading">
+                <span class="break-line">Let's <span class="stroke-text">Discover</span></span> The Lovely Places
+            </h1>
+            <div class="feature-container">
+                <div class="feature">
+                    <p class="feature-title">5-Star Experience</p>
+                    <p class="feature-text">
+                        Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt
+                    </p>
+                </div>
+                <div class="feature">
+                    <p class="feature-title">Private Trip</p>
+                     <p class="feature-text">
+                        Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt
+                    </p>
+                </div>
+                <div class="feature">
+                    <p class="feature-title">Expert Tour Guide</p>
+                    <p class="feature-text">
+                        Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt
+                        </p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+    <!--------------------------  BOOKING SECTION  ---------------------------->
+    <section id="booking" 
+    class="destination-section 
+    flex-column">
+    
+        <div class="heading-container">
+            <h2 class="heading-secondary center-text">Explore Top Destination</h2>
+            <p class="sub-heading center-text">More than +1000 beautiful places with amazing deals</p>
+        </div>
+        <div class="destination-container flex-column">
+            <div class="destination flex-column">
+                <img class="destination-img" src="img/destination-img-1.png" alt="Interlaken photo"/>
+                <p class="destination-name">Interlaken, Switz</p>
+                <div class="flex-row rating">
+                    <span><ion-icon class="rating-icon" name="star"></ion-icon></span>
+                    <p class="review">4.2 (1.2k reviews)</p>
+                </div>
+                <a href="#form" class="">Book Tour</a>
+            </div>
+        </div>      
+        <div class="swiping-btn">
+            <button class="btn back-btn" type="button">
+                <ion-icon class="icon back" name="caret-back-outline"></ion-icon> 
+            </button>
+            <button class="btn next-btn" type="button">
+                <ion-icon class=" icon next" name="caret-forward-outline"></ion-icon>
+            </button>
+        </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+
+
+
+    <!--------------------------  FORM  ---------------------------->
+    <section id="form" class="newsletter-section">
+        <div>
+            <h2 class="heading-secondary">Join our newsletter</h2>
+            <p class="sub-heading center-text"> 
+                Subcribe to our newsletter to receive
+                <span class="break-line">the latest offers and deals</span>  
+            </p>
+            <span class="line"></span>
+                <form action="" id="form" class="flex-column">
+                    <div class="style-form">
+                        <label for="email" class="flex-column style-label"> Email 
+                            <input required
+                            class="style-input remove-input-style"
+                            type="email" 
+                            name="email" 
+                            id="email-input" 
+                            placeholder="Email address"/>
+                        </label> 
+                    </div> 
+    
+                    <div class="style-form">
+                        <label for="location" class="flex-column style-label"> Location
+                            <select class="style-input remove-input-style" name="destination" id="location" required>
+                                <option select  value="">Choose a destination 
+                                </option>
+                                <option value="Italy">Italy</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Finland">Finland</option>
+                                <option value="Japan">Japan</option>
+                                <option value="Korea">Korea</option>
+                                <option value="Vietnam">Vietnam</option>
+                                <option value="Indonesia">Indonesia</option>
+                            </select>
+                        </label>
+                    </div>
+                   
+    
+                <div class="flex-row extra-option">
+                <label for="with-flight" class="style-label checkbox">              
+                    <input 
+                    type="checkbox"
+                    id="flight"
+                    name="flight"
+                    value="flight"
+                    class="remove-input-style">
+                    Include flight & hotel
+                </label>
+                </div>
+                <input class="form-btn" type="submit" value="Subcribe"/>
+            </form>
+        </div>
+        <img src="img/form-img.jpg" class="form-img" alt="Happy girl">
+    </section>
+
+    <!--------------------------  FAQ SECTION  ---------------------------->
+    <section id="about-us" class="FAQ-section container">
+        <h2 class="heading-secondary">
+            How can we help you?
+        </h2>
+        
+        <!-- FAQ Question Container -->
+        
+        <div class="FAQ-container flex-column">
+            <article class="FAQ">
+                <div class="faq-question-container flex-row">
+                    <p class="faq-question">
+                        01. Can I choose the flight schedule?
+                    </p> 
+                    <button class="btn" type="button">
+                        <span class="plus-btn">
+                            <ion-icon class="icon plus-icon" name="add-outline"></ion-icon>
+                            <ion-icon class="minus-icon icon hidden" name="remove-outline"></ion-icon>
+                        </span>
+                    </button>
+                </div>  
+                <div class="faq-answer-container">
+                    <p class="faq-answer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi 
+                        ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+            </article>
+
+            <article class="FAQ">
+                <div class="faq-question-container flex-row">
+                    <p class="faq-question">
+                        02. Cancel and change
+                    </p>
+                    <button class="btn" type="button">
+                        <span class="plus-btn">
+                            <ion-icon class="plus-icon icon" name="add-outline"></ion-icon>
+                            <ion-icon class="minus-icon icon hidden" name="remove-outline"></ion-icon>
+                        </span>
+                    </button>
+                </div>
+                <div class="faq-answer-container">
+                    <p class="faq-answer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi 
+                        ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+            </article>
+            
+            <article class="FAQ">
+               <div class="faq-question-container flex-row">
+                    <p class="faq-question">
+                        03. What form of payment?
+                    </p>
+                    <button class="btn" type="button">
+                        <span class="plus-btn">
+                            <ion-icon class="plus-icon icon" name="add-outline"></ion-icon>
+                            <ion-icon class="minus-icon icon hidden" name="remove-outline"></ion-icon>
+                        </span>
+                    </button>
+               </div>
+               <div class="faq-answer-container">
+                    <p class="faq-answer" >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi 
+                        ut aliquip ex ea commodo consequat.
+                    </p>
+               </div>
+            </article>
+
+            <!--- Question article --->
+            <article class="FAQ">
+                <div class="faq-question-container flex-row">
+                    <p class="faq-question">
+                        04. Do I need travel insurance?
+                    </p>
+                    <button class="btn" type="button">
+                        <span class="plus-btn">
+                            <ion-icon class="plus-icon icon" name="add-outline"></ion-icon>
+                            <ion-icon class="minus-icon icon hidden" name="remove-outline"></ion-icon>
+                        </span>
+                    </button>
+                </div>
+                <div class="faq-answer-container">
+                    <p class="faq-answer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi 
+                        ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    </div> 
+    <div class="overlay">
+        <div class="modal-container">
+            <div class="modal flex-column">
+                <ion-icon class="icon popup-icon" name="close-circle-outline"></ion-icon>
+                <img class="popup-img" src="./img/popup.png" alt="3d illustration"/>
+                <p class="heading-secondary">Thank you</p>
+                <p class="popup-text center-text"></p>
+    
+            </div>
+      </div>
+    </div>
+
+      <!--------------------------  PARTNER SECTION  ---------------------------->
+      <section class="partner-section container">
+        <h2 class="heading-secondary">Our Trusted Partners</h2>
+        <div class="partner-img-container flex-row">
+            <img class="partner-img" src="img/partner-1.png" alt="finnair"/>
+            <img class="partner-img" src="img/partner-2.png" alt="finnair"/>
+            <img class="partner-img" src="img/partner-3.png" alt="finnair"/>
+            <img class="partner-img" src="img/partner-4.png" alt="finnair"/>
+            <img class="partner-img" src="img/partner-5.svg" alt="finnair"/>
+            <img class="partner-img" src="img/partner-6.png" alt="finnair"/>
+        </div>
+    </section> 
+
+
+    <!--------------------------  FOOTER  ---------------------------->
+    <footer class="footer container flex-column">
+        <p class="logo footer-logo">SK.</p>
+    <div class="social-media flex-row">
+        <a href="https://www.linkedin.com/in/nhung19/" target="_blank"><ion-icon class="footer-icon" name="logo-linkedin"></ion-icon></ion-icon></a> 
+        <a href="https://www.instagram.com/suki.nhungphan/" target="_blank"><ion-icon class="footer-icon" name="logo-instagram"></ion-icon></ion-icon></a> 
+        <a href="https://github.com/sukiphan97" target="_blank"><ion-icon class="footer-icon" name="logo-github"></ion-icon></ion-icon></a> 
+        <a href="#" target="_blank"><ion-icon class="footer-icon" name="logo-facebook"></ion-icon></a> 
+    </div>
+    <span class="footer-text">© Suki Nhung Phan</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
