@@ -1,12 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Build a business one pager website that should contain an image or video header, a signup form, and an accordion. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I think this was a fun project. I stated out in figma and designd how I wanned it to look and then I build it from top to bottom. I loved the idea to use a hero video. My biggest hang up were to get the javaScript to work. Turend out to be ha > to much. If I had more time would link the navbar buttons so it moves you to the right place on the screen.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://jovial-sammet-e9d6e2.netlify.app/code/
