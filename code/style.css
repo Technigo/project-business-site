@@ -33,7 +33,6 @@ header {
 }
 
 .active + .answer {
-  /* some styling here */
   max-height: 700px;
 }
 
@@ -74,7 +73,6 @@ form,
   height: fit-content;
   width: min(350px, calc(100vw - 8em));
   margin: 2em;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
 }
 
 .q-and-a {
@@ -131,16 +129,16 @@ label {
 }
 
 .input {
-  border: 1px solid #ddd;
+  border: 2px solid white;
   outline: none;
   border-radius: 15px;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 0.5rem 0;
   font-size: 1rem;
 }
 
 input:focus {
-  border-color: red;
+  border-color: #879b6f;
 }
 
 .form-item.checkbox {
@@ -150,12 +148,25 @@ input:focus {
 
 .checkbox-box {
   margin: 1rem 1rem 1rem 0;
+  filter: grayscale(100%);
 }
 
 .send-button {
   align-self: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 0.5rem 1rem;
+  margin: 1rem;
+  border-radius: 30px;
+  font-weight: 200;
+  border: none;
+}
+
+.box-shadow {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+}
+
+.box-shadow-inset {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4) inset;
 }
 
 footer {
@@ -163,7 +174,6 @@ footer {
   flex-direction: column;
   align-content: center;
   min-height: 300px;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4) inset;
   padding: 2rem;
   letter-spacing: 1.2px;
 }
@@ -173,12 +183,21 @@ li {
   margin: 0.5rem 0;
 }
 
-li a {
+footer a {
   color: black;
   text-decoration: none;
 }
 
-@media (min-width: 668px) {
+.credits a {
+  font-weight: 500;
+}
+
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  .logo-text{
+    display: inline;
+  }
+  
   .content {
     display: flex;
     justify-content: center;
@@ -191,12 +210,32 @@ li a {
 
     padding: 2rem 5vw;
   }
+
+  .credits {
+    grid-column: span 3;
+    display: flex;
+  }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
+  .logo-text{
+    display: inline;
+  }
+
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr;
     padding: 2rem 12rem;
+  }
+
+  .my-tag {
+    grid-column: 2;
+  }
+
+  .credits {
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-around;
   }
 }

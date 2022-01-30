@@ -4,12 +4,10 @@
 document.getElementById('form').onsubmit = event => {
   event.preventDefault()
 
-  // console.log('Form submitted')
-  // alert('Form submitted')
   const inputValue = document.getElementById('first-name').value
 
-  // document.getElementById('greeting').innerText = 'Hello ' + inputValue
-  document.getElementById('form').innerText = `Hello ${inputValue}!`
+  const thankYouMsg = `Thank you ${inputValue[0].toUpperCase()}${inputValue.slice(1)}! We will contact you shortly to discuss your ${form["private-or-business"].value} options.`
+  document.getElementById('form').innerText = thankYouMsg;
 }
 
 document.querySelectorAll(".question").forEach(question => {
