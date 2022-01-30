@@ -253,11 +253,14 @@ padding: 2.4rem;
 
 
 /***** Styling Navbar Link  *****/
-.link {
+.link:link,
+.link:visited {
   text-decoration: none;
   font-size: 1.6rem;
   color: #333;
   position: relative;
+  transition: all 0.5s ease;
+
 }
 
 .link::after {
@@ -272,6 +275,10 @@ padding: 2.4rem;
   transition: all 0.5s ease;
 }
 
+.link:hover,
+.link:active {
+  color: #F5511D;
+}
 .link:hover::after {
   transform: scaleX(100%);
 }
@@ -812,7 +819,6 @@ padding-top: 3.2rem;
   }
 
   .header-nav{
-      position: absolute;
       background: none;
       overflow: none;
       transform: translateX(0);
@@ -838,11 +844,17 @@ padding-top: 3.2rem;
      align-items: center;
   }
   
-  .link {
+  .link:link,
+  .link:visited {
       color: #FFf;
       font-weight: 500;
       letter-spacing: 1.2px;
       position: relative;
+  }
+
+  .link:hover,
+  .link:active {
+      color: #eee;
   }
 
 
