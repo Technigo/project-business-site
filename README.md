@@ -8,3 +8,4 @@ I had some difficulties with adding the transition effect to the accordion which
 
 ## View it live
 
+https://zealous-bhaskara-41ced8.netlify.app/
