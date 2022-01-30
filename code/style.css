@@ -11,50 +11,39 @@
 
 /*This is the styling for the font*/
 body {
-  font-family:'Permanent Marker', cursive;
+  font-family:'Permanent Marker';
   color: black;
   background-color: aqua;
 }
 
 /*This is the styling for the header*/
-.header{
-  background-size: cover;
-  background-repeat: none;
-  height: 50vh;
+header { 
+  height: 100vh;
   width: 100vw;
-  border: 3px solid black;
-  display: flex;
-  align-items: center;
   overflow: hidden;
+  position: relative;
 }
 
-img {
-  border-radius: 8px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+video {
+width: 100%;
+height: auto;
+position: absolute;
+z-index: 1;
 }
 
 h1 {
-  display: flex;
-  justify-content: center;
-  position: top;
-  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
   text-align: center;
-  padding: 1rem;
-  margin: 1rem;
+  z-index: 2;
   color: black;
   font-size: 100px;
   text-shadow: -2px -2px 3px black;
 }
 
 h2 {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: middle;
   text-align: center;
   padding: 1rem;
   margin: 1rem;
