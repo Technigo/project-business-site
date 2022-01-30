@@ -8,6 +8,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 body{
   color:white;
+  
 background:white;
 }
 h1 h3{
@@ -32,10 +33,9 @@ header{
 }
 
 .neontext{
-  font-size:10vw;
-text-transform: uppercase;
+    text-transform: uppercase;
  align-items: center;
- font-size: 40px;
+ font-size: 25px;
  color:#9050cc;
  text-shadow:
      0 0 10px rgb(198, 64, 213),
@@ -48,15 +48,12 @@ text-transform: uppercase;
      opacity: 1;
      
 
-}
-header > a{
+} a{
   text-decoration: none;
-    color:white;
 }
 
 #hero {
-		height:100vh;
-		width:100%;
+		height: 65vh;
 		display:flex;
 		align-items:center;
 		justify-content: center;
@@ -64,14 +61,13 @@ header > a{
 
 
 #hero video {
-  width:100%;
-  height:100vh;
+  width: 100%;
+  height: 65vh;
   position:absolute;
   top:0;
   left:0;
   z-index:1;
   object-fit:cover;
-
 }
 
 #hero .overlay-Text {
@@ -80,10 +76,10 @@ header > a{
   text-transform: uppercase;
   font-family: 'Mochiy Pop P One', sans-serif;
   z-index:2;
+  font-size:10px;
   text-align:center;
-    color:#8B0AFA;
-    text-shadow: 1px 1px white;
-
+  color:#8B0AFA;
+  text-shadow: 1px 1px white;
 }
 #hero button {
   background-color: Transparent;
@@ -96,7 +92,7 @@ header > a{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 30px;
+    font-size:30px;
     margin: 4px 2px;
     cursor: pointer;
     color:#8B0AFA;
@@ -122,96 +118,63 @@ header > a{
 }
 .flexbox-container{
   display: flex;
-  padding:30px;
-  gap:30px;
+  padding: 15px;
+  gap: 15px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  
 }
-.child-sign-up{
+.child-sign-up {
   width: 100%;
-  height: 50vh;
+  height: 100%;
   display: flex;
   flex-direction:column;
-  justify-content: center;
   text-align: center;
-  gap:13px;
+  padding: 50px;
+  gap:20px;
   text-transform: uppercase;
+  text-shadow: 2px 2px black;
+  
 }
 .child-sign-in{
   width: 100%;
-  height: 50vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  gap: 13px;
+  gap: 20px;
+  padding-bottom: 60px;
   text-transform: uppercase;
+  text-shadow: 2px 2px black;
 }
 input{
-  border-radius: 5px;
-  min-height: min-content;
+border-radius: 5px;
  text-align: center;
  padding: 10px;
- width: 50vh;
- 
+
 }
 
-.child-sign-up > button{
+.child-sign-up button{
+	padding:20px;
   color:white;
   background-color: Transparent;
   border: none;
   cursor: pointer;
 } 
-.radio-button{
-  display:flex;
-  flex-direction:column;
-  position: relative;
+.child-sign-in > button{
+  color:white;
+  background-color: Transparent;
+  border: none;
   cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.radio-button input {
-  position: absolute;
-  cursor: pointer;
-}
-.radio{
-  position: absolute;
-  left: 0;
-  margin: 6px;
-  height: 15px;
-  border-radius: 50%;
 }
 
-.radio-button input:checked ~ .radio {
-  background-color: #2196F3;
-}
-.radio:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-.radio-button input:checked ~ .radio:after {
-  display: block;
-}
-.radio-button .radio:after {
-  top: 9px;
- left: 9px;
- width: 8px;
- height: 8px;
- border-radius: 50%;
- background: white;
-}
 #name #email{
   color:white;
 }
   #child-form{
-  background-image:url("drinks.jpeg") ;
-  border-radius: 20px; 
+  background-image:url("drinks.jpeg");
+  border-radius: 20px;
   width: 600px;
   height: 100vh;
   padding:30px;
@@ -227,23 +190,18 @@ input{
   color:white;
 }
   #child-form{
-  background-image:url("drinks.jpeg") ;
-  border-radius: 20px; 
-  width: 600px;
-  height: 100vh;
+  background-image:url("drinks.jpeg");
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
   padding:30px;
   background-size: cover;
-}
 
-input{
-  position: relative;
-  cursor: pointer;
 }
-
 
 #child-accordion > h2{
  text-align: center;
-  padding:30px;
+  padding:50px;
   color:#8B0AFA;
   text-shadow:
       0 0 10px rgb(198, 64, 213),
@@ -258,11 +216,10 @@ input{
 
 #child-accordion {
   background-color: black;
-  width: 600px;
-  min-height: 721px;
-  height: 100%;
+  width: 100%;
+  height: 75%;
   border-radius: 20px;
-  overflow: auto;
+  
 }
 .accordion-item {
   background-color: #fff;
@@ -275,7 +232,7 @@ input{
  
 }
 .accordion-item-header  {
-
+    padding:20px;
  justify-content: center;
   min-height: 3.5rem;
   line-height: 1.25rem;
@@ -295,7 +252,7 @@ input{
  transition: transform 0.2s ease-in-out;
 }
 /* when active class is added the pseudo element will turn the plus sign 454 deg
-and when the active class removs it will change back på plus sign back  */
+and when the active class removs it will change back pÃ¥ plus sign back  */
 
 .accordion-item-header.active::after {
 
@@ -322,28 +279,67 @@ footer{
  padding:20px;
 }
 
-/*
 
-@media (min-width:768px){
+
+@media screnn and (min-width:768px){
 	
   .flexbox-container{
     display: flex;  
     flex-direction: column;
     text-align: center;
+    
    
   }
+  .neontext{
+    text-transform: uppercase;
+ align-items: center;
+ font-size: 30px;
 	 
 	}
+	#hero button {
 
-	*/
+    font-size: 20px;
+    }
+}
+
+
 	@media (min-width:1024px){
 	
     .flexbox-container{
       display: flex;
       flex-direction: row;
-      justify-content:space-around;
-      justify-content: center;
-      gap:1rem;
+    }
+
+#hero .overlay-Text {
+  padding-top:250px;
+ 
+  font-size:15px;
+  text-align:center;
+  color:#8B0AFA;
+  text-shadow: 1px 1px white;
+}
+    .neontext{
+    text-transform: uppercase;
+ align-items: center;
+ font-size: 40px;
+ }
+    
+
+    #child-accordion > h2{
+    	padding-top:65px;
+    }
+
+.accordion-item {
+
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  margin: 15px;
+  padding:10px;
+ 
+}
+#hero button {
+
+    font-size: 30px;
     }
     
 	}

@@ -1,4 +1,4 @@
- const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
 accordionItemHeaders.forEach(accordionItemHeader => {
   accordionItemHeader.addEventListener("click", event => {
@@ -11,19 +11,6 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     else {
       accordionItemBody.style.maxHeight = 0;
     }
-    
   });
 });
 
-// For my add file button
-$('#image-event').on('change', function upload(evt) {
-  console.log(this.files[0]);
-});
-
-// only to show where is the drop-zone:
-$('#image-event-label').on('dragenter', function() {
-  this.classList.add('dragged-over');
-})
- .on('dragend drop dragexit dragleave', function() {
-  this.classList.remove('dragged-over');
-});
