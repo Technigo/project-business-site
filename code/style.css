@@ -62,12 +62,12 @@ form {
 }
 
 p1 {
-display: inline;
-margin: 0;
-width:80%;
-font-size: 15px;
-font-weight: bold;
-text-decoration:black underline double;
+  display: inline;
+  margin: 0;
+  width:80%;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration:black underline double;
 }
 
 .terms {
@@ -138,14 +138,13 @@ label {
   width: 90vw;
   max-width: 350px;
   margin: 5vh auto;
-
 }
 
 h2 {
   background-color: #264653;
   color: #e9c46a;
   border-radius: 10px;
-  padding: 0 30vw;
+  padding: 0 30%;
 }
 
 .question {
@@ -163,7 +162,7 @@ h2 {
 
 .question:hover {
   background-color:#264653;
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   box-shadow:black 0 8px 15px;
 }
 
@@ -201,28 +200,55 @@ p {
 
 footer {
   background-color: #264653;
-  padding: 2vh 10vw;
   font-size: small;
   width: 100vw;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 
+i {
+  margin: 1vh 2vw;
+}
 
+.social-logo {
+  text-decoration: none;
+  color:black;
+}
 
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
+.made-by {
+  margin-bottom: 1vh;
+}
 
 
 /*tablet size*/
 @media (min-width:668px) and (max-width: 1024px) {
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+  
+.video-header {
+  height: 100vh;
+  width: 100vw;
+}
 
 }
 
 
 /*desktop size*/
 @media (min-width:1025px) {
+  
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.video-header {
+  height: 100vh;
+  width: 100vw;
+}
 
 }
 
