@@ -1,9 +1,37 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-function toggle() {
-  this.classList.toggle("active")
+
+// POPUP Login and Register form
+  document.getElementById("button").addEventListener("click", function(){
+  document.querySelector(".popup").style.display = "flex";
+})
+
+  document.querySelector(".close").addEventListener("click", function(){
+  document.querySelector(".popup").style.display = "none";
+
+})
+
+let x = document.getElementById('login');
+let y = document.getElementById('register');
+let z = document.getElementById('btn');
+
+function register () {
+  x.style.left = '-400px';
+  y.style.left = '50px';
+  z.style.left = '110px';
 }
 
-// Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
+function login () { 
+  x.style.left = '50px';
+  y.style.left = '450px';
+  z.style.left = '0px';
+}
+
+// Accordion slide down 
+
+const faqs = document.querySelectorAll(".faq");
+
+faqs.forEach(faq => {
+  faq.addEventListener("click", () => {
+  faq.classList.toggle("active");
+  })
+})
+
