@@ -23,11 +23,18 @@ body {
   height: 50vh;
   width: 100vw;
   border: 3px solid black;
-  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   overflow: hidden;
+}
+
+img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
@@ -132,16 +139,13 @@ footer {
 
 /* This is the media querie for computer*/
 @media (min-width: 1025px) {
-  display: flex;
+  .column {
+    width: 100%;
   }
  
+  /* This is the media querie for mobile*/
 @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-      width: 100%;
-    }
-
-/* This is the media querie for mobile*/
-@media screen {
-  
+  .column {
+  width: 50%;}
+  }
 }
