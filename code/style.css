@@ -1,35 +1,110 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-/* form*/
+ /* body */
+body{
+  background: radial-gradient( #f0c6ae, #f165c5, #f1a67a, #f1a3d9);
+}
+ 
+ /*header*/
+header {
+  height: 30vh;
+  background-image: url('candyart-background.jpg');
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  margin-bottom: 10%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-.subscribe {
+h1 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 3px 10px #f1a67a;
+}
+
+h3 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 3px 10px #f1a67a;
+}
+/*  flexparent form and faq */
+.container {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
-  background: yellow;
+  box-sizing: border-box;
+  margin-bottom: 10%;
+}
+
+/* form*/
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  padding: 5%;
+  margin-bottom: 10%;
+  background: #f165c5;
+  max-width: 400px;
+  border-radius: 20px;
+  position: relative;
+  background-image: url('candyart-faq.jpg');
+  box-shadow: 0 3px 10px rgb(158 2 28 / 0.8)
+}
+
+.h2-form {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #fff;
+  min-width: 80%;
+  padding: 5%;
+  margin-bottom: 15%;
+  text-align: center;
+  background-color: #f1a67a;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgb(158 2 28 / 0.8)
 }
  
+
+
 .form-label {
   display: block;
   margin-bottom: 20px;
+
  }
 
 .form-label {
-  font-size: 22px;
-  font-style: italic;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  padding: 3%;
+  color: #fff;
 }
-select {
-  font-style: italic;
-}
+
 
 button {
-  margin: 20px;
   
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  padding: 5%;
+  margin-top: 5%;
+  background: #f1a67a;
+  background-color:;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 3px 10px rgb(158 2 28 / 0.8);
 
-}
 }
 
 /* faq */
@@ -40,47 +115,50 @@ button {
   }
 
 section 
-{ 
+{
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 50vh;
-  background: #bedfe8;
+  background: #f165c5;
+  border-radius: 20px;
+  background-image: url('candyart-form.jpg');
+  box-shadow: 0 3px 10px rgb(158 2 28 / 0.8);
 }
 .h2-faq {
-font-family: Arial, Helvetica, sans-serif;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 30px;
+text-align: center;
+
 display: flex;
 justify-content: center;
 align-items: center;
+color: #fff;
+background-color: #f1a67a;
+border-radius: 20px;
+padding: 5%;
+box-shadow: 0 3px 10px rgb(158 2 28 / 0.8);
 
 }
 .accordion {
-  max-width: 800px;
+  max-width: 400px;
 }
 .accordion .contentBx 
 {
   position: relative;
   margin: 10px 20px;
-}
+} 
 .accordion .contentBx .label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
   position: relative;
   padding: 10px;
-  background: #2694af;
+  background: #f1a67a;
   color: #fff;
-  cursor: poiner;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgb(158 2 28 / 0.8);
 }
-.accordion .contentBx .label::before {
-  content: '+';
-  position: absolute;
-  top: 50%;
-  right: 20px; 
-  transform: translateY(-50%);
-  font-size: 1.5em;
-}
-.accordion .contentBx.active .label::before
-{
-  content: '-';
-}
+
 .accordion .contentBx .content {
   position:relative;
   background: #fff;
@@ -91,10 +169,96 @@ align-items: center;
 }
 .accordion .contentBx.active .content
 {
-  height: 150px;
+  height: auto;
   padding: 10px;
   
 }
 
-/*tablet-size*/
-@media screen
+.content {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #f165c5;
+}
+/*fixed footer*/
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f09661;
+  color: #fff;
+  text-align: center;
+  margin-top: 10%;
+  display: none;
+  }
+
+.footer-text {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* tablet */
+
+@media (min-width: 668px) and (max-width: 1024px) {
+
+  h1 {
+    font-size: 60px;
+  }
+  h3{
+    font-size: 35px;
+  }
+  .container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .subscribe {
+    margin-right:5%
+  }
+  .accordion {
+    max-width: 400px;
+  }
+  footer {
+    display: inherit;
+  }
+}
+
+
+
+
+  /* desktop*/
+  
+  @media (min-width: 1025px) {
+
+    h1 {
+      font-size: 80px;
+    }
+    h3 {
+      font-size: 45px;
+    }
+    .container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  
+    }
+    .subscribe {
+      margin-right:5%
+    }
+    .accordion {
+      max-width: 600px;
+    }
+    .accordion .contentBx .label::before {
+      content: '+';
+      position: absolute;
+      top: 50%;
+      right: 20px; 
+      transform: translateY(-50%);
+      font-size: 1.5em;
+    }
+    .accordion .contentBx.active .label::before
+    {
+      content: '-';
+    }
+    footer {
+      display: inherit;
+    }
+
+  }
