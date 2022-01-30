@@ -1,7 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Murecho', sans-serif;
+ -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+/*Hero*/
+.video-hero {
+  height: 40vh;
+  width: 100vw;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-hero video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  left: 0;
+  top: 0;
+}
+
+.text-hero {
+  position: absolute;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-bottom: 100px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.button-sub {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  padding-top: 150px;
+  padding-left: 25%;
+  margin: 20px;
+}
+
+.sub-button-style {
+  position: absolute;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.sub-button-style:hover {
+  background-color: rgb(90, 69, 49);
+}
+
+.sub-button-style:active {
+  background-color: rgb(90, 69, 49);
+  transform: translateY(2px);
+}
+
+
+/* Sign up form */
+.sign-up {
+  border: thick double white;
+  margin: 20px;
+  text-align: center;
+}
+
+.exp-text {
+  padding: 10px;
+}
+
+input[type=text], [type=password], [type=email] {
+  padding: 8px 15px;
+  width: 250px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  /* width: 100%; */
+}
+
+.terms {
+  color: rgb(179, 157, 131);
+}
+
+.submit {
+  background-color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.submit:active {
+  background-color: rgb(90, 69, 49);
+  transform: translateY(2px);
+}
+
+/* Accordion */
+.accordion {
+  border: thick double white;
+  margin: 20px;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  transition: 0.2s;
+}
+
+h2 {
+  text-align: center;
+}
+
+.question {
+  display: block;
+
+}
+
+.question:hover {
+  background-color: rgb(90, 69, 49);
+}
+
+.answer {
+  display: none;
+}
+
+.active + .answer {
+  display: block;
+  background-color: rgb(90, 69, 49);
+}
+
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+/* .accordion:after {
+}
+
+.active:after {
+} */
+
+
+/*footer*/
+.footer {
+  display: block;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: bisque;
+}
+
+.cred {
+  color: antiquewhite;
+}
+
+
+/* tablet */
+@media (min-width: 668px) and (max-width: 1023px) {
+  /*hero*/
+  h1 {
+    font-size: 50px;
+  }
+
+  .button-sub {
+    padding-left: 20%;
+  }
+
+  /*Sign up form*/
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sub-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }  
+
+  .sign-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-center {
+    margin-left: 10%;
+    margin-right: 5%;
+  }
+
+  .check-center {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .robot-center {
+    margin-left: 20%
+  }
+
+  input[type=text], [type=password], [type=email] {
+    width: 250px;
+  }
+
+  label {
+    width: 50%;
+  }
+
+
+  /*Accordion*/
+  .accordion {
+    display: grid;
+    align-content: stretch;
+  }
+
+}
+
+
+/* desktop */
+@media (min-width: 1024px) {
+  /*hero*/
+  h1 {
+    font-size: 55px;
+  }
+
+  .button-sub {
+    padding-left: 17%;
+  }
+
+  /*Sign up form*/
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .sub-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  .sign-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-center {
+    margin-left: 10%;
+    margin-right: 5%;
+  }
+
+  .check-center {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .robot-center {
+    margin-left: 20%
+  }
+  
+  input[type=text], [type=password], [type=email] {
+    width: 300px;
+  }
+
+  label {
+    width: 50%;
+  }
+
+
+    /*Accordion*/
+  .accordion {
+    display: grid;
+    align-content: stretch;
+  }
+
 }

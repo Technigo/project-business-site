@@ -1,12 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This weeks assignment was to to create a business one pager website. The focus was on the hero image/video, a sign up form and an accordion.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I planned the website by using figma.
+If I had more time, I would change the FAQ and the styling around it. I would've wanted to have the questions stay in position when opening each one and adding some more styling. I also would've added a navbar on the top or some kind of logo.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Netlify link:

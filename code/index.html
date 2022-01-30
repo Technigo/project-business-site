@@ -3,28 +3,117 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Murecho&display=swap');
+      </style>
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+    <!--Header with video on repeat hero!!!!!!-->
+    <header class="video-hero">
+      <video autoplay loop muted poster="/books.jfif">
+        <source src="/books-video.mp4" type="video/mp4"/> 
+        This browser doesn't support awesome videos...
+      </video>
+
+      <div class="text-hero">
+        <h1>Books for life</h1>
+        <p>Anytime, anywhere</p>
+      </div>
+
+      <div class="button-sub">  
+        <input class="sub-button-style" type="button" name="subscribe" value="Subscribe" />
+      </div>
+    </header>
 
     <!-- Signup form -->
+    <div class="cards">
+      <main>
+        <div class="sign-up">
+          <h2 class="exp-text">Sign up for the ultimate experience</h2>
+          <form id="form" action="https://httpbin.org/anything" method="POST">
+            
+            <div class="input-center">
+              <label> <!--First name-->
+                <input id="fName" class="text-input" type="text" name="firstName" placeholder="First name" required/>
+              </label>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+              <label> <!--Last name-->
+                <input id="lName" class="text-input" type="text" name="lastName" placeholder="Last name" required/>
+              </label>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+              <label> <!--Email-->
+                <input type="email" name="email" placeholder="E-mail" required/>
+              </label>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+              <label>
+                <input type="password" name="password" id="pwd" placeholder="Create password" required/>
+              </label>
+            </div>
+            
+            <div class="check-center">
+              <label> <!--checkboxes-->
+                <input type="checkbox" name="newsletter"/>
+                I want newsletters!
+              </label>
+
+              <label>
+                <input type="checkbox" name="terms" required/>
+                I agree to the <a class="terms" href="">Terms & Conditions</a>
+              </label>
+            </div>  
+
+              <label class="robot-center"> <!--radio-->
+                <input type="radio" id="robot" name="robot" required/>
+                I am not a robot
+              </label>
+
+              <!--Sign up button-->
+              <label class="sub-center">
+                <button class="submit" type="submit">Sign up</button>
+                <!-- <input class="submit-reset" type="reset" value="Reset"/> -->
+              </label>
+          </form>
+        </div>
+      </main>
+
+      <section class="accordion">
+        <!-- Accordion -->
+        <h2>FAQ</h2>
+          <div class="question" id="section1">How does it work?</div>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae molestias sint asperiores delectus adipisci, minima provident expedita, quas hic doloremque inventore autem ducimus fugit vel! Obcaecati maiores ab iure vero.</p>
+          </div>
+
+          <div class="question" id="section2">How can I cancel my subscription?</div>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus ea tempora dolores itaque deserunt ab sint soluta aut maiores unde maxime at, nisi voluptas nemo molestias repellat in adipisci reprehenderit?</p>
+          </div>
+
+          <div class="question" id="section3">Can I listen offline?</div>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus ea tempora dolores itaque deserunt ab sint soluta aut maiores unde maxime at, nisi voluptas nemo molestias repellat in adipisci reprehenderit?</p>
+          </div>
+
+          <div class="question" id="section4">Another question I want answer to</div>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus ea tempora dolores itaque deserunt ab sint soluta aut maiores unde maxime at, nisi voluptas nemo molestias repellat in adipisci reprehenderit?</p>
+          </div>
+
+          <div class="question" id="section5">I want to read faster, how can I do it?</div>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus ea tempora dolores itaque deserunt ab sint soluta aut maiores unde maxime at, nisi voluptas nemo molestias repellat in adipisci reprehenderit?</p>
+          </div>
+
+      </section>
+    </div>
+
+    <footer class="footer">
+      <p> Vanessa Hajek </p>
+      <p>Video credit: <a class="cred" href="https://www.pexels.com/sv-se/@cottonbro">Cottonbro</a></p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
