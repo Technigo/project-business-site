@@ -39,7 +39,7 @@
   <main>
     <section class="signup-wrapper" id="signupWrapper">
       <h1 class="signup-title">Signup</h1>
-      <form action="http://httpbin.org/anything" method="post" target="_blank">
+      <form id="formSignup" action="http://httpbin.org/anything" method="post" target="_blank">
 
         <div class="signup-item">
           <label id="name" for="name"></label>
@@ -70,7 +70,7 @@
                 <input name="contact" type="radio" value="email"> via email
               </label>
             </div>
-            <div></div>
+            <div>
             <label>
               <input name="contact" type="radio" value="SMS"> via SMS
             </label>
@@ -121,6 +121,9 @@
         <div class="signup-item">
           <button class="button-submit" id="buttonSubmit" type="submit">Please register <span
               id="register"></span>!</button>
+        </div>
+        <div class="signup-item">
+          <p><span id="thankYou"><strong>Thank you for registering!</strong></span></p>
         </div>
       </form>
     </section>

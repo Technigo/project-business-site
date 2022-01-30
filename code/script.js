@@ -23,7 +23,7 @@ for (let i = 0; i < accordion.length; i++) {
 
 // button back to top
 //Get the button
-const myButton = document.getElementById("buttonTop");
+const buttonTop = document.getElementById("buttonTop");
 
 // When the user scrolls down 100px from the top of the document, show the button
 window.addEventListener("scroll", function () {
@@ -31,17 +31,27 @@ window.addEventListener("scroll", function () {
     document.body.scrollTop > 100 ||
     document.documentElement.scrollTop > 100
   ) {
-    myButton.style.display = "block";
+    buttonTop.style.display = "block";
   } else {
-    myButton.style.display = "none";
+    buttonTop.style.display = "none";
   }
 });
 
 // When the user clicks on the button, scroll to the top of the document
-myButton.addEventListener("click", function () {
+buttonTop.addEventListener("click", function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
+
+// reset the fields after submitting the form
+const submitForm = document.getElementById("formSignup");
+
+submitForm.addEventListener("submit", function () {
+  this.reset();
+  document.getElementsByName('contact').checked = 'false';
+  document.getElementById('thankYou').style.visibility = 'visible';
+});
+
 
 // To toggle in adult mode
 
@@ -55,6 +65,7 @@ adult.addEventListener("click", function () {
   } else {
     displayChild();
   }
+  document.getElementById('formSignup').reset();
 });
 
 document.addEventListener("DOMContentLoaded", displayChild);
@@ -96,7 +107,7 @@ function displayChild() {
     "Interested in our 18+ services?";
 
   const greenMedium = document.querySelectorAll(
-    ".signup-item .button-submit, .accordion-answer, footer .footer-button, #boutonToggle, #buttonTop"
+    ".signup-item .button-submit, .accordion-answer, footer .footer-button, #buttonToggle, #buttonTop"
   );
   for (let i = 0; i < greenMedium.length; i++) {
     greenMedium[i].style.backgroundColor = "#87A93A";
@@ -162,7 +173,7 @@ function displayAdult() {
     "Back to our child services";
 
   const redMedium = document.querySelectorAll(
-    ".signup-item .button-submit, .accordion-answer, footer .footer-button, #boutonToggle, #buttonTop"
+    ".signup-item .button-submit, .accordion-answer, footer .footer-button, #buttonToggle, #buttonTop"
   );
   for (let i = 0; i < redMedium.length; i++) {
     redMedium[i].style.backgroundColor = "#EA5E5A";
@@ -196,11 +207,3 @@ function displayAdult() {
     );
   }
 }
-
-
-// Pour empêcher que la page reset après avoir pesé submit
-// document.getElementById('form').onsubmit = event => {
-//   event.preventDefault()
-
-//   console.log('Form submitted')
-// }
