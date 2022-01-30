@@ -42,7 +42,7 @@ h1{
    max-width: 100%;
 }
 
-.maincontent{
+.maincontent /* Using flexbod to align signup and FAQ sections*/{
   display:flex; 
   justify-content: space-evenly; 
   font-family: Arial, Helvetica, sans-serif; 
@@ -50,7 +50,11 @@ h1{
   background-color: whitesmoke;
 }
 
-.signup {
+h2{
+  text-align: center; margin:5px;
+}
+
+.signup /* Styling for the signup box*/ {
   width:30%; 
   background-color: rgb(235, 220, 235); 
   border-radius: 2%; 
@@ -79,7 +83,7 @@ form{
   flex-direction:
   column; width:100%;
 }
-
+ 
 #name, #email {
   background-color: whitesmoke; 
   width:100%; 
@@ -133,11 +137,9 @@ label{
   padding:20px;
 }
 
-h2{
-  text-align: center; margin:5px;
-}
 
-.accordion{
+
+.accordion /* Styling for the FAQ-section */{
   width: 30%;
   padding:20px;
   border: 2px solid thistle;
@@ -150,7 +152,7 @@ h2{
 }
 
 .answer{
-  /*display: none;*/
+ /* Using height and opacity instead of display:none to be able to add transition */
   height: 0px;
   opacity: 0;
   overflow: hidden;
@@ -160,7 +162,6 @@ h2{
 }
 
 .active + .answer {
-  /*display:block;*/
   opacity: 1;
   height: 80px; 
   margin:0;
@@ -174,16 +175,16 @@ h2{
 }
 
 .question:after {
-  content: '\25C0'; /* Unicode character for "plus" sign (+) */
+  content: '\25C0'; /* Unicode character for the triangel*/
   font-size: 15px;
   color: #777;
   float: right;
   margin-left: 5px;
 }
-.active::after{ content: "\25BC";  
+.active::after{ content: "\25BC"; /* Unicode character for the triangel*/
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) /* For mobile*/ {
   
   header{
     height:60vh;
@@ -214,7 +215,7 @@ h2{
   }
 }
 
-@media only screen and (min-device-width: 600px) and (max-device-width: 1024px){
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px)/* For ipad*/{
 
   .signup{
   width:40%

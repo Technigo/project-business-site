@@ -1,12 +1,10 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Assignment: Create a business one pager website that should contain an image or video header, a signup form, and an accordion using Javascript.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I had some difficulties with adding the transition effect to the accordion which i solved it by setting opacity and height values to 0 instead of using display:none. I also had some trouble with styling the sign-up form which i solved by doing the layout first and then styling one element at the time. If i would have had more time i would have styled the checkboxes and radibuttons aswell.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
