@@ -3,28 +3,146 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Inner Peace Yoga</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chewy&family=Rationale&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chewy&family=Lexend:wght@200&family=Rationale&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
+  
+    <!-- Video, navbar and headertext -->
+
+    <div id="hero">
+      <video loop muted autoplay preload playsinline="auto">
+        <source src="./videos/women-yoga.mp4" type="video/mp4" />
+        Your browser doesn't support the video tag. 
+      </video>
+
+      <div class="header">
+        <nav class="navbar">
+          <ul>
+            <li><a herf="index.html">Studio</a></li>
+            <li><a herf="index.html">Schedule</a></li>
+            <li><a herf="index.html">Info</a></li>
+          </ul>
+        </nav>
+        <div class="headerText"> Inner Peace Yoga </div>
+      </div>
 
     <!-- Signup form -->
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+  <div class="main">
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    <div class="formContainer">
+ 
+    <section id="form">
+ 
+     <form method="post" action="http://httpbin.org/anything">
+       <h2>Bring some inner peace to you life</h2>
+ 
+       <!--Text input-->
+ 
+       <label class="blockLabel" for="email">Email:</label>
+       <input class="blockInput" type="email" id="email" name="email" placeholder="your email"required> 
+ 
+       <label class="blockLabel" for="password">Password:</label>
+       <input class="blockInput" type="password" id="password" name="password" placeholder="choose a password" required>
+ 
+       <!-- Radio buttons -->
+ 
+       <div class="radioButtons"> 
+ 
+       <div class="radioLevel">
+        <input type="radio" name="level" value="beginner" id="level">
+         <label for="level">Beginner</label>
+       </div>
+ 
+       <div class="radioLevel">
+        <input type="radio" name="level" value="experienced" id="level"> 
+         <label for="level">Experienced</label>
+       </div>
+ 
       </div>
+ 
+       <!-- Check boxes -->
+ 
+     <div class="checkBoxes"> 
+ 
+     <div id="termsConditions">
+       <input type="checkbox" name="terms-and-conditions" id="terms-and-conditions" required>
+       <label  for="terms-and-conditions">I agree with terms & conditions</label>
+     </div>
+ 
+     <div id="newsletter">
+       <input type="checkbox" name="newsletter" id="newsletter">
+       <label for="newsletter">I want Inner Peace Yoga Newsletter</label>
+     </div>
+ 
+     </div>
+ 
+   <!--Join Button-->
+ 
+   <div class="button">
+    <input class="joinButton" type="submit" value="Join with Peace">
+    </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
-  </body>
+  </form>   
+  </section>   
+</div> 
+
+<!--- Accordion --->
+
+<div class="accordionContainer">
+  <section id="accordion">
+
+  <div id="question1">
+    <div class="question" id="section1">Why Inner Peace yoga?</div>
+    <div class="answer" id="answer">
+      <p>We offer both courses and open classes for all levels. You will find everything from dynamically challenging to calm and healing Yoga.</p>
+    </div>
+  </div>
+
+  <div id="question2">
+    <div class="question" id="section2">Courses we offer</div>
+    <div class="answer" id="answer">
+      <p>We offer a beginner's course, an intermediate course and an advanced course.</p>
+    </div>
+  </div>
+
+  <div id="question3">
+    <div class="question" id="section3">Classes we teach</div>
+    <div class="answer" id="answer">
+      <p>We teach Flow Yoga, Strong Flow, Core Flow and Yin Yoga.</p>
+    </div>
+  </div>
+
+  <div id="question4">
+    <div class="question" id="section4">How much does it cost?</div>
+    <div class="answer" id="answer">
+      <p>We offer a membership that cost 499 kr / mounth and then you can tarin as much as you want. The courses we have cost 1899 kr for a ten times course.</p>
+    </div>
+  </div>
+
+  </section>
+</div>
+
+</div>
+
+<!-- Footer -->
+
+    <div class="footer">
+  
+      <p class="footerText">Designed and developed by Isabell Wästfelt</p>
+      <p class="footerCred">Video by SHVETS production, via Pexels</p>
+
+    </div>
+  </div>
+
+   <script src="script.js"></script>
+ </body>
 </html>
