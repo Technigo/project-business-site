@@ -101,6 +101,7 @@ form button {
   border: 2px white solid;
   border-radius: 5px;
   padding: 0.5rem;
+  margin: 0.5rem 0rem;
   justify-self: center;
 }
 
@@ -108,13 +109,14 @@ form button:hover {
   color: rgb(0,51,51);
   font-weight: bolder;
   background-color: white;
+  cursor: pointer;
 }
 
 .submit-form {
   display: none;
   font-size: 30px;
   text-align: center;
-  padding: 1rem;
+  padding: 3rem;
   min-width: 400px;
   align-self: center;
   gap: 1rem;
@@ -147,6 +149,12 @@ form button:hover {
   padding-left: 1rem;
 }
 
+.question:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  cursor: pointer;
+}
+
 .answer {
   display: none;
 }
@@ -159,10 +167,7 @@ form button:hover {
 }
 
 .open + .answer {
-  height: 6em;
-  opacity: 1;
   border-top: none;
-  /* transition: height 500ms ease-out; */
   display: inline;
 }
 
@@ -217,6 +222,10 @@ footer {
   .header-title {
     font-size: 70px;
   }
+  .submit-form {
+    font-size: 40px;
+    padding: 5rem;
+  }
 }
 
 /* Tablet elements that should behave differently */
@@ -224,6 +233,11 @@ footer {
   .header-title {
     font-size: 70px;
   }
+  .submit-form {
+    font-size: 40px;
+    padding: 4rem;
+  }
+}
 }
 
 /* Mobile elements that should behave differently */
