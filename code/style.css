@@ -7,11 +7,7 @@ body {
   min-height: 100vh;
 }
 
-.thank-you-container {
-  text-align: center;
-  background: blue;
-}
-
+/* styling for header including img and button */
 header {
   background: url("./umbrellas.jpg");
   background-size: cover;
@@ -33,16 +29,15 @@ header {
 }
 
 .find-out-button:hover {
-  transition: 800ms;
+  transition: 400ms;
   transform: scale(1.5);
 }
 
-.active + .answer {
-  max-height: 700px;
-}
-
-.green-background {
-  background-color: #95B86A;
+/* styling for main content, ie accordion and form */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .form-header,
@@ -52,20 +47,6 @@ header {
   font-family: "Montserrat";
   font-size: max(1.6rem, 1.6vw);
   margin: 1rem;
-}
-
-.pink-background { 
-  background-color: #CEC0CB;;
-}
-
-.dark-green-background {
-  background-color: #687a51;
-}
-
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 form,
@@ -80,8 +61,8 @@ form,
   margin: 2em;
 }
 
+/* styling for accordion */
 .q-and-a {
-  background-color: #879b6f;
   color: #20221d;
   display: flex;
   flex-direction: column;
@@ -89,6 +70,7 @@ form,
 }
 
 
+/* styling specific for the questions */
 .question {
   text-align: center;
   font-size: min(1rem, 5vw) ;
@@ -100,25 +82,17 @@ form,
 
 .question:hover {
   cursor: pointer;
-  background: #535f45;
   color: white;
 }
 
+/*adds a triangle symbol to end of question line */
 .question::after {
   content: '\25be';
   float: right;
   transform: scale(1.5);
 }
 
-
-.active {background: #535f45; color: white;}
-.active::after {content: '\25b4'}
-
-.margin-zero {
-  margin: 0;
-  padding: 1rem 0.5rem;
-}
-
+/* styling specific for answers */
 .answer {
   max-height: 0;
   overflow: hidden;
@@ -126,14 +100,26 @@ form,
   padding: 0 1rem;
 }
 
-.form-item {
-  margin: 1rem 2rem;
+/* styling for the active class/expanded answer section */
+.active + .answer {
+  max-height: 200px;
 }
 
+.active {
+  color: white;
+}
+
+/* changes direction of triangle when answer section is 'open'*/
+.active::after {
+  content: '\25b4';
+}
+
+/* styling specific for the form */
 label {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 1rem 2rem;
 }
 
 .input {
@@ -169,6 +155,7 @@ input:focus {
   border: none;
 }
 
+/* Two types of box-shadow, only difference is one is inset */
 .box-shadow {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
 }
@@ -177,6 +164,7 @@ input:focus {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.4) inset;
 }
 
+/* Styling for the footer */
 footer {
   display: flex;
   flex-direction: column;
@@ -191,21 +179,35 @@ li {
   margin: 0.5rem 0;
 }
 
+/* get rid of default link styling in the footer */
 footer a {
   color: black;
   text-decoration: none;
 }
 
+/* fatter letters in the bottom row with credits for hero image */
 .credits a {
   font-weight: 500;
 }
 
+/* background colors */
+.pink-background { 
+  background: #CEC0CB;;
+}
+
+.green-background {
+  background: #95B86A;
+}
+
+.middle-green-background {
+  background: #879b6f;
+}
+
+.dark-green-background {
+  background: #687a51;
+}
 
 @media (min-width: 668px) and (max-width: 1024px) {
-  .logo-text{
-    display: inline;
-  }
-  
   .content {
     display: flex;
     justify-content: center;
@@ -215,7 +217,6 @@ footer a {
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     padding: 2rem 5vw;
   }
 
@@ -226,10 +227,6 @@ footer a {
 }
 
 @media (min-width: 1025px) {
-  .logo-text{
-    display: inline;
-  }
-
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
