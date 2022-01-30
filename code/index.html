@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css" /> <!-- link CSS file -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- hero image header -->
@@ -19,38 +19,34 @@
         <!-- Signup form -->
         <form id="form" action="https://httpbin.org/anything" method="post">
           <h1 class="form-header">GET STARTED</h1>
-          <label for="full-name">
-            <input type="text" name="full-name" placeholder="Full name*" required>
+          <label>Name
+            <input type="text" placeholder="Full name*" required>
           </label>
-          <label for="email">
-            <input type="email" name="email" placeholder="example@domain.com*" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+          <label>Email
+            <input type="email" placeholder="example@domain.com*" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
           </label>
           <div class="radio-group">
-            <label>Willing to host
-              <input type="radio" name="host" checked>
-            </label>
-            <label>Just here to eat
-              <input type="radio" name="host">
-            </label>
+            <label><input type="radio" name="host" checked>Willing to host</label>
+            <label><input type="radio" name="host">Just here to eat</label>
           </div>
           <div class="food-preference">
             <label for="preference" class="preference">Dietery preference</label>
-            <select id="preference" class="preference-option" name="preference">
+            <select id="preference" class="preference-option">
               <option value="meat">Eat everything</option>
               <option value="fish">Pescatarian</option>
               <option value="vegetarian">Vegetarian</option>
               <option value="vegan">Vegan</option>
             </select>
             </div>
-          <label class="checkbox-label">
-            <input type="checkbox" name="news">
+          <label class="checkbox-label" >
+            <input type="checkbox" id="news">
             Sign me up for extra bites
           </label>
           <label class="checkbox-label">
-            <input type="checkbox" name="terms" required>
+            <input type="checkbox" required>
             I agree to the terms and conditions*
           </label>
-            <button id="submit" type="submit" name="signup">SIGN UP</button>
+          <button id="submit" type="submit" name="signup">SIGN UP</button>
         </form>
         
         <!-- Submit message -->
@@ -68,16 +64,16 @@
             <p>Supper Society brings people together to share their love of food by arranging dining opportunities in people's homes.
               Think of a community-based Sunday supper to look forward to each week. Who wouldn't want to be a part of that?</p>
           </div>
+          <div class="question" id="section1">I suck at cooking, can I still join?</div>
+          <div class="answer">
+            <p>The Society is open to both people who love to cook and people who love to eat.
+              There is no requirement to host for those that can't be trusted in the kitchen.</p>
+          </div>
           <div class="question" id="section1">How much does it cost?</div>
           <div class="answer">
             <p>Dinner guests split the grocery costs with the other diners.
               Costs vary per occasion.
             </p>
-          </div>
-          <div class="question" id="section1">I suck at cooking, can I still join?</div>
-          <div class="answer">
-            <p>The Society is open to both people who love to cook and people who love to eat.
-              There is no requirement to host for those that can't be trusted in the kitchen.</p>
           </div>
           <div class="question" id="section2">What about drinks?</div>
           <div class="answer">
@@ -86,11 +82,9 @@
         </section>
         <script src ="script.js"></script> <!-- link javascript file -->
       </div>
-
       <section class="image">
         <img class="img-spices" src="./images/spices.jpeg" alt="spices">
       </section>
-
     </main>
     <footer>
       <p>Created by <a class="footer-linkedin" href="https://www.linkedin.com/in/ariannaallahyar/">Arianna Allahyar</a> | 2022</p>

@@ -1,12 +1,17 @@
 # Business Site
+The assignment was to build a responsive business site that consists of:
+- A header with a responsive image or video
+- A signup form with at least three different input types
+- An FAQ accordion, built with JavaScript
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Stretch goals that I reached include:
+- Additional types of form elements
+- Validation to portions of the form
+- Icon indicating whether according sections are expanded or collapsed
+- Mouse cursor changed on hover
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Description soon.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Here is a link to my project on Netlify: (coming soon)
