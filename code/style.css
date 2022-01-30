@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   font-family:'Playfair Display', serif;
 }
 
@@ -9,7 +11,7 @@ body {
   background: #EEF0EB;
 }
 
-/*    Styling of the header    */
+/*Styling of the header*/
 .image-header {
   height: 60vh;
   max-width: 100%;
@@ -42,7 +44,7 @@ body {
 .header-text p {
   color: #C4F4C7;
   font-size: 1.5rem;
-  text-shadow: 5px 5px 10px #000000;
+  text-shadow: 3px 3px 8px #000000;
 } 
 
 /*Main styling*/
@@ -89,21 +91,21 @@ label {
   max-width: 250px;
 }
 
-input{
+input { 
   border: none;
   padding: 5px;
   border-radius: 5px;
 }
 
-input[type=radio]{
+input[type=radio] {
   margin-top: 10px;
 }
 
-input:focus{
-  background-color: #f8e8c1;
+input:focus {
+  background-color: #e3fae5;
 }
 
-input:valid{
+input:valid {
   border: 2px solid #0B5D1E;
 }
 
@@ -116,7 +118,7 @@ button {
   padding: 1rem;
   margin: 1rem;
   text-transform: uppercase;
-  box-shadow: 2px 2px 5px #000000;
+  box-shadow: 2px 2px 3px #3A435E;
   cursor: pointer;
 }
 
@@ -140,7 +142,7 @@ button {
    border-radius: 5px;
  }
 
- .accordion h1{
+ .accordion h1 {
    color: #370926;
    font-size: 1.8rem;
    margin-top: 1rem;
@@ -178,7 +180,7 @@ button {
    padding-right: 5px;
  }
 
- .accordion .accordion-element .question.active::before{
+ .accordion .accordion-element .question.active::before {
   content: "-";
 }
 
@@ -202,17 +204,6 @@ button {
    height: auto;
  }
 
-
-
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-/*.active + .answer {
-  /* some styling here 
-} */
-
-
 /* Media queries for tablet */
 @media screen and (min-width:668px) {
   .main-content {
@@ -222,11 +213,11 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     align-content: center;
   }
 
-  .header-text h1{
+  .header-text h1 {
     font-size: 3.5rem;
   }
 
-  .header-text p{
+  .header-text p {
     font-size: 2rem;
   }
 
@@ -234,7 +225,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
     font-size: 1.4rem;
   }
 
-  .accordion h1{
+  .accordion h1 {
     font-size: 2rem;
   }
 
@@ -243,20 +234,20 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   }
 }
 
-@media screen and (min-width:1024px){
-  .header-text h1{
+@media screen and (min-width:1024px) {
+  .header-text h1 {
     font-size: 4rem;
   }
 
-  .header-text p{
+  .header-text p {
     font-size: 2.5rem;
   }
 
-  .form-container h3{
+  .form-container h3 {
     font-size: 1.8rem;
   }
   
-  .accordion h1{
+  .accordion h1 {
     font-size: 2.3rem;
   }
 }

@@ -11,3 +11,4 @@ document.getElementById('section2').onclick = toggle
 document.getElementById('section3').onclick = toggle
 document.getElementById('section4').onclick = toggle
 
+
