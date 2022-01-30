@@ -1,7 +1,100 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/* form*/
 
-.active + .answer {
-  /* some styling here */
+.subscribe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  background: yellow;
 }
+ 
+.form-label {
+  display: block;
+  margin-bottom: 20px;
+ }
+
+.form-label {
+  font-size: 22px;
+  font-style: italic;
+}
+select {
+  font-style: italic;
+}
+
+button {
+  margin: 20px;
+  
+
+}
+}
+
+/* faq */
+  { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+section 
+{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background: #bedfe8;
+}
+.h2-faq {
+font-family: Arial, Helvetica, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.accordion {
+  max-width: 800px;
+}
+.accordion .contentBx 
+{
+  position: relative;
+  margin: 10px 20px;
+}
+.accordion .contentBx .label {
+  position: relative;
+  padding: 10px;
+  background: #2694af;
+  color: #fff;
+  cursor: poiner;
+}
+.accordion .contentBx .label::before {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 20px; 
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+.accordion .contentBx.active .label::before
+{
+  content: '-';
+}
+.accordion .contentBx .content {
+  position:relative;
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5%;
+  overflow-y: auto;
+}
+.accordion .contentBx.active .content
+{
+  height: 150px;
+  padding: 10px;
+  
+}
+
+/*tablet-size*/
+@media screen
