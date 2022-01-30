@@ -10,49 +10,62 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
   </head>
   <body>
-    <header>
-        <p>Logo</p>
-          <nav>
-            <a href="#">Home</a>
-            <a href="#">Glamping</a>
-            <a href="#">Tents</a>
-            <a href="#">Prices</a>
-            <a href="#">Activities</a>
-            <a href="#">Contact</a>
-          </nav>
-       <ion-icon class="menuIcon" name="menu-outline"></ion-icon>
-    </header>
+    
 
 
     <section class="hero">
       <h1>Glamping</h1>
-      <p>Enjoy nature without</p>
-      <p>compromising on comfort</p>
-      <button>Book your tent</button>
+      <p class="undertitleText">Enjoy nature without</p>
+      <p class="undertitleText">compromising comfort</p>
+      <a href="#formAndAccordion"><button class="titleButton">Book your tent</button></a>
+      <header>
+        <img class="tentLogo" src="images/logo.png">
+          <nav>
+            <a class="navLink"href="#">Home</a>
+            <a class="navLink"href="#">Glamping</a>
+            <a class="navLink"href="#">Tents</a>
+            <a class="navLink"href="#">Prices</a>
+            <a class="navLink"href="#">Activities</a>
+            <a class="navLink"href="#">Contact</a>
+          </nav>
+       <ion-icon class="menuIcon" name="menu-outline"></ion-icon>
+    </header>
     </section>
 
     <section class="glampingText">
       <p class="glampingTitle">Glamping</p>
-      <p>is a luxury type of camping that includes</p> 
-      <p>facilities and accommodation considered far</p>
-      <p>more comfortable than traditional camping. </p>
-      <p>It allows you to enjoy the freedom and </p>
-      <p>closeness to nature that camping affords,</p>
-      <p> without the uncomfortable aspects.</p>
+      <p class="glampingDefinition">
+      is a luxury type of camping that includes
+      facilities and accommodation considered far
+      more comfortable than traditional camping. 
+      It allows you to enjoy the freedom and 
+      closeness to nature that camping affords,
+      without the uncomfortable aspects.</p>
     </section>
 
     <section class="menuSection">
-      <img class="menuImage"src="./images/tent.jpeg"/>
-      <img class="menuImage"src="./images/dining.jpeg"/>
-      <img class="menuImage"src="./images/activities.jpeg"/>
-      <img class="menuImage"src="./images/event.jpeg"/>
+      <div class="menuContainer">
+        <img class="menuImage"src="./images/tent.jpeg"/>
+        <button class="menuButton">Tents</button>
+      </div>
+      <div class="menuContainer">
+        <img class="menuImage"src="./images/dining.jpeg"/>
+        <button class="menuButton">Dining</button>
+      </div>
+      <div class="menuContainer">
+        <img class="menuImage"src="./images/activities.jpeg"/>
+        <button class="menuButton">Activities</button>
+      </div>
+      <div class="menuContainer">
+        <img class="menuImage"src="./images/event.jpeg"/>
+        <button class="menuButton">Events</button>
+      </div>
     </section>
-
       
-    <section class="formAndAccordion">
+    <section class="formAndAccordion"id="formAndAccordion">
       <div class="formContainer" id="formContainer">
         <form id="form" action="https://httpbin.org/anything" method="post">
-          <p class="alignSelf">Book your glamping</p>
+          <p class="alignSelf">Book your glamping:</p>
           <label class="labelTextAbove"for="name">Name:
             <input id="name" type="text" name="name" required/>
           </label>
@@ -64,10 +77,10 @@
           </label>
           <label class="labelTextAbove"for="tentType">Tent:
             <select id="tentType" type="select" name="tentType" required>
-              <option>Option 1</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-              <option>Option 4</option>
+              <option>Tent 1</option>
+              <option>Tent 2</option>
+              <option>Tent 3</option>
+              <option>Tent 4</option>
             </select>
           </label>
           <label class="labelTextAbove" for="checkIn">Check in:
@@ -78,7 +91,7 @@
           </label>
           <label class="alignSelf" for="terms">
             <input id="terms" type="checkbox" name="terms" required/>
-            I accept Terms & Conditions.
+            I accept <a>Terms & Conditions</a>.
           </label>
           <label class="alignSelf"for="newsletter">
             <input id="newsletter" type="checkbox" name="newsletter"/>
@@ -89,33 +102,33 @@
       </div>
 
       <div id="submitMessage"class="submitMessage">
-        <p>Your booking is ready!</p>
+        <p>Thank you for your booking!</p>
       </div>
 
       <div class="accordionContainer">
-        <p class="alignSelf">FAQ</p>
-        <button class="accordionButton">Question1</button>
+        <p style="color: white;" class="alignSelf">Frequently Asked Questions:</p>
+        <button class="accordionButton">What includes for the price per night?</button>
         <div class="panel">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna 
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
             ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        <button class="accordionButton">Question2</button>
+        <button class="accordionButton">Do you have different kind of tents?</button>
         <div class="panel">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna 
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
             ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        <button class="accordionButton">Question3</button>
+        <button class="accordionButton">Do you have restaurant or cooking facilities?</button>
         <div class="panel">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna 
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
             ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        <button class="accordionButton">Question4</button>
+        <button class="accordionButton">Can I cancel my booking anytime without fee?</button>
         <div class="panel">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -126,7 +139,13 @@
       </div>
     </section>
     <footer>
-      <p>Kristiina</p>
+      <div >
+        <ion-icon class="footerIcon"name="logo-facebook"></ion-icon>
+        <ion-icon class="footerIcon"name="logo-instagram"></ion-icon>
+        <ion-icon class="footerIcon"name="mail"></ion-icon>
+      </div>
+      <p>&copy; Kristiina Kolu / 2022</p>
+      <p>Images: Pexel</p>
     </footer>
 
     <script src="./script.js"></script>
