@@ -7,3 +7,4 @@ The assignement was to make an image header with text on top and make the header
 This assignement was similar to last weeks so I keept my design for that and concentrated on learning the java script and working with forms and header. I didn't have to much time to study this week due to work so I had to priorise.
 If I had more time I wouuld like to implement more java script and maybe tried our the hero video. 
 
+https://artthatlookslikecandy.netlify.app/code/
