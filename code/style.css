@@ -27,12 +27,12 @@ img {
 
 .slide-top,
 .slide-bottom {
-  display: block;
+ 
   background: #111;
   width: 100vw;
   height: 52vh;
   position: absolute;
-  z-index: 3;
+  z-index: -10;
   opacity: 0;
 }
 .slide-top {
@@ -62,6 +62,7 @@ img {
        transform: translate(-50%,-50%) rotate(-10deg);
        opacity: 1;
        position: fixed;
+       
    }
    50% {
       transform: translate(-50%,-20%) rotate(5deg);
@@ -71,38 +72,56 @@ img {
       transform: translate(-50%,-50%) rotate(-10deg);
       opacity: 0.75;
       position: fixed;
+      
    }
 }
 
 @keyframes moveup {
    0% {
+  z-index: 3;
   transform: translateY(0);
   opacity: 1;
   position: fixed;
+  display: block;
+
+
   }
   70% {
   transform: translateY(0);
+
   }
   100% {
+    z-index: 3;
+
   transform: translateY(-100%);
   opacity: 1;
   position: fixed;
+  display: block;
+
   }
 }
 
 @keyframes movedown {
   0% {
+    z-index: 3;
+
       transform: translateY(100%);
       opacity: 1; 
       position: fixed;
+      display: block;
+
   }
   70% {
       transform: translateY(100%);
       }
   100% {
+    z-index: 3;
+
       transform: translateY(200%);
       opacity: 1;
       position: fixed;
+      display: block;
+
       }
 }
 
