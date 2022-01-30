@@ -1,8 +1,4 @@
-// A function that adds and remove the class "active" on the section you click on.
-// We haven't really talked about ´this´ yet, but we will... ;)
-// console.log(this) to see how it works
-//FRÅN KARIN Const myFunction = () => { ….. } //
-script.js
+
 console.log('CONNECTED')
 
 function toggle() {
@@ -10,13 +6,10 @@ function toggle() {
 }
 
 // Selects an HTML element, and calls a function which will be executed when the element is clicked.
-document.getElementById("section1").onclick = toggle
 
 document.getElementById('form').onsubmit = (event) => {
 event.preventDefault()
 
- //console.log ('form submitted')
- //alert ('Form submitted')
  const inputValue = document.getElementById('nameInput').value
 
  document.getElementById('greeting').innerText= 'hello'
@@ -25,7 +18,7 @@ event.preventDefault()
 document.getElementById('form').onsubmit = event => {
     event.preventDefault()
   
-    // console.log('Form submitted')
+    // console.log('Form submittegit commit d')
     // alert('Form submitted')
     const inputValue = document.getElementById('nameInput').value
   
@@ -34,3 +27,17 @@ document.getElementById('form').onsubmit = event => {
       'greeting'
     ).innerText = `Hello ${inputValue}!`
   }
+
+//This is the JS for the accordion//
+const sectionOne = document.getElementById("section1")
+
+sectionOne.onclick = () => {
+  sectionOne.classList.toggle("active")
+} 
+
+const sectionTwo = document.getElementById("section2")
+
+sectionTwo.onclick = () => {
+  sectionTwo.classList.toggle("active")
+} 
+ 
