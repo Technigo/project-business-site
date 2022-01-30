@@ -16,6 +16,7 @@ body {
   font-family: "Oxygen", sans-serif;
   background-image: linear-gradient(#6E7C74, #B19272);
   background-repeat: no-repeat;
+  display: grid;
 }
 
 .image-header {
@@ -91,7 +92,6 @@ input {
   margin-bottom: 10px;
 }
 
-
 .checkbox-container {
   display: block;
   position: relative;
@@ -108,17 +108,17 @@ input {
 }
 
 .custom-checkbox {
- position: absolute;
- top: 0;
- left: 0;
- height: 8px;
- width: 8px;
- background-color: whitesmoke;
- cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+  width: 8px;
+  background-color: whitesmoke;
+  cursor: pointer;
 }
 
 .checkbox-container:hover input ~ .custom-checkbox {
-background-color: rgb(129, 144, 136);
+  background-color: rgb(129, 144, 136);
 }
 
 .checkbox-container input:checked ~ .custom-checkbox {
@@ -132,20 +132,11 @@ button {
   font-size: 8px;
 }
 
-h3 {
-  margin-bottom: 15px;
-  font-size: 16px;
-}
-
 .tent {
   display: none;
 }
 
 .coffee {
-  display: none;
-}
-
-.colorbox1 {
   display: none;
 }
  
@@ -156,6 +147,11 @@ h3 {
   padding: 20px 10px; 
   cursor: help;
 } 
+
+h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
 
 .question {
   font-size: 12px;
@@ -175,83 +171,145 @@ h3 {
 .active, .question:hover {
   background-color: #B8A898;
 }
+
  /* for tablet */
-  @media screen and (min-width: 426px) { 
-  .content {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 30vh 30vh;
-   margin: 20px;
-   column-gap: 1vw;
- }
 
- h1 {
-   font-size: 38px;
- }
+@media screen and (min-width: 426px) { 
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30vh 30vh;
+  column-gap: 1vw;
+  margin: 20px;
+  justify-items: center;
+}
 
- .image-header p {
+h1 {
+  font-size: 38px;
+}
+
+.image-header p {
   font-size: 16px;
- }
+}
 
- .tent { 
-   display: inline-block;
-   overflow: hidden;
-   padding: 20px;
- }
+.text-input {
+  font-size: 16px;
+}
 
- .tent img { 
+.signup-form {
+  align-items: center;
+}
+
+.tent { 
+  display: inline-block;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.tent img { 
   width: 100%;
   height: 100%;
   object-fit: cover;
- } 
+} 
 
- .coffee {
+.coffee {
   display: inline-block;
   overflow: hidden;
   padding: 20px;
 }
 
 .coffee img { 
- width: 100%;
- height: 100%;
- object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 }
 
 /* for laptop */
 
 @media screen and (min-width: 769px) { 
-  .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    padding: 10px 0px;
-    row-gap: 10px;
-    grid-template-areas:
-  }
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  padding: 10px 0px;
+  row-gap: 10px;
+}
 
-  .h1 {
-    font-size: 78px;
-  }
+.image-header {
+  height: 50vh;
+  width: 100% vw;
+}
 
-  .image-header p {
-    font-size: 18px;
-  }
+h1 {
+  font-size: 74px;
+}
 
-  .signup-form {
-    grid-area: 1 / 2 / 2 / 3;
-  }
+.image-header p {
+  font-size: 28px;
+}
 
-  .tent {
-    grid-area: 1 / 3 / 2 / 4;
-  }
+.signup-form {
+  grid-area: 1 / 1 / 2 / 2;
+  align-items: center;
+}
 
-  .accordion {
-    grid-area: 2 / 2 / 3 / 3;
-  }
+h2 {
+  font-size: 45px;
+}
 
-  .coffee {
-    grid-area: 2 / 1 / 3 / 2;
-  }
+h3 { 
+  font-size: 24px;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+.inputBoxes { 
+  display: grid;
+  justify-content: center;
+  align-items: baseline;
+  row-gap: 15px;
+  margin-bottom: 20px;
+} 
+  
+.checkbox-container {
+  font-size: 10px;
+}
+
+.tent {
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+.coffee {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.accordion {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.accordion-headers {
+  margin-bottom: 40px;
+}
+
+.question {
+  font-size: 16px;
+  padding: 3px;
+  margin-bottom: 20px;
+}
+  
+.answer {
+  font-size: 12px;
+  display: none;
+}
+}
+
+@media screen and (min-width: 1300px) { 
+.content {
+  display: grid;
+  padding: 10px 30px;
+}
 }
