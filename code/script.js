@@ -66,6 +66,7 @@ adult.addEventListener("click", function () {
     displayChild();
   }
   document.getElementById('formSignup').reset();
+  document.getElementById('thankYou').style.visibility = 'hidden';
 });
 
 document.addEventListener("DOMContentLoaded", displayChild);
