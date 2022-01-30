@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 /* ----------- HEADER ----------- */
@@ -32,6 +32,7 @@ header {
   color: rgb(0,51,51, 0.75);
   padding: 1rem 0rem;
   font-size: 50px;
+  font-weight: 800;
   text-align: center;
   align-self: center;
   text-transform: uppercase;
@@ -40,13 +41,12 @@ header {
 /* ----------- SIGN-UP SECTION ----------- */
 
 form {
-  padding: 1rem;
   display: grid;
   justify-content: center;
   gap: 1rem;
-  margin: 1rem;
   background-color: rgb(0,51,51);
   border: 5px solid rgb(0,51,51);
+  padding: 1rem 0rem;
 }
 
 .form-header {
@@ -57,7 +57,7 @@ form {
 
 label {
   color: white;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 input {
@@ -125,19 +125,21 @@ form button:hover {
 /* ----------- ACCORDION/FAQ SECTION ----------- */
 
 .accordion {
-  padding: 1rem;
-  border: 5px solid rgb(0,51,51);
+  /* padding: 1rem;
+  margin: 1rem; */
+  /* border: 5px solid rgb(0,51,51); */
   display: block;
-  margin: 1rem;
+  margin: 1rem 0rem;
+  padding: 1rem 0rem;
 }
 
 .accordion-header {
-  color: white;
-  background-color: rgb(0,51,51);
+  /* color: white;
+  background-color: rgb(0,51,51); */
   display: flex;
   justify-content: center;
-  margin: -1rem -1rem -0rem -1rem;
-  padding: 1rem;
+  /* margin: -1rem -1rem -0rem -1rem;
+  padding: 1rem; */
 }
 
 .question {
@@ -219,34 +221,41 @@ footer {
 
 /* Desktop elements that should behave differently */
 @media (min-width: 992px) {
-  .container {
-    max-width: ;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
   .header-title {
-    font-size: 70px;
-    border-top: 10px rgb(0,51,51, 0.75) solid;
-    border-bottom: 10px rgb(0,51,51, 0.75) solid;
-  }
-  label {
-    font-size: 14px;
+    font-size: 80px;
   }
   .submit-form {
-    font-size: 40px;
     padding: 5rem;
   }
 }
 
 /* Tablet elements that should behave differently */
-@media (min-width: 768px) and (max-width: 991px){
+@media (min-width: 768px) {
+  .container {
+    padding: 1rem;    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   .header-title {
     font-size: 70px;
-    border-top: 10px rgb(0,51,51, 0.75) solid;
-    border-bottom: 10px rgb(0,51,51, 0.75) solid;
+  }
+  form {
+    padding: 1rem;
+    margin: 1rem;
   }
   .submit-form {
     font-size: 40px;
     padding: 4rem;
+  }
+  .accordion {
+    padding: 1rem;
+    margin: 1rem;
+    border: 5px solid rgb(0,51,51);
+  }
+  .accordion-header {
+    color: white;
+    background-color: rgb(0,51,51);
+    margin: -1rem -1rem -0rem -1rem;
+    padding: 1rem;
   }
 }
