@@ -148,9 +148,14 @@ form button:hover {
   padding-left: 1rem;
 }
 
+.question::before{
+  content: "+";
+  text-decoration: none;
+  padding-right: 0.5rem; 
+}
+
 .question:hover{
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
+  font-weight: 800;
   cursor: pointer;
 }
 
@@ -170,6 +175,9 @@ form button:hover {
   display: inline;
 }
 
+.question.open::before {
+  content: "-";
+}
 
 /* ----------- BOTTOM BANNER -----------*/
 
