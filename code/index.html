@@ -10,73 +10,75 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MuseoModerno&family=Open+Sans&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
-  <link rel="icon" 
-      type="image/png" 
-      href="./images/favicon.ico">
+  <link rel="icon" type="image/png" href="./images/favicon.ico">
 </head>
 
 <body>
-  <button class="button-top" id="myBtn" title="Back to top" type="button">Top</button>
 
   <header class="hero">
-    <video poster="./images/avocado-image.jpg" src="./videos/avocados.mp4" type="video/mp4" autoplay loop muted playsinline></video>
+    <video class="hero-video" poster="./images/avocado-image.jpg" src="./videos/avocados.mp4" type="video/mp4" autoplay
+      loop muted playsinline></video>
     <nav>
       <ul>
         <li>
-          <a href="#signup-wrapper">Signup</a>
+          <a href="#signupWrapper">Signup</a>
         </li>
         <li>
-          <a href="#accordion-wrapper">FAQ</a>
+          <a href="#accordionWrapper">FAQ</a>
         </li>
       </ul>
     </nav>
     <div class="hero-title">
       <h1>Find happiness</h1>
-      <h2>through <span id="subtitle"></span></h2>
+      <h2>through <span id="heroSubtitle"></span></h2>
     </div>
   </header>
 
   <main>
-    <section class="signup-wrapper" id="signup-wrapper">
+    <section class="signup-wrapper" id="signupWrapper">
       <h1 class="signup-title">Signup</h1>
       <form action="http://httpbin.org/anything" method="post" target="_blank">
 
         <div class="signup-item">
-          <label for="name" id="name"></label>
+          <label id="name" for="name"></label>
           <input class="input-field" name="name" placeholder="Firstname Lastname" type="text" required>
         </div>
 
         <div class="signup-item">
           <label for="email">Your email address</label>
-          <input class="input-field" autocomplete="on" name="email-address" placeholder="email@address.com" type="email" required>
+          <input class="input-field" autocomplete="on" name="email-address" placeholder="email@address.com" type="email"
+            required>
         </div>
 
         <div class="signup-item">
           <label for="phone">Your mobile number</label>
-          <input class="input-field" autocomplete="on" name="mobile-number" pattern="07[0-9]-[0-9]{3} [0-9]{2} [0-9]{2}|07[0-9]{8}" placeholder="07X-XXX XX XX or 070XXXXXXX" type="tel" required>
+          <input class="input-field" autocomplete="on" name="mobile-number"
+            pattern="07[0-9]-[0-9]{3} [0-9]{2} [0-9]{2}|07[0-9]{8}" placeholder="07X-XXX XX XX or 070XXXXXXX" type="tel"
+            required>
         </div>
 
-        <p class="signup-item signup-instruction">Please answer the following questions so we may send you information tailored to <span id="instruction"></span> in the best way.
+        <p class="signup-item signup-instruction">Please answer the following questions so we may send you information
+          tailored to <span id="instruction"></span> in the best way.
         </p>
 
         <div class="signup-item">How do you prefer to be contacted?
           <div class="input-field">
             <div>
+              <label>
+                <input name="contact" type="radio" value="email"> via email
+              </label>
+            </div>
+            <div></div>
             <label>
-              <input name="email" type="radio"> via email
+              <input name="contact" type="radio" value="SMS"> via SMS
             </label>
           </div>
-          <div></div>
-            <label>
-              <input name="SMS" type="radio"> via SMS
-            </label>
-          </div>
-          </div>
+        </div>
         </div>
 
         <div class="signup-item">
           <label for="age">Select your <span id="selectChild"></span>age range:</label>
-          <select class="input-field" name="age" id="age">
+          <select class="input-field" id="age" name="age">
             <option value="nochoice">(choose an option)</option>
             <option id="select1" value="option1"></option>
             <option id="select2" value="option2"></option>
@@ -87,7 +89,7 @@
           </select>
         </div>
 
-        <div class="signup-item">Check all <span id="check"></span>:
+        <div class="signup-item">Check all <span id="checkTitle"></span>:
           <div class="input-field">
             <div>
               <label>
@@ -98,7 +100,7 @@
               </label>
               <label>
                 <input name="veggie3" type="checkbox"><span id="check3"></span>
-              </label>  
+              </label>
             </div>
             <div>
               <label>
@@ -109,71 +111,84 @@
               </label>
               <label>
                 <input name="veggie6" type="checkbox"><span id="check6"></span>
-              </label>  
+              </label>
             </div>
           </div>
         </div>
 
         <div class="signup-item">
-          <button class="btn" id="buttonSubmit" type="submit">Please register <span id="register"></span>!</button>
+          <button class="button-submit" id="buttonSubmit" type="submit">Please register <span
+              id="register"></span>!</button>
         </div>
       </form>
     </section>
 
-    <section class="accordion-wrapper" id="accordion-wrapper">
+    <section class="accordion-wrapper" id="accordionWrapper">
       <h1 class="accordion-title">FAQ</h1>
       <button class="accordion-question">It seems incredible, what are your services?</button>
       <div class="accordion-answer">
-        <p>After registration, we will send you all the information about our services and we are pretty confident that you will be truly amazed.</p>
+        <p>After registration, we will send you all the information about our services and we are pretty confident that
+          you will be truly amazed.</p>
       </div>
 
       <button class="accordion-question">Are you a <span id="questionBusiness"></span>?</button>
       <div class="accordion-answer">
-        <p>We understand that you could think that, but not at all! We offer services to help you and <span id="answerWho"></span> to find happiness through <span id="answerType"></span>.</p>
+        <p>We understand that you could think that, but not at all! We offer services to help you and <span
+            id="answerWho"></span> to find happiness through <span id="answerType"></span>.</p>
       </div>
 
       <button class="accordion-question">Are <span id="questionType"></span> just a euphemism, or...?</button>
       <div class="accordion-answer">
-        <p>We are glad to have aroused your curiosity and we invite you to register to find out. We won't say more about that here…</p>
+        <p>We are glad to have aroused your curiosity and we invite you to register to find out. We won't say more about
+          that here…</p>
       </div>
 
       <button class="accordion-question">Is happiness really within my reach?</button>
       <div class="accordion-answer">
-        <p>Yes, it is. There is no doubt that with our <span id="relatedType"></span>-related services you will feel the kind of joy and happiness that will reflect on those around you, trust us on that!</p>
+        <p>Yes, it is. There is no doubt that with our <span id="relatedType"></span>-related services you will feel the
+          kind of joy and happiness that will reflect on those around you, trust us on that!</p>
       </div>
 
       <button class="accordion-question">I can't wait, are you in my town?</button>
       <div class="accordion-answer">
-        <p>Don't worry, we offer virtual services within all Sweden, that's why we need both your email address and your Swedish mobile number.</p>
+        <p>Don't worry, we offer virtual services within all Sweden, that's why we need both your email address and your
+          Swedish mobile number.</p>
       </div>
 
       <button class="accordion-question">But still, I'm not sure if I should register...</button>
       <div class="accordion-answer">
-        <p>We encourage you to dare to register on the basis of your curiosity alone, but if you insist on it, you can <a href="mailto:help@findhappiness.com?subject=Yes, I want to find happiness!&body=Please send more information about your services!"><strong>contact us here</strong></a> for more information. But beware, the surprise effect will be slightly spoiled...</p>
+        <p>We encourage you to dare to register on the basis of your curiosity alone, but if you insist on it, you can
+          <a
+            href="mailto:help@findhappiness.com?subject=Yes, I want to find happiness!&body=Please send more information about your services!"><strong>contact
+              us here</strong></a> for more information. But beware, the surprise effect will be slightly spoiled...</p>
       </div>
 
     </section>
+
+    <button class="button-top" id="buttonTop" title="Back to top" type="button">Top</button>
+
   </main>
 
-  
+
   <footer>
-  
-<div class="footer1">
-  <button class="btn2" id="buttonAdult" type="reset">Interested in our 18+ services?</button>
-</div>
-<div class="footer2">
-  <span>Created by Nadia Lefebvre</span>
-  <a href="https://www.linkedin.com/in/nadiainsweden/" target="_blank" title="Linkedin Nadia Lefebvre"<i
-      class="fab fa-linkedin">
-      </i>
-    </a>
-    <a href="https://github.com/nadialefebvre" target="_blank" title="GitHub Nadia Lefebvre"<i class="fab fa-github">
-      </i>
-    </a>
-    <a href="https://stackoverflow.com/users/17550223/nadia-lefebvre" target="_blank" title="Stack Overflow Nadia Lefebvre"<i class="fab fa-stack-overflow">
-      </i>
-    </a>
-</div>
+
+    <div class="footer-button">
+      <button class="button-toggle" id="buttonToggle" type="reset">Interested in our 18+ services?</button>
+    </div>
+    <div class="footer-copyright">
+      <span>Created by Nadia Lefebvre</span>
+      <a href="https://www.linkedin.com/in/nadiainsweden/" target="_blank" title="Linkedin Nadia Lefebvre" <i
+        class="fab fa-linkedin">
+        </i>
+      </a>
+      <a href="https://github.com/nadialefebvre" target="_blank" title="GitHub Nadia Lefebvre" <i class="fab fa-github">
+        </i>
+      </a>
+      <a href="https://stackoverflow.com/users/17550223/nadia-lefebvre" target="_blank"
+        title="Stack Overflow Nadia Lefebvre" <i class="fab fa-stack-overflow">
+        </i>
+      </a>
+    </div>
 
   </footer>
   <script src="./script.js"></script>

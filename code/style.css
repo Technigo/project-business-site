@@ -10,7 +10,7 @@
 
 html {
   background-color: #fefae7;
-  /* CSS property for smooth scrolling doesn't work on Safari */
+  /* CSS property for smooth scrolling doesn't work on Safari (need some more Googling to find a solution) */
   scroll-behavior: smooth;
   color: #3d4c1a;
 }
@@ -20,57 +20,11 @@ a {
   color: inherit;
 }
 
-::-webkit-input-placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #f6db55;
-  opacity: 1;
-  /* Firefox */
-}
-
-::-moz-placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #f6db55;
-  opacity: 1;
-  /* Firefox */
-}
-
-:-ms-input-placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #f6db55;
-  opacity: 1;
-  /* Firefox */
-}
-
-::-ms-input-placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #f6db55;
-  opacity: 1;
-  /* Firefox */
-}
-
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #f6db55;
-  opacity: 1;
-  /* Firefox */
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #f6db55;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #f6db55;
-}
-
-/* Hero section START */
 .hero {
   position: relative;
 }
 
-.hero video {
+.hero .hero-video {
   position: relative;
   height: 65vh;
   width: 100vw;
@@ -96,40 +50,6 @@ a {
   min-height: 275px;
 }
 
-.hero ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  /* I had to put a higher z-index so the visitor can click the links -- not necessary anymore? */
-  z-index: 3;
-}
-
-
-
-.hero ul li {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  align-self: flex-end;
-  padding: 0 2rem;
-  font-size: 1.25rem;
-}
-@media (min-width: 1025px) {
-  .hero ul {
-    flex-direction: column;
-  }
-
-  .hero ul li {
-    padding: 2rem 1rem;
-    font-size: 1.25rem;
-  }
-}
-
-.hero ul li a {
-  font-family: 'MuseoModerno', cursive;
-  font-weight: bold;
-}
-
 .hero-title {
   color: white;
   padding: 2rem 2rem;
@@ -147,8 +67,27 @@ a {
   font-family: 'MuseoModerno', cursive;
 }
 
-/* Hero section END */
+.hero ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  /* I had to put a higher z-index so the visitor can click the links -- not necessary anymore? */
+  z-index: 3;
+}
 
+.hero ul li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: flex-end;
+  padding: 0 2rem;
+  font-size: 1.25rem;
+}
+
+.hero ul li a {
+  font-family: 'MuseoModerno', cursive;
+  font-weight: bold;
+}
 
 main {
   display: flex;
@@ -159,8 +98,6 @@ main {
   font-size: 1.25rem;
 }
 
-
-/* FORM section START */
 .signup-wrapper, .accordion-wrapper {
   position: relative;
   max-width: 40rem;
@@ -178,11 +115,11 @@ main {
   margin-bottom: 8rem;
 }
 
-@media (min-width: 1025px) {
-  .signup-wrapper, .accordion-wrapper {
-    margin-top: 3rem;
-    margin-bottom: 8rem;
-  }
+.signup-title, .accordion-title {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  font-family: 'MuseoModerno', cursive;
 }
 
 .signup-item {
@@ -196,23 +133,69 @@ main {
   text-align: justify;
 }
 
+label {
+  display: block;
+}
+
+button, input, select {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+/* Input validation styling, show invalid red ring only while not focused */
+input:not(:focus):not(:placeholder-shown):invalid {
+  border-color: red;
+}
+
+option {
+  text-align: center;
+}
+
+/* Many properties so the placeholder styling can work */
+::-webkit-input-placeholder {
+  color: #f6db55;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: #f6db55;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #f6db55;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #f6db55;
+  opacity: 1;
+}
+
+::placeholder {
+  color: #f6db55;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #f6db55;
+}
+
+::-ms-input-placeholder {
+  color: #f6db55;
+}
+
 .input-field {
   display: flex;
-  /* column-gap: 4rem; */
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-end;
   width: 100%;
   padding: 0 0.5rem;
-  /* margin: 0.5rem 0; */
   background-color: #fefae7;
   border-radius: 5px;
   border: 2px solid #f4d125;
   color: inherit;
-}
-
-option {
-  text-align: center;
 }
 
 .input-field:focus {
@@ -221,19 +204,7 @@ option {
   outline-offset: 4px;
 }
 
-button, input, select {
-  font-family: inherit;
-  font-size: 100%;
-}
-
-/* Input validation styling : show invalid red ring only while not focused */
-input:not(:focus):not(:placeholder-shown):invalid {
-  border-color: red;
-}
-
-
-
-.signup-item .btn {
+.signup-item .button-submit {
   font-family: 'MuseoModerno', cursive;
   background-color: #87A93A;
   padding: 0.5rem 1rem;
@@ -247,14 +218,12 @@ input:not(:focus):not(:placeholder-shown):invalid {
   box-shadow: 5px 5px #f6db55;
 }
 
-.signup-item .btn:active {
+.signup-item .button-submit:active {
   background-color: #3d4c1a;
   box-shadow: 3px 3px #f4d125;
   transform: translateY(2px);
 }
 
-
-/* changing the appearance of checkboxes START */
 input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -265,16 +234,15 @@ input[type="checkbox"] {
   border: 2px solid #f4d125;
   background-color: #fefae7;
   border-radius: 25%;
-  /* Adjusts the position of the checkboxes on the text baseline */
+  /* adjusts the position of the checkboxes on the text baseline */
   vertical-align: -2px;
-  /* Set here so that Windows' High-Contrast Mode can override */
-  /* color: green; qu'est-ce que ca fait?? */
 }
 
 input[type="checkbox"]::before {
   content: "\1F31F";
   position: absolute;
   font-size: 0.75rem;
+  /* I leave the following line commented out since I am not satisfied with the checkmark positioning */
   /* right: -1px; */
   top: -0.2rem;
   visibility: hidden;
@@ -285,12 +253,6 @@ input[type="checkbox"]:checked::before {
   /* Use `visibility` instead of `display` to avoid recalculating layout */
   visibility: visible;
 }
-
-/* changing the appearance of checkboxes END */
-
-
-
-/* changing the appearance of radio buttons START */
 
 input[type="radio"] {
   -webkit-appearance: none;
@@ -304,7 +266,7 @@ input[type="radio"] {
   border-radius: 50%;
   border: 2px solid #f4d125;
   background-color: #fefae7;
-  /* Adjusts the position of the checkboxes on the text baseline */
+  /* adjusts the position of the checkboxes on the text baseline */
   vertical-align: -2px;
   outline: none;
 }
@@ -316,7 +278,6 @@ input[type="radio"]::before {
   height: 10px;
   border-radius: 50%;
   background-color: #c2a30a;
-  /* font-size: 4rem; */
   transform: translate(3px, 3px) scale(0);
   transform-origin: center;
   transition: all 0.3s ease-in;
@@ -327,21 +288,6 @@ input[type="radio"]:checked::before {
   transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
 }
 
-
-
-/* changing the appearance of radio buttons END */
-
-
-
-label {
-  display: block;
-}
-
-/* FORM section END */
-
-
-/* FAQ section START */
-
 .accordion-question, .accordion-title {
   background-color: inherit;
   color: inherit;
@@ -351,34 +297,25 @@ label {
 
 .accordion-question {
   border: none;
-  padding: 1rem 0;
+  padding: 1rem;
   text-align: left;
   cursor: help;
   outline: none;
   font-size: 1.25rem;
   transition: 0.4s;
 }
-
-.signup-title, .accordion-title {
-  font-size: 3rem;
-  display: flex;
-  justify-content: center;
-  font-family: 'MuseoModerno', cursive;
-}
-
-.active {
-  /* enlever cette ligne permettrait darreter davoir la question toujours highlightee */
-  background-color: #f9e586;
-  border-radius: 5px 5px 0 0;
-
-}
-
+/* I didn't have the time to solve the minus staying there even if the question is closed */
 .accordion-question:after {
   content: "\002B";
   font-weight: bold;
   float: right;
   margin-left: 0.5rem;
   color: #c2a30a;
+}
+
+.active {
+  background-color: #f9e586;
+  border-radius: 5px 5px 0 0;
 }
 
 .active:after {
@@ -388,104 +325,22 @@ label {
 
 .accordion-answer {
   padding: 0 1rem;
-  /* font-size: 1.25rem; */
-  /* a quoi sert ce font-size ...?) */
   background-color: #87A93A;
   border-radius: 0 0 5px 5px;
   color: white;
   max-height: 0;
-  /* max-width: 45rem; semble ne servir a rien*/
   width: 100%;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
 
 .accordion-answer p {
-  font-size: 1.25rem;
   margin: 1rem;
   line-height: 30px;
   text-align: justify;
 }
 
-/* FAQ section END */
-
-
-@media (min-width: 1025px) {
-
-  main {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .signup-wrapper {
-    margin-right: 1.5rem;
-  }
-
-  .accordion-wrapper {
-    margin-left: 1.5rem;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-}
-
-
-/* START Footer */
-/* STILL TRUE??? Bigger padding right and left for the footer than header and main so there is enough space to be able to touch all icons */
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 7rem;
-  font-size: 1.25rem;
-  font-family: 'MuseoModerno', cursive;
-  text-align: center;
-}
-
-footer .footer1 {
-  background-color: #87A93A;
-  height: 50%;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-footer .footer2 {
-  background-color: #faeb9e;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -moz-column-gap: 0.5rem;
-  column-gap: 0.5rem;
-  padding: 1rem 0;
-}
-
-footer .footer2 .fab {
-  font-size: 1.5rem;
-}
-
-footer .footer1 .btn2 {
-  background-color: #87A93A;
-  padding: 0.25rem;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-  outline: none;
-}
-
-footer .footer1 .btn2:active {
-  background-color: #3d4c1a;
-}
-
-/* button back to top */
+/* Button to bring the visitor back to top */
 .button-top {
   display: none;
   position: fixed;
@@ -500,11 +355,91 @@ footer .footer1 .btn2:active {
   color: white;
   cursor: pointer;
   padding: 0.25rem;
-  /* border-radius: 5px; */
-border-radius: 5px 0 0 0;
+  border-radius: 5px 0 0 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  font-size: 1.25rem;
+  font-family: 'MuseoModerno', cursive;
+  text-align: center;
+}
+
+footer .footer-button {
+  background-color: #87A93A;
+  height: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer-button .button-toggle {
+  background-color: #87A93A;
+  padding: 0.25rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+}
+
+footer .footer-button .button-toggle:active {
+  background-color: #3d4c1a;
+}
+
+footer .footer-copyright {
+  background-color: #faeb9e;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+  column-gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+footer .footer-copyright .fab {
+  font-size: 1.5rem;
 }
 
 @media (min-width: 1025px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero ul {
+    flex-direction: column;
+  }
+
+  .hero ul li {
+    padding: 2rem 1rem;
+    font-size: 1.25rem;
+  }
+
+  main {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .signup-wrapper, .accordion-wrapper {
+    margin-top: 3rem;
+    margin-bottom: 8rem;
+  }
+
+  .signup-wrapper {
+    margin-right: 1.5rem;
+  }
+
+  .accordion-wrapper {
+    margin-left: 1.5rem;
+  }
+
   .button-top {
     bottom: 0;
     right: 0;

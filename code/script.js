@@ -23,7 +23,7 @@ for (let i = 0; i < accordion.length; i++) {
 
 // button back to top
 //Get the button
-const myButton = document.getElementById("myBtn");
+const myButton = document.getElementById("buttonTop");
 
 // When the user scrolls down 100px from the top of the document, show the button
 window.addEventListener("scroll", function () {
@@ -45,7 +45,7 @@ myButton.addEventListener("click", function () {
 
 // To toggle in adult mode
 
-const adult = document.getElementById("buttonAdult");
+const adult = document.getElementById("buttonToggle");
 
 let modeAdult = false;
 adult.addEventListener("click", function () {
@@ -60,7 +60,7 @@ adult.addEventListener("click", function () {
 document.addEventListener("DOMContentLoaded", displayChild);
 
 function displayChild() {
-  document.getElementById("subtitle").innerText = "vegetables";
+  document.getElementById("heroSubtitle").innerText = "vegetables";
   document.getElementById("name").innerText = "Your child's name";
   document.getElementById("instruction").innerText = "your child";
 
@@ -72,7 +72,7 @@ function displayChild() {
   document.getElementById("select5").innerText = "14-17 years old";
 
 
-  document.getElementById("check").innerText =
+  document.getElementById("checkTitle").innerText =
     "types of vegetables that your child like";
   document.getElementById("check1").innerText = " Leafy";
   document.getElementById("check2").innerText = " Root";
@@ -92,11 +92,11 @@ function displayChild() {
   document.getElementById("questionType").innerText = "vegetables";
   document.getElementById("relatedType").innerText = "vegetable";
 
-  document.getElementById("buttonAdult").innerText =
+  document.getElementById("buttonToggle").innerText =
     "Interested in our 18+ services?";
 
   const greenMedium = document.querySelectorAll(
-    ".signup-item .btn, .accordion-answer, footer .footer1, footer .footer1 .btn2, #myBtn"
+    ".signup-item .button-submit, .accordion-answer, footer .footer-button, #bouton-toggle, #buttonTop"
   );
   for (let i = 0; i < greenMedium.length; i++) {
     greenMedium[i].style.backgroundColor = "#87A93A";
@@ -107,7 +107,7 @@ function displayChild() {
   }
 
   const buttonHover = document.querySelectorAll(
-    "#buttonSubmit, #buttonAdult, #myBtn"
+    "#buttonSubmit, #buttonToggle, #buttonTop"
   );
 
   for (let i = 0; i < buttonHover.length; i++) {
@@ -132,7 +132,7 @@ function displayChild() {
 }
 
 function displayAdult() {
-  document.getElementById("subtitle").innerText = "fruits";
+  document.getElementById("heroSubtitle").innerText = "fruits";
   document.getElementById("name").innerText = "Your name";
   document.getElementById("instruction").innerText = "you";
 
@@ -144,7 +144,7 @@ function displayAdult() {
   document.getElementById("select5").innerText = "61+ years old";
 
 
-  document.getElementById("check").innerText = "fruits that interest you";
+  document.getElementById("checkTitle").innerText = "fruits that interest you";
   document.getElementById("check1").innerText = " Banana";
   document.getElementById("check2").innerText = " Cherry";
   document.getElementById("check3").innerText = " Strawberry";
@@ -157,11 +157,11 @@ function displayAdult() {
   document.getElementById("answerType").innerText = "fruits";
   document.getElementById("questionType").innerText = "fruits";
   document.getElementById("relatedType").innerText = "fruit";
-  document.getElementById("buttonAdult").innerText =
+  document.getElementById("buttonToggle").innerText =
     "Back to our child services";
 
   const redMedium = document.querySelectorAll(
-    ".signup-item .btn, .accordion-answer, footer .footer1, footer .footer1 .btn2, #myBtn"
+    ".signup-item .button-submit, .accordion-answer, footer .footer-button, #bouton-toggle, #buttonTop"
   );
   for (let i = 0; i < redMedium.length; i++) {
     redMedium[i].style.backgroundColor = "#EA5E5A";
@@ -172,7 +172,7 @@ function displayAdult() {
   }
 
   const buttonHover = document.querySelectorAll(
-    "#buttonSubmit, #buttonAdult, #myBtn"
+    "#buttonSubmit, #buttonToggle, #buttonTop"
   );
 
   for (let i = 0; i < buttonHover.length; i++) {
