@@ -1,12 +1,9 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+I worked with mobile as default and added values that needed to be changed to fit tablet and desktop. I started with the faq-form where I worked with java script and then I made the subscribe-form. I later added a footer that is fixed and a header image with title text in it. I then made changes the html and css-file.  
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignement was to make an image header with text on top and make the header responsive. We should also use java script to make forms. 
 
-## The problem
+This assignement was similar to last weeks so I keept my design for that and concentrated on learning the java script and working with forms and header. I didn't have to much time to study this week due to work so I had to priorise.
+If I had more time I wouuld like to implement more java script and maybe tried our the hero video. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
