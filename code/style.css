@@ -1,7 +1,145 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+-webkit-font-smoothing:antialiased; 
+text-rendering: optimizeLegibility
+
 }
+
+section {
+  padding: 8rem 10rem;
+}
+
+body {
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+background-color: cornsilk;
+
+}
+
+.header {
+height: 50vh;
+min-height: 50vh;
+width: 100vw;
+background-image: url("./images/macarons.jpg");
+background-size: cover;
+display: grid ;
+justify-items: center;
+background-repeat: no-repeat;
+background-position: center;
+text-transform: uppercase;
+} 
+
+h1 {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  font-size: 100px;
+  font-style: oblique;
+  color:burlywood;
+  padding: 40px;
+  
+}
+.input-container {
+
+  display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 30%;
+    background-color: peachpuff;
+  color: black;
+  cursor: pointer;
+  padding: 20px;
+  margin:auto;
+  border-radius: 5%;
+  font-size: 20px;
+  margin-top: 50px; 
+
+  }
+
+.sendapplication {
+width: 100px;
+margin-top:  20px;  
+}
+
+form {
+display: flex;
+flex-direction: column;
+cursor: pointer;
+
+}
+ 
+input {
+margin-top: 8px;
+
+}
+
+input:valid {
+  background-color: darkturquoise;
+
+}
+
+input:invalid {
+  background-color: papayawhip; 
+ 
+}
+
+.accordion-container {
+  
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  margin-top: 12px;
+  width: 30%;
+  padding: 5px;
+  border-radius: 5%;
+  background-color: peachpuff;
+
+}
+
+p {
+
+color:fuchsia;
+font-size: 20px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+display:none;
+
+
+}
+
+.open +  p {
+  display: block ;
+  
+
+}
+  
+.footer {
+
+    text-align:right;
+    text-align:center
+    padding: 4px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+  
+  }
+
+@media (min-width: 668px) {
+.accordion-container {
+  width 100%;
+border-radius: 0%;
+
+} 
+
+h1 {
+font-size: 80px;
+text-align: center;  
+}
+}
+  
+      
+
+  
