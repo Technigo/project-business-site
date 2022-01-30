@@ -1,12 +1,21 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+This week's assignment was to build a business site. It had to have a Hero header, an image or a video, 
+one accordion with the commonly asked question, and a sign-up form for the business.  
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I started with designing in figama, first with a fig draft to make a plane for my project, then I design how I wanted it to look on mobile, 
+tablet, and desktop. 
 
-## The problem
+I had a great plan so it was easy to know what I wanted. I started with adding everything to 
+html and little by little to the css to be able to see what I needed to do. I had problems with 
+the accordion and how to make it work, with help from my team we managed to solve it together!
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started from mobile first and everything went well, but on the desktop, I had problems with positioning 
+the boxes where I wanted them. With the help of grid and a team friend we made it work! 
 
-## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+If I had the time I would love to add the things a business site need
+like a nave bar, social info, and more content but I'm happy with the result!
+
+
+
+
