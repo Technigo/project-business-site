@@ -6,12 +6,14 @@
 }
 
 body {
-  background-color: #F2EFE9; /*#C2B8B2;*/
+  background: #EEF0EB;
 }
+
 /*    Styling of the header    */
 .image-header {
   height: 60vh;
   max-width: 100%;
+  border-bottom: 2px solid #000000;
   background-image: url('img/bookshelf.jpg');
   background-size: cover;
   background-position: center;
@@ -24,22 +26,26 @@ body {
 .header-text {
   margin: 1rem;
   text-align: center;
+  background-color: rgba(250, 136, 136, 0.5);
+  padding: 1rem;
+  border-radius: 5px;
 }
 
+
 .header-text h1 {
-  color: #FDFFFC;
+  color: #A1C084;
   font-size: 3rem;
   font-family: 'Lora', serif;
-  text-shadow: 4px 4px 8px #FF0000;
+  text-shadow: 4px 4px 8px #000000;
 }
 
 .header-text p {
-  color: #FDFFFC;
+  color: #C4F4C7;
   font-size: 1.5rem;
-  text-shadow: 5px 5px 10px #FF0000;
+  text-shadow: 5px 5px 10px #000000;
 } 
 
-/*      Main     */
+/*Main styling*/
 
 .main-content {
   display: flex;
@@ -56,7 +62,7 @@ body {
   background-color: #C2B8B2;
   align-self: center;
   justify-self: center;
-  box-shadow: 3px 5px 5px #3A435E;
+  border: 2px solid #3A435E;
   border-radius: 5px;
 }
 
@@ -65,7 +71,7 @@ body {
   padding: 2rem 0.5rem 0 0.5rem;
   text-align: center;
   color: #370926;
-  text-shadow: 2px 2px 3px whitesmoke;
+  text-shadow: 2px 2px 3px #F5F5F5;
 }
 
 .form {
@@ -105,19 +111,19 @@ button {
   width: 8rem;
   height: 3rem;
   border-radius: 50px;
-  color:#FFFFFF;
+  color: #FFFFFF;
   background-color: #6D2E46;
   padding: 1rem;
   margin: 1rem;
   text-transform: uppercase;
-  box-shadow: 2px 3px 5px black;
+  box-shadow: 2px 2px 5px #000000;
   cursor: pointer;
-  align-self: center;
 }
 
  button:hover {
    box-shadow: none;
  }
+
 
  /*Styling of accordion*/
 
@@ -130,7 +136,7 @@ button {
    margin-bottom: 1.5rem;
    margin-top: 1rem;
    cursor: pointer;
-   box-shadow: 3px 5px 5px #3A435E;
+   border: 2px solid #3A435E;
    border-radius: 5px;
  }
 
@@ -138,7 +144,7 @@ button {
    color: #370926;
    font-size: 1.8rem;
    margin-top: 1rem;
-   text-shadow: 3px 3px 5px whitesmoke;
+   text-shadow: 3px 3px 5px #F5F5F5;
  }
 
  .accordion-element {
@@ -161,7 +167,7 @@ button {
    padding: 0.6rem;
    font-size: 15px;
    text-align:left;
-   border: 3px solid #6D2E46;
+   border: 2px solid #6D2E46;
  }
 
  .accordion .accordion-element .question::before{
@@ -188,6 +194,7 @@ button {
  .active {
    background-color:#884B58;
    filter: opacity(90%);
+   border: none;
  }
 
  .active + .answer {
@@ -238,11 +245,11 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 @media screen and (min-width:1024px){
   .header-text h1{
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .header-text p{
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .form-container h3{
