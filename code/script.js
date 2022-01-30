@@ -9,3 +9,4 @@ buttons .forEach (button => {
   accordionContent.classList.toggle('show-answer');
 })
 })
+
