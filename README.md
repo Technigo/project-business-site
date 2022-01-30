@@ -10,4 +10,5 @@ If I had more time and energy I would have tried to learn more about javaScript 
 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://confident-hamilton-176105.netlify.app
