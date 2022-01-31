@@ -5,7 +5,7 @@ In this project, I focused on building a reponsive website and implementing vani
 
 ## The problem
 
-The orginal goal was to build an interactive accordion. However, I wanted to challenge myself by adding the automatic closing function. That means only one answer box can be openned at a time. And I managed to solve it succesfully and learned a lot about how and when to use if/else condition. 
+The orginal goal was to build an interactive accordion. However, I wanted to challenge myself by adding the automatic closing function. That means only one answer box can be openned at a time. And I managed to solve it succesfully and learned a lot about how and when to use if/else statement. 
 
 Next, I was struggling on building the responsive navigation bar, particularly how to hide it in mobile version. In order to get it done, I spent time on reading a lot of relavant articles and looked for questions on StackOverflow. The solution was using transform(translateX()) to move the navigation bar from left to right. I believe that there are many other ways which you can use to solve it such as adjusting height, width, or using display:none. Overally, it depends on how you want style the transition! 
 
