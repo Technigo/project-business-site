@@ -1,15 +1,15 @@
 
 //For accordion//
 
-var que = document.getElementsByClassName("question");
-var i;
+const que = document.getElementsByClassName("question");
+
 
 for (i = 0; i < que.length; i++) {
   
   
   que[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var answers = this.nextElementSibling;
+    const answers = this.nextElementSibling;
     if (answers.style.display === "block") {
       answers.style.display = "none";
     } else {
@@ -20,7 +20,7 @@ for (i = 0; i < que.length; i++) {
 
 //For menu bar//
 function myFunction() {
-  var x = document.getElementById("nav-contents");
+  const x = document.getElementById("nav-contents");
   
  if (x.style.display=== "block") {
   x.style.display = "none";
