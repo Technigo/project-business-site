@@ -11,9 +11,13 @@ Next, I was struggling on building the responsive navigation bar, particularly h
 
 Thirdly, with a background in motion deisgn, I was able to combine my animation knowledge, creativity, and CSS skill and applied some cool animation to the site. 
 
-In conclusion, I've learned a lot and I do believe we can always make it better. If I had more time, I will build more structrure design in Figma. As you can see in the link below, the prototype is not yet completed. Definitely, it does make an impact on the web visual and save time on styling in CSS. In the booking section, I want to search for better Javascript solution to loop over the destination back and forth, when the next/prev button is clicked. I can't wait to learn more about it in the upcoming week.
+In conclusion, I've learned a lot and I do believe we can always make it better. If I had more time, I will build more structrure design in Figma. As you can see in the link below, the prototype is not yet completed. Definitely, it does make an impact on the web visual and save time on styling in CSS. In the booking section, I want to search for better Javascript solution to loop over the destinations back and forth, when the next/prev button is clicked. I can't wait to learn more about it in the upcoming week.
 
 
 
 ## View it live
 https://suki-travel.netlify.app/
+
+
+## Figma
+https://www.figma.com/file/Z6mVTgO1nb031oYOxRSUOc/Untitled?node-id=0%3A1
