@@ -1,8 +1,3 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-
 /* standard settings */
 * {
   margin: 0;
@@ -29,7 +24,6 @@ ul {
 }
 
 /* styling the navbar */
-
 .container {
   display: flex;
   justify-content: space-evenly;
@@ -49,17 +43,17 @@ ul {
 }
 
 .logo {
-font-family: 'Charm', cursive;
-font-weight: bold;
-font-size: 30px;
-margin-left: .2em;
-color: black;
+  font-family: 'Charm', cursive;
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: .2em;
+  color: black;
 }
 
 nav {
   position: fixed;
   z-index: 999;
-  width: 40vw;
+  width: 50vw;
   right: 0;
   top: 0;
   height: 100vh;
@@ -75,8 +69,8 @@ ul.nav-links-OK {
 li.nav-link a {
   color: white;
   display: block;
-  padding: 1em;
-  font-size: 20px;
+  padding: 1.2em;
+  font-size: 23px;
   text-align: right;
 }
 
@@ -114,12 +108,9 @@ li.nav-link a {
 }
 
 
-
 /* styling the welcome and description-part */
-
 .welcome {
   margin: 3em 3em 4em 3em;
-  /* text-align: center; */
 }
 
 h2 {
@@ -131,15 +122,12 @@ h2 {
 }
 
 p {
-  /* max-width: 70vw; */
   text-align: center;
   font-size: 16px;
 }
 
 
-
 /* styling the rentals section */
-
 .rentals-container {
   position: relative;
   text-align: center;
@@ -149,7 +137,7 @@ p {
 
 .rentals-image {
   width: 95vw;
-  height: 70vh;
+  height: 75vh;
   filter: brightness(.4);
   margin: 1em .5em 5em 1em;
   cursor: pointer;
@@ -157,6 +145,7 @@ p {
 }
 
 .rentals-header {
+  font-family: 'PT Sans', sans-serif;
   position: absolute;
   top: 35%;
   left: 55%;
@@ -176,6 +165,10 @@ p {
   cursor: pointer;
 }
 
+.rentals-image-desktop {
+  display: none;
+}
+
 
 /* styling the event section */
 .event-container {
@@ -187,7 +180,7 @@ p {
 
 .event-image {
   width: 95vw;
-  height: 70vh;
+  height: 75vh;
   filter: brightness(.45);
   margin: 1em .5em 5em 1em;
   cursor: pointer;
@@ -214,6 +207,9 @@ p {
   cursor: pointer;
 }
 
+.event-image-desktop {
+  display: none;
+}
 
 
 /* styling the portfolio section */
@@ -225,7 +221,7 @@ p {
 
 .portfolio-image {
   width: 95vw;
-  height: 70vh;
+  height: 75vh;
   filter: brightness(.45);
   margin: 1em .5em 5em 1em;
   cursor: pointer;
@@ -253,7 +249,6 @@ p {
 }
 
 
-
 /* styling the about-us section */
 .about-container {
   position: relative;
@@ -264,7 +259,7 @@ p {
 
 .about-image {
   width: 95vw;
-  height: 70vh;
+  height: 75vh;
   filter: brightness(.6);
   margin: 1em .5em 5em 1em;
   cursor: pointer;
@@ -282,11 +277,7 @@ p {
   cursor: pointer;
 }
 
-
-
-
 /* styling the FAQ/Accordion */
-
 .accordion-background {
   position: relative;
   text-align: center;
@@ -302,7 +293,6 @@ p {
   margin: .5em;
   cursor: pointer;
   border-radius: .5em;
- 
 }
 
 .accordion-container {
@@ -320,7 +310,6 @@ p {
   border-radius: 1em;
   margin: 1em 1em 5em 1em;
   max-height: 100vh;
-  /* border: solid rgb(150, 106, 106); */
 }
 
 .accordion-header {
@@ -332,10 +321,7 @@ p {
 }
 
 .panel {
-  /* width: 70vw; */
   max-height: 0;
-  /* padding: 0em 2em; */
-  /* background-color: rgb(182, 136, 136); */
   color: white;
   overflow: hidden;
   text-align: center;
@@ -357,8 +343,6 @@ p {
   font-size: 18px;
   border-radius: .5em;
   font-family: 'Benne', serif;
-  
-  /* border: solid rgb(150, 106, 106); */
 }
 
 .accordion1, .accordion3 {
@@ -376,7 +360,6 @@ p {
   margin: .2em;
   border-radius: .5em;
 }
-
 
 .accordion:hover {
   background-color: #965f5f;
@@ -404,13 +387,7 @@ p {
   font-weight: bold;
 }
 
-
-
-
 /* styling the sign up form */
-
-
-
 .get-in-touch-1 {
   font-size: 30px;
   margin: 0;
@@ -435,7 +412,6 @@ p {
   padding: 1em 1em 7em 1em;
   font-size: 15px;
   border-radius: .5em;
-  
 }
 
 input, textarea {
@@ -444,7 +420,6 @@ input, textarea {
   color: #532f2f;
   font-family: 'PT Sans', sans-serif;
   min-width: 55vw;
-  /* margin: 1em */
   padding: .5em;
   border: none;
   outline: none;
@@ -473,14 +448,13 @@ label a:hover {
   font-weight: bold;
 }
 
-
-.terms-container {
-font-size: 15px;
-flex-wrap: nowrap;
+.terms {
+  font-size: 15px;
+  flex-wrap: nowrap;
 }
 
-.newsletter-container {
-font-size: 15px;
+.newsletter {
+  font-size: 15px;
 }
 
 .check-box {
@@ -495,7 +469,7 @@ font-size: 15px;
   left: 33%;
   width: 100px;
   height: 40px;
-  padding: .8em .5em .3em .5em;
+  padding: .8em .5em .5em .5em;
   margin: 1.5em 0 2em 0em;
   cursor: pointer;
   font-family: 'Benne', serif;
@@ -512,13 +486,16 @@ font-size: 15px;
   background-color: rgb(110, 76, 76);
 }
 
+/* styling the footer */
+footer {
+  padding: .2em;
+  margin: 2em 0;
+}
 
-
-
-
-
+footer a:hover {
+font-weight: bold;
+}
 /* TABLET */
-
 @media screen and (min-width: 667px) and (max-width: 1024px) {
 
   .header-image {
@@ -529,205 +506,293 @@ font-size: 15px;
   .container {
     background-color: rgba(255,255,255,0.4);
   }
+
+   /* responsive image-section */
+   .section-container {
+    display: flex; 
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .rentals-image, .event-image, .portfolio-image, .about-image {
+    width: 45vw;
+    height: 75vh;
+    margin: 1em .5em 5em 1em;
+  }
+  
+  .rentals-container, .event-container, .portfolio-container, .about-container {
+    display: inline-block;
+  }
+
+  .rentals-image-desktop, .event-image-desktop {
+    display: none;
+  }
+
+  /* responsive accordion */
+  .accordion-image {
+    width: 45vw;
+    height: 85vh;
+  }
+
+  .accordion-container {
+    width: 40vw;
+    top: 47%;
+    left: 48.5%;
+    padding: 2em 0;
+  }
+
+  .accordion-header {
+    font-size: 45px;
+    margin-bottom: .5em;
+  }
+
+  .panel {
+    font-size: 16px;
+  }
+
+  .accordion, .accordion1, .accordion3 {
+    padding: .8em .5em .5em .5em;
+    width: 35vw;
+    font-size: 20px;
+  }
+
+
+/* responsive sign-up-form */
+  .form {
+    width: 45vw;
+    margin: 1em 0 2em 0;
+    font-size: 15px;
+  }
+
+  input, textarea {
+    font-size: 15px;
+    padding: .5em;
+    min-width: 30vw;
+  }
+
+  textarea {
+    height: 7em;
+    width: 31vw;
+  }
 }
 
 
-
-
-
-
-
 /* DESKTOP */
-
 @media (min-width: 1024px) {
 
+  /* responsive header-image and navbar */
   .header-image {
     background: url("./images/hero-image.jpg");
     background-size: cover;
+    position: relative;
   }
 
-  .container {
-    background-color: rgba(255,255,255,0.4);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  .logo {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    font-size: 45px;
+    margin: 0 0 1em .5em;
+    color: white;
+    cursor: pointer;
   }
 
   nav {
     background: none;
     width: 100vw;
     display: block;
-    flex-direction: row;
-    flex-wrap: wrap;
+    max-height: 50vh;
+    z-index: 0;
+    position: unset;
   }
 
-  /* .navbar {
-    flex-direction: row;
-    justify-content: center;
-  } */
-  
-  .nav-links-OK ul {
-    display: flex;
-    margin-top: 0;
-   } 
+  .navbar {
+  background: none;
+  } 
   
   .nav-links li a{
-    padding: 2.5rem;
-    display: none;
+    padding: 1.8em;
+    display: block;
     margin: 0;
-    font-size: 18px;
+    font-size: 22px;
+  }
+
+  .navbar a:hover {
+    transform: none; 
   }
 
   .hamburger {
     display: none;
   }
-
+  
   .close-menu {
     display: none;
   }
-
-  .rentals-image, .event-image, .portfolio-image, .about-image {
-    width: 40vw;
-    height: 50vh;
-    margin-left: 4em;
   
+  .welcome {
+    padding: .5em;
+    align-self: center;
+    max-width: 50vw;
+    margin-left: 18em;
   }
 
+  /* responsive image-section */
+  .section-container {
+    display: flex; 
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .rentals-image-desktop, .event-image-desktop, .portfolio-image, .about-image {
+    width: 45vw;
+    height: 75vh;
+    margin: 1em .5em 5em 1em;
+    filter: none;
+  }
+  
   .rentals-container, .event-container, .portfolio-container, .about-container {
     display: inline-block;
-    
   }
 
-  .section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  .rentals-image, .event-image {
+    display: none;
   }
-  
 
-/* .desktop-container {
-  display: flex; 
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* styling the accordion */
-  /* .accordion-container {
-    position: absolute;
-    width: 75vw;
-    top: 30%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2em 1em 4em 1em;
-    background-color: rgba(182, 136, 136, 0.144);
-    border-radius: 1em;
-    margin: 4em 4em 5em 4em;
-    /* border: solid rgb(150, 106, 106);
-  } */
-/*   
-  .accordion-header {
-    font-size: 40px;
-    margin-bottom: 1em;
-    color: white;
-    text-align: center;
-  }
-  
-  .panel {
-    /* width: 70vw;
-    max-height: 0;
-    /* padding: 0em 2em;
-    /* background-color: rgb(182, 136, 136);
-    color: white;
-    overflow: hidden;
-    text-align: center;
-    transition: max-heigth 1s ease-out;
-    font-size: 17px;
-  }
-  
-  .accordion {
-    background-color: rgb(173, 113, 113);
-    color: rgb(252, 252, 252);
-    cursor: pointer;
-    padding: .75em;
-    width: 60vw;
-    text-align: center;
-    border: none;
-    outline: none;
-    transition: 1s;
-    font-size: 20px;
-    border-radius: .5em;
-    
-    border: solid rgb(150, 106, 106);
-  }
-  
-  .accordion1, .accordion3 {
-    background-color: rgb(173, 113, 113);
-    color: rgb(247, 244, 244);
-    cursor: pointer;
-    padding: .75em;
-    width: 60vw;
-    text-align: center;
-    border: none;
-    outline: none;
-    transition: 1s;
-    font-size: 20px;
-    border: solid rgb(150, 106, 106);
-    margin: .2em;
-    border-radius: .5em;
-  }
-  
-  
-  .active, .accordion:hover {
-    background-color: rgb(182, 136, 136);
-    font-weight: bold;
-  }
-  
-  .active, .accordion1:hover {
-    background-color: rgb(182, 136, 136);
-    font-weight: bold;
-  }
-  
-  .active, .accordion3:hover {
-    background-color: rgb(182, 136, 136);
-    font-weight: bold;
-  }
-  
-  .active + .panel {
+  .rentals-image-desktop, .event-image-desktop {
     display: block;
-    transition: 1s;
-    margin: 1em 0;
-  } */
+    cursor: pointer;
+    border-radius: .5em;
+  }
+
+
+  /* hiding the image-text in default mode */
+  .rentals-text, .event-text, .portfolio-text, .about-header {
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+  } 
+
+
+  /* styling the image-headers */
+  .rentals-header, .event-header, .portfolio-header {
+    position: absolute;
+    top: 27%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  .about-header {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    
+  }
+
+  /* hover-effect on rentals-section */
+  .img-wrap:hover .rentals-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .rentals-image-desktop:hover {
+  filter: brightness(.4);
+  cursor: pointer;
+  transition: .2s;
+  }
+
+
+  /* hover-effect on event-section */
+  .img-wrap:hover .event-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .event-image-desktop:hover {
+  filter: brightness(.4);
+  cursor: pointer;
+  transition: .2s;
+  }
+
+
+  /* hover-effect on portfolio-section */
+  .img-wrap:hover .portfolio-text{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .portfolio-image:hover {
+  filter: brightness(.4);
+  cursor: pointer;
+  transition: .2s;
+  }
+
+  /* hover-effect on about-section */
+  .img-wrap:hover .about-header {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .about-image:hover {
+  filter: brightness(.4);
+  cursor: pointer;
+  transition: .2s;
+  }
+
+
+  /* responsive accordion */
+  .accordion-image {
+    width: 45vw;
+    height: 85vh;
+  }
+
+  .accordion-container {
+    width: 40vw;
+    top: 47%;
+    left: 48.5%;
+    padding: 2em 0;
+  }
+
+  .accordion-header {
+    font-size: 45px;
+    margin-bottom: .5em;
+  }
+
+  .panel {
+    font-size: 16px;
+  }
+
+  .accordion, .accordion1, .accordion3 {
+    padding: .8em .5em .5em .5em;
+    width: 35vw;
+    font-size: 20px;
+  }
+
+
+  /* responsive sign-up-form */
+  .form {
+    width: 45vw;
+    margin: 1em 0 2em 0;
+    font-size: 15px;
+  }
+
+  input, textarea {
+    font-size: 15px;
+    padding: .5em;
+    min-width: 30vw;
+  }
+
+  textarea {
+    height: 7em;
+    width: 31vw;
+  }
+
 } 
