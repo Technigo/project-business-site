@@ -8,4 +8,4 @@ I first found the hero image and based the business idea around that. I learned 
 
 ## View it live
 
-https://balance-business-site.netlify.app/
+https://business-site-proj-by-louise.netlify.app/
