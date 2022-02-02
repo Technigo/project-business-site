@@ -13,3 +13,6 @@ In the start of the week everything was going well but ofcourse i took water ove
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+
+The link to my page https://cocktails-and-dream.netlify.app/
