@@ -1,5 +1,5 @@
 # Business Site
-Week 3 project of Hero image/video, Form (Sign up) with validation, Accordion (FAQ) with responsive for Tablet and Desktop.
+Week 3 project of Hero image/video, Form (Sign up) with validation, Accordion (FAQ) with responsive for Tablet and Desktop, fulfilled 3 level (Blue, Red, Black) requirement.
 
 **🔵  Blue Level (Minimum Requirements)**
 
