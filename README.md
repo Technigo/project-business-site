@@ -8,4 +8,4 @@ This week I have been struggling with time and has really been forced to foccus 
 
 ## View it live
 see what it's all about:
-https://hair-in-my-face.netlify.app/
+shh-my-show.netlify.app
