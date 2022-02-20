@@ -2,6 +2,25 @@
 
 In this project, I focused on building a reponsive website and implementing vanilla Javascript to my accordion, responsive navigation bar, and custom alert box (after user submitted the form).
 
+# Project's Requirements
+
+**🔵  Blue Level (Minimum Requirements)**
+
+- Style your page.
+- Use CSS Grid or Flexbox to layout the page.
+- Create a responsive design with the following views; Desktop 4 columns, tablet 2 columns, mobile 1 column.
+- The site should have a header, a main news article, a grid of news articles.
+- Play around with hover effects, i.e. change colors, add or remove borders or flip the image upside down.
+
+**🔴  Red Level (Intermediary Goals)**
+
+- Add a box shadow to make the photos look like polaroids
+- Align the cards to the center of the page
+
+**⚫  Black Level (Advanced Goals)**
+
+- Add some animations to your project
+
 
 ## The problem
 
