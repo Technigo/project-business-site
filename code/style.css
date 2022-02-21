@@ -7,7 +7,7 @@ body {
 }
 /* Styling header */
 header {
-  background-image: url("./08-business_1233587863.jpg");
+  background-image: url("./assets/08-business_1233587863.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -23,22 +23,33 @@ header > h1 {
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
- /* Added an animation to the header */
+/* Added an animation to the header */
 
 @keyframes header {
-  0%   {color: white; font-size: 2.5vw;}
-  25%  {color: #334753; font-size: 3.7vw; }
-  50%  {color: #9eebeb; font-size: 3.2vw;}
-  100% {color: white; font-size: 2.5vw;}
+  0% {
+    color: white;
+    font-size: 2.5vw;
+  }
+  25% {
+    color: #334753;
+    font-size: 3.7vw;
+  }
+  50% {
+    color: #9eebeb;
+    font-size: 3.2vw;
+  }
+  100% {
+    color: white;
+    font-size: 2.5vw;
+  }
 }
-
 
 .main-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .sign-up {
@@ -48,11 +59,12 @@ header > h1 {
   padding: 10px;
 }
 
- label, button {
+label,
+button {
   display: block;
-  padding: 5px; 
-  margin-top: 20px; 
-} 
+  padding: 5px;
+  margin-top: 20px;
+}
 
 /* Used to align the text next to the radio button
 and checkbox */
@@ -65,27 +77,26 @@ and checkbox */
 
 /* Styling validation form */
 
-
 input {
   line-height: 1.5rem;
   background-color: #b3ffff;
   border: 1px solid #005580;
-} 
+}
 
- /* Added a checkmark as a background image when input is valid which
+/* Added a checkmark as a background image when input is valid which
  is placed at the far right */
 input:required:focus:valid {
-  background: url(./check-mark.webp) no-repeat 95% 50% rgb(253, 253, 253);
+  background: url(./assets/check-mark.webp) no-repeat 95% 50% rgb(253, 253, 253);
   background-size: 15px;
   border: 2px solid #005580;
 }
 
 /* With an invalid input an exclamation mark is displayed */
 input:focus:invalid {
-  background: url(./exclamation-mark.jpeg) no-repeat 100% 50% rgb(236, 57, 44);
+  background: url(./assets/exclamation-mark.jpeg) no-repeat 100% 50%
+    rgb(236, 57, 44);
   background-size: 1.5rem;
 }
-
 
 button {
   border-radius: 4px;
@@ -96,7 +107,7 @@ button {
   height: 40px;
   margin: 20px auto;
 }
- 
+
 /* Here starts styling of the accordion */
 
 .accordion {
@@ -108,17 +119,16 @@ button {
 
 .accordion > h1 {
   margin-bottom: 1.5rem;
-  margin-left: 2rem; 
-  font-family: 'Abel' sans-serif;
+  margin-left: 2rem;
+  font-family: "Abel" sans-serif;
 }
 
 .accordion-question {
   margin: 1rem 2rem;
   box-shadow: 9px 4px 5px #005580;
   padding: 0.2rem;
-  border: 1px solid #005580; 
+  border: 1px solid #005580;
 }
-
 
 .accordion-question:hover {
   transform: scale(1.1);
@@ -133,9 +143,9 @@ button {
   position: relative;
   cursor: pointer;
   padding: 0.3rem;
-  font-family: 'Abel', sans-serif;;
+  font-family: "Abel", sans-serif;
 }
- 
+
 /* Added an icon indicating content is
  visible or not */
 
@@ -152,9 +162,8 @@ button {
 
 /* Styling the answer div*/
 
-
- .answer {
-  display: none; 
+.answer {
+  display: none;
   line-height: 1.3rem;
   border-top: 2px solid;
   border-image: linear-gradient(to right, #005580, transparent) 1;
@@ -177,7 +186,6 @@ footer {
 }
 
 @media (min-width: 668px) {
-  
   header {
     height: 500px;
   }
@@ -187,17 +195,14 @@ footer {
     justify-content: space-between;
     align-items: center;
   }
- 
+
   .accordion {
     width: 350px;
     margin-left: 2rem;
   }
 }
 
-  
-
 @media (min-width: 992px) {
-
   header {
     height: 650px;
   }
