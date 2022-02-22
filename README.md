@@ -8,4 +8,4 @@ The problems I had was mostlu with the validation where i wanted the input to sh
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
-https://determined-murdock-c0b71e.netlify.app/
+https://project-business-site-linneafrisk.netlify.app/
