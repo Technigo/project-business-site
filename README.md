@@ -1,6 +1,8 @@
 # Business Site
 
+The site includes a hero image header, footer, sign-up form and accordion.
 This business site represents a website of a Gymnastic Artistic Club. The Hero image of the header represents the Sport this club offers to everyone and the black background color I chose, represents the dark side of the Gymnastic Artistic Sport,like for example, the psychological and physical problems that athletes encounter along their career.
+
 
 ## The problem
 
@@ -8,5 +10,4 @@ The most challenging part was to add the plus and the minimum symbols to the acc
 What I did was first to identify what the problem was, and then, I searched for another alternative, which was to set the symbol with a property float and this was the solution.
 
 ## View it live
-https://nostalgic-mcclintock-8ff1c5.netlify.app
-
+https://gymtasyclub.netlify.app/
