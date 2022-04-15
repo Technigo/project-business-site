@@ -1,66 +1,95 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.hero-video {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
 
+.overlay-text {
+  position: absolute;
+  top: 3vw;
+  left: 5vw;
+  margin-left: 20px;
+  z-index: 1;
+}
 
-body{
+body {
+  /* background-image: url('./images/sea.jpeg'); */
   background-color: #bddac3;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 2vh;
-  margin:0;
+
+  margin: 0;
 }
 
 .header {
-  background-image: url('./images/sea.jpeg');
-  object-fit: cover;
+  /* background-image: url('./images/sea.jpeg'); */
+  background-color: #bddac3;
+  /* object-fit: cover; */
   background-size: cover;
-  height: 70vh;
+  height: 50vh;
   width: 100%;
-  
 }
-h1 {
- 
-  margin-top: 60px;
-  color: #eebc3e;
-  text-align: center;
-  font-size: 50px;
 
+h1 {
+  font-size: 3rem;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  color: #f0c24e;
+
+  animation: glow 2s ease-in-out infinite;
+  animation-direction: alternate-reverse;
 }
-h3{
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #6b12d8;
+  }
+  to {
+    text-shadow: 0 0 30px #5c2ca9, 0 0 10px #711f8a;
+  }
+}
+
+h3 {
   text-align: center;
   font-size: 30px;
 }
-button#subtitle{
+button#subtitle {
   font-size: 30px;
   background-color: #bddac3;
   border: solid #14213d;
   padding: 15px;
   border-radius: 20px;
-
-  
 }
-div.subtitle::before{
+div.subtitle::before {
   transform: scaleX(0);
   transform-origin: bottom right;
-
 }
-div.subtitle:hover::before{
+div.subtitle:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 div.subtitle::before {
-  content: "";
+  content: '';
   display: block;
   position: fixed;
-  top: 0; right: 0; bottom: 0; left: 0;
-  /*inset: 0 0 0 0;*/
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: #14213d;
   z-index: -1;
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
 }
 
-.grid-container{
+.grid-container {
+  padding-top: 70px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
@@ -70,11 +99,11 @@ div.subtitle::before {
   display: grid;
   background-color: #e5e5e5;
   width: 400px;
+
   height: 400px;
   padding: 5px;
   margin: 20px;
   border-radius: 5%;
-
 }
 .accordion {
   justify-self: center;
@@ -107,7 +136,6 @@ label {
   width: 100%;
   box-sizing: border-box;
   border-radius: 50%;
-
 }
 section {
   border-radius: 10%;
@@ -116,46 +144,53 @@ section {
   size: 16px;
 }
 
-.question {                        
+.question {
   background-color: #f0c24e;
   color: white;
   cursor: pointer;
-  /*width: 200px;*/
+
   transition: 0.5s;
   height: 8vh;
-  margin:10px 0 0 0;
+  margin: 10px 0 0 0;
   box-sizing: border-box;
   padding: 2vh;
   text-align: center;
   font-size: 3vh;
-  color:#FFE9D6;
-  
-  
+  color: #ffe9d6;
 }
 
-/* before clicking */ 
-.answer{                                   
-display: none;
+/* before clicking */
+.answer {
+  display: none;
 }
 
 /* after clicking */
-.active + .answer {                         
-display: block;
-background-color: azure;
-margin:0;
-height: 20px;
-
+.active + .answer {
+  display: block;
+  background-color: azure;
+  margin: 0;
+  height: 20px;
 }
 
-.active{
-background-color: #14213d;
+.active {
+  background-color: #14213d;
 }
 
-
-@media (max-width: 480px) {
-  .grid-container{
-    display: grid;
-    grid-template-columns: 1fr;
+@media (max-width: 768px) {
+  .grid-container {
+    padding-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .sign-up {
+    margin: 50px;
+    width: 80%;
+    align-items: center;
+  }
+  .accordion {
+    margin: 50px;
+    width: 80%;
+    align-items: center;
   }
 }
-
