@@ -9,4 +9,4 @@ Coded mobile-first. If I had more time I would have worked more with grid, I´m 
 in laptop-format.
 
 ## View it live
-https://naughty-lamarr-cd9694.netlify.app
+https://thereese-business-site.netlify.app
