@@ -1,13 +1,12 @@
 # Business site
 
-
 This project is part of Technigo Web Development Bootcamp, sprint 1 week 3, where we are supposed to build a responsive website
 with forms and accordion. 
 
 ## The problem
 
-Problems with understanding the Javascript, it is too complicated for me for now but will do my best before the upcoming project. 
+The webpage is divided in three parts, 1) HTML, 2) CSS and 3) JavaScript. HTML and CSS was used to build and design the webpage and JS was used to make the FAQ section to dropdown Q&A section. I didn't face so much problem during this project, but I have now fully understand and learned why we always have to start to build our webpage looking from a mobile device point of view.
 
 ## View it live
-https://w2-news-site.netlify.app/
+https://w3-business-site.netlify.app/
 
