@@ -9,4 +9,3 @@ The webpage is divided in three parts, 1) HTML, 2) CSS and 3) JavaScript. HTML a
 
 ## View it live
 https://w3-business-site.netlify.app/
-
