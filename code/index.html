@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Lunch Box</title>
     <link rel="stylesheet" href="./style.css">
-    <!-- dont forget to add a css file and link it here! -->
+    
   </head>
   <body>
     <header>
-      <video controls autoplay> <src="/matvideo.mp4" alt="food video"></video>
-      <!-- video or image as a header is cool :) -->
+      <video autoplay muted loop id="matvideo">
+      <source src="./matvideo.mp4" type="video/mp4" alt="food video">
+      </video>
       <img src="./logo.png" alt="Lunchbox logo">
       <h1>The Lunchbox</h1>
     </header>
     
-    <!-- Signup form -->
+    <div class="content">
+      <h2>Fill out the form below to follow our smashing lunch recipes</h2>
+    </div>
+    
     <form id="signUp" action="https://httpbin.org/anything" method="POST">
-      <label for="name">Name</label>
+      <label for="name">Name:</label>
       <input name="name" id="name" type="text" placeholder="Name">
 
-      <label for="email">Email</label>
+      <label for="email">Email:</label>
       <input name="email" id="email" type="email" placeholder="Email">
       
       <input type="checkbox" id="specification" name="vegetarian">
@@ -40,19 +44,20 @@
     </form>
 
     <section class="accordion">
-      <!-- Accordion -->
+      
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="unsubscribe">How do I unsubscribe?</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="frequency">How often will I receive the recipes?</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+    <script src="./script.js"></script>
+    
   </body>
 </html>
