@@ -3,28 +3,77 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Project 3</title>
+
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
+    <header>
+      <h1 class="hero-text">Hippo safari</h1>
+    </header>
 
     <!-- Signup form -->
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+    <div class="main-container">
+      <section class="tour-booking">
+        <form
+          id="main_form"
+          action="https://httpbin.org/anything"
+          method="POST"
+        >
+          <h1>Tour booking</h1>
+          <input
+            name="name-input"
+            id="name-input"
+            type="text"
+            placeholder="Name"
+          />
+          <input
+            name="email-input"
+            id="email-input"
+            type="email"
+            placeholder="E-mail"
+          />
+          <label for="time-booking">Choose time</label>
+          <select name="time-booking" id="time-booking" title="time-booking">
+            <!-- If time make a placeholder -->
+            <option value="Morning">Morning</option>
+            <option value="Afternoon">Afternoon</option>
+            <option value="Night">Night</option>
+          </select>
+          <label for="gdpr-checkbox">Agree to terms and condition</label>
+          <input
+            name="gdpr-checkbox"
+            type="checkbox"
+            id="gdpr-checkbox"
+            required
+          />
+          <button type="submit">Send booking</button>
+        </form>
+      </section>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+      <section class="accordion">
+        <!-- Accordion -->
+        <h1>FAQ</h1>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+        <div class="question" id="section1">What does it cost?</div>
+        <div class="answer">
+          <p>1 000 000 SEK.</p>
+        </div>
+
+        <div class="question" id="section2">How long does it take?</div>
+        <div class="answer">
+          <p>Many hours</p>
+        </div>
+
+        <div class="question" id="section3">Is it dangerous?</div>
+        <div class="answer">
+          <p>Ofcourse! It is the most dangeours animal in the techworld</p>
+        </div>
+      </section>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>
