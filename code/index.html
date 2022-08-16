@@ -3,13 +3,41 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
+    <title>The Lunch Box</title>
+    <link rel="stylesheet" href="./style.css">
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
-
+    <header>
+      <video controls autoplay> <src="/matvideo.mp4" alt="food video"></video>
+      <!-- video or image as a header is cool :) -->
+      <img src="./logo.png" alt="Lunchbox logo">
+      <h1>The Lunchbox</h1>
+    </header>
+    
     <!-- Signup form -->
+    <form id="signUp" action="https://httpbin.org/anything" method="POST">
+      <label for="name">Name</label>
+      <input name="name" id="name" type="text" placeholder="Name">
+
+      <label for="email">Email</label>
+      <input name="email" id="email" type="email" placeholder="Email">
+      
+      <input type="checkbox" id="specification" name="vegetarian">
+      <label for="vegetarian">Vegetarian</label>
+  
+      <input type="checkbox" id="specification" name="vegan">
+      <label for="vegan">Vegan</label>   
+
+      <input type="checkbox" id="specification" name="dairyFree">
+      <label for="dairyFree">Dairy Free</label>      
+
+      <input type="checkbox" id="specification" name="glutenFree">
+      <label for="glutenFree">Gluten Free</label>      
+        
+      <button type="submit">Submit</button>
+
+    </form>
 
     <section class="accordion">
       <!-- Accordion -->
