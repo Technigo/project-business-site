@@ -3,28 +3,61 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Project 3</title>
-    <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
+    <div class="hero">
+      <h1>Technigo Group</h1>
+      <img src="../hero pic.jpeg">
+    </div>
 
     <!-- Signup form -->
 
+    <div class="form">
+      <h2>Fill this form</h2>
+      <form id="main_form" action="https://httpbin.org/anything" method="post">
+        <input type="text" name="name" placeholder="name"></input>
+        <br>
+        <input type="text" name="lastName" placeholder="last name"></input>
+        <br>
+        <input type="email" name="email" placeholder="email"></input>
+        <br>
+        <select>
+          <option value="1">Student</option>
+          <option value="2">Client</option>
+        </select>
+      
+        <br>
+        <p>I accept the term and condition <input type="checkbox" id="check"></p>
+        <p>I wanna news letter <input type="checkbox" id="check"></p>
+          <button type="submit"> Sign Up</button>   
+        </form>
+        
+
+
+    </div>
+
+
     <section class="accordion">
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      <h1>Frequent asked questions</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <button class="question" id="section1">1- What service do you provide? 
+      </button>
+
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <button class="question" id="section2">2- What service don't you provide?
+      </button>
       <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+
+          <p>Lorem ipsum...</p>
+        </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+    <script src="script.js"></script>
   </body>
 </html>
