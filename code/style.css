@@ -2,6 +2,26 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
+body, html {
+  height: 100%;
 }
+
+.hero-image {
+  height: 80%;
+  background-image: url("images/girlwithtoiletpaper.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+ 
+.answer {
+  display: none;
+}
+
+
+.active + .answer {
+  display: block;
+}
+
