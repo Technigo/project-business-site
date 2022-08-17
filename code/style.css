@@ -6,25 +6,27 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
+  background-color: #C4F5F3;
+  font:'Syncopate', sans-serif;
 }
 
 .start {
   position: relative;
-    height: 70vh;
-    width: 100vw;
+  height: 70vh;
+  width: 100vw;
 }
 .hero {
   height: 100%;
   width: 100%;
   display: flex;
-  direction: column;
+  flex-direction: column;
 }
 header {
   height: 100%;
   width: 100%;
   display: flex;
   position: absolute;
-  left: 50%;
+  left: 0%;
   align-items: center;
   justify-content: center;
 }
@@ -39,9 +41,12 @@ video {
 }
 
 .content {
-  display: block;
-  position: relative;
-  margin-top: 70vh;
+  display: flex;
+  flex-direction: column;
+  /*position: relative;*/
+  justify-content: center;
+  align-items: center;
+
 }
 
 h1 {
@@ -51,8 +56,17 @@ h1 {
   letter-spacing: 3vw;
   line-height: 1.2;
   font-size: 3vw;
-  text-align: center;
+  text-align: center;  
   text-shadow: 2px 2px #a6a6a6;
+}
+
+h2 {
+  font-family: 'Syncopate', sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 1,5vw;
+  text-align: center;  
+  text-shadow: 1px 1px #353434;
 }
 
 img {
@@ -64,4 +78,43 @@ img {
 #signUp {
   display: block;
 
+}
+.checkbox {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+
+}
+
+.submitbtn {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+
+.acd {
+  display: none;
+}
+
+.active {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2%;
+  align-items: center;
+}
+
+.acd + .active {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2%;
+}
+
+
+.accordion {
+  display: flex;
+  /*justify-content: center;*/
+  flex-direction: column;
 }
