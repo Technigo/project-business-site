@@ -13,4 +13,4 @@ We would fix the mobile styling more if we had more time.
 
 
 ## View it live
-http://127.0.0.1:5500/code/
+https://hippo-safari.netlify.app/
