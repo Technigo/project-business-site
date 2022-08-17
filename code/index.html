@@ -3,71 +3,104 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
+    <title>On a roll</title>
     <link rel="stylesheet" href="style.css">
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
-  
+  <header>
     <div class="hero-image">
      <!-- <img src="images/girlwithtoiletpaper.jpg" alt="Girl with toilet paper">-->
-      <h1>On a roll</h1>
+      <div class="hero-text">
+        <h1>On a roll</h1>
+        <p>Order your personal style roll</p>
+      </div>
     </div>
-    
-   
-  <section class="form">
-      <form action="https://httpbin.org/anything" method="post">
-        <label for="Message">personal message</label>
-        <input type="text" name="Message">
+  </header>
+  <main>
+    <section class="form-section">
+        <form class="form" action="https://httpbin.org/anything" method="post">
+          <h2>Order</h2>
+          <h3>Personal style</h3>
+          <input type="text" name="Message" required placeholder="Write your poem...">
 
-        <label for="Name">Name</label>
-        <input type="text" name="Name">
+          <h3>Paper quality</h3>
+          <div class="box">
+            <input type="radio" id="High" name="quality" value="High"> 
+            <label for="High">High quality</label>
+          </div>
 
-        <label for="email">E-mail</label>
-        <input type="email" name="email" placeholder="test@mail.com">
+          <div class="box">
+            <input type="radio" id="Medium" name="quality" value="Medium"> 
+            <label for="Medium">Medium quality</label>
+          </div>
 
-        <label for="Address1">Street</label>
-        <input type="text" name="Address1">
+          <div class="box">
+            <input type="radio" id="Low" name="quality" value="Low"> 
+            <label for="Low">Low quality</label>
+          </div>
 
-        <label for="Address2">Zip code</label>
-        <input type="text" name="Address2">
+          <h3>Order information</h3>
+          <label for="Name">Name</label>
+          <input type="text" name="Name" required placeholder="Your name...">
 
-        <p>Paper quality</p>
-        <input type="radio" id="High" name="quality" value="High"> 
-        <label for="High">High quality</label>
+          <label for="email">E-mail</label>
+          <input type="email" name="email" placeholder="test@mail.com" required>
 
-        <input type="radio" id="Medium" name="quality" value="Medium"> 
-        <label for="Medium">Medium quality</label>
+          <label for="Address1">Street</label>
+          <input type="text" name="Address1" required placeholder="Street...">
 
-        <input type="radio" id="Low" name="quality" value="Low"> 
-        <label for="Low">Low quality</label>
+          <label for="Address2">Zip code</label>
+          <input type="text" name="Address2" required placeholder="123 45">
 
-        <input type="checkbox" id="terms" name="terms" value="accept">
-        <label for="terms">I accept the terms and conditions</label>
+          <div class="box check">
+              <input type="checkbox" id="terms" name="terms" value="accept" required>
+              <label for="terms">I accept the terms and conditions</label>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
 
-        <button type="submit">Submit</button>
-      </form>
-    </section>
 
+      <!-- Signup form -->
+      
 
-    <!-- Signup form -->
-    
+      <section class="accordion">
+        <!-- Accordion -->
+        <h2>FAQ</h2>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+        <div class="question" id="section1">How long is a roll?</div>
+        <div class="answer">
+          <p>A roll is a perfect length for lengthy sessions.</p>
+        </div>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+        <div class="question" id="section2">How soft is the paper?</div>
+        <div class="answer">
+          <ul>
+            <li>Low quality = Sandpaper</li>
+            <li>Medium quality = Cotton </li>
+            <li>High quality = Silky smooth</li>
+          </ul>
+        </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
+        <div class="question" id="section3">How do I pay?</div>
+        <div class="answer">
+          <p>We will send an invoice together with the rolls.</p>
+        </div>
+
+        <div class="question" id="section4">How many rolls can I buy?</div>
+        <div class="answer">
+          <p>On a roll is pro bulking. You never wanna be without.</p>
+        </div>
+
+        <div class="question" id="section5">How long can my message be?</div>
+        <div class="answer">
+          <p>Only you know the answer...</p>
+        </div>
+
+      </section>
+    </main>
     <!-- dont forget to link the javascript file here! -->
     <script src="script.js"></script>
   </body>

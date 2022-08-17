@@ -1,20 +1,50 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica;
+  color: rgb(48, 47, 47);
+}
+
 
 body, html {
   height: 100%;
+  background-color: rgb(255, 246, 252);
+}
+
+header {
+  height: 60%;
+}
+
+main {
+  margin: 20px 0 0 0;
+}
+
+h1 {
+font-size: 48px;
+color: rgb(240, 68, 192);
+
+}
+
+h2 {
+  margin: 0 0 5px 0;
+}
+
+h3 {
+  margin: 0 0 2px 0;
 }
 
 .hero-image {
-  height: 80%;
+  height: 100%;
   background-image: url("images/girlwithtoiletpaper.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
-
  
 .answer {
   display: none;
@@ -25,3 +55,140 @@ body, html {
   display: block;
 }
 
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 246, 252, 0.5);
+  padding: 10px 30px; 
+  width: 80%;
+}
+
+.hero-text p {
+  font-style: italic;
+}
+
+section {
+  border-radius: 5%;
+  padding: 10px; 
+  border: 2px solid rgb(240, 68, 192);
+}
+.form-section {
+ padding: 20px;
+ margin: 10px;
+ background-color: rgb(245, 199, 224);
+
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: rgb(255, 246, 252);
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  margin: 20px 0px 0px 0px;
+  padding: 10px;
+  background-color: rgb(240, 68, 192);
+  width: 50%;
+  margin: 10px auto 0;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid rgb(240, 68, 192);
+}
+
+button:hover {
+  background-color: rgb(224, 58, 141);
+}
+
+.box {
+  display: flex;
+  gap: 5px;
+  margin: 5px;
+
+}
+
+.check {
+  margin-top: 20px;
+}
+
+.accordion {
+  padding: 20px;
+  margin: 10px;
+  background-color: rgb(245, 199, 224);
+ }
+
+ li {
+  margin: 0 0 0 20px;
+}
+
+.question {
+  border-bottom: 1px solid black;
+  padding: 0 0 2px 0;
+  margin: 0 0 5px 0;
+}
+
+.question:hover {
+  background-color: rgb(224, 58, 141);
+}
+
+.answer {
+  margin: 0 0 20px 0;
+}
+
+@media (min-width: 668px) {
+  main {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0 0;
+    column-gap: 50px;
+  }
+  section {
+    width: 40%;
+    row-gap: 50px;
+  }
+
+  h1 {
+    font-size: 64px;
+    }
+
+    .hero-text {
+      width: auto;
+    }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ta*/
+
+/*web
