@@ -3,30 +3,45 @@ in this case it is the div with the answer class next to the div with the active
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
 body {
-  display: block;
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
 
-.active + .answer {
-  /* some styling here */
+.start {
+  position: relative;
+    height: 70vh;
+    width: 100vw;
+}
+.hero {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  direction: column;
 }
 header {
-  position: relative;
-  height: 100vh;
-  text-align: center;
+  height: 100%;
+  width: 100%;
   display: flex;
+  position: absolute;
+  left: 50%;
   align-items: center;
   justify-content: center;
-
-
 }
 video {
   object-fit:cover;
   width: 100vw;
-  height: 100vh;
-  position: fixed;
+  height: 70vh;
+  position: absolute;
   top: 0;
   left: 0;
-  
+  display: block;
+}
+
+.content {
+  display: block;
+  position: relative;
+  margin-top: 70vh;
 }
 
 h1 {
@@ -38,17 +53,15 @@ h1 {
   font-size: 3vw;
   text-align: center;
   text-shadow: 2px 2px #a6a6a6;
-  
-  span {
-    display: block;
-    font-size: 10vw;
-    letter-spacing: -1.3vw;
-  
-  }
 }
 
 img {
   filter: invert(100%) drop-shadow(2px 2px #a6a6a6);
   width: 15%;
   margin-right: 5%; 
+}
+
+#signUp {
+  display: block;
+
 }
