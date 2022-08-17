@@ -1,6 +1,11 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
 
 .answer {
   display: none;
@@ -11,26 +16,29 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 header {
+  display: flex;
+  flex: 100%;
   height: 500px;
+  width: 100%;
   background-image: url("./hippo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  width: 100%;
-  display: flex;
-  flex: 100%;
   margin-bottom: 30px;
 }
 
 .hero-text {
   margin: auto;
   color: white;
-  font-size: 50px;
+  font-size: 100px;
+  margin-bottom: 100px;
+  letter-spacing: 5px;
+  text-shadow: 0 2px 6px #000;
 }
 
 .main-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .tour-booking {
@@ -68,6 +76,9 @@ button[type="submit"] {
   border-radius: 10px;
   border: none;
   background-color: rgb(136, 209, 234);
+  width: 50%;
+  margin: auto;
+  font-size: 15px;
 }
 
 button:hover {
@@ -77,7 +88,8 @@ button:hover {
 
 select {
   background-color: rgb(207, 233, 207);
-  padding: 10px;
+  padding: 15px;
+  margin: 15px 0;
   color: grey;
   border: none;
 }
@@ -96,4 +108,30 @@ option {
   padding: 5px 15px;
   background-color: rgb(196, 222, 231);
   word-wrap: break-word;
+}
+
+#gdpr-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 667px) {
+  .hero-text {
+    font-size: 50px;
+  }
+  .main-container {
+    flex-direction: column;
+  }
+  .tour-booking,
+  .accordion {
+    width: 80%;
+    margin: 10px;
+  }
 }
