@@ -1,6 +1,7 @@
 body, html {
   height: 100%;
   margin: 0;
+  background-color: rgb(236, 223, 206);
 }
 
 .hero-image {
@@ -14,22 +15,38 @@ body, html {
   text-align: center;
   padding: 30px;
   margin: 0 auto;
-  font-size: 30px;
+  font-size: 50px;
+  font-family: 'Bebas Neue';
+  color: white;
+}
+
+.hero-text h1 {
+  margin: 0;
+  padding: 20px;
+}
+
+.hero-text>p{
+  color: rgb(255, 255, 255);
+  margin: 10px;
 }
 
 
 .top-button {      /* Top button styling*/
-  color: white;
-  background-color: blue;
-  width: 80px;
+  color: black;
+  background-color: white;
+  width: 120px;
   height: 60px;
+  border-radius: 8px;
+  font-size: 24px;
+  font-family: 'Bebas Neue';
 }
 
 .company-text p {
   color: green;
   text-align: center;
   padding: 5% 10% 5% 10%;
-  font-size: 20px;
+  font-size: 35px;
+  font-family: 'Bebas Neue';
 }
 
 .flex-parent {
@@ -39,41 +56,78 @@ body, html {
   flex-direction: column;
 }
 
+/* Text styling*/
+
+
+
 .signup-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   width: 600px;
   height: 400px;
   padding: 10px;
   margin: 20px;
-  background-color: brown;
+  background-color: #BF9085;
+
 }
 
 
-h1 {
-  color: red;
+input{   /* ---  vid specifika små saker input[type=text] {CSS attribut} Såg snyggt exempel med border: none, border bottom: 2px etc */ 
+  width: 200px;
+  height: 30px;
+  padding: 8px;
+  display: grid;
+  text-align: center;
 }
 
-p {
-  color: red;
+input[type="text"] {
+  background-color: #c49c93;
+  color: white;
+  border: none; 
+  border-bottom: 2px solid green;
+}
+
+input[type="email"] {
+  background-color: #c49c93;
+  color: white;
+  border: none; 
+  border-bottom: 2px solid green;
+}
+
+input[type="tel"] {
+  background-color: #c49c93;
+  color: white;
+  border: none; 
+  border-bottom: 2px solid green;
+}
+
+input:hover {    /* coolt om bara botten ändrar färg vid hover*/
+  border-bottom: 2px solid rgb(255, 0, 238);
 }
 
 
 .faq-box {
   flex-direction: column;
-  width: 600px;
+  width: 600px;        /*Denna bråkar, pga accordion*/
   height: 400px;
   padding: 10px;
   margin: 20px;
-  background-color: brown;
+  background-color: #BF9085;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
 }
+
 
 .accordion {
   background-color: rgb(238, 207, 207);
   color: #444;
   cursor: pointer;
-  padding: 18px;
+  padding: 30px;
   width: 100%;
-  text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
@@ -90,25 +144,72 @@ p {
 /* RESPONSIVE -  TABLET */
 @media (min-width:768px) and (max-width:1023px) {
   .hero-text {
-    text-align: center;
-    padding: 30px;
-    margin: 0 auto;
-    font-size: 30px;
+      text-align: center;
+      padding: 30px;
+      margin: 0 auto;
+      font-size: 70px;
+      color: white;
     }
   
     .flex-parent {
       flex-direction: row;
     }
-    
+      
+    .signup-form {
+      flex-direction: column;
+      width: 600px;
+      height: 400px;
+      padding: 10px;
+      margin: 20px;
+      background-color: #BF9085;
+    }
   
+      .faq-box {
+      flex-direction: column;
+      width: 600px;
+      height: 400px;
+      padding: 10px;
+      margin: 20px;
+      background-color: #BF9085;
+}
   }
   /* RESPONSIVE -  DESKTOP */
   @media (min-width:1024px) {
-  
+   
+    .hero-text {
+      text-align: center;
+      padding: 10px;
+      margin: 0 auto;
+      font-size: 100px;
+      color: white;
+    }
+
+    .hero-image {
+      
+    }
+
     .flex-parent {
       flex-direction: row;
     }
     
+    .signup-form {
+      flex-direction: column;
+      width: 600px;
+      height: 400px;
+      padding: 10px;
+      margin: 20px;
+      background-color: #BF9085;
+    }
+  
+      .faq-box {
+      flex-direction: column;
+      width: 600px;
+      height: 400px;
+      padding: 10px;
+      margin: 20px;
+      background-color: #BF9085;
+}
+
     }
 
 
