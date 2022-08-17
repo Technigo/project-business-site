@@ -2,26 +2,37 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-}
+/* .active + .panel {
+  background-color: black;
+} */
 
-header {
-  width: 100%;
-  height: auto;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  float: left;
-}
-
-.main {
-  display: flex;
+body {
+  background-color: #f69847;
 }
 
 .accordion {
-  float: right;
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.active {
+  display: block;
+}
+
+.accordion:hover {
+  background-color: #ccc;
 }

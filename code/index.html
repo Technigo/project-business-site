@@ -16,7 +16,7 @@
           <img src="images/fox-big.jpg" alt="A fox" />
         </picture>
 
-        <h1>Hejhej</h1>
+        <h1>Order your Fox shirt!</h1>
       </div>
     </header>
 
@@ -30,17 +30,6 @@
             id="userNameInput"
             name="userName"
             placeholder="Write here!"
-          />
-        </label>
-
-        <label>
-          E-mail
-          <input
-            type="email"
-            name="email"
-            required
-            id="emailInput"
-            placeholder="@"
           />
         </label>
 
@@ -67,25 +56,46 @@
           </select>
         </label>
 
-        <button type="Submit">Order your T-shirt!</button>
+        <label>
+          E-mail
+          <input
+            type="email"
+            name="email"
+            required
+            id="emailInput"
+            placeholder="@"
+          />
+        </label>
+
+        <button type="Submit">Order!</button>
       </form>
       <!--Kolla upp varför title/namne osv-->
 
-      <section class="accordion">
-        <!-- Accordion -->
-        <h1>FAQ</h1>
+      <h1>FAQ</h1>
 
-        <div class="question" id="section1">Section 1</div>
-        <div class="answer">
-          <p>Lorem ipsum...</p>
-        </div>
+      <button class="accordion" id="panelBtn1">
+        Why don't you have different sizes?
+      </button>
+      <div class="panel" id="panel1">
+        <p>
+          We are working on it but until then we only have one "size fits all".
+        </p>
+      </div>
 
-        <div class="question" id="section2">Section 2</div>
-        <div class="answer">
-          <p>Lorem ipsum...</p>
-        </div>
-      </section>
+      <button class="accordion" id="secondaryPanelBtn">
+        When can I expect my product to be delivered?
+      </button>
+      <div class="panel" id="panel2">
+      <p>We have a delivery time on 1-2 weeks.</p>
     </div>
-    <!-- dont forget to link the javascript file here! -->
+
+    <button class="accordion" id="testPanelBtn">
+      What is your return policy?
+    </button>
+    <div class="panel" id="panel3">
+      <p>We have 30 days return policy on unused articles.</p>
+    </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
