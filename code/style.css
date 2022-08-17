@@ -12,28 +12,111 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 }
 
 .title-image {
-  background-color: lightblue;
-  height: 50vh;
-  display: block;
-  text-align: center;
   
-  align-content: center;
-  justify-content: center;
+  width: 100%;
+  min-height: 65vh;
+  background-image: url(https://images.unsplash.com/photo-1580136724728-0aa49b0b5d25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+  background-size: cover;
+  text-align: center;
+  box-shadow: 0px 0px 10 px 2 px grey;
+  background-position: center;
+  
 }
 
 h1 {
   text-align: center;
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px black;
+  margin-bottom: 10px;
+  padding: 20px 0px;
+  font-size: 2em;
+  
+
 }
 h2 {
   text-align: center;
+  color: whitesmoke;
+  text-shadow: 2px 2px 4px black;
 }
 
-
+h3 {
+  text-align: center;
+}
 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1200px;
   align-content: center;
   justify-content: space-around;
-  margin-top: 1em;
+  margin: 1em auto;
+}
+
+.flex-container div {
+  width: 35%;
+}
+
+/* p {
+  display: none;
+} */
+
+.answer {
+  display: none;
+}
+
+.open {
+  background: rgb(158, 212, 184); /* This will make the button blue when it has the class "open" */
+}
+
+.open + .answer {
+  display: block;
+}
+
+.faq{
+  display: flex;
+  justify-content: center;
+  background: rgb(142, 187, 142);
+  padding: 1rem;
+  border-radius: 15px;
+  flex-shrink: 1;
+  min-width: 0;
+  max-width: 400px;
+}
+
+.faq div {
+  width: 100%;
+}
+
+.question {
+  display: inline-block;
+  justify-content: center;
+border: 2px solid black;
+max-width: 90%;
+margin: 0.5rem;
+text-align: center;
+padding: 5px;
+border-radius: 15px;
+}
+
+.form{
+  background: rgb(142, 187, 142);
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.form div {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.form p {
+  margin-bottom: 1em;
+}
+
+input {
+  margin-bottom: 0.2em;
+}
+
+button {
+  padding: 0.7em;
 }
