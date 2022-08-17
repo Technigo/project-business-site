@@ -2,16 +2,28 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-
+/* CSS HEX 
+ship-gray: #414042;
+iron: #d8d9db;
+rolling-stone: #787c7f;
+sandy-brown: #f18865;
+cinnabar: #e85f3a;
+brandy-rose: #b58073;
+albescent-white: #f3d7cc;
+tan-hide: #fd944a;
+manhattan: #f3b19d; */
 
 body {
 margin: 0;
 text-align: center;
+background-color: #414042;
+color: white;
 }
 
 header {
 margin: 0;
 padding: 0;
+
 }
 
 .container {
@@ -22,20 +34,28 @@ padding: 0;
   }
 
 .headerImage {
+  display: flex;
   background-image: url("./Images/stockholm.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 400px;
+  /* opacity: 0.5; */
+  
 }
 
-h1 {
-  color:black;
+h1,h2 {
+  color:#414042;;
   }
-
   /* label {
     display: block;
   }
 */ 
+p {
+  color:#d8d9db;;
+  }
 
 .radioSession p {
 display: block;
@@ -48,24 +68,38 @@ margin: 30px;
 }
 
 .headerImage h1 {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* flex-direction: row; */
+  width: 100%;
+  /* margin: auto; */
+  /* justify-content: center;
+  align-items: center; */
+  /* border: 6px solid red; */
   }
 
+.headerImage p {
+  background-color: #787c7f;
+  color: white;
+}
+
 .formBox {
-  border: 1px solid blue;
+  border: 6px solid #d8d9db;
+  margin: 2%;
+  background-color: #787c7f;
 }
 
 .faqBox {
-  border: 6px solid green;
+  border: 6px solid #d8d9db;
+  margin: 2%;
+  background-color: #787c7f;
 }
+
+
 
 .gridContainer {
 display: grid;
 grid-template-columns: 100%;
-border: 1px solid red;
+/* border: 1px solid red; */
 }
 
 .submitButton {
@@ -74,23 +108,37 @@ margin: 4% 45% 4% 45%;
 
 }
 
+.question {
+  margin: 2%;
+  padding: 2%;
+}
+
 .answer {
   display: none;
 }
 
 .active + .answer {
   /* some styling here */
+  display: block;
 }
 
 
+/*For Tablet*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .gridContainer {
+    display: grid;
+  }
+}
 
-/* CSS HEX 
-ship-gray: #414042;
-iron: #d8d9db;
-rolling-stone: #787c7f;
-sandy-brown: #f18865;
-cinnabar: #e85f3a;
-brandy-rose: #b58073;
-albescent-white: #f3d7cc;
-tan-hide: #fd944a;
-manhattan: #f3b19d; */
+/*For Desktop*/
+@media (min-width: 992px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+  .headerImage {
+    height: 600px;
+  }
+
+
+}
