@@ -4,19 +4,37 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 
 body {
   background-color: #9ED2C6;
-  font-famixly: ;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
 }
 
-header{
+header {
   background-color: #F7ECDE;
   padding:20px;
-  /*J suggestion.Add different sizes of the image in media queries so that it is more responsive.*/
   height: 400px;
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
-  background-image: url(pexels-joe-boyne-3439576.jpg);
+  background-image: url(pexels-joe-boyne-3439576_small.jpg);
+  color: darkslateblue;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
+
+.headline1, .headline2 {
+  background-color: rgba(233, 218, 193, 0.5);
+  display: inline;
+  font-family:'Seaweed Script', cursive;
+}
+
+h1 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.headline1 {
+  font-size: 50px;
+}
+
 footer{
   background-color: #E9DAC1;
 }
@@ -35,13 +53,14 @@ label {
 
 .input {
   background-color: #F7ECDE;
-  padding: 20px;
+  padding: 10px;
   flex-grow: 1;
   margin-bottom: 5px;
 }
 .radio-buttons {
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 .radio-button-label {
@@ -49,6 +68,10 @@ label {
   flex-direction: row;
   padding-bottom: 10px;
 }
+
+p {
+  margin-bottom: 0px;
+} 
 
 .accordion {
   background-color: #F7ECDE;  
@@ -58,19 +81,24 @@ label {
 
 .answer {
   display: none;
+  padding: 5px;
+  background-color: lightgray;
+  margin: 5px;
+  margin-left: 20px;
 }
 
 .question {
   padding: 10px;
-  background-color: blueviolet;
+  background-color: #54BAB9;
   margin: 5px;
 }
 
 footer {
   text-align: center;
   padding: 30px;
+  font-size: 30px;
+  font-family:'Seaweed Script', cursive;
 }
-
 
 .active + .answer {
   display: block;
@@ -81,13 +109,30 @@ footer {
     flex-direction: row;
   }
 
+  header {
+    background-image: url(pexels-joe-boyne-3439576_large.jpg);
+  }
+
+  .headline1 {
+    font-size: 60px;
+  } 
+  .headline2 {
+    font-size: 36px;
+  }
+
   .input {
     margin-bottom: 0px;
     margin-right: 5px;
   }
+
+  footer {
+  text-align: right;
+  }
 }
 
-/* #F7ECDE
+/* 
+Color theme
+#F7ECDE
 #E9DAC1
 #9ED2C6
 #F7ECDE
