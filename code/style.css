@@ -1,11 +1,75 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-.active + .answer {
-  /* some styling here */
+body {
+  background-color: #f1efdc;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #d36b00;
+  font-size: 100px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  color: #d36b00;
+  font-size: 50px;
+}
+
+/* Mobile style */
+header {
+  position: relative;
+}
+
+#hero-video {
+  width: 100%;
+}
+
+.hero-text {
+  display: flex;
+  position: absolute;
+  bottom: 60%;
+  left: 40%;
+}
+main {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+form {
+  border: 2px solid black;
+  padding: 40px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #e6d2aa;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #d36b00;
+  color: #fff;
+}
+
+.container {
+  border: 2px solid black;
+  padding: 40px;
 }
 .question {
   display: block;
+  padding: 15px 0;
 }
 
 .answer {
@@ -16,6 +80,10 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   display: block;
 }
 
-body {
-  background-color: blue;
+/* Tablet style */
+@media all and (min-width: 667px) {
+}
+
+/* Desktop style */
+@media screen and (min-width: 1025px) {
 }
