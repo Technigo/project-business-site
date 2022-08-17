@@ -1,12 +1,16 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+We built a HTML form with responsive hero image.
+The form sends a HTTP POST request to https://httpbin.org/anything
 
 ## The problem
+We tackled and solved problems together as a team, during the sessions.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+When we were not sure, we applied a trial and error approach.
+
+We would fix the mobile styling more if we had more time.
+
+
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+http://127.0.0.1:5500/code/
