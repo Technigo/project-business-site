@@ -1,12 +1,8 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+Our task was to create a business one pager website that should contain an image or video header, a signup form, and an accordion. The focus was for us to practice what we've learned about image backgrounds, HTML forms, and how to modify the DOM with JavaScript. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We had to work in groups of four or five, using a mob programming approach.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://imaginative-narwhal-d82fb6.netlify.app/
