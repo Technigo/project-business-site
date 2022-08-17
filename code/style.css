@@ -1,18 +1,29 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
-/* .active + .panel {
-  background-color: black;
-} */
-
 body {
   background-color: #f69847;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.headerDiv h1 {
+  font-size: 50px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.headerDiv {
+  background-repeat: no-repeat;
+  object-fit: contain;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 150px;
+  background-position: center;
 }
 
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background-color: #f5c093;
+  color: black;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -24,15 +35,62 @@ body {
 
 .panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: #ffffff;
   display: none;
   overflow: hidden;
 }
 
 .active {
   display: block;
+  background-color: #dfd890;
 }
 
 .accordion:hover {
-  background-color: #ccc;
+  background-color: #7f9901;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.main {
+  padding: 20px;
+  margin: 10px;
+}
+
+label {
+  flex-direction: column;
+}
+
+button.submit {
+  background-color: #7b4fa3;
+  border-radius: 30px;
+  opacity: 0.9;
+  font-size: medium;
+  margin: 5px 0px;
+}
+
+.submit:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: 2px 3px 4px black;
+}
+
+/*tablet*/
+@media (min-width: 668px) and (max-width: 1023px) {
+  .headerDiv h1 {
+    font-size: 100px;
+    justify-content: center;
+    padding-top: 10px;
+    height: 350px;
+  }
+}
+
+/*desktop*/
+@media (min-width: 1024px) {
+  .headerDiv h1 {
+    font-size: 100px;
+    justify-content: center;
+    padding-top: 10px;
+    height: 650px;
+  }
 }

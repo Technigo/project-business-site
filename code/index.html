@@ -3,82 +3,92 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 3</title>
+    <title>Fox To You</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
     <header>
-      <div class="headerDiv">
-        <picture>
-          <source srcset="images/fox-small.jpg" media="(max-width: 600px)" />
-          <source srcset="images/fox-medium.jpg" media="(max-width: 900px)" />
-          <img src="images/fox-big.jpg" alt="A fox" />
-        </picture>
-
-        <h1>Order your Fox shirt!</h1>
+      <div
+        class="headerDiv"
+        style="background-image: url('images/fox-big.jpg')"
+      >
+        <h1>Forest to you</h1>
       </div>
     </header>
 
     <!-- Signup form -->
     <div class="main">
+      <h2>Order your Forest shirt!</h2>
+
       <form id="signUpForm" action="http://httpbin.org/anything" method="POST">
-        <label>
-          Choose your text on your t-shirt
-          <input
-            type="text"
-            id="userNameInput"
-            name="userName"
-            placeholder="Write here!"
-          />
-        </label>
+        <div>
+          <label>
+            Choose your text on your shirt
+            <input
+              type="text"
+              id="userNameInput"
+              name="userName"
+              required
+              placeholder="Write here!"
+            />
+          </label>
+        </div>
 
-        <label>
-          T-shirt
-          <input type="checkbox" id="shirtInput" name="genderBox" />
-        </label>
+        <div> 
+          <label>
+            T-shirt
+            <input type="checkbox" id="shirtInput" name="T-shirt" />
+          </label>
 
-        <label>
-          Jumper
-          <input type="checkbox" id="shirtInput" name="genderBox" />
-        </label>
+          <label>
+            Jumper
+            <input type="checkbox" id="shirtInput" name="Jumper" />
+          </label>
 
-        <label>
-          Hoodie
-          <input type="checkbox" id="shirtInput" name="genderBox" />
-        </label>
+          <label>
+            Hoodie
+            <input type="checkbox" id="shirtInput" name="Hoodie" />
+          </label>
+        </div>
 
-        <label>
-          Do you want our awesome newsletter?
-          <select name="newsletter" id="newsletterInput" title="newsletter">
-            <option value="Yes">Yes, subscribe!</option>
-            <option value="No">No, thanks.</option>
-          </select>
-        </label>
+        <div>
+          <label>
+            Do you want our awesome newsletter?
+            <select name="newsletter" id="newsletterInput" title="newsletter">
+              <option value="Yes">Yes, subscribe!</option>
+              <option value="No">No, thanks.</option>
+            </select>
+          </label>
 
-        <label>
-          E-mail
-          <input
-            type="email"
-            name="email"
-            required
-            id="emailInput"
-            placeholder="@"
-          />
-        </label>
+          <div>
+          <label>
+            E-mail
+            <input
+              type="email"
+              name="email"
+              required
+              id="emailInput"
+              placeholder="@"
+            />
+          </label>
+        </div>
 
-        <button type="Submit">Order!</button>
+        <div>
+          <button class="submit" type="submit">Order!</button>
+        </div>
       </form>
-      <!--Kolla upp varför title/namne osv-->
 
-      <h1>FAQ</h1>
+
+
+      <div class="accordionDiv">
+      <h2>FAQ</h2>
 
       <button class="accordion" id="panelBtn1">
         Why don't you have different sizes?
       </button>
       <div class="panel" id="panel1">
         <p>
-          We are working on it but until then we only have one "size fits all".
+          We are working on it but until then we only have "one size fits all".
         </p>
       </div>
 
@@ -86,16 +96,18 @@
         When can I expect my product to be delivered?
       </button>
       <div class="panel" id="panel2">
-      <p>We have a delivery time on 1-2 weeks.</p>
-    </div>
+        <p>We have a delivery time on 1-2 weeks.</p>
+      </div>
 
-    <button class="accordion" id="testPanelBtn">
-      What is your return policy?
-    </button>
-    <div class="panel" id="panel3">
-      <p>We have 30 days return policy on unused articles.</p>
-    </div>
+      <button class="accordion" id="testPanelBtn">
+        What is your return policy?
+      </button>
+      <div class="panel" id="panel3">
+        <p>We have 30 days return policy on unused articles.</p>
+      </div>
+</div>      
 
-    <script src="./script.js"></script>
+<script src="./script.js"></script>
+   
   </body>
 </html>
