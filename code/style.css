@@ -12,28 +12,26 @@ h1 {
   color: #d36b00;
   font-size: 100px;
   background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
 }
 
 h2 {
   color: #d36b00;
   font-size: 50px;
+  text-align: center;
 }
 
-/* Mobile style */
 header {
   position: relative;
 }
-
 #hero-video {
   width: 100%;
 }
 
-.hero-text {
-  display: flex;
-  position: absolute;
-  bottom: 60%;
-  left: 40%;
-}
 main {
   display: flex;
   justify-content: space-evenly;
@@ -42,6 +40,7 @@ main {
 form {
   border: 2px solid black;
   padding: 40px;
+  border-radius: 10px;
 }
 
 input {
@@ -66,24 +65,28 @@ button:hover {
 .container {
   border: 2px solid black;
   padding: 40px;
+  border-radius: 10px;
 }
 .question {
   display: block;
-  padding: 15px 0;
+  padding: 15px 0 0 0;
+}
+
+.question:hover {
+  cursor: pointer;
 }
 
 .answer {
   display: none;
+  margin-left: 40px;
 }
 
 .active {
   display: block;
 }
 
-/* Tablet style */
-@media all and (min-width: 667px) {
-}
-
-/* Desktop style */
-@media screen and (min-width: 1025px) {
+@media screen and (max-width: 667px) {
+  h1 {
+    font-size: 50px;
+  }
 }
