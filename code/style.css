@@ -1,9 +1,9 @@
 
 body {
   background-color: antiquewhite;
-  color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin:0;
+  box-sizing: border-box;
 }
 
 .header{
@@ -11,44 +11,168 @@ body {
   max-height: 1280px;
   position: relative;
   background-position: center;
+  background-size: cover;
   margin: 0px;
   background-image: url(https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80) ;
   display:flex;  
   flex-direction: column;
   text-align: center;
+}
 
+.intro h1 {
+  font-size: 50px;
+  color: white;
+  text-shadow: 0 0 30px black;
+  text-transform: uppercase;
 }
 
 .intro p {
-  font-size: 20px;
+  font-size: 22px;
+  color: white;
+  text-shadow: 0 0 5px black;
+  text-transform: uppercase;
 }
 
 a {
   text-decoration: none;
-  color:black;
-  padding:10px; 
+  font-size: 16px;
+  color: white;
+  padding: 10px; 
   text-align: start;
+  text-shadow: 0 0 5px black;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.links {
+margin-top: 20px;
+}
+
+a:hover {
+  color: black;
+}
+
+.form-accordion {
+  display: grid;
+  grid-template-columns: 100%;
+  margin:20px;
 }
 
 .signupForm {
   display: flex;
+  background-color: #c2e4cdb4;
   flex-direction: column;
+  align-items: center;
   padding: 10px;
   margin: 10px;
   border-color: black;
-  border-style: solid;
-  border-radius: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 50%);
+  height: 300px;
+  padding-bottom: 35px;
+  ;
+}
+
+.input {
+  border-radius: 10px;
+  padding: 10px;
+  display: block;
+  width: 100%;
 }
 
 label {
   display: block;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.panel {
+  display:none;
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+}
+
+.singUpBtn {
+  display: flex;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: 7px;
+  background-color: #77e99bb4;
+  width: 50%;
+  justify-content: center;
+  border: 1px solid black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.accordion-box {
+  display: flex;
+  background-color: #c2e4cdb4;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  border-color: black;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 50%);
+  text-transform: uppercase;
+  min-height: 300px;
+
+}
+
+.active {
+  display:block;
+
+}
+
+.accordion {
+  display: flex;
+  border: none;
+  margin-top: 30px;
+  padding: 7px;
+  background-color:rgb(189, 216, 225);
+  width: 100%;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.accordion-box p {
+  text-align: justify;
+  background-color: white;
+  padding: 20px;
+}
+
+.courseType {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-}
+  /** Media queries **/
+
+  @media (min-width: 667px) {
+    
+    .form-accordion {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+    
+    .signupForm {
+     max-height: 300px;
+    }
+
+    .input, label {
+      max-width: 5000px;
+
+    }
+    
+  }
+
+ 

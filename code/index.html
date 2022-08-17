@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web developers help</title>
@@ -12,67 +13,82 @@
     
     <section class="header">
       <div class="links">
-        <a href="#Courses" name="Courses"> Curses </a>
+        <a href="#Courses" name="Courses"> Courses </a>
         <a href="#Courses" name="Contact"> Contact </a>
-        <a href="#Courses" name="About us"> About us</a> 
-        
+        <a href="#Courses" name="About us"> About us</a>
       </div>
       <div class="intro">
         <h1>Web developers help</h1>
         <p>Get free courses and become a web developer</p>
       </div>
-      
-     
-    
-    
-    </section>
+    </section> 
       
 
 
 
 
     <!-- Signup form -->
-    <section class="signupForm">
+  <section class="form-accordion">
+    <div class="signupForm">
+      <h2>Sign up for courses</h2>
      <form action="http://httpbin.org/anything" method="POST">
-      <label>e-mail
-        <input type="email" name="email" placeholder="your e-mail" required> 
+      <label>E-mail:
+        <input type="email" class="input" name="email" placeholder="your e-mail" required> 
       </label>
-      <label>Name 
-        <input type="text" name="name" placeholder="Your name" required> 
+      <label>Name:
+        <input type="text" class="input" name="name" placeholder="your name" required> 
       </label>
-      <label>Type of course
-        <select name="courseType">
-          <option value="c1">Course 1</option>
-          <option value="c2">Course 2</option>
-          <option value="c3">Course 3</option>
-          <option value="c4">Course 4</option>
-          <option value="c5">Course 5</option>
-          <option value="c6">Course 6</option>
+      <label>Type of course:
+        <select class="courseType" name="courseType">
+          <option value="c1">HTML</option>
+          <option value="c2">CSS</option>
+          <option value="c3">JavaScript</option>
+          <option value="c4">React</option>
+          <option value="c5">Wordpress</option>
+          <option value="c6">Node.js</option>
         </select> 
       </label>
-
-      <button type="submit">Submit</button>
-
+    
+      <div class="button">
+        <button class="singUpBtn" type="submit">Sign up</button>
+      </div>
+    </div>
      </form>
+   
 
 
-
-    </section>
-
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
-
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+  <div class="accordion-box">
+    <h2>FAQ</h2>
+    <button class="accordion" id="mainPanelBtn" type="button">How long does it take to complete a course?</button>
+      <div class="panel" id="panel1">
+          <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vsectetur voluptatibus vel 
+                deserunt corporis fugiat quas pariatur enim laborum. Rerum deleniti tempore ibus, rerum!
+          </p>
       </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+    
+      <button class="accordion" id="secondaryPanelBtn" type="button">Is it really for free?</button>
+        <div class="panel" id="panel2">
+          <p>
+                Lorem ipsum dolor, sit amet consec optio. Nesciunt beatae perferendis
+                pariatur enim laborum. Rerum deleniti tempore ipsa. Temporibus, rerum!
+          </p>
+       </div>    
+        
+      <button class="accordion" id="testPanelBtn" type="button">Are they any requirements?</button>
+        <div class="panel" id="panel3">
+          <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Verit consectet fugiat quasi vitae 
+                minus rerum illum optio. Nesciunt beatae perfereneniti temus, rerum!
+          </p>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+    </div>
+      
+  </section>
+    
+    <script src="./script.js"></script>
   </body>
 </html>
+
+
+
