@@ -5,11 +5,17 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 body {
   background-color: #9ED2C6;
   font-famixly: ;
+  margin: 0px;
 }
 
 header{
   background-color: #F7ECDE;
   padding:20px;
+  /*J suggestion.Add different sizes of the image in media queries so that it is more responsive.*/
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(pexels-joe-boyne-3439576.jpg);
 }
 footer{
   background-color: #E9DAC1;
@@ -24,32 +30,60 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 10px;
-  flex-grow: 1;
+  margin: 15px;
 }
 
 .input {
-  margin: 5px;
   background-color: #F7ECDE;
-  padding: 20px
+  padding: 20px;
+  flex-grow: 1;
+  margin-bottom: 5px;
 }
 .radio-buttons {
   display: flex;
+  flex-direction: column;
+}
+
+.radio-button-label {
+  display: flex;
   flex-direction: row;
+  padding-bottom: 10px;
 }
 
 .accordion {
-  background-color: #F7ECDE;
+  background-color: #F7ECDE;  
   padding: 20px;
+  flex-grow: 1;
 }
 
+.answer {
+  display: none;
+}
+
+.question {
+  padding: 10px;
+  background-color: blueviolet;
+  margin: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+}
+
+
 .active + .answer {
-  /* some styling here */
+  display: block;
 }
 
 @media (min-width: 668px) {
   .container {
     flex-direction: row;
+  }
+
+  .input {
+    margin-bottom: 0px;
+    margin-right: 5px;
   }
 }
 
