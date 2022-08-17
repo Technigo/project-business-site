@@ -15,21 +15,95 @@
      </div>
     </header>
     <!-- Signup form -->
+    <div class="gridContainer">
+    <div class="formBox">
+      <form action"https://httpbin.org.anything/" id="main-form action" method="POST">
+      <h2>register here!</h2>
+  
+    <div class="signUp">
 
+      <div>
+        <label for="fullName">Your Name:</label>
+        <input type="text" name="fullName" id="fullName" required>
+      </div>
+
+      <div>
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" id="phone" maxlength="11" placeholder="111-22 22 222" required>
+      </div>
+
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+
+      <div>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+
+      <!-- <label>
+        Name
+          <input type ="text" name="name" required>
+      </label>
+      <label> 
+        Email
+          <input type ="email" name="email" required>
+         </label>
+        <label>
+        Phone
+          <input type ="tel" name="phone" required>
+         </label>
+        <label>
+        Day of Visit
+          <input type ="date" name="date" required>
+      </label> -->
+
+    </div>
+      <div class="radioSession">
+        <p>Which session do you want to join?<p>
+            <input type="radio" id="Morning Session" name="session" value="morningsSession">
+            <label>Morning Session</label>
+            <input type="radio" id="Afternoon Session" name="session" value="afternoonSession">
+            <label>Afternoon Session</label>
+        </div>
+
+            <input type="checkbox" id="termCondition" name="termCondition" value="termCondition">
+            <label>“I agree to the terms and conditions”</label><br>
+            <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
+            <label>“Sign up to our newsletter”</label>
+
+      <button class="submitButton" type="submit">Join</button>
+      </form>
+    </div>
+
+    <div class="faqBox">
     <section class="accordion">
       <!-- Accordion -->
       <h1>FAQ</h1>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="Section1" action="onclick">What time should I be there?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>30 minutes before.</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="Section2">What should I bring?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Clothes depending on weather.</p>
+      </div>
+
+      <div class="question" id="Section3">How many people are in each session?</div>
+      <div class="answer">
+        <p>30 people.</p>
+      </div>
+ 
+      <div class="question" id="Section4">Is it accessable for wheelchair?</div>
+      <div class="answer">
+        <p>Yes, all tours are accessible</p>
       </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+  </div>
+</div>
+   <script src="./script.js"></script>
   </body>
 </html>
