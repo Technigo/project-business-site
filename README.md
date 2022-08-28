@@ -14,4 +14,4 @@ We were struggling with the javascript code but one of our team mates searched f
 If we had more time we would have cleaned up the code, added more styling and also made the page responsive. 
 
 ## View it live
-https://zippy-stroopwafel-9fda11.netlify.app/
+https://fox-restaurant.netlify.app/
