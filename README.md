@@ -1,6 +1,6 @@
 # Business Site
 
-My first project at Technigo bootcamp during the introdays.The assignment was to create a business-site containing a header with a hero-image, a input form that should be possible to submit and a Q&A that could show & hide answers of questions.
+Our first project at Technigo bootcamp during the introdays.The assignment was to create a business-site containing a header with a hero-image, a input form that should be possible to submit and a Q&A that could show & hide answers of questions.
 
 ## The problem
 
