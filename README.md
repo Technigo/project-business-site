@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
-
 # Business Site
 
 The assignment was to create a business site with an accordion, styling, and header.
