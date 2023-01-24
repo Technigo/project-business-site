@@ -1,5 +1,5 @@
 // Selecting an HTML element
-const elementToToggle = document.getElementById("section1");
+const elementToToggle = document.querySelector("#section1");
 // A function that adds and remove the class "active" 
 const toggleHTMLElementClass = () => {
   elementToToggle.classList.toggle("active");
