@@ -3,28 +3,110 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
+    <title>Hippo-Walking</title>
+    <link rel="stylesheet" href="style.css" />
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
+    <video id="video" width="100%" height="100%" autoplay loop muted>
+      <source src="" type="video/mp4" />
+    </video>
+    <h1>Hippo Walking</h1>
     <!-- video or image as a header is cool :) -->
 
     <!-- Signup form -->
+    <form action="http://httpbin.org/anything" method="post">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" />
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" />
 
+      <fieldset>
+        <legend>Select your preference</legend>
+        <label for="individually">Individually</label>
+        <input
+          id="individually"
+          name="preference"
+          type="radio"
+          value="individually"
+        />
+        <label for="group">Group</label>
+        <input id="group" name="preference" type="radio" value="group" />
+      </fieldset>
+      <fieldset>
+        <label for="walker">Please select your preferred walker/walkers:</label>
+        <select name="walker" id="walker">
+          <option value="Alexander">Alexander</option>
+          <option value="Carol">Carol</option>
+          <option value="Josefin">Josefin</option>
+          <option value="Tess">Tess</option>
+          <option value="Vio">Vio</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Time selection:</legend>
+        <label for="morning">Morning</label>
+        <input
+          type="radio"
+          id="morning"
+          name="time-selection"
+          value="morning"
+        />
+        <input
+          type="radio"
+          id="afternoon"
+          name="time-selection"
+          value="afternoon"
+        />
+        <label for="afternoon">Afternoon</label>
+      </fieldset>
+      <fieldset>
+        <legend>Notifications:</legend>
+        <input
+          type="checkbox"
+          id="email-notifications"
+          name="notifications"
+          value="email"
+        />
+        <label for="email-notifications">Email</label>
+        <input
+          type="checkbox"
+          id="sms-notifications"
+          name="notifications"
+          value="sms"
+        />
+        <label for="sms-notifications">sms</label>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
     <section class="accordion">
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      <h2>FAQ</h2>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">
+        <h3>Why us?</h3>
+      </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>We are the Hip walkers. We let our hips do the walking.</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">
+        <h3>Do you only walk dogs?</h3>
+      </div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>No! We walk hippos too.</p>
+      </div>
+      <div class="question" id="section3">
+        <h3>What other services do you provide?</h3>
+      </div>
+      <div class="answer">
+        <p>
+          We do styling and fur design. We also do plant sitting, and we will
+          soon open the doors to our plant hotel.
+        </p>
       </div>
     </section>
+    <script src="script.js"></script>
     <!-- dont forget to link the javascript file here! -->
   </body>
 </html>
