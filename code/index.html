@@ -3,28 +3,96 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
+    <title>Pizza Palace</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
+
+    <!--HEADER-->
+    <header>
+
+      <video id="background-video" autoplay loop muted poster="./pizzavideo.mp4" >
+        <source src="./pizzavideo.mp4" type="video/mp4">
+      </video>
+
+      <img class="logo" src="/pizzapalace.png">
+      <form action="http://httpbin.org/anything" method="post">
+        <label>
+          E-mail
+          <input id="username" name="username" type="email" placeholder="Enter email"required>
+        </label>
+
+        <label>
+          Type in your password
+          <input id="password" name="password" type="password" placeholder="Enter password"required>
+        </label>
+
+        <button type="submit">Login</button>
+      </form>
+
+      
+    </header>
+
+
     <!-- video or image as a header is cool :) -->
 
-    <!-- Signup form -->
-
+<!--Accordions section-->
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+      <h1>Menu</h1>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <p class="accordion" id="pizza">Margerita</p>
+      <div class="ingriedents">
+          <ul>
+            <li>Cheese</li> 
+            <li>Tomato</li>
+          </ul>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
+      <p class="accordion" id="pizza">Capricciosa</p>
+      <div class="ingriedents">
+          <ul>
+            <li>Cheese</li> 
+            <li>Tomato</li>
+            <li>Ham</li>
+            <li>Mushroom</li>
+          </ul>
       </div>
+
+      <p class="accordion" id="pizza">Pizza Palace Special</p>
+      <div class="ingriedents">
+          <ul>
+            <li>Cheese</li> 
+            <li>Tomato</li>
+            <li>Onion</li> 
+            <li>Garlic</li>
+            <li>Basil</li>
+          </ul>
+      </div>
+    </div>
     </section>
-    <!-- dont forget to link the javascript file here! -->
+
+    <!--Pizza order-->
+    <section>
+      <form action="http://httpbin.org/anything" method="post">
+        
+        <label for ="pizza1">Margerita
+          <input type="checkbox" id="pizza1" name="pizza1" value="margerita">
+        </label>
+
+        <label for ="pizza2">Capricciosa
+          <input type="checkbox" id="pizza2" name="pizza2" value="Capricciosa">
+        </label>
+
+        <label for ="pizza3">Pizza Palace Special
+          <input type="checkbox" id="pizza3" name="pizza3" value="Pizza Palace Special">
+        </label>
+
+        <button type="submit">Order</button>
+      </form>
+      </section>
+<!--Javascript-->
+    <script src="/script.js"></script>
   </body>
 </html>
+
