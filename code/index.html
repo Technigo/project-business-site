@@ -2,19 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Site</title>
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
+    <header>
+      <video autoplay muted loop width="100%" id="heroVideo">
+        <source src="./videos/ocean_video.mp4" type="video/mp4" />
+      </video>
+      <ul class="menu-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <h1>BIG COOL TEXT!</h1>
+    </header>
     <section class="accordion">
       <!-- Accordion -->
       <h1>FAQ</h1>
-
       <div class="question" id="section1">Section 1</div>
       <div class="answer">
         <p>Lorem ipsum...</p>
@@ -24,7 +31,37 @@
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
+
+      <div class="question" id="section3">Section 3</div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
     </section>
+    <section class="sign-up-form">
+      <div class="sign-up-list">
+        <!-- Signup form -->
+        <form action="https://httpbin.org/anything" method="post">
+          <label for="fname">First name:</label><br />
+          <input type="text" id="fname" name="fname" required /><br />
+          <label for="lname">Last name:</label><br />
+          <input type="text" id="lname" name="lname" required /><br />
+          <label for="email">E-mail:</label><br />
+          <input type="email" id="email" name="email" required /><br />
+          <label for="checkbox">Subscribe to Newsletter</label>
+          <input
+            type="checkbox"
+            id="checkbox"
+            name="checkbox"
+            value="subscribe"
+          /><br />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </section>
+    <footer>
+      <h2>SAVE THE OCEAN NOW!</h2>
+    </footer>
+
     <!-- dont forget to link the javascript file here! -->
   </body>
 </html>
