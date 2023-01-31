@@ -1,30 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
+    <!--Eventually add navigation bar if there's time-->
+    <title>Tree People</title>
     <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+    </style>
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
-
+    <header>
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1>Tree People</h1>
+          <p>We love to plant trees.</p>
+          <button class="top-button">Plant a tree!</button>
+        </div>
+      </div>
+    </header>
+    <div class="company-text">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id,
+        consequuntur!
+      </p>
+    </div>
     <!-- Signup form -->
+    <div class="flex-parent">
+      <div class="signup-form">
+        <form action="https://httpbin.org/anything" method="post">
+          <label for="name">Name</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Name Namesson"
+            required
+          />
+          <label for="email">E-mail</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="your@gmail.com"
+            required
+          />
+          <label for="phone">Phone</label>
+          <input
+            id="phone"
+            type="tel"
+            name="phone"
+            placeholder="+46712312312"
+            required
+          />
 
+          <input type="checkbox" id="tree1" name="tree1" value="Blossom" />
+          <label for="tree1">Cherry blossom</label>
+          <input type="checkbox" id="tree2" name="tree2" value="Magnolia" />
+          <label for="tree2">Magnolia</label>
+          <input type="checkbox" id="tree3" name="tree3" value="Birch" />
+          <label for="tree3">Birch</label>
+
+          <button class="button" type="submit">Plant</button>
+        </form>
+      </div>
+    </div>
     <section class="accordion">
       <!-- Accordion -->
-      <h1>FAQ</h1>
+      <h2>FAQ</h2>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">
+        How many trees do we plant every year?
+      </div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">
+        Do we have fun when we plant trees?
+      </div>
+      <div class="answer">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <div class="question" id="section3">
+        What is our favorite tree to plant?
+      </div>
       <div class="answer">
         <p>Lorem ipsum...</p>
       </div>
     </section>
     <!-- dont forget to link the javascript file here! -->
+    <script src="./script.js"></script>
   </body>
 </html>
