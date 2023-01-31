@@ -3,13 +3,40 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
+    <title>The Incredible Code Coach</title>
+    <link rel="stylesheet" href="./style.css">
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
     <!-- video or image as a header is cool :) -->
-
+    <header>
+      <h1>The Incredible Code Coach</h1>
+      <picture>
+        <source srcset="./Images/Yoda_small.jpg" media="(max-width: 667px)" />
+        <source srcset="./Images/Yoda_medium.jpg" media="(max-width: 1024px)" />
+        <img src="./Images/Yoda_original.jpg" alt="Picture of Yoda" />
+      </picture>
+    </header>
     <!-- Signup form -->
+    <form action="http://httpbin.org/anything" method="POST">
+      <h2>Change your life, sign up here!</h2>    
+      <label for="fullName">Your Full Name</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="consultation">Free Consultation*</label>
+      <input type="checkbox" id="consultation" name="consultation">
+
+      <label for="newsletter">Free Newsletter*</label>
+      <input type="checkbox" id="newsletter" name="newsletter">
+
+      <label for="terms">I accept the terms & conditions</label>
+      <input type="checkbox" id="terms" name="terms" required>
+      <!-- add labels -->
+      <button type="submit">Submit</button>
+    </form>
 
     <section class="accordion">
       <!-- Accordion -->
@@ -26,5 +53,6 @@
       </div>
     </section>
     <!-- dont forget to link the javascript file here! -->
+    <script src="./script.js"></script>
   </body>
 </html>
