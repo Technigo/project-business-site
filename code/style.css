@@ -1,7 +1,17 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+/* button {
+  all: unset;
+  cursor: pointer;
+} */
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 header {
   background-image: url("./Images/Yoda_small.jpg");
   background-size: cover;
@@ -9,25 +19,58 @@ header {
   background-position-x: center;
   background-position-y: top;
   height: 200px;
-  border: 2px solid red;
+  /*border: 2px solid red;*/
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box {
+  border: 2px solid yellow;
+  width: 80%;
+  margin: 10px;
+}
+.form{
+  
+}
+h2{
+  text-align: center;
+  padding: 10px;
+}
+
+.checkbox{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
 form {
   background-color: aqua;
-  border: 2px dotted
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 label {
   display: block;
 }
 
-.accordion {
-  background-color: blueviolet;
-  border: 2px dotted
+.input {
+  padding-left: 10px;
 }
 
+input, label {
+  margin: 10px;
+ }
+
+.accordion {
+  background-color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 .answer {
   display: none;
@@ -37,7 +80,14 @@ label {
  display: block;
 }
 
+.question {
+  font-size: 14px;
+}
 
+p {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 @media (min-width: 667px) and (max-width: 1024px) {
 /*add info*/
