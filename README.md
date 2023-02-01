@@ -7,4 +7,4 @@ We first did a design idea on figma so we had an overall idea of how to approach
 If we had more time we could have a navbar and have more examples for our buisness including more images and ideas of how the buisness could work. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://northern-tours-technigo.netlify.app/
