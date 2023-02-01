@@ -8,6 +8,10 @@ html {
   height: 100%;
 }
 
+button {
+  font-family: "Oswald";
+}
+
 .answer {
   display: none;
 }
@@ -34,10 +38,11 @@ h1 {
 .hero-text {
   text-align: center;
   margin: 0 auto;
-  font-size: 50 px;
+  font-size: 50px;
   font-weight: 600;
   font-family: "Oswald";
   color: white;
+  object-fit: contain;
 }
 
 .textalign {
@@ -55,19 +60,59 @@ h1 {
 .top-button {
   padding: 20px;
   margin: 10px;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .signup-form {
+  background-color: #6e915b;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 182px;
-  height: 236px;
+  min-height: 362px;
+  max-height: 362px;
   padding: 66px;
   margin: 33px;
-  border: #6e915b 1px solid;
+  border-radius: 20px;
+  font-family: "Oswald";
+}
+
+.signup-form input {
+  margin: 5px;
+}
+
+.button {
+  margin: 12px 12px 12px 0px;
+  padding: 8px;
+  font-size: 18px;
+}
+
+.accordion {
+  background-color: #6e915b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 182px;
+  min-height: 362px;
+  max-height: 362px;
+  padding: 66px;
+  margin: 33px;
+  border-radius: 20px;
+  font-family: "Oswald";
+}
+
+input {
+  background-color: #e8f3d6;
+  display: block;
+}
+.checkboxes label {
+  display: inline-block;
+}
+
+.question {
+  padding: 10px;
 }
 
 /* responsive design for tablet */
@@ -81,6 +126,8 @@ h1 {
 
   .flex-parent {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .flex-child {
     display: block;
@@ -98,7 +145,10 @@ h1 {
 
   .flex-parent {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
   .flex-child {
     display: block;
   }
