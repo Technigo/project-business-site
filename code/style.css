@@ -2,12 +2,12 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-.active + .answer {
-  /* some styling here */
-}
-
 h1 {
-  color: white;
+  color: black;
+  text-align: center;
+  font-family: helvetica;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 #heroVideo {
@@ -20,25 +20,171 @@ header {
   position: relative;
 }
 
-.menu-list {
+.logoimg {
   position: absolute;
-  top: 1px;
-  right: 3px;
+  left: 10px;
+  top: 10px;
   display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 60%;
+}
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  top: 3px;
+  right: 3px;
+}
+
+.dropdown-button {
+  background-color: #4e68c011;
+  color: rgba(255, 255, 255, 0.329);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  min-width: 90px;
+  text-align: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding-top: 45px;
+  background-color: #f9f9f948;
+  min-width: 90px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+  text-align: center;
+}
+
+.dropdown-content a {
+  color: rgba(255, 255, 255, 0.329);
+  font-family: helvetica;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #2b2d9b62;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdown-button {
+  background-color: #3e8e412c;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.big-text {
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  left: 50%;
+  bottom: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: helvetica;
+  font-size: 2.6em;
+  font-weight: 700;
+  text-align: center;
 }
 
 body {
   margin: 0px 0px;
 }
 
-.accordion {
-  margin: 10px 10px;
+.sign-up-form {
+  font-family: helvetica;
+  display: flex;
+  margin: 10px 9px;
+  border: 3px solid rgb(72, 72, 194);
+  justify-content: center;
+  border-radius: 20%;
+  background-color: aquamarine;
 }
 
-.sign-up-form {
-  margin: 10px 9px;
-}
 /*
  header position relative 
  menu-list position absolute
 */
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: azure;
+  color: black;
+  font-family: Helvetica;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin: 10px 0px;
+}
+
+.regular-text {
+  font-size: 16px;
+  font-family: Helvetica;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.panel:hover {
+  background-color: lightblue;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: lightblue;
+  display: none;
+  overflow: hidden;
+}
+
+@media (min-width: 667px) {
+  #heroVideo {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .panel {
+    margin: 0 100px 100px 100px;
+  }
+
+  .accordion {
+    padding: 0 100px 60px 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #heroVideo {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .panel {
+    margin: 0 100px 100px 100px;
+  }
+
+  .accordion {
+    padding: 0 100px 60px 100px;
+  }
+}
