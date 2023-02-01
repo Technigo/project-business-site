@@ -4,7 +4,7 @@ During the intro days of the Technigo bootcamp, we were divided into teams of 4 
 
 ## The problem
 
-We began by sketching out a rough sketch in Figma, although in the end we abandoned it to design as we went on. Since it was our first time doing mob programming with VSC Live Share, we decided to take 10 minutes rounds for each driver, to have more time to get familiar with the approach.
+We began by sketching out a rough sketch in Figma, although in the end we abandoned it to design as we went on instead. Since it was our first time doing mob programming with VSC Live Share, we decided to take 10 minute rounds for each driver, to have more time to get familiar with the approach. 
 
 One of the things I think we really did well was to begin by building a functional website that met the basic requirements. We made sure that we had the correct inputs for the form, that the layout was responsive, that the accordion worked, etc. As soon as we got the basic requirements met, we started to add more functionality and play around with the code a bit. It made the process fun, creative and a lot less stressful.
 
