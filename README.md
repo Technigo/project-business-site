@@ -1,12 +1,15 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+During the intro days of the Technigo bootcamp, we were divided into teams of 4 and tasked with building a simple business website. The website should contain a hero header, a form with multiple types of inputs and an FAQ accordion that were collapsible using Javascript. The site was built by the approach of mob programming.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We began by sketching out a rough sketch in Figma, although in the end we abandoned it to design as we went on. Since it was our first time doing mob programming with VSC Live Share, we decided to take 10 minutes rounds for each driver, to have more time to get familiar with the approach.
+
+One of the things I think we really did well was to begin by building a functional website that met the basic requirements. We made sure that we had the correct inputs for the form, that the layout was responsive, that the accordion worked, etc. As soon as we got the basic requirements met, we started to add more functionality and play around with the code a bit. It made the process fun, creative and a lot less stressful.
+
+If we had more time (and knowledge), we discussed that we would make the javascript code more automated and less repetitive. We could also spend more time on cleaning up the code, making it more readable for everyone outside of our little group.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://chic-gingersnap-069122.netlify.app/
