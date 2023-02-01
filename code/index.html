@@ -5,53 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pizza Palace</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
 
     <!--HEADER-->
-    <header>
-
-      <video id="background-video" autoplay loop muted poster="./pizzavideo.mp4" >
-        <source src="./pizzavideo.mp4" type="video/mp4">
-      </video>
-
-      <img class="logo" src="/pizzapalace.png">
-      <form action="http://httpbin.org/anything" method="post">
-        <label>
-          E-mail
-          <input id="username" name="username" type="email" placeholder="Enter email"required>
-        </label>
-
-        <label>
-          Type in your password
-          <input id="password" name="password" type="password" placeholder="Enter password"required>
-        </label>
-
-        <button type="submit">Login</button>
-      </form>
-
-      
-    </header>
-
+    
+<header class ="flex-container">
+  <div class="header-box box">
+      <!--<div class="callout">
+        <h1>PIZZA</h1>
+        <p>FORMS ETC</p>
+      </div>-->
+    <div class="contentheader">
+      <img class="logo" src="./pizzapalacewhite.png">       
+          <form class="form" action="http://httpbin.org/anything" method="post">
+            <label>
+              E-mail<br>
+              <input id="username" name="username" type="email" placeholder="example@gmail.com"required>
+            </label>
+            <label>
+              <br>Password<br>
+              <input id="password" name="password" type="password" placeholder="password"required>
+            </label><br>
+            <button type="submit">Login</button>
+          </form>        
+    </div>
+    <!-- <video id="background-video" autoplay loop muted poster="./pizzavideo.mp4">
+      <source src="./pizzavideo.mp4" type="video/mp4">
+    </video> -->
+  </div>
+</header>
+ 
 
     <!-- video or image as a header is cool :) -->
 
 <!--Accordions section-->
-    <section class="accordion">
-      <h1>Menu</h1>
+<!--<div class="accordion-box box">
+  <section class="accordion">
+      <h1>Pizza menu</h1>
 
-      <p class="accordion" id="pizza">Margerita</p>
+      <button class="accordion" id="pizza1">Margerita</button>
       <div class="ingriedents">
-          <ul>
+          <ul id="ingredients">
             <li>Cheese</li> 
             <li>Tomato</li>
           </ul>
       </div>
 
-      <p class="accordion" id="pizza">Capricciosa</p>
+      <button class="accordion" id="pizza2">Capricciosa</button>
       <div class="ingriedents">
-          <ul>
+          <ul id="accordion">
             <li>Cheese</li> 
             <li>Tomato</li>
             <li>Ham</li>
@@ -59,7 +67,7 @@
           </ul>
       </div>
 
-      <p class="accordion" id="pizza">Pizza Palace Special</p>
+      <button class="accordion" id="pizza3">Pizza Palace Special</button>
       <div class="ingriedents">
           <ul>
             <li>Cheese</li> 
@@ -69,30 +77,65 @@
             <li>Basil</li>
           </ul>
       </div>
-    </div>
-    </section>
+  </section>
+  </div> -->
+<h1>Pizza menu</h1>
+  <button class="accordion">Margerita</button>
+<div class="panel">
+  <p>Cheese</p>
+  <p>Tomatoe</p>
+</div>
+
+<button class="accordion">Capricciosa</button>
+<div class="panel">
+  <p>Cheese</p>
+  <p>Tomato</p>
+  <p>Ham</p>
+  <p>Mushroom</p>
+</div>
+
+<button class="accordion">Pizza Palace Special</button>
+<div class="panel">
+  <p>Cheese</p> 
+    <p>Tomato</p>
+    <p>Onion</p> 
+    <p>Garlic</p>
+    <p>Basil</p>
+</div>
+  
 
     <!--Pizza order-->
-    <section>
-      <form action="http://httpbin.org/anything" method="post">
-        
-        <label for ="pizza1">Margerita
-          <input type="checkbox" id="pizza1" name="pizza1" value="margerita">
-        </label>
+    <div class="order-box box">
+ 
+        <h1>Pizza order form</h1>
+        <section class="order-form">
+          <form action="http://httpbin.org/anything" method="post">
+            <label for ="pizza1">Margerita
+              <input type="checkbox" id="pizza1" name="pizza1" value="margerita">
+            </label>
+            <br>
 
-        <label for ="pizza2">Capricciosa
-          <input type="checkbox" id="pizza2" name="pizza2" value="Capricciosa">
-        </label>
+            <label for ="pizza2">Capricciosa
+              <input type="checkbox" id="pizza2" name="pizza2" value="Capricciosa">
+            </label>
+            <br>
 
-        <label for ="pizza3">Pizza Palace Special
-          <input type="checkbox" id="pizza3" name="pizza3" value="Pizza Palace Special">
-        </label>
+            <label for ="pizza3">Pizza Palace Special
+              <input type="checkbox" id="pizza3" name="pizza3" value="Pizza Palace Special">
+            </label>
+            <br>
 
-        <button type="submit">Order</button>
-      </form>
-      </section>
+          <button type="submit">Order</button>
+          </form>
+        </section>
+    </div>
+  </div>
 <!--Javascript-->
     <script src="/script.js"></script>
+
+    <footer>
+      <p>Created By Lion Group 1</p>
+  </footer>
   </body>
 </html>
 
