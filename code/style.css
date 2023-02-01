@@ -1,13 +1,10 @@
-/* the + sign is used to select the sibling that comes immediately next to the element you selected.
-in this case it is the div with the answer class next to the div with the active class.
-this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 header {
   display: flex;
   background-image: url("./Images/Yoda_small.jpg");
@@ -39,7 +36,6 @@ main {
   margin: 10px;
   border-radius: 20px;
   min-height: 400px;
-
 }
 
 h2{
@@ -48,6 +44,7 @@ h2{
   color: #9fb9bf;
   text-shadow: black 1px 1px;
   text-transform: capitalize;
+  margin: 0 auto;
 }
 
 .checkbox{
@@ -56,9 +53,14 @@ h2{
   justify-content: flex-end;
 }
 
+input[type=checkbox]:hover, input[type=checkbox]:focus {
+  cursor: pointer;
+}
+
 .form{
   background-color: #ddadad;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -72,13 +74,9 @@ label {
   display: block;
 }
 
-.input {
-  
-}
-
 input, label {
   margin: 10px;
- }
+}
  
 button {
   all: unset;
@@ -89,7 +87,13 @@ button {
   padding: 5px 0;
   border-radius: 10px;
   margin: 0 0 10px 10px;
+  border: 2px solid;
+}
 
+button:hover, button:focus {
+  background-color: #aec8ec;
+  color: white;
+  border: 2px solid white;
 }
 
 .accordion {
@@ -103,6 +107,11 @@ button {
 .question {
   font-size: 14px;
   margin: 10px;
+}
+
+.question:hover, .question:focus {
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .question::after{
@@ -131,15 +140,34 @@ header{
 main{
   flex-direction: row;
 }
-.box{
-  min-height: 400px;
-}
 
 h1 {
   font-size: 50px;
 }
+
+h2 {
+font-size: 30px;
 }
 
+.box{
+  min-height: 440px;
+  max-height: 770px;
+}
+.accordion {
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.question {
+  font-size: 18px;
+}
+
+.question:hover, .question:focus {
+  cursor: pointer;
+  font-size: 20px;
+}
+}
 
 @media (min-width: 1025px) {
 header{
@@ -154,12 +182,31 @@ main{
 .box{
   min-height: 480px;
 }
+
 form {
   min-height: 480px;
 }
+
 h1 {
   font-size: 60px;
 }
 
+h2 {
+  font-size: 40px;
 }
 
+.accordion {
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.question {
+  font-size: 22px;
+}
+
+.question:hover, .question:focus {
+  cursor: pointer;
+  font-size: 26px;
+}
+}
