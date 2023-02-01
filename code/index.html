@@ -6,55 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fox Site</title>
     <link rel="stylesheet" href="style.css">
-    <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
 
-
-
-
-    <!---->
-    <div class="hero">
-      <video class="back-video" autoplay loop muted plays-inline> 
-        <source src="./videos/fox.mp4" type="video/mp4">
+  <header>
+     <video autoplay muted loop>
+        <source src="">
       </video>
-    <h1>Ninja Foxes</h1>
-    </div
+      <h1>Ninja Foxes</h1>
+  </header>
 
+<main>
+  <section class="form">
+    <h2>Get a fox now</h2>
+    <form action="http://httpbin.org/anything" method="post">
+    <label>
+    Name
+    <input type="text" name="name" required>
+    </label>
 
+    <label>
+    Phone number 
+    <input type="number" name="phone-number" required>   
+    </label>
 
+    <label>
+    Email adress
+    <input type="email" name="email" required>
+    </label>
 
-    <div class="review-container">
-      <h2>Reviews</h2>
-      <div class="review-image">
-        <img src="./images/restingfox.jpeg"/>
-      </div>
-      <div class="review-text">
-        <p>I love my fox. I named her Jitsi!</p>
-      </div>
-    </div>
-  
-  ¢
-    
-    <!-- video or image as a header is cool :) -->
+    <label>
+    <button type="submit"> Submit order</button>
+    </label>
+    </form>
+  </section>
 
-    <!-- Signup form -->
+  <section class="accordion">
+    <h2>FAQ</h2>
+    <div class="faq-container"></div>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h3>FAQ</h3>
+    <div class="question hidden">What fox sizes do you have?</div>
+    <div class="answer "><p>Small Medium and Large</p></div>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
+    <div class="question hidden">What fox colors do you have?</div>
+    <div class="answer"><p>Red Orange and Pink</p></div>
 
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+    <div class="question hidden">Where do you ship?</div>
+    <div class="answer"><p>We ship worldwide</p></div>
+
+    <div class="question hidden">What is your return policy?</div>
+    <div class="answer"> <p>We have two weeks return policy</p></div>
+
+  </section>
+</main>
+
     <script src="script.js"></script>
   </body>
 </html>
