@@ -1,14 +1,11 @@
 // Section 1 toggle
 const elementToToggle = document.querySelector("#section1");
- 
 const toggleHTMLElementClass = () => {
   elementToToggle.classList.toggle("active");
 };
 // Section 2 toggle
   elementToToggle.onclick = toggleHTMLElementClass;
-
 const elementToToggle2 = document.querySelector("#section2");
-
 const toggleHTMLElementClass2 = () => {
   elementToToggle2.classList.toggle("active");
 }
