@@ -1,7 +1,122 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Fredoka One";
+}
+.logo {
+  display: flex;
+  padding: auto;
+  justify-content: center;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.719);
+  position: absolute;
+  text-align: center;
+  font-family: "Shrikhand";
+
+  /*top: 30%;
+  left: 20%;*/
+}
+
+h2 {
+  color: black;
+}
+
+h3 {
+  margin-top: 10px;
+  color: white;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+}
+input,
+select,
+fieldset {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+fieldset {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  background-color: #e0690c;
+  padding: 15px;
+  width: 200px;
+  border-radius: 5px;
+  color: white;
+}
+.accordion {
+  padding: 50px;
+  background-color: rgb(224, 211, 211);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.header {
+  position: relative;
+}
+.answer {
+  display: none;
+  padding: 18px;
+}
+
+.question {
+  cursor: pointer;
+  padding: 25px;
+}
 
 .active + .answer {
+  display: block;
   /* some styling here */
+}
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #0bc8e0;
+}
+.email-subscribe {
+  align-self: center;
+}
+.sub-button {
+  align-self: center;
+}
+
+.footer-container {
+  padding: 50px;
+}
+
+@media screen and (min-width: 668px) {
+  .FAQ-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  h1 {
+    font-size: 18vh;
+  }
 }
