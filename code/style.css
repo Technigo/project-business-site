@@ -6,15 +6,17 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
   padding: 0px;
+  color: #012F2C;
 }
 
 header {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
+  height:320px;
 }
 
 .hero-video {
@@ -27,12 +29,10 @@ header {
   top: 0;
   bottom: 0;
   z-index: -1;
+  overflow: none;
   margin-bottom: 20px;
 }
 
-.navbar {
-
-}
 
 ul {
   display: flex;
@@ -43,6 +43,10 @@ ul {
 
 li {
   padding: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color:white;
 }
 
 .logo {
@@ -65,7 +69,9 @@ h2 {
   flex-direction: column;
   align-items: center;
   color: #012F2C;
-  margin: 20px 0;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 20px;
 }
 
@@ -77,6 +83,19 @@ h2 {
   font-size: 12px;
 }
 
+.answer {
+  display: none;
+  width: 250px;
+  font-size: 12px;
+  color:#012F2C;
+  text-align: left;
+}
+
+.active + .answer {
+  display: block;
+}
+
+
 .join-us {
   background-color: #e4ccff;
   display: flex;
@@ -84,29 +103,90 @@ h2 {
   justify-content: center;
   align-items: center;
   max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
 }
 
-button {
-  background-color: #ebff00;
+form {
+  display:flex;
+  flex-direction: column;
 }
 
-.answer{
-  display: none;
-}
-
-.active + .answer {
+label {
   display: block;
-  /* some styling here */
+  margin: 5px;
+  font-size: 12px;
+  text-align: right;
+}
+
+.radio-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 240px;
+}
+
+#beginner {
+  accent-color: #24FFF2;
+}
+
+#advanced {
+  accent-color: #24fff2;
+}
+
+.terms {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  background-color: #ebff00;
+  width: 150px;
+  align-self: center;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.foot-logo {
+  width: 30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  height: 50px;
 }
 
 @media (min-width: 668px) {
   .hero-video {
     height: 450px;
+    overflow: none;
   }
+
+  header {
+    margin-bottom: 150px;
+    height:320px;
+  }
+
+  .logo {
+    width: 300px;
+    display: flex;
+    align-content: center; 
+  }
+
+  .join-us {
+    box-shadow: 12px 12px 2px 1px #24FFF2;
+  }
+
+  .accordion {
+    box-shadow: 12px 12px 2px 1px #e4ccff;
+  }
+
 }
-
-
-@media(min-width: 1024px){
-
-}
-

@@ -4,17 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <title>Swims up</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Swim's UP</title>
   </head>
   <body>
     
-   <!-- video or image as a header is cool :) -->
     <header>
-     <video autoplay muted loop class="hero-video" >
+     <video autoplay muted loop class="hero-video">
         <source src="./videos/swimvideo.mp4" type="video/mp4">
         <source src="movie.ogg" type="video/ogg">
-      Your browser does not support the video tag.
       </video>
 
       <nav class="navbar">
@@ -25,10 +22,8 @@
         </ul>
       </nav>
 
-<!--Logga-->
-<img class="logo" src="./logos/swim-dive.svg" href="#" alt="logo">
+  <img class="logo" src="./logos/swim-dive.svg" href="#" alt="logo">
     </header>
-  
 
      <!-- Accordion -->
     <section class="accordion">
@@ -37,27 +32,27 @@
 
       <div class="question" id="quest1">Is there any required age to apply?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>From 5-143 yrs of age</p>
       </div>
 
       <div class="question" id="quest2">How much does it cost?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>It's for free!</p>
       </div>
 
       <div class="question" id="quest3">Where are you located?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>In your mind mostly</p>
       </div>
 
       <div class="question" id="quest4">Do I need to be able to float?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>It is a good thing to know</p>
       </div>
 
       <div class="question" id="quest5">Do I need to bring my own swimsuit?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Whatever floats your boat</p>
     </section>
 
   <!-- Signup form -->
@@ -65,32 +60,43 @@
       <h2>join us</h2>
 
     <form action ="http://httpbin.org/anything" method="post">
-      <label for="full-name">Full Name:</label>
-      <input id="full-name" name="name" type="text">
+      <label for="full-name">Full Name:
+        <input id="full-name" name="name" type="text" required>
+      </label>
       
-      <label for="email">E-mail:</label>
-      <input id="email" name="email" type="email">
+      <label for="email">E-mail:
+      <input id="email" name="email" type="email" required>
+      </label>
+
+      <label for="age">Age:
+      <input id="age" name="age" type="text" required>
+      </label>
       
-      <label for="age">Age:</label>
-      <input id="age" name="age" type="text">
+      <div class="radio-buttons">
+        <label for="beginner">
+        <input id="beginner" name="radio" type="radio" required>
+        Beginner</label>
 
-      <input id="beginner" name="radio" type="radio">
-      <label for="beginner">Beginner</label>
-      <input id="advanced" name="radio" type="radio">
-      <label for="advanced">Advanced</label>
+        <label for="advanced">
+        <input id="advanced" name="radio" type="radio" required>
+        Advanced</label>
+      </div>
 
-      <input id="checkbox" name="checkbox" type="checkbox">
-      <label for="checkbox">Agree to terms</label>
+      <label class="terms" for="checkbox">
+      <input id="checkbox" name="checkbox" type="checkbox" required>
+      Agree to terms</label>
 
-      <button type="submit">submit</button>
+      <button class="button" type="submit">submit</button>
     </form>
     
     </section>
 
+     <!-- a footer right here -->
     <footer>
-    <!--Technigo logotype-->
+      <img class="foot-logo" src="./logos/logo.svg" href="#" alt="footer logo">
     </footer>
-    <!-- Should the script tag be a self-closing tag or not? -->
+    
+    <!-- script tag -->
 <script src="script.js"></script>
   </body>
 </html>
