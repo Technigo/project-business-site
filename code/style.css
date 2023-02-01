@@ -9,6 +9,7 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
   font-family: Arial, Helvetica, sans-serif;
 }
 header {
+  display: flex;
   background-image: url("./Images/Yoda_small.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,8 +17,14 @@ header {
   background-position-y: top;
   height: 200px;
   /*border: 2px solid red;*/
-  text-align: center;
+  justify-content: center; 
+  align-items: center;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  color: #b88c8c;
+  text-shadow: black 2px 2px;
 }
 
 main {
@@ -31,12 +38,16 @@ main {
   width: 80%;
   margin: 10px;
   border-radius: 20px;
+  min-height: 400px;
 
 }
 
 h2{
   text-align: center;
   padding: 10px;
+  color: #9fb9bf;
+  text-shadow: black 1px 1px;
+  text-transform: capitalize;
 }
 
 .checkbox{
@@ -45,12 +56,16 @@ h2{
   justify-content: flex-end;
 }
 
-form {
+.form{
   background-color: #ddadad;
+}
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   border-radius: 20px;
+  min-height: 400px;
 }
 
 label {
@@ -58,7 +73,7 @@ label {
 }
 
 .input {
-  padding-left: 10px;
+  
 }
 
 input, label {
@@ -77,9 +92,12 @@ button {
 
 }
 
-
 .accordion {
   background-color: #d6c7c7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .question {
@@ -96,7 +114,6 @@ button {
   margin: 10px;
 }
 
-
 .active + .answer {
  display: block;
 }
@@ -106,19 +123,40 @@ p {
 }
 
 @media (min-width: 667px) and (max-width: 1024px) {
-/*add info*/
+header{
+  background-image: url("./Images/Yoda_medium.jpg");
+  height: 300px;
+}
+
+main{
+  flex-direction: row;
+}
+.box{
+  min-height: 400px;
+}
 
 h1 {
   font-size: 50px;
 }
-
 }
 
 
-
 @media (min-width: 1025px) {
-/*add info*/
+header{
+  background-image: url("./Images/Yoda_original.jpg");
+  height: 400px;
+}
 
+main{
+  flex-direction: row;
+}
+
+.box{
+  min-height: 480px;
+}
+form {
+  min-height: 480px;
+}
 h1 {
   font-size: 60px;
 }
