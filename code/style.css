@@ -1,44 +1,85 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
 body {
   margin: 0;
 }
-.answer{
-  display:none;
+
+.myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  }
+
+.answer {
+  display: none;
+  background-color: #9bcee9;
+  width: 250px;
+  border-radius: 10px;
+  padding: 5px;
 }
-.active + .answer {
-  display:block;
+
+.active+.answer {
+  display: block;
 }
-header{
+
+header {
   background-image: url("pexels-tobias-bjørkli-1562058.jpg");
   height: 300px;
   background-position: center;
   background-size: cover;
 }
-h1{
-  color:white;
+
+h1 {
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
-  padding:200px 0px 0px 70px;
-}
-.container{
-  display:grid;
-  grid-template-columns: 1fr;
+  padding: 200px 0px 0px 70px;
+  font-size: 35px;
 }
 
-.form{
-  background-color: aquamarine;
+.container {
+  display: grid;
+  grid-template-columns: 1fr
+}
+
+.form {
+  background-color: #559976;
   display: flex;
   flex-direction: column;
   margin: 10px;
   gap: 10px;
   padding: 10px;
   border: black 2px solid;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 
 }
 
-.accordion{
-  background-color: yellow;
+.form-fields {
+  padding: 10px 0 10px 10px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.sections {
+  padding: 0px 10px 0px 10px;
+  background-color: #73c3ed;
+  width: 250px;
+  align-content: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion {
+  background-color: #14638E;
   margin: 10px;
   gap: 10px;
   padding: 10px;
@@ -46,21 +87,55 @@ h1{
   flex-direction: column;
   align-items: center;
   border: black 2px solid;
+  border-radius: 10px;
 }
 
-h2{
+h2 {
   margin: 0;
+  text-align: center;
 }
 
-.robot{
+.robot {
   align-self: center;
-}
-.radio-buttons{
-  align-self: center;
+  font-size: larger;
 }
 
-button{
+.radio-buttons {
+  align-self: center;
+  font-size: larger;
+}
+
+button {
   margin-left: 50px;
   margin-right: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.13);
+  font-size: larger;
+  font-weight: bold;
+  background-color: #ceeadc;
+  color:#0d301d;
+  width:200px;
+}
 
+/*****responsive design for ipad*******/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  h1 {
+    font-size: 50px;
+  }
+}
+
+/*****responsive design for desktop*******/
+@media only screen and (min-device-width: 1025px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  h1 {
+    font-size: 75px;
+  }
 }

@@ -1,12 +1,10 @@
 # Business Site
-
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to design a buisness website with a submission form and accordion FAQ. 
 
 ## The problem
+We first did a design idea on figma so we had an overall idea of how to approach the layout. Then we began to use HTML to create the structure we wanted for the site. We continued on with Javascript for our accordion and lastly did the styling with CSS. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+If we had more time we could have a navbar and have more examples for our buisness including more images and ideas of how the buisness could work. 
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
