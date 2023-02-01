@@ -5,46 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css"> 
     <title>Turtle Shop</title>
-    <!-- CSS file is now linked -->
   </head>
   <body>
-    <!-- video or image as a header is cool :) -->
     <header class="turtle-shop">
       <h1 class="shop-header">Turtle Shop</h1>
       <h2>Get your turtle here</h2>
-
     </header>
     
     <form action="https://httpbin.org/anything" method="post" target="_blank">
+      <h2>Order your turtle now!</h2>
+      <label for="size">Pick turtle size</label>
+      <select name="size" id="size">
+        <option value="small">Small</option>  
+        <option value="medium">Medium</option>  
+        <option value="large">Large</option>  
+      </select>
+      
+  
+      <h3>Pick gender</h3>
+      <div class="gender">
+        <label for="male">Male
+          <input type="radio" id="male" name="gender" value="male">
+        </label>
+        <label for="female">Female
+          <input type="radio" id="female" name="gender" value="female">
+        </label>
+        <label for="surprise">Surprise me!
+          <input type="radio" id="surprise" name="gender" value="surprise">
+        </label>
+      </div>
+
+
       <label for="fname">First Name:</label>
       <input id="fname" name="fname" type="text" placeholder="Donatello" required></input>
       <label for="lname">Last Name:</label>
-      <input id="lname" name="lname" type="text" required></input>
+      <input id="lname" name="lname" type="text" placeholder="Turtleton" required></input>
       <label for="email">Email:</label>
       <input id="email" name="email" type="email" placeholder="Donatello@teenagemutantninjaturtles.com" required></input>
       <button id="button" type="submit">Place order</button>
     </form>
-    <!-- Signup form -->
+    
 <div class="polcontainer">
-  <!--picture element instead of img?-->
-
+  <figure>
   <img class="polaroid" src="./images/turtle-unsplash2.jpg" alt="Swimming turtle">
+  <figcaption>"Donatello"</figcaption>
+</figure>
 </div>
     <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+      <h2>FAQ</h2>
 
-      <div class="question" id="section1">Section 1</div>
+      <div class="question" id="section1">What is so great about turtles?</div>
         <div class="answer">
-          <p>Lorem ipsum...</p>
+          <p>Everything!</p>
         </div>
 
-      <div class="question" id="section2">Section 2</div>
+      <div class="question" id="section2">Is this even legal?</div>
       <div class="answer">
-        <p>Lorem ipsum...</p>
+        <p>Yes.</p>
       </div>
-    </section>
-    <!-- dont forget to link the javascript file here! -->
+
+      <div class="question" id="section3">Shipping options</div>
+      <div class="answer">
+        <p>By mail only.</p>
+      </div>
+  </section>
+
+  <footer>
+      <p>Page created by Matilda Frid, Sammy Olsson, Sofia Gerdmar, Jonas Jakobson</p>
+    </footer>
+
     <script src="./script.js"></script>
+
   </body>
 </html>
