@@ -1,6 +1,12 @@
 /* the + sign is used to select the sibling that comes immediately next to the element you selected.
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+body,
+html {
+  background-color: #e8f3d6;
+  margin: 0;
+  height: 100%;
+}
 
 .answer {
   display: none;
@@ -15,30 +21,93 @@ this can be used for the FAQ-accordion. read more here: https://www.w3schools.co
 } */
 
 h1 {
-  color: brown;
+  margin-top: 0;
+}
+
+.company-text {
+  font-size: 35px;
+  color: #6e915b;
+  font-family: "Oswald";
+  text-align: center;
 }
 
 .hero-text {
-  background-color: white;
-  width: 200px;
   text-align: center;
   margin: 0 auto;
+  font-size: 50 px;
+  font-weight: 600;
+  font-family: "Oswald";
+  color: white;
+}
+
+.textalign {
+  text-align: center;
 }
 
 .hero-image {
   background-image: url("./Images/Cherry-blossom.jpg");
-  background-repeat: no-repeat;
+  background-repeat: no-repeat center top;
   background-size: cover;
   height: 700px; /* fix this? */
+  opacity: 80%;
 }
 
-/* Fix Media queries */
+.top-button {
+  padding: 20px;
+  margin: 10px;
+  font-size: 15px;
+}
+
+.flex-parent {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 182px;
+  height: 236px;
+  padding: 66px;
+  margin: 33px;
+  border: #6e915b 1px solid;
+}
+
+/* responsive design for tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-text {
+    text-align: center;
+    padding: 30px;
+    margin: 0 auto;
+    font-size: 70px;
+  }
+  .flex-parent {
+    flex-direction: row;
+  }
+}
+
+/* responsive design for desktop browsers - NEED HELP WITH BUTTON POSITION?*/
+@media (min-width: 1024px) {
+  .hero-text {
+    text-align: center;
+    padding: 30px;
+    margin: 0 auto;
+    font-size: 90px;
+  }
+
+  .flex-parent {
+    flex-direction: row;
+  }
+
+  h1 {
+    margin-bottom: -70px;
+  }
+}
 
 /* Fix styling for div classes */
 
 /* Fix styling for Signup Form */
 
 /* Michelle W starts tomorrow 1 of Februar */
-
-.flex-parent {
-}
