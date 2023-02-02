@@ -18,45 +18,58 @@
       </div>
     </header>
     <!-- Signup form -->
-    <form class="signup-form" action="post">
-      <label for="question1">Name:</label>
-      <input id="question1" name="question" type="text" />
+    <div class="grid-parent">
+      <form
+        class="signup-form"
+        action="https://httpbin.org/anything"
+        method="post"
+      >
+        <label for="question1">Name:</label>
+      </br>
+        <input id="question1" name="name" type="text" />
+      </br>
+        <label for="question2">When did you start the course?</label>
+      </br>
+        <input id="question1" name="date" type="date" />
+        <fieldset>
+          <legend>Grade your experience</legend>
+          <p>1 is very bad and 5 is very good</p>
+          <label for="question4">1</label>
+          <input id="question1" name="grade" type="radio" />
+          <label for="question4">2</label>
+          <input id="question1" name="grade" type="radio" />
+          <label for="question4">3</label>
+          <input id="question1" name="grade" type="radio" />
+          <label for="question4">4</label>
+          <input id="question1" name="grade" type="radio" />
+          <label for="question4">5</label>
+          <input id="question1" name="grade" type="radio" />
+        </fieldset>
+      </br>
+        <label for="question3">Any comments?</label>
+      </br>
+      <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+      
+      <!--  <input id="comment1" name="comment" type="text" /> -->
+    </br>
+        <button type="submit">Submit</button>
+      </form>
 
-      <label for="question2">When did you start the course?</label>
-      <input id="question1" name="question" type="date" />
-      <fieldset>
-        <legend>Grade your experience</legend>
-        <p>1 is very bad and 5 is very good</p>
-        <label for="question4">1</label>
-        <input id="question1" name="question" type="radio" />
-        <label for="question4">2</label>
-        <input id="question1" name="question" type="radio" />
-        <label for="question4">3</label>
-        <input id="question1" name="question" type="radio" />
-        <label for="question4">4</label>
-        <input id="question1" name="question" type="radio" />
-        <label for="question4">5</label>
-        <input id="question1" name="question" type="radio" />
-      </fieldset>
-      <label for="question3">Any comments?</label>
-      <input id="question1" name="question" type="text" />
-      <button type="submit">Submit</button>
-    </form>
+      <section class="accordion">
+        <!-- Accordion -->
+        <h1>FAQ</h1>
 
-    <section class="accordion">
-      <!-- Accordion -->
-      <h1>FAQ</h1>
+        <div class="question" id="section1">Section 1</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
 
-      <div class="question" id="section1">Section 1</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-
-      <div class="question" id="section2">Section 2</div>
-      <div class="answer">
-        <p>Lorem ipsum...</p>
-      </div>
-    </section>
+        <div class="question" id="section2">Section 2</div>
+        <div class="answer">
+          <p>Lorem ipsum...</p>
+        </div>
+      </section>
+    </div>
     <!-- dont forget to link the javascript file here! -->
     <script src="./script.js"></script>
 
