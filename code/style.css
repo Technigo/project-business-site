@@ -2,16 +2,16 @@
 in this case it is the div with the answer class next to the div with the active class.
 this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
 
-body,
-html {
+body, html {
   margin: 0;
   height: 100%;
 }
 
+/* header */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(218, 9, 204, 0.5)),
     url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
-  height: 400px;
+  height: 350px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,43 +23,76 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
   text-align: center;
+  text-transform: uppercase;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+/* grid */
 .grid-parent {
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* signup form */
 .signup-form {
-  grid-column: 2 / span 1;
-  margin: 50px;
-  padding: 5px;
+  grid-column: 1 / span 3;
+  margin: 30px;
+  color: palevioletred;
 }
 
+input[type=text] , input[type=date] {
+  display: block;
+  color: palevioletred;
+}
+
+button {
+  display: block;
+  margin-top: 10px;
+  background-color: palevioletred;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+
+button:hover {
+color: darkmagenta;
+-webkit-transform: rotateZ(-10deg);
+-ms-transform: rotateZ(-10deg);
+transform: rotateZ(-10deg);
+transition: 1s ease;
+}
+
+/* accordion */
 .accordion {
-  width: 400px;
+  grid-column: 1 / span 3;
+  margin: 30px;
+  padding: 5px;
   background-color: palevioletred;
   text-align: center;
   color: white;
-  grid-column: 2 / span 1;
+}
+
+a {
+  text-decoration: none;
+  color: darkmagenta;
+}
+
+a:hover {
+  font-weight: bold;
 }
 
 .question {
   margin: 5px;
   padding: 5px;
   text-align: center;
-}
-
-#comment1 {
-  width: 70%;
-  height: 50px;
+  font-weight: bold;
 }
 
 .answer {
@@ -67,15 +100,21 @@ html {
 }
 
 .active + .answer {
-  /* some styling here */
   display: contents;
 }
 
-#question1 {
-  margin-top: 10px;
-  margin-bottom: 5px;
+/* footer */
+footer {
+  background-color: palevioletred;
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
 }
 
-button {
-  margin-top: 30px;
+/* Responsive design */
+@media (min-width: 1024px) {
+  .signup-form, .accordion {
+    grid-column: 2 / span 1;
+  }
 }
