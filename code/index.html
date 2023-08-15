@@ -3,15 +3,55 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Mushroom Studios</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Business name 🌻</h1>
-
+    <h1>Mushroom Studios</h1>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>Mushroom Studios</h1>
+        <p>Tatoo Heaven</p>
+        <button>Hire me</button>
+      </div>
+    </div> 
     <!-- video or image as a header is cool :) -->
 
     <!-- Signup form -->
+    <form action="http://httpbin.org/anything">
+      <label>
+        Full Name
+        <input type="text" name="name" placeholder="Your name here" required>
+      </label>
+      
+      <label>
+        E-mail
+        <input type="email" name="email" placeholder="Please leave e- mail" required>>
+      </label>
+      
+      <label>
+        Phonenumber
+        <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Phonenumber including countrycode" required>
+      </label>
+      
+      <label>
+        Which tattoartist do you prefer?
+        <select name="tattoArtist">
+          <option value="Clean">Clean Rock One</option>
+          <option value="Christian">Christian</option>
+          <option value="Juan">Juan</option>
+          <option value="Matilda">Miss Matilda</option>
+        </select>
+      </label>
+        
+      <label>
+        Describe your tattoo idea
+        <input type="text" name="message" required minlenght="10" maxlenght="100"> placeholder="I want a tattoo that's..." 
+        </label>
+        
+        <button type="submit">Send my booking request</button>
+        
+    </form> 
 
   </body>
 </html>
