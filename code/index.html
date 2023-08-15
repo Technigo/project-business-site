@@ -1,17 +1,101 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <h1>Business name 🌻</h1>
+<html lang="en">
 
-    <!-- video or image as a header is cool :) -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Hotel</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- dont forget to add a css file and link it here! -->
+</head>
 
-    <!-- Signup form -->
+<body>
+  <!-- video or image as a header is cool :) -->
+  <header class="hero">
+    <section class="hero-text">
+      <h1>The Hotel</h1>
+      <p>Join us for a relaxing stay!</p>
+    </section>
+  </header>
 
-  </body>
+  <!-- Signup form -->
+  <form action="https://httpbin.org/anything" method="post">
+    <!-- Full name field -->
+    <div class="form-area">
+      <label for="name">Full name</label>
+      <input type="text" id="name" name="name" placeholder="Person Person" required>
+    </div>
+
+    <!-- E-mail field -->
+    <div class="form-area">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="name@mail.com" required>
+    </div>
+
+    <!-- Phone field -->
+    <div class="form-area">
+      <label for="phone">Telephone</label>
+      <input type="tel" id="phone" name="phone" placeholder="123456789" required>
+    </div>
+
+    <!-- Date field -->
+    <section class="form-section">
+      <div class="form-area">
+        <label for="checkin-date">Check-in date</label>
+        <input type="date" id="checkin-date" name="checkin-date" required>
+      </div>
+      <div class="form-area">
+        <label for="checkout-date">Check-out date</label>
+        <input type="date" id="checkout-date" name="checkout-date" required>
+      </div>
+    </section>
+
+    <!-- Radio buttons -->
+    <label>Room type</label>
+    <div class="form-area">
+      <label for="single">Single room</label>
+      <input type="radio" id="single" name="room-type" value="single">
+    </div>
+    <div class="form-area">
+      <label for="double">Double room</label>
+      <input type="radio" id="double" name="room-type" value="double">
+    </div>
+
+    <!-- Checkbox options -->
+    <label>Extra stuff</label>
+    <div class="form-area">
+      <label for="extra-bed">Extra bed</label>
+      <input type="checkbox" id="extra-bed" name="extra-bed" value="extra-bed">
+    </div>
+    <div class="form-area">
+      <label for="extra-crib">Extra crib</label>
+      <input type="checkbox" id="extra-crib" name="extra-crib" value="extra-crib">
+    </div>
+    <div class="form-area">
+      <label for="balcony">Balcony if possible</label>
+      <input type="checkbox" id="balcony" name="balcony" value="balcony">
+    </div>
+    <div class="form-area">
+      <label for="extra-fruitplate">Fruitplate at arrival</label>
+      <input type="checkbox" id="extra-fruitplate" name="extra-fruitplate" value="extra-fruitplate">
+    </div>
+    <div class="form-area">
+      <label for="extra-champagne">Champagne at arrival</label>
+      <input type="checkbox" id="extra-champagne" name="extra-champagne" value="extra-champagne">
+    </div>
+
+    <!-- Additional comments -->
+    <div class="form-area">
+      <label for="comments">Additional comments</label>
+      <textarea id="comments" name="comments" rows="5"></textarea>
+    </div>
+
+    <!-- Submit form -->
+    <div class="form-area">
+      <button type="submit">Make a booking request</button>
+    </div>
+  </form>
+
+</body>
+
 </html>
