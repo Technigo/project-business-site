@@ -1,6 +1,41 @@
 /* After you've linked the CSS file in the HTML,
 this should turn the background blue ;) */
-body {
-  background: blue;
-  font-family: 'Roboto', sans-serif;
+:root {
+  /* This custom CSS variable represents the primary color used in the design. */
+  --primary-color: #892e9b;
+  /* This variable represents the secondary color. */
+  --secondary-color: #ffffff;
+  /* This variable represents an accent color. */
+  --accent-color: #1c1c1c;
+  /* This variable represents the text color. */
+  --text-color: #2e2e2e;
+  /* This variable represents the default font size. */
+  --font-size: 16px;
+}
+
+/* * selector in CSS selects all elements on a webpage, applying styles to all elements. */
+* {
+  /* Ensure consistent sizing with border-box box-sizing. */
+  box-sizing: border-box;
+  /* Remove underlines from anchor links and inherit text color. */
+  text-decoration: none;
+  color: inherit;
+  /* Remove list styles (bullets/numbers) from list elements. */
+  /* list-style: none; */
+  /* Reset margins, paddings, and outlines for all elements. */
+  padding: 0;
+  margin: 0;
+  outline: none;
+  /* Set default font styles for text elements. */
+  font-family: Roboto, Arial, sans-serif;
+  font-size: var(--font-size);
+  color: var(--text-color);
+  line-height: 22px;
+}
+
+form {
+  width: 100%;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px 0;
 }
