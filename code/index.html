@@ -3,15 +3,149 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
+    <title>Hairway to Heaven</title>
     <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Business name 🌻</h1>
+    <h1>✂ Hairway to Heaven ✂</h1>
 
     <!-- video or image as a header is cool :) -->
-
+    <div class="video-banner">
+      <video autoplay muted loop>
+        <source src="./assets/hair-banner.mp4" type="video/mp4" />
+      </video>
+      <h2 class="caption">Caption this!</h2>
+    </div>
     <!-- Signup form -->
+    <div class="container">
+      <form
+        class="signup-form"
+        action="http://httpbin.org/anything"
+        method="post"
+      >
+        <div class="banner">
+          <h2>Booking appointment</h2>
+        </div>
+        <div class="form-area">
+          <label for="appointment-date">Pick a date</label>
+          <input
+            type="date"
+            name="appointment-date"
+            id="appointment-date"
+            required
+          />
+        </div>
 
+        <div class="form-area">
+          <label>Class times</label>
+          <select>
+            <option selected disabled>Choose a time</option>
+            <option value="11">11.00</option>
+            <option value="12">12.00</option>
+            <option value="13">13.00</option>
+            <option value="14">14.00</option>
+          </select>
+        </div>
+        <div class="form-area">
+          <label for="hair-length">How long is your hair?</label>
+          <div class="radio-option">
+            <input
+              type="radio"
+              name="hair-length"
+              id="hair-length"
+              value="short-hair"
+            />
+            <label for="hair-length-s">Short</label>
+          </div>
+          <div class="radio-option">
+            <input
+              type="radio"
+              name="hair-length"
+              id="hair-length"
+              value="medium-hair"
+            />
+            <label for="hair-length-m">Medium</label>
+          </div>
+          <div class="radio-option">
+            <input
+              type="radio"
+              name="hair-length"
+              id="hair-length"
+              value="long-hair"
+            />
+            <label for="hair-length-l">Long</label>
+          </div>
+        </div>
+        <div class="form-area">
+          <label for="hair-type">What's your hair type?</label>
+          <div class="checkbox-options">
+            <input type="checkbox" name="curly" id="curly" value="curly" />
+            <label for="curly"> Curly</label>
+          </div>
+          <div class="checkbox-options">
+            <input
+              type="checkbox"
+              name="straight"
+              id="straight"
+              value="straight"
+            />
+            <label for="straight"> Straight</label>
+          </div>
+          <div class="checkbox-options">
+            <input type="checkbox" name="thick" id="thick" value="thick" />
+            <label for="thick"> Thick</label>
+          </div>
+          <div class="checkbox-options">
+            <input type="checkbox" name="thin" id="thin" value="thin" />
+            <label for="thin"> Thin</label>
+          </div>
+        </div>
+        <div class="form-area">
+          <label>Treatment</label>
+          <select>
+            <option selected disabled>Choose your treatment</option>
+            <option value="hair-cut">Hair cut</option>
+            <option value="coloring">Coloring</option>
+            <option value="styling">Styling</option>
+            <option value="hair-cut-coloring">Hair cut and coloring</option>
+            <option value="hair-cut-styling">Hair cut and styling</option>
+            <option value="everything">Everything</option>
+          </select>
+        </div>
+        <div class="form-area">
+          <label for="full-name">Full name</label
+          ><input
+            type="text"
+            name="full-name"
+            id="full-name"
+            required
+            placeholder="Diego Zito"
+          />
+        </div>
+        <div class="form-area">
+          <label for="email">Enter email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="johndoe@hair.com"
+          />
+        </div>
+        <div class="form-area">
+          <label for="appointment-phone">Enter your phone number</label
+          ><input
+            type="tel"
+            name="appointment-phone"
+            id="appointment-phone"
+            required
+            placeholder="07X XXX XXX"
+          />
+        </div>
+        <!-- <input type="button" value="submit" /> -->
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
