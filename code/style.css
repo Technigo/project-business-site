@@ -1,38 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap");
+
+:root {
+  --primaryColor: beige;
+  --font-size: 25px;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.1em;
+}
+
 body {
   background: white;
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  display: flex;
-  justify-content: center;
+.site-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px 0 lightgray;
 }
 
-.video-banner .caption {
+/*Positional styling for headlines */
+.headline {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  top: 50%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
 }
 
+/*Site title styling */
+.title {
+  font-size: 3.7rem;
+  color: var(--primaryColor);
+  letter-spacing: 0.2em;
+  text-shadow: 2px 4px 4px rgba(64, 72, 88, 0.417);
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* Site subtitle styling */
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--primaryColor);
+  letter-spacing: 0.2em;
+  text-shadow: 2px 4px 4px rgba(64, 72, 88, 0.417);
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Container for the form section */
 .container {
   display: flex;
   justify-content: center;
 }
 
+/* Styling for the video element. */
+video {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+/* Styling for the form element. */
 form {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
   width: 100%;
-  padding: 20px;
   border-radius: 6px;
-  box-shadow: 0 0 10px 0;
+  align-items: center;
+  padding-bottom: 5%;
 }
 
+/*Styling for form elements */
 .form-area {
-  margin: 2rem 0rem;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+label {
+  margin-bottom: 7px;
+}
+
+/* Styling for buttons, applying primary color and cursor pointer on hover. */
+button {
+  background-color: #939384;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 25%;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Styling for input elements, and select elements. */
+
+input[type="date"],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  padding: 5px 2px;
+}
+
+.footer {
+  background-color: var(--primaryColor);
+  text-align: center;
+  margin: 2px auto;
+  padding: 15px 10px;
+}
+
+/*Responsivity styling*/
+@media screen and (max-width: 450px) {
+  .headline {
+    top: 10%;
+  }
+  .button {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .title {
+    text-align: center;
+  }
+  .subtitle {
+    display: none;
+  }
+  h2 {
+    padding: 0 4rem;
+    text-align: center;
+  }
+  .form-area {
+    width: 50%;
+  }
+
+  .button {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  .title {
+    font-size: 2rem;
+    top: 10%;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    top: 18%;
+  }
+  .form-area {
+    width: 50%;
+  }
+  .button {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+    top: 10%;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    top: 18%;
+  }
+  .form-area {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+  .headline {
+    top: 23%;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .form-area {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .headline {
+    top: 20%;
+  }
 }
