@@ -18,75 +18,91 @@
 
   <header>
     <!-- video or image as a header is cool :) -->
-    <img class="header-image" src="pictures/applepicture.jpg" alt="picture of an apple">
+    <!-- <img class="header-image" src="pictures/applepicture.jpg" alt="picture of an apple">  wrong, because we want background image for header container and not a foreground image as page content-->
     <div class="imagetext">
-      <h1>Group 1 Apple Store 🌻</h1>
+      <h1 class="main-header">Group 1 Apple Store 🍎</h1>
       <p>Hungry? Find your favourite apple here</p>
     </div>
   </header>
 
   <main>
-    <p class="all-paragraphs">Order your favourite apples here!</p>
-    <form action="#" method="POST"></form>
-    <div class="form-area">
-
-      <!--text input for their name-->
-      <label for="full-name">Full name</label>
-      <input type="text" name="full-name" id="full-name" required placeholder="write your name here">
-
-      <!-- email field -->
-      <div class="form-area">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required placeholder="write your email here">
-        </label>
-
+    <div class="form-container-parent">
+      <form action="https://httpbin.org/post" method="post">
+        <!--text input for their name-->
+        <div class="form-area-left">
+          <p class="all-paragraphs">Order your favourite apples here!</p>
+          <label for="full-name">Full name</label>
+          <input type="text" name="full-name" id="full-name" required placeholder="write your name here">
+        </div>
+        <!-- email field -->
+        <div class="form-area-left">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required placeholder="write your email here">
+          </label>
+        </div>
         <!-- checkbox field -->
         <p class="all-paragraphs">Choose your apple:</p>
-        <div class="form-area">
+        <div class="form-area-left">
           <!--golden delicious-->
-          <label for="goldendelicious">Golden delicious</label>
-          <input type="checkbox" name="checkbox" id="goldendelicious">
-          Quantity:
-          <select name="quantity-apples">
-            <option value="">Please select</option>
-            <option value="1">1 kilogram</option>
-            <option value="2">2 kilogram</option>
-            <option value="surprise">Surprise</option>
-          </select>
+
+          <span>
+
+            <label for="goldendelicious">Golden delicious</label>
+            <input type="checkbox" name="checkbox" id="goldendelicious">
+            Quantity:
+
+
+
+
+            <select name="quantity-apples">
+              <option value="">Please select</option>
+              <option value="1">1 kilogram</option>
+              <option value="2">2 kilogram</option>
+              <option value="surprise">Surprise</option>
+            </select>
+
+          </span>
+
+
           <!--granny smith-->
-          <label for="grannysmith">Granny smith</label>
-          <input type="checkbox" name="checkbox" id="grannysmith">
-          Quantity:
-          <select name="quantity-apples">
-            <option value="">Please select</option>
-            <option value="1">1 kilogram</option>
-            <option value="2">2 kilgram</option>
-            <option value="surprise">Surprise</option>
-          </select>
+          <span>
+            <label for="grannysmith">Granny smith</label>
+            <input type="checkbox" name="checkbox" id="grannysmith">
+            Quantity:
+            <select name="quantity-apples">
+              <option value="">Please select</option>
+              <option value="1">1 kilogram</option>
+              <option value="2">2 kilgram</option>
+              <option value="surprise">Surprise</option>
+            </select>
+          </span>
           <!--red ball-->
-          <label for="redball">Red ball</label>
-          <input type="checkbox" name="checkbox" id="redball">
-          Quantity:
-          <select name="quantity-apples">
-            <option value="">Please select</option>
-            <option value="1">1 kilogram</option>
-            <option value="2">2 kilgram</option>
-            <option value="surprise">Surprise</option>
-          </select>
+          <span>
+            <label for="redball">Red ball</label>
+            <input type="checkbox" name="checkbox" id="redball">
+            Quantity:
+            <select name="quantity-apples">
+              <option value="">Please select</option>
+              <option value="1">1 kilogram</option>
+              <option value="2">2 kilgram</option>
+              <option value="surprise">Surprise</option>
+            </select>
+          </span>
           <!--submit button-->
-          <label for="button">Order here</label>
-          <input type="submit" name="submit" id="submit">
+          <input type="submit" name="submit-button" id="submit-button">
         </div>
 
+      </form>
+      <div class="form-area-right">
+        <img class="form-area-picture" src="pictures/singleapple2.jpg" alt="apple-basket" />
       </div>
-
-
-
+    </div>
   </main>
-
-  <div></div>
-  <!-- Signup form -->
-
+  <!-- footer -->
+  <footer>
+    <div class="footer">
+      <p>Group 1 Apple - Technigo Fall Class 2023 - Intro Days</p>
+  </footer>
 </body>
 
 </html>
