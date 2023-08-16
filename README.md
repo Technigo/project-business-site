@@ -9,4 +9,5 @@ We started out by using Figjam and Figma to sketch a design. VScode with "Live s
 If we've had more time we would work more on the design. We would also made the form require the check-in date to be before the check-out date.
 
 ## View it live
-!!Länk här!!
+
+https://the-hotel-project-business-site.netlify.app/
