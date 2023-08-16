@@ -3,7 +3,7 @@ body {
   background: #8D7B68;
   width: 100%;
   height: 100%;
-  font-family: Arial;
+  font-family: 'Raleway', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +26,7 @@ h2 {
   text-align: center;  
 }
 
+
 button {
   background-color: #4e604f; /* Green */
   border: none;
@@ -33,10 +34,16 @@ button {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+
   font-size: 16px;
   border-radius: 12px;
   cursor:pointer;
+}
+
+.button-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -50,6 +57,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0px; 
 }
 
 
@@ -78,12 +86,13 @@ button {
 label {
 	display: block;  
 	padding: 10px;
+  font-family: 'Raleway', sans-serif;
   color: grey;
 }
 
 .form-label {
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 5px;
   color: #333;
 }
@@ -94,15 +103,15 @@ input, select {
 
 .form-radio {
   font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 5px;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 2px;
   color: #333;
   display: flex;  
 }
 
 .form-time {
   font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 5px;
   color: #333;
   display: flex;  
@@ -120,6 +129,28 @@ input, select {
   box-shadow: 4px 4px 7px 0 rgba(0, 0, 0, 0.3);
 }
 
+.header-info {
+  width: 100%;
+  padding: 20px;
+  margin: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  border-radius: 20px;
+}
+
+.info {
+  width: 50%;
+  background-color: #F7E9D7;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 7px 0 rgba(0, 0, 0, 0.3); 
+}
+
+.button-box {
+  height: 7%; 
+}
 
 .footer{
   left: 0;
@@ -139,6 +170,7 @@ input, select {
   }
   
   .form {
+    width: 80%;
     background-color: #F7E9D7;
     padding: 10px;
     margin: 10px;
@@ -157,7 +189,14 @@ input, select {
     background: #8D7B68(148, 134, 134);
   }
 
+  .header-info {
+    /* insert header-info responsiveness */
+  }
+    
+  
+  
   .form {
+    width: 80%;
     background-color: #F7E9D7;
     padding: 10px;
     margin: 10px;
