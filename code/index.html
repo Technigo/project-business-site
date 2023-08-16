@@ -11,27 +11,28 @@
     <link rel="stylesheet" href="./style.css">
     <!-- dont forget to add a css file and link it here! -->
   </head>
+
   <body>
+    <!-- video or image as a header is cool :) -->
     <header>
       <section class="content-wrapper">
         <h1>Scandinavian Travel Companion</h1>
         <p>We are a Nordic Europe company specializing in personalized travel experiences. We have helped over +1000 travelers with personalised experiences.</p>
       </section>
     </header>
-    <!-- video or image as a header is cool :) -->
 
     <!-- Signup form -->
     <div class="form-wrapper">
       <form action="https://httpbin.org/anything" method="post">
-        <h3>Get our travel guide.<br> Fill in this form and we will provide you with customized travel guides!</h3>
-        <label for="name">Name:</labelgi>
-        <input type="text" name="name" id="name">
+        <h3>Get our travel guide<br> Fill in this form and we will provide you with customized travel guides!</h3>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email">
-        <label for="phone-number">Phone number</label>
-        <input type="tel" name="phone-number" id="phone-number" placeholder="###-###-####">
+        <input type="email" name="email" id="email" required>
+        <label for="phone-number">Phone number:</label>
+        <input type="tel" name="phone-number" id="phone-number" placeholder="###-###-####" required>
         <label for="country">Pick a country:</label>
-        <select name="country" id="country">
+        <select name="country" id="country" required>
           <option value="" disabled selected>Please pick a country</option>
           <option value="sweden">Sweden</option>
           <option value="norway">Norway</option>

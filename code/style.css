@@ -10,28 +10,34 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  font-family: 'Roboto', sans-serif;
   
 }
 
 header {
   background-image: url(../images/stockholm.png) ;
   background-position: center;
+  background-size: cover; 
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 30px 0;
-  height: auto;
+  height: 400px;
 }
 
+
 .content-wrapper {
-  background-color: white;
+  background-color: rgba(0,0,0,0.5);
   width: 90%;
   border-radius: 10px;
+  color: white;
 }
 
 header h1 {
-  padding: 25px 0;
+  padding: 15px 0;
+  color: white;
+  font-size: 28px;
 }
 
 header p {
@@ -42,33 +48,60 @@ header p {
   display: flex;
   justify-content: center;
   background-color: #ffe4e8;
-  padding: 50px 0;
+  padding: 50px 20px;
+}
+
+h3 {
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  
 }
 
 label {
   display: block;
-  padding: 10px;
+  padding-top: 12px;
+  padding-bottom: 8px; 
+  font-size: 18px;
+  font-weight: 700;
 }
 
 input[type="text"],input[type="email"], input[type="tel"], select {
-  
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 0px;
+  border: none; 
+  outline: none;
+  font-size: 16px; 
+
 }
 
 button {
-  margin: 20px 0;
-  padding: 5px;
   display: block;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  padding: 10px 25px;
+  margin: 40px auto;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: grey;
+  cursor: pointer;
 }
 
 footer {
   text-align: center;
-  margin-top: 40px;
+  background: black;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
-@media (min-width: 667px; and max-width: 1024px;) {
-
-}
-
-@media (min-width: 1025px;) {
-  
+footer h3 {
+  font-size: 16px;
+  font-weight: 400;
 }
