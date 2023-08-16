@@ -15,17 +15,23 @@ html {
 
 body {
   background: #b6d7a8;
-
+  color: #003300;
+  font-size: 20px;
 }
 
 
 img {
   max-width: 100%;
+
 }
 
 header {
   height: 500px;
+  background-image: url("./pictures/applepicture.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 
 .header-image {
   height: 100%;
@@ -36,7 +42,72 @@ header {
 
 
 .imagetext {
-  position: absolute;
-  top: 0;
-  left: 0;
+  text-align: center;
+  padding-top: 200px;
+  color: azure;
+}
+
+
+.main-header {
+  padding-bottom: 40px;
+  font-size: 75px;
+}
+
+.form-container-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 20px;
+}
+
+.form-area-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+span {
+  display: block;
+  margin-bottom: 30px;
+
+}
+
+.form-area-left {
+  margin-bottom: 30px;
+}
+
+.all-paragraphs {
+  margin-bottom: 30px;
+}
+
+.main-header {
+  font-size: 40px;
+}
+
+.footer {
+  background-color: #003300;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+#submit-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  background-color: #595959;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+/*PHONE SCREEN*/
+@media (max-width: 913px) {
+  .form-container-parent {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
 }
