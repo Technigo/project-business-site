@@ -4,6 +4,9 @@ body {
   width: 100%;
   height: 100%;
   font-family: Arial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -14,7 +17,7 @@ h1 {
   font-size: 40px;
 }
 
-button{
+button {
   background-color: #4e604f; /* Green */
   border: none;
   color: white;
@@ -26,11 +29,48 @@ button{
   border-radius: 12px;
 }
 
-/* Form */ 
+
+
+/* The hero image */
+.hero-header {
+  position: relative;
+  height: 100vh;
+  width: 100%; 
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero-video {
+  position: absolute;
+  width: 102%;
+  height: 70%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+}
+
 label {
 	display: block;
 	padding: 10px;
-  color: grey:
+  color: grey;
 }
 
 .form-label {
@@ -52,34 +92,25 @@ label {
   box-shadow: 4px 4px 7px 0 rgba(0, 0, 0, 0.3);
 }
 
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url ("https://www.pexels.com/sv-se/foto/svartvitt-arm-hander-kropp-1433271/");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
 
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Footer */
+.footer{
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #8D7B68(148, 134, 134);
   color: white;
-
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
-
-
 
 
 @media (min-width:667px) and (max-width:1024px) {
   /*This is the middle version*/
-  body, html {
+  body, html,h1 {
     background: #8D7B68(148, 134, 134);
   }
-
+  
   .form {
     background-color: #F7E9D7;
     padding: 10px;
@@ -90,10 +121,6 @@ label {
     border-radius: 20px;
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
   }
-
-.hero-image {
-  
-}
 
 }
 
@@ -120,15 +147,6 @@ label {
 
 }
 
-.footer{
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #8D7B68(148, 134, 134);
-  color: white;
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-}
+
 
 
