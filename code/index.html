@@ -28,7 +28,7 @@
     <div class="container">
       <form action="https://httpbin.org/post" method="post">
 
-
+<div class="main-box">
         <!-- Name -->
         <div class="text-area">
           <label for=" name"> Name</label>
@@ -52,13 +52,13 @@
           <label for="password"> Password</label>
           <input type="password" name="password" id="password" required placeholder="">
         </div>
-
+      </div>
 
         <!-- destination -->
-        <div class=destination>
+        <div class=boxes>
           <fieldset>
 
-            <legend>Destination:</legend>
+            <h2>Destination</h2>
             <div>
               <input type="radio" id="radio-button" name="radio-button-1" value="Bahamas">
               <label for="radio-button">Bahamas</label>
@@ -75,13 +75,17 @@
         </div>
         <!-- date -->
 
-        <label for="datemin">Enter a date after 2000-01-01:</label>
-        <input type="date" id="datemin" name="datemin" min="2000-01-02" />
+        <div class="boxes">
+          <fieldset>
+            <h2>Choose a date</h2>
+            <input type="date" id="datemin" name="datemin" min="2000-01-02" />
+          </fieldset>
+        </div>
 
         <!-- Room -->
-        <div class="room">
+        <div class="boxes">
           <fieldset>
-            <legend>Select a room:</legend>
+            <h2>Room</h2>
 
             <div>
               <input type="radio" id="Small room" name="drone" value="Small room" checked />
@@ -102,9 +106,9 @@
           </fieldset>
         </div>
         <!-- Add On -->
-        <div class="add-on">
+        <div class="boxes">
           <fieldset>
-            <legend>Add on</legend>
+            <h2>Add on</h2>
 
             <div>
               <input type="checkbox" id="Breakfast" name="Breakfast" value="Breakfast" checked />
@@ -124,12 +128,14 @@
             <div class="text-fields">
           </fieldset>
         </div>
-        
-        <!-- Text Fields -->
-        <label for="Additional information">Additional information</label>
-        <textarea name="Additional information" id="Additional information" cols="30" rows="10" required
-          placeholder="Any other information for example allergys"></textarea>
 
+        <!-- Text Fields -->
+        <div class="boxes">
+          <fieldset>
+            <textarea name="Additional information" id="Additional information" cols="50" rows="20" required
+              placeholder="Any other information for example allergys"></textarea>
+        </div>
+        </fieldset>
         <button type="submit"> Submit</button>
     </div>
 
