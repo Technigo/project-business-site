@@ -1,12 +1,12 @@
-# Business Site
+## Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+First team project in our Technigo web developer boot camp. The task was to create a business one-pager website containing a image header and a signup form with main focus to practice HTML forms. Mob-programming format was used.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started out by using Figjam and Figma to sketch a design. VScode with "Live share" was used to practice working as a team. We had a problem with the first push. This was solved by noticing that the terminal sent the information to the wrong repository. By adjusting the url this was solved.
+
+If we've had more time we would work more on the design. We would also made the form require the check-in date to be before the check-out date.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+!!Länk här!!
