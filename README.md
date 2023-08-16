@@ -1,10 +1,9 @@
 # Business Site
-
+The goal of this project was to produce a website with a hero header and a form.
 
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+It was a challenge to make it responsive, and we put a lot of time to make sure it looks good on all units. We solved the problems via Inspector and Google.
 
 ## View it live
 https://kiwibusiness.netlify.app/
