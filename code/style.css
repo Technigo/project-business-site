@@ -1,5 +1,65 @@
 /* After you've linked the CSS file in the HTML,
 this should turn the background blue ;) */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: beige;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.hero-image {
+  background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  width: 100%;
+  height: 460px;
+}
+
+.hero-text {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+  font-size: 80px;
+  text-shadow: 3px 5px 10px black;
+}
+
+.hero-text p {
+  font-size: 20px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+
+  margin: 10px 5px;
+  padding: 10px;
+}
+
+fieldset {
+  margin: 20px 0;
+  width: 500px;
+}
+
+.radio-button {
+  width: 400px;
 }

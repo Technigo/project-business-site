@@ -1,75 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Business Site</title>
-  <!-- dont forget to add a css file and link it here! -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header></header>
+  <!--Hero section-->
+  <header>
+    <div class="hero-wrapper">
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1>Epicurean Essence Delights</h1>
+          <article>
+            <p>Unleash your inner culinary artist with our Epicurean Essence Masterclass.</p>
+            <article>
+        </div>
+      </div>
+    </div>
+  </header>
+
   <main>
+    <!--Form section-->
     <form action="https://httpbin.org/post" method="post">
-      <div>
+      <!--first fieldset-->
+      <div class="form-area">
         <Fieldset>
-          <legend>email adress</legend>
-          <label for="emailadd"> Enter email adress
+          <legend>Log In (for members)</legend>
+          <div class="form-content">
+            <label for="emailadd"> Enter email adress</label>
             <input type="email" id="emailadd" name="emailadd" placeholder="abc@gmail.com">
-
-          </label>
-          <label for="password"> Enter your password
+          </div>
+          <div class="form-content">
+            <label for="password"> Enter your password</label>
             <input type="password" id="password" name="password">
-          </label>
-
+          </div>
         </Fieldset>
       </div>
 
-      <div>
+
+      <!--Second fieldset-->
+      <div class="form-area">
         <fieldset>
-          <legend> Sign up with your email address</legend>
-          <label for="emailadd"> Enter email address <input type="email" id="emailadd" name="emailadd"
-              placeholder="abc@gmail.com"> </label>
-
-
-          <label for="password"> Create your password
-            <input type="password" id="password" name="password">
-          </label>
-
-
-          <label for="username"> Create your username
-            <input type="text" id="username" name="username">
-          </label>
-
-
-          <label for=""> Upload a profile pictures
-            <input type="file">
-          </label>
-
-          <div>
-            <label for=""> Enter your date of birth
-
-              <label for="year">Year<input type="number" id="year" name="year" maxlength="4" placeholder="yyyy"></label>
-
-              <input type="text">
-              <input type="text">
-            </label>
+          <legend> Sign up to our culinary courses -Create new account</legend>
+          <div class="form-content">
+            <label for="emailadd"> Enter email</label>
+            <input type="email" id="emailadd" name="emailadd" placeholder="abc@gmail.com" required>
           </div>
-        </fieldset>
 
+          <div class="form-content">
+            <label for="password"> Create your password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+
+          <div class="form-content">
+            <label for="username"> Create your username</label>
+            <input type="text" id="username" name="username">
+
+          </div>
+
+          <div class="form-content">
+            <label for=""> Upload a profile picture</label>
+            <input type="file">
+          </div>
+
+          <div class="form-content">
+            <label for="date-of-birth">Enter your date of birth</label>
+            <input type="date" id="date-of-birth" name="date-of-birth">
+
+          </div>
+          <div class="form-content radio-button">
+            <label for="italian">Italian</label>
+            <input type="radio" id="italian" name="food" value="italian">
+
+            <label for="japanese">Japanese</label>
+            <input type="radio" id="japanese" name="food" value="japanese">
+
+            <label for="greek">Greek</label>
+            <input type="radio" id="greek" name="food" value="greek">
+
+            <label for="swedish">Swedish</label>
+            <input type="radio" id="swedish" name="food" value="swedish">
+
+          </div>
       </div>
-    </form>
+      </fieldset>
+      </div>
 
+      <!--Last section-->
+      <div class="form-content">
+        <label for="newsletter">Subscribe to our newsletter
+          <input type="checkbox" id="newsletter" name="newsletter" value="subscribe" checked>
+        </label>
+      </div>
+      <div class="form-content">
+        <label for="terms">I agree with the <a target="_blank" href="#termsandconditions"
+            rel="noopener noreferrer">Terms & conditions</a>
+          <input type="checkbox" id="terms" name="terms" value="subscribe" required>
+        </label>
+      </div>
+      <div class="form-content">
+        <button type="Submit">Sign Up</button>
+      </div>
+
+    </form>
   </main>
   <footer></footer>
-  <h1>Business name 🌻</h1>
-
-  <!-- video or image as a header is cool :) -->
-
-  <!-- Signup form -->
-
 </body>
 
 </html>
