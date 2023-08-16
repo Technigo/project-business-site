@@ -1,41 +1,48 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
-:root {
-  /* This custom CSS variable represents the primary color used in the design. */
-  --primary-color: #892e9b;
-  /* This variable represents the secondary color. */
-  --secondary-color: #ffffff;
-  /* This variable represents an accent color. */
-  --accent-color: #1c1c1c;
-  /* This variable represents the text color. */
-  --text-color: #2e2e2e;
-  /* This variable represents the default font size. */
-  --font-size: 16px;
+body {
+  padding: 1rem;
+  text-align: center;
 }
 
-/* * selector in CSS selects all elements on a webpage, applying styles to all elements. */
-* {
-  /* Ensure consistent sizing with border-box box-sizing. */
-  box-sizing: border-box;
-  /* Remove underlines from anchor links and inherit text color. */
-  text-decoration: none;
-  color: inherit;
-  /* Remove list styles (bullets/numbers) from list elements. */
-  /* list-style: none; */
-  /* Reset margins, paddings, and outlines for all elements. */
-  padding: 0;
-  margin: 0;
-  outline: none;
-  /* Set default font styles for text elements. */
-  font-family: Roboto, Arial, sans-serif;
-  font-size: var(--font-size);
-  color: var(--text-color);
-  line-height: 22px;
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)), url("image/boat.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: aqua;
+  text-align: center;
+  padding: 16.25rem 0;
 }
 
 form {
-  width: 100%;
+  width: auto;
   padding: 20px;
   border-radius: 6px;
   box-shadow: 0 0 10px 0;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  border: 5px solid red;
+  padding: 20px;
+}
+
+.text-area{
+  padding: 20px;
+
+}
+
+.destination{
+  border: 1px solid red;
+  padding: 20px;
+  margin: 20px;
+}
+
+
+/* tablet */
+@media (min-width: 667px) and (max-width: 1024px) {}
+
+/* desktop */
+@media (min-width: 1025px) {}
