@@ -11,3 +11,7 @@ If we've had more time we would work more on the design. We would also made the 
 ## View it live
 
 https://the-hotel-project-business-site.netlify.app/
+
+## We who worked on the project
+
+Anna Robertsson, Inna Kokic, Idah Collin, Jenny Larsen, Laura Lyckholm
