@@ -1,4 +1,4 @@
-# Flower Shop Website
+# Flower Shop Website by Apple-2 team
 
 This is a simple website template for a flower shop. The template includes a header, navigation bar, images, and a form for ordering flower bouquets.
 
@@ -11,6 +11,7 @@ This is a simple website template for a flower shop. The template includes a hea
 - [Installation](#installation)
 - [Contributing](#contributing)
 - [View It Live](#view-it-live)
+- [Team Members](#team-members)
 - [License](#license)
 
 ## Description
@@ -57,6 +58,16 @@ Contributions are welcome! If you have any suggestions, improvements, or bug fix
 ## View It Live
 
 The Flower Shop website is deployed and can be viewed live at [Flower Shop Website](https://stenlisuryadinata.github.io/project-business-site/project-business-site-master/code/index.html).
+
+## Team Members
+
+This project was brought to you by the **Apple-2** team:
+
+- [@Elin Olausson](https://github.com/Soygirt)
+- [@Sakura Tanaka](https://github.com/sansan-sakura)
+- [@Reginald](https://github.com/Reginald)
+- [@Olga Lepistö](https://github.com/olgalepisto)
+- [@Stenli Suryadinata](https://github.com/stenlisuryadinata)
 
 ## License
 
