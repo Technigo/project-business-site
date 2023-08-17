@@ -56,7 +56,7 @@ Contributions are welcome! If you have any suggestions, improvements, or bug fix
 
 ## View It Live
 
-The Flower Shop website is deployed and can be viewed live at [Flower Shop Website](https://your-deployed-url.com).
+The Flower Shop website is deployed and can be viewed live at [Flower Shop Website](https://stenlisuryadinata.github.io/project-business-site/project-business-site-master/code/index.html).
 
 ## License
 
