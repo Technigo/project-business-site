@@ -1,4 +1,6 @@
-## Business Site
+# Business Site
+
+## The Hotel Business Site
 
 First team project in our Technigo web developer boot camp. The task was to create a business one-pager website containing a image header and a signup form with main focus to practice HTML forms. Mob-programming format was used.
 
