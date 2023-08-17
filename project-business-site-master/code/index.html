@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flower Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <!-- dont forget to add a css file and link it here! -->
+</head>
+
+<body>
+  <!--header-->
+  <div class="container">
+    <header>
+      <h1>Flower Shop</h1>
+      <p>Your source for beautiful flower bouquets!</p>
+    </header>
+
+    <!--nav-->
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <!--images-->
+    <div class="flower-img-box">
+      <img src="./image/flower.jpg" class="flower-img">
+      <img src="./image/flower3.jpg" class="flower-img">
+    </div>
+
+    <!--form-->
+    <div class="content">
+      <div class="form-container">
+        <h2>Order Your Bouquet!</h2>
+
+        <!--name-->
+        <form action="http://httpbin.org/post" method="post">
+          <div class="input-container">
+            <label for="name">
+              Name :
+            </label>
+            <input type="text" name="name" class="input-field" required />
+          </div>
+
+          <!--email form-->
+          <div class="input-container">
+            <label for="email">
+              E-mail :
+            </label>
+            <input type="email" name="email" placeholder="youremail@email.com" class="input-field" required />
+          </div>
+
+          <!-- Select Input -->
+          <div class="input-container">
+            <label for="bouquet-size">Bouquet size :</label>
+            <select name="bouquet-size" id="bouquet-size" class="option-box" required>
+              <option disabled selected>Bouquet size</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+
+          <!-- delivery time-->
+          <div class="input-container">
+            <label for="time">
+              Delivery time :
+            </label>
+            <div class="radio-box">
+              <input type="radio" name="time" value="morning" required />Morning (9am to 11am)
+              <input type="radio" name="time" value="midday" />Midday (11am to 1pm)
+              <input type="radio" name="time" value="afternoon" />Afternoon (1pm to 4pm)
+            </div>
+          </div>
+
+          <!--message for friend-->
+          <div class="input-container">
+            <label for="message">Message :
+              <textarea id="message" name="message" rows="5" placeholder="Message for your friend."></textarea>
+            </label>
+          </div>
+
+          <!-- submit button-->
+          <div class="submit-button">
+            <button type="submit">Submit
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+    <div class="page-image">
+      <img src="./image/flower_5.jpg" class="flower-img">
+      <img src="./image/flower_4.jpg" class="flower-img">
+    </div>
+
+  </div>
+  <footer>
+    <p>&copy; 2023 Flower Shop. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
