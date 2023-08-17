@@ -1,129 +1,135 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Orange County</title>
-  </head>
-  <body>
-    <!-- Hero section starts here -->
-    <header class="hero-image">
-      <div class="hero-text">
-        <h1>Orange County</h1>
-        <h2>Where nature's goodness meets your cravings</h2>
-        <h2 class="italic">This is the site for you who want to order the best oranges in the country.</h2>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Orange County</title>
+</head>
+
+<body>
+  <!-- Hero section starts here -->
+  <header class="hero-image">
+    <div class="hero-text">
+      <h1>ORANGE COUNTY</h1>
+      <h2>WHERE NATURE'S GOODNESS MEETS YOUR CRAVINGS</h2>
+      <h2 class="italic">This is the site for you who want to order the best oranges in the country.</h2>
+    </div>
+  </header>
+  <!-- Hero section ends here -->
+  <main>
+    <fieldset>
+      <legend class="place-your-order">Place your order</legend>
+      <!-- Form starts here -->
+      <div class="container-box">
+        <form action="https://httpbin.org/anything" method="post">
+          <!-- What do you need CHECKBOX -->
+          <div class="form-area">
+            <label for="order">What do you need?</label>
+            <!-- Checkbox option -->
+            <div class="checkbox-options">
+              <input type="checkbox" name="order" id="box-of-oranges" value="box-of-oranges">
+              <label for="box-of-oranges">Box of oranges</label>
+            </div>
+            <!-- Checkbox option -->
+            <div class="checkbox-options">
+              <input type="checkbox" name="order" id="orange-juice" value="orange-juice">
+              <label for="orange-juice">Orange juice</label>
+            </div>
+            <!-- Checkbox option -->
+            <div class="checkbox-options">
+              <input type="checkbox" name="order" id="satsumas" value="satsumas">
+              <label for="satsumas">Satsumas</label>
+            </div>
+            <!-- Checkbox option -->
+            <div class="checkbox-options">
+              <input type="checkbox" name="order" id="orange-marmalade" value="orange-marmalade">
+              <label for="orange-marmelade">Orange marmalade</label>
+            </div>
+          </div>
+
+          <!-- Delivery DATE -->
+          <div class="form-area">
+            <label for="delivery">Delivery date</label>
+            <input type="date" name="delivery" id="delivery">
+          </div>
+
+          <!-- Name TEXT-->
+          <div class="form-area">
+            <label for="name">Full name</label>
+            <input type="text" name="name" id="name" placeholder="E.g John Johnson" required>
+          </div>
+
+          <!-- Email address TEXT -->
+          <div class="form-area">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="john.johnson@email.com" required>
+          </div>
+
+          <!-- Phone number TEL -->
+          <div class="form-area">
+            <label for="number">Phone number</label>
+            <input type="tel" name="number" id="number" placeholder="123 12 12 12" required>
+          </div>
+
+          <!-- Adress section -->
+          <div class="form-area">
+            <fieldset>
+              <legend>Address</legend>
+              <!-- Street name TEXT-->
+              <label for="street-name"></label>
+              <div class="address">
+                <input type="text" name="street-name" id="street-name" placeholder="Street Name nr123" required>
+              </div>
+              <!-- ZIP code NUMBER -->
+              <label for="zip"></label>
+              <div class="address">
+                <input type="number" name="zip" id="zip" placeholder="ZIP Code" required>
+                <!-- Add maxlength (maybe?) -->
+              </div>
+              <!-- City TEXT -->
+              <label for="city"></label>
+              <div class="address">
+                <input type="text" name="city" id="city" placeholder="City name" required>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- Text message -->
+          <div class="form-area">
+            <label for="message">Something we should know?</label>
+            <textarea name="message" id="message" rows="10" placeholder="Type here..."></textarea>
+          </div>
+
+          <!-- Radio buttons -->
+          <label>Would you like to subscribe to our juicy newsletter?</label>
+          <div class="radio-option">
+            <input type="radio" name="newsletter" id="newsletter-yes" value="yes">
+            <label for="newsletter-yes">Yes, please!</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" name="newsletter" id="newsletter-no" value="no">
+            <label for="newsletter-no">No, I don't like oranges 😢</label>
+          </div>
+
+          <!-- SUBMIT button-->
+          <button type="submit">Place Juicy Order</button>
+        </form>
       </div>
-    </header>
-    <!-- Hero section ends here -->
-    <main>
-      <fieldset >
-        <legend class="place-your-order">Place your order</legend>
-        <!-- Form starts here -->
-        <div class="container-box">
-          <form action="https://httpbin.org/anything" method="post">
-            <!-- What do you need CHECKBOX -->
-            <div class="form-area">
-              <label for="order">What do you need?</label>
-              <!-- Checkbox option -->
-              <div class="checkbox-options">
-                <input type="checkbox" name="order" id="box-of-oranges" value="box-of-oranges">
-                <label for="box-of-oranges">Box of oranges</label>
-              </div>
-              <!-- Checkbox option -->
-              <div class="checkbox-options">
-                <input type="checkbox" name="order" id="orange-juice" value="orange-juice">
-                <label for="orange-juice">Orange juice</label>
-              </div>
-              <!-- Checkbox option -->
-              <div class="checkbox-options">
-                <input type="checkbox" name="order" id="satsumas" value="satsumas">
-                <label for="satsumas">Satsumas</label>
-              </div>
-              <!-- Checkbox option -->
-              <div class="checkbox-options">
-                <input type="checkbox" name="order" id="orange-marmalade" value="orange-marmalade">
-                <label for="orange-marmelade">Orange marmalade</label>
-              </div>
-            </div>
+    </fieldset>
+  </main>
 
-            <!-- Delivery DATE -->
-            <div class="form-area">
-              <label for="delivery">Delivery date</label>
-              <input type="date" name="delivery" id="delivery">
-            </div>
+  <!-- Footer -->
+  <footer>
+    <p>Copyright Orange County 2023</p>
+    <p>Made by group Orange 1</p>
+  </footer>
+</body>
 
-            <!-- Name TEXT-->
-            <div class="form-area">
-              <label for="name">Full name</label>
-              <input type="text" name="name" id="name" placeholder="E.g John Johnson" required>
-            </div>
-
-            <!-- Email address TEXT -->
-            <div class="form-area">
-              <label for="email">Email</label>
-              <input type="text" name="email" id="email" placeholder="john.johnson@email.com" required>
-            </div>
-
-            <!-- Phone number TEL -->
-            <div class="form-area">
-              <label for="number">Phone number</label>
-              <input type="tel" name="number" id="number" placeholder="123 12 12 12" required>
-            </div>
-
-            <!-- Adress section -->
-            <div class="form-area">
-              <fieldset>
-                <legend>Address</legend>
-                <!-- Street name TEXT-->
-                <label for="street-name"></label>
-                <div class="address">
-                  <input type="text" name="street-name" id="street-name" placeholder="Street Name nr123" required>
-                </div>
-                <!-- ZIP code NUMBER -->
-                <label for="zip"></label>
-                <div class="address">
-                  <input type="number" name="zip" id="zip" placeholder="ZIP Code" required> <!-- Add maxlength (maybe?) -->
-                </div>
-                <!-- City TEXT -->
-                <label for="city"></label>
-                <div class="address">
-                  <input type="text" name="city" id="city" placeholder="City name" required>
-                </div>
-              </fieldset>
-            </div>
-
-            <!-- Text message -->
-            <div class="form-area">
-              <label for="message">Something we should know?</label>
-              <textarea name="message" id="message" rows="10" placeholder="Type here..."></textarea>
-            </div>
-
-            <!-- Radio buttons -->
-            <label>Would you like to subscribe to our juicy newsletter?</label>
-            <div class="radio-option">
-              <input type="radio" name="newsletter" id="newsletter-yes" value="yes">
-              <label for="newsletter-yes">Yes, please!</label>
-            </div>
-            <div class="radio-option">
-              <input type="radio" name="newsletter" id="newsletter-no" value="no">
-              <label for="newsletter-no">No, I don't like oranges 😢</label>
-            </div>
-
-            <!-- SUBMIT button-->
-            <button type="submit">Place Juicy Order</button>
-          </form>
-        </div>
-      </fieldset>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <p>Copyright Orange County 2023</p>
-      <p>Made by group Orange 1</p>
-    </footer>
-  </body>
 </html>
