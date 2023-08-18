@@ -20,18 +20,22 @@
       <h1>ORANGE COUNTY</h1>
       <h2>WHERE NATURE'S GOODNESS MEETS YOUR CRAVINGS</h2>
       <h2 class="italic">This is the site for you who want to order the best oranges in the country.</h2>
+      <button class="hero-button">ORDER HERE</button>
     </div>
+
   </header>
   <!-- Hero section ends here -->
   <main>
     <fieldset>
-      <legend class="place-your-order">Place your order</legend>
+      <legend class="place-your-order">PLACE YOUR ORDER</legend>
       <!-- Form starts here -->
       <div class="container-box">
         <form action="https://httpbin.org/anything" method="post">
           <!-- What do you need CHECKBOX -->
           <div class="form-area">
-            <label for="order">What do you need?</label>
+            <label for="order">
+              <h3>What do you need?</h3>
+            </label>
             <!-- Checkbox option -->
             <div class="checkbox-options">
               <input type="checkbox" name="order" id="box-of-oranges" value="box-of-oranges">
@@ -56,32 +60,42 @@
 
           <!-- Delivery DATE -->
           <div class="form-area">
-            <label for="delivery">Delivery date</label>
+            <label for="delivery">
+              <h3>Delivery date</h3>
+            </label>
             <input type="date" name="delivery" id="delivery">
           </div>
 
           <!-- Name TEXT-->
           <div class="form-area">
-            <label for="name">Full name</label>
+            <label for="name">
+              <h3>Full name</h3>
+            </label>
             <input type="text" name="name" id="name" placeholder="E.g John Johnson" required>
           </div>
 
           <!-- Email address TEXT -->
           <div class="form-area">
-            <label for="email">Email</label>
+            <label for="email">
+              <h3>Email</h3>
+            </label>
             <input type="text" name="email" id="email" placeholder="john.johnson@email.com" required>
           </div>
 
           <!-- Phone number TEL -->
           <div class="form-area">
-            <label for="number">Phone number</label>
+            <label for="number">
+              <h3>Phone number</h3>
+            </label>
             <input type="tel" name="number" id="number" placeholder="123 12 12 12" required>
           </div>
 
           <!-- Adress section -->
           <div class="form-area">
-            <fieldset>
-              <legend>Address</legend>
+            <fieldset class="address-area">
+              <legend>
+                <h3>Address</h3>
+              </legend>
               <!-- Street name TEXT-->
               <label for="street-name"></label>
               <div class="address">
@@ -103,23 +117,38 @@
 
           <!-- Text message -->
           <div class="form-area">
-            <label for="message">Something we should know?</label>
+            <label for="message">
+              <h3>Something we should know?</h3>
+            </label>
             <textarea name="message" id="message" rows="10" placeholder="Type here..."></textarea>
           </div>
 
           <!-- Radio buttons -->
-          <label>Would you like to subscribe to our juicy newsletter?</label>
-          <div class="radio-option">
-            <input type="radio" name="newsletter" id="newsletter-yes" value="yes">
-            <label for="newsletter-yes">Yes, please!</label>
+
+
+          <div class="radio-area">
+            <h3>Would you like to subscribe to our juicy newsletter?</h3>
+            <label class="radio-container"> <input type="radio" name="newsletter" id="newsletter-yes" value="yes"
+                checked>Yes,
+              please!
+              <span class="custom-radio">
+              </span>
+            </label>
+            <!-- <input type="radio" name="newsletter" id="newsletter-yes" value="yes">
+            <label for="newsletter-yes">Yes, please!</label> -->
           </div>
-          <div class="radio-option">
-            <input type="radio" name="newsletter" id="newsletter-no" value="no">
-            <label for="newsletter-no">No, I don't like oranges 😢</label>
+          <div class="radio-area">
+            <label class="radio-container">
+              <input type="radio" name="newsletter" id="newsletter-no" value="no">No, I
+              don't like <br> oranges 😢
+              <span class="custom-radio"></span>
+            </label>
+            <!-- <input type="radio" name="newsletter" id="newsletter-no" value="no">
+            <label for="newsletter-no">No, I don't like oranges 😢</label> -->
           </div>
 
           <!-- SUBMIT button-->
-          <button type="submit">Place Juicy Order</button>
+          <button class="submit-button" type="submit">Place juicy order 🍊</button>
         </form>
       </div>
     </fieldset>
