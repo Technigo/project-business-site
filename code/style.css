@@ -73,7 +73,9 @@ main {
     margin: 0 9rem 2rem;
     padding: 1rem;
     border-radius: 1rem;
-    color: white
+    color: white;
+    margin-left: 4rem;
+    margin-right: 4rem;
 }
 
 fieldset {
@@ -117,15 +119,64 @@ input::placeholder {
     margin-bottom: 5px;
 }
 
-.checkbox-options input {
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    font-size: 1.2rem;
+    user-select: none;
+}
+
+.checkbox-container input {
     display: inline;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.custom-checkbox {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    background-color: orange;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.custom-checkbox:after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    border: solid orange;
+    border-width: 0 4px 4px 0;
+    top: 2px;
+    left: 5px;
+    transform: rotate(45deg);
+    display: none;
+}
+
+.checkbox-container input:checked~.custom-checkbox:after {
+    display: block;
+}
+
+.checkbox-container:hover input~.custom-checkbox {
+    background-color: yellow;
+}
+
+.checkbox-container input:checked~.custom-checkbox {
+    background-color: yellow;
 }
 
 textarea::placeholder {
     font-size: 1.2rem;
     color: darkgrey;
 }
-
 
 .radio-area input {
     display: inline;
@@ -206,18 +257,48 @@ textarea {
     font-size: 1.1rem;
     border: none;
     font-weight: 700;
+    display: block;
+    margin: 0 auto;
 }
 
 footer {
-    background-color: #fa8128;
+    background-color: rgb(37, 166, 209);
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
+    color: white;
 }
 
 
-@media (max-width: 668px) {
+@media (min-width: 668px) {
     .container-box {
         margin-left: 4rem;
         margin-right: 4rem;
+    }
+
+    .hero-image {
+        height: 450px;
+    }
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 900;
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    .italic {
+        font-style: italic;
+        font-weight: lighter;
+        font-size: 1.3rem;
+        padding-top: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .place-your-order {
+        font-size: 2.5rem;
     }
 }
