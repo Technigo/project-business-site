@@ -1,12 +1,15 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Create a responsive site for a made up company with HTML & CSS and do it through mob-programming.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+One person created the project and shared it with everyone else through using VSCode and Live Share.
+We then approached the assignment as a team, discussing our different options and how to move forwards.
+There was some basic design discussion concerning fonts, colors and responsivity.
+The actual coding was done through mob-programming during which was new to all of us.
+Had we had more time we probably would've tried developing from a mobile first-standpoint.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://soft-mermaid-961851.netlify.app
