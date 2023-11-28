@@ -1,41 +1,116 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
-:root {
-  /* This custom CSS variable represents the primary color used in the design. */
-  --primary-color: #892e9b;
-  /* This variable represents the secondary color. */
-  --secondary-color: #ffffff;
-  /* This variable represents an accent color. */
-  --accent-color: #1c1c1c;
-  /* This variable represents the text color. */
-  --text-color: #2e2e2e;
-  /* This variable represents the default font size. */
-  --font-size: 16px;
-}
-
-/* * selector in CSS selects all elements on a webpage, applying styles to all elements. */
-* {
-  /* Ensure consistent sizing with border-box box-sizing. */
-  box-sizing: border-box;
-  /* Remove underlines from anchor links and inherit text color. */
-  text-decoration: none;
-  color: inherit;
-  /* Remove list styles (bullets/numbers) from list elements. */
-  /* list-style: none; */
-  /* Reset margins, paddings, and outlines for all elements. */
-  padding: 0;
+*,
+* ::after ::before {
   margin: 0;
-  outline: none;
-  /* Set default font styles for text elements. */
-  font-family: Roboto, Arial, sans-serif;
-  font-size: var(--font-size);
-  color: var(--text-color);
-  line-height: 22px;
+  box-sizing: border-box;
 }
 
+body {
+  background-color: #ebf7f5;
+}
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("image/boat.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 10rem 0;
+}
+
+h1 {
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with transparency */
+  display: inline-block; /* To make the background adjust to the text content */
+  padding: 1rem; /* Add some spacing around the text */
+  border-radius: 0.5rem;
+}
 form {
+  border-radius: 0.375rem;
+  box-shadow: 0 0 0.625rem 0;
+  background-color: white;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+textarea {
   width: 100%;
-  padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 0 10px 0;
+  padding: 0.5rem;
+  border: 0.063rem solid #ccc;
+  border-radius: 0.313rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  text-align: center;
+  padding: 0.5rem 2rem;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  display: block;
+  margin: auto;
+  background-color: rgb(209, 246, 246);
+  border: none;
+}
+
+footer {
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 1rem;
+}
+.main-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.text-area {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.choose-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  border: 0.063rem solid #ccc;
+  border-radius: 0.313rem;
+  margin-bottom: 1rem;
+}
+
+/* tablet */
+@media (min-width: 667px) and (max-width: 1024px) {
+  form {
+    padding: 2rem 2rem 2rem;
+  }
+}
+
+/* desktop */
+@media (min-width: 1025px) {
+  h1 {
+    padding: 2rem; /* Add some spacing around the text */
+  }
+  form {
+    padding: 2rem 2rem 2rem;
+  }
+  .container {
+    width: 60rem;
+  }
 }

@@ -1,135 +1,203 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>Business Site</title>
+    <!-- dont forget to add a css file and link it here! -->
+  </head>
+  <body>
+    <!-- video or image as a header is cool :) -->
+    <header>
+      <h1>Travelling with Lemon</h1>
+    </header>
+    <!-- Signup form -->
 
-<head>
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-  <title>Business Site</title>
-  <!-- dont forget to add a css file and link it here! -->
-</head>
-
-<body>
-
-
-  <!-- video or image as a header is cool :) -->
-  <header>
-    <img src="image/boat.jpg" alt="boat">
-    <h1>Business name 🌻</h1>
-  </header>
-  <!-- Signup form -->
-
-
-  <main>
     <div class="container">
       <form action="https://httpbin.org/post" method="post">
+        <div class="main-box">
+          <!-- Name -->
+          <div class="text-area">
+            <label for=" name"> Name:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              placeholder="Tom Thomason"
+            />
+          </div>
 
+          <!-- Email -->
+          <div class="text-area">
+            <label for="email"> Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="tom@thomason.com"
+            />
+          </div>
 
-        <!-- Name -->
-        <label for="name"> Name</label>
-        <input type="text" name="name" id="name" required placeholder="Tom Thomason">
-        <!-- Email -->
-        <label for="email"> Email</label>
-        <input type="email" name="email" id="email" required placeholder="tom@thomason.com">
-        <!-- Phone -->
-        <label for="phone"> Phone number</label>
-        <input type="tel" name="phone" id="phone" required placeholder="###-###-###">
-        <!-- Password -->
-        <label for="password"> Password</label>
-        <input type="password" name="password" id="password" required placeholder="">
+          <!-- Phone -->
+          <div class="text-area">
+            <label for="phone"> Phone number:</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              required
+              placeholder="###-###-###"
+            />
+          </div>
 
+          <!-- Password -->
+          <div class="text-area">
+            <label for="password"> Password:</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required
+              placeholder=""
+            />
+          </div>
+        </div>
 
         <!-- destination -->
-
-        <fieldset>
-          <legend>Destination:</legend>
-          <div>
-            <input type="radio" id="radio-button" name="radio-button-1" value="Bahamas">
-            <label for="radio-button">Bahamas</label>
-          </div>
-          <div>
-            <input type="radio" id="radio-button" name="radio-button-1" value="New Zealand">
-            <label for="radio-button">New Zealand</label>
-          </div>
-          <div>
-            <input type="radio" id="radio-button" name="radio-button-1" value="South Korea">
-            <label for="radio-button">South Korea</label>
-          </div>
-        </fieldset>
-
-        <!-- date -->
-
-        <label for="datemin">Enter a date after 2000-01-01:</label>
-        <input type="date" id="datemin" name="datemin" min="2000-01-02" />
-
-        <!-- Room -->
-        <fieldset>
-          <legend>Select a room:</legend>
-
-          <div>
-            <input type="radio" id="Small room" name="drone" value="Small room" checked />
-            <label for="Small room">Small room</label>
-          </div>
-
-          <div>
-            <input type="radio" id="Room with Window" name="drone" value="Room with Window" />
-            <label for="Room with Window">Room with Window</label>
+        <div class="choose-box">
+          <div class="boxes">
+            <div class="boxes-flex">
+              <h2>Destination</h2>
+              <div>
+                <input
+                  type="radio"
+                  id="radio-button"
+                  name="radio-button-1"
+                  value="Bahamas"
+                />
+                <label for="radio-button">Bahamas</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="radio-button"
+                  name="radio-button-1"
+                  value="New Zealand"
+                />
+                <label for="radio-button">New Zealand</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="radio-button"
+                  name="radio-button-1"
+                  value="South Korea"
+                />
+                <label for="radio-button">South Korea</label>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <input type="radio" id="Suite" name="drone" value="Suite" />
-            <label for="Suite">Suite</label>
+          <!-- date -->
+          <div class="boxes">
+            <div class="boxes-flex">
+              <h2>Choose a date</h2>
+              <input type="date" id="datemin" name="datemin" min="2000-01-02" />
+            </div>
           </div>
 
-
-        </fieldset>
-
-        <!-- Add On -->
-        <fieldset>
-          <legend>Add on</legend>
-
-          <div>
-            <input type="checkbox" id="Breakfast" name="Breakfast" value="Breakfast" checked />
-            <label for="Breakfast">Breakfast</label>
+          <!-- Room -->
+          <div class="boxes">
+            <div class="boxes-flex">
+              <h2>Room</h2>
+              <div>
+                <input
+                  type="radio"
+                  id="Small room"
+                  name="drone"
+                  value="Small room"
+                  checked
+                />
+                <label for="Small room">Small room</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="Room with Window"
+                  name="drone"
+                  value="Room with Window"
+                />
+                <label for="Room with Window">Room with Window</label>
+              </div>
+              <div>
+                <input type="radio" id="Suite" name="drone" value="Suite" />
+                <label for="Suite">Suite</label>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <input type="checkbox" id="all-inclusive" name="all-inclusive" value="All inclusive" />
-            <label for="all-inclusive">all-inclusive</label>
+          <!-- Add On -->
+          <div class="boxes">
+            <div class="boxes-flex">
+              <h2>Add on</h2>
+              <div>
+                <input
+                  type="checkbox"
+                  id="Breakfast"
+                  name="Breakfast"
+                  value="Breakfast"
+                  checked
+                />
+                <label for="Breakfast">Breakfast</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="all-inclusive"
+                  name="all-inclusive"
+                  value="All inclusive"
+                />
+                <label for="all-inclusive">all-inclusive</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="diving-tour"
+                  name="diving-tour"
+                  value="Diving tour"
+                />
+                <label for="diving-tour">diving-tour</label>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <input type="checkbox" id="diving-tour" name="diving-tour" value="Diving tour" />
-            <label for="diving-tour">diving-tour</label>
-          </div>
+          <!-- Textarea - comments -->
+          <label for="Additional information">
+            <h4>Any other information:</h4></label
+          >
+          <textarea
+            name="Additional information"
+            id="Additional information"
+            rows="5"
+          ></textarea>
 
-
-        </fieldset>
-
-        <!-- Text Fields -->
-        <label for="Additional information">Additional information</label>
-        <textarea name="Additional information" id="Additional information" cols="30" rows="10" required
-          placeholder="Any other information for example allergys"></textarea>
-
-        <button type="submit"> Submit</button>
-
-
-
+          <!-- Submit -->
+          <button type="submit">Submit</button>
+        </div>
       </form>
-
-
     </div>
 
-  </main>
-  <footer>
-    <p> 2023 Technigo - Lemon 1</p>
-  </footer>
-</body>
-
-</body>
-
+    <footer>
+      <p>2023 Technigo - Lemon 1 🍋</p>
+    </footer>
+  </body>
 </html>
