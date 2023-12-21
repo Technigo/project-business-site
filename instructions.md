@@ -29,7 +29,7 @@ Pick **one** group member who forks and clones the provided [**repository on Git
 
 **Not a designer?** We then heavily encourage you to find a signup form that you like and use that as inspiration to copy their styling. Why reinvent the wheel (you will also win time on this) when many great designers already have done the job for you? Here's some great resources👇
 
-- **[Confetti](https://confetti.events/sv/)** (hero video)
+- [Confetti](https://confetti.events/sv/)\*\* (hero video)
 - [Spotify signup form](https://www.spotify.com/se/signup) - Copy the link and open in incognito if you are already logged in 😉\*\*
 - [Dribble](https://dribbble.com/search/signup-form)\*\* (signup form examples)
 
