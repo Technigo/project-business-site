@@ -21,16 +21,16 @@ Make sure everyone in the team is aligned with the idea.
 
 ## How to get started
 
-Using a **[mob programming](https://www.notion.so/Mob-programming-306dcd9320704f14a2f0c15a06d45f3b?pvs=21)** approach**,** you will work in groups of four or five (you will get information about the groups during the intro days).
+Using a [mob programming](https://www.notion.so/Mob-programming-306dcd9320704f14a2f0c15a06d45f3b?pvs=21) approachs, you will work in groups of four or five (you will get information about the groups during the intro days).
 
-Pick **one** group member who forks and clones the provided [**repository on GitHub**](https://github.com/Technigo/project-business-site). \*\*\*\*That person then opens a Live share session in Visual Studio Code so that you can all take turns writing.
+Pick **one** group member who forks and clones the provided [**repository on GitHub**](https://github.com/Technigo/project-business-site). That person then opens a Live share session in Visual Studio Code so that you can all take turns writing.
 
 **Don't forget** to occasionally commit and push your code to GitHub to save your progress. When you're done for the day, ensure all code is pushed to GitHub.
 
 **Not a designer?** We then heavily encourage you to find a signup form that you like and use that as inspiration to copy their styling. Why reinvent the wheel (you will also win time on this) when many great designers already have done the job for you? Here's some great resources👇
 
 - [Confetti](https://confetti.events/sv/) (hero video)
-- [Spotify signup form](https://www.spotify.com/se/signup) - Copy the link and open in incognito if you are already logged in 😉\*\*
+- [Spotify signup form](https://www.spotify.com/se/signup) - Copy the link and open in incognito if you are already logged in 😉
 - [Dribble](https://dribbble.com/search/signup-form) (signup form examples)
 
 Follow our [guidelines on how to write good code](/59abdd4307a24f5ca7914d566326f4df?pvs=25)
