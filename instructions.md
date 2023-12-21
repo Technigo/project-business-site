@@ -49,9 +49,7 @@ You can for example find free videos to use on [Pexels](https://www.pexels.com/v
 
 #### A little help on the way
 
-##### Working with CSS images - With Diego
-
-[Check it out ](/56e01fe28e1f45b1bf417f3b04479518?pvs=25)(from toolbox)
+[Working with CSS images - With Diego](https://www.notion.so/CSS-Images-56e01fe28e1f45b1bf417f3b04479518)
 
 ### Build the Signup form
 
