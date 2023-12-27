@@ -17,7 +17,7 @@ Make sure everyone in the team is aligned with the idea.
   - Submit button
 - Style your page
 
-- The page should be fully responsive and work well on mobile as well as tablet and desktop
+- The page should be fully responsive and work well on mobile as well as tablet and desktop (it should look good on devices from 320px width up to 1600px).
 
 ## How to get started
 
