@@ -4,10 +4,81 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>Business name 🌻</h1>
+    <h1>Summer Jam 🌻</h1>
+    <form action="https://httpbin.org/anything" method="post" name="Signup form">
+      <div class="form-area">
+        <label>Ticket Dates</label>
+        
+        <div>
+          <label class="checkbox-option">
+            Friday 19th July
+            <input type="checkbox" name="date" value="friday">
+          </label>
+        </div>
+      
+        <div>
+          <label class="checkbox-option">
+            Saturday 20th July
+            <input type="checkbox" name="date" value="saturday">
+          </label>
+        </div>
+      
+        <div>
+          <label class="checkbox-option">
+            Sunday 21st July
+            <input type="checkbox" name="date" value="sunday">
+          </label>
+        </div>
+      </div>
+    <div>
+      <label for="ticket-type">Choose your ticket's type</label>
+      <select id="ticket-type" name="ticket">
+        <option value="">Select your ticket</option>
+        <option value="One day ticket">One day ticket</option>
+        <option value="Two days ticket">Two days ticket</option>
+        <option value="Three days ticket">Three days ticket</option>
+      </select>
+    </div>
+    <div>
+      <label for="ticket-amount">Choose the amount of tickets</label>
+      <input type="number" name="amount">
+    </div>
+
+    <div>
+      <label for="fullname">Full name</label>
+      <input type="text" id="fullname" placeholder="Type your full name" name="fullname">
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="name@gmail.com">
+    </div>
+
+    <div>
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" placeholder="### ### ### ###"name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+    </div>
+    
+    <div>
+      <label class="payment">Payment</label><br>
+      <input type="radio" id="visa" name="visa" value="visa">
+      <label for="visa">Visa</label>
+      <input type="radio" id="master" name="master" value="master">
+      <label for="master">Master</label>
+      <input type="radio" id="other" name="other" value="other">
+      <label for="other">Other</label>
+    </div>
+    <div>
+      <button class="submit" id="submit">submit</button>
+    </div>
+    
+
+    </form>
+
+    
 
     <!-- video or image as a header is cool :) -->
 
