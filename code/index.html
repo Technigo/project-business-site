@@ -7,11 +7,95 @@
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <h1>Business name 🌻</h1>
+    <!-- Text over hero image-->
+    <div class="banner">
+      <h1>Massage Parlor 🌻</h1>
+      <!--Background in CSS-->
+    </div>
+
+    <div class="description">
+      <p>Welcome message, types of massage descriptions.</p>
+    </div>
+
+    <div class="form">
+      <form action="https://httpbin.org/post" method="post">
+        <label>
+          Date:
+          <input type="date" name="date" required />
+        </label>
+        <label>
+          <select name="massage-type" required>
+            <option value="" disabled="disable" selected>Choose Massage</option>
+            <option value="oil-massage">Oil Massage</option>
+            <option value="shiatsu">Shiatsu</option>
+            <option value="hot-stone">Hot Stone Massage</option>
+          </select>
+        </label>
+
+        <div class="radio-buttons">
+          <p>Choose duration:</p>
+          <label>
+            <input type="radio" name="duaration" value="20min" selected />
+            20 min
+          </label>
+          <label>
+            <input type="radio" name="duaration" value="40min" />
+            40 min
+          </label>
+          <label>
+            <input type="radio" name="duaration" value="60min" />
+            60 min
+          </label>
+        </div>
+
+        <label>
+          Name:
+
+          <input
+            type="text"
+            placeholder="Enter your name"
+            name="full-name"
+            required
+          />
+        </label>
+
+        <label>
+          Email:
+
+          <input
+            type="email"
+            placeholder="Enter your email"
+            name="email"
+            required
+          />
+        </label>
+        <label>
+          Name:
+
+          <input
+            type="tel"
+            placeholder="070 - XX XXX XX"
+            name="phonenumber"
+            required
+          />
+        </label>
+        <div class="checkboxes">
+          <p>Does this apply to you?</p>
+          <label>
+            <input type="checkbox" value="ticklish" name="ticklish" />Ticklish?
+          </label>
+          <label>
+            <input type="checkbox" value="pain" name="pain" />Sensitive to Pain?
+          </label>
+        </div>
+        <div>
+          <button type="submit">Book</button>
+        </div>
+      </form>
+    </div>
 
     <!-- video or image as a header is cool :) -->
 
     <!-- Signup form -->
-
   </body>
 </html>
