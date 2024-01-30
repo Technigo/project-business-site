@@ -1,17 +1,95 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Site</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- dont forget to add a css file and link it here! -->
+</head>
+
+<body>
+  <header>
     <h1>Business name 🌻</h1>
+    <img src="./assets/pexels-helena-lopes-696218.jpg" alt="">
+  </header>
+  <form action="https://httpbin.org/post" method="post">
+    <div class="form-section">
+      <form>
+        <div class="inputfield">
+          <label>Date
+            <input type="date" name="date">
+          </label>
+        </div>
+        <div class="inputfield"><label>Time</label></div>
+        <label class="radio-option">
+          18.00
+          <input type="radio" name="time" value="18">
+          <label class="radio-option">
+            19.00
+            <input type="radio" name="time" value="19">
+            <label class="radio-option">
+              20.00
+              <input type="radio" name="time" value="20">
+            </label>
+            <div class="inputfield">
+              <label>
+                Name
+                <input type="text" name="name">
+              </label>
+            </div>
+            <div class="inputfield">
+              <label>
+                Phone number
+                <input type="tel" name="tel-number">
+              </label>
+            </div>
+            <div class="inputfield">
+              <label>
+                E-mail
+                <input type="email" name="email">
+              </label>
+            </div>
+            <div class="inputfield">
+              <label>
+                Number of guests
+                <input type="number" name="guests">
+              </label>
+            </div>
+            <div class="inputfield">
+              <label>
+                Food preference
+                <select>
+                  <option value="vegan">Vegan</option>
+                  <option value="vegan">Vegetarian</option>
+                  <option value="vegan">Fish</option>
+                  <option value="vegan">Chicken</option>
+                  <option value="vegan">Beef</option>
+                </select>
+              </label>
+            </div>
+            <div>
+              <label for="requests">
+                Special requests and food allergies?
+              </label>
+              <br>
+              <textarea name="requests" cols="20" rows="5" placeholder="Type here">
+
+              </textarea>
+            </div>
+            <div class="inputfield">
+              <button type="submit">
+                Book
+              </button>
+            </div>
+      </form>
+    </div>
 
     <!-- video or image as a header is cool :) -->
 
     <!-- Signup form -->
 
-  </body>
+</body>
+
 </html>
