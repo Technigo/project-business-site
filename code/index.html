@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Business Site</title>
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
     <!-- Text over hero image-->
     <div class="banner">
-      <h1>Massage Parlor 🌻</h1>
+      <h1>Super Massage</h1>
       <!--Background in CSS-->
     </div>
 
@@ -19,83 +20,103 @@
 
     <div class="form">
       <form action="https://httpbin.org/post" method="post">
-        <label>
-          Date:
-          <input type="date" name="date" required />
-        </label>
-        <label>
-          <select name="massage-type" required>
-            <option value="" disabled="disable" selected>Choose Massage</option>
-            <option value="oil-massage">Oil Massage</option>
-            <option value="shiatsu">Shiatsu</option>
-            <option value="hot-stone">Hot Stone Massage</option>
-          </select>
-        </label>
+        <h2>Book your appointment</h2>
+        <div class="date">
+          <label>
+            <p>Date:</p>
+            <input type="date" name="date" required />
+          </label>
+        </div>
 
-        <div class="radio-buttons">
+        <div class="massage-type">
+          <label>
+            <p>Massage type:</p>
+            <select name="massage-type" required>
+              <option value="" disabled="disable" selected>
+                Choose Massage
+              </option>
+              <option value="oil-massage">Oil Massage</option>
+              <option value="shiatsu">Shiatsu</option>
+              <option value="hot-stone">Hot Stone Massage</option>
+            </select>
+          </label>
+        </div>
+        <div class="duration">
           <p>Choose duration:</p>
-          <label>
-            <input type="radio" name="duaration" value="20min" selected />
-            20 min
-          </label>
-          <label>
-            <input type="radio" name="duaration" value="40min" />
-            40 min
-          </label>
-          <label>
-            <input type="radio" name="duaration" value="60min" />
-            60 min
-          </label>
+          <div class="radio-buttons">
+            <label>
+              <input type="radio" name="duration" value="20min" selected />
+              20 min
+            </label>
+            <label>
+              <input type="radio" name="duration" value="40min" />
+              40 min
+            </label>
+            <label>
+              <input type="radio" name="duration" value="60min" />
+              60 min
+            </label>
+          </div>
         </div>
 
-        <label>
-          Name:
+        <div class="personal-information">
+          <h3>Personal Information</h3>
+          <label>
+            <p>Name:</p>
 
-          <input
-            type="text"
-            placeholder="Enter your name"
-            name="full-name"
-            required
-          />
-        </label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              name="full-name"
+              required
+            />
+          </label>
 
-        <label>
-          Email:
+          <label>
+            <p>Email:</p>
 
-          <input
-            type="email"
-            placeholder="Enter your email"
-            name="email"
-            required
-          />
-        </label>
-        <label>
-          Name:
+            <input
+              type="email"
+              placeholder="Enter your email"
+              name="email"
+              required
+            />
+          </label>
 
-          <input
-            type="tel"
-            placeholder="070 - XX XXX XX"
-            name="phonenumber"
-            required
-          />
-        </label>
-        <div class="checkboxes">
+          <label>
+            <p>Phonenumber:</p>
+
+            <input
+              type="tel"
+              placeholder="070 - XX XXX XX"
+              name="phonenumber"
+              required
+            />
+          </label>
+        </div>
+        <div class="preference">
           <p>Does this apply to you?</p>
-          <label>
-            <input type="checkbox" value="ticklish" name="ticklish" />Ticklish?
-          </label>
-          <label>
-            <input type="checkbox" value="pain" name="pain" />Sensitive to Pain?
-          </label>
-        </div>
-        <div>
-          <button type="submit">Book</button>
+          <div class="checkboxes">
+            <label>
+              <input
+                type="checkbox"
+                value="ticklish"
+                name="ticklish"
+              />Ticklish?
+            </label>
+            <label>
+              <input type="checkbox" value="pain" name="pain" />Sensitive to
+              Pain?
+            </label>
+          </div>
+          <div class="button">
+            <button type="submit">Book</button>
+          </div>
         </div>
       </form>
     </div>
-
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
+    <footer>
+      <p>Footer</p>
+    </footer>
   </body>
 </html>
