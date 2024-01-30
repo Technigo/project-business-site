@@ -1,5 +1,72 @@
 /* After you've linked the CSS file in the HTML,
 this should turn the background blue ;) */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+
 body {
   background: blue;
+}
+
+* {
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.5em;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-weight: 900;
+  color: white;
+}
+
+p {
+  font-size: 1em;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    ". form form ."
+    "footer footer footer footer";
+}
+
+.header {
+  /* flex-direction: column; */
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.form {
+  grid-area: form;
+  background: green;
+}
+
+.footer {
+  grid-area: footer;
+  background: orange;
+}
+
+img {
+  width: 100%;
+}
+
+.header-text {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
