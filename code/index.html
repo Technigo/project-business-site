@@ -3,14 +3,123 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Paw Pals</title>
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <h1>Business name 🌻</h1>
+    <header class="header-photo">
+      <h1>Paw Pals</h1>
+      
+    </header>
+
+    <main>
+      <form action="https://httpbin.org/anything" method="post">
+      
+        <!-- Your name -->
+        <div class="form-area">
+          <label>Your Name
+    
+            <input type="text" name="full-name" placeholder="Type your name" required>
+          </label>
+        </div>
+
+        <!-- Email -->
+        <div class="form-area">
+          <label>Email
+            <input type="email" name="email" placeholder="YourEmail@email.com" required>
+          </label>
+        </div>
+
+        <!-- Phone number -->
+        <div class="form-area">
+          <label>Phone Number
+            <input type="tel" name="tel" placeholder="#### #### ####" required>
+          </label>
+        </div>
+        
+        <!--Radio Input-->
+        <div class="form-area">
+          <label>Dog Size:
+          <div>
+            <label class="radio-option">
+              Small
+              <input type="radio" name="dog-size" value="small" required>
+            </label>
+          </div>
+
+          <div>
+            <label class="radio-option">
+              Medium
+              <input type="radio" name="dog-size" value="Medium" required>
+            </label>
+          </div>
+
+          <div>
+            <label class="radio-option">
+              Large
+              <input type="radio" name="dog-size" value="large" required>
+            </label>
+          </div>
+        </div>
+
+        <!--Checklist Days-->
+        <div class="form-area">
+          <p>Select days needed</p> 
+          <div class="checkbox-option">
+            <label> 
+              Monday 
+              <input type="checkbox" name="days" value="monday" >
+            </label>
+          </div>
+          <div class="checkbox-option">
+            <label> 
+              Tuesday
+              <input type="checkbox" name="days" value="tuesday" >
+            </label>
+          </div>
+
+          <div class="checkbox-option">
+            <label> 
+              Wednesday
+              <input type="checkbox" name="days" value="wednesday" >
+            </label>
+          </div>
+          
+          <div class="checkbox-option">
+            <label> 
+              Thursday
+              <input type="checkbox" name="days" value="thursday" >
+            </label>
+          </div>
+         
+          <div class="checkbox-option">
+            <label> 
+              Friday
+              <input type="checkbox" name="days" value="friday" >
+            </label>
+          </div>
+        </div>
+
+        <!--Other Info-->
+        <div>
+          <p>Other info:</p>
+          <label>
+            <textarea name="other-info" id="reason" cols="30" rows="10"></textarea>
+          </label>        
+        </div>
+
+        <button type="submit">Submit</button>
+
+
+
+        
+      </form>
+    </main>
+      
 
     <!-- video or image as a header is cool :) -->
-
+   
     <!-- Signup form -->
 
   </body>
