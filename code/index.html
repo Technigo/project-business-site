@@ -3,15 +3,71 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
+    <title>Fly me to the moon</title>
+    <link rel="stylesheet" href="./style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Sixtyfour&display=swap" rel="stylesheet">
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <h1>Business name 🌻</h1>
-
     <!-- video or image as a header is cool :) -->
-
+    <header class="header">
+      <h1>Fly me to the moon</h1>
+      <h3>Making the moon accessible for everyone since 2024. </h3>
+    </header>
+    
     <!-- Signup form -->
+  <div class="form-container">
+    <form action="https://httpbin.org/POST" method="post">
+    <div class="form-area">
+      <h2>Sign up here!</h2>
+    </div>  
+    <!--Text Input-->
+      <div class="form-area">
+        <label>Full name:
+          <input type="text" name="full-name" placeholder="Elton John" required>
+        </label>
+      </div>
+    <!--Phone Input-->
+      <div class="form-area">
+        <label>Phone number:
+          <input type="tel" name="tel" placeholder="### ### ###" required>
+        </label>
+      </div>
+    <!--Email Input-->
+      <div class="form-area">
+        <label>E-Mail:
+          <input type="email" name="email" placeholder="elton.john@rocketman.com" required>
+        </label>
+      </div>
+    <!-- Date Input -->
+      <div class="form-area">
+        <label>Date:
+          <input type="date" name="date">
+        </label>
+      </div>
+
+    <!-- Size input -->
+      <div class="form-area">
+        <label>Size for the spacesuit:
+          <select name="size">
+            <option disabled selected>Choose a size</option>
+            <option value="s">Small</option>
+            <option value="m">Medium</option>
+            <option value="l">Large</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-area">
+      <button class="button" type="submit" role="button"><span class="text">Submit</span></button>
+      </div>
+    </form>
+  
+  </div> 
 
   </body>
 </html>
