@@ -3,11 +3,89 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>SATS</title>
+    <link rel="stylesheet" href="style.css">    <!-- dont forget to add a css file and link it here! -->
   </head>
+  
   <body>
-    <h1>Business name 🌻</h1>
+    <form action="https://httpbin.org/post" method="POST">
+
+    <header>
+      <h1>SATS membership</h1>
+    </header>
+
+    <h2>apply for membership here<h2>
+
+    <div class="form-area">
+      <label>full name
+        <input type="text"
+        name="full-name" required placeholder="your name">
+      </label>
+    </div>
+
+    <div class="form-area">
+      <label>Phone number
+        <input type="tel" required placeholder="Your phone number" name="phone-number">
+      </label>
+    </div>
+
+    <div class="form-area">
+      <label> E-mail
+        <input type="email" required placeholder="Your email" name="email">
+      </label>
+    </div>
+
+    <div class="form-area">
+      <label> Birth date
+        <input type="date" required name="date">
+      </label>
+    </div>
+
+
+    <div>
+      <h3>membership type</h3>
+      <label class="radio-option">
+        platinum
+        <input type="radio" name="membership" value="platinum" required>
+
+      </label>
+    </div>
+
+    <div>
+      <label class="radio-option">
+        gold
+        <input type="radio" name="membership" value="gold">
+
+      </label>
+    </div>
+
+    <div>
+      <label class="radio-option">
+        silver
+        <input type="radio" name="membership" value="silver">
+
+      </label>
+    </div>
+
+    <div>
+      <label class="drop-down-list">
+        Choose your city
+        <select name="city">
+          <option value="stockholm">Stockholm</option>
+          <option value="göteborg">Göteborg</option>
+          <option value="malmö">Malmö</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="submit-form">
+      <input type="submit" value="Join us now">
+    </div>
+
+    </form>
+   
+
+
 
     <!-- video or image as a header is cool :) -->
 
