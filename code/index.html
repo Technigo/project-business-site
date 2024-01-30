@@ -1,17 +1,104 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <h1>Business name 🌻</h1>
 
-    <!-- video or image as a header is cool :) -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Wacky Wiggle Dance Academy</title>
+  <script src="https://kit.fontawesome.com/de4c4c2e83.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@800&family=Open+Sans:wght@300;400;600;800&display=swap"
+    rel="stylesheet">
+</head>
 
-    <!-- Signup form -->
+<body>
+  <!-- video or image as a header is cool :) -->
+  <header>
+    <div class="hero-container">
+      <h1 class="hero-title">Wacky Wiggle Dance Academy</h1>
+      <video width="100%" muted loop autoplay>
+        <source src="./assets/pexels_videos_2795750 (2160p).mp4" muted loop autoplay>
+      </video>
+    </div>
+  </header>
 
-  </body>
+
+  <!-- Signup form -->
+  <main>
+    <form action="https://httpbin.org/post" method="post">
+
+      <fieldset class="personal-detail">
+        <legend>
+          <h2>Personal details</h2>
+        </legend>
+
+        <label class="label first-name">First Name
+          <input type="text" name="first-name" placeholder="First name" required>
+        </label>
+
+        <label class="label last-name">Last name
+          <input type="text" name="last-name" placeholder="Last name" required>
+        </label>
+
+        <label class="label email">E-mail
+          <input type="email" name="email" placeholder="E-mail" required>
+        </label>
+
+        <label class="label phone">Phone
+          <input type="tel" name="number" min="10" placeholder="Phone">
+        </label>
+
+        <label class="label age">Age
+          <input type="Age" name="age" placeholder="Age">
+        </label>
+      </fieldset>
+
+      <fieldset class="dance">
+        <legend>
+          <h2>Dance details</h2>
+        </legend>
+
+        <label class="label classes">Class
+          <select name="classes">
+            <option value="default" selected disabled>Select your class
+            </option>
+            <option value="Silly Shuffle">Silly Shuffle</option>
+            <option value="Goofy Groov">Goofy Groove</option>
+          </select>
+        </label>
+
+        <div class="level">
+          <label class="label">
+            <input type="radio" name="level-selection" value="Beginner">
+            Beginner
+          </label>
+          <label class="label">
+            <input type="radio" name="level-selection" value="Intermediate">
+            Intermediate
+          </label>
+          <label class="label">
+            <input type="radio" name="level-selection" value="Advanced">
+            Advanced
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="terms">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label class="label" for="terms">I agree with these agreement terms
+      </div>
+
+      <button type="submit">Sign up!</button>
+
+    </form>
+  </main>
+
+
+
+
+</body>
+
 </html>

@@ -1,5 +1,118 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+:root {
+  --primary-color: #401f3e;
+  --placeholder-color: #a0549ba0;
+  --light-color: #f2d5f8;
+  --font: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  width: 100vw;
+  background: radial-gradient(circle, black, var(--primary-color));
+  color: var(--light-color);
+  font-family: var(--font);
+  overflow-x: clip;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-title {
+  position: absolute;
+  top: 20%;
+  z-index: 10;
+  font-size: 2.5rem;
+  color: var(--light-color);
+  font-family: "Dancing Script", cursive;
+  width: 80%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.086);
+  border-radius: 15px;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.personal-detail {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "fn fn ln ln"
+    "em em em em"
+    "pn pn ag ag";
+  width: 80%;
+}
+
+.dance {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+}
+
+.first-name {
+  grid-area: fn;
+}
+
+.last-name {
+  grid-area: ln;
+}
+
+.email {
+  grid-area: em;
+}
+
+.phone {
+  grid-area: pn;
+}
+
+.age {
+  grid-area: ag;
+}
+
+fieldset {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+}
+
+.label {
+  margin: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="age"] {
+  width: 100%;
+  min-height: 1.8rem;
+  margin-top: 5px;
+  padding: 0.5rem;
+  border: var(--placeholder-color) solid 1.5px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+}
+
+input::placeholder {
+  color: var(--placeholder-color);
 }
