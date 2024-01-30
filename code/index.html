@@ -1,17 +1,111 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <h1>Business name 🌻</h1>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Site</title>
+  <!-- dont forget to add a css file and link it here! -->
+</head>
+
+<body>
+  <div class="container">
+    <h1>Book a vet</h1>
 
     <!-- video or image as a header is cool :) -->
 
     <!-- Signup form -->
+    <form action="https://httpbin.org/post" method="post">
 
-  </body>
+      <!-- Pick date -->
+      <div class="form-area">
+        <label>Choose a date
+          <input type="date" name="date">
+        </label>
+      </div>
+
+      <!-- Owner -->
+      <div class="form-area">
+        <label>Owner
+          <input type="text" name="owner" placeholder="Fill in your name" required>
+        </label>
+      </div>
+
+      <!-- Email input -->
+      <div class="form-area">
+        <label>Email address
+          <input type="email" name="email" placeholder="Fill in your email" required>
+        </label>
+      </div>
+
+      <!-- Phone input -->
+      <div class="form-area">
+        <label>Phone number
+          <input type="phone" name="phone" placeholder="Fill in your phone number">
+        </label>
+      </div>
+
+      <!-- Type of animal -->
+      <div class="form-area">
+        <label>Type of animal
+          <select name="animals">
+            <option disable selected>Choose type</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- Gender -->
+      <div class="form-area">
+        <label>Gender</label>
+        <div>
+          <label class="gender-option">
+            Female
+            <input type="radio" name="gender" value="female">
+          </label>
+
+        </div>
+
+        <div>
+          <label class="gender-option">
+            Male
+            <input type="radio" name="gender" value="male">
+          </label>
+        </div>
+      </div>
+
+
+      <!-- Weight -->
+      <div class="form-area">
+        <p class="weight">Weight</p>
+
+        <div class="check-box">
+          <label>1,4-14</label>
+
+        </div>
+      </div>
+
+
+      <!-- Submit button -->
+      <button type="submit">Submit</button>
+    </form>
+
+  </div>
+</body>
+
 </html>
+
+<!-- 
+  Ordlista:
+  sluttagg
+  starttagg
+  driver  
+  navigators
+
+  .form-area
+
+  Hur mycket väger en hund?
+  1,4 – 110 kg
+ -->
