@@ -7,20 +7,23 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+
+    <!-- Header with video with text -->
+
     <header>
       <h1>Birthday Bash</h1>
       <p>Text text text</p>
       <div id="headerContent">
         <p> Hello </p>
-        <!-- <video poster="#" autoplay="true" loop>
-            <video src="./assets/disco_ball_shining.mp4" type="video/mp4">
-        </video> -->
+      
         <video autoplay="true" loop>
           <source src="./assets/disco_ball_shining.mp4"
            type="video/mp4"/>
         </video>
         </div>
     </header>
+
+    <!-- Section with images and information -->
 
     <section class="info">
       <div>
@@ -49,26 +52,34 @@
       
     </section>
 
+    <!-- Section with form -->
+
     <section class="form">
-      <form action="">
+      <form action="http:/httpbin.org/" method="POST">
         <div class="name">
           <label>Name 
-            <input type="text" 
-            placeholder="Write your name">
+            <input type="text"
+            name="name"
+            placeholder="Write your name"
+            required>
           </label>
         </div>
         
         <div class="phonenumber">
           <label>Phonenumber 
-            <input type="text"
-            placeholder="Write your phone number">
+            <input type="text" 
+            name="phonenumber"
+            placeholder="Write your phone number"
+            required>
           </label>
         </div>
 
         <div class="name">
           <label>Email address
-            <input type="email" name="email"
-            placeholder="Write your email adress">
+            <input type="email" 
+            name="email"
+            placeholder="Write your email adress"
+            required>
           </label>
         </div>
 
@@ -86,15 +97,19 @@
           <label>Vegetarian
             <input type="radio" name="food" value="vegetarian">
          
-
         </div>
+
+
+        <div class="allergies">
+          <p>If you have any allergies or other food preferences you can write it here</p>
+          <label> 
+            <input type="text" name="allergies">
+        </div>
+
+        <input type="submit" value="Submit">
+        
       </form>
     </section>
-    
-
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
 
   </body>
 </html>
