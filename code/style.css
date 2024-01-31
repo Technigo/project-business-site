@@ -24,6 +24,11 @@ body {
   overflow-x: clip;
 }
 
+main {
+  max-width: 1400px;
+  min-width: 600px;
+}
+
 .hero-container {
   display: flex;
   flex-direction: column;
@@ -35,12 +40,16 @@ body {
 
 .hero-title {
   position: absolute;
-  top: 20%;
+  margin: 0 auto;
   z-index: 10;
-  font-size: 2.5rem;
+  font-size: 8vw;
   color: var(--light-color);
   font-family: "Dancing Script", cursive;
   width: 80%;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 form {
@@ -58,15 +67,11 @@ form {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
-    "fn fn ln ln"
+    "fn fn fn fn"
+    "ln ln ln ln"
     "em em em em"
-    "pn pn ag ag";
-  width: 80%;
-}
-
-.dance {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+    "pn pn pn pn"
+    "ag ag ag ag";
   width: 80%;
 }
 
@@ -111,8 +116,115 @@ input[type="age"] {
   border: var(--placeholder-color) solid 1.5px;
   border-radius: 5px;
   background-color: var(--primary-color);
+  color: var(--light-color);
 }
 
 input::placeholder {
   color: var(--placeholder-color);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  background-color: var(--placeholder-color);
+}
+
+.dance {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+}
+.dance * {
+  grid-column: span 4;
+}
+
+select {
+  cursor: pointer;
+  min-height: 1.8rem;
+  margin-top: 5px;
+  padding: 0.5rem;
+  border: var(--placeholder-color) solid 1.5px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  width: 100%;
+  appearance: none;
+}
+
+option {
+  cursor: pointer;
+}
+
+option:disabled {
+  color: var(--placeholder-color);
+}
+
+option:hover {
+  background-color: var(--light-color);
+}
+
+.level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+.level:first-child {
+  margin-bottom: 0.875rem;
+}
+
+.btn {
+  cursor: pointer;
+  appearance: none;
+  background-color: var(--placeholder-color);
+  padding: 0.5rem 0.8rem;
+  border-radius: 7px;
+  color: var(--light-color);
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: #f2d5f8;
+  color: var(--primary-color);
+}
+
+.radiolabel {
+  margin: 5px;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+.radiolabel input[type="radio"] {
+  cursor: pointer;
+  transform: translateY(3px);
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.terms-label {
+  font-size: 13px;
+}
+
+.accent {
+  accent-color: var(--placeholder-color);
+}
+
+@media screen and (min-width: 1025px) {
+  .personal-detail {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "fn fn ln ln"
+      "em em em em"
+      "pn pn ag ag";
+    width: 80%;
+  }
 }

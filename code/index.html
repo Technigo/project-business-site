@@ -18,7 +18,7 @@
   <!-- video or image as a header is cool :) -->
   <header>
     <div class="hero-container">
-      <h1 class="hero-title">Wacky Wiggle Dance Academy</h1>
+      <h1 class="hero-title">Wacky Wiggle <span class="nowrap">Dance Academy</span></h1>
       <video width="100%" muted loop autoplay>
         <source src="./assets/pexels_videos_2795750 (2160p).mp4" muted loop autoplay>
       </video>
@@ -52,7 +52,7 @@
         </label>
 
         <label class="label age">Age
-          <input type="Age" name="age" placeholder="Age">
+          <input type="Age" name="age" placeholder="Age" maxlength="3">
         </label>
       </fieldset>
 
@@ -71,15 +71,16 @@
         </label>
 
         <div class="level">
-          <label class="label">
+          <label>Your level</label>
+          <label class="radiolabel accent">
             <input type="radio" name="level-selection" value="Beginner">
             Beginner
           </label>
-          <label class="label">
+          <label class="radiolabel accent">
             <input type="radio" name="level-selection" value="Intermediate">
             Intermediate
           </label>
-          <label class="label">
+          <label class="radiolabel accent">
             <input type="radio" name="level-selection" value="Advanced">
             Advanced
           </label>
@@ -87,11 +88,11 @@
       </fieldset>
 
       <div class="terms">
-        <input type="checkbox" id="terms" name="terms" required>
-        <label class="label" for="terms">I agree with these agreement terms
+        <input type="checkbox" class="accent" id="terms" name="terms" required>
+        <label class="terms-label" for="terms">I agree with these agreement terms
       </div>
 
-      <button type="submit">Sign up!</button>
+      <button class="btn" type="submit">Sign up!</button>
 
     </form>
   </main>
