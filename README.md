@@ -1,12 +1,13 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+We made a form for a dogcare service called Paw Pals.
+We included text field, radio buttons, checkboxes, and submit button.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
+We started with a sketch on Figjam and then started the HTML skeleton, then worked on CSS.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We had trouble aligning and spacing the weekdays with the checkboxes. We also had issues requiring only one checkbox to be checked instead of all of them.
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
