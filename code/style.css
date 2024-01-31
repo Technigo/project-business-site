@@ -1,5 +1,3 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
 *{
   box-sizing: border-box;
   margin: 0px;
@@ -11,9 +9,148 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  background-image: linear-gradient(#614385,#516395)
+  background-image: linear-gradient(#f6a31b,#c75727)
 }
 
-h1{
-  
+.container {
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px; 
+  width: 70%; 
+  margin: 40px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 667px) {
+  .container {
+    width: 90%;
+    margin: 15px auto;
+  }
+}
+ 
+/* Hero Video */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+video {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.text-container {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* Hero Text */
+h1 {
+  top: 35%;
+  font-size: 45px;
+  color: #da602d;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-size: 14px;
+  color: #FFFFFF;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 1.2px; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.text-background {
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+}
+
+
+ /* Media query for screens smaller than 667px */
+ @media (max-width: 667px) {
+  video {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+
+.text-background, h2 {
+    display: none;
+  }
+}
+
+/* Form Heading */
+h3 {
+margin-top: 20px;
+text-align: center; 
+  font-size: 24px;
+  color: #333; 
+  font-family:'Vollkorn', serif;
+}
+
+.form-area {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.form-area input {
+  width: 80%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Arial", sans-serif; 
+  font-size: 14px; 
+}
+
+.form-area select {
+  width: 80%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Arial", sans-serif; 
+  font-size: 14px; 
+}
+
+.payment-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.form-area button {
+  padding: 10px 20px;
+  background-color: #000000;  
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.radio-option {
+  margin-right: 10px; 
+  margin-bottom: 10px; 
+  font-weight: lighter;
+}
+
+label {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif; 
+}
+
+
