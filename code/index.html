@@ -3,15 +3,119 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <title>Technigo Tattoo</title>
     <!-- dont forget to add a css file and link it here! -->
   </head>
-  <body>
-    <h1>Business name 🌻</h1>
-
+  
+<body>
     <!-- video or image as a header is cool :) -->
+  <div class="header">
+    <img src="./assets/technigotattooweb.jpg" width="700px" alt="Picture of a tattoo artist">
+  </div>
 
     <!-- Signup form -->
+<h1>Want to book an appointment?</h1>
+<h2>Submit your tattoo request here</h2>
+  <div class="container">
+    <form action="https://httpbin.org/post" method="post">
+    
+    <!-- TEXT INPUT -->
+  <div class="name-area">
+    <label class="input-boxes">Full name</label>
+     <input class="text-field" type="text"
+        name="full-name"
+        placeholder="Type your name"
+        required>
+  </div>
 
-  </body>
+
+<!-- Email input -->
+<div class="email-area">
+  <label class="input-boxes">Email address</label>
+    <input class="text-field" required 
+    type="email"
+    name="email"
+    placeholder="Type your email">
+</div>
+    
+<!-- Telephone input -->
+<div class="telephone-area">
+  <label class="input-boxes">Phone number</label>
+    <input class="text-field" required 
+    type="tel" 
+    name="telephone"
+    placeholder="Type your phone number">
+</div>
+
+<!-- Date and time -->
+<div class="datetime-area">
+  <label class="input-boxes">Date and time</label>
+    <input class="text-field" required 
+    type="datetime-local"
+    name="datetime">
+</div>
+
+<!-- Tattoo artist -->
+<div class="tattoo-artist">
+  <label>Choose your preferred tattoo artist</label>
+  <p class="disclaimer">You can choose multiple artists</p>
+</div>
+
+<div class="checkbox-names">
+<div>
+  <input type="checkbox" name="artist" value="Alex">
+  <label>Alex</label>
+</div>
+
+<div>
+    <input type="checkbox" name="artist" value="Lovisa">
+    <label>Lovisa</label>
+</div>
+
+<div>
+  <input type="checkbox" name="artist" value="Frida">
+  <label>Frida</label>
+</div>
+
+<div>
+  <input type="checkbox" name="artist" value="Antonella">
+  <label>Antonella</label>
+  </label>
+</div>
+
+<div>
+  <input type="checkbox" name="artist" value="Matilda">
+  <label>Matilda</label>
+</div>
+
+<div>
+  <input type="checkbox" name="artist" value="Maricel">
+  <label>Maricel</label>
+</div>
+</div>
+
+
+
+<!-- Tattoo idea -->
+<div class="tattoo-idea">
+  <label>Briefly describe your tattoo idea or upload an inspirational sketch
+    <input class="description-field" type="text" name="idea" placeholder="Describe your tattoo idea">
+  </label>
+</div>
+
+<div class="upload">
+  <input type="file" name="upload">
+</div>
+
+
+<div class="submit-button">
+  <button type="submit" value="submit">SUBMIT</button>
+</div>
+
+</form>
+</div>
+
+</body>
 </html>
