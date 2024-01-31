@@ -4,7 +4,57 @@ this should turn the background blue ;) */
 body {
   background: black;
   color: white;
+  margin: 0; 
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
 }
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+input:valid, textarea:valid {
+  background-color: lightblue;
+}
+
+button {
+  background-color: rgb(88, 88, 216);
+  border-radius: 8px;
+  border-width: 0;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+/* Classes */
 
 .header-photo {
   background-image: url("https://images.pexels.com/photos/3628100/pexels-photo-3628100.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
@@ -21,14 +71,32 @@ body {
   display: flex;
   column-gap: 20px;
   flex-direction: column;
+  row-gap: 20px;
 }
 
 .form-area {
   display: flex;
   row-gap: 20px;
+  justify-content: center;
+  text-align: center;
 }
 
-.check-box-option
-{
-  
+
+
+/* Tablet */
+@media (min-width: 668px) {
+  .header-photo {
+    height: 500px;
+  }
 }
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .header-photo {
+    height: 800px;
+  }
+}
+
+
+
+
