@@ -1,14 +1,97 @@
 /* After you've linked the CSS file in the HTML,
 this should turn the background blue ;) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: rgb(230, 230, 230);
+  font-family: 'Handlee', cursive;
+  font-family: 'Just Another Hand', cursive;
+  background: white;
   margin: 0;
 }
 
-video {
+#hero-video {
   width: 100%;
 }
 
-.hero-video {
-  height: 300px;
+header h1 {
+  font-size: 2.5em;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  margin-top: 10px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  /* border: 2px solid #E6AA88; */
+  background: rgb(230, 229, 229);
+  padding: 15px 0;
+}
+
+.cake-form {
+  margin: 10px 5px;
+  font-size: 1.5em;
+}
+
+.cake-form input {
+  display: block;
+}
+
+.cake-form input,
+select,
+textarea,
+button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 2px solid white;
+  background-color: #E6AA88;
+  color: white;
+}
+
+.cake-form label placeholder {
+  color: white;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  justify-content: space-between;
+}
+
+
+.cake-form select {
+  display: block;
+  width: 100%;
+}
+
+.cake-form textarea {
+  display: block;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+/* -------------------------------------Media queries mobile------------------------------------ */
+
+@media (min-width: 667px) and (max-width: 2000px) {
+
+  header h1 {
+    margin-top: 20px;
+  }
+
+  #hero-video {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
 }
