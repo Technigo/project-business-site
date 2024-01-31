@@ -3,15 +3,141 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Business Site</title>
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <h1>Business name 🌻</h1>
+    
+    <!-- Text over hero image-->
+    <div class="banner">
+      <!--Video in CSS-->
+      <div class="video">
+        <video autoplay muted loop id="my-video">
+          <source src="../assets/water1080p.mp4" type="video/mp4">
+        </video>
+      </div>
+      <h1>Calmness Spa</h1>
+    </div>
+    
+      <div class="description">
+        <p> Book a massage and treat yourself with some quality me-time</p>
+      </div>
+    
+    
+    <div class="container">
+    <div class="form">
+      <form action="https://httpbin.org/post" method="post">
+        <h2>Book your appointment</h2>
+        <div class="date">
+          <label>
+            <p>Date:</p>
+            <input type="date" name="date" required />
+          </label>
+        </div>
 
-    <!-- video or image as a header is cool :) -->
+        <div class="massage-type">
+          <label>
+            <p>Massage type:</p>
+            <select name="massage-type" required>
+              <option value="" disabled="disable" selected>
+                Choose Massage
+              </option>
+              <option value="oil-massage">Oil Massage</option>
+              <option value="shiatsu">Shiatsu</option>
+              <option value="hot-stone">Hot Stone Massage</option>
+            </select>
+          </label>
+        </div>
+        <div class="duration">
+          <p>Choose duration:</p>
+          <div class="radio-buttons">
+            <label>
+              <input type="radio" name="duration" value="20min" selected />
+              20 min
+            </label>
+            <label>
+              <input type="radio" name="duration" value="40min" />
+              40 min
+            </label>
+            <label>
+              <input type="radio" name="duration" value="60min" />
+              60 min
+            </label>
+          </div>
+        </div>
 
-    <!-- Signup form -->
+        <div class="personal-information">
+          <h3>Personal Information</h3>
+          <label>
+            <p>Name:</p>
 
+            <input
+              type="text"
+              placeholder="Enter your name"
+              name="full-name"
+              required
+            />
+          </label>
+
+          <label>
+            <p>Email:</p>
+
+            <input
+              type="email"
+              placeholder="Enter your email"
+              name="email"
+              required
+            />
+          </label>
+
+          <label>
+            <p>Phonenumber:</p>
+
+            <input
+              type="tel"
+              placeholder="070 - XX XXX XX"
+              name="phonenumber"
+              required
+            />
+          </label>
+        </div>
+        <div class="preference">
+          <p>Does this apply to you?</p>
+          <div class="checkboxes">
+            <label>
+              <input
+                type="checkbox"
+                value="ticklish"
+                name="ticklish"
+              />Ticklish?
+            </label>
+            <label>
+              <input type="checkbox" value="pain" name="pain" />Sensitive to
+              Pain?
+            </label>
+          </div>
+          <div class="button">
+            <button type="submit">Book</button>
+          </div>
+        </div>
+      </form>
+      
+    </div>
+    <div class="important-information">
+      <h3>Important information</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, repudiandae? Nulla maxime accusantium inventore soluta rerum ratione expedita enim iure?</p>
+      <div class="side-image">
+        <img src="https://images.unsplash.com/photo-1444312645910-ffa973656eba?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Massage">
+  
+      </div>
+    </div>
+
+  
+  </div>
+    <footer>
+      <p>&copy; 2024 - Team Moon</p>
+    </footer>
+  </div>
   </body>
 </html>
