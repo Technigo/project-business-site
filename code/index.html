@@ -12,51 +12,49 @@
 <body>
     <!-- video or image as a header is cool :) -->
   <div class="header">
-    <img src="./assets/technigotattoo.jpg" width="700px">
+    <img src="./assets/technigotattooweb.jpg" width="700px" alt="Picture of a tattoo artist">
   </div>
 
     <!-- Signup form -->
-<h1>Submit your tattoo request here</h1>
+<h1>Want to book an appointment?</h1>
+<h2>Submit your tattoo request here</h2>
   <div class="container">
     <form action="https://httpbin.org/post" method="post">
     
     <!-- TEXT INPUT -->
   <div class="name-area">
-    <label>Full name
-      <input type="text"
+    <label class="input-boxes">Full name</label>
+     <input class="text-field" type="text"
         name="full-name"
         placeholder="Type your name"
         required>
-     </label>
   </div>
 
 
 <!-- Email input -->
 <div class="email-area">
-  <label>Email adress
-    <input required 
+  <label class="input-boxes">Email address</label>
+    <input class="text-field" required 
     type="email"
     name="email"
     placeholder="Type your email">
-  </label>
 </div>
     
 <!-- Telephone input -->
 <div class="telephone-area">
-  <label for="telephone">Phone number</label>
-    <input required 
+  <label class="input-boxes">Phone number</label>
+    <input class="text-field" required 
     type="tel" 
-    id="telephone"
+    name="telephone"
     placeholder="Type your phone number">
 </div>
 
 <!-- Date and time -->
 <div class="datetime-area">
-  <label>Date and time
-    <input required 
+  <label class="input-boxes">Date and time</label>
+    <input class="text-field" required 
     type="datetime-local"
     name="datetime">
-  </label>
 </div>
 
 <!-- Tattoo artist -->
@@ -103,7 +101,7 @@
 <!-- Tattoo idea -->
 <div class="tattoo-idea">
   <label>Briefly describe your tattoo idea or upload an inspirational sketch
-    <input type="text" name="idea" placeholder="Describe your tattoo idea">
+    <input class="description-field" type="text" name="idea" placeholder="Describe your tattoo idea">
   </label>
 </div>
 
@@ -112,7 +110,7 @@
 </div>
 
 
-<div>
+<div class="submit-button">
   <button type="submit" value="submit">SUBMIT</button>
 </div>
 
