@@ -1,4 +1,4 @@
-<img src="./assets/screenshot.png" alt="Screenshot Hero">
+<img src="/code/assets/screenshot.png" alt="Screenshot Hero">
 
 # Business Site
 
