@@ -8,7 +8,7 @@ this should turn the background blue ;) */
 
 
 body {
-  background: blue;
+  background: white;
 }
 
 * {
@@ -21,12 +21,12 @@ h1 {
   justify-content: center;
   font-family: 'Cinzel', serif;
   font-weight: 900;
-  color: white;
+  color: black;
 }
 
 p {
   font-size: 1em;
-  color: white;
+  color: black;
 }
 
 .grid-container {
@@ -43,15 +43,53 @@ p {
   /* flex-direction: column; */
   grid-area: header;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  padding: 50px;
   background-image: url("https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-position: top;
   background-repeat: no-repeat;
 }
 
+.header-text {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.header-background {
+  background: white;
+  opacity: 0.6;
+  max-width: 500px;
+  border: 5px black solid;
+  border-radius: 30px;
+}
+
+.intro-text {
+  padding: 20px;
+}
+
 .form {
   grid-area: form;
-  background: green;
+  background: white;
+  border: 2px solid lightgray;
+  border-radius: 20px;
+  margin: 50px 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.wrapper-column {
+  padding: 20px;
+}
+
+.button-container {
+  padding-right: 10px;
 }
 
 .footer {
@@ -63,10 +101,9 @@ img {
   width: 100%;
 }
 
-.header-text {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
+button {
+  width: 100%;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
