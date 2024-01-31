@@ -1,5 +1,120 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: blue;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  min-height: 100vh;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.left {
+  padding: 1em;
+  width: 40%;
+  background-image: url("./assets/doggy.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.left .logo {
+  display: flex;
+  align-items: center;
+}
+.left img {
+  max-width: 80px;
+}
+
+.left p {
+  font-size: 1.5em;
+}
+
+.right {
+  width: 60%;
+  background-color: #484b61;
+  color: #fff;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
+}
+
+.right h1 {
+  margin-bottom: 1em;
+}
+
+.right form {
+  max-width: 400px;
+  width: 100%;
+}
+
+.right input,
+.right select {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  padding: 0.4em;
+  border-radius: 5px;
+  border: none;
+  margin-top: 0.7em;
+}
+
+.right label {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.gender-area div {
+  display: flex;
+}
+
+.gender-area label {
+  margin-bottom: 10px;
+}
+
+.gender-area .gender-option {
+  display: flex;
+  width: initial;
+}
+
+.gender-area div input {
+  width: initial;
+  margin: 0;
+  margin: 0 10px;
+}
+
+button {
+  border: none;
+  display: block;
+  margin: 0 auto;
+  border-radius: 30px;
+  padding: 0.5em 2em;
+  font-size: 1rem;
+  margin-top: 50px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+button:hover {
+  background: #5a5c6d;
 }
