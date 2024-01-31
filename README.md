@@ -1,12 +1,14 @@
-# Business Site
+## Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Create a business one-pager website. The main focus is on HTML Forms.
+There should be a header with a picture or video, a form with three different input types and the site should be responsive.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We planned the project by sketching out the website on Figma. We used flexbox and media queries to solve the problem and get the results we wanted.
+
+If we had more time, we would insert some videos and make the background fancier.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+Live website: https://65ba434b51eb31cf720320b9--majestic-duckanoo-36bd65.netlify.app/
