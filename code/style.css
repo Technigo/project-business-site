@@ -24,28 +24,67 @@ h3 {
 }
 
 .header {
-  background-size: 1000px;
+  background-size: cover;
   background-image: url("./moon.jpg");
+  background-repeat: no-repeat;
   height: 400px;
   font-family: 'Roboto Mono', monospace;
 }
 
 .form-container {
   display: flex;
+  background-color: lightgray;
   justify-content: center;
   font-family: 'Roboto Mono', monospace;
-  margin-top: 30px;
-  border: solid black 2px;
-  margin-left: 400px;
-  width: 400px;
+  margin-top: 50px;
+  border: solid gray 2px;
+  border-radius: 25px;
+  margin-left: 5%;
+  width: 90%;
   /* height: 400px; */
+  background-image: url("./star.jpg");
+  background-size: contain;
+  color: white;
+}
+
+input{
+  display: block;
+}
+
+select {
+  display: block;
 }
 
 .form-area {
   margin: 15px;
   display: flex;
+  justify-content: flex-start;
+}
+
+.banner {
+  margin: 15px;
+  display: flex;
   justify-content: center;
 }
+
+.radio-container {
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-end; */
+  margin: 15px;
+  /*display: block;*/
+}
+
+.radio-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.radio {
+  display: inline;
+  margin: 5px;
+}
+
 .button {
   align-items: center;
   background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
@@ -77,21 +116,48 @@ h3 {
 }
 
 .button span {
-  background-color: rgb(5, 6, 45);
-  padding: 5px;
-  border-radius: 8px;
+  /* background-color: rgb(5, 6, 45); */
+  /* padding: 5px;
+  border-radius: 8px; */
   width: 100%;
   height: 100%;
   transition: 300ms;
+  color: black;
 }
 
 .button:hover span {
   background: none;
+  color: white;
 }
 
-/* @media (min-width: 768px) {
-  .button {
-    font-size: 24px;
-    min-width: 196px;
+footer {
+  height: 80px;
+  font-family: 'Roboto Mono', monospace;
+  background-color: lightgrey;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+@media (min-width: 400px) {
+  .form-container {
+    margin-left: 15%;
+    width: 70%;
   }
-} */
+}
+
+@media (min-width: 668px) {
+  .form-container {
+    margin-left: 25%;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1020px) {
+  .form-container {
+    margin-left: 33%;
+    width: 33%;
+  }
+}
