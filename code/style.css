@@ -35,7 +35,7 @@ p {
 }
 
 
-input:valid, textarea:valid {
+input:valid, textarea:valid, input:invalid {
   background-color: lightblue;
 }
 
@@ -87,6 +87,7 @@ button {
   row-gap: 20px;
   justify-content: center;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 /* talk about issues with aligning checkbox with the weekday word */
@@ -113,8 +114,14 @@ button {
   }
 
   .checkbox-days {
-    padding: 0 40px 0 40px;
+    padding: 0 10px 0 10px;
+    white-space: nowrap;
   }
+
+  .form-area {
+    flex-wrap: nowrap;
+  }
+
 }
 
 
