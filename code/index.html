@@ -4,93 +4,106 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Business Site</title>
+  <title>Brunch House</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <h1>Restaurant name 🌻</h1>
-    <p class="info">info about restaurant</p>
+    <h1>Brunch House</h1>
+    <p class="info">Welcome to Brunch House where you can enjoy a wonderful meal with your friends. Fill out the form
+      below to book a table for our Sunday brunches.</p>
   </header>
-  <form action="https://httpbin.org/post" method="post">
-    <div class="form-section">
-      <form>
-        <div class="inputfield">
-          <label>Date
-            <input required type="date" name="date">
-          </label>
-        </div>
-        <div class="inputfield">
-          <label>Time</label>
-          <label class="radio-option">
-            <input type="radio" name="time" value="18">18.00
-          </label>
-          <label class="radio-option">
-            <input type="radio" name="time" value="19">19.00
-          </label>
-          <label class="radio-option">
-            <input type="radio" name="time" value="20">20.00
-          </label>
-        </div>
-        <div class="inputfield">
-          <label>
-            Name
-            <input required type="text" name="name">
-          </label>
-        </div>
-        <div class="inputfield">
-          <label>
-            Phone number
-            <input required type="tel" name="tel-number">
-          </label>
-        </div>
-        <div class="inputfield">
-          <label>
-            E-mail
-            <input type="email" name="email">
-          </label>
-        </div>
-        <div class="inputfield">
-          <label>
-            Number of guests
-            <input required type="number" name="guests">
-          </label>
-        </div>
-        <div class="inputfield">
-          <label>
-            Food preference
-            <select>
-              <option value="
-            " <option value="vegan">Vegan</option>
-              <option value="vegan">Vegetarian</option>
-              <option value="vegan">Fish</option>
-              <option value="vegan">Chicken</option>
-              <option value="vegan">Beef</option>
-            </select>
-          </label>
-        </div>
-        <div class="inputfield">
-          <label for="requests">
-            Special requests and food allergies?
-          </label>
-          <br>
-          <textarea id="requests" name="requests" cols="20" rows="5" placeholder="Type here">
-          </textarea>
-        </div>
-        <div class="inputfield">
-          <button type="submit">
-            Book
-          </button>
-        </div>
-      </form>
-    </div>
+  <div class="form-section">
+    <form action="https://httpbin.org/post" method="post">
+      <div class="inputfield">
+        <label>Date:
+          <input required type="date" name="date">
+        </label>
+      </div>
 
 
+      <div class="inputfield">
+        <label>Time:</label>
+        <div>
+          <label class="radio-option">
+            <input type="radio" name="time" value="12">12.00
+          </label>
+        </div>
+        <div>
+          <label class="radio-option">
+            <input type="radio" name="time" value="13">13.00
+          </label>
+        </div>
+        <div>
+          <label class="radio-option">
+            <input type="radio" name="time" value="14">14.00
+          </label>
+        </div>
+      </div>
 
+
+      <div class="inputfield">
+        <label>
+          Name:
+          <input required type="text" name="name" placeholder="Type your name">
+        </label>
+      </div>
+
+      <div class="inputfield">
+        <label>
+          Phone number:
+          <input required type="tel" name="tel-number" placeholder="### ### ### ###">
+        </label>
+      </div>
+
+      <div class="inputfield">
+        <label>
+          E-mail:
+          <input type="email" name="email" placeholder="youremail@gmail.com">
+        </label>
+      </div>
+
+      <div class="inputfield">
+        <label>
+          Number of guests:
+          <input required type="number" name="guests">
+        </label>
+      </div>
+
+      <div class="inputfield">
+        <label>
+          Food preference:
+          <select name="food-preference">
+            <option disabled selected>Choose an option</option>
+            <option value="vegan">Vegan</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="fish">Fish</option>
+            <option value="chicken">Chicken</option>
+            <option value="beef">Beef</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="inputfield">
+        <label for="requests">
+          Special requests and food allergies?
+        </label>
+        <textarea id="requests" name="requests" cols="30" rows="5" placeholder="Type here"></textarea>
+      </div>
+
+      <div class="inputfield">
+        <button type="submit">
+          Make a booking
+        </button>
+      </div>
+    </form>
+  </div>
+  <footer>© Team star one 2024</footer>
 </body>
 
 </html>
