@@ -96,6 +96,7 @@ text-align: center;
   font-family:'Vollkorn', serif;
 }
 
+/* Form Area */
 .form-area {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -105,31 +106,35 @@ text-align: center;
   align-items: center; 
 }
 
-.form-area input {
-  width: 80%;
-  padding: 8px;
-  margin-top: 5px;
-  box-sizing: border-box;
-  text-align: center;
-  font-family: "Arial", sans-serif; 
-  font-size: 14px; 
-}
-
+.form-area input,
 .form-area select {
   width: 80%;
   padding: 8px;
   margin-top: 5px;
   box-sizing: border-box;
   text-align: center;
-  font-family: "Arial", sans-serif; 
-  font-size: 14px; 
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
 }
+
+@media (max-width: 667px) {
+  .form-area label,  
+  .form-area input,
+   .form-area select {
+      font-size: 8px; 
+    }
+  
+    h3 {
+      font-size: 18px; 
+    }
+  }
 
 .payment-options {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 8px;
+  gap: 20px;
 }
 
 .form-area button {
@@ -139,6 +144,11 @@ text-align: center;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-area button:hover {
+  background-color: #f6a31b;
 }
 
 .radio-option {
@@ -153,4 +163,23 @@ label {
   font-family: "Arial", sans-serif; 
 }
 
+/* "Back To The Top"-button */
 
+#goTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+#goTopBtn:hover {
+  background-color: #f6a31b; /* Change the color on hover */
+}
