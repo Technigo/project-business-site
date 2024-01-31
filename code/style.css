@@ -9,28 +9,33 @@ this should turn the background blue ;) */
 body {
   background-color: white;
   font-family: sans-serif;
-
 }
 
 p{
   padding: 0.7rem 0 0.3rem 0;
 }
 
+
 .banner {
-  width: 100%;
   background-image: url("https://images.unsplash.com/photo-1555412654-72a95a495858?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  height: auto;
+  min-height: 10vh;
   padding: 2rem;
   color: #EAEBED;
 }
 
 .banner h1 {
   text-align: center;
+  font-size: x-large;
+  color: #FFFFFF;
 }
 
 .description{
-  background-color: pink;
+  background-color: #01A7C2;
+  color: #EAEBED;
+  text-align: center;
+  padding: 1rem;
 }
+
 
 .form {
   background-color: #EAEBED;
@@ -38,10 +43,9 @@ p{
   padding: 2rem;
   flex-direction: column;
   flex: 1fr;
-  margin: 3rem;
+  margin: 2rem 1rem 0 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   align-items: center;
-
 }
 
 
@@ -71,6 +75,7 @@ input[type=text], select,[type=email],[type=tel],[type=date]{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 5px;
 }
 
 .massage-type, .radiobuttons {
@@ -82,9 +87,9 @@ input[type=text], select,[type=email],[type=tel],[type=date]{
   flex-direction: column;
   padding: 1rem 0;
 }
-.personal-information h3{
+h3{
   font-size: 1rem;
-  color: 006989;
+  color: #006989;
   line-height: 2rem;
 }
 /*
@@ -120,8 +125,57 @@ button:hover {
   color: white;
 }
 
-footer {
-  background-color: lightgrey;
-  height: 200px;
+.important-information {
+  background-color: #EAEBED;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  margin: 1rem 1rem 2rem 1rem;
+}
+.side-image img{
+  display: none;
 }
 
+footer {
+  background-color: #006989;
+  padding: 2rem;
+  text-align: center;
+  color:#EAEBED;
+}
+
+
+@media screen and (min-width:501px){
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .form  {
+    width: 500px;
+    max-width: 500px;
+    margin-bottom: 2rem;
+  }
+
+  .important-information{
+    margin-top: 2rem;
+  }
+
+}
+  
+  @media screen and (min-width:769px) {
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex: 1fr 200px;
+    }
+    .important-information{
+      margin-top: 2rem;
+      max-height: 20vh;
+    }
+
+    .side-image img{
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      object-fit: cover;
+    }
+    }
