@@ -3,15 +3,122 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Birthday Bash</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Honk&display=swap" >
   </head>
   <body>
-    <h1>Business name 🌻</h1>
 
-    <!-- video or image as a header is cool :) -->
+    <!-- Header with video with text -->
 
-    <!-- Signup form -->
+    <header>
+      <div class="header-text">  
+        <h1>Birthday Bash</h1>
+        <p>You're invited!</p>
+      </div>
+      
+        <video autoplay="true" loop>
+          <source src="./assets/disco_ball_shining.mp4"
+           type="video/mp4"/>
+        </video>
+    </header>
+
+    <!-- Section with images and information -->
+
+    <!-- <section class="info">
+      <div>
+        <img src="./assets/balloons.jpg" alt="balloons">
+        <h2>Text</h2>
+        <p>text text text</p>
+      </div>
+
+      <div>
+        <img src="./assets/balloons.jpg" alt="balloons">
+        <h2>Text</h2>
+        <p>text text text</p>
+      </div>
+
+      <div>
+        <img src="./assets/balloons.jpg" alt="balloons">
+        <h2>Text</h2>
+        <p>text text text</p>
+      </div>
+
+      <div>
+        <img src="./assets/balloons.jpg" alt="balloons">
+        <h2>Text</h2>
+        <p>text text text</p>
+      </div>
+      
+    </section> -->
+
+    <!-- Section with form -->
+
+    <section class="form">
+      
+      <h3>Fill out this form to RSVP</h3>
+
+      <form action="https:/httpbin.org/post" method="POST">
+        
+        <div class="name">
+          <label>Name 
+            <input type="text"
+            name="name"
+            placeholder="Write your name"
+            required>
+          </label>
+        </div>
+        
+        <div class="phonenumber">
+          <label>Phonenumber 
+            <input type="text" 
+            name="phonenumber"
+            placeholder="Write your phone number"
+            required>
+          </label>
+        </div>
+
+        <div class="email">
+          <label>Email address
+            <input type="email" 
+            name="email"
+            placeholder="Write your email adress"
+            required>
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <h3>Choose your meal</h3>
+
+          <label>Meat
+            <input type="radio" name="food" value="meat">
+          </label>
+        
+
+          <label>Fish
+            <input type="radio" name="food" value="fish">
+          </label>
+
+          <label>Vegetarian
+            <input type="radio" name="food" value="vegetarian">
+          </label>
+         
+        </div>
+
+
+        <div class="allergies">
+          <p>If you have any allergies or other food preferences you can write it here
+          </p>
+          <label>
+            <input type="text" name="allergies">
+          </label>
+        </div>
+
+        <div class="submit-button">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </section>
 
   </body>
 </html>
