@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Farmy</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/c38d857281.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- mobile menu -->
     <div class="mobil-nav-wrapper">
       <header class="mobile-nav">
-        <h1>FARMY.</h1>
+        <h1 style="color: white">FARMY.</h1>
         <ul class="mobile-nav-list">
-          <li>ABOUT</li>
-          <li>OUR BOXES</li>
+          <a>ABOUT</a
+          ><br />
+          <a>OUR BOXES</a>
         </ul>
       </header>
     </div>
@@ -27,60 +32,70 @@
       </div>
     </main>
     <!-- Signup form -->
-    <form action="" method="post">
+    <form action="http://httpbin.org/anything" method="post">
       <div class="Logo">
-        <h1>FARMY.</h1>
+        <h1 style="color: white">FARMY.</h1>
       </div>
-      <label
-        >name
-        <input type="text" name="First Name" />
-      </label>
-      <label
-        >Surname
-        <input type="text" name="Surname" />
-      </label>
-      <label
+      <div class="wrapper">
+        <label
+          >name
+          <input type="text" name="First Name" />
+        </label>
+
+        <label
+          >Surname
+          <input type="text" name="Surname" />
+        </label>
+      </div>
+      <label class="input-address"
         >Address
         <input type="adress" name="Address" />
       </label>
-      <label> City<input type="text" name="city" /> </label>
-      <label>
-        Zip Code
-        <input type="number" name="zipcode" />
-      </label>
-      <label
-        >Address
-        <input type="adress" name="Address" />
-      </label>
-      <label>
+      <div class="wrapper">
+        <label> City<input type="text" name="city" /> </label>
+        <label>
+          Zip Code
+          <input type="number" name="zipcode" />
+        </label>
+      </div>
+      <label class="phone-number">
         Phone number
         <input type="tel" name="phonenumber" />
       </label>
       <!-- radio buttons -->
       <div class="radio-wrapper">
         <label>How Often? </label>
-        <div>
-          <label class="radio-option">
-            Weekly
-            <input type="radio" name="weekly" value="weekly" />
-          </label>
-        </div>
-        <div>
-          <label class="radio-option">
-            monthly
-            <input type="radio" name="monthly" value="monthly" />
-          </label>
+        <div class="container-radio">
+          <div class="wrapper-choice">
+            <label class="radio-option">
+              Weekly
+              <input type="radio" name="weekly" value="weekly" />
+            </label>
+          </div>
+          <div class="wrapper-choice">
+            <label class="radio-option">
+              Monthly
+              <input type="radio" name="monthly" value="monthly" />
+            </label>
+          </div>
         </div>
       </div>
-      <label>
+      <label class="psw">
         Password
-        <input type="Text" name="Password" />
+        <input type="text" name="Password" />
       </label>
-
-      <label>
+      <label class="psw">
         Repeat Password
         <input type="Text" name="Password-repeat" />
       </label>
+      <div class="terms">
+        <label for="conditions"> Accept Terms and Conditions </label>
+        <input id="conditions" type="checkbox" name="Conditions" />
+      </div>
+      <button type="submit" style="color: white">Submit</button>
     </form>
+    <footer>
+      <h2>©2024 Made from Planet Team 3 - Technigo</h2>
+    </footer>
   </body>
 </html>
