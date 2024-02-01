@@ -16,5 +16,5 @@ We used google, stack over flow, materials as well as chatGPT to solve the probl
 If we had time, we would like to make the website more beautiful by using CSS. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Here is the link of our project: https://team-lightening1-business-site.netlify.app/
 
