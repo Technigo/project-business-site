@@ -1,8 +1,8 @@
 # Business Site
 
 contributors:
-Cornelia Dahlin
-Yia Tsai
+Cornelia Dahlin,
+Yia Tsai,
 Trista Shan
 
 This group project is about a summer music festival ticket booking page. 
