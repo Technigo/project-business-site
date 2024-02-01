@@ -1,12 +1,20 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+contributors:
+Cornelia Dahlin
+Yia Tsai
+Trista Shan
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This group project is about a summer music festival ticket booking page. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We sketched the website layout by Figma. 
+This website is for a summer music festival ticket. We made it by HTML form and CSS, media queries for resposive design. We used javascript for fun because we were curious about the result. 
+If we had more time, we would like to make more 
+We used google, stack over flow, materials as well as chatGPT to solve the problems. 
+If we had time, we would like to make the website more beautiful by using CSS. 
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
