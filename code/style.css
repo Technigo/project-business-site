@@ -1,5 +1,109 @@
 /* After you've linked the CSS file in the HTML,
 this should turn the background blue ;) */
-body {
-  background: blue;
+/* 
+
+0. Förberedelse inför punkt 1 (Ta bort margins, padding)
+1. Skapa vänster respektive höger container vertikalt ✅
+2. Addera bakgrundsbild på vänster container ✅
+3. Block som innehåller logga och rubrik
+
+1. Rubrik ovanför formuläret ✅
+2. Ändra färg på text ✅
+3. Centrera formulär ✅
+4. Lägga till padding mellan olika fälten
+*/
+
+
+/*
+
+Måsvingar
+
+<h1> = tagg 
+class="box"
+
+h1 {
+  background: pink;
 }
+
+.box {
+  background: yellow;
+}
+
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* explain */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+.box-left {
+  min-height: 100vh;
+  /* vh - view height */
+  background-color: red;
+  width: 40%;
+  background-image: url("./assets/doggy.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box-right {
+  min-height: 100vh;
+  background-color: #484b61;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+margin: 10px;
+margin-bottom
+margin-top
+margin-right
+margin-left
+*/
+
+h1 {
+  color: #fff;
+}
+
+label {
+  color: #fff;
+  /* padding: 3px; */
+}
+
+input {
+  margin: 10px;
+  padding: 5px;
+}
+
+button {
+  background: pink;
+  color: black;
+  padding: 20px;
+  font-size: 18px;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* .form-area {
+  padding: 15px;
+  margin: 10px;
+}
+
+.gender-option {
+  padding: 15px;
+  margin: 15px;
+} */
