@@ -1,12 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Inder&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  /*
+  =============== 
+  Variables
+  ===============
+  */
+  --clr-primary-dark: #484b61;
+  --clr-primary-light: #e9dede;
+  --clr-text: #484b61;
+  --clr-white: #fff;
+  --clr-black: #000;
+
+  --border-radius-mini: 10px;
+  --border-radius-small: 15px;
+  --border-radius-medium: 20px;
+  --border-radius-large: 30px;
+
+  --general-padding: 35px;
+  --general-smaller-padding: 20px;
+  --general-mini-padding: 10px;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Inder", sans-serif;
 }
 
 .container {
@@ -23,29 +46,29 @@ img {
   display: block;
 }
 
-.left {
+.left-section {
   padding: 1em;
   width: 40%;
   background-image: url("./assets/doggy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.left .logo {
+.left-section .logo {
   display: flex;
   align-items: center;
 }
-.left img {
+.left-section img {
   max-width: 80px;
 }
 
-.left p {
+.left-section p {
   font-size: 1.5em;
 }
 
-.right {
+.right-section {
   width: 60%;
-  background-color: #484b61;
-  color: #fff;
+  background-color: var(--clr-primary-light);
+  color: var(--clr-primary-dark);
   font-weight: 100;
   display: flex;
   flex-direction: column;
@@ -54,52 +77,126 @@ img {
   padding: 4em;
 }
 
-.right h1 {
-  margin-bottom: 1em;
+.right-section h1 {
+  font-size: 2.3rem;
+  margin-bottom: 2em;
+  max-width: 500px;
 }
 
-.right form {
-  max-width: 400px;
+.right-section form {
+  max-width: 500px;
   width: 100%;
 }
 
-.right input,
-.right select {
+.right-section .form-area {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.right-section .input-area {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+.right-section input,
+.right-section select {
   display: block;
   width: 100%;
   margin-bottom: 20px;
   font-size: 0.9rem;
-  padding: 0.4em;
+  padding: 0.7em;
   border-radius: 5px;
   border: none;
   margin-top: 0.7em;
 }
 
-.right label {
-  width: 100%;
+.right-section label {
   display: block;
   margin-bottom: 20px;
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  color: var(--clr-text);
 }
 
-.gender-area div {
-  display: flex;
+label:nth-child(odd) {
+  margin-right: 10px;
 }
 
-.gender-area label {
-  margin-bottom: 10px;
+label:nth-child(even) {
+  margin-left: 10px;
 }
 
-.gender-area .gender-option {
-  display: flex;
-  width: initial;
+/* File upload */
+
+.image-upload {
+  position: relative;
+  width: 100%;
 }
 
-.gender-area div input {
-  width: initial;
+.image-upload label {
+  position: absolute;
   margin: 0;
-  margin: 0 10px;
+  top: 50%;
+  left: 81px;
+  display: flex;
+  transform: translate(0%, -50%);
+  cursor: pointer;
+}
+
+#upload-file {
+  visibility: hidden;
+  position: relative;
+  margin: 0;
+  height: 100%;
+}
+
+.upload-icon {
+  background: var(--clr-white);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.upload-icon img {
+  width: 20px;
+}
+
+/* Gender */
+.gender-section {
+  background-color: var(--clr-white);
+  display: flex;
+  padding: 0.3em;
+}
+
+label.gender-option {
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+  width: 50%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gender-option input {
+  display: none;
+}
+
+.gender-option input:checked + span {
+  background-color: #dfbfbf;
+  width: 100%;
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
 }
 
 button {
@@ -110,11 +207,18 @@ button {
   padding: 0.5em 2em;
   font-size: 1rem;
   margin-top: 50px;
-  background: transparent;
+  background: var(--clr-primary-dark);
   color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid var(--clr-primary-dark);
 }
 
 button:hover {
   background: #5a5c6d;
+}
+
+@media screen and (min-width: 768px) {
+  .right-section .input-area {
+    width: 48%;
+    margin-right: 2%;
+  }
 }

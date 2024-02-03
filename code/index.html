@@ -10,91 +10,93 @@
 
   <body>
     <div class="container">
-      <div class="box left">
+      <section class="box left-section">
         <div class="logo">
           <img src="./assets/tass.png" alt="Book a vet logo" />
-          <p>Book a vet!</p>
+          <p>PUPPY LOVE</p>
         </div>
-      </div>
+      </section>
 
-      <!-- video or image as a header is cool :) -->
-
-      <div class="box right">
-        <h1>Yeah, we love animals!</h1>
-        <!-- Signup form -->
+      <section class="box right-section">
+        <h1>Yeah, we love dogs! Give us the basics about your pup.</h1>
+        <!-- START: Signup form -->
         <form action="https://httpbin.org/post" method="post">
-          <!-- Pick date -->
           <div class="form-area">
-            <label
-              >Choose a date
-              <input type="date" name="date" />
-            </label>
-          </div>
-
-          <!-- Owner -->
-          <div class="form-area">
-            <label
-              >Owner
-              <input
-                type="text"
-                name="owner"
-                placeholder="Fill in your name"
-                required
-              />
-            </label>
-          </div>
-
-          <!-- Email input -->
-          <div class="form-area">
-            <label
-              >Email address
-              <input
-                type="email"
-                name="email"
-                placeholder="Fill in your email"
-                required
-              />
-            </label>
-          </div>
-
-          <!-- Phone input -->
-          <div class="form-area">
-            <label
-              >Phone number
-              <input
-                type="phone"
-                name="phone"
-                placeholder="Fill in your phone number"
-              />
-            </label>
-          </div>
-
-          <!-- Type of animal -->
-          <div class="form-area">
-            <label
-              >Type of animal
-              <select name="animals">
-                <option disable selected>Choose type</option>
-                <option value="dog">Dog</option>
-                <option value="cat">Cat</option>
-                <option value="other">Other</option>
-              </select>
-            </label>
-          </div>
-
-          <!-- Gender -->
-          <div class="gender-area">
-            <label>Gender</label>
-            <div>
-              <label class="gender-option">
-                Female
-                <input type="radio" name="gender" value="female" />
+            <div class="input-area">
+              <label
+                >Name
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Pet´s name"
+                  required
+                />
               </label>
+            </div>
 
-              <label class="gender-option">
-                Male
-                <input type="radio" name="gender" value="male" />
+            <div class="input-area image-upload">
+              <div class="upload-icon">
+                <img src="./assets/photo-camera.svg" alt="Upload Image" />
+              </div>
+
+              <label for="upload-file">Upload a photo</label>
+              <input
+                type="file"
+                name="img"
+                id="upload-file"
+                accept="image/.jpg, .png"
+              />
+            </div>
+          </div>
+
+          <div class="form-area">
+            <div class="input-area">
+              <label
+                >Bread
+                <input
+                  type="text"
+                  name="text"
+                  placeholder="Pet's breed"
+                  required
+                />
               </label>
+            </div>
+            <div class="input-area">
+              <label
+                >Birthday
+                <input type="date" name="date" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-area">
+            <div class="input-area">
+              <label>Gender</label>
+              <div class="gender-section">
+                <label class="gender-option">
+                  <input type="radio" name="gender" value="female" checked />
+                  <span>Female</span>
+                </label>
+
+                <label class="gender-option">
+                  <input type="radio" name="gender" value="male" />
+                  <span>Male</span>
+                </label>
+              </div>
+            </div>
+            <div class="input-area">
+              <label>Sprayed of Neutered</label>
+              <div class="gender-section">
+                <label class="gender-option">
+                  <input type="radio" name="neutered" value="yes" checked />
+                  <span>Yes</span>
+                </label>
+
+                <label class="gender-option">
+                  <input type="radio" name="neutered" value="no" />
+                  <span>No</span>
+                </label>
+              </div>
             </div>
           </div>
 
@@ -102,24 +104,31 @@
           <!-- <div class="form-area">
             <p class="weight">Weight</p>
 
-            <div class="check-box">
+            <div class="option">
               <label
-                >Small
-                <input type="checkbox" name="weight" value="small" />
+                >0-25 lbs
+                <input type="checkbox" name="weight" value="0-25" />
               </label>
             </div>
 
-            <div class="check-box">
+            <div class="option">
               <label
-                >Medium
-                <input type="checkbox" name="weight" value="medium" />
+                >25-50 lbs
+                <input type="checkbox" name="weight" value="25-50" />
               </label>
             </div>
 
-            <div class="check-box">
+            <div class="optionx">
               <label
-                >Large
-                <input type="checkbox" name="weight" value="large" />
+                >50-100 lbs
+                <input type="checkbox" name="weight" value="50-100" />
+              </label>
+            </div>
+
+            <div class="option">
+              <label
+                >100+ lbs
+                <input type="checkbox" name="weight" value="100+" />
               </label>
             </div>
           </div> -->
@@ -127,7 +136,7 @@
           <!-- Submit button -->
           <button type="submit">Submit</button>
         </form>
-      </div>
+      </section>
     </div>
   </body>
 </html>
