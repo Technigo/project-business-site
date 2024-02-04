@@ -46,6 +46,10 @@ img {
   display: block;
 }
 
+.full-width {
+  width: 100% !important;
+}
+
 .left-section {
   padding: 1em;
   width: 40%;
@@ -83,6 +87,7 @@ img {
   max-width: 500px;
 }
 
+/* Form */
 .right-section form {
   max-width: 500px;
   width: 100%;
@@ -111,7 +116,8 @@ img {
   margin-top: 0.7em;
 }
 
-.right-section label {
+.right-section label,
+.right-section .weight-label {
   display: block;
   margin-bottom: 20px;
   font-weight: 300;
@@ -128,7 +134,6 @@ label:nth-child(even) {
 }
 
 /* File upload */
-
 .image-upload {
   position: relative;
   width: 100%;
@@ -170,13 +175,15 @@ label:nth-child(even) {
 }
 
 /* Gender */
-.gender-section {
+.gender-section,
+.weight-section {
   background-color: var(--clr-white);
   display: flex;
   padding: 0.3em;
 }
 
-label.gender-option {
+label.gender-option,
+label.weight-option {
   position: relative;
   cursor: pointer;
   margin: auto;
@@ -185,13 +192,16 @@ label.gender-option {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 40px;
 }
 
-.gender-option input {
+.gender-option input,
+.weight-option input {
   display: none;
 }
 
-.gender-option input:checked + span {
+.gender-option input:checked + span,
+.weight-option input:checked + span {
   background-color: #dfbfbf;
   width: 100%;
   padding: 0.5em;
