@@ -2,11 +2,15 @@
 
 Replace this readme with your own information about your project. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+One page business site that contains an image, header and a sign-up form.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Describe how you approached to problem, and what tools and techniques you used to solve it. 
+Had bit of a challenge to understand how margin and padding changed the sit, when to use what. 
+How did you plan? We did a really simple drawing of what the site would look like and what information to ask for.  What technologies did you use? We used different signup forms i.e date, text, email, phone, select and radio buttons.
+
+If you had more time, what would be next? If we have had more time, we would hav added a field for weight of the animal.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+[Book a vet!](https://chimerical-parfait-95f855.netlify.app)
