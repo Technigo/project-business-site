@@ -169,7 +169,7 @@ img {
 
 .right-section .form-area {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .right-section .input-area {
@@ -300,7 +300,7 @@ button:hover {
   background: #5a5c6d;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .right-section .input-area {
     width: 48%;
     margin-right: 2%;
@@ -326,6 +326,10 @@ button:hover {
     padding: 1em;
   }
 
+  .right-section .form-area {
+    flex-direction: column;
+  }
+
   .right-section label {
     font-size: 0.8rem;
   }
@@ -336,5 +340,10 @@ button:hover {
 
   .weight-section label {
     width: 100%;
+  }
+
+  .right-section .input-area {
+    width: 100%;
+    margin-right: 0;
   }
 }
