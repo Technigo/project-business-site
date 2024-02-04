@@ -13,7 +13,6 @@ this should turn the background blue ;) */
 4. Lägga till padding mellan olika fälten
 */
 
-
 /*
 
 Måsvingar
@@ -31,7 +30,6 @@ h1 {
 
 */
 
-
 * {
   margin: 0;
   padding: 0;
@@ -43,12 +41,18 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+img {
+  width: 100%;
+  display: block;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
 }
 
 .box-left {
+  position: relative;
   min-height: 100vh;
   /* vh - view height */
   width: 40%;
@@ -61,14 +65,32 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
-
 }
 
-
-img {
+.box-left::before {
+  content: "";
+  position: absolute;
+  background-color: #484b6191;
   width: 100%;
-  display: block;
+  height: 100%;
+}
+
+.header {
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin-top: 5em;
+}
+
+.header img {
+  height: 60px;
+  width: 60px;
+  padding: 0.5em;
+  background-color: #eadede;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5em;
 }
 
 .box-right {
@@ -106,7 +128,6 @@ input {
   padding: 5px;
   border: none;
   border-radius: 5px;
-
 }
 
 .gender-area div {
@@ -137,7 +158,6 @@ button {
   border-radius: 10px;
   display: block;
   margin: auto;
-
 }
 
 button:hover {
@@ -158,8 +178,12 @@ button:hover {
 
   .box-left {
     min-height: 40vh;
-    /* vh - view height */
     width: 100%;
+    /* ALEX: Resten av koden behövs inte eftersom 
+    inga ändringar har gjorts nedan. Koden är exakt
+    likadan som raderna 58-67. Samma sak gäller .box-right :) 
+    */
+    /* vh - view height */
     background-image: url("./assets/doggy.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -169,12 +193,9 @@ button:hover {
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
     flex-wrap: unset;
   }
 }
-
-
 
 /* .form-area {
   padding: 15px;
