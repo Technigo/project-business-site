@@ -1,42 +1,7 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
-/* 
-
-0. Förberedelse inför punkt 1 (Ta bort margins, padding)
-1. Skapa vänster respektive höger container vertikalt ✅
-2. Addera bakgrundsbild på vänster container ✅
-3. Block som innehåller logga och rubrik
-
-1. Rubrik ovanför formuläret ✅
-2. Ändra färg på text ✅
-3. Centrera formulär ✅
-4. Lägga till padding mellan olika fälten
-*/
-
-
-/*
-
-Måsvingar
-
-<h1> = tagg 
-class="box"
-
-h1 {
-  background: pink;
-}
-
-.box {
-  background: yellow;
-}
-
-*/
-
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* explain */
 }
 
 body {
@@ -50,7 +15,6 @@ body {
 
 .box-left {
   min-height: 100vh;
-  /* vh - view height */
   width: 40%;
   background-image: url("./assets/doggy.jpg");
   background-repeat: no-repeat;
@@ -79,30 +43,24 @@ img {
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
-
-/*
-margin: 10px;
-margin-bottom
-margin-top
-margin-right
-margin-left
-*/
 
 h1 {
   color: #fff;
+  margin-bottom: 20px;
 }
 
 label {
   color: #fff;
-  /* padding: 3px; */
+  padding: 0px;
+  margin-right: 20px;
 }
 
 input {
   display: block;
-  width: 100 %;
-  margin-bottom: 10px;
-  margin-top: 5px;
+  width: 100%;
+  margin-top: 10px;
   padding: 5px;
   border: none;
   border-radius: 5px;
@@ -114,7 +72,8 @@ input {
 }
 
 .gender-area label {
-  margin-bottom: 10px;
+  margin-top: 10px;
+
 }
 
 .gender-area .gender-option {
@@ -124,14 +83,18 @@ input {
 
 .gender-area div input {
   width: initial;
-  margin: 0;
+  margin: 10px;
   margin: 0 10px;
+}
+
+.animals {
+  margin-top: 20px;
 }
 
 button {
   background: beige;
   color: black;
-  padding: 20px;
+  padding: 12px;
   font-size: 18px;
   border: 0;
   border-radius: 10px;
@@ -148,40 +111,15 @@ button:hover {
   .box-right {
     min-height: 60vh;
     width: 100%;
-    background-color: #484b61;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: unset;
   }
 
   .box-left {
     min-height: 40vh;
-    /* vh - view height */
     width: 100%;
-    background-image: url("./assets/doggy.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-size: 28px;
-    font-weight: bold;
-    color: black;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    flex-wrap: unset;
   }
 }
 
-
-
-/* .form-area {
-  padding: 15px;
-  margin: 10px;
+.form-area {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-
-.gender-option {
-  padding: 15px;
-  margin: 15px;
-} */
