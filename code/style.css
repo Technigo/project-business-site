@@ -1,5 +1,167 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
-body {
-  background: blue;
+:root{
+  --01: #f5eee6; 
+  --02: #f3d7ca; 
+  --03: #e6a4b4; 
+  --04: #c86b85;
+  --05: #bc385d;
 }
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Pacifico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+.container-body{
+  margin: 10px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.business-name{
+  color:var(--05);
+  text-transform: capitalize;
+  text-align: center;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--02);
+  border-radius: 10px;
+  margin: 15px;
+  padding: 20px;
+  font-size: 1.2em;
+  color: var(--04);
+}
+form input, select{
+  width:100%;
+  border: none;
+  font-family: "Pacifico", sans-serif;
+  color: black;
+  font-size: 1.1em;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+textarea{
+  width:100%;
+  border: none;
+  font-family: "Pacifico", sans-serif;
+  color: black;
+  font-size: 1em;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: left;
+  padding: 5px;
+}
+form button{
+  border: none;
+  font-family: "Pacifico", sans-serif;
+  font-size: 1.1em;
+  border-radius: 5px;
+  background-color: var(--05);
+  color: var(--01);
+}
+::placeholder{
+  color: var(--03);
+  text-align: center;
+}
+hr{
+  margin: 15px;
+  border: 1px solid white;
+}
+.radio-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;  
+}
+.radio-buttons input{
+  max-width: 20px;
+}
+.radio-buttons label{
+  text-align: left;
+}
+footer{
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  max-height: 70px;
+  padding:20px 20px;
+  color: rgb(93, 91, 91);
+}
+.footer-content a{
+  display: inline-block;
+  justify-content: space-between;
+  text-decoration: none;
+}
+div a:hover, footer a{
+  color: var(--bg-2);
+  font-size: bold;    
+}   
+.logo-png{
+  max-height: 30px;
+}
+
+/* ---------------------------------------------------MEDIA QUERIES------------------------------------------------------------- */
+/* --------------------------------------------MOVILE SCREENS<670PX------------------------------------------------------------- */
+@media (max-width:670px){
+  header{
+    max-height: 200px;
+  }
+  .business-name{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 220px;
+    margin: 10px;
+    z-index: 5;
+    top: 0;
+    left: 0;
+  }
+  #hero-video{
+    object-fit: cover;
+    width: 100%;
+    z-index: -2;
+  }
+}
+/* -------------------------------------------671PX<TABLET SCREENS<1024PX------------------------------------------------------- */
+@media (min-width:671px) and (max-width:1024px){
+  #hero-video{
+    object-fit: cover;
+    z-index: -2;
+  }
+  
+  .business-name{
+    width: 100%;
+    text-align: center;
+    font-size: 4em;
+    height: auto;
+    margin: 10px;
+  }
+}
+
+/* -----------------------------------------------1024PX<PC SCREENS------------------------------------------------------------- */
+@media (min-width:671px) and (max-width:1024px){
+   
+  .business-name{
+    width: 100%;
+    text-align: center;
+    font-size: 4em;
+    height: auto;
+    margin: 10px;
+  }
+}
+

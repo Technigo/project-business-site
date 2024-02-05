@@ -1,17 +1,106 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <h1>Business name 🌻</h1>
-
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <title>Business site</title>
+</head>
+<script src="scripts/main.js"></script>
+<body>
+  <header>
+    <section class="hero-section">
+      <video id="hero-video" autoplay muted loop>
+        <source src="https://player.vimeo.com/external/394677254.sd.mp4?s=09d11f8c7ed881016bb2302706cf25d4b181d5df&profile_id=164&oauth2_token_id=57447761"
+        type="video/mp4"> 
+      </section>
+    </header>
+  <div class="container-body">
+    <h1 class="business-name">The cake factory</h1>
+    <form action="https://httpbin.org/anything" method="post">
+      <h1>Design your marvoulous cake</h1>
+      <div> <!--Cake outside -->
+        <label>Choose the outside of your cake:
+          <select id="cake-outside" name="outsideCake" required>
+            <option disabled selected value></option>
+            <option value="Chocolat">Chocolate</option>
+            <option value="Vanilla">Vanilla</option>
+            <option value="Strawberry">Strawberry</option>
+            <option value="Lemon">Lemon</option>
+            <option value="Coffee">Coffee</option>
+            <option value="Blueberry">Blueberry</option>
+            <option value="Caramel">Caramel</option>
+          </select>
+        </label>
+      </div>
+      <div> <!--Cake inside flavour -->
+        <label>Choose your cake inside flavour:
+          <select id="cake-inside" name="insideCake" required>
+            <option disabled selected value></option>
+            <option value="Chocolat">Chocolate</option>
+            <option value="Vanilla">Vanilla</option>
+            <option value="Strawberry">Strawberry</option>
+            <option value="Lemon">Lemon</option>
+            <option value="Red Velvet">Red Velvet</option>
+            <option value="Coffee">Coffee</option>
+            <option value="Blueberry">Blueberry</option>
+            <option value="Caramel">Caramel</option>
+            <option value="cream">Cream</option>
+            <option value="marmelad">Marmelad</option>
+          </select>
+        </label>
+      </div>
+      <hr>
+      <div> <!--Radio buttons -->
+        <label>Some extras?
+          <div class="radio-buttons">
+            <input type="radio" required>
+            <label>Candle pack 1$</label>
+          </div>
+        <div class="radio-buttons">
+          <input type="radio" required>
+          <label>Happy birthday ballons 2$</label>
+        </div>
+        <div class="radio-buttons">
+          <input type="radio" required>
+          <label>Confetty 1$</label>
+        </div>
+      </label>
+      </div>
+      <hr>
+      <div class="text-area">
+        <label>Do you want to give us extra information? Write it down here:</label>
+        <textarea name="Client comment" id="textarea" cols="30" rows="7"></textarea>
+      </div>
+      <div> <!--Name order -->
+        <label>Name order:
+          <input type="text" name="nameOrder" required>
+        </label>
+      </div>
+      <div> <!--email -->
+        <label>e-mail:
+          <input type="email" name="emailCostumer" placeholder="(for order confirmation)" required>
+        </label>
+      </div>
+      <hr>
+    <button type="submit">Order</button>
+    </form>
+  </div>
+  <footer class="footer-content">
+    <a href=""></a>
+    <div>
+      <img class="logo-png" src="./logo.svg" alt="logo-technigo">
+    </div>
+    <div>
+      <a href="mailto:arnauvidal@gmail.com">© 2024 Arnau Vidal</a>
+    </div>
+    <div>
+      <a href="https://www.linkedin.com/in/arnau-vidal-i-huix-4266a940" target="_blank"><img class="logo-png" src="./linkedin-icon.png"></a>
+      <a href="https://github.com/vidalhuix/vidalhuix" target="_blank"><img class="logo-png" src="./github-icon.webp" alt=""></a>
+    </div>
+  </footer>
+</body>
 </html>

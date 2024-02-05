@@ -1,12 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+This is a web page showing a form where you can order a cake from "The cake factory" business.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This assigment is to practice html forms and their styling.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We did used Figma to make a fast sketch about the site. We used html and SCC to style it. The most dificult thing was to work toguether and figuring out how to keep the hero video att the top of the page.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
