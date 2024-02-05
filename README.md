@@ -8,4 +8,4 @@ This assigment is to practice html forms and their styling.
 
 We did used Figma to make a fast sketch about the site. We used html and SCC to style it. The most dificult thing was to work toguether and figuring out how to keep the hero video att the top of the page.
 
-## View it live: [here](https://the-cake-factory.netlify.app/) !!
+## View it live [here](https://the-cake-factory.netlify.app/)
