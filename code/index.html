@@ -4,14 +4,129 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
-  <body>
-    <h1>Business name 🌻</h1>
+  
+<body>
+<div class="container">
+<!-- Hero Video -->
+<div class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="https://assets.mixkit.co/videos/preview/mixkit-crowd-jumping-at-the-concert-14084-large.mp4" type="video/mp4">
+  </video>
+  <div class="text-container">
+    <h1>SUMMER JAM</h1>
+    <div class="text-background">
+      <h2>Don't miss out on the ultimate summer experience. Secure your spot and join us for an unforgettable weekend of music, joy, and summer vibes. Get your tickets now! 🎟️</h2>
+    </div>
+  </div>
+</div>
+    
+<h3>Access passes here</h3>
+  
+<form action="https://httpbin.org/anything" method="post" name="signupForm">
+  
+  <!-- Ticket Radio Input -->
+  <div class="form-area">
+    <label>Festival Tickets</label>
+    <select name="tickets" required>
+      <option value="" selected disabled>Select your ticket</option>
+      <option value="friday">Friday Ticket - 1.099,00 SEK</option>
+      <option value="saturday">Saturday Ticket - 1.099,00 SEK</option>
+      <option value="sunday">Sunday Ticket - 1.099,00 SEK</option>
+      <option value="3day">3-Day Ticket - 2.499,00 SEK</option>
+    </select>
+  </div>
+  
+  <!-- Ticket Amount Input -->
+  <div class="form-area">
+    <label>Amount of tickets</label>
+    <input type="number" id="ticket-amount" name="amount" min="1" value="1">
+  </div>
 
-    <!-- video or image as a header is cool :) -->
+  <!-- Text Input -->
+  <div class="form-area">
+    <label>Full name</label>
+    <input type="text" id="fullname" placeholder="Type your name" name="fullname" required>
+  </div>
 
-    <!-- Signup form -->
+  <!-- Email Input -->
+  <div class="form-area">
+    <label>Email</label>
+    <input type="email" id="email" placeholder="name@gmail.com" name="email" required>
+  </div>
 
-  </body>
+  <!-- Phone Input -->
+<div class="form-area">
+  <label>Phone</label>
+  <input type="tel" name="telephone" placeholder="### ### ### ###" required>
+</div>
+
+<div class="form-area">
+  <label>Payment</label>
+  <div class="payment-options">
+    <label class="radio-option">
+      <input type="radio" name="payment" value="visa" required>
+      Visa
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="payment" value="mastercard" required>
+      Mastercard
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="payment" value="amex" required>
+      Amex
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="payment" value="applepay" required>
+      Apple Pay
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="payment" value="paypal" required>
+      Paypal
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="payment" value="klarna" required>
+      Klarna
+    </label>
+  </div>
+</div>
+
+  <!-- Submit Button -->
+  <div class="form-area">
+    <button class="submit" id="submit">SUBMIT</button>
+  </div>
+</div>
+
+
+ <!-- "Back to Top" button -->
+ <button id="goTopBtn" onclick="goTop()"><i class="fas fa-arrow-up"></i></button>
+ <script>
+ 
+   var mybutton = document.getElementById("goTopBtn");
+
+  
+   window.onscroll = function() {
+     scrollFunction();
+   };
+
+   function scrollFunction() {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+       mybutton.style.display = "block";
+     } else {
+       mybutton.style.display = "none";
+     }
+   }
+
+
+   function goTop() {
+     document.body.scrollTop = 0; 
+     document.documentElement.scrollTop = 0; 
+   }
+ </script>
+<footer>
+  Conelia, Yia and Trista | Technigo Boot Camp 2024
+</footer>
+</body>
 </html>
