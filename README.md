@@ -14,7 +14,14 @@ If we had more time, we would insert some videos and make the background fancier
 Live website: https://65ba434b51eb31cf720320b9--majestic-duckanoo-36bd65.netlify.app/
 
 ## Collaborators
-This project was completed within a team consisting of me, Alma, Linda, and Sofie.
-[<img src="https://github.com/{{ SofieFerrari }}.png" width="60px;"/><br /><sub><ahref="https://github.com/{{ SofieFerrari }}">{{ SofieFerrari }}</a></sub>]
-[<img src="https://github.com/{{ linda-f }}.png" width="60px;"/><br /><sub><ahref="https://github.com/{{ linda-f }}">{{ linda-f }}</a></sub>]
-[<img src="https://github.com/{{ almaherris }}.png" width="60px;"/><br /><sub><ahref="https://github.com/{{ almaherris }}">{{ almaherris }}</a></sub>]
+This project was completed within a team consisting of Wen, Alma, Linda, and Sofie.
+
+[<img src="https://github.com/almaherris.png" width="80px;"/><br /><sub>Alma Herrström</sub>](https://github.com/almaherris)
+
+[<img src="https://github.com/linda-f.png" width="80px;"/><br /><sub>Linda Frischknecht</sub>](https://github.com/linda-f)
+
+[<img src="https://github.com/SofieFerrari.png" width="80px;"/><br /><sub>SofieFerrari</sub>](https://github.com/SofieFerrari)
+
+[<img src="https://github.com/wwenzz.png" width="80px;"/><br /><sub>Wen Zhao</sub>](https://github.com/wwenzz)
+
+
