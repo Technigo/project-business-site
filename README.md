@@ -20,7 +20,7 @@ This project was completed within a team consisting of Wen, Alma, Linda, and Sof
 
 [<img src="https://github.com/linda-f.png" width="80px;"/><br /><sub>Linda Frischknecht</sub>](https://github.com/linda-f)
 
-[<img src="https://github.com/SofieFerrari.png" width="80px;"/><br /><sub>SofieFerrari</sub>](https://github.com/SofieFerrari)
+[<img src="https://github.com/SofieFerrari.png" width="80px;"/><br /><sub>Sofie Ferrari</sub>](https://github.com/SofieFerrari)
 
 [<img src="https://github.com/wwenzz.png" width="80px;"/><br /><sub>Wen Zhao</sub>](https://github.com/wwenzz)
 
