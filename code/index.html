@@ -1,17 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <h1>Business name 🌻</h1>
 
-    <!-- video or image as a header is cool :) -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Signup form -->
+  <title>Business Site</title>
+  <!-- dont forget to add a css file and link it here! -->
+</head>
 
-  </body>
+<body>
+  <section class="grid-container">
+    <div class="header">
+      <div class="header-background">
+        <div class="header-text">
+          <h1>We are developers</h1>
+          <p>Tech dreams take flight with We Are Developers. Your gateway to the perfect web development job. Unleash
+            your potential today!</p>
+        </div>
+      </div>
+    </div>
+    <div class="form">
+      <div class="intro-text">
+        <h2>Need help connecting to tech jobs?</h2>
+        <p>Send us your contact details, experience level and we will help you find your dream job.</p>
+      </div>
+      <form action="https://httpbin.org/anything" method="post">
+
+        <div class="input-container">
+          <label for="name">Name</label>
+          <input type="text" name="name" placeholder="type your name here" required>
+        </div>
+
+        <div class="input-container">
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="type your email here" required>
+        </div>
+
+        <div class="input-container">
+          <label for="password">Password</label>
+          <input type="password" name="password" placeholder="********" required>
+        </div>
+
+        <div class="input-container">
+          <label for="password">Confirm password</label>
+          <input type="password" name="password" placeholder="********" required>
+
+        </div>
+
+
+        <div class="wrapper-column">
+          <p>Coding level</p>
+          <div class="wrapper-row">
+            <label class="button-container">
+              <input type="radio" name="codinglevel" id="beginner" value="beginner" checked>Beginner
+            </label>
+            <label class="button-container">
+              <input type="radio" name="codinglevel" id="intermediate" value="intermediate">Intermediate
+            </label>
+            <label class="button-container">
+              <input type="radio" name="codinglevel" id="advanced" value="advenced">Advanced
+            </label>
+          </div>
+        </div>
+
+        <div class="wrapper-column">
+          <p>How do you prefer working?</p>
+          <div class="wrapper-row">
+            <label class="button-container">
+              <input type="checkbox" name="checkbox" id="remotely" value="remotely">Remotely
+            </label>
+            <label class="button-container">
+              <input type="checkbox" name="checkbox" id="hybrid" value="hybrid">Hybrid
+            </label>
+            <label class="button-container">
+              <input type="checkbox" name="checkbox" id="locally" value="locally">Locally
+            </label>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <label for="document"> Upload your portfolio
+          </label>
+          <input type="file" id="document" name="document" accept=".pdf" />
+        </div>
+        <div class="input-container">
+          <button type="submit">Submit</button>
+        </div>
+        </label>
+
+      </form>
+    </div>
+
+    <div class="footer">
+      <p>created by Nathalie, Jing, Eliane</p>
+      <p>for Technigo Bootcamp Spring 2024</p>
+    </div>
+  </section>
+
+
+</body>
+
 </html>
