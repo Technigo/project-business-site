@@ -93,27 +93,17 @@ img {
   font-size: 1.5em;
 }
 
-.left-section li {
-  color: #fff6;
-}
-
-.left-section li.active {
-  color: var(--clr-white);
-}
-
-.form-steps li.active::before {
-  background-color: var(--clr-primary-dark);
-}
-
 /* Form steps */
 .form-steps ul {
   list-style: none;
+  margin-left: 25px;
 }
 
 .form-steps li {
   position: relative;
   display: flex;
   padding-bottom: 3em;
+  color: #fff6;
 }
 
 .form-steps li::before {
@@ -136,10 +126,15 @@ img {
   left: 10px;
 }
 
+.form-steps li.active {
+  color: var(--clr-white);
+}
+
 .form-steps li.active::before {
   border: 2px solid #fff;
   position: relative;
   z-index: 15;
+  background-color: var(--clr-primary-dark);
 }
 
 /* Right section */
@@ -313,7 +308,7 @@ button:hover {
 
   .left-section {
     min-height: 40vh;
-    background-position: left;
+    background-position: center;
   }
 
   .right-section h1 {
