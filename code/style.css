@@ -191,7 +191,7 @@ img {
 }
 
 .right-section label,
-.right-section .weight-label {
+.right-section .characteristic-label {
   display: block;
   margin-bottom: 20px;
   font-weight: 300;
@@ -250,14 +250,14 @@ label:nth-child(even) {
 
 /* Gender */
 .gender-section,
-.weight-section {
+.characteristic-section {
   background-color: var(--clr-white);
   display: flex;
   padding: 0.3em;
 }
 
 label.gender-option,
-label.weight-option {
+label.characteristic-option {
   position: relative;
   cursor: pointer;
   margin: auto;
@@ -270,12 +270,12 @@ label.weight-option {
 }
 
 .gender-option input,
-.weight-option input {
+.characteristic-option input {
   display: none;
 }
 
 .gender-option input:checked + span,
-.weight-option input:checked + span {
+.characteristic-option input:checked + span {
   background-color: #dfbfbf;
   width: 100%;
   padding: 0.5em;
@@ -330,15 +330,16 @@ button:hover {
     flex-direction: column;
   }
 
-  .right-section label {
+  .right-section label,
+  .right-section .characteristic-label {
     font-size: 0.8rem;
   }
 
-  .weight-section {
+  .characteristic-section {
     flex-direction: column;
   }
 
-  .weight-section label {
+  .characteristic-section label {
     width: 100%;
   }
 
