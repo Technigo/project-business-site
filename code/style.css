@@ -1,5 +1,122 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
 body {
-  background: blue;
+  background-image: url(https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 4em;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info {
+  color: white;
+  text-align: center;
+  width: 60%;
+  font-weight: 400;
+}
+
+.form-section {
+  background-color: rgba(220, 201, 184, 0.65);
+  padding: 10px;
+  border-radius: 25px;
+  margin: 30px;
+  width: 90%;
+}
+
+.inputfield {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+}
+
+textarea {
+  margin: 0px;
+  padding: 5px 10px;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 5px;
+  border: 0;
+}
+
+.inputfield>label {
+  float: left;
+  clear: left;
+  width: 100%;
+  text-align: left;
+}
+
+input {
+  float: right;
+  padding: 2px 10px;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 5px;
+  border: 0;
+}
+
+select {
+  float: right;
+  font-family: 'Quicksand', sans-serif;
+  padding: 2px 12px;
+  border-radius: 5px;
+  border: 0;
+}
+
+.radio-option {
+  display: flex;
+  font-weight: 400;
+}
+
+button {
+  background-color: rgb(77, 5, 19, 0.65);
+  color: white;
+  padding: 10px 20px;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 10px;
+  border: 0px;
+  font-size: 17px;
+}
+
+button:hover {
+  background-color: rgb(77, 5, 19);
+}
+
+footer {
+  color: white;
+  align-self: flex-end;
+  font-weight: 400;
+}
+
+@media (min-width: 667px) and (max-width: 1024px) {
+
+  .form-section {
+    width: 70%;
+  }
+
+}
+
+@media (min-width: 1025px) {
+
+  .form-section {
+    width: 45%;
+  }
 }
