@@ -1,5 +1,345 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+@import url("https://fonts.googleapis.com/css2?family=Inder&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*
+  =============== 
+  Variables
+  ===============
+  */
+  --clr-primary-dark: #484b61;
+  --clr-primary-light: #e9dede;
+  --clr-text: #484b61;
+  --clr-white: #fff;
+  --clr-black: #000;
+
+  --border-radius-mini: 10px;
+  --border-radius-small: 15px;
+  --border-radius-medium: 20px;
+  --border-radius-large: 30px;
+
+  --general-padding: 35px;
+  --general-smaller-padding: 20px;
+  --general-mini-padding: 10px;
+}
+
 body {
-  background: blue;
+  font-family: "Inder", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+/* Left section */
+.left-section {
+  min-height: 100vh;
+  position: relative;
+  width: 40%;
+  background-image: url("./assets/doggy.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-section::before {
+  content: "";
+  position: absolute;
+  background-color: #484b6187;
+  width: 100%;
+  height: 100%;
+}
+
+.left-section .info-container {
+  margin-top: 5em;
+  position: relative;
+  z-index: 10;
+}
+
+.left-section .logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4em;
+  color: var(--clr-white);
+}
+
+.left-section img {
+  width: 70px;
+  height: 70px;
+  padding: 0.8em;
+  background-color: var(--clr-primary-light);
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1em;
+}
+
+.left-section p {
+  font-size: 1.5em;
+}
+
+/* Form steps */
+.form-steps ul {
+  list-style: none;
+  margin-left: 25px;
+}
+
+.form-steps li {
+  position: relative;
+  display: flex;
+  padding-bottom: 3em;
+  color: #fff6;
+}
+
+.form-steps li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #5a5c6f;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+
+.form-steps li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: var(--clr-primary-dark);
+  width: 2px;
+  top: 19px;
+  left: 10px;
+}
+
+.form-steps li.active {
+  color: var(--clr-white);
+}
+
+.form-steps li.active::before {
+  border: 2px solid #fff;
+  position: relative;
+  z-index: 15;
+  background-color: var(--clr-primary-dark);
+}
+
+/* Right section */
+.right-section {
+  width: 60%;
+  background-color: var(--clr-primary-light);
+  color: var(--clr-primary-dark);
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
+}
+
+.right-section h1 {
+  font-size: 2.3rem;
+  margin-bottom: 2em;
+  max-width: 500px;
+}
+
+/* Form */
+.right-section form {
+  max-width: 500px;
+  width: 100%;
+}
+
+.right-section .form-area {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+.right-section .input-area {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+.right-section input,
+.right-section select {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  padding: 0.7em;
+  border-radius: 5px;
+  border: none;
+  margin-top: 0.7em;
+}
+
+.right-section label,
+.right-section .characteristic-label {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--clr-text);
+}
+
+label:nth-child(odd) {
+  margin-right: 10px;
+}
+
+label:nth-child(even) {
+  margin-left: 10px;
+}
+
+/* File upload */
+.image-upload {
+  position: relative;
+  width: 100%;
+}
+
+.image-upload label {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 81px;
+  display: flex;
+  transform: translate(0%, -50%);
+  cursor: pointer;
+}
+
+#upload-file {
+  visibility: hidden;
+  position: relative;
+  margin: 0;
+  height: 100%;
+}
+
+.upload-icon {
+  background: var(--clr-white);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.upload-icon img {
+  width: 20px;
+}
+
+/* Gender */
+.gender-section,
+.characteristic-section {
+  background-color: var(--clr-white);
+  display: flex;
+  padding: 0.3em;
+}
+
+label.gender-option,
+label.characteristic-option {
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+  width: 50%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+}
+
+.gender-option input,
+.characteristic-option input {
+  display: none;
+}
+
+.gender-option input:checked + span,
+.characteristic-option input:checked + span {
+  background-color: #dfbfbf;
+  width: 100%;
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  display: block;
+  margin: 0 auto;
+  border-radius: 30px;
+  padding: 0.5em 2em;
+  font-size: 1rem;
+  margin-top: 50px;
+  background: var(--clr-primary-dark);
+  color: #fff;
+  border: 1px solid var(--clr-primary-dark);
+}
+
+button:hover {
+  background: #5a5c6d;
+}
+
+@media screen and (max-width: 1200px) {
+  .right-section .input-area {
+    width: 48%;
+    margin-right: 2%;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+
+  .left-section {
+    min-height: 40vh;
+    background-position: center;
+  }
+
+  .right-section h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .right-section {
+    min-height: 60vh;
+    padding: 1em;
+  }
+
+  .right-section .form-area {
+    flex-direction: column;
+  }
+
+  .right-section label,
+  .right-section .characteristic-label {
+    font-size: 0.8rem;
+  }
+
+  .characteristic-section {
+    flex-direction: column;
+  }
+
+  .characteristic-section label {
+    width: 100%;
+  }
+
+  .right-section .input-area {
+    width: 100%;
+    margin-right: 0;
+  }
 }
