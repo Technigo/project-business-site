@@ -1,11 +1,11 @@
 # Business Site
 
-This is a web page showing a form where you can order a cake from "The cake factory" business.
+This is a web page that shows a form where you can order a cake.
 
 This assigment is to practice html forms and their styling.
 
 ## The problem
 
-We did used Figma to make a fast sketch about the site. We used html and SCC to style it. The most dificult thing was to work toguether and figuring out how to keep the hero video att the top of the page.
+We utilized Figma to create a quick sketch of how the site should appear. We then utilized HTML and CSS to style it accordingly. The most challenging aspect was collaborating effectively and determining how to maintain the hero video at the top of the page.
 
 ## View it live
