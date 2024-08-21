@@ -22,7 +22,7 @@ Your task is to create a business one-pager website that contains an image or vi
 
 - [Confetti](https://confetti.events/sv/) (hero video)
 - [Spotify signup form](https://www.spotify.com/se/signup) - Copy the link and open in incognito if you are already logged in 😉
-- [Dribble](https://dribbble.com/search/signup-form) (signup form examples)
+- [Dribbble](https://dribbble.com/search/signup-form) (signup form examples)
 
 ### Creating the Hero Section
 
