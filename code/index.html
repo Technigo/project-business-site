@@ -3,15 +3,68 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Tranquil Essence Spa</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Business name 🌻</h1>
+    <!-- Hero Section -->
+    <header class="hero-section">
+      <video autoplay muted loop class="hero-video">
+        <source src="/video/spa.mp4" type="video/mp4" />
+      </video>
 
-    <!-- video or image as a header is cool :) -->
+      <!-- Logo and Navigation on Video -->
+      <div class="logo-navigation">
+        <!-- <div> -->
+        <img src="images/logo1.png" alt="Tranquil Essence Spa Logo" />
+        <!-- </div> -->
+        <nav class="navigation">
+          <!-- Unordered list for navigation links -->
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Treatments & Therapies</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
 
-    <!-- Signup form -->
+      <div class="hero-content">
+        <h1>Tranquil Essence Spa</h1>
+        <p>Relax, Rejuvenate, Renew.</p>
+      </div>
+    </header>
 
+    <!-- Signup class maybe not needed -->
+    <section class="signup">
+      ----------------------------------------------------------
+      <form action="https://httpbin.org/anything" method="POST">
+        <h2>Sign Up to book an experience</h2>
+        <fieldset>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+
+          <p>Preferred Time:</p>
+          <label for="morning">
+            <input type="radio" id="morning" name="time" value="morning" />
+            Morning
+          </label>
+          <label for="afternoon">
+            <input type="radio" id="afternoon" name="time" value="afternoon" />
+            Afternoon
+          </label>
+
+          <label for="agree">
+            <input type="checkbox" id="agree" name="agree" /> I agree to the
+            Terms & Conditions
+          </label>
+
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </section>
   </body>
 </html>
