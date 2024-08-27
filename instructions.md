@@ -30,7 +30,7 @@ A very common element on websites is the top section with a background image or 
 
 #### Finding great free images
 
-Check in the [Image resources](/04237e2fdd624562acd58643dac93016) from the toolbox to find nice images.
+Check in the [Image resources](https://technigo.notion.site/Image-resources-04237e2fdd624562acd58643dac93016?pvs=4) from the toolbox to find nice images.
 
 #### Finding great free videos
 
