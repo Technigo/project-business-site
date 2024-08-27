@@ -1,5 +1,498 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+:root {
+  --white: #fff;
+  --black: #000;
+  --medium-gray: #888;
+  --light-gray: #ccc;
+  --lightest-gray: #e6e6e6;
+  --primary: #093215;
+  --secondary: blueviolet;
+  --error: #F75E1C;
+}
+
+::selection {
+  background-color: var(--black);
+  color: var(--white)
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: blue;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* ********************
+  Typography
+******************** */
+
+h1,
+h2,
+h3 {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 120%;
+  letter-spacing: 0.02rem;
+  color: var(--primary);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    line-height: 110%;
+  }
+}
+
+h1 {
+  font-size: 2.25rem;
+
+  @media (min-width: 768px) {
+    font-size: 3.5rem;
+  }
+
+  @media (min-width: 1025px) {
+    font-size: 4.5rem;
+  }
+}
+
+.text-large {
+  font-size: 1.125rem;
+  line-height: 1.5;
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 1025px) {
+    font-size: 1.5rem;
+  }
+}
+
+a:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  border-radius: 0.125rem;
+  outline: 0.125rem solid var(--white);
+  outline-offset: 0.75rem;
+}
+
+/* ********************
+  Default form styling
+******************** */
+
+form {
+  overflow: hidden;
+}
+
+form label {
+  position: relative;
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 1rem;
+  transition-property: opacity, background-color;
+  transition-timing-function: ease-out;
+  transition-duration: 0.5s;
+
+  @media (min-width: 1025px) {
+    width: auto;
+  }
+
+  span {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.25rem;
+  }
+}
+
+input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* 
+  Add icon after the label if the user input is valid.
+  But not when the placeholder is visible and not when input is in focus.
+  This is to avoid prematerualy validating the field.
+*/
+label:has(input:not(:placeholder-shown, :focus):valid) {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1.5rem;
+    height: 100%;
+    background: url('./assets/icon-success.svg') center no-repeat;
+  }
+}
+
+/* 
+  Add icon after the label if the user input is invalid.
+*/
+label:has(input:not(:placeholder-shown, :focus):invalid) {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1.5rem;
+    height: 100%;
+    background: url('./assets/icon-error.svg') center no-repeat;
+  }
+}
+
+form button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+
+  background-color: var(--primary);
+  border-radius: 0.375rem;
+  transition: background 0.2s ease-out;
+  padding: 1rem;
+
+  @media (min-width: 768px) {
+    padding: 0.4375rem 1rem 0.5rem 1rem;
+  }
+
+  &:hover, &:focus {
+    background-color: var(--secondary);
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 0.125rem solid var(--black);
+    outline-offset: 0.125rem;
+  }
+
+  &[type=submit] {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    .text, .icon {
+      transition: all 0.5s cubic-bezier(0.495, -0.395, 0.000, 1.540);
+    }
+
+    .text {
+      width: 100%;
+      position: relative;
+      left: 0;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: -100%;
+      width: 100%;
+    }
+  }
+
+  &[type=submit]:hover,
+  &[type=submit]:focus {
+    .text {
+      position: relative;
+      left: -130%;
+    }
+
+    .icon {
+      right: 0;
+    }
+  }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: var(--medium-gray);
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: var(--medium-gray);
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: var(--medium-gray);
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: var(--medium-gray);
+}
+
+
+/* ********************
+  Header
+******************** */
+
+.page-header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  width: 100%;
+
+  margin: auto;
+  padding: 1.5rem;
+
+  @media (min-width: 768px) {
+    padding: 2.5rem;
+  }
+}
+
+.page-header__logo {
+  img {
+    max-width: 7.5rem;
+  }
+}
+
+.page-header__nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--white);
+  text-decoration: none;
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 2.25rem;
+    height: 2px;
+  }
+
+  .hamburger:before,
+  .hamburger:after {
+    display: block;
+    content: "";
+    width: 2.25rem;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    transition: all .25s ease-in-out;
+  }
+
+  .hamburger:before {
+    transform: rotate(0deg) translateY(-6px);
+  }
+
+  .hamburger:after {
+    transform: rotate(0deg) translateY(6px);
+  }
+
+  &.is-open {
+    .hamburger:before {
+      transform: rotate(-45deg) translate(0);
+    }
+
+    .hamburger:after {
+      transform: rotate(45deg) translate(0);
+    }
+  }
+
+}
+
+/* ********************
+  Background video
+******************** */
+
+.bg-video-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  video {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    object-fit: cover;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* ********************
+  Hero
+******************** */
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  overflow: hidden;
+  background-color: rgba(6, 21, 7, 0.95);
+
+  padding: 4.5rem 1.5rem 2rem;
+  min-height: 100svh;
+  height: min-content;
+
+  @media (min-width: 768px) {
+    align-items: center;
+    padding: 2.5rem;
+  }
+
+  @media (min-width: 1025px) {
+    padding: 8rem 0;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    @media (min-width: 1025px) {
+      max-width: 49rem;
+    }
+  }
+
+  .hero__title, .hero__text {
+    color: var(--white);
+  }
+
+  .hero__text {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+
+    @media (min-width: 768px) {
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .hero__form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    border: none;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    @media (min-width: 1024px) {
+      width: auto;
+    }
+
+    label {
+      border-bottom: 1px solid var(--lightest-gray);
+
+      @media (min-width: 768px) {
+        border-right: 1px solid var(--lightest-gray);
+      }
+
+      &.is-focused {
+        box-shadow:
+          0px 0.7px 3.6px rgba(0, 0, 0, 0.049),
+          0px 1.9px 10px rgba(0, 0, 0, 0.07),
+          0px 4.5px 24.1px rgba(0, 0, 0, 0.091),
+          0px 15px 80px rgba(0, 0, 0, 0.14)
+        ;
+
+          span {
+            color: blueviolet;
+          }
+      }
+
+      span, input {
+        transition: opacity 0.5s cubic-bezier(0.495, -0.395, 0.000, 1.540);
+      }
+
+      &.is-not-focused {
+        span, input {
+          opacity: 0.5;
+        }
+      }
+
+    }
+
+    label:last-of-type {
+      @media (min-width: 768px) {
+        border-right: none;
+      }
+    }
+
+    input {
+      width: 100%;
+
+      @media (min-width: 768px) {
+        width: 100%;
+      }
+
+      @media (min-width: 1025px) {
+        min-width: 16rem;
+      }
+    }
+
+    .hero__form__button {
+      display: flex;
+      padding: 1rem;
+      flex-shrink: 0;
+      
+      @media (min-width: 768px) {
+        padding: 1rem;
+      }
+
+      button {
+        width: 100%;
+
+        @media (min-width: 768px) {
+          width: auto;
+        }
+
+      }
+
+    }
+  }
+
+  .hero__video {
+    z-index: -1;
+  }
+
 }

@@ -1,16 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Picko — When you like to move it, move it</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/favicon.svg" />
+    <link rel=”mask-icon” href=”./assets/favicon.svg” color=”#000000">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Testing, testing 🌻</h1>
-
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
+    <header class="page-header">
+      <a href="./index.html" class="page-header__logo">
+        <img
+          width="120"
+          height="35"
+          src="./assets/picko-logo.svg"
+          alt="Picko's logotype"
+        />
+      </a>
+      <nav class="page-header__nav">
+        <a href="#nav" class="page-header__nav__link">
+          <div class="hamburger"></div>
+          <span class="text">Menu</span>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero hero--video">
+        <div class="hero__content">
+          <h1 class="hero__title">When you like to move it, move it</h1>
+          <p class="hero__text text-large">
+            Picko is your go-to platform for easy item transport and delivery.
+            Instantly connect with reliable helpers to get your goods from point
+            A to point B.
+          </p>
+          <form action="https://httpbin.org/anything" class="hero__form">
+            <label>
+              <span>First name</span>
+              <input
+                type="text"
+                name="first_name"
+                placeholder="Madonna"
+                required
+              />
+            </label>
+            <label>
+              <span>Email</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+              />
+            </label>
+            <div class="hero__form__button">
+              <button type="submit">
+                <span class="text">Get started</span
+                ><span class="icon"
+                  ><img
+                    src="./assets/arrow-forward.svg"
+                    alt="Arrow going forward"
+                /></span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="hero__video bg-video-wrapper">
+          <video muted playsinline autoplay loop preload="auto" poster="">
+            <source src="./assets/picko-hero-background.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
   </body>
 </html>
