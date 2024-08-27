@@ -1,17 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Site</title>
+    <link rel="stylesheet" href="./style.css" />
     <!-- dont forget to add a css file and link it here! -->
   </head>
   <body>
-    <h1>Business name 🌻</h1>
+    <video autoplay muted loop id="hero-video">
+      <source src="/blue.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <div class="sign-up">
+        <h1>Business name</h1>
+        <form action="https://httpbin.org/anything" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required /><br /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="country">Country:</label>
+          <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option value="us">United States</option>
+            <option value="ca">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="au">Australia</option>
+            <!-- Add more countries as needed --></select
+          ><br /><br />
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+      <div class="testimonial-section">
+        <h2>What our Jobseekers Said.</h2>
+        <blockquote>
+          <p>
+            "Search and find your dream job is now easier than ever. Just browse
+            a job and apply if you need to."
+          </p>
+        </blockquote>
+      </div>
+    </div>
 
     <!-- video or image as a header is cool :) -->
 
     <!-- Signup form -->
-
   </body>
 </html>
