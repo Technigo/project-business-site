@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tranquil Essence Spa</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo1.png" sizes="16x16" type="image/png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Hero Section -->
-    <header class="hero-section">
-      <video autoplay muted loop class="hero-video">
-        <source src="/video/spa.mp4" type="video/mp4" />
-      </video>
+    <header>
+      <div class="hero-section">
+        <video autoplay muted loop class="hero-video">
+          <source src="/video/spa.mp4" type="video/mp4" />
+          <!-- fallback message for browsers that do not support the video tag -->
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
       <!-- Logo and Navigation on Video -->
-      <div class="logo-navigation">
-        <!-- <div> -->
+      <div class="logo">
         <img src="images/logo1.png" alt="Tranquil Essence Spa Logo" />
-        <!-- </div> -->
+
         <nav class="navigation">
           <!-- Unordered list for navigation links -->
           <ul>
             <li><a href="#">About us</a></li>
-            <li><a href="#">Treatments & Therapies</a></li>
+            <li><a href="#">Treatments</a></li>
             <li><a href="#">Gift Cards</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
@@ -35,27 +40,54 @@
       </div>
     </header>
 
-    <!-- Signup class maybe not needed -->
+    <!-- Signup class -->
     <section class="signup">
-      ----------------------------------------------------------
       <form action="https://httpbin.org/anything" method="POST">
-        <h2>Sign Up to book an experience</h2>
+        <h2>Sign up</h2>
+        <h5>to book your treatment</h5>
         <fieldset>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <label for="name"></label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+          />
 
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required />
+          <label for="email"></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="E-mail"
+            required
+          />
 
-          <p>Preferred Time:</p>
-          <label for="morning">
-            <input type="radio" id="morning" name="time" value="morning" />
-            Morning
-          </label>
-          <label for="afternoon">
-            <input type="radio" id="afternoon" name="time" value="afternoon" />
-            Afternoon
-          </label>
+          <label for="password"></label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+
+          <div class="radio-group">
+            <label for="morning">
+              <input type="radio" id="morning" name="time" value="morning" />
+              Morning
+            </label>
+            <label for="afternoon">
+              <input
+                type="radio"
+                id="afternoon"
+                name="time"
+                value="afternoon"
+              />
+              Afternoon
+            </label>
+          </div>
 
           <label for="agree">
             <input type="checkbox" id="agree" name="agree" /> I agree to the

@@ -1,49 +1,87 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(248, 244, 244);
+
+  overflow: auto;
 }
 
+h2 {
+  color: #666663;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h5 {
+  color: #666663;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 /* Base styles for the header */
-.hero {
+header {
   position: relative;
-  width: 100%;
-  height: 45vh;
+  max-width: auto;
+  height: 50vh; /* Slightly increased height for a more impactful hero section */
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Style the video */
 .hero-video {
+  display: flex;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+
+  max-width: 100%;
+  object-position: center; /* Center the video */
   object-fit: cover;
   z-index: -1;
 }
 
 /* Header content */
-.header-content {
+/* .header-content {
   display: flex;
   justify-content: space-between;
-  align-items: left;
+  align-items: center; /* Center alignment for better visual balance * /
   width: 100%;
   padding: 20px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
+} */
+
+.logo {
+  display: flex;
+  justify-content: space-between; /* Positions logo and navigation on opposite ends */
+  align-items: center; /* Centers items vertically */
+  padding: 20px;
 }
 
-/* logo image */
-.header-content img {
+.logo img {
+  display: block;
+  height: auto;
+  width: 70px; /* Slightly larger logo */
+}
+/* Logo image */
+/* .header-content img {
   display: block;
   max-width: 100%;
-  width: 70px;
-  height: auto;
+  width: 40px; /* Slightly larger logo */
+/* height: auto; * /
+} */
+
+/* Navigation styling */
+.navigation {
+  position: absolute;
+  top: 20px; /* Align navigation at the top */
+  right: 20px; /* Align navigation to the right */
 }
 
+/* @media (max-width: 480px) {
+  .navigation {
+    flex-direction: column;
+  } */
 /* Navigation styling */
 nav ul {
   display: flex;
@@ -54,13 +92,15 @@ nav ul {
 
 nav ul li {
   margin-left: 20px;
+  display: flex;
 }
 
 nav ul li a {
+  display: flex;
   text-decoration: none;
-  color: white; /* Make sure the color contrasts well with the background video */
+  color: white; /* Ensure high contrast with the background video */
   font-weight: bold;
-  font-size: 19px;
+  font-size: 18px; /* Slightly reduced font size for better spacing */
 }
 
 nav a:hover {
@@ -72,22 +112,33 @@ nav a:hover {
   position: relative;
   z-index: 2;
   text-align: center;
-  color: white;
+  color: rgb(229, 224, 224);
   max-width: 80%;
   margin: 0 auto;
+  padding: 0 20px; /* Added padding for better spacing on smaller screens */
 }
 
 /* Responsive text sizes */
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 3rem; /* Increased font size for larger screens */
 }
 
 .hero-content p {
-  font-size: 1.25rem;
+  font-size: 1.5rem; /* Slightly increased for emphasis */
 }
 
 /* Media queries for responsiveness */
 @media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2rem;
   }
@@ -97,7 +148,7 @@ nav a:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .hero-content h1 {
     font-size: 1.5rem;
   }
@@ -105,70 +156,86 @@ nav a:hover {
   .hero-content p {
     font-size: 0.875rem;
   }
-}
-
-@media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 1.25rem;
-  }
-
-  .hero-content p {
-    font-size: 0.75rem;
-  }
 
   .hero-content {
-    padding: 0 10px;
+    padding: 0 15px; /* Additional padding for extra small screens */
   }
 }
 
 /* Signup section styling */
 .signup {
-  padding: 0px;
+  padding: 20px; /* Added padding for better spacing */
   text-align: center;
-  background-color: rgb(248, 244, 244);
+  background-color: rgb(246, 246, 246);
 }
 
 .signup form {
-  max-width: 500px;
+  max-width: 450px; /* Slightly reduced width for better centering */
   margin: auto;
   display: flex;
-  display: grid;
-  place-items: center;
+  flex-direction: column; /* Changed to column for consistent alignment */
+  align-items: center; /* Align items to center */
 }
 
 .signup label {
   display: flex;
   align-items: center;
   text-align: left;
-  width: 60%;
-  margin: 10px 0 5px;
+  width: 100%; /* Full width for better alignment */
+  margin: 10px 0;
+  font-size: 0.9rem;
 }
 
-.signup input[type="text"],
+fieldset {
+  color: #3e3e3c;
+  margin: 0;
+  padding: 10px 30px 10;
+  border: none;
+  border: none; /* Remove the default border */
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+  border-radius: 10px;
+}
+
+.signup input[type="name"],
 .signup input[type="email"],
 .signup input[type="password"] {
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 10px;
-  border-radius: 50px;
+  border-radius: 10px;
   border: 1px solid #a6a1a1;
-  width: 60%;
+  width: 100%; /* Full width for better form structure */
   box-sizing: border-box;
 }
 
+/* Container for radio buttons */
+.radio-group {
+  display: flex;
+  gap: 15px; /* Space between the radio buttons */
+  align-items: center;
+  font-size: 0, 1rem;
+}
+/* .checkbox-group {
+  display: flex;
+  gap: 10px; /* Space between checkbox and label * /
+  margin-bottom: 10px; /* Add spacing below the checkbox group * /
+} */
+
+/* Change the color of radio buttons and checkboxes */
 .signup input[type="radio"],
 .signup input[type="checkbox"] {
-  margin-right: 0;
+  accent-color: #7c7b7b; /* Replace with your desired color */
 }
 
 .signup button {
-  padding: 8px 16px;
-  background-color: #8f8f8f;
+  padding: 12px 24px; /* Increased padding for a more prominent button */
+  background-color: #7c7b7b;
   color: white;
   border: none;
   border-radius: 50px;
-  font-size: 0.875rem;
-  width: 35%;
-  height: 4vh;
+  font-size: 1rem; /* Slightly larger font size */
+  width: 50%; /* Larger button for emphasis */
+  height: auto;
+  margin-top: 10px;
 }
 
 .signup button:hover {
@@ -181,6 +248,11 @@ nav a:hover {
   }
 
   .signup form {
-    width: 90%;
+    width: 100%; /* Full width for small screens */
+    padding: 0 0; /* Padding for small screens */
+  }
+
+  .signup button {
+    width: 60%; /* Adjust button width for small screens */
   }
 }
