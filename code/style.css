@@ -1,5 +1,92 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
 body {
-  background: blue;
+  margin: 0;
+  padding: 0;
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.hero {
+  grid-column: span 12;
+  position: relative;
+  height: 100vh;
+  /* Detta gör att hero-sektionen täcker hela höjden av skärmen */
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  /* Högre z-index än videon för att placera navbaren ovanpå */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.navbar-logo img {
+  height: 50px;
+}
+
+.navbar-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.signup {
+  background-color: bisque;
+  margin: 5%;
+}
+
+.signup-picture {
+  grid-column: span 6;
+}
+
+.signup-picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.signup-form {
+  grid-column: span 6;
+}
+
+footer {
+  grid-column: span 12;
+}
+
+.business-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media (max-width: 667px) {
+  .business-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
