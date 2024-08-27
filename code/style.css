@@ -1,5 +1,272 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
 body {
-  background: blue;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 150px; 
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-overlay h1 {
+  font-family: "Prata", serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.yellow-text {
+  color: #f2d158; /* Gold or Yellow color */
+}
+
+.hero-overlay p {
+  font-family: "Prata", serif;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  background-color: #181818;
+}
+
+.signup-container, .info-container {
+  background-color: #181818;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.signup-container h2 {
+  margin-bottom: 20px;
+}
+
+.info-container h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #b3b3b3;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: calc(100% - 40px); /* Adjust the input box width to leave space for padding */
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #3e3e3e;
+  border-radius: 4px;
+  background-color: #2c2c2c;
+  color: white;
+}
+
+input::placeholder {
+  color: #b3b3b3;
+}
+
+.radio-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.radio-group p {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.radio-options {
+  display: flex;
+  justify-content: space-around;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.radio-options label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #fff;
+  width: 120px;
+  gap: 10px;
+  line-height: 1.5;  
+  flex-direction: row-reverse;
+}
+
+.radio-options input[type="radio"] {
+  transform: translateY(-1px); 
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 20px;
+  font-size: 1px;
+  color: #fff;
+  padding: 10px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.checkbox-group input {
+  margin-left: 10px;
+  transform: translateY(-2px); /* Fine-tune the alignment of the checkbox */
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #1DB954;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #1aa34a;
+}
+
+.divider {
+  position: relative;
+  margin: 20px 0;
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.divider:before,
+.divider:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #3e3e3e;
+}
+
+.divider:before {
+  left: 0;
+}
+
+.divider:after {
+  right: 0;
+}
+
+.social-signup {
+  margin-bottom: 20px;
+}
+
+.social-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.google {
+  background-color: #4285F4;
+  color: white;
+}
+
+.facebook {
+  background-color: #4267B2;
+  color: white;
+}
+
+.apple {
+  background-color: #000000;
+  color: white;
+}
+
+.login-link {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.login-link a {
+  color: #1DB954;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .signup-container, .info-container {
+      width: 100%;
+      margin-bottom: 20px;
+  }
 }
