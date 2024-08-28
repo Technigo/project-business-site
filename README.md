@@ -1,6 +1,6 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
+My business site with a sign up form for an upcoming event. 
 
 Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
