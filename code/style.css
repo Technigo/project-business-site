@@ -1,5 +1,419 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
 body {
-  background: blue;
+  background: rgb(255, 255, 255);
+  font-family: "Della Respira", serif;
+}
+
+.hero-header {
+  background-image: url("https://images.unsplash.com/photo-1533294455009-a77b7557d2d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  /* Change to column for vertical layout */
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  /* Adjust the text color */
+}
+
+.hero-h1 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  color: rgba(248, 229, 103, 0.461);
+  font-size: 22px;
+}
+
+p {
+  text-align: justify;
+}
+
+.header1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+  width: 100%;
+}
+
+.logo-img {
+  height: 80px;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+nav {
+  margin-left: auto;
+  /* Move the nav to the right */
+  padding: 8px 12px 8px 4px;
+  display: none;
+}
+
+.hamburger {
+  background-color: #aa9bfb;
+  color: #210e8d;
+  border: #9395e3 solid 2px;
+  padding: 4px;
+  margin-left: auto;
+  /* Move the hmb to the right */
+  margin-right: 30px;
+  text-align: center;
+  border-radius: 20%;
+  width: 10%;
+}
+
+ul {
+  list-style: none;
+  padding: 2px 4px;
+}
+
+li {
+  font-size: 18px;
+}
+
+a {
+  color: #fff;
+  /* Match the text color */
+  text-decoration: none;
+}
+
+.sale-box {
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 20px;
+  width: 60%;
+}
+
+.workshop-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+  text-align: center;
+}
+
+.w-img-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.workshop1 {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 8px;
+}
+
+.w1info {
+  width: 100%;
+}
+
+.imgW1 {
+  max-width: 85%;
+  display: flex;
+}
+
+.workshop2 {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 8px;
+}
+
+.w2info {
+  width: 100%;
+}
+
+.imgW2 {
+  max-width: 85%;
+  display: flex;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #d3cdfa;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.radio-box {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  width: 100%;
+  height: 50%;
+  margin-bottom: 8px;
+}
+
+legend {
+  margin: 0 auto;
+  margin-top: 8px;
+}
+
+input[type="radio" i] {
+  background-color: initial;
+  cursor: default;
+  appearance: auto;
+  box-sizing: border-box;
+  margin: 1px 1px 1px 1px;
+  padding: initial;
+  border: 4px;
+}
+
+
+.f-ieldset {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border: transparent;
+}
+
+input {
+  /* Här lägger du till dina stilar */
+  padding: 4px;
+  border: 1px dotted #a06ef5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Ser till att padding och border ingår i bredden */
+}
+
+select {
+  background-color: white;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 8px;
+  color: rgb(244, 236, 236);
+  font-style: italic;
+  border-radius: 14px;
+  height: 22px;
+  width: 88px;
+  text-align: center;
+}
+
+option {
+  padding: 10px;
+  /* Avstånd mellan text och kant i alternativen */
+}
+
+select:focus {
+  outline: none;
+  /* Tar bort standardfokus-stilen */
+  border-color: rgb(240, 181, 214);
+  /* Ändrar kantfärg när den är fokuserad */
+  color: rgb(139, 23, 222);
+}
+
+option:first-child {
+  color: gray;
+  font-style: italic;
+}
+
+label {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.register {
+  /* display: flex;
+  margin: 0 auto;*/
+  width: 60%;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 14px;
+  line-height: inherit;
+  font-family: "Della Respira", serif;
+}
+
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+  }
+
+  nav {
+    margin-left: auto;
+    /* Move the nav to the right */
+    padding: 8px 12px 8px 4px;
+    display: flex;
+  }
+
+  .workshop-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+  }
+
+  .workshop1 {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 8px 4px 8px 22px;
+  }
+
+  .workshop2 {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 8px 22px 8px 4px;
+  }
+
+  .w1info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .w2info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imgW1 {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    display: flex;
+  }
+
+  .imgW2 {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    display: flex;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+}
+
+@media (min-width: 1025px) {
+
+  .hamburger {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+  }
+
+  nav {
+    margin-left: auto;
+    /* Move the nav to the right */
+    padding: 8px 12px 8px 4px;
+    display: flex;
+  }
+
+  .workshop-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .workshop1 {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+  }
+
+  .workshop2 {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+  }
+
+  .w1info {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+  }
+
+  .w2info {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+
+  }
+
+  .w-img-box {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .imgW1 {
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+    display: flex;
+  }
+
+  .imgW2 {
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+    display: flex;
+  }
 }
