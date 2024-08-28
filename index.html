@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tranquil Essence Spa</title>
-    <!-- Favicon -->
     <link rel="icon" href="images/logo1.png" sizes="16x16" type="image/png" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -12,37 +11,36 @@
     <!-- Hero Section -->
     <header>
       <div class="hero-section">
-        <video autoplay muted loop class="hero-video">
-          <source src="video/spa1.mp4" type="video/mp4" />
-          <!-- fallback message for browsers that do not support the video tag -->
-          Your browser does not support the video tag.
-          <!-- Fallback image for mobile devices -->
-          <img src="images/spa.png" alt="Tranquil Essence Spa" />
-        </video>
-      </div>
-
-      <!-- Logo and Navigation on Video -->
-      <div class="logo">
-        <img src="images/logo1.png" alt="Tranquil Essence Spa Logo" />
-
-        <nav class="navigation">
-          <!-- Unordered list for navigation links -->
-          <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Treatments</a></li>
-            <li><a href="#">Gift Cards</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="hero-content">
-        <h1>Tranquil Essence Spa</h1>
-        <p>Relax, Rejuvenate, Renew.</p>
+        <!-- <div class="video-container"> -->
+          <video autoplay muted loop class="hero-video">
+            <source src="video/spa.mp4" type="video/mp4" />
+          </video>
+          <!-- <img
+            src="images/spa.png"
+            alt="Tranquil Essence Spa"
+            class="fallback-image"
+          /> -->
+        <!-- </div> -->
+        </div>
+        <div class="logo">
+          <img src="images/logo1.png" alt="Tranquil Essence Spa Logo" />
+          <nav class="navigation">
+            <ul>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Treatments</a></li>
+              <li><a href="#">Gift Cards</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="hero-content">
+          <h1>Tranquil Essence Spa</h1>
+          <p>Relax, Rejuvenate, Renew.</p>
+        </div>
       </div>
     </header>
 
-    <!-- Signup class -->
+    <!-- Signup Section -->
     <section class="signup">
       <form action="https://httpbin.org/anything" method="POST">
         <h2>Sign up</h2>
@@ -56,7 +54,6 @@
             placeholder="Name"
             required
           />
-
           <label for="email"></label>
           <input
             type="email"
@@ -65,7 +62,6 @@
             placeholder="E-mail"
             required
           />
-
           <label for="password"></label>
           <input
             type="password"
@@ -74,7 +70,6 @@
             placeholder="Password"
             required
           />
-
           <div class="radio-group">
             <label for="morning">
               <input type="radio" id="morning" name="time" value="morning" />
@@ -90,12 +85,10 @@
               Afternoon
             </label>
           </div>
-
           <label for="agree">
             <input type="checkbox" id="agree" name="agree" /> I agree to the
             Terms & Conditions
           </label>
-
           <button type="submit">Submit</button>
         </fieldset>
       </form>
