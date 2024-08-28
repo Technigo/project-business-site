@@ -71,6 +71,84 @@ body {
 
 .signup-form {
   grid-column: span 6;
+  display: flex;
+  justify-content: center;
+  /* Centrerar horisontellt */
+  align-items: center;
+  /* Centrerar vertikalt */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 90%;
+  margin: 0;
+}
+
+label {
+  /* display: flex;
+  align-items: center;
+  gap: 10px; */
+}
+
+span {
+  width: 30%;
+  min-width: 100px;
+  /* Sätter en minsta bredd för mindre skärmar */
+  text-align: right;
+}
+
+/* Gemensam styling för input-fält och select */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  /* Gör alla input-fält lika stora */
+  padding: 10px;
+  /* Lägger till inre marginaler */
+  border: 1px solid #ccc;
+  /* Ljusgrå kant */
+  border-radius: 25px;
+  /* Rundade kanter */
+  box-sizing: border-box;
+  /* Säkerställer att padding inte påverkar total bredd */
+  font-size: 16px;
+  /* Liknande textstorlek för alla fält */
+}
+
+/* Styling för checkbox för att passa in */
+input[type="checkbox"] {
+  margin: 0 auto;
+  /* Avstånd till texten */
+}
+
+/* Styling för knappen */
+button {
+  padding: 10px 20px;
+  /* Gör knappen mindre bred och ger den lite höjd */
+  border: none;
+  border-radius: 25px;
+  /* Rundade kanter på knappen */
+  background-color: #007bff;
+  /* Valfri färg, här blå */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  width: fit-content;
+  /* Gör bredden beroende av innehållet */
+  margin: 0 auto;
+  /* Centrerar knappen */
+  display: block;
+  /* Gör så att knappen centrerar korrekt med auto-margin */
+  margin-bottom: 15%;
+}
+
+/* Styling för att ändra utseende på knappen vid hover */
+button:hover {
+  background-color: #0056b3;
+  /* Mörkare nyans vid hover */
 }
 
 footer {

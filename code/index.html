@@ -60,10 +60,39 @@
   </div>
 
   <div class="signup signup-form">
-    <h2>TEXT TEXT</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae consectetur incidunt accusamus repellat
-      omnis quidem, doloribus voluptatibus beatae explicabo enim libero sequi quo dolor excepturi culpa odit quae
-      veritatis autem.</p>
+    <form action="https://httpbin.org/anything" method="post">
+      <h2>Sign up and start listening</h2>
+      <!-- <fieldset> -->
+      <label>
+        <span>Name</span>
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        <span>Country</span>
+        <select name="country" required>
+          <option value="" disabled selected></option>
+          <option value="SE">Sweden</option>
+          <option value="NO">Norway</option>
+          <option value="DK">Denmark</option>
+          <option value="FI">Finland</option>
+        </select>
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" name="password" required>
+      </label>
+      <label>
+        <input type="checkbox" name="terms-and-conditions" required>
+        I accept the terms and conditions
+      </label>
+      <button type="submit">Save</button>
+      <!-- </fieldset> -->
+
+    </form>
 
   </div>
 
