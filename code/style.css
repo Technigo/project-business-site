@@ -16,22 +16,47 @@ body {
 @media (min-width: 1025px) {}
 
 .hero-header {
-  background: linear-gradient(to bottom, lightpink, purple);
+  position: relative;
   height: 50vh;
-  /*Half screen*/
   width: 100%;
-  /*Full screen*/
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero-image {
+  /*width: 100%;
+  height: 100%;*/
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  background: linear-gradient rgba(255, 182, 193, 0.7), rgba(128, 0, 128, 0.7);
+  /*rgba for making the gradient transparant*/
   display: flex;
   align-items: center;
   /*Horizontal*/
   justify-content: center;
   /*Vertical*/
-  /*background-size: cover;
-  background-position: center;*/
   color: #f8f0fc;
   border-radius: 20px;
   /*rounded corners*/
+}
 
+.overlay h1 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.overlay h2 {
+  font-size: 3em;
+  margin-bottom: 0.3em;
+  font-size: 45px;
+  color: #6a0dad;
+}
+
+.overlay p {
+  font-size: 1.2em;
 }
 
 main {
@@ -45,18 +70,18 @@ main {
   /*content: "✔️";*/
   padding-right: 8px;
   /*Space between text and check mark*/
-  font-size: 1.2em;
   font-size: 20px;
-  color: #c77dff
-}
-
-h2 {
-  font-size: 45px;
-  color: #6a0dad;
+  color: #c77dff;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 20px;
+  color: #7b2cbf;
+}
+
+a {
+  font-size: 20px;
+  font-weight: bolder;
   color: #7b2cbf;
 }
 
@@ -64,7 +89,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 300px;
+  max-width: 500px;
   margin: auto;
   margin-bottom: 34px;
   border: 2px solid #ccc;
@@ -75,30 +100,41 @@ h3 {
 
 */ input {
   width: 95%;
-  font-size: 15px;
-  padding: 5px 0;
+  font-size: 24px;
+  padding: 15px 40px;
   color: #666666;
-  border: none
-    /*Remove default border*/
+  border: none;
+  /*Remove default border*/
 }
 
 input[type="text"] {
   text-align: left;
   padding-left: 10px;
   border-radius: 25px;
-  font-size: 16px;
+  font-size: 24px;
+  color: #c77dff;
+  box-sizing: border-box;
+}
+
+input[type="password"] {
+  text-align: left;
+  padding-left: 10px;
+  border-radius: 25px;
+  font-size: 24px;
+  color: #c77dff;
   box-sizing: border-box;
 }
 
 input:valid {
-  background-color: lightgreen;
+  background-color: #f0e6ef;
+  color: #c77dff;
 }
 
 label {
   display: flex;
   border-bottom: solid 1px;
   border-radius: 20px;
-  color: #4b0082
+  color: #4b0082;
 }
 
 /*Style the agree radio button*/
@@ -115,11 +151,14 @@ button {
   display: flex;
   justify-content: center;
   width: 50%;
-  font-size: 15px;
-  padding: 5px 0;
+  font-size: 24px;
+  padding: 15px 40px;
   border-bottom: none;
-  background-color: #5a189a;
-  border-radius: 25px;
+  background-color: rgb(56, 0, 127);
+  border-radius: 70px;
+  border-width: 1px;
+  color: #ffffff;
+  cursor: pointer;
 
 }
 
