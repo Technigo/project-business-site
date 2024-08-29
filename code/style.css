@@ -1,5 +1,105 @@
 /* After you've linked the CSS file in the HTML,
 this should turn the background blue ;) */
 body {
-  background: blue;
+  background: #F3EAE1;
+  padding: 0;
+  margin: 0;
+}
+header {
+  background-image: url('./images/header-scotland.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 600px;
+}
+.header-content-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-small-screen {
+  display: flex;
+  align-items: center;
+}
+.nav-small-screen>ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  cursor: pointer;
+}
+.nav-menu-item-small-screen {
+  width: 30px;
+  border-bottom: #fff 3px solid;
+}
+/* textbox header */
+.header-textbox {
+  background-color: rgb(255, 255, 255, .5);
+  width: 40%;
+  min-height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 30px;
+  color: #fff;
+}
+.header-textbox>h1 {
+  border-bottom: #9A6C4D solid 2px;
+  padding-bottom: 10px;
+}
+.button-header {
+  background-color: #9A6C4D;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+/* main conatiner */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* tour examples */
+.section-tour-example {
+  display: grid;
+  align-items: center;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.tour-example {
+  background-color: rgba(149, 94, 57, 0.36);
+  padding: 20px;
+  color: #fff;
+  border-radius: 15px;
+}
+.small-text-tour-example {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+.tour-example>h3 {
+  font-size: 1.4rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+.tour-example-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.div-button-tour-example {
+  padding: 30px 15px;
+  text-align: center;
 }
