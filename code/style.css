@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: white;
+  background: rgb(29, 36, 36);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -39,13 +41,20 @@ body {
 }
 
 .navbar-logo img {
-  height: 50px;
+  width: 10vw;
+  height: auto;
 }
 
 .navbar-menu ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  /* Gör listan till ett flexbox-kontainer */
+  justify-content: center;
+  /* Centrerar innehållet horisontellt */
+  align-items: center;
+  /* Centrerar innehållet vertikalt */
+  padding: 0;
+  gap: 60px;
 }
 
 .navbar-link {
@@ -55,22 +64,28 @@ body {
 }
 
 .signup {
-  background-color: bisque;
+  background-color: rgb(0, 0, 0);
+  border-radius: 25px;
   margin: 5%;
 }
 
 .signup-picture {
   grid-column: span 6;
+  margin-left: 10%;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(5, 79, 79, 0.479)), url("./assets/spacepic2.png"); */
+  background-image: url("./assets/background-pic3.jpg");
+  background-size: cover;
+  background-position: center;
+
 }
 
 .signup-picture img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 20%;
 }
 
 .signup-form {
   grid-column: span 6;
+  margin-right: 10%;
   display: flex;
   justify-content: center;
   /* Centrerar horisontellt */
@@ -131,7 +146,7 @@ button {
   border: none;
   border-radius: 25px;
   /* Rundade kanter på knappen */
-  background-color: #007bff;
+  background-color: #ffffff2d;
   /* Valfri färg, här blå */
   color: white;
   font-size: 16px;
