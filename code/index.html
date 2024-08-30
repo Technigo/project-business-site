@@ -38,7 +38,7 @@
     <!-- main container -->
     <main class="main-container">
 
-      <h2 class="section-tour-example-h2">Read more about are different guided tours you can book with us down below</h2>
+      <h2 class="section-tour-example-h2">Read more about our different guided tours you can book with us down below</h2>
 
       <section class="section-tour-example">
 
@@ -49,7 +49,7 @@
             <img class="tour-example-img" src="./images/harry-potter-train.jpg" alt="Guided tours">
           </div>
           <div class="div-button-tour-example">
-            <a href="" target="_blank" class="button-header">Tour details</a> 
+            <a href="#" target="_blank" class="button-header">Tour details</a> 
           </div>
         </article>
 
@@ -60,7 +60,7 @@
               <img class="tour-example-img" src="./images/loch-ness.jpg" alt="Guided tours">
             </div>
             <div class="div-button-tour-example">
-              <a href="" target="_blank" class="button-header">Tour details</a> 
+              <a href="#" target="_blank" class="button-header">Tour details</a> 
             </div>
         </article>
 
@@ -71,15 +71,58 @@
             <img class="tour-example-img" src="./images/the-highlands.jpg" alt="Guided tours">
           </div>
           <div class="div-button-tour-example">
-            <a href="" target="_blank" class="button-header">Tour details</a> 
+            <a href="#" target="_blank" class="button-header">Tour details</a> 
           </div>
         </article>
 
       </section>
 
-    
+      <!-- Signup form -->
+      <h2 class="section-tour-example-h2">Sign up on a trip below - and we will contact you further!</h2>
 
-    <!-- Signup form -->
+      <form class="form-book-a-tour" action="">
+        <!-- choose a trip -->
+        <label for="guided-trip">Which trip are you intrested in?</label>
+        <select id="guided-trip" name="guided-trip">
+          <option value="harry-potter">Harry Potter Train</option>
+          <option value="loch-ness">Loch Ness</option>
+          <option value="inverness">Inverness</option>
+        </select>
+
+        <!-- date -->
+        <p>Choose a month of your arrival in Scotland:</p>
+        <input type="radio" id="date-1" name="date-1" value="September">
+        <label for="date-1">September</label><br>
+        <input type="radio" id="date-2" name="date-2" value="November">
+        <label for="date-2">November</label><br>
+        <input type="radio" id="date-3" name="date-3" value="December">
+        <label for="date-3">December</label><br>
+
+        <fieldset>
+          <legend>Your information:</legend>
+          <!-- namn -->
+          <div class="label-input-flex">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+          </div>
+          <!-- mejl -->
+          <div class="label-input-flex">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" required>
+          </div>
+          <!-- phone -->
+          <div class="label-input-flex">
+            <label for="email">Phone number</label>
+            <input type="email" id="email">
+          </div>
+        </fieldset>
+
+        
+
+        
+        <input type="submit" value="Submit">
+      </form>
+
     </main>
   </body>
 </html>
