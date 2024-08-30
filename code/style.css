@@ -1,24 +1,127 @@
-.background-video {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.5;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.page-hero {
+body {
+  background-color: rgb(63, 77, 102);
+  font-family: "Source sans 3", sans-serif;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-start;
   position: relative;
-  overflow: hidden;
+  max-height: 60vh;
+  width: 100vw;
+  text-align: center;
 }
 
-.background-video-content {
+/* Video styling */
+.hero-video {
   position: relative;
-  z-index: 1;
-}
-
-video[poster] {
+  height: auto;
+  width: 100vw;
+  max-height: 65vh;
+  filter: brightness(65%);
   object-fit: cover;
-  width: 50%;
-  height: 50%;
+}
+
+.hero-text {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 0 15px;
+  /* Padding for better readability on small screens */
+}
+
+.hero-text {
+  /* font-size: 3rem; */
+  margin: 0;
+  line-height: 1.2;
+}
+
+p {
+  /* font-size: 2rem; */
+  margin: 0;
+  /* line-height: 1.2; */
+}
+
+input {
+  font-size: 20px;
+}
+
+
+/* Form section  */
+
+form {
+  border: 1px solid rgb(72, 88, 112);
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h2 {
+
+  font-size: 20px;
+  margin-top: 0;
+  color: white;
+  text-align: center;
+}
+
+fieldset {
+  border: none;
+  box-sizing: border-box;
+  padding: 0;
+  background: rgb(204, 202, 202);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+}
+
+label {
+
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, .15);
+  box-sizing: border-box;
+  align-items: center;
+}
+
+label:last-child {
+  border-bottom: none;
+}
+
+span {
+
+  width: 30%;
+  text-align: right;
+  margin-right: 15px;
+}
+
+input {
+
+  width: 100%;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  background-color: #333;
+  appearance: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
 }
