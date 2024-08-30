@@ -1,9 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  background: rgb(29, 36, 36);
+  background-image: linear-gradient(rgb(0, 0, 0), rgba(1, 200, 255, 0.339)), url("./assets/background-pic3.jpg");
+  background-size: cover;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Quicksand", sans-serif;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -12,8 +13,9 @@ body {
   grid-column: span 12;
   position: relative;
   height: 100vh;
-  /* Detta gör att hero-sektionen täcker hela höjden av skärmen */
+  /* Hero-section vovers the whole hight of the screen */
   overflow: hidden;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.6);
 }
 
 .hero-video {
@@ -32,7 +34,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 2;
-  /* Högre z-index än videon för att placera navbaren ovanpå */
+  /* Higher z-index than the video to place navbar on top */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,11 +50,8 @@ body {
 .navbar-menu ul {
   list-style: none;
   display: flex;
-  /* Gör listan till ett flexbox-kontainer */
   justify-content: center;
-  /* Centrerar innehållet horisontellt */
   align-items: center;
-  /* Centrerar innehållet vertikalt */
   padding: 0;
   gap: 60px;
 }
@@ -63,24 +62,58 @@ body {
   font-weight: bold;
 }
 
-.signup {
-  background-color: rgb(0, 0, 0);
-  border-radius: 25px;
-  margin: 5%;
+.navbar-link:hover {
+  color: orange;
 }
 
-.signup-picture {
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: #ffffff2d;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  width: fit-content;
+  /* Makes the width adapts after its content */
+  margin: 0 auto;
+  /* Center the button */
+  display: block;
+  /* makes the button center correct with auto-margin */
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: orange;
+
+}
+
+/* makes the hamburger meny not being displayd in desktop view */
+.hamburger-menu {
+  display: none;
+}
+
+.signup {
+  background-color: rgb(1, 15, 23);
+  border-radius: 25px;
+  margin: 10% 5% 5% 5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.signup-info {
   grid-column: span 6;
   margin-left: 10%;
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(5, 79, 79, 0.479)), url("./assets/spacepic2.png"); */
-  background-image: url("./assets/background-pic3.jpg");
-  background-size: cover;
-  background-position: center;
-
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 175%;
 }
 
-.signup-picture img {
-  width: 20%;
+.signup-info img {
+  width: 25%;
 }
 
 .signup-form {
@@ -88,9 +121,7 @@ body {
   margin-right: 10%;
   display: flex;
   justify-content: center;
-  /* Centrerar horisontellt */
   align-items: center;
-  /* Centrerar vertikalt */
 }
 
 form {
@@ -101,85 +132,127 @@ form {
   margin: 0;
 }
 
-label {
-  /* display: flex;
-  align-items: center;
-  gap: 10px; */
-}
-
 span {
   width: 30%;
   min-width: 100px;
-  /* Sätter en minsta bredd för mindre skärmar */
   text-align: right;
 }
 
-/* Gemensam styling för input-fält och select */
+/* Common styling for input fields and select */
 input[type="text"],
 input[type="email"],
 input[type="password"],
 select {
   width: 100%;
-  /* Gör alla input-fält lika stora */
+  /* makes all input-fields equally big */
   padding: 10px;
-  /* Lägger till inre marginaler */
-  border: 1px solid #ccc;
-  /* Ljusgrå kant */
-  border-radius: 25px;
-  /* Rundade kanter */
-  box-sizing: border-box;
-  /* Säkerställer att padding inte påverkar total bredd */
-  font-size: 16px;
-  /* Liknande textstorlek för alla fält */
-}
-
-/* Styling för checkbox för att passa in */
-input[type="checkbox"] {
-  margin: 0 auto;
-  /* Avstånd till texten */
-}
-
-/* Styling för knappen */
-button {
-  padding: 10px 20px;
-  /* Gör knappen mindre bred och ger den lite höjd */
   border: none;
   border-radius: 25px;
-  /* Rundade kanter på knappen */
-  background-color: #ffffff2d;
-  /* Valfri färg, här blå */
-  color: white;
+  box-sizing: border-box;
+  /* makes sure padding is not affecting total width */
   font-size: 16px;
-  cursor: pointer;
-  width: fit-content;
-  /* Gör bredden beroende av innehållet */
+}
+
+/* Styling of checkbox */
+input[type="checkbox"] {
   margin: 0 auto;
-  /* Centrerar knappen */
-  display: block;
-  /* Gör så att knappen centrerar korrekt med auto-margin */
+  /* distance to text */
+}
+
+.submit-button {
   margin-bottom: 15%;
 }
 
-/* Styling för att ändra utseende på knappen vid hover */
-button:hover {
-  background-color: #0056b3;
-  /* Mörkare nyans vid hover */
+.signup-form-label:hover {
+  color: orange;
 }
 
 footer {
   grid-column: span 12;
+  margin: 5%
+}
+
+.footer-column {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+}
+
+.footer-column-label {
+  font-weight: bold;
+}
+
+.footer-column-item {
+  padding-top: 10px;
+}
+
+.footer-column-item-link {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-column-item-link:hover {
+  color: orange;
 }
 
 .business-info {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-bottom: 5%;
 }
 
+.personal-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.personal-info img {
+  width: auto;
+  height: 5vw;
+}
+
+.personal-info-items {
+  text-align: right;
+}
+
+.personal-info-items h4 {
+  margin: 0;
+  font-size: 10px;
+  font-weight: normal;
+}
+
+/* For mobile phones */
 @media (max-width: 667px) {
   .business-info {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .navbar {
+    background-color: rgb(1, 15, 23);
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-login {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    font-size: 30px;
+  }
+
+  .signup {
+    grid-column: span 12;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    flex-direction: column;
   }
 }
