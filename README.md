@@ -12,6 +12,8 @@ I also added a hamburger menu that can be opened and closed. The JavaScript I ha
 
 If I had more time I would have looked into creating a custom select so that I could style the dropdown as well.
 
+I've also explored using CSS Nesting since it newly became a baseline feature of CSS.
+
 ## View it live
 
 https://picko.netlify.app/

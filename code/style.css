@@ -132,6 +132,14 @@ a:focus-visible,
 }
 
 /* ********************
+  Animations
+******************** */
+
+@keyframes header-background {
+  to { background-color: transparent; }
+}
+
+/* ********************
   Default form styling
 ******************** */
 
@@ -198,6 +206,7 @@ select {
   border: 0;
   border-radius: 0.25rem;
 
+  color: var(--medium-gray);
   font-size: 1.125rem;
   padding: 2rem 0.75rem 0.75rem;
   background-color: var(--white);
@@ -361,6 +370,11 @@ form button {
 
   margin: auto;
   padding: 1.5rem;
+  background-color: var(--primary);
+
+  animation: header-background linear;
+  animation-timeline: view();
+  animation-duration: 1.5s;
 
   @media (min-width: 768px) {
     padding: 2.5rem;
