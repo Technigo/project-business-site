@@ -1,3 +1,8 @@
+/* ****************************************************************
+Add classes to the hero input form for 
+when a input is focused and not focused
+**************************************************************** */
+
 const inputs = document.querySelectorAll(".hero__form input");
 
 // Add event listeners to each input field
@@ -40,5 +45,28 @@ document.addEventListener("DOMContentLoaded", function () {
   navLink.addEventListener("click", function (event) {
     event.preventDefault(); // Prevent the default anchor behavior
     this.classList.toggle("is-open");
+  });
+});
+
+/* ****************************************************************
+Filter list of ads based on their category
+**************************************************************** */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const categorySelect = document.getElementById("category");
+  const ads = document.querySelectorAll(".ad");
+
+  categorySelect.addEventListener("change", function () {
+    const selectedCategory = categorySelect.value;
+
+    ads.forEach(function (ad) {
+      const adCategory = ad.getAttribute("data-category");
+
+      if (selectedCategory === "all" || adCategory === selectedCategory) {
+        ad.style.display = "block";
+      } else {
+        ad.style.display = "none";
+      }
+    });
   });
 });

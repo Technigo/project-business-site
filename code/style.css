@@ -40,7 +40,7 @@ h3 {
   font-weight: 300;
   font-style: normal;
   line-height: 120%;
-  letter-spacing: 0.02rem;
+  letter-spacing: -0.02rem;
   color: var(--primary);
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -62,6 +62,26 @@ h1 {
   }
 }
 
+h2 {
+  font-size: 1.75rem;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 1025px) {
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+
+  @media (min-width: 1025px) {
+    font-size: 1.125rem;
+  }
+}
+
 .text-large {
   font-size: 1.125rem;
   line-height: 1.5;
@@ -79,19 +99,41 @@ a:focus {
   outline: none;
 }
 
-a:focus-visible {
+/* Focus styling only for keyboard navigation and such */
+a:focus-visible,
+*:focus-visible {
   border-radius: 0.125rem;
   outline: 0.125rem solid var(--white);
   outline-offset: 0.75rem;
 }
 
 /* ********************
-  Default form styling
+  Grid
 ******************** */
 
-form {
-  overflow: hidden;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
 }
+
+.grid-container {
+  max-width: 80rem;
+}
+
+/* ********************
+  Default form styling
+******************** */
 
 form label {
   position: relative;
@@ -124,12 +166,49 @@ input {
   border: none;
 
   font-family: "Inter Tight", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 300;
+
+  caret-color: var(--secondary);
 
   &:focus {
     outline: none;
   }
+
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+  }
+}
+
+select {
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+
+  border: 0;
+  border-radius: 0.25rem;
+
+  font-size: 1.125rem;
+  padding: 2rem 0.75rem 0.75rem;
+  background-color: var(--white);
+  box-shadow:
+    0px 0.7px 3.6px rgba(0, 0, 0, 0.049),
+    0px 1.9px 10px rgba(0, 0, 0, 0.07),
+    0px 4.5px 24.1px rgba(0, 0, 0, 0.091),
+    0px 15px 80px rgba(0, 0, 0, 0.14)
+  ;
+}
+
+.select-arrow {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  width: 1.25rem;
+  height: 100%;
+  background-image: url('./assets/icon-arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* 
@@ -291,6 +370,7 @@ form button {
   gap: 1rem;
   color: var(--white);
   text-decoration: none;
+  z-index: 2;
 
   .hamburger {
     display: flex;
@@ -330,6 +410,41 @@ form button {
 
 }
 
+.page-header__menu {
+  display: none;
+
+  ul, li {
+    all: unset;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2.5rem;
+  }
+
+  a {
+    font-size: 1.5rem;
+    color: var(--white);
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.is-open + .page-header__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100svh;
+    width: 30vw;
+    min-width: 17.5rem;
+    background: var(--black);
+}
+
 /* ********************
   Background video
 ******************** */
@@ -365,10 +480,10 @@ form button {
   align-items: flex-end;
   text-align: center;
   overflow: hidden;
-  background-color: rgba(6, 21, 7, 0.95);
+  background-color: rgba(6, 21, 7, 0.9);
 
   padding: 4.5rem 1.5rem 2rem;
-  min-height: 100svh;
+  min-height: 92svh;
   height: min-content;
 
   @media (min-width: 768px) {
@@ -411,6 +526,7 @@ form button {
     border-radius: 0.5rem;
     border: none;
     width: 100%;
+    transition: outline 0.3s ease-out;
 
     @media (min-width: 768px) {
       flex-direction: row;
@@ -420,11 +536,22 @@ form button {
       width: auto;
     }
 
+    &:focus-within {
+      outline: 0.5rem solid rgba(255, 255, 255, 0.12);
+    }
+
     label {
       border-bottom: 1px solid var(--lightest-gray);
 
       @media (min-width: 768px) {
+        border-bottom: none;
         border-right: 1px solid var(--lightest-gray);
+      }
+
+      &:last-of-type {
+        @media (min-width: 768px) {
+          border-right: none;
+        }
       }
 
       &.is-focused {
@@ -450,12 +577,6 @@ form button {
         }
       }
 
-    }
-
-    label:last-of-type {
-      @media (min-width: 768px) {
-        border-right: none;
-      }
     }
 
     input {
@@ -495,4 +616,101 @@ form button {
     z-index: -1;
   }
 
+}
+
+/* ********************
+  Ads section
+******************** */
+
+.ads {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+
+  @media (min-width: 768px) {
+    padding: 3rem 2.5rem;
+  }
+}
+
+.ad-filters {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  form {
+    display: flex;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      width: auto;
+    }
+
+    select {
+      min-width: 15rem;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
+        outline-color: var(--black);
+      }
+    }
+
+    .select-label {
+      padding: 0;
+
+      span:not(.select-arrow) {
+        position: absolute;
+        text-wrap: nowrap;
+        left: 0.75rem;
+        top: 0.75rem;
+      }
+    }
+  }
+}
+
+.ad {
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow:
+    0px 0.8px 2.4px rgba(0, 0, 0, 0.035),
+    0px 2.3px 6.8px rgba(0, 0, 0, 0.05),
+    0px 5.4px 16.3px rgba(0, 0, 0, 0.065),
+    0px 18px 54px rgba(0, 0, 0, 0.1)
+  ;
+
+  img {
+    border-radius: 0.125rem;
+  }
+
+  .ad__title {
+    margin-bottom: 0;
+  }
+
+  .ad__price {
+    color: var(--secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 0.35rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ********************
+  Footer
+******************** */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem 2rem;
 }
