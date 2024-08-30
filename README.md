@@ -1,12 +1,15 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A project consisting of building a business site with a form and a hero section with a video or image.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started from forms that I like and tried to imitate them as much as possible. 
+
+I ran into problems like different types of inputs had different styles by default which made me have to work more with my css and classify to be able to get different inputs as similar as possible.
+
+If I had more time I would have added a footer and worked more on the responsive design for smaller screens
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://lustrous-crisp-6b8347.netlify.app
+
