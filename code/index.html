@@ -5,16 +5,109 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Business Site</title>
-  <!-- dont forget to add a css file and link it here! -->
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-  <h1>Concert House</h1>
+  <header>
+    <div class="background">
+      <logo>
+        <img src="./assets/logo-note.png" alt="the logo is a note">
+      </logo>
+      <div class="header-text">
+        <h1>Concert House</h1>
+        <h2>Become a member and enjoy special offers!</h2>
+      </div>
 
-  <!-- video or image as a header is cool :) -->
 
-  <!-- Signup form -->
+      <!-- Navigation of Mobile Phone in hamburger-style-->
+      <div class="navigation">
+        <div class="hamburger-layer"></div>
+        <div class="hamburger-layer"></div>
+        <div class="hamburger-layer"></div>
+        <nav>
+          <ul>
+            <a href="http://google.com"></a>
+            <a href="http://google.com"></a>
+            <a href="http://google.com"></a>
+            <a href="http://google.com"></a>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
+  <main>
+
+    <h3>New Member Registration</h3>
+    <!-- Sign-up form for mobile phones-->
+    <div class="form-container">
+      <form action="http://httpbin.org/anything" method="post">
+
+        <!-- personal information: first name, last name, address, country, phone, email -->
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name">
+
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name">
+
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address">
+
+        <label for="country">Country</label>
+        <select class="drop-down" name="country">
+          <option value="sweden">Sweden</option>
+          <option value="sweden">Germany</option>
+          <option value="sweden">France</option>
+          <option value="sweden">Switzerland</option>
+        </select>
+
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+
+
+        <!-- membership & Terms & Conditions -->
+        <label for="membership">Choose your Membership</label>
+        <select class="drop-down" name="membership">
+          <option value="monthly membership">One month membership</option>
+          <option value="six month membership">Six month membership</option>
+          <option value="one year membership">One year membership</option>
+        </select>
+
+        <div class="terms-and-conditions">
+          <input id="checkbox" type="checkbox" />
+          <label for="checkbox">I agree to these <a href="https://google.com">Terms and Conditions</a></label>
+        </div>
+
+        <!-- submit button -->
+        <div id="submit-button-container">
+          <button id="submit-button" type="submit">Submit</button>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <!-- footer for mobile phones -->
+  <footer>
+    <div>
+      <p class="footer-text">Contact: Gitte Beckmann</p>
+    </div>
+
+    <!-- linkedin -->
+    <a href="https://www.linkedin.com/in/gittebeckmann">
+      <svg id="linkedin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-linkedin" viewBox="0 0 16 16">
+        <path
+          d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+      </svg>
+    </a>
+
+  </footer>
 </body>
 
 </html>
