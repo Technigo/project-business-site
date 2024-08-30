@@ -70,3 +70,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+/* ****************************************************************
+  Add class to header when the user has scrolled. Remove again when reaching the top.
+**************************************************************** */
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".page-header");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 100) {
+      header.classList.add("is-scrolled");
+    } else {
+      header.classList.remove("is-scrolled");
+    }
+  });
+});

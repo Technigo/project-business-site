@@ -132,14 +132,6 @@ a:focus-visible,
 }
 
 /* ********************
-  Animations
-******************** */
-
-@keyframes header-background {
-  to { background-color: transparent; }
-}
-
-/* ********************
   Default form styling
 ******************** */
 
@@ -370,14 +362,14 @@ form button {
 
   margin: auto;
   padding: 1.5rem;
-  background-color: var(--primary);
-
-  animation: header-background linear;
-  animation-timeline: view();
-  animation-duration: 1.5s;
+  transition: background 0.25s ease-out;
 
   @media (min-width: 768px) {
     padding: 2.5rem;
+  }
+
+  &.is-scrolled {
+    background-color: var(--primary);
   }
 }
 
