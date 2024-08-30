@@ -10,7 +10,7 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 75vh;
+  height: 60vh;
   background-position: center;
   display: flex;
   align-items: center;
@@ -35,15 +35,12 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: relative;
   z-index: 5;
-  object-fit: cover;
 }
 
 .hero-caption {
-  max-width: 100%;
+  max-width: 700px;
   width: 75%;
-  height: 300px;
   position: absolute;
   z-index: 10;
   color: white;
@@ -51,7 +48,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
 }
 
 .hero-caption h1 {
@@ -67,64 +63,66 @@ body {
 }
 
 .form-caption {
-  text-transform: uppercase;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  font-size: 13px;
-  padding-top: 30px;
-  margin-bottom: 0;
+  padding-top: 50px;
+  margin: 0 auto;
 }
 
 .form-caption h2 {
+  text-transform: uppercase;
   margin: 0;
+  font-size: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 fieldset {
-  border: 0;
-  max-width: 75%;
-  margin: 0 auto;
-  box-sizing: border-box;
+  border: none;
   display: flex;
-  align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 label {
-  display: block;
   margin: 5px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   padding: 5px;
+  box-sizing: border-box;
 }
 
 span {
-  min-width: 0;
   margin-right: 10px;
   display: flex;
   align-items: center;
-  flex: 1;
-  min-width: 0;
-  max-width: 100%;
-  font-size: 3vw;
+  font-size: 3.5vw;
 }
 
 input {
-  height: 15px;
+  height: 23px;
+  max-width: 60%;
   border-radius: 5px;
-  width: 60%;
+  border: none;
+  width: 100%;
+  background-color: #01282e;
+  box-shadow: inset 0 0 0 1px var(--essential-subdued, #818181);
 }
 
 .select-container {
-  width: 63%;
+  width: 61%;
+  height: 23px;
+  font-size: 3vw;
+  color: white;
+  border: none;
+  box-shadow: inset 0 0 0 1px var(--essential-subdued, #818181);
+  box-sizing: border-box;
+  background-color: #01282e;
 }
 
 button {
   width: 50%;
   padding: 5px;
   margin-top: 10px;
-  background-color: white;
   border-radius: 5px;
+  border: solid white;
+  font-size: 3vw;
   cursor: pointer;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -134,67 +132,97 @@ button:hover {
 }
 
 footer {
-  display: grid;
-  margin: 20px;
+  margin-top: 20px;
   padding: 20px;
-  grid-template-rows: max-content;
 }
 
 .byline {
-  font-weight: bold;
   display: flex;
-  flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
   font-size: 10px;
 }
 
-
+/* Media Queries */
 @media (min-width: 426px) {
   .hero-caption {
     width: 65%;
-    font-size: 16px;
+    font-size: 1.1rem;
   }
 
-  fieldset {
-    max-width: 318%;
+  .form-caption h2 {
+    font-size: 20px;
+
   }
 
   span {
     font-size: 15px;
   }
 
-  input {
-    width: 60%;
+  .select-container {
     font-size: 15px;
+  }
+
+  button {
+    font-size: 13px;
   }
 
 }
 
 @media (min-width: 668px) {
   .hero-caption {
-    width: 70%;
-    font-size: 25px;
+    width: 60%;
+    font-size: 1.2rem;
   }
+
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .hero-caption {
-    width: 70%;
-    font-size: 25px;
+    width: 100%;
+    font-size: 1.5rem;
   }
 
-  fieldset {
-    max-width: 500px;
+  .form-caption {
+    padding-top: 60px;
+
+  }
+
+  label {
+    width: 350px;
   }
 
   span {
-    font-size: 17px;
+    font-size: 20px;
   }
 
   input {
+    height: 30px;
+  }
+
+  .select-container {
+    height: 30px;
     font-size: 17px;
   }
 
-  */
+  button {
+    font-size: 15px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .form-caption {
+    padding-top: 70px;
+
+  }
+
+  .form-caption h2 {
+    font-size: 25px;
+  }
+
+  label {
+    width: 350px;
+  }
+
 }
