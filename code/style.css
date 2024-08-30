@@ -1,5 +1,90 @@
 /* After you've linked the CSS file in the HTML,
 this should turn the background blue ;) */
 body {
-  background: blue;
+  background: rgb(162, 162, 235);
+}
+
+header {
+  display: block;
+}
+
+nav {
+  background-color: rgb(207, 70, 70);
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0%;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: aqua;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: blueviolet;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* 50% de la altura de la ventana gráfica */
+  overflow: hidden;
+}
+
+#hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%); /* Centra el video */
+  z-index: -1; /* Envía el video al fondo */
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el texto */
+  color: white;
+  text-align: center;
+  z-index: 1; /* Asegura que el texto esté por encima del video */
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.hero-text button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #d4af37; /* Color dorado para el botón */
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-text button:hover {
+  background-color: #b59430; /* Color más oscuro al pasar el ratón */
 }
