@@ -1,12 +1,11 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This Business Site has been developed as a bootcamp project and served to practice forms in HTML and to style them with CSS. The requirements included a header with a hero part, different kinds of input types, and the page should be fully responsive.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I have been using figma for my first scatch and got inspired by  forms I could find online.
+In a next step it would be important to make the form fully accessible. 
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
