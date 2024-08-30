@@ -8,4 +8,5 @@ I have been using figma for my first scatch and got inspired by  forms I could f
 In a next step it would be important to make the form fully accessible. 
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://concert-house.netlify.app/
+
