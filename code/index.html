@@ -10,7 +10,7 @@
 
 <body>
   <header>
-    <div class="background">
+    <div class="hero">
       <logo>
         <img src="./assets/logo-note.png" alt="the logo is a note">
       </logo>
@@ -27,10 +27,10 @@
         <div class="hamburger-layer"></div>
         <nav>
           <ul>
-            <a href="http://google.com"></a>
-            <a href="http://google.com"></a>
-            <a href="http://google.com"></a>
-            <a href="http://google.com"></a>
+            <a class="a-header" href="http://google.com"></a>
+            <a class="a-header" href="http://google.com"></a>
+            <a class="a-header" href="http://google.com"></a>
+            <a class="a-header" href="http://google.com"></a>
           </ul>
         </nav>
       </div>
@@ -46,39 +46,41 @@
 
         <!-- personal information: first name, last name, address, country, phone, email -->
         <label for="first-name">First Name</label>
-        <input type="text" id="first-name" name="first-name">
+        <input type="text" id="first-name" name="first-name" placeholder="first name" required>
 
         <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" name="last-name">
+        <input type="text" id="last-name" name="last-name" placeholder="last name" required>
 
         <label for="address">Address</label>
-        <input type="text" id="address" name="address">
+        <input type="text" id="address" name="address" placeholder="address">
 
-        <label for="country">Country</label>
+        <label required for="country">Country</label>
         <select class="drop-down" name="country">
+          <option value="select">select</option>
           <option value="sweden">Sweden</option>
-          <option value="sweden">Germany</option>
-          <option value="sweden">France</option>
-          <option value="sweden">Switzerland</option>
+          <option value="germany">Germany</option>
+          <option value="france">France</option>
+          <option value="switzerland">Switzerland</option>
         </select>
 
         <label for="phone">Phone</label>
-        <input type="text" id="phone" name="phone">
+        <input type="tel" id="phone" name="phone" placeholder="phone" required>
 
         <label for="email">Email</label>
-        <input type="text" id="email" name="email">
+        <input type="email" name="email" placeholder="email" required>
 
 
         <!-- membership & Terms & Conditions -->
         <label for="membership">Choose your Membership</label>
-        <select class="drop-down" name="membership">
+        <select class="drop-down" name="membership" required>
+          <option value="choose">Choose membership</option>
           <option value="monthly membership">One month membership</option>
           <option value="six month membership">Six month membership</option>
           <option value="one year membership">One year membership</option>
         </select>
 
         <div class="terms-and-conditions">
-          <input id="checkbox" type="checkbox" />
+          <input id="checkbox" type="checkbox" required />
           <label for="checkbox">I agree to these <a href="https://google.com">Terms and Conditions</a></label>
         </div>
 

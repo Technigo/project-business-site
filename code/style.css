@@ -4,7 +4,7 @@ body {
 }
 
 /* header style for mobile phones */
-.background {
+.hero {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -43,6 +43,7 @@ img {
   text-align: center;
 }
 
+
 /* texts of the header for mobile phones */
 h1 {
   color: #FFDF00;
@@ -54,8 +55,28 @@ h2 {
   margin-top: 15%;
 }
 
+/* header for Desktop */
+@media (min-width: 1024px) {
+  .header-text {
+    padding-top: 10%;
+    text-align: center;
+    max-width: 600px;
+  }
 
-/* sign-up form for mobile phones */
+  h1 {
+    color: #FFDF00;
+    font-size: 60px;
+  }
+
+  h2 {
+    color: #FFDF00;
+    font-size: 40px;
+    margin-top: 15%;
+  }
+}
+
+
+/* Title of form for mobile phones */
 
 h3 {
   color: rgb(81, 81, 132);
@@ -63,14 +84,24 @@ h3 {
   padding-left: 5%;
 }
 
+/* Title of form for Desktop */
+@media (min-width: 1024px) {
+  h3 {
+    font-weight: 500;
+    text-align: left;
+    font-size: xx-large;
+  }
+}
+
+/* sign-up form for mobile phones */
 .form-container {
   display: flex;
   justify-content: center;
   background-color: rgb(236, 233, 233);
-  margin-left: 10%;
-  margin-right: 10%;
   padding: 5%;
   border-radius: 5px;
+  margin: auto;
+  max-width: 500px;
 }
 
 form {
@@ -79,6 +110,7 @@ form {
   display: block;
   justify-content: center;
 }
+
 
 /* personal information */
 
@@ -93,6 +125,13 @@ input {
   justify-content: center;
   border: 2px solid rgb(200, 200, 200);
   border-radius: 5px;
+}
+
+/* Inputs for Tablets, iPads & desktop */
+@media (min-width: 667px) {
+  input {
+    width: 300px;
+  }
 }
 
 /* country: drop-down menu */
