@@ -6,15 +6,6 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Mobile */
-@media (max-width: 500px) {}
-
-/*Tablet*/
-@media (min-width: 501px) and (max-width: 1024px) {}
-
-/* Desktop */
-@media (min-width: 1025px) {}
-
 .hero-header {
   position: relative;
   height: 50vh;
@@ -64,7 +55,7 @@ main {
   border: none
 }
 
-.sign-up-info {
+.sign-up-info-list {
   list-style-type: disc;
   /*Default bullet list*/
   /*content: "✔️";*/
@@ -98,10 +89,11 @@ a {
   /* A 20px curvature for all corners around the form */
 }
 
-*/ input {
+input {
   width: 95%;
   font-size: 24px;
   padding: 15px 40px;
+  margin-bottom: 15px;
   color: #666666;
   border: none;
   /*Remove default border*/
@@ -130,21 +122,39 @@ input:valid {
   color: #c77dff;
 }
 
+.name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.name-fields input {
+  flex: 1;
+}
+
+/*Style the agree radio button*/
+input[type="radio"] {
+  appearance: none;
+  /*Deletes the default settings for the radio button*/
+  border: 3px solid #4b0082;
+  border-radius: 50%;
+  /*Make it round*/
+  width: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  background-color: #4b0082;
+  border-color: #4b0082;
+}
+
 label {
   display: flex;
-  border-bottom: solid 1px;
   border-radius: 20px;
   color: #4b0082;
 }
 
-/*Style the agree radio button*/
-label:last-child {
-  display: flex;
-  border-bottom: none;
-  color: #4b0082;
-  padding: 10px 20px;
-  border-radius: 25px;
-}
+label:last-child {}
 
 /*Style the Join button*/
 button {
@@ -160,6 +170,42 @@ button {
   color: #ffffff;
   cursor: pointer;
 
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .name-fields {
+    flex-direction: column;
+    /*One field per row*/
+    gap: 1px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/*Tablet*/
+@media screen (min-width: 501px) and (max-width: 1024px) {
+  .sign-up-info-container {
+    margin: 50px;
+  }
+
+  .name-fields {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
 }
 
 footer {

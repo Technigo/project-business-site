@@ -21,36 +21,35 @@
     </div>
   </div>
 
-  <!-- Signup form -->
+  <!-- Signup form start-->
   <main>
-    <h2>Come join the Acme community!</h2>
-    <h3>Let's set up your account. Already have one? <a href="url">Sign in here.</a></h3>
     <!-- Sign up info -->
-    <ul class="sign-up-info">
-      <li>Get this and that</li>
-      <li>5% off....</li>
-      <li>Weekly updates</li>
-    </ul>
+    <div class="sign-up-info-container">
+      <h2>Come join the Acme community!</h2>
+      <h3>Let's set up your account. Already have one? <a href="url">Sign in here.</a></h3>
+      <!-- Sign up info -->
+      <ul class="sign-up-info-list">
+        <li>Get this and that</li>
+        <li>5% off....</li>
+        <li>Weekly updates</li>
+      </ul>
+    </div>
     </h4>
     <!-- Sign up form questions -->
     <fieldset class="questionnaire">
       <form action="http://httpbin.org/anything" method="post">
-        <label for="firstname"></label>
-        <input type="text" id="firstname" name="firstname" placeholder="First name" required>
-        </label>
-        <label for="lastname"></label>
-        <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
-        </label>
+        <div class="name-fields">
+          <label for="firstname"></label>
+          <input type="text" id="firstname" name="firstname" placeholder="First name" required>
+          <label for="lastname"></label>
+          <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
+        </div>
         <!--Check if its an email address-->
         <label for="email"></label>
         <input type="text" id="email" name="email" placeholder="E-mail" required>
-        </label>
-        <label for="password"></label><input type="password" id="password" name="password" placeholder="Select password"
-          required>
-        </label>
-        <label>
-          <input type="radio" name="Agree" required>Agree</label>
-        </label>
+        <label for="password"></label>
+        <input type="password" id="password" name="password" placeholder="Select password" required>
+        <label><input type="radio" name="Agree" required>Agree</label>
         <div>
           <button type="submit">Join</button>
         </div>
