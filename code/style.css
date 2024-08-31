@@ -115,13 +115,11 @@ a:focus-visible,
   from {
     display: none;
     opacity: 0;
-    width: 0;
     transform: translateX(100%);
   }
   to {
     display: flex;
     opacity: 1;
-    width: 30vw;
     transform: translateX(0);
   }
 }
@@ -130,13 +128,11 @@ a:focus-visible,
   to {
     display: none;
     opacity: 0;
-    width: 0;
     transform: translateX(100%);
   }
   from {
     display: flex;
     opacity: 1;
-    width: 30vw;
     transform: translateX(0);
   }
 }
@@ -469,11 +465,15 @@ form button {
   top: 0px;
   right: 0;
   height: 100vh;
-  width: 0;
+  width: 100vw;
+  max-width: 35rem;
   min-width: 17.5rem;
   background: var(--black);
-
   animation: vanish 0.35s ease-in-out;
+
+  @media (min-width: 768px) {
+    width: 50vw;
+  }
 
   ul, li {
     all: unset;
@@ -496,8 +496,6 @@ form button {
 
 .is-open + .page-header__menu {
   display: flex;
-  right: 0;
-  width: 30vw;
   animation: appear 0.35s ease-in-out;
 }
 
