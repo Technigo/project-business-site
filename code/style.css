@@ -1,6 +1,5 @@
 body {
-  background: #01282e;
-  height: 100vh;
+  background-color: #000f12;
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: white;
@@ -64,7 +63,7 @@ body {
 
 .form-caption {
   padding-top: 50px;
-  margin: 0 auto;
+  margin: 20px 0 0 0 black;
 }
 
 .form-caption h2 {
@@ -72,6 +71,7 @@ body {
   margin: 0;
   font-size: 15px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
 }
 
 fieldset {
@@ -93,34 +93,57 @@ span {
   display: flex;
   align-items: center;
   font-size: 3.5vw;
+  opacity: 0.8;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
 
 input {
   height: 23px;
   max-width: 60%;
-  border-radius: 5px;
+  border-radius: 10px;
   border: none;
   width: 100%;
-  background-color: #01282e;
+  background-color: #000f12;
   box-shadow: inset 0 0 0 1px var(--essential-subdued, #818181);
+}
+
+input::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 1px 1px white;
+  border: 1px solid white;
 }
 
 .select-container {
   width: 61%;
   height: 23px;
-  font-size: 3vw;
+  font-size: 12px;
+  padding-left: 10px;
   color: white;
   border: none;
   box-shadow: inset 0 0 0 1px var(--essential-subdued, #818181);
   box-sizing: border-box;
-  background-color: #01282e;
+  background-color: #000f12;
+  border-radius: 10px;
+}
+
+.select-container:focus {
+  outline: none;
+  box-shadow: 0 0 1px 1px white;
+  border: 1px solid white;
 }
 
 button {
   width: 50%;
   padding: 5px;
   margin-top: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: solid white;
   font-size: 3vw;
   cursor: pointer;
@@ -128,19 +151,35 @@ button {
 }
 
 button:hover {
-  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px 1px white;
 }
 
 footer {
-  margin-top: 20px;
+  margin-top: auto;
   padding: 20px;
 }
 
 .byline {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: 12px;
+}
+
+.byline p {
+  margin: 0;
+}
+
+.byline a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.byline img {
+  width: 30px;
+  height: 30px;
+  padding: 0 10px;
 }
 
 /* Media Queries */
@@ -160,7 +199,7 @@ footer {
   }
 
   .select-container {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   button {
@@ -189,11 +228,11 @@ footer {
   }
 
   label {
-    width: 350px;
+    width: 300px;
   }
 
   span {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   input {
@@ -202,7 +241,6 @@ footer {
 
   .select-container {
     height: 30px;
-    font-size: 17px;
   }
 
   button {
