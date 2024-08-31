@@ -108,6 +108,40 @@ a:focus-visible,
 }
 
 /* ********************
+  Animations
+******************** */
+
+@keyframes appear {
+  from {
+    display: none;
+    opacity: 0;
+    width: 0;
+    transform: translateX(100%);
+  }
+  to {
+    display: flex;
+    opacity: 1;
+    width: 30vw;
+    transform: translateX(0);
+  }
+}
+
+@keyframes vanish {
+  to {
+    display: none;
+    opacity: 0;
+    width: 0;
+    transform: translateX(100%);
+  }
+  from {
+    display: flex;
+    opacity: 1;
+    width: 30vw;
+    transform: translateX(0);
+  }
+}
+
+/* ********************
   Grid
 ******************** */
 
@@ -428,6 +462,18 @@ form button {
 
 .page-header__menu {
   display: none;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 0px;
+  right: 0;
+  height: 100vh;
+  width: 0;
+  min-width: 17.5rem;
+  background: var(--black);
+
+  animation: vanish 0.35s ease-in-out;
 
   ul, li {
     all: unset;
@@ -449,16 +495,10 @@ form button {
 }
 
 .is-open + .page-header__menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    height: 100vh;
-    width: 30vw;
-    min-width: 17.5rem;
-    background: var(--black);
+  display: flex;
+  right: 0;
+  width: 30vw;
+  animation: appear 0.35s ease-in-out;
 }
 
 /* ********************
