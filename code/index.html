@@ -29,8 +29,10 @@
         <h1>EXPLORE SCOTLAND WITH US</h1>
         <p>Book a ticket for a bus seat today and join us for an amazing guided two weeks in Scotlands great dunes! Food, culture, nature and more - we won’t let you miss anything. Not even the windy great cliffs!</p>
         <br>
-        <a href="#" target="_blank" class="button-header">Read more!</a> 
-        <a href="#" target="_blank" class="button-header">Book a ticket!</a>
+        <div class="button-header-flex">
+          <a href="#" target="_blank" class="button-header">Read more!</a> 
+          <a href="#" target="_blank" class="button-header">Book a ticket!</a>
+        </div>
       </div>
     </header>
     
@@ -80,23 +82,29 @@
       <!-- Signup form -->
       <h2 class="section-tour-example-h2">Sign up on a trip below - and we will contact you further!</h2>
 
-      <form class="form-book-a-tour" action="">
+      <form class="form-book-a-tour" action="https://httpbin.org/anything" method="post">
         <!-- choose a trip -->
-        <label for="guided-trip">Which trip are you intrested in?</label>
-        <select id="guided-trip" name="guided-trip">
-          <option value="harry-potter">Harry Potter Train</option>
-          <option value="loch-ness">Loch Ness</option>
-          <option value="inverness">Inverness</option>
-        </select>
+        <div class="label-input-flex">
+          <label for="guided-trip">Which trip are you intrested in?</label>
+          <select id="guided-trip" name="guided-trip">
+            <option value="harry-potter">Harry Potter Train</option>
+            <option value="loch-ness">Loch Ness</option>
+            <option value="inverness">Inverness</option>
+          </select>
+        </div>
 
         <!-- date -->
-        <p>Choose a month of your arrival in Scotland:</p>
-        <input type="radio" id="date-1" name="date-1" value="September">
-        <label for="date-1">September</label><br>
-        <input type="radio" id="date-2" name="date-2" value="November">
-        <label for="date-2">November</label><br>
-        <input type="radio" id="date-3" name="date-3" value="December">
-        <label for="date-3">December</label><br>
+        <div class="label-input-radio">
+          <p class="label-for-radio">Choose a month of your arrival in Scotland:</p>
+            <div class="radioboxes">
+              <input type="radio" id="date-1" name="date-1" value="September">
+              <label for="date-1">September</label><br>
+              <input type="radio" id="date-2" name="date-2" value="November">
+              <label for="date-2">November</label><br>
+              <input type="radio" id="date-3" name="date-3" value="December">
+              <label for="date-3">December</label><br>
+            </div>
+        </div>
 
         <fieldset>
           <legend>Your information:</legend>
@@ -112,15 +120,15 @@
           </div>
           <!-- phone -->
           <div class="label-input-flex">
-            <label for="email">Phone number</label>
-            <input type="email" id="email">
+            <label for="number">Phone number</label>
+            <input type="number" id="number">
           </div>
         </fieldset>
 
+        <div class="button-submit-flex">
+          <input type="submit" value="Submit">
+        </div>
         
-
-        
-        <input type="submit" value="Submit">
       </form>
 
     </main>
