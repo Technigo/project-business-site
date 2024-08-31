@@ -1,3 +1,7 @@
+html {
+  background-color: #D1E9F6;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +10,7 @@
 }
 
 body {
-  background-color: #f0f0f0;
+  background-color: #;
   margin: 0;
   padding-top: 60px;
   /* Space for the navbar */
@@ -60,8 +64,10 @@ body {
   padding: 10px 20px;
 }
 
+/* Container and Section Styling */
 .container {
   display: flex;
+  flex-direction: row;
   max-width: 1200px;
   width: 100%;
   background-color: #fff;
@@ -90,7 +96,7 @@ h2 {
 
 p {
   margin-bottom: 20px;
-  color: #000000;
+  color: #393636;
 }
 
 .form-group {
@@ -100,7 +106,7 @@ p {
 label {
   display: block;
   margin-bottom: 5px;
-  color: #555;
+  color: #3f3e3e;
 }
 
 input[type="text"],
@@ -193,11 +199,11 @@ input[type="password"] {
   position: absolute;
   bottom: 40px;
   left: 40px;
-  color: #0f0f0f;
+  color: #141414;
 }
 
 .quote {
-  background-color: rgba(240, 235, 235, 0.7);
+  background-color: rgba(219, 213, 213, 0.7);
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -228,7 +234,41 @@ input[type="password"] {
   color: #ccc;
 }
 
+/* Grid Section Styling */
+.grid-section {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.grid-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.grid-item p {
+  color: #666;
+}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
@@ -244,6 +284,10 @@ input[type="password"] {
 
   .navbar .nav-links {
     gap: 15px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -274,6 +318,10 @@ input[type="password"] {
   .right-section {
     padding: 0;
     padding-bottom: 20px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -312,5 +360,9 @@ input[type="password"] {
 
   .quote-author {
     font-size: 12px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
   }
 }
