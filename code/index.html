@@ -1,109 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./style.css" />
-  <title>Business Site</title>
-  <!-- dont forget to add a css file and link it here! -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salk Tennis Academy</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Summer Camp at the Mouratoglou Academy </h1>
+  <nav class="navbar">
+    <div class="logo">
+      <h1>Salk Tennis Academy</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#" class="btn-login">Log in</a></li>
+    </ul>
+  </nav>
 
-  <!-- video or image as a header is cool :) -->
-
-  <!-- Signup form -->
-
-  <main class="container">
-    <section class="hero-section">
-      <intro-text>
-        <h2> TRAIN LIKE A PRO DURING YOUR SUMMER HOLIDAYS!</h2>
-
-        <p class="intro-text">
-          Immerse yourself in the vibrant atmosphere of the Summer Camps at the Mouratoglou Academy! Experience
-          unforgettable moments under the sun of the French Riviera between training sessions and festive activities!
-          Improve your game with the advice of coaches trained in the methodology of Patrick Mouratoglou, historical
-          coach of Serena Williams and current coach of the prodigy Holger Rune. Discover our wide range of available
-          camps : intensive, half-day, or our new camp, the Night Sessions.
-        </p>
-      </intro-text>
-    </section>
-
-    <!-- <form action="http://httpbin.org/anything" method="post">
-
-      <label>
-        Name
-        <input type="text" name="Message" required>
-      </label>
-
-      <label>
-        Email
-        <input type="email" name="email" required>
-      </label>
-
-      <label>
-        Size
-        <select name="tshirtSize">
-          <option value="S">Small size</option>
-          <option value="M">Medium size</option>
-          <option value="L">Large size</option>
-    </form>
-    </label>
-    </select>
-
-    <button type="Submit">Order t-shirt</button> -->
-
-
-    <form>
-      <form action="http://httpbin.org/anything" method="post">
-
-        <h2>Sign up now!</h2>
-
-        <fieldset>
-          <label>
-            Name
-            <input type="text" name="name" />
-          </label>
-
-          <label>
-            Email
-            <input type="Email" name="email" />
-          </label>
-
-          <label>
-            Address
-            <input type="text" name="address" />
-          </label>
-
-          <label>
-            City
-            <input type="text" name="city" />
-          </label>
-
-          <label>
-            Name
-            <input type="number" name="postalCode" />
-          </label>
-          <select name="country">
-            <option value="SE">Sweden</option>
-            <option value="KGZ">Kyrgyzstan</option>
-            <option value="FRA">France</option>
-          </select>
-
-          <label>
-
-
-
-          </label>
-
-        </fieldset>
-
-
-
+  <div class="container">
+    <div class="left-section">
+      <h2>Summer Camp Registration</h2>
+      <p>Immerse yourself in the vibrant atmosphere of the Summer Camps at the Salk Academy! </p>
+      <form action="submit.php" method="post">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn-create">Create account</button>
+        <button type="button" class="btn-google">Sign up with Google</button>
+        <button type="button" class="btn-twitter">Sign in with Twitter</button>
       </form>
-      <button type="Submit">Order t-shirt</button>
+      <p class="login-link">Already have an account? <a href="#">Log in</a></p>
+    </div>
+    <div class="right-section">
+      <img
+        src="https://images.unsplash.com/photo-1635542529858-566ad6c4b4a0?q=80&w=2639&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Person" class="image">
+
+      <div class="overlay">
+        <div class="quote">
+          <p>"Experience
+            unforgettable moments under the sun of the French Riviera between training sessions and festive
+            activities!
+            Improve your game with the advice of coaches trained in the methodology of Patrick Mouratoglou,
+            historical
+            coach of Serena Williams and current coach of the prodigy Holger Rune. Discover our wide range
+            of
+            available
+            camps : intensive, half-day, or our new camp, the Night Sessions."</p>
+          <div class="quote-author">
+            <span> Nadia Pak</span> - Tennis player, SALK
+          </div>
+        </div>
+        <div class="navigation-arrows">
+          <span>&larr;</span> <span>&rarr;</span>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

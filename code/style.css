@@ -1,30 +1,316 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
 body {
-  background: #CEDF9F
+  background-color: #f0f0f0;
+  margin: 0;
+  padding-top: 60px;
+  /* Space for the navbar */
 }
 
-input {
-  font-size: 20px;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
 
-/* input:valid {
-  background-color: antiquewhite;
+.navbar .logo h1 {
+  font-size: 24px;
+  color: #333;
 }
 
-input:invalid {
-  background-color: rgb(213, 119, 119); */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
 
-label {
-  display: block;
-  margin-bottom: 10px;
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #f4f4f4;
+  border-radius: 4px;
+}
+
+.btn-login {
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+  padding: 10px 20px;
 }
 
 .container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
   background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+  padding: 40px;
+}
+
+.left-section {
+  background-color: #ffffff;
+  max-width: 400px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.btn-create {
+  width: 100%;
+  padding: 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.btn-google,
+.btn-twitter {
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-twitter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-google::before {
+  content: url('google-icon.png');
+  /* Replace with your Google icon */
+}
+
+.btn-twitter::before {
+  content: url('twitter-icon.png');
+  /* Replace with your Twitter icon */
+}
+
+.login-link {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+.login-link a {
+  color: #000;
+  text-decoration: none;
+}
+
+.right-section {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e0e0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: #0f0f0f;
+}
+
+.quote {
+  background-color: rgba(240, 235, 235, 0.7);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
+  margin-bottom: 20px;
+}
+
+.quote p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.quote-author {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.navigation-arrows {
+  display: flex;
+  gap: 10px;
+  font-size: 24px;
+}
+
+.navigation-arrows span {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navigation-arrows span:hover {
+  color: #ccc;
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 20px;
+  }
+
+  .navbar .nav-links {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .navbar .logo h1 {
+    font-size: 20px;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .left-section {
+    padding: 20px 10px;
+  }
+
+  .right-section {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar .logo h1 {
+    font-size: 18px;
+  }
+
+  .navbar .nav-links a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .container {
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 15px;
+  }
+
+  .right-section .overlay {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .quote p {
+    font-size: 14px;
+  }
+
+  .quote-author {
+    font-size: 12px;
+  }
 }
