@@ -9,4 +9,4 @@ I started of by making a design in figma. I started by watching/googling how to 
 I felt I could have worked much longer with the styling and fonts in general for the landing page. But also tried out more attributes for the form.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Business site: https://business-site-guided-trip-scotland.netlify.app 
