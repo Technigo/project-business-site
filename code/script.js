@@ -54,11 +54,14 @@ document.addEventListener("DOMContentLoaded", function () {
   categorySelect.addEventListener("change", function () {
     const selectedCategory = categorySelect.value;
     ads.forEach((ad) => {
-      ad.style.display =
+      if (
         selectedCategory === "all" ||
         ad.getAttribute("data-category") === selectedCategory
-          ? "block"
-          : "none";
+      ) {
+        ad.classList.remove("is-hidden");
+      } else {
+        ad.classList.add("is-hidden");
+      }
     });
   });
 

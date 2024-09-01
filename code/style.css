@@ -26,6 +26,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 
@@ -115,11 +116,13 @@ a:focus-visible,
   from {
     display: none;
     opacity: 0;
+    -webkit-transform: translateX(100%);
     transform: translateX(100%);
   }
   to {
     display: flex;
     opacity: 1;
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -128,11 +131,13 @@ a:focus-visible,
   to {
     display: none;
     opacity: 0;
+    -webkit-transform: translateX(100%);
     transform: translateX(100%);
   }
   from {
     display: flex;
     opacity: 1;
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -724,6 +729,7 @@ form button {
 
       span:not(.select-arrow) {
         position: absolute;
+        pointer-events: none;
         text-wrap: nowrap;
         left: 0.75rem;
         top: 0.75rem;
@@ -733,6 +739,7 @@ form button {
 }
 
 .ad {
+  display: block;
   padding: 0.75rem;
   border-radius: 0.25rem;
   box-shadow:
@@ -741,6 +748,10 @@ form button {
     0px 5.4px 16.3px rgba(0, 0, 0, 0.065),
     0px 18px 54px rgba(0, 0, 0, 0.1)
   ;
+
+  &.is-hidden {
+    display: none;
+  }
 
   img {
     border-radius: 0.125rem;
