@@ -14,3 +14,5 @@ CSS3: Applied styling to ensure the page was visually appealing and that element
 
 ## View it live
 
+https://balancedbodies.netlify.app
+
