@@ -1,28 +1,26 @@
-
+/* Base styles */
 body, html {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
   height: 100%;
-  background-color: rgb(240, 223, 92);
+  background-color: rgb(250, 243, 102);
 }
+
+/* Layout */
 .container {
   display: flex;
   height: 100%;
   min-height: 100vh;
 }
 
-.container img {
-  max-width: 200px;
-  margin: 0 auto;
-  padding-bottom: 20px;
-}
-
+/* Video background styles */
 .video-background {
   flex: 1;
   position: relative;
   overflow: hidden;
 }
+
 video {
   position: absolute;
   top: 50%;
@@ -32,6 +30,7 @@ video {
   transform: translate(-50%, -50%);
   object-fit: cover;
 }
+
 .overlay-text {
   position: absolute;
   top: 45%;
@@ -41,6 +40,8 @@ video {
   text-align: center;
   font-size: 2rem;
 }
+
+/* Form container styles */
 .form-container {
   flex: 1;
   padding: 2rem;
@@ -48,35 +49,58 @@ video {
   flex-direction: column;
   justify-content: center;
 }
+
+.container img {
+  max-width: 200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+/* Form styles */
 form {
   max-width: 380px;
   margin: 0 auto;
 }
+
 h2 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 1.7rem;
 }
-input[type="text"], input[type="email"], input[type="password"] {
+
+p {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Form input styles */
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
   width: 95%;
   padding: 0.8rem;
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
 .radio-group {
   display: flex;
   justify-content: space-around;
   margin-bottom: 1rem;
 }
+
 .checkbox-group {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
+
 .checkbox-group label {
   margin-left: 0.5rem;
 }
+
 button {
   width: 100%;
   padding: 0.75rem;
@@ -89,16 +113,45 @@ button {
   font-family: "Montserrat", sans-serif;
 }
 
+/* Responsive styles */
 
 /* Tablet or Desktop */
 @media (max-width: 768px) {
   .container {
-      flex-direction: column;
+    flex-direction: column;
   }
+  
   .video-background {
-      height: 30vh;
+    height: 30vh;
   }
+  
   .form-container {
-      padding: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* Mobile */
+@media (min-width: 300px) and (max-width: 768px) {
+  .form-container {
+    width: 87%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .overlay-text {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .video-background {
+    height: 100vh;
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) scale(1.2);
+    object-position: center;
   }
 }

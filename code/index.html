@@ -1,52 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binge Streaming Service</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <section class="video-background">
+      <video autoplay loop muted playsinline> 
+        <source src="https://videos.pexels.com/video-files/6976213/6976213-uhd_1920_1440_25fps.mp4" type="video/mp4">
+      </video>
+      <h1 class="overlay-text">Watched everything? <br>Don't worry - we've got more!</h1>
+    </section>
     
-    <title>Business Site</title>
-    
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  </head>
-  <body>
+    <section class="form-container">
+      <img src="/assets/logo-binge.png" alt="Binge logo">
+      <form action="https://httpbin.org/anything" method="POST">
+        <h2>Your new favorite streaming service</h2>
+        <p>Sign up now to try it out for free!</p>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Repeat password" required>
   
-  <!-- Video -->
-
-<div class="container">
-    <div class="video-background">
-        <video autoplay loop muted playsinline>
-            <source src="https://videos.pexels.com/video-files/6976213/6976213-uhd_1920_1440_25fps.mp4" type="video/mp4">
-        </video>
-        <h1 class="overlay-text">Watched Everything? We’ve Got More!</h1>
-        
-    </div>
-   
-<!--Form-->
-<div class="form-container">
-
-  <img src="/assets/logo-binge.png" alt="logo">
-  <form action="https://httpbin.org/anything" method="POST">
-      <h2>Sign up now: <br> Try 30 days for free</h2>
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
-      <input type="password" placeholder="Repeat password" required>
-      <div class="radio-group">
+        <div class="radio-group">
           <label><input type="radio" name="length" value="Monthly"> Monthly</label>
           <label><input type="radio" name="length" value="Yearly"> Yearly</label>
-      </div>
-      <div class="checkbox-group">
+        </div>
+        <div class="checkbox-group">
           <input type="checkbox" id="terms" required>
           <label for="terms">I accept the terms & conditions.</label>
-      </div>
-      <button type="submit">START STREAMING</button>
-  </form>
-</div>
-</div>
-
-  </body>
+        </div>
+        <button type="submit">START STREAMING</button>
+      </form>
+    </section>
+  </main>
+</body>
 </html>
