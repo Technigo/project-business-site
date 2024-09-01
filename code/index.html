@@ -4,14 +4,87 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <link rel="stylesheet" href="./style.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
   <body>
-    <h1>Business name 🌻</h1>
+    
+    <header>
+      <!--nav meny here -->
+      <nav>
+        <div class="logo-container">
+          <img src="./images/wine-me.png" alt="Logo Wine Me">
+        </div>  
 
-    <!-- video or image as a header is cool :) -->
+          <ul>
+            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> Services</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+      </nav>
+    </header>  
 
-    <!-- Signup form -->
+    <!---hero section-->
+    <div class="hero-container">
+      <!---Hero video-->
+       <video autoplay muted loop id="hero-video">
+          <source src="./video/wine-video.mp4" type="video/mp4">
+       </video> 
+      <!--text over video--> 
+       <div class="hero-text">
+         <h1>Your private wine collection</h1>
+         <p>Directly to your home</p>
+         <a href="#Signupform">
+           <button>Sign up</button>
+         </a>
+       </div>
+    </div>   
+    <!--Images-->
+      <div class="image-gallery">
+          <img src="./images/our-wine.png" alt="our-wine" class="gray-image">
+          <img src="./images/month-wine.png" alt="month-wine">
+          <img src="./images/next-events.png" alt="events">
+      </div>
+      
+      <!---illustration-->
+      <div class="illustration-container">
+          <img src="./images/cincin.png" alt="illustration">
+      </div>
+     
+      
+      <!-- Signup form -->
+       
+         
 
+           <form class="form-inline" action="https://httpbin.org/anything" method="post">
+            <div class="form-container" id="Signupform">
+              <h1>Create account</h1>
+              <p>Please fill in this form to create an account.</p>
+
+              <label for="name"><b>First Name</b></label>
+              <input type="text" placeholder="First Name" name="name" required>
+
+              <label for="LastName"><b>Last Name</b></label>
+               <input type="text" placeholder="Last Name" name="LastName" required>
+
+              <label for="email"><b>Email</b></label>
+               <input type="email" placeholder="Email" name="email" required>
+
+              <label>
+               <input type="checkbox" name="newsletter" style="margin-bottom: 15px;"> Sign me up for the newsletter
+              </label>
+
+             <p>By creating an account you agree to our <a href="#" style="color: dodgerblue">term and conditions</a>.</p>
+
+             <button type="submit" class="signupbtn">Create account</button>
+          </div>
+      </form> 
+     
+      <footer>
+        <div class="footer-content">
+          <p>&copy; 2024 Wine Me. All rights reserved.</p>
+          <p>Your go-to place for the finest wines.</p>
+        </div>
+      </footer>
   </body>
 </html>
