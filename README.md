@@ -1,12 +1,12 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The task was to create a business website with the primary goal of building a signup form that includes at least three different input types. I used a submit button, text fields (for name and email), and a checkbox input. Additionally, we were required to have a hero section. I decided to focus on the signup form and aimed to give the website a slightly fashionable look and feel.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I encountered an issue where the backdrop filter blur worked in the browser's developer tools but not on an actual mobile device. I resolved this by adding -webkit-backdrop-filter: blur(10px); to ensure it works properly across all browsers.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://jonas-busines-site.netlify.app/
