@@ -1,12 +1,24 @@
-# Business Site
+This project was developed to create a responsive business website for BlueWave Scuba, featuring a full-width header video and a sign-up form with various inputs. The site was supposed to adapt seamlessly across devices with screen widths ranging from 320px to 1600px.
 
-Replace this readme with your own information about your project. 
+The main challenges were:
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+- Integrating a full-width video in the header that remains fixed and scales properly across different screen sizes.
+- Building a responsive sign-up form that adapts to various device widths, from small mobile screens to large desktops.
 
-## The problem
+To address the first challenge, I used a video element within the header and applied CSS properties such as object-fit: cover and position: sticky to ensure the video maintained its size and stayed fixed in the header.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+For the second challenge, I employed a combination of flexible layout techniques and media queries to ensure the form's responsiveness. I started by building the form with a mobile-first approach, then added media queries to adjust the layout and styling for larger screens.
+
+Tools and Technologies Used
+Google Fonts: To enhance the typography.
+Responsive Design: Utilizing media queries for a seamless experience across devices.
+
+If I had more time, I would:
+- Add a navigation bar and a logo to improve site structure and branding.
+- Include additional information about what BlueWave Scuba offers to provide visitors with a clear understanding of the site's purpose.
+- Add additional form validation.
+- Incorporate animations to enhance user interaction.
+
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Deployed project: https://bluewavescuba.netlify.app
