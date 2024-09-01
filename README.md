@@ -1,12 +1,12 @@
-# Business Site
+The assignment was to create a responsive business one-pager that included a form with a fieldset.
+The code was asked to be written clean and with a clear semantic structure.
 
-Replace this readme with your own information about your project. 
+I started by drawing out an example for my wished end result. Not knnowing exactly what I wanted, I created a simple draft with which I played around with until I found the looks I was happy with.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Like in a previous project, I gave all "boxes" their borders and colors, so I could nore easily understand and see what was happening each time I did changes in my code. My browser was always open to that I could try out different thing, and follow each step.
 
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+With more time I would have a video in my hero section, a menu and a footer that includes more information. I would also spend more time on creating a better looking hero section with a well designed logo (which I haven't figured out how to do yet).
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://flow-movement.netlify.app/
