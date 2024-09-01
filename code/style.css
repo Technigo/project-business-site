@@ -10,7 +10,7 @@
 :root {
   --primary-color: #0f3c18;
   --secondary-color: #449f6a;
-  --background-color: #565b60; 
+  --background-color: #ffffff; 
   --text-color: #ffffff;
   --input-background: rgba(
     255,
@@ -205,6 +205,10 @@ input[type="submit"]:hover {
 
 /* phone */
 @media (max-width: 568px) {
+  html {
+    scroll-behavior: smooth;
+}
+
   p {
     font-size: small;
   }
@@ -222,6 +226,12 @@ input[type="submit"]:hover {
   a {
     display: none;
   }
+
+  .hero-image {
+    position: absolute; /* Instead of fixed */
+    height: auto;
+    min-height: 100%;
+}
 }
 
 /* Subtle animations */
