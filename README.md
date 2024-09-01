@@ -8,6 +8,8 @@ The primary challenge was ensuring that form elements, such as radio buttons and
 
 
 HTML5: Structured the content of the sign-up page, ensuring semantic accuracy.
+
+
 CSS3: Applied styling to ensure the page was visually appealing and that elements such as radio buttons and checkboxes were correctly aligned. Flexbox was used extensively to handle layout tasks, and specific adjustments were made using properties like align-items, justify-content, and transform for fine-tuning.
 
 ## View it live
