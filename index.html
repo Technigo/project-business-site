@@ -4,33 +4,38 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tranquil Essence Spa</title>
+    <!-- Favicon-->
     <link rel="icon" href="images/logo1.png" sizes="16x16" type="image/png" />
+    <!-- Link to CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Hero Section -->
     <header>
       <div class="hero-section">
-        <!-- Video and fallback image -->
+        <!-- Video background with fallback image for unsupported browsers -->
         <video autoplay muted loop class="hero-video">
           <source src="video/spa.mp4" type="video/mp4" />
         </video>
+        <!-- Fallback image for browsers that don't support the video tag -->
         <img
           src="images/spa.png"
           alt="Tranquil Essence Spa"
           class="fallback-image"
         />
       </div>
+      <!-- Logo of the Spa -->
       <div class="logo">
         <img src="images/logo.png" alt="Tranquil Essence Spa Logo" />
       </div>
 
       <!-- Navigation Section -->
       <div class="navigation">
+        <!-- Button to toggle navigation menu -->
         <button class="menu-toggle">Menu</button>
       </div>
 
-      <!-- Hero Content -->
+      <!-- Hero Content (Title and Tagline)-->
       <div class="hero-content">
         <h1>Tranquil Essence Spa</h1>
         <p><em>Relax, Rejuvenate, Renew</em></p>
@@ -42,14 +47,16 @@
       <form action="https://httpbin.org/anything" method="POST">
         <h2>Sign up</h2>
         <fieldset>
+          <!-- Name Input Field -->
           <label for="name"></label>
           <input
-            type="name"
+            type="text"
             id="name"
             name="name"
             placeholder="Name"
             required
           />
+          <!-- Email Input Field -->
           <label for="email"></label>
           <input
             type="email"
@@ -58,6 +65,7 @@
             placeholder="E-mail"
             required
           />
+          <!-- Password Input Field -->
           <label for="password"></label>
           <input
             type="password"
@@ -66,6 +74,7 @@
             placeholder="Password"
             required
           />
+          <!-- Radio Buttons for Time Selection -->
           <div class="radio-group">
             <label for="morning">
               <input type="radio" id="morning" name="time" value="morning" />
@@ -81,10 +90,12 @@
               Afternoon
             </label>
           </div>
+          <!-- Checkbox for Terms & Conditions Agreement -->
           <label for="agree">
             <input type="checkbox" id="agree" name="agree" /> I agree to the
             Terms & Conditions
           </label>
+          <!-- Submit Button -->
           <button type="submit">Submit</button>
         </fieldset>
       </form>
