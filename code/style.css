@@ -10,14 +10,8 @@
 :root {
   --primary-color: #0f3c18;
   --secondary-color: #449f6a;
-  --background-color: #ffffff; 
   --text-color: #ffffff;
-  --input-background: rgba(
-    255,
-    255,
-    255,
-    0.5
-  );
+  --input-background: rgba(255, 255, 255, 0.5);
   --container-background: #1c4124ec;
   --blur-effect: blur(10px);
 }
@@ -28,10 +22,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
-  background: var(--background-color);
+  background-color: grey;
   color: var(--text-color);
   line-height: 1.6;
   display: flex;
@@ -40,7 +36,6 @@ body {
   align-items: center;
   min-height: 100vh;
   font-family: "Sana Sans", sans-serif;
-  backdrop-filter: var(--blur-effect);
 }
 
 header {
@@ -76,7 +71,7 @@ p {
   font-weight: 300;
   border-radius: 30px;
   padding: 13px;
-  background-color: var(--input-background)
+  background-color: var(--input-background);
 }
 
 .container {
@@ -86,7 +81,7 @@ p {
   border-radius: 20px 150px 20px 150px;
   overflow: hidden;
   margin: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   justify-content: center;
   align-items: center;
   background-color: var(--container-background);
@@ -112,11 +107,8 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  filter: blur(2px);
   z-index: -1;
   /* background-image: url(/visualelectric-1725003862393.jpeg); */
-  background-size: cover;
-  background-position: 500%;
 }
 
 /*Form Input styles*/
@@ -166,7 +158,7 @@ select:focus {
   transform: translateY(-2px);
 }
 
-/* button*/ 
+/* button*/
 
 input[type="submit"] {
   background: var(--secondary-color);
@@ -207,7 +199,7 @@ input[type="submit"]:hover {
 @media (max-width: 568px) {
   html {
     scroll-behavior: smooth;
-}
+  }
 
   p {
     font-size: small;
@@ -228,10 +220,9 @@ input[type="submit"]:hover {
   }
 
   .hero-image {
-    position: absolute; /* Instead of fixed */
-    height: auto;
-    min-height: 150%;
-}
+    background-attachment: scroll; /* Fallback for mobile devices */
+        height: auto;
+  }
 }
 
 /* Subtle animations */
@@ -274,8 +265,7 @@ input[type="submit"]:hover {
   opacity: 0.7;
 } */
 
-
-/* footer */ 
+/* footer */
 footer {
   width: 100%;
   height: 100%;
