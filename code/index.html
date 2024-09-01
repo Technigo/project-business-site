@@ -1,17 +1,110 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <h1>Business name 🌻</h1>
 
-    <!-- video or image as a header is cool :) -->
+<html lang="en">
 
-    <!-- Signup form -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Site</title>
 
-  </body>
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- googlefonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&family=Roboto:wght@700;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Logo -->
+  <div 
+  class="header-logo">
+    <img 
+    class="header-logo" 
+    src="assets/logo.jpg" 
+    alt="FemScore Media logo of a vinylplayer">
+  </div>
+
+  <!-- business name -->
+  <h1>FemScore Media</h1>
+  
+  <h2>Bring your stories to life - just add music created by women ♀</h2>
+
+  <!-- video content -->
+  <video 
+  id="video" 
+  controls autoplay loop muted>
+    <source src="assets/vinyl.mp4" 
+    alt="video of a vinyl player">
+  </video>
+
+  <!-- Signup form -->
+  <form 
+  action="http://httpbin.org/anything" method="post">
+    
+  <h3>Make a Song Request</h3>
+
+    <fieldset>
+      <!-- Name field -->
+      <label>
+        <span>Name</span>
+        <input type="text" name="name" placeholder="Lisa Nilsson" />
+      </label>
+
+      <!-- Email field -->
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" placeholder="lisanilsson@example.com" />
+      </label>
+
+      <!-- Company field -->
+      <label>
+        <span>Company Name</span>
+        <input type="Company Name" name="Company Name" placeholder="IKEA" />
+      </label>
+
+      <!-- Song field -->
+      <label>
+        <span>Song</span>
+        <select name="Song">
+          <option value="Shura - 2Shy">Shura - 2Shy</option>
+          <option value="Griff - Miss Me Too">Griff - Miss Me Too</option>
+          <option value="SKAAR - 24">SKAAR - 24</option>
+          <option value="Nao - Another Lifetime">Nao - Another Lifetime</option>
+          <option value="IDER - Girl">IDER - Girl</option>
+        </select>
+      </label>
+
+      <!-- Media format field -->
+      <label>
+        <span>Media Format</span>
+        <select name="Media Format">
+          <option value="TV/Film">TV/Film</option>
+          <option value="SoMe">SoMe</option>
+          <option value="SoMe">Advertisment</option>
+        </select>
+      </label>
+
+      <!-- Checkbox -->
+      <label id="checkbox-container">
+        <input type="checkbox" name="terms" required />
+        I agree to the 
+        <a href="https://www.spotify.com/se/legal/end-user-agreement/">Terms &
+        Conditions</a>
+        </div>
+      </label>
+
+      <!-- Submit button -->
+      <div class="button-container">
+        <button id="button" type="Submit">Submit Song Request</button>
+      </div>
+
+    </fieldset>
+  </form>
+
+  <footer>Copyright © 2024 FemScore Media</footer>
+
+</body>
+
 </html>
