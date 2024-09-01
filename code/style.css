@@ -23,11 +23,9 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 body {
-  background-color: grey;
   color: var(--text-color);
   line-height: 1.6;
   display: flex;
@@ -241,6 +239,10 @@ input[type="submit"]:hover {
 
 /* Hero image styling */
 .hero-image {
+  background: none !important;
+  background-color: grey !important;
+  background-image: none !important;
+  filter: grayscale(0.6) !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -249,7 +251,6 @@ input[type="submit"]:hover {
   object-fit: cover;
   object-position: 100%;
   z-index: -2;
-  opacity: 0.7;
   /* filter: blur(4px); */
 }
 
