@@ -9,19 +9,48 @@
 </head>
 
 <body>
-  <div class="hero">
-    <video class="hero-video" autoplay muted loop>
-      <source src="assets/business.mp4" type="video/mp4">
-    </video>
-    <div class="hero-text">
-      <h1>TradeWave</h1>
-      <p>Annual Fintech Forum</p>
-      <p>September 25, 2024</p>
+  <header>
+    <div class="hero">
+      <video class="hero-video" autoplay muted loop>
+        <source src="assets/business.mp4" type="video/mp4">
+      </video>
+      <div class="hero-text">
+        <h1>TradeWave</h1>
+        <h2>Annual Fintech Forum</h2>
+      </div>
     </div>
-  </div>
-  <form action="http://httpbin.org/anything" method="post">
+  </header>
+
+  <!-- Sign up form  -->
+
+  <section class="signup">
+    <form action="https://httpbin.org/anything" method="POST">
+      <form>
+        <h3>Sign up for more information</h3>
+        <fieldset>
+          <label for="name"></label>
+          <input type="name" id="name" name="name" placeholder="Name" required />
+          <label for="company"></label>
+          <input type="company" id="company" name="company" placeholder="Company" required />
+          <label for="email"></label>
+          <input type="email" id="email" name="email" placeholder="E-mail" required />
+          <label for="agree">
+            <input type="checkbox" id="agree" name="agree" /><a href="https://confetti.events/sv/terms-general">
+              I agree to the Terms and Conditions</a>
+          </label>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+  </section>
+
+
+
+
+
+
+  <!-- <form action="http://httpbin.org/anything" method="post">
     <form>
-      <h2>Sign up for more information!</h2>
+      <h2>Sign up for more information</h2>
       <fieldset>
         <label>
           <span>Name</span>
@@ -36,15 +65,23 @@
           <input type="text" name="Company" required>
         </label>
         <label>
-          <span>I agree to the terms and conditions</span>
-          <input type="checkbox" name="terms" required>
-        </label>
+          <span>I agree to these terms and conditions</span> -->
+  <!-- <div class="checkbox">
+            <label>I agree to these terms and conditions</label>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms"></label>
+          </div>
       </fieldset>
       <button type="submit">Submit</button>
-    </form>
-
-
+    </form> -->
 
 </body>
+
+<footer>
+  <div class="footer-logo"><a href="https://www.google.com">
+      <img src="assets/TRADEWAVE.png" alt="Company Logo"></a>
+  </div>
+  <p>&copy; 2024 TradeWave Inc. All rights reserved</p>
+</footer>
 
 </html>

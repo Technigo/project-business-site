@@ -2,18 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Source sans 3", sans-serif;
 }
 
 body {
   background-color: rgb(63, 77, 102);
-  font-family: "Source sans 3", sans-serif;
+  color: white;
 }
 
 .hero {
   display: flex;
   align-items: flex-start;
   position: relative;
-  max-height: 60vh;
+  max-height: 100vh;
   width: 100vw;
   text-align: center;
 }
@@ -23,9 +24,10 @@ body {
   position: relative;
   height: auto;
   width: 100vw;
-  max-height: 65vh;
+  max-height: 100vh;
   filter: brightness(65%);
   object-fit: cover;
+  z-index: -1;
 }
 
 .hero-text {
@@ -41,69 +43,109 @@ body {
   /* Padding for better readability on small screens */
 }
 
-.hero-text {
-  /* font-size: 3rem; */
-  margin: 0;
-  line-height: 1.2;
+header div h1 {
+  font-size: 50px;
 }
 
-p {
-  /* font-size: 2rem; */
-  margin: 0;
-  /* line-height: 1.2; */
+header div h2 {
+  font-size: 30px;
 }
 
-input {
+h3 {
   font-size: 20px;
 }
-
 
 /* Form section  */
 
-form {
-  border: 1px solid rgb(72, 88, 112);
-  border-radius: 6px;
-  box-sizing: border-box;
+.signup {
   padding: 20px;
-  max-width: 500px;
-  margin: 0 auto;
+  text-align: center;
+  background-color: rgb(63, 77, 102);
+  margin-top: 10px;
 }
 
-h2 {
+.signup form {
+  max-width: 450px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+}
 
-  font-size: 20px;
-  margin-top: 0;
-  color: white;
-  text-align: center;
+.signup label {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  margin: 10px 0;
+  font-size: 1rem;
 }
 
 fieldset {
+  color: white;
+  margin: 0;
+  padding: 10px 30px;
   border: none;
-  box-sizing: border-box;
-  padding: 0;
-  background: rgb(204, 202, 202);
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  background-color: rgb(91, 107, 135);
 }
 
-label {
+.signup input[type="name"],
+.signup input[type="company"] .signup input[type="email"] {
 
-  display: flex;
-  border-bottom: 1px solid rgba(0, 0, 0, .15);
-  box-sizing: border-box;
-  align-items: center;
+  padding: 12px;
+  margin: auto;
+  border-radius: 20px;
+  border: 1px solid rgb(160, 176, 203);
+  width: 100%;
 }
 
-label:last-child {
-  border-bottom: none;
+.signup input[type="checkbox"] {
+  accent-color: rgb(160, 176, 203);
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  padding: 12px;
+  margin: auto;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: white;
+
 }
 
-span {
-
-  width: 30%;
-  text-align: right;
-  margin-right: 15px;
+.signup button {
+  padding: 12px 24px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  width: 80%;
+  height: auto;
+  margin-top: 10px;
 }
+
+.signup button:hover {
+  animation: bubble 0.4s ease-out;
+}
+
+@keyframes bubble {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 input {
 
@@ -111,7 +153,9 @@ input {
   font-size: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
+  border-radius: 20px;
 }
+
 
 button {
   width: 100%;
@@ -124,4 +168,70 @@ button {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+}
+
+.footer {
+  display: block;
+  background-color: rgb(63, 77, 102);
+  text-align: center;
+  /* padding: 10px 0; */
+  position: absolute;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.footer-logo img {
+  display: block;
+  max-width: 100%;
+  width: 150px;
+  height: auto;
+}
+
+
+/* Media Queries */
+/* Header font-size for different screen sizes */
+
+@media (min-width: 1024px) {
+
+  header div h1 {
+    font-size: 4.5rem;
+  }
+
+  header div h2 {
+    font-size: 2.5rem;
+
+  }
+
+}
+
+@media (max-width: 768px) {
+  header div h1 {
+    font-size: 3.5rem;
+  }
+
+  header div h2 {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width: 500px) {
+  header div h1 {
+    font-size: 2.5rem;
+  }
+
+  header div h2 {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  header div h1 {
+    font-size: 1.5rem;
+  }
+
+  header div h2 {
+    font-size: 1rem;
+  }
 }
