@@ -8,7 +8,9 @@ The aim of the third project in the Web Dev bootcamp was to create a responsive 
 
 I started out by scetching out on paper how I wanted it to look like. I took inspiration from a landing page/event site that was created with the company confetti´s tool for the company I work at. 
 
-I used flexbox and fieldset as techniques to setup the hero video and signup form. Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I used flexbox and fieldset as techniques to setup the hero video and signup form. 
+
+If I hade more time I would learn more about the forms and try to style them better. I tried to make round check-boxes but it did not work out well and I also tried to remove the default setting of the forms but it also did not work out the way I would have liked. 
 
 ## View it live
 Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
