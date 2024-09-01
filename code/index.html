@@ -1,17 +1,185 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <h1>Business name 🌻</h1>
+<!-- welcome to XingsPress http://xingspress.netlify.app -->
 
-    <!-- video or image as a header is cool :) -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Site | XingsPress-contact-form</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- Link to the JavaScript file -->
+  <script src="./script.js"></script>
 
-    <!-- Signup form -->
+</head>
 
-  </body>
+<body id="contact">
+  <!-- video fullscreen as well as a logo and create an account -->
+  <header>
+    <!-- navbar -->
+    <div class="navbar-container">
+      <!-- logo -->
+      <div class="navbar-logo">
+        <a href="https://xingsnews.netlify.app/" target="_blank" id="logo">
+          <img src="assets/logo.png" alt="XingsPress Logo">
+        </a>
+      </div>
+      <!-- hamburger menu -->
+      <div class="navbar-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- navbar container shall not show this time-->
+      <!-- <div class="navbar-menu-container">
+        <ul class="navbar-menu">
+          <li class="navbar-menu-item"><a class="navbar-menu-item-link" href="#">Home</a></li>
+          <li class="navbar-menu-item"><a class="navbar-menu-item-link" href="#">About</a></li>
+          <li class="navbar-menu-item"><a class="navbar-menu-item-link" href="#">Contact</a></li>
+        </ul>
+      </div> -->
+
+    </div>
+
+    <!-- The fullscreen video with some text-->
+    <div class="video-container">
+      <video class="video-player" id="my-video" preload="auto" autoplay muted loop playsinline
+        poster="./assets/cloudfront.jpg">
+        <source src="assets/hero-video1.mp4" type="video/mp4">
+        <source src="assets/hero-video2.mp4" type="video/mp4">
+        <source src="assets/hero-video3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay"></div>
+      <!-- Optional: some overlay text to describe the video -->
+      <div class="overlay-text">
+        <div class="overlay-text-header">Welcome to XingsPress</div>
+        <div class="overlay-text-subheader">Just a little reminder that by continuing with any of the options
+          below,
+          you agree to our <a href="#">Terms
+            of Service</a> and have read our <a href="#">Privacy Policy</a>.</div>
+      </div>
+      <!-- Use a button to pause/play the video with JavaScript | Why??? JS do not work!!! -->
+      <button id="my-play-button" class="play-pause-button" onclick="myFunction()">Pause</button>
+    </div>
+  </header>
+
+
+  <main class="contact-form">
+    <!-- Form type shows based on screen size -->
+    <h1>Let's team up and make magic happen!</h1>
+    <form action="http://httpbin.org/anything" method="post">
+
+      <!-- Contact form only for smartphone-->
+      <div class="contact-form-for-small-screen">
+        <!-- Style of text input -->
+        <span>Hi! My name is</span> <br>
+        <input type="text" name="name" class="text-input" placeholder="Type your name*"> <br>
+        <span>and I work in</span> <br>
+        <input type="text" name="company" class="text-input" placeholder="Type your company name"> <br>
+
+        <!-- Style of radio input -->
+        <span>I found you using</span><br>
+        <input type="radio" name="source" id="mouth" class="radio"><label for="mouth">Word of mouth</label><br>
+        <input type="radio" name="source" id="dribbble" class="radio"><label for="dribbble">Dribbble</label><br>
+        <input type="radio" name="source" id="google" class="radio"><label for="google">Google Search</label><br>
+        <input type="radio" name="source" id="other" class="radio"><label for="other">Other</label><br>
+        <!-- Style of checkbox input -->
+        <span>I'm looking for help with:</span><br>
+        <input type="checkbox" name="service" id="brand-identity" class="checkbox">
+        <label for="brand-identity">Brand
+          Identity
+          Design</label><br>
+        <input type="checkbox" name="service" id="website" class="checkbox">
+        <label for="website">Website
+          Development</label><br>
+        <input type="checkbox" name="service" id="product" class="checkbox">
+        <label for="product">Product
+          Design</label><br>
+      </div>
+
+
+      <!-- Contact form for tablet or desktop-->
+      <div class="contact-form-for-large-screen">
+        <!-- Style of text input -->
+        <div class="contact-form-row">
+          <span class="contact-form-text">Hi! My name is</span>
+          <input type="text" class="text-input-underline" name="name" placeholder="Type your name*">
+
+          <span class="contact-form-text"> and I work in</span>
+          <input type="text" class="text-input-underline" name="company" placeholder="Type your company name*">
+        </div>
+        <!-- Style with flex box for radio input -->
+        <div class="contact-form-row">
+          <span class="contact-form-text">I found you using</span>
+          <div class="contact-form-items">
+            <label class="radio"><input type="radio" name="source" class="radio-input" value="Word of mouth">
+              <span class="radio-label no-select text-m">Word of mouth</span>
+            </label>
+            <label class="radio"><input type="radio" name="source" class="radio-input" value="Dribbble">
+              <span class="radio-label no-select text-m">Dribbble</span>
+            </label>
+            <label class="radio"><input type="radio" name="source" class="radio-input" value="Google Search">
+              <span class="radio-label no-select text-m">Google Search</span>
+            </label>
+            <label class="radio"><input type="radio" name="source" class="radio-input" value="Other">
+              <span class="radio-label no-select text-m">Other</span>
+            </label>
+          </div>
+        </div>
+        <!-- Style with flex box for checkbox input -->
+        <div class="contact-form-row">
+          <span class="contact-form-text">I'm looking for help with:</span>
+          <div class="contact-form-items">
+            <label class="checkbox">
+              <input type="checkbox" name="service" class="checkbox-input" value="Brand Identity Design">
+              <span class="checkbox-label">Brand Identity Design</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="service" class="checkbox-input" value="Website Development">
+              <span class="checkbox-label">Website Development</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="service" class="checkbox-input" value="Product Design">
+              <span class="checkbox-label">Product Design</span>
+            </label>
+          </div>
+
+        </div>
+      </div>
+
+      <button type="submit" class="submit-button">Start a journey</button>
+    </form>
+  </main>
+
+
+
+  <!-- Fotter with bunch of goodis :) -->
+  <footer>
+    <div class="footer-content">
+      <nav>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </nav>
+      <div class="social-media">
+        <a href="#"><img src="assets/facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+        <a href="#"><img src="assets/instagram-icon.png" alt="Instagram"></a>
+        <a href="#"><img src="assets/github-icon.png" alt="GitHub"></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 XingS Architecture. All rights reserved.</p>
+    </div>
+
+
+  </footer>
+
+
+</body>
+
 </html>

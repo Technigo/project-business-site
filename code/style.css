@@ -1,5 +1,361 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+/* Reset and basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+/* #contact {
+  border: 1px solid black;
+} */
+
 body {
-  background: blue;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* background: #f4f4f4; */
+  height: 100%;
+}
+
+/* Style the navbar with a grid layout for better positioning */
+.navbar-container {
+  align-items: center;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 10;  
+}
+
+.navbar-logo img {
+  max-width: 50px;
+  padding: 5px;
+}
+
+.navbar-burger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: center;
+  position: absolute;
+  top: 35px; right: 15px;
+  transform: translateY(-50%);
+}
+
+.navbar-burger span {
+  background: #fff;
+  height: 3px;
+  margin: 5px;
+  width: 25px;
+  border-radius: 2px;
+}
+
+.navbar-menu-container {
+  display: none;
+}
+
+/* Aligning the menu to the right */
+/* Navbar container shall not show this time */
+/* JS still not work */
+/* .navbar-menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  z-index: 11;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.navbar-menu-item a {
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-menu-item a:hover {
+  color: pink;
+  cursor: pointer;
+} */
+
+/* Style the video container and player to be centered and scale well */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Set a limited height for the video */
+  overflow: hidden;
+}
+
+.video-player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Darken the entire video */
+  z-index: 2;
+}
+
+/* Style the text on top of the video */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 3;
+  width: 80%;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-text-header {
+  font-size: 2em;
+}
+
+.overlay-text-subheader {
+  font-size: 0.75em;
+  margin-top: 10px;
+  max-width: 600px;
+  color: white;
+}
+
+.overlay-text-subheader a {
+  color: white;
+  font-style: italic;
+}
+.overlay-text-subheader a:hover {
+  text-decoration: underline;
+  color: #FFD700;
+  cursor: pointer;
+}
+
+/* Style the button used to pause/play the video */
+.play-pause-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  font-size: 0.75em;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.play-pause-button:hover {
+  background: #ddd;
+  color: black;
+}
+
+/* Footer content */
+.footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5vw;
+}
+
+.footer-links {
+    display: flex;
+    list-style: none;    
+  }
+
+.footer-links li {
+    margin-left: 20px;
+  }
+
+.footer-links a {
+    text-decoration: none;
+    color: #666;
+  }
+
+.footer-links a:hover {
+    text-decoration: underline;
+  }
+
+.social-media {
+    display: flex;
+    padding: 10px;
+}
+
+.social-media a {
+    margin-left: 10px;
+}
+
+.social-media img {
+    max-width: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Style the form */
+h1 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.submit-button {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 100px;
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  padding: 0.5vw 2vw;
+  width: 200px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  margin: 5px;  
+}
+
+.submit-button:hover {
+  background-color: rgba(113, 218, 113, 0.5);
+  color: black;
+}
+
+/* Responsive styles for tablets and desktops (768px and above) */
+@media screen and (max-width: 766px) {
+.contact-form-for-large-screen{
+  display: none;
+}
+}
+
+.contact-form-for-small-screen {
+  margin: 2vw 5vw;
+}
+
+.text-input {
+  margin: 0 1vw;
+  appearance: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+  display: inline-block;
+  outline: none;
+  transition: border-color ,3s ease;
+  font-size: 0,8em;
+  text-align: center;
+  width: 100%;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  .overlay-text-header {
+    font-size: 3em;
+  }
+
+  .overlay-text-subheader-terms {
+    font-size: 1em;
+  }
+
+  .play-pause-button {
+    font-size: 1.5em;
+  }
+
+/* hidde the small type of form*/
+.contact-form-for-small-screen {
+  display: none;
+}
+
+.contact-form-for-large-screen {
+  display: flex;  
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-form-row {
+  display: flex;
+  flex-grow: 0;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-self: center;
+  margin-bottom: 2vw;
+}
+
+.text-input-underline {
+  margin: 0 1vw;
+  appearance: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+  display: inline-block;
+  outline: none;
+  transition: border-color ,3s ease;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.contact-form-text {
+  flex-shrink: 0;
+  color: black;
+  font-size: 1.5em;
+}
+
+.contact-form-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  column-gap: 1vw;
+  margin-top: 0;
+  row-gap: 1vw;
+} 
+
+.radio, .checkbox {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 0.5vw 2vw;
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  display: flex;
+  margin:0 5px;
+}
+
+.submit-button {
+  position: absolute;
+  left: 50%;
+}
+
 }
