@@ -8,11 +8,20 @@
 body {
   background-color: rgb(63, 77, 102);
   color: white;
+  display: flex; 
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+main {
+   flex-grow: 1;       /*makes the main section takes up most space and keeps the footer at the bottom */
 }
 
 header {
 overflow-x: hidden; 
+max-width: 100%; 
 }
+
 
 .hero {
   display: flex;
@@ -178,12 +187,13 @@ button {
 }
 
 .footer {
-  display: block;
+  /* display: block; */
   background-color: rgb(63, 77, 102);
   text-align: center;
   position: absolute;
-  width: auto;
-  margin-left: 10px;
+  width: 100%;
+  margin-left: 10px; 
+  bottom: 0;
 }
 
 .footer-logo img {
