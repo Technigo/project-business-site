@@ -1,55 +1,291 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+@font-face {
+  font-family: "Sana Sans";
+  src:
+    url("/assets/Fonts/SanaSans-RegularDisplay.woff2") format("woff2"),
+    url("/assets/Fonts/SanaSans-RegularDisplay.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #0f3c18;
+  --secondary-color: #449f6a;
+  /* Changed: Darkened background color for dark mode */
+  --background-color: #565b60; /* Old value: rgba(110, 110, 116, 0.1) */
+  /* Changed: Adjusted text color for better contrast on dark background */
+  --text-color: #ffffff; /* Old value: #333 */
+  /* Removed: --light-text-color: #fff; (redundant with new text-color) */
+  /* Changed: Adjusted input background for better visibility on dark mode */
+  --input-background: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Old value: rgba(0, 0, 0, 0.1) */
+  /* Changed: Made container more transparent for modern look */
+  --container-background: rgba(
+    28,
+    87,
+    64,
+    0.5
+  ); /* Old value: rgba(255, 255, 255, 0.1) */
+  --blur-effect: blur(10px);
+}
+
+/* No changes to these base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: rgba(110, 110, 116, 0.516);
+  /* Changed: Updated font stack for more modern look */
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Added: Ensure full height even with little content */
+  min-height: 100vh;
+  font-family: "Sana Sans", sans-serif;
+
+  backdrop-filter: var(--blur-effect);
+}
+
+header {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-bar {
+  width: 100%;
+  background-color: #6b2121;
+  position: sticky;
+  top: 0;
+  padding: 0 20px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding: 20px;
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Removed: Specific img styling (replaced with hero-image class below) */
+
+/* Removed: .testimonial-section img styling (assuming it's no longer needed) */
+
+p {
+  font-weight: 300;
+  border-radius: 30px;
+  padding: 13px;
+  background-color: var(--input-background)
+}
+
+.container {
+  /* Removed: min-height: 100vh; (redundant with body min-height) */
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+
+  border-radius: 20px 150px 20px 150px;
+  /* Changed: Increased width for better responsiveness */
+  overflow: hidden;
+  margin: auto;
+  /* Changed: Enhanced box shadow for more depth */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Old value: rgba(0, 0, 0, 0.1) */
+  /* Added: Backdrop filter for frosted glass effect */
+  justify-content: center;
+  align-items: center;
+  background-color: #1c4124ec;
+}
+
+.sign-up {
+  background-position: center;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  padding: 55px;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  /* Removed: color: var(--text-color); (inherited from body) */
+  /* Removed: border-radius: 20px 0 0 20px; (handled by container) */
+}
+
+.sign-up::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(2px);
+  z-index: -1;
+  /* background-image: url(/visualelectric-1725003862393.jpeg); */
+  background-size: cover;
+  background-position: 500%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin-top: 10px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  color: rgb(255, 253, 253);
+}
+
+h1 {
+  margin-left: -260px;
+  margin-top: -48px;
+  margin-bottom: 0px;
+  font-weight: 500;
+  color: rgb(129, 171, 158);
+}
+
+select,
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--input-background);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--text-color);
+  /* Changed: Increased padding for better touch targets */
+  padding: 1rem; /* Old value: 0.8rem 1rem */
+  /* Changed: Increased margin for better spacing */
+  transition: all 0.3s ease;
+}
+
+input::placeholder,
+select {
+  color: rgb(58, 57, 68);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--secondary-color);
+  /* Added: Slight lift effect on focus */
+  transform: translateY(-2px);
+}
+
+/* Added: Button styling */
+input[type="submit"] {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin-bottom: 24px;
+}
+
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+  color: #3a86ff;
+}
+
+/* Responsive design*/
+@media (max-width: 768px) {
+  .container {
+    width: 65%;
+  }
+
+  h1 {
+    margin-left: -230px;
+  }
+  .sign-up {
+    width: 100%;
+  }
+}
+
+/* Added: Subtle animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sign-up {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Added: Hero image styling */
+.hero-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: 100%;
+  z-index: -2;
+  opacity: 0.7;
+  /* filter: blur(4px); */
 }
 
 #hero-video {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: 100%;
+  z-index: -2;
+  opacity: 0.7;
 }
 
-.container {
-  height: 100vh;
+footer {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-bar {
+  width: 100%;
+  background-color: #6b2121;
+  position: sticky;
+  top: 0;
+  padding: 0 20px;
+}
+
+.footer-list {
   display: flex;
-  width: 80%;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.sign-up,
-.testimonial-section {
-  width: 50%;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.testimonial-section {
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  border-radius: 0 20px 20px 0;
-}
-
-.sign-up {
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border-radius: 20px 0 0 20px;
-}
-
-input {
-  background-color: black;
-  border-radius: 20px;
-  font-size: x-large;
-  color: white;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding: 20px;
+  list-style: none;
 }
