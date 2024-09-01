@@ -64,6 +64,23 @@ body {
   padding: 10px 20px;
 }
 
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  height: 4px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+
 /* Registration section Styling */
 .registration-section {
   display: flex;
@@ -335,6 +352,10 @@ input[type="password"] {
     padding: 15px;
   }
 
+  .quote {
+    padding: 25px;
+  }
+
   .right-section .overlay {
     bottom: 20px;
     left: 20px;
@@ -353,6 +374,36 @@ input[type="password"] {
   }
 }
 
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 0;
+  }
+
+  .nav-links.show {
+    max-height: 300px;
+  }
+}
+
+
+/* Footer section */
 .footer {
   background-color: #F1D3CE;
   color: #070707;
