@@ -69,10 +69,8 @@ main {
 
 .sign-up-info-list {
   list-style-type: disc;
-  /*Default bullet list*/
-  /*content: "✔️";*/
   padding-right: 8px;
-  /*Space between text and check mark*/
+  /*Space between text and bullets*/
   font-size: 20px;
   color: #c77dff;
 }
@@ -92,7 +90,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 95%;
+  max-width: 70%;
   margin: 50px;
   border: 2px solid #ccc;
   padding: 20px;
@@ -111,6 +109,15 @@ input {
 }
 
 input[type="text"] {
+  text-align: left;
+  padding-left: 10px;
+  border-radius: 25px;
+  font-size: 24px;
+  color: #c77dff;
+  box-sizing: border-box;
+}
+
+input[type="email"] {
   text-align: left;
   padding-left: 10px;
   border-radius: 25px;
@@ -165,13 +172,11 @@ label {
   color: #4b0082;
 }
 
-label:last-child {}
-
 /*Style the Join button*/
 button {
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 25%;
   font-size: 24px;
   padding: 15px 40px;
   border-bottom: none;
@@ -194,7 +199,8 @@ button {
   }
 
   .questionnaire {
-    margin: 5px;
+    margin: 2px;
+    max-width: 95%;
   }
 
   .name-fields {
@@ -238,6 +244,16 @@ button {
     width: 100%;
   }
 }
+
+/*Desktop*/
+@media and (min-width: 1025px) {
+  .questionnaire {
+    max-width: 50%;
+    padding: 50px;
+  }
+}
+
+
 
 footer {
   text-align: center;
