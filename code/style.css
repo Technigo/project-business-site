@@ -1,5 +1,495 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+html {
+  background-color: #D1E9F6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
 body {
-  background: blue;
+  margin: 0;
+  padding-top: 60px;
+}
+
+
+/* Space for the navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar .logo h1 {
+  font-size: 24px;
+  color: #000000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2a2828;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #F1D3CE;
+  border-radius: 4px;
+}
+
+.btn-login {
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  height: 4px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+
+/* Registration section Styling */
+.registration-section {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+  padding: 40px;
+}
+
+.left-section {
+  background-color: #ffffff;
+  max-width: 400px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #393636;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #3f3e3e;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.btn-create {
+  width: 100%;
+  padding: 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.btn-google,
+.btn-twitter {
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.btn-twitter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.login-link {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+.login-link a {
+  color: #000;
+  text-decoration: none;
+}
+
+.right-section {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e0e0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: #141414;
+}
+
+.quote {
+  background-color: rgba(219, 213, 213, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.quote p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.quote-author {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* Other camp options section styling */
+.other-camps-section {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.grid-camps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.grid-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.grid-item p {
+  color: #666;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .registration-section {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 20px;
+  }
+
+  .navbar .nav-links {
+    gap: 15px;
+  }
+
+  .grid-camps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .navbar .logo h1 {
+    font-size: 20px;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .registration-section {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .left-section {
+    padding: 20px 10px;
+  }
+
+  .right-section {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  .grid-camps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar .logo h1 {
+    font-size: 18px;
+  }
+
+  .navbar .nav-links a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .registration-section {
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 15px;
+  }
+
+  .right-section .overlay {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .quote p {
+    font-size: 14px;
+  }
+
+  .quote-author {
+    font-size: 12px;
+  }
+
+  .grid-camps {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 0;
+  }
+
+  .nav-links.show {
+    max-height: 300px;
+  }
+}
+
+/* Footer section */
+.footer {
+  background-color: #F1D3CE;
+  color: #070707;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0c0c0c;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #060606;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-social a img {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s;
+}
+
+.footer-social a:hover img {
+  opacity: 0.7;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #0b0a0a;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 20px;
+  }
+
+  .footer-logo h1 {
+    font-size: 20px;
+  }
+
+  .footer-links {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .footer-social {
+    gap: 10px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo h1 {
+    font-size: 18px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+  }
+
+  .footer-social a img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
 }
