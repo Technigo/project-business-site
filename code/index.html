@@ -1,17 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Picko — When you like to move it, move it</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/favicon.svg" />
+    <link rel="mask-icon" href="./assets/favicon.svg" color="#000000" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Business name 🌻</h1>
-
-    <!-- video or image as a header is cool :) -->
-
-    <!-- Signup form -->
-
+    <header class="page-header">
+      <a href="./index.html" class="page-header__logo">
+        <img
+          width="120"
+          height="35"
+          src="./assets/picko-logo.svg"
+          alt="Picko's logotype"
+        />
+      </a>
+      <nav class="page-header__nav">
+        <a href="#nav" class="page-header__nav__link">
+          <div class="hamburger"></div>
+          <span class="text">Menu</span>
+        </a>
+        <div class="page-header__menu">
+          <ul>
+            <li><a href="#link1">Home</a></li>
+            <li><a href="#link1">Open ads</a></li>
+            <li><a href="#link1">About us</a></li>
+            <li><a href="#link1">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero hero--video">
+        <div class="hero__content">
+          <h1 class="hero__title">When you like to move it, move it</h1>
+          <p class="hero__text text-large">
+            Picko is your go-to platform for easy item transport and delivery.
+            Instantly connect with reliable helpers to get your goods from point
+            A to point B.
+          </p>
+          <form
+            action="https://httpbin.org/anything"
+            method="post"
+            class="hero__form"
+          >
+            <label>
+              <span>First name</span>
+              <input
+                type="text"
+                name="first_name"
+                autocomplete="given-name"
+                placeholder="Madonna"
+                required
+              />
+            </label>
+            <label>
+              <span>Email</span>
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="your@email.com"
+                required
+              />
+            </label>
+            <div class="hero__form__button">
+              <button type="submit">
+                <span class="text">Get started</span
+                ><span class="icon"
+                  ><img
+                    src="./assets/arrow-forward.svg"
+                    alt="Arrow going forward"
+                /></span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="hero__video bg-video-wrapper">
+          <video
+            muted
+            playsinline
+            autoplay
+            loop
+            preload="auto"
+            poster="./assets/video-poster.jpg"
+          >
+            <source src="./assets/picko-hero-background.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+    </main>
+    <section class="ads">
+      <div class="grid grid-container">
+        <div class="ad-filters">
+          <h2>Open ads</h2>
+          <form method="post">
+            <label class="select-label">
+              <span>Filter on category</span>
+              <select title="Filter on category" name="category" id="category">
+                <option value="all">All</option>
+                <option value="carpets">Carpets</option>
+                <option value="furniture">Furniture</option>
+                <option value="lamps">Lamps</option>
+                <option value="instruments">Musical instruments</option>
+                <option value="textile">Textile</option>
+              </select>
+              <span class="select-arrow"></span>
+            </label>
+          </form>
+        </div>
+        <div class="ad" data-category="lamps">
+          <img
+            width="640"
+            height="427"
+            src="./assets/ad-lamp.jpg"
+            alt="A lamp for sale"
+          />
+          <h3 class="ad__title">Stylish lamp</h3>
+          <p class="ad__price">150 kr</p>
+        </div>
+        <div class="ad" data-category="textile">
+          <img
+            width="640"
+            height="427"
+            src="./assets/ad-pillows.jpg"
+            alt="Three pillows for sale"
+          />
+          <h3 class="ad__title">3 pillows</h3>
+          <p class="ad__price">250 kr</p>
+        </div>
+        <div class="ad" data-category="furniture">
+          <img
+            width="640"
+            height="427"
+            src="./assets/ad-sofa.jpg"
+            alt="A sofa for sale"
+          />
+          <h3 class="ad__title">IKEA sofa</h3>
+          <p class="ad__price">350 kr</p>
+        </div>
+        <div class="ad" data-category="carpets">
+          <img
+            width="640"
+            height="427"
+            src="./assets/ad-carpet.jpg"
+            alt="A carpet for sale"
+          />
+          <h3 class="ad__title">Big carpet</h3>
+          <p class="ad__price">450 kr</p>
+        </div>
+        <div class="ad" data-category="instruments">
+          <img
+            width="640"
+            height="427"
+            src="./assets/ad-piano.jpg"
+            alt="A piano for sale"
+          />
+          <h3 class="ad__title">Piano</h3>
+          <p class="ad__price">550 kr</p>
+        </div>
+        <div class="ad" data-category="instruments">
+          <img
+            width="640"
+            height="427"
+            src="./assets/ad-guitar.jpg"
+            alt="A guitar for sale"
+          />
+          <h3 class="ad__title">Guitar</h3>
+          <p class="ad__price">650 kr</p>
+        </div>
+        <div class="ad" data-category="lamps">
+          <img
+            width="640"
+            height="427"
+            src="./assets/ad-floor-lamp.jpg"
+            alt="A floor lamp for sale"
+          />
+          <h3 class="ad__title">Floor lamp</h3>
+          <p class="ad__price">750 kr</p>
+        </div>
+        <div class="ad" data-category="furniture">
+          <img
+            width="640"
+            height="427"
+            src="./assets/ad-chair.jpg"
+            alt="A chair for sale"
+          />
+          <h3 class="ad__title">Designer chair</h3>
+          <p class="ad__price">850 kr</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>© Copyright 2024 Helene Westrin. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
