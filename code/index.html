@@ -3,15 +3,218 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Flow Movement</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
+  
   <body>
-    <h1>Business name 🌻</h1>
+    <header>
+      <div class="hero">
+        <div class="hero-overlay">
+          <h1>Flow Movement</h1>
+          <h2> - with Gabriella</h2>
+        </div>     
+      </div>
+    </header>
+    
+    <main>
 
-    <!-- video or image as a header is cool :) -->
+      <!-- Headline for the form -->
+      
+      <div class="form-header">
+        <h3>Create an account.</h3>
+        <h4>Let's get started with your 14 day free trial.</h4>
+      </div>
+      
 
-    <!-- Signup form -->
+      <!-- Signup form -->
+
+
+      <form action="http://httpbin.org/anything" method="post">
+        <fieldset class="form-fieldset">
+          
+          <label class="fname">
+            <span>First name</span>
+            <input 
+            class="fill-out-form" 
+            required type="text" 
+            name="fname" 
+            placeholder="First name">
+          </label>
+          
+          <label class="lname">
+            <span>Last name</span>
+            <input 
+            class="fill-out-form" 
+            required type="text" 
+            name="lname" 
+            placeholder="Last name">
+          </label>
+          
+          <label class="email">
+            <span>Email adress</span>
+            <input 
+            class="fill-out-form" 
+            required type="email" 
+            name="email-adress" 
+            placeholder="Email address">
+          </label>
+          
+          <label class="phone">
+            <span>Phone</span>
+            <input 
+            class="fill-out-form" 
+            required
+            type="tel" 
+            name="phone" 
+            placeholder="Phone">
+          </label>
+
+          <label class="password">
+            <span>Password</span>
+            <input 
+            class="fill-out-form" 
+            required type="password" 
+            name="password" 
+            minlength="8" 
+            placeholder="Password">
+          </label>
+          
+          <label class="confirm-password">
+            <span>Confirm Password</span>
+            <input 
+            class="fill-out-form" 
+            required type="password" 
+            name="confirm-password" 
+            minlength="8" 
+            placeholder="Confirm password">
+          </label>
+          
+          <label class="country">
+            <span>Country</span>
+              <select type="text" name="country">
+              <option value="SE">Sweden</option>
+              <option value="SE">Norway</option>
+              <option value="SE">Finland</option>
+              <option value="SE">Denmark</option>
+              <option value="SE">Iceland</option>
+            </select>
+          </label>
+         
+        </fieldset>
+            
+
+
+        <!--   RADIOBOXES    RADIOBOXES    RADIOBOXES    RADIOBOXES      -->
+
+        
+            
+        <fieldset class="contact-method">
+          <div class="contact-method-container">
+            <legend>Please select your preferred contact method:</legend>
+            
+            <div class="radio-button-container">
+              
+              <div class="radio-button-box">
+                <input
+                type="radio"
+                id="contact-choice-1"
+                name="contact"
+                value="email"
+                checked />
+                <label for="contactChoice1">Email</label>
+              </div>
+              
+              <div class="radio-button-box">
+                <input 
+                type="radio" 
+                id="contact-choice-2" 
+                name="contact" 
+                value="phone" />
+                <label for="contactChoice2">Phone</label>
+              </div>
+              
+              <div class="radio-button-box">
+                <input 
+                type="radio" 
+                id="contact-choice-3" 
+                name="contact" 
+                value="mail" />
+                <label for="contactChoice3">Mail</label>
+              </div>
+            
+            </div>
+          </div>
+        </fieldset>
+
+        
+        <!--  RADIOBOXES   END   RADIOBOXES   END   -->    
+            
+         
+        
+
+
+
+
+
+        <!--   CHECKBOXES   START   CHECKBOXES  START   CHECKBOXES  START   -->
+            
+            
+        <fieldset class="agreement">
+          
+          <div class="agreement-box">
+            <input
+            type="checkbox" id="terms" 
+            name="terms" />
+            <label for="terms">I agree to the <a href="#">Terms</a> and <a href="#"> Privacy Policy.</a></label>
+          </div>
+              
+          <div class="agreement-box">
+            <input
+            type="checkbox" 
+            id="communication" 
+            name="communication" />
+            <label for="communication">I agree to recieve communications.</label>
+          </div>
+        
+        </fieldset>
+            
+        
+            
+        <!--   CHECKBOXES END CHECKBOXES END CHECKBOXES END CHECKBOXES END CHECKBOXES END CHECKBOXES END  -->
+        
+                    
+        <button type="submit">Create account!</button>
+      
+      </form>
+            
+      <div class="existing-account">
+        <h4>Already have an account?<a href="#">Sign in now</a></h4>
+      </div>
+      
+    </main>
+
+      <footer>
+        <div class="personal-info">
+          
+          <img src="./assets/flow-movement-logo.png" alt="flow-movement-logo">
+          <div class="personal-info-links">
+            <i style="font-size:24px" class="fa">&#xf09b;</i>
+            <i style="font-size:24px" class="fa">&#xf08c;</i>
+            <i class="fa fa-copyright">Gabriella Iofe</i>
+          </div>
+
+        </div>
+      </footer>
 
   </body>
 </html>
