@@ -1,5 +1,466 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
 body {
-  background: blue;
+  background: rgb(255, 255, 255);
+  font-family: "Della Respira", serif;
+  margin: 0px;
+}
+
+.hero-header {
+  background-image: url("https://images.unsplash.com/photo-1533294455009-a77b7557d2d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  /* Change to column for vertical layout */
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  /* Adjust the text color */
+}
+
+.hero-h1 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  color: rgba(248, 229, 103, 0.461);
+  font-size: 22px;
+}
+
+p {
+  text-align: justify;
+}
+
+.header1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+  width: 100%;
+}
+
+.logo-img {
+  height: 80px;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+nav {
+  margin-left: auto;
+  /* Move the nav to the right */
+  padding: 8px 12px 8px 4px;
+  display: none;
+}
+
+.hamburger {
+  background-color: #677bbd;
+  color: #f7d03e;
+  border: #785bd9 solid 2px;
+  padding: 4px;
+  margin-left: auto;
+  /* Move the hmb to the right */
+  margin-right: 30px;
+  text-align: center;
+  border-radius: 20%;
+  min-width: 8%;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.hamburger:hover {
+  background-color: #9395e3;
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
+  padding: 2px 4px;
+}
+
+li {
+  font-size: 18px;
+}
+
+a {
+  color: #fff;
+  /* Match the text color */
+  text-decoration: none;
+}
+
+.sale-box {
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 20px;
+  width: 60%;
+}
+
+.workshop-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+  text-align: center;
+}
+
+.w-img-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.workshop1 {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 8px;
+}
+
+.w1info {
+  width: 100%;
+}
+
+.img-w1 {
+  max-width: 85%;
+  display: flex;
+}
+
+.workshop2 {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 8px;
+}
+
+.w2info {
+  width: 100%;
+}
+
+.img-w2 {
+  max-width: 85%;
+  display: flex;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #d3cdfa4b;
+  margin: 0 auto;
+  padding: 8px;
+  border-radius: 20px;
+  width: 95%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.radio-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  /* Adjust the gap between radio buttons */
+  width: 100%;
+
+}
+
+.radio-box label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.radio-box input[type="radio"] {
+  display: none;
+  /* Hide the default radio button */
+}
+
+.radio-box .custom-radio {
+  width: 10px;
+  height: 10px;
+  border: 2px dotted floralwhite;
+  /* Adjust border color and thickness */
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #d3cdfa97;
+  /* Adjust background color */
+}
+
+.radio-box input[type="radio"]:checked+.custom-radio {
+  background-color: plum;
+  /* Adjust checked background color */
+  border: 2px dotted #d3cdfa;
+}
+
+legend {
+  margin: 0 auto;
+}
+
+.fieldset1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border: none;
+}
+
+input {
+  /* Här lägger du till dina stilar */
+  padding: 8px 12px;
+  border: 1px dotted #a06ef5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Ser till att padding och border ingår i bredden */
+}
+
+.lunch-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+select {
+  background-color: white;
+  border-color: #a06ef5;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 8px;
+  color: powderblue;
+  font-style: italic;
+  border-radius: 14px;
+  height: 22px;
+  width: 88px;
+  text-align: center;
+}
+
+option {
+  padding: 10px;
+  /* Avstånd mellan text och kant i alternativen */
+}
+
+select:hover {
+  border-color: #ffffff;
+}
+
+select:focus {
+  outline: none;
+  /* Tar bort standardfokus-stilen */
+  border-color: plum;
+  /* Ändrar kantfärg när den är fokuserad */
+  color: rgb(18, 205, 230);
+}
+
+label {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.register {
+  /* display: flex;
+  margin: 0 auto;*/
+  width: 60%;
+  background-color: plum;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px 12px 2px;
+  cursor: pointer;
+  border-radius: 14px;
+  line-height: inherit;
+  font-family: "Della Respira", serif;
+}
+
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+  }
+
+  nav {
+    margin-left: auto;
+    /* Move the nav to the right */
+    padding: 8px 12px 8px 4px;
+    display: flex;
+  }
+
+  .workshop-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+  }
+
+  .workshop1 {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 8px 4px 8px 22px;
+  }
+
+  .workshop2 {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 8px 22px 8px 4px;
+  }
+
+  .w1info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .w2info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-w1 {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    display: flex;
+  }
+
+  .img-w2 {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    display: flex;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+}
+
+@media (min-width: 1025px) {
+
+  .hamburger {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+  }
+
+  nav {
+    margin-left: auto;
+    /* Move the nav to the right */
+    padding: 8px 12px 8px 4px;
+    display: flex;
+  }
+
+  .workshop-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .workshop1 {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+  }
+
+  .workshop2 {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+  }
+
+  .w1info {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-right: 10px;
+  }
+
+  .w2info {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-right: 10px;
+  }
+
+  .w-img-box {
+    display: flex;
+    justify-content: left;
+    width: 40%;
+  }
+
+  .img-w1 {
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+    display: flex;
+  }
+
+  .img-w2 {
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+    display: flex;
+  }
+
+  .form-box {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
 }

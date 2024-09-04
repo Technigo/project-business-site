@@ -1,17 +1,131 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <h1>Business name 🌻</h1>
 
-    <!-- video or image as a header is cool :) -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Site</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- link to css file -->
+  <!--Font från Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap"
+    rel="stylesheet">
 
-    <!-- Signup form -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
+</head>
 
-  </body>
+<body>
+  <header class="hero-header">
+    <div class="header1">
+      <img
+        src="https://img.freepik.com/free-vector/hand-painted-candy-pastel-color-illustration_52683-126062.jpg?t=st=1724655895~exp=1724659495~hmac=28425f1163faa7c23b22eb8458bd55a285d734303b04a43391436a0b48d64c16&w=740"
+        alt="My Star" class="logo-img">
+      <h3>Stars Above</h3>
+      <button class="hamburger">☰</button>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="hero-h1">
+      <h1>Above and Beyond</h1>
+    </div>
+  </header>
+
+  <section class="sale-box">
+    <h2>Explore the Mysteries of the Universe</h2>
+    <p>Our new age workshops will guide you on a journey of self-discovery through tarot readings and crystal healing.
+      Limited time offer: Sign up for both workshops and save 11%!
+      Don't miss this opportunity to connect with your higher self.
+    </p>
+  </section>
+
+  <section class="workshop-box">
+    <div class="workshop1">
+      <div class="w-img-box">
+        <img
+          src="https://images.unsplash.com/photo-1620051214519-e5982f867695?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="img W 1" class="img-w1">
+      </div>
+
+      <div class="w1info">
+        <h2>Discover the Secrets of the Tarot
+        </h2>
+        <p>Join us for a captivating workshop on tarot card reading! Learn the fundamentals of this ancient divination
+          tool, explore the symbolism of each card, and develop your intuition to interpret their messages. Whether
+          you're a beginner or have some experience, this workshop will provide you with valuable insights and practical
+          skills.</p>
+        <br>
+        <p>The workshop will take place on September&nbsp;15th from 11&nbsp;AM to 2&nbsp;PM at Amiralsgatan&nbsp;11 in
+          Malmö. Cost: 1200&nbsp;kr (lunch included!)
+        </p>
+      </div>
+    </div>
+
+    <div class="workshop2">
+      <div class="w-img-box">
+        <img
+          src="https://images.unsplash.com/photo-1567113463224-37cf03ba4577?q=80&w=2051&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="img W 2" class="img-w2">
+      </div>
+      <div class="w2info">
+        <h2>Unleash the Power of Crystal</h2>
+        <p>Discover the fascinating world of crystals and their energetic properties. Learn about the different types of
+          crystals, their corresponding chakras, and how to incorporate them into your daily life. This workshop will
+          provide you with practical knowledge and techniques to harness the healing and transformative power of
+          crystals.</p>
+        <br>
+        <p>The workshop will take place on September&nbsp;22th from 11&nbsp;AM to 2&nbsp;PM at Amiralsgatan&nbsp;11 in
+          Malmö. Cost: 1500&nbsp;kr (lunch included!)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-box">
+    <div class="form">
+      <h2>Sign up here</h2>
+      <form action="https://httpbin.org/anything" method="post">
+        <fieldset class="fieldset1">
+          <label> Name
+            <input type="text" name="name" required /> </label>
+          <label> Email
+            <input type="email" name="email" required /> </label>
+          <div class="radio-box">
+            <legend>Workshop:</legend>
+            <label><input type="radio" name="workshop" value="both">
+              <span class="custom-radio"></span>
+              Both workshops</label>
+            <label>
+              <input type="radio" name="workshop" value="tarot">
+              <span class="custom-radio"></span>
+              Tarot cards
+            </label>
+            <label>
+              <input type="radio" name="workshop" value="crystals">
+              <span class="custom-radio"></span>
+              Crystals
+            </label>
+          </div>
+          <label class="lunch-box"> Lunch:
+            <select name="lunch" required>
+              <option value="PA">Paleo</option>
+              <option value="VE">Vegan</option>
+            </select>
+          </label>
+        </fieldset>
+        <button type="submit" class="register">Register</button>
+      </form>
+    </div>
+  </section>
+</body>
+
 </html>
