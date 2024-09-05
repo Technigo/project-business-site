@@ -1,4 +1,5 @@
 img {
+  /*Ensure that images adapt to different screen sizes without causing layout issues*/
   display: block;
   max-width: 100%;
 }
@@ -151,21 +152,23 @@ input:valid {
   flex: 1;
 }
 
-/*Style the agree radio button*/
-input[type="radio"] {
+/*Style the agree check box*/
+input[type="checkbox"] {
   appearance: none;
-  /*Deletes the default settings for the radio button*/
+  /*Deletes the default settings for the check box*/
   border: 3px solid #4b0082;
-  border-radius: 50%;
-  /*Make it round*/
+  border-radius: 25px;
+  /*rounded corners*/
   width: 20px;
+  /*Ensures that the radio button remains round*/
   outline: none;
   cursor: pointer;
+  margin-right: 10px;
 }
 
-input[type="radio"]:checked {
+input[type="checkbox"]:checked {
   background-color: #4b0082;
-  border-color: #4b0082;
+  border-color: #c77dff;
 }
 
 label {
@@ -178,8 +181,6 @@ label {
 button {
   display: flex;
   justify-content: center;
-  width: 25%;
-  font-size: 24px;
   padding: 15px 40px;
   border-bottom: none;
   background-color: rgb(56, 0, 127);
