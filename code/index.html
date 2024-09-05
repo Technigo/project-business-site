@@ -1,17 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <h1>Business name 🌻</h1>
 
-    <!-- video or image as a header is cool :) -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <!-- Signup form -->
+<body>
 
-  </body>
+  <!-- video or image as a header is cool :) -->
+  <div class="hero-header">
+    <div class="hero-image">
+      <img src="assets/Mountain-4.png" alt="Mountain">
+    </div>
+    <div class="overlay">
+      <h1>Welcome to</h1>
+      <h2>Acme Corp.</h2>
+      <p>Where Innovation Meets Excellence</p>
+    </div>
+  </div>
+
+  <!-- Signup form start-->
+  <main>
+    <!-- Sign up info -->
+    <div class="sign-up-info-container">
+      <h2>Come join the Acme community!</h2>
+      <h3>Let's set up your account. Already have one? <a href="url">Sign in here.</a></h3>
+      <!-- Sign up info -->
+      <ul class="sign-up-info-list">
+        <li>Get this and that</li>
+        <li>5% off....</li>
+        <li>Weekly updates</li>
+      </ul>
+    </div>
+    <!-- Sign up form questions -->
+    <fieldset class="questionnaire">
+      <form action="http://httpbin.org/anything" method="post">
+        <div class="name-fields">
+          <label for="firstname"></label>
+          <input type="text" id="firstname" name="firstname" placeholder="First name" required>
+          <label for="lastname"></label>
+          <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
+        </div>
+        <!--Check if its an email address-->
+        <label for="email"></label>
+        <input type="email" id="email" name="email" placeholder="your.email@acme.com" required>
+        <label for="password"></label>
+        <input type="password" id="password" name="password" placeholder="Select password" required>
+        <label><input type="checkbox" id="checkbox" name="Agree" required>Agree</label>
+        <div>
+          <button type="submit">Join</button>
+        </div>
+      </form>
+    </fieldset>
+  </main>
+</body>
+<footer>2024-08-17 Johanna Eriksson</footer>
+
 </html>

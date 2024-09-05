@@ -1,5 +1,278 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+img {
+  /*Ensure that images adapt to different screen sizes without causing layout issues*/
+  display: block;
+  max-width: 100%;
+}
+
 body {
-  background: blue;
+  background-color: #f0e6ef;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.hero-header {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 182, 193, 0.7), rgba(128, 0, 128, 0.7));
+  /*rgba for making the gradient transparant*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*Horizontal*/
+  justify-content: center;
+  /*Vertical*/
+  color: #f8f0fc;
+  text-align: center;
+  border-radius: 20px;
+  /*rounded corners*/
+}
+
+.overlay h1 {
+  font-size: 14px;
+  margin-bottom: 0.5em;
+}
+
+.overlay h2 {
+  font-size: 54px;
+  margin-bottom: 0.3em;
+  font-size: 45px;
+  color: #ffffff;
+}
+
+.overlay p {
+  font-size: 20px;
+  font-style: italic;
+  color: #ffffff;
+}
+
+main {
+  margin: 30px;
+  border: none
+}
+
+.sign-up-info-container {
+  margin: 50px;
+}
+
+.sign-up-info-list {
+  list-style-type: disc;
+  padding-right: 8px;
+  /*Space between text and bullets*/
+  font-size: 20px;
+  color: #c77dff;
+}
+
+h3 {
+  font-size: 20px;
+  color: #7b2cbf;
+}
+
+a {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #7b2cbf;
+}
+
+.questionnaire {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 70%;
+  margin: 50px;
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 20px;
+  /* A 20px curvature for all corners around the form */
+}
+
+input {
+  width: 95%;
+  font-size: 24px;
+  padding: 15px 40px;
+  margin-bottom: 15px;
+  color: #666666;
+  border: none;
+  /*Remove default border*/
+}
+
+input[type="text"] {
+  text-align: left;
+  padding-left: 10px;
+  margin-left: 0px;
+  border-radius: 25px;
+  font-size: 24px;
+  color: #c77dff;
+  box-sizing: border-box;
+  border: 2px solid #dcc3f0;
+}
+
+input[type="email"] {
+  text-align: left;
+  padding-left: 10px;
+  border-radius: 25px;
+  border: 2px solid #dcc3f0;
+  font-size: 24px;
+  color: #c77dff;
+  box-sizing: border-box;
+}
+
+input[type="password"] {
+  text-align: left;
+  padding-left: 10px;
+  border-radius: 25px;
+  border: 2px solid #dcc3f0;
+  font-size: 24px;
+  color: #c77dff;
+  box-sizing: border-box;
+}
+
+input:valid {
+  background-color: #f0e6ef;
+  color: #c77dff;
+}
+
+.name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.name-fields input {
+  flex: 1;
+}
+
+/*Style the agree check box*/
+input[type="checkbox"] {
+  appearance: none;
+  /*Deletes the default settings for the check box*/
+  border: 3px solid #4b0082;
+  border-radius: 25px;
+  /*rounded corners*/
+  width: 20px;
+  /*Ensures that the radio button remains round*/
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #4b0082;
+  border-color: #c77dff;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  color: #4b0082;
+  font-size: 20px;
+}
+
+/*Style the Join button*/
+button {
+  display: flex;
+  justify-content: center;
+  padding: 15px 40px;
+  border-bottom: none;
+  background-color: rgb(56, 0, 127);
+  border-radius: 70px;
+  border-width: 1px;
+  color: #ffffff;
+  cursor: pointer;
+
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .hero-header {
+    height: 80%;
+  }
+
+  .sign-up-info-container {
+    margin: 5px;
+  }
+
+  .questionnaire {
+    margin: 2px;
+    max-width: 95%;
+  }
+
+  .name-fields {
+    flex-direction: column;
+    /*One field per row*/
+    gap: 1px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/*Tablet*/
+@media screen and (min-width: 501px) and (max-width: 1024px) {
+
+  .sign-up-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px;
+  }
+
+  .questionnaire {
+    margin: 50px;
+  }
+
+  .name-fields {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/*Desktop*/
+@media (min-width: 1025px) {
+  .sign-up-info-container {
+    max-width: 70%;
+    margin-left: 150px;
+  }
+
+  .sign-up-info-list {
+    margin-left: 50px;
+  }
+
+  .questionnaire {
+    max-width: 50%;
+    padding: 20px;
+    margin-left: 200px;
+  }
+}
+
+footer {
+  text-align: center;
+  color: #666666;
 }
