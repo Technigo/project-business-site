@@ -15,12 +15,9 @@ body {
 
 main {
    flex-grow: 1;       /*makes the main section takes up most space and keeps the footer at the bottom */
+   overflow-x: hidden; 
 }
 
-header {
-overflow-x: hidden; 
-max-width: 100%; 
-} 
 
 
 .hero {
@@ -58,11 +55,11 @@ max-width: 100%;
   padding: 0 15px; 
 }
   
-header div h1 {
+div h1 {
   font-size: 50px;
 }
 
-header div h2 {
+div h2 {
   font-size: 30px;
 }
 
@@ -107,12 +104,12 @@ fieldset {
   border: none;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  background-color: rgb(91, 107, 135);
+  background-color: rgb(126, 141, 163);
 }
 
-.signup input[type="name"],
-.signup input[type="company"], 
-.signup input[type="email"] {
+.signup input[type="text"],
+.signup input[type="text"], 
+.signup input[type="text"] {
 
   padding: 12px;
   margin-left: 5px;
@@ -142,6 +139,7 @@ fieldset {
   width: 100%;
   height: auto;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .signup button:hover {
@@ -169,20 +167,6 @@ input {
   border-radius: 5px;
 }
 
-
-button {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  color: white;
-  background-color: #333;
-  appearance: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
 .footer {
   /* display: block; */
   background-color: rgb(63, 77, 102);
@@ -191,6 +175,7 @@ button {
   width: 100%;
   margin-left: 10px; 
   bottom: 0;
+  overflow-x: hidden; 
 }
 
 .footer-logo img {
@@ -198,7 +183,14 @@ button {
   max-width: 100%;
   width: 150px;
   height: auto;
+  padding-top: 20px;
 }
+
+ p {
+ padding-left: 20px;
+ padding-bottom: 20px;
+ margin-right: 10px;
+} 
 
 
 /* Media Queries */
@@ -206,11 +198,11 @@ button {
 
 @media (min-width: 1024px) {
 
-  header div h1 {
+   div h1 {
     font-size: 4.5rem;
   }
 
-  header div h2 {
+   div h2 {
     font-size: 2.5rem;
 
   }
@@ -218,32 +210,35 @@ button {
 }
 
 @media (max-width: 768px) {
-  header div h1 {
+
+   div h1 {
     font-size: 3.5rem;
   }
-  header div h2 {
+   div h2 {
     font-size: 1.5rem;
   }
 
 }
 
 @media (max-width: 500px) {
-  header div h1 {
+
+   div h1 {
     font-size: 2.5rem;
   }
 
-  header div h2 {
+   div h2 {
     font-size: 1.5rem;
   }
 
 }
 
 @media (max-width: 480px) {
-  header div h1 {
+
+   div h1 {
     font-size: 1.5rem;
   }
 
-  header div h2 {
+   div h2 {
     font-size: 1rem;
   }
 
