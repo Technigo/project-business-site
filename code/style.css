@@ -1,5 +1,120 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+/* This webpage is coded in mobilfirst style - This styling is for the header*/
+
 body {
-  background: blue;
+  background-color: #FFF8E8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1622163642998-1ea32b0bbc67?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDF8fHxlbnwwfHx8fHw%3D");
+  height: 30vh;
+  width: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+  align-items: center;
+  border-radius: 5px;
+
+}
+
+.hero h3 {
+  color: #FFF8E8;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+
+/*Code for text-area and section*/
+.text-area {
+  display: flex;
+  background-color: #F7EED3;
+  color: #674636;
+  text-transform: uppercase;
+}
+
+.text-area h4 {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.text-section {
+  display: flex;
+  background-color: #F7EED3;
+  color: #674636;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/*Code for form*/
+.box {
+  background-color: #F7EED3
+}
+
+h5 {
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #674636;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+input {
+  margin-right: 10px;
+  border: 2px solid #674636;
+  padding: 10px;
+  background-color: #FFF8E8;
+}
+
+button {
+  width: 22%;
+  padding: 7px;
+  border: 3px solid #674636;
+  cursor: pointer;
+  background-color: #FFF8E8;
+}
+
+button:hover {
+  background-color: #F7EED3
+}
+
+
+/* Media query for screens wider than 420px*/
+@media(min-width: 445px)and (max-width: 667px) {
+  .hero {
+    height: 60vh;
+    width: 60%;
+  }
+
+}
+
+
+/*Media query for screens wider than 667px*/
+@media(min-width: 668px) {
+  .hero {
+
+    background-size: contain;
+    height: 70vh;
+    margin-bottom: 0px;
+  }
+
+  .text-area {
+    margin-top: 0px;
+  }
 }
