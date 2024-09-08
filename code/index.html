@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <h1>Business name 🌻</h1>
 
-    <!-- video or image as a header is cool :) -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TradeWave</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <!-- Signup form -->
+<body>
+  <main>
+    <div class="hero">
+      <video class="hero-video" autoplay playsinline muted loop>
+        <source src="assets/business.mp4" type="video/mp4"> <!--video credit Mixkit -->
+      </video>
+    <div class="hero-text">
+      <h1>TradeWave</h1>
+      <h2>Annual Fintech Forum</h2>
+    </div>
+    </div>
 
-  </body>
+
+  <!-- Sign up form  -->
+
+  <section class="signup">
+    <form action="https://httpbin.org/anything" method="POST">
+        <h3>Sign up for more information</h3>
+        <fieldset>
+          <label for="name"></label>
+          <input type="text" id="name" name="name" placeholder="Name" required />
+          <label for="company"></label>
+          <input type="text" id="company" name="company" placeholder="Company" required />
+          <label for="email"></label>
+          <input type="text" id="email" name="email" placeholder="E-mail" required />
+          <label for="agree">
+          <input type="checkbox" id="agree" name="agree" required /><a href="https://confetti.events/sv/terms-general">
+              I agree to the Terms and Conditions</a>
+          </label>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+  </section>
+  </main>
+<footer>
+  <div class="footer-logo"><a href="https://www.google.com">
+    <img src="assets/TRADEWAVE.png" alt="Company Logo"></a>
+  </div>
+  <p> &copy; 2024 TradeWave Inc. All rights reserved</p>
+</footer>
+</body>
+
 </html>
