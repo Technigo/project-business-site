@@ -66,7 +66,7 @@ body {
 
 
 .yellow-text {
-  color: #f2d158; /* Gold or Yellow color */
+  color: #f2d158;
 }
 
 
@@ -300,38 +300,88 @@ button[type="submit"]:hover {
 
 @media (max-width: 768px) {
   .main-content {
-      flex-direction: column;
-      padding: 20px;
+    flex-direction: column;
+    padding: 20px;
   }
 
+  .signup-container, .info-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Ensure text color is sufficiently contrasting against the background */
+  .hero-overlay h1 {
+    color: #FFD700; /* Using a brighter gold color */
+    text-shadow: none; /* Removing text-shadow for better readability */
+  }
+
+  .hero-overlay p {
+    color: #FFD700; /* Using a brighter gold color for better visibility */
+  }
 
   .signup-container, .info-container {
-      width: 100%;
-      margin-bottom: 20px;
+    background-color: #202020;
+  }
+
+  .radio-group p, .login-link, .divider {
+    color: #FFD700; /* Consistent color for better accessibility */
+  }
+
+  .white-text {
+    color: #f0f0f0; /* Off-white for better contrast */
+  }
+
+  .yellow-text {
+    color: #FFD700; /* Using a brighter gold color for links */
+  }
+
+  button[type="submit"] {
+    background-color: #1DB954; /* Green for the button */
+    color: white;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #1aa34a; /* Darker green on hover */
+  }
+
+  .social-button {
+    border: 1px solid #ccc; /* Adding a border to buttons for better visibility */
+  }
+
+  .social-button:hover {
+    opacity: 0.8; /* Slightly reduce opacity on hover for feedback */
+  }
+
+  .login-link a {
+    color: #FFD700; /* Better visibility for links */
+  }
+
+  .login-link a:hover {
+    text-decoration: underline;
+    color: #f0e68c; /* Slightly lighter for hover effect */
   }
 }
 
-
 @media (max-width: 530px) {
-    .hero-overlay h1 {
-        font-size: 1rem; 
-        line-height: 1.2; 
-    }
+  .hero-overlay h1 {
+    font-size: 1rem; 
+    line-height: 1.2; 
+  }
 
-    .hero-overlay p {
-        font-size: 0.5rem; 
-        line-height: 1.4; 
-    }
+  .hero-overlay p {
+    font-size: 0.5rem; 
+    line-height: 1.4; 
+  }
 
-    .hero-overlay {
-        padding: 20px; 
-    }
+  .hero-overlay {
+    padding: 20px; 
+  }
 
-    .logo-image {
-        width: 100px; 
-    }
-    
-    .signup-container {
-      padding: 0;
-    }
+  .logo-image {
+    width: 100px; 
+  }
+  
+  .signup-container {
+    padding: 0;
+  }
 }
