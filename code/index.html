@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Site - nomio</title>
     <link rel="stylesheet" href="./style.css" />
-
-    <link href="./transfonter.org-20240821-111631.zip" rel="stylesheet" />
   </head>
   <body>
     <header>
@@ -23,15 +21,17 @@
       </nav>
     </header>
     <main>
-      <img
-        class="hero-image"
-        src="visualelectric-1725211980007.jpeg"
-        alt="Runner in action"
-      />
-      <p>
-        Get real with clinically tested isothiocyanates from
-        <span aria-label="broccoli">🥦</span>
-      </p>
+      <section class="hero">
+        <img
+          class="hero-image"
+          src="visualelectric-1725211980007.jpeg"
+          alt="Runner in action"
+        />
+        <p>
+          Get real with clinically tested isothiocyanates from
+          <span aria-label="broccoli">🥦</span>
+        </p>
+      </section>
       <div class="container">
         <div class="sign-up">
           <h1>nomio</h1>
@@ -44,7 +44,7 @@
               name="name"
               required
               aria-required="true"
-            /><br /><br />
+            />
 
             <label for="email">Email address</label>
             <input
@@ -54,18 +54,17 @@
               required
               aria-required="true"
               placeholder="email@example.com"
-            /><br /><br />
+            />
 
             <label for="sport">What's your main sport?</label>
             <select id="sport" name="sport" required aria-required="true">
-              <option value="">Please select</option>
+              <option value="" selected disabled hidden>Please select</option>
               <option value="running">Running</option>
               <option value="cycling">Cycling</option>
               <option value="triathlon">Triathlon</option>
               <option value="skiing">Skiing</option>
-              <option value="other">Other</option></select
-            ><br /><br />
-
+              <option value="other">Other</option>
+            </select>
             <input type="submit" value="Submit" />
           </form>
         </div>
