@@ -70,87 +70,103 @@
     <h1>Let's team up and make magic happen!</h1>
     <form action="http://httpbin.org/anything" method="post">
 
-      <!-- Contact form only for smartphone-->
+      <!-- Contact form only for smartphone -->
       <div class="contact-form-for-small-screen">
         <!-- Style of text input -->
-        <span>Hi! My name is</span> <br>
-        <input type="text" name="name" class="text-input" placeholder="Type your name*"> <br>
-        <span>and I work in</span> <br>
-        <input type="text" name="company" class="text-input" placeholder="Type your company name"> <br>
+        <label for="name-small">Hi! My name is</label> <br>
+        <input type="text" name="name" id="name-small" class="text-input" placeholder="Type your name*"> <br>
+
+        <label for="company-small">and I work in</label> <br>
+        <input type="text" name="company" id="company-small" class="text-input" placeholder="Type your company name">
+        <br>
 
         <!-- Style of radio input -->
         <span>I found you using</span><br>
-        <input type="radio" name="source" id="mouth" class="radio"><label for="mouth">Word of mouth</label><br>
-        <input type="radio" name="source" id="dribbble" class="radio"><label for="dribbble">Dribbble</label><br>
-        <input type="radio" name="source" id="google" class="radio"><label for="google">Google Search</label><br>
-        <input type="radio" name="source" id="other" class="radio"><label for="other">Other</label><br>
+        <input type="radio" name="source" id="mouth-small" class="radio">
+        <label for="mouth-small">Word of mouth</label><br>
+
+        <input type="radio" name="source" id="dribbble-small" class="radio">
+        <label for="dribbble-small">Dribbble</label><br>
+
+        <input type="radio" name="source" id="google-small" class="radio">
+        <label for="google-small">Google Search</label><br>
+
+        <input type="radio" name="source" id="other-small" class="radio">
+        <label for="other-small">Other</label><br>
+
         <!-- Style of checkbox input -->
         <span>I'm looking for help with:</span><br>
-        <input type="checkbox" name="service" id="brand-identity" class="checkbox">
-        <label for="brand-identity">Brand
-          Identity
-          Design</label><br>
-        <input type="checkbox" name="service" id="website" class="checkbox">
-        <label for="website">Website
-          Development</label><br>
-        <input type="checkbox" name="service" id="product" class="checkbox">
-        <label for="product">Product
-          Design</label><br>
+        <input type="checkbox" name="service" id="brand-identity-small" class="checkbox">
+        <label for="brand-identity-small">Brand Identity Design</label><br>
+
+        <input type="checkbox" name="service" id="website-small" class="checkbox">
+        <label for="website-small">Website Development</label><br>
+
+        <input type="checkbox" name="service" id="product-small" class="checkbox">
+        <label for="product-small">Product Design</label><br>
       </div>
 
-
-      <!-- Contact form for tablet or desktop-->
+      <!-- Contact form for tablet or desktop -->
       <div class="contact-form-for-large-screen">
         <!-- Style of text input -->
         <div class="contact-form-row">
-          <span class="contact-form-text">Hi! My name is</span>
-          <input type="text" class="text-input-underline" name="name" placeholder="Type your name*">
+          <label for="name-large" class="contact-form-text">Hi! My name is</label>
+          <input type="text" id="name-large" class="text-input-underline" name="name" placeholder="Type your name*">
 
-          <span class="contact-form-text"> and I work in</span>
-          <input type="text" class="text-input-underline" name="company" placeholder="Type your company name*">
+          <label for="company-large" class="contact-form-text"> and I work in</label>
+          <input type="text" id="company-large" class="text-input-underline" name="company"
+            placeholder="Type your company name*">
         </div>
+
         <!-- Style with flex box for radio input -->
         <div class="contact-form-row">
-          <span class="contact-form-text">I found you using</span>
+          <label class="contact-form-text">I found you using</label>
           <div class="contact-form-items">
-            <label class="radio"><input type="radio" name="source" class="radio-input" value="Word of mouth">
+            <label class="radio">
+              <input type="radio" name="source" id="mouth-large" class="radio-input" value="Word of mouth">
               <span class="radio-label no-select text-m">Word of mouth</span>
             </label>
-            <label class="radio"><input type="radio" name="source" class="radio-input" value="Dribbble">
+            <label class="radio">
+              <input type="radio" name="source" id="dribbble-large" class="radio-input" value="Dribbble">
               <span class="radio-label no-select text-m">Dribbble</span>
             </label>
-            <label class="radio"><input type="radio" name="source" class="radio-input" value="Google Search">
+            <label class="radio">
+              <input type="radio" name="source" id="google-large" class="radio-input" value="Google Search">
               <span class="radio-label no-select text-m">Google Search</span>
             </label>
-            <label class="radio"><input type="radio" name="source" class="radio-input" value="Other">
+            <label class="radio">
+              <input type="radio" name="source" id="other-large" class="radio-input" value="Other">
               <span class="radio-label no-select text-m">Other</span>
             </label>
           </div>
         </div>
+
         <!-- Style with flex box for checkbox input -->
         <div class="contact-form-row">
-          <span class="contact-form-text">I'm looking for help with:</span>
+          <label class="contact-form-text">I'm looking for help with:</label>
           <div class="contact-form-items">
             <label class="checkbox">
-              <input type="checkbox" name="service" class="checkbox-input" value="Brand Identity Design">
+              <input type="checkbox" name="service" id="brand-identity-large" class="checkbox-input"
+                value="Brand Identity Design">
               <span class="checkbox-label">Brand Identity Design</span>
             </label>
             <label class="checkbox">
-              <input type="checkbox" name="service" class="checkbox-input" value="Website Development">
+              <input type="checkbox" name="service" id="website-large" class="checkbox-input"
+                value="Website Development">
               <span class="checkbox-label">Website Development</span>
             </label>
             <label class="checkbox">
-              <input type="checkbox" name="service" class="checkbox-input" value="Product Design">
+              <input type="checkbox" name="service" id="product-large" class="checkbox-input" value="Product Design">
               <span class="checkbox-label">Product Design</span>
             </label>
           </div>
-
         </div>
       </div>
 
       <button type="submit" class="submit-button">Start a journey</button>
     </form>
   </main>
+
 
 
 
