@@ -1,42 +1,41 @@
 /* After you've linked the CSS file in the HTML,
 this should turn the background blue ;) */
 body {
-  background: rgb(225, 225, 241);
-}
-
+    background: rgb(225, 225, 241);
+  }
+  
 /* Body Styling */
 body {
-    font-family: 'Roboto', sans-serif; /* Utilisation de la police Roboto */
+    font-family: 'Roboto', sans-serif;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centre verticalement */
-    height: 100vh; /* Hauteur totale de la fenêtre pour un centrage parfait */
-    background-color: #D0E7FF; /* Bleu clair pastel */
+    justify-content: center;
+    height: 100vh;
+    background-color: #D0E7FF;
 }
+
 .imported-image {
-  width: 100%; /* L'image occupe toute la largeur du conteneur */
-  max-width: 600px; /* Limite la largeur maximale à 600px */
-  height: 300px; /
-
-
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover; /* S'assure que l'image est bien ajustée dans son conteneur sans déformation */
 }
-
 
 /* Signup Form Styling */
 .signup-form {
-  background: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  color: #333;
-  margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #333;
+    margin: auto;
 }
 
 .signup-form h2 {
@@ -52,15 +51,18 @@ body {
 .signup-form input[type="email"],
 .signup-form input[type="date"],
 .signup-form input[type="password"] {
-    width: 100%;
+    width: 100%; /* Les champs prennent 100% de la largeur du formulaire */
+    max-width: 100%; /* Limite pour ne pas dépasser la largeur du conteneur */
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box; /* Inclut les bordures et padding dans la largeur */
 }
 
 .signup-form input[type="radio"] {
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .signup-form input[type="submit"] {
@@ -80,25 +82,31 @@ body {
     background-color: #555;
 }
 
+.radio-group {
+    margin-bottom: 15px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .signup-form {
         padding: 15px;
+        width: 90%; /* Ajuste la largeur du formulaire sur mobile */
     }
 
     .signup-form input[type="submit"] {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .signup-form {
-        padding: 10px;
-        width: 90%;
+        width: 100%; /* Le bouton de soumission prend toute la largeur sur mobile */
     }
 
-    .signup-form input[type="submit"] {
-        width: 100%;
-        font-size: 14px; 
+    .imported-image {
+        width: 100%; /* L'image prend toute la largeur du conteneur sur mobile */
+        height: auto; /* Garde les proportions de l'image */
+    }
+
+    .hero-text {
+        font-size: 18px; /* Ajuste la taille du texte sur mobile */
     }
 }
