@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap">
   <title>Blue-wave-scuba</title>
@@ -12,7 +12,7 @@
 <body>
   <header>
     <div class="hero">
-      <video autoplay muted loop playsinline>
+      <video autoplay muted loop playsinline tabindex="0" aria-label="video showing two scubadivers in deep water">
         <source src="media/scuba.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -26,26 +26,59 @@
   <main>
     <section>
       <div class="form-caption">
-        <h2>Join the community!</h2>
+        <h2 aria-label="Would you like to join the scuba diving community? If so: fill out the form below">Join the
+          community!
+        </h2>
       </div>
-      <fieldset>
+      <form action="https://httpbin.org/anything" method="post">
+        <fieldset>
+          <legend class="visually-hidden">Sign Up for Diving Class</legend>
+
+          <label for="first-name"><span>First name:</span>
+            <input type="text" id="first-name" name="first-name" placeholder="First name"
+              aria-label="Enter your first name">
+          </label>
+          <label for="last-name"><span>Last name:</span>
+            <input type="text" id="last-name" name="last-name" placeholder="Last name"
+              aria-label="Enter your last name">
+          </label>
+          <label for="e-mail"><span>E-mail:</span>
+            <input type="email" id="e-mail" name="email" placeholder="E-mail" required
+              aria-label="Enter your email address">
+          </label>
+
+          <label for="skill-level"><span>Skill level:</span>
+            <select id="skill-level" name="skill-level" aria-label="Select your skill level" class="select-container">
+              <option value="beginner">Beginner</option>
+              <option value="advanced-diver">Advanced diver</option>
+              <option value="dive-master">Dive master</option>
+            </select>
+          </label>
+
+          <button type="submit">Sign up</button>
+        </fieldset>
+      </form>
+      <!-- <fieldset>
         <form action="https://httpbin.org/anything" method="post">
 
-          <label>
+          <label for="first-name">
             <span>First name:</span>
-            <input type="text" name="first name" placeholder="first name">
+            <input type="text" id="first-name" name="first name" placeholder="first name">
           </label>
-          <label>
+
+          <label for="last-name">
             <span>Last name:</span>
-            <input type="text" name="last name" placeholder="last name">
+            <input type="text" id="last-name" name="last name" placeholder="last name">
           </label>
-          <label>
+
+          <label for="e-mail">
             <span>E-mail:</span>
-            <input type="email" name="email" placeholder="name@domain.com" required>
+            <input type="email" id="e-mail" name="email" placeholder="name@domain.com" required>
           </label>
-          <label>
+
+          <label for="skill-level">
             <span>Skill level </span>
-            <select class="select-container" name="Category">
+            <select id="skill-level" class="select-container" name="Category">
               <option value="beginner">Beginner</option>
               <option value="advanced-diver">Advanced diver</option>
               <option value="dive-master">Dive master</option>
@@ -54,7 +87,7 @@
 
           <button type="submit">Sign up</button>
         </form>
-      </fieldset>
+      </fieldset> -->
     </section>
   </main>
   <footer>
