@@ -11,28 +11,24 @@
 <body>
   <header>
     <div class="hero">
-      <logo>
+      <a class="logo-container" aria-label="website">
         <img src="./assets/logo-note.png" alt="the logo is a note">
-      </logo>
+      </a>
       <div class="header-text">
         <h1>Concert House</h1>
         <h2>Become a member and enjoy special offers!</h2>
       </div>
 
+      <button aria-expanded="false" aria-controls="navigation-menu" aria-label="Open Main Menu">
+        <div class="hamburger-layer"></div>
+        <div class="hamburger-layer"></div>
+        <div class="hamburger-layer"></div>
+      </button>
 
-      <!-- Navigation of Mobile Phone in hamburger-style-->
-      <div class="navigation">
-        <div class="hamburger-layer"></div>
-        <div class="hamburger-layer"></div>
-        <div class="hamburger-layer"></div>
-        <nav aria-label="main menue">
-          <a class="a-header" href="http://google.com"
-            aria-label="this text should give information about where it leads to"></a>
-          <a class="a-header" href="http://google.com" aria-label="search on google"></a>
-          <a class="a-header" href="http://google.com" aria-label="search on google"></a>
-          <a class="a-header" href="http://google.com" aria-label="search on google"></a>
-        </nav>
-      </div>
+      <nav id="navigation-menu" hidden>
+        <a href="http://google.com" aria-label="Go to Google">Google</a>
+        <a href="http://example.com" aria-label="Go to Example">Example</a>
+      </nav>
     </div>
   </header>
 
@@ -51,11 +47,11 @@
         <input type="text" id="last-name" name="last-name" placeholder="last name" required>
 
         <label for="address">Address</label>
-        <input type="text" id="address" name="address" placeholder="address">
+        <input type="text" id="address" name="address" placeholder="address" required>
 
-        <label required for="country">Country</label>
-        <select class="drop-down" name="country" aria-label="open dropdown to select a country">
-          <option value="select">select</option>
+        <label for="country">Country</label>
+        <select class="drop-down" name="country" required id="country" reuqired tabindex="0">
+          <option value="select" disabled selected>select</option>
           <option value="sweden">Sweden</option>
           <option value="germany">Germany</option>
           <option value="france">France</option>
@@ -79,9 +75,9 @@
         </select>
 
         <div class="terms-and-conditions">
-          <input id="checkbox" type="checkbox" required />
-          <label for="checkbox" aria-label="agreement to terms and conditions">I agree to these <a
-              href="https://google.com">Terms and Conditions</a></label>
+          <input id="checkbox" type="checkbox" required aria-describedby="terms-description" />
+          <label for="checkbox">I agree to these <a href="https://google.com">Terms and Conditions</a></label>
+          <p id="terms-description" class="sr-only">You must agree to the Terms and Conditions to continue</p>
         </div>
 
         <!-- submit button -->
