@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -25,13 +25,12 @@
         <div class="hamburger-layer"></div>
         <div class="hamburger-layer"></div>
         <div class="hamburger-layer"></div>
-        <nav>
-          <ul>
-            <a class="a-header" href="http://google.com"></a>
-            <a class="a-header" href="http://google.com"></a>
-            <a class="a-header" href="http://google.com"></a>
-            <a class="a-header" href="http://google.com"></a>
-          </ul>
+        <nav aria-label="main menue">
+          <a class="a-header" href="http://google.com"
+            aria-label="this text should give information about where it leads to"></a>
+          <a class="a-header" href="http://google.com" aria-label="search on google"></a>
+          <a class="a-header" href="http://google.com" aria-label="search on google"></a>
+          <a class="a-header" href="http://google.com" aria-label="search on google"></a>
         </nav>
       </div>
     </div>
@@ -55,7 +54,7 @@
         <input type="text" id="address" name="address" placeholder="address">
 
         <label required for="country">Country</label>
-        <select class="drop-down" name="country">
+        <select class="drop-down" name="country" aria-label="open dropdown to select a country">
           <option value="select">select</option>
           <option value="sweden">Sweden</option>
           <option value="germany">Germany</option>
@@ -72,8 +71,8 @@
 
         <!-- membership & Terms & Conditions -->
         <label for="membership">Choose your Membership</label>
-        <select class="drop-down" name="membership" required>
-          <option value="choose">Choose membership</option>
+        <select aria-label="open drop-down to choose membership type" class="drop-down" name="membership" required>
+          <option aria-label="close drop-down to choose membership type" value="choose">Choose membership</option>
           <option value="monthly membership">One month membership</option>
           <option value="six month membership">Six month membership</option>
           <option value="one year membership">One year membership</option>
@@ -81,7 +80,8 @@
 
         <div class="terms-and-conditions">
           <input id="checkbox" type="checkbox" required />
-          <label for="checkbox">I agree to these <a href="https://google.com">Terms and Conditions</a></label>
+          <label for="checkbox" aria-label="agreement to terms and conditions">I agree to these <a
+              href="https://google.com">Terms and Conditions</a></label>
         </div>
 
         <!-- submit button -->
@@ -101,7 +101,7 @@
     </div>
 
     <!-- linkedin -->
-    <a href="https://www.linkedin.com/in/gittebeckmann">
+    <a href="https://www.linkedin.com/in/gittebeckmann" aria-label="linkedin page of webpage-developer">
       <svg id="linkedin" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-linkedin" viewBox="0 0 16 16">
         <path
