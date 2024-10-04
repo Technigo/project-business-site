@@ -1,5 +1,298 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
 body {
-  background: blue;
+  background-color: #000f12;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+  margin: 0;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero::after {
+  width: 100%;
+  height: 100%;
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 7;
+}
+
+.hero video {
+  position: sticky;
+  top: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5;
+  transform: none;
+}
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-moz-media-controls {
+  display: none !important;
+}
+
+video::-o-media-controls {
+  display: none !important;
+}
+
+video::-ms-media-controls {
+  display: none !important;
+}
+
+.hero-caption {
+  max-width: 700px;
+  width: 75%;
+  position: absolute;
+  z-index: 10;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-caption h1 {
+  flex: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.hero-caption p {
+  font-family: 'Roboto Condensed', sans-serif;
+  flex: 1;
+  word-spacing: 0.3em;
+}
+
+.form-caption {
+  padding-top: 50px;
+  margin: 20px 0 0 0 black;
+}
+
+.form-caption h2 {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 18px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+fieldset {
+  /* max-width: 70%; */
+  margin: 0 auto;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+label {
+  width: 270px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+span {
+  margin-right: 10px;
+  display: flex;
+  align-items: left;
+  font-size: 16px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+input {
+  height: 23px;
+  max-width: 60%;
+  border-radius: 10px;
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #000f12;
+  box-shadow: inset 0 0 0 1px var(--essential-subdued, white);
+  color: white;
+  font-size: 16px;
+  padding-left: 15px;
+}
+
+input::placeholder {
+  color: white;
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 1px 1px white;
+  border: 1px solid white;
+}
+
+.select-container {
+  width: 61%;
+  height: 23px;
+  font-size: 16px;
+  padding-left: 10px;
+  color: white;
+  border: none;
+  box-shadow: inset 0 0 0 1px var(--essential-subdued, white);
+  box-sizing: border-box;
+  background-color: #000f12;
+  border-radius: 10px;
+}
+
+.select-container:focus {
+  outline: none;
+  box-shadow: 0 0 1px 1px white;
+  border: 1px solid white;
+}
+
+button {
+  width: 200px;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #000f12;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 1px 1px white;
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 1px 1px white;
+}
+
+footer {
+  margin-top: auto;
+  padding: 20px;
+}
+
+.byline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.byline p {
+  margin: 0;
+}
+
+.byline a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.byline img {
+  width: 30px;
+  height: 30px;
+  padding: 0 10px;
+}
+
+/* Media Queries */
+@media (min-width: 426px) {
+  .hero-caption {
+    width: 65%;
+    font-size: 1.1rem;
+  }
+
+  .form-caption h2 {
+    font-size: 20px;
+
+  }
+
+  span {
+    font-size: 16px;
+  }
+
+  .select-container {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+}
+
+@media (min-width: 668px) {
+  .hero-caption {
+    width: 60%;
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .hero-caption {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .form-caption {
+    padding-top: 60px;
+
+  }
+
+  label {
+    width: 300px;
+  }
+
+  input {
+    height: 30px;
+    font-size: 16px;
+  }
+
+  input::placeholder {
+    font-size: 16px;
+  }
+
+  .select-container {
+    height: 30px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+  .form-caption {
+    padding-top: 70px;
+
+  }
+
+  .form-caption h2 {
+    font-size: 25px;
+  }
+
+  label {
+    width: 350px;
+  }
+
 }
