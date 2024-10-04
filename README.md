@@ -22,3 +22,6 @@ If I had more time, I would:
 
 ## View it live
 Deployed project: https://bluewavescuba.netlify.app
+
+## View it live
+Deployed accessibility project: https://project-business-site-a11y--bluewavescuba.netlify.app/
