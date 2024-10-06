@@ -10,3 +10,7 @@ I felt I could have worked much longer with the styling and fonts in general for
 
 ## View it live
 Business site: https://business-site-guided-trip-scotland.netlify.app 
+
+
+## View it live with "Accessibility"
+Business site: https://business-site-guided-trip-scotland.netlify.app 
