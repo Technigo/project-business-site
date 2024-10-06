@@ -1,90 +1,134 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <link rel="stylesheet" href="./style.css" /> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  </head>
-  <body>
-    
-    <header>
-      <!--nav meny here -->
-      <nav>
-        <div class="logo-container">
-          <img src="./images/wine-me.png" alt="Logo Wine Me">
-        </div>  
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Site</title>
 
-          <ul>
-            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#"><i class="fas fa-user"></i> Services</a></li>
-            <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
-          </ul>
-      </nav>
-    </header>  
+  <!-- Inline critical CSS  -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+    /* Example of critical styles */
+    .hero-container {
+      position: relative;
+      height: 100vh;
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+  </style>
 
-    <!---hero section-->
-    <div class="hero-container">
-      <!---Hero video-->
-       <video autoplay muted loop id="hero-video">
-          <source src="./video/wine-video.mp4" type="video/mp4">
-       </video> 
-      <!--text over video--> 
-       <div class="hero-text">
-         <h1>Your private wine collection</h1>
-         <p>Directly to your home</p>
-         <a href="#Signupform">
-           <button>Sign up</button>
-         </a>
-       </div>
-    </div>   
-    <!--Images-->
-      <div class="image-gallery">
-          <img src="./images/our-wine.png" alt="our-wine" class="gray-image">
-          <img src="./images/month-wine.png" alt="month-wine">
-          <img src="./images/next-events.webp" alt="events">
+  <!-- Load non-critical CSS asynchronously -->
+  <link rel="stylesheet" href="./style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="./style.css"></noscript>
+
+  <!-- Load Font Awesome asynchronously -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+  <link rel="preload" href="./video/wine-video-sd.mp4" as="video">
+<link rel="preload" href="./images/our-wine.png" as="image">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+
+</head>
+<body>
+
+  <header>
+    <!--nav menu here -->
+    <nav>
+      <div class="logo-container">
+        <img srcset="./images/wine-me.png" alt="Logo Wine Me">
       </div>
-      <!---illustration-->
-      <div class="illustration-container">
-          <img src="./images/cincin.png" alt="illustration">
-      </div>
-   <!-- Signup form -->
-<form class="form-inline" action="https://httpbin.org/anything" method="post">
-  <div class="form-container" id="Signupform">
+      <ul>
+        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-user"></i> Services</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!---hero section-->
+<div class="hero-container">
+  <!-- Lazy load video -->
+  <video autoplay muted loop playsinline id="hero-video" poster="./images/hero-placeholder.jpg">
+    <source src="./video/wine-video.mp4" type="video/mp4">
+  </video>
+</div>
+
+    <!--text over video-->
+    <div class="hero-text">
+      <h1>Your private wine collection</h1>
+      <p>Directly to your home</p>
+      <a href="#Signupform">
+        <button>Sign up</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Images -->
+  <div class="image-gallery">
+    <img src="./images/our-wine.png" alt="our-wine" class="gray-image">
+    <img src="./images/month-wine.png" alt="month-wine">
+    <img src="./images/next-events.webp" alt="events">
+  </div>
+
+  <!-- Illustration -->
+  <div class="illustration-container">
+    <img 
+  src="./images/cincin-2048x533.png" 
+  srcset="
+    ./images/cincin-285x74.png 285w,
+    ./images/cincin-1460x380.png 1460w,
+    ./images/cincin-2048x533.png 2048w" 
+  sizes="(max-width: 600px) 285px,
+         (max-width: 1200px) 1460px,
+         2048px"
+  alt="illustration">
+
+  </div>
+
+  <!-- Signup form -->
+  <form class="form-inline" action="https://httpbin.org/anything" method="post">
+    <div class="form-container" id="Signupform">
       <h1>Create account</h1>
       <p>Please fill in this form to create an account.</p>
 
-      <!-- First Name with autocomplete -->
-      <label for="firstName"><b>First Name</b></label>
-      <input type="text" id="firstName" placeholder="First Name" name="name" autocomplete="given-name" required>
+      <label for="firstName">First Name:</label>
+      <input name="firstName" id="firstName" type="text" autocomplete="given-name" />
 
-      <!-- Last Name with autocomplete -->
-      <label for="lastName"><b>Last Name</b></label>
-      <input type="text" id="lastName" placeholder="Last Name" name="LastName" autocomplete="family-name" required>
+      <label for="lastName">Last Name:</label>
+      <input name="lastName" id="lastName" type="text" autocomplete="family-name" />
 
-      <!-- Email with autocomplete -->
-      <label for="email"><b>Email</b></label>
-      <input type="email" id="email" placeholder="Email" name="email" autocomplete="email" required>
+      <label for="email">Email:</label>
+      <input name="email" id="email" type="email" autocomplete="off" />
 
       <!-- Newsletter -->
       <label>
-          <input type="checkbox" name="newsletter" class="newsletter-checkbox"> Sign me up for the newsletter
+        <input type="checkbox" name="newsletter" class="newsletter-checkbox"> Sign me up for the newsletter
       </label>
 
       <p>By creating an account, you agree to our <a href="#" style="color: dodgerblue;">terms and conditions</a>.</p>
-
       <!-- Submit Button -->
       <button type="submit" class="signupbtn">Create account</button>
-  </div>
-</form>
+    </div>
+  </form>
 
-      <!--footer-->
-      <footer>
-        <div class="footer-content">
-          <p>&copy; 2024 Wine Me. All rights reserved.</p>
-          <p>Your go-to place for the finest wines.</p>
-        </div>
-      </footer>
-  </body>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Wine Me. All rights reserved.</p>
+      <p>Your go-to place for the finest wines.</p>
+    </div>
+  </footer>
+
+</body>
 </html>
