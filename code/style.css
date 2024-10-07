@@ -1,5 +1,308 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+
 body {
-  background: blue;
+  background: #F3EAE1;
+  padding: 0;
+  margin: 0;
+}
+header {
+  background-image: url('./images/header-scotland-new.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 600px;
+}
+p,
+form {
+  font-family: system-ui;
+}
+.header-content-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-small-screen {
+  display: flex;
+  align-items: center;
+}
+.nav-small-screen-icon {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  cursor: pointer;
+}
+.nav-menu-item-small-screen {
+  width: 30px;
+  border-bottom: #fff 3px solid;
+}
+.nav-small-screen-links {
+  list-style: none;
+  text-decoration: none;
+  display: none;
+  cursor: pointer;
+  max-width: 480px;
+}
+.nav-menu-links {
+  padding: 14px 7px;
+  font-size: 17px;
+  color: #000;
+}
+.nav-menu-links>a {
+  text-decoration: none;
+  color: #000;
+}
+/* textbox header */
+.header-textbox {
+  background-color: rgb(255, 255, 255, .5);
+  width: 40%;
+  min-height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 30px;
+  color: #000;
+}
+.header-textbox>h1 {
+  border-bottom: #000 solid 2px;
+  padding-bottom: 10px;
+}
+.button-header-flex {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.button-header {
+  background-color: #9A6C4D;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 1px 1px 2px #4f4646;
+  margin-top: 30px;
+}
+
+/* main conatiner */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* h2 main section  */
+.section-tour-example-h2 {
+  font-size: 2.5rem;
+  color: #9A6C4D;
+  margin: 60px 0 30px;
+  width: 65%;
+  text-align: center;
+}
+
+/* tour examples */
+.section-tour-example {
+  display: grid;
+  align-items: center;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.tour-example {
+  background-color: #464f49c2;
+  padding: 20px;
+  color: #fff;
+  border-radius: 15px;
+}
+.small-text-tour-example {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+.tour-example>h3 {
+  font-size: 1.4rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+.tour-example-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.div-button-tour-example {
+  padding: 30px 15px;
+  text-align: center;
+}
+.button-tour-example {
+  background-color: #F3EAE1;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 1px 1px 2px #525252;
+  margin-top: 30px;
+}
+
+/* form */
+.form-book-a-tour {
+  border-radius: 10px;
+  border: solid 2px rgba(149, 94, 57, 0.36);
+  margin: 10px 0 60px;
+  padding: 50px;
+  width: 70%;
+  box-sizing: border-box;
+}
+.label-input-radio {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px 25px;
+  margin: 20px 0 
+}
+.label-input-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px 25px;
+}
+fieldset {
+  margin: 40px 0;
+  border: none;
+  padding: 0;
+}
+legend {
+  font-size: 1.5rem;
+  color: #9A6C4D;
+  margin: 30px 0 10px;
+  padding: 0;
+}
+.radioboxes {
+  width: 80%;
+  padding: 0 0 12px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  list-style: none;
+}
+.radioboxes>li {
+  align-items: center;
+  display: flex;
+  gap: 0 10px;
+}
+.radioboxes>li>input {
+  border: 0px;
+  width: 24px;
+  height: 2em;
+}
+#guided-trip,
+input[type=text],
+input[type=email],
+input[type=number] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: #464f49c2;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.label-for-radio,
+label[for=guided-trip],
+label[for=name],
+label[for=email],
+label[for=number] {
+    width: 30%;
+}
+input[type=submit] {
+  width: 40%;
+  background-color: #9A6C4D;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input:focus {
+  outline: 2px solid #000;
+  box-shadow: 1px 1px 8px 1px #000;
+}
+.button-submit-flex {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 776px) {
+  /* main container */
+  .main-container {
+    padding: 10px;
+    align-items: normal;
+  }
+  /* header */
+  header {
+    height: 650px;
+  }
+  .button-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+  }
+  .header-textbox {
+    width: 65%;
+    min-height: 150px;
+    top: 60%;
+  }
+  /* tour guides */
+  .section-tour-example {
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .section-tour-example-h2 {
+    width: 90%;
+  }
+  /* form */
+  .label-for-radio,
+  label[for=guided-trip],
+  label[for=name],
+  label[for=email],
+  label[for=number] {
+    width: 100%;
+  }
+  #guided-trip,
+  input[type=submit],
+  input[type=text],
+  input[type=email],
+  input[type=number] {
+    width: 100%;
+  }
+  .label-input-flex,
+  .label-input-radio {
+    flex-wrap: wrap;
+  }
+  .form-book-a-tour {
+    width: 100%;
+    padding: 40px 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-small-screen-links {
+    background-color: #ffffffc7;
+    top: 60px;
+    left: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .nav-small-screen-links>li {
+    text-align: center;
+     width: 60px
+ }
 }

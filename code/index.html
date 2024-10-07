@@ -1,17 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Site</title>
     <!-- dont forget to add a css file and link it here! -->
+     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Business name 🌻</h1>
+    <!-- header - fullwidth image, logo and menu -->
+    <header>
+      <article class="header-content-width">
+          <div role="img" class="main-logo">
+            <img src="./images/logo-bc.png" width="60" alt="BU Logo">
+          </div>
+          
+          <!-- hamburgermenu (fake) -->
+          <nav class="nav-small-screen">
 
-    <!-- video or image as a header is cool :) -->
+            <ul class="nav-small-screen-links" role="menu" id="myLinks">
+              <li class="nav-menu-links" role="presentation"><a href="#about-us">About us</a></li>
+              <li class="nav-menu-links" role="presentation"><a href="#guided-trips">Guided trips</a></li>
+              <li class="nav-menu-links" role="presentation"><a href="#book-a-tour">Book a tour</a></li>
+            </ul>
 
-    <!-- Signup form -->
+            <ul class="nav-small-screen-icon" href="javascript:void(0);" onclick="clickForMenu()">
+              <li class="nav-menu-item-small-screen"></li>
+              <li class="nav-menu-item-small-screen"></li>
+              <li class="nav-menu-item-small-screen"></li>
+            </ul>
+          </nav>
+      </article>
+
+      <article class="header-textbox">
+        <h1>EXPLORE SCOTLAND WITH US</h1>
+        <p>Book a ticket for a bus seat today and join us for an amazing guided two weeks in Scotlands great dunes! Food, culture, nature and more - we won’t let you miss anything. Not even the windy great cliffs!</p>
+        <br>
+        <div role="button" class="button-header-flex">
+          <a href="#" target="_blank" class="button-header">Read more</a> 
+          <a href="#" target="_blank" class="button-header">Book a ticket</a>
+        </div>
+      </article>
+    </header>
+    
+    
+    <!-- main container -->
+    <main class="main-container">
+
+      <h2 class="section-tour-example-h2">Read more about the different guided tours you can book with us down below</h2>
+
+      <section class="section-tour-example">
+
+        <article class="tour-example">
+          <p class="small-text-tour-example">2-day trip</p>
+          <h3>The Harry Potter train!</h3>
+          <div role="img">
+            <img class="tour-example-img" src="./images/harry-potter-train-new.jpg" alt="Guided tours: Harry Potter train">
+          </div>
+          <div role="button" class="div-button-tour-example">
+            <a href="#" target="_blank" class="button-tour-example">Tour details</a> 
+          </div>
+        </article>
+
+        <article class="tour-example">
+          <p class="small-text-tour-example">4-day trip</p>
+          <h3>The monster of Loch Ness!</h3>
+            <div role="img">
+              <img class="tour-example-img" src="./images/loch-ness-new.jpg" alt="Guided tours: Loch Ness">
+            </div>
+            <div role="button" class="div-button-tour-example">
+              <a href="#" target="_blank" class="button-tour-example">Tour details</a> 
+            </div>
+        </article>
+
+        <article class="tour-example">
+          <p class="small-text-tour-example">8-day trip</p>
+          <h3>Glorious Inverness!</h3>
+          <div role="img">
+            <img class="tour-example-img" src="./images/the-highlands-new.jpg" alt="Guided tours: The Highlands">
+          </div>
+          <div role="button" class="div-button-tour-example">
+            <a href="#" target="_blank" class="button-tour-example">Tour details</a> 
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Signup form -->
+      <h2 class="section-tour-example-h2">Sign up on a trip below - and we will contact you further!</h2>
+
+      <form class="form-book-a-tour" action="https://httpbin.org/anything" method="post">
+        <!-- choose a trip -->
+        <article class="label-input-flex">
+          <label for="guided-trip">Which trip are you intrested in?</label>
+          <select id="guided-trip" name="guided-trip">
+            <option value="harry-potter">Harry Potter Train</option>
+            <option value="loch-ness">Loch Ness</option>
+            <option value="inverness">Inverness</option>
+          </select>
+        </article>
+
+        <!-- date -->
+        <article class="label-input-radio">
+          <p class="label-for-radio">Choose a month of your arrival in Scotland:</p>
+            <ul class="radioboxes">
+              <li>
+                <input type="radio" id="date-1" name="date-arrival" value="September">
+                <label for="date-1">September</label>
+              </li>
+              <li> 
+                <input type="radio" id="date-2" name="date-arrival" value="November">
+                <label for="date-2">November</label>
+              </li>
+              <li>
+                  <input type="radio" id="date-3" name="date-arrival" value="December">
+                  <label for="date-3">December</label>
+              </li>
+            </ul>
+        </article>
+
+        <fieldset>
+          <legend>Your information:</legend>
+          <!-- namn -->
+          <p class="label-input-flex">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required aria-required="true">
+          </p>
+          <!-- mejl -->
+          <p class="label-input-flex">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" required aria-required="true">
+          </p>
+          <!-- phone -->
+          <p class="label-input-flex">
+            <label for="number">Phone number</label>
+            <input type="number" id="number">
+          </p>
+        </fieldset>
+
+        <p class="button-submit-flex">
+          <input type="submit" value="Submit">
+        </p>
+        
+      </form>
+
+    </main>
+
+    <script>
+      function clickForMenu() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "flex") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "flex";
+        }
+      }
+    </script>
 
   </body>
 </html>
