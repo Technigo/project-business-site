@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #c8c8c8; /* Lighter than pure black for better contrast */
+  background-color: #292929; /* Lighter than pure black for better contrast */
   color: #f5f5f5; /* Light gray text for better contrast */
 }
 
@@ -74,7 +74,7 @@ body {
 }
 
 .signup-container, .info-container {
-  background-color: #000000;
+  background-color: #2f2f2f;
   padding: 20px;
   border-radius: 10px;
   width: 45%;
@@ -135,13 +135,23 @@ input::placeholder {
 
 /* Checkbox Group */
 .checkbox-group {
+  display: flex;
+  align-items: center; /* Vertically aligns the checkbox with the label */
+  justify-content: flex-start; /* Ensures the checkbox stays to the left with the label */
   margin-top: 20px;
   padding: 10px;
 }
 
 .checkbox-group label {
+  display: flex;
+  align-items: center;
   font-size: 14px;
-  color: #f5f5f5; /* Sufficient contrast for checkbox labels */
+  color: #f5f5f5; /* Ensure label text has sufficient contrast */
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-left: 10px;
+  transform: translateY(1px); /* Adjusts the vertical alignment of the checkbox */
 }
 
 /* Submit Button */
@@ -149,16 +159,16 @@ button[type="submit"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  background-color: #148F47; /* Dark green with good contrast */
+  background-color: #0b5d1e; /* Darker green for sufficient contrast */
   border: none;
   border-radius: 50px;
-  color: rgb(251, 214, 214); /* High contrast with background */
+  color: white; /* High contrast with background */
   font-size: 16px;
   cursor: pointer;
 }
 
 button[type="submit"]:hover {
-  background-color: #0c6c34; /* Darker green on hover */
+  background-color: #084315; /* Even darker green on hover for better contrast */
 }
 
 /* Social Buttons */
