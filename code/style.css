@@ -1,10 +1,12 @@
+/* General Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #121212;
-  color: white;
+  background-color: #1a1a1a; /* Lighter than pure black for better contrast */
+  color: #f5f5f5; /* Light gray text for better contrast */
 }
 
+/* Header */
 .site-header {
   position: absolute;
   top: 0;
@@ -24,6 +26,7 @@ body {
   width: 150px;
 }
 
+/* Hero Section */
 .hero-section {
   position: relative;
   width: 100%;
@@ -43,15 +46,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #fff;
-  text-shadow: none; /* Removed text-shadow for better readability */
+  color: #f5f5f5; /* Lighter text for better contrast */
 }
 
 .hero-overlay h1 {
   font-family: "Prata", serif;
   font-size: 48px;
   margin-bottom: 20px;
-  color: #FFD700; /* Bright gold color for better contrast */
+  color: #FFDD00; /* Bright yellow for strong contrast against the darker background */
 }
 
 .hero-overlay p {
@@ -60,18 +62,19 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 20px;
-  color: #FFD700; /* Brighter gold for better visibility */
+  color: #FFDD00; /* Same bright yellow for readability */
 }
 
+/* Main Content */
 .main-content {
   display: flex;
   justify-content: space-around;
   padding: 50px;
-  background-color: #181818;
+  background-color: #2c2c2c; /* Lighter dark background for better contrast */
 }
 
 .signup-container, .info-container {
-  background-color: #181818;
+  background-color: #2c2c2c;
   padding: 20px;
   border-radius: 10px;
   width: 45%;
@@ -81,19 +84,16 @@ body {
 
 .signup-container h2 {
   margin-bottom: 20px;
+  color: #f5f5f5; /* Light text for better contrast */
 }
 
-.info-container h2 {
-  text-align: left;
-  margin-bottom: 20px;
-}
-
+/* Form Labels and Inputs */
 label {
   display: block;
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 5px;
-  color: #d1d1d1; /* Lighter gray for better contrast */
+  color: #d6d6d6; /* Slightly darker gray for better contrast */
 }
 
 input[type="text"],
@@ -104,14 +104,15 @@ input[type="tel"] {
   margin-bottom: 20px;
   border: 1px solid #3e3e3e;
   border-radius: 4px;
-  background-color: #2c2c2c;
-  color: white;
+  background-color: #3e3e3e; /* Lighter than previous color for better contrast */
+  color: #f5f5f5; /* Light text for good contrast */
 }
 
 input::placeholder {
-  color: #e0e0e0; /* Brighter placeholder color for better contrast */
+  color: #e0e0e0; /* Light placeholder color */
 }
 
+/* Radio Group */
 .radio-group {
   text-align: left;
   margin-bottom: 20px;
@@ -119,76 +120,78 @@ input::placeholder {
 
 .radio-group p {
   font-size: 16px;
-  color: #fff;
+  color: #f5f5f5; /* Sufficient contrast */
   margin-bottom: 15px;
 }
 
-.radio-options {
-  display: flex;
-  justify-content: space-around;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
 .radio-options label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   font-size: 14px;
-  color: #fff;
-  width: 120px;
-  gap: 10px;
-  line-height: 1.5;
-  flex-direction: row-reverse;
+  color: #f5f5f5; /* Sufficient contrast for radio labels */
 }
 
 .radio-options input[type="radio"] {
   transform: translateY(-1px);
 }
 
+/* Checkbox Group */
 .checkbox-group {
-  display: flex;
-  align-items: center;
-  justify-content: left;
   margin-top: 20px;
-  font-size: 1px;
-  color: #fff;
   padding: 10px;
 }
 
 .checkbox-group label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row-reverse;
+  font-size: 14px;
+  color: #f5f5f5; /* Sufficient contrast for checkbox labels */
 }
 
-.checkbox-group input {
-  margin-left: 10px;
-  transform: translateY(-2px);
-}
-
+/* Submit Button */
 button[type="submit"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  background-color: #1aa34a; /* Darker green for better contrast */
+  background-color: #148F47; /* Dark green with good contrast */
   border: none;
   border-radius: 50px;
-  color: white;
+  color: white; /* High contrast with background */
   font-size: 16px;
   cursor: pointer;
 }
 
 button[type="submit"]:hover {
-  background-color: #198f41;
+  background-color: #0c6c34; /* Darker green on hover */
 }
 
+/* Social Buttons */
+.social-button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  border: 1px solid #ccc; /* Added border for visibility */
+  font-size: 14px;
+}
+
+.google {
+  background-color: #0b66d5; /* Darker blue for better contrast */
+  color: white;
+}
+
+.facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+.apple {
+  background-color: #000000;
+  color: white;
+}
+
+/* Divider */
 .divider {
   position: relative;
   margin: 20px 0;
   font-size: 12px;
-  color: #b3b3b3;
+  color: #d6d6d6;
 }
 
 .divider:before,
@@ -198,7 +201,7 @@ button[type="submit"]:hover {
   top: 50%;
   width: 40%;
   height: 1px;
-  background-color: #3e3e3e;
+  background-color: #d6d6d6;
 }
 
 .divider:before {
@@ -209,51 +212,22 @@ button[type="submit"]:hover {
   right: 0;
 }
 
-.social-signup {
-  margin-bottom: 20px;
-}
-
-.social-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 50px;
-  border: 1px solid #ccc; /* Added border for better visibility */
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.google {
-  background-color: #357ae8; /* Darker Google blue for better contrast */
-  color: white;
-}
-
-.facebook {
-  background-color: #4267B2;
-  color: white;
-}
-
-.apple {
-  background-color: #000000;
-  color: white;
-}
-
+/* Login Link */
 .login-link {
-  font-size: 12px;
-  color: #d1d1d1; /* Lighter gray for better contrast */
+  font-size: 14px;
+  color: #d6d6d6; /* Slightly darker text for readability */
 }
 
 .login-link a {
-  color: #38c172; /* Lighter green for better contrast */
-  text-decoration: none;
+  color: #FFDD00; /* Bright yellow link color for contrast */
+  text-decoration: underline; /* Underline to make the link more distinguishable */
 }
 
 .login-link a:hover {
-  text-decoration: underline;
-  color: #32b267; /* Slightly lighter green for hover effect */
+  color: #FFD700; /* Slightly darker yellow on hover */
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
   .main-content {
     flex-direction: column;
@@ -265,54 +239,33 @@ button[type="submit"]:hover {
     margin-bottom: 20px;
   }
 
-  .hero-overlay h1 {
-    color: #FFD700;
-    text-shadow: none;
+  .signup-container, .info-container {
+    background-color: #383838; /* Lighter dark background for contrast */
   }
 
+  .hero-overlay h1,
   .hero-overlay p {
     color: #FFD700;
   }
 
-  .signup-container, .info-container {
-    background-color: #202020;
-  }
-
-  .radio-group p, .login-link, .divider {
-    color: #FFD700;
-  }
-
-  .white-text {
-    color: #f0f0f0;
-  }
-
-  .yellow-text {
-    color: #FFD700;
-  }
-
   button[type="submit"] {
-    background-color: #1aa34a;
+    background-color: #148F47;
   }
 
   button[type="submit"]:hover {
-    background-color: #198f41;
+    background-color: #0c6c34;
   }
 
   .social-button {
     border: 1px solid #ccc;
   }
 
-  .social-button:hover {
-    opacity: 0.8;
-  }
-
   .login-link a {
-    color: #38c172;
+    color: #FFDD00;
   }
 
   .login-link a:hover {
-    text-decoration: underline;
-    color: #32b267;
+    color: #FFD700;
   }
 }
 
@@ -325,14 +278,6 @@ button[type="submit"]:hover {
   .hero-overlay p {
     font-size: 0.5rem;
     line-height: 1.4;
-  }
-
-  .hero-overlay {
-    padding: 20px;
-  }
-
-  .logo-image {
-    width: 100px;
   }
 
   .signup-container {
