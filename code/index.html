@@ -1,17 +1,76 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <h1>Business name 🌻</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up to start painting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="balanced-body-high-resolution-logo-white.png" alt="Balanced Body Logo" class="logo-image">
+        </div>
+    </header>
 
-    <!-- video or image as a header is cool :) -->
+    <section class="hero-section">
+        <img src="Screenshot 2024-08-27 at 21.49.14.png" alt="Hero Image" class="hero-image">
+        <div class="hero-overlay">
+            <h1>
+                <span class="white-text">Balance</span> <span class="yellow-text">Your Body</span>
+            </h1>
+            <p>Introducing the new workout collection, a line of productive exercises designed specifically for busy professionals.</p>
+        </div>
+    </section>
 
-    <!-- Signup form -->
+    <main>
+        <div class="main-content">
+            <div class="signup-container">
+                <h2>Sign up to start transforming into a new era with Balanced Body</h2>
+                <form action="https://httpbin.org/anything" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
 
-  </body>
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="name@domain.com" required>
+                    
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+                    <div class="radio-group">
+                        <p>Please select your preferred time for receiving notifications:</p>
+                        <div class="radio-options">
+                            <label for="morning">
+                                <input type="radio" id="morning" name="time" value="morning"> Morning
+                            </label>
+                            <label for="afternoon">
+                                <input type="radio" id="afternoon" name="time" value="afternoon"> Afternoon
+                            </label>
+                            <label for="evening">
+                                <input type="radio" id="evening" name="time" value="evening"> Evening
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label for="terms">I agree to the Terms & Conditions</label>
+                        <input type="checkbox" id="terms" name="terms" required>
+                    </div>
+
+                    <button type="submit" class="submit-button">Next</button>
+                </form>
+                <div class="divider">or</div>
+                <div class="social-signup">
+                    <button class="social-button google">Sign up with Google</button>
+                    <button class="social-button facebook">Sign up with Facebook</button>
+                    <button class="social-button apple">Sign up with Apple</button>
+                </div>
+                <p class="login-link">Already have an account? <a href="#">Log in here</a>.</p>
+            </div>
+        </div>
+    </main>
+</body>
 </html>

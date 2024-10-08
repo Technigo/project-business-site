@@ -1,5 +1,284 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+/* General Styles */
 body {
-  background: blue;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #292929; /* Lighter than pure black for better contrast */
+  color: #f5f5f5; /* Light gray text for better contrast */
+}
+
+/* Header */
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 150px;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f5f5f5; /* Lighter text for better contrast */
+}
+
+.hero-overlay h1 {
+  font-family: "Prata", serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #FFDD00; /* Bright yellow for strong contrast against the darker background */
+}
+
+.hero-overlay p {
+  font-family: "Prata", serif;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: #FFDD00; /* Same bright yellow for readability */
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  background-color: #2c2c2c; /* Lighter dark background for better contrast */
+}
+
+.signup-container, .info-container {
+  background-color: #2f2f2f;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.signup-container h2 {
+  margin-bottom: 20px;
+  color: #f5f5f5; /* Light text for better contrast */
+}
+
+/* Form Labels and Inputs */
+label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #d6d6d6; /* Slightly darker gray for better contrast */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: calc(100% - 40px);
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #3e3e3e;
+  border-radius: 4px;
+  background-color: #3e3e3e; /* Lighter than previous color for better contrast */
+  color: #f5f5f5; /* Light text for good contrast */
+}
+
+input::placeholder {
+  color: #e0e0e0; /* Light placeholder color */
+}
+
+/* Radio Group */
+.radio-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.radio-group p {
+  font-size: 16px;
+  color: #f5f5f5; /* Sufficient contrast */
+  margin-bottom: 15px;
+}
+
+.radio-options label {
+  font-size: 14px;
+  color: #f5f5f5; /* Sufficient contrast for radio labels */
+}
+
+.radio-options input[type="radio"] {
+  transform: translateY(-1px);
+}
+
+/* Checkbox Group */
+.checkbox-group {
+  display: flex;
+  align-items: center; /* Vertically aligns the checkbox with the label */
+  justify-content: flex-start; /* Ensures the checkbox stays to the left with the label */
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #f5f5f5; /* Ensure label text has sufficient contrast */
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-left: 10px;
+  transform: translateY(1px); /* Adjusts the vertical alignment of the checkbox */
+}
+
+/* Submit Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #0b5d1e; /* Darker green for sufficient contrast */
+  border: none;
+  border-radius: 50px;
+  color: white; /* High contrast with background */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #084315; /* Even darker green on hover for better contrast */
+}
+
+/* Social Buttons */
+.social-button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  border: 1px solid #ccc; /* Added border for visibility */
+  font-size: 14px;
+}
+
+.google {
+  background-color: #0b66d5; /* Darker blue for better contrast */
+  color: white;
+}
+
+.facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+.apple {
+  background-color: #000000;
+  color: white;
+}
+
+/* Divider */
+.divider {
+  position: relative;
+  margin: 20px 0;
+  font-size: 12px;
+  color: #d6d6d6;
+}
+
+.divider:before,
+.divider:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #d6d6d6;
+}
+
+.divider:before {
+  left: 0;
+}
+
+.divider:after {
+  right: 0;
+}
+
+/* Login Link */
+.login-link {
+  font-size: 14px;
+  color: #d6d6d6; /* Slightly darker text for readability */
+}
+
+.login-link a {
+  color: #FFDD00; /* Bright yellow link color for contrast */
+  text-decoration: underline; /* Underline to make the link more distinguishable */
+}
+
+.login-link a:hover {
+  color: #FFD700; /* Slightly darker yellow on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .signup-container, .info-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero-overlay h1,
+  .hero-overlay p {
+    color: #FFD700;
+  }
+  
+  .social-button {
+    border: 1px solid #ccc;
+  }
+
+  .login-link a {
+    color: #FFDD00;
+  }
+
+  .login-link a:hover {
+    color: #FFD700;
+  }
+}
+
+@media (max-width: 530px) {
+  .hero-overlay h1 {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-overlay p {
+    font-size: 0.5rem;
+    line-height: 1.4;
+  }
+
+  .signup-container {
+    padding: 0;
+  }
 }
