@@ -1,17 +1,86 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
+    <title>Business Site - nomio</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Business name 🌻</h1>
+    <header>
+      <nav class="top-menu" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#" aria-current="page">nomio</a></li>
+          <li>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/37688976/">
+              Reducing lactic acid by 12% and increases endurance by 8% on
+              average
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <img
+          class="hero-image"
+          src="visualelectric-1725211980007.jpeg"
+          alt="Runner in action"
+        />
+        <p>
+          Get real with clinically tested isothiocyanates from
+          <span aria-label="broccoli">🥦</span>
+        </p>
+      </section>
+      <div class="container">
+        <div class="sign-up">
+          <h1>nomio</h1>
+          <form action="https://httpbin.org/anything" method="POST">
+            <h2>Sign up for early access to N°6</h2>
+            <label for="name">Full name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              aria-required="true"
+            />
 
-    <!-- video or image as a header is cool :) -->
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              aria-required="true"
+              placeholder="email@example.com"
+            />
 
-    <!-- Signup form -->
-
+            <label for="sport">What's your main sport?</label>
+            <select id="sport" name="sport" required aria-required="true">
+              <option value="" selected disabled hidden>Please select</option>
+              <option value="running">Running</option>
+              <option value="cycling">Cycling</option>
+              <option value="triathlon">Triathlon</option>
+              <option value="skiing">Skiing</option>
+              <option value="other">Other</option>
+            </select>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <nav class="footer-menu" aria-label="Footer navigation">
+        <ul class="footer-list">
+          <li>2024</li>
+          <li>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/37688976/"
+              >Read our studies here</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

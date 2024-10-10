@@ -1,5 +1,307 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+@font-face {
+  font-family: "Sana Sans Web";
+  src:
+    url("Fonts/SanaSans-RegularDisplay.woff2") format("woff2"),
+    url("Fonts/SanaSans-RegularDisplay.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #0a2911; /* Darker shade for better contrast */
+  --secondary-color: #2c7a44; /* Adjusted for better visibility */
+  --text-color: #ffffff;
+  --input-background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* More opaque for better contrast */
+  --container-background: rgba(
+    28,
+    65,
+    36,
+    0.95
+  ); /* More opaque for better contrast */
+  --input-text-color: #333; /* New variable for input text color */
+  --placeholder-color: #555; /* New variable for placeholder text color */
+  --blur-effect: blur(10px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
-  background: blue;
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "12 Web", Roboto, sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-bar {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding: 20px;
+  list-style: none;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+a:hover,
+a:focus {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+p {
+  font-weight: 300;
+  border-radius: 30px;
+  padding: 13px;
+  background-color: var(--input-background);
+  color: var(--primary-color);
+  padding-left: 31px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  border-radius: 20px 150px 20px 150px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: var(--container-background);
+}
+
+.sign-up {
+  background-position: center;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  padding: 55px;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/*Form Input styles*/
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin-top: 10px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  color: rgb(255, 253, 253);
+}
+
+h1 {
+  margin-left: -260px;
+  margin-top: -48px;
+  margin-bottom: 0px;
+  font-weight: 500;
+  color: rgb(129, 171, 158);
+}
+
+select,
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--input-background);
+  color: var(--input-text-color);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+input::placeholder,
+select {
+  color: var(--placeholder-color);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* button*/
+
+input[type="submit"] {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin-bottom: 24px;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background: var(--primary-color);
+  transform: translateY(-2px);
+  outline: 2px solid #ffffff;
+}
+
+/* Responsive design*/
+@media (max-width: 768px) {
+  .container {
+    width: 65%;
+  }
+
+  h1 {
+    margin-left: -90%;
+  }
+  .sign-up {
+    width: 100%;
+  }
+  a {
+    display: none;
+  }
+}
+
+/* phone */
+@media (max-width: 568px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  p {
+    font-size: small;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  h1 {
+    margin-left: -90%;
+  }
+  .sign-up {
+    width: 100%;
+  }
+  a {
+    display: none;
+  }
+
+  .hero-image {
+    background-attachment: scroll; /* Fallback for mobile devices */
+    height: auto;
+  }
+}
+
+/* Subtle animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sign-up {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Hero image styling */
+.hero-image {
+  background: none !important;
+  background-color: grey !important;
+  background-image: none !important;
+  filter: grayscale(0.6) !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50%;
+  z-index: -2;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-bar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  padding: 0 20px;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding: 20px;
+  list-style: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
