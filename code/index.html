@@ -1,17 +1,119 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- dont forget to add a css file and link it here! -->
-  </head>
-  <body>
-    <h1>Business name 🌻</h1>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Site</title>
 
-    <!-- video or image as a header is cool :) -->
+  <!-- Inline critical CSS  -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+    /* Example of critical styles */
+    .hero-container {
+      position: relative;
+      height: 100vh;
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+  </style>
 
-    <!-- Signup form -->
+  <!-- Load non-critical CSS asynchronously -->
+  <link rel="stylesheet" href="./style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="./style.css"></noscript>
 
-  </body>
+  <!-- Load Font Awesome asynchronously -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+  <link rel="preload" href="./video/wine-video-sd.mp4" as="video">
+  <link rel="preload" href="./images/our-wine.png" as="images">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+
+</head>
+<body>
+
+  <header>
+    <!--nav menu here -->
+    <nav>
+      <div class="logo-container">
+        <img srcset="./images/wine-me.png" alt="Logo Wine Me">
+      </div>
+      <ul>
+        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-user"></i> Services</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!---hero section-->
+<div class="hero-container">
+  <!-- Lazy load video -->
+  <video autoplay muted loop playsinline id="hero-video">
+    <source src="./video/wine-video-sd.mp4" type="video/mp4">
+  </video>
+</div>
+
+    <!--text over video-->
+    <div class="hero-text">
+      <h1>Your private wine collection</h1>
+      <p>Directly to your home</p>
+      <a href="#Signupform">
+        <button>Sign up</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Images -->
+  <div class="image-gallery">
+    <img src="./images/our-wine.png" alt="our-wine" class="gray-image">
+    <img src="./images/month-wine.png" alt="month-wine">
+    <img src="./images/next-events.webp" alt="events">
+  </div>
+
+  <!-- Signup form -->
+  <form class="form-inline" action="https://httpbin.org/anything" method="post">
+    <div class="form-container" id="Signupform">
+      <h1>Create account</h1>
+      <p>Please fill in this form to create an account.</p>
+
+      <label for="firstName">First Name:</label>
+      <input name="firstName" id="firstName" type="text" autocomplete="given-name" />
+
+      <label for="lastName">Last Name:</label>
+      <input name="lastName" id="lastName" type="text" autocomplete="family-name" />
+
+      <label for="email">Email:</label>
+      <input name="email" id="email" type="email" autocomplete="off" />
+
+      <!-- Newsletter -->
+      <label>
+        <input type="checkbox" name="newsletter" class="newsletter-checkbox"> Sign me up for the newsletter
+      </label>
+
+      <p>By creating an account, you agree to our <a href="#" style="color: dodgerblue;">terms and conditions</a>.</p>
+      <!-- Submit Button -->
+      <button type="submit" class="signupbtn">Create account</button>
+    </div>
+  </form>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Wine Me. All rights reserved.</p>
+      <p>Your go-to place for the finest wines.</p>
+    </div>
+  </footer>
+
+</body>
 </html>

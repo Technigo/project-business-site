@@ -1,12 +1,15 @@
 # Business Site
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+we had to create a one page bussines website that contains a header, a Signup form and a submit button, the web site has to be styled and it must to be fully responsive
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+
+The main problem for me was the form, style it was very tricky, and I had to research a lot using mostly chatgpt, w3school and stackoverflow. Despite I could mostly solve it, I'm still not 100% happy with it, because my main idea was to have an image horizontly in the left side and pairing it with the form to the right side. But when I was trying to add the image the form was losing its properties, at the end I decided to keep only the form, but I couldn't center it so I had to keep the form to the left side, leading an empty space in the right side of the website, if I had more time, I would want to fix this.
+
+Another problem was upploading the hero video, I needed to increase the buffer size something I learned on stackoverflow.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Link to my business website
+
+https://stirring-salamander-00e5a8.netlify.app/
