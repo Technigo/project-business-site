@@ -1,12 +1,11 @@
-# Business Site
+During this assignment the tast was to make a site following the accessibility guidelines from WCAG and get a score above 95 on the extention Lighthouse. My score is 100.
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I chose to refine a previous project to focus on the given task and to visually see the difference on an accessible webpage an a non accessible.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+Here is a link to the accessible version:
+https://project-business-site-a11y--flow-movement.netlify.app/
+
+and this is the previous, non accessible and not following the WCAG guidelines.
+https://flow-movement.netlify.app/
